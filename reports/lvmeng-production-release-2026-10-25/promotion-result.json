@@ -1,0 +1,88 @@
+{
+  "status": "accepted_version_promoted_pending_production_acceptance",
+  "at": "2026-10-25T13:22:31.898Z",
+  "versionId": "7e62c798-d454-48d7-8bee-1bce6660550b",
+  "deploymentId": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+  "moduleSha256": "9ee63380be7747faddecd09a8c4f4f0b5c7c8d2324f46ef64d97793ff108fd2f",
+  "artifact": {
+    "game": "lvmeng",
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/lvmeng-production-release/lvmeng/artifact",
+    "sourceCommit": "8c436638d7e7de581b81cd86d835dbc34957291c",
+    "manifestSha256": "590fce5eef122d5468b7ecbd954f9445c2f50b95c4a7cf00f06e1dffad4327ea",
+    "treeSha256": "42e09e36e749c98eb97b18e0f754bb76e9f4db9425d1818814fb794c9c2bce6d",
+    "entries": 2058,
+    "bytes": 31934849
+  },
+  "cloudVersion": {
+    "id": "7e62c798-d454-48d7-8bee-1bce6660550b",
+    "number": 30,
+    "metadata": {
+      "created_on": "2026-10-25T13:18:42.585164Z",
+      "source": "wrangler",
+      "author_id": "3a7c299ef441611896bb25058f41782a",
+      "author_email": "[redacted]",
+      "has_preview": true
+    },
+    "annotations": {
+      "workers/message": "Security audit lvmeng candidate 8c436638d7e7de581b81cd86d835dbc34957291c",
+      "workers/triggered_by": "version_upload"
+    },
+    "resources": {
+      "script": {
+        "etag": "9b4b3b021543fff263c8acf7907bdcb67ecd203587b7490ea730a318f3b100f6",
+        "handlers": [
+          "fetch"
+        ],
+        "named_handlers": [
+          {
+            "name": "BucketCachePurge",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOQueueHandler",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOShardedTagCache",
+            "handlers": [
+              "class"
+            ]
+          }
+        ],
+        "last_deployed_from": "wrangler"
+      },
+      "script_runtime": {
+        "assets": {
+          "serve_directly": true,
+          "raw_run_worker_first": false,
+          "base_path": "/"
+        },
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "LVMENG_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    }
+  }
+}

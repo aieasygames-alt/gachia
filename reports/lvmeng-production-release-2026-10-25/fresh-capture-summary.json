@@ -1,0 +1,19 @@
+{
+  "status": "fresh_current_version_bytes_verified",
+  "oldModuleSha256": "0b82ec14f024703fffb6d1bf38e1659adbdda084d68f8adea128db23939980a4",
+  "previousAcceptedSource": "c86b08236373199f390b35acf1737eed429735ef",
+  "provenance": "operator_release_evidence_not_independent_git_attestation",
+  "receiptPath": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/lvmeng-production-release/lvmeng/previous-assets-receipt.json",
+  "receiptSha256": "87ca7a53852b11436be438ab9ca9b45233adbaf650fcdbe867c44b5fc712f83f",
+  "versionId": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+  "deploymentId": "49586e5c-90ee-498b-9882-75e33618df2c",
+  "scriptEtag": "ff1dd2562161a0e363c47341e523c026cd72401327d609f6bfa4f59b4ad89ae5",
+  "workerArchiveSha256": "8fa9517f68d357204fbfd6c4467fab0d94328afc4a81e797abc7fb91d8ddd899",
+  "inventorySha256": "58e66d7dae6427cb65e4d1fba08c3ec784f90c9ba9545faff4a4866c8c7ebfc3",
+  "files": 68,
+  "bytes": 1523485,
+  "capturedAt": "2026-10-25T13:16:16.615Z",
+  "sourceCommit": "not_attested",
+  "cloudAssetManifestCompleteness": "not_asserted",
+  "verification": "local_evidence_integrity_only_not_live_cloud_state"
+}

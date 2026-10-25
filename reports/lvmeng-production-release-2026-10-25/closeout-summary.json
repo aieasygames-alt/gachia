@@ -1,0 +1,18 @@
+{
+  "status": "production_and_whole_site_acceptance_passed",
+  "at": "2026-10-25T13:26:44.592Z",
+  "versionId": "7e62c798-d454-48d7-8bee-1bce6660550b",
+  "sourceCommit": "8c436638d7e7de581b81cd86d835dbc34957291c",
+  "postRegressionControlUnchanged": true,
+  "xmlDocuments": 6,
+  "xmlUnionUrls": 6653,
+  "navigation": {
+    "startTime": "2026-10-25T13:25:24.361Z",
+    "duration": 9222.188,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "githubActionsStarted": 0
+}

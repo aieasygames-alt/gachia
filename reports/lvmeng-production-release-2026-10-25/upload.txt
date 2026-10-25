@@ -1,0 +1,37 @@
+⛅️ wrangler 4.148.0 (update available 4.152.0)
+───────────────────────────────────────────────
+🌀 Building list of assets...
+✨ Read 229 files from the assets directory /Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/lvmeng-production-release/lvmeng/artifact/.open-next/assets
+🌀 Starting asset upload...
+🌀 Found 7 new or modified static assets to upload. Proceeding with upload...
++ /BUILD_ID
++ /_next/static/chunks/main-app-7bf6336b6bc12646.js
++ /_next/static/chunks/app/[lang]/lvmeng/launch-check/page-4297267757a6254c.js
++ /_next/static/chunks/app/layout-9c9df862fb4cdcff.js
++ /_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js
++ /_next/static/chunks/app/[lang]/lvmeng/page-100d5ae81e923d2b.js
++ /_next/static/chunks/app/[lang]/lvmeng/progression/page-d4c821230efd66c7.js
+Uploaded 2 of 7 assets
+Uploaded 5 of 7 assets
+Uploaded 7 of 7 assets
+✨ Success! Uploaded 7 files (162 already uploaded) (1.63 sec)
+
+Total Upload: 5344.10 KiB / gzip: 1063.16 KiB
+Worker Startup Time: 21 ms
+Your Worker has access to the following bindings:
+Binding                                                Resource
+env.ASSETS                                             Assets
+env.NEXT_PUBLIC_APP_URL ("https://gachia.com")         Environment Variable
+env.LVMENG_DEPLOYMENT_MODE ("production")              Environment Variable
+
+Uploaded gachia-game-lvmeng (6.43 sec)
+Worker Version ID: 7e62c798-d454-48d7-8bee-1bce6660550b
+Version Preview URL: https://7e62c798-gachia-game-lvmeng.aieasygames.workers.dev
+
+To deploy this version to production traffic use the command wrangler versions deploy
+
+Changes to non-versioned settings (config properties 'logpush' or 'tail_consumers') take effect after your next deployment using the command wrangler versions deploy
+
+Changes to triggers (routes, custom domains, cron schedules, etc) must be applied with the command wrangler triggers deploy
+
+▲ [WARNING] Proxy environment variables detected. We'll use your proxy for fetch requests.

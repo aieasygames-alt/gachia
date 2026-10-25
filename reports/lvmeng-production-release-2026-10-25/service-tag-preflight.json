@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "targetEnvironment": "production",
+  "mode": "production",
+  "definedEnvironments": [
+    "production"
+  ],
+  "tagsBefore": [
+    "cf:service=gachia-game-lvmeng",
+    "cf:environment=production"
+  ],
+  "tagsAfter": [
+    "cf:service=gachia-game-lvmeng",
+    "cf:environment=production"
+  ]
+}

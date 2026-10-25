@@ -1,0 +1,42 @@
+⛅️ wrangler 4.148.0 (update available 4.152.0)
+───────────────────────────────────────────────
+╭ Deploy Worker Versions by splitting traffic between multiple versions
+│
+├ Fetching latest deployment
+│
+├ Your current deployment has 1 version(s):
+│
+│ (100%) e6cb7815-64be-48df-890f-fd610a8f05a9
+│       Created:  2026-10-25T03:13:54.535674Z
+│           Tag:  -
+│       Message:  S2.22 lvmeng candidate c86b08236373199f390b35acf1737eed429735ef
+│
+├ Fetching versions
+│
+├ Which version(s) do you want to deploy?
+├ 1 Worker Version(s) selected
+│
+├     Worker Version 1:  7e62c798-d454-48d7-8bee-1bce6660550b
+│              Created:  2026-10-25T13:18:42.585164Z
+│                  Tag:  -
+│              Message:  Security audit lvmeng candidate 8c436638d7e7de581b81cd86d835dbc34957291c
+│
+├ What percentage of traffic should Worker Version 1 receive?
+├ 100% of traffic
+├
+├ Add a deployment message
+│ Deployment message Security audit accepted lvmeng 590fce5eef122d54
+│
+├ Deploying 1 version(s)
+│
+├ Syncing non-versioned settings
+│
+│ Synced non-versioned settings:
+│                      logpush:  false
+│                observability:  enabled:             true
+│                                head_sampling_rate:  1
+│               tail_consumers:  <skipped>
+│     streaming_tail_consumers:  <skipped>
+│
+╰  SUCCESS  Deployed gachia-game-lvmeng version 7e62c798-d454-48d7-8bee-1bce6660550b at 100% (1.18 sec)
+▲ [WARNING] Proxy environment variables detected. We'll use your proxy for fetch requests.

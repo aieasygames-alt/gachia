@@ -1,0 +1,1638 @@
+> gachia@ test:release /Users/robert/.codex/worktrees/account-deletion-release/gachia
+> node --test scripts/db-toolchain.test.mjs scripts/image-toolchain.test.mjs scripts/backlog-repairs-smoke.test.mjs scripts/live-owner-acceptance.test.mjs scripts/live-owner-artifact.test.mjs scripts/genshin-release-artifact.test.mjs scripts/web-recovery-policy.test.mjs scripts/browser-asset-diagnostics.test.mjs scripts/indexnow-plan.test.mjs scripts/game-release.test.mjs scripts/game-runtime.test.mjs scripts/runtime-rollout-smoke.test.mjs scripts/game-staging-acceptance.test.mjs scripts/web-release-policy.test.mjs scripts/production-site-audit.test.mjs scripts/retain-web-assets.test.mjs scripts/retain-game-assets.test.mjs scripts/managed-content-smoke.test.mjs scripts/seo-discovery-smoke.test.mjs && python3 -B scripts/restore-recovery-artifact.test.py && python3 -B scripts/extract-previous-web-assets.test.py && python3 -B scripts/web-sitemap-contract-audit.test.py && python3 -B scripts/web-published-sitemap-audit.test.py
+
+TAP version 13
+# Subtest: repair smoke only accepts reviewed owners and exact local Worker origins
+ok 1 - repair smoke only accepts reviewed owners and exact local Worker origins
+  ---
+  duration_ms: 1.1675
+  type: 'test'
+  ...
+# Subtest: same-origin failures retain strict rejection and persist the reason and navigation
+ok 2 - same-origin failures retain strict rejection and persist the reason and navigation
+  ---
+  duration_ms: 5.6445
+  type: 'test'
+  ...
+# Subtest: timeout snapshots retain unfinished response bodies and distinguish identical URLs
+ok 3 - timeout snapshots retain unfinished response bodies and distinguish identical URLs
+  ---
+  duration_ms: 0.257292
+  type: 'test'
+  ...
+# (node:17529) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: pinned Drizzle Kit no longer needs the deprecated loader dependency
+ok 4 - pinned Drizzle Kit no longer needs the deprecated loader dependency
+  ---
+  duration_ms: 31.058209
+  type: 'test'
+  ...
+# Subtest: Drizzle generates real schema SQL offline and a second generation is unchanged
+ok 5 - Drizzle generates real schema SQL offline and a second generation is unchanged
+  ---
+  duration_ms: 999.915917
+  type: 'test'
+  ...
+# Subtest: nte: staging is a separate, explicitly non-indexable service
+ok 6 - nte: staging is a separate, explicitly non-indexable service
+  ---
+  duration_ms: 6.175708
+  type: 'test'
+  ...
+# Subtest: nte: preview deploy cannot alias the production command
+ok 7 - nte: preview deploy cannot alias the production command
+  ---
+  duration_ms: 0.24675
+  type: 'test'
+  ...
+# Subtest: nte/staging: all commands bind the same explicit config, environment and mode
+ok 8 - nte/staging: all commands bind the same explicit config, environment and mode
+  ---
+  duration_ms: 1.601875
+  type: 'test'
+  ...
+# Subtest: nte/production: all commands bind the same explicit config, environment and mode
+ok 9 - nte/production: all commands bind the same explicit config, environment and mode
+  ---
+  duration_ms: 0.881208
+  type: 'test'
+  ...
+# Subtest: azur-promilia: staging is a separate, explicitly non-indexable service
+ok 10 - azur-promilia: staging is a separate, explicitly non-indexable service
+  ---
+  duration_ms: 0.561042
+  type: 'test'
+  ...
+# Subtest: azur-promilia: preview deploy cannot alias the production command
+ok 11 - azur-promilia: preview deploy cannot alias the production command
+  ---
+  duration_ms: 0.161083
+  type: 'test'
+  ...
+# Subtest: azur-promilia/staging: all commands bind the same explicit config, environment and mode
+ok 12 - azur-promilia/staging: all commands bind the same explicit config, environment and mode
+  ---
+  duration_ms: 0.418291
+  type: 'test'
+  ...
+# Subtest: azur-promilia/production: all commands bind the same explicit config, environment and mode
+ok 13 - azur-promilia/production: all commands bind the same explicit config, environment and mode
+  ---
+  duration_ms: 0.445458
+  type: 'test'
+  ...
+# Subtest: JSONC accepts comments/trailing commas but rejects ambiguous or invalid inputs
+ok 14 - JSONC accepts comments/trailing commas but rejects ambiguous or invalid inputs
+  ---
+  duration_ms: 2.409209
+  type: 'test'
+  ...
+# Subtest: NTE page metadata helpers cannot override layout preview protection
+ok 15 - NTE page metadata helpers cannot override layout preview protection
+  ---
+  duration_ms: 0.859166
+  type: 'test'
+  ...
+# Subtest: NTE metadata behavior with mode=preview: preview is closed, live Japanese gate retained
+ok 16 - NTE metadata behavior with mode=preview: preview is closed, live Japanese gate retained
+  ---
+  duration_ms: 59.16175
+  type: 'test'
+  ...
+# Subtest: NTE metadata behavior with mode=live: preview is closed, live Japanese gate retained
+ok 17 - NTE metadata behavior with mode=live: preview is closed, live Japanese gate retained
+  ---
+  duration_ms: 20.7945
+  type: 'test'
+  ...
+# Subtest: NTE metadata behavior with mode=undefined: preview is closed, live Japanese gate retained
+ok 18 - NTE metadata behavior with mode=undefined: preview is closed, live Japanese gate retained
+  ---
+  duration_ms: 16.675625
+  type: 'test'
+  ...
+# Subtest: rejects missing staging for either release environment
+ok 19 - rejects missing staging for either release environment
+  ---
+  duration_ms: 7.7675
+  type: 'test'
+  ...
+# Subtest: rejects missing staging name for either release environment
+ok 20 - rejects missing staging name for either release environment
+  ---
+  duration_ms: 1.191875
+  type: 'test'
+  ...
+# Subtest: rejects staging uses production name for either release environment
+ok 21 - rejects staging uses production name for either release environment
+  ---
+  duration_ms: 1.847708
+  type: 'test'
+  ...
+# Subtest: rejects unknown production service for either release environment
+ok 22 - rejects unknown production service for either release environment
+  ---
+  duration_ms: 1.78875
+  type: 'test'
+  ...
+# Subtest: rejects production uses preview indexing for either release environment
+ok 23 - rejects production uses preview indexing for either release environment
+  ---
+  duration_ms: 17.724042
+  type: 'test'
+  ...
+# Subtest: rejects missing preview mode must not inherit for either release environment
+ok 24 - rejects missing preview mode must not inherit for either release environment
+  ---
+  duration_ms: 7.381209
+  type: 'test'
+  ...
+# Subtest: rejects preview uses live indexing for either release environment
+ok 25 - rejects preview uses live indexing for either release environment
+  ---
+  duration_ms: 0.769917
+  type: 'test'
+  ...
+# Subtest: rejects unexpected canonical origin for either release environment
+ok 26 - rejects unexpected canonical origin for either release environment
+  ---
+  duration_ms: 1.294125
+  type: 'test'
+  ...
+# Subtest: rejects production route for either release environment
+ok 27 - rejects production route for either release environment
+  ---
+  duration_ms: 1.353042
+  type: 'test'
+  ...
+# Subtest: rejects preview custom route for either release environment
+ok 28 - rejects preview custom route for either release environment
+  ---
+  duration_ms: 1.184541
+  type: 'test'
+  ...
+# Subtest: rejects production database for either release environment
+ok 29 - rejects production database for either release environment
+  ---
+  duration_ms: 1.339458
+  type: 'test'
+  ...
+# Subtest: rejects preview service binding for either release environment
+ok 30 - rejects preview service binding for either release environment
+  ---
+  duration_ms: 1.095209
+  type: 'test'
+  ...
+# Subtest: rejects custom build hook for either release environment
+ok 31 - rejects custom build hook for either release environment
+  ---
+  duration_ms: 0.934042
+  type: 'test'
+  ...
+# Subtest: rejects different worker for either release environment
+ok 32 - rejects different worker for either release environment
+  ---
+  duration_ms: 1.259708
+  type: 'test'
+  ...
+# Subtest: rejects different asset directory for either release environment
+ok 33 - rejects different asset directory for either release environment
+  ---
+  duration_ms: 0.896584
+  type: 'test'
+  ...
+# Subtest: rejects preview worker override for either release environment
+ok 34 - rejects preview worker override for either release environment
+  ---
+  duration_ms: 3.041834
+  type: 'test'
+  ...
+# Subtest: rejects preview asset override for either release environment
+ok 35 - rejects preview asset override for either release environment
+  ---
+  duration_ms: 2.270417
+  type: 'test'
+  ...
+# Subtest: unknown game, implicit environment and malformed rollback fail closed
+ok 36 - unknown game, implicit environment and malformed rollback fail closed
+  ---
+  duration_ms: 0.82575
+  type: 'test'
+  ...
+# Subtest: production execution requires exact service and rollback, local verification does not
+ok 37 - production execution requires exact service and rollback, local verification does not
+  ---
+  duration_ms: 1.493333
+  type: 'test'
+  ...
+# Subtest: CLI rejects extra passthrough and duplicate target flags
+ok 38 - CLI rejects extra passthrough and duplicate target flags
+  ---
+  duration_ms: 0.165584
+  type: 'test'
+  ...
+# Subtest: unsupported Next exception requires an explicit verify-only option and can never deploy
+ok 39 - unsupported Next exception requires an explicit verify-only option and can never deploy
+  ---
+  duration_ms: 0.828917
+  type: 'test'
+  ...
+# Subtest: successful deploy is verification-pending, never released or cloud-observed
+ok 40 - successful deploy is verification-pending, never released or cloud-observed
+  ---
+  duration_ms: 2.008083
+  type: 'test'
+  ...
+# Subtest: verify performs only build and dry-run without production permission
+ok 41 - verify performs only build and dry-run without production permission
+  ---
+  duration_ms: 0.377167
+  type: 'test'
+  ...
+# Subtest: production rejection occurs before any build, artifact check or record mutation
+ok 42 - production rejection occurs before any build, artifact check or record mutation
+  ---
+  duration_ms: 0.278542
+  type: 'test'
+  ...
+# Subtest: failure at build stops without retry or implicit rollback
+ok 43 - failure at build stops without retry or implicit rollback
+  ---
+  duration_ms: 0.303875
+  type: 'test'
+  ...
+# Subtest: failure at artifacts stops without retry or implicit rollback
+ok 44 - failure at artifacts stops without retry or implicit rollback
+  ---
+  duration_ms: 0.227292
+  type: 'test'
+  ...
+# Subtest: failure at changed-config stops without retry or implicit rollback
+ok 45 - failure at changed-config stops without retry or implicit rollback
+  ---
+  duration_ms: 0.232458
+  type: 'test'
+  ...
+# Subtest: failure at deploy stops without retry or implicit rollback
+ok 46 - failure at deploy stops without retry or implicit rollback
+  ---
+  duration_ms: 0.678792
+  type: 'test'
+  ...
+# Subtest: record persistence failure after deploy still requires cloud reconciliation
+ok 47 - record persistence failure after deploy still requires cloud reconciliation
+  ---
+  duration_ms: 0.37775
+  type: 'test'
+  ...
+# Subtest: staging: inspect generated headers, robots, homepage and Worker
+ok 48 - staging: inspect generated headers, robots, homepage and Worker
+  ---
+  duration_ms: 4.025709
+  type: 'test'
+  ...
+# Subtest: production: inspect generated headers, robots, homepage and Worker
+ok 49 - production: inspect generated headers, robots, homepage and Worker
+  ---
+  duration_ms: 9.76975
+  type: 'test'
+  ...
+# Subtest: preview detail pages cannot override the noindex protection
+ok 50 - preview detail pages cannot override the noindex protection
+  ---
+  duration_ms: 8.001209
+  type: 'test'
+  ...
+# Subtest: missing build output fails instead of assuming the source configuration is enough
+ok 51 - missing build output fails instead of assuming the source configuration is enough
+  ---
+  duration_ms: 2.586292
+  type: 'test'
+  ...
+# Subtest: dynamic homepages are explicitly deferred to runtime smoke, not silently skipped
+ok 52 - dynamic homepages are explicitly deferred to runtime smoke, not silently skipped
+  ---
+  duration_ms: 3.70575
+  type: 'test'
+  ...
+# Subtest: direct preview assets retain the production Router paths and do not copy game data
+ok 53 - direct preview assets retain the production Router paths and do not copy game data
+  ---
+  duration_ms: 9.022708
+  type: 'test'
+  ...
+# Subtest: staging: runtime smoke checks pages, real detail, robots, sitemap, JS/CSS and 404
+ok 54 - staging: runtime smoke checks pages, real detail, robots, sitemap, JS/CSS and 404
+  ---
+  duration_ms: 48.926666
+  type: 'test'
+  ...
+# Subtest: production: runtime smoke checks pages, real detail, robots, sitemap, JS/CSS and 404
+ok 55 - production: runtime smoke checks pages, real detail, robots, sitemap, JS/CSS and 404
+  ---
+  duration_ms: 7.340709
+  type: 'test'
+  ...
+# Subtest: runtime smoke rejects noindex regressions
+ok 56 - runtime smoke rejects noindex regressions
+  ---
+  duration_ms: 2.504667
+  type: 'test'
+  ...
+# Subtest: runtime smoke rejects canonical regressions
+ok 57 - runtime smoke rejects canonical regressions
+  ---
+  duration_ms: 9.213834
+  type: 'test'
+  ...
+# Subtest: runtime smoke rejects assets regressions
+ok 58 - runtime smoke rejects assets regressions
+  ---
+  duration_ms: 4.588625
+  type: 'test'
+  ...
+# Subtest: runtime smoke rejects redirect regressions
+ok 59 - runtime smoke rejects redirect regressions
+  ---
+  duration_ms: 1.807
+  type: 'test'
+  ...
+# Subtest: runtime smoke rejects soft404 regressions
+ok 60 - runtime smoke rejects soft404 regressions
+  ---
+  duration_ms: 0.905459
+  type: 'test'
+  ...
+# Subtest: runtime smoke rejects xml regressions
+ok 61 - runtime smoke rejects xml regressions
+  ---
+  duration_ms: 0.662459
+  type: 'test'
+  ...
+# Subtest: runtime smoke rejects duplicate-sitemap regressions
+ok 62 - runtime smoke rejects duplicate-sitemap regressions
+  ---
+  duration_ms: 0.255083
+  type: 'test'
+  ...
+# Subtest: local smoke cannot silently inspect a production or arbitrary remote origin
+ok 63 - local smoke cannot silently inspect a production or arbitrary remote origin
+  ---
+  duration_ms: 0.409125
+  type: 'test'
+  ...
+# Subtest: CLI plan is read-only and blocked production command exits before build
+ok 64 - CLI plan is read-only and blocked production command exits before build
+  ---
+  duration_ms: 738.448917
+  type: 'test'
+  ...
+# Subtest: runtime requires reviewed exact declarations, resolutions, app and Node version
+ok 65 - runtime requires reviewed exact declarations, resolutions, app and Node version
+  ---
+  duration_ms: 1.024291
+  type: 'test'
+  ...
+# Subtest: nte: installed supported runtime and per-version patch are verified from the app
+ok 66 - nte: installed supported runtime and per-version patch are verified from the app
+  ---
+  duration_ms: 9.99075
+  type: 'test'
+  ...
+# Subtest: azur-promilia: installed supported runtime and per-version patch are verified from the app
+ok 67 - azur-promilia: installed supported runtime and per-version patch are verified from the app
+  ---
+  duration_ms: 3.386958
+  type: 'test'
+  ...
+# Subtest: all five Next applications share one reviewed runtime and patch registration
+ok 68 - all five Next applications share one reviewed runtime and patch registration
+  ---
+  duration_ms: 16.399
+  type: 'test'
+  ...
+# Subtest: runtime inventory CLI reports all apps and rejects unknown flags
+ok 69 - runtime inventory CLI reports all apps and rejects unknown flags
+  ---
+  duration_ms: 199.717875
+  type: 'test'
+  ...
+# Subtest: main CI verifies exact runtime before building or restoring an artifact
+ok 70 - main CI verifies exact runtime before building or restoring an artifact
+  ---
+  duration_ms: 53.96025
+  type: 'test'
+  ...
+# Subtest: Next 15.5.28 distribution patch reverses and reapplies exactly; partial, drift and wrong versions fail
+ok 71 - Next 15.5.28 distribution patch reverses and reapplies exactly; partial, drift and wrong versions fail
+  ---
+  duration_ms: 45.589083
+  type: 'test'
+  ...
+# Subtest: Next 15.5.28 patch changes only four absent-prefetch fallbacks, retaining actual prefetched values
+ok 72 - Next 15.5.28 patch changes only four absent-prefetch fallbacks, retaining actual prefetched values
+  ---
+  duration_ms: 0.501458
+  type: 'test'
+  ...
+# Subtest: staging origin is constructed from reviewed game and a single account label
+ok 73 - staging origin is constructed from reviewed game and a single account label
+  ---
+  duration_ms: 1.562958
+  type: 'test'
+  ...
+# Subtest: CLI rejects origin overrides, missing fields and duplicate flags
+ok 74 - CLI rejects origin overrides, missing fields and duplicate flags
+  ---
+  duration_ms: 1.622083
+  type: 'test'
+  ...
+# Subtest: optional browser proxy cannot use remote hosts, credentials or URL payloads
+ok 75 - optional browser proxy cannot use remote hosts, credentials or URL payloads
+  ---
+  duration_ms: 0.366333
+  type: 'test'
+  ...
+# Subtest: remote HTTP uses bounded GET requests with no credentials or redirects
+ok 76 - remote HTTP uses bounded GET requests with no credentials or redirects
+  ---
+  duration_ms: 10.978417
+  type: 'test'
+  ...
+# Subtest: redirects to production fail without following them
+ok 77 - redirects to production fail without following them
+  ---
+  duration_ms: 3.449083
+  type: 'test'
+  ...
+# Subtest: staging rejects missing noindex, bad canonical and preview sitemap URLs
+ok 78 - staging rejects missing noindex, bad canonical and preview sitemap URLs
+  ---
+  duration_ms: 10.101
+  type: 'test'
+  ...
+# Subtest: staging rejects divergent assets and a soft 404
+ok 79 - staging rejects divergent assets and a soft 404
+  ---
+  duration_ms: 7.94475
+  type: 'test'
+  ...
+# Subtest: staging rejects duplicated or cross-owner sitemap entries before page probes
+ok 80 - staging rejects duplicated or cross-owner sitemap entries before page probes
+  ---
+  duration_ms: 7.961375
+  type: 'test'
+  ...
+# Subtest: Genshin preview recognition uses parsed hostnames, not a substring or build mode
+ok 81 - Genshin preview recognition uses parsed hostnames, not a substring or build mode
+  ---
+  duration_ms: 30.162666
+  type: 'test'
+  ...
+# Subtest: material watchlist accepts old arrays, retains unknown IDs and bounds malformed state
+ok 82 - material watchlist accepts old arrays, retains unknown IDs and bounds malformed state
+  ---
+  duration_ms: 6.679375
+  type: 'test'
+  ...
+# Subtest: sealed targets differ only in service name; never add resources, routes or preview builds
+ok 83 - sealed targets differ only in service name; never add resources, routes or preview builds
+  ---
+  duration_ms: 12.321167
+  type: 'test'
+  ...
+# Subtest: seals the full portable artifact and separately pins the manifest identity
+ok 84 - seals the full portable artifact and separately pins the manifest identity
+  ---
+  duration_ms: 32.544084
+  type: 'test'
+  ...
+# Subtest: execution config relocates only paths and keeps Wrangler state outside the seal
+ok 85 - execution config relocates only paths and keeps Wrangler state outside the seal
+  ---
+  duration_ms: 33.372625
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects chunk
+ok 86 - artifact verification rejects chunk
+  ---
+  duration_ms: 12.003375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra file
+ok 87 - artifact verification rejects extra file
+  ---
+  duration_ms: 7.291542
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra empty directory
+ok 88 - artifact verification rejects extra empty directory
+  ---
+  duration_ms: 9.467292
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects manifest change
+ok 89 - artifact verification rejects manifest change
+  ---
+  duration_ms: 15.366416
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects target config
+ok 90 - artifact verification rejects target config
+  ---
+  duration_ms: 11.222125
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects missing file
+ok 91 - artifact verification rejects missing file
+  ---
+  duration_ms: 10.990584
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects external link
+ok 92 - artifact verification rejects external link
+  ---
+  duration_ms: 8.43
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects dangling link
+ok 93 - artifact verification rejects dangling link
+  ---
+  duration_ms: 5.514209
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects outside Worker link
+ok 94 - artifact verification rejects outside Worker link
+  ---
+  duration_ms: 15.281125
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong commit
+ok 95 - artifact verification rejects wrong commit
+  ---
+  duration_ms: 10.254
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong receipt
+ok 96 - artifact verification rejects wrong receipt
+  ---
+  duration_ms: 4.428834
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong pinned digest
+ok 97 - artifact verification rejects wrong pinned digest
+  ---
+  duration_ms: 4.151667
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects changed source config
+ok 98 - artifact verification rejects changed source config
+  ---
+  duration_ms: 4.503916
+  type: 'test'
+  ...
+# Subtest: CLI is local-only, explicit and rejects duplicate/unknown deployment flags
+ok 99 - CLI is local-only, explicit and rejects duplicate/unknown deployment flags
+  ---
+  duration_ms: 0.347417
+  type: 'test'
+  ...
+# Subtest: updated native image toolchain converts synthetic pixels without external files
+ok 100 - updated native image toolchain converts synthetic pixels without external files
+  ---
+  duration_ms: 21.605
+  type: 'test'
+  ...
+# Subtest: updated SVG rasterizer handles a bounded synthetic image
+ok 101 - updated SVG rasterizer handles a bounded synthetic image
+  ---
+  duration_ms: 16.664667
+  type: 'test'
+  ...
+# Subtest: all entrypoints share an explicit paused policy without an environment bypass
+ok 102 - all entrypoints share an explicit paused policy without an environment bypass
+  ---
+  duration_ms: 1.978416
+  type: 'test'
+  ...
+# Subtest: canonical production page paths normalize and deduplicate without silently dropping invalid inputs
+ok 103 - canonical production page paths normalize and deduplicate without silently dropping invalid inputs
+  ---
+  duration_ms: 1.870583
+  type: 'test'
+  ...
+# Subtest: rejects credential, port, protocol-relative, normalized, encoded and non-page URL variants
+ok 104 - rejects credential, port, protocol-relative, normalized, encoded and non-page URL variants
+  ---
+  duration_ms: 0.371334
+  type: 'test'
+  ...
+# Subtest: enforces candidate budgets before deduplication
+ok 105 - enforces candidate budgets before deduplication
+  ---
+  duration_ms: 11.857458
+  type: 'test'
+  ...
+# Subtest: unknown CLI flags and missing values fail closed; package separator and dry-run remain compatible
+ok 106 - unknown CLI flags and missing values fail closed; package separator and dry-run remain compatible
+  ---
+  duration_ms: 0.227
+  type: 'test'
+  ...
+# Subtest: submit stays unavailable even with syntactically valid URLs and forged local approval inputs
+ok 107 - submit stays unavailable even with syntactically valid URLs and forged local approval inputs
+  ---
+  duration_ms: 0.464042
+  type: 'test'
+  ...
+# Subtest: no snapshot means not assessed, never eligible
+ok 108 - no snapshot means not assessed, never eligible
+  ---
+  duration_ms: 0.235792
+  type: 'test'
+  ...
+# Subtest: real XML parser reads supplied owner snapshots and records hashes without treating membership as approval
+ok 109 - real XML parser reads supplied owner snapshots and records hashes without treating membership as approval
+  ---
+  duration_ms: 51.740667
+  type: 'test'
+  ...
+# Subtest: rejects malformed, hostile, unnamespaced, index and duplicate XML instead of extracting loc with regex
+ok 110 - rejects malformed, hostile, unnamespaced, index and duplicate XML instead of extracting loc with regex
+  ---
+  duration_ms: 415.327125
+  type: 'test'
+  ...
+# Subtest: rejects cross-owner duplicate locations, missing files and excessive snapshot inputs
+ok 111 - rejects cross-owner duplicate locations, missing files and excessive snapshot inputs
+  ---
+  duration_ms: 147.244416
+  type: 'test'
+  ...
+# Subtest: historical priorities remain candidates, including previously overpromoted URLs, not a curated approval list
+ok 112 - historical priorities remain candidates, including previously overpromoted URLs, not a curated approval list
+  ---
+  duration_ms: 0.471458
+  type: 'test'
+  ...
+# Subtest: archives the original priority list without executing its outbound submission
+ok 113 - archives the original priority list without executing its outbound submission
+  ---
+  duration_ms: 1.955
+  type: 'test'
+  ...
+# Subtest: both actual CLI wrappers produce offline plans and reject submission without invoking fetch
+ok 114 - both actual CLI wrappers produce offline plans and reject submission without invoking fetch
+  ---
+  duration_ms: 531.829125
+  type: 'test'
+  ...
+# Traceback (most recent call last):
+#   File "<string>", line 5, in <module>
+#   File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/xml/etree/ElementTree.py", line 1347, in XML
+#     parser.feed(text)
+# xml.etree.ElementTree.ParseError: mismatched tag: line 1, column 115
+# Traceback (most recent call last):
+#   File "<string>", line 11, in <module>
+# AssertionError
+# Traceback (most recent call last):
+#   File "<string>", line 3, in <module>
+# AssertionError
+# Subtest: unknown Main-owned NTE section is exactly a hub redirect, never a dedicated detail 404
+ok 115 - unknown Main-owned NTE section is exactly a hub redirect, never a dedicated detail 404
+  ---
+  duration_ms: 11.456167
+  type: 'test'
+  ...
+# Subtest: acceptance allows only local, public production or exact owner version preview origins
+ok 116 - acceptance allows only local, public production or exact owner version preview origins
+  ---
+  duration_ms: 1.971333
+  type: 'test'
+  ...
+# Subtest: XML parser rejects wrong roots, duplicate locs and entity declarations
+ok 117 - XML parser rejects wrong roots, duplicate locs and entity declarations
+  ---
+  duration_ms: 180.728584
+  type: 'test'
+  ...
+# Subtest: Japanese acceptance matches production minimum length and Japanese text policy
+ok 118 - Japanese acceptance matches production minimum length and Japanese text policy
+  ---
+  duration_ms: 0.169458
+  type: 'test'
+  ...
+# (node:17564) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+# (Use `node --trace-deprecation ...` to show where the warning was created)
+# Subtest: nte: exact target policy rejects unreviewed control-plane changes
+ok 119 - nte: exact target policy rejects unreviewed control-plane changes
+  ---
+  duration_ms: 10.43725
+  type: 'test'
+  ...
+# Subtest: seals the full portable artifact and separately pins the manifest identity
+ok 120 - seals the full portable artifact and separately pins the manifest identity
+  ---
+  duration_ms: 23.587833
+  type: 'test'
+  ...
+# Subtest: execution config stays outside seal and selects the reviewed environment
+ok 121 - execution config stays outside seal and selects the reviewed environment
+  ---
+  duration_ms: 6.057417
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects chunk
+ok 122 - artifact verification rejects chunk
+  ---
+  duration_ms: 6.90975
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra file
+ok 123 - artifact verification rejects extra file
+  ---
+  duration_ms: 9.227791
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra empty directory
+ok 124 - artifact verification rejects extra empty directory
+  ---
+  duration_ms: 8.353834
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects manifest change
+ok 125 - artifact verification rejects manifest change
+  ---
+  duration_ms: 5.361542
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects target config
+ok 126 - artifact verification rejects target config
+  ---
+  duration_ms: 4.894583
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects missing file
+ok 127 - artifact verification rejects missing file
+  ---
+  duration_ms: 5.291208
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects external link
+ok 128 - artifact verification rejects external link
+  ---
+  duration_ms: 17.152417
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects dangling link
+ok 129 - artifact verification rejects dangling link
+  ---
+  duration_ms: 5.66975
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects outside Worker link
+ok 130 - artifact verification rejects outside Worker link
+  ---
+  duration_ms: 9.34275
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong commit
+ok 131 - artifact verification rejects wrong commit
+  ---
+  duration_ms: 4.146667
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong receipt
+ok 132 - artifact verification rejects wrong receipt
+  ---
+  duration_ms: 8.598666
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong pinned digest
+ok 133 - artifact verification rejects wrong pinned digest
+  ---
+  duration_ms: 9.411667
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects changed source config
+ok 134 - artifact verification rejects changed source config
+  ---
+  duration_ms: 4.889125
+  type: 'test'
+  ...
+# Subtest: lvmeng: exact target policy rejects unreviewed control-plane changes
+ok 135 - lvmeng: exact target policy rejects unreviewed control-plane changes
+  ---
+  duration_ms: 1.318875
+  type: 'test'
+  ...
+# Subtest: seals the full portable artifact and separately pins the manifest identity
+ok 136 - seals the full portable artifact and separately pins the manifest identity
+  ---
+  duration_ms: 52.223166
+  type: 'test'
+  ...
+# Subtest: execution config stays outside seal and selects the reviewed environment
+ok 137 - execution config stays outside seal and selects the reviewed environment
+  ---
+  duration_ms: 16.380292
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects chunk
+ok 138 - artifact verification rejects chunk
+  ---
+  duration_ms: 5.425625
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra file
+ok 139 - artifact verification rejects extra file
+  ---
+  duration_ms: 4.852542
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra empty directory
+ok 140 - artifact verification rejects extra empty directory
+  ---
+  duration_ms: 7.513709
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects manifest change
+ok 141 - artifact verification rejects manifest change
+  ---
+  duration_ms: 7.465834
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects target config
+ok 142 - artifact verification rejects target config
+  ---
+  duration_ms: 9.317459
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects missing file
+ok 143 - artifact verification rejects missing file
+  ---
+  duration_ms: 6.014083
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects external link
+ok 144 - artifact verification rejects external link
+  ---
+  duration_ms: 4.415333
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects dangling link
+ok 145 - artifact verification rejects dangling link
+  ---
+  duration_ms: 14.953208
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects outside Worker link
+ok 146 - artifact verification rejects outside Worker link
+  ---
+  duration_ms: 5.03125
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong commit
+ok 147 - artifact verification rejects wrong commit
+  ---
+  duration_ms: 4.310459
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong receipt
+ok 148 - artifact verification rejects wrong receipt
+  ---
+  duration_ms: 31.729792
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong pinned digest
+ok 149 - artifact verification rejects wrong pinned digest
+  ---
+  duration_ms: 5.2545
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects changed source config
+ok 150 - artifact verification rejects changed source config
+  ---
+  duration_ms: 4.958917
+  type: 'test'
+  ...
+# Subtest: azur-promilia: exact target policy rejects unreviewed control-plane changes
+ok 151 - azur-promilia: exact target policy rejects unreviewed control-plane changes
+  ---
+  duration_ms: 6.349625
+  type: 'test'
+  ...
+# Subtest: seals the full portable artifact and separately pins the manifest identity
+ok 152 - seals the full portable artifact and separately pins the manifest identity
+  ---
+  duration_ms: 11.082417
+  type: 'test'
+  ...
+# Subtest: execution config stays outside seal and selects the reviewed environment
+ok 153 - execution config stays outside seal and selects the reviewed environment
+  ---
+  duration_ms: 7.314
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects chunk
+ok 154 - artifact verification rejects chunk
+  ---
+  duration_ms: 7.886917
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra file
+ok 155 - artifact verification rejects extra file
+  ---
+  duration_ms: 5.092208
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects extra empty directory
+ok 156 - artifact verification rejects extra empty directory
+  ---
+  duration_ms: 5.908625
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects manifest change
+ok 157 - artifact verification rejects manifest change
+  ---
+  duration_ms: 4.846166
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects target config
+ok 158 - artifact verification rejects target config
+  ---
+  duration_ms: 8.844833
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects missing file
+ok 159 - artifact verification rejects missing file
+  ---
+  duration_ms: 9.206583
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects external link
+ok 160 - artifact verification rejects external link
+  ---
+  duration_ms: 4.757333
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects dangling link
+ok 161 - artifact verification rejects dangling link
+  ---
+  duration_ms: 9.057084
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects outside Worker link
+ok 162 - artifact verification rejects outside Worker link
+  ---
+  duration_ms: 8.971375
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong commit
+ok 163 - artifact verification rejects wrong commit
+  ---
+  duration_ms: 5.610292
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong receipt
+ok 164 - artifact verification rejects wrong receipt
+  ---
+  duration_ms: 4.914583
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects wrong pinned digest
+ok 165 - artifact verification rejects wrong pinned digest
+  ---
+  duration_ms: 5.885417
+  type: 'test'
+  ...
+# Subtest: artifact verification rejects changed source config
+ok 166 - artifact verification rejects changed source config
+  ---
+  duration_ms: 5.000792
+  type: 'test'
+  ...
+# Subtest: nte preview host guard cannot be spoofed by path or userinfo
+ok 167 - nte preview host guard cannot be spoofed by path or userinfo
+  ---
+  duration_ms: 25.803834
+  type: 'test'
+  ...
+# Subtest: lvmeng preview host guard cannot be spoofed by path or userinfo
+ok 168 - lvmeng preview host guard cannot be spoofed by path or userinfo
+  ---
+  duration_ms: 5.788917
+  type: 'test'
+  ...
+# Subtest: azur-promilia preview host guard cannot be spoofed by path or userinfo
+ok 169 - azur-promilia preview host guard cannot be spoofed by path or userinfo
+  ---
+  duration_ms: 1.816584
+  type: 'test'
+  ...
+# Subtest: Azur production artifact policy preserves production mode and existing service grouping
+ok 170 - Azur production artifact policy preserves production mode and existing service grouping
+  ---
+  duration_ms: 5.392958
+  type: 'test'
+  ...
+# Subtest: Azur sealed configuration preserves the service tag under installed Wrangler semantics
+ok 171 - Azur sealed configuration preserves the service tag under installed Wrangler semantics
+  ---
+  duration_ms: 419.972042
+  type: 'test'
+  ...
+# Subtest: Azur middleware blocks Worker hosts without trusting forwarded-host or changing public indexing
+ok 172 - Azur middleware blocks Worker hosts without trusting forwarded-host or changing public indexing
+  ---
+  duration_ms: 35.442541
+  type: 'test'
+  ...
+# Subtest: Lvmeng progress keeps old and unknown string IDs but rejects malformed or unbounded state
+ok 173 - Lvmeng progress keeps old and unknown string IDs but rejects malformed or unbounded state
+  ---
+  duration_ms: 5.573791
+  type: 'test'
+  ...
+# Subtest: legacy redirects accept relative cloud locations without allowing origin or path drift
+ok 174 - legacy redirects accept relative cloud locations without allowing origin or path drift
+  ---
+  duration_ms: 6.520708
+  type: 'test'
+  ...
+# Subtest: release evidence uploads explicitly include the hidden release-records directory
+ok 175 - release evidence uploads explicitly include the hidden release-records directory
+  ---
+  duration_ms: 0.243791
+  type: 'test'
+  ...
+# Subtest: Main fallback acceptance rejects canonical, index policy, name and runtime ownership drift
+ok 176 - Main fallback acceptance rejects canonical, index policy, name and runtime ownership drift
+  ---
+  duration_ms: 0.246333
+  type: 'test'
+  ...
+# Subtest: cloud IndexNow probe never sends credentials, follows redirects or claims authenticated pause verification
+ok 177 - cloud IndexNow probe never sends credentials, follows redirects or claims authenticated pause verification
+  ---
+  duration_ms: 3.1415
+  type: 'test'
+  ...
+# Subtest: published acceptance is separate from the authenticated local fixture and rejects origin overrides
+ok 178 - published acceptance is separate from the authenticated local fixture and rejects origin overrides
+  ---
+  duration_ms: 1.661166
+  type: 'test'
+  ...
+# Subtest: cloud content, XML and durable evidence are mandatory before promotion and after deployment
+ok 179 - cloud content, XML and durable evidence are mandatory before promotion and after deployment
+  ---
+  duration_ms: 0.168666
+  type: 'test'
+  ...
+# Subtest: refuses stale static images and private withdrawal evidence in compiled assets
+ok 180 - refuses stale static images and private withdrawal evidence in compiled assets
+  ---
+  duration_ms: 13.174084
+  type: 'test'
+  ...
+# Subtest: refuses a stale compiled IndexNow sender before starting authenticated local requests
+ok 181 - refuses a stale compiled IndexNow sender before starting authenticated local requests
+  ---
+  duration_ms: 2.183125
+  type: 'test'
+  ...
+# Subtest: managed content checks reject remote origins, credentials and implicit ports before requesting data
+ok 182 - managed content checks reject remote origins, credentials and implicit ports before requesting data
+  ---
+  duration_ms: 1.449166
+  type: 'test'
+  ...
+# Subtest: managed content checks accept only an explicit loopback fixture
+ok 183 - managed content checks accept only an explicit loopback fixture
+  ---
+  duration_ms: 0.743625
+  type: 'test'
+  ...
+# Subtest: compiled managed content runs after browser installation and before artifact sealing
+ok 184 - compiled managed content runs after browser installation and before artifact sealing
+  ---
+  duration_ms: 0.525458
+  type: 'test'
+  ...
+# Subtest: production audit defaults to disabled account policy and remains bounded read-only
+ok 185 - production audit defaults to disabled account policy and remains bounded read-only
+  ---
+  duration_ms: 54.871709
+  type: 'test'
+  ...
+# Subtest: production audit rejects other origins and ambiguous account policy before making requests
+ok 186 - production audit rejects other origins and ambiguous account policy before making requests
+  ---
+  duration_ms: 0.511208
+  type: 'test'
+  ...
+# Subtest: production audit detects enabled auth, missing retirement headers, bad JSON and cookie refresh
+ok 187 - production audit detects enabled auth, missing retirement headers, bad JSON and cookie refresh
+  ---
+  duration_ms: 7.788875
+  type: 'test'
+  ...
+# Subtest: production audit preserves redirect, XML and SEO assertions
+ok 188 - production audit preserves redirect, XML and SEO assertions
+  ---
+  duration_ms: 1.906875
+  type: 'test'
+  ...
+# Subtest: production owner audit checks all five page/JS/CSS owners and four sitemaps with 19 GETs
+ok 189 - production owner audit checks all five page/JS/CSS owners and four sitemaps with 19 GETs
+  ---
+  duration_ms: 3.394792
+  type: 'test'
+  ...
+# Subtest: production owner audit rejects wrong owners, MIME types, asset namespaces and public SEO
+ok 190 - production owner audit rejects wrong owners, MIME types, asset namespaces and public SEO
+  ---
+  duration_ms: 1.16325
+  type: 'test'
+  ...
+# Subtest: retains only registered static files in both namespaces without changing worker or HTML
+ok 191 - retains only registered static files in both namespaces without changing worker or HTML
+  ---
+  duration_ms: 14.870209
+  type: 'test'
+  ...
+# Subtest: Genshin retention binds its own owner without authorizing the legacy deploy path
+ok 192 - Genshin retention binds its own owner without authorizing the legacy deploy path
+  ---
+  duration_ms: 6.420125
+  type: 'test'
+  ...
+# Subtest: rejects owner
+ok 193 - rejects owner
+  ---
+  duration_ms: 2.217125
+  type: 'test'
+  ...
+# Subtest: rejects schema
+ok 194 - rejects schema
+  ---
+  duration_ms: 2.779875
+  type: 'test'
+  ...
+# Subtest: rejects version
+ok 195 - rejects version
+  ---
+  duration_ms: 1.651584
+  type: 'test'
+  ...
+# Subtest: rejects unstable capture
+ok 196 - rejects unstable capture
+  ---
+  duration_ms: 2.714916
+  type: 'test'
+  ...
+# Subtest: rejects unproved Git claim
+ok 197 - rejects unproved Git claim
+  ---
+  duration_ms: 1.825125
+  type: 'test'
+  ...
+# Subtest: rejects unproved asset completeness
+ok 198 - rejects unproved asset completeness
+  ---
+  duration_ms: 2.421458
+  type: 'test'
+  ...
+# Subtest: rejects duplicate file
+ok 199 - rejects duplicate file
+  ---
+  duration_ms: 1.649709
+  type: 'test'
+  ...
+# Subtest: rejects missing logged file
+ok 200 - rejects missing logged file
+  ---
+  duration_ms: 1.814833
+  type: 'test'
+  ...
+# Subtest: rejects traversal
+ok 201 - rejects traversal
+  ---
+  duration_ms: 2.368334
+  type: 'test'
+  ...
+# Subtest: rejects absolute
+ok 202 - rejects absolute
+  ---
+  duration_ms: 2.196167
+  type: 'test'
+  ...
+# Subtest: rejects encoded
+ok 203 - rejects encoded
+  ---
+  duration_ms: 4.892583
+  type: 'test'
+  ...
+# Subtest: rejects backslash
+ok 204 - rejects backslash
+  ---
+  duration_ms: 3.822417
+  type: 'test'
+  ...
+# Subtest: rejects overlong path
+ok 205 - rejects overlong path
+  ---
+  duration_ms: 5.090042
+  type: 'test'
+  ...
+# Subtest: rejects excessively deep path
+ok 206 - rejects excessively deep path
+  ---
+  duration_ms: 2.920542
+  type: 'test'
+  ...
+# Subtest: rejects excessive file count
+ok 207 - rejects excessive file count
+  ---
+  duration_ms: 2.364542
+  type: 'test'
+  ...
+# Subtest: rejects HTML
+ok 208 - rejects HTML
+  ---
+  duration_ms: 1.354916
+  type: 'test'
+  ...
+# Subtest: rejects source escape
+ok 209 - rejects source escape
+  ---
+  duration_ms: 2.165
+  type: 'test'
+  ...
+# Subtest: rejects size
+ok 210 - rejects size
+  ---
+  duration_ms: 4.881458
+  type: 'test'
+  ...
+# Subtest: rejects digest
+ok 211 - rejects digest
+  ---
+  duration_ms: 4.3255
+  type: 'test'
+  ...
+# Subtest: rejects archive
+ok 212 - rejects archive
+  ---
+  duration_ms: 4.193292
+  type: 'test'
+  ...
+# Subtest: rejects inventory
+ok 213 - rejects inventory
+  ---
+  duration_ms: 1.302292
+  type: 'test'
+  ...
+# Subtest: wrong rollback owner/version and unsupported game fail before a release
+ok 214 - wrong rollback owner/version and unsupported game fail before a release
+  ---
+  duration_ms: 7.758834
+  type: 'test'
+  ...
+# Subtest: receipt bytes are bound into plan revalidation and mutation prevents deploy
+ok 215 - receipt bytes are bound into plan revalidation and mutation prevents deploy
+  ---
+  duration_ms: 4.126916
+  type: 'test'
+  ...
+# Subtest: rejects source symlink
+ok 216 - rejects source symlink
+  ---
+  duration_ms: 5.252083
+  type: 'test'
+  ...
+# Subtest: rejects destination symlink
+ok 217 - rejects destination symlink
+  ---
+  duration_ms: 5.400333
+  type: 'test'
+  ...
+# Subtest: rejects dangling-destination symlink
+ok 218 - rejects dangling-destination symlink
+  ---
+  duration_ms: 2.712
+  type: 'test'
+  ...
+# Subtest: asset collision preflight never overwrites or partially copies earlier files
+ok 219 - asset collision preflight never overwrites or partially copies earlier files
+  ---
+  duration_ms: 3.002417
+  type: 'test'
+  ...
+# Subtest: CLI receipt is explicit and cannot be silently ignored by prepare-assets
+ok 220 - CLI receipt is explicit and cannot be silently ignored by prepare-assets
+  ---
+  duration_ms: 0.125083
+  type: 'test'
+  ...
+# Subtest: Azur remote deployment rejects dirty source while local verification remains usable
+ok 221 - Azur remote deployment rejects dirty source while local verification remains usable
+  ---
+  duration_ms: 0.478584
+  type: 'test'
+  ...
+# Subtest: local HTTP verifies every retained byte in both namespaces: success
+ok 222 - local HTTP verifies every retained byte in both namespaces: success
+  ---
+  duration_ms: 7.848708
+  type: 'test'
+  ...
+# Subtest: local HTTP verifies every retained byte in both namespaces: missing
+ok 223 - local HTTP verifies every retained byte in both namespaces: missing
+  ---
+  duration_ms: 3.071708
+  type: 'test'
+  ...
+# Subtest: local HTTP verifies every retained byte in both namespaces: soft-404
+ok 224 - local HTTP verifies every retained byte in both namespaces: soft-404
+  ---
+  duration_ms: 3.629708
+  type: 'test'
+  ...
+# Subtest: local HTTP verifies every retained byte in both namespaces: redirect
+ok 225 - local HTTP verifies every retained byte in both namespaces: redirect
+  ---
+  duration_ms: 4.1055
+  type: 'test'
+  ...
+# Subtest: isolated staging compares candidate sitemap and retained bytes: success
+ok 226 - isolated staging compares candidate sitemap and retained bytes: success
+  ---
+  duration_ms: 7.032459
+  type: 'test'
+  ...
+# Subtest: isolated staging compares candidate sitemap and retained bytes: missing
+ok 227 - isolated staging compares candidate sitemap and retained bytes: missing
+  ---
+  duration_ms: 4.992583
+  type: 'test'
+  ...
+# Subtest: isolated staging compares candidate sitemap and retained bytes: soft-404
+ok 228 - isolated staging compares candidate sitemap and retained bytes: soft-404
+  ---
+  duration_ms: 5.672125
+  type: 'test'
+  ...
+# Subtest: isolated staging compares candidate sitemap and retained bytes: redirect
+ok 229 - isolated staging compares candidate sitemap and retained bytes: redirect
+  ---
+  duration_ms: 2.354292
+  type: 'test'
+  ...
+# Subtest: isolated staging compares candidate sitemap and retained bytes: sitemap-difference
+ok 230 - isolated staging compares candidate sitemap and retained bytes: sitemap-difference
+  ---
+  duration_ms: 4.176708
+  type: 'test'
+  ...
+# Subtest: nte retention binds its own cloud evidence
+ok 231 - nte retention binds its own cloud evidence
+  ---
+  duration_ms: 4.774583
+  type: 'test'
+  ...
+# Subtest: lvmeng retention binds its own cloud evidence
+ok 232 - lvmeng retention binds its own cloud evidence
+  ---
+  duration_ms: 6.625333
+  type: 'test'
+  ...
+# Subtest: retention adds only previous static files without replacing candidate code or resources
+ok 233 - retention adds only previous static files without replacing candidate code or resources
+  ---
+  duration_ms: 5.494625
+  type: 'test'
+  ...
+# Subtest: all immutable collisions are rejected before any file is copied
+ok 234 - all immutable collisions are rejected before any file is copied
+  ---
+  duration_ms: 9.360708
+  type: 'test'
+  ...
+# Subtest: verified recovery identity remains attached to the next retained-source manifest
+ok 235 - verified recovery identity remains attached to the next retained-source manifest
+  ---
+  duration_ms: 2.88125
+  type: 'test'
+  ...
+# Subtest: retention rejects source links, linked ancestors and dangling target links
+ok 236 - retention rejects source links, linked ancestors and dangling target links
+  ---
+  duration_ms: 7.163708
+  type: 'test'
+  ...
+# Subtest: retention verification detects Worker, file, version, manifest and path tampering
+ok 237 - retention verification detects Worker, file, version, manifest and path tampering
+  ---
+  duration_ms: 3.94575
+  type: 'test'
+  ...
+# Subtest: staging probes are fixed-origin read-only byte checks and bounded to 12 assets
+ok 238 - staging probes are fixed-origin read-only byte checks and bounded to 12 assets
+  ---
+  duration_ms: 73.904791
+  type: 'test'
+  ...
+# Subtest: previous artifact inputs and metadata require trusted immutable provenance
+ok 239 - previous artifact inputs and metadata require trusted immutable provenance
+  ---
+  duration_ms: 0.651833
+  type: 'test'
+  ...
+# Subtest: deployment log must bind the exact artifact to the current version, not just a matching SHA
+ok 240 - deployment log must bind the exact artifact to the current version, not just a matching SHA
+  ---
+  duration_ms: 0.187208
+  type: 'test'
+  ...
+# Subtest: new gh escape protection is opted into only for captured machine payloads
+ok 241 - new gh escape protection is opted into only for captured machine payloads
+  ---
+  duration_ms: 0.424291
+  type: 'test'
+  ...
+# Subtest: older gh stays compatible and the machine reader cannot select arbitrary endpoints
+ok 242 - older gh stays compatible and the machine reader cannot select arbitrary endpoints
+  ---
+  duration_ms: 0.318917
+  type: 'test'
+  ...
+# Subtest: robots acceptance separates named crawler blocks and combines wildcard groups
+ok 243 - robots acceptance separates named crawler blocks and combines wildcard groups
+  ---
+  duration_ms: 1.32475
+  type: 'test'
+  ...
+# Subtest: robots acceptance preserves preview exclusion and longest-match allow precedence
+ok 244 - robots acceptance preserves preview exclusion and longest-match allow precedence
+  ---
+  duration_ms: 0.137791
+  type: 'test'
+  ...
+# Subtest: remote acceptance never sends synthetic Cloudflare trusted-IP headers
+ok 245 - remote acceptance never sends synthetic Cloudflare trusted-IP headers
+  ---
+  duration_ms: 0.651291
+  type: 'test'
+  ...
+# Subtest: rollout fixtures never inherit cloud resources, routes or credentials
+ok 246 - rollout fixtures never inherit cloud resources, routes or credentials
+  ---
+  duration_ms: 4.916042
+  type: 'test'
+  ...
+# Subtest: disabled account runtime acceptance neither migrates nor seeds a database
+ok 247 - disabled account runtime acceptance neither migrates nor seeds a database
+  ---
+  duration_ms: 0.185958
+  type: 'test'
+  ...
+# Subtest: asset preparation for remaining games does not expand deployment permission
+ok 248 - asset preparation for remaining games does not expand deployment permission
+  ---
+  duration_ms: 0.974042
+  type: 'test'
+  ...
+# Subtest: discovery checks reject remote or ambiguous origins before any fetch
+ok 249 - discovery checks reject remote or ambiguous origins before any fetch
+  ---
+  duration_ms: 1.358875
+  type: 'test'
+  ...
+# Subtest: discovery metadata requires exact canonical, robots and translated-only alternates
+ok 250 - discovery metadata requires exact canonical, robots and translated-only alternates
+  ---
+  duration_ms: 1.766583
+  type: 'test'
+  ...
+# Subtest: failed postcheck source requires a separate trusted successful recovery, not a rewritten job result
+ok 251 - failed postcheck source requires a separate trusted successful recovery, not a rewritten job result
+  ---
+  duration_ms: 10.904625
+  type: 'test'
+  ...
+# Subtest: recovery source and live checks reject incomplete deployment evidence
+ok 252 - recovery source and live checks reject incomplete deployment evidence
+  ---
+  duration_ms: 0.284042
+  type: 'test'
+  ...
+# Subtest: complete static check encodes generated path segments and rejects redirects or changed bytes
+ok 253 - complete static check encodes generated path segments and rejects redirects or changed bytes
+  ---
+  duration_ms: 33.720666
+  type: 'test'
+  ...
+# Subtest: cloud snapshot only uses fixed read-only APIs and never persists secret text
+ok 254 - cloud snapshot only uses fixed read-only APIs and never persists secret text
+  ---
+  duration_ms: 2.142041
+  type: 'test'
+  ...
+# Subtest: read-only workflow cannot deploy, rebuild or accept an untrusted ref
+ok 255 - read-only workflow cannot deploy, rebuild or accept an untrusted ref
+  ---
+  duration_ms: 0.447167
+  type: 'test'
+  ...
+# Subtest: retired Genshin pre-cutover path fails before checkout or any deployment command
+ok 256 - retired Genshin pre-cutover path fails before checkout or any deployment command
+  ---
+  duration_ms: 0.239083
+  type: 'test'
+  ...
+# Subtest: a green status without the complete existing acceptance suite cannot issue a recovery receipt
+ok 257 - a green status without the complete existing acceptance suite cannot issue a recovery receipt
+  ---
+  duration_ms: 0.34
+  type: 'test'
+  ...
+# Subtest: raw review CLI admits explicit withdrawals without claiming verified game facts
+ok 258 - raw review CLI admits explicit withdrawals without claiming verified game facts
+  ---
+  duration_ms: 597.722583
+  type: 'test'
+  ...
+# Subtest: raw review CLI still blocks an equal factual hold before a chained build or upload
+ok 259 - raw review CLI still blocks an equal factual hold before a chained build or upload
+  ---
+  duration_ms: 142.839625
+  type: 'test'
+  ...
+# Subtest: main production deploy and upload check content before building, while staging remains reviewable
+ok 260 - main production deploy and upload check content before building, while staging remains reviewable
+  ---
+  duration_ms: 0.716541
+  type: 'test'
+  ...
+# Subtest: main Actions block production content before expensive build and recheck before promotion
+ok 261 - main Actions block production content before expensive build and recheck before promotion
+  ---
+  duration_ms: 0.21675
+  type: 'test'
+  ...
+# Subtest: main staging acceptance cannot select production, another service or an arbitrary origin
+ok 262 - main staging acceptance cannot select production, another service or an arbitrary origin
+  ---
+  duration_ms: 0.181291
+  type: 'test'
+  ...
+# Subtest: only retired account secrets are optional; IndexNow remains mandatory
+ok 263 - only retired account secrets are optional; IndexNow remains mandatory
+  ---
+  duration_ms: 0.535375
+  type: 'test'
+  ...
+# Subtest: disabled acceptance checks every account method with retired cookies and malformed bodies
+ok 264 - disabled acceptance checks every account method with retired cookies and malformed bodies
+  ---
+  duration_ms: 2.979416
+  type: 'test'
+  ...
+# Subtest: acceptance fails on an enabled endpoint, cookie refresh, or missing privacy headers
+ok 265 - acceptance fails on an enabled endpoint, cookie refresh, or missing privacy headers
+  ---
+  duration_ms: 0.89825
+  type: 'test'
+  ...
+1..265
+# tests 265
+# suites 0
+# pass 265
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2332.1075
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 0.245s
+
+OK
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.005s
+
+OK

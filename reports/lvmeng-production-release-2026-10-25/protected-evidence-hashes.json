@@ -1,0 +1,346 @@
+{
+  "root": ".release-records/lvmeng-production-release",
+  "scope": "Selected operational evidence; artifact tree covered separately by artifact-pin.json; auth log excluded",
+  "files": [
+    {
+      "path": "accept-nte.mjs",
+      "bytes": 2111,
+      "sha256": "ae6185b4d41d909580d1c6462f031bc608e09b97421b4245127e6fc0d31e0df7"
+    },
+    {
+      "path": "browser-assets-1440.jsonl",
+      "bytes": 1481,
+      "sha256": "c1ad2fc05acc0c8fe81daae119aba8d31efa64666ad5ff29ca66a1b59424f368"
+    },
+    {
+      "path": "browser-assets-390.jsonl",
+      "bytes": 1481,
+      "sha256": "8d9b24f49952c14a421ea0edd92060c8c9a4e0e1e7bb2ec5f133f60b8c290b36"
+    },
+    {
+      "path": "build-lvmeng.mjs",
+      "bytes": 3076,
+      "sha256": "00623b2e5bb841bd0d3b1b95c5a30b2527fb07ebd1894ffa33f2ae90d4b0fe81"
+    },
+    {
+      "path": "build.log",
+      "bytes": 6473,
+      "sha256": "1d711ca3d641ffce4bf60ef4cf63628500f19724910c24929c3853dcd93e8625"
+    },
+    {
+      "path": "capture-previous-lvmeng.mjs",
+      "bytes": 5001,
+      "sha256": "1b2bfee20bc4be463623a1af4d0c2440867096b9d525ec2514ff182a59353f29"
+    },
+    {
+      "path": "capture.log",
+      "bytes": 274,
+      "sha256": "c37ceaf460d60776acde7766c36b7957c004cf8844ecac0bc21df613d49adef2"
+    },
+    {
+      "path": "closeout-summary.json",
+      "bytes": 498,
+      "sha256": "18ed66ce191390e140d0a682d12ef83083ed6c89b3f52784f2bc5a7d674ca9d6"
+    },
+    {
+      "path": "closeout.log",
+      "bytes": 66,
+      "sha256": "898f9301e0e3c67dcad7fe881b299a50509c1cc333bfff5798fbf58310315c02"
+    },
+    {
+      "path": "cloud-control.mjs",
+      "bytes": 7500,
+      "sha256": "c8a27fc3caeecc8d76a3e17a884bf81078270cd03db9cab973d6c8f5f610f2ef"
+    },
+    {
+      "path": "content.log",
+      "bytes": 624,
+      "sha256": "ccd3380a85cf4c952eea995110e42cfcead30df9ab4a87bf19bef57fcf16ca05"
+    },
+    {
+      "path": "control-after-regression.json",
+      "bytes": 19648,
+      "sha256": "d070e87dc0abd8caae67512d776b0df63d2cb51afd46d299744c06e5b002a585"
+    },
+    {
+      "path": "control-baseline.json",
+      "bytes": 19630,
+      "sha256": "811fcda010bba413675e06c2ea7b31f2e88920310d0622106c562cbb0794169b"
+    },
+    {
+      "path": "control-final.json",
+      "bytes": 19648,
+      "sha256": "34c078283f06e09b4417f021ed8c78f81d4fdaf3ea6638dab6aea339a6f38486"
+    },
+    {
+      "path": "control-lvmeng-after-promote.json",
+      "bytes": 19648,
+      "sha256": "5fb6e22972f4d2bd517eb2701657d1f44fbf605dda161941637c0b611a66432c"
+    },
+    {
+      "path": "control-lvmeng-after-upload.json",
+      "bytes": 19639,
+      "sha256": "5827ae901d1453dbc61d85b153a41cea490642ccb3e73021ab3eeb0872c5e4eb"
+    },
+    {
+      "path": "control-lvmeng-before-promote.json",
+      "bytes": 19639,
+      "sha256": "56abecb757c9926a081c4abb66e52f67cc78cb822904c8da325a5f23bccf0378"
+    },
+    {
+      "path": "control-lvmeng-before-upload.json",
+      "bytes": 19630,
+      "sha256": "6b4efe2a86b804c4af2907f0db14ab1b2539fd71f593e2c26ca84dc310abd6c4"
+    },
+    {
+      "path": "cross-owner-acceptance.json",
+      "bytes": 23218,
+      "sha256": "427e64fe522a2be2a609039c49ca35faf9e4e0909767b7ac420e1abc0f783506"
+    },
+    {
+      "path": "cross-owner.log",
+      "bytes": 119,
+      "sha256": "124593e83e4b7e952f943ed50b8adca4d695db678ac4ec96d16a13b25ae1aed4"
+    },
+    {
+      "path": "cross-owner.mjs",
+      "bytes": 4105,
+      "sha256": "6e965957d90037f909e4be4d1a8ec6b1803f71acd006f5ea699c1e4c8867d2f6"
+    },
+    {
+      "path": "deployment-config.log",
+      "bytes": 184,
+      "sha256": "02d7df4889b907f1ab8f56cc5e134f131a6b87e77e14c0433e28df6ddaf4632f"
+    },
+    {
+      "path": "direct.log",
+      "bytes": 76,
+      "sha256": "de5dc09f5fda6d44623bab25bd1c5500827c73eed0d6c6a65f0cfc4e45430b8e"
+    },
+    {
+      "path": "final-control-summary.json",
+      "bytes": 3369,
+      "sha256": "6ecda99f03f9bc18178fc4e18e797123c6b04770b3a2d756c2d664de62a4275e"
+    },
+    {
+      "path": "final-control.log",
+      "bytes": 163,
+      "sha256": "596b24f12cd98f32ab68558575c7d61e1839b9c2ceb675a5d146d35f9af74182"
+    },
+    {
+      "path": "final-control.mjs",
+      "bytes": 2610,
+      "sha256": "a634309f32a68a150b94df5963c2581e54e42d196b83347cffaf8da6331cbc29"
+    },
+    {
+      "path": "http-proxy.mjs",
+      "bytes": 352,
+      "sha256": "73fb121b4ea5a0e942b89b140f8eb970b6152f9121ca138fa0003a9e5eab911c"
+    },
+    {
+      "path": "local.log",
+      "bytes": 125,
+      "sha256": "94d0bea967afd547f77ff7f6e37ab8052ae7967a1045301223bbf5fdf7db3261"
+    },
+    {
+      "path": "lvmeng/artifact-pin.json",
+      "bytes": 437,
+      "sha256": "04e14930569935d417167c1b229ae2595f09e80c4bf9526f46771de7dc0db6ae"
+    },
+    {
+      "path": "lvmeng/build-result.json",
+      "bytes": 500,
+      "sha256": "9147013c28c031cb64fa4c54ddefac536b5c6c71d72ec63ade5a94be7a5f728b"
+    },
+    {
+      "path": "lvmeng/direct-assets.json",
+      "bytes": 16843,
+      "sha256": "e2a57b27977b6b3d6c9ea7acf56634522f1e0093c9ca16860b3b7f8912fa168d"
+    },
+    {
+      "path": "lvmeng/fresh-capture-summary.json",
+      "bytes": 1158,
+      "sha256": "0223c67ecff6fd62809c00566becd533d25c7e1630ccc76572464a3c994683e2"
+    },
+    {
+      "path": "lvmeng/local-acceptance-1/acceptance.jsonl",
+      "bytes": 38798,
+      "sha256": "61066b095054a1c286073f5d13c6d4af78e88d1a7291d9450abf1153dd66fca9"
+    },
+    {
+      "path": "lvmeng/local-acceptance-1/browser-events.jsonl",
+      "bytes": 461,
+      "sha256": "fd6d121920c5d73e9cd4608b79892b81235fed4f2721afc1e6894b80d37725fc"
+    },
+    {
+      "path": "lvmeng/preview-acceptance-1/acceptance.jsonl",
+      "bytes": 44733,
+      "sha256": "7fe357be5c9403f04ce576d1418ea992a35fc45b5a548c5a55a7e14bd826c5af"
+    },
+    {
+      "path": "lvmeng/preview-acceptance-1/browser-events.jsonl",
+      "bytes": 535,
+      "sha256": "8b57f48225ef73a09939c92dfd8078141825ce2ef53aef46e7e996461ff2ad19"
+    },
+    {
+      "path": "lvmeng/previous-assets-receipt.json",
+      "bytes": 13660,
+      "sha256": "87ca7a53852b11436be438ab9ca9b45233adbaf650fcdbe867c44b5fc712f83f"
+    },
+    {
+      "path": "lvmeng/previous-production-worker.multipart",
+      "bytes": 5409908,
+      "sha256": "8fa9517f68d357204fbfd6c4467fab0d94328afc4a81e797abc7fb91d8ddd899"
+    },
+    {
+      "path": "lvmeng/previous-static-inventory.json",
+      "bytes": 5278,
+      "sha256": "58e66d7dae6427cb65e4d1fba08c3ec784f90c9ba9545faff4a4866c8c7ebfc3"
+    },
+    {
+      "path": "lvmeng/production-acceptance-1/acceptance.jsonl",
+      "bytes": 40543,
+      "sha256": "a0b21e1d79c128a365fa2c79a66994d4d7877147b31d0a65cf361d98b4d083ea"
+    },
+    {
+      "path": "lvmeng/production-acceptance-1/browser-events.jsonl",
+      "bytes": 453,
+      "sha256": "1423779eb9c71c27e7f67d5a697a87620eef9bb81ee4d4245ecd2f361e0744ad"
+    },
+    {
+      "path": "lvmeng/promotion-result.json",
+      "bytes": 2604,
+      "sha256": "d68f6953f5de5938c7994088e68a3a1af956908b7e9dac047640b0198d310496"
+    },
+    {
+      "path": "lvmeng/promotion.log",
+      "bytes": 1724,
+      "sha256": "6169ca9cf6f52328ba996b07bb73bd9c12926502cbece6e9041562d2d5939ae1"
+    },
+    {
+      "path": "lvmeng/published-worker.multipart",
+      "bytes": 5472612,
+      "sha256": "52f2dc0cc700a3a6d2b24276433aafee23ed960bf4687dcc05eeb68c153c360e"
+    },
+    {
+      "path": "lvmeng/rollback-local/acceptance.jsonl",
+      "bytes": 38016,
+      "sha256": "d61c6f6dc9a850d2455b64e5f70af2f12cf1ccb0d3eeb52241ab0a1372082b1d"
+    },
+    {
+      "path": "lvmeng/rollback-local/result.json",
+      "bytes": 910,
+      "sha256": "d795fa664d816a0e4fb842c18c69fc3c7494a7679d4c64aa55761cb1cd812a36"
+    },
+    {
+      "path": "lvmeng/service-tag-preflight.json",
+      "bytes": 318,
+      "sha256": "0f43b608e563e7a81e86447df958020500074d1fe646182a01f22603dedcfde1"
+    },
+    {
+      "path": "lvmeng/upload-result.json",
+      "bytes": 2598,
+      "sha256": "800420812b3b0c672c8c6104e07281ae9ea0bc3a78da49419b23910631205579"
+    },
+    {
+      "path": "lvmeng/upload.log",
+      "bytes": 2204,
+      "sha256": "6eda08598dddce02a10ec16a840902d7eabc154deef8cedda57587be369e09d5"
+    },
+    {
+      "path": "lvmeng/uploaded-worker.multipart",
+      "bytes": 5473456,
+      "sha256": "28a49c88355614c88c654d66d79cf7491ccb1a2b8409e5eacb28db8baff75d06"
+    },
+    {
+      "path": "lvmeng/wrangler.execution.json",
+      "bytes": 958,
+      "sha256": "26d2ac7b1df2be9618b4f5ef7e4726b4c108ae87fab8693c84ac96447405b2ec"
+    },
+    {
+      "path": "ops.mjs",
+      "bytes": 6025,
+      "sha256": "0de4ce0a706a59a7d7c360dd1f38292f5d9b20fefed2b3c267d3b491d307e8f7"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 453,
+      "sha256": "8966d51f105aef1f300ca060edcad4a12ecc6c005d91092fdd417060d38aaaf2"
+    },
+    {
+      "path": "preview.log",
+      "bytes": 127,
+      "sha256": "0ce833e91e5239f395c87d539106b4dfec81308237d7daebc8a6d2ee9fe225a4"
+    },
+    {
+      "path": "production.log",
+      "bytes": 130,
+      "sha256": "3fb318fd5ce889f4e7e55aa057d0a484451ae960588b6ceb16701e4a89cd59c6"
+    },
+    {
+      "path": "promotion-operation.log",
+      "bytes": 386,
+      "sha256": "ac7cbcf54a3b4942d62b8007d69ca53590486d0dcf41b9a2cd6665040a35874c"
+    },
+    {
+      "path": "public-navigation.json",
+      "bytes": 11406,
+      "sha256": "3e9396e6eb2bc16400a77f0b30e4b35c2867f422543eb62027ec16eb45dd62c6"
+    },
+    {
+      "path": "public-navigation.log",
+      "bytes": 2244,
+      "sha256": "f4ffc859686acbd7bfe0cccfb6f94f6992f8011a3e4ad3160a4e5d61b52324be"
+    },
+    {
+      "path": "public-sitemap.json",
+      "bytes": 404597,
+      "sha256": "7d5e6a4fd121131093f87674dc1ed7fc2a8f42e6041361ec5ba68da9d836721d"
+    },
+    {
+      "path": "public-sitemap.log",
+      "bytes": 618,
+      "sha256": "0b99ced92f78471299c909dabdb8deeedf16a520484c8ed233f1e13669c39367"
+    },
+    {
+      "path": "release-tests.log",
+      "bytes": 55472,
+      "sha256": "8fb3d469e24dbb0485e855ef46a0fa7857909472b7ec32b48efcfc84339fc615"
+    },
+    {
+      "path": "rollback-nte.mjs",
+      "bytes": 4069,
+      "sha256": "b4713931b69631909d6696c97ec6e987ea7543fd258a286a9e88694a39ec36aa"
+    },
+    {
+      "path": "rollback.log",
+      "bytes": 104,
+      "sha256": "560a1563b1ce7cf31048006fe65e2d9c6126bbb281f13036c6ab78a03ad47a5b"
+    },
+    {
+      "path": "tag-preflight.log",
+      "bytes": 287,
+      "sha256": "5621d8512cde3cf1361b28d0d4f636b9a6763f3f2b3c03efce9c024136e81286"
+    },
+    {
+      "path": "tag-preflight.mjs",
+      "bytes": 1630,
+      "sha256": "ba8322e753fe9faac10252bf31ae479fac25c2c144310c726af89f1be3a79a9a"
+    },
+    {
+      "path": "types.log",
+      "bytes": 136,
+      "sha256": "39095b8fc174e220fa251c6fe61757b9f19a2a37e0102c3d43e8e70c7111e029"
+    },
+    {
+      "path": "upload-operation.log",
+      "bytes": 228,
+      "sha256": "723bee06a22283004403cd66b839a117bb02bcd9d698695ccb704d9c6d7eb881"
+    },
+    {
+      "path": "verify-direct-assets.mjs",
+      "bytes": 2429,
+      "sha256": "18a36be4a07643b5480db9dbfb3683c218489c5214e4da8e88c944b87d1fcc76"
+    }
+  ]
+}

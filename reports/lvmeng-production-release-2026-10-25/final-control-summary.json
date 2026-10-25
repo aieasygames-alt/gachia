@@ -1,0 +1,113 @@
+{
+  "status": "production_accepted_control_plane_reconciled",
+  "at": "2026-10-25T13:25:41.437Z",
+  "sourceCommit": "8c436638d7e7de581b81cd86d835dbc34957291c",
+  "artifact": {
+    "game": "lvmeng",
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/lvmeng-production-release/lvmeng/artifact",
+    "sourceCommit": "8c436638d7e7de581b81cd86d835dbc34957291c",
+    "manifestSha256": "590fce5eef122d5468b7ecbd954f9445c2f50b95c4a7cf00f06e1dffad4327ea",
+    "treeSha256": "42e09e36e749c98eb97b18e0f754bb76e9f4db9425d1818814fb794c9c2bce6d",
+    "entries": 2058,
+    "bytes": 31934849
+  },
+  "versionId": "7e62c798-d454-48d7-8bee-1bce6660550b",
+  "deploymentId": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+  "moduleSha256": "9ee63380be7747faddecd09a8c4f4f0b5c7c8d2324f46ef64d97793ff108fd2f",
+  "services": {
+    "gachia": {
+      "deploymentId": "ccbff012-40dc-47b5-9aff-f63aa4ccbad1",
+      "versions": [
+        {
+          "version_id": "38263bf8-7c06-4991-8e8a-b4f81bb8cf71",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-staging": {
+      "deploymentId": "aa7f1cd3-39d6-40fb-a0aa-1f01524f56e5",
+      "versions": [
+        {
+          "version_id": "4f7da764-6a70-474f-9c34-1f26265fd0ff",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-router": {
+      "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+      "versions": [
+        {
+          "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-genshin": {
+      "deploymentId": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+      "versions": [
+        {
+          "version_id": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-genshin-staging": {
+      "deploymentId": "590f2ba5-e933-416c-b860-cc0b2c9e5678",
+      "versions": [
+        {
+          "version_id": "97f3bae6-3e9f-423f-a2c7-8a460f9911f4",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-nte": {
+      "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+      "versions": [
+        {
+          "version_id": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-lvmeng": {
+      "deploymentId": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+      "versions": [
+        {
+          "version_id": "7e62c798-d454-48d7-8bee-1bce6660550b",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-azur-promilia": {
+      "deploymentId": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+      "versions": [
+        {
+          "version_id": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-azur-promilia-staging": {
+      "deploymentId": "95c17034-e3af-4b21-ae7b-f504e59e0fd4",
+      "versions": [
+        {
+          "version_id": "c6b46257-2441-4cc2-b9c6-c31d4d4d1cca",
+          "percentage": 100
+        }
+      ]
+    }
+  },
+  "onlyLvmengDeploymentChanged": true,
+  "tagsPreserved": [
+    "cf:service=gachia-game-lvmeng",
+    "cf:environment=production"
+  ],
+  "bindingsUnchanged": true,
+  "subdomainsUnchanged": true,
+  "routesUnchanged": true,
+  "domainsUnchanged": true,
+  "workerInventoryUnchanged": true,
+  "oldVersionStillReadable": true,
+  "cloudRollbackDrill": false,
+  "githubActionsStarted": 0
+}
