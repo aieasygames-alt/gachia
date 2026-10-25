@@ -1,0 +1,1911 @@
+{
+  "schemaVersion": 1,
+  "phase": "S2.23",
+  "checkedAt": "2026-10-25T05:14:45.681Z",
+  "status": "backlog_repairs_published_and_independently_production_accepted",
+  "sourceCommit": "db153db648d8937204ca2d36f04f3d89b31b5b9c",
+  "evidenceHashesDescribeSavedCloseoutFilesNotExecutionAttestation": true,
+  "scope": {
+    "updatedServices": [
+      "gachia",
+      "gachia-staging",
+      "gachia-game-genshin",
+      "gachia-game-nte"
+    ],
+    "newWorkers": 0,
+    "routerDeployment": false,
+    "routingOrDomainChanges": false,
+    "databaseMigration": false,
+    "accountFeaturesRestored": false,
+    "cachePurge": false,
+    "evidenceDeletion": false,
+    "actionsRunsStarted": 2
+  },
+  "main": {
+    "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45",
+    "deploymentId": "f18dcd10-82ff-4b8e-b014-502a21a2d6f4",
+    "stagingVersionId": "0a8c1092-5f73-493c-93c1-796fdf399be4",
+    "artifactId": 12585908102,
+    "artifactZipSha256": "c15aed231444dae9520192aac6b1239dad5c82e08f24c90d22f846fd0c63de6c",
+    "tarSha256": "a7feb2650c16a5944578e28c0c40d4c648124bb9d72199d93f209e94cf37c5bc",
+    "originalRun": {
+      "id": 40159761037,
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/40159761037",
+      "conclusion": "failure",
+      "successfulDeploymentStep": true,
+      "failedStep": "Accept published main content and runtime",
+      "page": "/ja/roco/weapons/jufeng-xingji",
+      "failedScriptRequests": 6,
+      "observedReason": "net::ERR_CONNECTION_CLOSED",
+      "preciseNetworkBoundary": "not_proven",
+      "mustNotRewriteAsSuccess": true
+    },
+    "independentReadonlyRecovery": {
+      "runId": 40162485064,
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/40162485064",
+      "conclusion": "success",
+      "receiptArtifactId": 12587311797,
+      "receiptZipSha256": "103cd3d6e09ef07da5f8e5e0c332c131ffa648e22ebb4397114f5c2ef9551f55",
+      "deploymentPerformed": false,
+      "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45",
+      "staticFiles": 386,
+      "staticBytes": 10706875,
+      "allStaticBytesEqual": true,
+      "ownerGraphUnchanged": true
+    },
+    "acceptance": {
+      "http": 32,
+      "runtimeBrowsers": 18,
+      "managedHttp": 23,
+      "mainOwnedNteItemDetails": 171,
+      "managedBrowsers": 520,
+      "json": 7,
+      "searchManifests": 3,
+      "indexNowUnauthorizedReadonlyProbe": 1,
+      "indexNowAuthenticatedCloudProbe": false
+    }
+  },
+  "games": {
+    "genshin": {
+      "artifact": {
+        "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-23/genshin/artifact",
+        "manifestSha256": "9a5b5e03cdf24fd667dc2bed79dc850f1d3bcd4c1f5576fe18f3bf05a635f20d",
+        "sourceCommit": "db153db648d8937204ca2d36f04f3d89b31b5b9c",
+        "treeSha256": "e8bab45617ccdf669dd7df56f25392c78ba3de3255a7af12b513fcaec26e17fd",
+        "entries": 3711,
+        "bytes": 135408726
+      },
+      "previousVersionId": "a0045a48-8165-459b-9cd5-47c0261ce87e",
+      "versionId": "73d10dac-6343-49ed-a688-4c9a56a9ddd4",
+      "deploymentId": "e119e349-198a-495d-ac84-1ea8208c7fff",
+      "moduleSha256": "702a4062b4323733bf7aa14349f9b6d244888cb0cbb0c081b845d864db7d6800",
+      "previewUrl": "https://73d10dac-gachia-game-genshin.aieasygames.workers.dev",
+      "phases": {
+        "local": {
+          "pages": 1602,
+          "assets": 164,
+          "browsers": 18,
+          "requests": 1774,
+          "manifestSha256": "9a5b5e03cdf24fd667dc2bed79dc850f1d3bcd4c1f5576fe18f3bf05a635f20d"
+        },
+        "preview": {
+          "pages": 1602,
+          "assets": 164,
+          "browsers": 18,
+          "requests": 1770,
+          "manifestSha256": "9a5b5e03cdf24fd667dc2bed79dc850f1d3bcd4c1f5576fe18f3bf05a635f20d"
+        },
+        "production": {
+          "pages": 1602,
+          "assets": 82,
+          "browsers": 18,
+          "requests": 1688,
+          "manifestSha256": "9a5b5e03cdf24fd667dc2bed79dc850f1d3bcd4c1f5576fe18f3bf05a635f20d"
+        }
+      },
+      "fallback": {
+        "status": "local_compatibility_fallback_verified_not_deployed",
+        "onlineDrill": false
+      },
+      "repairs": {
+        "status": "sealed_repairs_verified",
+        "http": 12,
+        "browser": 6
+      }
+    },
+    "nte": {
+      "artifact": {
+        "directory": "/Users/robert/.codex/worktrees/multi-game-s1-release-safety/gachia/.release-records/s2-23/nte/artifact",
+        "game": "nte",
+        "sourceCommit": "db153db648d8937204ca2d36f04f3d89b31b5b9c",
+        "manifestSha256": "8751859a23ead12e864de6ca7531bf80693129460372f36dbffdc5836b798491",
+        "treeSha256": "e1fdc540ef39655a1bdc7af539ce196b293ea6e5c4e03d66534fe8b588766b51",
+        "entries": 2126,
+        "bytes": 36177787
+      },
+      "previousVersionId": "9d8f09b2-2417-43e5-970f-991ae8194c1b",
+      "versionId": "91821283-846e-42f0-8977-491da0e114e3",
+      "deploymentId": "8a5135d9-1ed3-4cf3-9b85-f2ea491f609b",
+      "moduleSha256": "aa0c817b912618ba6e165db429b2583accc572f50f5c4b2db9132a2c6f5929d3",
+      "previewUrl": "https://91821283-gachia-game-nte.aieasygames.workers.dev",
+      "phases": {
+        "local": {
+          "pages": 504,
+          "assets": 176,
+          "browsers": 18,
+          "requests": 688,
+          "manifestSha256": "8751859a23ead12e864de6ca7531bf80693129460372f36dbffdc5836b798491"
+        },
+        "preview": {
+          "pages": 504,
+          "assets": 176,
+          "browsers": 18,
+          "requests": 684,
+          "manifestSha256": "8751859a23ead12e864de6ca7531bf80693129460372f36dbffdc5836b798491"
+        },
+        "production": {
+          "pages": 504,
+          "assets": 176,
+          "browsers": 18,
+          "requests": 684,
+          "manifestSha256": "8751859a23ead12e864de6ca7531bf80693129460372f36dbffdc5836b798491"
+        }
+      },
+      "fallback": {
+        "status": "local_compatibility_fallback_verified_not_deployed",
+        "onlineDrill": false
+      },
+      "repairs": {
+        "status": "sealed_repairs_verified",
+        "http": 6,
+        "browser": 6
+      }
+    }
+  },
+  "local": {
+    "unitPasses": 831,
+    "existingSkips": 17,
+    "nodeReleaseTests": 240,
+    "pythonReleaseTests": 30,
+    "typeCheckTasks": 9,
+    "webLintErrors": 0,
+    "existingWebLintWarnings": 1,
+    "mainManagedBrowserCases": 520,
+    "mainRuntimeBrowsers": 18,
+    "genshinRuntimeBrowsers": 18,
+    "genshinDiscoveryBrowsers": 24,
+    "mainRepairHttp": 6,
+    "mainRepairBrowser": 7
+  },
+  "public": {
+    "repairs": {
+      "http": 18,
+      "browser": 6,
+      "nativeHops": 12
+    },
+    "crossOwner": {
+      "site": 15,
+      "owner": 19,
+      "mainNteDetails": 171,
+      "browser": 8,
+      "nativeHops": 16
+    },
+    "directStatic": {
+      "genshin": 82,
+      "nte": 88,
+      "stableHostsNoindex": true
+    },
+    "media": {
+      "verifiedRequestedFiles": 46,
+      "legacyChaosUrlStatus": 404,
+      "verifiedChaosPortraitSupplied": false,
+      "exactSealedMainCiBytes": true
+    },
+    "xml": {
+      "documents": 6,
+      "counts": {
+        "main": 4515,
+        "azur-promilia": 150,
+        "genshin": 1572,
+        "lvmeng": 27,
+        "nte": 389
+      },
+      "unionCount": 6653,
+      "ownerSetsUnchanged": true
+    },
+    "failedResourceRecheck": {
+      "http": 6,
+      "browser": 2,
+      "exactSealedBytes": true
+    }
+  },
+  "fleet": {
+    "gachia": {
+      "versionId": "c96323b1-c9a3-4390-aa7d-d17a4fa83c45",
+      "deploymentId": "f18dcd10-82ff-4b8e-b014-502a21a2d6f4",
+      "changed": true
+    },
+    "gachia-staging": {
+      "versionId": "0a8c1092-5f73-493c-93c1-796fdf399be4",
+      "deploymentId": "66dc5bd0-c0f3-49ec-8874-06c82f6e88b8",
+      "changed": true
+    },
+    "gachia-router": {
+      "versionId": "239bb325-998c-4893-98e5-ddd24d50c99a",
+      "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+      "changed": false
+    },
+    "gachia-game-genshin": {
+      "versionId": "73d10dac-6343-49ed-a688-4c9a56a9ddd4",
+      "deploymentId": "e119e349-198a-495d-ac84-1ea8208c7fff",
+      "changed": true
+    },
+    "gachia-game-genshin-staging": {
+      "versionId": "97f3bae6-3e9f-423f-a2c7-8a460f9911f4",
+      "deploymentId": "590f2ba5-e933-416c-b860-cc0b2c9e5678",
+      "changed": false
+    },
+    "gachia-game-nte": {
+      "versionId": "91821283-846e-42f0-8977-491da0e114e3",
+      "deploymentId": "8a5135d9-1ed3-4cf3-9b85-f2ea491f609b",
+      "changed": true
+    },
+    "gachia-game-lvmeng": {
+      "versionId": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+      "deploymentId": "49586e5c-90ee-498b-9882-75e33618df2c",
+      "changed": false
+    },
+    "gachia-game-azur-promilia": {
+      "versionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+      "deploymentId": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+      "changed": false
+    },
+    "gachia-game-azur-promilia-staging": {
+      "versionId": "c6b46257-2441-4cc2-b9c6-c31d4d4d1cca",
+      "deploymentId": "95c17034-e3af-4b21-ae7b-f504e59e0fd4",
+      "changed": false
+    }
+  },
+  "limitations": [
+    "Original Main run 40159761037 remains failure; six script connections closed during acceptance. Later byte/page checks and independent full read-only recovery do not establish the precise transport failure boundary.",
+    "Historical Main run 40121743063 remains failure with its own unproven cause.",
+    "Chaos has no verified portrait: current renderer uses an explicit localized placeholder, while the historical raw image URL remains 404.",
+    "Historic browser-cached search 301 redirects may persist; no cache purge performed.",
+    "Old game Git provenance is not independently attested; fresh cloud version/module plus retained known asset receipts do not assert full platform asset-manifest completeness.",
+    "Fallback compatibility exercised locally only; no online rollback drill or off-device complete artifact-restore exercise.",
+    "Independent production/branch approval protection and legacy release-entrypoint consolidation remain pending.",
+    "No disk deletion, new Worker, Worker consolidation, exhaustive game-fact audit, regional transport study or real-user performance study."
+  ],
+  "evidenceHashes": [
+    {
+      "path": ".release-records/s2-23/accept-genshin-local-1.log",
+      "bytes": 131,
+      "sha256": "3914a1c9f767501ab6a54f7868eb04000ec9d1e42dc9c6493e7f8c1bcb27854d"
+    },
+    {
+      "path": ".release-records/s2-23/accept-genshin.mjs",
+      "bytes": 16035,
+      "sha256": "3120a032ba2072b0fc3f1ace03f706c15ca7ee98ea97ec7219d4bd42d2a71717"
+    },
+    {
+      "path": ".release-records/s2-23/accept-nte-local-1.log",
+      "bytes": 124,
+      "sha256": "b058110deaff2727268ebe78ed2b646735f1b4fe73efec20248c6f31e6a89c12"
+    },
+    {
+      "path": ".release-records/s2-23/accept-nte.mjs",
+      "bytes": 2091,
+      "sha256": "4ba669b07c032a8b7c0673865b45f62a8bbb458fec196dbf9dc99ad6af335bf0"
+    },
+    {
+      "path": ".release-records/s2-23/actions-source-before-dispatch.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": ".release-records/s2-23/all-unit-2.log",
+      "bytes": 117481,
+      "sha256": "9ef9d89c3dbb00ee0cab0953b3087fdeb23bb3b961e0d5686461293a6042c81e"
+    },
+    {
+      "path": ".release-records/s2-23/baseline.json",
+      "bytes": 5380,
+      "sha256": "86ac4a0d49e29c83da72795f7fdfdac4540cb808c31d3e5b39c2f6e75729f961"
+    },
+    {
+      "path": ".release-records/s2-23/browser-assets-1440.jsonl",
+      "bytes": 1481,
+      "sha256": "2ecbe283110534b06595e322c98ce78c476c57f7fbfb7e994af59c12d033d71c"
+    },
+    {
+      "path": ".release-records/s2-23/browser-assets-390.jsonl",
+      "bytes": 1481,
+      "sha256": "a0f6c9ced01a59c2299003d5597950d515c353f035749536ab16009622b088f3"
+    },
+    {
+      "path": ".release-records/s2-23/build-genshin-1.log",
+      "bytes": 7095,
+      "sha256": "2dd9562a6c9311386dd38a0d3cf7ee1ac5f0b7359cbfd30613bc722a0da35cc2"
+    },
+    {
+      "path": ".release-records/s2-23/build-nte-1.log",
+      "bytes": 8306,
+      "sha256": "284866c14793c8fc746ad62c873af132c485a8e485b04af1c9ae2188e3ae1b10"
+    },
+    {
+      "path": ".release-records/s2-23/build-nte-2.log",
+      "bytes": 8306,
+      "sha256": "c78beca76b0daa5137f2efe92aa678f9333b5d7846bef325629bde38b374e24c"
+    },
+    {
+      "path": ".release-records/s2-23/build-nte-3.log",
+      "bytes": 8306,
+      "sha256": "a862bd07b3011c04610bf714af5dc0d2f75be08857e255a9a5eb8158abaffbf1"
+    },
+    {
+      "path": ".release-records/s2-23/build-nte-4.log",
+      "bytes": 5933,
+      "sha256": "b7f1c6d7f0ea94af73405bf0e0b7061a28513a374bf0036cbe86532f348b3e7e"
+    },
+    {
+      "path": ".release-records/s2-23/build-sealed-genshin.log",
+      "bytes": 8175,
+      "sha256": "2e6335b39ff96dbb9535cea45ee5bc380d4af7305a918872220ebaf184dab41b"
+    },
+    {
+      "path": ".release-records/s2-23/build-sealed-nte.log",
+      "bytes": 6988,
+      "sha256": "13559b48db533b2f9c4ff1b243dc1b2f82c201b9330586c271bf260d9b04846f"
+    },
+    {
+      "path": ".release-records/s2-23/build-sealed.mjs",
+      "bytes": 3032,
+      "sha256": "56ed9c50a5ee637410290e4f19aa80c877c749913edb7898f20f0a79e29ecd3a"
+    },
+    {
+      "path": ".release-records/s2-23/build-web-1.log",
+      "bytes": 13535,
+      "sha256": "ca5a5c3f788a0a4db1e2f7d7185e7df33e9517d3aaaf1a99511d709fc90741e0"
+    },
+    {
+      "path": ".release-records/s2-23/candidate-ops.mjs",
+      "bytes": 7113,
+      "sha256": "00678edca8ff07290f640004025f316a07c668ec43a12d28f2935e57d243e0ba"
+    },
+    {
+      "path": ".release-records/s2-23/capture-genshin-1.log",
+      "bytes": 97,
+      "sha256": "731912139e128e03bb13db75be0e3a9531c9aa8760f0f3244aa50ede808fec42"
+    },
+    {
+      "path": ".release-records/s2-23/capture-nte-1.log",
+      "bytes": 93,
+      "sha256": "a20b727c939b8dff0a656651ee2c089eae8253a49c9e13fe818f77698f340e6b"
+    },
+    {
+      "path": ".release-records/s2-23/capture-previous.mjs",
+      "bytes": 5102,
+      "sha256": "de8102ffc1c7ff07c12d208143ec7439ff9c237c4e866a6c733d58313c8409ff"
+    },
+    {
+      "path": ".release-records/s2-23/check-main-staging-search.mjs",
+      "bytes": 2433,
+      "sha256": "87c8f41811121fb2ec0f3c5a20bfe62666ca32fa92d02f19c6da4cd4ca2ff5d1"
+    },
+    {
+      "path": ".release-records/s2-23/closeout.mjs",
+      "bytes": 9597,
+      "sha256": "f3baf48da7836f63fe539af7268cd10ac35cc43726cdc2a9be99c42f44def992"
+    },
+    {
+      "path": ".release-records/s2-23/cloud-before.json",
+      "bytes": 19235,
+      "sha256": "c340c90b121948948712234431a42c1ae355434d11bfcab4ff8af578c84df7a4"
+    },
+    {
+      "path": ".release-records/s2-23/cloud-control.mjs",
+      "bytes": 7137,
+      "sha256": "e09ac6acbd71f6ebae2f72855c13d7f7c9caab0bb620f25de0b5c154eb49e2df"
+    },
+    {
+      "path": ".release-records/s2-23/cloud-snapshot-before.log",
+      "bytes": 55,
+      "sha256": "d6e2e636457ccd405f666acd33383b89a03c3ef20470cb365bdf4efde546347f"
+    },
+    {
+      "path": ".release-records/s2-23/control-before-main-dispatch.json",
+      "bytes": 19235,
+      "sha256": "c32cb7f08f62cf6cc53545abb69e4748179c28e98ad99249c425853d1dd57f46"
+    },
+    {
+      "path": ".release-records/s2-23/control-final.json",
+      "bytes": 19404,
+      "sha256": "c5e5d78337577dcec16b5ecd9ad1bde831d43c9b4188f2d719ae7eb34209cbe8"
+    },
+    {
+      "path": ".release-records/s2-23/control-genshin-after-promote.json",
+      "bytes": 19404,
+      "sha256": "7dcfdbaa536c30054d186ad0f0ad50891b186ad94eea270763deedbfbf00f0b5"
+    },
+    {
+      "path": ".release-records/s2-23/control-genshin-after-upload.json",
+      "bytes": 19332,
+      "sha256": "9836f251e5e7a14bb96308e38c87c2d42da4d2e6cc1c2b59056ab48e31151e44"
+    },
+    {
+      "path": ".release-records/s2-23/control-genshin-before-promote.json",
+      "bytes": 19332,
+      "sha256": "e0523fafac5bd1dac6334995aedcbb8090944f5f38eeb8dabc0cd20a57ec69e0"
+    },
+    {
+      "path": ".release-records/s2-23/control-genshin-before-upload.json",
+      "bytes": 19235,
+      "sha256": "40c29b506698c6d6122d1d1c0de109da50cff0a37cca8ed8a7b11c4be13bee74"
+    },
+    {
+      "path": ".release-records/s2-23/control-main-accepted.json",
+      "bytes": 19235,
+      "sha256": "7a9b16cabaa85f97f10d93a9263767cf7bdda233576b31284807a943e09ec382"
+    },
+    {
+      "path": ".release-records/s2-23/control-main-after-failed-acceptance.json",
+      "bytes": 19235,
+      "sha256": "a06c3512d6e3e7e20167375e6a6822a92933a5ce92f6d33f88c4800adfd57006"
+    },
+    {
+      "path": ".release-records/s2-23/control-nte-after-promote.json",
+      "bytes": 19404,
+      "sha256": "3cff4b7061c1e00e9c1ff182f76339d29851f37d5253678cafda5c78b90e3a38"
+    },
+    {
+      "path": ".release-records/s2-23/control-nte-after-upload.json",
+      "bytes": 19404,
+      "sha256": "b2b13efd3a6eccf6e3d358aa7339b6d4838f2708c40384acd8049c72f3730793"
+    },
+    {
+      "path": ".release-records/s2-23/control-nte-before-promote.json",
+      "bytes": 19404,
+      "sha256": "c0ed70c462dc92f9a466534cee585bcaf239818cda3a109fd4e82a9555687a58"
+    },
+    {
+      "path": ".release-records/s2-23/control-nte-before-upload.json",
+      "bytes": 19404,
+      "sha256": "7633eb4be82794c82cf8e145f39efde766910d40f73551f05e13d62082a2a587"
+    },
+    {
+      "path": ".release-records/s2-23/control-phase-before.json",
+      "bytes": 19235,
+      "sha256": "c340c90b121948948712234431a42c1ae355434d11bfcab4ff8af578c84df7a4"
+    },
+    {
+      "path": ".release-records/s2-23/cross-owner-acceptance.json",
+      "bytes": 23218,
+      "sha256": "e79fbbac7e337b73ccb79aaf23e417d6d3518e45eb452be027fc0b541c46c176"
+    },
+    {
+      "path": ".release-records/s2-23/cross-owner.log",
+      "bytes": 119,
+      "sha256": "a19162f88e7ffaa95b9649a38ff5cb313075ab2b4a016c2319feb54ff383d937"
+    },
+    {
+      "path": ".release-records/s2-23/cross-owner.mjs",
+      "bytes": 4085,
+      "sha256": "6b2a6f5f49713d921e11b2dde9baea503ac13a9c3a92d7480b974558e5d70200"
+    },
+    {
+      "path": ".release-records/s2-23/direct-assets-result.json",
+      "bytes": 38373,
+      "sha256": "4725e71eea0e8dfa68b9cb2698c902f6644eec51c3edf67c7f90208ff7ecb53d"
+    },
+    {
+      "path": ".release-records/s2-23/direct-assets.log",
+      "bytes": 261,
+      "sha256": "cceb6e813270c83905669841dd2a7ab07638fa80310ebd3300be19989a0f5d76"
+    },
+    {
+      "path": ".release-records/s2-23/discovery-genshin-1.log",
+      "bytes": 170,
+      "sha256": "1d4a1fc249d0656dc11e5c8f8ab1fb135ec934967d676091133297fe0d90dc13"
+    },
+    {
+      "path": ".release-records/s2-23/final-control-reconciliation.json",
+      "bytes": 1882,
+      "sha256": "31f17f7d8cbb32dbedfc7ca2b648ca7fe277efc19256cceb31858c567a6f21b2"
+    },
+    {
+      "path": ".release-records/s2-23/focused-tests-1.log",
+      "bytes": 261,
+      "sha256": "8150cf9a4332e3457c303306bcf00cdd1cdba0c95b39deb73dbec382ea24ffc1"
+    },
+    {
+      "path": ".release-records/s2-23/focused-tests-2.log",
+      "bytes": 259,
+      "sha256": "88b7c8a68331239a8fa97942b58245914d537f8ccd6415364b347805a4251bec"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/artifact-pin.json",
+      "bytes": 403,
+      "sha256": "09ec895b95fd20cc7a2d148b3ca253ebe88810b29b51fa43757ea674bf775623"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/fresh-capture-summary.json",
+      "bytes": 1143,
+      "sha256": "4aeeebbe99d95af3236aa880b6c7483c4fb2c5e3439139d2c66068531c4c574e"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/local-acceptance-1/browser-events.jsonl",
+      "bytes": 1299,
+      "sha256": "6f2bdca8cfa9cdfcd09fb1266d155e00eab0f5d3cbea570028ea0b3bf970fefd"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/local-acceptance-1/planner-1440.png",
+      "bytes": 400663,
+      "sha256": "6f4620896834cf252dd895e03f21e79db54efac9c4451a1b910f2aa37cbd121c"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/local-acceptance-1/planner-390.png",
+      "bytes": 179672,
+      "sha256": "5f78459511fcce975f184b71cf2c7d50d6ffc8867ecd32af365409b7b643416d"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/local-acceptance-1/result.json",
+      "bytes": 354116,
+      "sha256": "132d329556b3bc35de7166bf408858c43267bdee44272550aa6237e241e3e6d5"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/local-acceptance-1/worker.log",
+      "bytes": 195980,
+      "sha256": "2ac25f78729c0bd9958bbb51fcd8004aa0336a80abdbb42aace8f2070ba03cdb"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/local-acceptance-1/wrangler.execution.json",
+      "bytes": 909,
+      "sha256": "be59a04bdda0c00071cc79136c07f08c553f2f3248195fab2e291b872f7ee65f"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/preview-acceptance-1/browser-events.jsonl",
+      "bytes": 1527,
+      "sha256": "ce4d10c058ebe03b469e8c96f55d77aac8a47c5588630996546cbda3713261c4"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/preview-acceptance-1/planner-1440.png",
+      "bytes": 400663,
+      "sha256": "6f4620896834cf252dd895e03f21e79db54efac9c4451a1b910f2aa37cbd121c"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/preview-acceptance-1/planner-390.png",
+      "bytes": 179672,
+      "sha256": "5f78459511fcce975f184b71cf2c7d50d6ffc8867ecd32af365409b7b643416d"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/preview-acceptance-1/result.json",
+      "bytes": 353780,
+      "sha256": "0e8d1a3080654cb5a21a4a6e1d4bda3b0ecbf421184ddb4ba06d29e1305615d5"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/preview-operation.log",
+      "bytes": 311,
+      "sha256": "56205d5e35aded39e099039d6e567751c87ece31c8baccd0305b6cdd89791659"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/previous-assets-receipt.json",
+      "bytes": 16008,
+      "sha256": "4bed51e937f8de38f464436f45cf5406c95e0ec11faf53e371f900d26a7842a9"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/previous-production-worker.multipart",
+      "bytes": 9092576,
+      "sha256": "3d7afdf0ce21cca56f2a95eb2fb072ad560a9aabf604914af718650560cad491"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/previous-sitemap.xml",
+      "bytes": 212531,
+      "sha256": "1c485f2463ca9510b655394f5371ba48e7bd700fe775b867d8625a0a46bf25c8"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/previous-static-inventory.json",
+      "bytes": 6269,
+      "sha256": "74536146a5ec2cac37095a3a8f00bb0661414312ca6264e24720363b72ecc87e"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/production-acceptance-1/browser-events.jsonl",
+      "bytes": 1275,
+      "sha256": "22310ea5d550c95541dc52af7acae4c392caaf64373cdca09846bcb5eb1db892"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/production-acceptance-1/planner-1440.png",
+      "bytes": 400663,
+      "sha256": "6f4620896834cf252dd895e03f21e79db54efac9c4451a1b910f2aa37cbd121c"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/production-acceptance-1/planner-390.png",
+      "bytes": 179672,
+      "sha256": "5f78459511fcce975f184b71cf2c7d50d6ffc8867ecd32af365409b7b643416d"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/production-acceptance-1/result.json",
+      "bytes": 337340,
+      "sha256": "85eb6779e0ca00c19dd5cf39ef161a1f750138765e79eec79b1f5af1abe46c90"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/production-operation.log",
+      "bytes": 313,
+      "sha256": "1c4f6a22cf9ce55a37e395a6479b285e95386a126dd18197fd7b52c16ec9f834"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/promote-operation.log",
+      "bytes": 225,
+      "sha256": "37b11d11141fc5fa45a0099f1ccec0d8c6b8eea7b02b96c5cabc06c2811ca162"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/promotion-result.json",
+      "bytes": 2561,
+      "sha256": "7860bb1e8970fc89eef75ff864c5961daeb63358bb98c219663fa722d8ec1f8a"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/promotion.log",
+      "bytes": 1511,
+      "sha256": "30cf4a81986b7be1225f2c5ab03fc4301f8633a28057dc58d4f2dc446d6cc9b6"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/published-worker.multipart",
+      "bytes": 9081480,
+      "sha256": "ec7c8b375caee9f118715798f9c59b359584784eb2af93acc11f2f4b5ff7460e"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/browser-assets-1440.jsonl",
+      "bytes": 405,
+      "sha256": "8241f6bf20e8aed0bb5a56bd24578cdd2622f0088997d458e023c759bfb7d22a"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/browser-assets-390.jsonl",
+      "bytes": 405,
+      "sha256": "83b69b9c0fec4555cd02f8813935dccd39a00de251e371d839cc1a23de93a56a"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/game-genshin-en-1440.png",
+      "bytes": 6527890,
+      "sha256": "2fb6cfc48d590afbfe5d9715c0ef6f427fad62391248c9fa579be72297b53de1"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/game-genshin-en-390.png",
+      "bytes": 4364931,
+      "sha256": "078e2c3a4f41e242c34510b5229732c8b42b0bf734fd93e31f79df14b01ab06a"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/game-genshin-ja-1440.png",
+      "bytes": 6640993,
+      "sha256": "0387c6f87a3457c31ea66d4513f005f650db17b6ad3d96e995578e316a878c0b"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/game-genshin-ja-390.png",
+      "bytes": 4470042,
+      "sha256": "4912ff305c343992c22e1b3dece01ffe83c2b8b13274ec44839f773e11d32324"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/game-genshin-zh-1440.png",
+      "bytes": 6514820,
+      "sha256": "0b7c9057a8fc620afb98bf7cf0fbf8fcb510fffe56e18a82183a2da8a3a09e0f"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/game-genshin-zh-390.png",
+      "bytes": 4293112,
+      "sha256": "0188a7bfb301da3f0a765c17b8775dc3a569bdf03890487b241a92a78f076392"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/result.json",
+      "bytes": 3237,
+      "sha256": "97f9ff13a074988edec4c1bdd367021670d18ee9759f4226c79e8ea8932707d6"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/repairs-local-1/worker.log",
+      "bytes": 7248,
+      "sha256": "729dc0741c5d9a2e5bd52b3cb61618d19e0747a2fc23faaa4435f39ffb3ed3fd"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/rollback-local/result.json",
+      "bytes": 2067,
+      "sha256": "1314ce71fc9a9e6e88cf1ad54658592fc1fbebebacf57f9ea961ad83b979f4bd"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/rollback-local/worker.log",
+      "bytes": 37878,
+      "sha256": "7e71990b87a3e383d6d98baf0d430cc2b927563d3d03cbb3c83d6f2363b68488"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/rollback-local/wrangler.json",
+      "bytes": 575,
+      "sha256": "1747bef63e6210fec78d9b861fc8a86be11919ea0f9859fa31eaf873df26fa19"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/upload-operation.log",
+      "bytes": 246,
+      "sha256": "7780e5ec730b428650738c26b7338d7b6da9ae3790ac8931ba600fecb15edecc"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/upload-result.json",
+      "bytes": 2556,
+      "sha256": "0a99843f822c54661311d2d6a6de4eee6d020cc5e3b8ff4ab78ff64743cda8ec"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/upload.log",
+      "bytes": 1510,
+      "sha256": "ad66267bcb62e2853f5e56e232509027a758cafd9c62e2a9e035d672bf3c4ad5"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/uploaded-worker.multipart",
+      "bytes": 9082317,
+      "sha256": "722d3f8bcc8854dc7df89b667eaa270d32b4f62a4892563976965b122174a3de"
+    },
+    {
+      "path": ".release-records/s2-23/genshin/wrangler.execution.json",
+      "bytes": 910,
+      "sha256": "01ecb8d368323e8e0ac8fc81c75b63b7ff55d2486dfc7b5a6be486cab429d6c0"
+    },
+    {
+      "path": ".release-records/s2-23/lint-1.log",
+      "bytes": 562,
+      "sha256": "36b537bcbbdbf50ba7d06c7b3b31dff61b0cfe6b7d2ea1e7be2d1bd41f0d72b8"
+    },
+    {
+      "path": ".release-records/s2-23/main-accepted-control.json",
+      "bytes": 19235,
+      "sha256": "7a9b16cabaa85f97f10d93a9263767cf7bdda233576b31284807a943e09ec382"
+    },
+    {
+      "path": ".release-records/s2-23/main-current-worker.zip",
+      "bytes": 54131286,
+      "sha256": "c15aed231444dae9520192aac6b1239dad5c82e08f24c90d22f846fd0c63de6c"
+    },
+    {
+      "path": ".release-records/s2-23/main-dispatch.json",
+      "bytes": 501,
+      "sha256": "6ee853ffe89a107f5d33eb76fd1816e4e5fb1976090c827eef9a43502c4006c6"
+    },
+    {
+      "path": ".release-records/s2-23/main-dispatched-at.json",
+      "bytes": 101,
+      "sha256": "29a00aaea02aaef40ecf220d6713ee55b2d91a3a3d5c69c825113e5acb6e3fc5"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-resources-recheck.log",
+      "bytes": 1362,
+      "sha256": "1c5476e94028c1994f0429c0ae57a94b9b2084d81b6123a8f309fc9f88f51b17"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-resources-recheck/browser-assets-1440.jsonl",
+      "bytes": 139,
+      "sha256": "dfbb361b72ccc4e2d4b4c16a2840566ec38a498a376406410e7a21485a896515"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-resources-recheck/browser-assets-390.jsonl",
+      "bytes": 139,
+      "sha256": "cb1bb1b9b037031064c1f3e5ad4835d34b55b55a67627f05932c416ffd19b593"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-resources-recheck/page-1440.png",
+      "bytes": 300370,
+      "sha256": "e2f29fdf6946e09f15ac88150a3c507a776f7678400a1902d7826994492422b1"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-resources-recheck/page-390.png",
+      "bytes": 254175,
+      "sha256": "363ea7db3f8fb8e0ae1fdd4393947a00b83410c24395b4404e34129be15f225e"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-resources-recheck/result.json",
+      "bytes": 1721,
+      "sha256": "4517419e8e7a1006d00be8dea4ac9cd103c458b26f4aa9028959dce7b8feab1f"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-run.json",
+      "bytes": 17402,
+      "sha256": "b4271f771aca691d0c63730c7e0728572942691450012e68c4f64528ffa57f1b"
+    },
+    {
+      "path": ".release-records/s2-23/main-failed-steps.log",
+      "bytes": 2822,
+      "sha256": "f39b100fc3061949dbefeb86f5a3539e09c041f569b5da8e4ee0711cbab93582"
+    },
+    {
+      "path": ".release-records/s2-23/main-failure-reconciliation.log",
+      "bytes": 352,
+      "sha256": "a680b456648a9df8af3a5a7f95595e493656bb5bbbca05030dfc1d1a4fc1f33b"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence.zip",
+      "bytes": 152381,
+      "sha256": "383e179ecb22647d81552d2af17518697ad18f02d87e7bb57d691422859e98a2"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/before.json",
+      "bytes": 8910,
+      "sha256": "50a2b1b7f8160b7148c96897acd7e15121d67f8ab53bf423d0ce8caca4b71480"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/portability.json",
+      "bytes": 127,
+      "sha256": "34678030a4114918727444bac41d3680d9b1573f32539fa62f1e4bb00e6c8fda"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/receipt.json",
+      "bytes": 20468,
+      "sha256": "ceeacd83aa0c5ccf8d8dd4485da967eabcc5412f34fe3f694cc7a8b3b7661da9"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/result.json",
+      "bytes": 20468,
+      "sha256": "ceeacd83aa0c5ccf8d8dd4485da967eabcc5412f34fe3f694cc7a8b3b7661da9"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/source-artifact.json",
+      "bytes": 810,
+      "sha256": "20f9ead6b6edbbd118f2f2c0e576b9eebd52b40743bbb078bd8d6d718ca3e1e4"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/source-deploy.log",
+      "bytes": 87217,
+      "sha256": "15f6166feef97125ef411807ebf1317f72c7c2ab76f03f3d9ed25c75de7e3804"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/source-jobs.json",
+      "bytes": 26951,
+      "sha256": "e7419e3f904c52932e387145e9b9b8d908be7a434d97e03ec6946a2ff5d85144"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/source-run.json",
+      "bytes": 14049,
+      "sha256": "cc1dfdd8a5624f352d48d8152c7b79d2a6515c2bc15a80fa319fefec38f6691d"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/xml-before.json",
+      "bytes": 404597,
+      "sha256": "cff861e205c5a2eb73fef5631def9a99242f942422363a455d5a1ce186909a6c"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/main-recovery/xml.json",
+      "bytes": 404597,
+      "sha256": "5bf042126f130229bde3164046207339844d6761e07811352ae7486a4df1dde5"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/web-production-b1227f3f-10d2-4735-a2cc-c98201cd567b/browser-assets-1440.jsonl",
+      "bytes": 49658,
+      "sha256": "d009d8bc62e9d240a97ad2ec6635bdac59182424d9d3893184f0711312546936"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/web-production-b1227f3f-10d2-4735-a2cc-c98201cd567b/browser-assets-390.jsonl",
+      "bytes": 49658,
+      "sha256": "0683125e2eb479f1e8911e53eefd8a9651a0ac4dd815ab2f66ad6785c55eb341"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-evidence/web-production-b1227f3f-10d2-4735-a2cc-c98201cd567b/result.json",
+      "bytes": 162905,
+      "sha256": "7d62c0ac8235f10c4bd5f67a23790fa743db2b312f2c588916ff2d60281275e8"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-receipt.zip",
+      "bytes": 2394,
+      "sha256": "103cd3d6e09ef07da5f8e5e0c332c131ffa648e22ebb4397114f5c2ef9551f55"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-reconciliation-2.log",
+      "bytes": 301,
+      "sha256": "773b84bc4c770d883f8690e88897f337e23f6f7fba5deb6a5a4bdb6027ef1eca"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-reconciliation.log",
+      "bytes": 789,
+      "sha256": "55f5c29c38c6fe9a191fea137b1ad5347bf1aa1f4ecbdff7e787d43cea09c96a"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-result.json",
+      "bytes": 45694,
+      "sha256": "b813181e33ce31119a831bfe0489932379711dc8ab6e485fc2d754063b52fc0f"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-runs.json",
+      "bytes": 421,
+      "sha256": "3cd91f491316136ff1da9815d951cb4964620afc4bca1a2f54fb70dcd0362073"
+    },
+    {
+      "path": ".release-records/s2-23/main-new-recovery-watch.log",
+      "bytes": 9726,
+      "sha256": "696510cd29f8706421fd72a629beb1a2dc321c739e0ee7b59c875f964b97e830"
+    },
+    {
+      "path": ".release-records/s2-23/main-original-failure/web-production-f8d45f91-73c3-4f48-a6b0-b9b31b6a25d7/browser-assets-1440.jsonl",
+      "bytes": 44625,
+      "sha256": "56b376d25afd287361cc9af022279a64b2d3107a667d72e4ae0314df5aa8d5cd"
+    },
+    {
+      "path": ".release-records/s2-23/main-original-failure/web-production-f8d45f91-73c3-4f48-a6b0-b9b31b6a25d7/browser-failure-1440.json",
+      "bytes": 662,
+      "sha256": "9d4f3c9d4a6d45aa9403a6a59a32f51eda66ad2276c3465135e9ac54358f98ed"
+    },
+    {
+      "path": ".release-records/s2-23/main-original-failure/web-production-f8d45f91-73c3-4f48-a6b0-b9b31b6a25d7/browser-failure-1440.png",
+      "bytes": 181487,
+      "sha256": "8c31d51a93c1aeba455208d5e8dce0c6b774cb4e8ee7d280fe16693fe1af43a6"
+    },
+    {
+      "path": ".release-records/s2-23/main-original-failure/web-production-f8d45f91-73c3-4f48-a6b0-b9b31b6a25d7/result.json",
+      "bytes": 9206,
+      "sha256": "d773ece4f303b72aac5305c9b76c5365b08e0396f67a2f800840b2366f2b49ca"
+    },
+    {
+      "path": ".release-records/s2-23/main-previous-artifact.json",
+      "bytes": 322,
+      "sha256": "dace52f460e9589f9d2dc154360db75888ddc2e7bb7ac4c010c3ae2d90a2c7bc"
+    },
+    {
+      "path": ".release-records/s2-23/main-production-failure.zip",
+      "bytes": 180258,
+      "sha256": "cbaf7a4278930bb4cf79284b7067136c5884958967adfc690d2fceebbf3b1a2a"
+    },
+    {
+      "path": ".release-records/s2-23/main-production-job.log",
+      "bytes": 87217,
+      "sha256": "15f6166feef97125ef411807ebf1317f72c7c2ab76f03f3d9ed25c75de7e3804"
+    },
+    {
+      "path": ".release-records/s2-23/main-recovery-artifact.json",
+      "bytes": 322,
+      "sha256": "509d5775f2b863e48556b1f4c20bdd26a64975fd867df8b2fe2df4dec3193c23"
+    },
+    {
+      "path": ".release-records/s2-23/main-retention-preflight-2.log",
+      "bytes": 806,
+      "sha256": "70c51057ee12f4564e7e4a8df4b0008dc67d3be4ff7638a74cd39b1b638e6e55"
+    },
+    {
+      "path": ".release-records/s2-23/main-retention-preflight.log",
+      "bytes": 23,
+      "sha256": "8e211060a3ad20a06f2adc3f47afded2611897b39aa38cd25aa1cbeeab370164"
+    },
+    {
+      "path": ".release-records/s2-23/main-run-artifacts.json",
+      "bytes": 947,
+      "sha256": "86c74baf0114027ddd54963198d92b0c85a2dbce93b37ef4bb07f2199b153e3f"
+    },
+    {
+      "path": ".release-records/s2-23/main-runs-discovery.json",
+      "bytes": 231,
+      "sha256": "1101756f3598a83dca57941b5697648827416e1f668c6dc56a3988167794509d"
+    },
+    {
+      "path": ".release-records/s2-23/main-staging-job.log",
+      "bytes": 85349,
+      "sha256": "c3698117e10df96616e7806d36120d62766dcf192691e438e3498b923c91fa97"
+    },
+    {
+      "path": ".release-records/s2-23/main-staging-search.log",
+      "bytes": 241,
+      "sha256": "655c7d211de84d4ac6ab18ed50dc72c72b6d41db7ba41f9854e7a7171b703ca2"
+    },
+    {
+      "path": ".release-records/s2-23/main-staging-search/browser-assets-1440.jsonl",
+      "bytes": 471,
+      "sha256": "38c67a3d548acaa99c688095dad18d07b0935c7248dbf7302822004d16b85ca0"
+    },
+    {
+      "path": ".release-records/s2-23/main-staging-search/browser-assets-390.jsonl",
+      "bytes": 471,
+      "sha256": "32cfff378f770594ba78429e8e72e52202cac33a7b18338d257c54a825e2e37a"
+    },
+    {
+      "path": ".release-records/s2-23/main-staging-search/result.json",
+      "bytes": 1167,
+      "sha256": "36b3fa970616f658fc9b926ce1a1773ff9e3f77e65fdd7ca2bedaefc6dc2d718"
+    },
+    {
+      "path": ".release-records/s2-23/main-workflow-result.json",
+      "bytes": 44905,
+      "sha256": "646a316f20975e3d98bb7b88c228fc5d88d318903bfc86de48e45fb8661f2749"
+    },
+    {
+      "path": ".release-records/s2-23/main-workflow-watch.log",
+      "bytes": 113659,
+      "sha256": "86b24de72c949341e28c7cfe70ac754e2a2e6e4b4987c7992ac933e3ad9aa1a4"
+    },
+    {
+      "path": ".release-records/s2-23/managed-local-1.log",
+      "bytes": 920,
+      "sha256": "d392031a960ad4b9cb8b7f6dd4440869c623d29a627bbb0400bea3f15c666d23"
+    },
+    {
+      "path": ".release-records/s2-23/media-sealed-ci-equivalence.json",
+      "bytes": 7790,
+      "sha256": "e48fa651d12ae76d450a4b18ab111daead8b0b4d407dee244e27def2f06f96e1"
+    },
+    {
+      "path": ".release-records/s2-23/nte-overflow-all.json",
+      "bytes": 3371,
+      "sha256": "4c680eccd8340249f0129631ca377bd0bd0ace7e792029289a35cdc6b04a99dd"
+    },
+    {
+      "path": ".release-records/s2-23/nte-overflow.json",
+      "bytes": 54,
+      "sha256": "40e5c434838fe54019041d574a510902359cdd511c8cf54b8d9fa3fb8b6c6ddb"
+    },
+    {
+      "path": ".release-records/s2-23/nte-overflow.png",
+      "bytes": 197786,
+      "sha256": "b5d3c13f5cf1708caa0baf3555cad53ad1619dd77edb749138565961233510dc"
+    },
+    {
+      "path": ".release-records/s2-23/nte-placeholder-first.png",
+      "bytes": 240290,
+      "sha256": "2eadff726876d554c5350abda20562b3b6ad790f1c4c606550f3d551fb754ba7"
+    },
+    {
+      "path": ".release-records/s2-23/nte/artifact-pin.json",
+      "bytes": 415,
+      "sha256": "aca979988353e237289bb5d6c42dfd77f58918c76eb3d0ecbdda11003b4d4466"
+    },
+    {
+      "path": ".release-records/s2-23/nte/fresh-capture-summary.json",
+      "bytes": 1139,
+      "sha256": "7465d99384e346514d9fc05b8f7d18ee0755a9b4d870101bd088e16cc2091987"
+    },
+    {
+      "path": ".release-records/s2-23/nte/local-acceptance-1/acceptance.jsonl",
+      "bytes": 104310,
+      "sha256": "8ea923a8139966d5a0875c2875d8be0f58ce74772277d72823b65f9bd3dff18b"
+    },
+    {
+      "path": ".release-records/s2-23/nte/local-acceptance-1/browser-events.jsonl",
+      "bytes": 1347,
+      "sha256": "b4810ae6353cb5ccee1503b11332cff713b4815a4050ebade804bf3600c43516"
+    },
+    {
+      "path": ".release-records/s2-23/nte/local-acceptance-1/nte-1440.png",
+      "bytes": 132130,
+      "sha256": "51333282d6558ad42e599a9a362c9fe732ef25d406dde14ceeac678c2938cf45"
+    },
+    {
+      "path": ".release-records/s2-23/nte/local-acceptance-1/nte-390.png",
+      "bytes": 52223,
+      "sha256": "1bcb972e19212e5f723f2fd4878b47998e976e5f92059d08b4ab2389dee3a42e"
+    },
+    {
+      "path": ".release-records/s2-23/nte/local-acceptance-1/worker.log",
+      "bytes": 73892,
+      "sha256": "ef26a842eb6e7efb40e02ae65ae1df0a629d8bd9a7b493768b7f9ece57d55eef"
+    },
+    {
+      "path": ".release-records/s2-23/nte/preview-acceptance-1/acceptance.jsonl",
+      "bytes": 110090,
+      "sha256": "3c038f7e37f082524891648dd008d8ef05550db6cbf125a033278bd45791fa81"
+    },
+    {
+      "path": ".release-records/s2-23/nte/preview-acceptance-1/browser-events.jsonl",
+      "bytes": 1551,
+      "sha256": "1a24c7cc8577b065c307119c64737ccdb28ed37ff3f349f21534f2d1c9e19ada"
+    },
+    {
+      "path": ".release-records/s2-23/nte/preview-acceptance-1/nte-1440.png",
+      "bytes": 132130,
+      "sha256": "51333282d6558ad42e599a9a362c9fe732ef25d406dde14ceeac678c2938cf45"
+    },
+    {
+      "path": ".release-records/s2-23/nte/preview-acceptance-1/nte-390.png",
+      "bytes": 52223,
+      "sha256": "1bcb972e19212e5f723f2fd4878b47998e976e5f92059d08b4ab2389dee3a42e"
+    },
+    {
+      "path": ".release-records/s2-23/nte/preview-operation.log",
+      "bytes": 304,
+      "sha256": "9d54928a3fecefb4509774068165a92ac0884c0476a160449de0e197861861ed"
+    },
+    {
+      "path": ".release-records/s2-23/nte/previous-assets-receipt.json",
+      "bytes": 16736,
+      "sha256": "0e4bc20f53eac5509ff5c5a5173dfde9897203c141f7a06045a598414a5f6d46"
+    },
+    {
+      "path": ".release-records/s2-23/nte/previous-production-worker.multipart",
+      "bytes": 7201567,
+      "sha256": "55fbac4ac5b2e612fb7383b5f29401857cbb94af461611ea3fd08ea638d5514a"
+    },
+    {
+      "path": ".release-records/s2-23/nte/previous-sitemap.xml",
+      "bytes": 50332,
+      "sha256": "b8cfec0de4937f0e9a5eb9dde3690c80fe5812b5a9323cb9e10d1ba807571e51"
+    },
+    {
+      "path": ".release-records/s2-23/nte/previous-static-inventory.json",
+      "bytes": 6446,
+      "sha256": "a1935ecda2f9e1f82ffbdad199a27ddc7dc7d6db332580a6486d79e684fda93a"
+    },
+    {
+      "path": ".release-records/s2-23/nte/production-acceptance-1/acceptance.jsonl",
+      "bytes": 105925,
+      "sha256": "098b61b1992e39e7319bc9f9b32d5193cd43ca813b5fb02367e60828d04a8beb"
+    },
+    {
+      "path": ".release-records/s2-23/nte/production-acceptance-1/browser-events.jsonl",
+      "bytes": 1323,
+      "sha256": "ca683d5ac8ef88074344361164033ea39a11b544d8b019260be2a49f7cbde1b8"
+    },
+    {
+      "path": ".release-records/s2-23/nte/production-acceptance-1/nte-1440.png",
+      "bytes": 206886,
+      "sha256": "353fc9603fc834d467e01090e8971db4f331d607ed46c083527ee1f1a8506e2c"
+    },
+    {
+      "path": ".release-records/s2-23/nte/production-acceptance-1/nte-390.png",
+      "bytes": 130508,
+      "sha256": "56c1ed09a328e935df6798815815f12f24206100f83e15e5c55dc21e17a89f55"
+    },
+    {
+      "path": ".release-records/s2-23/nte/production-operation.log",
+      "bytes": 307,
+      "sha256": "7cacfa887802822f4d2f90b6d6f4961f80fc4605dcc3b54de5ed3bb7e944d14c"
+    },
+    {
+      "path": ".release-records/s2-23/nte/promote-operation.log",
+      "bytes": 221,
+      "sha256": "500898e70516470288dd70d0a568ba64498ad280c038ab570ef73b92cf0d1f86"
+    },
+    {
+      "path": ".release-records/s2-23/nte/promotion-result.json",
+      "bytes": 2561,
+      "sha256": "a111d9a2bfde206fbe566bbaf8cf0a5f7f1a546deb5045ce2ec20c45a5a001a2"
+    },
+    {
+      "path": ".release-records/s2-23/nte/promotion.log",
+      "bytes": 1285,
+      "sha256": "29841f1c9c3a20c7b73e7bc559d081a1264d19be5e3c8523ffef48ee35ff7705"
+    },
+    {
+      "path": ".release-records/s2-23/nte/published-worker.multipart",
+      "bytes": 7203847,
+      "sha256": "f8ccada17a2ec1c3906a1cc9f4c60c0a108e59d14d3bdff69f3d1a8a1bba6f73"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/browser-assets-1440.jsonl",
+      "bytes": 411,
+      "sha256": "24256ffcca199e46876853044453c80e7d75ae8c603ec86317e208bd9afbb905"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/browser-assets-390.jsonl",
+      "bytes": 411,
+      "sha256": "81aa56cb59cb141f1c5c9b0450f5e8cd36d6beee3c37e8fbbfb443c6ca3e3d16"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/game-nte-en-1440.png",
+      "bytes": 238410,
+      "sha256": "033a40812ac93e0003ebb7c1ec7c1c9ef3dd5a57e73c8d8a0891de29d2a5f39a"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/game-nte-en-390.png",
+      "bytes": 186433,
+      "sha256": "41298edacb0da70a4294a12579ebf28cfb88aeeed3ca29b95faa9f987563bf9b"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/game-nte-ja-1440.png",
+      "bytes": 255748,
+      "sha256": "cda1df6d0096f94bf4e60b39463803f47b87cabf8135948156525bc6bf0897fd"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/game-nte-ja-390.png",
+      "bytes": 200430,
+      "sha256": "668022e4a4ea3f7b45dcedce50a5f1ccaa53d3ce737b8b34f0744dd8829befee"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/game-nte-zh-1440.png",
+      "bytes": 231949,
+      "sha256": "adf0fc28fb6a39ff95b152afb7b2eb73c5b3e01c0a4f7d107a65ac7464232124"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/game-nte-zh-390.png",
+      "bytes": 173805,
+      "sha256": "7443301686bac3e5a84339259d2ce0c12bb4d90610d4a6c2c273a68826335873"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/result.json",
+      "bytes": 2561,
+      "sha256": "5a18c69dfd5e31f49a768b9db2d233f3394fbb3cb2f82c6b872b433d7679de35"
+    },
+    {
+      "path": ".release-records/s2-23/nte/repairs-local-1/worker.log",
+      "bytes": 8212,
+      "sha256": "d26a63d7cf9a961973ab8c147ab124502505d1c4404593fe8ccdb21d74df8614"
+    },
+    {
+      "path": ".release-records/s2-23/nte/rollback-local/acceptance.jsonl",
+      "bytes": 101962,
+      "sha256": "4d38b4b5f0b5c308a7bcc9e9fc2d6b8d483ee9eb8f7948b6864c8a9d29e1ac6d"
+    },
+    {
+      "path": ".release-records/s2-23/nte/rollback-local/result.json",
+      "bytes": 908,
+      "sha256": "81dc0fa57eb9714ce4a6d3dd58c6b9f9b2e21d30ea96dc609d73a04778987182"
+    },
+    {
+      "path": ".release-records/s2-23/nte/rollback-local/worker.log",
+      "bytes": 52687,
+      "sha256": "fbc3a59467a1cf7e9a42fd77e20b5f31db78b8d57b9ddbe015957b26634a1276"
+    },
+    {
+      "path": ".release-records/s2-23/nte/rollback-local/wrangler.json",
+      "bytes": 553,
+      "sha256": "9ff9d2b670c5200f9a14cd76a1f17b4ce8d8b1d4188621ccbaef165fced627d7"
+    },
+    {
+      "path": ".release-records/s2-23/nte/upload-operation.log",
+      "bytes": 238,
+      "sha256": "0fc6740e523fec3f0198faadb020500205ea53e4e713730b10bf73ca52883db6"
+    },
+    {
+      "path": ".release-records/s2-23/nte/upload-result.json",
+      "bytes": 2552,
+      "sha256": "4e14b72e3329bab57f2142931f75324d5796468b53c5e1d982fe67e28a1333d3"
+    },
+    {
+      "path": ".release-records/s2-23/nte/upload.log",
+      "bytes": 1657,
+      "sha256": "41fe8f8a7e1ff92490b3cd0a3559c11e3dce9bd561f7c554a92cca8b533f0d45"
+    },
+    {
+      "path": ".release-records/s2-23/nte/uploaded-worker.multipart",
+      "bytes": 7204670,
+      "sha256": "0270d8d1b9f750f305f222fcee92d05c9419b1e4311872f520f423f084295ae2"
+    },
+    {
+      "path": ".release-records/s2-23/nte/wrangler.execution.json",
+      "bytes": 543,
+      "sha256": "41414003945132fe976d93807f259cf3d3425553a1b38d9d25b527cb0fac41f7"
+    },
+    {
+      "path": ".release-records/s2-23/oauth-readonly-refresh-2.json",
+      "bytes": 4083,
+      "sha256": "a6be933fb74c4fc37b46875e34a3f13e75321b84dbca34d52f6d48da831de4f0"
+    },
+    {
+      "path": ".release-records/s2-23/oauth-readonly-refresh-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".release-records/s2-23/oauth-readonly-refresh-3.json",
+      "bytes": 4083,
+      "sha256": "a6be933fb74c4fc37b46875e34a3f13e75321b84dbca34d52f6d48da831de4f0"
+    },
+    {
+      "path": ".release-records/s2-23/oauth-readonly-refresh-3.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".release-records/s2-23/oauth-readonly-refresh.json",
+      "bytes": 4083,
+      "sha256": "1e740cfcf0883f18c3a4765e898d1b1a875ac972c83ad9cbb75d4a8f2802dd48"
+    },
+    {
+      "path": ".release-records/s2-23/oauth-readonly-refresh.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".release-records/s2-23/production-sitemap-graph-before-game-promotions.json",
+      "bytes": 404597,
+      "sha256": "a4cd8d1afb32fc1f4b1400d2d004f69ab9f9cec6abceeb3ff485a14fab228382"
+    },
+    {
+      "path": ".release-records/s2-23/production-sitemap-graph.json",
+      "bytes": 404597,
+      "sha256": "7d5e6a4fd121131093f87674dc1ed7fc2a8f42e6041361ec5ba68da9d836721d"
+    },
+    {
+      "path": ".release-records/s2-23/public-media-result.json",
+      "bytes": 8972,
+      "sha256": "0abed669e850fb595e74f91852535f3d26219092fc1b87f4d64b2f8d7cab2ed2"
+    },
+    {
+      "path": ".release-records/s2-23/public-media.log",
+      "bytes": 136,
+      "sha256": "4c81cc5d442962ed53190ae103b2c02c26fa3681507b23ef9744e45f0ae963b0"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1.log",
+      "bytes": 73,
+      "sha256": "b62fcc6bfce49c2fadfef620018ceabbdb55b2ef87c0e7595b11fee9c66f04a3"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/browser-assets-1440.jsonl",
+      "bytes": 1809,
+      "sha256": "608bc8a4c9f3908c3502f29889249dd93285568ef96cb86e68ae71552a37c9f4"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/browser-assets-390.jsonl",
+      "bytes": 1809,
+      "sha256": "363cc918e917c1dfd97360e3ee492bc39ebc7dc2d50f715c7b0403cacfff5581"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/nte-en-1440.png",
+      "bytes": 238410,
+      "sha256": "033a40812ac93e0003ebb7c1ec7c1c9ef3dd5a57e73c8d8a0891de29d2a5f39a"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/nte-en-390.png",
+      "bytes": 186433,
+      "sha256": "41298edacb0da70a4294a12579ebf28cfb88aeeed3ca29b95faa9f987563bf9b"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/nte-ja-1440.png",
+      "bytes": 255748,
+      "sha256": "cda1df6d0096f94bf4e60b39463803f47b87cabf8135948156525bc6bf0897fd"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/nte-ja-390.png",
+      "bytes": 200430,
+      "sha256": "668022e4a4ea3f7b45dcedce50a5f1ccaa53d3ce737b8b34f0744dd8829befee"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/nte-zh-1440.png",
+      "bytes": 231949,
+      "sha256": "adf0fc28fb6a39ff95b152afb7b2eb73c5b3e01c0a4f7d107a65ac7464232124"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/nte-zh-390.png",
+      "bytes": 173805,
+      "sha256": "7443301686bac3e5a84339259d2ce0c12bb4d90610d4a6c2c273a68826335873"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-all-1/result.json",
+      "bytes": 3872,
+      "sha256": "3f54022960d6e321bbb537ec7eaf5fc29f02d5ef0b7a5bb5f6c47cadeb128c13"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-main-1.log",
+      "bytes": 73,
+      "sha256": "ee22a7615dc6678fdc4e069d2183234cfa6382539d04d6aa28494edd8e75d9c9"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-main-1/browser-assets-1440.jsonl",
+      "bytes": 873,
+      "sha256": "91ad4457e19880abfc77e4c62a77c4ee2bf4dc524154024e88c738ba279dbf94"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-main-1/browser-assets-390.jsonl",
+      "bytes": 873,
+      "sha256": "dc99713a12a31fc0c3e15dd36abe9376bf81b2a304727966884fc49cf9de94e9"
+    },
+    {
+      "path": ".release-records/s2-23/public-repairs-main-1/result.json",
+      "bytes": 1557,
+      "sha256": "b19e22ca52ba42784d9be2a384fd734c2f8ddd969b69edb474dfb0b01e8db8ca"
+    },
+    {
+      "path": ".release-records/s2-23/reconcile-main-failure.mjs",
+      "bytes": 3661,
+      "sha256": "d16c8ac7b790a120fd0f6619a44e1a7625e13cd45fd9c86d34b22f0723de820e"
+    },
+    {
+      "path": ".release-records/s2-23/reconcile-main-recovery.mjs",
+      "bytes": 4372,
+      "sha256": "9d3dceae5703c66ee96f87b8f51e5f08b4d475286ca7096d0e8d355514af76c9"
+    },
+    {
+      "path": ".release-records/s2-23/reconcile-main.mjs",
+      "bytes": 3141,
+      "sha256": "b7d3186b08d8617e831076b3b26d7882272259ebebc023b36269aa20a5ca5ec9"
+    },
+    {
+      "path": ".release-records/s2-23/recovery-policy-local-final.log",
+      "bytes": 2005,
+      "sha256": "589541d6ca9389d9e0df587daffdee91bff066b9b74e7c62d15f5f597658b48e"
+    },
+    {
+      "path": ".release-records/s2-23/release-tests-1.log",
+      "bytes": 49952,
+      "sha256": "df448cddabdb2984538417dc995c39303fb80eaaa8fdf94723e63e8d637800a5"
+    },
+    {
+      "path": ".release-records/s2-23/release-tests-2.log",
+      "bytes": 50219,
+      "sha256": "acca78320945751a550e4557dc7890cb0c853b9590f3d9a2bb91191014d7626d"
+    },
+    {
+      "path": ".release-records/s2-23/rollback-genshin-1.log",
+      "bytes": 173,
+      "sha256": "1704cf3854342b524cf0c1cba7bbe53cbe31153bddbc756e92b8ec9a5f799305"
+    },
+    {
+      "path": ".release-records/s2-23/rollback-genshin.mjs",
+      "bytes": 4709,
+      "sha256": "9e8ecf916561d96c757305007427ea78430c1e538504af474e3e9148dfbca213"
+    },
+    {
+      "path": ".release-records/s2-23/rollback-nte-1.log",
+      "bytes": 102,
+      "sha256": "b5db402d9e221fdd3f215d4eaa1be1b7d4cfdbc6938436c2b434ea852d13f1a9"
+    },
+    {
+      "path": ".release-records/s2-23/rollback-nte.mjs",
+      "bytes": 4049,
+      "sha256": "c4187217923bb3de90330e8efe9ade446ca58201bbb88bda343888d980d6fc77"
+    },
+    {
+      "path": ".release-records/s2-23/runtime-genshin-1.log",
+      "bytes": 176,
+      "sha256": "da5af7fd5ffd7c6c2b1487370959e323268b7f92cbd5545e25513889085b3732"
+    },
+    {
+      "path": ".release-records/s2-23/runtime-web-1.log",
+      "bytes": 167,
+      "sha256": "2b6f80a95ecf30d97073b34046e1ba622cc1a4e4a7eb4b960411452eb1e71f8e"
+    },
+    {
+      "path": ".release-records/s2-23/sealed-repairs-local.log",
+      "bytes": 147,
+      "sha256": "7001f86ed2f79ccff23795b62deef041f270ccd071d9ea5a038c548114f7dc62"
+    },
+    {
+      "path": ".release-records/s2-23/search-nojs-first.png",
+      "bytes": 111758,
+      "sha256": "b15b47750390ca3fb90253c4df3d32259ce9db28810e11ce8eea5a4f6d0438a2"
+    },
+    {
+      "path": ".release-records/s2-23/sitemap-before-games.log",
+      "bytes": 618,
+      "sha256": "c9848fd6b48ea01009963e60a0a2ad140d8c01fd0b22b502cb8d0c3211b8e288"
+    },
+    {
+      "path": ".release-records/s2-23/sitemap-final.log",
+      "bytes": 618,
+      "sha256": "0b99ced92f78471299c909dabdb8deeedf16a520484c8ed233f1e13669c39367"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3.log",
+      "bytes": 79,
+      "sha256": "3d1900809fd40a953387d0bd3650622abf4063ee9387816acd6e542915ebfc46"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/browser-assets-1440.jsonl",
+      "bytes": 405,
+      "sha256": "5a4d022ab86794740ca4f928e5fed8397a4fb1dff91b75dc97006175fe2219f3"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/browser-assets-390.jsonl",
+      "bytes": 405,
+      "sha256": "95dfe89e198e4cc7f5faccc4d4e30ec99074ff47793d9343a1da69e1f1518b47"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/game-genshin-en-1440.png",
+      "bytes": 6527890,
+      "sha256": "2fb6cfc48d590afbfe5d9715c0ef6f427fad62391248c9fa579be72297b53de1"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/game-genshin-en-390.png",
+      "bytes": 4364931,
+      "sha256": "078e2c3a4f41e242c34510b5229732c8b42b0bf734fd93e31f79df14b01ab06a"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/game-genshin-ja-1440.png",
+      "bytes": 6640993,
+      "sha256": "0387c6f87a3457c31ea66d4513f005f650db17b6ad3d96e995578e316a878c0b"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/game-genshin-ja-390.png",
+      "bytes": 4470042,
+      "sha256": "4912ff305c343992c22e1b3dece01ffe83c2b8b13274ec44839f773e11d32324"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/game-genshin-zh-1440.png",
+      "bytes": 6514820,
+      "sha256": "0b7c9057a8fc620afb98bf7cf0fbf8fcb510fffe56e18a82183a2da8a3a09e0f"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/game-genshin-zh-390.png",
+      "bytes": 4293112,
+      "sha256": "0188a7bfb301da3f0a765c17b8775dc3a569bdf03890487b241a92a78f076392"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/result.json",
+      "bytes": 2945,
+      "sha256": "cc7019280360e965021906235026b4e8f490c7a338df077511f0a1db53930f5d"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/worker.log",
+      "bytes": 7248,
+      "sha256": "74112f6adc23c7520d1974ebe2eea457882b52b0df03a8ea12f3f17716131fee"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-genshin-3/wrangler.json",
+      "bytes": 526,
+      "sha256": "a4ac9575d40b524ee57c41a42d89dd4d2a77c1e4b8a4db85eed17b61df2673d0"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-3.log",
+      "bytes": 7353,
+      "sha256": "64194f9cabb8e8d5b0443581b4fab96349462c5f34f61c732abc75e36eec8516"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-3/browser-assets-1440.jsonl",
+      "bytes": 137,
+      "sha256": "652e225482ea3aae4b820313f2b20ba0c66ea25f7b9854cac1d5bd4f3ecce0cc"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-3/result.json",
+      "bytes": 737,
+      "sha256": "5bd6b88b5aa84f8abaa550f36c8065f25cb2275c48971809f5369310058fa262"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-3/worker.log",
+      "bytes": 3629,
+      "sha256": "6300fef28d55527473867d7af2b64f22fd05ddce11e2ff4acda8b8974fe97820"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-3/wrangler.json",
+      "bytes": 504,
+      "sha256": "dfeaecfeed8182a7a0328f42b56dc2e1e9b682c984725f9f62937a52a63c1e27"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4.log",
+      "bytes": 760,
+      "sha256": "9006466a391b1e6f8784da1272acb857a03dd2b68c8d2065711974c4cb40b55b"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/browser-assets-1440.jsonl",
+      "bytes": 411,
+      "sha256": "c74362f2cef5ce8a20b207271329d86bc1a91f7e86620181886472e43bac055c"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/browser-assets-390.jsonl",
+      "bytes": 274,
+      "sha256": "aec586d0aca1e14c46c981c9c1a70e30a74c6318fcfc7153f5fea2940efaab2d"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/game-nte-en-1440.png",
+      "bytes": 261634,
+      "sha256": "3062cf72eb1c1c48811e9f5d304feb8c695a442d489fdb3acbdb308107b45041"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/game-nte-ja-1440.png",
+      "bytes": 280441,
+      "sha256": "c404cbcfbc8d63dfd58add31da501d541f0e405252cccdd374ecc62b4b9d6a0d"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/game-nte-zh-1440.png",
+      "bytes": 256817,
+      "sha256": "2a2e6b1e8c35b51a644e86cf0db937239f9f246123a8327703ea5ac27e1d5e80"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/game-nte-zh-390.png",
+      "bytes": 182453,
+      "sha256": "10e93e82879b78d59b5b61d0c74493c2afe4627d0748807a0c1ffd077b472cda"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/result.json",
+      "bytes": 202,
+      "sha256": "83fec1a277382b02ec67f32dacf1e5d6d4ac88a7b8ccf3539deb8fd0c2fc663d"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/worker.log",
+      "bytes": 7297,
+      "sha256": "822a452b82c2fce121d631cc9f6729bce6329bec5943d2bff9a32f59f722dc2a"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-4/wrangler.json",
+      "bytes": 504,
+      "sha256": "dfeaecfeed8182a7a0328f42b56dc2e1e9b682c984725f9f62937a52a63c1e27"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5.log",
+      "bytes": 74,
+      "sha256": "1e99e84048a9c938ca453e5b0b321e481c366dd81c46dc05777fbb5b353d3319"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/browser-assets-1440.jsonl",
+      "bytes": 411,
+      "sha256": "de00213ad86dbbd29fb5d0a3a7b55c14b136a6e5c606f3cf1b9230569a77d129"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/browser-assets-390.jsonl",
+      "bytes": 411,
+      "sha256": "4096a63fd06400da2231d59121f236dc9486bc975ec93b27687bf692d175af4f"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/game-nte-en-1440.png",
+      "bytes": 260200,
+      "sha256": "86c15a84ddc79f62661ff79218db0397f25f9def677b71a10f2009dc86293ef6"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/game-nte-en-390.png",
+      "bytes": 188370,
+      "sha256": "8d99bcd4cc0f99eef4a33a52e1ac0d43fde894fa63a237b888580f6c00866df0"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/game-nte-ja-1440.png",
+      "bytes": 279194,
+      "sha256": "75d20d3cce60c86867a243e49ee3be2fe2aa2d14f32ea54b06d3ec523280d07d"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/game-nte-ja-390.png",
+      "bytes": 205065,
+      "sha256": "2c57e17300f0d9c79bec4c0e3b91930d4af6530d993dc6c71a8edf084f49791b"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/game-nte-zh-1440.png",
+      "bytes": 255336,
+      "sha256": "9e8aa0fcbcd046f7720d87a83b8b5792b690148e25ee11ae443d74993e210f91"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/game-nte-zh-390.png",
+      "bytes": 178391,
+      "sha256": "67b93dab9fb1b4c9e52aeeeb20c4e1268353d470fe34339c139cf55605380436"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/result.json",
+      "bytes": 2251,
+      "sha256": "b2dd127c3dd2e7e821bffbb9461a0a080df09dae200af5c2dc8318d3c5181fdd"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/worker.log",
+      "bytes": 8217,
+      "sha256": "3d2fc728fea210e082ff086d2e33c2f0656c7201e92de203f865ccc760c58283"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-5/wrangler.json",
+      "bytes": 504,
+      "sha256": "dfeaecfeed8182a7a0328f42b56dc2e1e9b682c984725f9f62937a52a63c1e27"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6.log",
+      "bytes": 74,
+      "sha256": "1e99e84048a9c938ca453e5b0b321e481c366dd81c46dc05777fbb5b353d3319"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/browser-assets-1440.jsonl",
+      "bytes": 411,
+      "sha256": "28a49b9b3ba7e83d2b3b69f7b9016967d06b9f7eeb1ce3ea58d39f5ee279a5a4"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/browser-assets-390.jsonl",
+      "bytes": 411,
+      "sha256": "f7356a0de457478ff6807c10e3e3d945f856708eb05e3fedb3d92629c7a980ec"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/game-nte-en-1440.png",
+      "bytes": 238410,
+      "sha256": "033a40812ac93e0003ebb7c1ec7c1c9ef3dd5a57e73c8d8a0891de29d2a5f39a"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/game-nte-en-390.png",
+      "bytes": 186433,
+      "sha256": "41298edacb0da70a4294a12579ebf28cfb88aeeed3ca29b95faa9f987563bf9b"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/game-nte-ja-1440.png",
+      "bytes": 255748,
+      "sha256": "cda1df6d0096f94bf4e60b39463803f47b87cabf8135948156525bc6bf0897fd"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/game-nte-ja-390.png",
+      "bytes": 200430,
+      "sha256": "668022e4a4ea3f7b45dcedce50a5f1ccaa53d3ce737b8b34f0744dd8829befee"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/game-nte-zh-1440.png",
+      "bytes": 231949,
+      "sha256": "adf0fc28fb6a39ff95b152afb7b2eb73c5b3e01c0a4f7d107a65ac7464232124"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/game-nte-zh-390.png",
+      "bytes": 173805,
+      "sha256": "7443301686bac3e5a84339259d2ce0c12bb4d90610d4a6c2c273a68826335873"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/result.json",
+      "bytes": 2251,
+      "sha256": "d7f634296e5865b37ca1ccf865728b9a66b0a9de5fd09550fc44edad1b5cd45f"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/worker.log",
+      "bytes": 8216,
+      "sha256": "c447c89d5241ec0a615aa00cb55e4eab8e8f4c5ea79b6c256ab06cbbc8fbc61f"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-game-nte-6/wrangler.json",
+      "bytes": 504,
+      "sha256": "dfeaecfeed8182a7a0328f42b56dc2e1e9b682c984725f9f62937a52a63c1e27"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-1.log",
+      "bytes": 846,
+      "sha256": "91c1378d56df2fa76238c67cf137a14169e3946727013c98926efb6fc42f761f"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-1/result.json",
+      "bytes": 204,
+      "sha256": "6cfcb964e119cbd9e2dab486fef89d53afaab7850a7f28a9ebff42e68986a6b9"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-1/worker.log",
+      "bytes": 2360,
+      "sha256": "59a9edf5563f1c8daffee8bb3213a9a9b408b2ac71cb025f017936a255af1091"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-1/wrangler.json",
+      "bytes": 454,
+      "sha256": "3141ab69d7f1760af7a7d82f6762b70f051a1ecd394052acce0a201f32f2d12d"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2.log",
+      "bytes": 2402,
+      "sha256": "c841dc6bd3f9a6ef67d103d7a19192968f1b6a0a69ac601598dbe9c47f31012a"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/browser-assets-1440.jsonl",
+      "bytes": 1419,
+      "sha256": "017a00cadde81e751d7db00268d754a3e201058da0866982764fe29ac0258027"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/browser-assets-390.jsonl",
+      "bytes": 1419,
+      "sha256": "792b7a1ace3ee72619f0d80ada4140e9d861594878bd16bc826c7d5dc2d8b76f"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/result.json",
+      "bytes": 547,
+      "sha256": "06d9a5fa9e36912819bbd2b37d27fcaa1ae918e19c9c1ca1b1bfe78847e45108"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/web-en-1440.png",
+      "bytes": 107495,
+      "sha256": "992e30453ab4637649fb57994f86b312df79e406e86607705f1d824333de6d82"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/web-en-390.png",
+      "bytes": 100175,
+      "sha256": "3d7cf0aeaa2a7f229f64d919ffed29f9879dddbd21e9a01f67eedcee20585cbe"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/web-ja-1440.png",
+      "bytes": 111267,
+      "sha256": "31f8c1c191e1bbe63580d36a4661081b00f39b1ee74e773feb8d3ae917a4abc8"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/web-ja-390.png",
+      "bytes": 103833,
+      "sha256": "a64c2968ec43628ec343829696998749952da23bb5d45679894c376a88cc777a"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/web-zh-1440.png",
+      "bytes": 107853,
+      "sha256": "7f813f2f8c9f310185a315c55483351a026200e275a5a325b793cfa55f25facd"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/web-zh-390.png",
+      "bytes": 99764,
+      "sha256": "f1473c5bc246e858a3fe6e3570af2d769d8c0366eafb10c76a129aba35f52cec"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/worker.log",
+      "bytes": 31723,
+      "sha256": "1fdbd80ce8a9f0b403f5a91f18f385aa2be71cbb426528c1cd6883df431cd38c"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-2/wrangler.json",
+      "bytes": 454,
+      "sha256": "3141ab69d7f1760af7a7d82f6762b70f051a1ecd394052acce0a201f32f2d12d"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3.log",
+      "bytes": 69,
+      "sha256": "cb8f68fb649271afafed70409c0faaa4f77bff88895a76dcc3ab046dd7c7a7df"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/browser-assets-1440.jsonl",
+      "bytes": 1419,
+      "sha256": "ee7f37863b5aefa46b894cc2cbb5bcd0b629b380244f1f66b106acbd56e1ceff"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/browser-assets-390.jsonl",
+      "bytes": 1419,
+      "sha256": "8d4bd4bdfed9b0f0606b3cd09f4990f60ea38fd5a32cd5f48f8f298a3ed397ea"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/result.json",
+      "bytes": 2337,
+      "sha256": "a233de078fa6f0839b4f4c13e96df15ddae33c3f7cb0b568a1805cb5b31fe0ff"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/web-en-1440.png",
+      "bytes": 107495,
+      "sha256": "992e30453ab4637649fb57994f86b312df79e406e86607705f1d824333de6d82"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/web-en-390.png",
+      "bytes": 100175,
+      "sha256": "3d7cf0aeaa2a7f229f64d919ffed29f9879dddbd21e9a01f67eedcee20585cbe"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/web-ja-1440.png",
+      "bytes": 111267,
+      "sha256": "31f8c1c191e1bbe63580d36a4661081b00f39b1ee74e773feb8d3ae917a4abc8"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/web-ja-390.png",
+      "bytes": 103833,
+      "sha256": "a64c2968ec43628ec343829696998749952da23bb5d45679894c376a88cc777a"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/web-zh-1440.png",
+      "bytes": 107853,
+      "sha256": "7f813f2f8c9f310185a315c55483351a026200e275a5a325b793cfa55f25facd"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/web-zh-390.png",
+      "bytes": 99764,
+      "sha256": "f1473c5bc246e858a3fe6e3570af2d769d8c0366eafb10c76a129aba35f52cec"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/worker.log",
+      "bytes": 31536,
+      "sha256": "d49dd05984edf12088dbc7504b3904bc14b52a6a73c8f40039b69ed932049f56"
+    },
+    {
+      "path": ".release-records/s2-23/smoke-web-3/wrangler.json",
+      "bytes": 454,
+      "sha256": "3141ab69d7f1760af7a7d82f6762b70f051a1ecd394052acce0a201f32f2d12d"
+    },
+    {
+      "path": ".release-records/s2-23/storage-readonly.txt",
+      "bytes": 369,
+      "sha256": "1bfa794cac6432180119a4f6867854e42170962ab0fa3405e2de60ca4d6b6496"
+    },
+    {
+      "path": ".release-records/s2-23/typecheck-1.log",
+      "bytes": 3392,
+      "sha256": "dc24d4251e5fae078abfc4030c41a77d3e458bbbe39c69d7c6d598115e3f626f"
+    },
+    {
+      "path": ".release-records/s2-23/typecheck-2.log",
+      "bytes": 3396,
+      "sha256": "7ae0c685acdb49ad2292561afa4076515a5fc31923e77e0b0e77500c897d8309"
+    },
+    {
+      "path": ".release-records/s2-23/typecheck-nte-final.log",
+      "bytes": 134,
+      "sha256": "d2a270eb70a859dd1f510c67d5bcf0254c2ad5838e548898120f35f2bfaaff55"
+    },
+    {
+      "path": ".release-records/s2-23/unit-1.log",
+      "bytes": 382,
+      "sha256": "2abc99a2b9a9322f32d19b1bb8347041548bc8ebd979b1ccfb43d42903eaba61"
+    },
+    {
+      "path": ".release-records/s2-23/verify-direct-assets.mjs",
+      "bytes": 2290,
+      "sha256": "2810037d3d8341198adf4ba93518de686c6ebc89d5670f43bd98f51af3ad1b19"
+    },
+    {
+      "path": ".release-records/s2-23/verify-main-failed-resources.mjs",
+      "bytes": 2395,
+      "sha256": "0adb5da777bebf433a713bc7b80205b0c9c0b2f2f8098398f74b5f4fce816ab9"
+    },
+    {
+      "path": ".release-records/s2-23/verify-public-media.mjs",
+      "bytes": 1898,
+      "sha256": "0916909d140a976ae3f0c0174d65e653c68a888bc44eee9bd5d34d67dced8c2d"
+    },
+    {
+      "path": ".release-records/s2-23/verify-public-repairs.mjs",
+      "bytes": 4945,
+      "sha256": "05d6c2f434d5353ffee86ebbda768700beba609b3462199daec4a17f2d16d59a"
+    },
+    {
+      "path": ".release-records/s2-23/verify-sealed-repairs.mjs",
+      "bytes": 1706,
+      "sha256": "0c2160032dbad036241794f743ab115596bf60930b422a24e9908f1305612cd8"
+    },
+    {
+      "path": ".release-records/s2-23/xml-source-equivalence.json",
+      "bytes": 256,
+      "sha256": "35539fb1ce3f1b5f1d23fe6a88ae618bdd87b4e4927c3b29d89978f61d8cd517"
+    }
+  ]
+}
