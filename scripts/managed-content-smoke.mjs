@@ -10,6 +10,7 @@ import { fixtureIpHeaders, localFixtureConfig } from './runtime-rollout-smoke.mj
 import { verifyLocalWorker } from './game-release-smoke.mjs';
 import { ROCO_RETAINED_CN_IMAGE_PATHS } from '../packages/data/scripts/roco-publication-contract.mjs';
 import { verifyRetainedWebAssets } from './retain-web-assets.mjs';
+import { observeBrowserAssets } from './browser-asset-diagnostics.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const SLUG = 'daily-events-merchant-guide';
@@ -245,8 +246,7 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
         const errors = [], failedAssets = [];
         page.on('pageerror', error => errors.push(error.message));
         page.on('console', message => { if (message.type() === 'error' && /hydration|Minified React error|uncaught/i.test(message.text())) errors.push(message.text()); });
-        page.on('response', response => { if (['script', 'stylesheet'].includes(response.request().resourceType()) && response.status() >= 400) failedAssets.push(response.url()); });
-        page.on('requestfailed', request => { if (new URL(request.url()).origin === origin && ['script', 'stylesheet'].includes(request.resourceType())) failedAssets.push(request.url()); });
+        observeBrowserAssets(page, origin, failedAssets, directory, width);
         if (width === 1440) {
           // Check every restored URL; DOMParser inspects HTTP HTML without executing it.
           for (const locale of ['zh', 'en', 'ja']) for (const item of nteMaterials) {
@@ -564,6 +564,13 @@ async function verifyContent(origin, directory, { localFixture, proxy }) {
             observations.browser.push({ path, width, status: 404, kind: 'roco-unknown-weapon' });
           }
         }
+      } catch (error) {
+        if (directory) {
+          const page = context.pages()[0];
+          writeFileSync(resolve(directory, `browser-failure-${width}.json`), JSON.stringify({ page: page?.url(), message: error.message }, null, 2) + '\n', { mode: 0o600 });
+          await page?.screenshot({ path: resolve(directory, `browser-failure-${width}.png`) }).catch(() => {});
+        }
+        throw error;
       } finally { await context.close(); }
     }
   } finally { await browser.close(); }

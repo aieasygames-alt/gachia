@@ -28,6 +28,14 @@ on:
         description: 'Production only: SHA-256 of that GitHub artifact ZIP (not the inner tar)'
         type: string
         default: ''
+      previous_web_recovery_artifact_id:
+        description: 'Only for a deployed source job with failed postchecks: successful read-only recovery receipt artifact ID'
+        type: string
+        default: ''
+      previous_web_recovery_sha256:
+        description: 'Recovery receipt GitHub ZIP SHA-256; original successful-source gate stays unchanged'
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -227,6 +235,8 @@ jobs:
           PREVIOUS_WEB_ARTIFACT_ID: ${{ inputs.previous_web_artifact_id }}
           PREVIOUS_WEB_ARTIFACT_SHA256: ${{ inputs.previous_web_artifact_sha256 }}
           ROLLBACK_VERSION: ${{ inputs.rollback_version }}
+          PREVIOUS_WEB_RECOVERY_ARTIFACT_ID: ${{ inputs.previous_web_recovery_artifact_id }}
+          PREVIOUS_WEB_RECOVERY_SHA256: ${{ inputs.previous_web_recovery_sha256 }}
         run: node scripts/prepare-previous-web-assets.mjs
 
       - name: Verify self-contained web artifact
@@ -370,6 +380,7 @@ jobs:
           include-hidden-files: true
           path: |
             .release-records/web-staging-*/result.json
+            .release-records/web-staging-*/browser-*
             test-results/
           if-no-files-found: ignore
           retention-days: 7
@@ -544,6 +555,7 @@ jobs:
           include-hidden-files: true
           path: |
             .release-records/web-production-*/result.json
+            .release-records/web-production-*/browser-*
             .release-records/production-sitemap-graph.json
           if-no-files-found: error
           retention-days: 30

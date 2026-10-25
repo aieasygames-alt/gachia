@@ -1,11 +1,11 @@
-name: Genshin Worker Production Origin
+name: Retired Genshin Pre-cutover Origin Release
 
 on:
   workflow_dispatch:
 
 concurrency:
   group: genshin-worker-production-origin-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy-and-verify:
@@ -17,6 +17,11 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
+      - name: Reject retired pre-cutover deployment path
+        run: |
+          echo 'Retired: production Router already serves the Genshin Worker at 100%.' >&2
+          echo 'Do not use a pre-cutover workflow for a live owner update. Require sealed staging promotion, previous-asset provenance and an approved sitemap diff.' >&2
+          exit 1
       - uses: actions/checkout@v7.0.0
       - uses: pnpm/action-setup@v6.0.9
       - uses: actions/setup-node@v6.4.0

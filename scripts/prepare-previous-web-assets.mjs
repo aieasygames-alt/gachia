@@ -6,6 +6,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { stripVTControlCharacters } from 'node:util';
 import { retainWebAssets, verifyRetainedWebAssets } from './retain-web-assets.mjs';
+import { verifyRecoveryArtifact, verifyRecoveryReceipt } from './web-recovery-policy.mjs';
 
 const repository = 'aieasygames-alt/gachia';
 export function previousArtifactInput(env) {
@@ -37,7 +38,7 @@ export function verifyPreviousDeploymentLog(log, input) {
 export function createPreviousArtifactApi(exec = execFileSync) {
   let allowMachineEscapes;
   return (path, binary = false) => {
-    assert(/^(?:actions\/artifacts\/[1-9][0-9]*(?:\/zip)?|actions\/runs\/[1-9][0-9]*\/jobs\?per_page=100|actions\/jobs\/[1-9][0-9]*\/logs)$/.test(path), 'Unsupported previous artifact API path');
+    assert(/^(?:actions\/artifacts\/[1-9][0-9]*(?:\/zip)?|actions\/runs\/[1-9][0-9]*(?:\/jobs\?per_page=100)?|actions\/jobs\/[1-9][0-9]*\/logs)$/.test(path), 'Unsupported previous artifact API path');
     assert.equal(binary, path.endsWith('/zip'), 'Binary mode is only valid and required for the artifact ZIP');
     const machinePayload = binary || path.endsWith('/logs');
     if (machinePayload && allowMachineEscapes === undefined) {
@@ -61,8 +62,26 @@ async function main() {
   const metadata = JSON.parse(api(`actions/artifacts/${input.artifactId}`));
   const runId = verifyPreviousArtifact(metadata, input);
   const jobs = JSON.parse(api(`actions/runs/${runId}/jobs?per_page=100`)).jobs;
-  const deploy = jobs.filter(job => job.name === 'deploy' && job.conclusion === 'success');
-  assert.equal(deploy.length, 1, 'One successful previous production deployment required');
+  const deploy = jobs.filter(job => job.name === 'deploy');
+  assert.equal(deploy.length, 1, 'One previous production deployment required');
+  if (deploy[0].conclusion !== 'success') {
+    const id = process.env.PREVIOUS_WEB_RECOVERY_ARTIFACT_ID;
+    const sha256 = process.env.PREVIOUS_WEB_RECOVERY_SHA256;
+    assert(/^[1-9][0-9]*$/.test(id ?? '') && /^[a-f0-9]{64}$/.test(sha256 ?? ''), 'Failed source job requires an immutable successful read-only recovery receipt');
+    const recoveryMetadata = JSON.parse(api(`actions/artifacts/${id}`));
+    assert(recoveryMetadata.workflow_run?.id, 'Missing recovery run');
+    const recoveryRun = JSON.parse(api(`actions/runs/${recoveryMetadata.workflow_run.id}`));
+    verifyRecoveryArtifact({ metadata: recoveryMetadata, run: recoveryRun, input: { recoveryArtifactId: id, recoverySha256: sha256 } });
+    const recoveryJobs = JSON.parse(api(`actions/runs/${recoveryMetadata.workflow_run.id}/jobs?per_page=100`)).jobs;
+    const archive = api(`actions/artifacts/${id}/zip`, true);
+    assert.equal(createHash('sha256').update(archive).digest('hex'), sha256, 'Recovery ZIP digest mismatch');
+    // Only deserialize the bounded JSON receipt; never execute files from this archive.
+    const receipt = JSON.parse(execFileSync('python3', ['-c',
+      'import io,json,sys,zipfile; z=zipfile.ZipFile(io.BytesIO(sys.stdin.buffer.read())); assert z.namelist()==["receipt.json"]; assert z.getinfo("receipt.json").file_size<=1048576; print(z.read("receipt.json").decode())'],
+    { input: archive, encoding: 'utf8', maxBuffer: 2 * 1024 * 1024 }));
+    verifyRecoveryReceipt({ receipt, metadata: recoveryMetadata, run: recoveryRun, jobs: recoveryJobs,
+      input: { ...input, recoveryArtifactId: id, recoverySha256: sha256 }, source: metadata, sourceJobs: jobs });
+  }
   const log = api(`actions/jobs/${deploy[0].id}/logs`);
   verifyPreviousDeploymentLog(log, input);
   const directory = resolve(root, '.release-records', `previous-main-${randomUUID()}`);

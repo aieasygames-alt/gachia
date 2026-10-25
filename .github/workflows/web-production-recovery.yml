@@ -1,0 +1,81 @@
+name: Read-only Main Production Recovery
+
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_id:
+        description: 'Immutable already-deployed Main artifact ID'
+        required: true
+        type: string
+      archive_sha256:
+        description: 'GitHub ZIP SHA-256'
+        required: true
+        type: string
+      tar_sha256:
+        description: 'Sealed inner tar SHA-256'
+        required: true
+        type: string
+      active_version:
+        description: 'Already-active 100% Main version UUID; no deployment is performed'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+# Do not overlap a Main release. This workflow never deploys or changes traffic.
+concurrency:
+  group: gachia-main-release
+  cancel-in-progress: false
+
+jobs:
+  verify-production:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    environment: production
+    steps:
+      - uses: actions/checkout@v7.0.0
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v6.0.9
+      - uses: actions/setup-node@v6.4.0
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Test recovery provenance and diagnostic policy
+        run: node --test scripts/web-recovery-policy.test.mjs scripts/browser-asset-diagnostics.test.mjs
+      - name: Install browser
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Verify exact deployed artifact without deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PREVIOUS_WEB_ARTIFACT_ID: ${{ inputs.artifact_id }}
+          PREVIOUS_WEB_ARTIFACT_SHA256: ${{ inputs.archive_sha256 }}
+          SOURCE_TAR_SHA256: ${{ inputs.tar_sha256 }}
+          ROLLBACK_VERSION: ${{ inputs.active_version }}
+        run: node scripts/web-production-recovery.mjs
+      - name: Store independent recovery receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-recovery-receipt-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .release-records/main-recovery/receipt.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+      - name: Preserve verification evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-recovery-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .release-records/main-recovery/*.json
+            .release-records/main-recovery/*.log
+            .release-records/web-production-*/result.json
+            .release-records/web-production-*/browser-*
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
