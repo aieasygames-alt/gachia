@@ -1,0 +1,634 @@
+{
+  "root": ".release-records/game-security-rollout",
+  "scope": "operator_saved_records_not_signed_attestation",
+  "files": [
+    {
+      "path": "build-lvmeng.mjs",
+      "sha256": "f7f9cb95938eb08457b5ea9ce1896ed3da8c03a9fb003b7ac38c9f4558465bdb"
+    },
+    {
+      "path": "accept-genshin.mjs",
+      "sha256": "0946286f66df2e386faa98c1c9c6fc9fb5ffae0c26e82f5f969098cce8f8ff73"
+    },
+    {
+      "path": "control-nte-before-upload.json",
+      "sha256": "aca8ee81d16e1ee048852a85d0a9230661d6ac0ac98391e4b83194dc5a269cec"
+    },
+    {
+      "path": "verify-direct-assets.mjs",
+      "sha256": "57e34383dad63c2fcbeb62d5290352d2cb28e6d4b16c73f33a44b7f48761117a"
+    },
+    {
+      "path": "current-summary.json",
+      "sha256": "a41382d5da915766b4023cde528822b7c30eb6cf0eee4a0e287378b35e7171dc"
+    },
+    {
+      "path": "cloud-control.mjs",
+      "sha256": "80febe3f1e5832a5d4616b67d92c3f19603ec33d4958fbe6dc4ed1dfc54c8558"
+    },
+    {
+      "path": "browser-assets-390.jsonl",
+      "sha256": "a98d2a7ff0d70eeda79b191f7a496782a5d1628b10e15f9807f58c5c7fc3554d"
+    },
+    {
+      "path": "rollback-nte.mjs",
+      "sha256": "041fffdaab7e89e728b0bfc291849b4de27bf7f1b4356fd56b9c31dcd584bc4e"
+    },
+    {
+      "path": "public-navigation.json",
+      "sha256": "2e848e266e093b05f4b804c6a80421457b99c1eced001ec8d9409f1086c7cff4"
+    },
+    {
+      "path": "lvmeng-ops.mjs",
+      "sha256": "e298ad60b9e89cc561b4a13b7de091cf5db0499cf978f41a3bf26dcc4141b238"
+    },
+    {
+      "path": "candidate-ops.mjs",
+      "sha256": "065da644e4971cc1c7752a574f6acee408140ba92e5ae850f43167d112ff9a4b"
+    },
+    {
+      "path": "lvmeng-ops-retry.mjs",
+      "sha256": "886f6e523e693211f05fa2002226b42743379178a65e1e715d3f5ef153bd2da5"
+    },
+    {
+      "path": "control-nte-before-promote.json",
+      "sha256": "57c649abb2e7b5bc91c42ed47313cee550898efad4836391b62dbacfa779f327"
+    },
+    {
+      "path": "rollback-genshin.mjs",
+      "sha256": "7b5d0873e3011e3acb66c0192ce91b44f79131c3cacd8e1a14a20ba14d972141"
+    },
+    {
+      "path": "auth-promote.log",
+      "sha256": "65c0a6cea70da7e32dc6e7115ad1d033045c177f5a2597e78e8a12a428a2c68d"
+    },
+    {
+      "path": "final-control-summary.json",
+      "sha256": "569e581a8ae29997aab48a0fbd1564559c8dabd6daf2af5ace5a03df3e22cd2c"
+    },
+    {
+      "path": "capture-current.mjs",
+      "sha256": "b3ac2b2b38cd37f1235db366d5128fe9393d77bae3169d595804e65df6ce3321"
+    },
+    {
+      "path": "control-genshin-after-upload.json",
+      "sha256": "74a0c8f9e9c6addc9295effc6dd62cecbe38e69a4f5aafd4554b2a736badbecf"
+    },
+    {
+      "path": "capture-previous.mjs",
+      "sha256": "e726f23388cea494ede65b77aa69035a2f03e1c3abc1a919887d5ed419949deb"
+    },
+    {
+      "path": "build-sealed.mjs",
+      "sha256": "73d5586c0c4332e517d8c65e3931cf2f9bfe7539469f7ff546f72d5cb7d2a069"
+    },
+    {
+      "path": "control-genshin-after-promote.json",
+      "sha256": "05b523bca53d38a90638ceee31d6c8e480d361da76701005f8c6f47ab6ffff04"
+    },
+    {
+      "path": "verify-sealed-repairs-nte.mjs",
+      "sha256": "2540276cd989a31ec8b187644dd136ce1eef2d1f0626ac9af1d8a99697e5719c"
+    },
+    {
+      "path": "control-genshin-before-promote.json",
+      "sha256": "76eac6bb860287d0ff32620cbfca4cb75bd946378ab4489b0e8b569b26584301"
+    },
+    {
+      "path": "cross-owner-acceptance.json",
+      "sha256": "d609c18efa891f0545ebf6fffe802ebfdd78bf0b4a87989c67239df8f2fa7cd3"
+    },
+    {
+      "path": "public-sitemap.json",
+      "sha256": "7d5e6a4fd121131093f87674dc1ed7fc2a8f42e6041361ec5ba68da9d836721d"
+    },
+    {
+      "path": "verify-direct-assets-first.mjs",
+      "sha256": "fbd1b89f0378b4be8c6a82866c352209f9f51ce15843192335fd9ea606d449ab"
+    },
+    {
+      "path": "accept-nte.mjs",
+      "sha256": "786477c4c434dce0b6914eedc37edeac98662fdb06731f38c92812a77993b525"
+    },
+    {
+      "path": "capture-previous-lvmeng.mjs",
+      "sha256": "4b15c7f2c9bbe488d5da0b1f294659f4691ae8d2d73015da20192e970f70cf39"
+    },
+    {
+      "path": "control-lvmeng-before-upload.json",
+      "sha256": "ae1488a38a1b6965b818cc6119819db566508f645d5d319054d1fee5a73a5b31"
+    },
+    {
+      "path": "control-genshin-before-upload.json",
+      "sha256": "dfc7f9cf159399db176e4dbeb6476a9c1102654d6bb946f38eef71428c907996"
+    },
+    {
+      "path": "verify-sealed-repairs.mjs",
+      "sha256": "584ef22b048777d0ac31a2f42f2ea9ac9744705515d2b3c978b5fa2e63c14348"
+    },
+    {
+      "path": "runtime-marker-comparison.json",
+      "sha256": "1f2d4c3c4ff68111b43da41d128683df941266d44ef83a0ba6c6ba32ee450691"
+    },
+    {
+      "path": "cross-owner.mjs",
+      "sha256": "73f6600a23ba7db7a7ba2fb44c987f030177548376d4f424d30297895b2b61b3"
+    },
+    {
+      "path": "public-navigation.log",
+      "sha256": "66d3d4bd7e61c4f5a3bbaaa27abaa86ad60df0e591a44c6f705c35ddc8ed1332"
+    },
+    {
+      "path": "control-nte-after-upload.json",
+      "sha256": "f6125c5696477987f34acb101c28b44470056111ad70ff47237ffcb6ff625792"
+    },
+    {
+      "path": "control-nte-after-promote.json",
+      "sha256": "c26dbf5d6a6edc62725be85f367c1b8cec0861ab5014fe314fe8ab9898b40c1e"
+    },
+    {
+      "path": "control-baseline.json",
+      "sha256": "83eccac85744f8e1b0a347aef9fa56244e007e3eca6a7f5a529550863c81d6ec"
+    },
+    {
+      "path": "cloud-before.json",
+      "sha256": "611fdc9891f058e2f107ff3ceafe8b01e7a67781df1d998a0cada324a9ff13f8"
+    },
+    {
+      "path": "browser-assets-1440.jsonl",
+      "sha256": "77b8bce2dcad5d4e9af14ac6d858135498bfd17609bd87f6644f675e0d90bfc5"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "3643fe1d0e559f16b2e527e5eec86094460cbe1a50c07c3d3e1bd039f2a157c6"
+    },
+    {
+      "path": "release-tests.log",
+      "sha256": "9993fbf0d0ade35b9f5192a931f640c1458c28269c73ccd314d40e81683b63e5"
+    },
+    {
+      "path": "app-source-differences.json",
+      "sha256": "71dc22788a1e16cd47c5dbf63cf851c19fc50f6c56c4591564bfdc7267c995ea"
+    },
+    {
+      "path": "cloud-after.json",
+      "sha256": "611fdc9891f058e2f107ff3ceafe8b01e7a67781df1d998a0cada324a9ff13f8"
+    },
+    {
+      "path": "auth.log",
+      "sha256": "65c0a6cea70da7e32dc6e7115ad1d033045c177f5a2597e78e8a12a428a2c68d"
+    },
+    {
+      "path": "control-lvmeng-upload-failure.json",
+      "sha256": "dd3316cd7fe9c89f954d26e891b661cfcb04d8368c4792deb7a5a64807956074"
+    },
+    {
+      "path": "cross-owner.log",
+      "sha256": "948ca78e2f7d17a3047a094d7d10dcf430fcd38a744f8b35bf3a834e5aa08d94"
+    },
+    {
+      "path": "control-final.json",
+      "sha256": "ef30f64bb5bf185e2cf8e0335cd5c223c501ea413b68b8d92ba91085ea2f42b2"
+    },
+    {
+      "path": "control-lvmeng-before-upload-retry.json",
+      "sha256": "27ce2b52bc3143aabde5bc12b2cbd49c4f25f7f634191153a0ffcf2ad9b2b1dc"
+    },
+    {
+      "path": "capture-previous-nte.mjs",
+      "sha256": "dd1ba77ac9c6f58d4ec4102d47ee5b5ea45674652d9a11d9834d71e209240d14"
+    },
+    {
+      "path": "public-sitemap.log",
+      "sha256": "0b99ced92f78471299c909dabdb8deeedf16a520484c8ed233f1e13669c39367"
+    },
+    {
+      "path": "azur-promilia/version.json",
+      "sha256": "268f0d282fbaa5f935c482486b015e1562ddcb89de48f7b5bc63ab15e78b4ad8"
+    },
+    {
+      "path": "azur-promilia/direct-indexing-observation.json",
+      "sha256": "ab46661e02f5767cc33c8002b8dd74f5ebfdcf4346fd4902f2564b4630498576"
+    },
+    {
+      "path": "azur-promilia/dryrun.log",
+      "sha256": "8ad188e8f199b4b36e679fe0c6a7bb50c5cec8fc7840bbb1b3520048e298401a"
+    },
+    {
+      "path": "nte/capture.log",
+      "sha256": "02104808f72e75cd805e7440919c252a85be3afbc4b1885ef8daabda0c2f9c9b"
+    },
+    {
+      "path": "nte/direct-assets.log",
+      "sha256": "8aa1bfef0bbe042b408bb4d3fbfcac15d7f1de42cd27a0023e8445e8f31e48e4"
+    },
+    {
+      "path": "nte/wrangler.execution.json",
+      "sha256": "9d2b58bb4e31657b5dabd582aef6a1744d071617425c04bb2fbf20de8087c72d"
+    },
+    {
+      "path": "nte/version.json",
+      "sha256": "b9d52735bad8a55033ad75b0b937d3169fe6e2776561b46db1916baa9a1cac7a"
+    },
+    {
+      "path": "nte/direct-assets.json",
+      "sha256": "c70e86e356c3dc2a911a9144fa03e551f9fcd75a3b80ad2e9ec034013bde2969"
+    },
+    {
+      "path": "nte/build-sealed.log",
+      "sha256": "f8659201d8ff61ca7c6e268fae422bec0beb2dd8be3bc20381ceafa1bd6fe4d2"
+    },
+    {
+      "path": "nte/upload-result.json",
+      "sha256": "5dcaf76ecfd0f8a7ce0977c2ecf5674bea77769f5e60a08d33dc0aec9dd58966"
+    },
+    {
+      "path": "nte/upload.log",
+      "sha256": "61ceee291bfc73f66ebbb29364e86a1fdff633513928ef3bb311255a2be2b252"
+    },
+    {
+      "path": "nte/production.log",
+      "sha256": "874ca191a22435af3ecbe279475308fe1fb0a9292cc8bbe644a00d1a12aee1b7"
+    },
+    {
+      "path": "nte/local.log",
+      "sha256": "920672807d5209534e92c1fab7d9bf5b2a6f0e0e66374bba5ac653cbd59028d6"
+    },
+    {
+      "path": "nte/rollback-readable.json",
+      "sha256": "d3e1f62bfca4ae41f615049be7fd66f9d8a86340aaeb18c18429bf3e9e82638c"
+    },
+    {
+      "path": "nte/dryrun.log",
+      "sha256": "e0e12cf3a962e7da7a6058e53c0fbae21b6dcd75f93f52b67c10dd68b1863520"
+    },
+    {
+      "path": "nte/promotion-result.json",
+      "sha256": "4c07cf0cf9a24bbf9c25d8bf9691076ac5ec278c46906df097af9b3698dea89b"
+    },
+    {
+      "path": "nte/promotion.log",
+      "sha256": "2929aa8ccf29307ae5a4d29753cfb7df4e91890377bea777c78b3d49f08bad83"
+    },
+    {
+      "path": "nte/repairs.log",
+      "sha256": "f5765744a28d31bcdd3a2da7ae7eaa697c953bfe911b31cd9998b852faf97764"
+    },
+    {
+      "path": "nte/fresh-capture-summary.json",
+      "sha256": "1915cf6b0a07a4311da3cf997a7abb66e066473bc9dba0b5386b82593886f9cf"
+    },
+    {
+      "path": "nte/rollback.log",
+      "sha256": "5f28566b143cf8db1b4e9c5ad1b3af73cdd20760781ea730a5dc8e82236e02ef"
+    },
+    {
+      "path": "nte/artifact-pin.json",
+      "sha256": "bfa530ca75a7978bb2f2bbfa8579448b176acf63d16a1fefde899158ee0361b9"
+    },
+    {
+      "path": "nte/promote-operation.log",
+      "sha256": "847b1a01ab1e5f86c373df9a75a296f821acfcb802ed7e8d707814dd2ad8bcfb"
+    },
+    {
+      "path": "nte/preview.log",
+      "sha256": "b6d26a0401581b3dcf77623d9b3c700375391df570efaf223aa8b7e1dc887dce"
+    },
+    {
+      "path": "nte/previous-assets-receipt.json",
+      "sha256": "8cc1ab75d900c1031d7407f9b900652cf3b6aa840021e0f03eec90af19737a5a"
+    },
+    {
+      "path": "nte/previous-static-inventory.json",
+      "sha256": "e1ad6614f2c412d004993df3319694441e29519a8d357f19ec12c12af523ac1d"
+    },
+    {
+      "path": "nte/upload-operation.log",
+      "sha256": "e0166277a836e062998f2d84eb32452135523321e783643d72ac878dd5fce6a4"
+    },
+    {
+      "path": "nte/local-acceptance-1/acceptance.jsonl",
+      "sha256": "da7c07b7cdf8f5cb1d5e520dcf759810d397a7c6886a6c246ed738f2abcbef68"
+    },
+    {
+      "path": "nte/local-acceptance-1/worker.log",
+      "sha256": "34838b35944ce38412ffb78b29d3cbb2a806dd20183a6b094b0bddc95ccbce13"
+    },
+    {
+      "path": "nte/local-acceptance-1/browser-events.jsonl",
+      "sha256": "e7fce06638b110eaa153f740260e54f60a03a946d0693032fcfbdb084ff8c668"
+    },
+    {
+      "path": "nte/production-acceptance-1/acceptance.jsonl",
+      "sha256": "2f47f310d4e299def2e3e0fe6606b8e42cf6a4226545ea31c137a5c1894d0191"
+    },
+    {
+      "path": "nte/production-acceptance-1/browser-events.jsonl",
+      "sha256": "63c7f08cecf5cd4cfd6c9aa464d0a589c61290b06f54d51d9852388d933913c7"
+    },
+    {
+      "path": "nte/rollback-local/acceptance.jsonl",
+      "sha256": "524115fe22e23999132f26e9e6ba8eec3a6003fc142076a7e3e1b1d492bbf9ee"
+    },
+    {
+      "path": "nte/rollback-local/result.json",
+      "sha256": "9c4875f6a4a8dc20b46c85fc46fd55f1572930e4e0467f3d7d9355756b51612b"
+    },
+    {
+      "path": "nte/rollback-local/wrangler.json",
+      "sha256": "4255f85c2ef778a39a333e77f774cef094b11ce6206b8bd865a501b69e378424"
+    },
+    {
+      "path": "nte/rollback-local/worker.log",
+      "sha256": "1afc7e43ad980d30fa6e6e4c0e2ff93dc10ca33c7560fc24008f46cd4d211267"
+    },
+    {
+      "path": "nte/preview-acceptance-1/acceptance.jsonl",
+      "sha256": "36e8b709db94b98525f2bb43e1a0140ec5fe1f929ef46aff770efd7426f6238f"
+    },
+    {
+      "path": "nte/preview-acceptance-1/browser-events.jsonl",
+      "sha256": "3952cce16b8de9ed548b9f8055ba1e659c3dfc0959c7bdbbbee845d3193e12bf"
+    },
+    {
+      "path": "nte/repairs-local-1/browser-assets-390.jsonl",
+      "sha256": "4d5ebf6e8cb169260293aeda1ce9f3b53a24ab0e345a5221359fd559337fa0fa"
+    },
+    {
+      "path": "nte/repairs-local-1/result.json",
+      "sha256": "50597ace377ac3ffb47e34448842efca4955623721a81e8febc8b5b9a0efd621"
+    },
+    {
+      "path": "nte/repairs-local-1/worker.log",
+      "sha256": "0c4d20d80de62d9c28c709531bacb6f872b7c79c16466a1461120238f8300d52"
+    },
+    {
+      "path": "nte/repairs-local-1/browser-assets-1440.jsonl",
+      "sha256": "3bc9e2e8db0a1a0b29001531bf91971e8c9d5569338eb0e04e92cd11c5d305e1"
+    },
+    {
+      "path": "genshin/direct-assets.log",
+      "sha256": "44bdca1714e4235bd3ded835650c00c80ae11bd86c1dcd4e65680a06b726fa2f"
+    },
+    {
+      "path": "genshin/wrangler.execution.json",
+      "sha256": "79b4030b396a93eae217dea306594d2b0b65551875e761ab2ce17d24a4875b19"
+    },
+    {
+      "path": "genshin/version.json",
+      "sha256": "875170059a23e4931ec91001693d73b54b7381d541051ca7546c99640b25ba49"
+    },
+    {
+      "path": "genshin/direct-assets.json",
+      "sha256": "2a46d1bf7b8b40b3fdd9896d4adeb1534bde47269ce4a5a1d7662dae1bc28d25"
+    },
+    {
+      "path": "genshin/build-sealed.log",
+      "sha256": "d3181e0c306281719cb8ca0dedda213225336a7f024591743fe8819a7cd8f61f"
+    },
+    {
+      "path": "genshin/capture-static.log",
+      "sha256": "e9542d114ede201ec592af57666af66f00453d42a53db031944bb36c53d8f162"
+    },
+    {
+      "path": "genshin/upload-result.json",
+      "sha256": "2cafd205bb436e4bbe14eea0068a2eeb97bc7bfe9d619c35650b2a8dda69ed95"
+    },
+    {
+      "path": "genshin/upload.log",
+      "sha256": "7abe53fc43469b7569af96899a08339b14d08b1041bf7c8faaac575f91ca41c6"
+    },
+    {
+      "path": "genshin/production.log",
+      "sha256": "39ba241a9f4016bffa412b17ece097faf5849f407698c7bfa909d0f4f4bec85e"
+    },
+    {
+      "path": "genshin/local.log",
+      "sha256": "a1ee6215b2e5486324edb4990604929703f1ec949e320df3d30d90dca06d519f"
+    },
+    {
+      "path": "genshin/rollback-readable.json",
+      "sha256": "03e420e9d606d1ae1bd7ca3d3df324ac4c9054a27a849d15409799c576b54d92"
+    },
+    {
+      "path": "genshin/dryrun.log",
+      "sha256": "d96e3c4c74c414e90e8c36b3a69faaaa2d1377868c9e366e7f2ad65067c4cc15"
+    },
+    {
+      "path": "genshin/promotion-result.json",
+      "sha256": "4945b0f418e08e2cc5f00f1fb1d8f5c2f04c622125e51d66a62c30e2ac55f16a"
+    },
+    {
+      "path": "genshin/promotion.log",
+      "sha256": "a671dc3efb3d10fb65dbb3b3bd2bfa839c0e691981487e826e906bd48e505e23"
+    },
+    {
+      "path": "genshin/repairs.log",
+      "sha256": "d0681b0221afb85ce2023bb18159631b2dbbf6c49a2ea05c67535abd66854372"
+    },
+    {
+      "path": "genshin/fresh-capture-summary.json",
+      "sha256": "db077bebd5dc5411048995f91ec83032fcb2e0df6c44d80d53e1930a2297b5b8"
+    },
+    {
+      "path": "genshin/rollback.log",
+      "sha256": "08dbc7600be98d301ee2d256b3ea667351c067ab1959dc2bf73219a38e9f6030"
+    },
+    {
+      "path": "genshin/artifact-pin.json",
+      "sha256": "6ec9c070d586acbe54d28e7a06a876955bb04968aed4081ff1ef1f129b5cc81e"
+    },
+    {
+      "path": "genshin/promote-operation.log",
+      "sha256": "a9d3f5219b0a9c7c7cc96e59ca979b26165a9b37787b4495ae8e5306f507149a"
+    },
+    {
+      "path": "genshin/preview.log",
+      "sha256": "2a4824d209402c4beda37aa67fb5fbaf49fcb4c18cb7b9d27d916d3f17527b79"
+    },
+    {
+      "path": "genshin/direct-assets-encoded.log",
+      "sha256": "dbb7e4d0db9d9c93046a7e87b7823eb67b18267e31f91b3042aae123adca7f1e"
+    },
+    {
+      "path": "genshin/direct-path-encoding.json",
+      "sha256": "2bb20f22eae69234a3937358f90b055d1d5a4fea4d4b1b57f2da2607a495ef8a"
+    },
+    {
+      "path": "genshin/previous-assets-receipt.json",
+      "sha256": "9d14327b6458fd4ae93093dc03e0d6fe93d293717f0a4b63f8139a01304dc907"
+    },
+    {
+      "path": "genshin/previous-static-inventory.json",
+      "sha256": "6e8450306f1668e3fcee79ca9cbc0f39490c4393b8cac40d7126a39720a2f4da"
+    },
+    {
+      "path": "genshin/upload-operation.log",
+      "sha256": "9b69d6793076cfd5fe88c7b3abc1773d92b320a06e13b18a2889bcfd826d1fb4"
+    },
+    {
+      "path": "genshin/local-acceptance-1/wrangler.execution.json",
+      "sha256": "6229194cb563096f19887d55f972340c48caa45640d9fa541aab5c671c6ba442"
+    },
+    {
+      "path": "genshin/local-acceptance-1/result.json",
+      "sha256": "d4dda04d7ed90f8356dd613f68898bebcbca3989baa2cbbadc4841b24d295d90"
+    },
+    {
+      "path": "genshin/local-acceptance-1/worker.log",
+      "sha256": "dbcbffef04e28a2d72230e6a97e449eb043cae70af88ebe8aac33cfb009f30ad"
+    },
+    {
+      "path": "genshin/local-acceptance-1/browser-events.jsonl",
+      "sha256": "31bcd56180a085bb1709ee20bd3acc1b510e755d1e6bd927b78efa7336b67390"
+    },
+    {
+      "path": "genshin/production-acceptance-1/result.json",
+      "sha256": "c1e8546d52bcf4826596b642a314c61d84607b29f35fecebd00e7366a16fb11d"
+    },
+    {
+      "path": "genshin/production-acceptance-1/browser-events.jsonl",
+      "sha256": "c40490d919d01623f4ca7d9dc7c7850bc5a51ef28d5a7d97710b401fd9ab0e57"
+    },
+    {
+      "path": "genshin/rollback-local/result.json",
+      "sha256": "2feab8b2109aadfa4f8e19d5fc7d2cf742531be16390076b78552f48a0b7d6ac"
+    },
+    {
+      "path": "genshin/rollback-local/wrangler.json",
+      "sha256": "37d67dbf7e6411f5599f7491fc5b318d6e2c0d8712ed0d37a634944983322509"
+    },
+    {
+      "path": "genshin/rollback-local/worker.log",
+      "sha256": "0d5637fbedd9bb22c32f6122df2ceba752d82b2995b6c1aea29e946bbf8276f8"
+    },
+    {
+      "path": "genshin/preview-acceptance-1/result.json",
+      "sha256": "811e5c77293136cdb46c85cda37f203333cd11d9f2e095dced53bb9d8c87c556"
+    },
+    {
+      "path": "genshin/preview-acceptance-1/browser-events.jsonl",
+      "sha256": "cd451db3829799b2cfbaaad7686171ea0db776f7f5f5ecf65dbd2afa6feeff95"
+    },
+    {
+      "path": "genshin/repairs-local-1/browser-assets-390.jsonl",
+      "sha256": "bb8a78a0097106955369dd70d8cf83ceb9f50acc5e0f1d86a3a29b4440dfdf82"
+    },
+    {
+      "path": "genshin/repairs-local-1/result.json",
+      "sha256": "bd042680d79fb11158baecdfed36a8bda34fe34d83ea7dd67a285212c60bcc24"
+    },
+    {
+      "path": "genshin/repairs-local-1/worker.log",
+      "sha256": "75f9406324c3aa786590ad484461a50274d46d99eb210fea15b4e8f4cb58852e"
+    },
+    {
+      "path": "genshin/repairs-local-1/browser-assets-1440.jsonl",
+      "sha256": "35658697ee1606148f09e844fde0bc5d619753e072ef4a22536d774842809eea"
+    },
+    {
+      "path": "lvmeng/capture.log",
+      "sha256": "94cd53ca50785eb6dff4c355484f8aec016549954d26d038feaaf5e674ca8855"
+    },
+    {
+      "path": "lvmeng/wrangler.execution.json",
+      "sha256": "51b9faa4fdb23c89683f7c2ac42c93035db1829ad0d8c39aa03f39d79fe7d88b"
+    },
+    {
+      "path": "lvmeng/version.json",
+      "sha256": "a6b5316bc67bbfc31fac2e68d209b2ba4b9d4cea47874fc7063c1e42bc21a1ff"
+    },
+    {
+      "path": "lvmeng/upload-operation-2.log",
+      "sha256": "32db4f10783cc095edb949506163dd87fa5fbfb6b53eaa35c5ca4c1f4455717d"
+    },
+    {
+      "path": "lvmeng/build-sealed.log",
+      "sha256": "1045d52a03df27de2fb4d4b18f10a34490736943c840b481894aab43e6a3a34b"
+    },
+    {
+      "path": "lvmeng/upload.log",
+      "sha256": "05bc305ac3f10ab9bc8fca5589c3f25c72aa7542a3a02243c0eee592a0dfd033"
+    },
+    {
+      "path": "lvmeng/local.log",
+      "sha256": "94d0bea967afd547f77ff7f6e37ab8052ae7967a1045301223bbf5fdf7db3261"
+    },
+    {
+      "path": "lvmeng/versions-after-failure.json",
+      "sha256": "50ebeca0f0be033b8054fccf90b8e7ef11a8e074748f6ee1431d65f6b59b9550"
+    },
+    {
+      "path": "lvmeng/upload-retry.log",
+      "sha256": "a3e8319138d4b757aac0677a7a23528c426a41b650d2149a436c7ddbda2d0ed4"
+    },
+    {
+      "path": "lvmeng/dryrun.log",
+      "sha256": "e4b42bda8961232beef234c0cda58fc37a5c0100a99cf313242872bb53180013"
+    },
+    {
+      "path": "lvmeng/versions-after-retry.json",
+      "sha256": "50ebeca0f0be033b8054fccf90b8e7ef11a8e074748f6ee1431d65f6b59b9550"
+    },
+    {
+      "path": "lvmeng/fresh-capture-summary.json",
+      "sha256": "0e94ed87dbf60cf6bc02506ec1bf9c5098803ac9069d86b8bb53dd4220c1ac20"
+    },
+    {
+      "path": "lvmeng/rollback.log",
+      "sha256": "560a1563b1ce7cf31048006fe65e2d9c6126bbb281f13036c6ab78a03ad47a5b"
+    },
+    {
+      "path": "lvmeng/upload-retry-operation.log",
+      "sha256": "207a51bab42c1c831ed34355270e175d3763a421d69b8ae61ef122be98f6a05f"
+    },
+    {
+      "path": "lvmeng/artifact-pin.json",
+      "sha256": "9675554adb41e3f3067b8dbfd6655e60f786b394d3ac3e3988552a8f87054a4e"
+    },
+    {
+      "path": "lvmeng/previous-assets-receipt.json",
+      "sha256": "a2843a2704c124118ecb2ebad5dd0fd007823198403fcac14e8c8add336552bc"
+    },
+    {
+      "path": "lvmeng/previous-static-inventory.json",
+      "sha256": "58e66d7dae6427cb65e4d1fba08c3ec784f90c9ba9545faff4a4866c8c7ebfc3"
+    },
+    {
+      "path": "lvmeng/build-result.json",
+      "sha256": "feb950863252d71cbd518aba0275fb730e64580e1b9819747e10237fc12e42f9"
+    },
+    {
+      "path": "lvmeng/upload-operation.log",
+      "sha256": "9f22584b2ec85f653eaae692af27035c83a16ccceacef6d221257aa0a78ef8f9"
+    },
+    {
+      "path": "lvmeng/local-acceptance-1/acceptance.jsonl",
+      "sha256": "024494799f8b88001ca9ced55e36494ad8469acee990e7f424d6076febafd404"
+    },
+    {
+      "path": "lvmeng/local-acceptance-1/worker.log",
+      "sha256": "1e1bc3a29978362c444815f408d6873a78373c609d98d8306ef3266e118b93dd"
+    },
+    {
+      "path": "lvmeng/local-acceptance-1/browser-events.jsonl",
+      "sha256": "1d5b9e540f828d28ac88b1964e110a23f5808a4d281814cd1e9a9178dcf73463"
+    },
+    {
+      "path": "lvmeng/rollback-local/acceptance.jsonl",
+      "sha256": "c476f65c0a6ff7c1259602a6d61e63c424d4d64d81e1cd1516ef8a4ede69df5c"
+    },
+    {
+      "path": "lvmeng/rollback-local/result.json",
+      "sha256": "39436f8455fe291e9522818e9906324802f4ca54eca653b19eb27ab1db903d0e"
+    },
+    {
+      "path": "lvmeng/rollback-local/wrangler.json",
+      "sha256": "7933f3a05082086643176a87ca7921d5635e459584b12a64e13b46a65d7fd270"
+    },
+    {
+      "path": "lvmeng/rollback-local/worker.log",
+      "sha256": "aee2d2f8b2f42c51ab99acc60280b96f203e49f4ede1aca2154afcbae87c9fc8"
+    }
+  ]
+}

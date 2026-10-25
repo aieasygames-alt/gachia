@@ -1,0 +1,68 @@
+{
+  "status": "control_plane_reconciled",
+  "updatedServices": [
+    "gachia-game-genshin",
+    "gachia-game-nte"
+  ],
+  "lvmengUnchanged": true,
+  "azurUnchanged": true,
+  "mainUnchanged": true,
+  "routerUnchanged": true,
+  "bindingsRoutesDomainsAndInventoryUnchanged": true,
+  "versions": {
+    "gachia": [
+      {
+        "version_id": "38263bf8-7c06-4991-8e8a-b4f81bb8cf71",
+        "percentage": 100
+      }
+    ],
+    "gachia-staging": [
+      {
+        "version_id": "4f7da764-6a70-474f-9c34-1f26265fd0ff",
+        "percentage": 100
+      }
+    ],
+    "gachia-router": [
+      {
+        "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-genshin": [
+      {
+        "version_id": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-genshin-staging": [
+      {
+        "version_id": "97f3bae6-3e9f-423f-a2c7-8a460f9911f4",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-nte": [
+      {
+        "version_id": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-lvmeng": [
+      {
+        "version_id": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-azur-promilia": [
+      {
+        "version_id": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-azur-promilia-staging": [
+      {
+        "version_id": "c6b46257-2441-4cc2-b9c6-c31d4d4d1cca",
+        "percentage": 100
+      }
+    ]
+  }
+}

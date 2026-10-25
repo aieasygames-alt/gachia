@@ -1,0 +1,597 @@
+{
+  "status": "stable_direct_origin_verified",
+  "versionId": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+  "origin": "https://gachia-game-nte.aieasygames.workers.dev",
+  "observations": [
+    {
+      "path": "/zh/nte",
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "path": "/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "bytes": 8533,
+      "sha256": "bbddeacd209251d11cef3f05fdda915471b6f94720f0a5712c897b0c35e07776"
+    },
+    {
+      "path": "/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "bytes": 8535,
+      "sha256": "522cecfd4d820c476e319b028697e39bbb5356eb747274da921e61acd34191ef"
+    },
+    {
+      "path": "/_next/static/chunks/721-1995520c574a32d7.js",
+      "bytes": 174137,
+      "sha256": "0c353970f4875f983651cf55e2e017d7a4b611a67852a84c43106c1acd1a18c2"
+    },
+    {
+      "path": "/_next/static/chunks/753-bd3e6fbe7f4f3d99.js",
+      "bytes": 173345,
+      "sha256": "48d12683cddfd6433ab5153c3af0d714c2869c097229008504951ebb58d25fb8"
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "bytes": 2670,
+      "sha256": "6fa38e324c72ef9585d564031f97aa0a3b26ec9adf66ea0d1a3c7e4a29631ab4"
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js",
+      "bytes": 2668,
+      "sha256": "82761a251e75f1bba80032b1f36902d2aab89ea92e801d4d2c7facc13a1be48b"
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-f61b96f466b71754.js",
+      "bytes": 2670,
+      "sha256": "8bc969fe0f866f0fbf6293a62cc614d3d71898e73a879c057117e013ccf46823"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-1106fb316852363d.js",
+      "bytes": 147,
+      "sha256": "af444fe6a8e8b6300a07517ab9ecf4058bf4cbe2bdf5ba243d9b0582dc700178"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-9791326f36b35ea8.js",
+      "bytes": 147,
+      "sha256": "6779adc2a51fc8685f41e6a9e77cc836dab54481940eb4814aa9e91b6a256263"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/anomalies/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/anomalies/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/anomalies/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/build/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/build/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/build/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/calculator/page-9add7da82d950460.js",
+      "bytes": 3562,
+      "sha256": "357bfa57246e7cfb5b2e155857fb87db4252fa21de35b9538070823afd2aa5a3"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/calculator/page-ac0a48ffa73da2e8.js",
+      "bytes": 3562,
+      "sha256": "6950631aa34b8c894a5b192ad1aa94106fec645bb3ab2a9808c0a1971ea9f614"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/calculator/page-b258e6c82b89f992.js",
+      "bytes": 3562,
+      "sha256": "eca24fe34d68c626a114e9f7b8b7ad9a26eeca4127c120c4c620c50846b76a1a"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/characters/%5Bid%5D/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/characters/%5Bid%5D/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/characters/%5Bid%5D/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/characters/page-22c0543eaa8824e0.js",
+      "bytes": 3409,
+      "sha256": "284efa5aedc588651307e6faa8d24d1c647ab3a271f3fda1296b7a0022af9ba5"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/characters/page-63bfb29a879073d3.js",
+      "bytes": 3411,
+      "sha256": "566ab937831cc7788f9dfd4ff944a607b7422711173859628430053d2148043a"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/characters/page-88ee71dee6b699b5.js",
+      "bytes": 3411,
+      "sha256": "2cc2ef57bc3dc588933c08fbef0487fd7721661ca814b0b589a8564914541a4e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/compare/page-6c5ec9366b6bcd11.js",
+      "bytes": 2948,
+      "sha256": "cf5f2bdf7cdd651f4e50dd63f6fc5955bbaa773bcce9a92bd7cd7ada2c5d633e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/compare/page-d590c801cfa0b26d.js",
+      "bytes": 2950,
+      "sha256": "91db81c30442daa4593bba841e3b0c1ce4c2d3b5cfd5e5919be3377fc5baab59"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/compare/page-e227f890c1f6432a.js",
+      "bytes": 2948,
+      "sha256": "29a01161bbe558993906649ea2a7d44c1bfde0c8d565a2c340493b60b315d52f"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/disk-sets/%5Bid%5D/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/disk-sets/%5Bid%5D/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/disk-sets/%5Bid%5D/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/disk-sets/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/disk-sets/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/disk-sets/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/download/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/download/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/download/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/events/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/events/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/events/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/gacha/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/gacha/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/gacha/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/guides/%5Bslug%5D/page-51810ec931c4cfe1.js",
+      "bytes": 183,
+      "sha256": "81591f1f63a2238c983346f4fd1efc3c9de1d1d011f5cef3ae3cbd665ee25d28"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/guides/%5Bslug%5D/page-6b9422e1dbc46268.js",
+      "bytes": 183,
+      "sha256": "12e910f025745625152d29d27314f96dd52f0711caa359e400a9d8a938ab70a7"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/guides/%5Bslug%5D/page-bb742d8390657f85.js",
+      "bytes": 183,
+      "sha256": "5636250e752bc2b806dcedea2ae2534c7e94772b8207335d427bad27a458cfe0"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/guides/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/guides/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/guides/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/items/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/items/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/items/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/layout-1106fb316852363d.js",
+      "bytes": 147,
+      "sha256": "af444fe6a8e8b6300a07517ab9ecf4058bf4cbe2bdf5ba243d9b0582dc700178"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/layout-9791326f36b35ea8.js",
+      "bytes": 147,
+      "sha256": "6779adc2a51fc8685f41e6a9e77cc836dab54481940eb4814aa9e91b6a256263"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/map/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/map/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/map/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/merchant/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/merchant/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/merchant/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/redeem-codes/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/redeem-codes/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/redeem-codes/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/teams/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/teams/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/teams/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/tier-list/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/tier-list/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/tier-list/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/version/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/version/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/version/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/weapons/%5Bid%5D/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/weapons/%5Bid%5D/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/weapons/%5Bid%5D/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/weapons/page-1f6466c40bacc9fa.js",
+      "bytes": 253,
+      "sha256": "59bcbb199fe916cbfd5400e43422ef572d285d4fb9a2bc074bbe15d41674ef94"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/weapons/page-a3a999f88f7c338c.js",
+      "bytes": 251,
+      "sha256": "1bde4e6b2c8e364982666d2fc8a003a3693deea331bdd43edb22ddb4478f3147"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/nte/weapons/page-f984dc73b6d5d8ec.js",
+      "bytes": 253,
+      "sha256": "c2f327700741908810bf3c0ff38133f93fabc8131d92db7b6eff1eaad20f6460"
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-44920949e0a0bf04.js",
+      "bytes": 199,
+      "sha256": "85692ff4e445da60a42b40cf0957a4052d667aded42dca8ec40816f8e0c0639c"
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-8b9bdf21422466d5.js",
+      "bytes": 199,
+      "sha256": "d0c8f169205968bf2665dc3dcf000254cd2745ea2e0897e0e514e1452288f626"
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-d9ef872cfd963425.js",
+      "bytes": 199,
+      "sha256": "fce23b4d806fcdcce06958e2f055b6ed682dab7598da09fa5e56f7d710338d85"
+    },
+    {
+      "path": "/_next/static/chunks/app/page-1106fb316852363d.js",
+      "bytes": 147,
+      "sha256": "af444fe6a8e8b6300a07517ab9ecf4058bf4cbe2bdf5ba243d9b0582dc700178"
+    },
+    {
+      "path": "/_next/static/chunks/app/page-9791326f36b35ea8.js",
+      "bytes": 147,
+      "sha256": "6779adc2a51fc8685f41e6a9e77cc836dab54481940eb4814aa9e91b6a256263"
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-1106fb316852363d.js",
+      "bytes": 147,
+      "sha256": "af444fe6a8e8b6300a07517ab9ecf4058bf4cbe2bdf5ba243d9b0582dc700178"
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-9791326f36b35ea8.js",
+      "bytes": 147,
+      "sha256": "6779adc2a51fc8685f41e6a9e77cc836dab54481940eb4814aa9e91b6a256263"
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-1106fb316852363d.js",
+      "bytes": 147,
+      "sha256": "af444fe6a8e8b6300a07517ab9ecf4058bf4cbe2bdf5ba243d9b0582dc700178"
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-9791326f36b35ea8.js",
+      "bytes": 147,
+      "sha256": "6779adc2a51fc8685f41e6a9e77cc836dab54481940eb4814aa9e91b6a256263"
+    },
+    {
+      "path": "/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "bytes": 173018,
+      "sha256": "0acbfe483471d226b8984baa718694a91bf1102c52f6506a4322fc1c29de6729"
+    },
+    {
+      "path": "/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "bytes": 173017,
+      "sha256": "87c8da227b1b98e63c7f2b40b2ca5379200c3feaacf525fb1144a1b4dcc00df9"
+    },
+    {
+      "path": "/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "bytes": 189765,
+      "sha256": "45abd73cb7d35889e62fa2bd172229424a8e21404639f5699d84ecb474110eb4"
+    },
+    {
+      "path": "/_next/static/chunks/framework-9696696a185c78ac.js",
+      "bytes": 189765,
+      "sha256": "7cc6e3090fe318ee2e44a91618678c5a7c1f862f61fbd9a82d65c8a841d87201"
+    },
+    {
+      "path": "/_next/static/chunks/main-291cc0b51596f64c.js",
+      "bytes": 137237,
+      "sha256": "b3ac5a861bddde0dfc6b3b5c290f96ad428c174d018bd5e7f703aa9da95e5076"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "bytes": 554,
+      "sha256": "c14b02306eb09038d4f504d947dfd9d9e2bd903c3bacbfa1471cb787f0ef1a1d"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "bytes": 556,
+      "sha256": "27ab33d830f470b76b844e468f1e4148a54e113fa6ddbf1d8989f4cf314bb785"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-969ac9a4916f5a15.js",
+      "bytes": 554,
+      "sha256": "233636a530b90654e40c395ace19e47114d0b639463366c26c28f0c9cb4697f2"
+    },
+    {
+      "path": "/_next/static/chunks/main-e08da73cad2c86b2.js",
+      "bytes": 137740,
+      "sha256": "2046ccdd10545dc1e4de36e8c61a1520a6f1914c289914fc1eec966ec3dffcb8"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "bytes": 236,
+      "sha256": "abf55f9b450809a507b1ba2bf3f32dcedd047609787a55f65dd9d8960b2eb660"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "bytes": 236,
+      "sha256": "8483ef687db555fda25098452116be580f1d517b9c8851585b89348c2fb0019b"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "bytes": 218,
+      "sha256": "e8a4a0d74e759f47f837e0eb62da7e849e03cd763559a6c5e78ef40ca5d86730"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "bytes": 216,
+      "sha256": "afebe9dcc6f3dcaf39287cec34fcf7c3fb664444dedf10ce5dd5121a8443f19c"
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "bytes": 112594,
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+    },
+    {
+      "path": "/_next/static/chunks/webpack-4d85dff31b7820a4.js",
+      "bytes": 3425,
+      "sha256": "b81386bbd02645a00a44d5e458e65ce0e1ce781dc5cc076b306833513a9ee479"
+    },
+    {
+      "path": "/_next/static/chunks/webpack-78aede61962d179a.js",
+      "bytes": 3425,
+      "sha256": "c64d3f5c383c283deca325ec08c628eb6eff1534868aa56e603d3f7945ea4087"
+    },
+    {
+      "path": "/_next/static/css/0c3661ec312a3055.css",
+      "bytes": 22134,
+      "sha256": "ca1dfd6abbad4ef2171ecfe71d25f1a50e5abf7541102239ff8dce250009455e"
+    },
+    {
+      "path": "/_next/static/css/707105c3a2bf68c5.css",
+      "bytes": 22583,
+      "sha256": "1aca72c9cee9322335c233ea80c5bc200274f1badbd954264f153aaf698eeacb"
+    },
+    {
+      "path": "/_next/static/css/a03f215a7bc52d77.css",
+      "bytes": 21115,
+      "sha256": "866a6d35cb5e0a4885c5e68a13ea05429217080ede132856653ceecea2abbf63"
+    },
+    {
+      "path": "/_next/static/KD73rR_8GnvbF8L310z-d/_buildManifest.js",
+      "bytes": 771,
+      "sha256": "962b4915f588e55bf2931fa2b5a174a67eaeaf397a2a44168267ead5687334c5"
+    },
+    {
+      "path": "/_next/static/KD73rR_8GnvbF8L310z-d/_ssgManifest.js",
+      "bytes": 80,
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+    },
+    {
+      "path": "/_next/static/PfY5Hf_riNFhLu6zf9d4X/_buildManifest.js",
+      "bytes": 771,
+      "sha256": "66d5cb5739dfe2fcee010a82558e0647afb4e5d6d5ee76ddafba678d2f0fc3f7"
+    },
+    {
+      "path": "/_next/static/PfY5Hf_riNFhLu6zf9d4X/_ssgManifest.js",
+      "bytes": 80,
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+    },
+    {
+      "path": "/_next/static/vAWquvi6K3ivFj1BGJi_V/_buildManifest.js",
+      "bytes": 771,
+      "sha256": "66d5cb5739dfe2fcee010a82558e0647afb4e5d6d5ee76ddafba678d2f0fc3f7"
+    },
+    {
+      "path": "/_next/static/vAWquvi6K3ivFj1BGJi_V/_ssgManifest.js",
+      "bytes": 80,
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+    },
+    {
+      "path": "/_next/static/zCUcV5pdjtlU5Uqz3DFhq/_buildManifest.js",
+      "bytes": 771,
+      "sha256": "66d5cb5739dfe2fcee010a82558e0647afb4e5d6d5ee76ddafba678d2f0fc3f7"
+    },
+    {
+      "path": "/_next/static/zCUcV5pdjtlU5Uqz3DFhq/_ssgManifest.js",
+      "bytes": 80,
+      "sha256": "678f6ce2cb80b1fe72fc67e7412be6e2ab6ada083111b64f7c40d35e3cba5e00"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+[
+  {
+    "game": "genshin",
+    "current": {
+      "moduleBytes": 9081229,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 123,
+      "betterAuthOccurrences": 0
+    },
+    "candidate": {
+      "moduleBytes": 9141143,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 458,
+      "betterAuthOccurrences": 0
+    }
+  },
+  {
+    "game": "nte",
+    "current": {
+      "moduleBytes": 7203596,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 123,
+      "betterAuthOccurrences": 0
+    },
+    "candidate": {
+      "moduleBytes": 7262706,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 458,
+      "betterAuthOccurrences": 0
+    }
+  },
+  {
+    "game": "azur-promilia",
+    "current": {
+      "moduleBytes": 5399816,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 123,
+      "betterAuthOccurrences": 0
+    },
+    "candidate": {
+      "moduleBytes": 5460806,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 458,
+      "betterAuthOccurrences": 0
+    }
+  },
+  {
+    "game": "lvmeng",
+    "current": {
+      "moduleBytes": 5409657,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 123,
+      "betterAuthOccurrences": 0
+    },
+    "candidate": {
+      "moduleBytes": 5472271,
+      "packagePathMarkers": [
+        "@opennextjs+aws@4.1.12_next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3_e388f86840ff94fd43190f505570e0a4",
+        "@swc+helpers@0.5.15",
+        "client-only@0.0.1",
+        "cookie@1.1.1",
+        "next@15.5.28_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_6492b9a3ef01c0acaf20de3eaf24666a",
+        "react-dom@19.2.4_react@19.2.4",
+        "react@19.2.4",
+        "styled-jsx@5.1.6_react@19.2.4"
+      ],
+      "zodOccurrences": 458,
+      "betterAuthOccurrences": 0
+    }
+  }
+]

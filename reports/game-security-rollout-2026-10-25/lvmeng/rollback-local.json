@@ -1,0 +1,19 @@
+{
+  "status": "local_compatibility_fallback_verified_not_deployed",
+  "at": "2026-10-25T11:49:44.683Z",
+  "game": "lvmeng",
+  "oldVersionId": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+  "oldCloudModuleSha256": "0b82ec14f024703fffb6d1bf38e1659adbdda084d68f8adea128db23939980a4",
+  "wrapperSha256": "d20ffc9dacb558bd160c7a582a31559ec9445783284d6079ab66cfa4a0730147",
+  "assetManifestSha256": "2991d7af7524e93c47fedfda8c4610de8e43e72910a3d049951ba0a4fb6ea582",
+  "sourceCommit": "not_attested",
+  "cloudRollbackDrill": false,
+  "pages": 27,
+  "assets": 166,
+  "limitations": [
+    "Local HTTP, host policy and old/new static bytes only; not online rollback drill or browser acceptance.",
+    "Old renderer restores previous runtime and old Lvmeng storage behavior.",
+    "Raw version rollback cannot prove new chunks remain available.",
+    "This local-only config is not an approved remote fallback target."
+  ]
+}

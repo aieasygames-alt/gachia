@@ -1,0 +1,547 @@
+{
+  "status": "stable_direct_origin_verified",
+  "versionId": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+  "origin": "https://gachia-game-genshin.aieasygames.workers.dev",
+  "observations": [
+    {
+      "path": "/zh/genshin",
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "path": "/_next/static/67tx7c7V6R2N0y2PfyrBe/_buildManifest.js",
+      "bytes": 783,
+      "sha256": "9648959723eed6133dab480ac08c818d5ca6145d48644b508d42a3e55360a0fc"
+    },
+    {
+      "path": "/_next/static/67tx7c7V6R2N0y2PfyrBe/_ssgManifest.js",
+      "bytes": 338,
+      "sha256": "8b42418df218e80186dc95ae64b97fff0b5e13e9ef87cb105b7d6dffbd262ece"
+    },
+    {
+      "path": "/_next/static/Bkxapi0t6TRXoRZMp0Y2P/_buildManifest.js",
+      "bytes": 783,
+      "sha256": "9648959723eed6133dab480ac08c818d5ca6145d48644b508d42a3e55360a0fc"
+    },
+    {
+      "path": "/_next/static/Bkxapi0t6TRXoRZMp0Y2P/_ssgManifest.js",
+      "bytes": 338,
+      "sha256": "8b42418df218e80186dc95ae64b97fff0b5e13e9ef87cb105b7d6dffbd262ece"
+    },
+    {
+      "path": "/_next/static/chunks/134-993bbc04f5d351fc.js",
+      "bytes": 173345,
+      "sha256": "33b0bd577c8547d5e8fe3a803869bd60f6132f2f387e8c4a9d092ca431b9ad09"
+    },
+    {
+      "path": "/_next/static/chunks/545-6e93eb050fa72f60.js",
+      "bytes": 8533,
+      "sha256": "bbddeacd209251d11cef3f05fdda915471b6f94720f0a5712c897b0c35e07776"
+    },
+    {
+      "path": "/_next/static/chunks/652-fb3b46b5e03210e4.js",
+      "bytes": 8535,
+      "sha256": "522cecfd4d820c476e319b028697e39bbb5356eb747274da921e61acd34191ef"
+    },
+    {
+      "path": "/_next/static/chunks/721-1995520c574a32d7.js",
+      "bytes": 174137,
+      "sha256": "0c353970f4875f983651cf55e2e017d7a4b611a67852a84c43106c1acd1a18c2"
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-1d7b51a07ed78421.js",
+      "bytes": 2670,
+      "sha256": "6fa38e324c72ef9585d564031f97aa0a3b26ec9adf66ea0d1a3c7e4a29631ab4"
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-37a003ce7c5a6f07.js",
+      "bytes": 2670,
+      "sha256": "bb37d43472dc80fbda6c3a7f1e8837e85228c91e54e65388dd85a289ffe53dfb"
+    },
+    {
+      "path": "/_next/static/chunks/app/_not-found/page-e85e57f7e9878369.js",
+      "bytes": 2668,
+      "sha256": "82761a251e75f1bba80032b1f36902d2aab89ea92e801d4d2c7facc13a1be48b"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/%5Bid%5D/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/%5Bid%5D/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/%5Bid%5D/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/build/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/build/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/build/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/calculator/page-11b11751c4cc72ec.js",
+      "bytes": 6168,
+      "sha256": "81276e907d6b0da94406aef9e2d0f9716bf4be771d7daf1ba834d2beb0b0fb28"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/calculator/page-4c58b38f34c66467.js",
+      "bytes": 5615,
+      "sha256": "e088d0febcc881cf6b21ff2d4eeb12319152567b64c06321a9736bb53e305dae"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/calculator/page-80e06d57ec32b1ec.js",
+      "bytes": 6168,
+      "sha256": "867e04ebd57b6c6aa10e2659f35d81ef9363531f52ca7943e27dc00533795867"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/characters/%5Bid%5D/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/characters/%5Bid%5D/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/characters/%5Bid%5D/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/characters/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/characters/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/characters/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/compare/page-9d73f82afd4678ca.js",
+      "bytes": 155,
+      "sha256": "37b1486e8ec85807ad495a2fafad1ea3bcc9fba21dbdeb3d7c47dbd9c0d55190"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/compare/page-acc9c8c4ae619233.js",
+      "bytes": 155,
+      "sha256": "2591e378615bc3ce393e1bd7817efad5ddcfb994d08c7a2980da5aef5e926a2c"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/download/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/download/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/download/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/gacha/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/gacha/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/gacha/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/guides/%5Bslug%5D/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/guides/%5Bslug%5D/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/guides/%5Bslug%5D/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/guides/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/guides/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/guides/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/items/%5Bid%5D/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/items/%5Bid%5D/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/items/%5Bid%5D/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/items/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/items/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/items/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/layout-9d73f82afd4678ca.js",
+      "bytes": 155,
+      "sha256": "37b1486e8ec85807ad495a2fafad1ea3bcc9fba21dbdeb3d7c47dbd9c0d55190"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/layout-acc9c8c4ae619233.js",
+      "bytes": 155,
+      "sha256": "2591e378615bc3ce393e1bd7817efad5ddcfb994d08c7a2980da5aef5e926a2c"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/map/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/map/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/map/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/redeem-codes/page-9d73f82afd4678ca.js",
+      "bytes": 155,
+      "sha256": "37b1486e8ec85807ad495a2fafad1ea3bcc9fba21dbdeb3d7c47dbd9c0d55190"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/redeem-codes/page-acc9c8c4ae619233.js",
+      "bytes": 155,
+      "sha256": "2591e378615bc3ce393e1bd7817efad5ddcfb994d08c7a2980da5aef5e926a2c"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/teams/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/teams/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/teams/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/tier-list/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/tier-list/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/tier-list/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/version/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/version/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/version/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/weapons/%5Bid%5D/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/weapons/%5Bid%5D/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/weapons/%5Bid%5D/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/weapons/page-2156a4fcf2eb8f97.js",
+      "bytes": 251,
+      "sha256": "1d481838a82fb515d76b4f8bd3dc2e8099a584ab592e9fa3b9de2cab039e1246"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/weapons/page-54fe70257673fb8a.js",
+      "bytes": 251,
+      "sha256": "ce999b0217e5accd38bc9ed6a3dc4ce1494a25e7b560d4931fe3717d511c9300"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/genshin/weapons/page-d3ab9e9cd0fcae2e.js",
+      "bytes": 249,
+      "sha256": "0b9587db5abc31e7c933edeefce6eab4a05d4fbf0807c20aa34a636119db841e"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-9d73f82afd4678ca.js",
+      "bytes": 155,
+      "sha256": "37b1486e8ec85807ad495a2fafad1ea3bcc9fba21dbdeb3d7c47dbd9c0d55190"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-acc9c8c4ae619233.js",
+      "bytes": 155,
+      "sha256": "2591e378615bc3ce393e1bd7817efad5ddcfb994d08c7a2980da5aef5e926a2c"
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-1bd9f95f2b57849b.js",
+      "bytes": 195,
+      "sha256": "e4b55c30aa97d10bfd39f82d7632af69e2bee8caba12f249f4ecc99b458223ee"
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-31fc9dcbfd8d78b6.js",
+      "bytes": 195,
+      "sha256": "6c6d25678950ff73a0ba31d774185136e45a374fb075845eb652ed47b5783a2b"
+    },
+    {
+      "path": "/_next/static/chunks/app/layout-59c9823f6b5fb17d.js",
+      "bytes": 195,
+      "sha256": "31cad5e60dd1fae5495971984044f3f7834ef0eca2eb2409dc09b2ec3116f218"
+    },
+    {
+      "path": "/_next/static/chunks/app/page-9d73f82afd4678ca.js",
+      "bytes": 155,
+      "sha256": "37b1486e8ec85807ad495a2fafad1ea3bcc9fba21dbdeb3d7c47dbd9c0d55190"
+    },
+    {
+      "path": "/_next/static/chunks/app/page-acc9c8c4ae619233.js",
+      "bytes": 155,
+      "sha256": "2591e378615bc3ce393e1bd7817efad5ddcfb994d08c7a2980da5aef5e926a2c"
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-9d73f82afd4678ca.js",
+      "bytes": 155,
+      "sha256": "37b1486e8ec85807ad495a2fafad1ea3bcc9fba21dbdeb3d7c47dbd9c0d55190"
+    },
+    {
+      "path": "/_next/static/chunks/app/robots.txt/route-acc9c8c4ae619233.js",
+      "bytes": 155,
+      "sha256": "2591e378615bc3ce393e1bd7817efad5ddcfb994d08c7a2980da5aef5e926a2c"
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-9d73f82afd4678ca.js",
+      "bytes": 155,
+      "sha256": "37b1486e8ec85807ad495a2fafad1ea3bcc9fba21dbdeb3d7c47dbd9c0d55190"
+    },
+    {
+      "path": "/_next/static/chunks/app/sitemap.xml/route-acc9c8c4ae619233.js",
+      "bytes": 155,
+      "sha256": "2591e378615bc3ce393e1bd7817efad5ddcfb994d08c7a2980da5aef5e926a2c"
+    },
+    {
+      "path": "/_next/static/chunks/b3ac7baf-c40001c3c1648c37.js",
+      "bytes": 173018,
+      "sha256": "0acbfe483471d226b8984baa718694a91bf1102c52f6506a4322fc1c29de6729"
+    },
+    {
+      "path": "/_next/static/chunks/cb95ab63-e7f3ca90b1b85bbe.js",
+      "bytes": 173017,
+      "sha256": "87c8da227b1b98e63c7f2b40b2ca5379200c3feaacf525fb1144a1b4dcc00df9"
+    },
+    {
+      "path": "/_next/static/chunks/framework-53958d1d0f917bbb.js",
+      "bytes": 189765,
+      "sha256": "45abd73cb7d35889e62fa2bd172229424a8e21404639f5699d84ecb474110eb4"
+    },
+    {
+      "path": "/_next/static/chunks/framework-9696696a185c78ac.js",
+      "bytes": 189765,
+      "sha256": "7cc6e3090fe318ee2e44a91618678c5a7c1f862f61fbd9a82d65c8a841d87201"
+    },
+    {
+      "path": "/_next/static/chunks/main-291cc0b51596f64c.js",
+      "bytes": 137237,
+      "sha256": "b3ac5a861bddde0dfc6b3b5c290f96ad428c174d018bd5e7f703aa9da95e5076"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-3c36f568c7a05fa8.js",
+      "bytes": 556,
+      "sha256": "e3fde6a2681ef2a1ea5b963612efd5347976d1129b022e7a5f8a30376e456974"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-651a19d72f1d115b.js",
+      "bytes": 554,
+      "sha256": "c14b02306eb09038d4f504d947dfd9d9e2bd903c3bacbfa1471cb787f0ef1a1d"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-7bf6336b6bc12646.js",
+      "bytes": 556,
+      "sha256": "27ab33d830f470b76b844e468f1e4148a54e113fa6ddbf1d8989f4cf314bb785"
+    },
+    {
+      "path": "/_next/static/chunks/main-e08da73cad2c86b2.js",
+      "bytes": 137740,
+      "sha256": "2046ccdd10545dc1e4de36e8c61a1520a6f1914c289914fc1eec966ec3dffcb8"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-7d404bf9bd0fdb29.js",
+      "bytes": 236,
+      "sha256": "abf55f9b450809a507b1ba2bf3f32dcedd047609787a55f65dd9d8960b2eb660"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_app-c8e994ea496efdaa.js",
+      "bytes": 236,
+      "sha256": "8483ef687db555fda25098452116be580f1d517b9c8851585b89348c2fb0019b"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-4a2748c8029baa0a.js",
+      "bytes": 218,
+      "sha256": "e8a4a0d74e759f47f837e0eb62da7e849e03cd763559a6c5e78ef40ca5d86730"
+    },
+    {
+      "path": "/_next/static/chunks/pages/_error-ca53de236ad1d553.js",
+      "bytes": 216,
+      "sha256": "afebe9dcc6f3dcaf39287cec34fcf7c3fb664444dedf10ce5dd5121a8443f19c"
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "bytes": 112594,
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+    },
+    {
+      "path": "/_next/static/chunks/webpack-7617905341b98b06.js",
+      "bytes": 3346,
+      "sha256": "0f22fe7aa7aa61a441f9eaf78c4889010ba480afd6374add77fe8f2d2e57f04f"
+    },
+    {
+      "path": "/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+      "bytes": 3346,
+      "sha256": "4c6321972f1e0403c2a5411ad77c4982c2e27deab693f64206dfc04feec1f779"
+    },
+    {
+      "path": "/_next/static/css/4e6b2dc0fa1e36bc.css",
+      "bytes": 32902,
+      "sha256": "bf6da9544c05a73ee8270ada9e17ebc0113dbcda9b55339b91209c335f34083f"
+    },
+    {
+      "path": "/_next/static/snNSIxpBvwprzZl6jRkM6/_buildManifest.js",
+      "bytes": 783,
+      "sha256": "2df82b01289fcde2e576d96a65dc6b8561f061cd7cecb30fd6073c4816dfae85"
+    },
+    {
+      "path": "/_next/static/snNSIxpBvwprzZl6jRkM6/_ssgManifest.js",
+      "bytes": 338,
+      "sha256": "8b42418df218e80186dc95ae64b97fff0b5e13e9ef87cb105b7d6dffbd262ece"
+    },
+    {
+      "path": "/_next/static/ycyvcBp5EZ-feVcYxWdWj/_buildManifest.js",
+      "bytes": 783,
+      "sha256": "9648959723eed6133dab480ac08c818d5ca6145d48644b508d42a3e55360a0fc"
+    },
+    {
+      "path": "/_next/static/ycyvcBp5EZ-feVcYxWdWj/_ssgManifest.js",
+      "bytes": 338,
+      "sha256": "8b42418df218e80186dc95ae64b97fff0b5e13e9ef87cb105b7d6dffbd262ece"
+    }
+  ]
+}

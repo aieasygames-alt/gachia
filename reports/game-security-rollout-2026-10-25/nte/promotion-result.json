@@ -1,0 +1,88 @@
+{
+  "status": "accepted_version_promoted_pending_production_acceptance",
+  "at": "2026-10-25T12:00:03.409Z",
+  "versionId": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+  "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+  "moduleSha256": "49c71c73771ede2f16c1fe9ebd3baab21b86f88371a3f34eb863248226d08fc3",
+  "artifact": {
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/game-security-rollout/nte/artifact",
+    "game": "nte",
+    "sourceCommit": "bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+    "manifestSha256": "d93be38d763b36561cb4e03cea7a6067af236d422ab870991bb8fcb0fa1f5677",
+    "treeSha256": "ec2f19a75136e7550d2ac1c02fb48b46ba152658c12b6f8094456d12ff0ee01d",
+    "entries": 2184,
+    "bytes": 36301967
+  },
+  "cloudVersion": {
+    "id": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+    "number": 24,
+    "metadata": {
+      "created_on": "2026-10-25T11:54:35.164808Z",
+      "source": "wrangler",
+      "author_id": "3a7c299ef441611896bb25058f41782a",
+      "author_email": "aieasygames@gmail.com",
+      "has_preview": true
+    },
+    "annotations": {
+      "workers/message": "Security audit nte candidate bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+      "workers/triggered_by": "version_upload"
+    },
+    "resources": {
+      "script": {
+        "etag": "300a163bed6c6d5cc2430e673207ae93577503b6a3b3450a444678fffe0963d6",
+        "handlers": [
+          "fetch"
+        ],
+        "named_handlers": [
+          {
+            "name": "BucketCachePurge",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOQueueHandler",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOShardedTagCache",
+            "handlers": [
+              "class"
+            ]
+          }
+        ],
+        "last_deployed_from": "wrangler"
+      },
+      "script_runtime": {
+        "assets": {
+          "serve_directly": true,
+          "raw_run_worker_first": false,
+          "base_path": "/"
+        },
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        },
+        {
+          "name": "NTE_DEPLOYMENT_MODE",
+          "text": "live",
+          "type": "plain_text"
+        }
+      ]
+    }
+  }
+}

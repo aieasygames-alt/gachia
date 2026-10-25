@@ -1,0 +1,26 @@
+[
+  {
+    "game": "genshin",
+    "previousRecordedSource": "db153db648d8937204ca2d36f04f3d89b31b5b9c",
+    "appSourceChanges": [],
+    "sourceAttestation": "historical_operator_record_not_platform_git_attestation"
+  },
+  {
+    "game": "nte",
+    "previousRecordedSource": "db153db648d8937204ca2d36f04f3d89b31b5b9c",
+    "appSourceChanges": [],
+    "sourceAttestation": "historical_operator_record_not_platform_git_attestation"
+  },
+  {
+    "game": "lvmeng",
+    "previousRecordedSource": "c86b08236373199f390b35acf1737eed429735ef",
+    "appSourceChanges": [],
+    "sourceAttestation": "historical_operator_record_not_platform_git_attestation"
+  },
+  {
+    "game": "azur-promilia",
+    "previousRecordedSource": "cb9def4756590c506ba61cd4f730717ccce9deab",
+    "appSourceChanges": [],
+    "sourceAttestation": "historical_operator_record_not_platform_git_attestation"
+  }
+]

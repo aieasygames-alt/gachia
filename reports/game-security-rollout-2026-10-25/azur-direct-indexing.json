@@ -1,0 +1,26 @@
+{
+  "origin": "https://gachia-game-azur-promilia.aieasygames.workers.dev",
+  "cloudWritePerformed": false,
+  "observations": [
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "xRobotsTag": null,
+      "location": null,
+      "robots": "User-Agent: *\nAllow: /\n\nSitemap: https://gachia.com/sitemaps/azur-promilia/index.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "xRobotsTag": null,
+      "location": null
+    },
+    {
+      "path": "/zh/azur-promilia",
+      "status": 200,
+      "xRobotsTag": null,
+      "location": null,
+      "canonical": "https://gachia.com/zh/azur-promilia"
+    }
+  ]
+}

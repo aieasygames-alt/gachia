@@ -1,0 +1,87 @@
+{
+  "status": "accepted_version_promoted_pending_production_acceptance",
+  "at": "2026-10-25T11:47:33.413Z",
+  "versionId": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+  "deploymentId": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+  "moduleSha256": "62a8007ea8e25353fc0016767ff6741cd343186522651b70842b829a82f2f0c7",
+  "artifact": {
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/game-security-rollout/genshin/artifact",
+    "manifestSha256": "9be8f2cc35e9629ed1723bfac362ed44ca1bec3cf01768266034c3787b7e2a48",
+    "sourceCommit": "bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+    "treeSha256": "7e0dbb28ad9633803c334458a234fd18ac8a21aff888264465d0446c6d8814f1",
+    "entries": 3761,
+    "bytes": 135526448
+  },
+  "cloudVersion": {
+    "id": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+    "number": 46,
+    "metadata": {
+      "created_on": "2026-10-25T11:39:09.221686Z",
+      "source": "wrangler",
+      "author_id": "3a7c299ef441611896bb25058f41782a",
+      "author_email": "aieasygames@gmail.com",
+      "has_preview": true
+    },
+    "annotations": {
+      "workers/message": "Security audit genshin candidate bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+      "workers/triggered_by": "version_upload"
+    },
+    "resources": {
+      "script": {
+        "etag": "e1fbac513f6d410ae2e8f50d88c5adc4f6b46260c238c63602c80cfd4df4b7c9",
+        "handlers": [
+          "fetch"
+        ],
+        "named_handlers": [
+          {
+            "name": "BucketCachePurge",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOQueueHandler",
+            "handlers": [
+              "class"
+            ]
+          },
+          {
+            "name": "DOShardedTagCache",
+            "handlers": [
+              "class"
+            ]
+          }
+        ],
+        "last_deployed_from": "wrangler"
+      },
+      "script_runtime": {
+        "assets": {
+          "serve_directly": true,
+          "raw_run_worker_first": false,
+          "base_path": "/"
+        },
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "GENSHIN_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    }
+  }
+}

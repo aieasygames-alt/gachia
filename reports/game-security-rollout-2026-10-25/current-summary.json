@@ -1,0 +1,38 @@
+[
+  {
+    "game": "genshin",
+    "service": "gachia-game-genshin",
+    "versionId": "73d10dac-6343-49ed-a688-4c9a56a9ddd4",
+    "deploymentId": "e119e349-198a-495d-ac84-1ea8208c7fff",
+    "etag": "87ec5b610a0b1e0c172a2fbf9db6b6f7db1e5c0ff3209487fd837c9d3778f25c",
+    "moduleSha256": "702a4062b4323733bf7aa14349f9b6d244888cb0cbb0c081b845d864db7d6800",
+    "bytes": 9081229
+  },
+  {
+    "game": "nte",
+    "service": "gachia-game-nte",
+    "versionId": "91821283-846e-42f0-8977-491da0e114e3",
+    "deploymentId": "8a5135d9-1ed3-4cf3-9b85-f2ea491f609b",
+    "etag": "3fc3b15895db9b01d6cb799e64817b3320f2e8a34280b5c27dd707c26972949c",
+    "moduleSha256": "aa0c817b912618ba6e165db429b2583accc572f50f5c4b2db9132a2c6f5929d3",
+    "bytes": 7203596
+  },
+  {
+    "game": "azur-promilia",
+    "service": "gachia-game-azur-promilia",
+    "versionId": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+    "deploymentId": "fcc7ddf4-f591-4607-9d95-f28ba096229d",
+    "etag": "bb12236733599fc9eb4513a868e0c717adc1cca891bf95d2ca1284fac779bfdd",
+    "moduleSha256": "083f01784b2e5a817d65e0213a341f27700a15ad4c878dcd71d3bc1024e476cc",
+    "bytes": 5399816
+  },
+  {
+    "game": "lvmeng",
+    "service": "gachia-game-lvmeng",
+    "versionId": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+    "deploymentId": "49586e5c-90ee-498b-9882-75e33618df2c",
+    "etag": "ff1dd2562161a0e363c47341e523c026cd72401327d609f6bfa4f59b4ad89ae5",
+    "moduleSha256": "0b82ec14f024703fffb6d1bf38e1659adbdda084d68f8adea128db23939980a4",
+    "bytes": 5409657
+  }
+]

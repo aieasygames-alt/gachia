@@ -1,0 +1,62 @@
+{
+  "sourceCommit": "bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+  "scope": "two_game_workers_promoted_two_pending",
+  "githubActionsStarted": 0,
+  "routerChanged": false,
+  "mainChanged": false,
+  "accountFeaturesRestored": false,
+  "databaseMigration": false,
+  "games": {
+    "genshin": {
+      "status": "production_accepted",
+      "artifact": {
+        "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/game-security-rollout/genshin/artifact",
+        "manifestSha256": "9be8f2cc35e9629ed1723bfac362ed44ca1bec3cf01768266034c3787b7e2a48",
+        "sourceCommit": "bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+        "treeSha256": "7e0dbb28ad9633803c334458a234fd18ac8a21aff888264465d0446c6d8814f1",
+        "entries": 3761,
+        "bytes": 135526448
+      },
+      "versionId": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+      "deploymentId": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+      "moduleSha256": "62a8007ea8e25353fc0016767ff6741cd343186522651b70842b829a82f2f0c7"
+    },
+    "nte": {
+      "status": "production_accepted",
+      "artifact": {
+        "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/game-security-rollout/nte/artifact",
+        "game": "nte",
+        "sourceCommit": "bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+        "manifestSha256": "d93be38d763b36561cb4e03cea7a6067af236d422ab870991bb8fcb0fa1f5677",
+        "treeSha256": "ec2f19a75136e7550d2ac1c02fb48b46ba152658c12b6f8094456d12ff0ee01d",
+        "entries": 2184,
+        "bytes": 36301967
+      },
+      "versionId": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+      "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+      "moduleSha256": "49c71c73771ede2f16c1fe9ebd3baab21b86f88371a3f34eb863248226d08fc3"
+    },
+    "lvmeng": {
+      "status": "blocked_upload_not_promoted",
+      "artifact": {
+        "game": "lvmeng",
+        "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/game-security-rollout/lvmeng/artifact",
+        "sourceCommit": "bab9e324e1d2ad3ecabe801e0af183649a7dc440",
+        "manifestSha256": "2991d7af7524e93c47fedfda8c4610de8e43e72910a3d049951ba0a4fb6ea582",
+        "treeSha256": "29ac639e6e67e1941ac6b6e03faa7994e04b9646a56e60717f4944d1475e1a0b",
+        "entries": 2058,
+        "bytes": 31934847
+      },
+      "uploadFailures": [
+        "Cloudflare assets-upload-session error 10013",
+        "one bounded retry timed out at Cloudflare API"
+      ],
+      "versionId": "e6cb7815-64be-48df-890f-fd610a8f05a9"
+    },
+    "azur-promilia": {
+      "status": "blocked_missing_runtime_preview_noindex_contract",
+      "productionVersionUnchanged": "9867e978-20fa-46f9-8dd4-c96c400e6919",
+      "remoteUploadAttempted": false
+    }
+  }
+}

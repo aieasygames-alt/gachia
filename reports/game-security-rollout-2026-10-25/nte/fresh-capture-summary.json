@@ -1,0 +1,19 @@
+{
+  "status": "fresh_current_version_bytes_verified",
+  "oldModuleSha256": "aa0c817b912618ba6e165db429b2583accc572f50f5c4b2db9132a2c6f5929d3",
+  "previousAcceptedSource": "db153db648d8937204ca2d36f04f3d89b31b5b9c",
+  "provenance": "operator_release_evidence_not_independent_git_attestation",
+  "receiptPath": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/game-security-rollout/nte/previous-assets-receipt.json",
+  "receiptSha256": "8cc1ab75d900c1031d7407f9b900652cf3b6aa840021e0f03eec90af19737a5a",
+  "versionId": "91821283-846e-42f0-8977-491da0e114e3",
+  "deploymentId": "8a5135d9-1ed3-4cf3-9b85-f2ea491f609b",
+  "scriptEtag": "3fc3b15895db9b01d6cb799e64817b3320f2e8a34280b5c27dd707c26972949c",
+  "workerArchiveSha256": "272eb7f56ee64f766f91df539b51fbb676d29fe9eb1931f3e8a7844f2e07a9af",
+  "inventorySha256": "e1ad6614f2c412d004993df3319694441e29519a8d357f19ec12c12af523ac1d",
+  "files": 88,
+  "bytes": 1591927,
+  "capturedAt": "2026-10-25T11:41:21.700Z",
+  "sourceCommit": "not_attested",
+  "cloudAssetManifestCompleteness": "not_asserted",
+  "verification": "local_evidence_integrity_only_not_live_cloud_state"
+}

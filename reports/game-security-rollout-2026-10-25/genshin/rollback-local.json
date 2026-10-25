@@ -1,0 +1,68 @@
+{
+  "status": "local_compatibility_fallback_verified_not_deployed",
+  "at": "2026-10-25T11:38:14.302Z",
+  "oldVersionId": "73d10dac-6343-49ed-a688-4c9a56a9ddd4",
+  "oldCloudModuleSha256": "702a4062b4323733bf7aa14349f9b6d244888cb0cbb0c081b845d864db7d6800",
+  "wrapperSha256": "ce49e8bb7c273f02adee758598d1cec642e808e876c2f679f3621a7d46c9d99c",
+  "assetManifestSha256": "9be8f2cc35e9629ed1723bfac362ed44ca1bec3cf01768266034c3787b7e2a48",
+  "sourceCommit": "not_attested",
+  "cloudRollbackDrill": false,
+  "limitations": [
+    "Local HTTP and old/new static bytes only; not an online rollback drill or browser acceptance.",
+    "Old renderer would restore previous language/indexing policy and old planner behavior.",
+    "Raw Cloudflare version rollback does not prove retention of new candidate chunks; do not substitute it for this compatibility fallback."
+  ],
+  "http": {
+    "status": "local_worker_http_verified",
+    "cloudVerification": "not_performed",
+    "observations": [
+      {
+        "path": "/robots.txt",
+        "status": 200
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin",
+        "status": 200
+      },
+      {
+        "path": "/en/genshin",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin/characters",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin/characters/hu-tao",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+        "status": 200
+      },
+      {
+        "path": "/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+        "status": 200
+      },
+      {
+        "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+        "status": 200
+      },
+      {
+        "path": "/_next/static/css/4e6b2dc0fa1e36bc.css",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin/__release_smoke_missing__",
+        "status": 404
+      }
+    ],
+    "retainedStaticPaths": 164
+  },
+  "oldSitemapUrls": 1572,
+  "oldAndNewStaticChecks": 212
+}

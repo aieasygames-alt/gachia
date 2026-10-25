@@ -1,0 +1,19 @@
+{
+  "status": "local_compatibility_fallback_verified_not_deployed",
+  "at": "2026-10-25T11:42:15.542Z",
+  "game": "nte",
+  "oldVersionId": "91821283-846e-42f0-8977-491da0e114e3",
+  "oldCloudModuleSha256": "aa0c817b912618ba6e165db429b2583accc572f50f5c4b2db9132a2c6f5929d3",
+  "wrapperSha256": "d20ffc9dacb558bd160c7a582a31559ec9445783284d6079ab66cfa4a0730147",
+  "assetManifestSha256": "d93be38d763b36561cb4e03cea7a6067af236d422ab870991bb8fcb0fa1f5677",
+  "sourceCommit": "not_attested",
+  "cloudRollbackDrill": false,
+  "pages": 504,
+  "assets": 232,
+  "limitations": [
+    "Local HTTP, host policy and old/new static bytes only; not online rollback drill or browser acceptance.",
+    "Old renderer restores previous runtime and old Lvmeng storage behavior.",
+    "Raw version rollback cannot prove new chunks remain available.",
+    "This local-only config is not an approved remote fallback target."
+  ]
+}

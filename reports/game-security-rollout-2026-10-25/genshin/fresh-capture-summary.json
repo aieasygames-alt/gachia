@@ -1,0 +1,19 @@
+{
+  "status": "fresh_current_version_bytes_verified",
+  "oldModuleSha256": "702a4062b4323733bf7aa14349f9b6d244888cb0cbb0c081b845d864db7d6800",
+  "previousAcceptedSource": "db153db648d8937204ca2d36f04f3d89b31b5b9c",
+  "provenance": "operator_release_evidence_not_independent_git_attestation",
+  "receiptPath": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/game-security-rollout/genshin/previous-assets-receipt.json",
+  "receiptSha256": "9d14327b6458fd4ae93093dc03e0d6fe93d293717f0a4b63f8139a01304dc907",
+  "versionId": "73d10dac-6343-49ed-a688-4c9a56a9ddd4",
+  "deploymentId": "e119e349-198a-495d-ac84-1ea8208c7fff",
+  "scriptEtag": "87ec5b610a0b1e0c172a2fbf9db6b6f7db1e5c0ff3209487fd837c9d3778f25c",
+  "workerArchiveSha256": "88dd1790ca34d121eda7c58fb4ed9a6fe9988bd38d17b98316a3f91b91b8f1b0",
+  "inventorySha256": "6e8450306f1668e3fcee79ca9cbc0f39490c4393b8cac40d7126a39720a2f4da",
+  "files": 82,
+  "bytes": 1551342,
+  "capturedAt": "2026-10-25T11:35:25.787Z",
+  "sourceCommit": "not_attested",
+  "cloudAssetManifestCompleteness": "not_asserted",
+  "verification": "local_evidence_integrity_only_not_live_cloud_state"
+}

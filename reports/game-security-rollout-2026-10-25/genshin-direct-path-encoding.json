@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/_next/static/chunks/app/[lang]/genshin/artifacts/[id]/page-2156a4fcf2eb8f97.js",
+    "status": 307,
+    "location": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/%5Bid%5D/page-2156a4fcf2eb8f97.js",
+    "bytes": 0
+  },
+  {
+    "path": "/_next/static/chunks/app/%5Blang%5D/genshin/artifacts/%5Bid%5D/page-2156a4fcf2eb8f97.js",
+    "status": 200,
+    "location": null,
+    "bytes": 251
+  }
+]
