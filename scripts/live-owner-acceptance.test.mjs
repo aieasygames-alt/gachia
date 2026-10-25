@@ -1,6 +1,15 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { nteJapaneseGuideIndexable, sitemapLocations, validateAcceptanceOrigin } from './live-owner-acceptance.mjs';
+import { missingSectionExpectation, nteJapaneseGuideIndexable, sitemapLocations, validateAcceptanceOrigin } from './live-owner-acceptance.mjs';
+
+test('unknown Main-owned NTE section is exactly a hub redirect, never a dedicated detail 404', () => {
+  assert.deepEqual(missingSectionExpectation('nte', 'production'), { status: 301, location: '/zh/nte' });
+  for (const game of ['nte', 'lvmeng']) for (const phase of ['local', 'preview', 'production']) {
+    if (game === 'nte' && phase === 'production') continue;
+    assert.deepEqual(missingSectionExpectation(game, phase), { status: 404, location: null });
+  }
+  assert.throws(() => missingSectionExpectation('genshin', 'production'));
+});
 
 test('acceptance allows only local, public production or exact owner version preview origins', () => {
   for (const game of ['nte', 'lvmeng']) {

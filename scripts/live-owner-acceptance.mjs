@@ -40,6 +40,14 @@ export function validateAcceptanceOrigin(game, origin, phase) {
   else assert(new RegExp(`^https://[a-f0-9]{8}-gachia-game-${game}\\.aieasygames\\.workers\\.dev$`).test(origin), 'Exact version preview only');
 }
 
+export function missingSectionExpectation(game, phase) {
+  assert(['nte', 'lvmeng'].includes(game) && ['local', 'preview', 'production'].includes(phase));
+  // Main's existing NTE allowlist redirects unsupported sections to the hub.
+  // This is not the dedicated character-detail 404 contract.
+  return game === 'nte' && phase === 'production'
+    ? { status: 301, location: '/zh/nte' } : { status: 404, location: null };
+}
+
 export async function acceptLiveOwner({ game, origin, phase, directory, artifactDirectory, manifest, previousSitemap, browsers = true }) {
   validateAcceptanceOrigin(game, origin, phase);
   const result = { game, phase, origin, startedAt: new Date().toISOString(), status: 'running', pages: [], assets: [], browsers: [], requests: 0 };
@@ -126,7 +134,11 @@ export async function acceptLiveOwner({ game, origin, phase, directory, artifact
       }
     }
     await get(`/zh/${game}/characters/release-missing`, { status: 404 });
-    await get(`/zh/${game}/__release_missing__`, { status: 404, owner: phase !== 'production' });
+    const missingPolicy = missingSectionExpectation(game, phase);
+    const missingSection = await get(`/zh/${game}/__release_missing__`, { status: missingPolicy.status, owner: phase !== 'production' });
+    assert.equal(missingSection.response.headers.get('location'), missingPolicy.location);
+    if (phase === 'production') assert.equal(missingSection.response.headers.get('x-gachia-route-target'), null, 'Unknown section belongs to Main');
+    result.missingSection = { owner: phase === 'production' ? 'main' : game, ...missingPolicy };
     if (game === 'lvmeng') for (const lang of ['en', 'ja']) await get(`/${lang}/lvmeng`, { status: 404, owner: phase !== 'production' });
     if (browsers) result.browsers = await acceptBrowser({ game, origin, phase, directory });
     result.status = 'candidate_acceptance_passed';
