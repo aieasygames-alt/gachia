@@ -2,8 +2,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, lstatSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, isAbsolute, resolve } from 'node:path';
 
-const GAME = 'azur-promilia';
-const SERVICE = `gachia-game-${GAME}`;
+const GAMES = new Set(['azur-promilia', 'genshin']);
 const UUID = /^[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}$/i;
 const SHA = /^[a-f0-9]{64}$/;
 const MAX_FILE = 8 * 1024 * 1024;
@@ -44,14 +43,15 @@ function readBoundFile(root, entry, maxBytes) {
 // This validates operator-saved evidence and bytes, not Cloudflare state or Git
 // provenance. A fresh cloud version check is still required before deployment.
 export function readPreviousGameAssets(receiptPath, { game, rollbackVersion } = {}) {
-  requireThat(game === GAME, 'only the reviewed Azur owner is supported');
+  requireThat(GAMES.has(game), 'only the reviewed Azur or Genshin owner is supported');
+  const service = `gachia-game-${game}`;
   const absolute = resolve(receiptPath);
   const root = dirname(absolute);
   const receiptFile = safePath(root, absolute.slice(root.length + 1));
   requireThat(lstatSync(receiptFile).isFile() && lstatSync(receiptFile).size <= 1024 * 1024, 'invalid receipt file');
   const raw = readFileSync(receiptFile);
   const receipt = JSON.parse(raw);
-  requireThat(receipt.schemaVersion === 1 && receipt.game === GAME && receipt.service === SERVICE, 'wrong schema or owner');
+  requireThat(receipt.schemaVersion === 1 && receipt.game === game && receipt.service === service, 'wrong schema or owner');
   requireThat(UUID.test(receipt.versionId) && UUID.test(receipt.deploymentId) && SHA.test(receipt.scriptEtag), 'invalid cloud identifiers');
   requireThat(!rollbackVersion || rollbackVersion === receipt.versionId, 'rollback version does not match retained version');
   requireThat(receipt.sourceCommit === 'not_attested' && receipt.cloudAssetManifestCompleteness === 'not_asserted', 'unsupported provenance claims');
@@ -62,7 +62,7 @@ export function readPreviousGameAssets(receiptPath, { game, rollbackVersion } = 
   readBoundFile(root, receipt.workerArchive, 16 * 1024 * 1024);
   const inventoryBytes = readBoundFile(root, receipt.inventory, 1024 * 1024);
   const inventory = JSON.parse(inventoryBytes);
-  requireThat(inventory.service === SERVICE && inventory.versionId === receipt.versionId && SHA.test(inventory.logSha256), 'wrong historical inventory');
+  requireThat(inventory.service === service && inventory.versionId === receipt.versionId && SHA.test(inventory.logSha256), 'wrong historical inventory');
   requireThat(Array.isArray(receipt.files) && receipt.files.length > 0 && receipt.files.length <= 2000, 'invalid static file inventory');
   const seen = new Set();
   let totalBytes = 0;

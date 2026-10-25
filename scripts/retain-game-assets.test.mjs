@@ -12,18 +12,18 @@ import { verifyStagingHttp } from './game-staging-acceptance.mjs';
 const game = 'azur-promilia';
 const versionId = '472903c2-3fca-43c0-a613-8c54f108bf73';
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
-function fixture(t) {
+function fixture(t, owner = game) {
   const root = mkdtempSync(resolve(tmpdir(), 'gachia-game-retention-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));
   const put = (path, bytes) => { const target = resolve(root, path); mkdirSync(dirname(target), { recursive: true }); writeFileSync(target, bytes); };
   const bound = (path, bytes) => { put(path, bytes); return { path, bytes: Buffer.byteLength(bytes), sha256: hash(bytes) }; };
   const files = [bound('static/chunks/app/[lang]/page-old.js', 'old client chunk'), bound('static/css/old.css', 'old css')].map(file => ({ ...file, path: file.path.slice(7) }));
-  const service = `gachia-game-${game}`;
+  const service = `gachia-game-${owner}`;
   const deploymentId = '06712d57-5067-4ceb-b039-bfe710b66126';
   const scriptEtag = 'a'.repeat(64);
   const observation = { versionId, deploymentId, scriptEtag, percentage: 100 };
   const receipt = {
-    schemaVersion: 1, game, service, versionId, deploymentId, scriptEtag,
+    schemaVersion: 1, game: owner, service, versionId, deploymentId, scriptEtag,
     capturedAt: '2026-10-24T00:00:00Z', before: observation, after: observation,
     sourceCommit: 'not_attested', cloudAssetManifestCompleteness: 'not_asserted',
     workerArchive: bound('worker.multipart', 'captured cloud multipart bytes'),
@@ -33,8 +33,8 @@ function fixture(t) {
   const receiptPath = resolve(root, 'receipt.json');
   const save = () => put('receipt.json', JSON.stringify(receipt));
   save();
-  const options = { game, rollbackVersion: versionId };
-  const makePlan = () => ({ ...readReleasePlan({ ...options, environment: 'production' }), previousAssets: readPreviousGameAssets(receiptPath, options).summary });
+  const options = { game: owner, rollbackVersion: versionId };
+  const makePlan = () => ({ ...(owner === game ? readReleasePlan({ ...options, environment: 'production' }) : { game: owner, app: `apps/game-${owner}`, rollbackVersion: { value: versionId } }), previousAssets: readPreviousGameAssets(receiptPath, options).summary });
   return { root, put, receipt, receiptPath, save, makePlan, options };
 }
 
@@ -53,6 +53,16 @@ test('retains only registered static files in both namespaces without changing w
     assert.equal(readFileSync(resolve(f.root, plan.app, '.open-next/assets', prefix, f.receipt.files[0].path), 'utf8'), 'old client chunk');
     assert.throws(() => readFileSync(resolve(f.root, plan.app, '.open-next/assets', prefix, 'unregistered.js')));
   }
+});
+
+test('Genshin retention binds its own owner without authorizing the legacy deploy path', t => {
+  const f = fixture(t, 'genshin');
+  const plan = f.makePlan();
+  assert.equal(retainPreviousGameAssets(plan, f.root).copiedPaths, 4);
+  assert.throws(() => readPreviousGameAssets(f.receiptPath, { ...f.options, game }), /owner/);
+  assert.throws(() => readReleasePlan({ game: 'genshin', environment: 'production' }), /Unsupported game/);
+  f.receipt.inventory.sha256 = '0'.repeat(64); f.save();
+  assert.throws(() => readPreviousGameAssets(f.receiptPath, f.options), /digest/);
 });
 
 for (const [name, mutate] of Object.entries({
