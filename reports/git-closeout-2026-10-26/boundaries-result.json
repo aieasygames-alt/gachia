@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "cloud": "not_accessed",
+  "syntheticOnly": true,
+  "observations": [
+    {
+      "path": "/api/shared-builds?id=permanent",
+      "status": 200,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/en/genshin/shared/permanent",
+      "status": 200,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/api/shared-builds?id=future",
+      "status": 200,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/en/genshin/shared/future",
+      "status": 200,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/api/shared-builds?id=expired",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/en/genshin/shared/expired",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/api/shared-builds?id=missing",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/en/genshin/shared/missing",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/en/starrail/shared/permanent",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/api/shared-builds?id=soon",
+      "status": 200,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/en/genshin/shared/soon",
+      "status": 200,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/api/shared-builds?id=soon",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/en/genshin/shared/soon",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/api/map/tile?url=https%3A%2F%2Fact-webstatic.hoyoverse.com%2Fmap_manage%2F20261025%2FAa.png&map_id=2",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "location": null
+    },
+    {
+      "path": "/api/map/tile?url=https%3A%2F%2Fact-webstatic.hoyoverse.com%2Fmap_manage%2F20261025%2FBB.png&map_id=2",
+      "status": 200,
+      "cacheControl": "public, max-age=31536000, immutable",
+      "location": null
+    },
+    {
+      "path": "/zh/%",
+      "status": 400,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/zh/%E0%A4%A",
+      "status": 400,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/zh/%2F",
+      "status": 400,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/zh/%5C",
+      "status": 400,
+      "cacheControl": "no-store",
+      "location": null
+    },
+    {
+      "path": "/zh/%E4%BD%A0",
+      "status": 404,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "location": null
+    },
+    {
+      "path": "/zh/%61bout?q=a%2Fb",
+      "status": 301,
+      "cacheControl": null,
+      "location": "http://localhost:53078/zh/about?q=a%2Fb"
+    },
+    {
+      "path": "/zh/about",
+      "status": 200,
+      "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+      "location": null
+    }
+  ]
+}

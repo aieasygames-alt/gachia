@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "6f7a01e2682a2b16282b23c95d67dc69aea0b032",
+  "cleanBeforeAndAfterBuild": true,
+  "archive": ".release-records/git-closeout-2026-10-26/main-local-candidate.tar.gz",
+  "archiveSha256": "20d85866438a759461bd10b8a014358805d109e93dc68cfae9c7a1f053a4b9c9",
+  "archiveBytes": 53179162,
+  "archiveMatchesBuild": true,
+  "files": 3146,
+  "links": 19,
+  "productionReady": false,
+  "previousProductionAssetsVerifiedAndMerged": false,
+  "pushed": false,
+  "cloudWrites": false
+}
