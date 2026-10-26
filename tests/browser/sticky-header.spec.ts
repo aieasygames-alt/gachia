@@ -1,9 +1,14 @@
-import { test, expect, type Page, type TestInfo } from '@playwright/test';
+import { test, expect, type Page, type Request, type TestInfo } from '@playwright/test';
 
 const locales = ['zh', 'en', 'ja'] as const;
 const modes = ['normal', 'delayed-scripts', 'no-js'] as const;
 
 async function captureViewport(page: Page, info: TestInfo, name: string) {
+  // A late logo load must not look like content leaking through the header in the paint probe.
+  await page.locator('header.gachia-header').evaluate(async (header) => {
+    await document.fonts.ready;
+    await Promise.all(Array.from(header.querySelectorAll('img'), (image) => image.decode()));
+  });
   const image = await page.screenshot({ animations: 'disabled' });
   await info.attach(name, { body: image, contentType: 'image/png' });
 }
@@ -58,12 +63,15 @@ for (const width of [390, 768, 1023, 1024, 1440]) {
           page.on('pageerror', (error) => errors.push(error.message));
           const failedAssets: string[] = [];
           const accountRequests: string[] = [];
+          const blockedExternalRequests = new Set<Request>();
           page.on('response', (response) => {
             if (['script', 'stylesheet'].includes(response.request().resourceType()) && response.status() >= 400) {
               failedAssets.push(`${response.status()} ${response.url()}`);
             }
           });
           page.on('requestfailed', (request) => {
+            // These requests are deliberately blocked below, not failed application assets.
+            if (blockedExternalRequests.has(request)) return;
             // Chromium reports script preloads disabled by javaScriptEnabled:false as CSP failures.
             if (mode === 'no-js' && request.resourceType() === 'script' && request.failure()?.errorText === 'csp') return;
             if (['script', 'stylesheet'].includes(request.resourceType())) failedAssets.push(request.url());
@@ -74,7 +82,10 @@ for (const width of [390, 768, 1023, 1024, 1440]) {
           const origin = new URL(info.project.use.baseURL as string).origin;
           await context.route('**/*', async (route) => {
             const request = route.request();
-            if (new URL(request.url()).origin !== origin) return route.abort();
+            if (new URL(request.url()).origin !== origin) {
+              blockedExternalRequests.add(request);
+              return route.abort();
+            }
             if (/^\/api\/(?:auth|account|favorites|user-characters|map\/progress)(?:\/|$)/.test(new URL(request.url()).pathname)) {
               accountRequests.push(request.url());
               return route.abort();
@@ -118,6 +129,10 @@ for (const width of [390, 768, 1023, 1024, 1440]) {
             expect(accountRequests).toEqual([]);
           } finally {
             releaseScripts();
+            await info.attach('blocked-external-requests', {
+              body: Buffer.from(JSON.stringify([...blockedExternalRequests].map((request) => request.url()))),
+              contentType: 'application/json',
+            });
           }
         });
       }
