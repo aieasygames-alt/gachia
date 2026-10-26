@@ -28,7 +28,7 @@ for (const game of ['nte', 'azur-promilia']) {
     const { scripts } = JSON.parse(readFileSync(resolve(root, `apps/game-${game}/package.json`), 'utf8'));
     assert.match(scripts['deploy:preview'], /game-release\.mjs deploy/);
     assert.match(scripts['deploy:preview'], /--environment staging/);
-    assert.match(scripts.deploy, /game-release\.mjs deploy.*--environment production/);
+    assert.equal(scripts.deploy, `node ../../scripts/production-release.mjs deploy --targets ${game}`);
     assert.equal(scripts['deploy:staging'], scripts['deploy:preview']);
     assert.equal(scripts['deploy:production'], scripts.deploy);
     assert.equal(scripts.build, 'node ../../scripts/require-app-runtime.mjs && next build', 'nested Next builds must retain the selected mode and verified runtime');
@@ -40,7 +40,8 @@ for (const game of ['nte', 'azur-promilia']) {
     test(`${game}/${environment}: all commands bind the same explicit config, environment and mode`, () => {
       const plan = planFor(environment, game);
       const expected = environment === 'staging' ? 'staging' : '';
-      for (const command of Object.values(plan.commands)) {
+      if (environment === 'production') assert.equal(plan.commands.deploy, null);
+      for (const command of Object.values(plan.commands).filter(Boolean)) {
         assert.deepEqual(command.slice(-4), ['--config', 'wrangler.jsonc', '--env', expected]);
       }
       assert.equal(plan.buildEnvironment.CLOUDFLARE_ENV, expected);
@@ -126,12 +127,12 @@ test('unknown game, implicit environment and malformed rollback fail closed', ()
   ]) assert.throws(() => createReleasePlan(options, text));
 });
 
-test('production execution requires exact service and rollback, local verification does not', () => {
+test('legacy production execution stays blocked even with service and rollback, local verification does not', () => {
   const plan = planFor('production');
   assert.throws(() => checkExecutionPermission(plan, { action: 'deploy' }), /Production blocked/);
   assert.throws(() => checkExecutionPermission(plan, { action: 'deploy', confirmation: 'gachia' }));
   assert.throws(() => checkExecutionPermission({ ...plan, rollbackVersion: { value: null } }, { action: 'deploy', confirmation: plan.service }));
-  assert.doesNotThrow(() => checkExecutionPermission(plan, { action: 'deploy', confirmation: plan.service }));
+  assert.throws(() => checkExecutionPermission(plan, { action: 'deploy', confirmation: plan.service }), /Production blocked/);
   assert.doesNotThrow(() => checkExecutionPermission(plan, { action: 'verify' }));
   assert.doesNotThrow(() => checkExecutionPermission(planFor(), { action: 'deploy' }));
 });

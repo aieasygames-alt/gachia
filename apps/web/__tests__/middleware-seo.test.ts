@@ -33,7 +33,7 @@ describe('SEO redirect contracts', () => {
     expect(middleware).toContain("'/tools/pull-planner'");
     expect(middleware).toContain("'/update-radar'");
     expect(middleware).toContain('LEGACY_PATH_REDIRECTS');
-    expect(middleware).toContain('const decodedPathname = decodeURIComponent(pathname);');
+    expect(middleware).toContain("const decodedPathname = decodedSegments.join('/');");
     expect(middleware).toContain("import { isRetiredPage } from './lib/retired-pages'");
     expect(isRetiredPage('/en/roco-cn/guides/daily-events-merchant-guide')).toBe(true);
     expect(middleware).toContain('isRetiredPage(decodedPathname)');

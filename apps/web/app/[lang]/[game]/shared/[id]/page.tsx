@@ -1,7 +1,6 @@
-import { GAMES, LOCALES } from '@gachia/core';
+import { GAMES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { getDb } from '@/lib/db';
-import { sharedBuilds, eq } from '@gachia/db';
+import { getPublicSharedBuild } from '@/lib/public-shared-builds';
 import { notFound } from 'next/navigation';
 import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
@@ -12,6 +11,8 @@ const GENSHIN_ELEMENT_COLORS: Record<string, string> = {
   pyro: '#ef4444', hydro: '#3b82f6', electro: '#8b5cf6',
   cryo: '#67e8f9', dendro: '#4ade80', anemo: '#6ee7b7', geo: '#fbbf24',
 };
+
+export const dynamic = 'force-dynamic';
 
 export async function generateStaticParams() {
   return [];
@@ -30,18 +31,12 @@ export default async function SharedBuildPage({
     notFound();
   }
 
-  const db = getDb();
-  const builds = await db
-    .select()
-    .from(sharedBuilds)
-    .where(eq(sharedBuilds.id, id))
-    .limit(1);
+  const build = await getPublicSharedBuild(id);
 
-  if (builds.length === 0) {
+  if (!build || build.gameId !== gameId) {
     notFound();
   }
 
-  const build = builds[0] as { buildData: string | Record<string, unknown>; [key: string]: unknown };
   const gameConfig = GAMES[gameId];
   let buildData: Record<string, unknown> | null = null;
   try {

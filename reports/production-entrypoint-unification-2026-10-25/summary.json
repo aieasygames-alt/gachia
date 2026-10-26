@@ -1,0 +1,92 @@
+{
+  "sourceBase": "334de6e6945c228b65860e3709558871d4e551ff",
+  "status": "local_production_bypass_containment_verified_not_pushed",
+  "targets": [
+    "main",
+    "genshin",
+    "nte",
+    "azur-promilia",
+    "lvmeng",
+    "router"
+  ],
+  "releaseTests": {
+    "node": 300,
+    "python": 31
+  },
+  "webTests": 376,
+  "routerTests": 35,
+  "typeCheckedPackages": 9,
+  "newPolicyTests": 35,
+  "remoteExecutorImplemented": false,
+  "productionDeploymentPerformed": false,
+  "cloudRequestsPerformed": false,
+  "mainWorkflowChanged": false,
+  "accountFeaturesChanged": false,
+  "existingCleanupPreserved": true,
+  "files": [
+    {
+      "path": "scripts/production-release.mjs",
+      "sha256": "a7432d2eca2b14561ab72d84f615818a7fdc9d811d62a4eb11804bb1b801aecd"
+    },
+    {
+      "path": "scripts/production-release.test.mjs",
+      "sha256": "aded327c55f571a12253735bff4c0cc4ef585a77d1bfe1835f92c37bd6e8d254"
+    },
+    {
+      "path": "scripts/game-release.mjs",
+      "sha256": "ab99b6b02d32c765d76428d638bf2755222ec4da85cbedb3d4c7f20c9057ed79"
+    },
+    {
+      "path": "scripts/game-release.test.mjs",
+      "sha256": "c5c754d2bc68a6825277f9077780a25ccea92ccf6d282783d07c075040171d0f"
+    },
+    {
+      "path": "scripts/retain-game-assets.test.mjs",
+      "sha256": "5ddf106828859637e17ccac7347b11494fbf82dd24a283838f81e001ddc0645b"
+    },
+    {
+      "path": "scripts/web-release-policy.test.mjs",
+      "sha256": "8579f778fff2dbeebba1f433681870a9b98d86e6501807d9f35b1fdb98a0ef3a"
+    },
+    {
+      "path": "package.json",
+      "sha256": "8fd6944a47daf45f01a7537186fb7dd4768382a644473fa509e85e9e7f8a7491"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "3a6ea84f5de4b9b66ad8d6efd11a7ceb9619e56ab37ad153a09447f4aed8473f"
+    },
+    {
+      "path": "apps/router/package.json",
+      "sha256": "23fdfcd235069f92a54d9eb5cf93432b0ba4f4430f7af2ab881b9a29d2966c8c"
+    },
+    {
+      "path": "apps/game-genshin/package.json",
+      "sha256": "78513ff660c635f5136e622c113d084445e327909dd45e7c173735371a7a17ce"
+    },
+    {
+      "path": "apps/game-nte/package.json",
+      "sha256": "779792ae3365325f40dd510c0e2f4d273b59ec85f47fd1f4a6335041b7b59a2f"
+    },
+    {
+      "path": "apps/game-azur-promilia/package.json",
+      "sha256": "61a6370a88af3cd253fc1233c0295038153ac66296537232a4bb33d269e13de8"
+    },
+    {
+      "path": "apps/game-lvmeng/package.json",
+      "sha256": "22d6c939963544cd277bfb21412a3113fcf5030a42748c3609c265022e50f07a"
+    },
+    {
+      "path": ".github/workflows/azur-promilia-preview.yml",
+      "sha256": "7c3a32663866560e5c580be8c794287b125e978b53c4b3e07206f674466ed8a9"
+    },
+    {
+      "path": ".github/workflows/genshin-router-canary-enable.yml",
+      "sha256": "ee5f971e38fc8146ae87f96cd19b8eb9c542212e17446f868108a3d53d08e299"
+    },
+    {
+      "path": ".github/workflows/genshin-router-full-cutover.yml",
+      "sha256": "d115f684213b776a092b937c8b2ed6fb77776f6599c4bff6535a396c4d033261"
+    }
+  ]
+}

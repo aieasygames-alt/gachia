@@ -1,0 +1,15 @@
+
+> @gachia/web@0.0.1 test /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+> vitest run
+
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+
+(node:7778) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  81 passed (81)
+      Tests  438 passed (438)
+   Start at  13:33:51
+   Duration  3.80s (transform 5.32s, setup 0ms, import 10.50s, tests 10.14s, environment 5ms)
+

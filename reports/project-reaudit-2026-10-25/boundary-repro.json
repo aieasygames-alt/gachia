@@ -1,0 +1,58 @@
+{
+  "scope": "Local synthetic inputs only; actual route source transpiled with mocked DB/upstream and middleware surrounding dependencies. No network, real DB, or deployment.",
+  "middleware": [
+    {
+      "path": "/zh/%",
+      "error": "URIError",
+      "message": "URI malformed"
+    },
+    {
+      "path": "/zh/%E0%A4%A",
+      "error": "URIError",
+      "message": "URI malformed"
+    },
+    {
+      "path": "/zh/%E4%BD%A0",
+      "status": 301,
+      "location": "https://gachia.com/zh/%E4%BD%A0",
+      "selfRedirect": true
+    }
+  ],
+  "expiredSharedBuild": {
+    "status": 200,
+    "cacheControl": "public, s-maxage=300, stale-while-revalidate=3600",
+    "body": {
+      "id": "synthetic-expired",
+      "userId": "synthetic-internal-user",
+      "gameId": "genshin",
+      "characterId": "synthetic",
+      "buildData": "{}",
+      "expiresAt": "2020-01-01T00:00:00.000Z"
+    }
+  },
+  "tile": {
+    "fetches": 1,
+    "writes": [
+      "map-tiles/2/4zj5jb"
+    ],
+    "responses": [
+      {
+        "url": "https://act-webstatic.hoyoverse.com/map_manage/20261025/Aa.png",
+        "status": 200,
+        "cache": "MISS",
+        "body": "https://act-webstatic.hoyoverse.com/map_manage/20261025/Aa.png"
+      },
+      {
+        "url": "https://act-webstatic.hoyoverse.com/map_manage/20261025/BB.png",
+        "status": 200,
+        "cache": "HIT",
+        "body": "https://act-webstatic.hoyoverse.com/map_manage/20261025/Aa.png"
+      }
+    ]
+  },
+  "nteGate": {
+    "dirtySourceAccepted": true,
+    "syntheticRollbackUuidAccepted": true,
+    "previousAssetsRequired": false
+  }
+}

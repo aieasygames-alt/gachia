@@ -97,9 +97,9 @@ test('wrong rollback owner/version and unsupported game fail before a release', 
   assert.throws(() => readPreviousGameAssets(f.receiptPath, { ...f.options, rollbackVersion: '01234567-89ab-cdef-0123-456789abcdef' }), /rollback version/);
   assert.throws(() => readPreviousGameAssets(f.receiptPath, { game: 'unreviewed' }), /reviewed dedicated/);
   const plan = readReleasePlan({ game, environment: 'production', rollbackVersion: versionId });
-  assert.throws(() => checkExecutionPermission(plan, { action: 'deploy', confirmation: plan.service }), /previous-assets-receipt/);
+  assert.throws(() => checkExecutionPermission(plan, { action: 'deploy', confirmation: plan.service }), /Production blocked/);
   assert.doesNotThrow(() => checkExecutionPermission(plan, { action: 'verify' }));
-  assert.doesNotThrow(() => checkExecutionPermission(f.makePlan(), { action: 'deploy', confirmation: plan.service }));
+  assert.throws(() => checkExecutionPermission(f.makePlan(), { action: 'deploy', confirmation: plan.service }), /Production blocked/);
 });
 
 test('receipt bytes are bound into plan revalidation and mutation prevents deploy', async t => {

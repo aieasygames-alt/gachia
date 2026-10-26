@@ -1,0 +1,26 @@
+
+> gachia@ lint /Users/robert/.codex/worktrees/account-deletion-release/gachia
+> turbo lint
+
+• turbo 2.10.4
+
+   • Packages in scope: @gachia/admin, @gachia/core, @gachia/data, @gachia/db, @gachia/game-azur-promilia, @gachia/game-genshin, @gachia/game-lvmeng, @gachia/game-nte, @gachia/router, @gachia/ui, @gachia/web
+   • Running lint in 11 packages
+   • Remote caching disabled, using shared worktree cache
+
+@gachia/web:lint: cache miss, executing e2373dbb0d9bd961
+@gachia/web:lint: 
+@gachia/web:lint: > @gachia/web@0.0.1 lint /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+@gachia/web:lint: > eslint .
+@gachia/web:lint: 
+@gachia/web:lint: 
+@gachia/web:lint: /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web/components/auth/auth-dialog.tsx
+@gachia/web:lint:   25:28  warning  The ref value 'attempt.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'attempt.current' to a variable inside the effect, and use that variable in the cleanup function  react-hooks/exhaustive-deps
+@gachia/web:lint: 
+@gachia/web:lint: ✖ 1 problem (0 errors, 1 warning)
+@gachia/web:lint: 
+
+ Tasks:    1 successful, 1 total
+Cached:    0 cached, 1 total
+  Time:    2.776s 
+

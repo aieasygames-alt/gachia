@@ -1,89 +1,17 @@
-name: Genshin Router Full Cutover
+name: Retired Genshin Router Full Cutover
 
 on:
   workflow_dispatch:
 
-concurrency:
-  group: genshin-router-canary-toggle
-  cancel-in-progress: false
+permissions:
+  contents: read
 
 jobs:
-  cutover:
+  reject-retired-entrypoint:
     runs-on: ubuntu-latest
-    environment: production
-    permissions:
-      contents: read
-    env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      PLAYWRIGHT_BASE_URL: https://gachia.com
     steps:
-      - uses: actions/checkout@v7.0.0
-      - uses: pnpm/action-setup@v6.0.9
-      - uses: actions/setup-node@v6.4.0
-        with:
-          node-version: 22
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - name: Verify cutover configuration
+      - name: Reject obsolete production routing operation
         run: |
-          set -euo pipefail
-          pnpm --filter @gachia/router type-check
-          pnpm --filter @gachia/router test
-          pnpm validate:game-deployments
-      - name: Publish full Genshin Router cutover
-        working-directory: apps/router
-        run: |
-          set -euo pipefail
-          trap 'rm -f wrangler.full-cutover.tmp.jsonc' EXIT
-          node -e 'const fs=require("fs"); const source="wrangler.jsonc"; const target="wrangler.full-cutover.tmp.jsonc"; const text=fs.readFileSync(source,"utf8"); const switches=[["\"GENSHIN_ENABLED\": \"false\"","\"GENSHIN_ENABLED\": \"true\""],["\"GENSHIN_FULL_CUTOVER\": \"false\"","\"GENSHIN_FULL_CUTOVER\": \"true\""]]; const next=switches.reduce((value,[from,to]) => value.replace(from,to),text); if(next===text || !next.includes("\"GENSHIN_FULL_CUTOVER\": \"true\"")) throw new Error("Expected disabled Genshin production switches"); fs.writeFileSync(target,next);'
-          pnpm exec wrangler deploy --config wrangler.full-cutover.tmp.jsonc --env ""
-      - name: Verify full Genshin routing
-        run: |
-          set -euo pipefail
-          for pathname in /zh/genshin /en/genshin/characters /ja/genshin/calculator /sitemaps/genshin/index.xml; do
-            matched=false
-            for attempt in 1 2 3 4 5; do
-              headers=$(curl --silent --show-error --max-time 30 -D - -o /dev/null -H 'X-Gachia-Route-Debug: 1' "https://gachia.com$pathname" | tr -d '\r')
-              target=$(printf '%s\n' "$headers" | sed -nE 's/^x-gachia-route-target: *(.*)$/\1/ip')
-              if [ "$target" = genshin ]; then
-                matched=true
-                break
-              fi
-              echo "Attempt $attempt for $pathname: Genshin target=$target" >&2
-              printf '%s\n' "$headers" | grep -iE '^(HTTP/|x-gachia-route-target:|content-type:|cf-ray:)' >&2 || true
-              sleep 5
-            done
-            if [ "$matched" != true ]; then
-              echo "Genshin route did not propagate for $pathname" >&2
-              exit 1
-            fi
-          done
-      - name: Compare full cutover with the Main SEO baseline
-        env:
-          GENSHIN_PRODUCTION_ORIGIN: https://gachia.com
-          GENSHIN_STAGING_ORIGIN: https://gachia.com
-          GENSHIN_STRICT_PARITY: 'true'
-        run: pnpm --filter @gachia/game-genshin seo:parity
-      - name: Verify API cache and authorization boundaries
-        env:
-          GENSHIN_API_ORIGIN: https://gachia.com
-        run: pnpm --filter @gachia/game-genshin api:boundary-smoke
-      - name: Install Playwright browser
-        run: pnpm exec playwright install --with-deps chromium
-      - name: Verify desktop and mobile full-cutover navigation
-        run: pnpm exec playwright test tests/browser/genshin-canary.spec.ts
-      - uses: actions/upload-artifact@v7.0.0
-        if: always()
-        with:
-          name: genshin-router-full-cutover-reports
-          path: |
-            reports/genshin/seo-parity-*.json
-            apps/game-genshin/reports/genshin/api-boundary-*.json
-            playwright-report
-            test-results
-          if-no-files-found: warn
-      - name: Roll back Router to Main if a gate fails
-        if: failure()
-        working-directory: apps/router
-        run: pnpm exec wrangler deploy --config wrangler.jsonc --env ""
+          echo 'Retired: Router now serves multiple live owners, not a pre-cutover Genshin-only topology.' >&2
+          echo 'Use pnpm release:production plan --targets router and obtain a separately reviewed routing release.' >&2
+          exit 1

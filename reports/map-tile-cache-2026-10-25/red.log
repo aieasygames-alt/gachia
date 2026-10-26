@@ -1,0 +1,67 @@
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+
+ ❯ __tests__/map-tile-cache.test.ts (14 tests | 3 failed) 10ms
+   × separates the known 32-bit collision and returns the correct bytes on repeat hits 5ms
+   × ignores old weak-hash objects without deleting or overwriting them 1ms
+   × uses the normalized fetch URL as identity, retaining map ID isolation 1ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  __tests__/map-tile-cache.test.ts > separates the known 32-bit collision and returns the correct bytes on repeat hits
+AssertionError: expected 'HIT' to be 'MISS' // Object.is equality
+
+Expected: "MISS"
+Received: "HIT"
+
+ ❯ __tests__/map-tile-cache.test.ts:34:47
+     32|     for (const url of urls) {
+     33|       const response = await GET(request(url));
+     34|       expect(response.headers.get('x-cache')).toBe(expectedCache);
+       |                                               ^
+     35|       expect(await response.text()).toBe(url);
+     36|     }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  __tests__/map-tile-cache.test.ts > ignores old weak-hash objects without deleting or overwriting them
+AssertionError: expected 'HIT' to be 'MISS' // Object.is equality
+
+Expected: "MISS"
+Received: "HIT"
+
+ ❯ __tests__/map-tile-cache.test.ts:50:43
+     48|   const url = `${base}BB.png`;
+     49|   const response = await GET(request(url));
+     50|   expect(response.headers.get('x-cache')).toBe('MISS');
+       |                                           ^
+     51|   expect(await response.text()).toBe(url);
+     52|   expect(mocks.get).toHaveBeenCalledWith(keyFor(url));
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  __tests__/map-tile-cache.test.ts > uses the normalized fetch URL as identity, retaining map ID isolation
+AssertionError: expected 'MISS' to be 'HIT' // Object.is equality
+
+Expected: "HIT"
+Received: "MISS"
+
+ ❯ __tests__/map-tile-cache.test.ts:62:62
+     60|   const alias = url.replace('act-webstatic.hoyoverse.com', 'ACT-WEBSTA…
+     61|   await GET(request(url));
+     62|   expect((await GET(request(alias))).headers.get('x-cache')).toBe('HIT…
+       |                                                              ^
+     63|   expect((await GET(request(url, '3'))).headers.get('x-cache')).toBe('…
+     64|   expect([...objects.keys()]).toEqual([keyFor(url), keyFor(url, '3')]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 11 passed (14)
+   Start at  23:45:13
+   Duration  180ms (transform 26ms, setup 0ms, import 76ms, tests 10ms, environment 0ms)
+
+undefined
+/Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web:
+ ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command failed with exit code 1: vitest run __tests__/map-tile-cache.test.ts

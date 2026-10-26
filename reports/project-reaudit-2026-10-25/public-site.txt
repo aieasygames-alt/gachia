@@ -1,0 +1,38 @@
+
+> gachia@ audit:production /Users/robert/.codex/worktrees/account-deletion-release/gachia
+> node scripts/production-site-audit.mjs
+
+307	/
+200	/zh
+200	/en
+200	/ja
+200	/zh/genshin
+200	/zh/nte
+200	/zh/azur-promilia
+200	/zh/games
+200	/sitemap.xml
+200	/sitemaps/nte/index.xml
+200	/sitemaps/azur-promilia/index.xml
+200	/robots.txt
+200	/ads.txt
+404	/api/auth/get-session
+200	/sitemaps/nte/index.xml?source=production-audit
+200	main	/zh
+200	main	/_next/static/chunks/webpack-02932d580e3c7274.js
+200	main	/_next/static/css/e89dd0dfedbe06e5.css
+200	genshin	/zh/genshin
+200	genshin	/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js
+200	genshin	/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css
+200	genshin	/sitemaps/genshin/index.xml
+200	nte	/zh/nte
+200	nte	/_games/nte/_next/static/chunks/webpack-78aede61962d179a.js
+200	nte	/_games/nte/_next/static/css/a03f215a7bc52d77.css
+200	nte	/sitemaps/nte/index.xml
+200	azur-promilia	/zh/azur-promilia
+200	azur-promilia	/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js
+200	azur-promilia	/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css
+200	azur-promilia	/sitemaps/azur-promilia/index.xml
+200	lvmeng	/zh/lvmeng
+200	lvmeng	/_games/lvmeng/_next/static/chunks/webpack-4b0fd5dc141f7074.js
+200	lvmeng	/_games/lvmeng/_next/static/css/6d814f1a9060c47b.css
+200	lvmeng	/sitemaps/lvmeng/index.xml

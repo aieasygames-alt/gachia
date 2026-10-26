@@ -1,0 +1,265 @@
+
+> @gachia/web@0.0.1 test /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+> vitest run -- __tests__/middleware-normalization.test.ts
+
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+
+(node:62229) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ❯ __tests__/middleware-normalization.test.ts (35 tests | 21 failed) 40ms
+     × rejects unsafe segment % without throwing 8ms
+     × rejects unsafe segment %G0 without throwing 1ms
+     × rejects unsafe segment %E0%A4%A without throwing 0ms
+     × rejects unsafe segment %C0%AF without throwing 0ms
+     × rejects unsafe segment %ED%A0%80 without throwing 0ms
+     × rejects unsafe segment %2F without throwing 3ms
+     × rejects unsafe segment %5c without throwing 1ms
+     × rejects unsafe segment %00 without throwing 1ms
+     × rejects unsafe segment %1F without throwing 1ms
+     × rejects unsafe segment %7F without throwing 1ms
+     × rejects unsafe segment %20..%20 without throwing 1ms
+     × preserves valid escaped segment %E4%BD%A0 without recursive decoding 0ms
+     × preserves valid escaped segment %25 without recursive decoding 0ms
+     × preserves valid escaped segment %252F without recursive decoding 2ms
+     × preserves valid escaped segment %3F without recursive decoding 0ms
+     × preserves valid escaped segment %23 without recursive decoding 7ms
+     × preserves valid escaped segment %253A without recursive decoding 1ms
+     × converges /zh/%e4%bd%a0 to /zh/%E4%BD%A0 and retains the query 0ms
+     × converges /zh//%20/about/ to /zh/about and retains the query 3ms
+     × validates sitemap paths and preserves normal XML bypass 0ms
+     × keeps preview origins non-indexable, including invalid paths and redirects 0ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 21 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment % without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %G0 without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %E0%A4%A without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %C0%AF without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %ED%A0%80 without throwing
+URIError: URI malformed
+ ❯ routeMiddleware middleware.ts:110:27
+    108|   const { pathname } = request.nextUrl;
+    109|   if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pat…
+    110|   const decodedPathname = decodeURIComponent(pathname);
+       |                           ^
+    111|   const segments = pathname.split('/').filter(Boolean);
+    112|   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = s…
+ ❯ middleware middleware.ts:273:62
+ ❯ __tests__/middleware-normalization.test.ts:25:22
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %2F without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %5c without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %00 without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %1F without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %7F without throwing
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > rejects unsafe segment %20..%20 without throwing
+AssertionError: expected 301 to be 400 // Object.is equality
+
+- Expected
++ Received
+
+- 400
++ 301
+
+ ❯ __tests__/middleware-normalization.test.ts:26:29
+     24|   it.each(['%', '%G0', '%E0%A4%A', '%C0%AF', '%ED%A0%80', '%2F', '%5c'…
+     25|     const response = middleware(new NextRequest(`${origin}/zh/${segmen…
+     26|     expect(response.status).toBe(400);
+       |                             ^
+     27|     expect(response.headers.get('cache-control')).toBe('no-store');
+     28|     expect(response.headers.get('x-robots-tag')).toBe('noindex, nofoll…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > preserves valid escaped segment %E4%BD%A0 without recursive decoding
+AssertionError: redirect cycle at https://gachia.com/zh/%E4%BD%A0: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ follow __tests__/middleware-normalization.test.ts:12:55
+     10|   const seen = new Set<string>();
+     11|   for (let hop = 0; hop < 6; hop++) {
+     12|     expect(seen.has(url), `redirect cycle at ${url}`).toBe(false);
+       |                                                       ^
+     13|     seen.add(url);
+     14|     const response = middleware(new NextRequest(url));
+ ❯ __tests__/middleware-normalization.test.ts:33:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > preserves valid escaped segment %25 without recursive decoding
+URIError: URI malformed
+ ❯ routeMiddleware middleware.ts:110:27
+    108|   const { pathname } = request.nextUrl;
+    109|   if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pat…
+    110|   const decodedPathname = decodeURIComponent(pathname);
+       |                           ^
+    111|   const segments = pathname.split('/').filter(Boolean);
+    112|   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = s…
+ ❯ middleware middleware.ts:273:62
+ ❯ follow __tests__/middleware-normalization.test.ts:14:22
+ ❯ __tests__/middleware-normalization.test.ts:33:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > preserves valid escaped segment %252F without recursive decoding
+AssertionError: expected 'https://gachia.com/zh' to be 'https://gachia.com/zh/%252F' // Object.is equality
+
+Expected: "https://gachia.com/zh/%252F"
+Received: "https://gachia.com/zh"
+
+ ❯ __tests__/middleware-normalization.test.ts:33:42
+     31|
+     32|   it.each(['%E4%BD%A0', '%25', '%252F', '%3F', '%23', '%253A'])('prese…
+     33|     expect(follow(`/zh/${segment}`).url).toBe(`${origin}/zh/${segment}…
+       |                                          ^
+     34|     expect(follow(`/zh/nte/items/${segment}`).url).toBe(`${origin}/zh/…
+     35|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > preserves valid escaped segment %3F without recursive decoding
+AssertionError: redirect cycle at https://gachia.com/zh/%3F: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ follow __tests__/middleware-normalization.test.ts:12:55
+     10|   const seen = new Set<string>();
+     11|   for (let hop = 0; hop < 6; hop++) {
+     12|     expect(seen.has(url), `redirect cycle at ${url}`).toBe(false);
+       |                                                       ^
+     13|     seen.add(url);
+     14|     const response = middleware(new NextRequest(url));
+ ❯ __tests__/middleware-normalization.test.ts:33:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > preserves valid escaped segment %23 without recursive decoding
+AssertionError: redirect cycle at https://gachia.com/zh/%23: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ follow __tests__/middleware-normalization.test.ts:12:55
+     10|   const seen = new Set<string>();
+     11|   for (let hop = 0; hop < 6; hop++) {
+     12|     expect(seen.has(url), `redirect cycle at ${url}`).toBe(false);
+       |                                                       ^
+     13|     seen.add(url);
+     14|     const response = middleware(new NextRequest(url));
+ ❯ __tests__/middleware-normalization.test.ts:33:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > preserves valid escaped segment %253A without recursive decoding
+AssertionError: expected 'https://gachia.com/zh/:' to be 'https://gachia.com/zh/%253A' // Object.is equality
+
+Expected: "https://gachia.com/zh/%253A"
+Received: "https://gachia.com/zh/:"
+
+ ❯ __tests__/middleware-normalization.test.ts:33:42
+     31|
+     32|   it.each(['%E4%BD%A0', '%25', '%252F', '%3F', '%23', '%253A'])('prese…
+     33|     expect(follow(`/zh/${segment}`).url).toBe(`${origin}/zh/${segment}…
+       |                                          ^
+     34|     expect(follow(`/zh/nte/items/${segment}`).url).toBe(`${origin}/zh/…
+     35|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > converges /zh/%e4%bd%a0 to /zh/%E4%BD%A0 and retains the query
+AssertionError: redirect cycle at https://gachia.com/zh/%E4%BD%A0?q=a%2Fb&x=1&x=2&space=a+b: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ follow __tests__/middleware-normalization.test.ts:12:55
+     10|   const seen = new Set<string>();
+     11|   for (let hop = 0; hop < 6; hop++) {
+     12|     expect(seen.has(url), `redirect cycle at ${url}`).toBe(false);
+       |                                                       ^
+     13|     seen.add(url);
+     14|     const response = middleware(new NextRequest(url));
+ ❯ __tests__/middleware-normalization.test.ts:51:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > converges /zh//%20/about/ to /zh/about and retains the query
+AssertionError: redirect cycle at https://gachia.com/zh/about/?q=a%2Fb&x=1&x=2&space=a+b: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ follow __tests__/middleware-normalization.test.ts:12:55
+     10|   const seen = new Set<string>();
+     11|   for (let hop = 0; hop < 6; hop++) {
+     12|     expect(seen.has(url), `redirect cycle at ${url}`).toBe(false);
+       |                                                       ^
+     13|     seen.add(url);
+     14|     const response = middleware(new NextRequest(url));
+ ❯ __tests__/middleware-normalization.test.ts:51:12
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > validates sitemap paths and preserves normal XML bypass
+AssertionError: expected 200 to be 400 // Object.is equality
+
+- Expected
++ Received
+
+- 400
++ 200
+
+ ❯ __tests__/middleware-normalization.test.ts:67:72
+     65|
+     66|   it('validates sitemap paths and preserves normal XML bypass', () => {
+     67|     expect(middleware(new NextRequest(`${origin}/sitemaps/%`)).status)…
+       |                                                                        ^
+     68|     expect(middleware(new NextRequest(`${origin}/sitemap.xml`)).header…
+     69|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/21]⎯
+
+ FAIL  __tests__/middleware-normalization.test.ts > Main pathname normalization with real next-intl > keeps preview origins non-indexable, including invalid paths and redirects
+URIError: URI malformed
+ ❯ routeMiddleware middleware.ts:110:27
+    108|   const { pathname } = request.nextUrl;
+    109|   if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pat…
+    110|   const decodedPathname = decodeURIComponent(pathname);
+       |                           ^
+    111|   const segments = pathname.split('/').filter(Boolean);
+    112|   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = s…
+ ❯ middleware middleware.ts:276:7
+ ❯ __tests__/middleware-normalization.test.ts:73:24
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/21]⎯
+
+
+ Test Files  1 failed | 78 passed (79)
+      Tests  21 failed | 390 passed (411)
+   Start at  23:27:36
+   Duration  4.03s (transform 6.14s, setup 0ms, import 11.02s, tests 10.81s, environment 5ms)
+
+/Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @gachia/web@0.0.1 test: `vitest run -- __tests__/middleware-normalization.test.ts`
+Exit status 1

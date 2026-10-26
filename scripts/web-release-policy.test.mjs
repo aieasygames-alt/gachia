@@ -54,9 +54,9 @@ test('raw review CLI still blocks an equal factual hold before a chained build o
   } finally { rmSync(root, { recursive: true, force: true }); }
 });
 
-test('main production deploy and upload check content before building, while staging remains reviewable', () => {
+test('main production aliases reject direct writes; staging and content validation remain reviewable', () => {
   const pkg = JSON.parse(readFileSync(new URL('../apps/web/package.json', import.meta.url), 'utf8'));
-  for (const key of ['deploy', 'upload']) assert.match(pkg.scripts[key], /^node .*raw-inventory-contract\.mjs --release && node .*require-patched-next\.mjs && opennextjs-cloudflare build/);
+  for (const key of ['deploy', 'upload']) assert.equal(pkg.scripts[key], `node ../../scripts/production-release.mjs ${key} --targets main`);
   for (const key of ['build', 'preview', 'preview:staging', 'deploy:staging']) assert(!pkg.scripts[key].includes('--release'), key);
   const gate = readFileSync(new URL('./require-patched-next.mjs', import.meta.url), 'utf8');
   assert.match(gate, /await verifyRawInventory\(\)/);

@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "node ../../scripts/production-release.mjs deploy --targets router",
     "deploy:staging": "wrangler deploy --env staging",
     "test": "vitest run",
     "type-check": "tsc --noEmit",
     "validate:config": "node ../../scripts/validate-game-deployment.mjs",
-    "check:generated": "node ../../scripts/generate-router-game-config.mjs --check"
+    "check:generated": "node ../../scripts/generate-router-game-config.mjs --check",
+    "release:plan": "node ../../scripts/production-release.mjs plan --targets router"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "5.20261006.1",

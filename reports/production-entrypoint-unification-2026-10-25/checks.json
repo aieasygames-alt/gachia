@@ -1,0 +1,88 @@
+[
+  {
+    "name": "web",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/web",
+      "test"
+    ],
+    "exitCode": 0,
+    "seconds": 4.43
+  },
+  {
+    "name": "router",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/router",
+      "test"
+    ],
+    "exitCode": 0,
+    "seconds": 0.66
+  },
+  {
+    "name": "types",
+    "command": [
+      "pnpm",
+      "-r",
+      "--if-present",
+      "type-check"
+    ],
+    "exitCode": 0,
+    "seconds": 5.05
+  },
+  {
+    "name": "config",
+    "command": [
+      "pnpm",
+      "validate:game-deployments"
+    ],
+    "exitCode": 0,
+    "seconds": 0.37
+  },
+  {
+    "name": "router-generated",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/router",
+      "check:generated"
+    ],
+    "exitCode": 0,
+    "seconds": 0.49
+  },
+  {
+    "name": "content",
+    "command": [
+      "pnpm",
+      "content:release-ready"
+    ],
+    "exitCode": 0,
+    "seconds": 0.63
+  },
+  {
+    "name": "plan",
+    "command": [
+      "pnpm",
+      "release:production",
+      "plan",
+      "--targets",
+      "main,genshin,nte,azur-promilia,lvmeng"
+    ],
+    "exitCode": 0,
+    "seconds": 0.37
+  },
+  {
+    "name": "router-plan",
+    "command": [
+      "pnpm",
+      "release:production",
+      "plan",
+      "--targets",
+      "router"
+    ],
+    "exitCode": 0,
+    "seconds": 0.37
+  }
+]

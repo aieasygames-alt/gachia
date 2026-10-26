@@ -1,0 +1,19 @@
+Scope: 11 of 12 workspace projects
+apps/game-lvmeng type-check$ tsc --noEmit
+apps/router type-check$ tsc --noEmit
+packages/db type-check$ tsc --noEmit
+packages/core type-check$ tsc --noEmit
+packages/core type-check: Done
+apps/router type-check: Done
+packages/db type-check: Done
+apps/game-lvmeng type-check: Done
+packages/data type-check$ tsc --noEmit
+packages/data type-check: Done
+apps/game-azur-promilia type-check$ tsc --noEmit
+apps/game-genshin type-check$ tsc --noEmit
+apps/game-nte type-check$ tsc --noEmit
+apps/web type-check$ tsc --noEmit
+apps/game-azur-promilia type-check: Done
+apps/game-nte type-check: Done
+apps/game-genshin type-check: Done
+apps/web type-check: Done

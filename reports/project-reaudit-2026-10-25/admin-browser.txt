@@ -1,0 +1,96 @@
+
+> @gachia/admin@0.0.1 test:browser /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/admin
+> node --import tsx tests/browser-smoke.mjs && WORKBENCH_BROWSER_TESTS=1 node --import tsx --test --test-name-pattern='desktop and mobile browsers|real browser|real React' tests/workspaces.test.mjs tests/application-preview.test.mjs tests/search-interactions.test.mjs tests/official-source.test.mjs tests/modal-background.test.mjs tests/search-loader-react.test.mjs tests/auth-dialog-react.test.mjs tests/preview-occupancy-browser.test.mjs
+
+(node:39554) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS browser 1440px: import, fact review, stale snapshot, task, export, reload, injection and layout
+PASS browser 390px: import, fact review, stale snapshot, task, export, reload, injection and layout
+TAP version 13
+# Subtest: real browser check detects missing directory links and removed pages returning 200
+ok 1 - real browser check detects missing directory links and removed pages returning 200
+  ---
+  duration_ms: 2249.590833
+  type: 'test'
+  ...
+# Subtest: real browser check records actual HTTP/H1/body and does not grant publish permission
+ok 2 - real browser check records actual HTTP/H1/body and does not grant publish permission
+  ---
+  duration_ms: 515.74525
+  type: 'test'
+  ...
+# Subtest: real React auth dialog ignores stale results and permits retry after returned errors
+ok 3 - real React auth dialog ignores stale results and permits retry after returned errors
+  ---
+  duration_ms: 1612.904666
+  type: 'test'
+  ...
+# Subtest: real browser search arrows navigate links without stealing composition, modifiers or native Enter
+ok 4 - real browser search arrows navigate links without stealing composition, modifiers or native Enter
+  ---
+  duration_ms: 1071.135084
+  type: 'test'
+  ...
+# Subtest: real browser overlapping modal owners survive both close orders and preserve scroll priority
+ok 5 - real browser overlapping modal owners survive both close orders and preserve scroll priority
+  ---
+  duration_ms: 429.378208
+  type: 'test'
+  ...
+# Subtest: real browser modal background is inert, dynamic siblings isolated and exact state restored
+ok 6 - real browser modal background is inert, dynamic siblings isolated and exact state restored
+  ---
+  duration_ms: 258.630458
+  type: 'test'
+  ...
+# (node:40118) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: real browser check imports reviewed source excerpts on desktop/mobile without executing HTML
+ok 7 - real browser check imports reviewed source excerpts on desktop/mobile without executing HTML
+  ---
+  duration_ms: 3420.281167
+  type: 'test'
+  ...
+# (node:40119) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: real browser occupancy cards keep foreign and pending previews non-actionable
+ok 8 - real browser occupancy cards keep foreign and pending previews non-actionable
+  ---
+  duration_ms: 8485.87825
+  type: 'test'
+  ...
+# Subtest: real browser check verifies empty results and both close/reset paths and detects broken backdrop
+ok 9 - real browser check verifies empty results and both close/reset paths and detects broken backdrop
+  ---
+  duration_ms: 37353.962541
+  type: 'test'
+  ...
+# Subtest: real browser check searches and clicks localized results, rejects wrong target language
+ok 10 - real browser check searches and clicks localized results, rejects wrong target language
+  ---
+  duration_ms: 43636.83225
+  type: 'test'
+  ...
+# Subtest: real React search loader transfers focus and ignores late imports after close
+ok 11 - real React search loader transfers focus and ignores late imports after close
+  ---
+  duration_ms: 2018.233292
+  type: 'test'
+  ...
+# (node:40122) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: desktop and mobile browsers load exact material, accept a draft and show stale review after edits
+ok 12 - desktop and mobile browsers load exact material, accept a draft and show stale review after edits
+  ---
+  duration_ms: 18066.679292
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 81549.007917

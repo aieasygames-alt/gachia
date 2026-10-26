@@ -1,0 +1,5 @@
+
+> @gachia/router@0.0.1 check:generated /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/router
+> node ../../scripts/generate-router-game-config.mjs --check
+
+Checked 4 Router game deployment(s).

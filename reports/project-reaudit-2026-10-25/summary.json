@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-25",
+  "sourceCommit": "334de6e6945c228b65860e3709558871d4e551ff",
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P1",
+      "title": "Production entrypoints bypass consistent source and artifact gates"
+    },
+    {
+      "id": "F2",
+      "priority": "P2",
+      "title": "Malformed encoding and non-idempotent URL normalization"
+    },
+    {
+      "id": "F3",
+      "priority": "P2",
+      "title": "Tile cache key collision returns wrong URL content"
+    },
+    {
+      "id": "F4",
+      "priority": "P2",
+      "title": "Public shared-build reads ignore expiration and expose full rows"
+    }
+  ],
+  "status": "audit_completed_findings_not_fixed",
+  "commandChecksPassed": 18,
+  "sitemap": {
+    "documents": 6,
+    "uniqueUrls": 6653,
+    "exitCode": 0
+  },
+  "dependencyAudit": {
+    "production": 0,
+    "all": 0
+  },
+  "productionDeploymentPerformed": false,
+  "productionControlPlaneRequeried": false,
+  "realUserDataAccessed": false,
+  "accountDeletion": "cancelled",
+  "existingCleanupPreserved": true,
+  "freshFullBuildsPerformed": false
+}

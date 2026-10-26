@@ -1,0 +1,43 @@
+[
+  {
+    "name": "admin-browser",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/admin",
+      "test:browser"
+    ],
+    "exitCode": 0,
+    "seconds": 89.21
+  },
+  {
+    "name": "data-validate",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/data",
+      "validate"
+    ],
+    "exitCode": 0,
+    "seconds": 2.05
+  },
+  {
+    "name": "freshness",
+    "command": [
+      "node",
+      "scripts/content-freshness-audit.mjs",
+      "--json"
+    ],
+    "exitCode": 0,
+    "seconds": 0.3
+  },
+  {
+    "name": "public-site",
+    "command": [
+      "pnpm",
+      "audit:production"
+    ],
+    "exitCode": 0,
+    "seconds": 23.42
+  }
+]

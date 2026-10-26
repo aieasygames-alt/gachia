@@ -37,8 +37,8 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'Domain not allowed' }, { status: 403 });
   }
 
-  // Compute R2 key from URL
-  const key = `map-tiles/${mapId}/${hashUrl(url)}`;
+  // Hash the same canonical URL we fetch; never reuse legacy 32-bit cache keys.
+  const key = `map-tiles/v2/${mapId}/${await hashUrl(parsedUrl.href)}`;
 
   let r2: R2Bucket | null = null;
   try {
@@ -101,13 +101,7 @@ async function fetchTile(url: URL): Promise<ArrayBuffer> {
   return body;
 }
 
-/** Simple hash for R2 key dedup */
-function hashUrl(url: string): string {
-  let hash = 0;
-  for (let i = 0; i < url.length; i++) {
-    const chr = url.charCodeAt(i);
-    hash = ((hash << 5) - hash) + chr;
-    hash |= 0;
-  }
-  return Math.abs(hash).toString(36);
+async function hashUrl(url: string): Promise<string> {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(url));
+  return Array.from(new Uint8Array(digest), byte => byte.toString(16).padStart(2, '0')).join('');
 }

@@ -1,5 +1,7 @@
 # 主站发布：旧静态资源保留与生产验收
 
+> 2026-10-25：[统一生产入口](production-release-entrypoints.md) 已关闭 Main 本地 deploy/upload 旁路；本文所述手动 production workflow 保留，原有门禁不降低。下方历史记录中对“本地 deploy/upload 检查”的描述不再代表可执行的生产路径。
+
 ## S2.19 实际发布与当时的来源限制
 
 2026-10-25，Main 已更新为 `c0615321-071d-4f44-b635-70dbdba117c2`，实际产物 `12571493654`，ZIP 摘要 `ee750c335f49ce18bea4ff184e8dcd7d16b271f160f4c3c8161133ca46f671ee`。同一封存产物先 staging 完整通过再推广，独立完整生产复验、359 个 JS/CSS 及旧 262 文件字节验证通过。但运行 `40121743063` 的生产后检出现未复现 JS 请求失败，deploy job 和整个 Actions 仍为 failure，不能假称 workflow 成功。

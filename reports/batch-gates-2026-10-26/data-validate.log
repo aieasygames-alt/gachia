@@ -1,0 +1,5 @@
+
+> @gachia/data@0.0.1 validate /Users/robert/.codex/worktrees/account-deletion-release/gachia/packages/data
+> tsx scripts/validate.ts
+
+All data validated successfully.

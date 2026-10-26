@@ -1,13 +1,15 @@
 import { accountFeatureUnavailable } from '@/lib/site-features';
 import { NextRequest, NextResponse } from 'next/server';
 import { getDb } from '@/lib/db';
-import { sharedBuilds, eq } from '@gachia/db';
+import { sharedBuilds } from '@gachia/db';
+import { getPublicSharedBuild } from '@/lib/public-shared-builds';
 import { createAuth } from '@/lib/auth';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { randomUUID } from 'crypto';
 import { GAME_IDS } from '@gachia/core';
 
 const gameIds = new Set<string>(GAME_IDS);
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
   const unavailable = accountFeatureUnavailable();
@@ -59,22 +61,17 @@ export async function GET(request: NextRequest) {
   const id = searchParams.get('id');
 
   if (!id) {
-    return NextResponse.json({ error: 'id is required' }, { status: 400 });
+    return NextResponse.json({ error: 'id is required' }, { status: 400, headers: { 'Cache-Control': 'no-store' } });
   }
 
-  const db = getDb();
-  const builds = await db
-    .select()
-    .from(sharedBuilds)
-    .where(eq(sharedBuilds.id, id))
-    .limit(1);
+  const build = await getPublicSharedBuild(id);
 
-  if (builds.length === 0) {
-    return NextResponse.json({ error: 'Build not found' }, { status: 404 });
+  if (!build) {
+    return NextResponse.json({ error: 'Build not found' }, { status: 404, headers: { 'Cache-Control': 'no-store' } });
   }
 
-  return NextResponse.json(builds[0], {
-    headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
+  return NextResponse.json(build, {
+    headers: { 'Cache-Control': 'no-store' },
   });
 }
 

@@ -1,0 +1,60 @@
+
+> gachia@ type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia
+> turbo type-check
+
+• turbo 2.10.4
+
+   • Packages in scope: @gachia/admin, @gachia/core, @gachia/data, @gachia/db, @gachia/game-azur-promilia, @gachia/game-genshin, @gachia/game-lvmeng, @gachia/game-nte, @gachia/router, @gachia/ui, @gachia/web
+   • Running type-check in 11 packages
+   • Remote caching disabled, using shared worktree cache
+
+@gachia/db:type-check: cache miss, executing c52899e9d6688d41
+@gachia/router:type-check: cache miss, executing d03d395ab0d53d68
+@gachia/core:type-check: cache miss, executing 016eb50c817ab35f
+@gachia/data:type-check: cache miss, executing af00e36b291bb870
+@gachia/game-lvmeng:type-check: cache miss, executing bd0189d70c33a05a
+@gachia/web:type-check: cache miss, executing 3f46aa4085d4636f
+@gachia/game-azur-promilia:type-check: cache miss, executing 02ef52eb4c8300ab
+@gachia/game-nte:type-check: cache miss, executing 8d6df5e3f917ca02
+@gachia/game-genshin:type-check: cache miss, executing 855bf37f0ffeecde
+@gachia/game-azur-promilia:type-check: 
+@gachia/game-azur-promilia:type-check: > @gachia/game-azur-promilia@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-azur-promilia
+@gachia/game-azur-promilia:type-check: > tsc --noEmit
+@gachia/game-azur-promilia:type-check: 
+@gachia/web:type-check: 
+@gachia/web:type-check: > @gachia/web@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+@gachia/web:type-check: > tsc --noEmit
+@gachia/web:type-check: 
+@gachia/game-genshin:type-check: 
+@gachia/game-genshin:type-check: > @gachia/game-genshin@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-genshin
+@gachia/game-genshin:type-check: > tsc --noEmit
+@gachia/game-genshin:type-check: 
+@gachia/game-lvmeng:type-check: 
+@gachia/game-lvmeng:type-check: > @gachia/game-lvmeng@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-lvmeng
+@gachia/game-lvmeng:type-check: > tsc --noEmit
+@gachia/game-lvmeng:type-check: 
+@gachia/core:type-check: 
+@gachia/core:type-check: > @gachia/core@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/packages/core
+@gachia/core:type-check: > tsc --noEmit
+@gachia/core:type-check: 
+@gachia/db:type-check: 
+@gachia/db:type-check: > @gachia/db@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/packages/db
+@gachia/db:type-check: > tsc --noEmit
+@gachia/db:type-check: 
+@gachia/router:type-check: 
+@gachia/router:type-check: > @gachia/router@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/router
+@gachia/router:type-check: > tsc --noEmit
+@gachia/router:type-check: 
+@gachia/data:type-check: 
+@gachia/data:type-check: > @gachia/data@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/packages/data
+@gachia/data:type-check: > tsc --noEmit
+@gachia/data:type-check: 
+@gachia/game-nte:type-check: 
+@gachia/game-nte:type-check: > @gachia/game-nte@0.0.1 type-check /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/game-nte
+@gachia/game-nte:type-check: > tsc --noEmit
+@gachia/game-nte:type-check: 
+
+ Tasks:    9 successful, 9 total
+Cached:    0 cached, 9 total
+  Time:    8.227s 
+

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-25",
+  "scope": "User-approved deletion of 119 old browser records only",
+  "deletedFiles": 119,
+  "deletedLogicalBytes": 1383224,
+  "manifest": "inventory.json",
+  "preDeletionHashesVerified": true,
+  "remainingCandidateHashesVerified": true,
+  "ignoreRule": "/.playwright-mcp/",
+  "materialsBackupsAndReleaseEvidencePreserved": true,
+  "committed": false,
+  "deployed": false
+}

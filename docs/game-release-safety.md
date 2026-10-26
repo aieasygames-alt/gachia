@@ -1,5 +1,7 @@
 # Game Release Safety：S1 本地发布门禁
 
+> 2026-10-25 生产入口变更：本文下方的 generic production deploy 命令是历史阶段记录，现已退役，即使提供确认参数和 receipt 也不能执行。当前入口、Main 路径与游戏/Router 的拒绝策略见 [多 Worker 生产入口](production-release-entrypoints.md)。本地 verify、资源保留及隔离 staging 仍可用；异环与蓝色星原远程 staging 均要求干净源码。不要照抄历史生产示例绕过新边界。
+
 更新：2026-10-25（S2.21 补充）。`game-release.mjs` 的通用远程执行许可仍仅覆盖异环与蓝色星原；运行时检查已覆盖全部五个 Next 应用。原神新增独立的本地产物封存入口，并按明确的操作者控制流程复用既有 staging 推广生产，契约见 [原神 Live Owner 发布规范](genshin-live-owner-release.md)。不能把一次游戏上线解释为通用平台、独立审批或全站放行。以下 S1 段落保留其历史阶段边界。
 
 ## 1. 本阶段解决什么

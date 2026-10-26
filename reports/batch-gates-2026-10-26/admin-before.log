@@ -1,0 +1,1763 @@
+
+> @gachia/admin@0.0.1 test /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/admin
+> node --import tsx --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: entity changes include all added, modified, deleted records, but not unchanged ones
+ok 1 - entity changes include all added, modified, deleted records, but not unchanged ones
+  ---
+  duration_ms: 1.6845
+  type: 'test'
+  ...
+# Subtest: budget refuses truncation; missing baseline is uncovered; reordering is not a content update
+ok 2 - budget refuses truncation; missing baseline is uncovered; reordering is not a content update
+  ---
+  duration_ms: 0.5475
+  type: 'test'
+  ...
+# Subtest: entity ID types and page budgets cannot use coercion to bypass validation
+ok 3 - entity ID types and page budgets cannot use coercion to bypass validation
+  ---
+  duration_ms: 0.310334
+  type: 'test'
+  ...
+# Subtest: curated translations change only two description groups, without mutating input
+ok 4 - curated translations change only two description groups, without mutating input
+  ---
+  duration_ms: 1.821958
+  type: 'test'
+  ...
+# Subtest: exact delta guard rejects unrelated edits, missing/duplicate targets and false live claims
+ok 5 - exact delta guard rejects unrelated edits, missing/duplicate targets and false live claims
+  ---
+  duration_ms: 0.640084
+  type: 'test'
+  ...
+# Subtest: fixed text contract preserves English names and explicitly bounds client/localization claims
+ok 6 - fixed text contract preserves English names and explicitly bounds client/localization claims
+  ---
+  duration_ms: 0.165333
+  type: 'test'
+  ...
+# Subtest: invalid lifetime and watcher budgets reject before starting a service
+ok 7 - invalid lifetime and watcher budgets reject before starting a service
+  ---
+  duration_ms: 0.681167
+  type: 'test'
+  ...
+# Subtest: check intent save failure restores retryable in-memory state without releasing process ownership
+ok 8 - check intent save failure restores retryable in-memory state without releasing process ownership
+  ---
+  duration_ms: 71.855458
+  type: 'test'
+  ...
+# Subtest: explicit execution confirmation, independent deps and no dotenv are required
+ok 9 - explicit execution confirmation, independent deps and no dotenv are required
+  ---
+  duration_ms: 5.841958
+  type: 'test'
+  ...
+# Subtest: linked build output or home blocks launch without writing outside the workspace
+ok 10 - linked build output or home blocks launch without writing outside the workspace
+  ---
+  duration_ms: 9.177833
+  type: 'test'
+  ...
+# Subtest: real browser check detects missing directory links and removed pages returning 200
+ok 11 - real browser check detects missing directory links and removed pages returning 200 # SKIP
+  ---
+  duration_ms: 0.042375
+  type: 'test'
+  ...
+# Subtest: real browser check records actual HTTP/H1/body and does not grant publish permission
+ok 12 - real browser check records actual HTTP/H1/body and does not grant publish permission # SKIP
+  ---
+  duration_ms: 0.025708
+  type: 'test'
+  ...
+# Subtest: entity diff routes are three-language and reject unsafe IDs
+ok 13 - entity diff routes are three-language and reject unsafe IDs
+  ---
+  duration_ms: 0.461667
+  type: 'test'
+  ...
+# Subtest: fixed command, sanitized environment, concurrency and owned-process stop
+ok 14 - fixed command, sanitized environment, concurrency and owned-process stop
+  ---
+  duration_ms: 31.157917
+  type: 'test'
+  ...
+# Subtest: a post-launch persistence failure stops the owned child before releasing its slot
+ok 15 - a post-launch persistence failure stops the owned child before releasing its slot
+  ---
+  duration_ms: 30.570084
+  type: 'test'
+  ...
+# Subtest: closing while port allocation is pending cancels launch without changing stopped state
+ok 16 - closing while port allocation is pending cancels launch without changing stopped state
+  ---
+  duration_ms: 1.765875
+  type: 'test'
+  ...
+# Subtest: persistent terminal save failure stays fenced and retries without relaunch or manual overwrite
+ok 17 - persistent terminal save failure stays fenced and retries without relaunch or manual overwrite
+  ---
+  duration_ms: 55.031833
+  type: 'test'
+  ...
+# Subtest: failed TERM and KILL signals retain ownership until an actual exit event
+ok 18 - failed TERM and KILL signals retain ownership until an actual exit event
+  ---
+  duration_ms: 17.137333
+  type: 'test'
+  ...
+# Subtest: successful signals without an exit become reconciliation and remain fenced until late exit
+ok 19 - successful signals without an exit become reconciliation and remain fenced until late exit
+  ---
+  duration_ms: 59.368083
+  type: 'test'
+  ...
+# Subtest: expiry and fact drift automatically stop the owned process
+ok 20 - expiry and fact drift automatically stop the owned process
+  ---
+  duration_ms: 260.66225
+  type: 'test'
+  ...
+# Subtest: restart refuses replay or killing persisted PID until human reconciliation
+ok 21 - restart refuses replay or killing persisted PID until human reconciliation
+  ---
+  duration_ms: 1.735125
+  type: 'test'
+  ...
+# Subtest: another service does not relabel or reconcile an owned active preview
+ok 22 - another service does not relabel or reconcile an owned active preview
+  ---
+  duration_ms: 29.717792
+  type: 'test'
+  ...
+# Subtest: hashes complete ordinary-file inventory twice without copying or opening execution permissions
+ok 23 - hashes complete ordinary-file inventory twice without copying or opening execution permissions
+  ---
+  duration_ms: 4.162416
+  type: 'test'
+  ...
+# Subtest: rejects content/size/mode drift and incomplete or extra inventory
+ok 24 - rejects content/size/mode drift and incomplete or extra inventory
+  ---
+  duration_ms: 5.120542
+  type: 'test'
+  ...
+# Subtest: rejects symlink file, symlink ancestor, root alias, hardlinks and undeclared directories
+ok 25 - rejects symlink file, symlink ancestor, root alias, hardlinks and undeclared directories
+  ---
+  duration_ms: 3.103042
+  type: 'test'
+  ...
+# Subtest: between-scan mutation rejects report and metadata failures never reach read hook
+ok 26 - between-scan mutation rejects report and metadata failures never reach read hook
+  ---
+  duration_ms: 2.232959
+  type: 'test'
+  ...
+# Subtest: real React auth dialog ignores stale results and permits retry after returned errors
+ok 27 - real React auth dialog ignores stale results and permits retry after returned errors # SKIP
+  ---
+  duration_ms: 0.315584
+  type: 'test'
+  ...
+# Subtest: baseline inventory preserves rename paths, separates reports and never follows symlinks or stages
+ok 28 - baseline inventory preserves rename paths, separates reports and never follows symlinks or stages
+  ---
+  duration_ms: 432.745334
+  type: 'test'
+  ...
+# Subtest: inventory distinguishes deletions, staged bytes and JSON data from data package code
+ok 29 - inventory distinguishes deletions, staged bytes and JSON data from data package code
+  ---
+  duration_ms: 277.097833
+  type: 'test'
+  ...
+# (node:13196) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: closure persists without schema migration, preserves snapshot, audits once and fences revision
+ok 30 - closure persists without schema migration, preserves snapshot, audits once and fences revision
+  ---
+  duration_ms: 22.717209
+  type: 'test'
+  ...
+# Subtest: missing confirmations, identity, stale content/code/facts and unknown task cannot close
+ok 31 - missing confirmations, identity, stale content/code/facts and unknown task cannot close
+  ---
+  duration_ms: 10.935
+  type: 'test'
+  ...
+# Subtest: audit insert failure rolls back closure and permits the same request after repair
+ok 32 - audit insert failure rolls back closure and permits the same request after repair
+  ---
+  duration_ms: 9.153083
+  type: 'test'
+  ...
+# Subtest: isolated snapshot recovery retains closure and audit without changing source or backup bytes
+ok 33 - isolated snapshot recovery retains closure and audit without changing source or backup bytes
+  ---
+  duration_ms: 12.857875
+  type: 'test'
+  ...
+# Subtest: existing revisions prevent closure rather than leaving previously approved drafts active
+ok 34 - existing revisions prevent closure rather than leaving previously approved drafts active
+  ---
+  duration_ms: 8.896541
+  type: 'test'
+  ...
+# Subtest: real scans with missing, malformed or divergent files reject closure without writes
+ok 35 - real scans with missing, malformed or divergent files reject closure without writes
+  ---
+  duration_ms: 46.860792
+  type: 'test'
+  ...
+# Subtest: unknown/incomplete scan fails closed; not-covered stays explicit; successful coverage is persisted
+ok 36 - unknown/incomplete scan fails closed; not-covered stays explicit; successful coverage is persisted
+  ---
+  duration_ms: 8.151792
+  type: 'test'
+  ...
+# Subtest: bounded reader handles empty/exact/chunked input and rejects oversized or unsafe files
+ok 37 - bounded reader handles empty/exact/chunked input and rejects oversized or unsafe files
+  ---
+  duration_ms: 2.685125
+  type: 'test'
+  ...
+# (node:13198) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: referenced evidence, pending drafts and reconciliation records stay protected
+ok 38 - referenced evidence, pending drafts and reconciliation records stay protected
+  ---
+  duration_ms: 2.020625
+  type: 'test'
+  ...
+# Subtest: incomplete scans, dangling references and duplicate IDs fail closed
+ok 39 - incomplete scans, dangling references and duplicate IDs fail closed
+  ---
+  duration_ms: 0.823458
+  type: 'test'
+  ...
+# Subtest: output and diagnostic truncation remain explicit without losing summary counts
+ok 40 - output and diagnostic truncation remain explicit without losing summary counts
+  ---
+  duration_ms: 3.919083
+  type: 'test'
+  ...
+# Subtest: record, reference and oversized-payload budgets are reported and suppress candidates
+ok 41 - record, reference and oversized-payload budgets are reported and suppress candidates
+  ---
+  duration_ms: 0.080542
+  type: 'test'
+  ...
+# Subtest: oversized material is skipped before nested traversal and cannot produce cleanup candidates
+ok 42 - oversized material is skipped before nested traversal and cannot produce cleanup candidates
+  ---
+  duration_ms: 15.386625
+  type: 'test'
+  ...
+# Subtest: nested traversal uses the same newest record window as metadata projection
+ok 43 - nested traversal uses the same newest record window as metadata projection
+  ---
+  duration_ms: 144.572834
+  type: 'test'
+  ...
+# Subtest: store projects metadata only; plan HTTP is authenticated and creates no events
+ok 44 - store projects metadata only; plan HTTP is authenticated and creates no events
+  ---
+  duration_ms: 53.935791
+  type: 'test'
+  ...
+# Subtest: nested snapshots and source provenance protect evidence without projecting body or HTML
+ok 45 - nested snapshots and source provenance protect evidence without projecting body or HTML
+  ---
+  duration_ms: 19.135209
+  type: 'test'
+  ...
+# Subtest: missing nested targets and missing source digest cancel all candidates
+ok 46 - missing nested targets and missing source digest cancel all candidates
+  ---
+  duration_ms: 0.208083
+  type: 'test'
+  ...
+# Subtest: bounded config inputs reject links, directories and oversize without emitting text
+ok 47 - bounded config inputs reject links, directories and oversize without emitting text
+  ---
+  duration_ms: 16.240458
+  type: 'test'
+  ...
+# Subtest: ambiguous duplicate keys and deep structures fail closed without exposing values
+ok 48 - ambiguous duplicate keys and deep structures fail closed without exposing values
+  ---
+  duration_ms: 3.074
+  type: 'test'
+  ...
+# Subtest: data preview renders three languages as escaped text with no application execution
+ok 49 - data preview renders three languages as escaped text with no application execution
+  ---
+  duration_ms: 4.244584
+  type: 'test'
+  ...
+# Subtest: empty, unknown and deleted data never count as preview passed; missing body fails
+ok 50 - empty, unknown and deleted data never count as preview passed; missing body fails
+  ---
+  duration_ms: 1.1845
+  type: 'test'
+  ...
+# Subtest: preview page budget rejects rather than silently truncating
+ok 51 - preview page budget rejects rather than silently truncating
+  ---
+  duration_ms: 2.1425
+  type: 'test'
+  ...
+# Subtest: malformed containers and entity IDs never render ambiguous or duplicate preview pages
+ok 52 - malformed containers and entity IDs never render ambiguous or duplicate preview pages
+  ---
+  duration_ms: 1.879875
+  type: 'test'
+  ...
+# Subtest: evaluation requires a valid date and inherited object keys are not reference fields
+ok 53 - evaluation requires a valid date and inherited object keys are not reference fields
+  ---
+  duration_ms: 13.574792
+  type: 'test'
+  ...
+# Subtest: translation diagnostics check optional field groups without asserting semantics or mutating data
+ok 54 - translation diagnostics check optional field groups without asserting semantics or mutating data
+  ---
+  duration_ms: 1.16675
+  type: 'test'
+  ...
+# Subtest: confirmed fact date diagnostics are inclusive UTC, deterministic and never revoke review state
+ok 55 - confirmed fact date diagnostics are inclusive UTC, deterministic and never revoke review state
+  ---
+  duration_ms: 0.27625
+  type: 'test'
+  ...
+# Subtest: literal entity suggestions include English and Japanese labels but do not infer aliases
+ok 56 - literal entity suggestions include English and Japanese labels but do not infer aliases
+  ---
+  duration_ms: 0.1325
+  type: 'test'
+  ...
+# Subtest: nested skills and FAQ use distinct locale conventions and report malformed or empty records
+ok 57 - nested skills and FAQ use distinct locale conventions and report malformed or empty records
+  ---
+  duration_ms: 1.42475
+  type: 'test'
+  ...
+# Subtest: explicit references distinguish invalid IDs, missing targets and unavailable datasets
+ok 58 - explicit references distinguish invalid IDs, missing targets and unavailable datasets
+  ---
+  duration_ms: 0.190834
+  type: 'test'
+  ...
+# Subtest: diagnostic output and nested traversal explicitly flag truncation
+ok 59 - diagnostic output and nested traversal explicitly flag truncation
+  ---
+  duration_ms: 9.902583
+  type: 'test'
+  ...
+# Subtest: primary deployment workflow requires patched dependencies before build
+ok 60 - primary deployment workflow requires patched dependencies before build
+  ---
+  duration_ms: 58.487541
+  type: 'test'
+  ...
+# Subtest: web promotion uses one immutable artifact ID and digest, preserving hidden files and links
+ok 61 - web promotion uses one immutable artifact ID and digest, preserving hidden files and links
+  ---
+  duration_ms: 223.84575
+  type: 'test'
+  ...
+# Subtest: web scripts require their resolved patch before build, after production content approval
+not ok 62 - web scripts require their resolved patch before build, after production content approval
+  ---
+  duration_ms: 0.663875
+  type: 'test'
+  location: '/Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/admin/tests/deferred-patch-package.test.mjs:79:1'
+  failureType: 'testCodeFailure'
+  error: 'deploy'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/admin/tests/deferred-patch-package.test.mjs:84:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: staging and production require all 12 HI3 reading routes and reject redirects or failures
+ok 63 - staging and production require all 12 HI3 reading routes and reject redirects or failures
+  ---
+  duration_ms: 1711.545542
+  type: 'test'
+  ...
+# Subtest: distribution patch applies exactly and verifier rejects partial, drift and wrong version
+ok 64 - distribution patch applies exactly and verifier rejects partial, drift and wrong version
+  ---
+  duration_ms: 51.44925
+  type: 'test'
+  ...
+# Subtest: binds exact source/review/lock identities without treating metadata as artifact verification
+ok 65 - binds exact source/review/lock identities without treating metadata as artifact verification
+  ---
+  duration_ms: 5.134041
+  type: 'test'
+  ...
+# Subtest: rejects missing confirmation, floating identities, unsupported platforms and credential URLs
+ok 66 - rejects missing confirmation, floating identities, unsupported platforms and credential URLs
+  ---
+  duration_ms: 0.307666
+  type: 'test'
+  ...
+# Subtest: readiness stays blocked even with claimed verification flags and partial scans
+ok 67 - readiness stays blocked even with claimed verification flags and partial scans
+  ---
+  duration_ms: 0.813042
+  type: 'test'
+  ...
+# Subtest: missing/failed scans are explicit and changed plan or material bindings reject export
+ok 68 - missing/failed scans are explicit and changed plan or material bindings reject export
+  ---
+  duration_ms: 0.858417
+  type: 'test'
+  ...
+# Subtest: JSONC local fields are consistent without promoting release acceptance
+ok 69 - JSONC local fields are consistent without promoting release acceptance
+  ---
+  duration_ms: 3.880125
+  type: 'test'
+  ...
+# Subtest: environment bindings never inherit production and duplicate bindings are mismatches
+ok 70 - environment bindings never inherit production and duplicate bindings are mismatches
+  ---
+  duration_ms: 0.830334
+  type: 'test'
+  ...
+# Subtest: invalid or absent configuration is not checked and strings with URL comments survive
+ok 71 - invalid or absent configuration is not checked and strings with URL comments survive
+  ---
+  duration_ms: 3.268292
+  type: 'test'
+  ...
+# Subtest: discovery checks live sitemap entries, removed URLs and localized search names
+ok 72 - discovery checks live sitemap entries, removed URLs and localized search names
+  ---
+  duration_ms: 3.031333
+  type: 'test'
+  ...
+# Subtest: stale deleted entries, duplicates, wrong names and absent categories fail
+ok 73 - stale deleted entries, duplicates, wrong names and absent categories fail
+  ---
+  duration_ms: 0.550167
+  type: 'test'
+  ...
+# Subtest: fetch is bounded to four local requests, and errors never masquerade as empty indexes
+ok 74 - fetch is bounded to four local requests, and errors never masquerade as empty indexes
+  ---
+  duration_ms: 31.385167
+  type: 'test'
+  ...
+# Subtest: fetch rejects oversized responses and configures no redirects and a timeout
+ok 75 - fetch rejects oversized responses and configures no redirects and a timeout
+  ---
+  duration_ms: 10.448416
+  type: 'test'
+  ...
+# Subtest: missing source translations cannot pass through search generator fallback names
+ok 76 - missing source translations cannot pass through search generator fallback names
+  ---
+  duration_ms: 0.137875
+  type: 'test'
+  ...
+# Subtest: malformed search entries fail deletion and addition checks without throwing
+ok 77 - malformed search entries fail deletion and addition checks without throwing
+  ---
+  duration_ms: 0.087
+  type: 'test'
+  ...
+# Subtest: discovery rejects non-loopback origins before calling fetch
+ok 78 - discovery rejects non-loopback origins before calling fetch
+  ---
+  duration_ms: 0.311208
+  type: 'test'
+  ...
+# Subtest: discovery distinguishes bounded failure categories without leaking response or error text
+ok 79 - discovery distinguishes bounded failure categories without leaking response or error text
+  ---
+  duration_ms: 60.94575
+  type: 'test'
+  ...
+# Subtest: search JSON failures retain safe status and byte observations, valid discovery remains unchanged
+ok 80 - search JSON failures retain safe status and byte observations, valid discovery remains unchanged
+  ---
+  duration_ms: 0.73475
+  type: 'test'
+  ...
+# Subtest: valid three-language dataset passes only covered rules; unknown semantic checks stay uncovered
+ok 81 - valid three-language dataset passes only covered rules; unknown semantic checks stay uncovered
+  ---
+  duration_ms: 29.003834
+  type: 'test'
+  ...
+# Subtest: mirror drift, missing body, duplicate IDs, invalid FAQ and broken references fail
+ok 82 - mirror drift, missing body, duplicate IDs, invalid FAQ and broken references fail
+  ---
+  duration_ms: 15.538584
+  type: 'test'
+  ...
+# Subtest: new untracked and extra data bytes change fingerprint; unknown schema remains uncovered
+ok 83 - new untracked and extra data bytes change fingerprint; unknown schema remains uncovered
+  ---
+  duration_ms: 19.568
+  type: 'test'
+  ...
+# Subtest: symlink, malformed JSON and missing counterpart cannot pass
+ok 84 - symlink, malformed JSON and missing counterpart cannot pass
+  ---
+  duration_ms: 11.447958
+  type: 'test'
+  ...
+# Subtest: draft reads enforce byte budgets, ordinary files and exact local data paths
+ok 85 - draft reads enforce byte budgets, ordinary files and exact local data paths
+  ---
+  duration_ms: 4.302625
+  type: 'test'
+  ...
+# Subtest: oversized draft input becomes a failed read, never a passing validation
+ok 86 - oversized draft input becomes a failed read, never a passing validation
+  ---
+  duration_ms: 39.542958
+  type: 'test'
+  ...
+# Subtest: walks importer metadata and peer-qualified cyclic snapshots without executing install
+ok 87 - walks importer metadata and peer-qualified cyclic snapshots without executing install
+  ---
+  duration_ms: 13.515
+  type: 'test'
+  ...
+# Subtest: detects stale specifiers, absent snapshots, local escapes and missing included importers
+ok 88 - detects stale specifiers, absent snapshots, local escapes and missing included importers
+  ---
+  duration_ms: 2.095959
+  type: 'test'
+  ...
+# Subtest: rejects duplicate YAML keys, alias expansion, unsupported patterns and lock versions
+ok 89 - rejects duplicate YAML keys, alias expansion, unsupported patterns and lock versions
+  ---
+  duration_ms: 2.166083
+  type: 'test'
+  ...
+# Subtest: unverifiable artifact identity and transitive local references never pass
+ok 90 - unverifiable artifact identity and transitive local references never pass
+  ---
+  duration_ms: 0.700875
+  type: 'test'
+  ...
+# Subtest: workspace dependency cannot silently link a different included package
+ok 91 - workspace dependency cannot silently link a different included package
+  ---
+  duration_ms: 0.7645
+  type: 'test'
+  ...
+# Subtest: resolves relative source, JSONC inherited aliases and local workspace package through manifest-only host
+ok 92 - resolves relative source, JSONC inherited aliases and local workspace package through manifest-only host
+  ---
+  duration_ms: 12.899917
+  type: 'test'
+  ...
+# Subtest: reports missing/outside local inputs, workspace dependencies, bad config and dynamic loading without executing code
+ok 93 - reports missing/outside local inputs, workspace dependencies, bad config and dynamic loading without executing code
+  ---
+  duration_ms: 1.612209
+  type: 'test'
+  ...
+# Subtest: clean static slice stays partial and diagnostic cap never produces a pass
+ok 94 - clean static slice stays partial and diagnostic cap never produces a pass
+  ---
+  duration_ms: 2.422792
+  type: 'test'
+  ...
+# Subtest: invalid package containers and excessive AST depth remain blocking diagnostics
+ok 95 - invalid package containers and excessive AST depth remain blocking diagnostics
+  ---
+  duration_ms: 0.601792
+  type: 'test'
+  ...
+# (node:13561) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: inspection export is authenticated and cannot mutate or release the active slot
+ok 96 - inspection export is authenticated and cannot mutate or release the active slot
+  ---
+  duration_ms: 39.39475
+  type: 'test'
+  ...
+# Subtest: atomic reservation, idempotency, owner-checked heartbeat and cancellation retain history without runtime
+ok 97 - atomic reservation, idempotency, owner-checked heartbeat and cancellation retain history without runtime
+  ---
+  duration_ms: 6.213833
+  type: 'test'
+  ...
+# Subtest: expiration persists reconciliation, blocks takeover and cannot be revived or released after restart
+ok 98 - expiration persists reconciliation, blocks takeover and cannot be revived or released after restart
+  ---
+  duration_ms: 4.965459
+  type: 'test'
+  ...
+# Subtest: invalid owner, lease and identity fields never reserve a slot
+ok 99 - invalid owner, lease and identity fields never reserve a slot
+  ---
+  duration_ms: 4.1535
+  type: 'test'
+  ...
+# Subtest: unknown saved states block replacement instead of implicitly releasing the slot
+ok 100 - unknown saved states block replacement instead of implicitly releasing the slot
+  ---
+  duration_ms: 3.933042
+  type: 'test'
+  ...
+# Subtest: invalid clocks deny reservation and mutation without clearing an existing lease
+ok 101 - invalid clocks deny reservation and mutation without clearing an existing lease
+  ---
+  duration_ms: 12.971917
+  type: 'test'
+  ...
+# Subtest: schema v10 migration backs up database before adding intent table and rejects newer versions
+ok 102 - schema v10 migration backs up database before adding intent table and rejects newer versions
+  ---
+  duration_ms: 10.983417
+  type: 'test'
+  ...
+# Subtest: persisted launch attempt fences cancellation, identity replacement and incorrect runtime reports
+ok 103 - persisted launch attempt fences cancellation, identity replacement and incorrect runtime reports
+  ---
+  duration_ms: 6.826167
+  type: 'test'
+  ...
+# Subtest: unknown launch result and crash after launch intent retain slot without claiming runtime absence
+ok 104 - unknown launch result and crash after launch intent retain slot without claiming runtime absence
+  ---
+  duration_ms: 4.421375
+  type: 'test'
+  ...
+# Subtest: launch intent without a returned result expires to reconciliation and retains attempt identity
+ok 105 - launch intent without a returned result expires to reconciliation and retains attempt identity
+  ---
+  duration_ms: 11.95
+  type: 'test'
+  ...
+# Subtest: simulated inspection fences cross-connection lease changes against the persisted attempt snapshot
+ok 106 - simulated inspection fences cross-connection lease changes against the persisted attempt snapshot
+  ---
+  duration_ms: 4.694292
+  type: 'test'
+  ...
+# Subtest: v11 intent migration preserves active ownership and backs up pre-migration records
+ok 107 - v11 intent migration preserves active ownership and backs up pre-migration records
+  ---
+  duration_ms: 10.87475
+  type: 'test'
+  ...
+# Subtest: two separate processes racing for the same initialized slot yield exactly one reservation
+ok 108 - two separate processes racing for the same initialized slot yield exactly one reservation
+  ---
+  duration_ms: 112.319292
+  type: 'test'
+  ...
+# Subtest: owner process exits without cancellation; subsequent controller preserves reservation then reconciliation
+ok 109 - owner process exits without cancellation; subsequent controller preserves reservation then reconciliation
+  ---
+  duration_ms: 76.206375
+  type: 'test'
+  ...
+# (node:13571) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: freezes source/config/lock with exact hashes, excludes deps/git and exposes drift without execute permission
+ok 110 - freezes source/config/lock with exact hashes, excludes deps/git and exposes drift without execute permission
+  ---
+  duration_ms: 25.194125
+  type: 'test'
+  ...
+# Subtest: rejects credentials, symlinks and budgets before recording frozen material
+ok 111 - rejects credentials, symlinks and budgets before recording frozen material
+  ---
+  duration_ms: 6.362917
+  type: 'test'
+  ...
+# Subtest: capture rejects invalid or excessive budgets and nonboolean exclusion options
+ok 112 - capture rejects invalid or excessive budgets and nonboolean exclusion options
+  ---
+  duration_ms: 5.845125
+  type: 'test'
+  ...
+# Subtest: copy-time source changes and revoked review fail closed and preserve non-executable failed record
+ok 113 - copy-time source changes and revoked review fail closed and preserve non-executable failed record
+  ---
+  duration_ms: 8.434458
+  type: 'test'
+  ...
+# Subtest: fixed template exclusion requires an exact separate confirmation and keeps only audit metadata
+ok 114 - fixed template exclusion requires an exact separate confirmation and keeps only audit metadata
+  ---
+  duration_ms: 14.813167
+  type: 'test'
+  ...
+# Subtest: changed exclusion bytes, other source changes, or changed packet invalidate the proposal
+ok 115 - changed exclusion bytes, other source changes, or changed packet invalidate the proposal
+  ---
+  duration_ms: 8.516458
+  type: 'test'
+  ...
+# Subtest: exclusion option never bypasses symlink, directory or other credential rejection
+ok 116 - exclusion option never bypasses symlink, directory or other credential rejection
+  ---
+  duration_ms: 5.732
+  type: 'test'
+  ...
+# Subtest: excluded file drift during copy fails and older v1 manifest still assesses correctly
+ok 117 - excluded file drift during copy fails and older v1 manifest still assesses correctly
+  ---
+  duration_ms: 15.518833
+  type: 'test'
+  ...
+# Subtest: dependency plans persist without execution, deduplicate, append changes and become stale with material/review drift
+ok 118 - dependency plans persist without execution, deduplicate, append changes and become stale with material/review drift
+  ---
+  duration_ms: 90.82825
+  type: 'test'
+  ...
+# Subtest: runtime file discovery never enables isolation, even when every command exists
+ok 119 - runtime file discovery never enables isolation, even when every command exists
+  ---
+  duration_ms: 2.863958
+  type: 'test'
+  ...
+# Subtest: missing/inaccessible files remain diagnostic, never trigger installation or fallback
+ok 120 - missing/inaccessible files remain diagnostic, never trigger installation or fallback
+  ---
+  duration_ms: 0.619667
+  type: 'test'
+  ...
+# Subtest: fixed offline probe protocol maps target budgets without enabling commands or asserting effective limits
+ok 121 - fixed offline probe protocol maps target budgets without enabling commands or asserting effective limits
+  ---
+  duration_ms: 1.372917
+  type: 'test'
+  ...
+# Subtest: protocol is deterministic, immutable target budget is shared with policy and returned values cannot mutate it
+ok 122 - protocol is deterministic, immutable target budget is shared with policy and returned values cannot mutate it
+  ---
+  duration_ms: 1.984541
+  type: 'test'
+  ...
+# (node:13637) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: field validation binds exact evidence, server and lifecycle; ignores caller verification claims
+ok 123 - field validation binds exact evidence, server and lifecycle; ignores caller verification claims
+  ---
+  duration_ms: 8.572125
+  type: 'test'
+  ...
+# Subtest: confirmation requires explicit checks; revisions prevent stale approval and history persists
+ok 124 - confirmation requires explicit checks; revisions prevent stale approval and history persists
+  ---
+  duration_ms: 5.124042
+  type: 'test'
+  ...
+# Subtest: discussion and unknown-scope facts cannot be confirmed, but may be rejected
+ok 125 - discussion and unknown-scope facts cannot be confirmed, but may be rejected
+  ---
+  duration_ms: 5.163542
+  type: 'test'
+  ...
+# Subtest: task snapshots bind reviewed fact revisions and never change after revocation
+ok 126 - task snapshots bind reviewed fact revisions and never change after revocation
+  ---
+  duration_ms: 6.419625
+  type: 'test'
+  ...
+# Subtest: v1 migration backs up committed WAL data and preserves old records
+ok 127 - v1 migration backs up committed WAL data and preserves old records
+  ---
+  duration_ms: 5.396
+  type: 'test'
+  ...
+# Subtest: HTTP field review endpoints enforce validation and revision conflict
+ok 128 - HTTP field review endpoints enforce validation and revision conflict
+  ---
+  duration_ms: 50.15025
+  type: 'test'
+  ...
+# Subtest: static audit follows literal cycles, reports missing and dynamic inputs without executing
+ok 129 - static audit follows literal cycles, reports missing and dynamic inputs without executing
+  ---
+  duration_ms: 10.848875
+  type: 'test'
+  ...
+# Subtest: audit validates entry containers and bounds unique queued files including unavailable inputs
+ok 130 - audit validates entry containers and bounds unique queued files including unavailable inputs
+  ---
+  duration_ms: 172.187917
+  type: 'test'
+  ...
+# Subtest: Mac recommendation is deferred by policy, not detection or authorization
+ok 131 - Mac recommendation is deferred by policy, not detection or authorization
+  ---
+  duration_ms: 1.405625
+  type: 'test'
+  ...
+# Subtest: report is deterministic and fresh; non-Mac reports do not silently choose a runtime
+ok 132 - report is deterministic and fresh; non-Mac reports do not silently choose a runtime
+  ---
+  duration_ms: 1.277584
+  type: 'test'
+  ...
+# Subtest: bounded context metadata classifies candidates without leaking URLs, names or credentials
+ok 133 - bounded context metadata classifies candidates without leaking URLs, names or credentials
+  ---
+  duration_ms: 8.777417
+  type: 'test'
+  ...
+# Subtest: symlink and oversized metadata are rejected and platform mismatch reads nothing
+ok 134 - symlink and oversized metadata are rejected and platform mismatch reads nothing
+  ---
+  duration_ms: 4.235333
+  type: 'test'
+  ...
+# Subtest: default unit command excludes any present historical manual workflow tools
+ok 135 - default unit command excludes any present historical manual workflow tools
+  ---
+  duration_ms: 0.521917
+  type: 'test'
+  ...
+# Subtest: next-search-loading rejects missing confirmation before browser or snapshot access
+ok 136 - next-search-loading rejects missing confirmation before browser or snapshot access # SKIP Optional historical tool not delivered; execution guard not covered
+  ---
+  duration_ms: 0.036542
+  type: 'test'
+  ...
+# Subtest: next-search-integration rejects missing confirmation before browser or snapshot access
+ok 137 - next-search-integration rejects missing confirmation before browser or snapshot access # SKIP Optional historical tool not delivered; execution guard not covered
+  ---
+  duration_ms: 0.031833
+  type: 'test'
+  ...
+# Subtest: next-weapon-scope rejects missing confirmation before browser or snapshot access
+ok 138 - next-weapon-scope rejects missing confirmation before browser or snapshot access # SKIP Optional historical tool not delivered; execution guard not covered
+  ---
+  duration_ms: 0.079084
+  type: 'test'
+  ...
+# Subtest: retired snapshot launcher always rejects, including with legacy arguments
+ok 139 - retired snapshot launcher always rejects, including with legacy arguments # SKIP Optional historical launcher not delivered; retirement guard not covered
+  ---
+  duration_ms: 0.025
+  type: 'test'
+  ...
+# Subtest: real browser search arrows navigate links without stealing composition, modifiers or native Enter
+ok 140 - real browser search arrows navigate links without stealing composition, modifiers or native Enter # SKIP
+  ---
+  duration_ms: 0.393083
+  type: 'test'
+  ...
+# Subtest: real browser overlapping modal owners survive both close orders and preserve scroll priority
+ok 141 - real browser overlapping modal owners survive both close orders and preserve scroll priority # SKIP
+  ---
+  duration_ms: 0.037166
+  type: 'test'
+  ...
+# Subtest: real browser modal background is inert, dynamic siblings isolated and exact state restored
+ok 142 - real browser modal background is inert, dynamic siblings isolated and exact state restored # SKIP
+  ---
+  duration_ms: 0.028125
+  type: 'test'
+  ...
+# Subtest: Azur PR verification follows the live registry and retains staging isolation without rg
+ok 143 - Azur PR verification follows the live registry and retains staging isolation without rg
+  ---
+  duration_ms: 134.249666
+  type: 'test'
+  ...
+# Subtest: main release is explicit, serialized and cannot migrate or redeploy other Workers
+ok 144 - main release is explicit, serialized and cannot migrate or redeploy other Workers
+  ---
+  duration_ms: 56.07625
+  type: 'test'
+  ...
+# Subtest: previous static assets are pinned, sealed once and verified before both cloud writes
+ok 145 - previous static assets are pinned, sealed once and verified before both cloud writes
+  ---
+  duration_ms: 12.281875
+  type: 'test'
+  ...
+# Subtest: production waits for browser acceptance of the exact compiled staging artifact
+ok 146 - production waits for browser acceptance of the exact compiled staging artifact
+  ---
+  duration_ms: 9.171458
+  type: 'test'
+  ...
+# Subtest: rollback evidence must identify the latest fully active main version
+ok 147 - rollback evidence must identify the latest fully active main version
+  ---
+  duration_ms: 376
+  type: 'test'
+  ...
+# Subtest: main secret gates share the checked-in account policy without weakening other releases
+ok 148 - main secret gates share the checked-in account policy without weakening other releases
+  ---
+  duration_ms: 17.25375
+  type: 'test'
+  ...
+# (node:13644) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: DNS timeout and unsafe DNS answers never start an HTTPS request
+ok 149 - DNS timeout and unsafe DNS answers never start an HTTPS request
+  ---
+  duration_ms: 2.568833
+  type: 'test'
+  ...
+# Subtest: fixed endpoint pins validated DNS for single and all-address lookups, without credentials or TLS bypass
+ok 150 - fixed endpoint pins validated DNS for single and all-address lookups, without credentials or TLS bypass
+  ---
+  duration_ms: 1.636459
+  type: 'test'
+  ...
+# Subtest: request deadline, oversized body and stream errors reject rather than returning partial data
+ok 151 - request deadline, oversized body and stream errors reject rather than returning partial data
+  ---
+  duration_ms: 1.30625
+  type: 'test'
+  ...
+# Subtest: redirect is not followed and service records access failure, retaining old snapshots
+ok 152 - redirect is not followed and service records access failure, retaining old snapshots
+  ---
+  duration_ms: 9.37875
+  type: 'test'
+  ...
+# (node:13645) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: real browser check imports reviewed source excerpts on desktop/mobile without executing HTML
+ok 153 - real browser check imports reviewed source excerpts on desktop/mobile without executing HTML # SKIP
+  ---
+  duration_ms: 0.353
+  type: 'test'
+  ...
+# Subtest: official parser bounds list and retains untrusted HTML as unverified Global data
+ok 154 - official parser bounds list and retains untrusted HTML as unverified Global data
+  ---
+  duration_ms: 0.199792
+  type: 'test'
+  ...
+# Subtest: source network policy rejects nonpublic IPv4 and every IPv6 address
+ok 155 - source network policy rejects nonpublic IPv4 and every IPv6 address
+  ---
+  duration_ms: 10.643667
+  type: 'test'
+  ...
+# Subtest: reviewed excerpts bind immutable source provenance, reject edits/stale snapshots and remain unverified
+ok 156 - reviewed excerpts bind immutable source provenance, reject edits/stale snapshots and remain unverified
+  ---
+  duration_ms: 9.802417
+  type: 'test'
+  ...
+# Subtest: persistent source health distinguishes edits, parse/access failure, cooldown and restart
+ok 157 - persistent source health distinguishes edits, parse/access failure, cooldown and restart
+  ---
+  duration_ms: 6.663083
+  type: 'test'
+  ...
+# Subtest: interrupted collection survives restart without replay or masquerading as success
+ok 158 - interrupted collection survives restart without replay or masquerading as success
+  ---
+  duration_ms: 6.209083
+  type: 'test'
+  ...
+# Subtest: intent persists before requests and concurrent collection is rejected
+ok 159 - intent persists before requests and concurrent collection is rejected
+  ---
+  duration_ms: 4.646666
+  type: 'test'
+  ...
+# (node:13657) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: quality coverage does not equate empty checks with full schema coverage
+ok 160 - quality coverage does not equate empty checks with full schema coverage
+  ---
+  duration_ms: 7.730959
+  type: 'test'
+  ...
+# Subtest: snapshot differences and recovery matrix are explicitly partial and non-actionable
+ok 161 - snapshot differences and recovery matrix are explicitly partial and non-actionable
+  ---
+  duration_ms: 0.150541
+  type: 'test'
+  ...
+# Subtest: storage comparison never treats missing counts as zero or invalid bytes as measured growth
+ok 162 - storage comparison never treats missing counts as zero or invalid bytes as measured growth
+  ---
+  duration_ms: 0.088208
+  type: 'test'
+  ...
+# Subtest: release plan reads fixed configuration without executing and API requires auth
+ok 163 - release plan reads fixed configuration without executing and API requires auth
+  ---
+  duration_ms: 32.878958
+  type: 'test'
+  ...
+# Subtest: gate summary never promotes configuration or historical reports to current acceptance
+ok 164 - gate summary never promotes configuration or historical reports to current acceptance
+  ---
+  duration_ms: 4.459625
+  type: 'test'
+  ...
+# Subtest: invalid package configuration has one explicit input diagnostic and fails closed
+ok 165 - invalid package configuration has one explicit input diagnostic and fails closed
+  ---
+  duration_ms: 34.892167
+  type: 'test'
+  ...
+# Subtest: build acceptance separates recovery, server body and navigation without granting approval
+ok 166 - build acceptance separates recovery, server body and navigation without granting approval
+  ---
+  duration_ms: 1.519375
+  type: 'test'
+  ...
+# Subtest: baseline mismatch includes missing code and does not grant copy/install/execute permission
+ok 167 - baseline mismatch includes missing code and does not grant copy/install/execute permission
+  ---
+  duration_ms: 42.459042
+  type: 'test'
+  ...
+# (node:13733) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: real browser occupancy cards keep foreign and pending previews non-actionable
+ok 168 - real browser occupancy cards keep foreign and pending previews non-actionable # SKIP
+  ---
+  duration_ms: 0.35275
+  type: 'test'
+  ...
+# Subtest: read-only readiness blocks missing dependencies and dotenv; never grants execution
+ok 169 - read-only readiness blocks missing dependencies and dotenv; never grants execution
+  ---
+  duration_ms: 6.764709
+  type: 'test'
+  ...
+# Subtest: readiness rejects shared external Next dependency and absent application
+ok 170 - readiness rejects shared external Next dependency and absent application
+  ---
+  duration_ms: 1.544375
+  type: 'test'
+  ...
+# Subtest: a directory at the Next executable path is blocked, not a dependency pass
+ok 171 - a directory at the Next executable path is blocked, not a dependency pass
+  ---
+  duration_ms: 1.070667
+  type: 'test'
+  ...
+# (node:13737) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: two SQLite connections cannot reserve concurrent previews and reconciliation keeps the fence
+ok 172 - two SQLite connections cannot reserve concurrent previews and reconciliation keeps the fence
+  ---
+  duration_ms: 11.799667
+  type: 'test'
+  ...
+# Subtest: independent processes race one reservation and cannot overwrite the winning owner
+ok 173 - independent processes race one reservation and cannot overwrite the winning owner
+  ---
+  duration_ms: 200.50425
+  type: 'test'
+  ...
+# Subtest: owned previews cannot be overwritten by generic saves or a different instance
+ok 174 - owned previews cannot be overwritten by generic saves or a different instance
+  ---
+  duration_ms: 5.835625
+  type: 'test'
+  ...
+# Subtest: production integrations isolate origins and deduplicate real Next scripts on remount
+ok 175 - production integrations isolate origins and deduplicate real Next scripts on remount # SKIP
+  ---
+  duration_ms: 0.708125
+  type: 'test'
+  ...
+# Subtest: matrix separates observed keys, optional absent groups and presence-only rules
+ok 176 - matrix separates observed keys, optional absent groups and presence-only rules
+  ---
+  duration_ms: 10.00175
+  type: 'test'
+  ...
+# Subtest: nested matrix counts malformed groups, invalid items and retained field checks
+ok 177 - nested matrix counts malformed groups, invalid items and retained field checks
+  ---
+  duration_ms: 0.895833
+  type: 'test'
+  ...
+# Subtest: additional quality datasets do not alter legacy revision fingerprint or page entries
+ok 178 - additional quality datasets do not alter legacy revision fingerprint or page entries
+  ---
+  duration_ms: 17.2025
+  type: 'test'
+  ...
+# Subtest: new explicit reference families validate IDs without inferring relationship semantics
+ok 179 - new explicit reference families validate IDs without inferring relationship semantics
+  ---
+  duration_ms: 0.532292
+  type: 'test'
+  ...
+# Subtest: matrix observation budgets and invalid rows stay explicit
+ok 180 - matrix observation budgets and invalid rows stay explicit
+  ---
+  duration_ms: 6.347666
+  type: 'test'
+  ...
+# Subtest: configured guide content and FAQ differ from material source rules
+ok 181 - configured guide content and FAQ differ from material source rules
+  ---
+  duration_ms: 0.51725
+  type: 'test'
+  ...
+# Subtest: duplicate target IDs are ambiguous, invalid records are reported and input remains unchanged
+ok 182 - duplicate target IDs are ambiguous, invalid records are reported and input remains unchanged
+  ---
+  duration_ms: 11.714833
+  type: 'test'
+  ...
+# Subtest: ID diagnostic truncation preserves issue totals independently from text output
+ok 183 - ID diagnostic truncation preserves issue totals independently from text output
+  ---
+  duration_ms: 7.362292
+  type: 'test'
+  ...
+# Subtest: unique IDs resolve; invalid IDs never satisfy a reference
+ok 184 - unique IDs resolve; invalid IDs never satisfy a reference
+  ---
+  duration_ms: 0.316833
+  type: 'test'
+  ...
+# Subtest: duplicate dataset owners cannot resolve references by silent merging
+ok 185 - duplicate dataset owners cannot resolve references by silent merging
+  ---
+  duration_ms: 9.848875
+  type: 'test'
+  ...
+# Subtest: row budget preserves observed counts and does not approve omitted targets
+ok 186 - row budget preserves observed counts and does not approve omitted targets
+  ---
+  duration_ms: 51.286042
+  type: 'test'
+  ...
+# Subtest: invalid containers, invalid rows declarations and dataset/fact budgets remain explicit
+ok 187 - invalid containers, invalid rows declarations and dataset/fact budgets remain explicit
+  ---
+  duration_ms: 1.381334
+  type: 'test'
+  ...
+# Subtest: per-dataset traversal reveals global object budget omissions in later datasets
+ok 188 - per-dataset traversal reveals global object budget omissions in later datasets
+  ---
+  duration_ms: 25.927209
+  type: 'test'
+  ...
+# Subtest: depth and diagnostic budgets distinguish partial rows from rows never started
+ok 189 - depth and diagnostic budgets distinguish partial rows from rows never started
+  ---
+  duration_ms: 36.42175
+  type: 'test'
+  ...
+# Subtest: complete key traversal reports reference counts without approving unknown fields
+ok 190 - complete key traversal reports reference counts without approving unknown fields
+  ---
+  duration_ms: 0.284208
+  type: 'test'
+  ...
+# (node:13863) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: independent snapshot preserves seven draft/execution tables; restart fences unknown execution
+ok 191 - independent snapshot preserves seven draft/execution tables; restart fences unknown execution
+  ---
+  duration_ms: 20.49875
+  type: 'test'
+  ...
+# (node:13872) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: agent identity persists without bypassing fact gates; omitted identity is not human
+ok 192 - agent identity persists without bypassing fact gates; omitted identity is not human
+  ---
+  duration_ms: 11.059958
+  type: 'test'
+  ...
+# Subtest: review metadata budgets apply before trimming and malformed input is a client error
+ok 193 - review metadata budgets apply before trimming and malformed input is a client error
+  ---
+  duration_ms: 0.29375
+  type: 'test'
+  ...
+# Subtest: rejected review identity or stale revision leaves fact, history and events unchanged
+ok 194 - rejected review identity or stale revision leaves fact, history and events unchanged
+  ---
+  duration_ms: 11.00475
+  type: 'test'
+  ...
+# Subtest: draft review identity does not grant publication or bypass exact packet checks
+ok 195 - draft review identity does not grant publication or bypass exact packet checks
+  ---
+  duration_ms: 0.3215
+  type: 'test'
+  ...
+# Subtest: malformed historical article containers or bodies remain unavailable, never approved
+ok 196 - malformed historical article containers or bodies remain unavailable, never approved
+  ---
+  duration_ms: 1.304292
+  type: 'test'
+  ...
+# (node:13935) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: revision selection requires confirmed in-batch facts and current review version
+ok 197 - revision selection requires confirmed in-batch facts and current review version
+  ---
+  duration_ms: 14.119375
+  type: 'test'
+  ...
+# Subtest: request idempotency, version conflicts and chained revisions persist
+ok 198 - request idempotency, version conflicts and chained revisions persist
+  ---
+  duration_ms: 6.145833
+  type: 'test'
+  ...
+# Subtest: revocation permanently invalidates affected revisions, even after reconfirmation and retry
+ok 199 - revocation permanently invalidates affected revisions, even after reconfirmation and retry
+  ---
+  duration_ms: 5.170417
+  type: 'test'
+  ...
+# Subtest: v2 migration backs up data once before adding revisions
+ok 200 - v2 migration backs up data once before adding revisions
+  ---
+  duration_ms: 14.383
+  type: 'test'
+  ...
+# Subtest: HTTP revision creation and export recheck facts after invalidation
+ok 201 - HTTP revision creation and export recheck facts after invalidation
+  ---
+  duration_ms: 215.89375
+  type: 'test'
+  ...
+# Subtest: Router generated check detects drift and missing output without writing
+ok 202 - Router generated check detects drift and missing output without writing
+  ---
+  duration_ms: 24.528042
+  type: 'test'
+  ...
+# Subtest: Router input budgets and unsafe paths fail without overwriting targets
+ok 203 - Router input budgets and unsafe paths fail without overwriting targets
+  ---
+  duration_ms: 9.861375
+  type: 'test'
+  ...
+# Subtest: Router writes tolerate short reads and reject oversized output before creating or changing files
+ok 204 - Router writes tolerate short reads and reject oversized output before creating or changing files
+  ---
+  duration_ms: 11.717791
+  type: 'test'
+  ...
+# Subtest: static Router source parsing supports formatting but rejects ambiguous and executable inputs
+ok 205 - static Router source parsing supports formatting but rejects ambiguous and executable inputs
+  ---
+  duration_ms: 4.799291
+  type: 'test'
+  ...
+# Subtest: invalid source does not overwrite existing generated output even in generation mode
+ok 206 - invalid source does not overwrite existing generated output even in generation mode
+  ---
+  duration_ms: 4.30475
+  type: 'test'
+  ...
+# Subtest: missing expected identity returns an unknown result without leaking inspect data
+ok 207 - missing expected identity returns an unknown result without leaking inspect data
+  ---
+  duration_ms: 1.054625
+  type: 'test'
+  ...
+# Subtest: fixed commands use full IDs and digest references, no shell or execution
+ok 208 - fixed commands use full IDs and digest references, no shell or execution
+  ---
+  duration_ms: 0.229417
+  type: 'test'
+  ...
+# Subtest: Docker and Podman fixture JSON matching yields claims only, without secrets or raw output
+ok 209 - Docker and Podman fixture JSON matching yields claims only, without secrets or raw output
+  ---
+  duration_ms: 0.419041
+  type: 'test'
+  ...
+# Subtest: failed commands, malformed/multiple outputs, limits and clock ambiguity stay unknown, not absent
+ok 210 - failed commands, malformed/multiple outputs, limits and clock ambiguity stay unknown, not absent
+  ---
+  duration_ms: 0.494792
+  type: 'test'
+  ...
+# Subtest: mismatched instance/image/platform/labels and inconsistent state deny matching
+ok 211 - mismatched instance/image/platform/labels and inconsistent state deny matching
+  ---
+  duration_ms: 0.243708
+  type: 'test'
+  ...
+# Subtest: fixed daemon profiles pin unix endpoints and do not inherit host environment
+ok 212 - fixed daemon profiles pin unix endpoints and do not inherit host environment
+  ---
+  duration_ms: 1.112291
+  type: 'test'
+  ...
+# Subtest: explicit simulation only; result remains unverified and simulator errors are redacted
+ok 213 - explicit simulation only; result remains unverified and simulator errors are redacted
+  ---
+  duration_ms: 0.604917
+  type: 'test'
+  ...
+# Subtest: before/during/after snapshot drift and lease expiry reject session without state changes
+ok 214 - before/during/after snapshot drift and lease expiry reject session without state changes
+  ---
+  duration_ms: 0.3475
+  type: 'test'
+  ...
+# Subtest: simulation leaves caller identity and snapshot untouched and grants no capabilities
+ok 215 - simulation leaves caller identity and snapshot untouched and grants no capabilities
+  ---
+  duration_ms: 0.138083
+  type: 'test'
+  ...
+# Subtest: exact current identity assertions match only and never permit stop/release or verify runtime
+ok 216 - exact current identity assertions match only and never permit stop/release or verify runtime
+  ---
+  duration_ms: 1.038042
+  type: 'test'
+  ...
+# Subtest: fault matrix rejects every identity mismatch, nonce spoof, stale clock, absent and ambiguous state
+ok 217 - fault matrix rejects every identity mismatch, nonce spoof, stale clock, absent and ambiguous state
+  ---
+  duration_ms: 0.26325
+  type: 'test'
+  ...
+# Subtest: inspection specification is digest-stable, redacted and not an inspection or stop authorization
+ok 218 - inspection specification is digest-stable, redacted and not an inspection or stop authorization
+  ---
+  duration_ms: 0.159583
+  type: 'test'
+  ...
+# Subtest: exact offline settings claims match target budget but never assert effective enforcement
+ok 219 - exact offline settings claims match target budget but never assert effective enforcement
+  ---
+  duration_ms: 2.171375
+  type: 'test'
+  ...
+# Subtest: budget/permission/network/mount/command/environment deviations fail closed without returning secrets
+ok 220 - budget/permission/network/mount/command/environment deviations fail closed without returning secrets
+  ---
+  duration_ms: 1.178083
+  type: 'test'
+  ...
+# Subtest: missing fields, unsupported backends and unverified staging remain mismatched
+ok 221 - missing fields, unsupported backends and unverified staging remain mismatched
+  ---
+  duration_ms: 0.422625
+  type: 'test'
+  ...
+# Subtest: array port bindings and malformed settings containers cannot match claims
+ok 222 - array port bindings and malformed settings containers cannot match claims
+  ---
+  duration_ms: 0.262125
+  type: 'test'
+  ...
+# Subtest: search sampling is bounded, localized and explicitly records skipped entities
+ok 223 - search sampling is bounded, localized and explicitly records skipped entities
+  ---
+  duration_ms: 0.945333
+  type: 'test'
+  ...
+# Subtest: real browser check verifies empty results and both close/reset paths and detects broken backdrop
+ok 224 - real browser check verifies empty results and both close/reset paths and detects broken backdrop # SKIP
+  ---
+  duration_ms: 0.03925
+  type: 'test'
+  ...
+# Subtest: real browser check searches and clicks localized results, rejects wrong target language
+ok 225 - real browser check searches and clicks localized results, rejects wrong target language # SKIP
+  ---
+  duration_ms: 0.027167
+  type: 'test'
+  ...
+# Subtest: real React search loader transfers focus and ignores late imports after close
+ok 226 - real React search loader transfers focus and ignores late imports after close # SKIP
+  ---
+  duration_ms: 0.328459
+  type: 'test'
+  ...
+# (node:13985) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: historical context lookup reports record and byte budgets without changing saved history
+ok 227 - historical context lookup reports record and byte budgets without changing saved history
+  ---
+  duration_ms: 76.098375
+  type: 'test'
+  ...
+# Subtest: v12 migration preserves history and large keyset traversal uses source cursor index
+ok 228 - v12 migration preserves history and large keyset traversal uses source cursor index
+  ---
+  duration_ms: 33.847541
+  type: 'test'
+  ...
+# Subtest: keyset pages retain history and filter status/title/ID without exposing body in list
+ok 229 - keyset pages retain history and filter status/title/ID without exposing body in list
+  ---
+  duration_ms: 10.036834
+  type: 'test'
+  ...
+# Subtest: actual SQLite list projection stays small for large bodies while detail retains exact bytes
+ok 230 - actual SQLite list projection stays small for large bodies while detail retains exact bytes
+  ---
+  duration_ms: 13.821291
+  type: 'test'
+  ...
+# Subtest: history routes require auth, reject invalid filters and read without collecting
+ok 231 - history routes require auth, reject invalid filters and read without collecting
+  ---
+  duration_ms: 20.982375
+  type: 'test'
+  ...
+# Subtest: inclusive UTC attempt dates and combined failure filter do not substitute article/success dates
+ok 232 - inclusive UTC attempt dates and combined failure filter do not substitute article/success dates
+  ---
+  duration_ms: 7.127042
+  type: 'test'
+  ...
+# (node:13986) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: second service startup preserves active attempt and rejects collection without fetching
+ok 233 - second service startup preserves active attempt and rejects collection without fetching
+  ---
+  duration_ms: 10.42025
+  type: 'test'
+  ...
+# Subtest: expiry reconciles once, waits for explicit cooldown retry and rejects old completion
+ok 234 - expiry reconciles once, waits for explicit cooldown retry and rejects old completion
+  ---
+  duration_ms: 7.866166
+  type: 'test'
+  ...
+# Subtest: late response alone marks expired intent unknown instead of reporting success
+ok 235 - late response alone marks expired intent unknown instead of reporting success
+  ---
+  duration_ms: 6.096125
+  type: 'test'
+  ...
+# Subtest: two processes racing for one source permit exactly one persisted attempt
+ok 236 - two processes racing for one source permit exactly one persisted attempt
+  ---
+  duration_ms: 109.331125
+  type: 'test'
+  ...
+# Subtest: contract binds all identities, remains deterministic and does not create directories or permit mounts
+ok 237 - contract binds all identities, remains deterministic and does not create directories or permit mounts
+  ---
+  duration_ms: 0.516209
+  type: 'test'
+  ...
+# Subtest: valid regular-file metadata is unverified, never stage permission
+ok 238 - valid regular-file metadata is unverified, never stage permission
+  ---
+  duration_ms: 0.285083
+  type: 'test'
+  ...
+# Subtest: rejects traversal, secrets, links, duplicates, collisions, roots and excessive budget without raw paths
+ok 239 - rejects traversal, secrets, links, duplicates, collisions, roots and excessive budget without raw paths
+  ---
+  duration_ms: 0.35375
+  type: 'test'
+  ...
+# Subtest: identity drift and truncated diagnostic lists do not yield metadata pass
+ok 240 - identity drift and truncated diagnostic lists do not yield metadata pass
+  ---
+  duration_ms: 0.232125
+  type: 'test'
+  ...
+# Subtest: classifies fixed directory metadata without exposing paths, names or file bodies
+ok 241 - classifies fixed directory metadata without exposing paths, names or file bodies
+  ---
+  duration_ms: 9.2825
+  type: 'test'
+  ...
+# Subtest: links are excluded, linked root is rejected and missing roots report partial
+ok 242 - links are excluded, linked root is rejected and missing roots report partial
+  ---
+  duration_ms: 5.660542
+  type: 'test'
+  ...
+# Subtest: entry, depth and elapsed budgets explicitly mark incomplete inventory
+ok 243 - entry, depth and elapsed budgets explicitly mark incomplete inventory
+  ---
+  duration_ms: 3.741167
+  type: 'test'
+  ...
+# Subtest: invalid scan budgets reject before filesystem access instead of disabling limits
+ok 244 - invalid scan budgets reject before filesystem access instead of disabling limits
+  ---
+  duration_ms: 1.130167
+  type: 'test'
+  ...
+# (node:13989) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: storage snapshot counts records without database writes or disclosing bodies
+ok 245 - storage snapshot counts records without database writes or disclosing bodies
+  ---
+  duration_ms: 11.043792
+  type: 'test'
+  ...
+# Subtest: storage endpoint requires authentication and exposes no cleanup action
+ok 246 - storage endpoint requires authentication and exposes no cleanup action
+  ---
+  duration_ms: 21.738875
+  type: 'test'
+  ...
+# (node:13990) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: restored review history and revision chain retain permanent invalidation and idempotency
+ok 247 - restored review history and revision chain retain permanent invalidation and idempotency
+  ---
+  duration_ms: 14.905458
+  type: 'test'
+  ...
+# Subtest: non-SQLite and truncated backup copies are rejected without rewriting bytes
+ok 248 - non-SQLite and truncated backup copies are rejected without rewriting bytes
+  ---
+  duration_ms: 8.907875
+  type: 'test'
+  ...
+# Subtest: injected migration backup failure stops before schema changes and later retry preserves records
+ok 249 - injected migration backup failure stops before schema changes and later retry preserves records
+  ---
+  duration_ms: 8.806208
+  type: 'test'
+  ...
+# Subtest: failed migration rolls back and closes its connection before fixture repair and retry
+ok 250 - failed migration rolls back and closes its connection before fixture repair and retry
+  ---
+  duration_ms: 9.035625
+  type: 'test'
+  ...
+# Subtest: cleanup errors do not mask the migration failure and close is still attempted
+ok 251 - cleanup errors do not mask the migration failure and close is still attempted
+  ---
+  duration_ms: 6.08125
+  type: 'test'
+  ...
+# Subtest: SQLite snapshot restores evidence, pending facts, task history and source bytes into a separate database
+ok 252 - SQLite snapshot restores evidence, pending facts, task history and source bytes into a separate database
+  ---
+  duration_ms: 8.384584
+  type: 'test'
+  ...
+# Subtest: SQLITE_FULL rolls back source current/history/event writes and permits a later retry
+ok 253 - SQLITE_FULL rolls back source current/history/event writes and permits a later retry
+  ---
+  duration_ms: 21.5355
+  type: 'test'
+  ...
+# Subtest: store preserves the original failure after SQLite auto-rollback and can retry atomically
+ok 254 - store preserves the original failure after SQLite auto-rollback and can retry atomically
+  ---
+  duration_ms: 4.81125
+  type: 'test'
+  ...
+# Subtest: rollback failure preserves the operation error and fences captured read/write and nested APIs until close
+ok 255 - rollback failure preserves the operation error and fences captured read/write and nested APIs until close
+  ---
+  duration_ms: 4.066292
+  type: 'test'
+  ...
+# Subtest: forced writer termination retains committed WAL records and rolls back an unfinished transaction
+ok 256 - forced writer termination retains committed WAL records and rolls back an unfinished transaction
+  ---
+  duration_ms: 80.89
+  type: 'test'
+  ...
+# (node:13991) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: evidence validation rejects credential URLs, invalid dates, languages and oversized content
+ok 257 - evidence validation rejects credential URLs, invalid dates, languages and oversized content
+  ---
+  duration_ms: 2.232625
+  type: 'test'
+  ...
+# Subtest: content scan rejects oversized and linked inputs without accepting their bytes
+ok 258 - content scan rejects oversized and linked inputs without accepting their bytes
+  ---
+  duration_ms: 25.511459
+  type: 'test'
+  ...
+# Subtest: imports and batches are idempotent, unverified and persistent across restart
+ok 259 - imports and batches are idempotent, unverified and persistent across restart
+  ---
+  duration_ms: 10.226292
+  type: 'test'
+  ...
+# Subtest: batch creation rolls back on failure and preserves discussion classification
+ok 260 - batch creation rolls back on failure and preserves discussion classification
+  ---
+  duration_ms: 6.506583
+  type: 'test'
+  ...
+# Subtest: content scanning detects mirror drift, malformed input and missing translations without modifying files
+ok 261 - content scanning detects mirror drift, malformed input and missing translations without modifying files
+  ---
+  duration_ms: 4.722583
+  type: 'test'
+  ...
+# Subtest: HTTP API enforces authentication, host, origin, JSON and denies production routes
+ok 262 - HTTP API enforces authentication, host, origin, JSON and denies production routes
+  ---
+  duration_ms: 89.125166
+  type: 'test'
+  ...
+# Subtest: unexpected HTTP failure redacts internals and does not promise rollback
+ok 263 - unexpected HTTP failure redacts internals and does not promise rollback
+  ---
+  duration_ms: 16.471708
+  type: 'test'
+  ...
+# Subtest: HTTP operations fail closed after rollback failure and shutdown still closes the database
+ok 264 - HTTP operations fail closed after rollback failure and shutdown still closes the database
+  ---
+  duration_ms: 9.883791
+  type: 'test'
+  ...
+# Subtest: invalid ports reject before creating workbench data
+ok 265 - invalid ports reject before creating workbench data
+  ---
+  duration_ms: 2.195375
+  type: 'test'
+  ...
+# Subtest: port conflict rejects startup and the same data directory can be reopened
+ok 266 - port conflict rejects startup and the same data directory can be reopened
+  ---
+  duration_ms: 9.613042
+  type: 'test'
+  ...
+# Subtest: parallel and repeated close share one operation and allow reopening the database
+ok 267 - parallel and repeated close share one operation and allow reopening the database
+  ---
+  duration_ms: 16.472541
+  type: 'test'
+  ...
+# Subtest: close drains an admitted POST before closing its database
+ok 268 - close drains an admitted POST before closing its database
+  ---
+  duration_ms: 4084.558917
+  type: 'test'
+  ...
+# Subtest: artifact portability accepts relative internal links and rejects external, absolute and broken links
+ok 269 - artifact portability accepts relative internal links and rejects external, absolute and broken links
+  ---
+  duration_ms: 7.348875
+  type: 'test'
+  ...
+# Subtest: CI checks actual artifact portability after browser checks and before sealing
+ok 270 - CI checks actual artifact portability after browser checks and before sealing
+  ---
+  duration_ms: 45.984708
+  type: 'test'
+  ...
+# (node:13994) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: clean detached worktree excludes unrelated dirty changes, persists and retries without overwriting
+ok 271 - clean detached worktree excludes unrelated dirty changes, persists and retries without overwriting
+  ---
+  duration_ms: 1290.783709
+  type: 'test'
+  ...
+# Subtest: reconfirming a selected fact invalidates validation, accepted review and preview without rewriting history
+ok 272 - reconfirming a selected fact invalidates validation, accepted review and preview without rewriting history
+  ---
+  duration_ms: 1710.729625
+  type: 'test'
+  ...
+# Subtest: oversized allowed-path JSON blocks workspace inspection before validation or review
+ok 273 - oversized allowed-path JSON blocks workspace inspection before validation or review
+  ---
+  duration_ms: 413.8895
+  type: 'test'
+  ...
+# Subtest: draft review binds exact packet, checks gaps, rejects stale pages and preserves history
+ok 274 - draft review binds exact packet, checks gaps, rejects stale pages and preserves history
+  ---
+  duration_ms: 3445.601167
+  type: 'test'
+  ...
+# Subtest: empty or failed drafts cannot be accepted; rejected drafts remain traceable
+ok 275 - empty or failed drafts cannot be accepted; rejected drafts remain traceable
+  ---
+  duration_ms: 1519.722291
+  type: 'test'
+  ...
+# Subtest: untracked additions and deletions are included in exact review material
+ok 276 - untracked additions and deletions are included in exact review material
+  ---
+  duration_ms: 660.001417
+  type: 'test'
+  ...
+# Subtest: HTTP draft review packet and export enforce auth and recheck exact file input
+ok 277 - HTTP draft review packet and export enforce auth and recheck exact file input
+  ---
+  duration_ms: 3601.085583
+  type: 'test'
+  ...
+# Subtest: desktop and mobile browsers load exact material, accept a draft and show stale review after edits
+ok 278 - desktop and mobile browsers load exact material, accept a draft and show stale review after edits # SKIP
+  ---
+  duration_ms: 0.05675
+  type: 'test'
+  ...
+# Subtest: relevant uncommitted content and revoked input block workspace creation
+ok 279 - relevant uncommitted content and revoked input block workspace creation
+  ---
+  duration_ms: 139.514458
+  type: 'test'
+  ...
+# Subtest: out-of-scope, symlink, invalid JSON and revoked facts block inspection
+ok 280 - out-of-scope, symlink, invalid JSON and revoked facts block inspection
+  ---
+  duration_ms: 519.906167
+  type: 'test'
+  ...
+# Subtest: large ignored dependency listings are excluded before output budgeting without hiding other ignored files
+ok 281 - large ignored dependency listings are excluded before output budgeting without hiding other ignored files
+  ---
+  duration_ms: 1324.482125
+  type: 'test'
+  ...
+# Subtest: ignored out-of-scope files, checkout filters and changed HEAD are blocked
+ok 282 - ignored out-of-scope files, checkout filters and changed HEAD are blocked
+  ---
+  duration_ms: 429.63125
+  type: 'test'
+  ...
+1..282
+# tests 282
+# suites 0
+# pass 264
+# fail 1
+# cancelled 0
+# skipped 17
+# todo 0
+# duration_ms 18649.32125
+/Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/admin:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @gachia/admin@0.0.1 test: `node --import tsx --test tests/*.test.mjs`
+Exit status 1

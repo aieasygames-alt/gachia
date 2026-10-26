@@ -7,6 +7,7 @@ import ts from 'typescript';
 import { verifyLocalWorker } from './game-release-smoke.mjs';
 import { verifyAppRuntime } from './require-app-runtime.mjs';
 import { readPreviousGameAssets, retainPreviousGameAssets } from './retain-game-assets.mjs';
+import { rejectProductionMutation } from './production-release.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const TARGETS = Object.freeze({
@@ -83,16 +84,14 @@ export function createReleasePlan({ game, environment, rollbackVersion, allowUns
     commands: {
       build: ['exec', 'opennextjs-cloudflare', 'build', ...(allowUnsupportedNextForVerification ? ['--dangerouslyUseUnsupportedNextVersion'] : []), '--config', 'wrangler.jsonc', '--env', env],
       verify: ['exec', 'wrangler', 'deploy', '--dry-run', '--config', 'wrangler.jsonc', '--env', env],
-      deploy: ['exec', 'opennextjs-cloudflare', 'deploy', '--config', 'wrangler.jsonc', '--env', env],
+      deploy: isProduction ? null : ['exec', 'opennextjs-cloudflare', 'deploy', '--config', 'wrangler.jsonc', '--env', env],
     },
     effects: { targetWorkerAndAssets: true, productionTraffic: isProduction, routerDeployment: false },
     currentVersion: { status: 'not_observed', value: null },
     candidateVersion: { status: 'not_observed', value: null },
     rollbackVersion: { status: rollbackVersion ? 'operator_supplied_unverified' : 'not_supplied', value: rollbackVersion ?? null },
     cloudVerification: 'not_performed',
-    productionGate: game === 'azur-promilia'
-      ? 'exact_service_confirmation_operator_verified_rollback_uuid_and_previous_assets_receipt_required'
-      : 'exact_service_confirmation_and_operator_verified_rollback_uuid_required',
+    productionGate: 'generic_production_deploy_retired_use_production_release_plan',
   };
 }
 
@@ -117,22 +116,17 @@ export function readAssetPlan(options, root = ROOT) {
   return { game: options.game, app };
 }
 
-export function checkExecutionPermission(plan, { action, confirmation }) {
+export function checkExecutionPermission(plan, { action }) {
   if (!['verify', 'deploy'].includes(action)) throw new Error('Unknown execution action');
   if (action === 'deploy' && plan.compatibilityException) throw new Error('Unsupported Next exception is restricted to local verification, never deployment');
   if (action === 'deploy' && plan.environment === 'production') {
-    if (confirmation !== plan.service || !UUID.test(plan.rollbackVersion.value ?? '')) {
-      throw new Error(`Production blocked: --confirm ${plan.service} and --rollback-version <verified-UUID> are required`);
-    }
-    if (plan.game === 'azur-promilia' && (!plan.previousAssets || plan.previousAssets.versionId !== plan.rollbackVersion.value)) {
-      throw new Error('Production blocked: --previous-assets-receipt must bind the Azur rollback version');
-    }
+    rejectProductionMutation(plan.game, 'deploy');
   }
 }
 
 export function checkSourcePermission(plan, { action }, { dirty, commit, expectedCommit = commit }) {
-  if (action === 'deploy' && plan.game === 'azur-promilia' && (dirty || commit !== expectedCommit)) {
-    throw new Error('Azur deployment requires a clean committed source tree; local verification remains available');
+  if (action === 'deploy' && (dirty || commit !== expectedCommit)) {
+    throw new Error('Game deployment requires a clean committed source tree; local verification remains available');
   }
 }
 
@@ -254,6 +248,7 @@ export function parseArguments(argv) {
 
 async function main() {
   const options = parseArguments(process.argv.slice(2));
+  if (options.action === 'deploy' && options.environment === 'production') rejectProductionMutation(options.game, 'deploy');
   if (options.action === 'status') {
     const record = JSON.parse(readFileSync(resolve(options.record), 'utf8'));
     if (record.schemaVersion !== 1 || !record.releaseId || !record.plan?.service || !Array.isArray(record.events)) throw new Error('Invalid local release record');
@@ -283,7 +278,7 @@ async function main() {
     checkSourcePermission(plan, options, { dirty });
     const record = await executeRelease(plan, options, {
       refreshPlan: () => {
-        if (options.action === 'deploy' && plan.game === 'azur-promilia') {
+        if (options.action === 'deploy') {
           checkSourcePermission(plan, options, {
             expectedCommit: commit,
             commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).trim(),

@@ -1,0 +1,12 @@
+{
+  "sourceHead": "334de6e6945c228b65860e3709558871d4e551ff",
+  "files": {
+    "apps/web/app/api/map/tile/route.ts": "d615ea52f3ac83d609f8673f7496ea87f4ec9bbe41872e2a403d3420731dfd87",
+    "apps/web/__tests__/map-tile-cache.test.ts": "6aaa8d3a2004541fe0b645ef4bb69e88c54164773b3ecb395b1a8397edc0d51d"
+  },
+  "cleanup": {
+    "deleted": 119,
+    "retainedHashesUnchanged": 59
+  },
+  "deployed": false
+}

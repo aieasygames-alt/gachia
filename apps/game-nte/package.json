@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node ../../scripts/require-app-runtime.mjs && next build",
     "build:worker": "NTE_DEPLOYMENT_MODE=live opennextjs-cloudflare build --config wrangler.jsonc --env \"\" && node ../../scripts/game-release.mjs prepare-assets --game nte --environment production",
-    "deploy": "node ../../scripts/game-release.mjs deploy --game nte --environment production",
+    "deploy": "node ../../scripts/production-release.mjs deploy --targets nte",
     "preview": "NTE_DEPLOYMENT_MODE=preview opennextjs-cloudflare build --config wrangler.jsonc --env staging && node ../../scripts/game-release.mjs prepare-assets --game nte --environment staging && NTE_DEPLOYMENT_MODE=preview opennextjs-cloudflare preview --config wrangler.jsonc --env staging",
     "deploy:preview": "node ../../scripts/game-release.mjs deploy --game nte --environment staging",
     "smoke": "node scripts/smoke.mjs",
@@ -17,9 +17,10 @@
     "seo:parity": "node ../../scripts/nte-seo-parity.mjs",
     "verify:bundle": "node ../../scripts/game-release.mjs verify --game nte --environment production",
     "type-check": "tsc --noEmit",
-    "deploy:production": "node ../../scripts/game-release.mjs deploy --game nte --environment production",
+    "deploy:production": "node ../../scripts/production-release.mjs deploy --targets nte",
     "deploy:staging": "node ../../scripts/game-release.mjs deploy --game nte --environment staging",
-    "verify:preview": "node ../../scripts/game-release.mjs verify --game nte --environment staging"
+    "verify:preview": "node ../../scripts/game-release.mjs verify --game nte --environment staging",
+    "release:plan": "node ../../scripts/production-release.mjs plan --targets nte"
   },
   "dependencies": {
     "@gachia/core": "workspace:*",

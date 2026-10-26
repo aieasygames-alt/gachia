@@ -6,12 +6,13 @@
     "build": "node ../../scripts/require-app-runtime.mjs && next build",
     "build:worker": "GENSHIN_DEPLOYMENT_MODE=production opennextjs-cloudflare build --config wrangler.jsonc --env \"\" && node ../../scripts/game-release.mjs prepare-assets --game genshin --environment production",
     "preview": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build --config wrangler.jsonc --env staging && node ../../scripts/game-release.mjs prepare-assets --game genshin --environment staging && opennextjs-cloudflare preview --config wrangler.jsonc --env staging",
-    "deploy": "pnpm run build:worker && opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
+    "deploy": "node ../../scripts/production-release.mjs deploy --targets genshin",
     "deploy:staging": "GENSHIN_DEPLOYMENT_MODE=preview opennextjs-cloudflare build --config wrangler.jsonc --env staging && node ../../scripts/game-release.mjs prepare-assets --game genshin --environment staging && opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
     "verify:bundle": "pnpm run build:worker && wrangler deploy --dry-run --config wrangler.jsonc --env \"\"",
     "seo:parity": "node ../../scripts/genshin-seo-parity.mjs",
     "api:boundary-smoke": "node ../../scripts/genshin-api-boundary-smoke.mjs",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "release:plan": "node ../../scripts/production-release.mjs plan --targets genshin"
   },
   "dependencies": {
     "@gachia/core": "workspace:*",

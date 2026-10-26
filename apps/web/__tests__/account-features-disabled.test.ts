@@ -52,13 +52,13 @@ describe('retired account boundary', () => {
   }
 
   it('keeps existing public shared-build reads available', async () => {
-    const build = { id: 'existing', buildData: '{}' };
-    const query = { from: vi.fn(), where: vi.fn(), limit: vi.fn().mockResolvedValue([build]) };
+    const build = { id: 'existing', gameId: 'genshin', characterId: 'amber', buildData: '{}' };
+    const query = { from: vi.fn(), where: vi.fn(), limit: vi.fn().mockResolvedValue([{ ...build, expiresAt: null }]) };
     query.from.mockReturnValue(query); query.where.mockReturnValue(query);
     mocks.db.mockReturnValue({ select: () => query });
     const response = await shared.GET(new NextRequest('https://example.test/api/shared-builds?id=existing'));
     expect(await response.json()).toEqual(build);
-    expect(response.headers.get('cache-control')).toContain('public');
+    expect(response.headers.get('cache-control')).toBe('no-store');
     expect(mocks.auth).not.toHaveBeenCalled();
     expect(mocks.rate).not.toHaveBeenCalled();
   });

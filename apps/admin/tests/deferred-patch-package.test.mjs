@@ -76,13 +76,25 @@ test('web promotion uses one immutable artifact ID and digest, preserving hidden
   } finally { rmSync(root, { recursive: true, force: true }); }
 });
 
-test('web scripts require their resolved patch before build, after production content approval', () => {
+test('web build scripts require their resolved patch and production aliases fail closed', () => {
   const pkg = JSON.parse(readFileSync(new URL('../../web/package.json', import.meta.url), 'utf8'));
-  for (const name of ['build', 'preview', 'preview:staging', 'deploy', 'deploy:staging', 'upload']) {
-    const contentGate = ['deploy', 'upload'].includes(name)
-      ? 'node ../../packages/data/scripts/raw-inventory-contract.mjs --release && ' : '';
-    assert.ok(pkg.scripts[name].startsWith(contentGate + 'node ../../scripts/require-patched-next.mjs && '), name);
+  for (const name of ['build', 'preview', 'preview:staging', 'deploy:staging']) {
+    assert.ok(pkg.scripts[name].startsWith('node ../../scripts/require-patched-next.mjs && '), name);
   }
+  for (const name of ['deploy', 'upload']) {
+    assert.equal(pkg.scripts[name], `node ../../scripts/production-release.mjs ${name} --targets main`);
+    const blocked = spawnSync(process.execPath, pkg.scripts[name].split(' ').slice(1), {
+      cwd: fileURLToPath(new URL('../../web', import.meta.url)), encoding: 'utf8',
+    });
+    assert.equal(blocked.status, 1, blocked.stderr);
+    assert.match(blocked.stderr, /Production blocked: main/);
+  }
+  const { parse } = createRequire(import.meta.url)('yaml');
+  const { jobs } = parse(readFileSync(new URL('../../../.github/workflows/deploy.yml', import.meta.url), 'utf8'));
+  const contentGate = jobs.build.steps.findIndex(step => step.run === 'node packages/data/scripts/raw-inventory-contract.mjs --release');
+  const buildStep = jobs.build.steps.findIndex(step => step.run === 'pnpm --filter @gachia/web exec opennextjs-cloudflare build');
+  assert.ok(contentGate >= 0 && buildStep > contentGate);
+  assert.equal(jobs.build.steps[contentGate].if, "inputs.release_target == 'production'");
   const result = spawnSync(process.execPath,
     [fileURLToPath(new URL('../../../scripts/require-patched-next.mjs', import.meta.url))],
     { cwd: fileURLToPath(new URL('../../web', import.meta.url)), encoding: 'utf8' });

@@ -1,0 +1,10 @@
+
+> @gachia/web@0.0.1 lint /Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web
+> eslint .
+
+
+/Users/robert/.codex/worktrees/account-deletion-release/gachia/apps/web/components/auth/auth-dialog.tsx
+  25:28  warning  The ref value 'attempt.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'attempt.current' to a variable inside the effect, and use that variable in the cleanup function  react-hooks/exhaustive-deps
+
+✖ 1 problem (0 errors, 1 warning)
+

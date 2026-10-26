@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "status": "policy_plan_not_execution_authorization",
+  "ready": false,
+  "atomic": false,
+  "cloudState": "not_observed",
+  "sourceValidation": "not_performed",
+  "ownershipContract": "packages/core/route-ownership.json",
+  "crossOwnerValidationRequired": true,
+  "effects": {
+    "build": false,
+    "upload": false,
+    "promote": false,
+    "rollback": false,
+    "router": false
+  },
+  "targets": [
+    {
+      "target": "main",
+      "app": "apps/web",
+      "service": "gachia",
+      "environment": "",
+      "kind": "content",
+      "workflow": ".github/workflows/deploy.yml",
+      "path": "approved_main_workflow",
+      "status": "manual_workflow_required",
+      "currentVersion": null,
+      "candidateVersion": null,
+      "rollbackVersion": null
+    }
+  ],
+  "excludedServices": [
+    "gachia-game-genshin",
+    "gachia-game-nte",
+    "gachia-game-azur-promilia",
+    "gachia-game-lvmeng",
+    "gachia-router"
+  ],
+  "requiredEvidencePerTarget": [
+    "clean_pushed_source_and_reviewed_runtime",
+    "sealed_artifact_and_external_digest_pin",
+    "fresh_current_deployment_and_previous_asset_provenance",
+    "local_runtime_and_old_new_asset_compatibility",
+    "target_specific_remote_acceptance",
+    "explicit_promotion_approval_and_fresh_control_plane_recheck",
+    "production_acceptance_and_cross_owner_regression"
+  ],
+  "invariants": [
+    "No Worker creation, renaming, binding, route, domain or service-tag changes by content releases",
+    "Lvmeng production uses explicit production env; its default preview config names the live service",
+    "Dedicated games promote the accepted version UUID without rebuilding; Main retains its existing sealed-artifact workflow",
+    "Each target needs its own evidence; one owner success is not whole-site or batch success",
+    "Game prefixes are not whole-game ownership: Main fallback pages, APIs and shared images stay in cross-owner acceptance",
+    "Stop on partial failure, reconcile actual cloud state, never retry or roll back automatically",
+    "No implicit staging creation, Router deployment or production writes from this command"
+  ],
+  "instructions": "See docs/production-release-entrypoints.md. This plan does not inspect files, receipts, approval, credentials or cloud state."
+}

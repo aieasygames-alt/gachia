@@ -7,15 +7,16 @@
     "build": "node ../../scripts/require-patched-next.mjs && next build",
     "preview": "node ../../scripts/require-patched-next.mjs && opennextjs-cloudflare build && NODE_OPTIONS=--disable-warning=DEP0190 opennextjs-cloudflare preview --config wrangler.jsonc --env \"\"",
     "preview:staging": "node ../../scripts/require-patched-next.mjs && opennextjs-cloudflare build && NODE_OPTIONS=--disable-warning=DEP0190 opennextjs-cloudflare preview --config wrangler.jsonc --env staging",
-    "deploy": "node ../../packages/data/scripts/raw-inventory-contract.mjs --release && node ../../scripts/require-patched-next.mjs && opennextjs-cloudflare build && NODE_OPTIONS=--disable-warning=DEP0190 opennextjs-cloudflare deploy --config wrangler.jsonc --env \"\"",
+    "deploy": "node ../../scripts/production-release.mjs deploy --targets main",
     "deploy:staging": "node ../../scripts/require-patched-next.mjs && opennextjs-cloudflare build && NODE_OPTIONS=--disable-warning=DEP0190 opennextjs-cloudflare deploy --config wrangler.jsonc --env staging",
-    "upload": "node ../../packages/data/scripts/raw-inventory-contract.mjs --release && node ../../scripts/require-patched-next.mjs && opennextjs-cloudflare build && NODE_OPTIONS=--disable-warning=DEP0190 opennextjs-cloudflare upload --config wrangler.jsonc --env \"\"",
+    "upload": "node ../../scripts/production-release.mjs upload --targets main",
     "start": "next start",
     "lint": "eslint .",
     "test": "vitest run",
     "type-check": "tsc --noEmit",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-    "clean": "rm -rf .next .open-next node_modules"
+    "clean": "rm -rf .next .open-next node_modules",
+    "release:plan": "node ../../scripts/production-release.mjs plan --targets main"
   },
   "dependencies": {
     "@gachia/core": "workspace:*",

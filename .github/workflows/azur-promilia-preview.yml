@@ -11,6 +11,8 @@ on:
       - 'pnpm-lock.yaml'
       - 'scripts/game-release.mjs'
       - 'scripts/game-release.test.mjs'
+      - 'scripts/production-release.mjs'
+      - 'scripts/production-release.test.mjs'
       - 'scripts/game-release-smoke.mjs'
       - 'scripts/require-app-runtime.mjs'
       - 'scripts/game-runtime.test.mjs'

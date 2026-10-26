@@ -1,0 +1,1353 @@
+{
+  "mode": "preparation_only_no_deletions",
+  "date": "2026-10-25",
+  "workspace": "/Users/robert/.codex/worktrees/account-deletion-release/gachia",
+  "sourceCommit": "334de6e6945c228b65860e3709558871d4e551ff",
+  "trackedFilesInspected": 2774,
+  "referenceMethod": "Tracked UTF-8 text search of exact paths and basenames, plus manual review of dynamic path constructors, package scripts, build and deployment configuration. Not a whole-program dead-code proof; external consumers and other worktrees not scanned.",
+  "summary": {
+    "A-old-browser-artifacts": {
+      "files": 119,
+      "bytes": 1383224
+    },
+    "B-original-image-material": {
+      "files": 39,
+      "bytes": 10436334
+    },
+    "B-root-og-images": {
+      "files": 11,
+      "bytes": 2428635
+    },
+    "B-old-character-backup": {
+      "files": 1,
+      "bytes": 493021
+    },
+    "B-generated-content-drafts": {
+      "files": 8,
+      "bytes": 14577
+    }
+  },
+  "candidates": [
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-29-03-800Z.log",
+      "bytes": 6962,
+      "sha256": "9e1ab1610fff71045465d20ca2c378c399b51e5c248c52d8be9d3c4a3f05a6a1",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-29-45-340Z.log",
+      "bytes": 2262,
+      "sha256": "85624b61f4e31594e62e6b6968898c25d906597147649b7853eb117d515c2f10",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-31-11-787Z.log",
+      "bytes": 748,
+      "sha256": "dbee54129166965539e8c70ee7b8684249b14d16a06bb772704e22b3f41e9ac4",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-32-34-304Z.log",
+      "bytes": 13879,
+      "sha256": "465d560272011ddee0e5e35350e81ace32118a43771e221dea05810a9ccabe73",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-33-20-391Z.log",
+      "bytes": 13605,
+      "sha256": "8e7d629044f71fb15a12e06276760a8057cc0c00f6c14af18451569789f01d25",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-33-38-352Z.log",
+      "bytes": 13605,
+      "sha256": "641fd6db8fa191ffaf508e91c6b8405fd649fb002a2b163278982df26ba137e4",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-34-00-129Z.log",
+      "bytes": 206,
+      "sha256": "d97b399d987df4784de720c7bb390082ccedf6950ebdc055fc9572dad14cf5ba",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-34-12-104Z.log",
+      "bytes": 826,
+      "sha256": "1800708edca2c993631d66624828f378d5d3ef2eda50287b772646853608a8ad",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-34-33-362Z.log",
+      "bytes": 511,
+      "sha256": "9e2a0cc1de98a181e85b7e9b39cbd46c250d0cb6787a75f6b1e66b3e1e717fc0",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-35-01-804Z.log",
+      "bytes": 763,
+      "sha256": "5c1a4682fbf61119542693d008e99a0e15574ff4b0a57e6f4e03274299ee347e",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-36-44-059Z.log",
+      "bytes": 975,
+      "sha256": "078e7d9917bdb21bad354ebb19fcf21f95bc0771d00c772c15989b948b81e64d",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-37-02-917Z.log",
+      "bytes": 940,
+      "sha256": "5114f017a1fcedf66b024d52e813230874ef83c5bb7ae1148f30632a69c5dcf4",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-37-34-598Z.log",
+      "bytes": 194,
+      "sha256": "06e6a5f6a52d76d2499002b2790e3b8df94533b3d92f993143a6482ea72a8ff1",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-38-20-582Z.log",
+      "bytes": 7853,
+      "sha256": "c403ba3a91f616b83bf7c2993707f0ac436319f49c90f593afedfa54a8271510",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-38-34-990Z.log",
+      "bytes": 792,
+      "sha256": "900d97f7e16bbbfc5fb11afeab0c6cb902bbc71a260f906adcd2f271ad18967d",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-39-18-908Z.log",
+      "bytes": 611,
+      "sha256": "bc346438ab0999cb7a1f1043a300c4001751edb3ac7e03b54efc001cb0779202",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-39-55-478Z.log",
+      "bytes": 516,
+      "sha256": "44a1ea61d06f0cbc0c67685ea3020f906f740412e22453ffa198b74403c2fb76",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-54-23-556Z.log",
+      "bytes": 12018,
+      "sha256": "87916923d1d5ee2ade9d0e6b32ca68eb254f7d56da5a937b76a5c70d4fc7b558",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-54-24-793Z.log",
+      "bytes": 1831,
+      "sha256": "e1adacd52f9c5942ea92aa71e5f8093a40bb31f3cb95c88db894ec234f5eca71",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-54-26-131Z.log",
+      "bytes": 1407,
+      "sha256": "f094deb27055b1e43ed21a9353d3262c8b99ba304c8b9f8915a1a7586c05dff7",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-55-58-417Z.log",
+      "bytes": 516,
+      "sha256": "4cb1787871dcfe26b536baa82a2d7a58b5678e9f140e58dcbd8766912739a2f3",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-56-03-205Z.log",
+      "bytes": 391,
+      "sha256": "3a1a7912879cb1b3ec5abda1e26e01c248be0d5a0cedce5ac54d7dbeb631dfec",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-56-03-960Z.log",
+      "bytes": 13605,
+      "sha256": "9262d6ead356d3cac162bc757924e71c690885c3386ca30e7c8244742743bc80",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-56-15-457Z.log",
+      "bytes": 516,
+      "sha256": "a870433892c7374d3be26aed091f8118c69a9d57895e397ef3c69d2d78891f8b",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-56-31-361Z.log",
+      "bytes": 11340,
+      "sha256": "365fb24832ebf86df706b9da2b4a767513b8ec92a05bef80113d64a0b0ccff9d",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-56-41-689Z.log",
+      "bytes": 940,
+      "sha256": "12c4b659eb2501e77ac845d7e2ee866138897dee255dd5f98218218aec50bcf2",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-56-51-118Z.log",
+      "bytes": 13605,
+      "sha256": "483ed266304df16570a7208d81d576a0c8136cf553bd92fca4da7969a25dba7e",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-57-04-697Z.log",
+      "bytes": 553,
+      "sha256": "7df9816c326e98d1eec13581c173ded13631c6b54bb7060889cbbdce26ee0c8c",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-57-06-672Z.log",
+      "bytes": 1012,
+      "sha256": "419cf7c7f32c248fbe51b29ae282496be7002749fa8548205ce91ab72a1418f2",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-57-31-317Z.log",
+      "bytes": 2788,
+      "sha256": "fc9e7391cd186deb49d883062b0b4b2c882b52b18ff3bd7147db395f4cf855bf",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-57-32-126Z.log",
+      "bytes": 529,
+      "sha256": "7b50127ef336d04b5f257e8e2d338a928b6e71c93cfabc02086c19e921360f59",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-57-38-687Z.log",
+      "bytes": 13605,
+      "sha256": "b335a370312c257ac02397b058fa92590b04f7c8c59d83dc9a6cacef0df386ba",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-58-03-559Z.log",
+      "bytes": 13605,
+      "sha256": "41bafd82750b7d6b01716bbda6c6968446f8531a79079d720f29007ea14d3297",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-58-24-855Z.log",
+      "bytes": 13458,
+      "sha256": "76666cb4723553fd3b95267cd4c8ae2f9652aebcf3a3876fe48e73f05e0e33e9",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-58-25-695Z.log",
+      "bytes": 137,
+      "sha256": "74f218c08444a063950af595e3a7d9fade8be526a72ffd96fa83ed8dc6f50402",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-58-26-471Z.log",
+      "bytes": 151,
+      "sha256": "dce213b5514f1a6b45c21af5b5881adb076d80c0d1966c64fd86d824b5628136",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-58-46-969Z.log",
+      "bytes": 151,
+      "sha256": "2aabdf114b8a40d2ed9786aab4809147a10a831e6fec893984c20d5b327d984c",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-58-48-105Z.log",
+      "bytes": 13605,
+      "sha256": "07d3d789b4b401b7596d83a8178e4c60fe4a45f010223d436561b4a1483ef719",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-59-00-656Z.log",
+      "bytes": 151,
+      "sha256": "0e40a6febd09095a0d38135d37f88400714dfe6f3bd2634885af9744165ebcd3",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-59-28-392Z.log",
+      "bytes": 151,
+      "sha256": "fdd76952a0e69be7cfd989a97b492761bb6250cfaeb11c43959fd830581aa7c3",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T06-59-54-541Z.log",
+      "bytes": 516,
+      "sha256": "0be291761a07c3008d087891411dd8c4d0a89e8ac781b01581cf49fb40ccc989",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-00-10-317Z.log",
+      "bytes": 1012,
+      "sha256": "fe03f225f956cd2c795185a4569cc42d1e22cb8d08ff89d7962509cf6d63ea29",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-00-20-784Z.log",
+      "bytes": 516,
+      "sha256": "efdd78546cfdff5d32520f282175991e4ef70471fb9e84550b8469c2ff918120",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-00-34-690Z.log",
+      "bytes": 1012,
+      "sha256": "dcb0bae642a7f97fe89eb765de1b7d0d19326e4c6c7fe105cd95c2042561677d",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-00-59-630Z.log",
+      "bytes": 516,
+      "sha256": "b2afcfbce72020716cab516aa641e5b1529f7370272dc2d2216abbdfb48bf02c",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-01-40-526Z.log",
+      "bytes": 611,
+      "sha256": "2a697d2a95986c5cfcfd2c6a56244b623f09fab279a3b1becc68bc1692125b40",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-01-48-555Z.log",
+      "bytes": 516,
+      "sha256": "5c021213fecf6b186b8b44ee9317768de35d6b5a02ae2ef15c3016ddb4ca38d4",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-02-11-383Z.log",
+      "bytes": 516,
+      "sha256": "db786ba2b366ca6c9f861660bbcebc4f2dec2c30432ca1f8778c21316af20cf6",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-02-33-400Z.log",
+      "bytes": 516,
+      "sha256": "f39fdf6e41d985b317d88f499182e560ba8edcc5a3bc94b27550f64ca53f43f6",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-02-56-617Z.log",
+      "bytes": 516,
+      "sha256": "823d3ab99bd913798a42bcbab6884855d16ff0cc8f3292d025b12b1a30073cf0",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-19-59-264Z.log",
+      "bytes": 11984,
+      "sha256": "8f8486d5df2e8b6143e60f912d1ae3fef82b247a5919488782b821846f83fd99",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-19-59-273Z.log",
+      "bytes": 11984,
+      "sha256": "844e7b683e40cd9eba5ed9d9153e45fd26c9a8dde578b77f5936bd081f1e89dd",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-25-23-765Z.log",
+      "bytes": 10754,
+      "sha256": "47f9136a30c170ff26e60306444e8c46b906e5f3aeee734a7de130fe456861a0",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-25-24-559Z.log",
+      "bytes": 11984,
+      "sha256": "619af2a138e7d0b6e29e0279e86aaeef460345b9e657eeff2c8705bab5274dad",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-27-03-740Z.log",
+      "bytes": 11837,
+      "sha256": "d40e78ee35d7cce64fb91eb668b43e0ef3d0646a018593132881416360e922c9",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/console-2026-06-26T07-27-06-810Z.log",
+      "bytes": 35952,
+      "sha256": "200bcd986d668436f7f8d3ad184ac3827eea5d3e55cabbb85a730d555eac98fe",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-28-14-992Z.yml",
+      "bytes": 315,
+      "sha256": "2f6f77bbc918236f7f9cd0db31a258c3744f5b6fa2dde2b1af346d04094a5692",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-29-06-308Z.yml",
+      "bytes": 3972,
+      "sha256": "21b1c1bfc8f20c01261d4e869e9ff14932c5e8e063cc8e36f97506f4c6f3c5ad",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-29-51-510Z.yml",
+      "bytes": 859,
+      "sha256": "6a3c618aa39005ee05a89524800c64cf062077355a96e8a0a5505f57021097a8",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-30-34-168Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-31-14-774Z.yml",
+      "bytes": 1559,
+      "sha256": "af0a763c6877ad8a0bcee1a22a9a6ed0b179c30098440f56b5d3ff45ad9fc8ed",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-32-35-236Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-33-20-530Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-33-38-511Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-34-03-021Z.yml",
+      "bytes": 1024,
+      "sha256": "a65de812ccd3a8dbdd8d414afed372d402e49aea67a2b8649a24f21901c3cc93",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-34-13-754Z.yml",
+      "bytes": 4211,
+      "sha256": "094035b2e5250b48b2976815f2a318470d4f69628c68696ee99f63222db3fb6d",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-34-34-816Z.yml",
+      "bytes": 15274,
+      "sha256": "edd16d7db9aa1f0430eb5aec7bb2bf87dfa911454f8fa658073d87faaf1c81f8",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-35-02-146Z.yml",
+      "bytes": 2624,
+      "sha256": "d7e7e41f2db9ea716b35b58669855ec5e6560006267137d87b468d1b1cd2ddfe",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-36-45-913Z.yml",
+      "bytes": 6518,
+      "sha256": "22439a7fbbe6c93bcbd73cf1002914de317a8b1d24a095d7ffe98b67e93506ba",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-37-03-721Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-37-35-921Z.yml",
+      "bytes": 3583,
+      "sha256": "816ee66fe35582d6b3497e8378b537e9ff30ae07495025b20ab9779609b77c90",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-38-23-454Z.yml",
+      "bytes": 65194,
+      "sha256": "0becb5f9bbed3bddebee37835d66d41f1533a83bfafefc413468888ac426d7e6",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-38-35-930Z.yml",
+      "bytes": 6417,
+      "sha256": "5483d26ca27828c1133cf8f5433ab17de2458a120a0e2cebafb394ec58dd9094",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-39-19-360Z.yml",
+      "bytes": 6417,
+      "sha256": "5483d26ca27828c1133cf8f5433ab17de2458a120a0e2cebafb394ec58dd9094",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-39-57-497Z.yml",
+      "bytes": 29985,
+      "sha256": "072d8b5ee55ad70a14e965aab4aa8d40774e5507d3690dc1058d265de2442530",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-54-24-123Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-54-30-717Z.yml",
+      "bytes": 29574,
+      "sha256": "2579a484511d1bb38ff7a3ee4a37a462cf0d4a9a8561aea6b1810e9a36b47bae",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-54-31-809Z.yml",
+      "bytes": 29574,
+      "sha256": "2579a484511d1bb38ff7a3ee4a37a462cf0d4a9a8561aea6b1810e9a36b47bae",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-00-327Z.yml",
+      "bytes": 43460,
+      "sha256": "36b2634931677b6ed364387f02ae15894917d69639ffdbc62e42168f7a1754c9",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-04-127Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-16-370Z.yml",
+      "bytes": 18034,
+      "sha256": "a86adb007ca027f2613937626300243898b56499dc17ae5c41833b3514fa1e7f",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-17-544Z.yml",
+      "bytes": 82918,
+      "sha256": "084144e4b23de6f5b751897c761ef905837093b029bdc1e0246d19235b4ae914",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-31-724Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-41-985Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-42-844Z.yml",
+      "bytes": 7146,
+      "sha256": "6dcf79525dafd67450127aad564b43013583975f58f402c178d3273280fa24e6",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-56-51-315Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-57-06-174Z.yml",
+      "bytes": 79981,
+      "sha256": "b6a9abefa33403c9082bbaa895df8eca948633b248a49a77720dce4e09e94a54",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-57-06-849Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-57-24-652Z.yml",
+      "bytes": 4869,
+      "sha256": "f7c2451fc76829a61314c32beca92eb7203a19aaa3461bced836423358ed3506",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-57-31-431Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-57-33-099Z.yml",
+      "bytes": 75971,
+      "sha256": "bfa036faddbf88abf62bf93f129a073f06b3ee51b910a7914e2eb94f35068789",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-57-38-884Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-58-04-678Z.yml",
+      "bytes": 58476,
+      "sha256": "7f571dc2fe4ba90955eecdbb3fef38b0f014019c4b45a69bf1562d8fd1c80408",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-58-24-978Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-58-27-421Z.yml",
+      "bytes": 4683,
+      "sha256": "c685e0d15e8cc009bf848de3820e02aaa2c5a2a1b45bc55df3544211e3319054",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-58-48-480Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-58-48-481Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-59-05-983Z.yml",
+      "bytes": 4503,
+      "sha256": "5aea2e78141a7e56b4ce17f6ae23b63ed731e77f80d6b5a64e2a951de119921d",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-59-30-404Z.yml",
+      "bytes": 3242,
+      "sha256": "3aad0ff6fe8181621f48db15169b1ad424c74ef862caf998219f119c2031ff09",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T06-59-55-855Z.yml",
+      "bytes": 28612,
+      "sha256": "5cec650950bc1ad8c965e0e7128c2ba84db135244752e83bd422d56739505b6c",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-00-10-638Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-00-22-989Z.yml",
+      "bytes": 22025,
+      "sha256": "e2144d5a3cb3245445405fde22b3fa65a8afc05bdd43e02782875f9195496248",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-00-24-507Z.yml",
+      "bytes": 22025,
+      "sha256": "e2144d5a3cb3245445405fde22b3fa65a8afc05bdd43e02782875f9195496248",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-00-35-017Z.yml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-01-04-868Z.yml",
+      "bytes": 28878,
+      "sha256": "64314fecb210bf58ca42d8a0b3f5a28b38be6ccfac93f0863ce9c3573385684b",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-01-40-946Z.yml",
+      "bytes": 6417,
+      "sha256": "5483d26ca27828c1133cf8f5433ab17de2458a120a0e2cebafb394ec58dd9094",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-01-51-024Z.yml",
+      "bytes": 28878,
+      "sha256": "2078cce427dcefb2624cc48b11f6702110abc67ab291613e59073c1ef41ea497",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-02-12-657Z.yml",
+      "bytes": 79550,
+      "sha256": "0f769f9c5caf4481062d198dfda6142ef6c4eb8321876f48f533041c9b4c0115",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-02-34-861Z.yml",
+      "bytes": 32032,
+      "sha256": "288e16683c39a0fcd827af105d25ed119be55156962b065d48c62c6349c766ed",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-02-57-552Z.yml",
+      "bytes": 17501,
+      "sha256": "c7fc98f845caebe09434bdc51ff4867b1babc6d03c41d8b42a9f5589c89f9af1",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-20-01-553Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-20-01-623Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-21-44-446Z.yml",
+      "bytes": 79639,
+      "sha256": "f4eecb4c328831196a369933f9914d750b9efd662b78c0627ffcdb1fa6bb4e83",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-25-24-507Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-25-24-949Z.yml",
+      "bytes": 1350,
+      "sha256": "405bd3b710d649dcf5781378450254e909ac6c718d395c09e7a17fbaf1c384b7",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-25-39-923Z.yml",
+      "bytes": 79652,
+      "sha256": "5f6a7385472b92481d077be397e4aecf2062f58c45c4a56cf2b831a5f62afbd5",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-27-03-911Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-27-07-005Z.yml",
+      "bytes": 111,
+      "sha256": "f25aff822c3fd38d65c44f89f5085eab467dc085a96b4554964032aaecfb2585",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "A-old-browser-artifacts",
+      "path": ".playwright-mcp/page-2026-06-26T07-27-21-199Z.yml",
+      "bytes": 82451,
+      "sha256": "d3f41f372f63b060bfaa05d486523bc85449737dbf37e33b6e80524339b9c2c2",
+      "status": "candidate_after_confirmation"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield1.webp",
+      "bytes": 142334,
+      "sha256": "c852038ddd909f7748b0e3f521265732dd6928d6168e8a6852b202c2ec262595",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield2.jpeg",
+      "bytes": 13917,
+      "sha256": "24d80c9b0440be0b328fd2fe065b94542b460f7cbc0a7ad2ccf6eac6f7c11a90",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield3.jpeg",
+      "bytes": 14239,
+      "sha256": "94e419c2dac12c9182f8c10a36072d90822daec4910af29b107a7477e948a6c2",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield4.jpeg",
+      "bytes": 10776,
+      "sha256": "310826e63e3fa26969ce48237ba80f9ff7dcb8e4c6e1dd9b975532f4025b5ad0",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield5.jpeg",
+      "bytes": 46057,
+      "sha256": "271d0a84aa4a95c5d8fbc490e3db14b2bbae5bfb557b24c2f4523c50518e59f0",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield6.jpg",
+      "bytes": 165719,
+      "sha256": "2912ca79c1d62f7b193fde64b25f3c51429708a638f39bf8e5bb8bb59b3ee21d",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield7.jpeg",
+      "bytes": 28335,
+      "sha256": "adccfda288a92e92c7532e40eaf5c1e42cae32e1e3a15677c93457edf6e3210b",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield8.jpeg",
+      "bytes": 44812,
+      "sha256": "a67ca697ac74806075d6ab103d52924a987847a790a2fac6c9f014c775ce8a07",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/endfield9.jpg",
+      "bytes": 267313,
+      "sha256": "18e2c377d4c4171cd372b0d98adbc69e82733728fcee550989c19cec844c4589",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea0.jpeg",
+      "bytes": 28234,
+      "sha256": "ce0c82dfb2b528738c5539491fa4252351535696196d7da0fc49e71a43f45ff3",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea1.webp",
+      "bytes": 35456,
+      "sha256": "36b0d6ddc09452443b0294c73e2dd0c64af5b1578fb6a89d8c9990e1e22eeb39",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea2.png",
+      "bytes": 3673189,
+      "sha256": "5aae61c589ba5298dfbe6549ee67d04af952495f5e7d598a7a4c4bdca6888f9d",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea3.html",
+      "bytes": 130970,
+      "sha256": "17fd19a52776ac7feae6f1e547ecb8ae4646461dca78232312297669bcc94585",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea3.jpeg",
+      "bytes": 46928,
+      "sha256": "306859e2cb37ed4750a0802097015b14e02563bad47c4117a27ccaeb1b00019b",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea4.jpeg",
+      "bytes": 60490,
+      "sha256": "f07c3a5959feb79b91643bf213bdd00f10afeb0e14db472f0630bc67f1603f8f",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea5.jpeg",
+      "bytes": 53507,
+      "sha256": "93196a6481a4a08a7b6df1a7f9d6771c010aab4cac03f3158c3728b6115bbe50",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea6.png",
+      "bytes": 1021176,
+      "sha256": "c880c788863d8f545395f30c0026161a55e5f7f3005a03faac5bf4d6fb4fbc56",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea7.jpeg",
+      "bytes": 45804,
+      "sha256": "cfb482e0462c5bb864bc448e862d3ad192c7e55d2d0015ec0720489281479a97",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea8.jpeg",
+      "bytes": 55600,
+      "sha256": "e829559d664414dc22910cbf146ac0c8e87fd88848e9cc37e17adaf2f07b2b17",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/sea9.jpeg",
+      "bytes": 28088,
+      "sha256": "20b5cb6f2046b30b845a235c9e8c242a19f8714b60c7400a1758c61f990efb3e",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh1.jpg",
+      "bytes": 169279,
+      "sha256": "8131ba33e95372d59420e75b843280c5130ef6063786663615180d4e227b7f9b",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh2.jpeg",
+      "bytes": 130223,
+      "sha256": "4ae02d567a497000772d7b700a28ec47e0c378841abc1c7c939c86147239217a",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh3.png",
+      "bytes": 360884,
+      "sha256": "a8940998b530932bc609b2d50c52c097c17affdfa5bed542e8d3fd497d478513",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh4.png",
+      "bytes": 600020,
+      "sha256": "0b6af3a057da7f5dc0e8e610e1a482392ec920a9cca570a9f09f547afe7261fe",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh5.png",
+      "bytes": 268785,
+      "sha256": "4ca6224b720f10df1bb301f16e1005cd17c4f98e448f15c2f816f9af0bd9f640",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh6.webp",
+      "bytes": 345448,
+      "sha256": "ca1f3fe10bf0350160192daefa728856192ee7642e3c936e5adee2cf73a2b21f",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh7.jpeg",
+      "bytes": 29669,
+      "sha256": "1a4eccb24ebb428487b8b4643aa22146ff79b59402e754e221f0812e98814196",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh8.jpg",
+      "bytes": 727344,
+      "sha256": "6a7bcbcdbc77fc72bc49c6622c64a8ff8ad44c16fa4e910d65d2975fd4911762",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/skjh9.jpg",
+      "bytes": 68161,
+      "sha256": "91f37471f166a9417d4defe3aaf38a6021d684c0671011bb3b20c91cecfb46de",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz0.webp",
+      "bytes": 88340,
+      "sha256": "c827b9d28b4a544bab91d7d5c83f5415f270d5de6cadae62aca92bb755c9a2ef",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz1.jpeg",
+      "bytes": 655779,
+      "sha256": "861d8ebfca65edbe7e7131cd3c1901046d8255cc03a618c3c1458bb6ce3383f2",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz2.jpeg",
+      "bytes": 50484,
+      "sha256": "6a608fc2dcd595cd7a8170fc2b5842c99b59ec756ae6ed68cb7c401fe4e65877",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz3.jpeg",
+      "bytes": 58109,
+      "sha256": "3d3a2112fab48e82b829ca83a2a95514e4b9223901b48d1dad9a93c70cce3cd8",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz4.webp",
+      "bytes": 158744,
+      "sha256": "a4882290303e7d5d5417650fd6956855271cc90863ec6def19d54ecc4b5fd2bf",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz5.jpeg",
+      "bytes": 36463,
+      "sha256": "fe58362df2eafd290c30b427064209fc90fb9ad842d80aa213d5b105a0875208",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz6.jpg",
+      "bytes": 252580,
+      "sha256": "2c6dec4f09db41add2d41d7e03b31ddd25238784e8016f3d408c21be0cd938de",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz7.jpg",
+      "bytes": 107742,
+      "sha256": "1039e3751a47b267eca4ab6468ab245dcc69e137a600e41fc2c8a2560f186eec",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz8.jpeg",
+      "bytes": 41939,
+      "sha256": "c11ae1fef7a797f45a643e9e946b9fa588b392704507b121e9b04f2cf37cc825",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-original-image-material",
+      "path": "pic/zzz9.jpeg",
+      "bytes": 373397,
+      "sha256": "ed605b1422ee348ed96446bb4b2391fbcc608f12232997c66bbc802d7a1454ae",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/ananta.jpg",
+      "bytes": 117793,
+      "sha256": "2be1bb84de11e209b62f48277b5f344627571ca59749573290fed5e4fdb9973d",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/default.jpg",
+      "bytes": 117793,
+      "sha256": "2be1bb84de11e209b62f48277b5f344627571ca59749573290fed5e4fdb9973d",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/endfield.jpg",
+      "bytes": 228681,
+      "sha256": "35cad14aed7eca869155859a6548aa4f6171cbb73c00c3e314c0c9842160e541",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/genshin.jpg",
+      "bytes": 310172,
+      "sha256": "e76aca3a5ca8ff9ea5bc9d0a4035a7a43a0e19bf21fb845e52755ad734724d1f",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/guihuan.jpg",
+      "bytes": 301892,
+      "sha256": "510022232da061721562769fc917c2d09cfa8a823878b8a10c3dbbba9af17e3a",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/nte.jpg",
+      "bytes": 252174,
+      "sha256": "da379fa1f7aa769c754fcc225bb400504f130ee6e6bad402a91f114637bc5b12",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/sea.jpg",
+      "bytes": 114474,
+      "sha256": "470b584a5be43658b17fcd233dda253898a7c48b1fcd73db5d5df4f64043161d",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/skjh.jpg",
+      "bytes": 235969,
+      "sha256": "21a3c59b6e77342e7c9b784a3910a944a9fa3e82529bb651a3a65d1692c98db7",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/starrail.jpg",
+      "bytes": 229718,
+      "sha256": "d8a03aaf8801cb1a3110df0f0556badfe3f179dfd186652f45df26e976c94fc3",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/wuwa.jpg",
+      "bytes": 245662,
+      "sha256": "cf8b97ed817aebffed162307f81a3db03545a33ec209b50f1b735b0baf65c087",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-root-og-images",
+      "path": "public/images/og/zzz.jpg",
+      "bytes": 274307,
+      "sha256": "c191a4704529b88b780dd0e78ccd2009305e4fbe3aff277a91972444e2f9e0b5",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-old-character-backup",
+      "path": "packages/data/games/genshin/raw-characters.json.backup",
+      "bytes": 493021,
+      "sha256": "f48aa323565e6d71fd2b33d5d9abe5b667da1214cb9cb9f9162acef53390836f",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/equipment-guides/genshin-equipment-guide.json",
+      "bytes": 2226,
+      "sha256": "9914d3e1e568ccc686226be0fb7b8decd2386a76917e9f5641106dcc3c820d9a",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/equipment-guides/starrail-equipment-guide.json",
+      "bytes": 2107,
+      "sha256": "35ebc7474923c9918be1521caf912da241d3dec97751171b57c15707dcbb174e",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/equipment-guides/wuwa-equipment-guide.json",
+      "bytes": 1976,
+      "sha256": "5fe5724a3e9fd7c174165aac4aa2d1fed89588e522dadae051dc975e4027008c",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/equipment-guides/zzz-equipment-guide.json",
+      "bytes": 1794,
+      "sha256": "178b697e4284ae7e7ac3bb45fbfff6447cb45d53cd7d5e0b35f60715817a833c",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/team-guides/genshin-team-guide.json",
+      "bytes": 2200,
+      "sha256": "b48da856e787b0b0dfca2d5fb16166409705726074dedb42ace90001f69b9b61",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/team-guides/starrail-team-guide.json",
+      "bytes": 1485,
+      "sha256": "0d78a3c93471850ba86f302efdee1592bbedf11eee67cdc9971dce57491c94b8",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/team-guides/wuwa-team-guide.json",
+      "bytes": 1425,
+      "sha256": "f8bafef5ded37df5e8071e2d499de5d886a8efea58c0acfea52606c457afb689",
+      "status": "manual_review_required"
+    },
+    {
+      "group": "B-generated-content-drafts",
+      "path": "content/team-guides/zzz-team-guide.json",
+      "bytes": 1364,
+      "sha256": "ec3dff713797242798e1884826e975e378a6403d29a4cf0fe7cd1882fb1a3a1f",
+      "status": "manual_review_required"
+    }
+  ],
+  "regenerableLocalOutputs": [
+    {
+      "path": "apps/game-azur-promilia/.next",
+      "allocatedKiB": 207128,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-genshin/.next",
+      "allocatedKiB": 401196,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-lvmeng/.next",
+      "allocatedKiB": 196252,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-nte/.next",
+      "allocatedKiB": 228448,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/web/.next",
+      "allocatedKiB": 104936,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-azur-promilia/.open-next",
+      "allocatedKiB": 36096,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-genshin/.open-next",
+      "allocatedKiB": 141816,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-lvmeng/.open-next",
+      "allocatedKiB": 35504,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-nte/.open-next",
+      "allocatedKiB": 39856,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/web/.open-next",
+      "allocatedKiB": 120656,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-azur-promilia/tsconfig.tsbuildinfo",
+      "allocatedKiB": 392,
+      "status": "regenerable_after_process_and_evidence_check"
+    },
+    {
+      "path": "apps/game-lvmeng/tsconfig.tsbuildinfo",
+      "allocatedKiB": 392,
+      "status": "regenerable_after_process_and_evidence_check"
+    }
+  ],
+  "excluded": [
+    ".release-records/",
+    "reports/ (historical evidence)",
+    "**/.wrangler/",
+    "**/node_modules/",
+    "patches/",
+    "apps/*/public/",
+    "packages/db/src/migrations/",
+    ".gachia-workbench/",
+    ".env*",
+    "content/**/.gitkeep"
+  ],
+  "executionAuthorized": false
+}

@@ -1,5 +1,7 @@
 # 异环 / 绿梦：不新增 Worker 的版本推广契约
 
+> 2026-10-25：六个生产目标统一由 [生产入口策略](production-release-entrypoints.md) 说明。本文为受控推广契约，不是自动执行器或持续授权；普通游戏 deploy 已拒绝生产写入。既有本地封存/验收工具和历史发布证据保留，不可用原始 CLI 绕开退役入口。
+
 ## 适用边界
 
 S2.22 使用既有服务的 Cloudflare Version Preview URL，验收通过后推广同一 UUID。它不同于把 preview 模式构建直接部署到生产，也不同于新建 staging Worker。只适用于明确审查过的 `gachia-game-nte` / `gachia-game-lvmeng`，不授权其他 owner 或 Router 变更。

@@ -1,0 +1,148 @@
+[
+  {
+    "name": "release",
+    "command": [
+      "pnpm",
+      "test:release"
+    ],
+    "exitCode": 0,
+    "seconds": 3.33
+  },
+  {
+    "name": "web",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/web",
+      "test"
+    ],
+    "exitCode": 0,
+    "seconds": 6.06
+  },
+  {
+    "name": "data",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/data",
+      "test"
+    ],
+    "exitCode": 0,
+    "seconds": 1.84
+  },
+  {
+    "name": "router",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/router",
+      "test"
+    ],
+    "exitCode": 0,
+    "seconds": 1.16
+  },
+  {
+    "name": "admin",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/admin",
+      "test"
+    ],
+    "exitCode": 0,
+    "seconds": 18.65
+  },
+  {
+    "name": "types",
+    "command": [
+      "pnpm",
+      "-r",
+      "--if-present",
+      "type-check"
+    ],
+    "exitCode": 0,
+    "seconds": 12.59
+  },
+  {
+    "name": "lint",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/web",
+      "lint"
+    ],
+    "exitCode": 0,
+    "seconds": 3.67
+  },
+  {
+    "name": "content",
+    "command": [
+      "pnpm",
+      "content:release-ready"
+    ],
+    "exitCode": 0,
+    "seconds": 0.62
+  },
+  {
+    "name": "manifests",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/data",
+      "verify:manifests"
+    ],
+    "exitCode": 0,
+    "seconds": 0.6
+  },
+  {
+    "name": "router-generated",
+    "command": [
+      "pnpm",
+      "--filter",
+      "@gachia/router",
+      "check:generated"
+    ],
+    "exitCode": 0,
+    "seconds": 0.51
+  },
+  {
+    "name": "config",
+    "command": [
+      "pnpm",
+      "validate:game-deployments"
+    ],
+    "exitCode": 0,
+    "seconds": 0.35
+  },
+  {
+    "name": "runtime",
+    "command": [
+      "node",
+      "scripts/require-app-runtime.mjs",
+      "--all"
+    ],
+    "exitCode": 0,
+    "seconds": 0.08
+  },
+  {
+    "name": "audit-production",
+    "command": [
+      "pnpm",
+      "audit",
+      "--prod",
+      "--json"
+    ],
+    "exitCode": 0,
+    "seconds": 3.42
+  },
+  {
+    "name": "audit-all",
+    "command": [
+      "pnpm",
+      "audit",
+      "--json"
+    ],
+    "exitCode": 0,
+    "seconds": 2.76
+  }
+]

@@ -88,7 +88,8 @@ function asGame(segment?: string): GameId | undefined {
 }
 
 function redirectTo(request: NextRequest, pathname: string, clearSearch = false) {
-  const url = request.nextUrl.clone();
+  // NextURL.clone retains the incoming trailing-slash flag when pathname changes.
+  const url = new URL(request.nextUrl.href);
   url.pathname = pathname;
   if (clearSearch) url.search = '';
   return NextResponse.redirect(url, 301);
@@ -96,18 +97,37 @@ function redirectTo(request: NextRequest, pathname: string, clearSearch = false)
 
 function stripLabelSuffix(segment?: string) {
   if (!segment) return undefined;
-  const stripped = decodeURIComponent(segment)
+  const decoded = decodeURIComponent(segment);
+  const stripped = decoded
     .replace(/[：:].*$/, '')
     .replace(/[-\s]*[^\x00-\x7F].*$/, '')
     .trim()
     .replace(/-+$/, '');
-  return stripped && stripped !== segment ? stripped : undefined;
+  return stripped && stripped !== '.' && stripped !== '..' && stripped !== decoded
+    ? encodeURIComponent(stripped)
+    : undefined;
 }
 
 function routeMiddleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  let decodedSegments: string[];
+  let normalizedSegments: string[];
+  try {
+    // Decode exactly once per segment; encoded separators must not change route ownership.
+    decodedSegments = pathname.split('/').map(segment => decodeURIComponent(segment));
+    normalizedSegments = decodedSegments.map(segment => segment.trim().replace(/\s+/g, '-'));
+    if (decodedSegments.some(segment => /[/\\\x00-\x1F\x7F]/.test(segment)) ||
+        normalizedSegments.some(segment => segment === '.' || segment === '..')) {
+      throw new URIError('Unsafe pathname segment');
+    }
+  } catch {
+    return new NextResponse(null, {
+      status: 400,
+      headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' },
+    });
+  }
   if (pathname === '/robots.txt' || pathname === '/sitemap.xml' || pathname.startsWith('/sitemaps/')) return NextResponse.next();
-  const decodedPathname = decodeURIComponent(pathname);
+  const decodedPathname = decodedSegments.join('/');
   const segments = pathname.split('/').filter(Boolean);
   const [firstSegment, secondSegment, thirdSegment, fourthSegment] = segments;
   const locale = asLocale(firstSegment);
@@ -162,10 +182,8 @@ function routeMiddleware(request: NextRequest) {
     }
   }
 
-  const normalizedSegments = segments.map((segment) =>
-    decodeURIComponent(segment).trim().replace(/\s+/g, '-')
-  );
-  const normalizedPathname = `/${normalizedSegments.join('/')}`;
+  // Compare URL-encoded paths, not Unicode text against its encoded representation.
+  const normalizedPathname = `/${normalizedSegments.filter(Boolean).map(segment => encodeURIComponent(segment)).join('/')}`;
   if (normalizedPathname !== pathname) {
     return redirectTo(request, normalizedPathname);
   }
@@ -248,7 +266,10 @@ function routeMiddleware(request: NextRequest) {
   // Override cache-control for public pages to allow Googlebot caching
   const isStaticAsset = pathname.startsWith('/_next') || pathname.startsWith('/images');
   const isApiRoute = pathname.startsWith('/api/');
-  if (!isStaticAsset && !isApiRoute) {
+  if (locale && game && thirdSegment === 'shared') {
+    // Public shares can expire; never override their dynamic response with a public TTL.
+    response.headers.set('Cache-Control', 'no-store');
+  } else if (!isStaticAsset && !isApiRoute) {
     response.headers.set(
       'Cache-Control',
       'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400'

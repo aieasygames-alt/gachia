@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "status": "main_fallback_urls_present",
+  "environment": "local",
+  "cloudRequestsPerformed": false,
+  "fallbackCoverage": {
+    "requiredCount": 171,
+    "missingCount": 0,
+    "missing": [],
+    "status": "main_fallback_urls_present"
+  }
+}

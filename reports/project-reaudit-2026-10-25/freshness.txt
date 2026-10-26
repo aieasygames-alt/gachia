@@ -1,0 +1,1003 @@
+{
+  "generatedAt": "2026-10-25T14:08:51.990Z",
+  "summary": {
+    "total": 110,
+    "risk": 0,
+    "archive": 110,
+    "byScope": {
+      "raw-guide": 110
+    }
+  },
+  "findings": [
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "v4-4-preview-guide",
+      "term": "v4.4",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "fate-collab-guide",
+      "term": "v4.4",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "fate-collab-guide",
+      "term": "4.4 当前",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "banner-schedule-guide",
+      "term": "v4.4",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "banner-schedule-guide",
+      "term": "4.4 当前",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "farming-route-guide",
+      "term": "v4.4",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "himeko-nova-fate-pull-plan",
+      "term": "v4.4",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "starrail",
+      "id": "fate-rin-gilgamesh-reward-faq",
+      "term": "v4.4",
+      "currentRoute": "v4.6 preview / live warps",
+      "file": "apps/web/public/data/starrail/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "team-building-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "w-engine-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "w-engine-guide",
+      "term": "3.1 当前",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "drive-disc-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "v3-0-version-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "v3-0-version-guide",
+      "term": "v3.0",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "build-jane-doe",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "banner-schedule-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "farming-route-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "meta-teams-v3-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "meta-teams-v3-guide",
+      "term": "v3.0",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "v3-1-anniversary-xbox-guide",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "v3-1-anniversary-xbox-guide",
+      "term": "v3.0",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "anniversary-rewards-codes-plan",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "zzz",
+      "id": "v3-1-remielle-sigrid-pull-plan",
+      "term": "v3.1",
+      "currentRoute": "v3.3 watch / v3.2 recap",
+      "file": "apps/web/public/data/zzz/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "endfield",
+      "id": "blueprint-aic-factory-guide",
+      "term": "Homecoming",
+      "currentRoute": "CN Danqingdu / historical test archive",
+      "file": "apps/web/public/data/endfield/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "endfield",
+      "id": "homecoming-operators-map-route",
+      "term": "Homecoming",
+      "currentRoute": "CN Danqingdu / historical test archive",
+      "file": "apps/web/public/data/endfield/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "endfield",
+      "id": "official-download-specs-homecoming-faq",
+      "term": "Homecoming",
+      "currentRoute": "CN Danqingdu / historical test archive",
+      "file": "apps/web/public/data/endfield/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "endfield",
+      "id": "steam-pioneer-test-registration-faq",
+      "term": "Homecoming",
+      "currentRoute": "CN Danqingdu / historical test archive",
+      "file": "apps/web/public/data/endfield/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "official-2026-test-timeline-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "official-2026-test-timeline-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "official-2026-test-timeline-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "official-2026-test-timeline-guide",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-day-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-day-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-day-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "open-beta-version-center",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "open-beta-version-center",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "open-beta-version-center",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "open-beta-version-center",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "download-install-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "download-install-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "download-install-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "download-install-guide",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "system-requirements-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "ps5-release-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "ps5-release-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-preview-calendar",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-preview-calendar",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-preview-calendar",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-preview-calendar",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-rewards-codes-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-rewards-codes-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-rewards-codes-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-30min-checklist",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-30min-checklist",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "platform-download-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "platform-download-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "platform-download-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "platform-download-guide",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-day-vs-ashfall",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-day-vs-ashfall",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-week-overview",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "launch-week-overview",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-launch-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-launch-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-launch-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-launch-guide",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "week-one-live-ops-overview",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "week-one-live-ops-overview",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "week-one-live-ops-overview",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "week-one-live-ops-overview",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "ps5-xbox-review-gameplay-faq",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-troubleshooting-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-troubleshooting-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-troubleshooting-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "pc-mobile-cross-progression-faq",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "pc-mobile-cross-progression-faq",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "pc-mobile-cross-progression-faq",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "molly-starter-team-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "molly-starter-team-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "molly-starter-team-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "molly-starter-team-guide",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "n3-abyss-week-one-route",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "gamescom-demo-gameplay-review-faq",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "gamescom-demo-gameplay-review-faq",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "identity-v-mobile-launch-event-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "identity-v-mobile-launch-event-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "identity-v-mobile-launch-event-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "spongebob-collab-summer-faq",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "spongebob-collab-summer-faq",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "spongebob-collab-summer-faq",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "haizang-combat-highlight-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "haizang-combat-highlight-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "bluewave-band-music-character-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "offline-seafood-stall-event-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "channel-rewards-code-verification-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "channel-rewards-code-verification-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "channel-rewards-code-verification-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "mobile-graphics-fps-heat-settings-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "heige-haizang-double-intellect-team-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "today-live-events-calendar-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "today-live-events-calendar-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "today-live-events-calendar-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "today-live-events-calendar-guide",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "guide-freshness-toxic-advice-checklist",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "guide-freshness-toxic-advice-checklist",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "lost-sea-act-two-july-30-prep-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "lost-sea-act-two-july-30-prep-guide",
+      "term": "移动端首发",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "lost-sea-act-two-july-30-prep-guide",
+      "term": "Mobile launch",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "identity-v-signin-screenshot-rewards-guide",
+      "term": "7 月 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    },
+    {
+      "scope": "raw-guide",
+      "severity": "archive",
+      "gameId": "sea",
+      "id": "identity-v-signin-screenshot-rewards-guide",
+      "term": "July 23",
+      "currentRoute": "early 2027 / December beta watch",
+      "file": "apps/web/public/data/sea/raw-guides.json"
+    }
+  ]
+}

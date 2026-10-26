@@ -17,3 +17,4 @@ coverage/
 plans/content-freshness-latest.md
 .gachia-workbench/
 .release-records/
+/.playwright-mcp/
