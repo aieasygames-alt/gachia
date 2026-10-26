@@ -103,6 +103,16 @@ test('sticky header paint gates staging before promotion and preserves both publ
   }
 });
 
+test('failed build browser checks retain screenshots and traces for diagnosis', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/deploy.yml', import.meta.url), 'utf8');
+  const build = workflow.split('\n  deploy-staging:')[0];
+  const preservation = build.slice(build.indexOf('- name: Preserve failed build browser diagnostics')).split('\n      - name:')[0];
+  assert(preservation.includes("if: failure() && steps.scope.outputs.scope != 'admin'"));
+  assert(preservation.includes('uses: actions/upload-artifact@v4'));
+  assert(preservation.includes('path: test-results/'));
+  assert(preservation.includes('retention-days: 7'));
+});
+
 test('only retired account secrets are optional; IndexNow remains mandatory', () => {
   assert.equal(WEB_FEATURES.accountFeatures, false);
   assert.deepEqual(requiredWebSecrets(), ['INDEXNOW_AUTH_TOKEN']);

@@ -107,6 +107,12 @@ for (const width of [390, 768, 1023, 1024, 1440]) {
             await expect(page.locator('main h1')).toBeVisible();
             await checkScrolledHeader(page, info, 'returned-list');
             expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+            if (locale === 'en' && mode === 'normal' && [390, 768].includes(width)) {
+              // Wider font metrics reproduce the Linux card's intrinsic-width pressure on macOS too.
+              await page.addStyleTag({ content: 'body { font-family: Verdana, sans-serif !important; }' });
+              await checkScrolledHeader(page, info, 'wide-font-returned-list');
+              expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+            }
             expect(errors).toEqual([]);
             expect(failedAssets).toEqual([]);
             expect(accountRequests).toEqual([]);

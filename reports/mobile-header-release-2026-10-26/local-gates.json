@@ -1,0 +1,163 @@
+{
+  "sourceCommit": "146a8425bddaa6471c981a47f8c8f605c12b1f0b",
+  "cleanBeforeAndAfterBuild": true,
+  "runtime": "Node 22.22.2 / Next.js 15.5.28 / OpenNext 1.20.13",
+  "openNextBuild": "passed",
+  "dryRunGzipKiB": 2880.5,
+  "portability": {
+    "files": 3146,
+    "links": 19,
+    "portable": true,
+    "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+  },
+  "httpChecks": 32,
+  "existingBrowserChecks": 18,
+  "stickyHeader": {
+    "startTime": "2026-10-26T14:19:13.287Z",
+    "duration": 18260.341,
+    "expected": 42,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "boundaryChecks": {
+    "status": "passed",
+    "count": 22,
+    "syntheticOnly": true
+  },
+  "fallback": {
+    "schemaVersion": 1,
+    "status": "main_fallback_urls_present",
+    "environment": "local",
+    "cloudRequestsPerformed": false,
+    "fallbackCoverage": {
+      "requiredCount": 171,
+      "missingCount": 0,
+      "missing": [],
+      "status": "main_fallback_urls_present"
+    }
+  },
+  "previousAssets": {
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/previous-main-68947cd9-fec9-47a8-825d-f01aa5d9e542",
+    "source": {
+      "artifactId": "12645502112",
+      "archiveSha256": "d297cd60e7596a0c7b3f2d778c934b8514e5da3c7b4d1639a9c79d9d4d361fe5",
+      "versionId": "9addf3a5-ff70-4ad5-9419-eb82b115ec92",
+      "runId": 40310008871,
+      "headSha": "d31c84e02caf879884b5f6783b0d5cb390c13070"
+    },
+    "copied": 350,
+    "versionId": "9addf3a5-ff70-4ad5-9419-eb82b115ec92",
+    "files": 437,
+    "bytes": 11129450,
+    "verified": true
+  },
+  "publicPreflight": {
+    "siteFailures": [],
+    "owners": 19,
+    "siteChecks": 15
+  },
+  "releaseTests": {
+    "node": 301,
+    "python": 31
+  },
+  "cloudBefore": {
+    "main": {
+      "deploymentId": "fa918e80-d03f-4dfa-b3f8-6b3ba50a619f",
+      "createdOn": "2026-10-26T11:23:18.702865Z",
+      "versions": [
+        {
+          "version_id": "9addf3a5-ff70-4ad5-9419-eb82b115ec92",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-genshin": {
+      "deploymentId": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+      "createdOn": "2026-10-25T11:47:12.597357Z",
+      "versions": [
+        {
+          "version_id": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-nte": {
+      "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+      "createdOn": "2026-10-25T11:59:42.402192Z",
+      "versions": [
+        {
+          "version_id": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-azur-promilia": {
+      "deploymentId": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+      "createdOn": "2026-10-25T13:03:32.563538Z",
+      "versions": [
+        {
+          "version_id": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-lvmeng": {
+      "deploymentId": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+      "createdOn": "2026-10-25T13:22:17.958551Z",
+      "versions": [
+        {
+          "version_id": "7e62c798-d454-48d7-8bee-1bce6660550b",
+          "percentage": 100
+        }
+      ]
+    },
+    "router": {
+      "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+      "createdOn": "2026-10-09T14:55:23.062535Z",
+      "versions": [
+        {
+          "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+          "percentage": 100
+        }
+      ]
+    },
+    "staging": {
+      "deploymentId": "161d0654-3703-45f6-a49c-1e872e3ea32c",
+      "createdOn": "2026-10-26T11:11:34.04869Z",
+      "versions": [
+        {
+          "version_id": "776285a1-72b5-4d75-ae17-274dbae2183c",
+          "percentage": 100
+        }
+      ]
+    }
+  },
+  "budget": {
+    "actionsRemaining": "not_observable",
+    "reason": "GitHub billing API requires user scope; credentials not expanded",
+    "productionEnvironmentProtectionRules": []
+  },
+  "sourceHashes": {
+    ".github/workflows/deploy.yml": "59b7f4ad21ce9ea0cc7962995f263a4b636b57c3d1bcfe1abe0eee874a246177",
+    "apps/web/components/layout/site-header.tsx": "3de11bd70b657ee9bc70786320ec84566341497f097a5d0f3ff2b8422104cde7",
+    "scripts/web-release-policy.test.mjs": "0f0e9a2c891298c02df8c293cc815d7ed6973749ba1ac5687f807f272b27bc95",
+    "tests/browser/sticky-header.spec.ts": "ee6797434ee84f5c6a7aacbe229af0b8f5bd4921f98b6782a8c61bc990e0b2c1"
+  },
+  "downloadTransport": {
+    "initial": "gh artifact ZIP timed out at 300s; failure log retained",
+    "verified": "gh through configured loopback proxy 127.0.0.1:7890, TLS verification unchanged; ZIP digest and provenance checked"
+  },
+  "retainedHttp": {
+    "status": "passed",
+    "files": 437,
+    "bytes": 11129450,
+    "scope": "all_retained_static_files_over_local_Worker_HTTP_not_remote"
+  },
+  "portabilityAfterRetention": {
+    "files": 3497,
+    "links": 19,
+    "portable": true,
+    "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+  }
+}

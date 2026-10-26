@@ -329,10 +329,10 @@ function WeaponCard({ weapon, locale, gameId }: { weapon: WeaponCardEntry; local
   const rankColor = WEAPON_RANK_COLORS[weapon.rankLabel] || WEAPON_RANK_COLORS[weapon.rankGroup] || '#888';
 
   return (
-    <div className="rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
-      <div className="mb-2 flex items-center gap-2">
+    <div className="min-w-0 rounded-lg border border-game-border bg-game-surface p-4 transition-colors hover:border-game-primary">
+      <div className="mb-2 flex flex-wrap items-center gap-2">
         <span className="text-base font-bold" style={{ color: rankColor }}>{weapon.rankLabel}</span>
-        <h3 className="font-semibold text-game-text">
+        <h3 className="min-w-0 break-words font-semibold text-game-text">
           {gameId === 'hi3' ? (
             <Link href={`/hi3/weapons/${weapon.id}`} className="hover:text-game-primary focus-visible:outline-2 focus-visible:outline-game-primary">
               {weapon.name}

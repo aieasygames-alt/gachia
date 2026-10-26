@@ -212,6 +212,15 @@ jobs:
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm test:browser
 
+      - name: Preserve failed build browser diagnostics
+        if: failure() && steps.scope.outputs.scope != 'admin'
+        uses: actions/upload-artifact@v4
+        with:
+          name: main-build-browser-failure-${{ github.run_id }}
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Verify Azur Promilia bundle
         if: steps.scope.outputs.scope != 'admin'
         run: pnpm --filter @gachia/game-azur-promilia verify:bundle
