@@ -1,0 +1,90 @@
+{
+  "sourceCommit": "a7d52c6b1d1f0475c3bdeecbe05b8b15127993cb",
+  "cleanBeforeAndAfterBuild": true,
+  "build": "OpenNext passed; local only",
+  "dryRunGzipKiB": 2891.34,
+  "workerChecks": {
+    "http": 32,
+    "browser": 18,
+    "stickyHeader": {
+      "startTime": "2026-10-26T14:57:07.158Z",
+      "duration": 18241.33,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "boundaries": 22,
+    "syntheticOnly": true
+  },
+  "localQuality": {
+    "webTests": 438,
+    "webTypeCheck": "passed",
+    "browserTypeCheck": "passed",
+    "changedComponentsEslint": "passed",
+    "releaseNodeTests": 302,
+    "releasePythonTests": 31
+  },
+  "portability": {
+    "files": 3146,
+    "links": 19,
+    "portable": true,
+    "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+  },
+  "portabilityRetained": {
+    "files": 3497,
+    "links": 19,
+    "portable": true,
+    "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+  },
+  "retainedHttp": {
+    "status": "passed",
+    "files": 437,
+    "bytes": 11129450
+  },
+  "previousAssets": {
+    "directory": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/previous-main-33decd31-d7ef-450e-8865-5409b84e7780",
+    "source": {
+      "artifactId": "12645502112",
+      "archiveSha256": "d297cd60e7596a0c7b3f2d778c934b8514e5da3c7b4d1639a9c79d9d4d361fe5",
+      "versionId": "9addf3a5-ff70-4ad5-9419-eb82b115ec92",
+      "runId": 40310008871,
+      "headSha": "d31c84e02caf879884b5f6783b0d5cb390c13070"
+    },
+    "copied": 350,
+    "versionId": "9addf3a5-ff70-4ad5-9419-eb82b115ec92",
+    "files": 437,
+    "bytes": 11129450,
+    "verified": true
+  },
+  "fallback": {
+    "schemaVersion": 1,
+    "status": "main_fallback_urls_present",
+    "environment": "local",
+    "cloudRequestsPerformed": false,
+    "fallbackCoverage": {
+      "requiredCount": 171,
+      "missingCount": 0,
+      "missing": [],
+      "status": "main_fallback_urls_present"
+    }
+  },
+  "sourceHashes": {
+    ".github/workflows/deploy.yml": "ad15a66ee2e93fffe50f8c85b007ade939fce061f224b6fa1d40e87c30d26ce5",
+    "apps/web/components/layout/site-header.tsx": "3de11bd70b657ee9bc70786320ec84566341497f097a5d0f3ff2b8422104cde7",
+    "apps/web/app/[lang]/[game]/weapons/page.tsx": "d0c12ecb8ef595cca118e5eede87e2bece60639e9b9943774660815a792797a0",
+    "tests/browser/sticky-header.spec.ts": "9c4b5c155be6f4b458c12305b2d7854c81f082265bc331a131fbfcbe6f20f049",
+    "scripts/web-release-policy.test.mjs": "3408d6af61f71fed4380d97190e4cc3701e5ba94c792027ccd2ce47e98fc0ffe"
+  },
+  "ci": {
+    "previousFailedRun": 40338798567,
+    "previousResult": {
+      "passed": 50,
+      "failed": 8,
+      "skipped": 8
+    },
+    "newRun": 40343990122,
+    "statusAtRecord": "in_progress"
+  },
+  "cloudWrites": false
+}

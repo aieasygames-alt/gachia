@@ -2,14 +2,14 @@
 
 ## 再审计后的当前待办（更新：2026-10-26）
 
-10-26 发布后独立线上复验：六个生产 Worker 版本与发布记录一致；15 条基础 GET、19 条 owner/静态资源检查及 18 个 Main 浏览器场景通过。新增 **P2：移动端 sticky 游戏导航背景透明，滚动后正文与导航叠字**。本地修复与绘制回归通过后，`146a842` 已推送 main；首次 CI `40338798567` 被严格视口检查拦住，发现 Linux 英文武器卡片横向溢出，未部署。已补卡片换行/收缩及本地可复现的宽字体回归，待新干净构建与 CI 后再发布；线上 P2 仍未关闭。最新进展见 `reports/mobile-header-release-2026-10-26/README.md`，初始本地证据见 `reports/mobile-header-fix-2026-10-26/README.md`。另需厘清公网编码 NUL 与点段路径的边缘处理契约，不将本地 400/no-store 断言直接当作公网保证。原始线上记录见 `reports/online-verification-2026-10-26/README.md`；本次未操作真实账号/分享/R2 数据，未重新部署。
+10-26 发布后独立线上复验新增 **P2：移动端 sticky 游戏导航透明叠字**。`146a842` 的首次 CI `40338798567` 发现 Linux 英文武器卡片溢出并阻断发布，原失败保留。补修 `a7d52c6` 已重新完成干净 OpenNext/隔离 Worker/宽字体回归与新 CI `40343990122`：Linux 浏览器 58 通过、8 跳过，build 成功，部署作业跳过。当前待受控 Main 正式发布及新生产版本独立复验，线上 P2 仍未关闭。最新进展见 `reports/mobile-header-release-2026-10-26/README.md`；初始本地与线上证据分别在 `reports/mobile-header-fix-2026-10-26/README.md`、`reports/online-verification-2026-10-26/README.md`。公网编码 NUL/点段契约差异仍待明确。本次未操作真实账号/分享/R2 数据，未重新部署。
 
 在 `334de6e` 基线上重新审计，P1 入口旁路已封堵并合入 main，F2–F4 已修复且随 Main 正式发布。功能提交为 `6f7a01e`，生产源码为仅追加证据的 `d31c84e`；发布运行 `40310008871` 构建/staging/production 全部成功。Main 当前 100% 为 `9addf3a5-ff70-4ad5-9419-eb82b115ec92`，四游戏及 Router deployment 不变。本轮工程修复与发布收尾已完成，S3–S8 等长期任务不因此完成。详见 `reports/main-release-2026-10-26/README.md`；原始审计见 `reports/project-reaudit-2026-10-25/README.md`。
 
 | 优先级 | 任务 | 当前状态 / 完成标准 |
 |---|---|---|
-| P2 / 线上复验新增 | 移动端 sticky 导航透明叠字 | 修复已合入 main；首次 CI 暴露英文卡片溢出并阻断发布，正在补修后重验。未部署，须受控发布与新生产版本复验后关闭线上问题 |
-| P2 / CI 新增 | 英文武器卡片字体相关横向溢出 | Linux 390/768px 稳定复现；本地宽字体红/绿验证已补，原严格宽度断言保留。待补修提交后的干净构建、Worker 与新 CI |
+| P2 / 线上复验新增 | 移动端 sticky 导航透明叠字 | 修复及补修已合入 main；新干净 Worker 与 Linux CI 通过。未部署，须受控发布与新生产版本复验后关闭线上问题 |
+| P2 / CI 新增 | 英文武器卡片字体相关横向溢出 | 卡片换行/收缩、宽字体红/绿回归与 Linux CI 已通过，原严格宽度断言保留；与导航修复一并待 Main 发布验收 |
 | 契约澄清 | 编码 NUL 与点段的公网处理 | 仍待定位边缘规范化层并明确公网/应用层契约；无权限绕过或循环证据，本次导航补丁不涉及、不关闭该项 |
 | P1 / F1 | 统一生产目标并封堵旁路 | 已合入 main 并通过 CI：六应用生产别名统一、旧 game-release 生产写入拒绝、旧 Router 切流 workflow 退役。Main 原受控 workflow 保留；四游戏/Router 未接入通用远程执行器前保持拒绝。旧 checkout/原始 CLI 不属于账户级权限防护；见 `docs/production-release-entrypoints.md` |
 | P2 / F2 | 主站 URL 解码与规范化 | 已随 Main 发布并通过完整验收：逐段单次解码、非法路径 400/no-store、防自重定向及尾斜杠循环；新增 37 项回归。原修复记录见 `reports/middleware-normalization-2026-10-25/README.md` |

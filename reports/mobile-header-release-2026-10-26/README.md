@@ -31,3 +31,19 @@
 - `WeaponCard` 增加 `min-w-0`，头部允许 flex-wrap，标题允许收缩与 break-words；没有使用 overflow hidden 掩盖内容、删减提示文字或放宽原来的视口宽度断言。该组件仍仅属于 Main，不改变独立 Worker。
 - 在原 42 场景内，英文 390/768px 正常模式追加宽字体滚动/返回检查；本地开发模式最终 42/42，零重试通过。新增 build 浏览器失败归档保留截图/trace 7 天；发布测试新增契约后为 Node 302 + Python 31 通过。
 - 首次干净提交/Worker 记录仅证明对应源码在当时本地环境通过，不能代表 Linux 已通过或为补修后的新代码背书。补修须重新干净构建、Worker 验收和新 CI，仍未发起 production workflow。
+
+## 补修后的独立重验
+
+- 补修提交 `a7d52c6b1d1f0475c3bdeecbe05b8b15127993cb` 已推送分支与 main；新 push CI 为 `40343990122`，没有重跑或覆盖失败的第一次 CI。
+- 从该干净提交重新构建 Main OpenNext，dry-run gzip 2891.34 KiB；32 HTTP、18 既有运行时浏览器、42 新绘制/宽字体浏览器、22 合成 D1/R2 边界检查全部通过。
+- 再次执行旧 artifact 来源/下载摘要验证，437 个保留资源全部通过新 Worker HTTP 字节校验；可移植性、内容与 171/171 fallback sitemap 门禁通过。
+- Web 438 测试、Web/新浏览器测试类型、两个修改组件 ESLint、Node 302 + Python 31 发布合约通过。机器摘要见 `font-fix-gates.json`，该记录与首个候选分别保存。
+- 复核 `mobile-zh-scrolled.png`、`mobile-zh-returned-list.png`、`mobile-en-wide-font-returned-list.png`、`tablet-en-wide-font-returned-list.png`：导航不透底，卡片完整换行，没有通过裁切隐藏提示内容。这里仍是本地 Worker 截图，不是新版本线上截图。
+
+## 新 CI 通过
+
+main push 验证 [40343990122](https://github.com/aieasygames-alt/gachia/actions/runs/40343990122) 成功，源提交 `a7d52c6`。Linux 浏览器 58 通过、8 跳过、0 失败；build 成功，deploy-staging/deploy 均因 push 事件跳过，没有产生部署。元数据见 `ci-success.json`。
+
+该验证 artifact 不含正式 production 请求的旧资源保留步骤，不能直接推广，也不是当前生产旧资源的来源。正式发布仍必须由新的 production workflow 按当前 UUID 与 artifact `12645502112`/精确 ZIP 摘要重新构建和封存，经 staging 验收同一制品后再发布；不复用本地目录或把跳过的部署算作完成。
+
+后续本段证据与任务表采用文档提交 `[skip ci]`，不改动已验收功能源码、workflow 或测试。Actions 剩余额度仍不可观测，未额外授权凭据或配置环境保护规则。

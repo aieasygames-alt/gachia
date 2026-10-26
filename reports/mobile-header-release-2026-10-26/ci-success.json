@@ -1,0 +1,37 @@
+{
+  "id": 40343990122,
+  "status": "completed",
+  "conclusion": "success",
+  "headSha": "a7d52c6b1d1f0475c3bdeecbe05b8b15127993cb",
+  "url": "https://github.com/aieasygames-alt/gachia/actions/runs/40343990122",
+  "jobs": [
+    {
+      "name": "build",
+      "conclusion": "success"
+    },
+    {
+      "name": "deploy",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "deploy-staging",
+      "conclusion": "skipped"
+    }
+  ],
+  "browser": {
+    "passed": 58,
+    "skipped": 8,
+    "failed": 0
+  },
+  "artifacts": [
+    {
+      "id": 12662216697,
+      "name": "web-worker-a7d52c6b1d1f0475c3bdeecbe05b8b15127993cb-1",
+      "digest": "sha256:14ba7ff9811b4d042d0f7e7d0fe1827f24b80e7e3cfecf2dc7d8db3c7ec253bd",
+      "expired": false,
+      "expires_at": "2026-11-02T15:16:54Z"
+    }
+  ],
+  "productionDeploymentPerformed": false,
+  "artifactRole": "verification_only_not_current_production_provenance_or_approved_release"
+}
