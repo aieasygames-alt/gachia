@@ -1,0 +1,174 @@
+{
+  "status": "local_retained_assets_http_verified",
+  "files": 435,
+  "bytes": 11128397,
+  "http": [
+    {
+      "path": "/zh/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/en/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/vermillion-liuli",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/vermillion-liuli-full-burn",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/ja/hi3/weapons/volatile-sparkler",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/robots.txt",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/main/sitemap.xml",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/webpack-02932d580e3c7274.js",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/e89dd0dfedbe06e5.css",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons/__runtime_missing__",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/get-session",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-in/social",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/callback/google?code=disabled&state=disabled",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-out",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "PUT",
+      "status": 404
+    },
+    {
+      "path": "/api/shared-builds",
+      "method": "POST",
+      "status": 404
+    }
+  ],
+  "portability": {
+    "files": 3494,
+    "links": 19,
+    "portable": true,
+    "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+  },
+  "cloudRequests": false
+}

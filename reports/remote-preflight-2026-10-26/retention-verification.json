@@ -1,0 +1,13 @@
+{
+  "status": "isolated_local_retention_verified",
+  "versionId": "38263bf8-7c06-4991-8e8a-b4f81bb8cf71",
+  "files": 435,
+  "bytes": 11128397,
+  "verified": true,
+  "copied": 347,
+  "existingIdentical": 88,
+  "candidate": "/Users/robert/.codex/worktrees/account-deletion-release/gachia/.release-records/remote-preflight-2026-10-26/compatibility-candidate",
+  "originalAcceptedCandidateUnchanged": true,
+  "cloudStaticVerification": false,
+  "productionReady": false
+}

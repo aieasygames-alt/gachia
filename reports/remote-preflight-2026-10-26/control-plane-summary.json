@@ -1,0 +1,50 @@
+{
+  "observedAt": "2026-10-26T09:21:56.467Z",
+  "services": {
+    "gachia": {
+      "deploymentId": "ccbff012-40dc-47b5-9aff-f63aa4ccbad1",
+      "createdAt": "2026-10-25T11:10:32.827664Z",
+      "version": "38263bf8-7c06-4991-8e8a-b4f81bb8cf71",
+      "percentage": 100
+    },
+    "gachia-staging": {
+      "deploymentId": "aa7f1cd3-39d6-40fb-a0aa-1f01524f56e5",
+      "createdAt": "2026-10-25T10:58:09.64183Z",
+      "version": "4f7da764-6a70-474f-9c34-1f26265fd0ff",
+      "percentage": 100
+    },
+    "gachia-router": {
+      "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+      "createdAt": "2026-10-09T14:55:23.062535Z",
+      "version": "239bb325-998c-4893-98e5-ddd24d50c99a",
+      "percentage": 100
+    },
+    "gachia-game-genshin": {
+      "deploymentId": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+      "createdAt": "2026-10-25T11:47:12.597357Z",
+      "version": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+      "percentage": 100
+    },
+    "gachia-game-nte": {
+      "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+      "createdAt": "2026-10-25T11:59:42.402192Z",
+      "version": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+      "percentage": 100
+    },
+    "gachia-game-azur-promilia": {
+      "deploymentId": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+      "createdAt": "2026-10-25T13:03:32.563538Z",
+      "version": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+      "percentage": 100
+    },
+    "gachia-game-lvmeng": {
+      "deploymentId": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+      "createdAt": "2026-10-25T13:22:17.958551Z",
+      "version": "7e62c798-d454-48d7-8bee-1bce6660550b",
+      "percentage": 100
+    }
+  },
+  "mainVersionBindingsMatchLocalConfig": true,
+  "scope": "deployment snapshots and Main version bindings; not mutable settings/routes/domains or future-state proof",
+  "cloudWrites": false
+}

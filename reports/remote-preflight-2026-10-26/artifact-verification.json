@@ -1,0 +1,17 @@
+{
+  "input": {
+    "artifactId": "12595024086",
+    "archiveSha256": "77fe18ca9d3053fcc3e5f0e3634db6732a8ff40210e2e036364d6ce6e64d4b11",
+    "versionId": "38263bf8-7c06-4991-8e8a-b4f81bb8cf71"
+  },
+  "runId": 40182701738,
+  "sourceCommit": "e011d3e9950000275d9bbdcd55bec8e5b1d79eb5",
+  "sourceDeployJob": 121151880122,
+  "sourceJobSuccess": true,
+  "downloadedBytes": 54244295,
+  "sha256": "77fe18ca9d3053fcc3e5f0e3634db6732a8ff40210e2e036364d6ce6e64d4b11",
+  "expiresAt": "2026-11-24T10:17:19Z",
+  "recoveryReceiptRequired": false,
+  "cloudCurrentVersionChecked": true,
+  "controlPlaneObservedAt": "2026-10-26T09:21:56.467Z"
+}
