@@ -1,0 +1,42 @@
+[
+  {
+    "id": 12646821888,
+    "name": "main-production-acceptance-40310008871",
+    "size_in_bytes": 68981,
+    "digest": "sha256:46276940f79a3f9e2b6954c63f276f2136c1ae613387905cbf118e9818840c01",
+    "expires_at": "2026-11-25T11:32:52Z",
+    "expired": false
+  },
+  {
+    "id": 12646541259,
+    "name": "main-deployments-before-40310008871",
+    "size_in_bytes": 982,
+    "digest": "sha256:9ef97b7915d8122f7b419b40e7a5c794b07755dd3a07e517869f3d87c1e55780",
+    "expires_at": "2026-11-25T11:23:08Z",
+    "expired": false
+  },
+  {
+    "id": 12646406308,
+    "name": "main-staging-acceptance-40310008871",
+    "size_in_bytes": 59961,
+    "digest": "sha256:a5e16ccbb23363fde0268c2f035b0c2fde0e9ca941488028d757b6b3a409fd78",
+    "expires_at": "2026-11-25T11:22:12Z",
+    "expired": false
+  },
+  {
+    "id": 12645502112,
+    "name": "web-worker-d31c84e02caf879884b5f6783b0d5cb390c13070-1",
+    "size_in_bytes": 54253844,
+    "digest": "sha256:d297cd60e7596a0c7b3f2d778c934b8514e5da3c7b4d1639a9c79d9d4d361fe5",
+    "expires_at": "2026-11-25T11:10:20Z",
+    "expired": false
+  },
+  {
+    "id": 12645195563,
+    "name": "main-fallback-coverage-40310008871",
+    "size_in_bytes": 330,
+    "digest": "sha256:9522de2e01bd30a121473050afc9cc683449ab575809fc1dedd73a8c8b6e0173",
+    "expires_at": "2026-11-25T10:52:41Z",
+    "expired": false
+  }
+]

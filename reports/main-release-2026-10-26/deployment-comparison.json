@@ -1,0 +1,51 @@
+{
+  "gachia": {
+    "beforeVersion": "38263bf8-7c06-4991-8e8a-b4f81bb8cf71",
+    "afterVersion": "9addf3a5-ff70-4ad5-9419-eb82b115ec92",
+    "afterDeployment": "fa918e80-d03f-4dfa-b3f8-6b3ba50a619f",
+    "percentage": 100,
+    "changed": true
+  },
+  "gachia-staging": {
+    "beforeVersion": "4f7da764-6a70-474f-9c34-1f26265fd0ff",
+    "afterVersion": "776285a1-72b5-4d75-ae17-274dbae2183c",
+    "afterDeployment": "161d0654-3703-45f6-a49c-1e872e3ea32c",
+    "percentage": 100,
+    "changed": true
+  },
+  "gachia-router": {
+    "beforeVersion": "239bb325-998c-4893-98e5-ddd24d50c99a",
+    "afterVersion": "239bb325-998c-4893-98e5-ddd24d50c99a",
+    "afterDeployment": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+    "percentage": 100,
+    "changed": false
+  },
+  "gachia-game-genshin": {
+    "beforeVersion": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+    "afterVersion": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+    "afterDeployment": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+    "percentage": 100,
+    "changed": false
+  },
+  "gachia-game-nte": {
+    "beforeVersion": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+    "afterVersion": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+    "afterDeployment": "89960349-9607-422a-bc18-fa2b22b4e997",
+    "percentage": 100,
+    "changed": false
+  },
+  "gachia-game-azur-promilia": {
+    "beforeVersion": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+    "afterVersion": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+    "afterDeployment": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+    "percentage": 100,
+    "changed": false
+  },
+  "gachia-game-lvmeng": {
+    "beforeVersion": "7e62c798-d454-48d7-8bee-1bce6660550b",
+    "afterVersion": "7e62c798-d454-48d7-8bee-1bce6660550b",
+    "afterDeployment": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+    "percentage": 100,
+    "changed": false
+  }
+}

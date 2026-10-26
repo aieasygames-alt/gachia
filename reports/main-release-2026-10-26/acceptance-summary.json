@@ -1,0 +1,58 @@
+{
+  "staging": {
+    "artifactId": 12646406308,
+    "actualZipSha256": "a5e16ccbb23363fde0268c2f035b0c2fde0e9ca941488028d757b6b3a409fd78",
+    "status": "main_staging_verified_accounts_disabled",
+    "http": 32,
+    "browser": 18,
+    "managedContent": {
+      "http": 23,
+      "fallbackHttp": 171,
+      "json": 7,
+      "search": 3,
+      "browser": 520,
+      "indexnow": 1,
+      "retainedAssets": 12
+    },
+    "xml": {
+      "status": "published_xml_graph_verified",
+      "documents": 6,
+      "unionCount": 6653,
+      "mainArtifactEqual": true,
+      "fallbackCoverage": {
+        "requiredCount": 171,
+        "missingCount": 0,
+        "missing": [],
+        "status": "main_fallback_urls_present"
+      }
+    }
+  },
+  "production": {
+    "artifactId": 12646821888,
+    "actualZipSha256": "46276940f79a3f9e2b6954c63f276f2136c1ae613387905cbf118e9818840c01",
+    "status": "main_production_verified_accounts_disabled",
+    "http": 32,
+    "browser": 18,
+    "managedContent": {
+      "http": 23,
+      "fallbackHttp": 171,
+      "json": 7,
+      "search": 3,
+      "browser": 520,
+      "indexnow": 1,
+      "retainedAssets": 12
+    },
+    "xml": {
+      "status": "published_xml_graph_verified",
+      "documents": 6,
+      "unionCount": 6653,
+      "mainArtifactEqual": true,
+      "fallbackCoverage": {
+        "requiredCount": 171,
+        "missingCount": 0,
+        "missing": [],
+        "status": "main_fallback_urls_present"
+      }
+    }
+  }
+}
