@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "status": "deployed_independent_visual_checks_passed_original_release_workflow_failed",
+  "releaseRunId": "40348527117",
+  "releaseUrl": "https://github.com/aieasygames-alt/gachia/actions/runs/40348527117",
+  "sourceSha": "12c1c6b843f4972fcd46132bdd7363f76dcbe0b3",
+  "deployDispatches": 1,
+  "automaticRollback": false,
+  "jobs": {
+    "build": "success",
+    "deploy-staging": "success",
+    "deploy": "failure"
+  },
+  "controls": {
+    "main": {
+      "deploymentId": "6300eb50-e8ed-491b-b9cd-26a59ad11d36",
+      "createdOn": "2026-10-26T16:07:07.776255Z",
+      "versions": [
+        {
+          "version_id": "3efd4103-7156-484b-86d8-a28853a668c8",
+          "percentage": 100
+        }
+      ]
+    },
+    "staging": {
+      "deploymentId": "77b45460-05a3-4435-95cd-89077c6750e1",
+      "createdOn": "2026-10-26T15:40:11.857731Z",
+      "versions": [
+        {
+          "version_id": "f142070d-ffb0-4b99-a204-49af0c265baa",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-genshin": {
+      "deploymentId": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+      "createdOn": "2026-10-25T11:47:12.597357Z",
+      "versions": [
+        {
+          "version_id": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-nte": {
+      "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+      "createdOn": "2026-10-25T11:59:42.402192Z",
+      "versions": [
+        {
+          "version_id": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-azur-promilia": {
+      "deploymentId": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+      "createdOn": "2026-10-25T13:03:32.563538Z",
+      "versions": [
+        {
+          "version_id": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-lvmeng": {
+      "deploymentId": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+      "createdOn": "2026-10-25T13:22:17.958551Z",
+      "versions": [
+        {
+          "version_id": "7e62c798-d454-48d7-8bee-1bce6660550b",
+          "percentage": 100
+        }
+      ]
+    },
+    "router": {
+      "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+      "createdOn": "2026-10-09T14:55:23.062535Z",
+      "versions": [
+        {
+          "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+          "percentage": 100
+        }
+      ]
+    }
+  },
+  "nonMainProductionDeploymentsUnchanged": [
+    "game-genshin",
+    "game-nte",
+    "game-azur-promilia",
+    "game-lvmeng",
+    "router"
+  ],
+  "mainVersionBindingsUnchanged": true,
+  "secretValuesRead": false,
+  "webArtifact": {
+    "id": "12662818947",
+    "zipSha256": "cb1192aeda6b45f49a9af4fdcd8f931e93a4113e6098d5874b4cd79c1ec5a00b",
+    "innerTarSha256": "abbebb44a39dd7bf3f438f9b7ba4555e233eba365a017bf8e3c97ad5b5715b2c",
+    "sameArtifactAndTarAcceptedBeforeBothDeployments": true
+  },
+  "acceptanceArtifacts": {
+    "staging": {
+      "artifactId": "12664699549",
+      "zipSha256": "62d5710d641c66736a917c2d5d8a27e01b70345058cfeafc219b769eafbefe7c",
+      "junit": {
+        "tests": 42,
+        "failures": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "runtimeStatus": "main_staging_verified_accounts_disabled",
+      "http": 32,
+      "browser": 18,
+      "managedContent": {
+        "http": 23,
+        "fallbackHttp": 171,
+        "json": 7,
+        "search": 3,
+        "browser": 520,
+        "indexnow": 1,
+        "retainedAssets": 12
+      }
+    },
+    "production": {
+      "artifactId": "12666446764",
+      "zipSha256": "0720479cdaf4ecdfcefb6415b72d3cb744d809b53a9a5817a0b6f1bd1b76e9dd",
+      "junit": {
+        "tests": 42,
+        "failures": 36,
+        "skipped": 0,
+        "errors": 0
+      },
+      "runtimeStatus": "main_production_verified_accounts_disabled",
+      "http": 32,
+      "browser": 18,
+      "managedContent": {
+        "http": 23,
+        "fallbackHttp": 171,
+        "json": 7,
+        "search": 3,
+        "browser": 520,
+        "indexnow": 1,
+        "retainedAssets": 12
+      }
+    }
+  },
+  "originalProductionVisualFailure": "36 intentionally aborted Cloudflare beacon requests classified as asset failures; 6 no-JS passed; later XML and reading-smoke workflow steps skipped",
+  "testFix": {
+    "sha": "12218b76ec8d4cabad908a0fe32a5629c2abb363",
+    "sha256": "6454f7e7d38e9d7691dee792e2671dd76b479d3a36ff232ab794f81bf469cc65",
+    "branch": "codex/mobile-header-fix",
+    "mergedToMain": false,
+    "linuxCiPerformed": false,
+    "runtimeOrWorkflowChange": false
+  },
+  "independent": {
+    "http": {
+      "site": 15,
+      "owners": 19,
+      "failures": []
+    },
+    "originalBrowserStats": {
+      "startTime": "2026-10-26T16:12:50.157Z",
+      "duration": 93977.445,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 36,
+      "flaky": 0
+    },
+    "originalBrowserFailureReasons": {
+      "intentionalExternalBeaconBlock": 35,
+      "logoLoadedBetweenPaintSamples": 1
+    },
+    "correctedBrowserStats": {
+      "startTime": "2026-10-26T16:23:02.066Z",
+      "duration": 86441.948,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "supplementalCardBrowserStats": {
+      "startTime": "2026-10-26T16:28:44.646Z",
+      "duration": 27793.266,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "negativeControls": {
+      "transparentHeader": "failed paint assertion as expected",
+      "missingSameOriginScript": "failed asset assertion as expected",
+      "retries": 0
+    },
+    "xml": {
+      "status": "production_graph_matches_verified_staging_artifact",
+      "deploymentPerformed": false,
+      "comparisonArtifactId": "12664699549",
+      "fallbackCoverage": {
+        "requiredCount": 171,
+        "missingCount": 0,
+        "missing": [],
+        "status": "main_fallback_urls_present"
+      },
+      "documents": 6,
+      "counts": {
+        "main": 4515,
+        "azur-promilia": 150,
+        "genshin": 1572,
+        "lvmeng": 27,
+        "nte": 389
+      },
+      "mainByLocale": {
+        "en": 1580,
+        "zh": 1583,
+        "ja": 1352
+      },
+      "unionCount": 6653
+    },
+    "screenshots": [
+      {
+        "path": "online-mobile-en-wide-font-card.png",
+        "sha256": "5c8c187c9b8f50c6ad79304c24deaa2f1b2d428d03b2015ef307ac3584ff2876"
+      },
+      {
+        "path": "online-mobile-en-wide-font-returned-list.png",
+        "sha256": "c322f657ca31535c779a932fab8d2cfe8a56b1517d6dd4c93ce4bcd6eb41310c"
+      },
+      {
+        "path": "online-mobile-zh-returned-list.png",
+        "sha256": "c5328e4669f0197cc8212fe3984f9122b2898bc0cc6d52d61eee310470917cda"
+      },
+      {
+        "path": "online-mobile-zh-scrolled.png",
+        "sha256": "c5328e4669f0197cc8212fe3984f9122b2898bc0cc6d52d61eee310470917cda"
+      },
+      {
+        "path": "online-mobile-zh-top.png",
+        "sha256": "f3e9d34504911eb821c3048e99baeef7b93740eae40f3524cbe9b8ef8fe7d76b"
+      },
+      {
+        "path": "online-tablet-en-wide-font-card.png",
+        "sha256": "aaf56874d054c91c46b3cd15dbcb58b40dc4d26ce7147b3ae86a510921b8db8c"
+      },
+      {
+        "path": "online-tablet-en-wide-font-returned-list.png",
+        "sha256": "2994077db80d6ebcd087b8151b3434c9b1f5c72aa54bf1c509cbb0cf8e9fb7f3"
+      }
+    ]
+  },
+  "formalRecoveryReceiptIssued": false,
+  "actionsBudgetObservable": false,
+  "scopeLimits": [
+    "Chromium simulated desktop/mobile; targeted Main HI3 list/detail, not exhaustive site/browser/global validation",
+    "Third-party analytics deliberately blocked, not validated",
+    "No real account/share/map-cache R2 end-to-end data checks, migrations, cache clearing or account deletion",
+    "Encoded NUL/dot-segment edge contracts remain unresolved"
+  ],
+  "nextStep": "Integrate and verify test-only correction, then perform separately controlled read-only recovery including the new 42-case paint gate; do not rerun deployment"
+}
