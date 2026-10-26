@@ -362,6 +362,13 @@ jobs:
         if: inputs.release_target == 'production'
         run: node scripts/web-staging-acceptance.mjs
 
+      - name: Verify sticky header paint on staging
+        if: inputs.release_target == 'production'
+        env:
+          PLAYWRIGHT_BASE_URL: https://gachia-staging.aieasygames.workers.dev
+          PLAYWRIGHT_JUNIT_OUTPUT_FILE: .release-records/sticky-header-staging/results.xml
+        run: pnpm exec playwright test tests/browser/sticky-header.spec.ts --workers=2 --retries=0 --reporter=list,junit --output=.release-records/sticky-header-staging/output
+
       - name: Verify staging Main XML and unchanged production owner graph
         if: inputs.release_target == 'production'
         run: python3 -B scripts/web-published-sitemap-audit.py staging --output .release-records/staging-sitemap-graph.json
@@ -394,6 +401,7 @@ jobs:
           path: |
             .release-records/web-staging-*/result.json
             .release-records/staging-sitemap-graph.json
+            .release-records/sticky-header-staging/
           if-no-files-found: error
           retention-days: 30
 
@@ -544,6 +552,12 @@ jobs:
       - name: Accept published main content and runtime
         run: node scripts/web-production-acceptance.mjs
 
+      - name: Verify sticky header paint on production
+        env:
+          PLAYWRIGHT_BASE_URL: https://gachia.com
+          PLAYWRIGHT_JUNIT_OUTPUT_FILE: .release-records/sticky-header-production/results.xml
+        run: pnpm exec playwright test tests/browser/sticky-header.spec.ts --workers=2 --retries=0 --reporter=list,junit --output=.release-records/sticky-header-production/output
+
       - name: Verify production XML owner union against sealed Main
         run: python3 -B scripts/web-published-sitemap-audit.py production --output .release-records/production-sitemap-graph.json
 
@@ -557,6 +571,7 @@ jobs:
             .release-records/web-production-*/result.json
             .release-records/web-production-*/browser-*
             .release-records/production-sitemap-graph.json
+            .release-records/sticky-header-production/
           if-no-files-found: error
           retention-days: 30
 

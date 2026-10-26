@@ -2,10 +2,14 @@
 
 ## 再审计后的当前待办（更新：2026-10-26）
 
+10-26 发布后独立线上复验：六个生产 Worker 版本与发布记录一致；15 条基础 GET、19 条 owner/静态资源检查及 18 个 Main 浏览器场景通过。新增 **P2：移动端 sticky 游戏导航背景透明，滚动后正文与导航叠字**。随后已本地修复并补滚动/详情返回列表的绘制级回归：新浏览器场景开发/生产模式各 42/42、既有导航 16/16、Web 438 项测试、类型检查和 Next.js 生产构建通过；尚未提交或部署，线上 P2 仍待受控发布后独立复验。见 `reports/mobile-header-fix-2026-10-26/README.md`。另需厘清公网编码 NUL 与点段路径的边缘处理契约，不将本地 400/no-store 断言直接当作公网保证。原始线上记录见 `reports/online-verification-2026-10-26/README.md`；本次未操作真实账号/分享/R2 数据，未重新部署。
+
 在 `334de6e` 基线上重新审计，P1 入口旁路已封堵并合入 main，F2–F4 已修复且随 Main 正式发布。功能提交为 `6f7a01e`，生产源码为仅追加证据的 `d31c84e`；发布运行 `40310008871` 构建/staging/production 全部成功。Main 当前 100% 为 `9addf3a5-ff70-4ad5-9419-eb82b115ec92`，四游戏及 Router deployment 不变。本轮工程修复与发布收尾已完成，S3–S8 等长期任务不因此完成。详见 `reports/main-release-2026-10-26/README.md`；原始审计见 `reports/project-reaudit-2026-10-25/README.md`。
 
 | 优先级 | 任务 | 当前状态 / 完成标准 |
 |---|---|---|
+| P2 / 线上复验新增 | 移动端 sticky 导航透明叠字 | 本地已修复，两行完整不透明底色且保留桌面效果；滚动/返回列表绘制回归及断点/三语言检查通过。未提交/部署，须受控发布与新生产版本复验后关闭线上问题 |
+| 契约澄清 | 编码 NUL 与点段的公网处理 | 仍待定位边缘规范化层并明确公网/应用层契约；无权限绕过或循环证据，本次导航补丁不涉及、不关闭该项 |
 | P1 / F1 | 统一生产目标并封堵旁路 | 已合入 main 并通过 CI：六应用生产别名统一、旧 game-release 生产写入拒绝、旧 Router 切流 workflow 退役。Main 原受控 workflow 保留；四游戏/Router 未接入通用远程执行器前保持拒绝。旧 checkout/原始 CLI 不属于账户级权限防护；见 `docs/production-release-entrypoints.md` |
 | P2 / F2 | 主站 URL 解码与规范化 | 已随 Main 发布并通过完整验收：逐段单次解码、非法路径 400/no-store、防自重定向及尾斜杠循环；新增 37 项回归。原修复记录见 `reports/middleware-normalization-2026-10-25/README.md` |
 | P2 / F3 | 地图瓦片缓存键碰撞 | 已随 Main 发布：规范化 URL 的 SHA-256 + map-tiles/v2 命名空间，保持 map ID 隔离；新增 14 项回归，隔离 R2 验收通过。未清除真实 R2/CDN/浏览器缓存，旧客户端响应不因此立即失效。原修复记录见 `reports/map-tile-cache-2026-10-25/README.md` |

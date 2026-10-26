@@ -1,0 +1,220 @@
+{
+  "top": {
+    "scrollY": 0,
+    "viewport": 390,
+    "documentWidth": 390,
+    "elements": [
+      {
+        "tag": "HEADER",
+        "class": "gachia-header sticky top-0 z-50",
+        "text": "Gachia\n中文\nEnglish\n日本語\n绿梦：时空之声\n原神\n鸣潮\n绝区零\n洛克王国：世界（国际服）\n更多游戏",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 145,
+          "top": 0,
+          "right": 390,
+          "bottom": 145,
+          "left": 0
+        },
+        "position": "sticky",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "NAV",
+        "class": "gachia-header__games hidden min-w-0 flex-1 flex-wrap items-center gap-1 lg:flex",
+        "text": "绿梦：时空之声原神鸣潮绝区零洛克王国：世界（国际服）更多游戏",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "MAIN",
+        "class": "flex-1",
+        "text": "角色图鉴\n武器\n材料道具\n版本专题\n下载配置\n攻略百科\n中文\n崩坏3\n\n本页是 Global 英文公告资料摘要，不代表当前客户端效果或可用状态已核实。中文与日文名称沿用现有资料，正式本地化名称尚待核对；名称、星级和版本标签不是当前获取状态证明。\n\n武器\n\n共 3 件武器\n\n收录朱华、朱华·全燃与跃动火花的版本公告资料，公告明确列出跃动火花为 4★ 驱动核心；",
+        "rect": {
+          "x": 0,
+          "y": 145,
+          "width": 390,
+          "height": 1720.5,
+          "top": 145,
+          "right": 390,
+          "bottom": 1865.5,
+          "left": 0
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "NAV",
+        "class": "border-b border-game-border bg-game-surface",
+        "text": "角色图鉴\n武器\n材料道具\n版本专题\n下载配置\n攻略百科",
+        "rect": {
+          "x": 0,
+          "y": 145,
+          "width": 390,
+          "height": 49,
+          "top": 145,
+          "right": 390,
+          "bottom": 194,
+          "left": 0
+        },
+        "position": "static",
+        "background": "rgb(22, 33, 62)"
+      },
+      {
+        "tag": "NAV",
+        "class": "mb-4",
+        "text": "中文\n崩坏3",
+        "rect": {
+          "x": 16,
+          "y": 218,
+          "width": 358,
+          "height": 20,
+          "top": 218,
+          "right": 374,
+          "bottom": 238,
+          "left": 16
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "H1",
+        "class": "mb-2 text-2xl font-bold",
+        "text": "武器",
+        "rect": {
+          "x": 16,
+          "y": 387,
+          "width": 358,
+          "height": 32,
+          "top": 387,
+          "right": 374,
+          "bottom": 419,
+          "left": 16
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  },
+  "scrolled": {
+    "scrollY": 120,
+    "viewport": 390,
+    "documentWidth": 390,
+    "elements": [
+      {
+        "tag": "HEADER",
+        "class": "gachia-header sticky top-0 z-50",
+        "text": "Gachia\n中文\nEnglish\n日本語\n绿梦：时空之声\n原神\n鸣潮\n绝区零\n洛克王国：世界（国际服）\n更多游戏",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 145,
+          "top": 0,
+          "right": 390,
+          "bottom": 145,
+          "left": 0
+        },
+        "position": "sticky",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "NAV",
+        "class": "gachia-header__games hidden min-w-0 flex-1 flex-wrap items-center gap-1 lg:flex",
+        "text": "绿梦：时空之声原神鸣潮绝区零洛克王国：世界（国际服）更多游戏",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "MAIN",
+        "class": "flex-1",
+        "text": "角色图鉴\n武器\n材料道具\n版本专题\n下载配置\n攻略百科\n中文\n崩坏3\n\n本页是 Global 英文公告资料摘要，不代表当前客户端效果或可用状态已核实。中文与日文名称沿用现有资料，正式本地化名称尚待核对；名称、星级和版本标签不是当前获取状态证明。\n\n武器\n\n共 3 件武器\n\n收录朱华、朱华·全燃与跃动火花的版本公告资料，公告明确列出跃动火花为 4★ 驱动核心；",
+        "rect": {
+          "x": 0,
+          "y": 25,
+          "width": 390,
+          "height": 1720.5,
+          "top": 25,
+          "right": 390,
+          "bottom": 1745.5,
+          "left": 0
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "NAV",
+        "class": "border-b border-game-border bg-game-surface",
+        "text": "角色图鉴\n武器\n材料道具\n版本专题\n下载配置\n攻略百科",
+        "rect": {
+          "x": 0,
+          "y": 25,
+          "width": 390,
+          "height": 49,
+          "top": 25,
+          "right": 390,
+          "bottom": 74,
+          "left": 0
+        },
+        "position": "static",
+        "background": "rgb(22, 33, 62)"
+      },
+      {
+        "tag": "NAV",
+        "class": "mb-4",
+        "text": "中文\n崩坏3",
+        "rect": {
+          "x": 16,
+          "y": 98,
+          "width": 358,
+          "height": 20,
+          "top": 98,
+          "right": 374,
+          "bottom": 118,
+          "left": 16
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "tag": "H1",
+        "class": "mb-2 text-2xl font-bold",
+        "text": "武器",
+        "rect": {
+          "x": 16,
+          "y": 267,
+          "width": 358,
+          "height": 32,
+          "top": 267,
+          "right": 374,
+          "bottom": 299,
+          "left": 16
+        },
+        "position": "static",
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    ]
+  }
+}

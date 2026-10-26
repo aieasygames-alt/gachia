@@ -1,0 +1,307 @@
+{
+  "runtime": "local Next.js production server; Chromium desktop/mobile emulation",
+  "stats": {
+    "startTime": "2026-10-26T14:03:57.147Z",
+    "duration": 18721.321,
+    "expected": 42,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "scenario": "390px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / delayed-scripts",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / delayed-scripts",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / delayed-scripts",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / delayed-scripts",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / delayed-scripts",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / delayed-scripts",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / no-js",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / no-js",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / no-js",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / no-js",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / no-js",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "390px / no-js",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "768px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "768px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "768px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "768px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "768px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "768px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1023px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1023px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1023px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1023px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1023px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1023px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1024px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1024px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1024px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1024px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1024px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1024px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1440px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1440px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1440px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "desktop",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1440px / normal",
+      "title": "zh sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1440px / normal",
+      "title": "en sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    },
+    {
+      "scenario": "1440px / normal",
+      "title": "ja sticky header stays readable when scrolling and returning to the list",
+      "project": "mobile",
+      "status": "passed",
+      "retries": 0
+    }
+  ]
+}

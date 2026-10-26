@@ -1,0 +1,410 @@
+{
+  "startedAt": "2026-10-26T13:49:12.802Z",
+  "transport": "curl via configured loopback proxy 127.0.0.1:7890; GET only",
+  "failures": [
+    "/zh/%00: missing no-store",
+    "/zh/%2Ehidden/%2E%2E: expected 400",
+    "/zh/%2Ehidden/%2E%2E: missing no-store",
+    "/zh/%61bout?source=online-verification: redirect location"
+  ],
+  "site": {
+    "origin": "https://gachia.com",
+    "accountFeatures": false,
+    "observations": [
+      {
+        "path": "/",
+        "status": 307
+      },
+      {
+        "path": "/zh",
+        "status": 200
+      },
+      {
+        "path": "/en",
+        "status": 200
+      },
+      {
+        "path": "/ja",
+        "status": 200
+      },
+      {
+        "path": "/zh/genshin",
+        "status": 200
+      },
+      {
+        "path": "/zh/nte",
+        "status": 200
+      },
+      {
+        "path": "/zh/azur-promilia",
+        "status": 200
+      },
+      {
+        "path": "/zh/games",
+        "status": 200
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/nte/index.xml",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/azur-promilia/index.xml",
+        "status": 200
+      },
+      {
+        "path": "/robots.txt",
+        "status": 200
+      },
+      {
+        "path": "/ads.txt",
+        "status": 200
+      },
+      {
+        "path": "/api/auth/get-session",
+        "status": 404
+      },
+      {
+        "path": "/sitemaps/nte/index.xml?source=production-audit",
+        "status": 200
+      }
+    ],
+    "failures": []
+  },
+  "owners": [
+    {
+      "path": "/zh",
+      "owner": "main",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/chunks/webpack-02932d580e3c7274.js",
+      "owner": "main",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_next/static/css/e89dd0dfedbe06e5.css",
+      "owner": "main",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/zh/genshin",
+      "owner": "genshin",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/genshin/_next/static/chunks/webpack-b3c4034404eb8d2b.js",
+      "owner": "genshin",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/genshin/_next/static/css/4e6b2dc0fa1e36bc.css",
+      "owner": "genshin",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/genshin/index.xml",
+      "owner": "genshin",
+      "kind": "xml",
+      "status": 200
+    },
+    {
+      "path": "/zh/nte",
+      "owner": "nte",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/nte/_next/static/chunks/webpack-78aede61962d179a.js",
+      "owner": "nte",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/nte/_next/static/css/a03f215a7bc52d77.css",
+      "owner": "nte",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/nte/index.xml",
+      "owner": "nte",
+      "kind": "xml",
+      "status": 200
+    },
+    {
+      "path": "/zh/azur-promilia",
+      "owner": "azur-promilia",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/chunks/webpack-ab27a0009b5e7231.js",
+      "owner": "azur-promilia",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/azur-promilia/_next/static/css/9aa93cdcbed4bf47.css",
+      "owner": "azur-promilia",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/azur-promilia/index.xml",
+      "owner": "azur-promilia",
+      "kind": "xml",
+      "status": 200
+    },
+    {
+      "path": "/zh/lvmeng",
+      "owner": "lvmeng",
+      "kind": "html",
+      "status": 200
+    },
+    {
+      "path": "/_games/lvmeng/_next/static/chunks/webpack-4b0fd5dc141f7074.js",
+      "owner": "lvmeng",
+      "kind": "js",
+      "status": 200
+    },
+    {
+      "path": "/_games/lvmeng/_next/static/css/6d814f1a9060c47b.css",
+      "owner": "lvmeng",
+      "kind": "css",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/lvmeng/index.xml",
+      "owner": "lvmeng",
+      "kind": "xml",
+      "status": 200
+    }
+  ],
+  "boundaries": [
+    {
+      "path": "/zh/%",
+      "status": 400,
+      "cache": true,
+      "actual": 400,
+      "headers": {
+        "cache-control": "no-store",
+        "content-type": "text/plain;charset=UTF-8",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/zh/%E0%A4",
+      "status": 400,
+      "cache": true,
+      "actual": 400,
+      "headers": {
+        "cache-control": "no-store",
+        "content-type": "text/plain;charset=UTF-8",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/zh/%2F",
+      "status": 400,
+      "cache": true,
+      "actual": 400,
+      "headers": {
+        "cache-control": "no-store",
+        "content-type": "text/plain;charset=UTF-8",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/zh/%5C",
+      "status": 400,
+      "cache": true,
+      "actual": 400,
+      "headers": {
+        "cache-control": "no-store",
+        "content-type": "text/plain;charset=UTF-8",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/zh/%00",
+      "status": 400,
+      "cache": true,
+      "actual": 400,
+      "headers": {
+        "content-type": "text/html"
+      },
+      "failures": [
+        "missing no-store"
+      ]
+    },
+    {
+      "path": "/zh/%2Ehidden/%2E%2E",
+      "status": 400,
+      "cache": true,
+      "actual": 308,
+      "headers": {
+        "content-type": "text/plain;charset=UTF-8",
+        "location": "/zh/"
+      },
+      "failures": [
+        "expected 400",
+        "missing no-store"
+      ]
+    },
+    {
+      "path": "/zh/%61bout?source=online-verification",
+      "status": 301,
+      "location": "https://gachia.com/zh/about?source=online-verification",
+      "actual": 301,
+      "headers": {
+        "content-type": "text/plain;charset=UTF-8",
+        "location": "/zh/about?source=online-verification"
+      },
+      "failures": [
+        "redirect location"
+      ]
+    },
+    {
+      "path": "/zh/%E6%B5%8B%E8%AF%95",
+      "status": 404,
+      "actual": 404,
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/auth/get-session",
+      "status": 404,
+      "cache": true,
+      "disabled": true,
+      "actual": 404,
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/favorites",
+      "status": 404,
+      "cache": true,
+      "disabled": true,
+      "actual": 404,
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/user-characters",
+      "status": 404,
+      "cache": true,
+      "disabled": true,
+      "actual": 404,
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/map/progress",
+      "status": 404,
+      "cache": true,
+      "disabled": true,
+      "actual": 404,
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/shared-builds",
+      "status": 400,
+      "cache": true,
+      "actual": 400,
+      "headers": {
+        "cache-control": "no-store",
+        "content-type": "application/json"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/map/tile",
+      "status": 400,
+      "actual": 400,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/map/tile?map_id=99&url=invalid",
+      "status": 400,
+      "actual": 400,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/map/tile?url=invalid",
+      "status": 400,
+      "actual": 400,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/map/tile?url=https%3A%2F%2Fexample.com%2Fmap_manage%2F20261025%2Ftest.png",
+      "status": 403,
+      "actual": 403,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/map/tile?url=http%3A%2F%2Fact-webstatic.hoyoverse.com%2Fmap_manage%2F20261025%2Ftest.png",
+      "status": 403,
+      "actual": 403,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "failures": []
+    },
+    {
+      "path": "/api/map/tile?url=https%3A%2F%2Fact-webstatic.hoyoverse.com%2Fnot-a-tile",
+      "status": 403,
+      "actual": 403,
+      "headers": {
+        "content-type": "application/json"
+      },
+      "failures": []
+    }
+  ],
+  "finishedAt": "2026-10-26T13:50:17.746Z"
+}

@@ -80,6 +80,29 @@ test('main staging acceptance cannot select production, another service or an ar
   for (const args of [['https://gachia.com'], ['--origin', 'https://example.test'], ['nte']]) assert.throws(() => webStagingOrigin(args), /only the isolated/);
 });
 
+test('sticky header paint gates staging before promotion and preserves both published results', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/deploy.yml', import.meta.url), 'utf8');
+  const staging = workflow.split('\n  deploy-staging:')[1].split('\n  deploy:\n')[0];
+  const production = workflow.split('\n  deploy:\n')[1];
+  assert.match(production, /needs: \[build, deploy-staging\]/);
+  assert.match(production, /needs\.deploy-staging\.result == 'success'/);
+  for (const [job, phase, origin] of [
+    [staging, 'staging', 'https://gachia-staging.aieasygames.workers.dev'],
+    [production, 'production', 'https://gachia.com'],
+  ]) {
+    const gate = job.slice(job.indexOf(`- name: Verify sticky header paint on ${phase}`)).split('\n      - name:')[0];
+    assert(gate.includes(`PLAYWRIGHT_BASE_URL: ${origin}\n`));
+    assert(gate.includes(`PLAYWRIGHT_JUNIT_OUTPUT_FILE: .release-records/sticky-header-${phase}/results.xml`));
+    assert(gate.includes('tests/browser/sticky-header.spec.ts --workers=2 --retries=0 --reporter=list,junit'));
+    assert(gate.includes(`--output=.release-records/sticky-header-${phase}/output`));
+    assert(!gate.includes('continue-on-error'));
+    if (phase === 'staging') assert(gate.includes("if: inputs.release_target == 'production'"));
+    const preservation = job.slice(job.indexOf(`- name: Preserve ${phase} release acceptance records`)).split('\n      - name:')[0];
+    assert(preservation.includes('if: always()'));
+    assert(preservation.includes(`.release-records/sticky-header-${phase}/`));
+  }
+});
+
 test('only retired account secrets are optional; IndexNow remains mandatory', () => {
   assert.equal(WEB_FEATURES.accountFeatures, false);
   assert.deepEqual(requiredWebSecrets(), ['INDEXNOW_AUTH_TOKEN']);

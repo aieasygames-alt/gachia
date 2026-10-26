@@ -1,0 +1,65 @@
+{
+  "baseline": "71d7851900cb1f994bbec730ec75770d9a951964",
+  "productionVerifiedSourceSha256": {
+    "apps/web/components/layout/site-header.tsx": "3de11bd70b657ee9bc70786320ec84566341497f097a5d0f3ff2b8422104cde7",
+    "tests/browser/sticky-header.spec.ts": "ee6797434ee84f5c6a7aacbe229af0b8f5bd4921f98b6782a8c61bc990e0b2c1"
+  },
+  "runtime": {
+    "node": "v22.22.2",
+    "framework": "Next.js 15.5.28",
+    "server": "local next start on 127.0.0.1:3100",
+    "browser": "Chromium desktop and mobile emulation"
+  },
+  "checks": {
+    "regressionBeforeFix": {
+      "expectedFailure": true,
+      "scenario": "390px / normal / zh / desktop",
+      "assertion": "content must not show through either mobile header row",
+      "evidence": ".release-records/mobile-header-fix-2026-10-26/red/"
+    },
+    "stickyHeader": {
+      "startTime": "2026-10-26T14:03:57.147Z",
+      "duration": 18721.321,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "existingNavigation": {
+      "startTime": "2026-10-26T14:04:15.248Z",
+      "duration": 5244.1410000000005,
+      "expected": 16,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "webTests": {
+      "files": 81,
+      "passed": 438
+    },
+    "webTypeCheck": "passed",
+    "browserTestTypeCheck": "passed",
+    "changedComponentEslint": "passed",
+    "nextProductionBuild": "passed",
+    "knownBuildWarnings": [
+      "Existing auth-dialog.tsx react-hooks/exhaustive-deps ref cleanup warning"
+    ]
+  },
+  "evidenceSha256": {
+    ".release-records/mobile-header-fix-2026-10-26/production-browser.json": "6282061846a89940fd9e13c01d49deb0e6e7000e7b6c7d94c85f73f1ef10c50a",
+    ".release-records/mobile-header-fix-2026-10-26/navigation-browser.json": "270366bd947d1f82f0fa98317a149518c4c1b7eff26e3d9987cb3636d298b2a8",
+    ".release-records/mobile-header-fix-2026-10-26/build.log": "1f20ab6f302b928114e9de15eb9167f911d14e16517dc7b07dce69073939e28e",
+    ".release-records/mobile-header-fix-2026-10-26/web-tests.log": "b2885fe38664744fb60617f0c0df2144fac50136eec226b5e28ffb7aaedb245e",
+    ".release-records/mobile-header-fix-2026-10-26/quality.log": "6f70831976b645cb0e1499a2883788734ed3edd53d93cdd01e72f5eb98241196"
+  },
+  "boundaries": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false,
+    "openNextWorkerBuildRun": false,
+    "productionRetest": false,
+    "accountOperations": false,
+    "realShareRead": false,
+    "r2Access": false
+  }
+}
