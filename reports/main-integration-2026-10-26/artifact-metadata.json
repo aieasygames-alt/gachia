@@ -1,0 +1,14 @@
+{
+  "downloadedAndHashVerified": false,
+  "productionReady": false,
+  "artifacts": [
+    {
+      "id": 12641657198,
+      "name": "web-worker-19a60f14105ec05a8be1ee706f1313e3ed58c0b3-1",
+      "size_in_bytes": 52912263,
+      "digest": "sha256:fc03135bb9c8cb5c935833c50d51074b54cab2392e87919a973c8907679d2554",
+      "expired": false,
+      "expires_at": "2026-11-02T10:03:19Z"
+    }
+  ]
+}
