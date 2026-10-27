@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "status": "main_header_fix_closed_by_trusted_read_only_recovery",
+  "dateAsiaShanghai": "2026-10-27",
+  "verificationSourceSha": "6d2e32db5f9a6eb13d1dbfd477c76de5ce69bf94",
+  "productionSourceSha": "12c1c6b843f4972fcd46132bdd7363f76dcbe0b3",
+  "ci": {
+    "runId": "40432069788",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/40432069788",
+    "event": "push",
+    "conclusion": "success",
+    "jobs": {
+      "build": "success",
+      "deploy-staging": "skipped",
+      "deploy": "skipped"
+    },
+    "browserPassed": 58,
+    "browserSkipped": 8
+  },
+  "originalRelease": {
+    "runId": "40348527117",
+    "conclusion": "failure",
+    "reason": "intentional third-party beacon blocks counted as asset failures",
+    "resultRewritten": false,
+    "deploymentRetried": false
+  },
+  "recovery": {
+    "runId": "40434584403",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/40434584403",
+    "conclusion": "success",
+    "dispatchCount": 1,
+    "deploymentPerformed": false,
+    "source": {
+      "artifactId": "12662818947",
+      "archiveSha256": "cb1192aeda6b45f49a9af4fdcd8f931e93a4113e6098d5874b4cd79c1ec5a00b",
+      "versionId": "3efd4103-7156-484b-86d8-a28853a668c8",
+      "runId": 40348527117,
+      "headSha": "12c1c6b843f4972fcd46132bdd7363f76dcbe0b3",
+      "tarSha256": "abbebb44a39dd7bf3f438f9b7ba4555e233eba365a017bf8e3c97ad5b5715b2c"
+    },
+    "acceptanceStatus": "main_production_verified_accounts_disabled",
+    "paint": {
+      "status": "published_sticky_header_paint_verified",
+      "stats": {
+        "startTime": "2026-10-27T01:59:11.491Z",
+        "duration": 73782.36,
+        "expected": 42,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "id": "bb6de7ffdf311b0835c6-d6e00117418231de752b",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-bd086b1a3ff615de927f",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-4c9aeb1b1c6b49bcb2ce",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-6966beb542a898db5067",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-f8578a79fb2603ae9a81",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-e915f45521fea61b2219",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-b8fd8e041d3c68bfad60",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / delayed-scripts",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-6fc58f6c8f6b914bf2a4",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / delayed-scripts",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-de1e9081798a58e1b9ad",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / delayed-scripts",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-0ec382a64b70d2236338",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / delayed-scripts",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-7f3662ec6af30a406fb5",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / delayed-scripts",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-f08f17d06d4ba4a38bfb",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / delayed-scripts",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-6cf40746207de0c865db",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / no-js",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-e0cac3fa0e3f157686c0",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / no-js",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-03884daec42320983c55",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 390px / no-js",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-62ce193fbc848f077084",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / no-js",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-96cf0443a49f907c56c4",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / no-js",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-ee8b672749af3ec9dcc9",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 390px / no-js",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-23361f9ce65456a76a95",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 768px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-61e0b74d3ef5bd335184",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 768px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-192e5c7c829145bdbbbf",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 768px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-7e71749cd959a655860b",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 768px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-373a5692f4396fc85310",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 768px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-804b57431f261955f6b6",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 768px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-fb226e4289df4b67ecc4",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1023px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-6d7bb1dcf6982ebd516a",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1023px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-e65e6d93d0a45e6ffab3",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1023px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-a62d9d496ce5e2f6ebb2",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1023px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-6bd4f7457acee1d2413d",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1023px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-eac462b4e17438a898e1",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1023px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-fbca3b4f4889dab7cc60",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1024px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-9a57e4985584d63803e0",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1024px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-62fe532cea3a75ae1dca",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1024px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-2a8e94fb3a42768cc0bf",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1024px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-4d24ef1d30c4687239fe",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1024px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-2bb94076f8248c7f84a0",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1024px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-d8aff91ffaaaff6963ec",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1440px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-fa44a7d040c4874cb083",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1440px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-fe690eab676e0836ca4a",
+          "project": "desktop",
+          "suite": "sticky-header.spec.ts / 1440px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-da3f4dd89a6da1f871ca",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1440px / normal",
+          "title": "zh sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-043877f11bc8740c38c2",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1440px / normal",
+          "title": "en sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        },
+        {
+          "id": "bb6de7ffdf311b0835c6-25e38918d518532d3ea9",
+          "project": "mobile",
+          "suite": "sticky-header.spec.ts / 1440px / normal",
+          "title": "ja sticky header stays readable when scrolling and returning to the list",
+          "status": "passed",
+          "retry": 0
+        }
+      ]
+    },
+    "paintReportSha256": "8ad91f642e6c60373df133554d271960ce207123a23d033a4f165bd851722669",
+    "paintTestSha256": "6454f7e7d38e9d7691dee792e2671dd76b479d3a36ff232ab794f81bf469cc65",
+    "acceptanceSha256": "6efd1a367a9e0244da19332b126c9f11f4c37d11b70681c6d6fa273f62bad025",
+    "xmlSha256": "b8701b758aa09d2e095ad4c2edfc7ab5603f2f90f08c67d6b3e4c62412e3ee1f",
+    "allStaticBytesEqual": true,
+    "staticFiles": 441,
+    "staticBytes": 11240745,
+    "startedAt": "2026-10-27T01:47:49.967Z",
+    "finishedAt": "2026-10-27T02:01:20.607Z",
+    "artifacts": [
+      {
+        "id": "12704725102",
+        "name": "main-recovery-receipt-40434584403-1",
+        "zipSha256": "d0b98ac86fd7a4c2fc97f7b8237bab39827781575168c8eea47a72810748fa76",
+        "size": 3658
+      },
+      {
+        "id": "12703424609",
+        "name": "main-recovery-evidence-40434584403-1",
+        "zipSha256": "a3b046fd768e94c24bd70609edcb659051dd6760fad40dcadee73a553f25b4ac",
+        "size": 165163
+      }
+    ]
+  },
+  "receiptVerification": {
+    "verifiedAt": "2026-10-27T02:03:10.944Z",
+    "status": "trusted_read_only_recovery_receipt_verified",
+    "receiptArtifactId": "12704725102",
+    "receiptZipSha256": "d0b98ac86fd7a4c2fc97f7b8237bab39827781575168c8eea47a72810748fa76",
+    "sourceRunId": 40348527117,
+    "sourceArtifactId": "12662818947",
+    "activeVersion": "3efd4103-7156-484b-86d8-a28853a668c8",
+    "paintCases": 42,
+    "testSha256": "6454f7e7d38e9d7691dee792e2671dd76b479d3a36ff232ab794f81bf469cc65",
+    "acceptanceStatus": "main_production_verified_accounts_disabled",
+    "xmlStatus": "published_xml_graph_verified",
+    "allStaticFiles": 441,
+    "allStaticBytes": 11240745,
+    "sevenDeploymentsUnchanged": true,
+    "bindingsRoutesDomainsUnchangedDuringRecovery": true,
+    "deploymentPerformed": false
+  },
+  "evidenceVerification": {
+    "http": 32,
+    "browser": 18,
+    "managedContent": {
+      "http": 23,
+      "fallbackHttp": 171,
+      "json": 7,
+      "search": 3,
+      "browser": 520,
+      "indexnow": 1,
+      "retainedAssets": 12
+    },
+    "browserRuntimeErrors": 0,
+    "browserFailedAssets": 0,
+    "browserAccountRequests": 0,
+    "paintStats": {
+      "startTime": "2026-10-27T01:59:11.491Z",
+      "duration": 73782.36,
+      "expected": 42,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "paintCases": 42,
+    "xmlDocuments": 6,
+    "xmlUnionCount": 6653,
+    "fallbackCoverage": {
+      "requiredCount": 171,
+      "missingCount": 0,
+      "missing": [],
+      "status": "main_fallback_urls_present"
+    },
+    "xmlSealedArtifactEqual": true,
+    "portability": {
+      "files": 3450,
+      "links": 19,
+      "portable": true,
+      "scope": "filesystem_portability_not_runtime_or_platform_acceptance"
+    }
+  },
+  "controls": {
+    "main": {
+      "deploymentId": "6300eb50-e8ed-491b-b9cd-26a59ad11d36",
+      "createdOn": "2026-10-26T16:07:07.776255Z",
+      "versions": [
+        {
+          "version_id": "3efd4103-7156-484b-86d8-a28853a668c8",
+          "percentage": 100
+        }
+      ]
+    },
+    "staging": {
+      "deploymentId": "77b45460-05a3-4435-95cd-89077c6750e1",
+      "createdOn": "2026-10-26T15:40:11.857731Z",
+      "versions": [
+        {
+          "version_id": "f142070d-ffb0-4b99-a204-49af0c265baa",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-genshin": {
+      "deploymentId": "580e92e2-4bfd-446d-9736-07a85c245ed9",
+      "createdOn": "2026-10-25T11:47:12.597357Z",
+      "versions": [
+        {
+          "version_id": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-nte": {
+      "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+      "createdOn": "2026-10-25T11:59:42.402192Z",
+      "versions": [
+        {
+          "version_id": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-azur-promilia": {
+      "deploymentId": "3438d584-7cc5-4000-bd7d-562fe7c489b8",
+      "createdOn": "2026-10-25T13:03:32.563538Z",
+      "versions": [
+        {
+          "version_id": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+          "percentage": 100
+        }
+      ]
+    },
+    "game-lvmeng": {
+      "deploymentId": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+      "createdOn": "2026-10-25T13:22:17.958551Z",
+      "versions": [
+        {
+          "version_id": "7e62c798-d454-48d7-8bee-1bce6660550b",
+          "percentage": 100
+        }
+      ]
+    },
+    "router": {
+      "deploymentId": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+      "createdOn": "2026-10-09T14:55:23.062535Z",
+      "versions": [
+        {
+          "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+          "percentage": 100
+        }
+      ]
+    }
+  },
+  "sevenDeploymentsUnchangedSinceBeforeRecovery": true,
+  "bindingsRoutesDomainsUnchangedDuringRecovery": true,
+  "secretValuesRead": false,
+  "independentPublicHttp": {
+    "site": 15,
+    "owners": 19,
+    "failures": [],
+    "startedAt": "2026-10-27T01:47:20.379Z",
+    "finishedAt": "2026-10-27T01:48:11.545Z"
+  },
+  "localReleaseTests": {
+    "node": 304,
+    "python": 31,
+    "failures": 0
+  },
+  "scopeLimits": [
+    "Chromium simulated devices and targeted Main HI3 visual matrix; not every real device/browser or full-site visual acceptance",
+    "No real-user account/share/map-cache R2 end-to-end operations, database migration, cache clear, deploy or rollback",
+    "Original public encoded NUL/dot-segment edge-contract differences remain open",
+    "Actions balance remains unobservable; no new credential scopes or platform protections configured"
+  ],
+  "nextStep": "No additional release or recovery required for these two P2 fixes; remaining contract/long-term work is separate"
+}
