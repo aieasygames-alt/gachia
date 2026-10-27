@@ -5,7 +5,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createPreviousArtifactApi, previousArtifactInput, verifyPreviousArtifact, verifyPreviousDeploymentLog } from './prepare-previous-web-assets.mjs';
-import { ACCOUNT, ZONE, PUBLIC_ORIGIN, RECOVERY_WORKFLOW, trustedMainRun, sourceDeploymentJob, activeMain, assertRecoveryAcceptance } from './web-recovery-policy.mjs';
+import { ACCOUNT, ZONE, PUBLIC_ORIGIN, RECOVERY_WORKFLOW, trustedMainRun, sourceDeploymentJob, activeMain, assertRecoveryAcceptance, summarizeRecoveryPaint } from './web-recovery-policy.mjs';
 import { verifyWorkerArtifact } from './verify-worker-artifact.mjs';
 
 const root = resolve(import.meta.dirname, '..');
@@ -117,6 +117,26 @@ async function main() {
     assertRecoveryAcceptance(acceptance);
     record.acceptanceStatus = acceptance.status;
     record.acceptanceSha256 = hash(readFileSync(resultPath));
+    const paintDirectory = resolve(directory, 'paint');
+    mkdirSync(paintDirectory);
+    const paintReport = resolve(paintDirectory, 'raw.json');
+    const paintLog = resolve(directory, 'paint.log');
+    const runPaint = () => execFileSync('pnpm', ['exec', 'playwright', 'test', 'tests/browser/sticky-header.spec.ts',
+      '--workers=2', '--retries=0', '--reporter=list,json', `--output=${resolve(paintDirectory, 'output')}`], {
+      cwd: root, timeout: 600000, maxBuffer: 16 * 1024 * 1024,
+      env: { ...process.env, PLAYWRIGHT_BASE_URL: PUBLIC_ORIGIN, PLAYWRIGHT_JSON_OUTPUT_FILE: paintReport },
+      encoding: 'utf8',
+    });
+    try {
+      writeFileSync(paintLog, runPaint(), { mode: 0o600 });
+    } catch (error) {
+      writeFileSync(paintLog, `${error.stdout ?? ''}\n${error.stderr ?? ''}`, { mode: 0o600 });
+      throw error;
+    }
+    record.paint = summarizeRecoveryPaint(JSON.parse(readFileSync(paintReport)));
+    record.paintReportSha256 = hash(readFileSync(paintReport));
+    record.paintTestSha256 = hash(readFileSync(resolve(root, 'tests/browser/sticky-header.spec.ts')));
+    save('paint-summary.json', { ...record.paint, reportSha256: record.paintReportSha256, testSha256: record.paintTestSha256 });
     const xml = checkXml('xml.json');
     assert.deepEqual(xml.owners, xmlBefore.owners, 'XML owner sets changed during recovery');
     record.xmlStatus = xml.status;

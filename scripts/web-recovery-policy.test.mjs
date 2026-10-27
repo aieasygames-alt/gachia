@@ -3,7 +3,7 @@ import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'nod
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { RECOVERY_WORKFLOW, REPOSITORY_ID, activeMain, sourceDeploymentJob, trustedMainRun, verifyRecoveryReceipt, assertRecoveryAcceptance } from './web-recovery-policy.mjs';
+import { RECOVERY_WORKFLOW, REPOSITORY_ID, activeMain, sourceDeploymentJob, trustedMainRun, verifyRecoveryReceipt, assertRecoveryAcceptance, summarizeRecoveryPaint, assertRecoveryPaint } from './web-recovery-policy.mjs';
 import { cloudSnapshot, verifyAllPublicStatic } from './web-production-recovery.mjs';
 
 function fixture() {
@@ -90,6 +90,12 @@ test('read-only workflow cannot deploy, rebuild or accept an untrusted ref', () 
   assert.match(workflow, /group: gachia-main-release/);
   assert.match(workflow, /include-hidden-files: true/);
   assert(!/wrangler\s+(?:deploy|rollback)|opennextjs-cloudflare\s+(?:deploy|build)|contents: write|actions: write/.test(workflow));
+  assert(workflow.includes('.release-records/main-recovery/paint/output/'));
+  const recovery = readFileSync(new URL('./web-production-recovery.mjs', import.meta.url), 'utf8');
+  assert(recovery.includes("'tests/browser/sticky-header.spec.ts'"));
+  assert(recovery.includes("'--workers=2', '--retries=0'"));
+  assert(recovery.includes('PLAYWRIGHT_BASE_URL: PUBLIC_ORIGIN'));
+  assert(recovery.indexOf('record.paint = summarizeRecoveryPaint') < recovery.indexOf("save('receipt.json'"));
 });
 
 test('retired Genshin pre-cutover path fails before checkout or any deployment command', () => {
@@ -106,5 +112,50 @@ test('a green status without the complete existing acceptance suite cannot issue
   assertRecoveryAcceptance(record);
   for (const name of Object.keys(record.managedContent)) {
     const bad = structuredClone(record); bad.managedContent[name].pop(); assert.throws(() => assertRecoveryAcceptance(bad));
+  }
+});
+
+function paintReport() {
+  return { errors: [], stats: { expected: 42, unexpected: 0, skipped: 0, flaky: 0 }, suites: [{ suites: [{
+    specs: Array.from({ length: 21 }, (_, index) => ({ id: `case-${index}`, title: `case ${index}`,
+      tests: ['desktop', 'mobile'].map(projectName => ({ projectName, status: 'expected', results: [{ status: 'passed', retry: 0, errors: [] }] })) })),
+  }] }] };
+}
+
+test('paint recovery rejects failed, retried, skipped, duplicate or incomplete browser reports', () => {
+  const report = paintReport();
+  assertRecoveryPaint(summarizeRecoveryPaint(report));
+  for (const mutate of [
+    r => { r.errors.push({ message: 'runner error' }); },
+    r => { r.stats.expected--; }, r => { r.stats.unexpected++; }, r => { r.stats.skipped++; }, r => { r.stats.flaky++; },
+    r => { r.suites[0].suites[0].specs.pop(); },
+    r => { r.suites[0].suites[0].specs[0].tests[0].results[0].retry = 1; },
+    r => { r.suites[0].suites[0].specs[0].tests[0].results.push({ status: 'passed', retry: 1, errors: [] }); },
+    r => { r.suites[0].suites[0].specs[0].tests[0].results[0].status = 'failed'; },
+    r => { r.suites[0].suites[0].specs[0].tests[0].results[0].errors.push({ message: 'failure' }); },
+    r => { r.suites[0].suites[0].specs[0].tests[0].status = 'unexpected'; },
+    r => { r.suites[0].suites[0].specs[0].tests[0].projectName = 'unknown'; },
+    r => { r.suites[0].suites[0].specs[0].id = 'case-1'; },
+  ]) {
+    const candidate = paintReport(); mutate(candidate); assert.throws(() => summarizeRecoveryPaint(candidate));
+  }
+});
+
+test('a release with the new paint gate cannot use an old or incomplete recovery receipt', () => {
+  const currentFixture = () => {
+    const f = fixture();
+    f.sourceJobs[2].steps.push({ name: 'Verify sticky header paint on production', conclusion: 'failure' });
+    f.receipt.paint = summarizeRecoveryPaint(paintReport());
+    f.receipt.paintReportSha256 = 'a'.repeat(64);
+    f.receipt.paintTestSha256 = 'b'.repeat(64);
+    return f;
+  };
+  verifyRecoveryReceipt(currentFixture());
+  for (const mutate of [
+    f => { delete f.receipt.paint; }, f => { delete f.receipt.paintReportSha256; }, f => { delete f.receipt.paintTestSha256; },
+    f => { f.receipt.paint.stats.expected = 6; }, f => { f.receipt.paint.stats.unexpected = 36; },
+    f => { f.receipt.paint.cases[0].retry = 1; }, f => { f.receipt.paint.cases[0].status = 'failed'; },
+  ]) {
+    const f = currentFixture(); mutate(f); assert.throws(() => verifyRecoveryReceipt(f));
   }
 });

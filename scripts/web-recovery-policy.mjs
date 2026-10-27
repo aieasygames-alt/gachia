@@ -52,6 +52,41 @@ export function assertRecoveryAcceptance(record) {
   }
 }
 
+export function summarizeRecoveryPaint(report) {
+  const cases = [];
+  const visit = (suite, parents = []) => {
+    const path = [...parents, suite.title ?? ''];
+    for (const child of suite.suites ?? []) visit(child, path);
+    for (const spec of suite.specs ?? []) for (const test of spec.tests ?? []) {
+      assert.equal(test.status, 'expected', 'Unexpected paint outcome');
+      assert.equal(test.results?.length, 1, 'Paint recovery must not retry');
+      const result = test.results[0];
+      assert.equal(result.status, 'passed', 'Paint case did not pass');
+      assert.equal(result.retry, 0, 'Paint recovery must not retry');
+      assert.equal(result.errors?.length, 0, 'Paint case has errors');
+      cases.push({ id: spec.id, project: test.projectName, suite: path.join(' / '), title: spec.title, status: result.status, retry: result.retry });
+    }
+  };
+  for (const suite of report.suites ?? []) visit(suite);
+  assert.equal(report.errors?.length, 0, 'Paint runner has errors');
+  const summary = { status: 'published_sticky_header_paint_verified', stats: report.stats, cases };
+  assertRecoveryPaint(summary);
+  return summary;
+}
+
+export function assertRecoveryPaint(record) {
+  assert.equal(record?.status, 'published_sticky_header_paint_verified');
+  assert.equal(record.stats?.expected, 42, 'All 42 paint cases required');
+  for (const name of ['unexpected', 'skipped', 'flaky']) assert.equal(record.stats[name], 0, `Paint ${name} must be zero`);
+  assert.equal(record.cases?.length, 42);
+  assert.equal(new Set(record.cases.map(row => `${row.project}:${row.id}`)).size, 42, 'Duplicate paint case');
+  for (const project of ['desktop', 'mobile']) assert.equal(record.cases.filter(row => row.project === project).length, 21);
+  for (const row of record.cases) {
+    assert.equal(row.status, 'passed');
+    assert.equal(row.retry, 0);
+  }
+}
+
 export function verifyRecoveryArtifact({ metadata, run, input }) {
   assert.equal(String(metadata.id), input.recoveryArtifactId);
   assert.equal(metadata.expired, false);
@@ -91,4 +126,10 @@ export function verifyRecoveryReceipt({ receipt, metadata, run, jobs, input, sou
   assert.equal(receipt.allStaticBytesEqual, true);
   assert.equal(receipt.ownerGraphUnchanged, true);
   assert(receipt.staticFiles > 0);
+  // Historical receipts predate this gate; newer failed releases cannot recover without it.
+  if (sourceJobs.some(job => job.steps?.some(step => step.name === 'Verify sticky header paint on production'))) {
+    assertRecoveryPaint(receipt.paint);
+    assert.match(receipt.paintReportSha256 ?? '', /^[a-f0-9]{64}$/);
+    assert.match(receipt.paintTestSha256 ?? '', /^[a-f0-9]{64}$/);
+  }
 }

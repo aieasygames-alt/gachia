@@ -74,6 +74,7 @@ jobs:
           path: |
             .release-records/main-recovery/*.json
             .release-records/main-recovery/*.log
+            .release-records/main-recovery/paint/output/
             .release-records/web-production-*/result.json
             .release-records/web-production-*/browser-*
           include-hidden-files: true
