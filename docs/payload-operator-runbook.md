@@ -118,6 +118,8 @@ cms publish-cloud-promote --run "$RUN" --pin "$PLAN_PIN" --recovery "$RECOVERY" 
 
 推广成功须看到 production_accepted，并保留精确 UUID、journal SHA、公网实际响应及对应 releaseKey；不能仅以 HTTP 200 或 CMS 的 published 判定完成。失败时不要继续执行本节下一条命令。
 
+四个历史staging别名不是Payload发布中转站，不要为本流程部署它们或用其HTTP替代精确候选UUID验收。R23已完成限定HTTP/已知自动构建入口调查：动态noindex/robots禁爬成立，但语言cookie与公开缓存差异仍保留，未降低本流程的正式门禁；也未在账户层强制只有本机能部署。详见[R23报告](../reports/payload-staging-inspection-2026-11-02-r23/README.md)。
+
 ## 6. 过期续验、部分失败与显式恢复
 
 | 现象 | 处理 |

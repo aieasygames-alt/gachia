@@ -1,18 +1,18 @@
 # 当前审计任务表
 
-## 当前权威状态：R22 NTE 来源交接（2026-11-02）
+## 当前权威状态：R23 staging 与外部入口核验（2026-11-02）
 
-**本机Payload可编辑；两游戏当前game/Main UUID的已验来源均已登记，真实编辑云发布仍未验收。** 仍以尽快发布既有指南文字为目标，不等待内容准确度/全类型迁移。R22只升级manager/publisher并只读取证，不重启CMS、不编辑内容、不上传候选。当前结果见[R22报告](../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)，Genshin目录/CLI基线见[R21](../reports/payload-source-catalog-2026-11-02-r21/README.md)，工程准备见[R20](../reports/payload-launch-closeout-2026-11-02-r20/README.md)，全面底图见[R19](../reports/payload-status-audit-2026-11-02-r19/README.md)，执行见[现行手册](../docs/payload-operator-runbook.md)。下方R18及更早段落均为历史，不覆盖本节。
+**本机Payload可编辑；双游戏当前来源已登记，四个历史staging限定HTTP与已知自动构建入口调查已完成，真实编辑云发布仍未验收。** 以尽快发布既有指南文字为目标，不等待准确度/全类型迁移。R23只有只读调查及文档交付，无内容/云写入、CMS重启或工具安装。当前结果见[R23报告](../reports/payload-staging-inspection-2026-11-02-r23/README.md)，来源基线见[R22](../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)/[R21](../reports/payload-source-catalog-2026-11-02-r21/README.md)，工程准备见[R20](../reports/payload-launch-closeout-2026-11-02-r20/README.md)，全面底图见[R19](../reports/payload-status-audit-2026-11-02-r19/README.md)，执行见[现行手册](../docs/payload-operator-runbook.md)。下方R18及更早段落均为历史，不覆盖本节。
 
 ### 本轮重要修订
 
-- R21两条来源命令继续有效；R22增加无候选历史来源的严格内部校验，不捏造run/releaseKey或恢复回执。按当前UUID固定私有目录，重验完整来源/HTTP字节/pin/当前模块/Main JSON及前后七服务拓扑；不使用latest、不回退O、不自动跟随新UUID。
-- NTE实际刷新**557**份公网静态资源，派生副本仅替换为当前精确云runtime，再做**811**份loopback响应；安装版模块实际登记/选择，另取**15**份精确版本HTTP（含首次baseline），均是source-only，不是manager真实候选CLI验收。Genshin实际manager选择沿用R21；当前A=O，A≠O只由隔离回归证明。
-- 新鲜本地回归：CMS **163/163** + typegen/typecheck、桌面 **458/458**、既有Node **304/304**、Python **49/49**、Router **35/35**及类型检查、inventory通过。来源目录**63**项隔离测试；**20模块+manager共21文件**安装摘要一致，无CMS应用覆盖/重启；不重跑全站build/parity/浏览器。
-- 工程提交`0120e79`已推送专用维护分支，真实CI[41439936620](https://github.com/aieasygames-alt/gachia/actions/runs/41439936620)成功；main未合并、两个部署开关仍false。后续文档提交CI身份单列于R22 delivery，不套用旧run。
-- CMS/PG healthy/loaded、HTTP安全 **9/9**，DB摘要不变，仍84draft/hold、0 eligible，且当前标题/正文相对导入源的编辑数为0。没有真实预期编辑，故不造内容、不清hold、不重建/上传诊断候选；R20双游戏正式导出拒绝仍有效，不冒称本轮重新导出。
-- 登记前控制面超时及随后模块正文超时均保留独立diagnostic；只读新轮重验，不放宽超时/TLS、不复用半成品manifest。精确版本仍用当前Mac既有SOCKS代理的进程级环境。实际部署仍10Worker，推广保护7服务，写入目标game/Main；来源目录不扩展Router/其他staging权限。
-- 独立密钥介质/第二Mac仍缺，L03不关闭；R19的1low依赖风险沿用、不算新扫描。首次/新UUID完整来源自动接续仍未完成，未验staging入口是下一可执行工程项；有真实Genshin编辑即优先云验收。
+- 四个staging别名/当前精确版本共8origin，**78份实际完整响应**：66个200/12个预期404，62动态noindex、8robots禁爬、30生产canonical HTML、12生产域名sitemap、16静态200。替代R19的robots fetch failed，不代表新候选或浏览器验收。
+- 严格无cookie原始**20项发现保留**，均为Main/Router语言偏好NEXT_LOCALE、与路径locale一致，未见账号cookie；不放宽正式候选/公网无cookie门禁。Main/Router为公开缓存，Genshin指南1年s-maxage，不冒称staging全private/no-store；noindex不是隐私隔离。
+- GitHub两个部署变量false，staging/production环境无变量覆盖，9份main远端workflow与维护分支一致。Cloudflare Builds/hooks实际11次403不是空列表；现有登录后台确认Main生产/预览builds关闭，其余9Worker无Git连接。仅Main明确无hooks，未独立枚举所有hooks/token，**账户级仅本机发布未强制**。
+- 新鲜本地定向策略/门禁/手册回归**91/91**。R22 CMS163/typegen/typecheck、桌面458、Node304、Python49、Router35/typecheck沿用，不冒称本轮本机重跑；本轮文档精确提交实际CI另存R23 delivery，不套用旧run。
+- CMS/PG healthy/loaded、HTTP安全**9/9**、DB摘要不变，84draft/hold、0 eligible；21安装文件与开始/R22/源码一致，无安装/重启。10Worker采样前后/最终及R22一致，推广保护仍7服务，写入仍game/Main。旧脏checkout不改。
+- R21/R22当前双游戏来源登记继续有效；没有latest/自动前移，新UUID须重新验证当前公开A与完整来源。R23不造编辑、不清hold、不上传诊断候选；R20正式导出拒绝仍沿用，不冒称本轮重导出。
+- 独立key/第二Mac仍缺，L03不关闭；1low依赖风险沿用。staging调查子任务关闭，**无真实编辑时下一可执行工程项转首次/新UUID来源交接与发布后来源接续**；有真实Genshin编辑即优先首次/第二次云发布与恢复，再NTE。不为历史staging重建/统一缓存新增首发阻塞。
 
 ### P0–P7 当前状态
 
@@ -42,7 +42,7 @@
 | T09 配置驱动新游戏 | 未完成 | 配置/导航/搜索/SEO与扩展边界后置 |
 | T10 全scope权威移交 | 部分完成（准备） | 盘点/导入已有；最终同步、停写、公开接管/交还未关 |
 | T11 完整恢复/退役 | 部分完成 | 独立key托管、跨机应用启动、真实云恢复及完整退役未关 |
-| T12 Git/CI可复现交付 | 部分完成 | 当前inventory/Router实际CI、版本化来源登记/选择及21文件安装已有；从零可信来源、新UUID交接及真实云操作验收未关 |
+| T12 Git/CI可复现交付 | 部分完成 | inventory/Router实际CI、双游戏来源登记/选择及21文件安装已有，R23完成staging/已知自动构建入口调查；首次/新UUID交接、账户级凭据限制及真实云验收未关 |
 
 P5/T08从“未完成（局部原型）”更新为部分完成，仅承认R14本地持续发布子任务，不是批量运营或自动调度已完成。其余任务不因测试数量增加而关闭。
 
@@ -52,7 +52,8 @@ P5/T08从“未完成（局部原型）”更新为部分完成，仅承认R14�
 | --- | --- | --- |
 | 已完成工程子项 | L06 当前inventory/CI及项目观察清单 | 版本化新清单、历史不变、新实际CI成功、10服务观察与7服务保护区分 |
 | 已完成当前版本子项，交接未全关 | L05/L06 资源/恢复证据与版本化来源目录 | R21 Genshin、R22 NTE当前game/Main来源已登记/选择，21文件安装；首次可信来源与新UUID仍需验证登记，不是一键从零发布 |
-| 下一可执行工程项 | staging外部入口/HTTP策略 | 只读验证四个staging的实际HTTP、robots/noindex/cache与外部发布入口；不擅自部署或扩大七服务保护集 |
+| 已完成限定调查子项 | staging外部入口/HTTP策略 | R23实际78响应与Dashboard/GitHub只读核验；20语言cookie发现/公开缓存及403边界保留，不声称全账户入口封锁 |
+| 下一可执行工程项 | 首次/新UUID来源交接与发布后接续 | 减少当前公开A及完整来源重新验证/登记的手工衔接；不直接改UUID、不回退O、不重复staging或旧本地A/B |
 | 外部条件未具备 | L03 独立key与跨机恢复 | 复制/校验工具与清单已补；需真实独立介质/第二台Mac，不重复同机或R2往返 |
 | 真实候选就绪即优先 | L04 Genshin首次/第二次/恢复，再L05 NTE | 正式导出无合格记录，先取得实际预期文本编辑；不制造变化、不批量清hold，不等待准确度/全类型迁移 |
 

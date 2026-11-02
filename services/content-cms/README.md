@@ -1,10 +1,12 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-02，R22）
+## 当前状态（2026-11-02，R23）
 
-Payload/PostgreSQL已常驻本机；双游戏game/Main发布、续验及兼容恢复协议已安装，**真实编辑云预览/推广/恢复仍未验收**。内容准确度不作首发门槛，不制造演练变化。执行看[现行手册](../../docs/payload-operator-runbook.md)，状态看[R22 NTE来源交接报告](../../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)、[首发清单](../../plans/payload-launch-closeout-2026-11-02.md)，项目关系看[多Worker地图](../../docs/payload-project-worker-map.md)。
+Payload/PostgreSQL已常驻本机；双游戏game/Main发布、续验及兼容恢复协议已安装，**真实编辑云预览/推广/恢复仍未验收**。内容准确度不作首发门槛，不制造演练变化。执行看[现行手册](../../docs/payload-operator-runbook.md)，状态看[R23 staging/外部入口核验](../../reports/payload-staging-inspection-2026-11-02-r23/README.md)、[首发清单](../../plans/payload-launch-closeout-2026-11-02.md)，项目关系看[多Worker地图](../../docs/payload-project-worker-map.md)。
 
-R21来源命令保持；R22补无候选历史来源的严格校验，当前两游戏game/Main来源均已登记。NTE实际刷新557公网静态/811本地响应/15精确版本HTTP，安装版模块source-only登记/选择通过，不捏造候选run/releaseKey或云发布回执。首次/新UUID仍需可信验证登记，没有latest或自动前移；每轮资源、基线、兼容恢复和云门禁保留。新鲜CMS163/typegen/typecheck、桌面458、既有Node304、Python49、Router35/typecheck、inventory通过，21工具文件一致；DB摘要不变、84draft/hold、0eligible。未改内容、重启CMS或写云，代码/实际CI身份见R22报告；下一可执行工程项为未验staging入口。
+R23完成四历史staging限定调查：8origin/78完整响应，62动态noindex、8robots禁爬、30生产canonical HTML、12生产域名sitemap；20项NEXT_LOCALE cookie发现及公开cache差异原样记录，不放宽正式候选验收。GitHub部署变量false且无环境覆盖；Dashboard确认Main生产/预览builds关闭、另9Worker未连接Git。Builds/hooks API11次403及全账户hook/token未枚举边界保留，不能称账户级仅本机发布已强制。定向本地回归91/91、安全HTTP9/9、21安装文件未变、DB与10Worker不变；无安装/内容/云写入或CMS重启。下一无编辑可执行工程项为首次/新UUID来源交接与发布后接续，不重复staging调查。
+
+R21来源命令保持；[R22](../../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)补无候选历史来源的严格校验，当前两游戏game/Main来源均已登记。NTE实际刷新557公网静态/811本地响应/15精确版本HTTP，安装版模块source-only登记/选择通过，不捏造候选run/releaseKey或云发布回执。首次/新UUID仍需可信验证登记，没有latest或自动前移；每轮资源、基线、兼容恢复和云门禁保留。CMS163/typegen/typecheck、桌面458、既有Node304、Python49、Router35/typecheck、inventory为R22本机新鲜基线，非R23本机重跑；21工具文件一致，DB摘要不变、84draft/hold、0eligible。
 
 R20已修复inventory漂移：当前版本在`inventory/2026-11-02`，2026-10-28历史输入不改；CI新增inventory与Router生成配置/映射/类型/测试，工程提交`a0634a9`已推送并通过实际CI41426588559。新鲜回归CMS163/typegen/typecheck、桌面387、既有Node304、Python49、Router35/typecheck通过；不是全站build/parity/浏览器重验。
 

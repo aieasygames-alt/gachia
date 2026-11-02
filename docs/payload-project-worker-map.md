@@ -6,6 +6,8 @@ R21来源交接增量：[报告](../reports/payload-source-catalog-2026-11-02-r2
 
 R22当前增量：[NTE来源交接报告](../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)。已补NTE当前game/Main登记与安装版模块source-only选择；557份公网静态、811份本地响应、15份精确版本HTTP通过，历史树未改，派生副本仅替换当前云runtime。无NTE候选run/releaseKey，不冒充manager候选或真实云发布验收。10Worker/7服务保护/game+Main写入边界不变，四staging实际HTTP与外部入口仍是下一核验项。
 
+R23当前权威增量：[staging/外部入口报告](../reports/payload-staging-inspection-2026-11-02-r23/README.md)。四staging别名/当前UUID共78实际响应、62动态noindex、8robots禁爬，完成限定HTTP/已知自动构建入口调查，替代下文R19未验结论。10Worker前后/最终及R22一致；没有重部署、安装、内容编辑或CMS重启。真实候选发布与账户级仅本机发布仍未验/未强制；无真实编辑时下一工程项转首次/新UUID来源交接，不重复历史staging调查。
+
 ## 1. 三个系统边界
 
 | 系统 | 位置与职责 | 不能混淆的边界 |
@@ -35,14 +37,15 @@ R22当前增量：[NTE来源交接报告](../reports/payload-nte-source-handoff-
 
 本次账号脚本清单发现上述 **10 个 Gachia Worker**，未发现已部署的 `gachia-game-nte-staging`。不能从仓库存在 env 配置推断对应服务已部署。
 
-`scripts/desktop-cloud-release.mjs` 的 SERVICES 固定为六生产 + Main staging。它还比较脚本名清单，但**没有重读另外三个 staging 的部署/settings**。因此“七服务前后无变化”成立，“全项目十服务完全受保护”不成立。R20新增并安装`publish-project-inventory`，实际读到10服务/3额外staging，前后无变化，secrets值脱敏；它只观察，不扩展推广保护/写入目标。完整staging HTTP与外部入口策略仍待独立验收。
+`scripts/desktop-cloud-release.mjs` 的 SERVICES 固定为六生产 + Main staging。它还比较脚本名清单，但**没有重读另外三个 staging 的部署/settings**。因此“七服务前后无变化”成立，“全项目十服务完全受保护”不成立。R20新增并安装`publish-project-inventory`，实际读到10服务/3额外staging，secrets值脱敏；R23前后/最终及R22一致。它只观察，不扩展推广保护/写入目标。R23补限定staging HTTP与已知自动入口调查，非全站/全账户安全验收。
 
 ### staging 实际值不等于源码模板
 
 - Genshin staging 的实际 `GENSHIN_DEPLOYMENT_MODE=production`；可能来自同制品推广策略，不能仅凭名称判为漏洞，也不能据此宣称隔离/索引策略已验。
 - Azur staging 实际 mode 为 preview。
 - Router staging 实际仅 MAIN_SITE 指向 `gachia-staging`，`NTE_ENABLED=false`，NTE_SITE 的 service 为空且已删除，`PREVIEW_MODE=true`，workers.dev 开启。仓库 staging 模板的其他生产 game bindings **不是本次观察到的实际部署**。
-- 四个 staging 的 robots 网络探测均 fetch failed；控制面可读不代表 HTTP/noindex 验收成功。这是未验证项，后续专门核验，不擅自重部署 Router staging。
+- R19四个staging robots fetch failed由R23实际网络证据替代：别名/精确版本8个robots均禁爬，62动态响应均noindex，30HTML为生产canonical、12XML为生产域名sitemap。20份Main/Router语言偏好cookie原始发现保留，正式无cookie验收门禁不改。
+- Main/Router HTML为1小时公开缓存/1天SWR，Genshin指南s-maxage一年；noindex不代表private或访问控制。Payload发布走game/Main精确候选UUID，不通过四个历史staging别名；无须为首发擅自统一缓存或重部署Router staging。
 
 ## 3. 正式请求路径与所有权
 
@@ -94,6 +97,6 @@ Main 当前有网站 D1、`gachia-images` R2、自引用及已有 secret binding
 
 ## 5. 自动入口与执行方案约束
 
-两个 GitHub Cloudflare 部署变量均 false，独立 Genshin preview workflow disabled；专用 Payload CI 只验证、不部署。R18 的七服务 Builds 检查为历史证据，本轮没有重新声称十服务所有外部构建/凭据入口已封堵。普通生产 deploy/promote/rollback 命令继续 fail-closed；持有原始 Cloudflare 凭据的人仍能绕过仓库命令，脚本不是账户级权限控制。
+R23实际读取GitHub两个部署变量均false，staging/production环境无变量覆盖，独立Genshin preview workflow disabled；main的9份workflow与维护分支相同，Payload CI仅验证。Cloudflare公开Builds/hooks API实际11次403，不是空列表；现有登录Dashboard确认仅Main连接Git且生产/预览builds关闭，另9Worker未连接Git，Main明确无deploy hooks。其余hook/token未独立完整枚举，不能声称十服务所有凭据入口封堵或账户级“只有本机发布”。普通生产deploy/promote/rollback继续fail-closed；持凭据或Dashboard权限的人仍可能绕过仓库命令人工部署。
 
 当前清单/CI与准备命令已交付；后续实际Genshin编辑就绪即优先首次/第二次云发布及恢复，再沿用NTE；独立介质/第二台Mac具备即验独立key/跨机恢复，首次来源交接继续减手工。内容准确度、全类型/全scope迁移、通用队列和免重建快照后置。没有真实编辑时不造内容或重复演练凑发布；运行数据、密钥、私有媒体与原始日志不入Git。
