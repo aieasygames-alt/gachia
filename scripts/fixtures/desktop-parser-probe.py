@@ -18,6 +18,7 @@ def forbidden(*args, **kwargs):
 
 # Only this blocked child may reach argparse; the real CLI keeps its CI rejection.
 with patch.dict(os.environ, {'CI': '', 'GITHUB_ACTIONS': ''}), \
+        patch.object(module, 'install', forbidden), patch.object(module, 'settings', forbidden), \
         patch('builtins.open', forbidden), patch('subprocess.run', forbidden), \
         patch('socket.socket', forbidden), patch('urllib.request.urlopen', forbidden):
     module.main()

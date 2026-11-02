@@ -65,9 +65,11 @@ test('manager help exposes reviewed actions and old actions reject new evidence 
 });
 
 test('parser probe cannot execute runtime actions or access the real installation', () => {
-  const child = spawnSync('python3', ['-B', parserProbe, 'status'], { encoding: 'utf8' });
-  assert.equal(child.status, 1);
-  assert.match(child.stderr, /Parser-only probe forbids file\/process\/network access/);
+  for (const action of ['status', 'install', 'serve', 'resume-install', 'publish-prepare']) {
+    const child = spawnSync('python3', ['-B', parserProbe, action], { encoding: 'utf8' });
+    assert.equal(child.status, 1, action);
+    assert.match(child.stderr, /Parser-only probe forbids file\/process\/network access/);
+  }
 });
 
 test('actual desktop manager still rejects CI before its parser or runtime', () => {

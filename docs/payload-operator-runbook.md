@@ -120,4 +120,6 @@ manual-recover 会切到**已经验收的兼容恢复 UUID**。原始旧 UUID �
 - 当前生产依赖仍 1 low：deepmerge 返回对象 prototype poisoning 可复现；临时限定单用户 loopback 接受，复核截止2026-11-16。远程化、多不可信用户/导入、上游修复或风险升级时立即重评，见 [依赖风险决定](payload-dependency-risk-2026-11-02.md)。不是漏洞已修复或外网运行豁免。
 - `payload-source-handoff.py` 的 pack/verify/extract 交付源码、锁、测试、文档和限定报告，不含 Git 历史、依赖、构建物、数据库、密钥、私有媒体或发布日志。外部 SHA 必须来自交付回执。
 - 在新目录校验/解包后可验证源码；需要已有 Git baseCommit 和实际依赖安装才能重新构建发布。不得在真实 GachiaCMS 路径覆盖解包，也不执行 install/resume-install 覆盖已有安装。
-- Git/CI 未交付完成、独立密钥托管及跨机应用启动仍单列；私有R2密文往返通过不等于完整灾备完成。验证 workflow 只能测试，不给 Cloudflare/GitHub 写入凭据，不开启自动部署。
+- R18 已冻结源码并推送 `codex/payload-unified-maintenance`，实际 GitHub Linux 验证通过。prepare 应使用该已同步分支/精确提交，不使用旧 main 或未提交源码；不需要合并 main 来运行本机发布工具。
+- 验证 workflow 仅允许该精确任务分支 push/手动运行，只有只读权限、不保留 checkout 凭据、不用 secrets、不能部署；两个 Cloudflare GitHub 部署开关保持 false。CI 不执行真实桌面 manager。
+- 资源/兼容恢复证据命令化、独立密钥托管及跨机应用启动仍单列；私有R2密文往返通过不等于完整灾备完成，Git/验证CI完成也不等于真实内容云发布已验收。

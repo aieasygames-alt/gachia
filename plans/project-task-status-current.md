@@ -1,5 +1,21 @@
 # 当前审计任务表
 
+## 当前增量状态：R18 Git 冻结、安全同步与实际 CI（2026-11-02）
+
+Payload 源码、锁、测试、必要 fixture 与现行文档共 **293 文件**已冻结为 `66df8bc8e3d0fa6b4bb1f56246223ef10861c7f5`，逐文件 Git object 摘要与审查清单一致，已推送私有仓库专用分支 `codex/payload-unified-maintenance`。真实 GitHub Linux push CI [41397758661](https://github.com/aieasygames-alt/gachia/actions/runs/41397758661) 全部成功；本机按 CI 环境重跑 CMS **161/161**、typegen/typecheck、桌面 **359/359**、既有 Node **304/304**、Python **45/45** 通过。
+
+新 workflow 只允许精确任务分支，保留手动入口；只读权限、不保留 checkout 凭据、不使用 secrets、无部署步骤。真实桌面 manager 仍禁止在 CI 运行，只增加无副作用的 parser 测试 probe。`main` 仍为 `71a52728be2c9612d0b39be47092b7d85a320ac3`，两个 Cloudflare GitHub 部署开关仍 false，未合并或创建 PR。运行数据、密钥、数据库、私有媒体及原始发布日志没有入 Git；历史/原始证据保留本地，不要求整个工作区变为 clean。
+
+**L06 的 Git 冻结/同步与实际验证 CI 子任务完成，L06/T12 整体仍部分完成。** CMS healthy、持久服务 loaded，在线 DB 摘要与 84 draft/hold 不变，已安装 publisher/manager 的 19 文件不变；七服务只读快照与 R17 一致。没有 CMS 重启、安装覆盖、内容修改或 Cloudflare 写入。
+
+| 任务 | 当前进展 | 剩余 |
+| --- | --- | --- |
+| L06 / T12 | 手册、风险决定、源码包、Git 冻结/推送及真实 GitHub CI 完成 | 资源/兼容恢复证据命令化及完整交接，不能称为一键发布 |
+| L03 / T11 / P7 | 私有异地密文与同机隔离恢复已完成 | 独立密钥托管、跨机应用重建/启动、真实云恢复仍未验 |
+| L04 / L05 / T04 / T06 | 本地双游戏发布、续验和恢复实现保持已验 | 无真实编辑候选，首次/连续云发布、partial failure 与云恢复仍未验 |
+
+**下一可执行优先级：资源/兼容恢复证据命令化，减少首发手工步骤。** 真实编辑候选出现时优先 L04/L05 云验收；不制造变化、不批量清 hold、不以事实准确度或全类型迁移阻塞首发。详见 [R18 报告](../reports/payload-git-ci-2026-11-02/README.md)及[首发清单](payload-launch-closeout-2026-11-02.md)。下方 R17 及更早状态保留为历史，不覆盖本节。
+
 ## 当前增量状态：R17 私有R2异地备份与下载恢复（2026-11-02）
 
 新增独立私有R2桶 `gachia-cms-private-backups`，仅写入约51MB的AES-GCM密文；从真实R2重新下载，完整密文SHA/认证解密、29归档文件及2640源码文件校验通过。下载所得DB/媒体在新临时PG恢复，1用户/84内容/1媒体、逻辑摘要及媒体字节一致；测试库已清理，在线DB没有替换。r2.dev禁用、自定义域名为空、未绑定七网站Worker，七服务部署/受保护拓扑前后一致。

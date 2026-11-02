@@ -1,10 +1,12 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-02，R17）
+## 当前状态（2026-11-02，R18）
 
 Payload/PostgreSQL 已常驻本机。Genshin/NTE + Main 的发布、续验及兼容恢复协议已安装，本地连续发布/恢复已有实测；**真实编辑候选的云预览、推广和恢复仍未验收**。不以事实准确度阻塞首发，不制造演练变化。
 
-日常操作只使用 [现行最短手册](../../docs/payload-operator-runbook.md)，状态看 [首发清单](../../plans/payload-launch-closeout-2026-11-02.md)。deepmerge 仍1 low，已复现并限定本机可信单用户临时接受，见 [风险决定](../../docs/payload-dependency-risk-2026-11-02.md)。源码交付包不是数据库/私有媒体/密钥备份，也不是 Git/CI 已交付。
+日常操作只使用 [现行最短手册](../../docs/payload-operator-runbook.md)，状态看 [首发清单](../../plans/payload-launch-closeout-2026-11-02.md)。deepmerge 仍1 low，已复现并限定本机可信单用户临时接受，见 [风险决定](../../docs/payload-dependency-risk-2026-11-02.md)。源码交付包不是数据库/私有媒体/密钥备份。
+
+R18已将293文件冻结为 `66df8bc` 并推送私有任务分支 `codex/payload-unified-maintenance`；真实 GitHub Linux 验证 CI 41397758661 通过。本机 CI 环境 CMS161、typegen/typecheck、桌面359、既有Node304、Python45通过。workflow仅验证该分支、无部署权限；main及Cloudflare自动部署不变。L06/T12仍部分完成，下一可执行优先级为资源/兼容恢复证据命令化，详见[R18报告](../../reports/payload-git-ci-2026-11-02/README.md)。
 
 R17新增独立私有R2密文备份，并从真实下载结果完成AES认证、逐文件校验和隔离PG/媒体恢复；没有公开备份桶或修改网站Worker。独立密钥托管、跨机应用启动未验，不能关闭完整灾备；见[异地恢复说明](../../docs/payload-offsite-recovery.md)。
 

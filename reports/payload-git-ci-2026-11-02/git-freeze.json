@@ -1,0 +1,19 @@
+{
+  "codeCommit": "66df8bc8e3d0fa6b4bb1f56246223ef10861c7f5",
+  "files": 293,
+  "sourceBytes": 3449970,
+  "allCommittedBytesMatchReviewedManifest": true,
+  "remoteBranches": {
+    "refs/heads/codex/payload-unified-maintenance": "66df8bc8e3d0fa6b4bb1f56246223ef10861c7f5",
+    "refs/heads/main": "71a52728be2c9612d0b39be47092b7d85a320ac3"
+  },
+  "pushScope": "task branch only; no main write or pull request",
+  "credentialReview": "bounded source allowlist and token-pattern scan; not a universal secret detector",
+  "excluded": [
+    "runtime credentials/settings/env, including env examples",
+    "database and private media runtime",
+    "encryption keys/backups and encrypted archives",
+    "cloud multipart bodies, private journals and non-allowlisted reports"
+  ],
+  "whitespaceReview": "source check passed excluding unmodified generated migration and byte-preserved robots fixture; only generated SQL indentation/trailing whitespace and fixture final blank line were reported"
+}
