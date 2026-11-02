@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 // deliberately not an executable recipe or a claim about current cloud state.
 export const PRODUCTION_TARGETS = Object.freeze(Object.fromEntries(Object.entries({
   main: { app: 'apps/web', service: 'gachia', environment: '', kind: 'content',
-    workflow: '.github/workflows/deploy.yml', path: 'approved_main_workflow' },
+    workflow: '.github/workflows/deploy.yml', path: 'desktop_only_sealed_promotion_pending' },
   genshin: { app: 'apps/game-genshin', service: 'gachia-game-genshin', environment: '', kind: 'content', path: 'sealed_version_promotion' },
   nte: { app: 'apps/game-nte', service: 'gachia-game-nte', environment: '', kind: 'content', path: 'sealed_version_promotion' },
   'azur-promilia': { app: 'apps/game-azur-promilia', service: 'gachia-game-azur-promilia', environment: '', kind: 'content', path: 'sealed_version_promotion' },
@@ -39,7 +39,7 @@ export function productionPlan(targets) {
     ownershipContract: 'packages/core/route-ownership.json', crossOwnerValidationRequired: true,
     effects: { build: false, upload: false, promote: false, rollback: false, router: false },
     targets: targets.map(target => ({ target, ...PRODUCTION_TARGETS[target],
-      status: target === 'main' ? 'manual_workflow_required' : 'blocked_pending_reviewed_executor',
+      status: 'blocked_pending_reviewed_local_executor',
       currentVersion: null, candidateVersion: null, rollbackVersion: null,
     })),
     excludedServices: Object.entries(PRODUCTION_TARGETS).filter(([target]) => !targets.includes(target)).map(([, value]) => value.service),
@@ -52,7 +52,8 @@ export function productionPlan(targets) {
     invariants: [
       'No Worker creation, renaming, binding, route, domain or service-tag changes by content releases',
       'Lvmeng production uses explicit production env; its default preview config names the live service',
-      'Dedicated games promote the accepted version UUID without rebuilding; Main retains its existing sealed-artifact workflow',
+      'Content publication is initiated and executed on the installed desktop; CI is verification-only',
+      'Dedicated games promote the accepted version UUID without rebuilding; Main retains sealed-artifact and prior-asset safety requirements',
       'Each target needs its own evidence; one owner success is not whole-site or batch success',
       'Game prefixes are not whole-game ownership: Main fallback pages, APIs and shared images stay in cross-owner acceptance',
       'Stop on partial failure, reconcile actual cloud state, never retry or roll back automatically',
@@ -65,7 +66,7 @@ export function productionPlan(targets) {
 export function rejectProductionMutation(target, action) {
   validateTargets([target]);
   const guidance = target === 'main'
-    ? 'Use the existing approved Main workflow (.github/workflows/deploy.yml); its source, previous-asset, staging and production gates remain mandatory.'
+    ? 'Cloud publication is disabled. Prepare content in the installed desktop CMS; the reviewed local promotion executor is not yet available. Source, previous-asset, preview and rollback gates remain mandatory.'
     : target === 'router'
       ? 'Router changes require a separate reviewed routing release; old Genshin cutover workflows are retired.'
       : 'Dedicated games require a reviewed sealed-artifact version upload/acceptance/promotion executor. Generic build-and-deploy is retired; local receipts or confirmation strings cannot unlock it.';

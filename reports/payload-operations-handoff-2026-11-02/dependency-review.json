@@ -1,0 +1,77 @@
+{
+  "advisory": "GHSA-gcqx-w48m-w2h4",
+  "cve": "CVE-2026-93753",
+  "severity": "low",
+  "auditCounts": {
+    "low": 1,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "upstreamPatchedVersion": null,
+  "results": [
+    {
+      "label": "source",
+      "version": "4.3.1",
+      "entrySHA256": "2e5160f84a1141bd927264afe4d15766f1e6cf07daef182b37ff53fea121de7d",
+      "returnedPrototypePoisoningReproduced": true,
+      "globalPrototypeUnchanged": true
+    },
+    {
+      "label": "installed",
+      "version": "4.3.1",
+      "entrySHA256": "2e5160f84a1141bd927264afe4d15766f1e6cf07daef182b37ff53fea121de7d",
+      "returnedPrototypePoisoningReproduced": true,
+      "globalPrototypeUnchanged": true
+    }
+  ],
+  "http": [
+    {
+      "path": "/health",
+      "headers": {},
+      "status": 200
+    },
+    {
+      "path": "/admin/login",
+      "headers": {},
+      "status": 200
+    },
+    {
+      "path": "/api/content-records?limit=1",
+      "headers": {},
+      "status": 403
+    },
+    {
+      "path": "/health",
+      "headers": {
+        "origin": "https://outside.invalid"
+      },
+      "status": 403
+    },
+    {
+      "path": "/health",
+      "headers": {
+        "host": "localhost:3100"
+      },
+      "status": 403
+    },
+    {
+      "path": "/health",
+      "headers": {
+        "sec-fetch-site": "cross-site"
+      },
+      "status": 403
+    }
+  ],
+  "reachability": "Payload beforeChange validation merges stored doc/data; no demonstrated end-to-end privilege exploit; not unreachable",
+  "disposition": "temporary scoped acceptance for trusted single-user loopback desktop only",
+  "reviewBy": "2026-11-16",
+  "revokeOn": [
+    "remote editor or tunnel",
+    "additional untrusted users/imports",
+    "upstream fix or severity increase",
+    "observed exploitation"
+  ],
+  "cloudWrites": false,
+  "contentWrites": false
+}

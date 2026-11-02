@@ -54,11 +54,9 @@ export function createPreviousArtifactApi(exec = execFileSync) {
   };
 }
 
-async function main() {
-  if (process.argv.length !== 2) throw Error('Use explicit PREVIOUS_WEB_ARTIFACT_ID, PREVIOUS_WEB_ARTIFACT_SHA256 and ROLLBACK_VERSION');
-  const input = previousArtifactInput(process.env);
-  const root = resolve(import.meta.dirname, '..');
-  const api = createPreviousArtifactApi();
+export function capturePreviousWebAssets({ input, recoveryInput = {}, directory, api = createPreviousArtifactApi() }) {
+  previousArtifactInput({ PREVIOUS_WEB_ARTIFACT_ID: input.artifactId, PREVIOUS_WEB_ARTIFACT_SHA256: input.archiveSha256, ROLLBACK_VERSION: input.versionId });
+  mkdirSync(directory, { mode: 0o700 });
   const metadata = JSON.parse(api(`actions/artifacts/${input.artifactId}`));
   const runId = verifyPreviousArtifact(metadata, input);
   const jobs = JSON.parse(api(`actions/runs/${runId}/jobs?per_page=100`)).jobs;
@@ -66,8 +64,8 @@ async function main() {
   assert.equal(deploy.length, 1, 'One previous production deployment required');
   let recovery;
   if (deploy[0].conclusion !== 'success') {
-    const id = process.env.PREVIOUS_WEB_RECOVERY_ARTIFACT_ID;
-    const sha256 = process.env.PREVIOUS_WEB_RECOVERY_SHA256;
+    const id = recoveryInput.artifactId;
+    const sha256 = recoveryInput.archiveSha256;
     assert(/^[1-9][0-9]*$/.test(id ?? '') && /^[a-f0-9]{64}$/.test(sha256 ?? ''), 'Failed source job requires an immutable successful read-only recovery receipt');
     const recoveryMetadata = JSON.parse(api(`actions/artifacts/${id}`));
     assert(recoveryMetadata.workflow_run?.id, 'Missing recovery run');
@@ -82,19 +80,36 @@ async function main() {
     { input: archive, encoding: 'utf8', maxBuffer: 2 * 1024 * 1024 }));
     verifyRecoveryReceipt({ receipt, metadata: recoveryMetadata, run: recoveryRun, jobs: recoveryJobs,
       input: { ...input, recoveryArtifactId: id, recoverySha256: sha256 }, source: metadata, sourceJobs: jobs });
+    writeFileSync(resolve(directory, 'recovery-proof.json'), JSON.stringify({ metadata: recoveryMetadata, run: recoveryRun, jobs: recoveryJobs, receipt }, null, 2) + '\n', { mode: 0o600 });
+    writeFileSync(resolve(directory, 'recovery.zip'), archive, { mode: 0o600 });
     recovery = { artifactId: id, archiveSha256: sha256, runId: recoveryRun.id, headSha: recoveryRun.head_sha };
   }
   const log = api(`actions/jobs/${deploy[0].id}/logs`);
   verifyPreviousDeploymentLog(log, input);
-  const directory = resolve(root, '.release-records', `previous-main-${randomUUID()}`);
-  mkdirSync(directory, { recursive: true, mode: 0o700 });
+  writeFileSync(resolve(directory, 'source-proof.json'), JSON.stringify({ metadata, jobs }, null, 2) + '\n', { mode: 0o600 });
+  writeFileSync(resolve(directory, 'source-deploy.log'), log, { mode: 0o600 });
   const archive = api(`actions/artifacts/${input.artifactId}/zip`, true);
   assert.equal(createHash('sha256').update(archive).digest('hex'), input.archiveSha256, 'Downloaded archive digest mismatch');
   const zipPath = resolve(directory, 'previous-worker.zip');
   writeFileSync(zipPath, archive, { mode: 0o600 });
   const previousStatic = resolve(directory, 'static');
-  const extraction = JSON.parse(execFileSync('python3', [resolve(root, 'scripts/extract-previous-web-assets.py'), zipPath, input.archiveSha256, previousStatic], { encoding: 'utf8', timeout: 120000 }));
-  const record = retainWebAssets({ previousStatic, artifactDirectory: resolve(root, 'apps/web/.open-next'), source: { ...input, runId, headSha: metadata.workflow_run.head_sha, ...(recovery ? { recovery } : {}) } });
+  const extraction = JSON.parse(execFileSync('python3', [resolve(import.meta.dirname, 'extract-previous-web-assets.py'), zipPath, input.archiveSha256, previousStatic], { encoding: 'utf8', timeout: 120000 }));
+  const result = { previousStatic, source: { ...input, runId, headSha: metadata.workflow_run.head_sha, ...(recovery ? { recovery } : {}) }, extraction };
+  writeFileSync(resolve(directory, 'capture.json'), JSON.stringify(result, null, 2) + '\n', { mode: 0o600 });
+  return result;
+}
+
+async function main() {
+  if (process.argv.length !== 2) throw Error('Use explicit PREVIOUS_WEB_ARTIFACT_ID, PREVIOUS_WEB_ARTIFACT_SHA256 and ROLLBACK_VERSION');
+  const input = previousArtifactInput(process.env);
+  const root = resolve(import.meta.dirname, '..');
+  const parent = resolve(root, '.release-records');
+  mkdirSync(parent, { recursive: true, mode: 0o700 });
+  const directory = resolve(parent, `previous-main-${randomUUID()}`);
+  const { previousStatic, source, extraction } = capturePreviousWebAssets({ input, directory, recoveryInput: {
+    artifactId: process.env.PREVIOUS_WEB_RECOVERY_ARTIFACT_ID, archiveSha256: process.env.PREVIOUS_WEB_RECOVERY_SHA256,
+  } });
+  const record = retainWebAssets({ previousStatic, artifactDirectory: resolve(root, 'apps/web/.open-next'), source });
   const verification = verifyRetainedWebAssets(resolve(root, 'apps/web/.open-next'), input.versionId);
   writeFileSync(resolve(directory, 'provenance.json'), JSON.stringify({ source: record.source, extraction, verification }, null, 2) + '\n', { mode: 0o600 });
   console.log(JSON.stringify({ directory, source: record.source, copied: record.copied, ...verification }, null, 2));

@@ -13,5 +13,14 @@ export function NteNav({ locale, current }: { locale: SupportedLocale; current?:
     sectionLabel: 'NTE navigation',
     sectionLinks: enabledRoutes.map((route) => ({ href: `/${locale}/nte/${route}`, label: CATEGORY_LABELS[route]?.[locale] ?? route, current: current === route })),
   });
-  return <SharedGameHeader header={header} />;
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Gachia', item: 'https://gachia.com' },
+      { '@type': 'ListItem', position: 2, name: 'NTE', item: `https://gachia.com/${locale}/nte` },
+      ...(current ? [{ '@type': 'ListItem', position: 3, name: current, item: `https://gachia.com/${locale}/nte/${current}` }] : []),
+    ],
+  };
+  return <><SharedGameHeader header={header} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} /></>;
 }

@@ -5,6 +5,7 @@ import { GAME_IDS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { isWorkerPreviewOrigin } from './lib/preview-origin';
 import { isRetiredPage } from './lib/retired-pages';
+import { shadowLocalEnabled } from '../../packages/core/shadow-local-gate';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -291,6 +292,13 @@ function routeMiddleware(request: NextRequest) {
 }
 
 export default function middleware(request: NextRequest) {
+  if (request.nextUrl.pathname === '/shadow' || request.nextUrl.pathname.startsWith('/shadow/')) {
+    const response = shadowLocalEnabled('main', request.headers.get('host'))
+      ? NextResponse.next() : new NextResponse('Not found', { status: 404 });
+    response.headers.set('Cache-Control', 'private, no-store');
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+    return response;
+  }
   if (!isWorkerPreviewOrigin(request.nextUrl.origin)) return routeMiddleware(request);
   const response = request.nextUrl.pathname === '/robots.txt'
     ? new NextResponse('User-agent: *\nDisallow: /\n', { headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
@@ -301,6 +309,7 @@ export default function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    '/shadow/:path*',
     '/',
     '/robots.txt',
     '/sitemap.xml',

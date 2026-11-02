@@ -1,0 +1,3140 @@
+{
+  "sourceCommit": "71a52728be2c9612d0b39be47092b7d85a320ac3",
+  "batchKey": "7069991e56680742fbf9677d04596d7d70905092f7a14849333dcd775158a8f3",
+  "mapperVersion": "legacy-records-v2",
+  "policyDigest": "27cbf55c5359916d10689404ba43e186d2a1bc470b4193d23c15fd105049e0c3",
+  "policyEvidence": [
+    {
+      "path": "apps/game-genshin/lib/guide-policy.ts",
+      "digest": "7171a6286fc91c56274cda6341fc828065e75757f66d2fabffedcfce2abdd4e1"
+    },
+    {
+      "path": "apps/web/lib/retired-pages.ts",
+      "digest": "42f8bc1cb16e0175359b37b84cb46539803756ddfaee8ce637121bd4858d92d8"
+    },
+    {
+      "path": "apps/web/lib/seo-metadata.ts",
+      "digest": "6dbd12f292b17b530993ce6b8e08e6fb0398084f4607d527c8bc353e736d4deb"
+    },
+    {
+      "path": "packages/core/route-ownership.json",
+      "digest": "0e58f71f574fb81b8d78dfb0b68ad4e700e6b526d122d2f9cd17c2bafb81f019"
+    },
+    {
+      "path": "packages/data/games/ananta/characters.ts",
+      "digest": "e08bd054f74029204852a90d2963af39a23c6c102c74aeec816e43b21c425a67"
+    },
+    {
+      "path": "packages/data/games/ananta/guides.ts",
+      "digest": "67e8c74f021b52f7e9fded0bcfec27df95c72ddd9d02790317fad4bb392ab7bc"
+    },
+    {
+      "path": "packages/data/games/ananta/types.ts",
+      "digest": "f17c0c61f64d871d58c2213a75fbe9eeb5b5b157f487e025a7b247d6893dd81e"
+    },
+    {
+      "path": "packages/data/games/aniimo/characters.ts",
+      "digest": "12387b914124ca184ca640b2c44ffc834a7c1b0dab42001762e22bdc2f70e416"
+    },
+    {
+      "path": "packages/data/games/aniimo/guides.ts",
+      "digest": "fb289dbb703c3159116e6b6c07415f458aea7a233210eb6d2351d5585deed57f"
+    },
+    {
+      "path": "packages/data/games/aniimo/types.ts",
+      "digest": "5276d5d8855738e44d78a9d6843b2f26d0d002f10840da242dfd6415c02e8605"
+    },
+    {
+      "path": "packages/data/games/azur-promilia/characters.ts",
+      "digest": "8446d4d86eb6f7d19bb2cdc414710b573f125a3dddb93587705096b9e780c2cf"
+    },
+    {
+      "path": "packages/data/games/azur-promilia/types.ts",
+      "digest": "0c62cb20bc6786ab374178a835fbb4755ccaf8abe8209ba04dbc61dd5199e493"
+    },
+    {
+      "path": "packages/data/games/endfield/characters.ts",
+      "digest": "962c1f04899e8622122c11e8dbd3b87e8f2203958e740602b4fa920c54b58cd7"
+    },
+    {
+      "path": "packages/data/games/endfield/guides.ts",
+      "digest": "fc5508729485ee2c18274a1668715be96f798c185f1f7db76ac6cd3c73e6b650"
+    },
+    {
+      "path": "packages/data/games/endfield/types.ts",
+      "digest": "2b5b4401136024df74faf3e226859221c01248e309faf46ed6dab085c28cac6a"
+    },
+    {
+      "path": "packages/data/games/genshin/characters.ts",
+      "digest": "5d4e03479400957d97b59766eee3f659a882281ac7b7e87c3f4bede248424562"
+    },
+    {
+      "path": "packages/data/games/genshin/guides.ts",
+      "digest": "0d655275304a27107e270b30a2a440aee4f4204c2f101d693c52e16189f1a02d"
+    },
+    {
+      "path": "packages/data/games/genshin/types.ts",
+      "digest": "7cef06118a126404e4e83c57fdad55f4459eee7c1463f4beeedf081812df7828"
+    },
+    {
+      "path": "packages/data/games/guihuan/characters.ts",
+      "digest": "c4555780c19b0080050c49678e90dbb13196a259d3a91e14ecaca026a2e80933"
+    },
+    {
+      "path": "packages/data/games/guihuan/guides.ts",
+      "digest": "fac6dee542f229cf1e230acbea88ab15c5f7e85f208c7b709e3ba8fee8ea42ae"
+    },
+    {
+      "path": "packages/data/games/guihuan/types.ts",
+      "digest": "f6f6fbe38770d5786f91f3e369014daf8494b19c3e15ce6daba83f4c0a1efbfd"
+    },
+    {
+      "path": "packages/data/games/hi3/characters.ts",
+      "digest": "08045c4e151e737f6cc7ae6c1ac13c800bcc1cb16bdbcd8c6a388c28b4625592"
+    },
+    {
+      "path": "packages/data/games/hi3/guides.ts",
+      "digest": "bcb3ade37bdd88e88ea634f11c009087fd8c07c94655fbf4971588844c57a215"
+    },
+    {
+      "path": "packages/data/games/hi3/types.ts",
+      "digest": "63fd1f918f632868ebe6fc7e96b90d9ea7d16b584adf7be21144da9c0ba16cf6"
+    },
+    {
+      "path": "packages/data/games/nte/characters.ts",
+      "digest": "3ed63bffe5fcdf7d7089de3bf921c3d7b41a2f0a49d4a0377ce45b737f189e29"
+    },
+    {
+      "path": "packages/data/games/nte/guides.ts",
+      "digest": "7cd3aac92f7e263d1f1e383fb84204babf0daa74a4420871a35948b62eaa685e"
+    },
+    {
+      "path": "packages/data/games/nte/types.ts",
+      "digest": "e3b7d2841ddbe1794ad27e81b0397977f4139f06d4500b08b65e644baf43c4f1"
+    },
+    {
+      "path": "packages/data/games/roco-cn/characters.ts",
+      "digest": "c07fa70b5547d4166617cbcd768dea0048b248252078c6be1e5201cf9cf68949"
+    },
+    {
+      "path": "packages/data/games/roco-cn/guides.ts",
+      "digest": "5d3e308aa13452c1adb2276c6bb0b0d3e57754aee0c03381422d81aed03c89d6"
+    },
+    {
+      "path": "packages/data/games/roco-cn/types.ts",
+      "digest": "94d2ab3df60703afdf57e86d9079ee1d0bc03381824ede0d4de9494adba8aefa"
+    },
+    {
+      "path": "packages/data/games/roco/characters.ts",
+      "digest": "c1e262251a9dff5953f915b51f4f7b3b7de39ba0b99697b7df0394f4bc45f57b"
+    },
+    {
+      "path": "packages/data/games/roco/guides.ts",
+      "digest": "3102daf0bc503be47309370b98b73a15ee1960a79a34dbb725e1083b7e7c273d"
+    },
+    {
+      "path": "packages/data/games/roco/types.ts",
+      "digest": "b4d8976610cc36b27e0271c0f77113a16551403ab2a927af1f71df34b94c259e"
+    },
+    {
+      "path": "packages/data/games/sea/characters.ts",
+      "digest": "c428430079681086966391b05cf915769c97854a2b1ce6cffe8a6ba52fb276ca"
+    },
+    {
+      "path": "packages/data/games/sea/guides.ts",
+      "digest": "00d30cc15ef7390b3b1c40e592e0d0342edeb14921303a42957357a5ffe7a0ab"
+    },
+    {
+      "path": "packages/data/games/sea/types.ts",
+      "digest": "709b6529c26e9d1a65b14af1024741c08441226a592fa29c231e3f0c0430edb3"
+    },
+    {
+      "path": "packages/data/games/skjh/characters.ts",
+      "digest": "6508a350e8839a87b0f8dd90fd0682910a3d5a84e71ea64838d83b36c3a4f2ed"
+    },
+    {
+      "path": "packages/data/games/skjh/guides.ts",
+      "digest": "2862de1709c1d6dd490d74bae269be9800da67eff260600d2d8c59f941103449"
+    },
+    {
+      "path": "packages/data/games/skjh/types.ts",
+      "digest": "38058ca3d0d834a5054ea137a2eb9cb6fd95c7a49326d5afba04ac73bc78e0b3"
+    },
+    {
+      "path": "packages/data/games/starrail/characters.ts",
+      "digest": "60a655d636d04a98e7384da02c6413f4f2cdb0c032cac6d4330b73c6c0092f3f"
+    },
+    {
+      "path": "packages/data/games/starrail/guides.ts",
+      "digest": "768a5846d7eb686ba0c4a78568e5e62c5ed40cf6843fe7605a3fccebdc3c10eb"
+    },
+    {
+      "path": "packages/data/games/starrail/types.ts",
+      "digest": "7fc817f1d212d6ba0ed0f8e7bb0edfcdf92a03db136c43ef71a9b1deab636975"
+    },
+    {
+      "path": "packages/data/games/wuwa/characters.ts",
+      "digest": "1789161880dd4dd17a72b40dab47e1f1fb870448922247ef3bfac51a8ef496e2"
+    },
+    {
+      "path": "packages/data/games/wuwa/guides.ts",
+      "digest": "866e2bd5fb4eba84116e3e899cb0b3555a7853dea21a0f622a0ecd7e1aee781f"
+    },
+    {
+      "path": "packages/data/games/wuwa/types.ts",
+      "digest": "2339a00a4ba48370dcb8d19f9e28755a6d664494ff74f47e16abfd5acb9c225b"
+    },
+    {
+      "path": "packages/data/games/zzz/characters.ts",
+      "digest": "21421f386d1aa357e12fb0a091eb8bb84be4a5cf7f8abbdc9ce5cca99a4f9bb9"
+    },
+    {
+      "path": "packages/data/games/zzz/guides.ts",
+      "digest": "904d5815b3b1f4f6c6c3a11bf2cc783d30dc63a6b73a7d824e26650057ec8050"
+    },
+    {
+      "path": "packages/data/games/zzz/types.ts",
+      "digest": "0bd54783f659e13cd7e2931c1d51a57d06c0d5fc9abfafe30b317f2f75fa0b20"
+    },
+    {
+      "path": "packages/data/raw-content-review.json",
+      "digest": "2ad907f710135a251e4852449bf18338aeb14ee79c2b5f50aa1f71cf26b72cd9"
+    }
+  ],
+  "counts": {
+    "azur-promilia": {
+      "records": 106,
+      "commonFields": 105,
+      "identityOnly": 1,
+      "structuredFields": 0,
+      "sections": 1,
+      "faqEntries": 0,
+      "deferred": []
+    },
+    "genshin": {
+      "records": 742,
+      "commonFields": 149,
+      "identityOnly": 593,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 193,
+      "deferred": []
+    },
+    "lvmeng": {
+      "records": 51,
+      "commonFields": 20,
+      "identityOnly": 30,
+      "structuredFields": 1,
+      "sections": 31,
+      "faqEntries": 11,
+      "deferred": []
+    },
+    "nte": {
+      "records": 429,
+      "commonFields": 102,
+      "identityOnly": 243,
+      "structuredFields": 84,
+      "sections": 2,
+      "faqEntries": 307,
+      "deferred": []
+    },
+    "ananta": {
+      "records": 63,
+      "commonFields": 29,
+      "identityOnly": 34,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 113,
+      "deferred": []
+    },
+    "aniimo": {
+      "records": 104,
+      "commonFields": 97,
+      "identityOnly": 7,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 45,
+      "deferred": []
+    },
+    "endfield": {
+      "records": 132,
+      "commonFields": 49,
+      "identityOnly": 83,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 72,
+      "deferred": []
+    },
+    "guihuan": {
+      "records": 84,
+      "commonFields": 31,
+      "identityOnly": 53,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 103,
+      "deferred": []
+    },
+    "hi3": {
+      "records": 15,
+      "commonFields": 5,
+      "identityOnly": 10,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 18,
+      "deferred": []
+    },
+    "roco-cn": {
+      "records": 574,
+      "commonFields": 265,
+      "identityOnly": 309,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 22,
+      "deferred": []
+    },
+    "roco": {
+      "records": 36,
+      "commonFields": 30,
+      "identityOnly": 6,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 90,
+      "deferred": []
+    },
+    "sea": {
+      "records": 120,
+      "commonFields": 99,
+      "identityOnly": 21,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 466,
+      "deferred": []
+    },
+    "skjh": {
+      "records": 99,
+      "commonFields": 45,
+      "identityOnly": 54,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 207,
+      "deferred": []
+    },
+    "starrail": {
+      "records": 432,
+      "commonFields": 109,
+      "identityOnly": 323,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 168,
+      "deferred": []
+    },
+    "wuwa": {
+      "records": 250,
+      "commonFields": 81,
+      "identityOnly": 169,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 158,
+      "deferred": []
+    },
+    "zzz": {
+      "records": 203,
+      "commonFields": 89,
+      "identityOnly": 114,
+      "structuredFields": 0,
+      "sections": 0,
+      "faqEntries": 158,
+      "deferred": []
+    }
+  },
+  "total": 3440,
+  "publishable": false,
+  "authority": "legacy",
+  "sources": [
+    {
+      "sourcePath": "apps/game-azur-promilia/lib/data.ts",
+      "gameKey": "azur-promilia",
+      "sourceSnapshotKey": "df5fa68b0dca103f378961312b6c576b00997fd9b7b12a772d64d83b12363564",
+      "units": [
+        {
+          "name": "characters",
+          "line": 4,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "tierLists",
+          "line": 4,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "weapons",
+          "line": 4,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "sourceStatusLabel",
+          "line": 14,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "travelTraceVerification",
+          "line": 20,
+          "state": "rows",
+          "records": 6
+        },
+        {
+          "name": "kiboFacilities",
+          "line": 71,
+          "state": "rows",
+          "records": 10
+        },
+        {
+          "name": "facilityReference",
+          "line": 84,
+          "state": "rows",
+          "records": 8
+        },
+        {
+          "name": "kiboLifeSkills",
+          "line": 95,
+          "state": "rows",
+          "records": 11
+        },
+        {
+          "name": "kiboLabel",
+          "line": 109,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "tuningMarkGlossary",
+          "line": 113,
+          "state": "rows",
+          "records": 3
+        },
+        {
+          "name": "kiboLifecycle",
+          "line": 119,
+          "state": "rows",
+          "records": 2
+        },
+        {
+          "name": "guides",
+          "line": 124,
+          "state": "rows",
+          "records": 20
+        },
+        {
+          "name": "redeemCodes",
+          "line": 404,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "versionTimeline",
+          "line": 407,
+          "state": "rows",
+          "records": 5
+        },
+        {
+          "name": "kibo",
+          "line": 452,
+          "state": "rows",
+          "records": 16
+        },
+        {
+          "name": "worldRegions",
+          "line": 471,
+          "state": "rows",
+          "records": 5
+        },
+        {
+          "name": "gameName",
+          "line": 479,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "characterName",
+          "line": 483,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "weaponName",
+          "line": 487,
+          "state": "reader-code",
+          "records": 0
+        }
+      ],
+      "state": "mapped",
+      "reason": null,
+      "records": 87,
+      "unmappedFields": [
+        "action",
+        "associations",
+        "battleTags",
+        "catchable",
+        "combatSkill",
+        "date",
+        "downloadStatus",
+        "element",
+        "eligibility",
+        "facilities",
+        "href",
+        "landmarks",
+        "lifeSkills",
+        "mountType",
+        "platform",
+        "region",
+        "source",
+        "species",
+        "status",
+        "value"
+      ]
+    },
+    {
+      "sourcePath": "apps/game-genshin/lib/data.ts",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "fcda42528e7e1aaa7e0c5654bebdd416d579cdc95e5752f87328633c8982ea7f",
+      "units": [
+        {
+          "name": "versionDecisionRoute",
+          "line": 9,
+          "state": "rows",
+          "records": 3
+        },
+        {
+          "name": "artifactSets",
+          "line": 31,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "genshinCharacterSummaries",
+          "line": 31,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "genshinCharacters",
+          "line": 31,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "genshinGuides",
+          "line": 31,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "genshinMaterials",
+          "line": 31,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "genshinWeapons",
+          "line": 31,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "redeemCodes",
+          "line": 31,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getActiveRedeemCodes",
+          "line": 32,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getArtifactSetById",
+          "line": 32,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getArtifactSetDesc2pc",
+          "line": 32,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getArtifactSetDesc4pc",
+          "line": 32,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getArtifactSetName",
+          "line": 32,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinCharacterById",
+          "line": 33,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinCharacterDescription",
+          "line": 33,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinCharacterImage",
+          "line": 33,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinCharacterName",
+          "line": 33,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinCharacterSummaryImage",
+          "line": 34,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinCharacterSummaryName",
+          "line": 34,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinMaterialById",
+          "line": 34,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinMaterialName",
+          "line": 34,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGuideById",
+          "line": 35,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGuideContent",
+          "line": 35,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGuideSummary",
+          "line": 35,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGuideTitle",
+          "line": 35,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinWeaponById",
+          "line": 35,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinWeaponEffect",
+          "line": 35,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinWeaponName",
+          "line": 36,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getGenshinWeaponSource",
+          "line": 36,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getRedeemCodeReward",
+          "line": 36,
+          "state": "reader-code",
+          "records": 0
+        }
+      ],
+      "state": "mapped",
+      "reason": null,
+      "records": 3,
+      "unmappedFields": [
+        "href"
+      ]
+    },
+    {
+      "sourcePath": "apps/game-lvmeng/lib/data.ts",
+      "gameKey": "lvmeng",
+      "sourceSnapshotKey": "8a13b67bafb30b1ef7157408ce28a4c7bfea9db221aca5df7341c9b5f1ff4bf4",
+      "units": [
+        {
+          "name": "game",
+          "line": 1,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "officialSources",
+          "line": 14,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "playableCharacters",
+          "line": 21,
+          "state": "rows",
+          "records": 13
+        },
+        {
+          "name": "characterSources",
+          "line": 37,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "patchSource",
+          "line": 44,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "patchChecks",
+          "line": 45,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "firstWeekRoute",
+          "line": 51,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "clientEvidenceChecklist",
+          "line": 57,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "contentStatus",
+          "line": 64,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "sourcePolicy",
+          "line": 71,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "launchPriority",
+          "line": 77,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "launchDayVerification",
+          "line": 83,
+          "state": "rows",
+          "records": 7
+        },
+        {
+          "name": "contentRoadmap",
+          "line": 142,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "releaseStatus",
+          "line": 149,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "officialAnnouncements",
+          "line": 156,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "previewFollowUpChecklist",
+          "line": 167,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "officialEntryPoints",
+          "line": 194,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "launchFaq",
+          "line": 201,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "redeemCodeStatus",
+          "line": 215,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "starterGuideSections",
+          "line": 221,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "mapDirectory",
+          "line": 230,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "progressionDirectory",
+          "line": 236,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "versionHistory",
+          "line": 242,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "systemOverview",
+          "line": 249,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "preparationChecklist",
+          "line": 256,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "launchRewards",
+          "line": 263,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "deviceRequirements",
+          "line": 271,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "launchSource",
+          "line": 277,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "rewardsSource",
+          "line": 278,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "worldGlossary",
+          "line": 280,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "publicWorldSources",
+          "line": 288,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "launchVerificationChecklist",
+          "line": 294,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "communitySources",
+          "line": 301,
+          "state": "section",
+          "records": 1
+        }
+      ],
+      "state": "mapped",
+      "reason": null,
+      "records": 51,
+      "unmappedFields": [
+        "action",
+        "affiliation",
+        "href",
+        "status",
+        "value"
+      ]
+    },
+    {
+      "sourcePath": "apps/game-nte/lib/data.ts",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "92b196f2f0b01ef2709524bf02d9734b2c14947435e9e33f29b73d3edb8a874e",
+      "units": [
+        {
+          "name": "nteCharacterSummaries",
+          "line": 39,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "nteCharacters",
+          "line": 40,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "guides",
+          "line": 41,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "nteWeapons",
+          "line": 42,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "diskSets",
+          "line": 43,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "redeemCodes",
+          "line": 44,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "versionCheckRoute",
+          "line": 45,
+          "state": "rows",
+          "records": 3
+        },
+        {
+          "name": "materials",
+          "line": 65,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "tierLists",
+          "line": 66,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "downloadInfo",
+          "line": 67,
+          "state": "section",
+          "records": 1
+        },
+        {
+          "name": "gacha",
+          "line": 68,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "anomalies",
+          "line": 69,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "regions",
+          "line": 92,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "characterBuilds",
+          "line": 93,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "characterMaterials",
+          "line": 94,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "hasJapaneseNteGuideContent",
+          "line": 100,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "isNteJapanesePathIndexable",
+          "line": 104,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "isNteLocaleIndexable",
+          "line": 111,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "localeName",
+          "line": 115,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "characterName",
+          "line": 119,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "characterImage",
+          "line": 123,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getNteCharacter",
+          "line": 125,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "characterText",
+          "line": 129,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "characterDescription",
+          "line": 133,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getCharacterBuilds",
+          "line": 137,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getCharacterMaterials",
+          "line": 138,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getNteWeaponName",
+          "line": 140,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getNteDiskSetName",
+          "line": 141,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "getNteMaterialName",
+          "line": 142,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "diskSetEffect",
+          "line": 143,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "materialType",
+          "line": 144,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "materialSource",
+          "line": 145,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "regionName",
+          "line": 146,
+          "state": "reader-code",
+          "records": 0
+        },
+        {
+          "name": "regionDescription",
+          "line": 147,
+          "state": "reader-code",
+          "records": 0
+        }
+      ],
+      "state": "mapped",
+      "reason": null,
+      "records": 4,
+      "unmappedFields": [
+        "href",
+        "value"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-character-materials.json",
+      "gameKey": "ananta",
+      "sourceSnapshotKey": "b69d0fcf239188ab88ff10de2819789f8f666fb9cd0c207e2db09d057b57e754",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-characters.json",
+      "gameKey": "ananta",
+      "sourceSnapshotKey": "6236b0b35cb8c75bc64137ffac9dcd77dee92643dbcff477b3c5b84f0a975604",
+      "state": "mapped",
+      "reason": null,
+      "records": 10,
+      "unmappedFields": [
+        "availableAtLaunch",
+        "element",
+        "elementEn",
+        "faq",
+        "image",
+        "rarity",
+        "recommendedBuild",
+        "relatedCharacters",
+        "role",
+        "roleEn",
+        "skills",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-guides.json",
+      "gameKey": "ananta",
+      "sourceSnapshotKey": "57700510c2549078269a1d44fd8a5928c4e16c3587cf08de84d16cce93db413c",
+      "state": "mapped",
+      "reason": null,
+      "records": 19,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "date",
+        "tags"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-materials.json",
+      "gameKey": "ananta",
+      "sourceSnapshotKey": "82d0c9e5e227ebd60c5b1628cc7f488faf5b26c670862160041f52d8029d090e",
+      "state": "mapped",
+      "reason": null,
+      "records": 20,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-weapons.json",
+      "gameKey": "ananta",
+      "sourceSnapshotKey": "55e816b379353e3a3770049e7cff7429590819ccb42c6e719403d1cf50c092a7",
+      "state": "mapped",
+      "reason": null,
+      "records": 14,
+      "unmappedFields": [
+        "baseAtk",
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectName",
+        "effectNameEn",
+        "howToObtain",
+        "howToObtainEn",
+        "name",
+        "nameEn",
+        "nameJa",
+        "rarity",
+        "status",
+        "substat",
+        "substatEn",
+        "substatValue",
+        "weaponType",
+        "weaponTypeEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-characters.json",
+      "gameKey": "aniimo",
+      "sourceSnapshotKey": "a4f3e418471825ee0f4e7d8f96ae9660f156fcb4711e9dedde8a63675389ffdf",
+      "state": "mapped",
+      "reason": null,
+      "records": 89,
+      "unmappedFields": [
+        "ability",
+        "abilityJa",
+        "abilityUseCase",
+        "abilityZh",
+        "aliases",
+        "element",
+        "elementEn",
+        "elementJa",
+        "elementZh",
+        "evolution",
+        "evolutionDetail",
+        "image",
+        "locationNote",
+        "no",
+        "rarity",
+        "region",
+        "relatedRegionReason",
+        "role",
+        "roleEn",
+        "roleJa",
+        "roleZh",
+        "sourceNote",
+        "stage",
+        "status",
+        "tierRank",
+        "tierReason",
+        "tierReasonJa",
+        "tierReasonZh"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-guides.json",
+      "gameKey": "aniimo",
+      "sourceSnapshotKey": "72691e3b2fdc8eb259550b58df7cf2d44d03504cd4ad2127ca7a80aba31e5dda",
+      "state": "mapped",
+      "reason": null,
+      "records": 8,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryZh",
+        "currentVersion",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-redeem-codes.json",
+      "gameKey": "aniimo",
+      "sourceSnapshotKey": "00c800538fafdcccf99e7155af8c5383bd1cda025a65f78ae4d4af53e9bd37f2",
+      "state": "mapped",
+      "reason": null,
+      "records": 1,
+      "unmappedFields": [
+        "checklist",
+        "checklistJa",
+        "checklistZh",
+        "reward",
+        "rewardEn",
+        "rewardJa",
+        "rewardZh",
+        "status",
+        "statusJa",
+        "statusZh",
+        "updated"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-regions.json",
+      "gameKey": "aniimo",
+      "sourceSnapshotKey": "328ffc8c6e5f4f1fc9777b35237f9966d514c2c3e9c075cc25c99e1e8d136f17",
+      "state": "mapped",
+      "reason": null,
+      "records": 6,
+      "unmappedFields": [
+        "aniimo",
+        "checklist",
+        "checklistJa",
+        "checklistZh",
+        "guideNote",
+        "guideNoteJa",
+        "guideNoteZh",
+        "image",
+        "mechanics",
+        "mechanicsJa",
+        "mechanicsZh",
+        "name",
+        "nameJa",
+        "nameZh",
+        "source",
+        "status",
+        "statusJa",
+        "statusZh",
+        "theme",
+        "themeJa",
+        "themeZh"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/azur-promilia/raw-characters.json",
+      "gameKey": "azur-promilia",
+      "sourceSnapshotKey": "eeca1ed0671d81a36b4b698a1cc002308e9295655c29cf9c67be6a91432428ef",
+      "state": "mapped",
+      "reason": null,
+      "records": 19,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-character-materials.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "675c79cc75fd0b5493110f2c9115dcb413d26cb26a443ed079b5c9d9635ae462",
+      "state": "mapped",
+      "reason": null,
+      "records": 28,
+      "unmappedFields": [
+        "ascensionMaterials",
+        "talentMaterials"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-characters.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "c78c60470972c31f8435118127b08c5340785d3b2e10fd5f09e0aa1379e99aa2",
+      "state": "mapped",
+      "reason": null,
+      "records": 28,
+      "unmappedFields": [
+        "availableAtLaunch",
+        "element",
+        "elementEn",
+        "eliteCosts",
+        "faq",
+        "image",
+        "potentials",
+        "profession",
+        "professionEn",
+        "rarity",
+        "recommendedBuild",
+        "relatedCharacters",
+        "skills",
+        "stats",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-gear-sets.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "44c7cd874da54ef522c71fd120b49908dfb7ba8d82201d6d27d6175e2067d3f7",
+      "state": "mapped",
+      "reason": null,
+      "records": 22,
+      "unmappedFields": [
+        "effect",
+        "effectEn",
+        "mainStat",
+        "name",
+        "nameEn",
+        "nameJa",
+        "nameZh",
+        "rarity",
+        "recommendedFor",
+        "tierRank"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-guides.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "0fd1dc15579770147ca36f3546a6e9f2d754663dc85683d5c4a31a15cdb7f897",
+      "state": "mapped",
+      "reason": null,
+      "records": 21,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "currentVersion",
+        "date",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-materials.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "ca2e82fe6e8248e86fed3b92e7ec1ce835bd37bc1b394e2e94130443e712a7d0",
+      "state": "mapped",
+      "reason": null,
+      "records": 18,
+      "unmappedFields": [
+        "description",
+        "descriptionEn",
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-regions.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "245a7b0817ec6e10ec61099e58ce28abae3f388da2e5e065549dbf43cab5819f",
+      "state": "mapped",
+      "reason": null,
+      "records": 5,
+      "unmappedFields": [
+        "bosses",
+        "collectibles",
+        "description",
+        "descriptionEn",
+        "domains",
+        "highlights",
+        "name",
+        "nameEn",
+        "specialties",
+        "subRegions",
+        "tips"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-weapons.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "7c891f547911dfbbd2ecdd62f5fbf98741d75c773719924f6cfdbf1aa1cfdfbd",
+      "state": "mapped",
+      "reason": null,
+      "records": 10,
+      "unmappedFields": [
+        "baseAtk",
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectName",
+        "effectNameEn",
+        "howToObtain",
+        "howToObtainEn",
+        "name",
+        "nameEn",
+        "nameJa",
+        "rarity",
+        "status",
+        "substat",
+        "substatEn",
+        "substatValue",
+        "weaponType",
+        "weaponTypeEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-artifacts.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "adee02230541e11bc7625fa7440a65721af5c543e3e7f4a570cd29cebf407825",
+      "state": "mapped",
+      "reason": null,
+      "records": 40,
+      "unmappedFields": [
+        "bestFor",
+        "bonus2pc",
+        "bonus2pcEn",
+        "bonus4pc",
+        "bonus4pcEn",
+        "characters",
+        "name",
+        "nameEn",
+        "rarity"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "5c7497679a7faf471bd8fa85ef0baa74c38044462d88e4f784dbd4f70642df72",
+      "state": "mapped",
+      "reason": null,
+      "records": 90,
+      "unmappedFields": [
+        "ascensionMaterials",
+        "talentMaterials"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-summaries.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "116812815f4b1efe5b94bb935d58dcae87ebb44164175a488539dc7b673be849",
+      "state": "mapped",
+      "reason": null,
+      "records": 115,
+      "unmappedFields": [
+        "element",
+        "name",
+        "nameEn",
+        "rarity",
+        "status",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-characters.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "8457b88a4f51ccf5665026d904426122b033ef0bffa2a658530dff5de49daf70",
+      "state": "mapped",
+      "reason": null,
+      "records": 115,
+      "unmappedFields": [
+        "acquisitionMethod",
+        "constellations",
+        "element",
+        "faq",
+        "image",
+        "rarity",
+        "recommendedBuild",
+        "region",
+        "relatedCharacters",
+        "releaseVersion",
+        "skills",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-guides.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "0c661dd48b1ef9ee981a3ce87ba7b21031517e60e36320b4c16a521873b0e8ac",
+      "state": "mapped",
+      "reason": null,
+      "records": 31,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "currentVersion",
+        "date",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "ecc2c5e0c12e4439d4b0e1c9209979fc5e08600f72258abb15afbdea2c386fe6",
+      "state": "mapped",
+      "reason": null,
+      "records": 185,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-redeem-codes.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "5b9a489f52641deb18dd869421ac0d3374c8f56776e084039ffe9067595e9990",
+      "state": "mapped",
+      "reason": null,
+      "records": 8,
+      "unmappedFields": [
+        "expiresAt",
+        "revealedAt",
+        "reward",
+        "rewardEn",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-regions.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "0769cd468ce8e2cb469fb0e69295c59f2c64b1ca80e866b463a15324cd0e0215",
+      "state": "mapped",
+      "reason": null,
+      "records": 7,
+      "unmappedFields": [
+        "bosses",
+        "description",
+        "descriptionEn",
+        "descriptionJa",
+        "domains",
+        "highlights",
+        "name",
+        "nameEn",
+        "nameJa",
+        "oculi",
+        "specialties",
+        "statues",
+        "teleporters",
+        "tips"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-weapons.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "c93bf1b734b1da1276460abdfc2af5d22d6aa3e40b9eff220d2c495bd8b2a797",
+      "state": "mapped",
+      "reason": null,
+      "records": 148,
+      "unmappedFields": [
+        "baseAtk",
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectName",
+        "effectNameEn",
+        "howToObtain",
+        "howToObtainEn",
+        "howToObtainZh",
+        "name",
+        "nameEn",
+        "rarity",
+        "signatureCharacter",
+        "status",
+        "subStat",
+        "subStatValue",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-character-materials.json",
+      "gameKey": "guihuan",
+      "sourceSnapshotKey": "7d43f28b47fcd59f77a4c046fcab0398e93fe533f27f57ff0af9114a1c06daff",
+      "state": "mapped",
+      "reason": null,
+      "records": 12,
+      "unmappedFields": [
+        "ascensionMaterials",
+        "talentMaterials"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-characters.json",
+      "gameKey": "guihuan",
+      "sourceSnapshotKey": "04895a8e9b25c8d750c508f5cd85d57578202ef56c6bfa706f1ea474e794ba3f",
+      "state": "mapped",
+      "reason": null,
+      "records": 12,
+      "unmappedFields": [
+        "availableAtLaunch",
+        "element",
+        "elementEn",
+        "faq",
+        "image",
+        "rarity",
+        "recommendedBuild",
+        "relatedCharacters",
+        "role",
+        "roleEn",
+        "skills",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-guides.json",
+      "gameKey": "guihuan",
+      "sourceSnapshotKey": "e45b34fc7786fde6d7d31ce8cbfeff02b92980e41007efa22d7351ebbce4ca48",
+      "state": "mapped",
+      "reason": null,
+      "records": 19,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "date",
+        "tags"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-materials.json",
+      "gameKey": "guihuan",
+      "sourceSnapshotKey": "45a86a1435bd2598065cb41bb1c976785d066ec0a30c463b5674101933e2ef07",
+      "state": "mapped",
+      "reason": null,
+      "records": 20,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-regions.json",
+      "gameKey": "guihuan",
+      "sourceSnapshotKey": "cf5353eaa87f8bed1bf08055b05ac0c80e8de1a0c4a6ac956f08fd22a8771972",
+      "state": "mapped",
+      "reason": null,
+      "records": 7,
+      "unmappedFields": [
+        "bosses",
+        "description",
+        "descriptionEn",
+        "descriptionJa",
+        "domains",
+        "highlights",
+        "name",
+        "nameEn",
+        "nameJa",
+        "oculi",
+        "specialties",
+        "statues",
+        "teleporters",
+        "tips"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-weapons.json",
+      "gameKey": "guihuan",
+      "sourceSnapshotKey": "071b84f5e6c5fc5c2ac02e82658c4ae4a7b3c8047fdd2737da64662a852dcf3b",
+      "state": "mapped",
+      "reason": null,
+      "records": 14,
+      "unmappedFields": [
+        "baseAtk",
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectName",
+        "effectNameEn",
+        "howToObtain",
+        "howToObtainEn",
+        "name",
+        "nameEn",
+        "nameJa",
+        "rarity",
+        "status",
+        "substat",
+        "substatEn",
+        "substatValue",
+        "weaponType",
+        "weaponTypeEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-astral-ops.json",
+      "gameKey": "hi3",
+      "sourceSnapshotKey": "f2418a5e43165aee066fdc758d00c16ecb9a3ff20d48f2d3da6710fda8666265",
+      "state": "mapped",
+      "reason": null,
+      "records": 1,
+      "unmappedFields": [
+        "description",
+        "descriptionEn",
+        "descriptionJa",
+        "name",
+        "nameEn",
+        "nameJa",
+        "releaseVersion",
+        "role",
+        "roleEn",
+        "roleJa",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-characters.json",
+      "gameKey": "hi3",
+      "sourceSnapshotKey": "ec7ace4d989f2f95775699a5b61d6ba5645096549c3eb3367b74fc817ce8c2fa",
+      "state": "mapped",
+      "reason": null,
+      "records": 2,
+      "unmappedFields": [
+        "damageType",
+        "damageTypeEn",
+        "rank",
+        "releaseVersion",
+        "skills",
+        "status",
+        "type",
+        "typeEn",
+        "weaponType",
+        "weaponTypeEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-guides.json",
+      "gameKey": "hi3",
+      "sourceSnapshotKey": "bd00774fd9dc28cefb750fbe426826033479bfeab8196eb5e3de4329dff0b7bd",
+      "state": "mapped",
+      "reason": null,
+      "records": 3,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "currentVersion",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-materials.json",
+      "gameKey": "hi3",
+      "sourceSnapshotKey": "874fa1288d45799a6d5a7bb11deabce19ad72105bbb7d9f31a7f7b330ec77ca2",
+      "state": "mapped",
+      "reason": null,
+      "records": 4,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "nameJa",
+        "rarity",
+        "source",
+        "sourceEn",
+        "sourceJa",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-stigma-sets.json",
+      "gameKey": "hi3",
+      "sourceSnapshotKey": "c08f77d4e30a76e640f000a965bac91f10e9de5027c672c0661265a7166b89ee",
+      "state": "mapped",
+      "reason": null,
+      "records": 2,
+      "unmappedFields": [
+        "description",
+        "descriptionEn",
+        "descriptionJa",
+        "name",
+        "nameEn",
+        "nameJa",
+        "releaseVersion",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-weapons.json",
+      "gameKey": "hi3",
+      "sourceSnapshotKey": "eb6f1999d99e8a3d1729c1cf97fc6ec5249dbda3a1fc0e6b9849a0889e1c437c",
+      "state": "mapped",
+      "reason": null,
+      "records": 3,
+      "unmappedFields": [
+        "description",
+        "descriptionEn",
+        "descriptionJa",
+        "name",
+        "nameEn",
+        "nameJa",
+        "rank",
+        "releaseVersion",
+        "status",
+        "weaponType",
+        "weaponTypeEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-anomalies.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "1ce7753dbd28c00c640492d796cdd9ab647bbe43b699a06252bca90780aff434",
+      "state": "mapped",
+      "reason": null,
+      "records": 17,
+      "unmappedFields": [
+        "appearance",
+        "attribute",
+        "attributeEn",
+        "category",
+        "categoryZh",
+        "drops",
+        "dropsEn",
+        "hp",
+        "location",
+        "locationEn",
+        "mechanics",
+        "mechanicsEn",
+        "name",
+        "nameEn",
+        "strategy",
+        "strategyEn",
+        "type",
+        "typeZh",
+        "weakness",
+        "weaknessEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-builds.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "3e2a2b2c9fb04c8e60992e8a2d6004b5324437077c0c6ed93bcb887ca2bc5034",
+      "state": "mapped",
+      "reason": null,
+      "records": 38,
+      "unmappedFields": [
+        "builds"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "a34efa97771735b4eaf89c53522128bef33652a53302518b47fbfc4e4a8b6dc7",
+      "state": "mapped",
+      "reason": null,
+      "records": 21,
+      "unmappedFields": [
+        "levelingMaterials",
+        "skillMaterials"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-character-summaries.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "f946bd44fc3457916325a206afcced7fc0267257e9ca3839df2cf36638231cba",
+      "state": "mapped",
+      "reason": null,
+      "records": 42,
+      "unmappedFields": [
+        "attribute",
+        "availableAtLaunch",
+        "name",
+        "nameEn",
+        "rank",
+        "roleEn",
+        "status",
+        "tierRank",
+        "weaponEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-characters.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "118c6c044b1a51a996dfe5ec485ba541385a7d198c132a41dd263b3a0a1d998c",
+      "state": "mapped",
+      "reason": null,
+      "records": 42,
+      "unmappedFields": [
+        "acquisitionMethod",
+        "arcType",
+        "attribute",
+        "attributeEn",
+        "availableAtLaunch",
+        "cvEn",
+        "cvJp",
+        "cvJpEn",
+        "cvZh",
+        "descriptionEn_extra",
+        "faction",
+        "factionEn",
+        "faq",
+        "image",
+        "nameTw",
+        "rank",
+        "recommendedBuild",
+        "relatedCharacters",
+        "role",
+        "roleEn",
+        "signatureArc",
+        "skills",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh",
+        "trait",
+        "weapon",
+        "weaponEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-disk-sets.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "be6659ef60743b8a5c8a2ded9c4bc61f779af316ff42a13601f838fc6cce6fda",
+      "state": "mapped",
+      "reason": null,
+      "records": 12,
+      "unmappedFields": [
+        "bestFor",
+        "category",
+        "characters",
+        "element",
+        "image",
+        "name",
+        "nameEn",
+        "nameTw",
+        "pieces",
+        "setDescription2pc",
+        "setDescription2pcEn",
+        "setDescription4pc",
+        "setDescription4pcEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-gacha-system.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "e1dedbd049a8c73b33193f355f762b5e6f8f071d825e2f3cb83b1e66526ab673",
+      "state": "mapped",
+      "reason": null,
+      "records": 5,
+      "unmappedFields": [
+        "aRate",
+        "avgPity",
+        "bRate",
+        "hardPity",
+        "maxPulls",
+        "no5050",
+        "oneTimeOnly",
+        "pityFeatured",
+        "sRate",
+        "selectorAt",
+        "softPity"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-guides.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "bc026265e51bebc4f1706a76c93c089c9fffc194e823b8c5e3c98d44df55b2db",
+      "state": "mapped",
+      "reason": null,
+      "records": 53,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "currentVersion",
+        "date",
+        "internalLinks",
+        "quickFacts",
+        "relatedCharacters",
+        "relatedLocations",
+        "relatedLore",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-image-sources.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "25d17290a0203e76ff24f2d1143e8f41414ab1496472c82f413761140d63d2f4",
+      "state": "mapped",
+      "reason": null,
+      "records": 84,
+      "unmappedFields": [
+        "categories",
+        "comment"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-materials.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "0eb86552e2b8c2b522197daacc074912ce99dbb40aa05a430b611e0602494552",
+      "state": "mapped",
+      "reason": null,
+      "records": 57,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "type",
+        "typeZh"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-redeem-codes.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "21971faeaa514b67336f133df1dd214c8d0e964ffe17316b5841e26484700b2d",
+      "state": "mapped",
+      "reason": null,
+      "records": 8,
+      "unmappedFields": [
+        "expiresAt",
+        "revealedAt",
+        "reward",
+        "rewardEn",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-regions.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "7c4357360cc14cc982ccae18429a928024eef4bab986b3596f643a43f24af1a8",
+      "state": "mapped",
+      "reason": null,
+      "records": 4,
+      "unmappedFields": [
+        "bosses",
+        "collectibles",
+        "description",
+        "descriptionEn",
+        "domains",
+        "highlights",
+        "name",
+        "nameEn",
+        "specialties",
+        "subRegions",
+        "tips"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-weapons.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "6cd2d9c3c4df0dbe927efb6d3d11641c6690a43f007367a4269301391ca4c37b",
+      "state": "mapped",
+      "reason": null,
+      "records": 42,
+      "unmappedFields": [
+        "baseAtk",
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectDescriptionTw",
+        "effectName",
+        "effectNameEn",
+        "effectNameTw",
+        "howToObtain",
+        "howToObtainEn",
+        "howToObtainZh",
+        "name",
+        "nameEn",
+        "nameTw",
+        "rank",
+        "signatureCharacter",
+        "status",
+        "substat",
+        "substatValue",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-character-summaries.json",
+      "gameKey": "roco-cn",
+      "sourceSnapshotKey": "a2991c34d8c0fc0d1462f5fd92a719f06d621038c549e99cbbb2ec1f2a766eae",
+      "state": "mapped",
+      "reason": null,
+      "records": 261,
+      "unmappedFields": [
+        "attribute",
+        "attributeEn",
+        "name",
+        "nameEn",
+        "rarity",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-characters.json",
+      "gameKey": "roco-cn",
+      "sourceSnapshotKey": "20740f9b2dd17ff9207394025adcdecf415734b6fa94d8f47146f1808144d2ee",
+      "state": "mapped",
+      "reason": null,
+      "records": 261,
+      "unmappedFields": [
+        "attribute",
+        "attributeEn",
+        "evolution",
+        "evolutionEn",
+        "habitat",
+        "habitatEn",
+        "number",
+        "rarity",
+        "releaseVersion",
+        "skills",
+        "stats",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-guides.json",
+      "gameKey": "roco-cn",
+      "sourceSnapshotKey": "b4cf13318c475312edd1172417ea9ef4277dd479c95f5b71f0852058ca7a28c3",
+      "state": "mapped",
+      "reason": null,
+      "records": 4,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "currentVersion",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-materials.json",
+      "gameKey": "roco-cn",
+      "sourceSnapshotKey": "41adca6422050e671921e40e7bcaaff2375541eb3a5b1bb397f14b8eb66ae786",
+      "state": "mapped",
+      "reason": null,
+      "records": 23,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-redeem-codes.json",
+      "gameKey": "roco-cn",
+      "sourceSnapshotKey": "a386538dea21c803099f59449cc1add09f25ea36adeb0d89cc632a1d1974faa5",
+      "state": "mapped",
+      "reason": null,
+      "records": 25,
+      "unmappedFields": [
+        "expiresAt",
+        "revealedAt",
+        "reward",
+        "rewardEn",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-weapons.json",
+      "gameKey": "roco-cn",
+      "sourceSnapshotKey": "79e0d175a1ae40bbfaabed98906dcf4845ec796f388174d57c9e5bfc97ad8ef9",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-characters.json",
+      "gameKey": "roco",
+      "sourceSnapshotKey": "c202aeab3d8708f2b6739631ff629cf346a5e5aee38c6a13d3d49a89f03ad947",
+      "state": "mapped",
+      "reason": null,
+      "records": 6,
+      "unmappedFields": [
+        "contentReview"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-guides.json",
+      "gameKey": "roco",
+      "sourceSnapshotKey": "d3574fbb97a7ea8eb283af4e1abb76574c9fbe2684d33e5bb27d2276d663f550",
+      "state": "mapped",
+      "reason": null,
+      "records": 30,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "contentReview",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-materials.json",
+      "gameKey": "roco",
+      "sourceSnapshotKey": "a9bfb72c63cce10f116d08f3df924a5c37260478da78f2cd37a64b7da6852a04",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-redeem-codes.json",
+      "gameKey": "roco",
+      "sourceSnapshotKey": "d40c4f6c4d2c77af90e1b180e7a4e574b45d1be6ba92ad310e212e99a1d6a3a4",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-weapons.json",
+      "gameKey": "roco",
+      "sourceSnapshotKey": "b7db32be187d50874628f99ee7818cf594a05ee3e42ef1c4d500b47575a704b8",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-character-materials.json",
+      "gameKey": "sea",
+      "sourceSnapshotKey": "b7b42a05513cf454a22e1158f55b97fe5afc633265c1df2ec153cc39d266ce0f",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-characters.json",
+      "gameKey": "sea",
+      "sourceSnapshotKey": "20c9b789652bfc42265019f941a99ce2eaa28b74cdc0eb39fd71a2188c761780",
+      "state": "mapped",
+      "reason": null,
+      "records": 24,
+      "unmappedFields": [
+        "attribute",
+        "attributeEn",
+        "faction",
+        "faq",
+        "favoriteFood",
+        "fleet",
+        "fleetEn",
+        "image",
+        "nickname",
+        "number",
+        "position",
+        "rarity",
+        "relatedCharacters",
+        "role",
+        "roleEn",
+        "skills",
+        "speed",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-guides.json",
+      "gameKey": "sea",
+      "sourceSnapshotKey": "11ed31f34dd3b9a225c6f547306c1bd2b0901f911b940b8d38d05c610270b3a1",
+      "state": "mapped",
+      "reason": null,
+      "records": 75,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryZh",
+        "currentVersion",
+        "date",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-materials.json",
+      "gameKey": "sea",
+      "sourceSnapshotKey": "d48eda3e4b8fa55d26135619050dff97175d32cae72784dfa4b5f2829443ebe6",
+      "state": "mapped",
+      "reason": null,
+      "records": 20,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-redeem-codes.json",
+      "gameKey": "sea",
+      "sourceSnapshotKey": "da6664230558340a04d1f174d1e158db705ce260323581d5a5f9beed35cadb50",
+      "state": "mapped",
+      "reason": null,
+      "records": 1,
+      "unmappedFields": [
+        "expiresAt",
+        "revealedAt",
+        "reward",
+        "rewardEn",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-weapons.json",
+      "gameKey": "sea",
+      "sourceSnapshotKey": "d769d1a3e4f192c7bedf24a77ddc61cc6443e005809e131c22051bcb3e4198d6",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-guides.json",
+      "gameKey": "skjh",
+      "sourceSnapshotKey": "9bbb59d3020815861bfbba4de58034c9eff569ea7af0dd4b67e63090f966be36",
+      "state": "mapped",
+      "reason": null,
+      "records": 45,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "date",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-materials.json",
+      "gameKey": "skjh",
+      "sourceSnapshotKey": "a70fe96e77917945c319adc7d8e1e03a0a958483671ef7686cb0b374aca25449",
+      "state": "mapped",
+      "reason": null,
+      "records": 43,
+      "unmappedFields": [
+        "acquisition",
+        "acquisitionEn",
+        "conversions",
+        "conversionsEn",
+        "name",
+        "nameEn",
+        "nameJa",
+        "notes",
+        "notesEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "sourceJa",
+        "stackLimit",
+        "type",
+        "uses",
+        "usesEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-redeem-codes.json",
+      "gameKey": "skjh",
+      "sourceSnapshotKey": "321d629d3d1d3093076f4b786ab28f9f11f97e36640193360416e3a168e1177e",
+      "state": "mapped",
+      "reason": null,
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-weapons.json",
+      "gameKey": "skjh",
+      "sourceSnapshotKey": "c6358eb382292250639071362674dc51819b8894d2de03ad578fbdc0f3e23a6d",
+      "state": "mapped",
+      "reason": null,
+      "records": 11,
+      "unmappedFields": [
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectDescriptionJa",
+        "effectName",
+        "effectNameEn",
+        "effectNameJa",
+        "name",
+        "nameEn",
+        "nameJa",
+        "nameZh",
+        "rarity",
+        "source",
+        "sourceEn",
+        "sourceJa",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-character-materials.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "afb812a81bf6ba60042f57eab3a53e20ab4c6804fcb05143fb8b658392c93757",
+      "state": "mapped",
+      "reason": null,
+      "records": 50,
+      "unmappedFields": [
+        "ascensionMaterials",
+        "traceMaterials"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-character-summaries.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "e67649ba84ef2b91a51a7c3ea855c34b8fa13069c1019424216ac508d2cfc767",
+      "state": "mapped",
+      "reason": null,
+      "records": 81,
+      "unmappedFields": [
+        "element",
+        "name",
+        "nameEn",
+        "nameJa",
+        "path",
+        "rarity",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-characters.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "be4b0d80753126604db72a79eb6e6140b1cca52c306aeca9fd2cde309615e84c",
+      "state": "mapped",
+      "reason": null,
+      "records": 81,
+      "unmappedFields": [
+        "acquisitionMethod",
+        "cvJp",
+        "cvZh",
+        "eidolons",
+        "element",
+        "faq",
+        "image",
+        "nameZh",
+        "path",
+        "rarity",
+        "recommendedBuild",
+        "relatedCharacters",
+        "releaseVersion",
+        "skills",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-guides.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "d297fee5c40bc7997ed47d8df24644229cbfeda2cb451343ec5d5f4bcec7224a",
+      "state": "mapped",
+      "reason": null,
+      "records": 28,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryZh",
+        "currentVersion",
+        "date",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-light-cones.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "cfcb970e7702e06ca8e5c1086dc472a8c975e891f627bdb0de024dfc52a75a68",
+      "state": "mapped",
+      "reason": null,
+      "records": 85,
+      "unmappedFields": [
+        "baseAtk",
+        "baseDef",
+        "baseHp",
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectName",
+        "effectNameEn",
+        "howToObtain",
+        "howToObtainEn",
+        "howToObtainZh",
+        "name",
+        "nameEn",
+        "path",
+        "rarity",
+        "signatureCharacter",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-materials.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "3d5ec653f5eb8877f9a91cb40bae32793c1e526d751645f4ba75f737cd13439b",
+      "state": "mapped",
+      "reason": null,
+      "records": 62,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-redeem-codes.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "367c25e9333a15828213ff26ed8b060fddd7e23bcca56a69f43bf8872a3e709d",
+      "state": "mapped",
+      "reason": null,
+      "records": 8,
+      "unmappedFields": [
+        "expiresAt",
+        "revealedAt",
+        "reward",
+        "rewardEn",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-regions.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "a2e870b2dfa29d0944b2a1295d6baa5a43cb0e822635ad2d3250e3590d4acb06",
+      "state": "mapped",
+      "reason": null,
+      "records": 5,
+      "unmappedFields": [
+        "bosses",
+        "calyxes",
+        "description",
+        "descriptionEn",
+        "domains",
+        "echoesOfWar",
+        "highlights",
+        "name",
+        "nameEn",
+        "spaceAnchors",
+        "specialties",
+        "tips"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-relics.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "b2e5a1b0cc8e28dc5a20b64022de7c18a3af0935b99cf57e9a4f94b252c5da50",
+      "state": "mapped",
+      "reason": null,
+      "records": 32,
+      "unmappedFields": [
+        "bestFor",
+        "bonus2pc",
+        "bonus2pcEn",
+        "bonus4pc",
+        "bonus4pcEn",
+        "name",
+        "nameEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-character-materials.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "776b1e8d64e68fc795806045b3d573d64238a6e2ec887a32442023af02684a95",
+      "state": "mapped",
+      "reason": null,
+      "records": 22,
+      "unmappedFields": [
+        "ascensionMaterials",
+        "rarity",
+        "skillMaterials"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-characters.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "af8be3ab74ac6a80f210020c03ff0fc5fcfaaef64a14cc980343fbc16b8c90fa",
+      "state": "mapped",
+      "reason": null,
+      "records": 52,
+      "unmappedFields": [
+        "ascensionMaterials",
+        "element",
+        "image",
+        "minorFortes",
+        "rarity",
+        "recommendedBuild",
+        "releaseVersion",
+        "skillMaterials",
+        "skills",
+        "stats",
+        "status",
+        "tierRank",
+        "tierReason",
+        "voiceActors",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-echoes.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "1d6a99b50b3b155aa5a81d11c00d778b1df0089a7f34e8953998c6331cbf9289",
+      "state": "mapped",
+      "reason": null,
+      "records": 15,
+      "unmappedFields": [
+        "bestFor",
+        "bonus2pc",
+        "bonus2pcEn",
+        "bonus5pc",
+        "bonus5pcEn",
+        "bonus5pcJa",
+        "name",
+        "nameEn",
+        "nameJa",
+        "sourceReview"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-guides.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "00a681141a77cb859b59c6ae176a350e33a69f0b5b6473975db93b57795c4f68",
+      "state": "mapped",
+      "reason": null,
+      "records": 29,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "currentVersion",
+        "date",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-materials.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "28ded9169322a25a2172c3670d85335cc67a06f07ba575610d449baa97d8330e",
+      "state": "mapped",
+      "reason": null,
+      "records": 50,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "sourceEn",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-redeem-codes.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "82bfd89873da7da3f7c3b1b07c19e7f6bdc3b81dbd7e89440bbaead5571fd21c",
+      "state": "mapped",
+      "reason": null,
+      "records": 5,
+      "unmappedFields": [
+        "expiresAt",
+        "revealedAt",
+        "reward",
+        "rewardEn",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-regions.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "6cf94fe706c84da4669feb298f0d745c954fccdf6ffdf8808d7c6b32f6a54943",
+      "state": "mapped",
+      "reason": null,
+      "records": 6,
+      "unmappedFields": [
+        "bosses",
+        "description",
+        "descriptionEn",
+        "descriptionJa",
+        "domains",
+        "highlights",
+        "highlightsEn",
+        "highlightsJa",
+        "name",
+        "nameEn",
+        "nameJa",
+        "sourceReview",
+        "specialties",
+        "subRegions",
+        "subRegionsEn",
+        "subRegionsJa",
+        "tips",
+        "tipsEn",
+        "tipsJa"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-weapons.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "f5f12ce9d4109a39062f14bd0eeca7451a489a5e0e098ed330292ccfcf5621c0",
+      "state": "mapped",
+      "reason": null,
+      "records": 71,
+      "unmappedFields": [
+        "baseAtk",
+        "name",
+        "nameEn",
+        "rarity",
+        "signatureCharacter",
+        "subStat",
+        "weaponType"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-characters.json",
+      "gameKey": "zzz",
+      "sourceSnapshotKey": "7b8831017bf3ff093ee910046195f9b5750484e2a88eded6fe1ea6bbcab75f8a",
+      "state": "mapped",
+      "reason": null,
+      "records": 58,
+      "unmappedFields": [
+        "acquisitionMethod",
+        "attackType",
+        "attackTypeEn",
+        "attribute",
+        "availableAtLaunch",
+        "cvEn",
+        "cvJa",
+        "cvJp",
+        "cvZh",
+        "faction",
+        "factionEn",
+        "faq",
+        "image",
+        "mindscapeCinema",
+        "rank",
+        "recommendedBuild",
+        "relatedCharacters",
+        "skills",
+        "specialty",
+        "specialtyEn",
+        "status",
+        "teamComps",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-drive-discs.json",
+      "gameKey": "zzz",
+      "sourceSnapshotKey": "766d360058e61df68a83c87fcf009ca623051cd7ff81193841610b06691b0c27",
+      "state": "mapped",
+      "reason": null,
+      "records": 24,
+      "unmappedFields": [
+        "bestFor",
+        "category",
+        "characters",
+        "element",
+        "image",
+        "name",
+        "nameEn",
+        "pieces",
+        "setDescription2pc",
+        "setDescription2pcEn",
+        "setDescription4pc",
+        "setDescription4pcEn"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-guides.json",
+      "gameKey": "zzz",
+      "sourceSnapshotKey": "2f41c1082423a0367884f16958a4af1a2a9117837e84fff4bb2edd760265f56c",
+      "state": "mapped",
+      "reason": null,
+      "records": 31,
+      "unmappedFields": [
+        "category",
+        "categoryEn",
+        "categoryJa",
+        "categoryZh",
+        "currentVersion",
+        "date",
+        "quickFacts",
+        "serpDescription",
+        "serpTitle",
+        "tags",
+        "updatedAt"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-materials.json",
+      "gameKey": "zzz",
+      "sourceSnapshotKey": "0d594d47321f0a99fcdfeb871de60266299fbb0dc8ef2de2f0be2dbce11715b8",
+      "state": "mapped",
+      "reason": null,
+      "records": 35,
+      "unmappedFields": [
+        "name",
+        "nameEn",
+        "rarity",
+        "source",
+        "type"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-redeem-codes.json",
+      "gameKey": "zzz",
+      "sourceSnapshotKey": "419d7c890d8fd7e86591944744beb888a9157d15b68b51e9bdd467df1fae4325",
+      "state": "mapped",
+      "reason": null,
+      "records": 10,
+      "unmappedFields": [
+        "expiresAt",
+        "revealedAt",
+        "reward",
+        "rewardEn",
+        "source",
+        "status"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-weapons.json",
+      "gameKey": "zzz",
+      "sourceSnapshotKey": "fdef95ba1f3d32f6a8a09274033e7a3316aeb721ed08831cfc3e3433819ea9c4",
+      "state": "mapped",
+      "reason": null,
+      "records": 45,
+      "unmappedFields": [
+        "baseAtk",
+        "effectDescription",
+        "effectDescriptionEn",
+        "effectName",
+        "effectNameEn",
+        "howToObtain",
+        "howToObtainEn",
+        "howToObtainZh",
+        "name",
+        "nameEn",
+        "rank",
+        "signatureCharacter",
+        "specialty",
+        "specialtyEn",
+        "status",
+        "substat",
+        "substatEn",
+        "substatValue"
+      ]
+    },
+    {
+      "sourcePath": "packages/data/raw-content-review.json",
+      "gameKey": "_platform",
+      "sourceSnapshotKey": "454e0519ee81164087c779d9dab23efa43e46006c7416c331c2855be08409279",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/ananta.json",
+      "gameKey": "ananta",
+      "sourceSnapshotKey": "7d5a4bdae82f085dd83d83bed71877f2474bbfc92f0cd96a192eb389fdda9f21",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/aniimo.json",
+      "gameKey": "aniimo",
+      "sourceSnapshotKey": "4a54d5a6af456fb183e5462382955a18f00279863f9626bc585e84dd957e3b40",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/azur-promilia.json",
+      "gameKey": "azur-promilia",
+      "sourceSnapshotKey": "4bd4f5ce136b2f64235f9bd0e959bee132ee83674151913ceb6fea7b7a76a043",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/endfield.json",
+      "gameKey": "endfield",
+      "sourceSnapshotKey": "f6ce8cf2f6e52a5dfaee3243500de1ea0872d80dfe8acd6ae6ea09559c16de48",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/genshin.json",
+      "gameKey": "genshin",
+      "sourceSnapshotKey": "aede7b14adfcfa3d7faeb1d7b08add5237dda8b93bff395bc17ca10e9ce55419",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/guihuan.json",
+      "gameKey": "guihuan",
+      "sourceSnapshotKey": "a60e48c6106a3538234e1cd69bcd4e23acb559b813ce776e38c065c11f4665d3",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/hi3.json",
+      "gameKey": "hi3",
+      "sourceSnapshotKey": "942e01fcb086e2244cc42d20d358e02a3956a7ba97fc6905c6e434216f912030",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/lvmeng.json",
+      "gameKey": "lvmeng",
+      "sourceSnapshotKey": "0885cb8535d739573676d8c0320519a3bed02865e51721353ad13e434a8522de",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/nte.json",
+      "gameKey": "nte",
+      "sourceSnapshotKey": "0f8c85238d713eff3539fa9bd0172c2160441ac0f7a980ba6fa88e8db7fb1dbb",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/roco-cn.json",
+      "gameKey": "roco-cn",
+      "sourceSnapshotKey": "178c33525e4bdc2fe3064fc4cb3a8db202c0d1168c3b804dda6642f99a6c68e6",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/roco.json",
+      "gameKey": "roco",
+      "sourceSnapshotKey": "3a3a53195b0dcc00436357ac7c175ce706d97424a642d82cfd451fa3a42c38c9",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/sea.json",
+      "gameKey": "sea",
+      "sourceSnapshotKey": "28c064d7fd307f6b2bcecfc0c412abc605f24825d8ca6fa14b3b4cded23cce73",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/skjh.json",
+      "gameKey": "skjh",
+      "sourceSnapshotKey": "76eaa4cbba6a1d6ffe46e7de4c6a73a6a2d626ad1b26753af88aaf96214d8c99",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/starrail.json",
+      "gameKey": "starrail",
+      "sourceSnapshotKey": "468f7de06d887da358b40de60075a629440132fcf8b8c91aafd0d18044fc7a43",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/wuwa.json",
+      "gameKey": "wuwa",
+      "sourceSnapshotKey": "cf0faf221b1537fe5ff30e6dc88131b6e562a493457ba63381c3e53f6cbd8f9a",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    },
+    {
+      "sourcePath": "registry/zzz.json",
+      "gameKey": "zzz",
+      "sourceSnapshotKey": "628771194fbc63cbebeb2c16832cca433ca7c8e0c2a347d7a3bd922e60ff9e7c",
+      "state": "context",
+      "reason": "Context preserved in batch source snapshot; not an editorial record.",
+      "records": 0,
+      "unmappedFields": []
+    }
+  ]
+}

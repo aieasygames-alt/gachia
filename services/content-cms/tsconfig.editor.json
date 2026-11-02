@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "scripts/editor-admin.ts", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "tests", "scripts/postgres-smoke.ts"]
+}

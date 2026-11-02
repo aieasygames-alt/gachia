@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "installedFiles": 19,
+  "sources": [
+    {
+      "path": "packages/data/games/genshin/raw-guides.json",
+      "sha256": "8d0c81f541218f4df90fb9766fa13351bd8ca1147f012be36bb694db3accc310"
+    },
+    {
+      "path": "apps/web/public/data/genshin/raw-guides.json",
+      "sha256": "8d0c81f541218f4df90fb9766fa13351bd8ca1147f012be36bb694db3accc310"
+    },
+    {
+      "path": "packages/data/games/nte/raw-guides.json",
+      "sha256": "0f2427eb8d971895220b28ccce923acf2bd9c214055eba1dfd2a5964c4ed3c3e"
+    },
+    {
+      "path": "apps/web/public/data/nte/raw-guides.json",
+      "sha256": "0f2427eb8d971895220b28ccce923acf2bd9c214055eba1dfd2a5964c4ed3c3e"
+    }
+  ],
+  "cloudWrites": false,
+  "contentWrites": false
+}

@@ -1,0 +1,15 @@
+# Intentionally separate from the public site's workspace, patches and overrides.
+packages:
+  - '.'
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+  # Local integration tests: this script only restores packaged library symlinks.
+  - '@embedded-postgres/darwin-arm64'
+overrides:
+  # Monaco's sanitizer range excludes the fix for GHSA-cg2g-xh64-v4q7.
+  dompurify: 3.4.17
+  # Isolate GHSA-x8rm-f576-gq67 remediation to Payload's GraphQL adapter.
+  '@payloadcms/graphql@3.92.1>graphql-scalars': 2.0.1
+  # This pinned kit has no code reference to the obsolete loader; verified by tests.
+  drizzle-kit@0.31.7>@esbuild-kit/esm-loader: '-'

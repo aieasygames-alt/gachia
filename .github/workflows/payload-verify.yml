@@ -1,0 +1,40 @@
+name: Payload Verification Only
+
+on:
+  push:
+    branches: [codex/payload-unified-maintenance]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: payload-verify-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/codex/payload-unified-maintenance'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6.4.0
+        with:
+          node-version: 22.23.4
+      - name: Install pinned pnpm
+        run: npm install --global pnpm@10.10.0
+      - name: Install public workspace and isolated CMS dependencies
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm --dir services/content-cms install --frozen-lockfile
+      - name: Verify CMS types without deployment credentials
+        run: |
+          pnpm --dir services/content-cms exec next typegen
+          pnpm --dir services/content-cms typecheck
+      - name: Test isolated CMS
+        run: pnpm --dir services/content-cms test
+      - name: Test release tooling without deployment credentials
+        run: pnpm test:release

@@ -1,0 +1,51 @@
+{
+  "release": {
+    "version": "shadow-release-v1",
+    "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+    "scopes": [
+      "genshin",
+      "nte"
+    ],
+    "snapshots": {
+      "genshin": "7fb9e8c028b33b1f82561055e85151072b0c8d2857aa74c3c99e322b8bce49d3",
+      "nte": "888afbeea9f93131653f211100f9c791824ecc872f4e21f60312ef2e3b14e084"
+    },
+    "shadowOnly": true,
+    "publishable": false,
+    "releaseKey": "3bc168944b30fc5c76f857e62491d411c8b7ce097118253bb44717d2ab0bc827"
+  },
+  "snapshots": {
+    "7fb9e8c028b33b1f82561055e85151072b0c8d2857aa74c3c99e322b8bce49d3": {
+      "version": "shadow-snapshot-v1",
+      "game": "genshin",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/genshin/characters/index",
+          "owner": "genshin",
+          "schema": "shadow-page-v1",
+          "title": "genshin characters",
+          "body": "Approved local shadow fixture",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "7fb9e8c028b33b1f82561055e85151072b0c8d2857aa74c3c99e322b8bce49d3"
+    },
+    "888afbeea9f93131653f211100f9c791824ecc872f4e21f60312ef2e3b14e084": {
+      "version": "shadow-snapshot-v1",
+      "game": "nte",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/nte/characters/index",
+          "owner": "nte",
+          "schema": "shadow-page-v1",
+          "title": "nte characters",
+          "body": "Approved local shadow fixture",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "888afbeea9f93131653f211100f9c791824ecc872f4e21f60312ef2e3b14e084"
+    }
+  }
+}

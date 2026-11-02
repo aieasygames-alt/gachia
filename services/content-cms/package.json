@@ -1,0 +1,56 @@
+{
+  "name": "gachia-content-cms",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": "^22.23.4 || >=24.22.1"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3100",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3100",
+    "start:editor": "next start --hostname 0.0.0.0 --port 3100",
+    "editor:migrate": "payload migrate",
+    "editor:admin": "tsx scripts/editor-admin.ts",
+    "test:postgres": "tsx scripts/postgres-smoke.ts",
+    "desktop": "python3 scripts/desktop.py",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:http": "tsx scripts/http-smoke.ts",
+    "inventory": "tsx scripts/inventory.ts",
+    "inventory:check": "tsx scripts/inventory.ts --check",
+    "intake:plan": "tsx scripts/legacy-intake.ts --plan",
+    "intake:local": "tsx scripts/legacy-intake.ts --apply-local",
+    "records:plan": "tsx scripts/record-intake.ts --plan",
+    "records:local": "tsx scripts/record-intake.ts --apply-local",
+    "records:diff": "tsx scripts/record-diff.ts",
+    "review:stage": "tsx scripts/review-stage.ts",
+    "local:admin": "tsx scripts/local-admin.ts",
+    "generate:types": "payload generate:types",
+    "maintenance:plan": "tsx scripts/maintenance-plan.ts",
+    "contracts:coverage": "tsx scripts/contract-coverage.ts",
+    "media:check": "tsx scripts/media-manifest-check.ts",
+    "media:runtime": "node ../../scripts/owner-media-runtime-audit.mjs"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "3.92.1",
+    "@payloadcms/db-sqlite": "3.92.1",
+    "@payloadcms/next": "3.92.1",
+    "@payloadcms/ui": "3.92.1",
+    "graphql": "16.11.0",
+    "next": "16.4.2",
+    "payload": "3.92.1",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/react": "19.1.6",
+    "@types/react-dom": "19.1.6",
+    "embedded-postgres": "17.6.0-beta.15",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  }
+}

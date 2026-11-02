@@ -58,6 +58,11 @@ function snapshot(url, status, html, headers) {
   };
 }
 
+function expectsJapaneseAlternate(path) {
+  // NTE Japanese pages are indexable only for guides with reviewed Japanese copy.
+  return /\/nte\/guides\/(?:999-nights-mode-guide)$/.test(path);
+}
+
 async function fetchSnapshot(origin, path) {
   const target = new URL(path, origin);
   let lastError;
@@ -92,7 +97,7 @@ for (const path of paths) {
     stagingReachable: stagingAvailable,
     titlePresent: stagingAvailable && Boolean(staging.title),
     canonicalOnProductionHost: stagingAvailable && staging.canonical.startsWith('https://gachia.com/'),
-    hreflangComplete: stagingAvailable && ['zh-Hans', 'en', 'ja', 'x-default'].every((lang) => staging.alternates.some((entry) => entry.startsWith(`${lang}:`))),
+    hreflangComplete: stagingAvailable && ['zh-Hans', 'en', 'x-default'].every((lang) => staging.alternates.some((entry) => entry.startsWith(`${lang}:`))) && (!expectsJapaneseAlternate(path) || staging.alternates.some((entry) => entry.startsWith('ja:'))),
     noindexPreview: stagingAvailable && (/noindex/i.test(staging.xRobotsTag) || /noindex/i.test(staging.bodyText)),
     contentFloor: stagingAvailable && productionAvailable && staging.bodyTextLength >= Math.min(400, production.bodyTextLength),
     navigationFloor: stagingAvailable && productionAvailable && staging.internalLinkCount >= Math.min(12, production.internalLinkCount),

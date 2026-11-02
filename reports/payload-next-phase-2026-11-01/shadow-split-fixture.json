@@ -1,0 +1,59 @@
+{
+  "release": {
+    "version": "shadow-release-v1",
+    "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+    "scopes": [
+      "genshin",
+      "nte"
+    ],
+    "snapshots": {
+      "genshin": "266c5e6cc8cc7e928921ab4fdddb2e997a86859cca6e14da792dad3e420a75e7",
+      "nte": "6462a817bc8f80668eeb1c6f1247925ad0493dde8606f175da1056b658ffc1b4"
+    },
+    "shadowOnly": true,
+    "publishable": false,
+    "releaseKey": "d59a5f4e8426a07959993a51cdea7bb717dd1da409d999e16f2684110294f829"
+  },
+  "snapshots": {
+    "266c5e6cc8cc7e928921ab4fdddb2e997a86859cca6e14da792dad3e420a75e7": {
+      "version": "shadow-snapshot-v1",
+      "game": "genshin",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/genshin/characters/index",
+          "owner": "genshin",
+          "schema": "shadow-page-v1",
+          "title": "Genshin fixture",
+          "body": "Synthetic split ownership: Genshin fixture",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "266c5e6cc8cc7e928921ab4fdddb2e997a86859cca6e14da792dad3e420a75e7"
+    },
+    "6462a817bc8f80668eeb1c6f1247925ad0493dde8606f175da1056b658ffc1b4": {
+      "version": "shadow-snapshot-v1",
+      "game": "nte",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/nte/characters/index",
+          "owner": "nte",
+          "schema": "shadow-page-v1",
+          "title": "NTE character fixture",
+          "body": "Synthetic split ownership: NTE character fixture",
+          "expiresAt": null
+        },
+        {
+          "path": "/zh/nte/items/ore",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Main NTE item fixture",
+          "body": "Synthetic split ownership: Main NTE item fixture",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "6462a817bc8f80668eeb1c6f1247925ad0493dde8606f175da1056b658ffc1b4"
+    }
+  }
+}

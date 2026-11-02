@@ -1,0 +1,14 @@
+**
+!packages
+!packages/core
+!packages/core/**
+!services
+!services/content-cms
+!services/content-cms/**
+**/node_modules
+**/.next
+**/.local
+**/.env
+**/.env.*
+**/*.tsbuildinfo
+**/.git

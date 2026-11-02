@@ -1,0 +1,96 @@
+{
+  "schema": "media-evidence-v1",
+  "generatedAt": "2026-10-31T12:01:57.290Z",
+  "entries": [
+    {
+      "owner": "genshin",
+      "pathname": "/images/genshin/characters/diluc.webp",
+      "sha256": "c870e0ceaf3a7e1e581129a911b971be23890c1998b03e7b59d17e1fbabb9a84",
+      "bytes": 21472,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-genshin/public/images/genshin/characters/diluc.webp"
+    },
+    {
+      "owner": "genshin",
+      "pathname": "/images/genshin/characters/hu-tao.webp",
+      "sha256": "6b8bad89848b05a0d1dd445adfcf5da3c6b3d6f5cd0001958aa30d2910235f03",
+      "bytes": 21948,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-genshin/public/images/genshin/characters/hu-tao.webp"
+    },
+    {
+      "owner": "genshin",
+      "pathname": "/images/genshin/characters/klee.webp",
+      "sha256": "1d667b89bbb4e127d1513d3d9e167f8c9709cc4a4e2c1737a5586f2dd11715b0",
+      "bytes": 24934,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-genshin/public/images/genshin/characters/klee.webp"
+    },
+    {
+      "owner": "genshin",
+      "pathname": "/images/logo.webp",
+      "sha256": "a7ab8a404c8bd8d316c2c4805ed74c0b7298d44dd1b78b6a586e72d795c8b2b0",
+      "bytes": 82762,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-genshin/public/images/logo.webp"
+    },
+    {
+      "owner": "nte",
+      "pathname": "/images/characters/alphard.webp",
+      "sha256": "e7107a34f36c9a9a721ff8ba925616953b06151ded22473bed959cc0839b8ac3",
+      "bytes": 212980,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-nte/public/images/characters/alphard.webp"
+    },
+    {
+      "owner": "nte",
+      "pathname": "/images/characters/black-bird.webp",
+      "sha256": "f6f5bb0773aedc2000b91979c12251b07a735a260ff1a30894d739ef4d47bb19",
+      "bytes": 41900,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-nte/public/images/characters/black-bird.webp"
+    },
+    {
+      "owner": "nte",
+      "pathname": "/images/characters/nitsa.webp",
+      "sha256": "c579007b0d91f86eea474ebf50ec046ec4a764b599cce14c7c68eeab1b7de9bd",
+      "bytes": 166522,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-nte/public/images/characters/nitsa.webp"
+    },
+    {
+      "owner": "nte",
+      "pathname": "/images/characters/shinku.webp",
+      "sha256": "f3fc3d567f3e3494ba6d7709ac353834246525d0e3a370b2c8b0abeca8d7480d",
+      "bytes": 149552,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-nte/public/images/characters/shinku.webp"
+    },
+    {
+      "owner": "nte",
+      "pathname": "/images/characters/taygedo.webp",
+      "sha256": "017bd4cf0ce1b49c261d13a7983833bba8b2ac6c9761fafd002181280364af45",
+      "bytes": 434118,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-nte/public/images/characters/taygedo.webp"
+    },
+    {
+      "owner": "nte",
+      "pathname": "/images/logo.webp",
+      "sha256": "a7ab8a404c8bd8d316c2c4805ed74c0b7298d44dd1b78b6a586e72d795c8b2b0",
+      "bytes": 82762,
+      "mime": "image/webp",
+      "rights": "unverified",
+      "sourcePointer": "apps/game-nte/public/images/logo.webp"
+    }
+  ]
+}

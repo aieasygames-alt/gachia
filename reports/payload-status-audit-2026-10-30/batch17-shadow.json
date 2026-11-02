@@ -1,0 +1,438 @@
+{
+  "version": "shadow-experiment-v1",
+  "syntheticOnly": true,
+  "publicTrafficChanged": false,
+  "productionActivationImplemented": false,
+  "inventoryDigest": "1aabeb344664390dce9c13c67090dd3ae583bbdf934744a2825cfc96db13a0c1",
+  "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+  "asOf": "2026-10-30T00:00:00.000Z",
+  "scopes": [
+    "genshin",
+    "starrail",
+    "wuwa",
+    "nte",
+    "zzz",
+    "hi3",
+    "guihuan",
+    "ananta",
+    "endfield",
+    "sea",
+    "skjh",
+    "roco",
+    "roco-cn",
+    "aniimo",
+    "azur-promilia",
+    "lvmeng"
+  ],
+  "owners": [
+    "azur-promilia",
+    "genshin",
+    "lvmeng",
+    "main",
+    "nte"
+  ],
+  "snapshotCount": 17,
+  "reusedScopes": [
+    "genshin",
+    "starrail",
+    "wuwa",
+    "zzz",
+    "hi3",
+    "guihuan",
+    "ananta",
+    "endfield",
+    "sea",
+    "skjh",
+    "roco",
+    "roco-cn",
+    "aniimo",
+    "azur-promilia",
+    "lvmeng"
+  ],
+  "capabilitiesAreSynthetic": true,
+  "checks": {
+    "serializedRoundTrip": true,
+    "nteSplitOwners": true,
+    "pinnedOldView": true,
+    "incompatibleMainRejected": true,
+    "incompatibleNteRejected": true,
+    "missingOwnerSnapshotRejected": true,
+    "rollbackRevalidated": true
+  },
+  "baseline": {
+    "version": "shadow-release-v1",
+    "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+    "scopes": [
+      "ananta",
+      "aniimo",
+      "azur-promilia",
+      "endfield",
+      "genshin",
+      "guihuan",
+      "hi3",
+      "lvmeng",
+      "nte",
+      "roco",
+      "roco-cn",
+      "sea",
+      "skjh",
+      "starrail",
+      "wuwa",
+      "zzz"
+    ],
+    "snapshots": {
+      "ananta": "ccbc1ced33a1f53cf64548df1474e02f57d9eb2dd68858e624485d93711b8096",
+      "aniimo": "2ce74ed046a9a0b606c5481ee9f3812c54d3f38935c6c23ddae83670e8bab9fd",
+      "azur-promilia": "0781b6519172bc0ddaf30286f6ff9701b228282fa05e7aaeba7e5cf63736e43f",
+      "endfield": "b8553619d270c827f8b21f12ffac6336c142d86dcc4922a10f02480e77a5a638",
+      "genshin": "ac7f496f347a80b53512a52497f95a922c5c4d32a4617384883e1cf14503cb6c",
+      "guihuan": "c22e280d762502d4affe20ce11550318dde44a16613ba1df0db59f62c5aff7a0",
+      "hi3": "41063ad96d466bf60821cd33802e6cef1cd96464b8720b6f6325b8bd117b6238",
+      "lvmeng": "5f9cb8bdf46997695227bc4bd2ff5de7b905f01c65cf48464a8ca6e653a9d5db",
+      "nte": "22991dafbc066340d2c2667aa7c47debffcf526882d4009ade635b48eb771acc",
+      "roco": "9696a1e688a6bcedec98861ad1dea45975476b9901458d36d1fac48de73df977",
+      "roco-cn": "518bd672bb9acca48c396ab48026923cb169c265f49a4ecefada8bc67f56e3a6",
+      "sea": "53451a63d597d1094a9129ff2c93ab3762b0c5d0b5d41a7d3fccafe741744e5b",
+      "skjh": "d635afdf9542812a18716a5aeb14f097182ed3b77a8818d540711916ac34cb94",
+      "starrail": "7dd2ea0859191dc8d856899bed034ece8c1271b2c96417d645655995428e38a7",
+      "wuwa": "52d7e2b77bdd4b5eb15ab310a361bd1416084b5c9bd01505de7153f488bb668b",
+      "zzz": "235ae02e79e6cb8c5bd19c2235ff3bfffaec639b2126009f321be64c722522f8"
+    },
+    "shadowOnly": true,
+    "publishable": false,
+    "releaseKey": "9603ce6e29e85b950421df9a0c710931a115fa23282493fc81ea9a686675cf96"
+  },
+  "next": {
+    "version": "shadow-release-v1",
+    "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+    "scopes": [
+      "ananta",
+      "aniimo",
+      "azur-promilia",
+      "endfield",
+      "genshin",
+      "guihuan",
+      "hi3",
+      "lvmeng",
+      "nte",
+      "roco",
+      "roco-cn",
+      "sea",
+      "skjh",
+      "starrail",
+      "wuwa",
+      "zzz"
+    ],
+    "snapshots": {
+      "ananta": "ccbc1ced33a1f53cf64548df1474e02f57d9eb2dd68858e624485d93711b8096",
+      "aniimo": "2ce74ed046a9a0b606c5481ee9f3812c54d3f38935c6c23ddae83670e8bab9fd",
+      "azur-promilia": "0781b6519172bc0ddaf30286f6ff9701b228282fa05e7aaeba7e5cf63736e43f",
+      "endfield": "b8553619d270c827f8b21f12ffac6336c142d86dcc4922a10f02480e77a5a638",
+      "genshin": "ac7f496f347a80b53512a52497f95a922c5c4d32a4617384883e1cf14503cb6c",
+      "guihuan": "c22e280d762502d4affe20ce11550318dde44a16613ba1df0db59f62c5aff7a0",
+      "hi3": "41063ad96d466bf60821cd33802e6cef1cd96464b8720b6f6325b8bd117b6238",
+      "lvmeng": "5f9cb8bdf46997695227bc4bd2ff5de7b905f01c65cf48464a8ca6e653a9d5db",
+      "nte": "ad1d6fec3f0d6b9154b659c32d6c88042d2e43f02f9b37588b1e2b24798fe77a",
+      "roco": "9696a1e688a6bcedec98861ad1dea45975476b9901458d36d1fac48de73df977",
+      "roco-cn": "518bd672bb9acca48c396ab48026923cb169c265f49a4ecefada8bc67f56e3a6",
+      "sea": "53451a63d597d1094a9129ff2c93ab3762b0c5d0b5d41a7d3fccafe741744e5b",
+      "skjh": "d635afdf9542812a18716a5aeb14f097182ed3b77a8818d540711916ac34cb94",
+      "starrail": "7dd2ea0859191dc8d856899bed034ece8c1271b2c96417d645655995428e38a7",
+      "wuwa": "52d7e2b77bdd4b5eb15ab310a361bd1416084b5c9bd01505de7153f488bb668b",
+      "zzz": "235ae02e79e6cb8c5bd19c2235ff3bfffaec639b2126009f321be64c722522f8"
+    },
+    "shadowOnly": true,
+    "publishable": false,
+    "releaseKey": "71c1b51a93952ba25c81e88ef3967587ee15c34d7e46d80f1799ec1a8148fbe0"
+  },
+  "snapshots": [
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "genshin",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/genshin/characters/example",
+          "owner": "genshin",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "ac7f496f347a80b53512a52497f95a922c5c4d32a4617384883e1cf14503cb6c"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "starrail",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/starrail/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "7dd2ea0859191dc8d856899bed034ece8c1271b2c96417d645655995428e38a7"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "wuwa",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/wuwa/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "52d7e2b77bdd4b5eb15ab310a361bd1416084b5c9bd01505de7153f488bb668b"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "nte",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/nte/characters/example",
+          "owner": "nte",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        },
+        {
+          "path": "/zh/nte/items/ore",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "22991dafbc066340d2c2667aa7c47debffcf526882d4009ade635b48eb771acc"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "zzz",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/zzz/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "235ae02e79e6cb8c5bd19c2235ff3bfffaec639b2126009f321be64c722522f8"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "hi3",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/hi3/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "41063ad96d466bf60821cd33802e6cef1cd96464b8720b6f6325b8bd117b6238"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "guihuan",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/guihuan/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "c22e280d762502d4affe20ce11550318dde44a16613ba1df0db59f62c5aff7a0"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "ananta",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/ananta/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "ccbc1ced33a1f53cf64548df1474e02f57d9eb2dd68858e624485d93711b8096"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "endfield",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/endfield/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "b8553619d270c827f8b21f12ffac6336c142d86dcc4922a10f02480e77a5a638"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "sea",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/sea/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "53451a63d597d1094a9129ff2c93ab3762b0c5d0b5d41a7d3fccafe741744e5b"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "skjh",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/skjh/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "d635afdf9542812a18716a5aeb14f097182ed3b77a8818d540711916ac34cb94"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "roco",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/roco/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "9696a1e688a6bcedec98861ad1dea45975476b9901458d36d1fac48de73df977"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "roco-cn",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/roco-cn/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "518bd672bb9acca48c396ab48026923cb169c265f49a4ecefada8bc67f56e3a6"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "aniimo",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/aniimo/characters/example",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "2ce74ed046a9a0b606c5481ee9f3812c54d3f38935c6c23ddae83670e8bab9fd"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "azur-promilia",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/azur-promilia/characters/example",
+          "owner": "azur-promilia",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "0781b6519172bc0ddaf30286f6ff9701b228282fa05e7aaeba7e5cf63736e43f"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "lvmeng",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/lvmeng/characters/example",
+          "owner": "lvmeng",
+          "schema": "shadow-page-v1",
+          "title": "Synthetic shadow fixture",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "5f9cb8bdf46997695227bc4bd2ff5de7b905f01c65cf48464a8ca6e653a9d5db"
+    },
+    {
+      "version": "shadow-snapshot-v1",
+      "game": "nte",
+      "routePolicy": "a8bc8ed0d9b90aaa096b207e36f31f334a76f87eea82bcbe777ce1f3fdee78bb",
+      "pages": [
+        {
+          "path": "/zh/nte/characters/example",
+          "owner": "nte",
+          "schema": "shadow-page-v1",
+          "title": "Updated synthetic character",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        },
+        {
+          "path": "/zh/nte/items/ore",
+          "owner": "main",
+          "schema": "shadow-page-v1",
+          "title": "Updated synthetic item",
+          "body": "Synthetic text only; not migrated or approved content.",
+          "expiresAt": null
+        }
+      ],
+      "snapshotKey": "ad1d6fec3f0d6b9154b659c32d6c88042d2e43f02f9b37588b1e2b24798fe77a"
+    }
+  ]
+}

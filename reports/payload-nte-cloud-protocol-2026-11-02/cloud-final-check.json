@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sevenServiceTopologyUnchanged": true,
+  "cloudWrites": false,
+  "finalSnapshot": "/Users/robert/.gachia-cms-audits/nte-retention-44q23z/cloud-final.json",
+  "sha256": "fa7c08f4d8a21f45a8272045401a6ed657726c69daefaf6058e58d89ceaaadcd",
+  "versions": {
+    "gachia": "3efd4103-7156-484b-86d8-a28853a668c8",
+    "gachia-staging": "f142070d-ffb0-4b99-a204-49af0c265baa",
+    "gachia-router": "239bb325-998c-4893-98e5-ddd24d50c99a",
+    "gachia-game-genshin": "c0dba6f4-878a-467e-91e9-f32508e59e82",
+    "gachia-game-nte": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+    "gachia-game-azur-promilia": "86353da1-7aa9-40e1-836c-a344eeb4dad0",
+    "gachia-game-lvmeng": "7e62c798-d454-48d7-8bee-1bce6660550b"
+  }
+}

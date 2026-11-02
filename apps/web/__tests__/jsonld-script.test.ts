@@ -59,5 +59,5 @@ it('routes every app JSON-LD script through the shared serializer', () => {
     };
     visit(tree);
   }
-  expect(sinks).toBe(32);
+  expect(sinks).toBe(33);
 });

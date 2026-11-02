@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "work": "/Users/robert/.gachia-cms-audits/nte-retention-44q23z",
+  "evidencePath": "/Users/robert/.gachia-cms-audits/nte-retention-44q23z/asset-evidence.json",
+  "evidencePin": "e2f9b3ba41bd853f1a1586cfc58bf92de80f96974e2974ae57e339ba904b638c",
+  "gameAssets": {
+    "receiptPath": "/Users/robert/.gachia-cms-audits/nte-retention-44q23z/previous-nte/receipt.json",
+    "receiptSha256": "8a6c8c40927e0fa25991ae64ed61153c9c3448a7d6427afb4647005904a72bee",
+    "versionId": "cb854ebe-544d-40b6-9217-5df329a8a1cb",
+    "deploymentId": "89960349-9607-422a-bc18-fa2b22b4e997",
+    "scriptEtag": "300a163bed6c6d5cc2430e673207ae93577503b6a3b3450a444678fffe0963d6",
+    "workerArchiveSha256": "db797a592a4091f1095130ad33644845969241e2b7e100e8f127145bec2642ef",
+    "inventorySha256": "02cad970fc1b189dedf16f6d821668a7c0bc5081fe2d27b6609e18947736fd9c",
+    "files": 116,
+    "bytes": 1611112,
+    "capturedAt": "2026-11-02T03:46:48.079Z",
+    "sourceCommit": "not_attested",
+    "cloudAssetManifestCompleteness": "not_asserted",
+    "verification": "local_evidence_integrity_only_not_live_cloud_state"
+  },
+  "main": {
+    "versionId": "3efd4103-7156-484b-86d8-a28853a668c8",
+    "files": 441,
+    "bytes": 11240745,
+    "workerArchiveSHA256": "280e9f5813605b08822a662f257163704c6cf3b2791a505fc88e71f5d8fadd77"
+  },
+  "historicalArtifactManifestSHA256": "d93be38d763b36561cb4e03cea7a6067af236d422ab870991bb8fcb0fa1f5677",
+  "historicalArtifactTreeSHA256": "ec2f19a75136e7550d2ac1c02fb48b46ba152658c12b6f8094456d12ff0ee01d",
+  "publicNTEStaticResponses": 116,
+  "topologyUnchanged": true,
+  "cloudWrites": false,
+  "scope": "current-version-bound logged static inventory; local historical bytes plus fresh public Router byte probes; not complete cloud asset manifest"
+}
