@@ -13,7 +13,7 @@ for (const [index, line] of lines.entries()) test(`runbook command ${index + 1} 
   for (let i = 2; i < parts.length; i += 2) {
     const key = parts[i], value = key === '--run' ? `${id}-${'a'.repeat(12)}`
       : key === '--mode' ? parts[i + 1] : ['--retention', '--bundle', '--recovery', '--renewal'].includes(key) ? id
-        : ['--repo', '--evidence', '--baseline'].includes(key) ? '/tmp/runbook-fixture' : sha;
+        : ['--repo', '--evidence', '--baseline', '--source'].includes(key) ? '/tmp/runbook-fixture' : sha;
     args.push(key, value);
   }
   assert.equal(options([action === 'plan' ? 'inspect' : action, ...args]).action, action === 'plan' ? 'inspect' : action);
@@ -24,7 +24,9 @@ test('runbook publish actions exist in the installed manager parser', () => {
   for (const line of lines) assert(help.stdout.includes(line.split(' ')[1]));
 });
 test('operator handoff makes the remaining manual evidence and cloud gaps explicit', () => {
-  assert.match(text, /尚无一键自动生成全部资源\/恢复证据/);
+  assert.match(text, /尚无一键自动生成全部资源\/恢复证据并从零建立可信来源/);
+  assert.match(text, /publish-assets-refresh/);
+  assert.match(text, /publish-recovery-local-prepare/);
   assert.match(text, /首次真实编辑的云端验收尚未完成/);
   assert.match(text, /不能删日志/);
   assert.match(text, /title \/ body/);
@@ -41,5 +43,5 @@ test('Payload CI permits only the task branch, remains read-only and has no depl
   assert.match(workflow, /contents: read/);
   assert.match(workflow, /persist-credentials: false/);
   assert(!/secrets\.|(?:contents|actions|packages|id-token): write|wrangler|desktop\.py|release:production|\bpull_request:/.test(workflow));
-  for (const check of ['next typegen', 'typecheck', 'test:release']) assert(workflow.includes(check));
+  for (const check of ['next typegen', 'typecheck', 'test:release', 'inventory:check', '@gachia/router check:generated', 'validate:game-deployments', '@gachia/router type-check', '@gachia/router test']) assert(workflow.includes(check));
 });

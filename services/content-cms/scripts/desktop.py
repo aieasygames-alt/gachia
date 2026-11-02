@@ -22,7 +22,7 @@ ROOT = Path.home() / 'Library/Application Support/GachiaCMS'
 AGENTS = Path.home() / 'Library/LaunchAgents'
 PG = Path('/opt/homebrew/opt/postgresql@17/bin')
 NODE = '/opt/homebrew/bin/node'
-MAINTENANCE_ACTIONS = ['baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
+MAINTENANCE_ACTIONS = ['assets-refresh', 'recovery-local-prepare', 'baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
 
 
 def maintenance_arguments(args):
@@ -219,7 +219,7 @@ def complete_install(cfg):
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     for name in ['desktop-recovery-receipt.mjs', 'desktop-promotion-request.mjs', 'desktop-promotion-transport.mjs',
                  'desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs',
-                 'desktop-release-scope.mjs']:
+                 'desktop-release-scope.mjs', 'desktop-local-evidence.mjs']:
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     create_agent('payload', [sys.executable, ROOT / 'desktop.py', 'serve'], app)
     start('payload')
@@ -306,7 +306,7 @@ def main():
                                          'publish-cloud-prepare', 'publish-cloud-verify', 'publish-cloud-upload-preview',
                                          'publish-cloud-reconcile', 'publish-recovery-check', 'publish-promotion-check',
                                          'publish-recovery-prepare-cloud', 'publish-recovery-verify-cloud',
-                                         'publish-recovery-upload-preview', 'publish-recovery-receipt-check', 'publish-cloud-promote']
+                                         'publish-recovery-upload-preview', 'publish-recovery-receipt-check', 'publish-cloud-promote', 'publish-project-inventory']
                                         + ['publish-' + action for action in MAINTENANCE_ACTIONS])
     parser.add_argument('--backup', type=Path)
     parser.add_argument('--repo', type=Path)
@@ -332,12 +332,14 @@ def main():
     parser.add_argument('--renewal-pin')
     parser.add_argument('--mode', choices=['promote', 'recover'])
     parser.add_argument('--promotion-journal-pin')
+    parser.add_argument('--source', type=Path)
+    parser.add_argument('--source-pin')
     supplied_flags = [arg.split('=', 1)[0] for arg in sys.argv[1:] if arg.startswith('--')]
     if len(supplied_flags) != len(set(supplied_flags)):
         parser.error('Duplicate options are forbidden')
     args = parser.parse_args()
     if args.action.removeprefix('publish-') not in MAINTENANCE_ACTIONS and any(
-            getattr(args, key) is not None for key in ['baseline', 'baseline_pin', 'renewal', 'renewal_pin', 'mode', 'promotion_journal_pin']):
+            getattr(args, key) is not None for key in ['baseline', 'baseline_pin', 'renewal', 'renewal_pin', 'mode', 'promotion_journal_pin', 'source', 'source_pin']):
         parser.error('Maintenance evidence options require an explicit maintenance action')
     if args.action == 'serve':
         cfg = settings()
@@ -380,7 +382,7 @@ def main():
         elif args.action.startswith('publish-'):
             action = args.action.removeprefix('publish-')
             command = [NODE, ROOT / 'publisher/desktop-publish.mjs', 'inspect' if action == 'plan' else action]
-            if action in MAINTENANCE_ACTIONS:
+            if action in MAINTENANCE_ACTIONS or action == 'project-inventory':
                 command += maintenance_arguments(args)
             elif action in ['plan', 'prepare']:
                 if not args.repo or not args.release_key:

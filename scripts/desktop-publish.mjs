@@ -370,6 +370,8 @@ async function previewUnlocked(run, pin, retained) {
 
 const renewalArgs = ['--recovery', '--recovery-pin', '--journal-pin', '--receipt-pin', '--release-key'];
 export const maintenanceActions = {
+  'assets-refresh': ['--evidence', '--evidence-pin'],
+  'recovery-local-prepare': ['--retention', '--retention-pin', '--baseline', '--baseline-pin', '--source', '--source-pin'],
   'baseline-capture': ['--repo', '--retention', '--retention-pin'],
   'baseline-bind': ['--retention', '--retention-pin', '--evidence', '--evidence-pin', '--baseline', '--baseline-pin'],
   'evidence-renew': [...renewalArgs, '--mode'],
@@ -379,6 +381,7 @@ export const maintenanceActions = {
 
 export function options(args) {
   const [action, ...rest] = args;
+  if (action === 'project-inventory') { assert.equal(rest.length, 0, 'Project inventory accepts no targets/options'); return { action }; }
   if (Object.hasOwn(maintenanceActions, action)) {
     const expected = ['--run', '--pin', ...maintenanceActions[action]], result = { action };
     for (let i = 0; i < rest.length; i += 2) {
@@ -420,7 +423,11 @@ async function main() {
   const opts = options(process.argv.slice(2));
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Only the installed Mac may prepare releases');
   assert(existsSync(join(ROOT, 'settings.json')), 'Install the desktop CMS first');
-  if (['inspect', 'prepare'].includes(opts.action)) {
+  if (opts.action === 'project-inventory') {
+    const { preparationReader } = await import('./desktop-local-evidence.mjs');
+    const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
+    console.log(json(await preparationReader(token).project()));
+  } else if (['inspect', 'prepare'].includes(opts.action)) {
     assert(SHA.test(opts['--release-key']), 'Invalid release key');
     const input = { repo: resolve(opts['--repo']), directory: join(ROOT, 'publish', opts['--release-key']), commit: opts['--commit'] ?? 'HEAD' };
     if (opts.action === 'inspect') console.log(json(inspectCandidate(input)));
@@ -432,7 +439,25 @@ async function main() {
   } else {
     assert(/^[a-f0-9]{16}-[a-f0-9]{12}$/.test(opts['--run']), 'Invalid local run ID');
     const run = join(RUNS, opts['--run']);
-    if (['baseline-capture', 'baseline-bind'].includes(opts.action)) {
+    if (['assets-refresh', 'recovery-local-prepare'].includes(opts.action)) {
+      await withRunLock(run, async () => {
+        const { preparationReader, refreshAssetEvidence, prepareLocalRecovery } = await import('./desktop-local-evidence.mjs');
+        const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
+        const reader = preparationReader(token);
+        const directory = join(run, `${opts.action}-${randomBytes(8).toString('hex')}`);
+        if (opts.action === 'assets-refresh') {
+          const plan = verifyBuilt(run, opts['--pin']);
+          const result = await refreshAssetEvidence({ plan, evidencePath: resolve(opts['--evidence']), evidencePin: opts['--evidence-pin'], directory, reader });
+          verifyBuilt(run, opts['--pin']); console.log(json(result));
+        } else {
+          const { verifyRetainedCandidate } = await import('./desktop-release-assets.mjs');
+          const check = () => ({ ...verifyRetainedCandidate(run, opts['--pin'], opts['--retention'], opts['--retention-pin']), retentionPin: opts['--retention-pin'] });
+          const result = await prepareLocalRecovery({ run, verified: check(), baselinePath: resolve(opts['--baseline']), baselinePin: opts['--baseline-pin'],
+            sourcePath: resolve(opts['--source']), sourcePin: opts['--source-pin'], directory, reader });
+          check(); console.log(json(result));
+        }
+      });
+    } else if (['baseline-capture', 'baseline-bind'].includes(opts.action)) {
       await withRunLock(run, async () => {
         const { verifyRetainedCandidate } = await import('./desktop-release-assets.mjs');
         const verified = { ...verifyRetainedCandidate(run, opts['--pin'], opts['--retention'], opts['--retention-pin']), retentionPin: opts['--retention-pin'] };

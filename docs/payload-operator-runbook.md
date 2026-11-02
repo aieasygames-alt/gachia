@@ -49,17 +49,21 @@ cms publish-verify --run "$RUN" --pin "$PLAN_PIN"
 
 ## 4. 维护者准备资源、上一公开基线和兼容恢复：不写云
 
-这一步仍是维护者流程，**尚无一键自动生成全部资源/恢复证据的管理器命令**。不能让编辑者手填一个 approved=true 或重新签 JSON 来跳过。
+R20新增 `publish-project-inventory`（只读观察10Worker）、`publish-assets-refresh`（新鲜公网资源字节/当前云模块）和 `publish-recovery-local-prepare`（当前云runtime + 新旧静态并集 + 实际loopback采样）。管理器自动输出本轮evidencePath/evidencePin，不再手写HTTP成功回执。它们不上传、不部署、不解锁CI或通用目标。
 
-维护者用 `desktop-release-assets.mjs` 的 captureGameAssets/verifyAssetEvidence，绑定当前游戏 UUID/deployment/etag、历史网络清单及真实静态字节，同时核对 Main 可信旧制品来源。使用保留制品、当前旧 runtime 与新旧静态资源并集，按 `desktop-release-readiness.mjs` 的 verifyRecoveryCompatibility 合同生成该 run 的本地恢复 HTTP 证据。参考 R14/R15 的实测与执行脚本，但不得直接复用其诊断 UUID、publishable=false 制品或合成回执。
+**尚无一键自动生成全部资源/恢复证据并从零建立可信来源的命令**：首次基线托管仍由维护者准备。ASSET_SOURCE/ASSET_SOURCE_PIN指已经验证的双owner旧资源来源，不是旧HTTP批准；新命令重新读取当前版本、比对历史game模块，并重采全部已登记的game/Main公网静态字节。来源过期即停止，没有“跳过来源”或直接approved标记。旧资源范围仍是已记录清单，不宣称完整Cloudflare资产清单。
+
+RECOVERY_SOURCE/RECOVERY_SOURCE_PIN是固定game/Main来源树清单：`schemaVersion:1`、game及owners；每个owner包含当前公开versionId、可信旧`.open-next`的directory和完整artifactSHA256（来自artifactFiles规范JSON的SHA）。来源清单是字节身份输入，不是审批；命令将重新下载精确当前云模块替换**派生副本**的runtime，拒绝源树/UUID/静态冲突，验证旧JSON和三语言页面与当前精确版本一致。第一轮可使用已验历史制品；后续B必须指向当前公开A，不沿用最初O。不得直接复用R14/R15诊断UUID、publishable=false产物或合成回执。
 
 ```sh
+cms publish-project-inventory
+cms publish-assets-refresh --run "$RUN" --pin "$PLAN_PIN" --evidence "$ASSET_SOURCE" --evidence-pin "$ASSET_SOURCE_PIN"
 cms publish-retain --run "$RUN" --pin "$PLAN_PIN" --evidence "$ASSET_EVIDENCE" --evidence-pin "$ASSET_PIN"
 cms publish-verify-retained --run "$RUN" --pin "$PLAN_PIN" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
 cms publish-preview-retained --run "$RUN" --pin "$PLAN_PIN" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
 cms publish-cloud-check --run "$RUN" --pin "$PLAN_PIN" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
 cms publish-baseline-capture --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
-cms publish-baseline-bind --run "$RUN" --pin "$PLAN_PIN" --retention "$RETENTION" --retention-pin "$RETENTION_PIN" --evidence "$LOCAL_RECOVERY" --evidence-pin "$LOCAL_RECOVERY_PIN" --baseline "$BASELINE_PATH" --baseline-pin "$BASELINE_PIN"
+cms publish-recovery-local-prepare --run "$RUN" --pin "$PLAN_PIN" --retention "$RETENTION" --retention-pin "$RETENTION_PIN" --baseline "$BASELINE_PATH" --baseline-pin "$BASELINE_PIN" --source "$RECOVERY_SOURCE" --source-pin "$RECOVERY_SOURCE_PIN"
 cms publish-recovery-check --run "$RUN" --pin "$PLAN_PIN" --retention "$RETENTION" --retention-pin "$RETENTION_PIN" --evidence "$BOUND_RECOVERY" --evidence-pin "$BOUND_RECOVERY_PIN"
 cms publish-cloud-prepare --run "$RUN" --pin "$PLAN_PIN" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
 cms publish-cloud-verify --run "$RUN" --pin "$PLAN_PIN" --bundle "$BUNDLE" --bundle-pin "$BUNDLE_PIN"
@@ -67,7 +71,7 @@ cms publish-recovery-prepare-cloud --run "$RUN" --pin "$PLAN_PIN" --bundle "$BUN
 cms publish-recovery-verify-cloud --run "$RUN" --pin "$PLAN_PIN" --recovery "$RECOVERY" --recovery-pin "$RECOVERY_PIN"
 ```
 
-输出映射：retain 的 id/retentionPin；baseline-capture 的 baselinePath/baselinePin；baseline-bind 的新 evidencePath/evidencePin；cloud-prepare 的 id/bundlePin；recovery-prepare-cloud 的 id/recoveryBundlePin。逐项保存为相应变量，不混用候选 bundle、恢复 bundle 和 receipt pin。
+输出映射：assets-refresh的evidencePath/evidencePin→ASSET_EVIDENCE/ASSET_PIN；retain的id/retentionPin；baseline-capture的baselinePath/baselinePin；recovery-local-prepare的evidencePath/evidencePin→BOUND_RECOVERY/BOUND_RECOVERY_PIN（已绑定上一公开基线）；cloud-prepare的id/bundlePin；recovery-prepare-cloud的id/recoveryBundlePin。逐项保存同一run的真实输出，不混用候选bundle、恢复bundle和receipt pin。旧baseline-bind保留给已有本地回执的兼容路径，不是新主流程必做步骤。
 
 上一公开内容 A 与最初 Git 导入 O 必须分开。第二轮 B 的恢复必须恢复 A，不能默认为 O；baseline-capture 使用当前精确 Main UUID 内容并核查前后七服务拓扑。基线变化或静态路径同名异字节时停止并重新取证。
 
@@ -122,4 +126,4 @@ manual-recover 会切到**已经验收的兼容恢复 UUID**。原始旧 UUID �
 - 在新目录校验/解包后可验证源码；需要已有 Git baseCommit 和实际依赖安装才能重新构建发布。不得在真实 GachiaCMS 路径覆盖解包，也不执行 install/resume-install 覆盖已有安装。
 - R18 已冻结源码并推送 `codex/payload-unified-maintenance`，实际 GitHub Linux 验证通过。prepare 应使用该已同步分支/精确提交，不使用旧 main 或未提交源码；不需要合并 main 来运行本机发布工具。
 - 验证 workflow 仅允许该精确任务分支 push/手动运行，只有只读权限、不保留 checkout 凭据、不用 secrets、不能部署；两个 Cloudflare GitHub 部署开关保持 false。CI 不执行真实桌面 manager。
-- 资源/兼容恢复证据命令化、独立密钥托管及跨机应用启动仍单列；私有R2密文往返通过不等于完整灾备完成，Git/验证CI完成也不等于真实内容云发布已验收。
+- R20资源刷新/本地兼容恢复已接入管理器；首次可信来源登记及每轮真实云预览/验收仍不可省略。独立密钥托管及跨机应用启动仍单列；私有R2密文往返通过不等于完整灾备完成，Git/验证CI完成也不等于真实内容云发布已验收。

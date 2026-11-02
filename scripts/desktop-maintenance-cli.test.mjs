@@ -12,7 +12,7 @@ const manager = join(root, 'services/content-cms/scripts/desktop.py');
 const parserProbe = join(root, 'scripts/fixtures/desktop-parser-probe.py');
 const sha = 'a'.repeat(64), id = 'a'.repeat(16);
 const value = key => key === '--run' ? `${id}-${'a'.repeat(12)}` : key === '--mode' ? 'recover'
-  : ['--repo', '--baseline', '--evidence'].includes(key) ? '/tmp/fixture path'
+  : ['--repo', '--baseline', '--evidence', '--source'].includes(key) ? '/tmp/fixture path'
     : ['--retention', '--recovery', '--renewal'].includes(key) ? id : sha;
 const argsFor = action => ['--run', '--pin', ...maintenanceActions[action]].flatMap(key => [key, value(key)]);
 
@@ -90,7 +90,7 @@ for n in ast.walk(t):
 print(json.dumps(sorted(names)))`;
   const child = spawnSync('python3', ['-B', '-c', script], { encoding: 'utf8' });
   assert.equal(child.status, 0, child.stderr); const names = JSON.parse(child.stdout);
-  for (const name of ['desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs']) assert(names.includes(name));
+  for (const name of ['desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs', 'desktop-local-evidence.mjs']) assert(names.includes(name));
   const dir = realpathSync(mkdtempSync(join(tmpdir(), 'cms-installed-closure-'))); t.after(() => rmSync(dir, { recursive: true, force: true }));
   for (const name of names) copyFileSync(join(root, 'scripts', name), join(dir, name));
   const source = names.map(name => `await import(${JSON.stringify(pathToFileURL(join(dir, name)).href)});`).join('\n');

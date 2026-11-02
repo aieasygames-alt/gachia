@@ -36,5 +36,12 @@ jobs:
           pnpm --dir services/content-cms typecheck
       - name: Test isolated CMS
         run: pnpm --dir services/content-cms test
+      - name: Verify current content inventory and Router contracts
+        run: |
+          pnpm --dir services/content-cms inventory:check
+          pnpm --filter @gachia/router check:generated
+          pnpm validate:game-deployments
+          pnpm --filter @gachia/router type-check
+          pnpm --filter @gachia/router test
       - name: Test release tooling without deployment credentials
         run: pnpm test:release
