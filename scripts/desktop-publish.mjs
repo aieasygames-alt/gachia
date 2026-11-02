@@ -370,6 +370,8 @@ async function previewUnlocked(run, pin, retained) {
 
 const renewalArgs = ['--recovery', '--recovery-pin', '--journal-pin', '--receipt-pin', '--release-key'];
 export const maintenanceActions = {
+  'source-register': ['--retention', '--retention-pin', '--evidence', '--evidence-pin'],
+  'source-select': [],
   'assets-refresh': ['--evidence', '--evidence-pin'],
   'recovery-local-prepare': ['--retention', '--retention-pin', '--baseline', '--baseline-pin', '--source', '--source-pin'],
   'baseline-capture': ['--repo', '--retention', '--retention-pin'],
@@ -439,7 +441,26 @@ async function main() {
   } else {
     assert(/^[a-f0-9]{16}-[a-f0-9]{12}$/.test(opts['--run']), 'Invalid local run ID');
     const run = join(RUNS, opts['--run']);
-    if (['assets-refresh', 'recovery-local-prepare'].includes(opts.action)) {
+    if (['source-register', 'source-select'].includes(opts.action)) {
+      await withRunLock(run, async () => {
+        const { preparationReader } = await import('./desktop-local-evidence.mjs');
+        const { registerSourceCatalog, selectSourceCatalog } = await import('./desktop-source-catalog.mjs');
+        const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
+        const reader = preparationReader(token), root = join(RUNS, 'source-catalog');
+        const directory = join(run, `${opts.action}-${randomBytes(8).toString('hex')}`);
+        if (opts.action === 'source-register') {
+          const { verifyRetainedCandidate } = await import('./desktop-release-assets.mjs');
+          const check = () => ({ ...verifyRetainedCandidate(run, opts['--pin'], opts['--retention'], opts['--retention-pin']), retentionPin: opts['--retention-pin'] });
+          const result = await registerSourceCatalog({ root, directory, verified: check(), reader,
+            recovery: { path: resolve(opts['--evidence']), pin: opts['--evidence-pin'] } });
+          check(); console.log(json(result));
+        } else {
+          const plan = verifyPrepared(run, opts['--pin']);
+          const result = await selectSourceCatalog({ root, directory, plan, reader });
+          verifyPrepared(run, opts['--pin']); console.log(json(result));
+        }
+      });
+    } else if (['assets-refresh', 'recovery-local-prepare'].includes(opts.action)) {
       await withRunLock(run, async () => {
         const { preparationReader, refreshAssetEvidence, prepareLocalRecovery } = await import('./desktop-local-evidence.mjs');
         const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];

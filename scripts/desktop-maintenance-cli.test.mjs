@@ -90,7 +90,7 @@ for n in ast.walk(t):
 print(json.dumps(sorted(names)))`;
   const child = spawnSync('python3', ['-B', '-c', script], { encoding: 'utf8' });
   assert.equal(child.status, 0, child.stderr); const names = JSON.parse(child.stdout);
-  for (const name of ['desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs', 'desktop-local-evidence.mjs']) assert(names.includes(name));
+  for (const name of ['desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs']) assert(names.includes(name));
   const dir = realpathSync(mkdtempSync(join(tmpdir(), 'cms-installed-closure-'))); t.after(() => rmSync(dir, { recursive: true, force: true }));
   for (const name of names) copyFileSync(join(root, 'scripts', name), join(dir, name));
   const source = names.map(name => `await import(${JSON.stringify(pathToFileURL(join(dir, name)).href)});`).join('\n');

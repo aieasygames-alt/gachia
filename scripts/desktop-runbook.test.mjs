@@ -27,6 +27,10 @@ test('operator handoff makes the remaining manual evidence and cloud gaps explic
   assert.match(text, /尚无一键自动生成全部资源\/恢复证据并从零建立可信来源/);
   assert.match(text, /publish-assets-refresh/);
   assert.match(text, /publish-recovery-local-prepare/);
+  assert.match(text, /publish-source-register/);
+  assert.match(text, /publish-source-select/);
+  assert.match(text, /没有“latest”、原始O回退或部署后自动接续/);
+  assert.match(text, /仍须为新候选执行assets-refresh、baseline-capture、recovery-local-prepare与全部云门禁/);
   assert.match(text, /首次真实编辑的云端验收尚未完成/);
   assert.match(text, /不能删日志/);
   assert.match(text, /title \/ body/);

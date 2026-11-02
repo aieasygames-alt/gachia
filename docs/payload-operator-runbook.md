@@ -37,6 +37,7 @@ cms content-export --repo "$REPO" --game "$GAME" --preview
 cms content-export --repo "$REPO" --game "$GAME"
 cms publish-plan --repo "$REPO" --release-key "$RELEASE_KEY"
 cms publish-prepare --repo "$REPO" --release-key "$RELEASE_KEY"
+cms publish-source-select --run "$RUN" --pin "$PLAN_PIN"
 cms publish-build --run "$RUN" --pin "$PLAN_PIN"
 cms publish-preview --run "$RUN" --pin "$PLAN_PIN"
 cms publish-verify --run "$RUN" --pin "$PLAN_PIN"
@@ -44,6 +45,7 @@ cms publish-verify --run "$RUN" --pin "$PLAN_PIN"
 
 - 正式导出不加 --preview；releaseKey 为返回值，候选在 `GachiaCMS/publish/<releaseKey>/`。preview=true 永不允许云上传。
 - prepare 返回 runId、planSHA256，分别记为 RUN/PLAN_PIN；冻结指定 Git commit（默认 HEAD），不会把工作区未提交代码一起打包。工程包保存当前源码并不等于 Git 已交付。
+- 已登记来源时，source-select在build前按当前game/Main UUID自动选择；输出evidencePath/evidencePin→ASSET_SOURCE/ASSET_SOURCE_PIN、sourcePath/sourcePin→RECOVERY_SOURCE/RECOVERY_SOURCE_PIN。不需要为新releaseKey手拼旧来源路径。未登记或当前UUID已变化则停止，先走第4节的首次/新版本来源交接，不可跳过拒绝后照常上传。
 - run 在 `~/.gachia-cms-releases/<runId>/`；证据/锁/日志不得删除重建。两个 owner 必须全部通过，不能只发游戏而遗留 Main 的公开 JSON。
 - 本地预览是真实临时 Worker，响应正文、metadata/JSON-LD/引用/静态字节、sitemap 和 cache 保存到返回目录，不是长期预览站点或 Cloudflare 验收。
 
@@ -54,6 +56,20 @@ R20新增 `publish-project-inventory`（只读观察10Worker）、`publish-asset
 **尚无一键自动生成全部资源/恢复证据并从零建立可信来源的命令**：首次基线托管仍由维护者准备。ASSET_SOURCE/ASSET_SOURCE_PIN指已经验证的双owner旧资源来源，不是旧HTTP批准；新命令重新读取当前版本、比对历史game模块，并重采全部已登记的game/Main公网静态字节。来源过期即停止，没有“跳过来源”或直接approved标记。旧资源范围仍是已记录清单，不宣称完整Cloudflare资产清单。
 
 RECOVERY_SOURCE/RECOVERY_SOURCE_PIN是固定game/Main来源树清单：`schemaVersion:1`、game及owners；每个owner包含当前公开versionId、可信旧`.open-next`的directory和完整artifactSHA256（来自artifactFiles规范JSON的SHA）。来源清单是字节身份输入，不是审批；命令将重新下载精确当前云模块替换**派生副本**的runtime，拒绝源树/UUID/静态冲突，验证旧JSON和三语言页面与当前精确版本一致。第一轮可使用已验历史制品；后续B必须指向当前公开A，不沿用最初O。不得直接复用R14/R15诊断UUID、publishable=false产物或合成回执。
+
+### 首次/新版本登记与后续自动选择
+
+R21新增只读`publish-source-register`/`publish-source-select`。首次取得可信资源、当前A的完整来源树、版本绑定baseline及实际本地恢复证据后，用**该来源run**登记一次；首次尚无目录时仍按本节原流程提供人工核实的来源，完成恢复采样后再登记，不循环调用select来“补齐”来源。
+
+```sh
+cms publish-source-register --run "$SOURCE_RUN" --pin "$SOURCE_PLAN_PIN" --retention "$SOURCE_RETENTION" --retention-pin "$SOURCE_RETENTION_PIN" --evidence "$SOURCE_RECOVERY_EVIDENCE" --evidence-pin "$SOURCE_RECOVERY_PIN"
+```
+
+注意register的evidence是已验**本地恢复回执**，资源来源从该run的retention回执读取，不能误传资源evidence。登记重新GET当前双owner精确版本模块及Main公开JSON，核对A而非导入O、来源树/HTTP回执/pin及前后七服务拓扑。固定目录`~/.gachia-cms-releases/source-catalog/<game>/<gameUUID>-<mainUUID>/`仅本机用户可读写，manifest最后排他写入，旧项/不完整项都不覆盖。
+
+后续新候选按第3节select，无需手工改清单；select重新校验来源、模块、当前JSON及本轮拓扑，**仍须为新候选执行assets-refresh、baseline-capture、recovery-local-prepare与全部云门禁**。目录是可信本机索引，不是外部签名批准，不包含全部副本；原始私有来源/回执被删除或篡改即失效，不可将旧release目录当垃圾清理。没有“latest”、原始O回退或部署后自动接续：game或Main发布新UUID后必须重新交接/登记，不能复用原条目；其他Worker的历史版本变化不等于这两个来源UUID变化，但每轮七服务前后漂移仍拒绝。
+
+登记/选择可读取由诊断run取得的**当前公众基线来源**，不使诊断候选变为正式内容；productionReady保持false，诊断制品仍禁止上传。R21实机登记范围与证据见对应报告，不把隔离双游戏测试称作两游戏实际登记。
 
 ```sh
 cms publish-project-inventory
@@ -83,7 +99,7 @@ R20发现当前系统对workers.dev的直连解析返回异常地址，Node默�
 NODE_USE_ENV_PROXY=1 HTTPS_PROXY=socks5://127.0.0.1:1080 NO_PROXY=127.0.0.1,localhost,api.cloudflare.com,gachia.com cms publish-baseline-capture --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
 ```
 
-同一环境可用于recovery-local-prepare及后续精确版本只读验收；loopback/API/正式域名保持直连。先核验已有本地代理和精确预览HTTP，不自动发现或信任任意远程代理。已经出现上传/推广intent时仍先对账，不能借网络修复重跑写操作；不得用普通公网别名或本地响应代替精确版本证据。
+同一环境可用于source-register/source-select、recovery-local-prepare及后续精确版本只读验收；loopback/API/正式域名保持直连。先核验已有本地代理和精确预览HTTP，不自动发现或信任任意远程代理。已经出现上传/推广intent时仍先对账，不能借网络修复重跑写操作；不得用普通公网别名或本地响应代替精确版本证据。
 
 ## 5. 上传精确云预览与推广：以下会写云
 
