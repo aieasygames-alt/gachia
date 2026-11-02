@@ -1,18 +1,20 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-02，R18）
+## 当前状态（2026-11-02，R20）
 
-Payload/PostgreSQL 已常驻本机。Genshin/NTE + Main 的发布、续验及兼容恢复协议已安装，本地连续发布/恢复已有实测；**真实编辑候选的云预览、推广和恢复仍未验收**。不以事实准确度阻塞首发，不制造演练变化。
+Payload/PostgreSQL已常驻本机；双游戏game/Main发布、续验及兼容恢复协议已安装，**真实编辑云预览/推广/恢复仍未验收**。内容准确度不作首发门槛，不制造演练变化。执行看[现行手册](../../docs/payload-operator-runbook.md)，状态看[R20执行报告](../../reports/payload-launch-closeout-2026-11-02-r20/README.md)、[首发清单](../../plans/payload-launch-closeout-2026-11-02.md)，项目关系看[多Worker地图](../../docs/payload-project-worker-map.md)。
 
-日常操作只使用 [现行最短手册](../../docs/payload-operator-runbook.md)，状态看 [首发清单](../../plans/payload-launch-closeout-2026-11-02.md)。deepmerge 仍1 low，已复现并限定本机可信单用户临时接受，见 [风险决定](../../docs/payload-dependency-risk-2026-11-02.md)。源码交付包不是数据库/私有媒体/密钥备份。
+R20已修复inventory漂移：当前版本在`inventory/2026-11-02`，2026-10-28历史输入不改；CI新增inventory与Router生成配置/映射/类型/测试，工程提交`a0634a9`已推送并通过实际CI41426588559。新鲜回归CMS163/typegen/typecheck、桌面387、既有Node304、Python49、Router35/typecheck通过；不是全站build/parity/浏览器重验。
 
-R18已将293文件冻结为 `66df8bc` 并推送私有任务分支 `codex/payload-unified-maintenance`；真实 GitHub Linux 验证 CI 41397758661 通过。本机 CI 环境 CMS161、typegen/typecheck、桌面359、既有Node304、Python45通过。workflow仅验证该分支、无部署权限；main及Cloudflare自动部署不变。L06/T12仍部分完成，下一可执行优先级为资源/兼容恢复证据命令化，详见[R18报告](../../reports/payload-git-ci-2026-11-02/README.md)。
+新增并安装`publish-project-inventory`、`publish-assets-refresh`、`publish-recovery-local-prepare`，20工具文件摘要一致；547份实际公网资源响应通过，恢复命令实际范围见R20。首次可信来源登记仍需维护者，不是一键从零发布。当前Mac精确workers.dev预览需既有本机SOCKS代理的单进程环境，见手册；未修改系统网络或关闭TLS。
 
-R17新增独立私有R2密文备份，并从真实下载结果完成AES认证、逐文件校验和隔离PG/媒体恢复；没有公开备份桶或修改网站Worker。独立密钥托管、跨机应用启动未验，不能关闭完整灾备；见[异地恢复说明](../../docs/payload-offsite-recovery.md)。
+CMS/PG健康，HTTP安全9/9；DB仍84draft/hold、0eligible，双游戏正式导出拒绝无合格记录，不是no_changes或发布成功。10Worker盘点前后无变化；推广保护仍7服务、每批仅game/Main。main未合并，两个云GitHub部署开关false；本轮无内容编辑、云写入或CMS重启。
+
+私有R2密文与同机恢复仍沿用R17；R20补独立key复制校验工具/跨机清单，但缺独立可写介质/第二Mac，未复制真实key或验证跨机。见[灾备说明](../../docs/payload-offsite-recovery.md)。deepmerge仍1low、限定单用户loopback接受、11月16日前复核，沿用R19扫描，见[风险决定](../../docs/payload-dependency-risk-2026-11-02.md)。源码包不是运行数据/密钥备份。
 
 ## 历史实验与增量记录
 
-下方“未注册推广”“未接通执行器”等为当批历史状态，不用于当前操作；SQLite 环境说明仅适用于隔离实验，不是当前桌面 PostgreSQL 的运行设置。
+本节以下全部为历史实验/增量说明。“未注册推广”“未接通执行器”“源码尚未提交/无CI”等为当批状态，不用于当前操作；SQLite与 `.local/<namespace>` 环境说明仅适用于隔离实验，不是当前桌面PostgreSQL运行设置。`inventory:check`已在R20修复，新生成仅写版本化当前清单，历史证据保留；临时HTTP测试拒绝占用正在运行的3100服务，不为复跑实验停机。
 
 最新进展：兼容恢复制品已完成真实 Wrangler 封存及 762 个新 loopback 响应检查；公网验收模块已覆盖 Router 缓存/路由、托管 robots 前缀和页面原有索引政策。尚未上传恢复版本或注册生产推广，见 [恢复封存报告](../../reports/payload-recovery-seal-2026-11-01/README.md)。
 

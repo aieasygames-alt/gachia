@@ -2,13 +2,21 @@
 
 ## 当前能力
 
-2026-11-02 更新：已在本机持久发布器注册 Genshin + Main 专用 `publish-recovery-upload-preview`、`publish-recovery-receipt-check` 和 `publish-cloud-promote`。推广必须重新读取固定候选/恢复证据、四个远端版本模块、七服务拓扑，并在持久意图日志之后发送精确 UUID 的 100% 部署请求，最后验证公网输出。无通用目标、绕过参数或 CI 执行路径。隔离集成/安装门禁已验，真实编辑候选的云端验收未完成，本轮没有上传或切流。普通 `deploy/promote/rollback` 仍拒绝；以下旧日期描述保留为历史，不代表上述受控入口尚未注册。操作参数见 [本机 Payload](../services/content-cms/deploy/desktop.md)。
+2026-11-02 R20：已在本机持久发布器注册 **Genshin/Main、NTE/Main** 两种固定双目标的候选/恢复上传预览、精确UUID推广、同UUID续验与显式人工兼容恢复。包含 `publish-recovery-upload-preview`、`publish-recovery-receipt-check`、`publish-cloud-promote` 等入口，实际参数见[现行手册](payload-operator-runbook.md)。推广重新读取候选/恢复证据、四个远端版本模块、七服务拓扑，持久化意图后发送精确UUID的100%部署请求并验公网；顺序双目标，非原子事务。无通用目标、绕过参数或真实manager CI执行路径。隔离集成/本地恢复/安装已验，**真实编辑候选云E2E未完成**。
+
+实际项目有 **10个Gachia Worker（6生产+4staging）**；现有发布器仅保护六生产+Main staging共7服务。另三staging只比较脚本名、不验证部署/settings；R19额外只读盘点并记录差异，不能称全项目保护/全入口收口。首发仍仅game/Main，不部署Router/其他游戏/staging；完整地图见[项目与Worker](payload-project-worker-map.md)。R20新增10Worker观察、资源刷新和兼容恢复准备命令，均只读/本地且已安装；首次可信来源登记仍需维护者，不能宣传一键从零发布。
+
+普通 `deploy/promote/rollback` 仍拒绝，Azur/Lvmeng及Router没有对应完整Payload发布执行器。两个GitHub部署变量保持false；R18验证CI只读、无部署。R20已将工程提交a0634a9推送维护分支并通过含inventory/Router的真实CI41426588559；无内容编辑、云上传或切流。以下旧日期能力描述保留历史，不代表受控双游戏入口尚未注册。
+
+### 历史能力与自动入口核验
 
 2026-10-25 的 P1 修复采用 fail-closed：统一生产目标入口并退役绕过门禁的命令，**没有新增能自动发布六个 Worker 的执行器**。命令不会构建、联网、读取凭据、上传或切流；不通过本地 JSON receipt、确认字符串或 CI 环境变量开放隐藏路径。
 
 2026-11-01 用户指定内容仅从本机发布：仓库 `CLOUDFLARE_DEPLOY_FROM_GITHUB`、`CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB` 已设为 false，独立 Genshin preview workflow 已停用。Main 不再沿用 GitHub workflow 作为当前发布路径；CI 测试/构建保留。四个游戏已有本地封存、验收工具和历史受控发布记录，但完整本机推广执行器尚未接通；在其就绪前，普通生产命令拒绝写入。Router 始终单独审查。此为旁路收口，不是 S5 自动化平台完成。Cloudflare Builds API 曾返回 401/403；现已通过 Dashboard 补齐七个 Gachia 服务的构建入口核验，账户全部权限与外部发布路径不在本轮核验范围。
 
-## 唯一目标入口
+## 目标入口与历史演进
+
+以下2026-11-01的“未注册production transport”仅记当批状态；当前能力以上节R20为准。七服务Builds检查不覆盖另三staging的全部外部构建入口，不能外推账户所有入口均关闭。
 
 2026-11-01 通过现有认证 Dashboard 检查七个 Gachia 服务：Main 生产/预览分支构建关闭、无 Deploy Hook，其余六个未连接 Git 构建。Builds API 权限没有扩大，不声称账户所有凭据/外部 CI/手工写入不可绕过。
 
@@ -36,11 +44,11 @@ pnpm release:production plan --targets router
 
 | 目标 | 现有服务 | 生产环境选择 | 当前真实发布路径 |
 |---|---|---|---|
-| main | gachia | 显式默认环境 `""` | 本机封存制品推广执行器待接通；GitHub 部署开关关闭 |
-| genshin | gachia-game-genshin | 显式默认环境 `""` | 游戏同制品版本推广契约；通用远程执行器未接入，普通命令拒绝 |
-| nte | gachia-game-nte | 显式默认环境 `""` | 同上；不能仅凭回退 UUID 格式放行 |
-| azur-promilia | gachia-game-azur-promilia | 显式默认环境 `""` | 同上；保留环境定义派生的服务标签 |
-| lvmeng | gachia-game-lvmeng | `production` | 同上；默认 preview 配置使用同一个 live 服务名，不能充当隔离预览 |
+| main | gachia | 显式默认环境 `""` | 已安装本机game/Main受控封存推广；真实云未验，GitHub部署关闭 |
+| genshin | gachia-game-genshin | 显式默认环境 `""` | 已安装固定Genshin/Main发布、续验/兼容恢复；真实云未验，普通命令拒绝 |
+| nte | gachia-game-nte | 显式默认环境 `""` | 已安装固定NTE/Main发布、续验/兼容恢复；真实云未验，普通命令拒绝 |
+| azur-promilia | gachia-game-azur-promilia | 显式默认环境 `""` | Payload执行器未接入，普通命令拒绝；保留环境派生服务标签 |
+| lvmeng | gachia-game-lvmeng | `production` | Payload执行器未接入，普通命令拒绝；默认preview使用同一live服务名，不能当隔离预览 |
 | router | gachia-router | 显式默认环境 `""` | 独立路由审查，无普通生产执行器 |
 
 服务名、环境和 Router bindings 的对应关系由发布测试交叉检查；清单不是云端自动发现，不会新增或修正服务。

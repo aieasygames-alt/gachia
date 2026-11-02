@@ -1,0 +1,71 @@
+{
+  "round": "R20",
+  "date": "2026-11-02",
+  "codeCommit": "a0634a9b2939f4933508c54c88d97caf7f773f11",
+  "ci": {
+    "conclusion": "success",
+    "headSha": "a0634a9b2939f4933508c54c88d97caf7f773f11",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/41426588559"
+  },
+  "tests": {
+    "cms": 163,
+    "desktopNode": 387,
+    "existingNode": 304,
+    "python": 49,
+    "router": 35
+  },
+  "inventoryCheck": "passed",
+  "historicalInventoryUnchanged": true,
+  "installedToolFiles": 20,
+  "assetPublicHTTPResponses": 547,
+  "localRecoveryHTTPResponses": 760,
+  "exactVersionComparisons": 7,
+  "task1": "engineering_completed",
+  "task2": "implementation_installation_and_genshin_diagnostic_integration_completed",
+  "task3": "tooling_completed_actual_independent_key_and_second_mac_unavailable",
+  "task4": "formal_exports_refused_no_eligible_records_no_cloud_release",
+  "local": {
+    "healthy": true,
+    "loaded": true,
+    "logicalDigest": "c41f3179e0ed3f60b1fc25a58ed30c5e715a85f90da14310c4ae9eb230b70211",
+    "states": "draft|t|84",
+    "eligiblePublished": "0",
+    "readOnlyConnection": true,
+    "cloudWrites": false,
+    "contentWrites": false,
+    "cmsRestarted": false,
+    "databaseUnchanged": true,
+    "installedToolFilesVerified": 20,
+    "localHTTPSecurity": {
+      "passed": 9,
+      "total": 9
+    },
+    "historicalInventoryUnchanged": true
+  },
+  "cloud": {
+    "status": "passed",
+    "projectWorkers": 10,
+    "protectedServices": 7,
+    "additionalObservedStaging": 3,
+    "writeGroups": [
+      [
+        "genshin",
+        "main"
+      ],
+      [
+        "nte",
+        "main"
+      ]
+    ],
+    "allTenUnchangedDuringRound": true,
+    "cloudWrites": false,
+    "installedCommand": true
+  },
+  "contentAccuracyIsLaunchGate": false,
+  "firstTrustedSourceRegistrationStillManual": true,
+  "newFullBuildParityBrowserAudit": false,
+  "newDependencyAudit": false,
+  "cloudWrites": false,
+  "cmsRestarted": false
+}

@@ -75,6 +75,16 @@ cms publish-recovery-verify-cloud --run "$RUN" --pin "$PLAN_PIN" --recovery "$RE
 
 上一公开内容 A 与最初 Git 导入 O 必须分开。第二轮 B 的恢复必须恢复 A，不能默认为 O；baseline-capture 使用当前精确 Main UUID 内容并核查前后七服务拓扑。基线变化或静态路径同名异字节时停止并重新取证。
 
+### 当前Mac的版本预览网络
+
+R20发现当前系统对workers.dev的直连解析返回异常地址，Node默认不读取macOS PAC；既有系统PAC指向本机SOCKS5 `127.0.0.1:1080`。已用当前Node25.9.0验证，仅对本轮命令设置以下环境即可访问精确版本预览；没有改系统DNS/代理、启动新代理或关闭TLS校验。SOCKS支持仍为Node实验特性，其他机器须先验证，不盲用此端口。
+
+```sh
+NODE_USE_ENV_PROXY=1 HTTPS_PROXY=socks5://127.0.0.1:1080 NO_PROXY=127.0.0.1,localhost,api.cloudflare.com,gachia.com cms publish-baseline-capture --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
+```
+
+同一环境可用于recovery-local-prepare及后续精确版本只读验收；loopback/API/正式域名保持直连。先核验已有本地代理和精确预览HTTP，不自动发现或信任任意远程代理。已经出现上传/推广intent时仍先对账，不能借网络修复重跑写操作；不得用普通公网别名或本地响应代替精确版本证据。
+
 ## 5. 上传精确云预览与推广：以下会写云
 
 用户已给予所需操作默认授权，不重复等待逐项确认；但仅接受真实编辑候选及它自己的完整证据。四个候选/兼容恢复版本的上传与预览均不能省略。
