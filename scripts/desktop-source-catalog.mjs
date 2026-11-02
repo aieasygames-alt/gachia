@@ -7,7 +7,8 @@ import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-asset
 import { verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
-import { boundedBody, exactPreviewOrigin } from './desktop-version-preview.mjs';
+import { boundedBody, exactPreviewOrigin, pageFingerprint } from './desktop-version-preview.mjs';
+import { publicRobots } from './desktop-public-acceptance.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (path, value) => { const raw = json(value); writeFileSync(path, raw, { flag: 'wx', mode: 0o600 }); return digest(raw); };
@@ -50,12 +51,92 @@ function sourcesFromRecovery(recovery, verified, versions) {
   return { profile: { schemaVersion: 1, game: verified.plan.game, owners }, baseline, evidence };
 }
 
+// Historical source-only diagnostics have no candidate or releaseKey. Verify the
+// original trees/HTTP bytes directly; never fabricate a candidate-shaped receipt.
+function sourcesFromHistory(origin, versions) {
+  assert.equal(origin.sourceOnly, true); assert.equal(origin.plan.releaseKey, undefined);
+  const { plan } = origin, proof = pinnedJson(origin.proofPath, origin.proofPin);
+  assert.equal(proof.schemaVersion, 1); assert.equal(proof.kind, 'downloaded_runtime_source_local_http'); assert.equal(proof.sourceOnly, true);
+  assert.equal(proof.status, 'passed'); assert.equal(proof.publishable, false);
+  assert.equal(proof.cloudWrites, false); assert.equal(proof.rawUUIDRollbackAuthorized, false);
+  assert.deepEqual(Object.keys(proof.recovery).sort(), [...plan.owners].sort());
+  const historical = pinnedJson(proof.historical.path, proof.historical.pin);
+  assert.equal(historical.status, 'passed'); assert.equal(historical.publishable, false); assert.equal(historical.cloudWrites, false);
+  assert.equal(historical.rawUUIDRollbackAuthorized, false);
+  assert.deepEqual(Object.keys(historical.recovery).sort(), [...plan.owners].sort());
+  assert.equal(realpathSync(proof.work), resolve(proof.work), 'Linked historical evidence root forbidden');
+  const baseline = verifyPublishedBaseline(origin.baselinePath, origin.baselinePin, plan, versions);
+  const owners = {}, evidence = { owners: {} }, references = [];
+  for (const owner of plan.owners) {
+    const row = proof.recovery[owner], directory = join(proof.work, 'recovery', owner, '.open-next');
+    assert.equal(row.status, 'passed'); assert.equal(row.runtimeUnchangedDuringSampling, true);
+    assert.equal(row.runtimeOrigin, 'downloaded_exact_cloud_version'); assert.equal(row.versionId, versions[owner]);
+    assert.equal(realpathSync(directory), resolve(directory), 'Linked historical source forbidden');
+    const tree = pinnedJson(join(proof.work, `recovery-${owner}-inventory.json`), row.artifactSHA256);
+    assert.deepEqual(artifactFiles(directory), tree, 'Historical source tree changed');
+    const parent = historical.recovery[owner], oldDirectory = join(historical.work, 'recovery', owner, '.open-next');
+    assert.equal(parent.status, 'passed'); assert.equal(parent.runtimeUnchanged, true);
+    assert.equal(realpathSync(oldDirectory), resolve(oldDirectory), 'Linked original source forbidden');
+    const oldTree = pinnedJson(join(historical.work, `recovery-${owner}-inventory.json`), parent.artifactSHA256);
+    assert.deepEqual(artifactFiles(oldDirectory), oldTree, 'Original historical source changed');
+    assert.deepEqual(tree.filter(file => file.path !== 'worker.js'), oldTree.filter(file => file.path !== 'worker.js'), 'Source-only import may replace only the runtime');
+    assert(tree.every(file => !(file.path === 'assets' || file.path.startsWith('assets/')) || file.type !== 'link'), 'Linked historical asset forbidden');
+    const observations = new Map();
+    assert(row.observations.length > 0 && row.observations.length <= 5000);
+    assert.equal(row.responses, row.observations.length);
+    for (const observation of row.observations) {
+      const path = observation.path;
+      assert(typeof path === 'string' && !observations.has(path), 'Invalid/duplicate historical HTTP path');
+      assert.match(observation.bodyFile, /^[0-9]+\.body$/);
+      const file = join(proof.work, `recovery-${owner}-http`, observation.bodyFile);
+      assert.equal(realpathSync(file), file, 'Linked historical HTTP body forbidden');
+      assert(statSync(file).isFile() && statSync(file).size <= 16 * 1024 * 1024, 'Historical body budget exceeded');
+      const body = readFileSync(file);
+      assert.equal(body.length, observation.bytes, 'Historical HTTP body changed'); assert.equal(digest(body), observation.sha256, 'Historical HTTP body changed');
+      assert(!observation.headers['set-cookie']);
+      const auth = owner === 'main' && path === '/api/auth/get-session';
+      assert.equal(observation.status, auth ? 404 : 200);
+      if (auth) { assert.equal(JSON.parse(body).code, 'ACCOUNT_FEATURES_DISABLED'); assert.match(observation.headers['cache-control'], /no-store/); }
+      observations.set(path, { ...observation, body });
+    }
+    const statics = tree.filter(file => file.type === 'file' && (file.path.startsWith('assets/_next/static/') || file.path.startsWith(`assets/_games/${plan.game}/_next/static/`)));
+    assert(statics.length > 0);
+    for (const file of statics) {
+      const path = '/' + file.path.slice(7).split('/').map(encodeURIComponent).join('/');
+      assert.equal(observations.get(path)?.sha256, file.sha256, 'Historical HTTP lacks source static asset');
+    }
+    const paths = ['/sitemap.xml'];
+    if (owner === 'main') {
+      assert.equal(observations.get(`/data/${plan.game}/raw-guides.json`)?.sha256, baseline.contentSHA256, 'Historical Main JSON is not current A');
+      assert.equal(digest(readFileSync(join(directory, `assets/data/${plan.game}/raw-guides.json`))), baseline.contentSHA256, 'Historical Main source contains a different baseline');
+      paths.push('/api/auth/get-session');
+    } else {
+      assert.match(origin.sampleGuide, /^[a-z0-9-]+$/);
+      paths.push(...['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${origin.sampleGuide}`));
+    }
+    for (const path of paths) {
+      const reference = observations.get(path); assert(reference, 'Historical source lacks required dynamic HTTP');
+      references.push({ owner, ...reference });
+    }
+    const runtime = join(directory, 'worker.js'); assert.equal(realpathSync(runtime), runtime, 'Linked historical runtime forbidden');
+    assert.equal(digest(readFileSync(runtime)), row.runtimeModuleSHA256, 'Historical source runtime pin changed');
+    owners[owner] = { directory, versionId: versions[owner], artifactSHA256: row.artifactSHA256 };
+    evidence.owners[owner] = { runtimeModuleSHA256: digest(readFileSync(runtime)) };
+  }
+  return { profile: { schemaVersion: 1, game: plan.game, owners }, baseline, evidence, references };
+}
+
 function checkInputs({ verified, recovery, assets }, versions) {
   assertReleaseScope(verified.plan);
-  assert.deepEqual(pinnedJson(join(verified.directory, 'receipt.json'), verified.retentionPin), verified.receipt, 'Retained source context changed');
   const original = verifyAssetEvidence(assets.path, assets.pin, verified.plan.game);
   assert.equal(original.capture.summary.versionId, versions[verified.plan.game], 'Game asset source is not current');
   assert.equal(original.evidence.main.source.versionId, versions.main, 'Main asset source is not current');
+  if (verified.kind === 'historical_local_recovery') {
+    assert.deepEqual(assets, verified.assets, 'Historical asset source mismatch');
+    return sourcesFromHistory(verified, versions);
+  }
+  assert.equal(verified.kind, undefined, 'Unknown source origin');
+  assert.deepEqual(pinnedJson(join(verified.directory, 'receipt.json'), verified.retentionPin), verified.receipt, 'Retained source context changed');
   return sourcesFromRecovery(recovery, verified, versions);
 }
 
@@ -75,18 +156,47 @@ async function currentBytes({ plan, sources, versions, reader, request, director
   const body = await boundedBody(response);
   assert.equal(digest(body), sources.baseline.contentSHA256, 'Published content changed; catalog must follow A, not import O');
   writeFileSync(join(directory, 'published.body'), body, { flag: 'wx', mode: 0o600 });
-  return { modules, contentSHA256: digest(body), origin, path, status: response.status, headers: Object.fromEntries(response.headers) };
+  const observations = [], policy = value => (value ?? '').toLowerCase().split(',').map(x => x.trim()).filter(Boolean).sort();
+  for (const reference of sources.references ?? []) {
+    const sourceOrigin = exactPreviewOrigin(scope.serviceFor(reference.owner), versions[reference.owner]);
+    const response = await request(sourceOrigin + reference.path, { method: 'GET', credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(30000) });
+    const bytes = await boundedBody(response), bodyFile = `history-${observations.length}.body`;
+    writeFileSync(join(directory, bodyFile), bytes, { flag: 'wx', mode: 0o600 });
+    observations.push({ owner: reference.owner, origin: sourceOrigin, path: reference.path, status: response.status,
+      headers: Object.fromEntries(response.headers), bytes: bytes.length, sha256: digest(bytes), bodyFile });
+    assert.equal(response.status, reference.status); assert(!response.headers.has('set-cookie'));
+    const mime = response.headers.get('content-type')?.split(';')[0];
+    assert.equal(mime, reference.headers['content-type']?.split(';')[0]);
+    assert.deepEqual(policy(response.headers.get('cache-control')), policy(reference.headers['cache-control']), 'Historical source cache policy changed');
+    if (mime === 'text/html') {
+      assert.deepEqual(pageFingerprint(bytes.toString()), pageFingerprint(reference.body.toString()), 'Historical rendered source is not current');
+      assert.deepEqual(publicRobots(bytes.toString()), publicRobots(reference.body.toString()));
+    } else assert.equal(digest(bytes), reference.sha256, 'Historical source response differs from current');
+  }
+  save(join(directory, 'current.json'), { modules, observations, contentSHA256: digest(body) });
+  return { modules, contentSHA256: digest(body), origin, path, status: response.status, headers: Object.fromEntries(response.headers), observations };
 }
 
 // The catalog is a private index of already verified inputs, not a new approval.
 // Its fixed game/Main UUID key never advances itself after a deployment.
 export async function registerSourceCatalog({ root, directory, verified, recovery, reader, request = fetch }) {
+  const origin = { plan: { game: verified.plan.game, owners: verified.plan.owners, changed: verified.plan.changed,
+    releaseKey: verified.plan.releaseKey, preview: verified.plan.preview, sourceSHA256: verified.plan.sourceSHA256 },
+    receipt: verified.receipt, directory: verified.directory, retentionPin: verified.retentionPin };
+  return registerOrigin({ root, directory, origin, assets: { path: verified.receipt.evidencePath, pin: verified.receipt.evidencePin }, recovery, reader, request });
+}
+
+export async function registerHistoricalSourceCatalog({ root, directory, origin, reader, request = fetch }) {
+  assert.equal(origin.kind, 'historical_local_recovery');
+  return registerOrigin({ root, directory, origin, assets: origin.assets, reader, request });
+}
+
+async function registerOrigin({ root, directory, origin: verified, assets, recovery, reader, request }) {
   privateDirectory(root, true); privateDirectory(directory, true);
   const diagnostic = { status: 'running', game: verified.plan.game, cloudWrites: false };
   try {
     const before = await reader.snapshot(); assertTopology(before, before);
     const target = entryPath(root, verified.plan, before);
-    const assets = { path: verified.receipt.evidencePath, pin: verified.receipt.evidencePin };
     const sources = checkInputs({ verified, recovery, assets }, target.versions);
     const current = await currentBytes({ plan: verified.plan, sources, versions: target.versions, reader, request, directory });
     const after = await reader.snapshot(); assertTopology(before, after);
@@ -96,9 +206,7 @@ export async function registerSourceCatalog({ root, directory, verified, recover
     mkdirSync(target.directory, { mode: 0o700 });
     const sourcePath = join(target.directory, 'sources.json'), sourcePin = save(sourcePath, sources.profile);
     const manifest = { schemaVersion: 1, kind: 'verified_local_source_catalog', game: verified.plan.game, versions: target.versions,
-      assets, recovery, origin: { plan: { game: verified.plan.game, owners: verified.plan.owners, changed: verified.plan.changed,
-        releaseKey: verified.plan.releaseKey, preview: verified.plan.preview, sourceSHA256: verified.plan.sourceSHA256 },
-        receipt: verified.receipt, directory: verified.directory, retentionPin: verified.retentionPin },
+      assets, recovery, origin: verified,
       sourcePath, sourcePin, current, before, after, observedAt: new Date().toISOString(),
       cloudWrites: false, productionReady: false, note: 'References require retained local evidence; not a self-contained backup or cloud release approval.' };
     const manifestPath = join(target.directory, 'manifest.json'), manifestPin = save(manifestPath, manifest);

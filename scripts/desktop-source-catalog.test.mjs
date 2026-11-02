@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
-import { chmodSync, existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { chmodSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
-import { registerSourceCatalog, selectSourceCatalog } from './desktop-source-catalog.mjs';
+import { registerHistoricalSourceCatalog, registerSourceCatalog, selectSourceCatalog } from './desktop-source-catalog.mjs';
 import { prepareLocalRecovery } from './desktop-local-evidence.mjs';
 import { artifactFiles } from './desktop-publish.mjs';
 import { captureGameAssets, digest } from './desktop-release-assets.mjs';
@@ -171,4 +171,97 @@ test('even re-pinned internal asset links cannot become catalog sources', async 
   evidence.owners.main.artifactSHA256 = save(join(f.root, 'recovery/main-inventory.json'), artifactFiles(artifact));
   f.input.recovery.pin = save(f.input.recovery.path, evidence);
   await assert.rejects(registerSourceCatalog(f.input), /Linked asset source/);
+});
+
+async function historicalFixture(t, game = 'nte') {
+  const f = await fixture(t, game), previous = JSON.parse(readFileSync(f.input.recovery.path)), work = join(f.root, 'history');
+  const proof = { status: 'passed', work, publishable: false, cloudWrites: false, rawUUIDRollbackAuthorized: false, recovery: {} };
+  for (const owner of f.plan.owners) {
+    const directory = join(work, 'recovery', owner, '.open-next'); mkdirSync(dirname(directory), { recursive: true });
+    cpSync(join(f.root, 'recovery', owner, '.open-next'), directory, { recursive: true });
+    const observations = [...previous.owners[owner].observations, ...previous.owners[owner].auxiliary].map((row, i) => {
+      const bodyFile = `${i}.body`, path = join(work, `recovery-${owner}-http`, bodyFile);
+      mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, readFileSync(join(f.root, 'recovery', row.bodyFile)));
+      return { ...row, bodyFile };
+    });
+    proof.recovery[owner] = { status: 'passed', runtimeUnchanged: true, responses: observations.length, observations,
+      artifactSHA256: save(join(work, `recovery-${owner}-inventory.json`), artifactFiles(directory)) };
+  }
+  const parent = structuredClone(proof); parent.work = join(f.root, 'parent-history');
+  cpSync(work, parent.work, { recursive: true });
+  const parentPath = join(f.root, 'parent-history.json'), parentPin = save(parentPath, parent);
+  proof.schemaVersion = 1; proof.kind = 'downloaded_runtime_source_local_http'; proof.sourceOnly = true;
+  proof.historical = { path: parentPath, pin: parentPin };
+  for (const owner of f.plan.owners) {
+    delete proof.recovery[owner].runtimeUnchanged;
+    Object.assign(proof.recovery[owner], { runtimeUnchangedDuringSampling: true, runtimeOrigin: 'downloaded_exact_cloud_version', versionId: f.version(owner), runtimeModuleSHA256: digest(runtime) });
+  }
+  const proofPath = join(f.root, 'historical-proof.json');
+  const origin = { kind: 'historical_local_recovery', sourceOnly: true, plan: { game, owners: [game, 'main'], sourceSHA256: f.plan.sourceSHA256 },
+    assets: { path: f.verified.receipt.evidencePath, pin: f.verified.receipt.evidencePin }, proofPath, proofPin: save(proofPath, proof),
+    baselinePath: previous.baselinePath, baselinePin: previous.baselinePin, sampleGuide: 'one' };
+  return { ...f, proof, origin, historical: { ...f.input, verified: undefined, recovery: undefined, origin } };
+}
+
+for (const game of ['genshin', 'nte']) test(`${game} imports historical real-shaped source evidence without inventing a candidate`, async t => {
+  const f = await historicalFixture(t, game), registered = await registerHistoricalSourceCatalog(f.historical);
+  const manifest = JSON.parse(readFileSync(registered.manifestPath));
+  assert.equal(manifest.origin.kind, 'historical_local_recovery'); assert.equal(manifest.origin.sourceOnly, true);
+  assert.equal(manifest.origin.plan.releaseKey, undefined); assert.equal(manifest.origin.receipt, undefined); assert.equal(manifest.recovery, undefined);
+  assert.equal(manifest.current.observations.length, 6);
+  const selected = await selectSourceCatalog(f.selection());
+  assert.equal(selected.sourcePin, registered.sourcePin); assert.equal(selected.productionReady, false);
+  assert.equal(selected.freshAssetHTTPStillRequired, true); assert.equal(selected.freshCandidateRecoveryStillRequired, true);
+  assert.equal(JSON.parse(readFileSync(join(f.root, 'select/current.json'))).observations.length, 6);
+});
+
+for (const failure of ['candidate-identity', 'source-only', 'proof-pin', 'parent-proof', 'parent-tree', 'non-runtime-change', 'wrong-game', 'version', 'proof-body', 'source-tree', 'missing-static', 'missing-locale', 'body-link', 'main-O', 'network', 'current-runtime', 'current-rendered', 'current-cache', 'current-cookie', 'current-auth', 'topology']) {
+  test(`historical registration rejects ${failure} without creating a candidate or manifest`, async t => {
+    const f = await historicalFixture(t), { origin, proof, historical } = f;
+    if (failure === 'candidate-identity') origin.plan.releaseKey = 'f'.repeat(64);
+    if (failure === 'source-only') origin.sourceOnly = false;
+    if (failure === 'proof-pin') origin.proofPin = '0'.repeat(64);
+    if (failure === 'parent-proof') writeFileSync(proof.historical.path, '{}');
+    if (failure === 'parent-tree') writeFileSync(join(f.root, 'parent-history/recovery/nte/.open-next/worker.js'), 'tampered');
+    if (failure === 'non-runtime-change') {
+      const directory = join(proof.work, 'recovery/nte/.open-next'); writeFileSync(join(directory, 'assets/guide.html'), 'tampered');
+      proof.recovery.nte.artifactSHA256 = save(join(proof.work, 'recovery-nte-inventory.json'), artifactFiles(directory));
+      origin.proofPin = save(origin.proofPath, proof);
+    }
+    if (failure === 'wrong-game') { origin.plan.game = 'genshin'; origin.plan.owners = ['genshin', 'main']; }
+    if (failure === 'version') f.snapshot.services.gachia.versions[0].version_id = uuid(999);
+    if (failure === 'proof-body') writeFileSync(join(proof.work, 'recovery-nte-http/0.body'), 'tampered');
+    if (failure === 'source-tree') writeFileSync(join(proof.work, 'recovery/nte/.open-next/worker.js'), 'tampered');
+    if (failure === 'body-link') { const path = join(proof.work, 'recovery-nte-http/0.body'), target = join(f.root, 'linked.body'); writeFileSync(target, readFileSync(path)); rmSync(path); symlinkSync(target, path); }
+    if (failure === 'main-O') {
+      const directory = join(proof.work, 'recovery/main/.open-next'); writeFileSync(join(directory, 'assets/data/nte/raw-guides.json'), f.original);
+      proof.recovery.main.artifactSHA256 = save(join(proof.work, 'recovery-main-inventory.json'), artifactFiles(directory));
+      origin.proofPin = save(origin.proofPath, proof);
+    }
+    if (failure === 'missing-static' || failure === 'missing-locale') {
+      proof.recovery.nte.observations = proof.recovery.nte.observations.filter(row => failure === 'missing-static' ? row.path !== '/_next/static/new.js' : row.path !== '/ja/nte/guides/one');
+      proof.recovery.nte.responses = proof.recovery.nte.observations.length; origin.proofPin = save(origin.proofPath, proof);
+    }
+    if (failure === 'network') historical.request = async () => { throw Error('unavailable'); };
+    if (failure === 'current-runtime') f.reader.module = async () => ({ code: Buffer.from('wrong'), moduleSHA256: digest('wrong'), archive: Buffer.from('wrong') });
+    if (failure.startsWith('current-') && failure !== 'current-runtime') historical.request = async (url, options) => {
+      const response = await f.input.request(url, options);
+      if (url.includes('/data/')) return response;
+      if (failure === 'current-rendered' && url.includes('/guides/')) return new Response(html(f.game).replace('Published A', 'Wrong'), { headers: response.headers });
+      if (failure === 'current-cache') response.headers.set('cache-control', 'private');
+      if (failure === 'current-cookie') response.headers.set('set-cookie', 'bad=1');
+      if (failure === 'current-auth' && url.includes('/api/')) return new Response('{}', { headers: response.headers });
+      return response;
+    };
+    if (failure === 'topology') { let n = 0; f.reader.snapshot = async () => { const x = structuredClone(f.snapshot); if (++n > 1) x.routes.push('drift'); return x; }; }
+    await assert.rejects(registerHistoricalSourceCatalog(historical));
+    assert.equal(JSON.parse(readFileSync(join(historical.directory, 'diagnostic.json'))).status, 'failed');
+    await assert.rejects(selectSourceCatalog(f.selection()));
+  });
+}
+
+test('historical evidence is revalidated on selection, not trusted only at import', async t => {
+  const f = await historicalFixture(t); await registerHistoricalSourceCatalog(f.historical);
+  writeFileSync(join(f.proof.work, 'recovery-main-http/0.body'), 'tampered after registration');
+  await assert.rejects(selectSourceCatalog(f.selection()), /Historical HTTP body changed/);
 });
