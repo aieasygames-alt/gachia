@@ -1,12 +1,14 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-02，R20）
+## 当前状态（2026-11-02，R21）
 
-Payload/PostgreSQL已常驻本机；双游戏game/Main发布、续验及兼容恢复协议已安装，**真实编辑云预览/推广/恢复仍未验收**。内容准确度不作首发门槛，不制造演练变化。执行看[现行手册](../../docs/payload-operator-runbook.md)，状态看[R20执行报告](../../reports/payload-launch-closeout-2026-11-02-r20/README.md)、[首发清单](../../plans/payload-launch-closeout-2026-11-02.md)，项目关系看[多Worker地图](../../docs/payload-project-worker-map.md)。
+Payload/PostgreSQL已常驻本机；双游戏game/Main发布、续验及兼容恢复协议已安装，**真实编辑云预览/推广/恢复仍未验收**。内容准确度不作首发门槛，不制造演练变化。执行看[现行手册](../../docs/payload-operator-runbook.md)，状态看[R21来源交接报告](../../reports/payload-source-catalog-2026-11-02-r21/README.md)、[首发清单](../../plans/payload-launch-closeout-2026-11-02.md)，项目关系看[多Worker地图](../../docs/payload-project-worker-map.md)。
+
+R21新增并安装`publish-source-register`/`publish-source-select`，当前game/Main UUID绑定的私有来源目录让新候选无需手填旧路径/pin；Genshin实机登记/安装版选择通过，NTE本轮仅隔离回归。首次/新UUID仍需可信验证登记，没有latest或自动前移；每轮资源、基线、兼容恢复和云门禁保留。新鲜CMS163/typegen/typecheck、桌面434、既有Node304、Python49、Router35/typecheck、inventory通过，21工具文件一致；DB摘要不变、84draft/hold、0eligible。未改内容、重启CMS或写云，代码/CI身份见R21报告。
 
 R20已修复inventory漂移：当前版本在`inventory/2026-11-02`，2026-10-28历史输入不改；CI新增inventory与Router生成配置/映射/类型/测试，工程提交`a0634a9`已推送并通过实际CI41426588559。新鲜回归CMS163/typegen/typecheck、桌面387、既有Node304、Python49、Router35/typecheck通过；不是全站build/parity/浏览器重验。
 
-新增并安装`publish-project-inventory`、`publish-assets-refresh`、`publish-recovery-local-prepare`，20工具文件摘要一致；547份实际公网资源响应通过，恢复命令实际范围见R20。首次可信来源登记仍需维护者，不是一键从零发布。当前Mac精确workers.dev预览需既有本机SOCKS代理的单进程环境，见手册；未修改系统网络或关闭TLS。
+R20新增并安装`publish-project-inventory`、`publish-assets-refresh`、`publish-recovery-local-prepare`，当轮20工具文件摘要一致；547份实际公网资源响应通过，恢复命令实际范围见R20。首次可信来源仍需维护者验证；R21新增登记/选择不等于一键从零发布。当前Mac精确workers.dev预览需既有本机SOCKS代理的单进程环境，见手册；未修改系统网络或关闭TLS。
 
 CMS/PG健康，HTTP安全9/9；DB仍84draft/hold、0eligible，双游戏正式导出拒绝无合格记录，不是no_changes或发布成功。10Worker盘点前后无变化；推广保护仍7服务、每批仅game/Main。main未合并，两个云GitHub部署开关false；本轮无内容编辑、云写入或CMS重启。
 

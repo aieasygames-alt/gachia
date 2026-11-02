@@ -1,6 +1,10 @@
 # Payload 首发收口清单（2026-11-02）
 
-当前权威：[R20四项执行报告](../reports/payload-launch-closeout-2026-11-02-r20/README.md)、[当前任务表](project-task-status-current.md)及[项目/Worker地图](../docs/payload-project-worker-map.md)。当前清单漂移/CI漏项已修复，三个只读准备命令已接线安装；CMS163/typegen/typecheck、桌面387、既有Node304、Python49、Router35/typecheck通过。10Worker盘点不扩展7服务推广保护或game/Main写入目标；真实云发布仍未验。
+当前权威：[R21来源交接报告](../reports/payload-source-catalog-2026-11-02-r21/README.md)、[当前任务表](project-task-status-current.md)及[项目/Worker地图](../docs/payload-project-worker-map.md)。当前版本的已验来源可登记并自动选择，Genshin实机通过；两游戏39项隔离覆盖。CMS163/typegen/typecheck、桌面434、既有Node304、Python49、Router35/typecheck与inventory新鲜通过，21工具文件已安装。10Worker盘点不扩展7服务保护或game/Main写入目标；真实云发布仍未验。
+
+R21未改内容或重启CMS；DB仍84draft/hold、0eligible，当前标题/正文无实际编辑。来源目录按当前game/Main UUID固定索引并重读云模块/精确MainJSON，没有latest、回退O或部署后自动前移；新候选仍须资源刷新/新基线/本地恢复及云门禁。首次/新UUID来源仍需验证登记，不是一键从零发布，NTE本轮未实际登记。新工程提交`1558210`及CI身份见R21报告；R20以下均为历史证据，不重复计数。
+
+前一工程基线：[R20四项执行报告](../reports/payload-launch-closeout-2026-11-02-r20/README.md)。当前清单漂移/CI漏项已修复，三个只读准备命令已接线安装；当轮CMS163/typegen/typecheck、桌面387、既有Node304、Python49、Router35/typecheck通过。
 
 工程提交`a0634a9`已推送维护分支并通过真实GitHub CI [41426588559](https://github.com/aieasygames-alt/gachia/actions/runs/41426588559)，包含新inventory/Router检查；main和云部署开关不变。资源刷新547份实际公网响应通过；精确版本网络需当前Mac既有SOCKS代理的单进程环境，见手册。安装20文件、CMS健康/安全HTTP9/9、DB与10Worker前后状态不变。仍84draft/hold、0 eligible，双游戏正式导出拒绝无合格记录；无真实key复制或跨机启动。依赖1low沿用R19扫描，不宣称已修复。
 
@@ -37,9 +41,9 @@
 | L03 备份/灾备最低保障 | **整体部分完成；独立key/跨机未验** | R17私有异地密文/实际下载认证/隔离恢复有效；R20补安全复制校验工具/跨机清单。只有只读DMG，无独立可写介质/第二Mac，未复制真实密钥，不重复同机恢复凑完成 |
 | L04 Genshin 首次真实发布 | 运维本地验收完成，待真实编辑候选 | R20正式导出明确拒绝No eligible records，DB仍84draft/hold、0 eligible；默认授权不是编辑输入，不能将演练文本公开。真实编辑后执行云预览/推广/公网验收，继而第二次/恢复 |
 | L05 NTE 云链路 | **本地实现、资源/恢复实测和安装完成；真实云未验** | R15 当前版本116旧资源绑定/公网字节、Main441文件、前向/恢复各811实际HTTP、8公网对照、严格owner/game及双目标故障测试通过；真实候选/恢复云预览、推广及云故障恢复仍未验 |
-| L06 工程交付/操作手册 | **当前清单/CI/新命令/安装完成；完整交接部分完成** | R20历史不变的新清单、实际CI含Router/inventory、10Worker只读盘点、资源刷新547响应、兼容恢复准备命令/20文件安装已有；恢复实测范围见R20。首次可信来源登记仍需维护者，不是一键从零发布；依赖1low限定本机接受，11月16日前复核 |
+| L06 工程交付/操作手册 | **当前清单/CI/来源目录/安装子任务完成；完整交接部分完成** | R20资源/恢复命令已有；R21固定UUID来源登记/选择、Genshin只读实测、21文件安装及新回归通过。首次可信来源、新UUID交接仍需验证登记；不自动复用旧版本，依赖1low沿用风险决定 |
 
-后续顺序：**真实Genshin候选就绪即优先首次/第二次云发布与兼容恢复 → 沿用到NTE；独立key/第二Mac条件具备即完成灾备验收；首次可信来源交接继续减手工**。不重做已完成清单/CI、547资源刷新或旧本地A/B演练。另三staging全部HTTP/noindex和外部入口策略仍单列，不为首条guides自动重部署项目。
+后续顺序：**真实Genshin候选就绪即用已登记来源执行首次/第二次云发布与兼容恢复 → 沿用到NTE；独立key/第二Mac条件具备即完成灾备验收**。没有真实编辑时可推进NTE来源交接和未验staging入口，不空跑构建或重做来源目录/旧本地A/B。新UUID后的来源必须重新验证登记，后续自动接续另列，不冒充本轮已完成。
 
 工程代码已冻结并通过新实际CI，文档提交身份另见R20报告。正式prepare只冻结指定Git commit，不会自动包含未提交源码，应使用已同步的任务分支/精确提交；交付ZIP不能替代Git冻结。独立密钥不能以本机key目录或iCloud目录存在冒充托管。L01/L02及L05已有本地实现不重做；不等待全类型和通用队列，诊断制品不得上传。
 
