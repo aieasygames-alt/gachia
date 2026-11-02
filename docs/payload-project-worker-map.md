@@ -4,6 +4,8 @@
 
 R21来源交接增量：[报告](../reports/payload-source-catalog-2026-11-02-r21/README.md)。已安装的来源目录严格按game/Main当前UUID索引，Genshin登记及选择重新读取双模块/Main JSON与本轮七服务拓扑；只读准备，不切换服务或扩展保护范围。新UUID缺目录即停止，不能认为Main共享就允许复用另一游戏来源；每个game分别登记。新候选仍需全套新鲜证据，NTE本轮未实机登记，真实云内容发布仍未验。
 
+R22当前增量：[NTE来源交接报告](../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)。已补NTE当前game/Main登记与安装版模块source-only选择；557份公网静态、811份本地响应、15份精确版本HTTP通过，历史树未改，派生副本仅替换当前云runtime。无NTE候选run/releaseKey，不冒充manager候选或真实云发布验收。10Worker/7服务保护/game+Main写入边界不变，四staging实际HTTP与外部入口仍是下一核验项。
+
 ## 1. 三个系统边界
 
 | 系统 | 位置与职责 | 不能混淆的边界 |

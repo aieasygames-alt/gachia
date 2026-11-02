@@ -1,18 +1,18 @@
 # 当前审计任务表
 
-## 当前权威状态：R21 版本化来源交接（2026-11-02）
+## 当前权威状态：R22 NTE 来源交接（2026-11-02）
 
-**本机Payload可编辑；已验来源可按当前game/Main UUID登记并由新候选自动选择，真实编辑云发布仍未验收。** 仍以尽快发布既有指南文字为目标，不等待内容准确度/全类型迁移。R21只升级manager/publisher并只读取证，不重启CMS、不编辑内容、不上传候选。当前结果见[R21报告](../reports/payload-source-catalog-2026-11-02-r21/README.md)，前一工程基线见[R20](../reports/payload-launch-closeout-2026-11-02-r20/README.md)，全面底图见[R19](../reports/payload-status-audit-2026-11-02-r19/README.md)，执行见[现行手册](../docs/payload-operator-runbook.md)。下方R18及更早段落均为历史，不覆盖本节。
+**本机Payload可编辑；两游戏当前game/Main UUID的已验来源均已登记，真实编辑云发布仍未验收。** 仍以尽快发布既有指南文字为目标，不等待内容准确度/全类型迁移。R22只升级manager/publisher并只读取证，不重启CMS、不编辑内容、不上传候选。当前结果见[R22报告](../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)，Genshin目录/CLI基线见[R21](../reports/payload-source-catalog-2026-11-02-r21/README.md)，工程准备见[R20](../reports/payload-launch-closeout-2026-11-02-r20/README.md)，全面底图见[R19](../reports/payload-status-audit-2026-11-02-r19/README.md)，执行见[现行手册](../docs/payload-operator-runbook.md)。下方R18及更早段落均为历史，不覆盖本节。
 
 ### 本轮重要修订
 
-- 新增并安装`publish-source-register`/`publish-source-select`：固定私有UUID目录、旧项不覆盖、来源/回执/pin/当前云模块/Main JSON/本轮七服务拓扑重验；不使用latest、不回退原始O、不自动跟随新UUID。新候选仍须新鲜资源/基线/本地恢复和全部云门禁。
-- Genshin当前game/Main来源实际登记、安装版manager实际选择通过；每次重读双模块及精确Main JSON。当前实际A=O，不声称本轮制造了云A/B；A≠O/另一releaseKey/两游戏及拒绝路径由39项隔离回归覆盖。NTE本轮未做实际来源登记。
-- 新鲜本地回归：CMS **163/163** + typegen/typecheck、桌面 **434/434**、既有Node **304/304**、Python **49/49**、Router **35/35**及类型检查、inventory通过。**20模块+manager共21文件**安装摘要一致，无CMS应用覆盖/重启；不重跑全站build/parity/浏览器。
-- 工程提交`1558210`已推送专用维护分支，真实CI[41436177902](https://github.com/aieasygames-alt/gachia/actions/runs/41436177902)成功；main未合并、两个部署开关仍false。R20清单/Router CI修复继续有效，不把旧run混称验证本轮源码。
+- R21两条来源命令继续有效；R22增加无候选历史来源的严格内部校验，不捏造run/releaseKey或恢复回执。按当前UUID固定私有目录，重验完整来源/HTTP字节/pin/当前模块/Main JSON及前后七服务拓扑；不使用latest、不回退O、不自动跟随新UUID。
+- NTE实际刷新**557**份公网静态资源，派生副本仅替换为当前精确云runtime，再做**811**份loopback响应；安装版模块实际登记/选择，另取**15**份精确版本HTTP（含首次baseline），均是source-only，不是manager真实候选CLI验收。Genshin实际manager选择沿用R21；当前A=O，A≠O只由隔离回归证明。
+- 新鲜本地回归：CMS **163/163** + typegen/typecheck、桌面 **458/458**、既有Node **304/304**、Python **49/49**、Router **35/35**及类型检查、inventory通过。来源目录**63**项隔离测试；**20模块+manager共21文件**安装摘要一致，无CMS应用覆盖/重启；不重跑全站build/parity/浏览器。
+- 工程提交`0120e79`已推送专用维护分支，真实CI[41439936620](https://github.com/aieasygames-alt/gachia/actions/runs/41439936620)成功；main未合并、两个部署开关仍false。后续文档提交CI身份单列于R22 delivery，不套用旧run。
 - CMS/PG healthy/loaded、HTTP安全 **9/9**，DB摘要不变，仍84draft/hold、0 eligible，且当前标题/正文相对导入源的编辑数为0。没有真实预期编辑，故不造内容、不清hold、不重建/上传诊断候选；R20双游戏正式导出拒绝仍有效，不冒称本轮重新导出。
-- 首次注册因既有token过期401失败，保留diagnostic，刷新现有登录后新一轮只读登记通过；精确版本仍用当前Mac既有SOCKS代理的进程级环境。没有扩权限、改系统网络或关TLS。实际部署仍10Worker，推广保护7服务，写入目标game/Main；来源目录不扩展Router/其他staging权限。
-- 独立密钥介质/第二Mac仍缺，L03不关闭；R20的547资源/760本地响应/7云对照及R19的1low依赖风险为历史证据，不计入本轮新增采样或新扫描。完整新版本来源自动接续也未完成。
+- 登记前控制面超时及随后模块正文超时均保留独立diagnostic；只读新轮重验，不放宽超时/TLS、不复用半成品manifest。精确版本仍用当前Mac既有SOCKS代理的进程级环境。实际部署仍10Worker，推广保护7服务，写入目标game/Main；来源目录不扩展Router/其他staging权限。
+- 独立密钥介质/第二Mac仍缺，L03不关闭；R19的1low依赖风险沿用、不算新扫描。首次/新UUID完整来源自动接续仍未完成，未验staging入口是下一可执行工程项；有真实Genshin编辑即优先云验收。
 
 ### P0–P7 当前状态
 
@@ -51,7 +51,8 @@ P5/T08从“未完成（局部原型）”更新为部分完成，仅承认R14�
 | 顺序 | 任务 | 交付边界 |
 | --- | --- | --- |
 | 已完成工程子项 | L06 当前inventory/CI及项目观察清单 | 版本化新清单、历史不变、新实际CI成功、10服务观察与7服务保护区分 |
-| 已交付命令，交接未全关 | L06 资源/恢复证据与版本化来源目录 | R21固定当前game/Main UUID登记/选择、21文件安装；首次可信来源与新UUID仍需验证登记，不是一键从零发布 |
+| 已完成当前版本子项，交接未全关 | L05/L06 资源/恢复证据与版本化来源目录 | R21 Genshin、R22 NTE当前game/Main来源已登记/选择，21文件安装；首次可信来源与新UUID仍需验证登记，不是一键从零发布 |
+| 下一可执行工程项 | staging外部入口/HTTP策略 | 只读验证四个staging的实际HTTP、robots/noindex/cache与外部发布入口；不擅自部署或扩大七服务保护集 |
 | 外部条件未具备 | L03 独立key与跨机恢复 | 复制/校验工具与清单已补；需真实独立介质/第二台Mac，不重复同机或R2往返 |
 | 真实候选就绪即优先 | L04 Genshin首次/第二次/恢复，再L05 NTE | 正式导出无合格记录，先取得实际预期文本编辑；不制造变化、不批量清hold，不等待准确度/全类型迁移 |
 

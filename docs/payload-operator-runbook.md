@@ -71,6 +71,8 @@ cms publish-source-register --run "$SOURCE_RUN" --pin "$SOURCE_PLAN_PIN" --reten
 
 登记/选择可读取由诊断run取得的**当前公众基线来源**，不使诊断候选变为正式内容；productionReady保持false，诊断制品仍禁止上传。R21实机登记范围与证据见对应报告，不把隔离双游戏测试称作两游戏实际登记。
 
+R22已为没有候选run的NTE历史基线完成一次性source-only交接：保留原树，派生副本仅替换为当前精确云runtime，重新采样本地HTTP及精确云响应，再由安装版模块登记/选择。证据见[R22报告](../reports/payload-nte-source-handoff-2026-11-02-r22/README.md)。这不是新增通用CLI或候选资格豁免；不要为登记造run/releaseKey，后续真实NTE候选仍按第3节执行select和全部门禁。game/Main新UUID出现后仍须新证据，不能复制此历史条目改UUID。
+
 ```sh
 cms publish-project-inventory
 cms publish-assets-refresh --run "$RUN" --pin "$PLAN_PIN" --evidence "$ASSET_SOURCE" --evidence-pin "$ASSET_SOURCE_PIN"
