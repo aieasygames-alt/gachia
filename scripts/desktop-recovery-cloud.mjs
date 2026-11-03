@@ -36,6 +36,9 @@ export async function prepareRecoveryCloud(input) {
       const hashes = new Map(inventory.filter(row => row.type === 'file' && (row.path.startsWith('assets/_next/static/') || row.path.startsWith(`assets/_games/${owner}/_next/static/`))).map(row => ['/' + row.path.slice(7).split('/').map(encodeURIComponent).join('/'), row.sha256]));
       const paths = owner === 'main' ? [`/data/${plan.game}/raw-guides.json`, '/sitemap.xml', '/robots.txt', '/api/auth/get-session']
         : ['/sitemap.xml', '/robots.txt', ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
+      const preserved = owner === 'main' && plan.preservedGuides ? pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin) : undefined;
+      const preservedPath = preserved && `/data/${preserved.otherGame}/raw-guides.json`;
+      if (preserved) paths.push(preservedPath);
       paths.push(...hashes.keys());
       const local = { name: `cms-recovery-sealed-${owner}`, main: config.main, no_bundle: true, compatibility_date: config.compatibility_date, compatibility_flags: config.compatibility_flags, assets: config.assets, vars: config.vars,
         ...(owner === 'main' ? { d1_databases: [{ binding: 'DB', database_name: 'local-only', database_id: '00000000-0000-0000-0000-000000000000' }], r2_buckets: [{ binding: 'IMAGES', bucket_name: 'local-only' }] } : {}) };
@@ -46,8 +49,9 @@ export async function prepareRecoveryCloud(input) {
           const response = await fetch(origin + path, { redirect: 'error', signal: AbortSignal.timeout(30000) }), body = await boundedBody(response);
           assert.equal(response.status, path.startsWith('/api/auth/') ? 404 : 200);
           const row = { path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(body) };
+          if (path === preservedPath) row.preservedMainVersion = preserved.mainVersionId;
           if (hashes.has(path)) assert.equal(row.sha256, hashes.get(path), 'Recovery static HTTP changed');
-          if (path.startsWith('/data/')) assert.equal(row.sha256, publishedBaselineSHA256, 'Recovery must serve the previous published JSON');
+          if (path.startsWith('/data/')) assert.equal(row.sha256, path === preservedPath ? preserved.sha256 : publishedBaselineSHA256, 'Recovery must serve the previous published JSON');
           if (path.startsWith('/api/auth/')) { assert.equal(JSON.parse(body).code, 'ACCOUNT_FEATURES_DISABLED'); assert.match(row.headers['cache-control'], /no-store/); }
           if (row.headers['content-type']?.startsWith('text/html')) row.fingerprint = pageFingerprint(body.toString());
           const old = recovery.owners[owner].observations.find(x => x.path === path);
@@ -92,6 +96,12 @@ export function verifyRecoveryCloud({ run, pin, recoveryId, recoveryBundlePin })
     assert.equal(config.main, join(directory, owner, 'worker.js')); assert.equal(config.assets.directory, join(verified.recovery.directory, owner, '.open-next/assets'));
     const refs = pinnedJson(join(directory, owner, 'references.json'), row.referencesSHA256); assert.equal(refs.length, row.paths);
     refs.forEach((ref, i) => assert.equal(digest(readFileSync(join(directory, owner, `${i}.body`))), ref.sha256, 'Recovery network reference changed'));
+    if (owner === 'main' && verified.candidate.plan.preservedGuides) {
+      const preserved = pinnedJson(verified.candidate.plan.preservedGuides.path, verified.candidate.plan.preservedGuides.pin);
+      const rows = refs.filter(ref => ref.path === `/data/${preserved.otherGame}/raw-guides.json`);
+      assert.equal(rows.length, 1, 'Recovery lacks preserved other-game reference');
+      assert.equal(rows[0].sha256, preserved.sha256); assert.equal(rows[0].preservedMainVersion, preserved.mainVersionId);
+    }
   }
   return { ...verified, directory, manifest };
 }

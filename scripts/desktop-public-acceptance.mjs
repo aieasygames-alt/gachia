@@ -35,7 +35,11 @@ export function publicReferences(owner, references, game = owner === 'main' ? 'g
       if (path === '/sitemap.xml') publicPath = `/sitemaps/${game}/index.xml`;
       else if (path.startsWith('/_next/static/')) publicPath = `/_games/${game}` + path;
       else assert(path.startsWith(`/_games/${game}/_next/static/`) || new RegExp(`^/(zh|en|ja)/${game}/guides/[^/]+$`).test(path), 'Unexpected game public route');
-    } else assert(path.startsWith('/_next/static/') || [`/data/${game}/raw-guides.json`, '/sitemap.xml', '/robots.txt', '/api/auth/get-session'].includes(path), 'Unexpected Main public route');
+    } else {
+      const other = game === 'genshin' ? 'nte' : 'genshin';
+      const preserved = path === `/data/${other}/raw-guides.json` && /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(reference.preservedMainVersion ?? '');
+      assert(preserved || path.startsWith('/_next/static/') || [`/data/${game}/raw-guides.json`, '/sitemap.xml', '/robots.txt', '/api/auth/get-session'].includes(path), 'Unexpected Main public route');
+    }
     assert.equal(new URL(publicPath, 'https://gachia.com').pathname, publicPath, 'Public path normalization forbidden');
     if (mapped.has(publicPath)) assert.equal(mapped.get(publicPath).sha256, reference.sha256, 'Conflicting public asset references');
     else mapped.set(publicPath, { ...reference, path: publicPath, headers: { ...reference.headers,

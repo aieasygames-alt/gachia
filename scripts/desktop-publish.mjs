@@ -6,6 +6,7 @@ import { homedir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { verifyWorkerArtifact } from './verify-worker-artifact.mjs';
+import { verifyPreservedGuides } from './desktop-source-catalog.mjs';
 
 const hash = value => createHash('sha256').update(value).digest('hex');
 const SHA = /^[a-f0-9]{64}$/;
@@ -95,11 +96,17 @@ function sourceDigest(workspace, paths) {
   return hash(JSON.stringify(paths.map(relative => [relative, hash(regular(join(workspace, relative)))])));
 }
 
-export function prepareCandidate({ repo, directory, runs, commit = 'HEAD' }) {
+export function prepareCandidate({ repo, directory, runs, commit = 'HEAD', preservedGuides }) {
   const plan = inspectCandidate({ repo, directory, commit });
   assert.notEqual(plan.status, 'no_changes', 'No content changes: do not build/upload an unchanged import');
   assert(!/[^A-Za-z0-9_./-]/.test(resolve(runs)), 'Current frozen game configs require a build directory without URL-encoded characters');
   const paths = sourceEntries(repo, plan.sourceCommit);
+  const preserved = preservedGuides ? verifyPreservedGuides(preservedGuides, plan) : undefined;
+  if (preserved) {
+    const [source, mirror] = preserved.proof.paths.map(path => git(repo, ['show', `${plan.sourceCommit}:${path}`]));
+    assert(source.equals(mirror), 'Non-target committed source/public mirror drift');
+    validateGuideOverlay(source.toString(), preserved.body.toString());
+  }
   mkdirSync(runs, { recursive: true, mode: 0o700 });
   const runId = `${plan.releaseKey.slice(0, 16)}-${randomBytes(6).toString('hex')}`;
   const run = join(runs, runId), workspace = join(run, 'source');
@@ -109,7 +116,8 @@ export function prepareCandidate({ repo, directory, runs, commit = 'HEAD' }) {
   const content = regular(join(directory, 'raw-guides.json'));
   assert.equal(hash(content), plan.candidateSHA256, 'Candidate changed during preparation');
   for (const relative of plan.sourcePaths) writeFileSync(join(workspace, relative), content);
-  const frozen = { ...plan, runId, sourceFiles: paths, sourceTreeSHA256: sourceDigest(workspace, paths) };
+  if (preserved) for (const relative of preserved.proof.paths) writeFileSync(join(workspace, relative), preserved.body);
+  const frozen = { ...plan, ...(preservedGuides ? { preservedGuides } : {}), runId, sourceFiles: paths, sourceTreeSHA256: sourceDigest(workspace, paths) };
   const text = json(frozen);
   writeFileSync(join(run, 'plan.json'), text, { flag: 'wx', mode: 0o600 });
   writeFileSync(join(run, 'state.json'), json({ status: 'prepared', owners: {}, cloudWrites: false }), { flag: 'wx', mode: 0o600 });
@@ -135,6 +143,10 @@ export function verifyPrepared(run, pin) {
   walk();
   assert.equal(sourceDigest(join(run, 'source'), plan.sourceFiles), plan.sourceTreeSHA256, 'Frozen source changed');
   for (const relative of plan.sourcePaths) assert.equal(hash(regular(join(run, 'source', relative))), plan.candidateSHA256, 'Candidate/source binding lost');
+  if (plan.preservedGuides) {
+    const { proof, body } = verifyPreservedGuides(plan.preservedGuides, plan);
+    for (const relative of proof.paths) assert(regular(join(run, 'source', relative)).equals(body), 'Non-target published guides were not preserved');
+  }
   return plan;
 }
 
@@ -244,6 +256,10 @@ export function verifyBuilt(run, pin) {
     const manifest = regular(join(run, `${owner}-artifact.json`));
     assert.equal(hash(manifest), state.owners[owner].artifactSHA256, 'Artifact inventory changed');
     assert.deepEqual(artifactFiles(join(run, 'artifacts', owner)), JSON.parse(manifest), 'Artifact tree changed');
+  }
+  if (plan.preservedGuides) {
+    const { proof } = verifyPreservedGuides(plan.preservedGuides, plan);
+    assert.equal(hash(regular(join(run, 'artifacts/main/assets/data', proof.otherGame, 'raw-guides.json'))), proof.sha256, 'Built Main lost non-target published guides');
   }
   return plan;
 }
@@ -455,7 +471,11 @@ async function main() {
     const input = { repo: resolve(opts['--repo']), directory: join(ROOT, 'publish', opts['--release-key']), commit: opts['--commit'] ?? 'HEAD' };
     if (opts.action === 'inspect') console.log(json(inspectCandidate(input)));
     else {
-      const prepared = prepareCandidate({ ...input, runs: RUNS });
+      const { preparePublishedCandidate } = await import('./desktop-source-catalog.mjs');
+      const { preparationReader } = await import('./desktop-local-evidence.mjs');
+      const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
+      const prepared = await preparePublishedCandidate({ ...input, runs: RUNS, root: join(RUNS, 'source-catalog'),
+        evidenceDirectory: join(RUNS, `source-inputs-${randomBytes(8).toString('hex')}`), reader: preparationReader(token) });
       const { plan, ...summary } = prepared;
       console.log(json({ ...summary, releaseKey: plan.releaseKey, owners: plan.owners, cloudWrites: false }));
     }

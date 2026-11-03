@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { chmodSync, existsSync, mkdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
-import { registerHistoricalSourceCatalog, registerSourceCatalog, selectSourceCatalog } from './desktop-source-catalog.mjs';
-import { artifactFiles } from './desktop-publish.mjs';
+import { registerHistoricalSourceCatalog, registerSourceCatalog, selectSourceCatalog, preparePublishedCandidate, verifyPreservedGuides } from './desktop-source-catalog.mjs';
+import { artifactFiles, verifyPrepared } from './desktop-publish.mjs';
 import { digest } from './desktop-release-assets.mjs';
+import { guideDataHashes } from './desktop-cloud-transport.mjs';
 
 const json = x => JSON.stringify(x, null, 2) + '\n';
 const save = (path, x) => { mkdirSync(dirname(path), { recursive: true, mode: 0o700 }); writeFileSync(path, json(x), { mode: 0o600 }); return digest(json(x)); };
@@ -13,6 +15,67 @@ const runtime = Buffer.from('downloaded current cloud runtime');
 const html = game => `<html><head><title>A</title><link rel="canonical" href="https://gachia.com/zh/${game}/guides/one"/><meta name="description" content="A"/><script type="application/ld+json">{"name":"A"}</script></head><body><h1>A</h1>Published A</body></html>`;
 
 import { fixture, historicalFixture } from './fixtures/desktop-catalog-source.mjs';
+
+async function preservedFixture(t, game = 'genshin') {
+  const other = game === 'genshin' ? 'nte' : 'genshin';
+  const otherContent = '[{"id":"one","title":"Other published A","content":"Original"}]';
+  const f = await fixture(t, game, { otherContent });
+  await registerSourceCatalog(f.input);
+  const repo = join(f.root, 'repo'), candidate = join(f.root, 'candidate'); mkdirSync(repo); mkdirSync(candidate);
+  for (const g of [game, other]) for (const path of [`packages/data/games/${g}/raw-guides.json`, `apps/web/public/data/${g}/raw-guides.json`]) {
+    mkdirSync(dirname(join(repo, path)), { recursive: true }); writeFileSync(join(repo, path), f.original);
+  }
+  save(join(repo, 'packages/core/route-ownership.json'), { games: { [game]: { pages: ['guides'], details: ['guides'] } } });
+  const git = args => execFileSync('git', args, { cwd: repo, stdio: 'pipe' });
+  git(['init']); git(['add', '.']); git(['-c', 'user.name=CMS test', '-c', 'user.email=fixture@localhost.invalid', 'commit', '-m', 'frozen imports']);
+  const bytes = '[{"id":"one","title":"Next B","content":"Original"}]';
+  writeFileSync(join(candidate, 'raw-guides.json'), bytes);
+  const sourceSHA256 = digest(f.original), candidateSHA256 = digest(bytes);
+  const releaseKey = digest(JSON.stringify({ game, source: sourceSHA256, candidate: candidateSHA256, preview: false }));
+  save(join(candidate, 'manifest.json'), { game, sourcePath: `packages/data/games/${game}/raw-guides.json`, sourceSHA256, candidateSHA256, releaseKey, preview: false, preparedOn: 'desktop', changed: ['one'] });
+  const input = { repo, directory: candidate, runs: join(f.root, 'runs'), root: f.input.root, evidenceDirectory: join(f.root, 'preserved'), reader: f.reader,
+    request: async (url, opts) => url === `https://gachia.com/data/${other}/raw-guides.json` ? new Response(otherContent, { headers: { 'content-type': 'application/json' } }) : f.input.request(url, opts) };
+  return { ...f, other, otherContent, input };
+}
+
+for (const game of ['genshin', 'nte']) test(`${game} preparation freezes the other game's published A in both Main build inputs and exact HTTP references`, async t => {
+  const f = await preservedFixture(t, game), prepared = await preparePublishedCandidate(f.input);
+  const plan = verifyPrepared(prepared.directory, prepared.planSHA256), { proof } = verifyPreservedGuides(plan.preservedGuides, plan);
+  for (const path of proof.paths) assert.equal(readFileSync(join(prepared.directory, 'source', path), 'utf8'), f.otherContent);
+  assert.equal(proof.mainVersionId, f.version('main'));
+  assert.notEqual(proof.sha256, plan.sourceSHA256); assert.notEqual(proof.sha256, plan.candidateSHA256);
+  assert.deepEqual([...guideDataHashes(plan)], [[`/data/${game}/raw-guides.json`, plan.candidateSHA256], [`/data/${f.other}/raw-guides.json`, digest(f.otherContent)]]);
+  writeFileSync(join(prepared.directory, 'source', proof.paths[0]), f.original);
+  assert.throws(() => verifyPrepared(prepared.directory, prepared.planSHA256), /Frozen source changed|not preserved/);
+});
+
+for (const reason of ['old-O', 'status', 'cookie', 'mime', 'network', 'topology', 'unpublished-field']) test(`cross-game preparation rejects ${reason} before creating a run`, async t => {
+  const f = await preservedFixture(t), request = f.input.request;
+  f.input.request = async (url, opts) => {
+    if (!url.includes(`/data/${f.other}/`)) return request(url, opts);
+    if (reason === 'network') throw Error('network unavailable');
+    if (reason === 'topology') f.snapshot.routes.push('drift');
+    return new Response(reason === 'old-O' ? f.original : f.otherContent, { status: reason === 'status' ? 503 : 200,
+      headers: { 'content-type': reason === 'mime' ? 'text/html' : 'application/json', ...(reason === 'cookie' ? { 'set-cookie': 'bad=1' } : {}) } });
+  };
+  if (reason === 'unpublished-field') {
+    const file = join(f.input.repo, `packages/data/games/${f.other}/raw-guides.json`);
+    writeFileSync(file, '[{"id":"one","title":"O","content":"Original","image":"unreviewed.png"}]');
+    const git = args => execFileSync('git', args, { cwd: f.input.repo, stdio: 'pipe' });
+    writeFileSync(join(f.input.repo, `apps/web/public/data/${f.other}/raw-guides.json`), readFileSync(file));
+    git(['add', '.']); git(['-c', 'user.name=CMS test', '-c', 'user.email=fixture@localhost.invalid', 'commit', '-m', 'different contract']);
+  }
+  await assert.rejects(preparePublishedCandidate(f.input)); assert(!existsSync(f.input.runs));
+});
+
+for (const reason of ['proof', 'public-body', 'catalog', 'source-tree']) test(`frozen cross-game evidence rejects later ${reason} tampering`, async t => {
+  const f = await preservedFixture(t), prepared = await preparePublishedCandidate(f.input);
+  const { proof } = verifyPreservedGuides(prepared.plan.preservedGuides, prepared.plan);
+  const target = reason === 'proof' ? prepared.plan.preservedGuides.path : reason === 'public-body' ? proof.bodyPath : reason === 'catalog' ? proof.selection.manifestPath
+    : join(JSON.parse(readFileSync(proof.selection.sourcePath)).owners.main.directory, `assets/data/${f.other}/raw-guides.json`);
+  writeFileSync(target, '{}');
+  assert.throws(() => verifyPrepared(prepared.directory, prepared.planSHA256));
+});
 
 for (const game of ['genshin', 'nte']) test(`${game} catalog selects current A sources for a different candidate without authorizing it`, async t => {
   const f = await fixture(t, game), registered = await registerSourceCatalog(f.input), selected = await selectSourceCatalog(f.selection());

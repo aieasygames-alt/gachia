@@ -48,7 +48,8 @@ export async function fixture(t, game = 'genshin', options = {}) {
   };
   for (const owner of plan.owners) {
     const old = join(root, 'old', owner); artifact(old);
-    if (owner === 'main') { mkdirSync(join(old, `assets/data/${game}`), { recursive: true }); writeFileSync(join(old, `assets/data/${game}/raw-guides.json`), published); }
+    if (owner === 'main') { mkdirSync(join(old, `assets/data/${game}`), { recursive: true }); writeFileSync(join(old, `assets/data/${game}/raw-guides.json`), published);
+      if (options.otherContent) { const other = game === 'genshin' ? 'nte' : 'genshin'; mkdirSync(join(old, `assets/data/${other}`), { recursive: true }); writeFileSync(join(old, `assets/data/${other}/raw-guides.json`), options.otherContent); } }
     sources[owner] = { directory: old, versionId: version(owner), artifactSHA256: digest(json(artifactFiles(old))) };
     const current = join(retained, owner, '.open-next'); artifact(current); writeFileSync(join(current, 'assets/_next/static/new.js'), 'new static');
     receipt.owners[owner] = { previousVersion: version(owner), artifactSHA256: save(join(retained, `${owner}-inventory.json`), artifactFiles(current)) };

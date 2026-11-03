@@ -124,7 +124,15 @@ export function assertTopology(before, after, changed = {}) {
   assert.deepEqual(Object.keys(after.services).sort(), [...SERVICES].sort(), 'Protected service set changed');
   for (const key of ['bindings', 'routes', 'domains', 'settings', 'subdomains', 'scripts']) {
     assert(before[key] !== undefined && after[key] !== undefined, `Missing topology evidence: ${key}`);
-    assert.deepEqual(after[key], before[key], `Topology drift: ${key}`);
+    // Workers /settings reports the latest uploaded version's message, even
+    // before deployment. Keep it in evidence, but not in the topology identity.
+    const identity = value => key !== 'settings' ? value : Object.fromEntries(Object.entries(value).map(([service, settings]) => {
+      if (!settings?.annotations || !Object.hasOwn(settings.annotations, 'workers/message')) return [service, settings];
+      const { 'workers/message': message, ...annotations } = settings.annotations;
+      assert.equal(typeof message, 'string', 'Invalid Worker version message');
+      return [service, { ...settings, annotations }];
+    }));
+    assert.deepEqual(identity(after[key]), identity(before[key]), `Topology drift: ${key}`);
   }
   for (const service of SERVICES) {
     activeVersion(before, service);

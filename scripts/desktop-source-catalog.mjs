@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
-import { artifactFiles } from './desktop-publish.mjs';
+import { artifactFiles, inspectCandidate, prepareCandidate } from './desktop-publish.mjs';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
 import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-assets.mjs';
 import { verifyPublishedBaseline } from './desktop-published-baseline.mjs';
@@ -325,4 +325,57 @@ export async function selectSourceCatalog({ root, directory, plan, reader, reque
     save(join(directory, 'selection.json'), result); diagnostic.status = 'passed'; return result;
   } catch (error) { diagnostic.status = 'failed'; diagnostic.error = error.message; throw new Error(`${error.message}; diagnostics: ${join(directory, 'diagnostic.json')}`, { cause: error }); }
   finally { save(join(directory, 'diagnostic.json'), diagnostic); }
+}
+
+export function verifyPreservedGuides(preservation, plan) {
+  privateFile(preservation.path);
+  const proof = pinnedJson(preservation.path, preservation.pin);
+  assert.equal(proof.kind, 'current_main_preserved_guides'); assert.equal(proof.schemaVersion, 1);
+  assert.equal(proof.game, plan.game); assert.equal(proof.sourceCommit, plan.sourceCommit);
+  const other = plan.game === 'genshin' ? 'nte' : 'genshin';
+  assert.equal(proof.otherGame, other);
+  assert.deepEqual(proof.paths, [`packages/data/games/${other}/raw-guides.json`, `apps/web/public/data/${other}/raw-guides.json`]);
+  const catalog = verifySelectedSourceCatalog(proof.selection, plan);
+  assert.equal(proof.mainVersionId, catalog.versions.main);
+  assertTopology(proof.before, proof.after);
+  assert.equal(activeVersion(proof.after, 'gachia'), proof.mainVersionId);
+  const source = pinnedJson(proof.selection.sourcePath, proof.selection.sourcePin);
+  const body = readFileSync(join(source.owners.main.directory, `assets/data/${other}/raw-guides.json`));
+  assert.equal(digest(body), proof.sha256, 'Preserved Main source bytes changed');
+  privateFile(proof.bodyPath);
+  assert(readFileSync(proof.bodyPath).equals(body), 'Preserved public response changed');
+  assert.equal(proof.response.path, `/data/${other}/raw-guides.json`);
+  assert.equal(proof.response.status, 200); assert(!proof.response.headers['set-cookie']);
+  assert.equal(proof.response.headers['content-type']?.split(';')[0], 'application/json');
+  return { proof, body };
+}
+
+// Main embeds both games. Freeze the non-target game's current published bytes,
+// not Git's original import or another game's unpublished CMS drafts.
+export async function preparePublishedCandidate({ repo, directory, runs, commit = 'HEAD', root, evidenceDirectory, reader, request = fetch }) {
+  const plan = inspectCandidate({ repo, directory, commit });
+  const selection = await selectSourceCatalog({ root, directory: join(evidenceDirectory, 'selection'), plan, reader, request });
+  const before = await reader.snapshot(); assertTopology(before, before);
+  assert.equal(activeVersion(before, 'gachia'), selection.versions.main);
+  assert.equal(activeVersion(before, `gachia-game-${plan.game}`), selection.versions[plan.game]);
+  const other = plan.game === 'genshin' ? 'nte' : 'genshin';
+  const source = pinnedJson(selection.sourcePath, selection.sourcePin);
+  const body = readFileSync(join(source.owners.main.directory, `assets/data/${other}/raw-guides.json`));
+  const path = `/data/${other}/raw-guides.json`;
+  const response = await request('https://gachia.com' + path, { method: 'GET', credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(30000) });
+  assert.equal(response.status, 200); assert(!response.headers.has('set-cookie'));
+  assert.equal(response.headers.get('content-type')?.split(';')[0], 'application/json');
+  const observed = await boundedBody(response);
+  assert(observed.equals(body), 'Current Main non-target guides differ from the verified source');
+  const after = await reader.snapshot(); assertTopology(before, after);
+  const bodyPath = join(evidenceDirectory, 'preserved.body');
+  writeFileSync(bodyPath, body, { flag: 'wx', mode: 0o600 });
+  const proof = { schemaVersion: 1, kind: 'current_main_preserved_guides', game: plan.game, otherGame: other,
+    sourceCommit: plan.sourceCommit, mainVersionId: selection.versions.main, sha256: digest(body),
+    paths: [`packages/data/games/${other}/raw-guides.json`, `apps/web/public/data/${other}/raw-guides.json`],
+    selection, before, after, bodyPath, observedAt: new Date().toISOString(),
+    response: { path, status: response.status, headers: Object.fromEntries(response.headers) }, cloudWrites: false };
+  const proofPath = join(evidenceDirectory, 'preserved.json'), proofPin = save(proofPath, proof);
+  verifyPreservedGuides({ path: proofPath, pin: proofPin }, plan);
+  return prepareCandidate({ repo, directory, runs, commit: plan.sourceCommit, preservedGuides: { path: proofPath, pin: proofPin } });
 }

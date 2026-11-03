@@ -17,7 +17,7 @@ const uuid = '00000000-0000-0000-0000-000000000999';
 
 async function fixture(t, game = 'nte', legacy = false, options = {}) {
   const other = game === 'nte' ? 'genshin' : 'nte';
-  const donor = await publishedFixture(t, other, { otherContent: options.otherContent ?? '[{"id":"one","title":"A","content":"Original"}]' });
+  const donor = await publishedFixture(t, other, { otherContent: options.otherContent ?? '[{"id":"one","title":"A","content":"Original"}]', preserveReferences: options.preserveReferences });
   const target = await (legacy ? legacyFixture : historicalFixture)(t, game, { snapshot: donor.manifest.snapshot });
   const old = await (legacy ? registerSourceCatalog(target.input) : registerHistoricalSourceCatalog(target.historical));
   const main = await advanceSourceCatalog(donor.args);
@@ -63,6 +63,21 @@ for (const game of ['genshin', 'nte']) for (const legacy of [false, true]) test(
 test('a genuinely sealed donor Main containing O cannot silently reset target A', async t => {
   const f = await fixture(t, 'nte', false, { otherContent: '[{"id":"one","title":"O","content":"Original"}]' });
   await assert.rejects(rebindSourceCatalog(f.args), /New Main changed target content/);
+});
+
+for (const game of ['genshin', 'nte']) test(`${game}: Main's sealed preserved reference is verified and reused, not duplicated during rebind`, async t => {
+  const f = await fixture(t, game, false, { preserveReferences: true });
+  // Match the independently verified donor HTTP policy, as actual production does.
+  const request = f.args.request;
+  f.args.request = async (url, opts) => {
+    const response = await request(url, opts);
+    if (new URL(url).pathname === `/data/${game}/raw-guides.json`) response.headers.set('cache-control', 'public, max-age=0');
+    return response;
+  };
+  const result = await rebindSourceCatalog(f.args);
+  assert.equal(result.sourceOnly, true);
+  const selected = await selectSourceCatalog({ ...f.selection(), request: f.args.request });
+  assert.equal(selected.versions.main, f.main.versions.main);
 });
 
 test('forward-only local recovery chunks are not falsely claimed as current cloud assets', async t => {

@@ -49,9 +49,12 @@ cms publish-verify --run "$RUN" --pin "$PLAN_PIN"
 
 - 正式导出不加 --preview；releaseKey 为返回值，候选在 `GachiaCMS/publish/<releaseKey>/`。preview=true 永不允许云上传。
 - prepare 返回 runId、planSHA256，分别记为 RUN/PLAN_PIN；冻结指定 Git commit（默认 HEAD），不会把工作区未提交代码一起打包。工程包保存当前源码并不等于 Git 已交付。
+- R29起，正式prepare先只读选择当前来源，读取经完整来源链校验的Main树，并与公网另一游戏指南逐字节核对；把它同时冻结到package/public两个构建输入。plan固定来源/响应pin和Main UUID；build、retain、封存、候选及恢复云预览/公网验收均保留该JSON，不回退另一游戏的Git导入O或夹带未发布CMS内容。共享Main变化先显式rebind，再重新prepare，禁止复用旧run。
 - 已登记来源时，source-select在build前按当前game/Main UUID自动选择；输出evidencePath/evidencePin→ASSET_SOURCE/ASSET_SOURCE_PIN、sourcePath/sourcePin→RECOVERY_SOURCE/RECOVERY_SOURCE_PIN。不需要为新releaseKey手拼旧来源路径。未登记或当前UUID已变化则停止，先走第4节的首次/新版本来源交接，不可跳过拒绝后照常上传。
 - run 在 `~/.gachia-cms-releases/<runId>/`；证据/锁/日志不得删除重建。两个 owner 必须全部通过，不能只发游戏而遗留 Main 的公开 JSON。
 - 本地预览是真实临时 Worker，响应正文、metadata/JSON-LD/引用/静态字节、sitemap 和 cache 保存到返回目录，不是长期预览站点或 Cloudflare 验收。
+
+Cloudflare的`/settings`会随未部署版本上传改变`annotations.workers/message`；R29仅从拓扑比较中排除此版本描述字符串，原值仍保存取证。其他annotations、兼容配置、bindings、observability、路由、服务及部署身份仍严格比较。旧失败journal不可删除或重试；先只读对账，确认无未知写入，再另建run执行全部门禁。
 
 ## 4. 维护者准备资源、上一公开基线和兼容恢复：不写云
 

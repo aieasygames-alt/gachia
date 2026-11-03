@@ -64,12 +64,14 @@ export async function fixture(t, game = 'genshin', options = {}) {
     put(join(bundle, owner, 'worker.js'), code);
     const configSHA256 = save(join(bundle, owner, 'upload.json'), config);
     const dynamic = owner === 'main' ? [`/data/${game}/raw-guides.json`, '/sitemap.xml', '/api/auth/get-session'] : ['/sitemap.xml', ...['zh', 'en', 'ja'].map(lang => `/${lang}/${game}/guides/one`)];
+    if (owner === 'main' && options.preserveReferences) dynamic.push(`/data/${game === 'genshin' ? 'nte' : 'genshin'}/raw-guides.json`);
     const refs = [];
     for (const path of [...dynamic, ...artifactFiles(join(retained.directory, owner, '.open-next')).filter(row => (row.path.startsWith('assets/_next/static/') || row.path.startsWith(`assets/_games/${game}/_next/static/`)) && row.type === 'file').map(row => '/' + row.path.slice(7))]) {
       const html = `<html><head><title>A</title><link rel="canonical" href="https://gachia.com${path}"/><meta name="description" content="A"/><script type="application/ld+json">{"name":"A"}</script></head><body><h1>A</h1>Published A</body></html>`;
-      const body = Buffer.from(path.includes('/guides/') ? html : path.startsWith('/data/') ? content : path.startsWith('/api/') ? '{"code":"ACCOUNT_FEATURES_DISABLED"}' : path === '/sitemap.xml' ? '<urlset/>' : readFileSync(join(config.assets.directory, path)));
+      const body = Buffer.from(path.includes('/guides/') ? html : path.startsWith('/data/') ? path === `/data/${game}/raw-guides.json` ? content : options.otherContent : path.startsWith('/api/') ? '{"code":"ACCOUNT_FEATURES_DISABLED"}' : path === '/sitemap.xml' ? '<urlset/>' : readFileSync(join(config.assets.directory, path)));
       const headers = { 'content-type': path.includes('/guides/') ? 'text/html' : path.endsWith('.json') || path.startsWith('/api/') ? 'application/json' : path.endsWith('.xml') ? 'application/xml' : 'text/javascript', 'cache-control': path.startsWith('/api/') ? 'no-store' : 'public, max-age=0' };
       const ref = { path, status: path.startsWith('/api/') ? 404 : 200, headers, sha256: digest(body), ...(path.includes('/guides/') ? { fingerprint: pageFingerprint(html), expectedRobots: [] } : {}) };
+      if (path.startsWith('/data/') && path !== `/data/${game}/raw-guides.json`) ref.preservedMainVersion = version('main');
       put(join(bundle, owner, `${refs.length}.body`), body); refs.push(ref); responses.set(`${service}:${path}`, { body, ref });
     }
     const referencesSHA256 = save(join(bundle, owner, 'references.json'), refs);

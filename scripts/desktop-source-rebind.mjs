@@ -53,8 +53,10 @@ function inputs(input) {
   }
   const mainRefs = donor.sources.allReferences.filter(row => row.owner === 'main').map(normalize);
   const path = `/data/${game}/raw-guides.json`;
-  assert(!mainRefs.some(row => row.path === path), 'Ambiguous target Main reference');
-  mainRefs.push({ path, status: 200, headers: target.sources.baseline.headers, sha256: target.sources.baseline.contentSHA256 });
+  const preserved = mainRefs.filter(row => row.path === path);
+  assert(preserved.length <= 1, 'Ambiguous target Main reference');
+  if (preserved.length) assert.equal(preserved[0].sha256, target.sources.baseline.contentSHA256, 'Preserved target Main reference changed A');
+  else mainRefs.push({ path, status: 200, headers: target.sources.baseline.headers, sha256: target.sources.baseline.contentSHA256 });
   return { target, donor, plan, versions, profile, evidence, assets, references: { [game]: gameRefs, main: mainRefs } };
 }
 

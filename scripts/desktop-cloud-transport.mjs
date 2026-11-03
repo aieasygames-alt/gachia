@@ -18,6 +18,17 @@ const save = (path, value) => writeFileSync(path, json(value), { flag: 'wx', mod
 const serviceFor = owner => owner === 'main' ? 'gachia' : `gachia-game-${owner}`;
 const expectedSecrets = ['BETTER_AUTH_SECRET', 'GOOGLE_CLIENT_ID', 'GOOGLE_CLIENT_SECRET', 'INDEXNOW_AUTH_TOKEN'];
 
+export function guideDataHashes(plan) {
+  assertReleaseScope(plan);
+  const result = new Map([[`/data/${plan.game}/raw-guides.json`, plan.candidateSHA256]]);
+  if (plan.preservedGuides) {
+    const preserved = pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin);
+    assert.equal(preserved.otherGame, plan.game === 'genshin' ? 'nte' : 'genshin');
+    result.set(`/data/${preserved.otherGame}/raw-guides.json`, preserved.sha256);
+  }
+  return result;
+}
+
 function configuredBindings(config) {
   return [{ name: 'ASSETS', type: 'assets' }, ...Object.entries(config.vars).map(([name, text]) => ({ name, text, type: 'plain_text' })),
     ...(config.d1_databases ?? []).map(b => ({ name: b.binding, type: 'd1', id: b.database_id })),
@@ -182,6 +193,13 @@ export async function prepareCloudBundle({ run, pin, retentionId, retentionPin, 
       const localConfig = join(temp, `${owner}-local.json`); save(localConfig, local);
       const paths = owner === 'main' ? [`/data/${plan.game}/raw-guides.json`, '/sitemap.xml', '/robots.txt', '/api/auth/get-session']
         : ['/sitemap.xml', '/robots.txt', ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
+      const dataHashes = guideDataHashes(plan);
+      if (owner === 'main' && plan.preservedGuides) {
+        const preserved = pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin);
+        const path = `/data/${preserved.otherGame}/raw-guides.json`;
+        assert.equal(activeVersion(snapshot, 'gachia'), preserved.mainVersionId);
+        paths.push(path);
+      }
       const inventory = pinnedJson(join(retained, `${owner}-inventory.json`), receipt.owners[owner].artifactSHA256);
       const staticFiles = inventory.filter(row => row.type === 'file' && (row.path.startsWith('assets/_next/static/') || row.path.startsWith(`assets/_games/${plan.game}/_next/static/`)));
       const staticHashes = new Map(staticFiles.map(row => ['/' + row.path.slice(7).split('/').map(encodeURIComponent).join('/'), row.sha256]));
@@ -192,9 +210,12 @@ export async function prepareCloudBundle({ run, pin, retentionId, retentionPin, 
           const response = await fetch(origin + path, { redirect: 'error', signal: AbortSignal.timeout(30000) });
           const body = await boundedBody(response); assert.equal(response.status, path.startsWith('/api/auth/') ? 404 : 200);
           const row = { path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(body) };
+          if (owner === 'main' && plan.preservedGuides && path.startsWith('/data/') && path !== `/data/${plan.game}/raw-guides.json`) {
+            row.preservedMainVersion = pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin).mainVersionId;
+          }
           if (staticHashes.has(path)) assert.equal(row.sha256, staticHashes.get(path), 'Local static HTTP bytes differ from retained inventory');
           if (row.headers['content-type']?.startsWith('text/html')) row.fingerprint = pageFingerprint(body.toString());
-          if (path.startsWith('/data/')) assert.equal(row.sha256, plan.candidateSHA256, 'Main mirror differs from candidate');
+          if (path.startsWith('/data/')) assert.equal(row.sha256, dataHashes.get(path), 'Main mirror differs from pinned guide content');
           if (path.startsWith('/api/auth/')) { assert.equal(JSON.parse(body).code, 'ACCOUNT_FEATURES_DISABLED'); assert.match(row.headers['cache-control'], /no-store/); }
           writeFileSync(join(ownerDir, `${rows.length}.body`), body, { flag: 'wx', mode: 0o600 }); rows.push(row);
         }
@@ -227,6 +248,13 @@ export function verifyCloudBundle({ run, pin, id, bundlePin }) {
     const references = pinnedJson(join(directory, owner, 'references.json'), record.referencesSHA256);
     assert.equal(record.paths, references.length);
     references.forEach((r, i) => assert.equal(digest(readFileSync(join(directory, owner, `${i}.body`))), r.sha256, 'Local network reference changed'));
+    if (owner === 'main') for (const [path, sha256] of guideDataHashes(retained.plan)) {
+      const rows = references.filter(row => row.path === path);
+      assert.equal(rows.length, 1, 'Main guide reference missing or duplicated');
+      assert.equal(rows[0].sha256, sha256, 'Main guide reference differs from frozen content');
+      if (path !== `/data/${retained.plan.game}/raw-guides.json`) assert.equal(rows[0].preservedMainVersion,
+        pinnedJson(retained.plan.preservedGuides.path, retained.plan.preservedGuides.pin).mainVersionId);
+    }
   }
   return { ...retained, directory, manifest };
 }

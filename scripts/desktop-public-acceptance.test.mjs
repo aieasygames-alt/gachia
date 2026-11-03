@@ -26,6 +26,13 @@ test('NTE Main mirror requires explicit game selection and rejects cross-game da
   assert.throws(() => publicReferences('main', [reference], 'azur-promilia'));
 });
 
+test('Main accepts only an explicitly bound preserved other-game guide reference', () => {
+  const reference = { path: '/data/genshin/raw-guides.json', sha256: digest('published A'), headers: {}, preservedMainVersion: '00000000-0000-0000-0000-000000000001' };
+  assert.equal(publicReferences('main', [reference], 'nte')[0].sha256, reference.sha256);
+  for (const path of ['/data/unknown/raw-guides.json', '/data/genshin/characters.json']) assert.throws(() => publicReferences('main', [{ ...reference, path }], 'nte'));
+  assert.throws(() => publicReferences('main', [{ ...reference, preservedMainVersion: 'unknown' }], 'nte'));
+});
+
 test('public routing uses actual Router sitemap and asset namespace, not the direct Worker paths', () => {
   const rows = publicReferences('genshin', [{ ...reference, path: '/sitemap.xml' }, { ...reference, path: '/robots.txt' }, reference,
     { ...reference, path: '/_next/static/a.js' }, { ...reference, path: '/_games/genshin/_next/static/a.js' }]);

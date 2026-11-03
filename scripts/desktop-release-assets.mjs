@@ -104,6 +104,10 @@ export async function retainCandidateWithLock(run, pin, evidencePath, evidencePi
   assertRunLock(run, lease);
   const plan = verifyBuilt(run, pin);
   const { evidence, capture } = verifyAssetEvidence(evidencePath, evidencePin, plan.game);
+  if (plan.preservedGuides) {
+    const preservation = pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin);
+    assert.equal(evidence.main.source.versionId, preservation.mainVersionId, 'Main changed since non-target guides were frozen');
+  }
   const id = randomBytes(8).toString('hex'), directory = join(run, 'retained', id);
   mkdirSync(directory, { recursive: true, mode: 0o700 });
   const owners = {};
@@ -130,6 +134,8 @@ export function verifyRetainedCandidate(run, pin, id, retentionPin) {
   const receipt = pinnedJson(join(directory, 'receipt.json'), retentionPin);
   assert.equal(receipt.id, id); assert.equal(receipt.planSHA256, pin); assert.equal(receipt.releaseKey, plan.releaseKey);
   const { evidence, capture } = verifyAssetEvidence(receipt.evidencePath, receipt.evidencePin, plan.game);
+  if (plan.preservedGuides) assert.equal(evidence.main.source.versionId,
+    pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin).mainVersionId, 'Main changed since non-target guides were frozen');
   assert.deepEqual(Object.keys(receipt.owners).sort(), [...plan.owners].sort(), 'Missing retained owner');
   for (const owner of plan.owners) {
     const inventory = pinnedJson(join(directory, `${owner}-inventory.json`), receipt.owners[owner].artifactSHA256);

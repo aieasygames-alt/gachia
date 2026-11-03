@@ -110,6 +110,36 @@ for (const field of ['routes', 'domains', 'settings', 'bindings', 'subdomains', 
   assert.equal(reconcileRelease(before, after).status, 'drift_requires_manual_reconciliation');
 });
 
+test('latest-upload version messages do not masquerade as operational settings drift', async t => {
+  const f = fixture(t), service = 'gachia-game-genshin';
+  f.baseline.settings[service] = { annotations: { 'workers/message': 'previous upload', 'workers/triggered_by': 'version_upload' }, compatibility_date: '2026-07-08' };
+  f.current.settings = structuredClone(f.baseline.settings);
+  const upload = f.input.transport.upload;
+  f.input.transport.upload = async args => {
+    const result = await upload(args);
+    delete f.current.settings[service].annotations['workers/message'];
+    return result;
+  };
+  assert.equal((await executeReleaseProtocol(f.input)).status, 'production_accepted');
+  assert.equal(f.journal()[0].baseline.settings[service].annotations['workers/message'], 'previous upload');
+  f.current.settings[service].annotations['workers/message'] = 'another version message';
+  assertTopology(f.baseline, f.current, Object.fromEntries(Object.entries(f.current.services).filter(([s]) => ['gachia', service].includes(s)).map(([s, row]) => [s, row.versions[0].version_id])));
+});
+
+for (const change of ['unknown-annotation', 'triggered-by', 'compatibility', 'observability', 'binding', 'invalid-message']) test(`version message exclusion still rejects ${change}`, () => {
+  const before = snapshot(), service = 'gachia-game-nte';
+  before.settings[service] = { annotations: { 'workers/message': 'previous', 'workers/triggered_by': 'version_upload' }, compatibility_flags: ['nodejs_compat'], observability: { enabled: true }, bindings: [] };
+  const after = structuredClone(before), settings = after.settings[service];
+  delete settings.annotations['workers/message'];
+  if (change === 'unknown-annotation') settings.annotations['unreviewed/value'] = 'new';
+  if (change === 'triggered-by') settings.annotations['workers/triggered_by'] = 'other';
+  if (change === 'compatibility') settings.compatibility_flags.push('unreviewed');
+  if (change === 'observability') settings.observability.enabled = false;
+  if (change === 'binding') settings.bindings.push({ name: 'new', type: 'assets' });
+  if (change === 'invalid-message') settings.annotations['workers/message'] = {};
+  assert.throws(() => assertTopology(before, after));
+});
+
 test('split traffic, a third UUID and deployment churn cannot be misread as a safe baseline', () => {
   const before = snapshot(), after = structuredClone(before), service = 'gachia';
   after.services[service].versions.push({ version_id: uuid(800), percentage: 50 });
