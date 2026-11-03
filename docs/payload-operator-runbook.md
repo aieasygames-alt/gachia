@@ -4,11 +4,15 @@
 
 **R30范围约束：Payload CMS只在这台Mac运行，不要求第二台Mac或跨机启动验收。** 最新异地备份的本机隔离PG/媒体恢复、实际CMS登录/导出/重启持久性已通过，详见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)。这是复用已安装应用的本机恢复，不是整机重建；独立密钥托管仍待办。
 
-**当前已安装发布/恢复能力，但首次真实编辑的云端验收尚未完成。保存或 published 不等于公网更新。** 不要求事实准确度审稿；保留发布意图、身份/版本、安全和新媒体权利边界。
+**R31发布/恢复工程已安装，首次真实编辑的完整云推广仍未完成。保存或 published 不等于公网更新。** 四个候选/兼容恢复版本与新鲜续验已实际通过，但正式推广在首个intent前因重复本地校验耗尽15分钟窗口停止；公网仍旧标题。当前不是稳定限定V1或原始项目完成。
 
-**R29实机停止条件：** Genshin已有正式真实编辑；一个非活动版本已上传，生产仍旧UUID。随后按旧UUID调用`content/v2?version=...`实际返回最新上传模块，当前来源选择正确拒绝。精确版本取证问题解决前不继续上传/推广；不要把active UUID改成该非活动UUID、复用旧run、清journal、把API200视为字节相符，或改用普通别名/本地runtime冒充精确云证据。已留存实际响应与只读对账，详见[R29报告](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)。
+当前工作包见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，实测与失败证据见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。R29不可靠历史content选择器已由[上传字节回执](payload-version-provenance-2026-11-03.md)替代：上传时绑定日志/UUID、出站multipart、响应ETag/字节及前后版本元数据；以后重验封存字节和新鲜不可变UUID身份，不伪造历史下载。三份旧来源仅接受审核原始pin，未知外部UUID仍拒绝。
 
-当前完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。R31已实现[上传字节回执协议](payload-version-provenance-2026-11-03.md)：上传时绑定实际日志/UUID、出站multipart、响应HTTP ETag/字节和前后元数据；后续验证封存字节及新鲜精确UUID元数据，不再调用不可靠的历史content选择器。三份旧来源仅允许已审核原始历史pin；未知外部UUID仍拒绝。实际安装/云验收见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)，不能重放R29旧run。兼容恢复后的可信来源接续使用第6节显式`publish-source-recover`；不能把恢复后的UUID当作普通成功发布去source-advance。工程闭环不替代真实首发、连续发布/恢复及NTE云验收。
+本账户部署POST可能只返回id；发布器封存原始POST，再按返回精确部署ID GET严格核对同ID、percentage、单一正确UUID/100%，最后仍核对当前活动七服务拓扑，不因字段缺失重复POST。实际partial/显式兼容恢复/source-recover和下一候选准备已通过，恢复后再次成功发布未验。
+
+发布前确认OAuth余量；本轮使用已安装Wrangler相同的官方refresh_token grant，在显式边界续签，权限集合不变，凭证仅写私有Wrangler配置、不进入报告，不伪造到期时间。认证续签不延长实时15分钟门禁。固定HTTPS目标GET的瞬时TypeError最多3次；仅上传后固定服务/UUID模块二进制GET自身传输超时可再读一次，每次180秒/最多两次/最多16MiB，尝试记录进入回执pin。HTTP错误、外部取消、元数据超时、预算/身份错误及云写不重试。HTTP采样最多4并发，失败等待活动同伴落盘。
+
+**下一次云上传前先解决已实测的重复封存校验耗时并证明时长余量。** 不再以新run盲发替代剖析；不得延长900秒、改acceptedAt、跳过字节或写前漂移检查。最后失败journal即使零promotion intent也不重放，确认修复后另建run执行全部门禁。不要求内容准确度审稿；发布意图、身份、安全和新增媒体权利仍保留。
 
 ## 1. 编辑者只需做什么
 

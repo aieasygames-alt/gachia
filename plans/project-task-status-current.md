@@ -1,6 +1,18 @@
 # 当前审计任务表
 
-## 当前权威状态：R30 仅此Mac与本机恢复关闭（2026-11-03）
+## 当前权威状态：R31 四版本云验收通过，首发仍被15分钟窗口阻塞（2026-11-03）
+
+**本机Payload已可编辑，但首次完整公网发布仍未完成；不要把CMS published、非活动版本上传或云预览通过称为上线。** 只在此Mac运行，无Tunnel/Mac公网回源，不要求第二Mac。执行清单见[V1有限完成计划](payload-v1-completion-2026-11-03.md)，实际证据见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。历史报告保留；P0–P7/T01–T12全范围等级不整体提升。
+
+- **C01关闭，C02真实恢复接续部分通过**：真实partial后显式兼容恢复Genshin/Main成功，source-recover/选择/全新候选准备通过；恢复后再次成功发布仍未验。原失败journal保留，不自动重试云写。
+- **C03实际四版本云验收与续验通过，首次推广未完成**：第五次Genshin389/Main628项候选及恢复精确云预览通过；续验完成后正式推广因本地重复封存链校验使最早证明约925秒，首个promotion intent前拒绝，零部署POST。公网仍旧标题/旧JSON，不把“无切流”说成“已上线”。下一最高优先级压缩重复重验关键路径，而非延长15分钟/跳过校验/盲目再上传。
+- **C04工程完成、真实NTE及成功后共享Main交接未验**：候选/恢复均保留NTE当前公开JSON，NTE UUID不变；尚无完整成功Genshin来源供source-advance/rebind，未伪造候选或批量清hold。
+- **C05a保持R30实测关闭，C05b独立key待办**：不要求跨Mac，不重复同机恢复凑进度；独立密钥目的地未配置，不作为首次文字发布新增门槛。
+- **交付边界**：本机桌面745/745、其他Node304/304、Python49/49，精确代码提交CI含CMS165/typecheck、Router/inventory通过；28发布工具文件安装验摘要。R31实际共17版本上传、4部署POST（均在原始partial/显式恢复阶段）；后四次尝试均无部署POST。最后四版本回执及生产控制面/HTTP重新只读核验。10Worker观察/7服务保护，仅Genshin/Main曾写；NTE/Router/staging、main分支和两个GitHub部署false开关保持。DB仍83draft/hold+1published/eligible，本轮没有DB/内容/媒体写入。
+
+**剩余顺序：推广重复校验耗时剖析与有界优化 → 新run完成首次公网发布/source-advance → 独立正常连续发布/恢复后再发 → 真实NTE及共享Main交接；独立key具备目的地即验。** 900秒实时门禁/字节与身份/媒体权利/写边界不放宽。不再重复架构选型、历史staging或已有本机恢复；下一次云写前先证明关键路径有足够时长余量。以下R30及更早均为历史，冲突以本节为准。
+
+### 前轮 R30 仅此Mac与本机恢复关闭（2026-11-03）
 
 **用户明确Payload CMS只在这台Mac运行：第二台Mac、跨机安装/启动/迁移已从限定V1验收删除，不再以缺少另一台Mac阻塞完成。** 当前以[V1有限完成计划](payload-v1-completion-2026-11-03.md)为准，本轮实际证据见[R30报告](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)。历史报告保留当时结论，不重写为新验收。
 
