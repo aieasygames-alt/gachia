@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
-import { assertUploadedVersion, multipartModule } from './desktop-cloud-transport.mjs';
+import { assertUploadedVersion, multipartModule, normalizedBindings } from './desktop-cloud-transport.mjs';
 import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-assets.mjs';
 import { capturePublishedBaseline, verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { readPublishedCandidate } from './desktop-source-advance.mjs';
@@ -62,7 +62,7 @@ function checkVersion(owner, version, context) {
   const versionId = context.versions[owner];
   assert.equal(version.id, versionId); assert.equal(version.metadata.has_preview, true);
   assert.equal(version.resources.script.etag, context.evidence.owners[owner].runtimeModuleSHA256);
-  assert.deepEqual(version.resources.bindings, snapshot.bindings[service]);
+  assert.deepEqual(normalizedBindings(version.resources.bindings), normalizedBindings(snapshot.bindings[service]));
   for (const key of ['compatibility_date', 'compatibility_flags']) assert.deepEqual(version.resources.script_runtime[key], snapshot.settings[service][key]);
   if (owner === 'main') {
     const origin = context.donor.manifest.origin, candidate = readPublishedCandidate(origin.input), record = candidate.manifest.owners.main;

@@ -1,6 +1,6 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
-2026-11-03 R25增量：[跨游戏Main只读重绑定](../reports/payload-source-rebind-2026-11-03-r25/README.md)。`publish-source-rebind`保持目标game UUID/公开A，组合原始游戏来源与另一游戏完整本机成功发布的新Main；固定双UUID新条目，父pin/历史与新鲜HTTP/模块/版本配置/七服务拓扑重验，不造候选run/releaseKey、改旧条目或自动切流。45隔离回归含实际loopback，23工具文件安装；真实云重绑定未验。10Worker与R24一致，仍只保护7服务、发布写入game+Main，不扩展Router/staging或Mac公网依赖。无内容/云写入或CMS重启；下一工程项为现有本地证据准备流程编排。下方R24及更早为历史。
+2026-11-03 R25增量：[跨游戏Main只读重绑定](../reports/payload-source-rebind-2026-11-03-r25/README.md)。`publish-source-rebind`保持目标game UUID/公开A，组合原始游戏来源与另一游戏完整本机成功发布的新Main；固定双UUID新条目，父pin/历史与新鲜HTTP/模块/版本配置/七服务拓扑重验，不造候选run/releaseKey、改旧条目或自动切流。47隔离回归含实际loopback，23工具文件安装；真实云重绑定未验。10Worker与R24一致，仍只保护7服务、发布写入game+Main，不扩展Router/staging或Mac公网依赖。无内容/云写入或CMS重启；下一工程项为现有本地证据准备流程编排。下方R24及更早为历史。
 
 2026-11-03 R24增量：[发布后来源接续](../reports/payload-source-advance-2026-11-03-r24/README.md)。显式`publish-source-advance`仅接受本机完整成功推广的同游戏game/Main封存来源；新精确UUID/模块/静态/动态HTTP重验后生成资源/来源并登记。Main来源使用真实本机bundle/journal而非伪造GitHub artifact ID，22工具文件已安装。无内容/云写入或CMS重启；仍10Worker观察/7服务保护/game+Main写入，不扩展Router或staging权限。真实云接续未验，跨游戏共享Main新UUID不能自动套另一游戏条目，后续受控重绑定另列。
 

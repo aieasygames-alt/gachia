@@ -1,6 +1,6 @@
 # Payload 首发收口清单（2026-11-02）
 
-2026-11-03当前增量：[R25跨游戏Main来源重绑定](../reports/payload-source-rebind-2026-11-03-r25/README.md)。`publish-source-rebind`已实现/安装：目标游戏UUID和公开A保持不变，只组合另一游戏本机完整成功发布的新Main，重验父来源/全部登记HTTP/模块/配置与拓扑；无候选run/releaseKey、latest/O回退或批准时效延长。45新增测试含实际loopback（云仍模拟），定向234、桌面545/Node304/Python49通过，23工具文件备份安装/验摘要；CMS安全HTTP9/9、DB84draft/hold/0eligible、10Worker与R24不变，无内容/云写入或CMS重启。关闭限定工程子项，真实云重绑定与首次/外部部署/恢复交接仍未全关；本节覆盖下方R24历史状态。
+2026-11-03当前增量：[R25跨游戏Main来源重绑定](../reports/payload-source-rebind-2026-11-03-r25/README.md)。`publish-source-rebind`已实现/安装：目标游戏UUID和公开A保持不变，只组合另一游戏本机完整成功发布的新Main，重验父来源/全部登记HTTP/模块/配置与拓扑；无候选run/releaseKey、latest/O回退或批准时效延长。47新增测试含实际loopback（云仍模拟），定向236、桌面547/Node304/Python49通过，23工具文件备份安装/验摘要；CMS安全HTTP9/9、DB84draft/hold/0eligible、10Worker与R24不变，无内容/云写入或CMS重启。关闭限定工程子项，真实云重绑定与首次/外部部署/恢复交接仍未全关；本节覆盖下方R24历史状态。
 
 2026-11-03当前增量：[R24新UUID来源接续](../reports/payload-source-advance-2026-11-03-r24/README.md)。`publish-source-advance`已实现/安装，完整成功推广后只读重验并登记新game/Main来源，下一轮Main retain可用真实本机bundle/journal来源，不伪造GitHub artifact ID。33新增接续测试含loopback（云仍模拟），桌面495/Node304/Python49通过，22工具文件安装/摘要一致、安全HTTP9/9、DB84draft/hold/0eligible不变；无内容/云写入或CMS重启。真实云接续仍待验，首次/外部版本/恢复与跨游戏共享Main交接未全关，不覆盖下方历史边界。
 

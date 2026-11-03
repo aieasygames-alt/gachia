@@ -25,15 +25,15 @@ cms publish-source-rebind --source "$TARGET_SOURCE_MANIFEST" --source-pin "$TARG
 
 | 项目 | 结果 | 结论范围 |
 | --- | --- | --- |
-| 新重绑定回归 | **45/45** | 双方向、historical/retained/published目标、A非O、Main下一轮retain、排他登记/再选择；云控制面/成功发布为fixture |
-| 实际loopback HTTP | **1项**，包含于45 | 真实服务器/客户端、正文落盘；不代表真实Cloudflare新发布 |
-| 定向最终回归 | **234/234** | 来源目录/接续/重绑定、本地证据、CLI、手册 |
-| 完整发布回归 | 桌面 **545/545**、既有Node **304/304**、Python **49/49** | 无新依赖，不重跑无关公众应用build/parity |
+| 新重绑定回归 | **47/47** | 双方向、historical/retained/published目标、A非O、Main下一轮retain、排他登记/再选择；云控制面/成功发布为fixture |
+| 实际loopback HTTP | **1项**，包含于47 | 真实服务器/客户端、正文落盘；不代表真实Cloudflare新发布 |
+| 定向最终回归 | **236/236** | 来源目录/接续/重绑定、本地证据、CLI、手册 |
+| 完整发布回归 | 桌面 **547/547**、既有Node **304/304**、Python **49/49** | 无新依赖，不重跑无关公众应用build/parity |
 | 本机工具安装 | **22模块+manager=23文件** | 维护锁、备份、原子替换、依赖闭包、安装后hash及实际manager缺参拒绝；smoke网络调用0 |
 | 本机安全与数据 | HTTP **9/9**、CMS/PG健康/loaded、DB摘要不变 | 84draft/hold、0eligible；无内容写入或CMS应用覆盖/重启 |
 | Worker盘点 | **10观察/7保护**，与R24一致 | 发布目标仍game+Main，未扩展Router/staging权限或新增Mac运行时依赖 |
 
-首轮新增测试因fixture未包含目标游戏settings失败；修复测试拓扑后保留失败日志。旧fixture提取为两个共享测试helper，既有目录/接续测试继续全部通过。自审修正了目标恢复树可能包含尚未上线的forward-only chunks：新增明确scope及回归，只对已pin的当前游戏capture作云静态声明，不降级新Main全部封存引用。另增加真实封存的新Main包含O时的明确拒绝、robots变化拒绝、无run/releaseKey的严格CLI以及安装依赖闭包回归，不通过跳过校验获得绿灯。
+首轮新增测试因fixture未包含目标游戏settings失败；修复测试拓扑后保留失败日志。旧fixture提取为两个共享测试helper，既有目录/接续测试继续全部通过。自审修正了目标恢复树可能包含尚未上线的forward-only chunks：新增明确scope及回归，只对已pin的当前游戏capture作云静态声明，不降级新Main全部封存引用。版本binding比较复用既有canonical identity，接受API顺序变化而拒绝未知/变化binding，增加正反回归，避免合法来源被数组顺序阻断。另增加真实封存的新Main包含O时的明确拒绝、robots变化拒绝、无run/releaseKey的严格CLI以及安装依赖闭包回归，不通过跳过校验获得绿灯。
 
 本机没有重跑CMS/typegen/typecheck/Router全套；最新本机基线沿用R22，精确交付提交的实际只验证GitHub CI身份记录在本地`delivery.json`，不套用R24 run。依赖1low和账户级“仅本机发布”未强制等R23边界沿用，不新增审计完成声明。
 

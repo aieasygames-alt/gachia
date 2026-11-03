@@ -2,7 +2,7 @@
 
 ## 当前状态（2026-11-03，R25）
 
-[R25跨游戏Main来源重绑定](../../reports/payload-source-rebind-2026-11-03-r25/README.md)已实现并安装：`publish-source-rebind`用目标原始游戏来源与另一游戏完整成功发布的Main来源组合，只读重验固定UUID/公开A、pin/树/全部登记HTTP/模块/配置/拓扑，不造候选run/releaseKey、不覆盖原来源。45新增测试含实际loopback（云仍模拟），定向234、桌面545/Node304/Python49通过，23工具文件安装校验；CMS/PG健康、安全HTTP9/9、DB84draft/hold/0eligible及10Worker与R24不变，无内容/云写入或CMS重启。真实跨游戏云重绑定、首次/外部部署/恢复来源仍待验；下一无编辑工程项为现有本地发布前证据准备流程编排，减少手传pin，不自动上传/切流。下方R24及更早为历史，不覆盖本段。
+[R25跨游戏Main来源重绑定](../../reports/payload-source-rebind-2026-11-03-r25/README.md)已实现并安装：`publish-source-rebind`用目标原始游戏来源与另一游戏完整成功发布的Main来源组合，只读重验固定UUID/公开A、pin/树/全部登记HTTP/模块/配置/拓扑，不造候选run/releaseKey、不覆盖原来源。47新增测试含实际loopback（云仍模拟），定向236、桌面547/Node304/Python49通过，23工具文件安装校验；CMS/PG健康、安全HTTP9/9、DB84draft/hold/0eligible及10Worker与R24不变，无内容/云写入或CMS重启。真实跨游戏云重绑定、首次/外部部署/恢复来源仍待验；下一无编辑工程项为现有本地发布前证据准备流程编排，减少手传pin，不自动上传/切流。下方R24及更早为历史，不覆盖本段。
 
 ### R24 基线
 

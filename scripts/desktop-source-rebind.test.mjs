@@ -78,6 +78,14 @@ test('forward-only local recovery chunks are not falsely claimed as current clou
   assert.equal(proof.targetStaticScope, 'pinned_current_game_capture_not_forward_recovery_chunks');
 });
 
+test('version bindings use the established canonical identity, not API array order', async t => {
+  const f = await fixture(t), original = f.reader.version;
+  f.reader.version = async (...args) => {
+    const version = structuredClone(await original(...args)); version.resources.bindings.reverse(); return version;
+  };
+  assert.equal((await rebindSourceCatalog(f.args)).sourceOnly, true);
+});
+
 test('published target sources can be rebound after the other game publishes, without changing either original entry', async t => {
   const seed = await publishedFixture(t, 'genshin');
   const target = await publishedFixture(t, 'nte', { snapshot: seed.manifest.snapshot, uuidBase: 200 });
@@ -93,7 +101,7 @@ test('published target sources can be rebound after the other game publishes, wi
   assert.equal(readPinnedSourceCatalog({ path: old.manifestPath, pin: old.manifestPin }).manifest.game, 'nte');
 });
 
-for (const failure of ['target-pin', 'donor-pin', 'same-game', 'unpublished-donor', 'rebound-parent', 'source-profile', 'source-body', 'source-link', 'public-manifest', 'target-uuid', 'main-uuid', 'other-worker', 'settings', 'split', 'partial-publication', 'journal-tamper', 'new-main-O', 'live-O', 'cookie', 'cache', 'noindex', 'guide', 'robots', 'static', 'auth', 'network', 'module', 'archive', 'version', 'topology']) test(`rebind rejects ${failure} without a selectable new entry`, async t => {
+for (const failure of ['target-pin', 'donor-pin', 'same-game', 'unpublished-donor', 'rebound-parent', 'source-profile', 'source-body', 'source-link', 'public-manifest', 'target-uuid', 'main-uuid', 'other-worker', 'settings', 'split', 'partial-publication', 'journal-tamper', 'new-main-O', 'live-O', 'cookie', 'cache', 'noindex', 'guide', 'robots', 'static', 'auth', 'network', 'module', 'archive', 'version', 'binding', 'topology']) test(`rebind rejects ${failure} without a selectable new entry`, async t => {
   const f = await fixture(t);
   const repin = (which, change) => { const ref = f.input[which], value = JSON.parse(readFileSync(ref.path)); change(value); ref.pin = save(ref.path, value); };
   if (failure === 'target-pin') f.input.source.pin = digest('wrong');
@@ -131,6 +139,7 @@ for (const failure of ['target-pin', 'donor-pin', 'same-game', 'unpublished-dono
   if (failure === 'module') f.reader.module = async () => ({ code: Buffer.from('wrong'), moduleSHA256: digest('wrong'), archive: Buffer.from('wrong') });
   if (failure === 'archive') { const original = f.reader.module; f.reader.module = async (...args) => ({ ...await original(...args), archive: Buffer.from('wrong') }); }
   if (failure === 'version') { const original = f.reader.version; f.reader.version = async (...args) => ({ ...await original(...args), id: uuid }); }
+  if (failure === 'binding') { const original = f.reader.version; f.reader.version = async (...args) => { const version = structuredClone(await original(...args)); version.resources.bindings.push({ name: 'UNKNOWN', type: 'plain_text', text: 'changed' }); return version; }; }
   if (failure === 'topology') { let n = 0; f.reader.snapshot = async () => { const x = structuredClone(f.donor.current); if (++n > 3) x.domains.push('drift'); return x; }; }
   await assert.rejects(rebindSourceCatalog(f.args));
   assert.equal(JSON.parse(readFileSync(join(f.args.directory, 'diagnostic.json'))).status, 'failed');

@@ -39,7 +39,10 @@ export async function fixture(t, game = 'genshin', options = {}) {
   save(join(run, 'state.json'), state); verifyBuilt(run, pin);
   const baseline = options.snapshot ? structuredClone(options.snapshot) : { services: Object.fromEntries(SERVICES.map((service, i) => [service, { id: uuid(i + 10), versions: [{ version_id: uuid(i + 20), percentage: 100 }] }])),
     settings: {}, bindings: {}, subdomains: {}, routes: [], domains: [], scripts: [...SERVICES] };
-  for (const service of SERVICES) baseline.settings[service] ??= { compatibility_date: '2026-07-08', compatibility_flags: ['nodejs_compat'] };
+  for (const service of SERVICES) {
+    baseline.settings[service] ??= { compatibility_date: '2026-07-08', compatibility_flags: ['nodejs_compat'] };
+    baseline.bindings[service] ??= [{ name: 'ASSETS', type: 'assets' }];
+  }
   const version = owner => baseline.services[owner === 'main' ? 'gachia' : `gachia-game-${owner}`].versions[0].version_id;
   const form = new FormData(); form.set('worker.js', new Blob(['old']), 'worker.js'); const oldArchive = Buffer.from(await new Response(form).arrayBuffer());
   const history = join(root, 'history.json'), staticBytes = Buffer.from('old static');
