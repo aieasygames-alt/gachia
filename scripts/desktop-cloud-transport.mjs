@@ -260,6 +260,13 @@ export function verifyCloudBundle({ run, pin, id, bundlePin }) {
   return { ...retained, directory, manifest };
 }
 
+export function uploadReadOptions(token, binary = false) {
+  assert.equal(typeof binary, 'boolean');
+  // Multipart transfers are up to 16 MiB; recovery uses the same budget as candidates.
+  return { method: 'GET', redirect: 'error', headers: { authorization: `Bearer ${token}` },
+    signal: AbortSignal.timeout(binary ? 180000 : 30000) };
+}
+
 export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, token }) {
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Cloud publishing is desktop-only');
   const verified = verifyCloudBundle({ run, pin, id, bundlePin });
@@ -269,7 +276,7 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
   const directory = join(run, `cloud-preview-${id}`); mkdirSync(directory, { mode: 0o700 });
   const api = async (service, suffix, binary = false) => {
     assert(scope.services.includes(service), 'Release service/game mismatch');
-    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`, { method: 'GET', redirect: 'error', headers: { authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(180000) });
+    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`, uploadReadOptions(token, binary));
     assert(response.ok, `Version read failed: ${response.status}`);
     if (binary) return { archive: await boundedBody(response), etag: response.headers.get('etag') };
     const body = await response.json(); assert(body.success); return body.result;
@@ -333,8 +340,7 @@ export async function uploadRecoveryPreview(input) {
   const readVersion = async (service, versionId, binary = false) => {
     exactPreviewOrigin(service, versionId);
     const suffix = binary ? `/content/v2?version=${versionId}` : `/versions/${versionId}`;
-    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`,
-      { method: 'GET', redirect: 'error', headers: { authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(30000) });
+    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`, uploadReadOptions(token, binary));
     assert(response.ok, `Recovery version read failed: ${response.status}`);
     if (binary) return { archive: await boundedBody(response), etag: response.headers.get('etag') };
     const body = JSON.parse((await boundedBody(response)).toString()); assert.equal(body.success, true); return body.result;

@@ -4,11 +4,22 @@ import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { assertEditorialRecovery, assertOwnerSettings, assertUploadedVersion, assertUploadMetadata, multipartModule, normalizedBindings, uploadCloudPreview, uploadRecoveryPreview } from './desktop-cloud-transport.mjs';
+import { assertEditorialRecovery, assertOwnerSettings, assertUploadedVersion, assertUploadMetadata, multipartModule, normalizedBindings, uploadCloudPreview, uploadReadOptions, uploadRecoveryPreview } from './desktop-cloud-transport.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint, validatePreviewResponse, verifyVersionPreview } from './desktop-version-preview.mjs';
 import { digest } from './desktop-release-assets.mjs';
 
 const versionId = '00000000-0000-0000-0000-000000000001';
+test('candidate and recovery multipart reads share a bounded transfer budget without write retries', t => {
+  const budgets = [], signal = new AbortController().signal;
+  t.mock.method(AbortSignal, 'timeout', ms => { budgets.push(ms); return signal; });
+  for (const binary of [false, true]) {
+    const options = uploadReadOptions('fixture-token', binary);
+    assert.deepEqual(options, { method: 'GET', redirect: 'error', headers: { authorization: 'Bearer fixture-token' }, signal });
+    assert(!Object.hasOwn(options, 'body'));
+  }
+  assert.deepEqual(budgets, [30000, 180000]);
+  assert.throws(() => uploadReadOptions('fixture-token', 'true'));
+});
 const html = '<html><head><title>Guide</title><meta name="description" content="Description"/><link rel="canonical" href="https://gachia.com/zh/genshin/guides/one"/></head><body><h1>Guide</h1><article>Rendered content</article><img src="/image.png"/><script type="application/ld+json">{"name":"Guide"}</script><script>flight()</script></body></html>';
 function settings(owner = 'genshin') {
   const service = owner === 'main' ? 'gachia' : `gachia-game-${owner}`;
