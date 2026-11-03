@@ -54,3 +54,26 @@ for (const failure of ['modules', 'http', 'topology', 'original-changed']) test(
   const f = fixture(t, failure); await assert.rejects(executeEvidenceRenewal(f.options));
   assert.equal(f.result().status, 'failed'); assert.equal(f.result().cloudWrites, false);
 });
+test('four fixed read-only previews overlap without changing coverage or evidence order', async t => {
+  const f = fixture(t); let active = 0, peak = 0, completed = 0;
+  f.options.preview = async () => {
+    peak = Math.max(peak, ++active);
+    await new Promise(resolve => setTimeout(resolve, 10));
+    active--; completed++; return { evidenceSHA256: sha };
+  };
+  await executeEvidenceRenewal(f.options);
+  assert.equal(peak, 4); assert.equal(completed, 4); assert.equal(active, 0);
+  assert.deepEqual(Object.keys(f.result().owners), ['genshin-candidate', 'genshin-recovery', 'main-candidate', 'main-recovery']);
+});
+test('failed renewal waits for every sibling and preserves completed proofs before sealing failure', async t => {
+  const f = fixture(t); let started = 0, completed = 0;
+  f.options.preview = async () => {
+    const i = started++;
+    await new Promise(resolve => setTimeout(resolve, i === 0 ? 1 : 20));
+    completed++; if (i === 0) throw Error('first preview failed');
+    return { evidenceSHA256: sha };
+  };
+  await assert.rejects(executeEvidenceRenewal(f.options), /first preview failed/);
+  assert.equal(started, 4); assert.equal(completed, 4);
+  assert.equal(f.result().status, 'failed'); assert.equal(Object.keys(f.result().owners).length, 3);
+});

@@ -48,17 +48,29 @@ export async function executeEvidenceRenewal({ input, readEvidence, readSealed, 
       result.before = await transport.snapshot(); assertRenewalTopology(evidence, result.before, mode);
       result.remote = await transport.verifyVersions(evidence);
       assert.equal(result.remote.status, 'passed');
+      const previews = [];
       for (const owner of evidence.plan.owners) {
         const service = evidence.manifest.owners[owner].service;
         for (const [kind, root, record, versionId] of [
           ['candidate', sealed.candidate.directory, evidence.manifest.owners[owner], evidence.accepted[service].versionId],
           ['recovery', sealed.directory, sealed.manifest.owners[owner], evidence.recovery.owners[owner].versionId],
         ]) {
-          const refs = pinnedJson(join(root, owner, 'references.json'), record.referencesSHA256);
-          const proof = await preview({ service, versionId, references: refs, directory: join(directory, `${owner}-${kind}-http`) });
-          result.owners[`${owner}-${kind}`] = { service, versionId, evidenceSHA256: proof.evidenceSHA256, acceptedAt: Date.now() };
+          previews.push({ owner, kind, root, record, service, versionId });
         }
       }
+      assert.equal(previews.length, 4);
+      // Four independent read-only origins share one freshness window. Wait
+      // for all probes on failure as well, so no evidence writer is left live.
+      const outcomes = await Promise.allSettled(previews.map(async ({ owner, kind, root, record, service, versionId }) => {
+        const refs = pinnedJson(join(root, owner, 'references.json'), record.referencesSHA256);
+        const proof = await preview({ service, versionId, references: refs, directory: join(directory, `${owner}-${kind}-http`) });
+        return { service, versionId, evidenceSHA256: proof.evidenceSHA256, acceptedAt: Date.now() };
+      }));
+      for (const [i, outcome] of outcomes.entries()) if (outcome.status === 'fulfilled') {
+        result.owners[`${previews[i].owner}-${previews[i].kind}`] = outcome.value;
+      }
+      const failed = outcomes.find(outcome => outcome.status === 'rejected');
+      if (failed) throw failed.reason;
       assert.deepEqual(readEvidence(input), evidence, 'Original evidence changed during renewal');
       result.after = await transport.snapshot(); assertTopology(result.before, result.after); assertRenewalTopology(evidence, result.after, mode);
       result.status = 'passed';
