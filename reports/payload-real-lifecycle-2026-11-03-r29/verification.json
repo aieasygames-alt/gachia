@@ -1,0 +1,53 @@
+{
+  "round": "R29",
+  "tasks": {
+    "C03": "partial_real_edit_build_and_nonactive_upload_no_production_acceptance",
+    "C04": "cross_game_preservation_implemented_tested_installed_real_cloud_pending",
+    "C05": "fresh_encrypted_offsite_backup_verified_independent_key_and_second_mac_pending"
+  },
+  "tests": {
+    "desktop": 679,
+    "node": 304,
+    "python": 49,
+    "cms": 165,
+    "typegen": true,
+    "typecheck": true
+  },
+  "installedFilesVerified": 27,
+  "cloud": {
+    "status": "passed",
+    "observedWorkers": 10,
+    "protectedServices": 7,
+    "activeDeploymentsUnchanged": true,
+    "operationalSettingsUnchanged": true,
+    "versionMessageExcludedFromTopology": true,
+    "nonactiveVersionsUploaded": 1,
+    "productionPromotions": 0,
+    "routerAndStagingUnchanged": true,
+    "backupObjectsUploaded": 1
+  },
+  "publicBaselineResponses": 11,
+  "newEditorialTitleLive": false,
+  "cms": {
+    "healthy": true,
+    "eligiblePublished": 1,
+    "draftHold": 83,
+    "totalRecords": 84,
+    "databaseChangedByEditorialEdit": true,
+    "stableAfterEditAndBackup": true,
+    "httpSafetyPassed": 9
+  },
+  "backup": {
+    "ciphertextRoundtripVerified": true,
+    "aesAuthenticationVerified": true,
+    "bytes": 51649337,
+    "independentKeyCustodyVerified": false,
+    "secondMacStartupVerified": false
+  },
+  "productCommit": "bc497f51bfeebb351966dc13aadfbcec0af17555",
+  "productCISuccessRun": 41587080090,
+  "mainUnchanged": true,
+  "githubDeploymentFlagsEnabled": false,
+  "exactHistoricalVersionReaderBlocked": true,
+  "allThreeTasksComplete": false
+}

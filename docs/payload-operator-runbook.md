@@ -4,6 +4,8 @@
 
 **当前已安装发布/恢复能力，但首次真实编辑的云端验收尚未完成。保存或 published 不等于公网更新。** 不要求事实准确度审稿；保留发布意图、身份/版本、安全和新媒体权利边界。
 
+**R29实机停止条件：** Genshin已有正式真实编辑；一个非活动版本已上传，生产仍旧UUID。随后按旧UUID调用`content/v2?version=...`实际返回最新上传模块，当前来源选择正确拒绝。精确版本取证问题解决前不继续上传/推广；不要把active UUID改成该非活动UUID、复用旧run、清journal、把API200视为字节相符，或改用普通别名/本地runtime冒充精确云证据。已留存实际响应与只读对账，详见[R29报告](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)。
+
 R28完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。兼容恢复后的可信来源接续使用第6节显式`publish-source-recover`；不能把恢复后的UUID当作普通成功发布去source-advance，也不自动接纳外部未知版本。工程闭环不替代真实首发、连续发布/恢复及NTE云验收。
 
 ## 1. 编辑者只需做什么

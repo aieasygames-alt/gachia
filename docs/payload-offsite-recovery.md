@@ -1,6 +1,6 @@
 # Payload 私有异地备份与恢复
 
-更新：2026-11-02（R20补独立key工具/跨机验收清单，实际异地恢复证据仍R17）。CMS/PG仍只在本机运行，公众站点不回源本机；本流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。
+更新：2026-11-03（R29刷新冷备/私有异地密文/下载AES认证，独立key及跨机仍未完成；实际隔离PG恢复证据仍R17）。CMS/PG仍只在本机运行，公众站点不回源本机；本流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。R29包含本轮1条published编辑与已安装发布器，不代表该编辑已在公网生效，见[R29报告](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)。
 
 ## 存储与交付边界
 
@@ -12,7 +12,7 @@
 
 ## 恢复顺序
 
-1. 从实际R17交付回执取得bucket/objectKey、encryptedSHA256、plaintextSHA256及keyPath。回执见 `reports/payload-offsite-recovery-2026-11-02/encrypted-backup.json`、`offsite-roundtrip.json`；它们不含密钥值。
+1. 从同一轮实际交付回执取得bucket/objectKey、encryptedSHA256、plaintextSHA256及keyPath。最新冷备为R29，回执在`reports/payload-real-lifecycle-2026-11-03-r29/encrypted-backup.json`、`offsite-roundtrip.json`；旧R17回执仍保留，不混用两轮密钥/对象/pin。回执不含密钥值，原始回执仅本机保留，不跟随Git提交。
 2. 用已有Cloudflare账号只读下载精确对象；调用 `downloadEncryptedBackup({store,objectKey,pin,destination})`，destination必须为新私有工作目录中的新文件。函数固定使用该账号/桶，不接收任意远程地址。
 3. 使用另行保管的32字节密钥和 `desktop-encrypted-backup.mjs` 的 `decryptArchive`，认证解密到新文件并核对plaintextSHA256。格式为ASCII `GACHIA-BACKUP-v1`加NUL、12字节nonce、密文、16字节GCM tag；AAD为magic+nonce，AES-256-GCM。密钥不得与密文一起放进R2，也不要打印到终端、聊天或报告。
 4. 先检查tar成员仅为相对普通文件，拒绝链接/穿越/额外成员；按bundle-manifest逐文件核对SHA/大小后才提取到新目录。内含源码ZIP还有独立HANDOFF清单/pin；不要直接解包覆盖运行目录。
@@ -23,7 +23,7 @@
 
 **R2密文副本与独立密钥托管是两件事。** 现有keyPath仍在同一Mac；没有验证独立密码管理器、另一台设备或离线介质里的密钥副本，也不因iCloud目录存在就宣称已同步。整机丢失时仍可能无法解密，因此L03/T11不能整体关闭。
 
-R20检查到当前只有只读应用安装DMG挂载，没有可用独立可写介质或第二台Mac执行上下文，故没有复制真实密钥或宣称跨机启动。默认操作授权不是外部设备已经存在的证据；不将key随意放到iCloud/报告/聊天或密文桶。
+R29重新观察到当前已挂载外部卷仅为只读应用安装DMG，未配置第二台Mac执行上下文，故没有复制真实密钥或宣称跨机启动；不推断用户没有其他未配置设备。最新R29与历史R17密钥仍只在同一Mac，默认操作授权不是外部设备已经存在的证据；不将key随意放到iCloud/报告/聊天或密文桶。
 
 ### 独立密钥副本工具
 
@@ -38,7 +38,7 @@ python3 -B scripts/payload-key-custody.py verify --source "$KEY_PATH" --destinat
 
 ### 第二台Mac验收清单
 
-1. 确认这是不同物理主机；取得可信Git提交/源码包pin、R17无密钥交付回执、独立取回的key及Cloudflare只读下载资格。不要拷贝Wrangler OAuth或沿用历史发布intent。
+1. 确认这是不同物理主机；取得可信Git提交/源码包pin、选定同一轮（当前R29）无密钥交付回执、独立取回的key及Cloudflare只读下载资格。不要拷贝Wrangler OAuth或沿用历史发布intent。
 2. 按锁安装兼容Node与PostgreSQL17，在新私有恢复目录校验密文/AES/归档/源码；不能运行install覆盖任何现有GachiaCMS。
 3. 按`services/content-cms/deploy/desktop.md`的loopback边界重建CMS；PG恢复到独立实例，settings中的绝对app/媒体/环境路径重定位，PG/CMS只监听127.0.0.1。重建密码/secret来自恢复包，不输出到报告。
 4. 验证应用实际启动、管理员可登录、1用户/84内容/1媒体与备份逻辑摘要一致，私有媒体登录后可读/匿名403；验证重启持久性和发布器导入/只读门禁。保存主机身份的脱敏区分、版本、命令退出码及网络/数据证据。

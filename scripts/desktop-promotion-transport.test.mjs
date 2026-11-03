@@ -76,6 +76,7 @@ async function fixture(t, failure) {
       const id = operation === 'versions' ? versionId : new URL(url).searchParams.get('version');
       const entry = cloud.get(`${service}/${id}`); assert(entry, 'Only pinned UUID reads allowed');
       if (operation === 'content') {
+        if (failure === 'ignored-version-selector') return new Response(cloud.get(`${service}/${uuid(service === 'gachia' ? 201 : 200)}`).bytes);
         if (failure === 'module' && entry.kind === 'recovery') { const form = new FormData(); form.set('worker.js', new Blob(['tampered']), 'worker.js'); return new Response(form); }
         return new Response(entry.bytes);
       }
@@ -108,12 +109,12 @@ test('composed transport verifies four cloud modules, promotes exact versions an
   const count = f.calls.length; await assert.rejects(executePromotionContinuation(f.options), /EEXIST/); assert.equal(f.calls.length, count);
 });
 
-for (const failure of ['module', 'version', 'read', 'second-write', 'lost-response', 'public', 'public-drift']) test(`composed transport stops and reconciles ${failure}`, async t => {
+for (const failure of ['module', 'version', 'read', 'ignored-version-selector', 'second-write', 'lost-response', 'public', 'public-drift']) test(`composed transport stops and reconciles ${failure}`, async t => {
   const f = await fixture(t, failure); await assert.rejects(executePromotionContinuation(f.options));
   const rows = f.journal(); assert(rows.some(r => r.phase === 'stopped')); assert.equal(rows.at(-1).phase, 'reconciliation');
   assert(!rows.some(r => r.phase === 'production_accepted'));
   const writes = f.calls.filter(c => c.method === 'POST').length;
-  assert.equal(writes, ['module', 'version', 'read'].includes(failure) ? 0 : failure === 'lost-response' ? 1 : 2);
+  assert.equal(writes, ['module', 'version', 'read', 'ignored-version-selector'].includes(failure) ? 0 : failure === 'lost-response' ? 1 : 2);
   if (failure === 'second-write') assert.equal(rows.filter(r => r.phase === 'promoted').length, 1);
   if (failure === 'lost-response') assert(rows.at(-1).result.unresolvedOperation);
   assert(!existsSync(join(f.run, 'operation.lock')));
