@@ -162,10 +162,18 @@ function command(file, args, { cwd, env, log }) {
   });
 }
 
+const runLockLeases = new WeakMap();
+
+export function assertRunLock(run, lease) {
+  assert(lease && runLockLeases.get(lease) === realpathSync(run), 'Live lock lease for this run required');
+}
+
 export async function withRunLock(run, execute) {
+  const canonical = realpathSync(run), lease = Object.freeze({});
   const lock = join(run, 'operation.lock');
   writeFileSync(lock, json({ pid: process.pid, startedAt: new Date().toISOString() }), { flag: 'wx', mode: 0o600 });
-  try { return await execute(); } finally { unlinkSync(lock); }
+  runLockLeases.set(lease, canonical);
+  try { return await execute(lease); } finally { runLockLeases.delete(lease); unlinkSync(lock); }
 }
 
 export async function buildCandidate(run, pin) {
@@ -370,6 +378,7 @@ async function previewUnlocked(run, pin, retained) {
 
 const renewalArgs = ['--recovery', '--recovery-pin', '--journal-pin', '--receipt-pin', '--release-key'];
 export const maintenanceActions = {
+  'prepare-evidence': ['--repo'],
   'source-rebind': ['--source', '--source-pin', '--main-source', '--main-source-pin'],
   'source-advance': ['--repo', '--bundle', '--bundle-pin', '--promotion-journal-pin'],
   'source-register': ['--retention', '--retention-pin', '--evidence', '--evidence-pin'],
@@ -452,7 +461,13 @@ async function main() {
   } else {
     assert(/^[a-f0-9]{16}-[a-f0-9]{12}$/.test(opts['--run']), 'Invalid local run ID');
     const run = join(RUNS, opts['--run']);
-    if (opts.action === 'source-advance') {
+    if (opts.action === 'prepare-evidence') {
+      const { prepareEvidence } = await import('./desktop-evidence-preparation.mjs');
+      const { preparationReader } = await import('./desktop-local-evidence.mjs');
+      const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
+      console.log(json(await prepareEvidence({ run, pin: opts['--pin'], repo: resolve(opts['--repo']),
+        root: join(RUNS, 'source-catalog'), reader: preparationReader(token) })));
+    } else if (opts.action === 'source-advance') {
       await withRunLock(run, async () => {
         const { advanceSourceCatalog } = await import('./desktop-source-advance.mjs');
         const { preparationReader } = await import('./desktop-local-evidence.mjs');

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash, randomBytes } from 'node:crypto';
 import { cpSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
-import { artifactFiles, localAssetPath, verifyBuilt, withRunLock } from './desktop-publish.mjs';
+import { artifactFiles, assertRunLock, localAssetPath, verifyBuilt, withRunLock } from './desktop-publish.mjs';
 import { readPreviousGameAssets, retainPreviousGameAssets } from './retain-game-assets.mjs';
 import { previousAssetFiles, retainWebAssets, verifyRetainedWebAssets } from './retain-web-assets.mjs';
 
@@ -96,28 +96,32 @@ export function verifyAssetEvidence(path, pin, game) {
 }
 
 export async function retainCandidate(run, pin, evidencePath, evidencePin) {
-  return withRunLock(run, async () => {
-    const plan = verifyBuilt(run, pin);
-    const { evidence, capture } = verifyAssetEvidence(evidencePath, evidencePin, plan.game);
-    const id = randomBytes(8).toString('hex'), directory = join(run, 'retained', id);
-    mkdirSync(directory, { recursive: true, mode: 0o700 });
-    const owners = {};
-    for (const owner of plan.owners) {
-      const target = join(directory, owner, '.open-next'); mkdirSync(dirname(target), { mode: 0o700 });
-      cpSync(join(run, 'artifacts', owner), target, { recursive: true, verbatimSymlinks: true, errorOnExist: true, force: false });
-      const retention = owner === 'main' ? retainWebAssets({ previousStatic: evidence.main.previousStatic, artifactDirectory: target, source: evidence.main.source })
-        : retainPreviousGameAssets({ game: plan.game, app: owner, previousAssets: capture.summary, rollbackVersion: { value: capture.summary.versionId } }, directory);
-      if (owner === 'main') verifyRetainedWebAssets(target, evidence.main.source.versionId);
-      const inventory = artifactFiles(target); save(join(directory, `${owner}-inventory.json`), inventory);
-      owners[owner] = { artifactSHA256: digest(json(inventory)), previousVersion: owner === 'main' ? evidence.main.source.versionId : capture.summary.versionId, retention };
-    }
-    verifyBuilt(run, pin); verifyAssetEvidence(evidencePath, evidencePin, plan.game);
-    const receipt = { schemaVersion: 1, id, planSHA256: pin, releaseKey: plan.releaseKey, evidencePath: resolve(evidencePath), evidencePin, owners,
-      status: 'retained_local_only', cloudWrites: false, rawVersionRollbackSafe: false,
-      rollbackNote: 'Old runtime also needs candidate chunks; raw UUID rollback is not authorized by forward retention.' };
-    save(join(directory, 'receipt.json'), receipt);
-    return { directory, id, retentionPin: digest(json(receipt)), ...receipt };
-  });
+  return withRunLock(run, lease => retainCandidateWithLock(run, pin, evidencePath, evidencePin, lease));
+}
+
+// Only a live capability from withRunLock can compose retention into a longer operation.
+export async function retainCandidateWithLock(run, pin, evidencePath, evidencePin, lease) {
+  assertRunLock(run, lease);
+  const plan = verifyBuilt(run, pin);
+  const { evidence, capture } = verifyAssetEvidence(evidencePath, evidencePin, plan.game);
+  const id = randomBytes(8).toString('hex'), directory = join(run, 'retained', id);
+  mkdirSync(directory, { recursive: true, mode: 0o700 });
+  const owners = {};
+  for (const owner of plan.owners) {
+    const target = join(directory, owner, '.open-next'); mkdirSync(dirname(target), { mode: 0o700 });
+    cpSync(join(run, 'artifacts', owner), target, { recursive: true, verbatimSymlinks: true, errorOnExist: true, force: false });
+    const retention = owner === 'main' ? retainWebAssets({ previousStatic: evidence.main.previousStatic, artifactDirectory: target, source: evidence.main.source })
+      : retainPreviousGameAssets({ game: plan.game, app: owner, previousAssets: capture.summary, rollbackVersion: { value: capture.summary.versionId } }, directory);
+    if (owner === 'main') verifyRetainedWebAssets(target, evidence.main.source.versionId);
+    const inventory = artifactFiles(target); save(join(directory, `${owner}-inventory.json`), inventory);
+    owners[owner] = { artifactSHA256: digest(json(inventory)), previousVersion: owner === 'main' ? evidence.main.source.versionId : capture.summary.versionId, retention };
+  }
+  verifyBuilt(run, pin); verifyAssetEvidence(evidencePath, evidencePin, plan.game);
+  const receipt = { schemaVersion: 1, id, planSHA256: pin, releaseKey: plan.releaseKey, evidencePath: resolve(evidencePath), evidencePin, owners,
+    status: 'retained_local_only', cloudWrites: false, rawVersionRollbackSafe: false,
+    rollbackNote: 'Old runtime also needs candidate chunks; raw UUID rollback is not authorized by forward retention.' };
+  save(join(directory, 'receipt.json'), receipt);
+  return { directory, id, retentionPin: digest(json(receipt)), ...receipt };
 }
 
 export function verifyRetainedCandidate(run, pin, id, retentionPin) {

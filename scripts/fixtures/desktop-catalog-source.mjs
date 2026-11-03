@@ -38,7 +38,7 @@ export async function fixture(t, game = 'genshin', options = {}) {
     archive: async () => archive, request: async () => new Response(staticBytes) });
   const mainStatic = join(root, 'main-static'); mkdirSync(mainStatic); writeFileSync(join(mainStatic, 'old.js'), staticBytes);
   const evidencePath = join(root, 'assets.json'), evidencePin = save(evidencePath, { schemaVersion: 1, game, gameAssets,
-    main: { source: { versionId: version('main') }, previousStatic: mainStatic, files: previousAssetFiles(mainStatic) } });
+    main: { source: { versionId: version('main'), artifactId: '123', archiveSha256: digest('fixture archive') }, previousStatic: mainStatic, files: previousAssetFiles(mainStatic) } });
   const receipt = { owners: {}, evidencePath, evidencePin }, retained = join(root, 'retained'), sources = {};
   const artifact = path => {
     for (const [name, bytes] of Object.entries({ 'worker.js': 'never execute this original', '.build/open-next.config.edge.mjs': 'export default {}',

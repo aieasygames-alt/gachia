@@ -1,6 +1,10 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-03，R25）
+## 当前状态（2026-11-03，R26）
+
+[R26本地发布前证据准备](../../reports/payload-evidence-preparation-2026-11-03-r26/README.md)新增`publish-prepare-evidence --run / --pin / --repo`：对已构建真实文字候选，单run锁串联来源→公网资源刷新→retain→固定导入O/公开A基线→本地兼容恢复→末次来源/拓扑重验。阶段回执/完整响应与辅助检查/日志整体pin，失败独立新尝试，有空/截断云写journal也拒绝；与当前公开A文字相同不发布。最终回归/安装/只读状态见报告。关闭本地编排工程子任务，不自动托管首次来源、build、上传或切流，不省略preview-retained/cloud-check/云预览和推广门禁；真实内容云发布仍未验收。首发继续优先实际Genshin文字编辑，不等待准确度。下方R25及更早为历史。
+
+### R25 基线
 
 [R25跨游戏Main来源重绑定](../../reports/payload-source-rebind-2026-11-03-r25/README.md)已实现并安装：`publish-source-rebind`用目标原始游戏来源与另一游戏完整成功发布的Main来源组合，只读重验固定UUID/公开A、pin/树/全部登记HTTP/模块/配置/拓扑，不造候选run/releaseKey、不覆盖原来源。47新增测试含实际loopback（云仍模拟），定向236、桌面547/Node304/Python49通过，23工具文件安装校验；CMS/PG健康、安全HTTP9/9、DB84draft/hold/0eligible及10Worker与R24不变，无内容/云写入或CMS重启。真实跨游戏云重绑定、首次/外部部署/恢复来源仍待验；下一无编辑工程项为现有本地发布前证据准备流程编排，减少手传pin，不自动上传/切流。下方R24及更早为历史，不覆盖本段。
 

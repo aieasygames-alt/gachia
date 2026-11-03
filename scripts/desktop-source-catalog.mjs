@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 import { artifactFiles } from './desktop-publish.mjs';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
 import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-assets.mjs';
@@ -266,6 +266,24 @@ async function registerOrigin({ root, directory, origin: verified, assets, recov
       evidencePath: assets.path, evidencePin: assets.pin, sourcePath, sourcePin, cloudWrites: false, productionReady: false };
   } catch (error) { diagnostic.status = 'failed'; diagnostic.error = error.message; throw new Error(`${error.message}; diagnostics: ${join(directory, 'diagnostic.json')}`, { cause: error }); }
   finally { save(join(directory, 'diagnostic.json'), diagnostic); }
+}
+
+// Recheck a pinned selection's transitive local inputs, including rebound origins.
+// This is not a fresh network selection or permission to use it as a rebound parent.
+export function verifySelectedSourceCatalog(selection, plan) {
+  privateFile(selection.manifestPath);
+  const manifest = pinnedJson(selection.manifestPath, selection.manifestPin);
+  assert.equal(manifest.schemaVersion, 1); assert.equal(manifest.kind, 'verified_local_source_catalog');
+  assert.equal(manifest.game, plan.game); assert.equal(manifest.origin.plan.game, plan.game);
+  assert.equal(manifest.cloudWrites, false); assert.equal(manifest.productionReady, false);
+  assert.deepEqual(manifest.versions, selection.versions);
+  assert.equal(manifest.sourcePath, join(dirname(selection.manifestPath), 'sources.json'));
+  assert.equal(manifest.sourcePath, selection.sourcePath); assert.equal(manifest.sourcePin, selection.sourcePin);
+  assert.deepEqual(manifest.assets, { path: selection.evidencePath, pin: selection.evidencePin });
+  const sources = checkInputs({ verified: manifest.origin, recovery: manifest.recovery, assets: manifest.assets }, manifest.versions);
+  privateFile(selection.sourcePath);
+  assert.deepEqual(pinnedJson(selection.sourcePath, selection.sourcePin), sources.profile);
+  return manifest;
 }
 
 export async function selectSourceCatalog({ root, directory, plan, reader, request = fetch }) {

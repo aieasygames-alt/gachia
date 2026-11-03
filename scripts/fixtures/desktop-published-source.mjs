@@ -18,7 +18,7 @@ const uuid = n => `00000000-0000-0000-0000-${String(n).padStart(12, '0')}`;
 export async function fixture(t, game = 'genshin', options = {}) {
   const root = realpathSync(mkdtempSync(join(tmpdir(), 'cms-source-advance-'))); t.after(() => rmSync(root, { recursive: true, force: true }));
   const repo = join(root, 'repo'), directory = join(root, 'candidate'); mkdirSync(repo); mkdirSync(directory);
-  const original = json([{ id: 'one', title: 'O', content: 'Original' }]), content = json([{ id: 'one', title: 'A', content: 'Published A' }]);
+  const original = options.original ?? json([{ id: 'one', title: 'O', content: 'Original' }]), content = options.content ?? json([{ id: 'one', title: 'A', content: 'Published A' }]);
   const paths = [`packages/data/games/${game}/raw-guides.json`, `apps/web/public/data/${game}/raw-guides.json`];
   for (const path of paths) put(join(repo, path), original);
   save(join(repo, 'packages/core/route-ownership.json'), { games: { [game]: { pages: ['guides'], details: ['guides'] } } });
@@ -37,6 +37,7 @@ export async function fixture(t, game = 'genshin', options = {}) {
     state.owners[owner] = { status: 'built', artifactSHA256: save(join(run, `${owner}-artifact.json`), artifactFiles(artifact)), releaseKey, previewOnly: true };
   }
   save(join(run, 'state.json'), state); verifyBuilt(run, pin);
+  if (options.builtOnly) return { root, repo, run, pin, plan: prepared.plan, original, content };
   const baseline = options.snapshot ? structuredClone(options.snapshot) : { services: Object.fromEntries(SERVICES.map((service, i) => [service, { id: uuid(i + 10), versions: [{ version_id: uuid(i + 20), percentage: 100 }] }])),
     settings: {}, bindings: {}, subdomains: {}, routes: [], domains: [], scripts: [...SERVICES] };
   for (const service of SERVICES) {

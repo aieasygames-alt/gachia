@@ -51,6 +51,24 @@ cms publish-verify --run "$RUN" --pin "$PLAN_PIN"
 
 ## 4. 维护者准备资源、上一公开基线和兼容恢复：不写云
 
+### 已登记来源的推荐入口（R26）
+
+第3节完成双owner build/preview/verify后，用一个命令准备本轮本地证据：
+
+```sh
+cms publish-prepare-evidence --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO"
+```
+
+仅接收已经构建、非preview且有真实文字变化的候选；若候选与当前公开A相同也拒绝。按当前game/Main UUID选择并重验来源→刷新全部登记公网资源→保留旧资源到候选→从plan固定sourceCommit读取导入O并采样公开A→下载精确云runtime、派生本地兼容恢复并采样三语言/JSON/metadata/JSON-LD/sitemap/静态/账号→再次选择来源与检查七服务拓扑。全程持有同一run锁，不接受任意URL/Worker/force/skip，不自动build、登记首次来源、上传或切流。
+
+输出`manifestPath/manifestPin`为本地汇总回执；`assets.evidencePath/evidencePin`、`retention.id/retentionPin`、`baseline.baselinePath/baselinePin`、`recovery.evidencePath/evidencePin`分别提供后续所需pin。将`retention`记为RETENTION/RETENTION_PIN，将`recovery`记为BOUND_RECOVERY/BOUND_RECOVERY_PIN；无需再重复手动assets-refresh、retain、baseline-capture或recovery-local-prepare。下面对应单步命令保留给首次托管/故障定位，不与推荐入口重复运行。
+
+**仍必须执行publish-verify-retained、publish-preview-retained、publish-cloud-check、publish-recovery-check及全部云封存/精确预览/推广门禁**，继续使用下面的云命令。汇总回执固定`productionReady:false`、`cloudRecoveryAccepted:false`，不能当上传/上线批准或替代15分钟证据时效；`verifyEvidencePreparation`仅离线重验，不续期或重读云。资源范围仍是已登记清单，不新增未批准媒体或完整资产清单声明。
+
+每次生成独立`evidence-preparation-<id>`目录，阶段日志、中间结果、实际响应正文/headers和恢复树均保留，成功manifest最后排他写入。失败看输出diagnostics目录；修正原因后同一命令**创建全新尝试**，不续用半成品、不覆盖旧回执。保留原始source/run依赖，不清理旧目录。如果run已有任何上传/推广/恢复写journal（包括空/截断文件）则拒绝，先按第6节只读对账，不能删日志后重跑。
+
+### 单步命令与首次来源托管
+
 R20新增 `publish-project-inventory`（只读观察10Worker）、`publish-assets-refresh`（新鲜公网资源字节/当前云模块）和 `publish-recovery-local-prepare`（当前云runtime + 新旧静态并集 + 实际loopback采样）。管理器自动输出本轮evidencePath/evidencePin，不再手写HTTP成功回执。它们不上传、不部署、不解锁CI或通用目标。
 
 **尚无一键自动生成全部资源/恢复证据并从零建立可信来源的命令**：首次基线托管仍由维护者准备。ASSET_SOURCE/ASSET_SOURCE_PIN指已经验证的双owner旧资源来源，不是旧HTTP批准；新命令重新读取当前版本、比对历史game模块，并重采全部已登记的game/Main公网静态字节。来源过期即停止，没有“跳过来源”或直接approved标记。旧资源范围仍是已记录清单，不宣称完整Cloudflare资产清单。
@@ -67,7 +85,7 @@ cms publish-source-register --run "$SOURCE_RUN" --pin "$SOURCE_PLAN_PIN" --reten
 
 注意register的evidence是已验**本地恢复回执**，资源来源从该run的retention回执读取，不能误传资源evidence。登记重新GET当前双owner精确版本模块及Main公开JSON，核对A而非导入O、来源树/HTTP回执/pin及前后七服务拓扑。固定目录`~/.gachia-cms-releases/source-catalog/<game>/<gameUUID>-<mainUUID>/`仅本机用户可读写，manifest最后排他写入，旧项/不完整项都不覆盖。
 
-后续新候选按第3节select，无需手工改清单；select重新校验来源、模块、当前JSON及本轮拓扑，**仍须为新候选执行assets-refresh、baseline-capture、recovery-local-prepare与全部云门禁**。目录是可信本机索引，不是外部签名批准，不包含全部副本；原始私有来源/回执被删除或篡改即失效，不可将旧release目录当垃圾清理。没有“latest”、原始O回退或部署后自动接续：game或Main发布新UUID后必须重新交接/登记，不能复用原条目；其他Worker的历史版本变化不等于这两个来源UUID变化，但每轮七服务前后漂移仍拒绝。
+后续新候选可按第3节select提前检查，无需手工改清单；select重新校验来源、模块、当前JSON及本轮拓扑，**仍须为新候选执行assets-refresh、baseline-capture、recovery-local-prepare与全部云门禁**，前三项可由R26入口串联，云门禁不合并。目录是可信本机索引，不是外部签名批准，不包含全部副本；原始私有来源/回执被删除或篡改即失效，不可将旧release目录当垃圾清理。没有“latest”、原始O回退或部署后自动接续：game或Main发布新UUID后必须重新交接/登记，不能复用原条目；其他Worker的历史版本变化不等于这两个来源UUID变化，但每轮七服务前后漂移仍拒绝。
 
 登记/选择可读取由诊断run取得的**当前公众基线来源**，不使诊断候选变为正式内容；productionReady保持false，诊断制品仍禁止上传。R21实机登记范围与证据见对应报告，不把隔离双游戏测试称作两游戏实际登记。
 

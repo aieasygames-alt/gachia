@@ -31,6 +31,9 @@ test('operator handoff makes the remaining manual evidence and cloud gaps explic
   assert.match(text, /publish-source-select/);
   assert.match(text, /publish-source-advance/);
   assert.match(text, /publish-source-rebind/);
+  assert.match(text, /publish-prepare-evidence/);
+  assert.match(text, /创建全新尝试/);
+  assert.match(text, /productionReady:false/);
   assert.match(text, /原始游戏来源/);
   assert.match(text, /没有“latest”、原始O回退或部署后自动接续/);
   assert.match(text, /仍须为新候选执行assets-refresh、baseline-capture、recovery-local-prepare与全部云门禁/);
