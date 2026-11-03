@@ -22,6 +22,22 @@ test('promotion request is fixed-account, exact UUID, 100%, without settings mut
   assert.equal((await promote(args)).deploymentId, deploymentId);
   await assert.rejects(promote(args), /No automatic retry/); assert.equal(calls, 1);
 });
+test('deployment creation may omit strategy while retaining exact identity and allocation', async () => {
+  let calls = 0;
+  const promote = writer(async () => { calls++; return response({ strategy: undefined }); });
+  assert.equal((await promote(args)).deploymentId, deploymentId);
+  await assert.rejects(promote(args), /No automatic retry/); assert.equal(calls, 1);
+});
+for (const status of [200, 403]) test(`deployment response is archived before validation (${status})`, async () => {
+  const saved = [];
+  const promote = promotionWriter({ game: 'genshin', releaseKey, versions, token: 'test-not-a-credential',
+    request: async () => new Response('{"success":false}', { status }), recordResponse: row => saved.push(row) });
+  await assert.rejects(promote(args));
+  assert.equal(saved.length, 1); assert.equal(saved[0].service, args.service); assert.equal(saved[0].status, status);
+  assert.equal(saved[0].bytes.toString(), '{"success":false}');
+  assert(!JSON.stringify(saved[0]).includes('test-not-a-credential'));
+  await assert.rejects(promote(args), /No automatic retry/);
+});
 for (const patch of [{ owner: 'nte' }, { service: 'gachia-router' }, { versionId: deploymentId }, { releaseKey: 'b'.repeat(64) }]) {
   test(`promotion rejects unauthorized target ${JSON.stringify(patch)}`, async () => {
     let calls = 0; const promote = writer(async () => { calls++; return response(); });
@@ -39,6 +55,9 @@ for (const [label, result] of [
   ['split deployment', () => response({ versions: [{ version_id: versionId, percentage: 50 }] })],
   ['wrong UUID', () => response({ versions: [{ version_id: deploymentId, percentage: 100 }] })],
   ['missing identity', () => response({ id: null })],
+  ['conflicting strategy', () => response({ strategy: 'other' })],
+  ['null strategy', () => response({ strategy: null })],
+  ['missing allocation', () => response({ strategy: undefined, versions: undefined })],
   ['malformed JSON', () => new Response('{')],
 ]) test(`promotion ${label} fails closed and consumes attempt`, async () => {
   let calls = 0; const promote = writer(async () => { calls++; return result(); });
