@@ -106,4 +106,3 @@ export async function fixture(t, game = 'genshin', options = {}) {
   return { root, game, run, pin, journal, journalPath, manifest, input, current, reader, request, calls, original, content, responses,
     args: { input, root: join(root, 'catalog'), directory: join(run, 'advance'), reader, request } };
 }
-

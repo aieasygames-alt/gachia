@@ -105,4 +105,3 @@ export async function historicalFixture(t, game = 'nte', options = {}) {
     baselinePath: previous.baselinePath, baselinePin: previous.baselinePin, sampleGuide: 'one' };
   return { ...f, proof, origin, historical: { ...f.input, verified: undefined, recovery: undefined, origin } };
 }
-
