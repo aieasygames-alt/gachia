@@ -1,6 +1,8 @@
 # Plan: Payload 全游戏统一维护
 
-> 当前权威入口（2026-11-02）：[R20四项收口](../reports/payload-launch-closeout-2026-11-02-r20/README.md)、[当前任务表](project-task-status-current.md)、[首发清单](payload-launch-closeout-2026-11-02.md)及[多Worker地图](../docs/payload-project-worker-map.md)。当前inventory已版本化且历史不变，Router/inventory实际CI通过；工程提交a0634a9已推送。三个只读准备命令已安装，20工具文件摘要一致，547份公网资源响应已取证。CMS163、桌面387、既有Node304、Python49、Router35及相关类型检查通过。真实编辑云E2E、独立key/跨机与完整交接仍未关；DB84draft/hold、0eligible，正式导出拒绝无合格记录。10Worker盘点、7服务推广保护、game/Main写入三者分开。内容准确度/全类型迁移后置，不制造编辑或重复已完成演练。下方早期增量均为历史。
+> 当前权威入口（2026-11-03）：[R27全面审计](../reports/payload-completion-audit-2026-11-03-r27/README.md)、[V1有限完成计划](payload-v1-completion-2026-11-03.md)及[当前任务表](project-task-status-current.md)。本机双游戏发布/恢复工具已安装，参数安全已修复；下一工程项是兼容恢复后的可信来源接续，随后真实Genshin生命周期、NTE共享Main、独立key/跨机恢复。限定V1与下文原始全游戏范围分别验收；准确度不阻塞首发，不以新增工具或报告替代真实云验收。10Worker观察/7服务保护/每次game+Main写入边界不变。下方R20及更早是历史，不作为当前执行顺序。
+
+> R20历史基线（2026-11-02）：[四项收口](../reports/payload-launch-closeout-2026-11-02-r20/README.md)。inventory版本化且历史不变，Router/inventory实际CI通过；工程提交a0634a9已推送。三个只读准备命令已安装，20工具文件摘要一致，547份公网资源响应已取证。CMS163、桌面387、既有Node304、Python49、Router35及相关类型检查通过。该轮真实编辑云E2E、独立key/跨机与完整交接未关；DB84draft/hold、0eligible，正式导出拒绝无合格记录。
 
 > 历史增量：[本机发布推进报告](../reports/payload-local-publish-2026-11-01/README.md)。已将候选检查、冻结 Git 源码与双 owner 构建/本地验收装入本机维护工具；Genshin + Main 的合成候选真实 Worker 构建及 14 响应通过。现有内容无变化，不重复发布。云端推广执行器和旧资源/回退证据仍未接通，Builds 权限核验返回 403；不关闭 T04/T05 或完整发布任务。
 
@@ -20,7 +22,7 @@
 
 用户故事：U1 全游戏统一管理；U2 日常更新；U3 新增游戏；U4 多 Worker 一致发布；U5 持续维护和恢复。
 
-完整剩余任务定义保留 R8 的 T01–T12 表，执行状态以 `project-task-status-current.md` 的R20表为准。当前inventory/Router实际CI及资源/恢复证据命令/安装已交付，首次可信来源交接仍需维护者；独立密钥托管/跨机验收保留明确待办，真实编辑出现时优先云验收，再逐范围接管。源码ZIP不是正式Git提交，私有R2密文往返也不等于整机丢失后可恢复。云自动发布入口保持关闭，不重复开启；事实校对/缺译/命名差异后置。不把本机后台或合成 RSC 验收当公众接管，不公开草稿或未经授权的媒体。
+完整剩余任务定义保留 R8 的 T01–T12 表，执行状态以 `project-task-status-current.md` 的R27权威节和V1有限计划为准。当前双游戏来源已登记且重选通过，普通成功发布接续/跨游戏Main重绑定/本地准备编排已实现安装；恢复后来源接续仍缺，首次无来源或外部未知版本继续拒绝。独立密钥托管/跨机验收保留明确待办，真实编辑出现即优先云验收，再逐范围接管。源码ZIP不是正式Git提交，私有R2密文往返也不等于整机丢失后可恢复。云自动发布入口保持关闭；事实校对/缺译/命名差异后置。不把本机后台或合成 RSC 验收当公众接管，不公开草稿或未经授权的媒体。
 
 ## P0：全游戏迁移基线
 

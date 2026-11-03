@@ -1,6 +1,6 @@
 # T04 剩余验收矩阵与执行顺序
 
-日期：2026-11-01。当前状态：R9 实施证据；旧来源保持权威，所有 shadow 输出不可发布。
+日期：2026-11-01。本文保留R9 shadow读侧验收矩阵，不是当前首发执行顺序；合成shadow输出仍不可发布。当前状态见[R27审计](../reports/payload-completion-audit-2026-11-03-r27/README.md)和[V1有限完成计划](payload-v1-completion-2026-11-03.md)：既有指南文字先复用旧reader/双owner封存发布，真实云生命周期未验，全请求releaseKey与完整Snapshot激活仍未完成，不用本地持续发布覆盖下表全范围缺口。
 
 ## 判定层次
 
