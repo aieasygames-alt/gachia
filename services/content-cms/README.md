@@ -1,6 +1,12 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-03，R26）
+## 当前状态（2026-11-03，R27）
+
+[R27完成导向审计](../../reports/payload-completion-audit-2026-11-03-r27/README.md)已把后续收为[V1五个有限工作包](../../plans/payload-v1-completion-2026-11-03.md)。本轮关闭CLI参数安全子项：import拒绝preview/多余参数，export才支持preview；manager不再静默忽略发布参数。CMS165/typegen/typecheck、桌面594/Node304/Python49、Router35与inventory通过，26工具/helper文件安装验摘要；无bundle覆盖/内容或云写入/CMS重启，安全HTTP9/9、DB84draft/hold/0eligible与10Worker不变。两游戏当前来源重新选择通过，不是新内容云验收。
+
+**下一工程最高优先级：兼容恢复后新UUID的可信来源接续**，目前成功恢复不符合source-advance成功promotion合约，跨游戏Main也不能直接rebind。只修已知完整恢复来源，不接纳外部未知版本。随后真实Genshin首次/连续/partial failure/恢复/再发、NTE共享Main与独立key/跨机验收；准确度/全类型迁移后置，不制造编辑凑发布。当前仍未完成真实云上线验收，完整P/T任务不关闭。下方R26及更早为历史。
+
+### R26 基线
 
 [R26本地发布前证据准备](../../reports/payload-evidence-preparation-2026-11-03-r26/README.md)新增`publish-prepare-evidence --run / --pin / --repo`：对已构建真实文字候选，单run锁串联来源→公网资源刷新→retain→固定导入O/公开A基线→本地兼容恢复→末次来源/拓扑重验。阶段回执/完整响应与辅助检查/日志整体pin，失败独立新尝试，有空/截断云写journal也拒绝；与当前公开A文字相同不发布。最终回归/安装/只读状态见报告。关闭本地编排工程子任务，不自动托管首次来源、build、上传或切流，不省略preview-retained/cloud-check/云预览和推广门禁；真实内容云发布仍未验收。首发继续优先实际Genshin文字编辑，不等待准确度。下方R25及更早为历史。
 

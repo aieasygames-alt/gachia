@@ -2,6 +2,16 @@ import { createHash } from 'node:crypto'
 
 export const guideFields = { zh: { title: 'title', body: 'content' }, en: { title: 'titleEn', body: 'contentEn' }, ja: { title: 'titleJa', body: 'contentJa' } } as const
 export const sha256 = (value: string | Buffer) => createHash('sha256').update(value).digest('hex')
+
+export function parseDesktopContentArguments(args: string[]) {
+  const [action, repo, game, flag] = args
+  if ((args.length !== 3 && args.length !== 4) || !['import', 'export'].includes(action) || !repo
+    || !['genshin', 'nte'].includes(game) || (args.length === 4 && (action !== 'export' || flag !== '--preview'))) {
+    throw new Error('Usage: desktop-content.ts import <repository> genshin|nte OR export <repository> genshin|nte [--preview]')
+  }
+  return { action, repo, game, preview: flag === '--preview' }
+}
+
 export type LegacyGuide = { id: string; [key: string]: unknown }
 export function parseGuides(text: string): LegacyGuide[] {
   const rows: unknown = JSON.parse(text)

@@ -340,9 +340,14 @@ def main():
     if len(supplied_flags) != len(set(supplied_flags)):
         parser.error('Duplicate options are forbidden')
     args = parser.parse_args()
-    if args.action.removeprefix('publish-') not in MAINTENANCE_ACTIONS and any(
-            getattr(args, key) is not None for key in ['baseline', 'baseline_pin', 'renewal', 'renewal_pin', 'mode', 'promotion_journal_pin', 'source', 'source_pin', 'main_source', 'main_source_pin']):
-        parser.error('Maintenance evidence options require an explicit maintenance action')
+    if not args.action.startswith('publish-'):
+        required = {'restore-check': {'backup'}, 'content-import': {'repo', 'game'}, 'content-export': {'repo', 'game'}}.get(args.action, set())
+        allowed = required | ({'preview'} if args.action == 'content-export' else set())
+        for key, value in vars(args).items():
+            if key != 'action' and value is not None and value is not False and key not in allowed:
+                parser.error(f'Unexpected option for {args.action}: --{key.replace("_", "-")}')
+        if any(getattr(args, key) is None for key in required):
+            parser.error(f'Required arguments missing for {args.action}')
     if args.action == 'serve':
         cfg = settings()
         app = Path(cfg['app'])
@@ -384,46 +389,7 @@ def main():
         elif args.action.startswith('publish-'):
             action = args.action.removeprefix('publish-')
             command = [NODE, ROOT / 'publisher/desktop-publish.mjs', 'inspect' if action == 'plan' else action]
-            if action in MAINTENANCE_ACTIONS or action == 'project-inventory':
-                command += maintenance_arguments(args)
-            elif action in ['plan', 'prepare']:
-                if not args.repo or not args.release_key:
-                    parser.error('--repo and --release-key are required')
-                command += ['--repo', args.repo.resolve(), '--release-key', args.release_key]
-                if args.commit:
-                    command += ['--commit', args.commit]
-            else:
-                if not args.run or not args.pin:
-                    parser.error('--run and --pin are required')
-                command += ['--run', args.run, '--pin', args.pin]
-                if action in ['retain', 'recovery-check', 'promotion-check', 'recovery-prepare-cloud']:
-                    if not args.evidence or not args.evidence_pin:
-                        parser.error('--evidence and --evidence-pin are required')
-                    command += ['--evidence', args.evidence.resolve(), '--evidence-pin', args.evidence_pin]
-                if action.endswith('-retained') or action in ['cloud-check', 'cloud-prepare', 'recovery-check']:
-                    if not args.retention or not args.retention_pin:
-                        parser.error('--retention and --retention-pin are required')
-                    command += ['--retention', args.retention, '--retention-pin', args.retention_pin]
-                if action in ['cloud-verify', 'cloud-upload-preview', 'cloud-reconcile', 'promotion-check', 'recovery-prepare-cloud']:
-                    if not args.bundle or not args.bundle_pin:
-                        parser.error('--bundle and --bundle-pin are required')
-                    command += ['--bundle', args.bundle, '--bundle-pin', args.bundle_pin]
-                if action in ['recovery-verify-cloud', 'recovery-upload-preview', 'recovery-receipt-check', 'cloud-promote']:
-                    if not args.recovery or not args.recovery_pin:
-                        parser.error('--recovery and --recovery-pin are required')
-                    command += ['--recovery', args.recovery, '--recovery-pin', args.recovery_pin]
-                if action in ['promotion-check', 'cloud-promote']:
-                    if not args.journal_pin:
-                        parser.error('--journal-pin is required')
-                    command += ['--journal-pin', args.journal_pin]
-                if action in ['cloud-upload-preview', 'recovery-upload-preview', 'recovery-receipt-check', 'cloud-promote']:
-                    if not args.release_key:
-                        parser.error('--release-key is required')
-                    command += ['--release-key', args.release_key]
-                if action in ['recovery-receipt-check', 'cloud-promote']:
-                    if not args.receipt_pin:
-                        parser.error('--receipt-pin is required')
-                    command += ['--receipt-pin', args.receipt_pin]
+            command += maintenance_arguments(args)
             run(command, cwd=cfg['app'])
 
 

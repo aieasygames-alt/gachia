@@ -1,5 +1,15 @@
 # Payload 首发收口清单（2026-11-02）
 
+## 当前执行：R27 有限完成计划（2026-11-03）
+
+后续工作以[V1有限完成计划](payload-v1-completion-2026-11-03.md)为唯一执行顺序，详细审计见[R27报告](../reports/payload-completion-audit-2026-11-03-r27/README.md)。**C01参数安全已实现/回归/安装；C02兼容恢复后来源接续未实现，是下一工程项；C03 Genshin真实生命周期、C04 NTE/共享Main真实连续性、C05独立密钥/跨机恢复仍未完成。** 本机编辑可用不等于真实云上线验收，全类型迁移不等于限定V1。
+
+R27修复import-preview仍导入、旧发布参数静默丢弃；CMS165/typegen/typecheck、桌面594/Node304/Python49、Router35及inventory通过，26工具/helper文件安装验摘要。安全HTTP9/9、健康与DB摘要不变，84draft/hold/0eligible；两游戏当前来源重新选择通过，10Worker与R26不变。无内容/云写入、无bundle覆盖或CMS重启。1low依赖风险保留，实际CI另存delivery。
+
+下一轮不再新增方便性编排工具：只修恢复成功后新UUID不能被source-advance/跨游戏rebind接纳的已知生命周期缺口，再执行真实编辑云验收。无真实编辑则不制造内容差异；准确度、全类型/其他owner后置；新媒体权利、安全、身份及恢复门禁保留。独立恢复具备介质/第二Mac即执行，不重复同机演练。本节覆盖下方历史顺序和L任务的旧“下一步”描述。
+
+## 历史轮次与L01–L06映射
+
 2026-11-03当前权威增量：[R26本地证据准备单入口](../reports/payload-evidence-preparation-2026-11-03-r26/README.md)。`publish-prepare-evidence --run / --pin / --repo`已串联来源重验、资源刷新、retain、固定Git导入O/公开A基线、本地兼容恢复和末次重验；单run锁/阶段诊断/独立重跑/完整保存文件pin，云写journal存在即停止。只关闭L06/T12本地编排工程子项，不替代真实候选/云预览/推广门禁，不从零生成可信来源或自动上传。最终本轮测试/安装/数据与Worker只读复核见R26报告。首发下一步仍优先真实Genshin文字→新入口→云首次/连续发布/恢复，再NTE；准确度后置、不造变化。下方R25及更早为历史，冲突时以本段和当前任务表为准。
 
 2026-11-03当前增量：[R25跨游戏Main来源重绑定](../reports/payload-source-rebind-2026-11-03-r25/README.md)。`publish-source-rebind`已实现/安装：目标游戏UUID和公开A保持不变，只组合另一游戏本机完整成功发布的新Main，重验父来源/全部登记HTTP/模块/配置与拓扑；无候选run/releaseKey、latest/O回退或批准时效延长。47新增测试含实际loopback（云仍模拟），定向236、桌面547/Node304/Python49通过，23工具文件备份安装/验摘要；CMS安全HTTP9/9、DB84draft/hold/0eligible、10Worker与R24不变，无内容/云写入或CMS重启。关闭限定工程子项，真实云重绑定与首次/外部部署/恢复交接仍未全关；本节覆盖下方R24历史状态。

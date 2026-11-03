@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { copyFileSync, mkdtempSync, realpathSync, rmSync } from 'node:fs';
+import { copyFileSync, mkdtempSync, readFileSync, realpathSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -15,6 +15,46 @@ const value = key => key === '--run' ? `${id}-${'a'.repeat(12)}` : key === '--mo
   : ['--repo', '--baseline', '--evidence', '--source', '--main-source'].includes(key) ? '/tmp/fixture path'
     : ['--retention', '--recovery', '--renewal', '--bundle'].includes(key) ? id : sha;
 const argsFor = action => maintenanceArgumentKeys(action).flatMap(key => [key, value(key)]);
+
+function dispatch(args) {
+  const script = `import importlib.util,json,os,sys
+from unittest.mock import patch,mock_open
+s=importlib.util.spec_from_file_location('manager',${JSON.stringify(manager)})
+m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+sys.argv=[${JSON.stringify(manager)},*json.loads(${JSON.stringify(JSON.stringify(args))})]
+def record(command,**kwargs): print(json.dumps([str(x) for x in command]))
+with patch.dict(os.environ,{'CI':'','GITHUB_ACTIONS':''}),patch.object(m,'settings',return_value={'app':'/tmp/fixture app'}),patch.object(m,'run',record),patch('builtins.open',mock_open()),patch.object(m.fcntl,'flock'):
+ m.main()`;
+  const child = spawnSync('python3', ['-B', '-c', script], { encoding: 'utf8' });
+  return { ...child, command: child.status === 0 ? JSON.parse(child.stdout) : undefined };
+}
+
+test('actual manager dispatch preserves all options for every documented publication command', () => {
+  const lines = readFileSync(join(root, 'docs/payload-operator-runbook.md'), 'utf8').match(/^cms publish-[^\n]+/gm);
+  for (const line of lines) {
+    const parts = line.match(/"[^"]*"|'[^']*'|\S+/g).map(s => s.replace(/^["']|["']$/g, ''));
+    const action = parts[1].slice(8), args = parts.slice(2).map((item, i, all) => i % 2 === 0 ? item : all[i - 1] === '--mode' ? item : value(all[i - 1]));
+    const valid = dispatch([parts[1], ...args]); assert.equal(valid.status, 0, valid.stderr);
+    assert.equal(options(valid.command.slice(2)).action, action === 'plan' ? 'inspect' : action);
+    for (const extra of [['--game', 'nte'], ['--preview'], ['--backup', '/tmp/do-not-ignore']]) {
+      const child = dispatch([parts[1], ...args, ...extra]);
+      if (child.status === 0) assert.throws(() => options(child.command.slice(2)), /Unknown|Unexpected|accepts no/, `${parts[1]} silently discarded ${extra[0]}`);
+      else assert.equal(child.status, 2, child.stderr);
+    }
+  }
+});
+
+test('non-publication commands reject irrelevant options before opening files or invoking processes', () => {
+  for (const args of [['content-import', '--repo', '/tmp/repo', '--game', 'genshin', '--preview'], ['status', '--run', 'unused'],
+    ['restore-check', '--backup', '/tmp/backup', '--repo', '/tmp/repo'], ['content-export', '--repo', '/tmp/repo', '--game', 'nte', '--backup', '/tmp/backup']]) {
+    const child = spawnSync('python3', ['-B', parserProbe, ...args], { encoding: 'utf8' });
+    assert.equal(child.status, 2, child.stderr); assert.match(child.stderr, /Unexpected option for/);
+  }
+  for (const args of [['content-import'], ['content-export', '--repo', '/tmp/repo'], ['restore-check']]) {
+    const child = spawnSync('python3', ['-B', parserProbe, ...args], { encoding: 'utf8' });
+    assert.equal(child.status, 2, child.stderr); assert.match(child.stderr, /Required arguments missing/);
+  }
+});
 
 for (const action of Object.keys(maintenanceActions)) {
   test(`${action} accepts only its exact pinned argument contract`, () => {
@@ -65,7 +105,7 @@ test('manager help exposes reviewed actions and old actions reject new evidence 
   assert.equal(help.status, 0);
   for (const action of Object.keys(maintenanceActions)) assert(help.stdout.includes(`publish-${action}`));
   const invalid = spawnSync('python3', ['-B', parserProbe, 'status', '--renewal', id], { encoding: 'utf8' });
-  assert.equal(invalid.status, 2); assert.match(invalid.stderr, /explicit maintenance action/);
+  assert.equal(invalid.status, 2); assert.match(invalid.stderr, /Unexpected option for/);
   const duplicate = spawnSync('python3', ['-B', parserProbe, 'publish-manual-recover', '--run', 'one', '--run=two'], { encoding: 'utf8' });
   assert.equal(duplicate.status, 2); assert.match(duplicate.stderr, /Duplicate/);
 });

@@ -2,14 +2,11 @@ import { readFile } from 'node:fs/promises'
 import { homedir } from 'node:os'
 import path from 'node:path'
 import { cmsEnvironment } from '../src/cms-environment'
-import { guideFields, parseGuides, sha256 } from '../src/desktop-guides'
+import { guideFields, parseDesktopContentArguments, parseGuides, sha256 } from '../src/desktop-guides'
 import { exportDesktopGuides } from '../src/desktop-export'
 import { writeDesktopCandidate } from '../src/desktop-candidate'
 
-const [action, repo, game, flag] = process.argv.slice(2)
-if (!['import', 'export'].includes(action) || !repo || !['genshin', 'nte'].includes(game) || (flag && flag !== '--preview')) {
-  throw new Error('Usage: desktop-content.ts import|export <repository> genshin|nte [--preview]')
-}
+const { action, repo, game, preview } = parseDesktopContentArguments(process.argv.slice(2))
 const runtime = cmsEnvironment()
 if (runtime.mode !== 'desktop' || process.env.CI || process.env.GITHUB_ACTIONS) throw new Error('Only the installed desktop can prepare content')
 const root = path.join(homedir(), 'Library/Application Support/GachiaCMS')
@@ -52,7 +49,6 @@ try {
     }
     console.log(JSON.stringify({ action, game, created, skipped: originals.length - created, factsCorrected: false, websiteChanged: false }))
   } else {
-    const preview = flag === '--preview'
     // Without --preview, read the published versions, never overlay newer drafts.
     const records = preview ? existing.docs : (await payload.find({ collection: 'content-records', overrideAccess: true, draft: false, locale: 'all',
       where: { and: [{ game: { equals: gameDoc.id } }, { kind: { equals: 'guides' } }, { _status: { equals: 'published' } }, { hold: { equals: false } }] },

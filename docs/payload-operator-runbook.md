@@ -4,6 +4,8 @@
 
 **当前已安装发布/恢复能力，但首次真实编辑的云端验收尚未完成。保存或 published 不等于公网更新。** 不要求事实准确度审稿；保留发布意图、身份/版本、安全和新媒体权利边界。
 
+R27完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。当前下一工程项是兼容恢复后的可信来源接续，未实现前不能把恢复后的UUID当作普通成功发布去source-advance；外部未知版本也不自动接纳。真实首发、连续发布/恢复及NTE验收仍待执行。
+
 ## 1. 编辑者只需做什么
 
 1. 打开 `http://127.0.0.1:3100/admin` 并登录，进入内容记录，筛选游戏与 guides。账号密码只在本机私有文件中保存，不复制进报告或聊天。
@@ -27,6 +29,8 @@ cms backup
 ```
 
 `GAME` 可改为 nte；所有 publish 命令从候选读取 game，不额外加 --game。每次实际发布前保留新冷备。backup 会短暂停止并恢复 CMS，不影响公网；备份含数据库、私有媒体、settings，不能公开。
+
+命令参数严格按各action白名单检查；不适用的`--game`、`--preview`、`--backup`等会拒绝，不会静默忽略。`content-import`没有preview模式，执行会导入缺少的记录，日常编辑/发布不需要重导入；**`--preview`只适用于`content-export`**。无关参数及导入的多余参数必须修正后重试，不通过绕过manager或直接调用脚本规避门禁。
 
 数据根目录 `~/Library/Application Support/GachiaCMS`，仅 loopback PostgreSQL 54329/CMS 3100；不启用 Tunnel、端口映射或远程编辑。R17已在独立私有R2完成新密文上传/下载、认证解密和同机隔离恢复；独立密钥托管及跨机应用启动仍未验，见[异地备份与恢复](payload-offsite-recovery.md)。源码交付包不替代运行备份。
 
