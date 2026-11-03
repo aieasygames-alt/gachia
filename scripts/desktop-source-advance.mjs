@@ -13,6 +13,7 @@ import { readReleaseJournal, verifySavedPreview } from './desktop-release-readin
 import { loadPublicReferences, publicReferences, validatePublicResponse } from './desktop-public-acceptance.mjs';
 import { verifyVersionPreview } from './desktop-version-preview.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
+import { readRecoveredCandidate } from './desktop-recovered-source.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (path, value) => { const raw = json(value); writeFileSync(path, raw, { flag: 'wx', mode: 0o600 }); return digest(raw); };
@@ -74,11 +75,14 @@ export function readPublishedCandidate(input) {
   return { ...candidate, versions };
 }
 
+const sourceDirectory = (candidate, run, owner) => candidate.sourceDirectories?.[owner] ?? join(run, 'retained', candidate.manifest.retentionId, owner, '.open-next');
+const readDeployment = (input, recovered) => recovered ? readRecoveredCandidate(input) : readPublishedCandidate(input);
+
 function referencesFor(candidate, owner) {
   const record = candidate.manifest.owners[owner];
   const references = pinnedJson(join(candidate.directory, owner, 'references.json'), record.referencesSHA256);
   assert(new Set(references.map(row => row.path)).size === references.length);
-  const tree = artifactFiles(join(candidate.run, 'retained', candidate.manifest.retentionId, owner, '.open-next'));
+  const tree = artifactFiles(sourceDirectory(candidate, candidate.run, owner));
   const statics = tree.filter(staticFile); assert(statics.length > 0);
   for (const file of statics) {
     const path = '/' + file.path.slice(7).split('/').map(encodeURIComponent).join('/');
@@ -92,7 +96,16 @@ function referencesFor(candidate, owner) {
 
 export function publishedSourceInputs(origin, versions) {
   assert.equal(origin.kind, 'published_candidate_source');
-  const candidate = { ...readPublishedCandidate(origin.input), run: origin.input.run };
+  return completedSourceInputs(origin, versions, false);
+}
+
+export function recoveredSourceInputs(origin, versions) {
+  assert.equal(origin.kind, 'recovered_candidate_source');
+  return completedSourceInputs(origin, versions, true);
+}
+
+function completedSourceInputs(origin, versions, recovered) {
+  const candidate = { ...readDeployment(origin.input, recovered), run: origin.input.run };
   assert.deepEqual(candidate.plan, origin.plan);
   const proof = pinnedJson(origin.proofPath, origin.proofPin);
   assert.equal(proof.schemaVersion, 1); assert.equal(proof.status, 'passed'); assert.equal(proof.kind, origin.kind); assert.equal(proof.cloudWrites, false);
@@ -101,7 +114,8 @@ export function publishedSourceInputs(origin, versions) {
   assert.deepEqual(Object.keys(proof.owners).sort(), [...candidate.plan.owners].sort());
   const baseline = verifyPublishedBaseline(proof.baselinePath, proof.baselinePin, candidate.plan, versions);
   assertTopology(proof.before, baseline.after);
-  assert.equal(baseline.contentSHA256, candidate.plan.candidateSHA256, 'New source must follow published A, not import O');
+  assert.equal(baseline.contentSHA256, candidate.contentSHA256 ?? candidate.plan.candidateSHA256, 'New source must follow published A, not import O');
+  if (recovered) assert.deepEqual(proof.historicalArchives, candidate.archiveChecks, 'Recovery archive verification changed');
   const profile = { schemaVersion: 1, game: candidate.plan.game, owners: {} }, evidence = { owners: {} }, references = [], allReferences = [];
   for (const owner of candidate.plan.owners) {
     const record = candidate.manifest.owners[owner], row = proof.owners[owner], source = referencesFor(candidate, owner);
@@ -136,20 +150,33 @@ export function publishedSourceInputs(origin, versions) {
 }
 
 function mainProvenance(input, candidate) {
+  if (candidate.sourceDirectories) return { kind: 'recovered_desktop_candidate', versionId: candidate.versions.gachia, releaseKey: candidate.plan.releaseKey,
+    recoveryBundlePath: join(input.run, 'recovery-bundles', input.recoveryId, 'manifest.json'), recoveryBundlePin: input.recoveryBundlePin,
+    renewalPath: join(input.run, `renewal-${input.renewalId}/renewal.json`), renewalPin: input.renewalPin,
+    recoveryJournalPath: join(input.run, `manual-recovery-${input.renewalId}.jsonl`), recoveryJournalPin: input.recoveryJournalPin };
   return { kind: 'published_desktop_candidate', versionId: candidate.versions.gachia, releaseKey: candidate.plan.releaseKey,
     bundlePath: join(input.run, 'cloud-bundles', input.id, 'manifest.json'), bundlePin: input.bundlePin,
     promotionJournalPath: join(input.run, `promotion-${candidate.manifest.retentionId}.jsonl`), promotionJournalPin: input.promotionJournalPin };
 }
 
 export async function advanceSourceCatalog({ input, root, directory, reader, request = fetch }) {
+  return advanceCompletedSource({ input, root, directory, reader, request }, false);
+}
+
+export async function recoverSourceCatalog({ input, root, directory, reader, request = fetch }) {
+  return advanceCompletedSource({ input, root, directory, reader, request }, true);
+}
+
+async function advanceCompletedSource({ input, root, directory, reader, request }, recovered) {
   mkdirSync(directory, { mode: 0o700 });
   const diagnostic = { status: 'running', cloudWrites: false };
   try {
-    const candidate = { ...readPublishedCandidate(input), run: input.run }, { plan, manifest } = candidate;
+    const candidate = { ...readDeployment(input, recovered), run: input.run }, { plan, manifest } = candidate;
+    if (recovered) for (const row of candidate.archiveChecks) assert.equal((await multipartModule(readFileSync(row.path))).moduleSHA256, row.moduleSHA256, 'Historical recovery module changed');
     const before = await reader.snapshot(); assertTopology(manifest.snapshot, before, candidate.versions);
     const importBytes = execFileSync('git', ['show', `${plan.sourceCommit}:packages/data/games/${plan.game}/raw-guides.json`], { cwd: input.repo, maxBuffer: 16 * 1024 * 1024 });
     const baseline = await capturePublishedBaseline({ plan, importBytes, directory: join(directory, 'baseline'), observe: reader.snapshot, request });
-    assert.equal(baseline.contentSHA256, plan.candidateSHA256);
+    assert.equal(baseline.contentSHA256, candidate.contentSHA256 ?? plan.candidateSHA256);
     const owners = {}, modules = {}, remoteVersions = {};
     for (const owner of plan.owners) {
       const record = manifest.owners[owner], versionId = candidate.versions[record.service], source = referencesFor(candidate, owner);
@@ -161,7 +188,7 @@ export async function advanceSourceCatalog({ input, root, directory, reader, req
       assert.equal((await multipartModule(module.archive)).moduleSHA256, record.moduleSHA256);
       writeFileSync(join(directory, `${owner}.multipart`), module.archive, { flag: 'wx', mode: 0o600 });
       const target = join(directory, owner, '.open-next'); mkdirSync(dirname(target), { mode: 0o700 });
-      cpSync(join(input.run, 'retained', manifest.retentionId, owner, '.open-next'), target, { recursive: true, verbatimSymlinks: true, force: false, errorOnExist: true });
+      cpSync(sourceDirectory(candidate, input.run, owner), target, { recursive: true, verbatimSymlinks: true, force: false, errorOnExist: true });
       assert.equal(realpathSync(join(target, 'worker.js')), join(target, 'worker.js'));
       writeFileSync(join(target, 'worker.js'), module.code, { mode: 0o600 });
       const preview = await verifyVersionPreview({ service: record.service, versionId, references: source.references, directory: join(directory, `${owner}-http`), request });
@@ -185,15 +212,16 @@ export async function advanceSourceCatalog({ input, root, directory, reader, req
     const evidencePin = save(evidencePath, { schemaVersion: 1, game: plan.game,
       gameAssets: readPreviousGameAssets(receiptPath, { game: plan.game, rollbackVersion: versionId }).summary,
       main: { source: mainProvenance(input, candidate), previousStatic: mainStatic, files: previousAssetFiles(mainStatic) } });
-    assert.deepEqual(readPublishedCandidate(input), Object.fromEntries(Object.entries(candidate).filter(([key]) => key !== 'run')));
+    assert.deepEqual(readDeployment(input, recovered), Object.fromEntries(Object.entries(candidate).filter(([key]) => key !== 'run')));
     const after = await reader.snapshot(); assertTopology(before, after);
-    const assets = { path: evidencePath, pin: evidencePin }, kind = 'published_candidate_source';
+    const assets = { path: evidencePath, pin: evidencePin }, kind = recovered ? 'recovered_candidate_source' : 'published_candidate_source';
     const proofPath = join(directory, 'source-proof.json');
-    const proofPin = save(proofPath, { schemaVersion: 1, kind, status: 'passed', input, before, after, owners, assets, ...baseline, cloudWrites: false });
+    const proofPin = save(proofPath, { schemaVersion: 1, kind, status: 'passed', input, before, after, owners, assets, ...baseline,
+      ...(recovered ? { historicalArchives: candidate.archiveChecks } : {}), cloudWrites: false });
     const origin = { kind, input, plan, proofPath, proofPin, assets };
-    const { registerPublishedSourceCatalog } = await import('./desktop-source-catalog.mjs');
-    const result = await registerPublishedSourceCatalog({ root, directory: join(directory, 'register'), origin, reader, request });
-    diagnostic.status = 'passed'; return { ...result, publishedReleaseKey: plan.releaseKey, sourceOnly: true, newPublicationAuthorized: false };
+    const { registerPublishedSourceCatalog, registerRecoveredSourceCatalog } = await import('./desktop-source-catalog.mjs');
+    const result = await (recovered ? registerRecoveredSourceCatalog : registerPublishedSourceCatalog)({ root, directory: join(directory, 'register'), origin, reader, request });
+    diagnostic.status = 'passed'; return { ...result, ...(recovered ? { recoveredFromReleaseKey: plan.releaseKey } : { publishedReleaseKey: plan.releaseKey }), sourceOnly: true, newPublicationAuthorized: false };
   } catch (error) { diagnostic.status = 'failed'; diagnostic.error = error.message; throw error; }
   finally { save(join(directory, 'diagnostic.json'), diagnostic); }
 }

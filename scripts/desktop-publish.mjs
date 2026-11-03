@@ -381,6 +381,7 @@ export const maintenanceActions = {
   'prepare-evidence': ['--repo'],
   'source-rebind': ['--source', '--source-pin', '--main-source', '--main-source-pin'],
   'source-advance': ['--repo', '--bundle', '--bundle-pin', '--promotion-journal-pin'],
+  'source-recover': ['--repo', ...renewalArgs, '--renewal', '--renewal-pin', '--promotion-journal-pin', '--recovery-journal-pin'],
   'source-register': ['--retention', '--retention-pin', '--evidence', '--evidence-pin'],
   'source-select': [],
   'assets-refresh': ['--evidence', '--evidence-pin'],
@@ -467,14 +468,17 @@ async function main() {
       const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
       console.log(json(await prepareEvidence({ run, pin: opts['--pin'], repo: resolve(opts['--repo']),
         root: join(RUNS, 'source-catalog'), reader: preparationReader(token) })));
-    } else if (opts.action === 'source-advance') {
+    } else if (['source-advance', 'source-recover'].includes(opts.action)) {
       await withRunLock(run, async () => {
-        const { advanceSourceCatalog } = await import('./desktop-source-advance.mjs');
+        const { advanceSourceCatalog, recoverSourceCatalog } = await import('./desktop-source-advance.mjs');
         const { preparationReader } = await import('./desktop-local-evidence.mjs');
         const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
-        console.log(json(await advanceSourceCatalog({ input: { run, pin: opts['--pin'], id: opts['--bundle'], bundlePin: opts['--bundle-pin'],
-          promotionJournalPin: opts['--promotion-journal-pin'], repo: resolve(opts['--repo']) }, root: join(RUNS, 'source-catalog'),
-          directory: join(run, `source-advance-${randomBytes(8).toString('hex')}`), reader: preparationReader(token) })));
+        const input = { run, pin: opts['--pin'], promotionJournalPin: opts['--promotion-journal-pin'], repo: resolve(opts['--repo']),
+          ...(opts.action === 'source-advance' ? { id: opts['--bundle'], bundlePin: opts['--bundle-pin'] } : {
+            recoveryId: opts['--recovery'], recoveryBundlePin: opts['--recovery-pin'], journalPin: opts['--journal-pin'], receiptPin: opts['--receipt-pin'], releaseKey: opts['--release-key'],
+            renewalId: opts['--renewal'], renewalPin: opts['--renewal-pin'], recoveryJournalPin: opts['--recovery-journal-pin'] }) };
+        console.log(json(await (opts.action === 'source-advance' ? advanceSourceCatalog : recoverSourceCatalog)({ input, root: join(RUNS, 'source-catalog'),
+          directory: join(run, `${opts.action}-${randomBytes(8).toString('hex')}`), reader: preparationReader(token) })));
       });
     } else if (['source-register', 'source-select'].includes(opts.action)) {
       await withRunLock(run, async () => {

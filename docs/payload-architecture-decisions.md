@@ -1,6 +1,6 @@
 # Payload 架构决定与实施风险
 
-> 2026-11-03 R27当前执行边界：[有限完成计划](../plans/payload-v1-completion-2026-11-03.md)、[审计报告](../reports/payload-completion-audit-2026-11-03-r27/README.md)。本机PostgreSQL/Cloudflare网站架构不重选；双游戏当前来源有效，参数安全修复并安装。下一工程缺口是已知成功兼容恢复后的可信来源接续，真实云发布/恢复与独立key/跨机仍未验。CMS165/typecheck、桌面594/Node304/Python49、Router35/inventory为本轮本机结果；新鲜依赖扫描仍1low，风险决定有效至11月16日前复核，未修复。
+> 2026-11-03 R28当前执行边界：[有限完成计划](../plans/payload-v1-completion-2026-11-03.md)、[本轮报告](../reports/payload-recovery-source-2026-11-03-r28/README.md)。本机PostgreSQL/Cloudflare网站架构不重选；双游戏当前来源有效，参数安全及已知完整兼容恢复后的可信来源接续工程均实现/安装。source-recover不写云，历史完成时钟不扩展实时15分钟门禁；外部未知UUID继续拒绝。下一项是C03真实Genshin生命周期，真实云恢复接续/再发与独立key/跨机仍未验。CMS165/typegen/typecheck、桌面655/Node304/Python49/inventory为本轮本机结果；Router35及依赖1low沿用R27，风险决定有效至11月16日前复核，未修复。
 
 > 2026-11-02 R20历史基线：Payload/PostgreSQL常驻本机，公众Cloudflare多Worker不实时依赖Mac，仍仅本机发起发布。inventory版本化/历史不变、Router和inventory实际CI成功，工程提交a0634a9已同步。资源刷新/兼容恢复准备与10Worker只读观察命令已安装；该轮首次来源登记仍需维护者，真实编辑云E2E、独立key/跨机启动与完整交接未关。10Worker观察、7服务保护、game/Main写入分别限定。见[R20报告](../reports/payload-launch-closeout-2026-11-02-r20/README.md)、[项目地图](payload-project-worker-map.md)、[手册](payload-operator-runbook.md)和[任务表](../plans/project-task-status-current.md)。deepmerge仍1low，沿用R19扫描及[限定风险接受](payload-dependency-risk-2026-11-02.md)，不是漏洞修复。
 

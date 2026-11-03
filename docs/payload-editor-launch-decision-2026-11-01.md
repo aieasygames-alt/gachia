@@ -2,7 +2,7 @@
 
 状态：用户进一步指定“Payload 部署本机，以后仅从本机发布”。本机目标环境已完成安装、浏览器与持久性验收；此前 Linux/HTTPS 方案不再是当前前置。本文替代 ADR v2 中编辑端需要先完成 PG/D1 对比的执行顺序，不改写历史证据，也不代表完整公众内容平台已验收。
 
-当前操作入口见[现行手册](payload-operator-runbook.md)，收口顺序见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，首次安装结果保留于 `reports/payload-local-install-2026-11-01/README.md`。仅本机编辑者访问loopback，不开放团队远程访问或Tunnel。GitHub发布开关已关闭；双游戏受控发布/兼容恢复执行器已安装，真实编辑云端验收、恢复后来源接续及独立key/跨机恢复仍未完成，不能再把“执行器待接通”作为当前任务。网站不实时读取本机。
+当前操作入口见[现行手册](payload-operator-runbook.md)，收口顺序见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，首次安装结果保留于 `reports/payload-local-install-2026-11-01/README.md`。仅本机编辑者访问loopback，不开放团队远程访问或Tunnel。GitHub发布开关已关闭；双游戏受控发布/兼容恢复执行器及R28恢复后可信来源接续已实现并安装，不能再把“执行器/恢复来源待接通”作为当前工程任务。真实编辑云端首发/连续发布/恢复接续再发及独立key/跨机恢复仍未完成。网站不实时读取本机。
 
 ## 决定
 

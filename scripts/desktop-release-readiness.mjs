@@ -6,6 +6,7 @@ import { digest, pinnedJson } from './desktop-release-assets.mjs';
 import { assertTopology, reconcileRelease } from './desktop-cloud-release.mjs';
 import { exactPreviewOrigin, validatePreviewResponse } from './desktop-version-preview.mjs';
 import { recoveryBaselineSHA256 } from './desktop-published-baseline.mjs';
+import { assertReleaseScope } from './desktop-release-scope.mjs';
 
 const SHA = /^[a-f0-9]{64}$/;
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
@@ -69,13 +70,13 @@ export function acceptedPreviewJournal(journal, verified, now = Date.now(), maxA
   const { plan, receipt, manifest } = verified;
   assert.equal(plan.preview, false, 'Rehearsal candidates cannot continue to promotion');
   assert(plan.changed.length > 0, 'No editorial change');
-  assert.deepEqual(plan.owners, ['genshin', 'main'], 'Unreviewed continuation owners');
+  const scope = assertReleaseScope(plan, manifest.owners);
   assert(!journal.damaged, 'Incomplete journal cannot authorize promotion');
   const rows = journal.rows;
   assert.equal(rows.length, 8, 'Only a completed preview-only journal may continue');
   assert.equal(rows[0].phase, 'baseline'); assertTopology(manifest.snapshot, rows[0].baseline);
   assert.equal(rows[7].phase, 'cloud_previews_accepted_no_promotion');
-  assert.deepEqual(Object.keys(rows[7].accepted).sort(), ['gachia', 'gachia-game-genshin']);
+  assert.deepEqual(Object.keys(rows[7].accepted).sort(), [...scope.services].sort());
   const accepted = {};
   for (const [index, owner] of plan.owners.entries()) {
     const service = serviceFor(owner), record = manifest.owners[owner];

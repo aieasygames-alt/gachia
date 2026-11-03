@@ -9,7 +9,7 @@ import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint, validatePreviewResponse } from './desktop-version-preview.mjs';
 import { publicRobots } from './desktop-public-acceptance.mjs';
-import { publishedSourceInputs } from './desktop-source-advance.mjs';
+import { publishedSourceInputs, recoveredSourceInputs } from './desktop-source-advance.mjs';
 import { reboundSourceInputs } from './desktop-source-rebind.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
@@ -148,6 +148,10 @@ function checkInputs({ verified, recovery, assets }, versions) {
     assert.deepEqual(assets, verified.assets);
     return publishedSourceInputs(verified, versions);
   }
+  if (verified.kind === 'recovered_candidate_source') {
+    assert.deepEqual(assets, verified.assets);
+    return recoveredSourceInputs(verified, versions);
+  }
   if (verified.kind === 'historical_local_recovery') {
     assert.deepEqual(assets, verified.assets, 'Historical asset source mismatch');
     return sourcesFromHistory(verified, versions);
@@ -211,6 +215,11 @@ export async function registerHistoricalSourceCatalog({ root, directory, origin,
 
 export async function registerPublishedSourceCatalog({ root, directory, origin, reader, request = fetch }) {
   assert.equal(origin.kind, 'published_candidate_source');
+  return registerOrigin({ root, directory, origin, assets: origin.assets, reader, request });
+}
+
+export async function registerRecoveredSourceCatalog({ root, directory, origin, reader, request = fetch }) {
+  assert.equal(origin.kind, 'recovered_candidate_source');
   return registerOrigin({ root, directory, origin, assets: origin.assets, reader, request });
 }
 

@@ -4,7 +4,7 @@
 
 **当前已安装发布/恢复能力，但首次真实编辑的云端验收尚未完成。保存或 published 不等于公网更新。** 不要求事实准确度审稿；保留发布意图、身份/版本、安全和新媒体权利边界。
 
-R27完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。当前下一工程项是兼容恢复后的可信来源接续，未实现前不能把恢复后的UUID当作普通成功发布去source-advance；外部未知版本也不自动接纳。真实首发、连续发布/恢复及NTE验收仍待执行。
+R28完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。兼容恢复后的可信来源接续使用第6节显式`publish-source-recover`；不能把恢复后的UUID当作普通成功发布去source-advance，也不自动接纳外部未知版本。工程闭环不替代真实首发、连续发布/恢复及NTE云验收。
 
 ## 1. 编辑者只需做什么
 
@@ -150,7 +150,7 @@ cms publish-source-advance --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --bundl
 
 命令不上传或切流：重读完整发布journal、封存bundle及全部已保存公网正文，确认game/Main当前100% UUID，重新GET模块/版本配置、全部封存静态和动态精确预览，取得当前公开A的JSON。保留原树，仅派生副本替换下载runtime，自动生成两owner资源来源、baseline和完整树pin，登记到新UUID固定目录。Main使用明确的本机发布bundle/journal来源，不捏造GitHub artifact ID；下一轮retain可直接使用返回的资源证据。
 
-下一次B仍prepare新run、source-select，并执行全部新鲜资源/基线/兼容恢复/云门禁；旧A的发布journal可以作为历史来源，但不延长候选/恢复批准的15分钟时效。没有“latest”、原始O回退或部署后自动接续：本命令是发布成功后的显式只读交接，且目标仍是当前精确UUID；不是后台自动追踪。partial failure、撤回/手工恢复、新UUID来自外部部署、未知版本或缺完整本机封存来源时拒绝，走第4节维护者交接，不猜版本或重复部署。跨游戏共享Main变化使用下节受控交接，不能直接套用另一游戏条目。首次无可信来源也仍需维护者，不宣称一键从零发布。
+下一次B仍prepare新run、source-select，并执行全部新鲜资源/基线/兼容恢复/云门禁；旧A的发布journal可以作为历史来源，但不延长候选/恢复批准的15分钟时效。没有“latest”、原始O回退或部署后自动接续：本命令是发布成功后的显式只读交接，且目标仍是当前精确UUID；不是后台自动追踪。partial failure或恢复UUID不符合本命令，已知完整兼容恢复走第6节source-recover；外部部署、未知版本或缺完整本机封存来源仍走第4节维护者交接，不猜版本或重复部署。跨游戏共享Main变化使用下节受控交接，不能直接套用另一游戏条目。首次无可信来源也仍需维护者，不宣称一键从零发布。
 
 ### 另一游戏发布后：只读重绑定共享 Main
 
@@ -160,11 +160,11 @@ R25新增`publish-source-rebind`。例如Genshin成功发布并完成source-adva
 cms publish-source-rebind --source "$TARGET_SOURCE_MANIFEST" --source-pin "$TARGET_SOURCE_PIN" --main-source "$NEW_MAIN_SOURCE_MANIFEST" --main-source-pin "$NEW_MAIN_SOURCE_PIN"
 ```
 
-四个值分别是目标游戏旧登记返回的manifestPath/manifestPin，以及另一游戏本次source-advance返回的manifestPath/manifestPin。命令没有run、plan pin或releaseKey，不为NTE捏造候选。目标可为原始retained/recovery、R22历史source-only或已成功发布来源；不接受重绑定结果作为父来源，重复交接仍引用同一**原始游戏来源**。Main必须来自另一游戏的完整本机成功发布，不能用历史诊断、外部部署、恢复版本或未知UUID。若目标游戏自身UUID已变，应走该游戏source-advance或维护者交接。
+四个值分别是目标游戏旧登记返回的manifestPath/manifestPin，以及另一游戏本次source-advance或source-recover返回的manifestPath/manifestPin。命令没有run、plan pin或releaseKey，不为NTE捏造候选。目标可为原始retained/recovery、R22历史source-only、已成功发布或完整兼容恢复来源；不接受重绑定结果作为父来源，重复交接仍引用同一**原始游戏来源**。Main必须来自另一游戏的完整本机成功发布或已知完整兼容恢复，不能用历史诊断、外部部署、原始旧UUID或未知UUID。若目标游戏自身UUID已变，应走该游戏source-advance/source-recover或维护者交接。
 
 重读两方全部来源树/pin/历史HTTP、成功发布journal和公网证据；确认目标UUID未变、只有另一游戏/Main的历史部署变化且受保护配置不变。新Main源文件及新鲜精确版本JSON都必须仍等于目标上一公开A，而非O或另一套内容；三语言指南、body/metadata/JSON-LD/media、sitemap、账号禁用、已登记静态、双模块/版本配置和noindex/cookie/cache均重验。目标静态范围为已pin的当前游戏capture，不将本地恢复树的forward-only候选chunks冒称已在云端；新Main仍重验全部封存静态。未宣称完整未知云资源清单。原树/原目录不写，输出新固定目标game/Main条目和组合资源证据；已有/不完整条目不覆盖。返回的sourcePath/sourcePin与evidencePath/evidencePin只供后续source-select及第4节准备使用，不是新发布批准，也不延长15分钟批准。
 
-全部采样正文、版本模块和诊断保存在`~/.gachia-cms-releases/source-rebind-<id>/`，依赖两方原始run/目录，不是自包含备份。失败保留诊断、停止，不回退latest/O或自动部署。当前只有隔离双游戏和真实loopback测试，**真实跨游戏云发布后的成功重绑定仍待验**；无完整成功发布时不运行假交接。首次可信来源、外部部署/手工恢复仍由维护者处理。
+全部采样正文、版本模块和诊断保存在`~/.gachia-cms-releases/source-rebind-<id>/`，依赖两方原始run/目录，不是自包含备份。失败保留诊断、停止，不回退latest/O或自动部署。当前只有隔离双游戏和真实loopback测试，**真实跨游戏云发布/恢复后的成功重绑定仍待验**；无完整成功发布或兼容恢复时不运行假交接。首次可信来源、外部部署/未知手工恢复仍由维护者处理。
 
 四个历史staging别名不是Payload发布中转站，不要为本流程部署它们或用其HTTP替代精确候选UUID验收。R23已完成限定HTTP/已知自动构建入口调查：动态noindex/robots禁爬成立，但语言cookie与公开缓存差异仍保留，未降低本流程的正式门禁；也未在账户层强制只有本机能部署。详见[R23报告](../reports/payload-staging-inspection-2026-11-02-r23/README.md)。
 
@@ -196,6 +196,18 @@ cms publish-manual-recover --run "$RUN" --pin "$PLAN_PIN" --recovery "$RECOVERY"
 ```
 
 manual-recover 会切到**已经验收的兼容恢复 UUID**。原始旧 UUID 可能缺新 chunks，不准直接回退。撕裂 journal、未知版本/split 或恢复响应丢失均保留现场，不能删日志、改时间、补伪成功事件或自动重复写入。
+
+### 兼容恢复成功后：只读接续来源
+
+R28新增`publish-source-recover`。只接纳上述manual-recover完整成功且具有`recovery_accepted`的同一run；保存其返回journalSHA256为RECOVERY_JOURNAL_PIN，不能误用候选上传JOURNAL_PIN、恢复上传receipt或PROMOTION_JOURNAL_PIN。
+
+```sh
+cms publish-source-recover --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --recovery "$RECOVERY" --recovery-pin "$RECOVERY_PIN" --journal-pin "$JOURNAL_PIN" --receipt-pin "$RECEIPT_PIN" --release-key "$RELEASE_KEY" --renewal "$RENEWAL" --renewal-pin "$RENEWAL_PIN" --promotion-journal-pin "$PROMOTION_JOURNAL_PIN" --recovery-journal-pin "$RECOVERY_JOURNAL_PIN"
+```
+
+命令只读云端、不上传/切流：重验原候选/封存兼容恢复、recover模式renewal、推广及完整恢复journal、历史multipart/版本配置/实际公网正文；重新读取当前双恢复UUID/模块/配置、全部封存静态和精确预览HTTP、公开A与七服务拓扑。派生副本仅替换runtime，原树不改；Main登记为明确的本机兼容恢复来源，不伪造成功推广或GitHub artifact身份。未知外部恢复、partial/torn journal、原始旧UUID、候选UUID、漂移或来源被篡改都拒绝。
+
+历史证据按已pin的实际恢复完成时间核验当时的时效，**不延长实时15分钟门禁，也不授权再次推广/恢复**。返回manifestPath/manifestPin、sourcePath/sourcePin、evidencePath/evidencePin用于下一次全新run的source-select/prepare-evidence/retain；恢复的是上一公开A，不是导入O或失败候选B。另一游戏共享Main变化可用该新manifest执行source-rebind，但目标game UUID及公开A仍必须不变。保留原run与全部依赖，不重跑旧发布或清journal。双游戏磁盘链/loopback工程回归已覆盖，真实云恢复→接续→再发仍归C03/C04待验。
 
 ## 7. 交付与安全边界
 

@@ -107,12 +107,32 @@ export function verifyWebAssetSource(source) {
     assert(digest.test(source.archiveSha256), 'Previous artifact archive digest required');
     return;
   }
-  assert.equal(source.kind, 'published_desktop_candidate', 'Unknown Main asset provenance');
+  assert(['published_desktop_candidate', 'recovered_desktop_candidate'].includes(source.kind), 'Unknown Main asset provenance');
   const pinned = (path, pin) => {
     assert(digest.test(pin)); assert.equal(realpathSync(path), resolve(path));
     assert(lstatSync(path).isFile() && lstatSync(path).size <= 16 * 1024 * 1024);
     assert.equal(sha(path), pin, 'Published asset provenance changed'); return readFileSync(path, 'utf8');
   };
+  if (source.kind === 'recovered_desktop_candidate') {
+    const bundle = JSON.parse(pinned(source.recoveryBundlePath, source.recoveryBundlePin));
+    const renewal = JSON.parse(pinned(source.renewalPath, source.renewalPin));
+    assert.equal(bundle.kind, 'sealed_local_recovery'); assert.equal(bundle.previewCandidate, false);
+    assert.equal(bundle.releaseKey, source.releaseKey); assert(digest.test(source.releaseKey));
+    assert.equal(bundle.owners.main.service, 'gachia');
+    assert.equal(renewal.kind, 'same_uuid_renewal'); assert.equal(renewal.status, 'passed'); assert.equal(renewal.mode, 'recover');
+    assert.equal(renewal.releaseKey, source.releaseKey); assert.equal(renewal.recoveryBundlePin, source.recoveryBundlePin);
+    const text = pinned(source.recoveryJournalPath, source.recoveryJournalPin); assert(text.endsWith('\n'));
+    const rows = text.trimEnd().split('\n').map(line => JSON.parse(line));
+    assert.deepEqual(rows.map(row => row.phase), ['baseline', 'remote_versions_verified', 'recovery_intent', 'recovered', 'recovery_intent', 'recovered', 'recovery_accepted']);
+    assert(rows.every(row => row.releaseKey === source.releaseKey)); assert.equal(rows[0].renewalId, renewal.id);
+    for (const row of rows.slice(4, 6)) { assert.equal(row.owner, 'main'); assert.equal(row.service, 'gachia'); assert.equal(row.versionId, source.versionId); }
+    assert.equal(renewal.owners['main-recovery'].versionId, source.versionId);
+    assert.notEqual(renewal.owners['main-candidate'].versionId, source.versionId);
+    assert.equal(rows[1].proof.modules.gachia, bundle.owners.main.moduleSHA256);
+    assert.equal(rows.at(-1).proof.status, 'passed'); assert.equal(rows.at(-1).proof.versions.gachia, source.versionId);
+    assert.notEqual(source.versionId, bundle.owners.main.sourceVersionId);
+    return;
+  }
   const bundle = JSON.parse(pinned(source.bundlePath, source.bundlePin));
   assert.equal(bundle.previewCandidate, false); assert.equal(bundle.releaseKey, source.releaseKey); assert(digest.test(source.releaseKey));
   assert.equal(bundle.owners.main.service, 'gachia');

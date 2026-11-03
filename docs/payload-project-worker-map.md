@@ -1,8 +1,8 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
-2026-11-03 R27当前审计：[报告](../reports/payload-completion-audit-2026-11-03-r27/README.md)、[有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。安装版双游戏当前来源选择通过，10Worker前后与R26一致，仍保护7服务、单次只写game/Main；本轮无云/内容写入、无CMS重启或架构变更。修复CLI参数安全并安装26工具/helper文件，不影响公众应用bundle。
+2026-11-03 R28当前增量：[恢复来源接续报告](../reports/payload-recovery-source-2026-11-03-r28/README.md)、[有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。安装版双游戏当前来源选择通过，10Worker前后与R27一致，仍保护7服务、单次只写game/Main；本轮无云/内容写入、无CMS重启或架构变更。24publisher模块+manager+2TS helper共27文件验摘要，不影响公众应用bundle。
 
-**下一工程缺口是恢复后的来源连续性**：成功兼容恢复输出恢复UUID及`recovery_accepted` journal，但source-advance只接受`production_accepted`，跨游戏rebind的Main也只认成功发布来源；恢复后继续发布尚未闭环。将仅为本机已知完整成功恢复建立可信交接，不自动接受任意外部部署。真实云首发/连续/恢复、独立key/跨机及原始全类型任务仍未完成；下方轮次为历史，不作为继续扩建工具的顺序。
+**恢复后的来源连续性工程子项已关闭**：显式source-recover仅接纳本机已知完整兼容恢复，原始封存链/renewal/推广与恢复journal/实际HTTP及当前双UUID重验；下一候选准备/retain与另一游戏共享Main rebind已覆盖。历史时钟不延长实时门禁；未知外部部署仍拒绝。完整NTE磁盘链还修复旧preview reader硬编码Genshin。下一优先级为C03真实Genshin首发/连续/恢复，随后C04 NTE共享Main及C05独立key/跨机；都仍未完成真实验收。下方轮次为历史，不作为继续扩建工具的顺序。
 
 2026-11-03 R26增量：[本地证据准备编排](../reports/payload-evidence-preparation-2026-11-03-r26/README.md)。已构建候选可用`publish-prepare-evidence`只读云控制面/HTTP并准备本地资源、公开A与兼容恢复证据；全程同run锁，开始/结束重验来源与7服务拓扑，失败不续用半成品，有云写journal拒绝。没有新增Worker/Tunnel/数据库绑定或云写入能力，公众请求不依赖Mac；10服务观察/7服务保护/每次game+Main写入边界不变。来源目录仍按双UUID索引，首次/未知/外部或恢复版本不自动接纳。只关闭本地编排实现/隔离验收/安装子项，不称真实云上线完成；本轮实际状态见R26报告。下方R25及更早为历史。
 

@@ -6,6 +6,7 @@ import { assertUploadedVersion, multipartModule, normalizedBindings } from './de
 import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-assets.mjs';
 import { capturePublishedBaseline, verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { readPublishedCandidate } from './desktop-source-advance.mjs';
+import { readRecoveredCandidate } from './desktop-recovered-source.mjs';
 import { readPinnedSourceCatalog, registerReboundSourceCatalog } from './desktop-source-catalog.mjs';
 import { verifySavedPreview } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
@@ -19,7 +20,7 @@ function inputs(input) {
   const target = readPinnedSourceCatalog(input.source), donor = readPinnedSourceCatalog(input.mainSource);
   const { game } = target.manifest, other = donor.manifest.game;
   assert.notEqual(game, other, 'Main donor must be the other game');
-  assert.equal(donor.manifest.origin.kind, 'published_candidate_source', 'Main requires a completed local publication');
+  assert(['published_candidate_source', 'recovered_candidate_source'].includes(donor.manifest.origin.kind), 'Main requires a completed local publication or compatible recovery');
   assert.notEqual(target.manifest.versions.main, donor.manifest.versions.main, 'Main UUID did not change');
   const changed = { gachia: donor.manifest.versions.main, [`gachia-game-${other}`]: donor.manifest.versions[other] };
   assertTopology(target.manifest.after, donor.manifest.before, changed);
@@ -65,7 +66,7 @@ function checkVersion(owner, version, context) {
   assert.deepEqual(normalizedBindings(version.resources.bindings), normalizedBindings(snapshot.bindings[service]));
   for (const key of ['compatibility_date', 'compatibility_flags']) assert.deepEqual(version.resources.script_runtime[key], snapshot.settings[service][key]);
   if (owner === 'main') {
-    const origin = context.donor.manifest.origin, candidate = readPublishedCandidate(origin.input), record = candidate.manifest.owners.main;
+    const origin = context.donor.manifest.origin, candidate = origin.kind === 'recovered_candidate_source' ? readRecoveredCandidate(origin.input) : readPublishedCandidate(origin.input), record = candidate.manifest.owners.main;
     assertUploadedVersion(version, versionId, pinnedJson(join(candidate.directory, 'main/upload.json'), record.configSHA256), snapshot.bindings.gachia);
   }
 }
@@ -101,7 +102,7 @@ export function reboundSourceInputs(origin, versions) {
 }
 
 // No candidate/run/releaseKey is invented. The game remains at its original UUID;
-// only a proven, completed other-game publication can supply the shared Main.
+// only a proven, completed other-game publication/recovery can supply Main.
 export async function rebindSourceCatalog({ input, root, directory, reader, request = fetch }) {
   mkdirSync(directory, { mode: 0o700 });
   const diagnostic = { status: 'running', sourceOnly: true, cloudWrites: false };

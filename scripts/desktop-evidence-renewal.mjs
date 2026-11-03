@@ -76,6 +76,14 @@ export async function verifyRenewedEvidence(input, mode) {
 
 // Internal disk verifier: production callers first validate the original sealed chain.
 export async function verifyRenewalFiles({ input, mode, evidence: original, sealed }) {
+  const { archiveChecks, ...value } = readRenewalFiles({ input, mode, evidence: original, sealed });
+  for (const row of archiveChecks) assert.equal((await multipartModule(readFileSync(row.path))).moduleSHA256, row.moduleSHA256, 'Renewed module differs from sealed bytes');
+  return value;
+}
+
+// Internal historical reader. A completed-recovery source may supply its pinned
+// completion time; live promotion/recovery above always uses the current clock.
+export function readRenewalFiles({ input, mode, evidence: original, sealed, now = Date.now() }) {
   assert(/^[a-f0-9]{16}$/.test(input.renewalId));
   const evidence = structuredClone(original);
   assert.equal(input.releaseKey, evidence.plan.releaseKey);
@@ -87,7 +95,14 @@ export async function verifyRenewalFiles({ input, mode, evidence: original, seal
   assertTopology(renewal.before, renewal.after); assertRenewalTopology(evidence, renewal.after, mode);
   const remote = pinnedJson(join(directory, 'remote-versions.json'), renewal.remote.evidenceSHA256);
   assert.equal(remote.status, 'passed'); assert.equal(remote.observations.length, 4);
+  assert.deepEqual({ ...remote, evidenceSHA256: renewal.remote.evidenceSHA256 }, renewal.remote);
+  assert.deepEqual(remote.versions, Object.fromEntries(evidence.plan.owners.map(owner => {
+    const service = evidence.manifest.owners[owner].service; return [service, evidence.accepted[service].versionId];
+  })));
+  assert.deepEqual(remote.modules, Object.fromEntries(evidence.plan.owners.map(owner => [evidence.manifest.owners[owner].service, evidence.manifest.owners[owner].moduleSHA256])));
+  assert.deepEqual(remote.recoveryVersions, Object.fromEntries(evidence.plan.owners.map(owner => [evidence.manifest.owners[owner].service, evidence.recovery.owners[owner].versionId])));
   assert.deepEqual(Object.keys(renewal.owners).sort(), evidence.plan.owners.flatMap(owner => [`${owner}-candidate`, `${owner}-recovery`]).sort());
+  const archiveChecks = [];
   for (const owner of evidence.plan.owners) {
     const service = evidence.manifest.owners[owner].service;
     for (const [kind, root, record, target] of [
@@ -96,13 +111,13 @@ export async function verifyRenewalFiles({ input, mode, evidence: original, seal
     ]) {
       const proof = renewal.owners[`${owner}-${kind}`];
       assert.equal(proof.service, service); assert.equal(proof.versionId, target.versionId);
-      assert(Number.isSafeInteger(proof.acceptedAt) && proof.acceptedAt <= Date.now() && Date.now() - proof.acceptedAt < 900000, 'Renewed preview expired or future');
+      assert(Number.isSafeInteger(proof.acceptedAt) && proof.acceptedAt <= now && now - proof.acceptedAt < 900000, 'Renewed preview expired or future');
       const observed = remote.observations.filter(row => row.owner === owner && row.kind === kind);
       assert.equal(observed.length, 1); assert.equal(observed[0].service, service);
       assert.equal(observed[0].versionId, target.versionId); assert.equal(observed[0].moduleSHA256, record.moduleSHA256);
-      const multipart = readFileSync(join(directory, `${owner}-${kind}.multipart`));
+      const path = join(directory, `${owner}-${kind}.multipart`), multipart = readFileSync(path);
       assert.equal(digest(multipart), observed[0].multipartSHA256);
-      assert.equal((await multipartModule(multipart)).moduleSHA256, record.moduleSHA256, 'Renewed module differs from sealed bytes');
+      archiveChecks.push({ path, sha256: digest(multipart), moduleSHA256: record.moduleSHA256 });
       const version = pinnedJson(join(directory, `${owner}-${kind}-version.json`), observed[0].versionSHA256);
       const config = pinnedJson(join(root, owner, 'upload.json'), record.configSHA256);
       assertUploadedVersion(version, target.versionId, config, evidence.baseline.bindings[service]);
@@ -111,7 +126,7 @@ export async function verifyRenewalFiles({ input, mode, evidence: original, seal
     }
   }
   evidence.recoveryPin = input.renewalPin;
-  return { evidence, observed: renewal.after, sealed };
+  return { evidence, observed: renewal.after, sealed, archiveChecks };
 }
 
 export async function verifyRenewedPromotionEvidence(input) {

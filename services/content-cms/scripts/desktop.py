@@ -22,7 +22,7 @@ ROOT = Path.home() / 'Library/Application Support/GachiaCMS'
 AGENTS = Path.home() / 'Library/LaunchAgents'
 PG = Path('/opt/homebrew/opt/postgresql@17/bin')
 NODE = '/opt/homebrew/bin/node'
-MAINTENANCE_ACTIONS = ['prepare-evidence', 'source-rebind', 'source-advance', 'source-register', 'source-select', 'assets-refresh', 'recovery-local-prepare', 'baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
+MAINTENANCE_ACTIONS = ['prepare-evidence', 'source-rebind', 'source-advance', 'source-recover', 'source-register', 'source-select', 'assets-refresh', 'recovery-local-prepare', 'baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
 
 
 def maintenance_arguments(args):
@@ -219,7 +219,7 @@ def complete_install(cfg):
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     for name in ['desktop-recovery-receipt.mjs', 'desktop-promotion-request.mjs', 'desktop-promotion-transport.mjs',
                  'desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs',
-                 'desktop-release-scope.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs', 'desktop-source-advance.mjs', 'desktop-source-rebind.mjs', 'desktop-evidence-preparation.mjs']:
+                 'desktop-release-scope.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs', 'desktop-source-advance.mjs', 'desktop-source-rebind.mjs', 'desktop-evidence-preparation.mjs', 'desktop-recovered-source.mjs']:
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     create_agent('payload', [sys.executable, ROOT / 'desktop.py', 'serve'], app)
     start('payload')
@@ -332,6 +332,7 @@ def main():
     parser.add_argument('--renewal-pin')
     parser.add_argument('--mode', choices=['promote', 'recover'])
     parser.add_argument('--promotion-journal-pin')
+    parser.add_argument('--recovery-journal-pin')
     parser.add_argument('--source', type=Path)
     parser.add_argument('--source-pin')
     parser.add_argument('--main-source', type=Path)

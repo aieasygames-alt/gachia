@@ -30,6 +30,8 @@ test('operator handoff makes the remaining manual evidence and cloud gaps explic
   assert.match(text, /publish-source-register/);
   assert.match(text, /publish-source-select/);
   assert.match(text, /publish-source-advance/);
+  assert.match(text, /publish-source-recover/);
+  assert.match(text, /不延长实时15分钟门禁/);
   assert.match(text, /publish-source-rebind/);
   assert.match(text, /publish-prepare-evidence/);
   assert.match(text, /创建全新尝试/);

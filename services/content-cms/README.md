@@ -1,10 +1,10 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-03，R27）
+## 当前状态（2026-11-03，R28）
 
-[R27完成导向审计](../../reports/payload-completion-audit-2026-11-03-r27/README.md)已把后续收为[V1五个有限工作包](../../plans/payload-v1-completion-2026-11-03.md)。本轮关闭CLI参数安全子项：import拒绝preview/多余参数，export才支持preview；manager不再静默忽略发布参数。CMS165/typegen/typecheck、桌面594/Node304/Python49、Router35与inventory通过，26工具/helper文件安装验摘要；无bundle覆盖/内容或云写入/CMS重启，安全HTTP9/9、DB84draft/hold/0eligible与10Worker不变。两游戏当前来源重新选择通过，不是新内容云验收。
+[R28恢复来源接续](../../reports/payload-recovery-source-2026-11-03-r28/README.md)关闭[V1五个有限工作包](../../plans/payload-v1-completion-2026-11-03.md)中的C02工程子项。显式只读`publish-source-recover`重验已知完整兼容恢复的封存/renewal/journal/实际响应、公开A/双UUID/模块/配置/静态/七服务拓扑，下一候选准备/retain与跨游戏共享Main交接可用；历史完成时间不延长实时门禁，未知外部UUID仍拒绝。57新回归含双游戏完整磁盘链与loopback，另修复NTE旧preview reader硬编码Genshin；CMS165/typegen/typecheck、桌面655/Node304/Python49/inventory通过，27工具/helper文件安装验摘要。安全HTTP9/9、DB84draft/hold/0eligible与10Worker不变，无bundle覆盖/内容或云写入/CMS重启。Router及1low结论沿用R27，不是新内容云验收。
 
-**下一工程最高优先级：兼容恢复后新UUID的可信来源接续**，目前成功恢复不符合source-advance成功promotion合约，跨游戏Main也不能直接rebind。只修已知完整恢复来源，不接纳外部未知版本。随后真实Genshin首次/连续/partial failure/恢复/再发、NTE共享Main与独立key/跨机验收；准确度/全类型迁移后置，不制造编辑凑发布。当前仍未完成真实云上线验收，完整P/T任务不关闭。下方R26及更早为历史。
+**下一优先级是C03真实Genshin首次/连续/partial failure/恢复接续再发**，随后C04 NTE共享Main与C05独立key/跨机验收；不再新增首发便利工具。C01/C02工程完成不等于真实云上线验收；准确度/全类型迁移后置，不制造编辑凑发布，完整P/T任务不关闭。当前DB没有合格published候选。下方R26及更早为历史。
 
 ### R26 基线
 
