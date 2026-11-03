@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { digest, pinnedJson } from './desktop-release-assets.mjs';
-import { boundedBody, pageFingerprint } from './desktop-version-preview.mjs';
+import { boundedBody, pageFingerprint, sampleReadOnly } from './desktop-version-preview.mjs';
 
 // Reviewed Router HTML policy and the exact currently observed Cloudflare
 // managed robots prefix. A managed-rule change requires a fresh review.
@@ -75,15 +75,15 @@ export async function verifyPublicHTTP({ owner, game, references, directory, req
   const rows = publicReferences(owner, references, game), result = { status: 'running', origin: 'https://gachia.com', owner, observations: [] };
   mkdirSync(directory, { mode: 0o700 });
   try {
-    for (const reference of rows) {
+    await sampleReadOnly(rows, async (reference, index) => {
       const response = await request(result.origin + reference.path, { method: 'GET', credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(30000) });
-      const body = await boundedBody(response), bodyFile = `${result.observations.length}.body`;
+      const body = await boundedBody(response), bodyFile = `${index}.body`;
       writeFileSync(join(directory, bodyFile), body, { flag: 'wx', mode: 0o600 });
-      result.observations.push({ path: reference.path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(body), bodyFile, bytes: body.length });
+      result.observations[index] = { path: reference.path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(body), bodyFile, bytes: body.length };
       validatePublicResponse(response, body, reference);
-    }
+    });
     result.status = 'passed';
   } catch (error) { result.status = 'failed'; result.error = error.message; throw error; }
-  finally { writeFileSync(join(directory, 'result.json'), JSON.stringify(result, null, 2) + '\n', { flag: 'wx', mode: 0o600 }); }
+  finally { result.observations = result.observations.filter(Boolean); writeFileSync(join(directory, 'result.json'), JSON.stringify(result, null, 2) + '\n', { flag: 'wx', mode: 0o600 }); }
   return { ...result, evidenceSHA256: digest(readFileSync(join(directory, 'result.json'))) };
 }

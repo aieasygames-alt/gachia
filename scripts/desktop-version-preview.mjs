@@ -4,6 +4,36 @@ import { join } from 'node:path';
 import { digest } from './desktop-release-assets.mjs';
 
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
+
+export function readRetryFetch(request, { pause = ms => new Promise(resolve => setTimeout(resolve, ms)) } = {}) {
+  assert.equal(typeof request, 'function');
+  return async (input, options = {}) => {
+    const url = new URL(input instanceof Request ? input.url : input);
+    const method = (options.method ?? (input instanceof Request ? input.method : 'GET')).toUpperCase();
+    const reviewed = url.protocol === 'https:' && (['api.cloudflare.com', 'gachia.com'].includes(url.hostname) ||
+      /^[a-f0-9]{8}-gachia(?:-game-(?:genshin|nte))?\.aieasygames\.workers\.dev$/.test(url.hostname));
+    for (let attempt = 0; ; attempt++) {
+      try { return await request(input, options); }
+      catch (error) {
+        if (method !== 'GET' || !reviewed || !(error instanceof TypeError) || options.signal?.aborted || attempt === 2) throw error;
+        await pause(250 * (attempt + 1));
+      }
+    }
+  };
+}
+
+export async function sampleReadOnly(items, sample) {
+  let next = 0, failed;
+  // Only reads overlap. All active writers settle before a failure is returned.
+  await Promise.all(Array.from({ length: Math.min(4, items.length) }, async () => {
+    while (!failed && next < items.length) {
+      const index = next++;
+      try { await sample(items[index], index); } catch (error) { failed ??= { error }; }
+    }
+  }));
+  if (failed) throw failed.error;
+}
+
 export function exactPreviewOrigin(service, versionId) {
   assert(['gachia', 'gachia-game-genshin', 'gachia-game-nte'].includes(service), 'Unreviewed preview service');
   assert(UUID.test(versionId), 'Exact version UUID required');
@@ -64,17 +94,17 @@ export async function verifyVersionPreview({ service, versionId, references, dir
   mkdirSync(directory, { mode: 0o700 });
   const result = { status: 'running', service, versionId, origin, observations: [] };
   try {
-    for (const reference of references) {
+    await sampleReadOnly(references, async (reference, index) => {
       const path = reference.path;
       assert(path.startsWith('/') && !path.startsWith('//') && !path.includes('\\') && new URL(path, origin).origin === origin, 'Preview origin escape');
       const response = await request(origin + path, { method: 'GET', credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(30000) });
-      const bytes = await boundedBody(response), bodyFile = `${result.observations.length}.body`;
+      const bytes = await boundedBody(response), bodyFile = `${index}.body`;
       writeFileSync(join(directory, bodyFile), bytes, { flag: 'wx', mode: 0o600 });
-      result.observations.push({ path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(bytes), bytes: bytes.length, bodyFile });
+      result.observations[index] = { path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(bytes), bytes: bytes.length, bodyFile };
       validatePreviewResponse({ path, response, bytes, reference });
-    }
+    });
     result.status = 'passed';
   } catch (error) { result.status = 'failed'; result.error = error.message; throw error; }
-  finally { writeFileSync(join(directory, 'result.json'), JSON.stringify(result, null, 2) + '\n', { flag: 'wx', mode: 0o600 }); }
+  finally { result.observations = result.observations.filter(Boolean); writeFileSync(join(directory, 'result.json'), JSON.stringify(result, null, 2) + '\n', { flag: 'wx', mode: 0o600 }); }
   return { ...result, evidenceSHA256: digest(readFileSync(join(directory, 'result.json'))) };
 }

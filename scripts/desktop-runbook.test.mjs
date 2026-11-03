@@ -39,7 +39,7 @@ test('operator handoff makes the remaining manual evidence and cloud gaps explic
   assert.match(text, /原始游戏来源/);
   assert.match(text, /没有“latest”、原始O回退或部署后自动接续/);
   assert.match(text, /仍须为新候选执行assets-refresh、baseline-capture、recovery-local-prepare与全部云门禁/);
-  assert.match(text, /首次真实编辑的云端验收尚未完成/);
+  assert.match(text, /保存或 published 不等于公网更新/);
   assert.match(text, /不能删日志/);
   assert.match(text, /title \/ body/);
   assert.match(text, /admin\/reviewer/);
@@ -73,5 +73,6 @@ test('limited V1 stays on this Mac and separates verified local recovery from in
   assert(!recovery.includes('### 第二台Mac验收清单'));
   assert.match(text, /Payload CMS只在这台Mac运行，不要求第二台Mac或跨机启动验收/);
   assert.match(entry, /只在这台Mac运行，不要求第二台Mac或跨机启动验收/);
-  assert.match(plan, /方案尚未实现\/安装，当前仍fail closed/);
+  assert.match(plan, /payload-version-provenance-2026-11-03\.md/);
+  assert.match(text, /未知外部UUID仍拒绝/);
 });

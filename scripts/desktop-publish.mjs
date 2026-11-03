@@ -455,6 +455,8 @@ async function main() {
   const opts = options(process.argv.slice(2));
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Only the installed Mac may prepare releases');
   assert(existsSync(join(ROOT, 'settings.json')), 'Install the desktop CMS first');
+  const { readRetryFetch } = await import('./desktop-version-preview.mjs');
+  globalThis.fetch = readRetryFetch(globalThis.fetch);
   if (opts.action === 'project-inventory') {
     const { preparationReader } = await import('./desktop-local-evidence.mjs');
     const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
