@@ -6,6 +6,7 @@ import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
 import { pinnedJson } from './desktop-release-assets.mjs';
 import { acceptedPreviewJournal, readReleaseJournal, verifySavedPreview } from './desktop-release-readiness.mjs';
 import { exactPreviewOrigin } from './desktop-version-preview.mjs';
+import { readUploadedModuleReceipt } from './desktop-version-provenance.mjs';
 
 const SHA = /^[a-f0-9]{64}$/;
 
@@ -75,6 +76,10 @@ export function verifyRecoveryReceiptFiles(input, verified, maxAge = 900000) {
     const config = pinnedJson(join(verified.directory, owner, 'upload.json'), row.configSHA256);
     const version = pinnedJson(join(directory, `${owner}-version.json`), proof.versionSHA256);
     assertUploadedVersion(version, proof.versionId, config, verified.manifest.snapshot.bindings[row.service]);
+    const module = readUploadedModuleReceipt(proof.moduleProof, { service: row.service, versionId: proof.versionId, moduleSHA256: row.moduleSHA256,
+      context: { role: 'recovery', releaseKey: input.releaseKey, configSHA256: row.configSHA256 } });
+    assert(Date.parse(module.receipt.capturedAt) <= proof.acceptedAt, 'Recovery module captured after preview acceptance');
+    assert.deepEqual(module.version, version, 'Recovery receipt version differs from original capture');
     const references = pinnedJson(join(verified.directory, owner, 'references.json'), row.referencesSHA256);
     verifySavedPreview(join(directory, `${owner}-http`), proof, references);
   }
@@ -102,6 +107,9 @@ function readPromotionEvidence(input, renewalOnly) {
   for (const owner of plan.owners) {
     const row = manifest.owners[owner], proof = accepted[row.service];
     assert.notEqual(proof.versionId, recovery.receipt.owners[owner].versionId, 'Candidate UUID cannot serve as recovery');
+    const module = readUploadedModuleReceipt(proof.moduleProof, { service: row.service, versionId: proof.versionId, moduleSHA256: row.moduleSHA256,
+      context: { role: 'candidate', releaseKey: plan.releaseKey, configSHA256: row.configSHA256 } });
+    assert(Date.parse(module.receipt.capturedAt) <= proof.acceptedAt, 'Candidate module captured after preview acceptance');
     const refs = pinnedJson(join(candidate.directory, owner, 'references.json'), row.referencesSHA256);
     verifySavedPreview(join(input.run, `cloud-preview-${manifest.id}`, `${owner}-http`), proof, refs);
   }

@@ -10,6 +10,7 @@ import { isolatedEnvironment, withLocalWorker, withRunLock } from './desktop-pub
 import { activeVersion, assertTopology, desktopCloudSnapshot, executeReleaseProtocol } from './desktop-cloud-release.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint, verifyVersionPreview } from './desktop-version-preview.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
+import { captureUploadedModule, revalidateUploadedModule } from './desktop-version-provenance.mjs';
 
 const ACCOUNT = 'e6472b6c6172a3ac1e1596ef100543ae';
 const CONFIG_PINS = { main: 'b1693ed74f4428f9180e877643d3455c43aef29161dc03ed223c3f4c64b973ff', genshin: '71044abce9df463b547e471016b62f83715aba87c764d394bdd9336e0724add2', nte: '24a9c035334cd7cd8fd9587ed36d8fbac2b2d4a685b0ee8277b92f3ca7724ebf' };
@@ -270,7 +271,7 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
     assert(scope.services.includes(service), 'Release service/game mismatch');
     const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`, { method: 'GET', redirect: 'error', headers: { authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(180000) });
     assert(response.ok, `Version read failed: ${response.status}`);
-    if (binary) return multipartModule(await boundedBody(response));
+    if (binary) return { archive: await boundedBody(response), etag: response.headers.get('etag') };
     const body = await response.json(); assert(body.success); return body.result;
   };
   const recheck = () => verifyCloudBundle({ run, pin, id, bundlePin });
@@ -297,15 +298,19 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
       assertUploadMetadata(form.metadata, pinnedJson(join(verified.directory, args.owner, 'upload.json'), record.configSHA256));
       const version = await api(args.service, `/versions/${versionId}`);
       assertUploadedVersion(version, versionId, pinnedJson(join(verified.directory, args.owner, 'upload.json'), record.configSHA256), verified.manifest.snapshot.bindings[args.service]);
-      assert.equal((await api(args.service, `/content/v2?version=${versionId}`, true)).moduleSHA256, record.moduleSHA256, 'Cloud module bytes differ');
+      const moduleProof = await captureUploadedModule({ service: args.service, versionId, moduleSHA256: record.moduleSHA256,
+        context: { role: 'candidate', releaseKey, configSHA256: record.configSHA256 }, directory: join(directory, `${args.owner}-module`), uploadPath: outfile,
+        uploadLogPath: join(directory, `${args.owner}-upload.log`),
+        expectedVersion: version, readVersion: (service, uuid) => api(service, `/versions/${uuid}`), readContent: (service, uuid) => api(service, `/content/v2?version=${uuid}`, true) });
       save(join(directory, `${args.owner}-version.json`), version); recheck();
-      return { versionId, releaseKey, artifactSHA256: record.artifactSHA256, moduleSHA256: record.moduleSHA256 };
+      return { versionId, releaseKey, artifactSHA256: record.artifactSHA256, moduleSHA256: record.moduleSHA256, moduleProof };
     },
     preview: async args => {
       recheck(); const record = verified.manifest.owners[args.owner];
       const references = pinnedJson(join(verified.directory, args.owner, 'references.json'), record.referencesSHA256);
       const proof = await verifyVersionPreview({ service: args.service, versionId: args.versionId, references, directory: join(directory, `${args.owner}-http`) });
-      assert.equal((await api(args.service, `/content/v2?version=${args.versionId}`, true)).moduleSHA256, record.moduleSHA256); recheck();
+      await revalidateUploadedModule({ proof: args.moduleProof, service: args.service, versionId: args.versionId, moduleSHA256: record.moduleSHA256,
+        context: { role: 'candidate', releaseKey, configSHA256: record.configSHA256 }, readVersion: (service, uuid) => api(service, `/versions/${uuid}`) }); recheck();
       return { ...args, status: proof.status, evidenceSHA256: proof.evidenceSHA256 };
     },
   };
@@ -331,7 +336,7 @@ export async function uploadRecoveryPreview(input) {
     const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`,
       { method: 'GET', redirect: 'error', headers: { authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(30000) });
     assert(response.ok, `Recovery version read failed: ${response.status}`);
-    if (binary) return multipartModule(await boundedBody(response));
+    if (binary) return { archive: await boundedBody(response), etag: response.headers.get('etag') };
     const body = JSON.parse((await boundedBody(response)).toString()); assert.equal(body.success, true); return body.result;
   };
   return executeRecoveryUpload({ input, verify: () => {
@@ -357,14 +362,18 @@ export async function uploadRecoveryPreview(input) {
       assert.equal(form.moduleSHA256, row.moduleSHA256); assertUploadMetadata(form.metadata, config);
       const version = await readVersion(row.service, versionId);
       assertUploadedVersion(version, versionId, config, verified.manifest.snapshot.bindings[row.service]);
-      assert.equal((await readVersion(row.service, versionId, true)).moduleSHA256, row.moduleSHA256);
+      const moduleProof = await captureUploadedModule({ service: row.service, versionId, moduleSHA256: row.moduleSHA256,
+        context: { role: 'recovery', releaseKey: input.releaseKey, configSHA256: row.configSHA256 }, directory: join(directory, `${owner}-module`),
+        uploadPath: join(directory, `${owner}.multipart`), uploadLogPath: join(directory, `${owner}-upload.log`), expectedVersion: version, readVersion,
+        readContent: (service, uuid) => readVersion(service, uuid, true) });
       save(join(directory, `${owner}-version.json`), version);
-      return { versionSHA256: digest(json(version)) };
+      return { versionSHA256: digest(json(version)), moduleProof };
     },
-    preview: async ({ owner, row, versionId, verified, directory }) => {
+    preview: async ({ owner, row, versionId, verified, directory, inspected }) => {
       const references = pinnedJson(join(verified.directory, owner, 'references.json'), row.referencesSHA256);
       const proof = await verifyVersionPreview({ service: row.service, versionId, references, directory: join(directory, `${owner}-http`) });
-      assert.equal((await readVersion(row.service, versionId, true)).moduleSHA256, row.moduleSHA256);
+      await revalidateUploadedModule({ proof: inspected.moduleProof, service: row.service, versionId, moduleSHA256: row.moduleSHA256,
+        context: { role: 'recovery', releaseKey: input.releaseKey, configSHA256: row.configSHA256 }, readVersion });
       return proof;
     },
   } });
@@ -415,13 +424,14 @@ export async function executeRecoveryUpload({ input, verify, transport }) {
         const inspected = await transport.inspect({ ...context, versionId });
         assert(/^[a-f0-9]{64}$/.test(inspected.versionSHA256));
         await recheck(); assertTopology(baseline, await transport.snapshot());
-        const proof = await transport.preview({ ...context, versionId });
+        const proof = await transport.preview({ ...context, versionId, inspected });
         assert.equal(proof.status, 'passed');
         assert.equal(proof.service, service); assert.equal(proof.versionId, versionId);
         assert(/^[a-f0-9]{64}$/.test(proof.evidenceSHA256));
         await recheck(); assertTopology(baseline, await transport.snapshot());
         owners[owner] = { service, versionId, sourceVersionId: row.sourceVersionId, candidateArtifactSHA256: row.candidateArtifactSHA256,
-          moduleSHA256: row.moduleSHA256, recoveryArtifactSHA256: row.recoveryArtifactSHA256, versionSHA256: inspected.versionSHA256, evidenceSHA256: proof.evidenceSHA256, acceptedAt: Date.now() };
+          moduleSHA256: row.moduleSHA256, recoveryArtifactSHA256: row.recoveryArtifactSHA256, versionSHA256: inspected.versionSHA256,
+          ...(inspected.moduleProof ? { moduleProof: inspected.moduleProof } : {}), evidenceSHA256: proof.evidenceSHA256, acceptedAt: Date.now() };
         record({ phase: 'preview_accepted', owner, proof: owners[owner] }); pendingOperation = undefined;
       }
       await recheck(); assertTopology(baseline, await transport.snapshot());

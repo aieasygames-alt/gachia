@@ -93,6 +93,7 @@ export function acceptedPreviewJournal(journal, verified, now = Date.now(), maxA
       assert.equal(value.moduleSHA256, record.moduleSHA256); assert.equal(value.versionId, result.versionId);
     }
     assert.equal(proof.status, 'passed'); assert(SHA.test(proof.evidenceSHA256));
+    assert.deepEqual(proof.moduleProof, result.moduleProof, 'Module receipt differs from upload journal');
     assert.deepEqual(saved, { ...proof, acceptedAt: saved.acceptedAt });
     assert(Number.isSafeInteger(saved.acceptedAt) && saved.acceptedAt <= now && now - saved.acceptedAt < maxAge, 'Preview acceptance expired or in future');
     assert(Math.abs(Date.parse(preview.at) - saved.acceptedAt) < 1000, 'Preview time differs from journal');

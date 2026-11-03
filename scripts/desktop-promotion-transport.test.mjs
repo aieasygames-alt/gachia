@@ -7,6 +7,7 @@ import test from 'node:test';
 import { createPromotionTransport, promoteDesktopRelease } from './desktop-promotion-transport.mjs';
 import { executePromotionContinuation, SERVICES } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
+import { moduleReceipt } from './fixtures/desktop-module-receipt.mjs';
 
 const sha = 'a'.repeat(64), retentionId = 'a'.repeat(16);
 const uuid = n => `00000000-0000-0000-0000-${String(n).padStart(12, '0')}`;
@@ -31,17 +32,18 @@ async function fixture(t, failure) {
       const assets = { serve_directly: true, raw_run_worker_first: false, base_path: '/' };
       if (owner === 'main') Object.assign(assets, { headers: { version: 2, rules: { '/_next/static/*': { set: { 'cache-control': 'public,max-age=31536000,immutable' }, unset: [] } } },
         raw_headers: '/_next/static/*\n  Cache-Control: public,max-age=31536000,immutable\n' });
-      const version = { id: versionId, metadata: { has_preview: true }, resources: { bindings: [], script_runtime: {
+      const version = { id: versionId, metadata: { has_preview: true }, resources: { script: { etag: digest(`vendor-${code}`) }, bindings: [], script_runtime: {
         compatibility_date: '2026-01-01', compatibility_flags: ['nodejs_compat'], usage_model: 'standard', assets,
       } } };
       const form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
       const bytes = Buffer.from(await new Response(form).arrayBuffer()); cloud.set(`${service}/${versionId}`, { version, bytes, kind });
+      const moduleProof = await moduleReceipt({ directory, service, version, code, bytes, role: kind, releaseKey: sha, configSHA256 });
       if (kind === 'candidate') {
         row.referencesSHA256 = save(join(directory, 'references.json'), [{ path: owner === 'main' ? '/data/genshin/raw-guides.json' : '/_next/static/test.js', status: 200,
           headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=0' }, sha256: digest('{}') }]);
-        owners[owner] = row; accepted[service] = { service, versionId, moduleSHA256, artifactSHA256: sha, status: 'passed', releaseKey: sha, evidenceSHA256: sha, acceptedAt: Date.now() };
+        owners[owner] = row; accepted[service] = { service, versionId, moduleSHA256, moduleProof, artifactSHA256: sha, status: 'passed', releaseKey: sha, evidenceSHA256: sha, acceptedAt: Date.now() };
       } else {
-        recoveryOwners[owner] = row; recoveryProofs[owner] = { versionId, moduleSHA256, sourceVersionId: baseline.services[service].versions[0].version_id,
+        recoveryOwners[owner] = row; recoveryProofs[owner] = { versionId, moduleSHA256, moduleProof, sourceVersionId: baseline.services[service].versions[0].version_id,
           candidateArtifactSHA256: sha, evidenceSHA256: sha, acceptedAt: Date.now() };
       }
     }
@@ -49,6 +51,13 @@ async function fixture(t, failure) {
   const evidence = { plan: { game: 'genshin', preview: false, changed: ['guide'], owners: ['genshin', 'main'], releaseKey: sha },
     manifest: { retentionId, owners, snapshot: baseline }, accepted, baseline, journalPin: sha, recoveryPin: sha,
     recovery: { status: 'exact_cloud_recovery_previews_accepted', releaseKey: sha, owners: recoveryProofs } };
+  if (failure === 'module') writeFileSync(JSON.parse(readFileSync(recoveryProofs.main.moduleProof.path)).archive.path, 'tampered');
+  if (failure === 'missing-proof') delete recoveryProofs.main.moduleProof;
+  if (failure === 'swapped-proof') recoveryProofs.main.moduleProof = accepted.gachia.moduleProof;
+  if (failure?.startsWith('missing-') && failure !== 'missing-proof') {
+    const [, owner, kind] = failure.split('-'), target = kind === 'candidate' ? accepted[owners[owner].service] : recoveryProofs[owner];
+    delete target.moduleProof;
+  }
   const journal = () => readFileSync(join(run, `promotion-${retentionId}.jsonl`), 'utf8').trim().split('\n').map(JSON.parse);
   const request = async (url, options) => {
     calls.push({ url, method: options.method }); assert.equal(options.redirect, 'error');
@@ -63,7 +72,8 @@ async function fixture(t, failure) {
     const [service, operation, versionId] = suffix?.split('/') ?? [];
     if (options.method === 'POST') {
       assert.equal(operation, 'deployments'); assert.equal(journal().at(-1).phase, 'promotion_intent');
-      assert.equal(calls.filter(c => c.url.includes('/content/v2?')).length, 4, 'All four cloud modules checked before write');
+      assert.equal(calls.filter(c => c.url.includes('/content/v2?')).length, 0, 'Historical content must not be downloaded');
+      assert.equal(calls.filter(c => c.url.includes('/versions/')).length, 4, 'All four immutable-version identities checked before write');
       const body = JSON.parse(options.body);
       assert.deepEqual(body, { strategy: 'percentage', versions: [{ version_id: accepted[service].versionId, percentage: 100 }] });
       if (failure === 'second-write' && service === 'gachia') return new Response('', { status: 503 });
@@ -109,12 +119,24 @@ test('composed transport verifies four cloud modules, promotes exact versions an
   const count = f.calls.length; await assert.rejects(executePromotionContinuation(f.options), /EEXIST/); assert.equal(f.calls.length, count);
 });
 
-for (const failure of ['module', 'version', 'read', 'ignored-version-selector', 'second-write', 'lost-response', 'public', 'public-drift']) test(`composed transport stops and reconciles ${failure}`, async t => {
+test('latest content ignoring the selector cannot replace any of the four archived modules', async t => {
+  const f = await fixture(t, 'ignored-version-selector');
+  assert.equal((await executePromotionContinuation(f.options)).status, 'production_accepted');
+  assert.equal(f.calls.filter(row => row.url.includes('/content/')).length, 0);
+});
+
+for (const owner of ['genshin', 'main']) for (const kind of ['candidate', 'recovery']) test(`missing ${owner} ${kind} receipt causes zero promotion POST`, async t => {
+  const f = await fixture(t, `missing-${owner}-${kind}`);
+  await assert.rejects(executePromotionContinuation(f.options), /receipt required/);
+  assert.equal(f.calls.filter(row => row.method === 'POST').length, 0);
+});
+
+for (const failure of ['module', 'version', 'read', 'missing-proof', 'swapped-proof', 'second-write', 'lost-response', 'public', 'public-drift']) test(`composed transport stops and reconciles ${failure}`, async t => {
   const f = await fixture(t, failure); await assert.rejects(executePromotionContinuation(f.options));
   const rows = f.journal(); assert(rows.some(r => r.phase === 'stopped')); assert.equal(rows.at(-1).phase, 'reconciliation');
   assert(!rows.some(r => r.phase === 'production_accepted'));
   const writes = f.calls.filter(c => c.method === 'POST').length;
-  assert.equal(writes, ['module', 'version', 'read', 'ignored-version-selector'].includes(failure) ? 0 : failure === 'lost-response' ? 1 : 2);
+  assert.equal(writes, ['module', 'version', 'read', 'missing-proof', 'swapped-proof'].includes(failure) ? 0 : failure === 'lost-response' ? 1 : 2);
   if (failure === 'second-write') assert.equal(rows.filter(r => r.phase === 'promoted').length, 1);
   if (failure === 'lost-response') assert(rows.at(-1).result.unresolvedOperation);
   assert(!existsSync(join(f.run, 'operation.lock')));

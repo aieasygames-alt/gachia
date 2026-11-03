@@ -14,6 +14,7 @@ import { loadPublicReferences, publicReferences, validatePublicResponse } from '
 import { verifyVersionPreview } from './desktop-version-preview.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { readRecoveredCandidate } from './desktop-recovered-source.mjs';
+import { readUploadedModuleReceipt } from './desktop-version-provenance.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (path, value) => { const raw = json(value); writeFileSync(path, raw, { flag: 'wx', mode: 0o600 }); return digest(raw); };
@@ -38,7 +39,7 @@ export function readPublishedCandidate(input) {
     assert.equal(row.previewJournalPin, start.previewJournalPin); assert.equal(row.recoveryPin, start.recoveryPin);
     assert(Date.parse(row.at) >= at && Date.parse(row.at) <= Date.now(), 'Publication chronology changed'); at = Date.parse(row.at);
   }
-  const versions = {}, modules = {};
+  const versions = {}, modules = {}, moduleProofs = {};
   for (const [i, owner] of scope.owners.entries()) {
     const record = manifest.owners[owner], accepted = start.accepted[record.service];
     assert.equal(accepted.status, 'passed'); assert.equal(accepted.service, record.service);
@@ -49,6 +50,11 @@ export function readPublishedCandidate(input) {
       assert.equal(row.owner, owner); assert.equal(row.service, record.service); assert.equal(row.versionId, accepted.versionId);
     }
     versions[record.service] = accepted.versionId; modules[record.service] = record.moduleSHA256;
+    if (accepted.moduleProof) {
+      readUploadedModuleReceipt(accepted.moduleProof, { service: record.service, versionId: accepted.versionId, moduleSHA256: record.moduleSHA256,
+        context: { role: 'candidate', releaseKey: plan.releaseKey, configSHA256: record.configSHA256 } });
+      moduleProofs[owner] = accepted.moduleProof;
+    }
   }
   assert.equal(remote.proof.status, 'passed'); assert.deepEqual(remote.proof.versions, versions); assert.deepEqual(remote.proof.modules, modules);
   const directory = join(input.run, `promotion-evidence-${manifest.retentionId}`);
@@ -72,7 +78,7 @@ export function readPublishedCandidate(input) {
       validatePublicResponse(new Response(null, { status: row.status, headers: row.headers }), body, reference);
     }
   }
-  return { ...candidate, versions };
+  return { ...candidate, versions, ...(Object.keys(moduleProofs).length ? { moduleProofs } : {}) };
 }
 
 const sourceDirectory = (candidate, run, owner) => candidate.sourceDirectories?.[owner] ?? join(run, 'retained', candidate.manifest.retentionId, owner, '.open-next');
@@ -128,14 +134,15 @@ function completedSourceInputs(origin, versions, recovered) {
     assert.deepEqual(tree.filter(file => file.path !== 'worker.js'), source.tree.filter(file => file.path !== 'worker.js'));
     assert(tree.every(file => !file.path.startsWith('assets/') || file.type !== 'link'), 'Linked published asset forbidden');
     assert.equal(digest(readFileSync(join(directory, 'worker.js'))), record.moduleSHA256); assert.equal(row.runtimeModuleSHA256, record.moduleSHA256);
+    assert.deepEqual(row.moduleProof, candidate.moduleProofs?.[owner], 'Source module receipt differs from completed publication');
     verifySavedPreview(join(dirname(origin.proofPath), `${owner}-http`), { service: record.service, versionId: versions[owner], evidenceSHA256: row.previewPin }, source.references);
     for (const reference of source.references.filter(row => source.dynamic.includes(row.path))) {
       const i = source.references.indexOf(reference);
       references.push({ owner, ...reference, body: readFileSync(join(candidate.directory, owner, `${i}.body`)) });
     }
     for (const [i, reference] of source.references.entries()) allReferences.push({ owner, ...reference, body: readFileSync(join(candidate.directory, owner, `${i}.body`)) });
-    profile.owners[owner] = { directory, versionId: versions[owner], artifactSHA256: row.artifactSHA256 };
-    evidence.owners[owner] = { runtimeModuleSHA256: row.runtimeModuleSHA256 };
+    profile.owners[owner] = { directory, versionId: versions[owner], artifactSHA256: row.artifactSHA256, ...(row.moduleProof ? { moduleProof: row.moduleProof } : {}) };
+    evidence.owners[owner] = { runtimeModuleSHA256: row.runtimeModuleSHA256, ...(row.moduleProof ? { moduleProof: row.moduleProof } : {}) };
   }
   assert.equal(digest(readFileSync(join(profile.owners.main.directory, `assets/data/${candidate.plan.game}/raw-guides.json`))), baseline.contentSHA256);
   assert.deepEqual(proof.assets, origin.assets);
@@ -183,7 +190,7 @@ async function advanceCompletedSource({ input, root, directory, reader, request 
       const version = await reader.version(record.service, versionId);
       assertUploadedVersion(version, versionId, pinnedJson(join(candidate.directory, owner, 'upload.json'), record.configSHA256), before.bindings[record.service]);
       remoteVersions[owner] = version;
-      const module = await reader.module(record.service, versionId); modules[owner] = module;
+      const module = await reader.module(record.service, versionId, candidate.moduleProofs?.[owner]); modules[owner] = module;
       assert.equal(module.moduleSHA256, record.moduleSHA256); assert.equal(digest(module.code), record.moduleSHA256);
       assert.equal((await multipartModule(module.archive)).moduleSHA256, record.moduleSHA256);
       writeFileSync(join(directory, `${owner}.multipart`), module.archive, { flag: 'wx', mode: 0o600 });
@@ -193,6 +200,7 @@ async function advanceCompletedSource({ input, root, directory, reader, request 
       writeFileSync(join(target, 'worker.js'), module.code, { mode: 0o600 });
       const preview = await verifyVersionPreview({ service: record.service, versionId, references: source.references, directory: join(directory, `${owner}-http`), request });
       owners[owner] = { artifactSHA256: digest(json(artifactFiles(target))), runtimeModuleSHA256: record.moduleSHA256,
+        ...(module.moduleProof ? { moduleProof: module.moduleProof } : {}), ...(module.provenanceMode ? { provenanceMode: module.provenanceMode } : {}),
         versionPin: save(join(directory, `${owner}-version.json`), version), previewPin: preview.evidenceSHA256, multipartPin: digest(module.archive) };
     }
     const gameDirectory = join(directory, plan.game, '.open-next'), capture = join(directory, 'game-assets'); mkdirSync(capture, { mode: 0o700 });
@@ -210,6 +218,7 @@ async function advanceCompletedSource({ input, root, directory, reader, request 
       workerArchive: bound('worker.multipart'), inventory: bound('inventory.json'), staticDirectory: 'static', files });
     const evidencePath = join(directory, 'asset-evidence.json'), mainStatic = join(directory, 'main/.open-next/assets/_next/static');
     const evidencePin = save(evidencePath, { schemaVersion: 1, game: plan.game,
+      ...(candidate.moduleProofs ? { moduleProofs: candidate.moduleProofs } : {}),
       gameAssets: readPreviousGameAssets(receiptPath, { game: plan.game, rollbackVersion: versionId }).summary,
       main: { source: mainProvenance(input, candidate), previousStatic: mainStatic, files: previousAssetFiles(mainStatic) } });
     assert.deepEqual(readDeployment(input, recovered), Object.fromEntries(Object.entries(candidate).filter(([key]) => key !== 'run')));

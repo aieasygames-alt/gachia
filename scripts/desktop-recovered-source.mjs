@@ -34,7 +34,7 @@ export function readRecoveredCandidate(input) {
   for (const row of promotion.rows) assert(Date.parse(row.at) <= Date.parse(journal.rows[0].at), 'Promotion occurred after recovery began');
   assert.equal(journal.rows[0].renewalId, input.renewalId); assertTopology(value.observed, journal.rows[0].observed);
   for (const row of Object.values(value.evidence.accepted)) assert(row.acceptedAt <= Date.parse(journal.rows[0].at), 'Recovery began before renewal');
-  const versions = {}, modules = {}, sourceDirectories = {};
+  const versions = {}, modules = {}, sourceDirectories = {}, moduleProofs = {};
   for (const [i, owner] of scope.owners.entries()) {
     const row = sealed.manifest.owners[owner], target = value.evidence.recovery.owners[owner];
     assert.notEqual(target.versionId, row.sourceVersionId, 'Raw old UUID recovery forbidden');
@@ -45,6 +45,7 @@ export function readRecoveredCandidate(input) {
       assert(Date.parse(event.at) >= target.acceptedAt && Date.parse(event.at) - target.acceptedAt < 900000, 'Recovery used expired preview');
     }
     versions[row.service] = target.versionId; modules[row.service] = row.moduleSHA256;
+    if (target.moduleProof) moduleProofs[owner] = target.moduleProof;
     sourceDirectories[owner] = join(sealed.recovery.directory, owner, '.open-next');
   }
   assertTopology(original.baseline, value.observed, Object.fromEntries(scope.services.map(service => [service, activeVersion(value.observed, service)])));
@@ -84,5 +85,5 @@ export function readRecoveredCandidate(input) {
   }
   const owners = Object.fromEntries(scope.owners.map(owner => [owner, { ...sealed.manifest.owners[owner], artifactSHA256: sealed.manifest.owners[owner].recoveryArtifactSHA256 }]));
   return { plan, directory: sealed.directory, manifest: { ...sealed.manifest, retentionId: sealed.candidate.manifest.retentionId, owners },
-    versions, sourceDirectories, archiveChecks, contentSHA256: recoveryBaselineSHA256(sealed.recovery, sealed.retained) };
+    versions, sourceDirectories, archiveChecks, ...(Object.keys(moduleProofs).length ? { moduleProofs } : {}), contentSHA256: recoveryBaselineSHA256(sealed.recovery, sealed.retained) };
 }

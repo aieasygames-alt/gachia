@@ -214,7 +214,7 @@ def complete_install(cfg):
     publisher = ROOT / 'publisher'
     publisher.mkdir(mode=0o700)
     for name in ['desktop-publish.mjs', 'verify-worker-artifact.mjs', 'desktop-release-assets.mjs',
-                 'desktop-cloud-release.mjs', 'desktop-cloud-transport.mjs', 'desktop-version-preview.mjs', 'desktop-release-readiness.mjs',
+                 'desktop-cloud-release.mjs', 'desktop-cloud-transport.mjs', 'desktop-version-provenance.mjs', 'desktop-version-preview.mjs', 'desktop-release-readiness.mjs',
                  'desktop-recovery-cloud.mjs', 'desktop-public-acceptance.mjs', 'retain-game-assets.mjs', 'retain-web-assets.mjs']:
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     for name in ['desktop-recovery-receipt.mjs', 'desktop-promotion-request.mjs', 'desktop-promotion-transport.mjs',

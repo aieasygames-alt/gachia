@@ -200,6 +200,7 @@ export async function executeReleaseProtocol({ run, pin, retentionId, retentionP
         assert.equal(proof.versionId, result.versionId, 'Preview UUID differs from uploaded UUID');
         assert.equal(proof.releaseKey, plan.releaseKey); assert.equal(proof.artifactSHA256, artifactSHA256);
         assert.equal(proof.moduleSHA256, result.moduleSHA256); assert(SHA.test(proof.evidenceSHA256), 'Persisted network evidence required');
+        assert.deepEqual(proof.moduleProof, result.moduleProof, 'Module receipt changed between upload and preview');
         assert.equal(proof.status, 'passed');
         accepted[service] = { ...proof, acceptedAt: Date.now() }; record({ phase: 'preview_accepted', owner, service, proof });
       }

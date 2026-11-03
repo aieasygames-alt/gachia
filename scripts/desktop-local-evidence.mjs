@@ -10,6 +10,7 @@ import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint } from './desktop-version-preview.mjs';
 import { publicRobots } from './desktop-public-acceptance.mjs';
+import { revalidateVersionModule } from './desktop-version-provenance.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (file, value) => { writeFileSync(file, json(value), { flag: 'wx', mode: 0o600 }); return digest(json(value)); };
@@ -27,13 +28,12 @@ export function preparationReader(token, request = fetch) {
     assert(response.ok, `Read-only preparation request failed (${new URL(url).pathname}): ${response.status}`);
     return response;
   };
-  const get = async (service, suffix, binary = false) => {
+  const get = async (service, suffix) => {
     assert([...SERVICES, ...STAGING].includes(service), 'Unreviewed observed service');
-    assert(/^\/(?:deployments|settings|subdomain|versions\/[a-f0-9-]{36}|content\/v2\?version=[a-f0-9-]{36})$/.test(suffix), 'Unreviewed read operation');
+    assert(/^\/(?:deployments|settings|subdomain|versions\/[a-f0-9-]{36})$/.test(suffix), 'Unreviewed read operation');
     const response = await read(`https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/${service}${suffix}`, {
       method: 'GET', redirect: 'error', headers: { authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(30000),
     });
-    if (binary) return boundedBody(response);
     const body = await response.json(); assert.equal(body.success, true); return body.result;
   };
   return {
@@ -42,10 +42,9 @@ export function preparationReader(token, request = fetch) {
       exactPreviewOrigin(service, version);
       return get(service, `/versions/${version}`);
     },
-    async module(service, version) {
+    async module(service, version, proof) {
       exactPreviewOrigin(service, version);
-      const archive = await get(service, `/content/v2?version=${version}`, true);
-      return { archive, ...await multipartModule(archive) };
+      return revalidateVersionModule({ proof, service, versionId: version, readVersion: (name, uuid) => get(name, `/versions/${uuid}`) });
     },
     async project() {
       const protectedSnapshot = await desktopCloudSnapshot(token, read), additionalStaging = {};
@@ -79,7 +78,7 @@ export async function refreshAssetEvidence({ plan, evidencePath, evidencePin, di
     assert.equal(activeVersion(before, 'gachia'), original.evidence.main.source.versionId, 'Main source is not current');
     const oldArchive = join(dirname(original.capture.summary.receiptPath), 'worker.multipart');
     const oldModule = await multipartModule(readFileSync(oldArchive));
-    const live = await reader.module(scope.services[0], original.capture.summary.versionId);
+    const live = await reader.module(scope.services[0], original.capture.summary.versionId, original.evidence.moduleProofs?.[plan.game]);
     assert.equal(live.moduleSHA256, oldModule.moduleSHA256, 'Historical game runtime differs from current cloud version');
     writeFileSync(join(directory, 'game-worker.multipart'), live.archive, { flag: 'wx', mode: 0o600 });
     for (const owner of scope.owners) {
@@ -98,7 +97,8 @@ export async function refreshAssetEvidence({ plan, evidencePath, evidencePin, di
     verifyAssetEvidence(evidencePath, evidencePin, plan.game);
     const observationPin = save(join(directory, 'observations.json'), result.observations);
     const evidence = { ...original.evidence, freshCapture: { releaseKey: plan.releaseKey, observedAt: new Date().toISOString(), before, after,
-      observationsPath: join(directory, 'observations.json'), observationsPin: observationPin, gameModuleSHA256: live.moduleSHA256, cloudWrites: false } };
+      observationsPath: join(directory, 'observations.json'), observationsPin: observationPin, gameModuleSHA256: live.moduleSHA256,
+      ...(live.provenanceMode ? { provenanceMode: live.provenanceMode } : {}), cloudWrites: false } };
     const destination = join(directory, 'asset-evidence.json'), pin = save(destination, evidence);
     verifyAssetEvidence(destination, pin, plan.game);
     result.status = 'passed';
@@ -121,7 +121,8 @@ function recoveryInputs({ verified, baselinePath, baselinePin, sourcePath, sourc
     assert(sha.test(source.artifactSHA256));
     assert.equal(realpathSync(source.directory), resolve(source.directory), 'Linked recovery root forbidden');
     assert.equal(digest(json(artifactFiles(source.directory))), source.artifactSHA256, 'Recovery source tree changed');
-    // Assets can be copied; the executable is always re-read from the exact cloud UUID.
+    // Assets can be copied; runtime authority comes from the pinned capture and
+    // fresh immutable-version metadata, not an unversioned content download.
     assert(artifactFiles(source.directory).every(file => !file.path.startsWith('assets/') || file.type !== 'link'), 'Linked asset source forbidden');
   }
   return { scope, baseline, sources, versions };
@@ -138,7 +139,7 @@ export async function prepareLocalRecovery(input) {
     for (const owner of scope.owners) {
       const artifact = join(directory, owner, '.open-next'); mkdirSync(dirname(artifact), { mode: 0o700 });
       cpSync(sources.owners[owner].directory, artifact, { recursive: true, verbatimSymlinks: true, force: false, errorOnExist: true });
-      const live = await reader.module(scope.serviceFor(owner), versions[owner]);
+      const live = await reader.module(scope.serviceFor(owner), versions[owner], sources.owners[owner].moduleProof);
       // Never execute a caller-selected old worker or overwrite the source artifact.
       const worker = join(artifact, 'worker.js'); assert.equal(realpathSync(worker), worker, 'Linked runtime forbidden');
       writeFileSync(worker, live.code, { mode: 0o600 });
@@ -185,7 +186,8 @@ export async function prepareLocalRecovery(input) {
         }
       });
       assert.deepEqual(artifactFiles(artifact), tree, 'Recovery tree changed during sampling');
-      result.owners[owner] = { status: 'passed', oldVersionId: versions[owner], artifactSHA256, runtimeModuleSHA256: live.moduleSHA256, observations, auxiliary };
+      result.owners[owner] = { status: 'passed', oldVersionId: versions[owner], artifactSHA256, runtimeModuleSHA256: live.moduleSHA256,
+        ...(live.moduleProof ? { moduleProof: live.moduleProof } : {}), ...(live.provenanceMode ? { provenanceMode: live.provenanceMode } : {}), observations, auxiliary };
     }
     assertTopology(before, await reader.snapshot()); recoveryInputs(input);
     const evidence = { status: 'old_runtime_with_old_and_new_static_local_http_verified', directory, releaseKey: plan.releaseKey,

@@ -12,6 +12,7 @@ import { verifySavedPreview } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { pageFingerprint, verifyVersionPreview } from './desktop-version-preview.mjs';
 import { publicRobots } from './desktop-public-acceptance.mjs';
+import { assertModuleVersionIdentity, readUploadedModuleReceipt } from './desktop-version-provenance.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (path, value) => { const raw = json(value); writeFileSync(path, raw, { flag: 'wx', mode: 0o600 }); return digest(raw); };
@@ -33,6 +34,8 @@ function inputs(input) {
   const targetAssets = verifyAssetEvidence(target.manifest.assets.path, target.manifest.assets.pin, game);
   const mainAssets = verifyAssetEvidence(donor.manifest.assets.path, donor.manifest.assets.pin, other);
   const assets = { schemaVersion: 1, game, gameAssets: targetAssets.evidence.gameAssets, main: mainAssets.evidence.main };
+  const moduleProofs = Object.fromEntries(Object.entries(profile.owners).filter(([, row]) => row.moduleProof).map(([owner, row]) => [owner, row.moduleProof]));
+  if (Object.keys(moduleProofs).length) assets.moduleProofs = moduleProofs;
   const normalize = reference => {
     assert(!reference.headers['set-cookie']); assert.equal(digest(reference.body), reference.sha256);
     return { path: reference.path, status: reference.status, headers: reference.headers, sha256: reference.sha256,
@@ -64,7 +67,10 @@ function checkVersion(owner, version, context) {
   const scope = assertReleaseScope(context.plan), service = scope.serviceFor(owner), snapshot = context.donor.manifest.before;
   const versionId = context.versions[owner];
   assert.equal(version.id, versionId); assert.equal(version.metadata.has_preview, true);
-  assert.equal(version.resources.script.etag, context.evidence.owners[owner].runtimeModuleSHA256);
+  const moduleProof = context.profile.owners[owner].moduleProof;
+  if (moduleProof) assertModuleVersionIdentity(readUploadedModuleReceipt(moduleProof, { service, versionId,
+    moduleSHA256: context.evidence.owners[owner].runtimeModuleSHA256 }).version, version);
+  else if (owner !== 'main') assert.equal(version.resources.script.etag, context.assets.gameAssets.scriptEtag, 'Rebound legacy script ETag changed');
   assert.deepEqual(normalizedBindings(version.resources.bindings), normalizedBindings(snapshot.bindings[service]));
   for (const key of ['compatibility_date', 'compatibility_flags']) assert.deepEqual(version.resources.script_runtime[key], snapshot.settings[service][key]);
   if (owner === 'main') {
@@ -118,7 +124,7 @@ export async function rebindSourceCatalog({ input, root, directory, reader, requ
     const owners = {};
     for (const owner of scope.owners) {
       const service = scope.serviceFor(owner), version = await reader.version(service, versions[owner]); checkVersion(owner, version, context);
-      const module = await reader.module(service, versions[owner]);
+      const module = await reader.module(service, versions[owner], context.profile.owners[owner].moduleProof);
       assert.equal(module.moduleSHA256, context.evidence.owners[owner].runtimeModuleSHA256); assert.equal(digest(module.code), module.moduleSHA256);
       assert.equal((await multipartModule(module.archive)).moduleSHA256, module.moduleSHA256);
       writeFileSync(join(directory, `${owner}.multipart`), module.archive, { flag: 'wx', mode: 0o600 });

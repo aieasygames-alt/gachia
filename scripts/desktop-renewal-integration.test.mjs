@@ -9,6 +9,7 @@ import { digest } from './desktop-release-assets.mjs';
 import { executeEvidenceRenewal, verifyRenewalFiles } from './desktop-evidence-renewal.mjs';
 import { executeVerifiedManualRecovery, verifyRecoveryPromotionJournal } from './desktop-manual-recovery.mjs';
 import { verifyVersionPreview } from './desktop-version-preview.mjs';
+import { moduleReceipt } from './fixtures/desktop-module-receipt.mjs';
 
 const sha = 'a'.repeat(64), retentionId = 'a'.repeat(16);
 const uuid = n => `00000000-0000-0000-0000-${String(n).padStart(12, '0')}`;
@@ -39,17 +40,18 @@ async function fixture(t, failure, game = 'genshin') {
       const assets = { serve_directly: true, raw_run_worker_first: false, base_path: '/' };
       if (owner === 'main') Object.assign(assets, { headers: { version: 2, rules: { '/_next/static/*': { set: { 'cache-control': 'public,max-age=31536000,immutable' }, unset: [] } } },
         raw_headers: '/_next/static/*\n  Cache-Control: public,max-age=31536000,immutable\n' });
-      const version = { id: versionId, metadata: { has_preview: true }, resources: { bindings: structuredClone(baseline.bindings[service]), script_runtime: {
+      const version = { id: versionId, metadata: { has_preview: true }, resources: { script: { etag: digest(`vendor-${code}`) }, bindings: structuredClone(baseline.bindings[service]), script_runtime: {
         compatibility_date: '2026-01-01', compatibility_flags: ['nodejs_compat'], usage_model: 'standard', assets,
       } } };
       const form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
       const bytes = Buffer.from(await new Response(form).arrayBuffer()); cloud.set(`${service}/${versionId}`, { version, bytes, kind });
+      const moduleProof = await moduleReceipt({ directory, service, version, code, bytes, role: kind, releaseKey: sha, configSHA256 });
       row.referencesSHA256 = save(join(directory, 'references.json'), [{ path: owner === 'main' ? `/data/${game}/raw-guides.json` : '/_next/static/test.js', status: 200,
           headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=0' }, sha256: digest('{}') }]);
       if (kind === 'candidate') {
-        owners[owner] = row; accepted[service] = { service, versionId, moduleSHA256, artifactSHA256: sha, status: 'passed', releaseKey: sha, evidenceSHA256: sha, acceptedAt: Date.now() };
+        owners[owner] = row; accepted[service] = { service, versionId, moduleSHA256, moduleProof, artifactSHA256: sha, status: 'passed', releaseKey: sha, evidenceSHA256: sha, acceptedAt: Date.now() };
       } else {
-        recoveryOwners[owner] = row; recoveryProofs[owner] = { versionId, moduleSHA256, sourceVersionId: baseline.services[service].versions[0].version_id,
+        recoveryOwners[owner] = row; recoveryProofs[owner] = { versionId, moduleSHA256, moduleProof, sourceVersionId: baseline.services[service].versions[0].version_id,
           candidateArtifactSHA256: sha, evidenceSHA256: sha, acceptedAt: Date.now() };
       }
     }
@@ -57,6 +59,7 @@ async function fixture(t, failure, game = 'genshin') {
   const evidence = { plan: { game, preview: false, changed: ['guide'], owners: [game, 'main'], releaseKey: sha },
     manifest: { retentionId, owners, snapshot: baseline }, accepted, baseline, journalPin: sha, recoveryPin: sha,
     recovery: { status: 'exact_cloud_recovery_previews_accepted', releaseKey: sha, owners: recoveryProofs } };
+  if (failure === 'module') writeFileSync(JSON.parse(readFileSync(recoveryProofs.main.moduleProof.path)).archive.path, 'tampered');
   const request = async (url, options) => {
     calls.push({ url, method: options.method }); assert.equal(options.redirect, 'error');
     if (url.startsWith('https://gachia.com/') || url.includes('.aieasygames.workers.dev/')) {
@@ -70,7 +73,8 @@ async function fixture(t, failure, game = 'genshin') {
     const [service, operation, versionId] = suffix?.split('/') ?? [];
     if (options.method === 'POST') {
       assert.equal(operation, 'deployments');
-      assert(calls.filter(c => c.url.includes('/content/v2?')).length >= 4);
+      assert.equal(calls.filter(c => c.url.includes('/content/v2?')).length, 0);
+      assert(calls.filter(c => c.url.includes('/versions/')).length >= 4);
       const body = JSON.parse(options.body);
       assert.equal(body.strategy, 'percentage'); assert.equal(body.versions.length, 1); assert.equal(body.versions[0].percentage, 100); assert(cloud.has(`${service}/${body.versions[0].version_id}`));
       if (failure === 'second-write' && service === 'gachia') return new Response('', { status: 503 });

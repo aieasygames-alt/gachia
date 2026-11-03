@@ -48,7 +48,7 @@ function sourcesFromRecovery(recovery, verified, versions) {
     assert(tree.every(file => !(file.path === 'assets' || file.path.startsWith('assets/')) || file.type !== 'link'), 'Linked asset source forbidden');
     assert.equal(realpathSync(runtime), runtime, 'Linked runtime forbidden');
     assert.equal(digest(readFileSync(runtime)), row.runtimeModuleSHA256, 'Source is not the downloaded cloud runtime');
-    owners[owner] = { directory, versionId: row.oldVersionId, artifactSHA256: row.artifactSHA256 };
+    owners[owner] = { directory, versionId: row.oldVersionId, artifactSHA256: row.artifactSHA256, ...(row.moduleProof ? { moduleProof: row.moduleProof } : {}) };
     for (const reference of [...row.observations, ...(row.auxiliary ?? [])]) {
       assert.match(reference.bodyFile, new RegExp(`^${owner}-[0-9]+\\.body$`));
       const path = join(evidence.directory, reference.bodyFile); assert.equal(realpathSync(path), path);
@@ -162,13 +162,14 @@ function checkInputs({ verified, recovery, assets }, versions) {
 }
 
 async function currentBytes({ plan, sources, versions, reader, request, directory }) {
-  const scope = assertReleaseScope(plan), modules = {};
+  const scope = assertReleaseScope(plan), modules = {}, runtimeSources = {};
   for (const owner of scope.owners) {
-    const live = await reader.module(scope.serviceFor(owner), versions[owner]);
+    const live = await reader.module(scope.serviceFor(owner), versions[owner], sources.profile.owners[owner].moduleProof);
     assert.equal(live.moduleSHA256, sources.evidence.owners[owner].runtimeModuleSHA256, 'Current cloud runtime differs from catalog source');
     assert.equal(digest(live.code), live.moduleSHA256);
     writeFileSync(join(directory, `${owner}-current.multipart`), live.archive, { flag: 'wx', mode: 0o600 });
     modules[owner] = live.moduleSHA256;
+    if (live.provenanceMode) runtimeSources[owner] = { mode: live.provenanceMode, ...(live.moduleProof ? { moduleProof: live.moduleProof } : {}) };
   }
   const path = `/data/${plan.game}/raw-guides.json`, origin = exactPreviewOrigin('gachia', versions.main);
   const response = await request(origin + path, { method: 'GET', credentials: 'omit', redirect: 'error', signal: AbortSignal.timeout(30000) });
@@ -195,8 +196,8 @@ async function currentBytes({ plan, sources, versions, reader, request, director
       assert.deepEqual(publicRobots(bytes.toString()), publicRobots(reference.body.toString()));
     } else assert.equal(digest(bytes), reference.sha256, 'Historical source response differs from current');
   }
-  save(join(directory, 'current.json'), { modules, observations, contentSHA256: digest(body) });
-  return { modules, contentSHA256: digest(body), origin, path, status: response.status, headers: Object.fromEntries(response.headers), observations };
+  save(join(directory, 'current.json'), { modules, runtimeSources, observations, contentSHA256: digest(body) });
+  return { modules, ...(Object.keys(runtimeSources).length ? { runtimeSources } : {}), contentSHA256: digest(body), origin, path, status: response.status, headers: Object.fromEntries(response.headers), observations };
 }
 
 // The catalog is a private index of already verified inputs, not a new approval.

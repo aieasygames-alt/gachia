@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { moduleReceipt } from './fixtures/desktop-module-receipt.mjs';
 import { spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -178,6 +179,7 @@ for (const mutation of ['none', 'body', 'version', 'journal', 'receipt']) test(`
   f.verified.directory = join(f.run, 'sealed'); mkdirSync(f.verified.directory);
   for (const owner of ['genshin', 'main']) {
     const row = f.verified.manifest.owners[owner], directory = join(f.verified.directory, owner); mkdirSync(directory);
+    row.moduleSHA256 = digest(`sealed ${owner}`);
     row.configSHA256 = save(join(directory, 'upload.json'), { name: row.service, compatibility_date: '2026-01-01', compatibility_flags: ['nodejs_compat'] });
     row.referencesSHA256 = save(join(directory, 'references.json'), [{ path: '/data/test.json', status: 200, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' }, sha256: digest('{}') }]);
     f.verified.manifest.snapshot.bindings[row.service] = [];
@@ -189,10 +191,14 @@ for (const mutation of ['none', 'body', 'version', 'journal', 'receipt']) test(`
       headers: { version: 2, rules: { '/_next/static/*': { set: { 'cache-control': 'public,max-age=31536000,immutable' }, unset: [] } } },
       raw_headers: '/_next/static/*\n  Cache-Control: public,max-age=31536000,immutable\n',
     });
-    const version = { id: versionId, metadata: { has_preview: true }, resources: { bindings: [], script_runtime: {
+    const version = { id: versionId, metadata: { has_preview: true }, resources: { script: { etag: digest(`vendor-${owner}`) }, bindings: [], script_runtime: {
       compatibility_date: '2026-01-01', compatibility_flags: ['nodejs_compat'], usage_model: 'standard', assets,
     } } };
-    return { versionSHA256: save(join(directory, `${owner}-version.json`), version) };
+    const code = `sealed ${owner}`, form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
+    const out = join(directory, `${owner}-capture`); mkdirSync(out);
+    const moduleProof = await moduleReceipt({ directory: out, service: row.service, version, code, bytes: Buffer.from(await new Response(form).arrayBuffer()),
+      role: 'recovery', releaseKey: f.input.releaseKey, configSHA256: row.configSHA256 });
+    return { versionSHA256: save(join(directory, `${owner}-version.json`), version), moduleProof };
   };
   f.options.transport.preview = async ({ owner, row, versionId, directory, verified }) => verifyVersionPreview({
     service: row.service, versionId, directory: join(directory, `${owner}-http`),

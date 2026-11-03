@@ -31,7 +31,7 @@ async function fixture(t, game = 'nte', legacy = false, options = {}) {
   };
   const reader = { snapshot: donor.reader.snapshot,
     module: (service, id) => service === `gachia-game-${game}` ? target.reader.module(service, id) : donor.reader.module(service, id),
-    version: async (service, id) => service === `gachia-game-${game}` ? { id, metadata: { has_preview: true }, resources: { script: { etag: digest('downloaded current cloud runtime') }, bindings: donor.current.bindings[service], script_runtime: donor.current.settings[service] } } : donor.reader.version(service, id) };
+    version: async (service, id) => service === `gachia-game-${game}` ? { id, metadata: { has_preview: true }, resources: { script: { etag: 'b'.repeat(64) }, bindings: donor.current.bindings[service], script_runtime: donor.current.settings[service] } } : donor.reader.version(service, id) };
   const args = { input, root: target.input.root, directory: join(target.root, 'rebind'), reader, request };
   const selection = () => ({ root: args.root, directory: join(target.root, 'select-rebound'), plan: { game, owners: [game, 'main'] }, reader, request });
   return { game, other, target, donor, input, old, main, args, reader, request, selection };

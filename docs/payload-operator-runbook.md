@@ -8,7 +8,7 @@
 
 **R29实机停止条件：** Genshin已有正式真实编辑；一个非活动版本已上传，生产仍旧UUID。随后按旧UUID调用`content/v2?version=...`实际返回最新上传模块，当前来源选择正确拒绝。精确版本取证问题解决前不继续上传/推广；不要把active UUID改成该非活动UUID、复用旧run、清journal、把API200视为字节相符，或改用普通别名/本地runtime冒充精确云证据。已留存实际响应与只读对账，详见[R29报告](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)。
 
-当前完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，精确版本阻塞的收敛方案见[取证说明](payload-version-provenance-2026-11-03.md)，尚未改变生产取证协议。兼容恢复后的可信来源接续使用第6节显式`publish-source-recover`；不能把恢复后的UUID当作普通成功发布去source-advance，也不自动接纳外部未知版本。工程闭环不替代真实首发、连续发布/恢复及NTE云验收。
+当前完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。R31已实现[上传字节回执协议](payload-version-provenance-2026-11-03.md)：上传时绑定实际日志/UUID、出站multipart、响应HTTP ETag/字节和前后元数据；后续验证封存字节及新鲜精确UUID元数据，不再调用不可靠的历史content选择器。三份旧来源仅允许已审核原始历史pin；未知外部UUID仍拒绝。实际安装/云验收见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)，不能重放R29旧run。兼容恢复后的可信来源接续使用第6节显式`publish-source-recover`；不能把恢复后的UUID当作普通成功发布去source-advance。工程闭环不替代真实首发、连续发布/恢复及NTE云验收。
 
 ## 1. 编辑者只需做什么
 

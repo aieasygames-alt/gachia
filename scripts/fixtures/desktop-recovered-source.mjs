@@ -15,6 +15,7 @@ import { executeVerifiedManualRecovery, verifyRecoveryPromotionJournal } from '.
 import { createPromotionTransport } from '../desktop-promotion-transport.mjs';
 import { pageFingerprint, verifyVersionPreview } from '../desktop-version-preview.mjs';
 import { publicReferences } from '../desktop-public-acceptance.mjs';
+import { moduleReceipt } from './desktop-module-receipt.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const put = (path, bytes) => { mkdirSync(dirname(path), { recursive: true, mode: 0o700 }); writeFileSync(path, bytes, { mode: 0o600 }); return digest(bytes); };
@@ -75,7 +76,7 @@ export async function fixture(t, game = 'genshin', options = {}) {
     owners[owner] = { service, sourceVersionId: profile.owners[owner].versionId, candidateArtifactSHA256: record.artifactSHA256,
       recoveryArtifactSHA256: local.owners[owner].artifactSHA256, moduleSHA256, configSHA256: save(join(directory, owner, 'upload.json'), config), referencesSHA256: save(join(directory, owner, 'references.json'), refs), paths: refs.length, tool };
     const versionId = `22222222-0000-0000-0000-${String(i + 200).padStart(12, '0')}`, version = structuredClone(await f.reader.version(service));
-    version.id = versionId; version.resources.script.etag = moduleSHA256;
+    version.id = versionId; version.resources.script.etag = digest(`vendor-recovery-${owner}`);
     const form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
     cloud.set(`${service}/${versionId}`, { version, module: { code, moduleSHA256, archive: Buffer.from(await new Response(form).arrayBuffer()) } });
   }
@@ -128,12 +129,17 @@ export async function fixture(t, game = 'genshin', options = {}) {
   rmSync(f.journalPath); rmSync(join(run, `promotion-evidence-${retained.receipt.id ?? f.manifest.retentionId}`), { recursive: true, force: true });
   const previewDir = join(run, `cloud-preview-${input.id}`); mkdirSync(previewDir);
   await executeReleaseProtocol({ run, pin, retentionId: f.manifest.retentionId, retentionPin: f.manifest.retentionPin, previewOnly: true, authorize: () => plan.releaseKey,
-    transport: { snapshot: async () => structuredClone(baseline), upload: async ({ owner }) => { const row = f.manifest.owners[owner]; return { versionId: f.current.services[row.service].versions[0].version_id, releaseKey: plan.releaseKey, artifactSHA256: row.artifactSHA256, moduleSHA256: row.moduleSHA256 }; },
+    transport: { snapshot: async () => structuredClone(baseline), upload: async ({ owner }) => { const row = f.manifest.owners[owner]; return { versionId: f.current.services[row.service].versions[0].version_id, releaseKey: plan.releaseKey, artifactSHA256: row.artifactSHA256, moduleSHA256: row.moduleSHA256, moduleProof: (await f.reader.module(row.service)).moduleProof }; },
       preview: async args => ({ ...args, ...await verifyVersionPreview({ service: args.service, versionId: args.versionId, references: JSON.parse(readFileSync(join(run, 'cloud-bundles', input.id, args.owner, 'references.json'))), directory: join(previewDir, `${args.owner}-http`), request }) }) } });
   input.journalPin = digest(readFileSync(join(run, `cloud-${f.manifest.retentionId}.jsonl`)));
   const uploaded = await executeRecoveryUpload({ input, verify: () => verifyRecoveryCloud(input), transport: { snapshot: async () => structuredClone(baseline),
     upload: async ({ owner, row }) => ({ versionId: [...cloud].find(([key]) => key.startsWith(`${row.service}/22222222`))[1].version.id }),
-    inspect: async ({ owner, row, versionId, directory: out }) => ({ versionSHA256: save(join(out, `${owner}-version.json`), cloud.get(`${row.service}/${versionId}`).version) }),
+    inspect: async ({ owner, row, versionId, directory: out }) => {
+      const { version, module } = cloud.get(`${row.service}/${versionId}`), path = join(out, `${owner}-capture`); mkdirSync(path);
+      module.moduleProof = await moduleReceipt({ directory: path, service: row.service, version, code: module.code, bytes: module.archive,
+        role: 'recovery', releaseKey: plan.releaseKey, configSHA256: row.configSHA256 });
+      return { versionSHA256: save(join(out, `${owner}-version.json`), version), moduleProof: module.moduleProof };
+    },
     preview: async ({ owner, row, versionId, directory: out }) => verifyVersionPreview({ service: row.service, versionId, references: JSON.parse(readFileSync(join(directory, owner, 'references.json'))), directory: join(out, `${owner}-http`), request }) } });
   input.receiptPin = uploaded.receiptPin;
   const evidence = verifyPromotionEvidence(input); failMain = true;

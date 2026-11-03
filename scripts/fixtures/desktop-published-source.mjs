@@ -9,6 +9,7 @@ import { SERVICES } from '../desktop-cloud-release.mjs';
 import { previousAssetFiles } from '../retain-web-assets.mjs';
 import { pageFingerprint } from '../desktop-version-preview.mjs';
 import { publicReferences } from '../desktop-public-acceptance.mjs';
+import { moduleReceipt } from './desktop-module-receipt.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const put = (path, bytes) => { mkdirSync(dirname(path), { recursive: true, mode: 0o700 }); writeFileSync(path, bytes, { mode: 0o600 }); return digest(bytes); };
@@ -87,7 +88,10 @@ export async function fixture(t, game = 'genshin', options = {}) {
     modules[service] = { code, moduleSHA256: digest(code), archive: Buffer.from(await new Response(currentForm).arrayBuffer()) };
     const assets = { serve_directly: true, raw_run_worker_first: false, base_path: '/' };
     if (owner === 'main') Object.assign(assets, { headers: { version: 2, rules: { '/_next/static/*': { set: { 'cache-control': 'public,max-age=31536000,immutable' }, unset: [] } } }, raw_headers: '/_next/static/*\n  Cache-Control: public,max-age=31536000,immutable\n' });
-    remoteVersions[service] = { id: versionId, metadata: { has_preview: true }, resources: { script: { etag: digest(code) }, bindings, script_runtime: { compatibility_date: config.compatibility_date, compatibility_flags: config.compatibility_flags, usage_model: 'standard', assets } } };
+    remoteVersions[service] = { id: versionId, metadata: { has_preview: true }, resources: { script: { etag: digest(`vendor-${code}`) }, bindings, script_runtime: { compatibility_date: config.compatibility_date, compatibility_flags: config.compatibility_flags, usage_model: 'standard', assets } } };
+    const moduleProof = await moduleReceipt({ directory: join(bundle, owner), service, version: remoteVersions[service], code,
+      bytes: modules[service].archive, releaseKey, configSHA256 });
+    modules[service].moduleProof = moduleProof; accepted[service].moduleProof = moduleProof;
   }
   const manifest = { schemaVersion: 1, id, planSHA256: pin, retentionId: retained.id, retentionPin: retained.retentionPin, releaseKey, owners, snapshot: baseline, previewCandidate: false };
   const bundlePin = save(join(bundle, 'manifest.json'), manifest);

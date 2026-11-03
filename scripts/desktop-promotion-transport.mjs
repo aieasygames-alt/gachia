@@ -2,13 +2,14 @@ import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { desktopCloudSnapshot, executePromotionContinuation } from './desktop-cloud-release.mjs';
-import { assertUploadedVersion, multipartModule } from './desktop-cloud-transport.mjs';
+import { assertUploadedVersion } from './desktop-cloud-transport.mjs';
 import { digest, pinnedJson } from './desktop-release-assets.mjs';
 import { boundedBody, exactPreviewOrigin } from './desktop-version-preview.mjs';
 import { loadPublicReferences, verifyPublicHTTP } from './desktop-public-acceptance.mjs';
 import { promotionWriter } from './desktop-promotion-request.mjs';
 import { verifyPromotionEvidence, verifyRecoveryReceipt } from './desktop-recovery-receipt.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
+import { revalidateUploadedModule } from './desktop-version-provenance.mjs';
 
 const base = 'https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/';
 const json = value => JSON.stringify(value, null, 2) + '\n';
@@ -27,14 +28,13 @@ export function createPromotionTransport({ run, evidence, candidateDirectory, re
   const write = promotionWriter({ game: pinned.plan.game, releaseKey: pinned.plan.releaseKey, versions, token, request });
   let initialized = false, snapshots = 0, remoteVerified = false;
   const initialize = () => { if (!initialized) { mkdirSync(directory, { mode: 0o700 }); initialized = true; } };
-  const get = async (service, versionId, binary) => {
+  const get = async (service, versionId) => {
     exactPreviewOrigin(service, versionId);
-    const suffix = binary ? `/content/v2?version=${versionId}` : `/versions/${versionId}`;
+    const suffix = `/versions/${versionId}`;
     const response = await request(base + service + suffix, { method: 'GET', redirect: 'error',
       headers: { authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(30000) });
     assert(response.ok, `Fresh remote verification failed: ${response.status}`);
     const bytes = await boundedBody(response);
-    if (binary) return { bytes, module: await multipartModule(bytes) };
     const body = JSON.parse(bytes.toString()); assert.equal(body.success, true); return body.result;
   };
   return {
@@ -44,6 +44,7 @@ export function createPromotionTransport({ run, evidence, candidateDirectory, re
       save(join(directory, `snapshot-${snapshots++}.json`), current); return current;
     },
     verifyVersions: async initial => {
+      remoteVerified = false;
       assert.deepEqual(initial, pinned); initialize();
       const observations = [], modules = {}, recoveryVersions = {};
       for (const owner of pinned.plan.owners) {
@@ -56,13 +57,16 @@ export function createPromotionTransport({ run, evidence, candidateDirectory, re
           ['recovery', fallback, pinned.recovery.owners[owner].versionId, recoveryDirectory],
         ]) {
           const config = pinnedJson(join(root, owner, 'upload.json'), record.configSHA256);
-          const version = await get(record.service, versionId, false);
+          const version = await get(record.service, versionId);
           const versionSHA256 = save(join(directory, `${owner}-${kind}-version.json`), version);
           assertUploadedVersion(version, versionId, config, pinned.baseline.bindings[record.service]);
-          const downloaded = await get(record.service, versionId, true);
-          writeFileSync(join(directory, `${owner}-${kind}.multipart`), downloaded.bytes, { flag: 'wx', mode: 0o600 });
-          assert.equal(downloaded.module.moduleSHA256, record.moduleSHA256, 'Fresh cloud module differs from sealed bytes');
-          observations.push({ owner, kind, service: record.service, versionId, versionSHA256, moduleSHA256: record.moduleSHA256, multipartSHA256: digest(downloaded.bytes) });
+          const target = kind === 'candidate' ? pinned.accepted[record.service] : pinned.recovery.owners[owner];
+          const role = versionId === pinned.recovery.owners[owner].versionId ? 'recovery' : 'candidate';
+          const saved = await revalidateUploadedModule({ proof: target.moduleProof, service: record.service, versionId, moduleSHA256: record.moduleSHA256,
+            context: { role, releaseKey: pinned.plan.releaseKey, configSHA256: record.configSHA256 }, readVersion: async () => version });
+          writeFileSync(join(directory, `${owner}-${kind}.multipart`), saved.archive, { flag: 'wx', mode: 0o600 });
+          observations.push({ owner, kind, service: record.service, versionId, versionSHA256, moduleSHA256: record.moduleSHA256,
+            multipartSHA256: digest(saved.archive), moduleProof: target.moduleProof, provenanceMode: saved.provenanceMode });
         }
         modules[candidate.service] = candidate.moduleSHA256;
         recoveryVersions[candidate.service] = pinned.recovery.owners[owner].versionId;

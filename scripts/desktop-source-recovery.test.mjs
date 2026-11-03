@@ -142,7 +142,7 @@ for (const game of ['genshin', 'nte']) test(`${game}: other game's recovered Mai
     return donor.request(url, options);
   };
   const reader = { snapshot: donor.reader.snapshot, module: (s, v) => s === `gachia-game-${game}` ? target.reader.module(s, v) : donor.reader.module(s, v),
-    version: async (s, v) => s === `gachia-game-${game}` ? { id: v, metadata: { has_preview: true }, resources: { script: { etag: digest('downloaded current cloud runtime') }, bindings: donor.current.bindings[s], script_runtime: donor.current.settings[s] } } : donor.reader.version(s, v) };
+    version: async (s, v) => s === `gachia-game-${game}` ? { id: v, metadata: { has_preview: true }, resources: { script: { etag: 'b'.repeat(64) }, bindings: donor.current.bindings[s], script_runtime: donor.current.settings[s] } } : donor.reader.version(s, v) };
   const result = await rebindSourceCatalog({ input: { source: { path: old.manifestPath, pin: old.manifestPin }, mainSource: { path: main.manifestPath, pin: main.manifestPin } }, root: target.input.root, directory: join(target.root, 'rebind-recovery'), reader, request });
   const selected = await selectSourceCatalog({ root: target.input.root, directory: join(target.root, 'select-rebound-recovery'), plan: { game, owners: [game, 'main'] }, reader, request });
   assert.equal(selected.sourcePin, result.sourcePin); assert.equal(selected.versions[game], old.versions[game]); assert.equal(selected.versions.main, main.versions.main);

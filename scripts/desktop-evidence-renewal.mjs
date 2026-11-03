@@ -12,6 +12,7 @@ import { verifySavedPreview } from './desktop-release-readiness.mjs';
 import { verifyVersionPreview } from './desktop-version-preview.mjs';
 import { assertUploadedVersion, multipartModule } from './desktop-cloud-transport.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
+import { readUploadedModuleReceipt } from './desktop-version-provenance.mjs';
 
 export function assertRenewalTopology(evidence, current, mode) {
   assertReleaseScope(evidence.plan, evidence.manifest.owners);
@@ -115,6 +116,11 @@ export function readRenewalFiles({ input, mode, evidence: original, sealed, now 
       const observed = remote.observations.filter(row => row.owner === owner && row.kind === kind);
       assert.equal(observed.length, 1); assert.equal(observed[0].service, service);
       assert.equal(observed[0].versionId, target.versionId); assert.equal(observed[0].moduleSHA256, record.moduleSHA256);
+      if (target.moduleProof) {
+        assert.deepEqual(observed[0].moduleProof, target.moduleProof, 'Renewal module receipt differs from original upload');
+        readUploadedModuleReceipt(target.moduleProof, { service, versionId: target.versionId, moduleSHA256: record.moduleSHA256,
+          context: { role: kind, releaseKey: evidence.plan.releaseKey, configSHA256: record.configSHA256 } });
+      }
       const path = join(directory, `${owner}-${kind}.multipart`), multipart = readFileSync(path);
       assert.equal(digest(multipart), observed[0].multipartSHA256);
       archiveChecks.push({ path, sha256: digest(multipart), moduleSHA256: record.moduleSHA256 });
