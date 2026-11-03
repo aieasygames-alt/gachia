@@ -26,9 +26,10 @@ export function createPromotionTransport({ run, evidence, candidateDirectory, re
   const directory = join(run, name);
   const versions = Object.fromEntries(Object.entries(pinned.accepted).map(([service, proof]) => [service, proof.versionId]));
   const write = promotionWriter({ game: pinned.plan.game, releaseKey: pinned.plan.releaseKey, versions, token, request,
-    recordResponse: ({ service, status, headers, bytes }) => {
-      writeFileSync(join(directory, `${service}-deployment-response.body`), bytes, { flag: 'wx', mode: 0o600 });
-      save(join(directory, `${service}-deployment-response.json`), { service, status, headers, bytes: bytes.length, sha256: digest(bytes) });
+    recordResponse: ({ service, kind, status, headers, bytes }) => {
+      const suffix = kind === 'creation' ? 'response' : 'verification';
+      writeFileSync(join(directory, `${service}-deployment-${suffix}.body`), bytes, { flag: 'wx', mode: 0o600 });
+      save(join(directory, `${service}-deployment-${suffix}.json`), { service, kind, status, headers, bytes: bytes.length, sha256: digest(bytes) });
     } });
   let initialized = false, snapshots = 0, remoteVerified = false;
   const initialize = () => { if (!initialized) { mkdirSync(directory, { mode: 0o700 }); initialized = true; } };

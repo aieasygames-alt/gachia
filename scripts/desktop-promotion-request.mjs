@@ -34,15 +34,30 @@ export function promotionWriter({ game, releaseKey, versions, token, request, re
       throw Error('Deployment outcome unknown; reconcile read-only, never retry');
     }
     const bytes = await boundedBody(response);
-    await recordResponse({ service: args.service, status: response.status, headers: Object.fromEntries(response.headers), bytes });
+    await recordResponse({ service: args.service, kind: 'creation', status: response.status, headers: Object.fromEntries(response.headers), bytes });
     assert(response.ok, `Deployment response ${response.status}; reconcile before any further action`);
     const body = JSON.parse(bytes.toString());
     assert.equal(body.success, true, 'Deployment API did not confirm success');
     assert(/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(body.result?.id), 'Missing deployment identity');
-    // Creation responses may omit strategy; the request and exact allocation
-    // remain mandatory, and the continuation rechecks the active deployment.
+    // Creation may return only an ID. Verify its allocation by that exact ID,
+    // never by latest, before the continuation checks the active deployment.
     if (Object.hasOwn(body.result, 'strategy')) assert.equal(body.result.strategy, 'percentage');
-    assert.deepEqual(body.result.versions, [{ version_id: args.versionId, percentage: 100 }], 'Unexpected deployed versions');
+    const allocation = [{ version_id: args.versionId, percentage: 100 }];
+    if (Object.hasOwn(body.result, 'versions')) assert.deepEqual(body.result.versions, allocation, 'Unexpected deployed versions');
+    let verification;
+    try {
+      verification = await request(`${base}${args.service}/deployments/${body.result.id}`, {
+        method: 'GET', redirect: 'error', signal: AbortSignal.timeout(30000), headers: { authorization: `Bearer ${token}` },
+      });
+    } catch { throw Error('Deployment verification unavailable; reconcile read-only, never retry'); }
+    const verifiedBytes = await boundedBody(verification);
+    await recordResponse({ service: args.service, kind: 'verification', status: verification.status, headers: Object.fromEntries(verification.headers), bytes: verifiedBytes });
+    assert(verification.ok, `Deployment verification ${verification.status}; reconcile before any further action`);
+    const verified = JSON.parse(verifiedBytes.toString());
+    assert.equal(verified.success, true, 'Deployment verification API did not confirm success');
+    assert.equal(verified.result?.id, body.result.id, 'Deployment identity differs from creation receipt');
+    assert.equal(verified.result.strategy, 'percentage');
+    assert.deepEqual(verified.result.versions, allocation, 'Unexpected verified deployed versions');
     return { deploymentId: body.result.id, service: args.service, versionId: args.versionId, releaseKey };
   };
 }

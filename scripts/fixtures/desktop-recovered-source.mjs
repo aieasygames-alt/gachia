@@ -94,12 +94,15 @@ export async function fixture(t, game = 'genshin', options = {}) {
         if (failMain && service === 'gachia') return new Response('', { status: 503 });
         const body = JSON.parse(opts.body); assert(cloud.has(`${service}/${body.versions[0].version_id}`));
         current.services[service] = { id: `33333333-0000-0000-0000-${String(calls.length).padStart(12, '0')}`, strategy: body.strategy, versions: body.versions };
-        return Response.json({ success: true, result: current.services[service] });
+        return Response.json({ success: true, result: { id: current.services[service].id } });
       }
       assert.equal(opts.method, 'GET'); let value;
       if (operation === 'versions') value = cloud.get(`${service}/${versionId}`).version;
       else if (operation === 'content') return new Response(cloud.get(`${service}/${u.searchParams.get('version')}`).module.archive);
-      else if (operation === 'deployments') value = { deployments: [current.services[service]] };
+      else if (operation === 'deployments') {
+        if (versionId) assert.equal(versionId, current.services[service].id);
+        value = versionId ? current.services[service] : { deployments: [current.services[service]] };
+      }
       else if (operation === 'settings') value = current.settings[service];
       else if (operation === 'subdomain') value = current.subdomains[service];
       else if (path.endsWith('/workers/scripts')) value = current.scripts.map(id => ({ id }));

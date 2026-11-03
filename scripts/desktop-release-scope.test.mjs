@@ -19,16 +19,16 @@ for (const game of ['genshin', 'nte']) {
     assert.throws(() => assertReleaseScope(plan, { [game]: { service: `gachia-game-${other}` }, main: { service: 'gachia' } }));
   });
   test(`${game}: fixed writer rejects a swapped game/Main version map before requests`, async () => {
-    let calls = 0;
+    const calls = [];
     const input = { game, releaseKey: sha, versions: { gachia: uuid, [`gachia-game-${game}`]: uuid }, token: 'test',
-      request: async () => { calls++; return Response.json({ success: true, result: { id: uuid, strategy: 'percentage', versions: [{ version_id: uuid, percentage: 100 }] } }); } };
+      request: async (url, options) => { calls.push(options.method); return Response.json({ success: true, result: { id: uuid, strategy: 'percentage', versions: [{ version_id: uuid, percentage: 100 }] } }); } };
     assert.throws(() => promotionWriter({ ...input, game: other }));
     assert.throws(() => promotionWriter({ ...input, versions: { ...input.versions, 'gachia-router': uuid } }));
     const write = promotionWriter(input);
     await assert.rejects(write({ owner: other, service: `gachia-game-${other}`, releaseKey: sha, versionId: uuid }));
-    assert.equal(calls, 0);
+    assert.equal(calls.length, 0);
     await write({ owner: game, service: `gachia-game-${game}`, releaseKey: sha, versionId: uuid });
-    assert.equal(calls, 1);
+    assert.deepEqual(calls, ['POST', 'GET']);
   });
 }
 test('unreviewed games never acquire a release scope', () => {

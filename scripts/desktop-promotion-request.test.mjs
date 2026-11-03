@@ -8,7 +8,8 @@ const releaseKey = 'a'.repeat(64);
 const versions = { gachia: versionId, 'gachia-game-genshin': versionId };
 const args = { owner: 'genshin', service: 'gachia-game-genshin', versionId, releaseKey };
 const response = (patch = {}) => Response.json({ success: true, result: { id: deploymentId, strategy: 'percentage', versions: [{ version_id: versionId, percentage: 100 }], ...patch } });
-const writer = request => promotionWriter({ game: 'genshin', releaseKey, versions, token: 'test-not-a-credential', request });
+const writer = (post, get = () => response()) => promotionWriter({ game: 'genshin', releaseKey, versions, token: 'test-not-a-credential',
+  request: (url, options) => options.method === 'GET' ? get(url, options) : post(url, options) });
 
 test('promotion request is fixed-account, exact UUID, 100%, without settings mutations', async () => {
   let calls = 0;
@@ -27,6 +28,29 @@ test('deployment creation may omit strategy while retaining exact identity and a
   const promote = writer(async () => { calls++; return response({ strategy: undefined }); });
   assert.equal((await promote(args)).deploymentId, deploymentId);
   await assert.rejects(promote(args), /No automatic retry/); assert.equal(calls, 1);
+});
+test('ID-only creation requires exact deployment GET with the complete allocation', async () => {
+  let posts = 0, gets = 0;
+  const promote = writer(async () => { posts++; return Response.json({ success: true, result: { id: deploymentId } }); }, async (url, options) => {
+    gets++; assert.equal(url, `https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/gachia-game-genshin/deployments/${deploymentId}`);
+    assert.equal(options.method, 'GET'); assert.equal(options.redirect, 'error'); assert.equal(options.headers.authorization, 'Bearer test-not-a-credential');
+    return response();
+  });
+  assert.equal((await promote(args)).deploymentId, deploymentId);
+  await assert.rejects(promote(args), /No automatic retry/); assert.equal(posts, 1); assert.equal(gets, 1);
+});
+for (const [label, get] of [
+  ['wrong ID', () => response({ id: versionId })],
+  ['wrong version', () => response({ versions: [{ version_id: deploymentId, percentage: 100 }] })],
+  ['split allocation', () => response({ versions: [{ version_id: versionId, percentage: 50 }] })],
+  ['missing allocation', () => response({ versions: undefined })],
+  ['missing strategy', () => response({ strategy: undefined })],
+  ['HTTP failure', () => new Response('', { status: 403 })],
+  ['lost verification', () => { throw Error('test-not-a-credential'); }],
+]) test(`ID-only receipt rejects ${label} without another POST`, async () => {
+  let posts = 0; const promote = writer(async () => { posts++; return Response.json({ success: true, result: { id: deploymentId } }); }, get);
+  await assert.rejects(promote(args), error => !error.message.includes('test-not-a-credential'));
+  await assert.rejects(promote(args), /No automatic retry/); assert.equal(posts, 1);
 });
 for (const status of [200, 403]) test(`deployment response is archived before validation (${status})`, async () => {
   const saved = [];
@@ -57,7 +81,6 @@ for (const [label, result] of [
   ['missing identity', () => response({ id: null })],
   ['conflicting strategy', () => response({ strategy: 'other' })],
   ['null strategy', () => response({ strategy: null })],
-  ['missing allocation', () => response({ strategy: undefined, versions: undefined })],
   ['malformed JSON', () => new Response('{')],
 ]) test(`promotion ${label} fails closed and consumes attempt`, async () => {
   let calls = 0; const promote = writer(async () => { calls++; return result(); });

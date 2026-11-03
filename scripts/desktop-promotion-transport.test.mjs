@@ -79,7 +79,7 @@ async function fixture(t, failure) {
       if (failure === 'second-write' && service === 'gachia') return new Response('', { status: 503 });
       current.services[service] = { id: uuid(service === 'gachia' ? 401 : 400), created_on: '2026-11-02T00:00:00Z', strategy: 'percentage', versions: body.versions };
       if (failure === 'lost-response') throw Error('Connection lost test-only');
-      return Response.json({ success: true, result: current.services[service] });
+      return Response.json({ success: true, result: { id: current.services[service].id } });
     }
     assert.equal(options.method, 'GET');
     if (operation === 'versions' || operation === 'content') {
@@ -95,7 +95,10 @@ async function fixture(t, failure) {
       return Response.json({ success: true, result: entry.version });
     }
     let result;
-    if (operation === 'deployments') result = { deployments: [current.services[service]] };
+    if (operation === 'deployments') {
+      if (versionId) assert.equal(versionId, current.services[service].id);
+      result = versionId ? current.services[service] : { deployments: [current.services[service]] };
+    }
     else if (operation === 'settings') result = current.settings[service];
     else if (operation === 'subdomain') result = current.subdomains[service];
     else if (path.endsWith('/workers/scripts')) result = current.scripts.map(id => ({ id }));
