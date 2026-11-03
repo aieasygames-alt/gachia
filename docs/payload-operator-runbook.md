@@ -2,11 +2,13 @@
 
 更新：2026-11-03，适用 Mac 单用户 CMS 与 Genshin/NTE guides。公众网站仍由 Cloudflare 多 Worker 服务，不回源 Mac。本文替代旧部署说明中的过时状态；历史验收看各轮报告。
 
+**R30范围约束：Payload CMS只在这台Mac运行，不要求第二台Mac或跨机启动验收。** 最新异地备份的本机隔离PG/媒体恢复、实际CMS登录/导出/重启持久性已通过，详见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)。这是复用已安装应用的本机恢复，不是整机重建；独立密钥托管仍待办。
+
 **当前已安装发布/恢复能力，但首次真实编辑的云端验收尚未完成。保存或 published 不等于公网更新。** 不要求事实准确度审稿；保留发布意图、身份/版本、安全和新媒体权利边界。
 
 **R29实机停止条件：** Genshin已有正式真实编辑；一个非活动版本已上传，生产仍旧UUID。随后按旧UUID调用`content/v2?version=...`实际返回最新上传模块，当前来源选择正确拒绝。精确版本取证问题解决前不继续上传/推广；不要把active UUID改成该非活动UUID、复用旧run、清journal、把API200视为字节相符，或改用普通别名/本地runtime冒充精确云证据。已留存实际响应与只读对账，详见[R29报告](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)。
 
-R28完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。兼容恢复后的可信来源接续使用第6节显式`publish-source-recover`；不能把恢复后的UUID当作普通成功发布去source-advance，也不自动接纳外部未知版本。工程闭环不替代真实首发、连续发布/恢复及NTE云验收。
+当前完成导向清单见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，精确版本阻塞的收敛方案见[取证说明](payload-version-provenance-2026-11-03.md)，尚未改变生产取证协议。兼容恢复后的可信来源接续使用第6节显式`publish-source-recover`；不能把恢复后的UUID当作普通成功发布去source-advance，也不自动接纳外部未知版本。工程闭环不替代真实首发、连续发布/恢复及NTE云验收。
 
 ## 1. 编辑者只需做什么
 
@@ -34,7 +36,7 @@ cms backup
 
 命令参数严格按各action白名单检查；不适用的`--game`、`--preview`、`--backup`等会拒绝，不会静默忽略。`content-import`没有preview模式，执行会导入缺少的记录，日常编辑/发布不需要重导入；**`--preview`只适用于`content-export`**。无关参数及导入的多余参数必须修正后重试，不通过绕过manager或直接调用脚本规避门禁。
 
-数据根目录 `~/Library/Application Support/GachiaCMS`，仅 loopback PostgreSQL 54329/CMS 3100；不启用 Tunnel、端口映射或远程编辑。R17已在独立私有R2完成新密文上传/下载、认证解密和同机隔离恢复；独立密钥托管及跨机应用启动仍未验，见[异地备份与恢复](payload-offsite-recovery.md)。源码交付包不替代运行备份。
+数据根目录 `~/Library/Application Support/GachiaCMS`，仅 loopback PostgreSQL 54329/CMS 3100；不启用 Tunnel、端口映射或远程编辑。R30已对最新R29私有R2对象新下载、认证解密并实际同机恢复应用；隔离PG临时使用54330，验收后已停止，原CMS恢复3100。独立密钥托管仍未验；不要求跨机应用启动，见[异地备份与恢复](payload-offsite-recovery.md)。源码交付包不替代运行备份。
 
 ## 3. 导出与本地预览：不写云
 
@@ -221,4 +223,4 @@ cms publish-source-recover --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --recov
 - 在新目录校验/解包后可验证源码；需要已有 Git baseCommit 和实际依赖安装才能重新构建发布。不得在真实 GachiaCMS 路径覆盖解包，也不执行 install/resume-install 覆盖已有安装。
 - R18 已冻结源码并推送 `codex/payload-unified-maintenance`，实际 GitHub Linux 验证通过。prepare 应使用该已同步分支/精确提交，不使用旧 main 或未提交源码；不需要合并 main 来运行本机发布工具。
 - 验证 workflow 仅允许该精确任务分支 push/手动运行，只有只读权限、不保留 checkout 凭据、不用 secrets、不能部署；两个 Cloudflare GitHub 部署开关保持 false。CI 不执行真实桌面 manager。
-- R20资源刷新/本地兼容恢复已接入管理器；首次可信来源登记及每轮真实云预览/验收仍不可省略。独立密钥托管及跨机应用启动仍单列；私有R2密文往返通过不等于完整灾备完成，Git/验证CI完成也不等于真实内容云发布已验收。
+- R20资源刷新/本地兼容恢复已接入管理器；首次可信来源登记及每轮真实云预览/验收仍不可省略。R30本机应用恢复已验、跨机启动出范围，独立密钥托管仍单列；本机恢复不等于整机丢失可解密，Git/验证CI完成也不等于真实内容云发布已验收。

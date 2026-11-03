@@ -1,0 +1,54 @@
+{
+  "round": "R30",
+  "scope": "Payload CMS runs only on this Mac; no cross-Mac startup requirement",
+  "tasks": {
+    "C01": "engineering_complete",
+    "C02": "engineering_complete_cloud_chain_pending",
+    "C03": "blocked_exact_historical_module_provenance",
+    "C04": "engineering_fix_installed_real_cloud_pending",
+    "C05a": "same_host_application_recovery_passed",
+    "C05b": "independent_key_custody_pending"
+  },
+  "recovery": {
+    "freshR2DownloadBytes": 51649337,
+    "verifiedArchiveFiles": 36,
+    "verifiedSourceFiles": 2663,
+    "administratorLogin": true,
+    "records": 84,
+    "draftHold": 83,
+    "eligiblePublished": 1,
+    "authenticatedMediaVerified": true,
+    "restartPersistence": true,
+    "restoredExportMatchesReleaseKeyAndCandidate": true,
+    "httpSafetyPassed": 9,
+    "reusedInstalledApplication": true,
+    "fromScratchRebuildVerified": false,
+    "crossMacRequired": false,
+    "independentKeyCustodyVerified": false,
+    "liveDatabaseUnchanged": true,
+    "liveCMSHealthy": true
+  },
+  "tests": {
+    "desktop": 680,
+    "existingNode": 304,
+    "python": 49,
+    "cms": 165,
+    "typegen": "passed",
+    "typecheck": "passed"
+  },
+  "installedFilesVerified": 27,
+  "cloud": {
+    "observedWorkers": 10,
+    "protectedServices": 7,
+    "newWrites": 0,
+    "activeDeploymentsUnchanged": true,
+    "stagingUnchanged": true,
+    "deploymentFlags": {
+      "CLOUDFLARE_DEPLOY_FROM_GITHUB": "false",
+      "CLOUDFLARE_DEPLOY_STAGING_FROM_GITHUB": "false"
+    }
+  },
+  "replacementVersionProtocolImplemented": false,
+  "firstRealEditorialPublicationAccepted": false,
+  "allV1TasksComplete": false
+}

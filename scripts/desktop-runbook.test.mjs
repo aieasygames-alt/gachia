@@ -57,3 +57,21 @@ test('Payload CI permits only the task branch, remains read-only and has no depl
   assert(!/secrets\.|(?:contents|actions|packages|id-token): write|wrangler|desktop\.py|release:production|\bpull_request:/.test(workflow));
   for (const check of ['next typegen', 'typecheck', 'test:release', 'inventory:check', '@gachia/router check:generated', 'validate:game-deployments', '@gachia/router type-check', '@gachia/router test']) assert(workflow.includes(check));
 });
+
+test('limited V1 stays on this Mac and separates verified local recovery from independent key custody', () => {
+  const read = path => readFileSync(new URL(path, import.meta.url), 'utf8');
+  const plan = read('../plans/payload-v1-completion-2026-11-03.md');
+  const recovery = read('../docs/payload-offsite-recovery.md');
+  const entry = read('../services/content-cms/deploy/desktop.md');
+  assert.match(plan, /第二台 Mac、跨机安装\/启动\/迁移不属于限定 V1 验收条件/);
+  assert.match(plan, /C05a本机应用恢复实际通过；C05b独立密钥托管待办/);
+  assert.match(plan, /原DB摘要不变/);
+  assert.match(recovery, /不要求第二台Mac或跨机安装\/启动验收/);
+  assert.match(recovery, /C05a已通过/);
+  assert.match(recovery, /C05b独立key托管仍待办/);
+  assert.match(recovery, /不声称从零重建应用、跨机启动或整机损坏后可恢复/);
+  assert(!recovery.includes('### 第二台Mac验收清单'));
+  assert.match(text, /Payload CMS只在这台Mac运行，不要求第二台Mac或跨机启动验收/);
+  assert.match(entry, /只在这台Mac运行，不要求第二台Mac或跨机启动验收/);
+  assert.match(plan, /方案尚未实现\/安装，当前仍fail closed/);
+});
