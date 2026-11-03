@@ -267,6 +267,30 @@ export function uploadReadOptions(token, binary = false) {
     signal: AbortSignal.timeout(binary ? 180000 : 30000) };
 }
 
+export async function readUploadVersion({ service, versionId, token, binary = false, request = fetch }) {
+  exactPreviewOrigin(service, versionId);
+  const suffix = binary ? `/content/v2?version=${versionId}` : `/versions/${versionId}`;
+  const url = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`;
+  const readAttempts = [];
+  for (let attempt = 0; ; attempt++) {
+    const options = uploadReadOptions(token, binary), started = Date.now();
+    try {
+      const response = await request(url, options);
+      assert(response.ok, `Upload version read failed: ${response.status}`);
+      const bytes = await boundedBody(response);
+      readAttempts.push({ status: 'downloaded', elapsedMs: Date.now() - started, bytes: bytes.length });
+      if (binary) return { archive: bytes, etag: response.headers.get('etag'), readAttempts };
+      const body = JSON.parse(bytes.toString()); assert.equal(body.success, true); return body.result;
+    } catch (error) {
+      const ownTimeout = options.signal.aborted && options.signal.reason?.name === 'TimeoutError'
+        && ['TimeoutError', 'AbortError'].includes(error.name);
+      readAttempts.push({ status: 'failed', elapsedMs: Date.now() - started, errorName: error.name, ownTimeout });
+      // Only a fixed, upload-time binary GET can get one fresh transfer timer.
+      if (!binary || !ownTimeout || attempt === 1) throw error;
+    }
+  }
+}
+
 export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, token }) {
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Cloud publishing is desktop-only');
   const verified = verifyCloudBundle({ run, pin, id, bundlePin });
@@ -274,12 +298,9 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
   assert.equal(verified.plan.preview, false, 'Never upload rehearsal/preview candidates');
   assert(verified.plan.changed.length > 0 && releaseKey === verified.plan.releaseKey, 'Explicit changed editorial release required');
   const directory = join(run, `cloud-preview-${id}`); mkdirSync(directory, { mode: 0o700 });
-  const api = async (service, suffix, binary = false) => {
+  const api = (service, versionId, binary = false) => {
     assert(scope.services.includes(service), 'Release service/game mismatch');
-    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`, uploadReadOptions(token, binary));
-    assert(response.ok, `Version read failed: ${response.status}`);
-    if (binary) return { archive: await boundedBody(response), etag: response.headers.get('etag') };
-    const body = await response.json(); assert(body.success); return body.result;
+    return readUploadVersion({ service, versionId, token, binary });
   };
   const recheck = () => verifyCloudBundle({ run, pin, id, bundlePin });
   let firstSnapshot = true;
@@ -303,12 +324,12 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
       const form = await multipartModule(readFileSync(outfile));
       assert.equal(form.moduleSHA256, record.moduleSHA256, 'Uploaded form differs from sealed module');
       assertUploadMetadata(form.metadata, pinnedJson(join(verified.directory, args.owner, 'upload.json'), record.configSHA256));
-      const version = await api(args.service, `/versions/${versionId}`);
+      const version = await api(args.service, versionId);
       assertUploadedVersion(version, versionId, pinnedJson(join(verified.directory, args.owner, 'upload.json'), record.configSHA256), verified.manifest.snapshot.bindings[args.service]);
       const moduleProof = await captureUploadedModule({ service: args.service, versionId, moduleSHA256: record.moduleSHA256,
         context: { role: 'candidate', releaseKey, configSHA256: record.configSHA256 }, directory: join(directory, `${args.owner}-module`), uploadPath: outfile,
         uploadLogPath: join(directory, `${args.owner}-upload.log`),
-        expectedVersion: version, readVersion: (service, uuid) => api(service, `/versions/${uuid}`), readContent: (service, uuid) => api(service, `/content/v2?version=${uuid}`, true) });
+        expectedVersion: version, readVersion: api, readContent: (service, uuid) => api(service, uuid, true) });
       save(join(directory, `${args.owner}-version.json`), version); recheck();
       return { versionId, releaseKey, artifactSHA256: record.artifactSHA256, moduleSHA256: record.moduleSHA256, moduleProof };
     },
@@ -317,7 +338,7 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
       const references = pinnedJson(join(verified.directory, args.owner, 'references.json'), record.referencesSHA256);
       const proof = await verifyVersionPreview({ service: args.service, versionId: args.versionId, references, directory: join(directory, `${args.owner}-http`) });
       await revalidateUploadedModule({ proof: args.moduleProof, service: args.service, versionId: args.versionId, moduleSHA256: record.moduleSHA256,
-        context: { role: 'candidate', releaseKey, configSHA256: record.configSHA256 }, readVersion: (service, uuid) => api(service, `/versions/${uuid}`) }); recheck();
+        context: { role: 'candidate', releaseKey, configSHA256: record.configSHA256 }, readVersion: api }); recheck();
       return { ...args, status: proof.status, evidenceSHA256: proof.evidenceSHA256 };
     },
   };
@@ -337,14 +358,7 @@ export async function uploadRecoveryPreview(input) {
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Cloud publishing is desktop-only');
   const { verifyRecoveryCloud } = await import('./desktop-recovery-cloud.mjs');
   const { run, token } = input;
-  const readVersion = async (service, versionId, binary = false) => {
-    exactPreviewOrigin(service, versionId);
-    const suffix = binary ? `/content/v2?version=${versionId}` : `/versions/${versionId}`;
-    const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`, uploadReadOptions(token, binary));
-    assert(response.ok, `Recovery version read failed: ${response.status}`);
-    if (binary) return { archive: await boundedBody(response), etag: response.headers.get('etag') };
-    const body = JSON.parse((await boundedBody(response)).toString()); assert.equal(body.success, true); return body.result;
-  };
+  const readVersion = (service, versionId, binary = false) => readUploadVersion({ service, versionId, token, binary });
   return executeRecoveryUpload({ input, verify: () => {
     const verified = verifyRecoveryCloud(input);
     assertEditorialRecovery(verified.candidate.plan, input.releaseKey);

@@ -53,7 +53,7 @@ export async function captureUploadedModule({ service, versionId, moduleSHA256, 
   save(join(directory, 'before.json'), before);
   const content = await readContent(service, versionId);
   writeFileSync(join(directory, 'download.multipart'), content.archive, { flag: 'wx', mode: 0o600 });
-  save(join(directory, 'content-http.json'), { etag: content.etag });
+  save(join(directory, 'content-http.json'), { etag: content.etag, ...(content.readAttempts ? { readAttempts: content.readAttempts } : {}) });
   assert.equal(scriptETag(content.etag), before.resources.script.etag, 'Content endpoint returned another version (HTTP ETag)');
   const downloaded = await multipartModule(content.archive);
   assert.equal(downloaded.moduleSHA256, moduleSHA256, 'Downloaded module differs from outbound bytes');

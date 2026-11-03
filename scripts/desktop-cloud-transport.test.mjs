@@ -4,7 +4,7 @@ import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { assertEditorialRecovery, assertOwnerSettings, assertUploadedVersion, assertUploadMetadata, multipartModule, normalizedBindings, uploadCloudPreview, uploadReadOptions, uploadRecoveryPreview } from './desktop-cloud-transport.mjs';
+import { assertEditorialRecovery, assertOwnerSettings, assertUploadedVersion, assertUploadMetadata, multipartModule, normalizedBindings, readUploadVersion, uploadCloudPreview, uploadReadOptions, uploadRecoveryPreview } from './desktop-cloud-transport.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint, validatePreviewResponse, verifyVersionPreview } from './desktop-version-preview.mjs';
 import { digest } from './desktop-release-assets.mjs';
 
@@ -19,6 +19,53 @@ test('candidate and recovery multipart reads share a bounded transfer budget wit
   }
   assert.deepEqual(budgets, [30000, 180000]);
   assert.throws(() => uploadReadOptions('fixture-token', 'true'));
+});
+for (const failure of ['headers', 'body']) test(`upload-time binary GET retries one own ${failure} timeout with a fresh signal`, async t => {
+  const first = AbortSignal.abort(new DOMException('fixture timeout', 'TimeoutError'));
+  const second = new AbortController().signal, signals = [first, second], budgets = [];
+  t.mock.method(AbortSignal, 'timeout', ms => { budgets.push(ms); return signals.shift(); });
+  let calls = 0;
+  const result = await readUploadVersion({ service: 'gachia', versionId, token: 'fixture', binary: true,
+    request: async (url, options) => {
+      assert.equal(url, `https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/gachia/content/v2?version=${versionId}`);
+      assert.equal(options.method, 'GET'); assert.equal(options.redirect, 'error'); assert(!Object.hasOwn(options, 'body'));
+      assert.equal(options.signal, calls === 0 ? first : second);
+      if (++calls === 1) {
+        if (failure === 'headers') throw first.reason;
+        return new Response(new ReadableStream({ start(controller) { controller.error(new DOMException('body aborted', 'AbortError')); } }));
+      }
+      return new Response('sealed', { headers: { etag: 'fixture-etag' } });
+    } });
+  assert.equal(calls, 2); assert.deepEqual(budgets, [180000, 180000]);
+  assert.equal(result.archive.toString(), 'sealed'); assert.equal(result.etag, 'fixture-etag');
+  assert.equal(result.readAttempts.length, 2); assert.equal(result.readAttempts[0].ownTimeout, true);
+});
+for (const failure of ['metadata-timeout', 'external-abort', 'http-error', 'body-budget', 'network-error']) {
+  test(`upload read does not add a retry for ${failure}`, async t => {
+    const timeout = new DOMException('fixture timeout', 'TimeoutError');
+    const signal = failure === 'metadata-timeout' ? AbortSignal.abort(timeout)
+      : failure === 'external-abort' ? AbortSignal.abort() : new AbortController().signal;
+    t.mock.method(AbortSignal, 'timeout', () => signal);
+    let calls = 0;
+    await assert.rejects(readUploadVersion({ service: 'gachia', versionId, token: 'fixture', binary: failure !== 'metadata-timeout',
+      request: async () => {
+        calls++;
+        if (failure === 'metadata-timeout') throw timeout;
+        if (failure === 'external-abort') throw signal.reason;
+        if (failure === 'http-error') return new Response('', { status: 503 });
+        if (failure === 'body-budget') return new Response(new Uint8Array(16 * 1024 * 1024 + 1));
+        throw new TypeError('fixture network failure');
+      } }));
+    assert.equal(calls, 1);
+  });
+}
+test('a second own transfer timeout stops after exactly two GETs', async t => {
+  const reason = new DOMException('fixture timeout', 'TimeoutError');
+  t.mock.method(AbortSignal, 'timeout', () => AbortSignal.abort(reason));
+  let calls = 0;
+  await assert.rejects(readUploadVersion({ service: 'gachia', versionId, token: 'fixture', binary: true,
+    request: async (_url, options) => { calls++; assert.equal(options.method, 'GET'); throw options.signal.reason; } }));
+  assert.equal(calls, 2);
 });
 const html = '<html><head><title>Guide</title><meta name="description" content="Description"/><link rel="canonical" href="https://gachia.com/zh/genshin/guides/one"/></head><body><h1>Guide</h1><article>Rendered content</article><img src="/image.png"/><script type="application/ld+json">{"name":"Guide"}</script><script>flight()</script></body></html>';
 function settings(owner = 'genshin') {
