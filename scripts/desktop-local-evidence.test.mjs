@@ -103,9 +103,13 @@ test('project inventory takes no target or write flags', () => {
 test('preparation transport only GETs fixed services and rejects origin injection', async () => {
   const calls = [], reader = preparationReader('fixture-token', async (url, options) => { calls.push({ url, options }); return new Response('unavailable', { status: 401 }); });
   await assert.rejects(reader.module('https://example.invalid', uuid(1)));
+  await assert.rejects(reader.version('gachia-router', uuid(1)));
+  await assert.rejects(reader.version('gachia', 'latest'));
   assert.equal(calls.length, 0);
   await assert.rejects(reader.module('gachia', uuid(1)), /401/);
   assert.equal(calls.length, 1); assert.equal(calls[0].options.method, 'GET'); assert(!calls[0].options.body);
+  await assert.rejects(reader.version('gachia', uuid(1)), /401/);
+  assert.equal(calls.length, 2); assert.equal(calls[1].options.method, 'GET'); assert(!calls[1].options.body);
 });
 
 test('project inventory observes ten services, redacts secret values and keeps seven-service promotion scope', async t => {

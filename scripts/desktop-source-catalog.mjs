@@ -9,6 +9,7 @@ import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint } from './desktop-version-preview.mjs';
 import { publicRobots } from './desktop-public-acceptance.mjs';
+import { publishedSourceInputs } from './desktop-source-advance.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (path, value) => { const raw = json(value); writeFileSync(path, raw, { flag: 'wx', mode: 0o600 }); return digest(raw); };
@@ -131,6 +132,10 @@ function checkInputs({ verified, recovery, assets }, versions) {
   const original = verifyAssetEvidence(assets.path, assets.pin, verified.plan.game);
   assert.equal(original.capture.summary.versionId, versions[verified.plan.game], 'Game asset source is not current');
   assert.equal(original.evidence.main.source.versionId, versions.main, 'Main asset source is not current');
+  if (verified.kind === 'published_candidate_source') {
+    assert.deepEqual(assets, verified.assets);
+    return publishedSourceInputs(verified, versions);
+  }
   if (verified.kind === 'historical_local_recovery') {
     assert.deepEqual(assets, verified.assets, 'Historical asset source mismatch');
     return sourcesFromHistory(verified, versions);
@@ -188,6 +193,11 @@ export async function registerSourceCatalog({ root, directory, verified, recover
 
 export async function registerHistoricalSourceCatalog({ root, directory, origin, reader, request = fetch }) {
   assert.equal(origin.kind, 'historical_local_recovery');
+  return registerOrigin({ root, directory, origin, assets: origin.assets, reader, request });
+}
+
+export async function registerPublishedSourceCatalog({ root, directory, origin, reader, request = fetch }) {
+  assert.equal(origin.kind, 'published_candidate_source');
   return registerOrigin({ root, directory, origin, assets: origin.assets, reader, request });
 }
 

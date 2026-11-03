@@ -29,7 +29,7 @@ export function preparationReader(token, request = fetch) {
   };
   const get = async (service, suffix, binary = false) => {
     assert([...SERVICES, ...STAGING].includes(service), 'Unreviewed observed service');
-    assert(/^\/(?:deployments|settings|subdomain|content\/v2\?version=[a-f0-9-]{36})$/.test(suffix), 'Unreviewed read operation');
+    assert(/^\/(?:deployments|settings|subdomain|versions\/[a-f0-9-]{36}|content\/v2\?version=[a-f0-9-]{36})$/.test(suffix), 'Unreviewed read operation');
     const response = await read(`https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/${service}${suffix}`, {
       method: 'GET', redirect: 'error', headers: { authorization: `Bearer ${token}` }, signal: AbortSignal.timeout(30000),
     });
@@ -38,6 +38,10 @@ export function preparationReader(token, request = fetch) {
   };
   return {
     snapshot: () => desktopCloudSnapshot(token, read),
+    async version(service, version) {
+      exactPreviewOrigin(service, version);
+      return get(service, `/versions/${version}`);
+    },
     async module(service, version) {
       exactPreviewOrigin(service, version);
       const archive = await get(service, `/content/v2?version=${version}`, true);

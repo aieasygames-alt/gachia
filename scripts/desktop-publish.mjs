@@ -370,6 +370,7 @@ async function previewUnlocked(run, pin, retained) {
 
 const renewalArgs = ['--recovery', '--recovery-pin', '--journal-pin', '--receipt-pin', '--release-key'];
 export const maintenanceActions = {
+  'source-advance': ['--repo', '--bundle', '--bundle-pin', '--promotion-journal-pin'],
   'source-register': ['--retention', '--retention-pin', '--evidence', '--evidence-pin'],
   'source-select': [],
   'assets-refresh': ['--evidence', '--evidence-pin'],
@@ -395,7 +396,7 @@ export function options(args) {
     assert(/^[a-f0-9]{16}-[a-f0-9]{12}$/.test(result['--run']), 'Invalid local run ID');
     for (const key of expected) {
       if (key.endsWith('-pin') || key === '--pin' || key === '--release-key') assert(SHA.test(result[key]), 'Invalid SHA-256 argument');
-      if (['--recovery', '--retention', '--renewal'].includes(key)) assert(/^[a-f0-9]{16}$/.test(result[key]), 'Invalid evidence ID');
+      if (['--recovery', '--retention', '--renewal', '--bundle'].includes(key)) assert(/^[a-f0-9]{16}$/.test(result[key]), 'Invalid evidence ID');
     }
     if (result['--mode']) assert(['promote', 'recover'].includes(result['--mode']), 'Invalid renewal mode');
     return result;
@@ -441,7 +442,16 @@ async function main() {
   } else {
     assert(/^[a-f0-9]{16}-[a-f0-9]{12}$/.test(opts['--run']), 'Invalid local run ID');
     const run = join(RUNS, opts['--run']);
-    if (['source-register', 'source-select'].includes(opts.action)) {
+    if (opts.action === 'source-advance') {
+      await withRunLock(run, async () => {
+        const { advanceSourceCatalog } = await import('./desktop-source-advance.mjs');
+        const { preparationReader } = await import('./desktop-local-evidence.mjs');
+        const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
+        console.log(json(await advanceSourceCatalog({ input: { run, pin: opts['--pin'], id: opts['--bundle'], bundlePin: opts['--bundle-pin'],
+          promotionJournalPin: opts['--promotion-journal-pin'], repo: resolve(opts['--repo']) }, root: join(RUNS, 'source-catalog'),
+          directory: join(run, `source-advance-${randomBytes(8).toString('hex')}`), reader: preparationReader(token) })));
+      });
+    } else if (['source-register', 'source-select'].includes(opts.action)) {
       await withRunLock(run, async () => {
         const { preparationReader } = await import('./desktop-local-evidence.mjs');
         const { registerSourceCatalog, selectSourceCatalog } = await import('./desktop-source-catalog.mjs');

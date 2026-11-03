@@ -1,5 +1,7 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
+2026-11-03 R24增量：[发布后来源接续](../reports/payload-source-advance-2026-11-03-r24/README.md)。显式`publish-source-advance`仅接受本机完整成功推广的同游戏game/Main封存来源；新精确UUID/模块/静态/动态HTTP重验后生成资源/来源并登记。Main来源使用真实本机bundle/journal而非伪造GitHub artifact ID，22工具文件已安装。无内容/云写入或CMS重启；仍10Worker观察/7服务保护/game+Main写入，不扩展Router或staging权限。真实云接续未验，跨游戏共享Main新UUID不能自动套另一游戏条目，后续受控重绑定另列。
+
 核验日期：2026-11-02，R20复核。工程基线 `a0634a9b2939f4933508c54c88d97caf7f773f11`。这是源码与实际控制面/公网采样的对照，不把 Wrangler 模板当作已部署事实。详细底图见 [R19 全面审计](../reports/payload-status-audit-2026-11-02-r19/README.md)，本轮命令与复核见 [R20执行报告](../reports/payload-launch-closeout-2026-11-02-r20/README.md)。
 
 R21来源交接增量：[报告](../reports/payload-source-catalog-2026-11-02-r21/README.md)。已安装的来源目录严格按game/Main当前UUID索引，Genshin登记及选择重新读取双模块/Main JSON与本轮七服务拓扑；只读准备，不切换服务或扩展保护范围。新UUID缺目录即停止，不能认为Main共享就允许复用另一游戏来源；每个game分别登记。新候选仍需全套新鲜证据，NTE本轮未实机登记，真实云内容发布仍未验。

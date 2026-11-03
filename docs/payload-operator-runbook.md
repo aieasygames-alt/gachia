@@ -1,6 +1,6 @@
 # Payload 最短操作手册
 
-更新：2026-11-02，适用已安装的 Mac 单用户 CMS 与 Genshin/NTE guides。公众网站仍由 Cloudflare 多 Worker 服务，不回源 Mac。本文替代旧部署说明中的过时状态；历史验收看各轮报告。
+更新：2026-11-03，适用 Mac 单用户 CMS 与 Genshin/NTE guides。公众网站仍由 Cloudflare 多 Worker 服务，不回源 Mac。本文替代旧部署说明中的过时状态；历史验收看各轮报告。
 
 **当前已安装发布/恢复能力，但首次真实编辑的云端验收尚未完成。保存或 published 不等于公网更新。** 不要求事实准确度审稿；保留发布意图、身份/版本、安全和新媒体权利边界。
 
@@ -117,6 +117,18 @@ cms publish-cloud-promote --run "$RUN" --pin "$PLAN_PIN" --recovery "$RECOVERY" 
 候选上传返回 journalSHA256 → JOURNAL_PIN；恢复上传返回 receiptPin → RECEIPT_PIN。上传创建非活动版本、不切流；最后的 promote 顺序切换游戏/Main 并验公网。精确 UUID、模块/runtime/bindings、HTTP 覆盖、noindex、15分钟时效和拓扑均重验；不接受普通 workers.dev 别名替代精确版本预览。
 
 推广成功须看到 production_accepted，并保留精确 UUID、journal SHA、公网实际响应及对应 releaseKey；不能仅以 HTTP 200 或 CMS 的 published 判定完成。失败时不要继续执行本节下一条命令。
+
+### 发布成功后：只读接续新 UUID 来源
+
+R24新增显式`publish-source-advance`。仅在上述推广**完整成功**后，用该run的BUNDLE/BUNDLE_PIN及推广返回的journalSHA256（记为PROMOTION_JOURNAL_PIN，不能误用上传的JOURNAL_PIN）执行：
+
+```sh
+cms publish-source-advance --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --bundle "$BUNDLE" --bundle-pin "$BUNDLE_PIN" --promotion-journal-pin "$PROMOTION_JOURNAL_PIN"
+```
+
+命令不上传或切流：重读完整发布journal、封存bundle及全部已保存公网正文，确认game/Main当前100% UUID，重新GET模块/版本配置、全部封存静态和动态精确预览，取得当前公开A的JSON。保留原树，仅派生副本替换下载runtime，自动生成两owner资源来源、baseline和完整树pin，登记到新UUID固定目录。Main使用明确的本机发布bundle/journal来源，不捏造GitHub artifact ID；下一轮retain可直接使用返回的资源证据。
+
+下一次B仍prepare新run、source-select，并执行全部新鲜资源/基线/兼容恢复/云门禁；旧A的发布journal可以作为历史来源，但不延长候选/恢复批准的15分钟时效。没有“latest”、原始O回退或部署后自动接续：本命令是发布成功后的显式只读交接，且目标仍是当前精确UUID；不是后台自动追踪。partial failure、撤回/手工恢复、新UUID来自外部部署、未知版本或缺完整本机封存来源时拒绝，走第4节维护者交接，不猜版本或重复部署。跨游戏共享Main变化后不能自动套用另一游戏来源。首次无可信来源也仍需维护者，不宣称一键从零发布。
 
 四个历史staging别名不是Payload发布中转站，不要为本流程部署它们或用其HTTP替代精确候选UUID验收。R23已完成限定HTTP/已知自动构建入口调查：动态noindex/robots禁爬成立，但语言cookie与公开缓存差异仍保留，未降低本流程的正式门禁；也未在账户层强制只有本机能部署。详见[R23报告](../reports/payload-staging-inspection-2026-11-02-r23/README.md)。
 

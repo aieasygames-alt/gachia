@@ -22,7 +22,7 @@ ROOT = Path.home() / 'Library/Application Support/GachiaCMS'
 AGENTS = Path.home() / 'Library/LaunchAgents'
 PG = Path('/opt/homebrew/opt/postgresql@17/bin')
 NODE = '/opt/homebrew/bin/node'
-MAINTENANCE_ACTIONS = ['source-register', 'source-select', 'assets-refresh', 'recovery-local-prepare', 'baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
+MAINTENANCE_ACTIONS = ['source-advance', 'source-register', 'source-select', 'assets-refresh', 'recovery-local-prepare', 'baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
 
 
 def maintenance_arguments(args):
@@ -219,7 +219,7 @@ def complete_install(cfg):
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     for name in ['desktop-recovery-receipt.mjs', 'desktop-promotion-request.mjs', 'desktop-promotion-transport.mjs',
                  'desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs',
-                 'desktop-release-scope.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs']:
+                 'desktop-release-scope.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs', 'desktop-source-advance.mjs']:
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     create_agent('payload', [sys.executable, ROOT / 'desktop.py', 'serve'], app)
     start('payload')

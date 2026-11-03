@@ -39,9 +39,7 @@ export function previousAssetFiles(directory) {
 }
 
 export function retainWebAssets({ previousStatic, artifactDirectory, source }) {
-  assert(uuid.test(source?.versionId), 'Verified rollback version required');
-  assert(/^[1-9][0-9]*$/.test(String(source?.artifactId)), 'Previous artifact ID required');
-  assert(digest.test(source?.archiveSha256), 'Previous artifact archive digest required');
+  verifyWebAssetSource(source);
   const root = safeDirectory(artifactDirectory);
   const target = safeDirectory(join(root, 'assets/_next/static'));
   const files = previousAssetFiles(previousStatic);
@@ -78,7 +76,7 @@ export function verifyRetainedWebAssets(artifactDirectory, versionId) {
   const record = JSON.parse(readFileSync(join(root, 'retained-web-assets.json'), 'utf8'));
   assert.equal(record.schemaVersion, 1);
   assert.equal(record.source?.versionId, versionId, 'Retained assets do not match current rollback version');
-  assert(/^[1-9][0-9]*$/.test(String(record.source?.artifactId)) && digest.test(record.source?.archiveSha256), 'Invalid artifact provenance');
+  verifyWebAssetSource(record.source);
   assert.equal(sha(join(root, 'worker.js')), record.workerSha256, 'Worker changed after asset preparation');
   assert(Array.isArray(record.files) && record.files.length > 0 && record.files.length <= 5000);
   const seen = new Set();
@@ -98,6 +96,33 @@ export function verifyRetainedWebAssets(artifactDirectory, versionId) {
   }
   assert.equal(record.bytes, bytes, 'Retained byte count mismatch');
   return { versionId, files: record.files.length, bytes: record.bytes, verified: true };
+}
+
+// Desktop publications have pinned local bundles/journals, not GitHub artifact
+// IDs. Keep the old archive contract separate rather than inventing an ID.
+export function verifyWebAssetSource(source) {
+  assert(uuid.test(source?.versionId), 'Verified rollback version required');
+  if (source.kind === undefined) {
+    assert(/^[1-9][0-9]*$/.test(String(source.artifactId)), 'Previous artifact ID required');
+    assert(digest.test(source.archiveSha256), 'Previous artifact archive digest required');
+    return;
+  }
+  assert.equal(source.kind, 'published_desktop_candidate', 'Unknown Main asset provenance');
+  const pinned = (path, pin) => {
+    assert(digest.test(pin)); assert.equal(realpathSync(path), resolve(path));
+    assert(lstatSync(path).isFile() && lstatSync(path).size <= 16 * 1024 * 1024);
+    assert.equal(sha(path), pin, 'Published asset provenance changed'); return readFileSync(path, 'utf8');
+  };
+  const bundle = JSON.parse(pinned(source.bundlePath, source.bundlePin));
+  assert.equal(bundle.previewCandidate, false); assert.equal(bundle.releaseKey, source.releaseKey); assert(digest.test(source.releaseKey));
+  assert.equal(bundle.owners.main.service, 'gachia');
+  const text = pinned(source.promotionJournalPath, source.promotionJournalPin); assert(text.endsWith('\n'));
+  const rows = text.trimEnd().split('\n').map(line => JSON.parse(line));
+  assert.equal(rows.length, 7); assert(rows.every(row => row.releaseKey === source.releaseKey));
+  assert.deepEqual(rows.map(row => row.phase), ['baseline', 'remote_versions_verified', 'promotion_intent', 'promoted', 'promotion_intent', 'promoted', 'production_accepted']);
+  assert.equal(rows[0].accepted.gachia.versionId, source.versionId);
+  assert.equal(rows[0].accepted.gachia.artifactSHA256, bundle.owners.main.artifactSHA256);
+  assert.equal(rows.at(-1).proof.versions.gachia, source.versionId); assert.equal(rows.at(-1).proof.status, 'passed');
 }
 
 export async function verifyStagedRetainedAssets(artifactDirectory, versionId, request = fetch) {
