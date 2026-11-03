@@ -5,16 +5,16 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import test from 'node:test';
-import { maintenanceActions, options } from './desktop-publish.mjs';
+import { maintenanceActions, maintenanceArgumentKeys, options } from './desktop-publish.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const manager = join(root, 'services/content-cms/scripts/desktop.py');
 const parserProbe = join(root, 'scripts/fixtures/desktop-parser-probe.py');
 const sha = 'a'.repeat(64), id = 'a'.repeat(16);
 const value = key => key === '--run' ? `${id}-${'a'.repeat(12)}` : key === '--mode' ? 'recover'
-  : ['--repo', '--baseline', '--evidence', '--source'].includes(key) ? '/tmp/fixture path'
+  : ['--repo', '--baseline', '--evidence', '--source', '--main-source'].includes(key) ? '/tmp/fixture path'
     : ['--retention', '--recovery', '--renewal', '--bundle'].includes(key) ? id : sha;
-const argsFor = action => ['--run', '--pin', ...maintenanceActions[action]].flatMap(key => [key, value(key)]);
+const argsFor = action => maintenanceArgumentKeys(action).flatMap(key => [key, value(key)]);
 
 for (const action of Object.keys(maintenanceActions)) {
   test(`${action} accepts only its exact pinned argument contract`, () => {
@@ -25,8 +25,8 @@ for (const action of Object.keys(maintenanceActions)) {
     for (const extra of ['--target', '--token', '--url', '--preview', '--game', '--percent', '--force']) {
       assert.throws(() => options([action, ...args, extra, 'anything']), /Unknown/);
     }
-    assert.throws(() => options([action, ...args, '--run', value('--run')]), /duplicate/);
-    const bad = [...args]; bad[bad.indexOf('--pin') + 1] = 'not-a-sha';
+    assert.throws(() => options([action, ...args, args[0], args[1]]), /duplicate/);
+    const bad = [...args]; bad[bad.findIndex(key => key === '--pin' || key.endsWith('-pin')) + 1] = 'not-a-sha';
     assert.throws(() => options([action, ...bad]), /SHA-256/);
   });
   test(`${action} rejects missing arguments in an actual CLI process before environment or network access`, () => {
@@ -52,6 +52,12 @@ print(json.dumps(m.maintenance_arguments(argparse.Namespace(**json.loads(${JSON.
 test('renewal mode cannot change into an arbitrary operation', () => {
   const args = argsFor('evidence-renew'); args[args.indexOf('--mode') + 1] = 'deploy';
   assert.throws(() => options(['evidence-renew', ...args]), /mode/);
+});
+
+test('source-only rebinding cannot invent or accept candidate identity', () => {
+  for (const key of ['--run', '--pin', '--release-key', '--repo', '--game']) {
+    assert.throws(() => options(['source-rebind', ...argsFor('source-rebind'), key, value(key)]), /Unknown/);
+  }
 });
 
 test('manager help exposes reviewed actions and old actions reject new evidence flags', () => {
@@ -90,7 +96,7 @@ for n in ast.walk(t):
 print(json.dumps(sorted(names)))`;
   const child = spawnSync('python3', ['-B', '-c', script], { encoding: 'utf8' });
   assert.equal(child.status, 0, child.stderr); const names = JSON.parse(child.stdout);
-  for (const name of ['desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs', 'desktop-source-advance.mjs']) assert(names.includes(name));
+  for (const name of ['desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs', 'desktop-source-advance.mjs', 'desktop-source-rebind.mjs']) assert(names.includes(name));
   const dir = realpathSync(mkdtempSync(join(tmpdir(), 'cms-installed-closure-'))); t.after(() => rmSync(dir, { recursive: true, force: true }));
   for (const name of names) copyFileSync(join(root, 'scripts', name), join(dir, name));
   const source = names.map(name => `await import(${JSON.stringify(pathToFileURL(join(dir, name)).href)});`).join('\n');

@@ -22,7 +22,7 @@ ROOT = Path.home() / 'Library/Application Support/GachiaCMS'
 AGENTS = Path.home() / 'Library/LaunchAgents'
 PG = Path('/opt/homebrew/opt/postgresql@17/bin')
 NODE = '/opt/homebrew/bin/node'
-MAINTENANCE_ACTIONS = ['source-advance', 'source-register', 'source-select', 'assets-refresh', 'recovery-local-prepare', 'baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
+MAINTENANCE_ACTIONS = ['source-rebind', 'source-advance', 'source-register', 'source-select', 'assets-refresh', 'recovery-local-prepare', 'baseline-capture', 'baseline-bind', 'evidence-renew', 'cloud-promote-renewed', 'manual-recover']
 
 
 def maintenance_arguments(args):
@@ -219,7 +219,7 @@ def complete_install(cfg):
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     for name in ['desktop-recovery-receipt.mjs', 'desktop-promotion-request.mjs', 'desktop-promotion-transport.mjs',
                  'desktop-published-baseline.mjs', 'desktop-evidence-renewal.mjs', 'desktop-manual-recovery.mjs',
-                 'desktop-release-scope.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs', 'desktop-source-advance.mjs']:
+                 'desktop-release-scope.mjs', 'desktop-local-evidence.mjs', 'desktop-source-catalog.mjs', 'desktop-source-advance.mjs', 'desktop-source-rebind.mjs']:
         shutil.copy2(repo / 'scripts' / name, publisher / name)
     create_agent('payload', [sys.executable, ROOT / 'desktop.py', 'serve'], app)
     start('payload')
@@ -334,12 +334,14 @@ def main():
     parser.add_argument('--promotion-journal-pin')
     parser.add_argument('--source', type=Path)
     parser.add_argument('--source-pin')
+    parser.add_argument('--main-source', type=Path)
+    parser.add_argument('--main-source-pin')
     supplied_flags = [arg.split('=', 1)[0] for arg in sys.argv[1:] if arg.startswith('--')]
     if len(supplied_flags) != len(set(supplied_flags)):
         parser.error('Duplicate options are forbidden')
     args = parser.parse_args()
     if args.action.removeprefix('publish-') not in MAINTENANCE_ACTIONS and any(
-            getattr(args, key) is not None for key in ['baseline', 'baseline_pin', 'renewal', 'renewal_pin', 'mode', 'promotion_journal_pin', 'source', 'source_pin']):
+            getattr(args, key) is not None for key in ['baseline', 'baseline_pin', 'renewal', 'renewal_pin', 'mode', 'promotion_journal_pin', 'source', 'source_pin', 'main_source', 'main_source_pin']):
         parser.error('Maintenance evidence options require an explicit maintenance action')
     if args.action == 'serve':
         cfg = settings()

@@ -13,7 +13,7 @@ for (const [index, line] of lines.entries()) test(`runbook command ${index + 1} 
   for (let i = 2; i < parts.length; i += 2) {
     const key = parts[i], value = key === '--run' ? `${id}-${'a'.repeat(12)}`
       : key === '--mode' ? parts[i + 1] : ['--retention', '--bundle', '--recovery', '--renewal'].includes(key) ? id
-        : ['--repo', '--evidence', '--baseline', '--source'].includes(key) ? '/tmp/runbook-fixture' : sha;
+        : ['--repo', '--evidence', '--baseline', '--source', '--main-source'].includes(key) ? '/tmp/runbook-fixture' : sha;
     args.push(key, value);
   }
   assert.equal(options([action === 'plan' ? 'inspect' : action, ...args]).action, action === 'plan' ? 'inspect' : action);
@@ -30,6 +30,8 @@ test('operator handoff makes the remaining manual evidence and cloud gaps explic
   assert.match(text, /publish-source-register/);
   assert.match(text, /publish-source-select/);
   assert.match(text, /publish-source-advance/);
+  assert.match(text, /publish-source-rebind/);
+  assert.match(text, /原始游戏来源/);
   assert.match(text, /没有“latest”、原始O回退或部署后自动接续/);
   assert.match(text, /仍须为新候选执行assets-refresh、baseline-capture、recovery-local-prepare与全部云门禁/);
   assert.match(text, /首次真实编辑的云端验收尚未完成/);

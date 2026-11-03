@@ -370,6 +370,7 @@ async function previewUnlocked(run, pin, retained) {
 
 const renewalArgs = ['--recovery', '--recovery-pin', '--journal-pin', '--receipt-pin', '--release-key'];
 export const maintenanceActions = {
+  'source-rebind': ['--source', '--source-pin', '--main-source', '--main-source-pin'],
   'source-advance': ['--repo', '--bundle', '--bundle-pin', '--promotion-journal-pin'],
   'source-register': ['--retention', '--retention-pin', '--evidence', '--evidence-pin'],
   'source-select': [],
@@ -382,18 +383,20 @@ export const maintenanceActions = {
   'manual-recover': [...renewalArgs, '--renewal', '--renewal-pin', '--promotion-journal-pin'],
 };
 
+export const maintenanceArgumentKeys = action => [...(action === 'source-rebind' ? [] : ['--run', '--pin']), ...maintenanceActions[action]];
+
 export function options(args) {
   const [action, ...rest] = args;
   if (action === 'project-inventory') { assert.equal(rest.length, 0, 'Project inventory accepts no targets/options'); return { action }; }
   if (Object.hasOwn(maintenanceActions, action)) {
-    const expected = ['--run', '--pin', ...maintenanceActions[action]], result = { action };
+    const expected = maintenanceArgumentKeys(action), result = { action };
     for (let i = 0; i < rest.length; i += 2) {
       const key = rest[i], value = rest[i + 1];
       assert(expected.includes(key) && value && !value.startsWith('-') && !Object.hasOwn(result, key), 'Unknown/duplicate/missing option');
       result[key] = value;
     }
     assert(expected.every(key => result[key]), 'Required arguments missing');
-    assert(/^[a-f0-9]{16}-[a-f0-9]{12}$/.test(result['--run']), 'Invalid local run ID');
+    if (result['--run']) assert(/^[a-f0-9]{16}-[a-f0-9]{12}$/.test(result['--run']), 'Invalid local run ID');
     for (const key of expected) {
       if (key.endsWith('-pin') || key === '--pin' || key === '--release-key') assert(SHA.test(result[key]), 'Invalid SHA-256 argument');
       if (['--recovery', '--retention', '--renewal', '--bundle'].includes(key)) assert(/^[a-f0-9]{16}$/.test(result[key]), 'Invalid evidence ID');
@@ -430,6 +433,13 @@ async function main() {
     const { preparationReader } = await import('./desktop-local-evidence.mjs');
     const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
     console.log(json(await preparationReader(token).project()));
+  } else if (opts.action === 'source-rebind') {
+    const { preparationReader } = await import('./desktop-local-evidence.mjs');
+    const { rebindSourceCatalog } = await import('./desktop-source-rebind.mjs');
+    const token = readFileSync(join(homedir(), '.wrangler/config/default.toml'), 'utf8').match(/^oauth_token\s*=\s*"([^"]+)"/m)?.[1];
+    console.log(json(await rebindSourceCatalog({ input: { source: { path: resolve(opts['--source']), pin: opts['--source-pin'] },
+      mainSource: { path: resolve(opts['--main-source']), pin: opts['--main-source-pin'] } }, root: join(RUNS, 'source-catalog'),
+      directory: join(RUNS, `source-rebind-${randomBytes(8).toString('hex')}`), reader: preparationReader(token) })));
   } else if (['inspect', 'prepare'].includes(opts.action)) {
     assert(SHA.test(opts['--release-key']), 'Invalid release key');
     const input = { repo: resolve(opts['--repo']), directory: join(ROOT, 'publish', opts['--release-key']), commit: opts['--commit'] ?? 'HEAD' };

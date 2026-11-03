@@ -7,9 +7,10 @@ import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-asset
 import { verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
-import { boundedBody, exactPreviewOrigin, pageFingerprint } from './desktop-version-preview.mjs';
+import { boundedBody, exactPreviewOrigin, pageFingerprint, validatePreviewResponse } from './desktop-version-preview.mjs';
 import { publicRobots } from './desktop-public-acceptance.mjs';
 import { publishedSourceInputs } from './desktop-source-advance.mjs';
+import { reboundSourceInputs } from './desktop-source-rebind.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (path, value) => { const raw = json(value); writeFileSync(path, raw, { flag: 'wx', mode: 0o600 }); return digest(raw); };
@@ -37,7 +38,7 @@ function sourcesFromRecovery(recovery, verified, versions) {
   verifyRecoveryCompatibility(recovery.path, recovery.pin, verified);
   const evidence = pinnedJson(recovery.path, recovery.pin);
   const baseline = verifyPublishedBaseline(evidence.baselinePath, evidence.baselinePin, verified.plan, versions);
-  const owners = {};
+  const owners = {}, allReferences = [];
   for (const owner of verified.plan.owners) {
     const row = evidence.owners[owner], directory = join(evidence.directory, owner, '.open-next');
     assert.equal(row.oldVersionId, versions[owner], 'Catalog source is not the current published version');
@@ -48,8 +49,14 @@ function sourcesFromRecovery(recovery, verified, versions) {
     assert.equal(realpathSync(runtime), runtime, 'Linked runtime forbidden');
     assert.equal(digest(readFileSync(runtime)), row.runtimeModuleSHA256, 'Source is not the downloaded cloud runtime');
     owners[owner] = { directory, versionId: row.oldVersionId, artifactSHA256: row.artifactSHA256 };
+    for (const reference of [...row.observations, ...(row.auxiliary ?? [])]) {
+      assert.match(reference.bodyFile, new RegExp(`^${owner}-[0-9]+\\.body$`));
+      const path = join(evidence.directory, reference.bodyFile); assert.equal(realpathSync(path), path);
+      const body = readFileSync(path); assert.equal(digest(body), reference.sha256);
+      allReferences.push({ owner, ...reference, body });
+    }
   }
-  return { profile: { schemaVersion: 1, game: verified.plan.game, owners }, baseline, evidence };
+  return { profile: { schemaVersion: 1, game: verified.plan.game, owners }, baseline, baselinePath: evidence.baselinePath, evidence, allReferences };
 }
 
 // Historical source-only diagnostics have no candidate or releaseKey. Verify the
@@ -67,7 +74,7 @@ function sourcesFromHistory(origin, versions) {
   assert.deepEqual(Object.keys(historical.recovery).sort(), [...plan.owners].sort());
   assert.equal(realpathSync(proof.work), resolve(proof.work), 'Linked historical evidence root forbidden');
   const baseline = verifyPublishedBaseline(origin.baselinePath, origin.baselinePin, plan, versions);
-  const owners = {}, evidence = { owners: {} }, references = [];
+  const owners = {}, evidence = { owners: {} }, references = [], allReferences = [];
   for (const owner of plan.owners) {
     const row = proof.recovery[owner], directory = join(proof.work, 'recovery', owner, '.open-next');
     assert.equal(row.status, 'passed'); assert.equal(row.runtimeUnchangedDuringSampling, true);
@@ -99,6 +106,7 @@ function sourcesFromHistory(origin, versions) {
       assert.equal(observation.status, auth ? 404 : 200);
       if (auth) { assert.equal(JSON.parse(body).code, 'ACCOUNT_FEATURES_DISABLED'); assert.match(observation.headers['cache-control'], /no-store/); }
       observations.set(path, { ...observation, body });
+      allReferences.push({ owner, ...observation, body });
     }
     const statics = tree.filter(file => file.type === 'file' && (file.path.startsWith('assets/_next/static/') || file.path.startsWith(`assets/_games/${plan.game}/_next/static/`)));
     assert(statics.length > 0);
@@ -124,7 +132,7 @@ function sourcesFromHistory(origin, versions) {
     owners[owner] = { directory, versionId: versions[owner], artifactSHA256: row.artifactSHA256 };
     evidence.owners[owner] = { runtimeModuleSHA256: digest(readFileSync(runtime)) };
   }
-  return { profile: { schemaVersion: 1, game: plan.game, owners }, baseline, evidence, references };
+  return { profile: { schemaVersion: 1, game: plan.game, owners }, baseline, baselinePath: origin.baselinePath, evidence, references, allReferences };
 }
 
 function checkInputs({ verified, recovery, assets }, versions) {
@@ -132,6 +140,10 @@ function checkInputs({ verified, recovery, assets }, versions) {
   const original = verifyAssetEvidence(assets.path, assets.pin, verified.plan.game);
   assert.equal(original.capture.summary.versionId, versions[verified.plan.game], 'Game asset source is not current');
   assert.equal(original.evidence.main.source.versionId, versions.main, 'Main asset source is not current');
+  if (verified.kind === 'cross_game_main_source') {
+    assert.deepEqual(assets, verified.assets);
+    return reboundSourceInputs(verified, versions);
+  }
   if (verified.kind === 'published_candidate_source') {
     assert.deepEqual(assets, verified.assets);
     return publishedSourceInputs(verified, versions);
@@ -173,6 +185,7 @@ async function currentBytes({ plan, sources, versions, reader, request, director
     const mime = response.headers.get('content-type')?.split(';')[0];
     assert.equal(mime, reference.headers['content-type']?.split(';')[0]);
     assert.deepEqual(policy(response.headers.get('cache-control')), policy(reference.headers['cache-control']), 'Historical source cache policy changed');
+    if (sources.strictPreview) validatePreviewResponse({ path: reference.path, response, bytes, reference });
     if (mime === 'text/html') {
       assert.deepEqual(pageFingerprint(bytes.toString()), pageFingerprint(reference.body.toString()), 'Historical rendered source is not current');
       assert.deepEqual(publicRobots(bytes.toString()), publicRobots(reference.body.toString()));
@@ -199,6 +212,34 @@ export async function registerHistoricalSourceCatalog({ root, directory, origin,
 export async function registerPublishedSourceCatalog({ root, directory, origin, reader, request = fetch }) {
   assert.equal(origin.kind, 'published_candidate_source');
   return registerOrigin({ root, directory, origin, assets: origin.assets, reader, request });
+}
+
+export async function registerReboundSourceCatalog({ root, directory, origin, reader, request = fetch }) {
+  assert.equal(origin.kind, 'cross_game_main_source');
+  return registerOrigin({ root, directory, origin, assets: origin.assets, reader, request });
+}
+
+// Verify a pinned historical entry locally without pretending it is still live.
+// Rebinding accepts only original origins, so evidence graphs cannot recurse.
+export function readPinnedSourceCatalog({ path, pin }) {
+  privateFile(path);
+  const manifest = pinnedJson(path, pin), directory = resolve(path, '..'), root = resolve(directory, '../..');
+  assert.equal(manifest.schemaVersion, 1); assert.equal(manifest.kind, 'verified_local_source_catalog');
+  const scope = assertReleaseScope(manifest.origin.plan);
+  assert.equal(manifest.game, scope.game);
+  assert.notEqual(manifest.origin.kind, 'cross_game_main_source', 'Use the original game source, not a rebound entry');
+  assert.equal(path, join(root, manifest.game, `${manifest.versions[manifest.game]}-${manifest.versions.main}`, 'manifest.json'));
+  privateDirectory(root); privateDirectory(join(root, manifest.game)); privateDirectory(directory);
+  assert.equal(manifest.cloudWrites, false); assert.equal(manifest.productionReady, false);
+  assertTopology(manifest.before, manifest.after);
+  assert.deepEqual(Object.keys(manifest.versions).sort(), [...scope.owners].sort());
+  for (const owner of scope.owners) assert.equal(activeVersion(manifest.before, scope.serviceFor(owner)), manifest.versions[owner]);
+  assert.equal(manifest.sourcePath, join(directory, 'sources.json')); privateFile(manifest.sourcePath);
+  const sources = checkInputs({ verified: manifest.origin, recovery: manifest.recovery, assets: manifest.assets }, manifest.versions);
+  assert.deepEqual(pinnedJson(manifest.sourcePath, manifest.sourcePin), sources.profile);
+  assert.equal(manifest.current.contentSHA256, sources.baseline.contentSHA256);
+  assert.deepEqual(manifest.current.modules, Object.fromEntries(scope.owners.map(owner => [owner, sources.evidence.owners[owner].runtimeModuleSHA256])));
+  return { manifest, sources };
 }
 
 async function registerOrigin({ root, directory, origin: verified, assets, recovery, reader, request }) {

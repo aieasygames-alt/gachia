@@ -1,5 +1,7 @@
 # Payload 首发收口清单（2026-11-02）
 
+2026-11-03当前增量：[R25跨游戏Main来源重绑定](../reports/payload-source-rebind-2026-11-03-r25/README.md)。`publish-source-rebind`已实现/安装：目标游戏UUID和公开A保持不变，只组合另一游戏本机完整成功发布的新Main，重验父来源/全部登记HTTP/模块/配置与拓扑；无候选run/releaseKey、latest/O回退或批准时效延长。45新增测试含实际loopback（云仍模拟），定向234、桌面545/Node304/Python49通过，23工具文件备份安装/验摘要；CMS安全HTTP9/9、DB84draft/hold/0eligible、10Worker与R24不变，无内容/云写入或CMS重启。关闭限定工程子项，真实云重绑定与首次/外部部署/恢复交接仍未全关；本节覆盖下方R24历史状态。
+
 2026-11-03当前增量：[R24新UUID来源接续](../reports/payload-source-advance-2026-11-03-r24/README.md)。`publish-source-advance`已实现/安装，完整成功推广后只读重验并登记新game/Main来源，下一轮Main retain可用真实本机bundle/journal来源，不伪造GitHub artifact ID。33新增接续测试含loopback（云仍模拟），桌面495/Node304/Python49通过，22工具文件安装/摘要一致、安全HTTP9/9、DB84draft/hold/0eligible不变；无内容/云写入或CMS重启。真实云接续仍待验，首次/外部版本/恢复与跨游戏共享Main交接未全关，不覆盖下方历史边界。
 
 当前权威：[R23 staging/外部入口核验](../reports/payload-staging-inspection-2026-11-02-r23/README.md)、[当前任务表](project-task-status-current.md)及[项目/Worker地图](../docs/payload-project-worker-map.md)。四历史staging的8origin共78实际响应完成：62动态noindex、8robots禁爬、30生产canonical页面、12生产域名sitemap。20项NEXT_LOCALE cookie发现原样保留，不放宽正式验收；实际公开缓存不等于private。Main Dashboard生产/预览自动builds关闭，其余9Worker无Git连接；API11次403及未完整枚举hook/token保留，账户级仅本机发布未强制。
@@ -47,9 +49,9 @@ R22未改内容或重启CMS；DB仍84draft/hold、0eligible。实际刷新557份
 | L03 备份/灾备最低保障 | **整体部分完成；独立key/跨机未验** | R17私有异地密文/实际下载认证/隔离恢复有效；R20补安全复制校验工具/跨机清单。只有只读DMG，无独立可写介质/第二Mac，未复制真实密钥，不重复同机恢复凑完成 |
 | L04 Genshin 首次真实发布 | 运维本地验收完成，待真实编辑候选 | R20正式导出明确拒绝No eligible records，DB仍84draft/hold、0 eligible；默认授权不是编辑输入，不能将演练文本公开。真实编辑后执行云预览/推广/公网验收，继而第二次/恢复 |
 | L05 NTE 云链路 | **当前来源交接、本地实测和安装完成；真实云未验** | R15协议/资源/兼容恢复保留；R22当前NTE/Main实际来源登记/安装版模块选择，557公网静态/811本地响应/15精确版本HTTP通过。没有NTE候选run，不冒充manager候选或云发布验收；首次/连续发布与云故障恢复仍未验 |
-| L06 工程交付/操作手册 | **已补R24同游戏成功发布后接续/安装子项；完整交接部分完成** | 显式source-advance已验封存/成功journal/新UUID/全部HTTP及Main本机来源；真实云接续、首次/外部版本/恢复及跨游戏Main变化仍需交接。R23边界/依赖1low沿用 |
+| L06 工程交付/操作手册 | **R24同游戏接续/R25跨游戏Main重绑定已实现并安装；完整交接部分完成** | source-advance/source-rebind限定本机成功发布来源，23工具文件安装；真实云接续/重绑定、首次/外部版本/恢复来源与本地准备流程编排仍待收口。R23边界/依赖1low沿用 |
 
-后续顺序：**真实Genshin候选就绪即首次云发布→显式source-advance→第二次云发布/兼容恢复→NTE；独立key/第二Mac具备即灾备验收**。同游戏成功后的只读接续已实现，不重复开发；无真实编辑时推进跨游戏共享Main新UUID的受控source-only重绑定。四staging调查不重做；首次/外部部署/手工恢复后仍需可信来源交接，不能仅改UUID或套用另一游戏目录。
+后续顺序：**真实Genshin候选就绪即首次云发布→显式source-advance→另一游戏source-rebind→第二次云发布/兼容恢复及NTE；独立key/第二Mac具备即灾备验收**。两种只读来源接续已实现，不重复开发；无真实编辑时推进本地发布前证据准备编排，减少手传pin，不新增自动云写入。四staging调查不重做；首次/外部部署/手工恢复后仍需可信来源交接，不能仅改UUID或套用另一游戏目录。
 
 工程代码已冻结并通过新实际CI，文档提交身份另见R20报告。正式prepare只冻结指定Git commit，不会自动包含未提交源码，应使用已同步的任务分支/精确提交；交付ZIP不能替代Git冻结。独立密钥不能以本机key目录或iCloud目录存在冒充托管。L01/L02及L05已有本地实现不重做；不等待全类型和通用队列，诊断制品不得上传。
 

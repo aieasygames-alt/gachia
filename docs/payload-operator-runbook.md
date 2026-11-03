@@ -128,7 +128,21 @@ cms publish-source-advance --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --bundl
 
 命令不上传或切流：重读完整发布journal、封存bundle及全部已保存公网正文，确认game/Main当前100% UUID，重新GET模块/版本配置、全部封存静态和动态精确预览，取得当前公开A的JSON。保留原树，仅派生副本替换下载runtime，自动生成两owner资源来源、baseline和完整树pin，登记到新UUID固定目录。Main使用明确的本机发布bundle/journal来源，不捏造GitHub artifact ID；下一轮retain可直接使用返回的资源证据。
 
-下一次B仍prepare新run、source-select，并执行全部新鲜资源/基线/兼容恢复/云门禁；旧A的发布journal可以作为历史来源，但不延长候选/恢复批准的15分钟时效。没有“latest”、原始O回退或部署后自动接续：本命令是发布成功后的显式只读交接，且目标仍是当前精确UUID；不是后台自动追踪。partial failure、撤回/手工恢复、新UUID来自外部部署、未知版本或缺完整本机封存来源时拒绝，走第4节维护者交接，不猜版本或重复部署。跨游戏共享Main变化后不能自动套用另一游戏来源。首次无可信来源也仍需维护者，不宣称一键从零发布。
+下一次B仍prepare新run、source-select，并执行全部新鲜资源/基线/兼容恢复/云门禁；旧A的发布journal可以作为历史来源，但不延长候选/恢复批准的15分钟时效。没有“latest”、原始O回退或部署后自动接续：本命令是发布成功后的显式只读交接，且目标仍是当前精确UUID；不是后台自动追踪。partial failure、撤回/手工恢复、新UUID来自外部部署、未知版本或缺完整本机封存来源时拒绝，走第4节维护者交接，不猜版本或重复部署。跨游戏共享Main变化使用下节受控交接，不能直接套用另一游戏条目。首次无可信来源也仍需维护者，不宣称一键从零发布。
+
+### 另一游戏发布后：只读重绑定共享 Main
+
+R25新增`publish-source-rebind`。例如Genshin成功发布并完成source-advance后，NTE游戏Worker UUID未变，但Main已更新；此时用**NTE的原始游戏来源**目录manifest及新Genshin来源目录manifest组合验证，不复制文件改game/UUID。
+
+```sh
+cms publish-source-rebind --source "$TARGET_SOURCE_MANIFEST" --source-pin "$TARGET_SOURCE_PIN" --main-source "$NEW_MAIN_SOURCE_MANIFEST" --main-source-pin "$NEW_MAIN_SOURCE_PIN"
+```
+
+四个值分别是目标游戏旧登记返回的manifestPath/manifestPin，以及另一游戏本次source-advance返回的manifestPath/manifestPin。命令没有run、plan pin或releaseKey，不为NTE捏造候选。目标可为原始retained/recovery、R22历史source-only或已成功发布来源；不接受重绑定结果作为父来源，重复交接仍引用同一**原始游戏来源**。Main必须来自另一游戏的完整本机成功发布，不能用历史诊断、外部部署、恢复版本或未知UUID。若目标游戏自身UUID已变，应走该游戏source-advance或维护者交接。
+
+重读两方全部来源树/pin/历史HTTP、成功发布journal和公网证据；确认目标UUID未变、只有另一游戏/Main的历史部署变化且受保护配置不变。新Main源文件及新鲜精确版本JSON都必须仍等于目标上一公开A，而非O或另一套内容；三语言指南、body/metadata/JSON-LD/media、sitemap、账号禁用、已登记静态、双模块/版本配置和noindex/cookie/cache均重验。目标静态范围为已pin的当前游戏capture，不将本地恢复树的forward-only候选chunks冒称已在云端；新Main仍重验全部封存静态。未宣称完整未知云资源清单。原树/原目录不写，输出新固定目标game/Main条目和组合资源证据；已有/不完整条目不覆盖。返回的sourcePath/sourcePin与evidencePath/evidencePin只供后续source-select及第4节准备使用，不是新发布批准，也不延长15分钟批准。
+
+全部采样正文、版本模块和诊断保存在`~/.gachia-cms-releases/source-rebind-<id>/`，依赖两方原始run/目录，不是自包含备份。失败保留诊断、停止，不回退latest/O或自动部署。当前只有隔离双游戏和真实loopback测试，**真实跨游戏云发布后的成功重绑定仍待验**；无完整成功发布时不运行假交接。首次可信来源、外部部署/手工恢复仍由维护者处理。
 
 四个历史staging别名不是Payload发布中转站，不要为本流程部署它们或用其HTTP替代精确候选UUID验收。R23已完成限定HTTP/已知自动构建入口调查：动态noindex/robots禁爬成立，但语言cookie与公开缓存差异仍保留，未降低本流程的正式门禁；也未在账户层强制只有本机能部署。详见[R23报告](../reports/payload-staging-inspection-2026-11-02-r23/README.md)。
 

@@ -1,6 +1,10 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-03，R24）
+## 当前状态（2026-11-03，R25）
+
+[R25跨游戏Main来源重绑定](../../reports/payload-source-rebind-2026-11-03-r25/README.md)已实现并安装：`publish-source-rebind`用目标原始游戏来源与另一游戏完整成功发布的Main来源组合，只读重验固定UUID/公开A、pin/树/全部登记HTTP/模块/配置/拓扑，不造候选run/releaseKey、不覆盖原来源。45新增测试含实际loopback（云仍模拟），定向234、桌面545/Node304/Python49通过，23工具文件安装校验；CMS/PG健康、安全HTTP9/9、DB84draft/hold/0eligible及10Worker与R24不变，无内容/云写入或CMS重启。真实跨游戏云重绑定、首次/外部部署/恢复来源仍待验；下一无编辑工程项为现有本地发布前证据准备流程编排，减少手传pin，不自动上传/切流。下方R24及更早为历史，不覆盖本段。
+
+### R24 基线
 
 [R24发布后新UUID来源接续](../../reports/payload-source-advance-2026-11-03-r24/README.md)已实现并安装：`publish-source-advance`只读重验本机完整成功journal/封存来源、当前双UUID/模块/版本配置和全封存HTTP后登记新来源；Main下一轮retain可使用明确本机bundle/journal来源，无伪造GitHub artifact ID。33新增来源回归含真实loopback（云仍模拟），完整桌面495/Node304/Python49通过，22工具文件安装校验、安全HTTP9/9、DB84draft/hold/0eligible不变。无内容/云写入或CMS重启；真实云接续仍未验，首次/跨游戏共享Main/外部部署和恢复来源交接仍未全关。下一无编辑工程项为跨游戏Main新UUID的受控来源重绑定，不重复同游戏接续或staging调查。下方R23及更早为基线，不覆盖本段。
 

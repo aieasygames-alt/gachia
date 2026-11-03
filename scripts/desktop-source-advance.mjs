@@ -102,7 +102,7 @@ export function publishedSourceInputs(origin, versions) {
   const baseline = verifyPublishedBaseline(proof.baselinePath, proof.baselinePin, candidate.plan, versions);
   assertTopology(proof.before, baseline.after);
   assert.equal(baseline.contentSHA256, candidate.plan.candidateSHA256, 'New source must follow published A, not import O');
-  const profile = { schemaVersion: 1, game: candidate.plan.game, owners: {} }, evidence = { owners: {} }, references = [];
+  const profile = { schemaVersion: 1, game: candidate.plan.game, owners: {} }, evidence = { owners: {} }, references = [], allReferences = [];
   for (const owner of candidate.plan.owners) {
     const record = candidate.manifest.owners[owner], row = proof.owners[owner], source = referencesFor(candidate, owner);
     assertUploadedVersion(pinnedJson(join(dirname(origin.proofPath), `${owner}-version.json`), row.versionPin), versions[owner],
@@ -119,6 +119,7 @@ export function publishedSourceInputs(origin, versions) {
       const i = source.references.indexOf(reference);
       references.push({ owner, ...reference, body: readFileSync(join(candidate.directory, owner, `${i}.body`)) });
     }
+    for (const [i, reference] of source.references.entries()) allReferences.push({ owner, ...reference, body: readFileSync(join(candidate.directory, owner, `${i}.body`)) });
     profile.owners[owner] = { directory, versionId: versions[owner], artifactSHA256: row.artifactSHA256 };
     evidence.owners[owner] = { runtimeModuleSHA256: row.runtimeModuleSHA256 };
   }
@@ -131,7 +132,7 @@ export function publishedSourceInputs(origin, versions) {
   verifyWebAssetSource(assets.evidence.main.source);
   assert.deepEqual(assets.capture.files.map(file => ({ path: file.path, sha256: file.sha256 })),
     previousAssetFiles(join(profile.owners[candidate.plan.game].directory, 'assets/_next/static')).map(file => ({ path: file.path, sha256: file.sha256 })));
-  return { profile, evidence, baseline, references };
+  return { profile, evidence, baseline, baselinePath: proof.baselinePath, references, allReferences };
 }
 
 function mainProvenance(input, candidate) {
