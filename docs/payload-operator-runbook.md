@@ -6,17 +6,21 @@
 
 **R30范围约束：Payload CMS只在这台Mac运行，不要求第二台Mac或跨机启动验收。** 最新异地备份的本机隔离PG/媒体恢复、实际CMS登录/导出/重启持久性已通过，详见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)。这是复用已安装应用的本机恢复，不是整机重建；独立密钥托管仍待办。
 
-**R32首次真实Genshin公网发布与来源交接已完成。保存或 published 不等于公网更新。** 真实标题“原神快速上手指南：基础操作、元素反应与资源规划”已通过双owner构建、四个候选/兼容恢复版本精确云预览、新鲜续验、正式推广/公网验收/source-advance；NTE原UUID/JSON保持，真实共享Main只读重绑定和重新选择也通过。下一条独立正常发布、实际NTE推广和独立key仍待验，当前不是稳定限定V1或原始项目全部完成。
+**R36双游戏CMS-first实发和双向Main交接通过，修订后的限定V1运行里程碑完成。保存或 published 不等于公网更新。** NTE新手指南中文标题/导读、Genshin上手指南中文阅读路线均由代理先入CMS草稿、批准，再完成四版本精确云预览/900秒新鲜续验/正式推广/公网/source-advance；NTE→Genshin→NTE共享Main交接及重新选择通过，另一游戏公开JSON保持。C01/C02/C03/C04/C05a关闭；C05b用户暂缓、移出当前门槛，原全范围和完整灾备未完成。
 
-**R35日常更新保护已安装：** [R34](../reports/payload-readiness-audit-2026-11-04-r34/README.md)复现的同游戏hold/撤回后隐式回退O，现由本地证据准备及正式推广的逐字段O/A/B门禁拒绝，正常/renewed推广写前均重新核验。**这不是导出器自动保留A，不能仅看manifest.changed或inspect通过就发布。** 遇到`Implicit reset to import O`应停止，核对当前公开A与候选完整差异及CMS批准状态；不批量清hold、混入草稿、手改pin或绕过门禁。刻意恢复到精确O同样拒绝，显式reset-intent尚未实现。hold/撤回不等于网站删除，可信A的手动恢复reader保持可用。精确代码CI/三模块安装与安装版两游戏fixture证据见[R35](../reports/payload-public-preservation-2026-11-04-r35/README.md)；本轮DB/线上内容未变，下一项是真实NTE发布，不重发R32候选。
+**R35日常更新保护保持：** [R34](../reports/payload-readiness-audit-2026-11-04-r34/README.md)复现的同游戏hold/撤回后隐式回退O，现由本地证据准备及正式推广的逐字段O/A/B门禁拒绝，正常/renewed推广写前均重新核验。**这不是导出器自动保留A，不能仅看manifest.changed或inspect通过就发布。** 遇到`Implicit reset to import O`应停止，核对当前公开A与候选完整差异及CMS批准状态；不批量清hold、混入草稿、手改pin或绕过门禁。刻意恢复到精确O同样拒绝，显式reset-intent尚未实现。hold/撤回不等于网站删除，可信A的手动恢复reader保持可用。原工程证据见[R35](../reports/payload-public-preservation-2026-11-04-r35/README.md)，本轮真实更新见R36，不重发任何已接受候选。
 
-当前工作包见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，当前实测见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。R29不可靠历史content选择器已由[上传字节回执](payload-version-provenance-2026-11-03.md)替代：上传时绑定日志/UUID、出站multipart、响应ETag/字节及前后版本元数据；以后重验封存字节和新鲜不可变UUID身份，不伪造历史下载。三份旧来源仅接受审核原始pin，未知外部UUID仍拒绝。
+当前工作包见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，当前实测见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，首发见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，历史partial见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。R29不可靠历史content选择器已由[上传字节回执](payload-version-provenance-2026-11-03.md)替代：上传时绑定日志/UUID、出站multipart、响应ETag/字节及前后版本元数据；以后重验封存字节和新鲜不可变UUID身份，不伪造历史下载。三份旧来源仅接受审核原始pin，未知外部UUID仍拒绝。
+
+**R36新上传可见性边界：** 已确认上传返回精确UUID后，只有首次元数据GET遇404允许按5/10/20/40秒等待（最多5次GET/75秒等待），本机`version-visibility.jsonl`记录服务/UUID/时间与状态、不含凭证；超过上限即停止。普通身份检查、二进制HTTP错误、403/503及任何上传/部署不据此重试。此前两次非活动上传失败保留，另建run成功；实际成功批次未出现等待日志，该等待分支由回归覆盖，不冒称实网已触发。
 
 本账户部署POST可能只返回id；发布器封存原始POST，再按返回精确部署ID GET严格核对同ID、percentage、单一正确UUID/100%，最后仍核对当前活动七服务拓扑，不因字段缺失重复POST。实际partial/显式兼容恢复/source-recover和恢复后另建run再次成功发布均已通过；旧失败/恢复journal保留，不再执行旧run。
 
 发布前确认OAuth余量；本轮使用已安装Wrangler相同的官方refresh_token grant，在显式边界续签，权限集合不变，凭证仅写私有Wrangler配置、不进入报告，不伪造到期时间。认证续签不延长实时15分钟门禁。固定HTTPS目标GET的瞬时TypeError最多3次；仅上传后固定服务/UUID模块二进制GET自身传输超时可再读一次，每次180秒/最多两次/最多16MiB，尝试记录进入回执pin。HTTP错误、外部取消、元数据超时、预算/身份错误及云写不重试。HTTP采样最多4并发，失败等待活动同伴落盘。R32公共静态采样只对自身超时或已识别断流允许一次完整新读取，保存尝试证据；字节/身份/HTTP错误及外部取消不借此重试。
 
 **R32已修复并实测通过推广重复封存校验耗时。** 去重仅限同步只读验证pass，不跨await、网络或写边界；写前仍重新读取字节、四版本身份、活动UUID/拓扑和900秒实时有效性。实测推广202.16秒，首/次intent时最老候选证明约96.85/134.24秒；不是网络时延保证。下一条真实编辑另建run，不重发本轮已成功releaseKey，不重放历史失败journal，不改acceptedAt/延长窗口/跳过写前漂移。不要求内容准确度审稿；发布意图、身份、安全和新增媒体权利仍保留。
+
+R36将现有同步pass用于prepare/source输入重验，读取不跨网络缓存。实际NTE/Genshin推广333.07/508.44秒；后者超过历史490秒保守分配，实际900秒门禁仍全通过，不能把490当延迟保证。收尾DB为82draft/hold+2published/eligible，最终冷备已含两次编辑；当前R2仍R29，不代表最新异地保护。
 
 ## 1. 内容入库与批准（默认代理执行，也支持手动编辑）
 
@@ -226,7 +230,7 @@ cms publish-source-recover --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --recov
 
 命令只读云端、不上传/切流：重验原候选/封存兼容恢复、recover模式renewal、推广及完整恢复journal、历史multipart/版本配置/实际公网正文；重新读取当前双恢复UUID/模块/配置、全部封存静态和精确预览HTTP、公开A与七服务拓扑。派生副本仅替换runtime，原树不改；Main登记为明确的本机兼容恢复来源，不伪造成功推广或GitHub artifact身份。未知外部恢复、partial/torn journal、原始旧UUID、候选UUID、漂移或来源被篡改都拒绝。
 
-历史证据按已pin的实际恢复完成时间核验当时的时效，**不延长实时15分钟门禁，也不授权再次推广/恢复**。返回manifestPath/manifestPin、sourcePath/sourcePin、evidencePath/evidencePin用于下一次全新run的source-select/prepare-evidence/retain；恢复的是上一公开A，不是导入O或失败候选B。另一游戏共享Main变化可用该新manifest执行source-rebind，但目标game UUID及公开A仍必须不变。保留原run与全部依赖，不重跑旧发布或清journal。双游戏磁盘链/loopback工程回归已覆盖；R31真实云恢复→来源接续→R32另建run成功再发已通过。独立正常下一次发布及实际NTE发布仍归C03/C04待验。
+历史证据按已pin的实际恢复完成时间核验当时的时效，**不延长实时15分钟门禁，也不授权再次推广/恢复**。返回manifestPath/manifestPin、sourcePath/sourcePin、evidencePath/evidencePin用于下一次全新run的source-select/prepare-evidence/retain；恢复的是上一公开A，不是导入O或失败候选B。另一游戏共享Main变化可用该新manifest执行source-rebind，但目标game UUID及公开A仍必须不变。保留原run与全部依赖，不重跑旧发布或清journal。双游戏磁盘链/loopback工程回归已覆盖；R31真实云恢复→来源接续→R32另建run成功再发已通过。R36又完成独立正常Genshin发布、实际NTE发布与双向Main交接，C03/C04关闭，不再重复这些验收。
 
 ## 7. 交付与安全边界
 

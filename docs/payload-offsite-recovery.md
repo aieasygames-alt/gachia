@@ -2,7 +2,9 @@
 
 **2026-11-04最新范围决定：** 用户暂不需要独立密钥存放位置，C05b改为未完成/明确暂缓，移出当前限定V1上线条件，后续恢复韧性工作另排；不再要求现在接入独立介质。保留本机现有key、备份与私有R2密文，不关闭备份、不将密钥随意外传。若Mac与同机key一并丢失，R2密文可能无法解密，因此不声称完整整机灾难恢复，T11/P7完整范围仍未关闭。详见[当前内容工作流与范围决定](payload-agent-publishing-workflow.md)。以下历史验收和工具保持可用，不将暂缓冒称已通过。
 
-更新：2026-11-04（R30异地备份的本机应用恢复通过；R32首次真实公网发布完成；R33本机编辑权限修复；独立key仍待办）。用户明确CMS只在这台Mac运行，**不要求第二台Mac或跨机安装/启动验收**。公众站点不回源本机；本流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。本文最新已验异地对象仍为R29，含1条published编辑与当时的已安装发布器；该编辑已在R32公网生效，不能再称为待首发。R32/R33另有本机冷备，R33为应用升级前备份，均未据此宣称已更新R2对象；新应用版本保留在本机，未完成其异地恢复验收。恢复结果见[R30报告](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，异地备份生成见[R29](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)，公开发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，当前本机应用见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)。
+更新：2026-11-04 R36（双游戏实际发布/双向Main交接通过，修订后的限定V1运行里程碑完成；C05b仍暂缓）。用户明确CMS只在这台Mac运行，**不要求第二台Mac或跨机安装/启动验收**。公众站点不回源本机；本备份流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。**最新已验异地对象仍为R29**，含1条published编辑与当时的发布器；该编辑已于R32公网生效。R36两次新编辑与最新发布器尚未写新R2对象，不把本轮冷备或限定V1完成冒称最新异地恢复达标。恢复见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，异地对象见[R29](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)，本轮发布/本机备份见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，安装应用见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)。
+
+R36三次本机冷备分别在NTE编辑前、Genshin编辑前及两次发布/交接后；最终目录为`~/Library/Application Support/GachiaCMS/backups/20261104T152116Z-424b09`，含当前84记录/2eligible、私有媒体/settings。备份后CMS/PG健康、9项安全HTTP和698应用/28工具摘要通过。未对本轮备份重复恢复演练，最新异地包与安全保留治理是独立运维余项，不重开已验C05a，也不取消本机备份。
 
 ## 存储与交付边界
 
@@ -14,7 +16,7 @@
 
 ## 恢复顺序
 
-1. 从同一轮实际交付回执取得bucket/objectKey、encryptedSHA256、plaintextSHA256及keyPath。最新冷备为R29，回执在`reports/payload-real-lifecycle-2026-11-03-r29/encrypted-backup.json`、`offsite-roundtrip.json`；旧R17回执仍保留，不混用两轮密钥/对象/pin。回执不含密钥值，原始回执仅本机保留，不跟随Git提交。
+1. 从同一轮实际交付回执取得bucket/objectKey、encryptedSHA256、plaintextSHA256及keyPath。最新已验异地对象来自R29，回执在`reports/payload-real-lifecycle-2026-11-03-r29/encrypted-backup.json`、`offsite-roundtrip.json`；旧R17回执仍保留，不混用两轮密钥/对象/pin。回执不含密钥值，原始回执仅本机保留，不跟随Git提交。本轮更新的本机冷备不是该R2对象，不混用其明文pin。
 2. 用已有Cloudflare账号只读下载精确对象；调用 `downloadEncryptedBackup({store,objectKey,pin,destination})`，destination必须为新私有工作目录中的新文件。函数固定使用该账号/桶，不接收任意远程地址。
 3. 使用另行保管的32字节密钥和 `desktop-encrypted-backup.mjs` 的 `decryptArchive`，认证解密到新文件并核对plaintextSHA256。格式为ASCII `GACHIA-BACKUP-v1`加NUL、12字节nonce、密文、16字节GCM tag；AAD为magic+nonce，AES-256-GCM。密钥不得与密文一起放进R2，也不要打印到终端、聊天或报告。
 4. 先检查tar成员仅为相对普通文件，拒绝链接/穿越/额外成员；按bundle-manifest逐文件核对SHA/大小后才提取到新目录。内含源码ZIP还有独立HANDOFF清单/pin；不要直接解包覆盖运行目录。

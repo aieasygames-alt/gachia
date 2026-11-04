@@ -1,10 +1,10 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
-**最新操作/范围决定（2026-11-04）：** 由代理规划内容、经认证Payload API先写草稿并批准，再从CMS正式版本执行现有本机双owner发布；不再等待用户手动编辑。独立key C05b用户暂缓，移出当前上线条件，完整灾备不宣称完成。见[工作流](payload-agent-publishing-workflow.md)与[V1清单](../plans/payload-v1-completion-2026-11-03.md)。本轮未改Worker架构、真实内容或部署，下面R35为最新工程实测，不是本轮重验。
+**当前入口：2026-11-04 R36。** 由代理规划→认证Payload草稿/批准→本机双owner发布的真实路径已执行，NTE与独立Genshin更新、公网/source-advance、双向共享Main交接均通过，修订后的限定V1运行里程碑完成。架构仍为本机Payload/PG、Cloudflare公众多Worker，无Tunnel/Mac回源。C05b独立key用户暂缓，完整灾备不宣称完成。证据见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，操作见[工作流](payload-agent-publishing-workflow.md)与[V1清单](../plans/payload-v1-completion-2026-11-03.md)。
 
-**当前入口：2026-11-04 R35。** 架构仍为本机Payload/PG、Cloudflare公众多Worker，无Tunnel/Mac回源。R32已完成Genshin真实内容首发、partial后的兼容恢复来源再发及NTE共享Main只读交接；R33编辑资格修复已安装，R35隐式O回退保护也已通过精确代码CI并安装。本轮DB/公开内容保持，Worker源码契约通过，未刷新已过期OAuth或重查云控制面，因此10Worker/7服务及R32UUID是上次已验证拓扑，不是本轮新控制面观察。当前增量见[R35](../reports/payload-public-preservation-2026-11-04-r35/README.md)，完整审计见[R34](../reports/payload-readiness-audit-2026-11-04-r34/README.md)，执行见[V1清单](../plans/payload-v1-completion-2026-11-03.md)。
+本轮实际重查10Worker/7服务，Router/staging及其他服务保持，单次仍只写game+Main。最终Main UUID为`63b9b839-5ad7-4f61-9add-5df5ee336bc4`，Genshin为`347eb5c8-36d5-4f9c-b548-bb19c8617304`，NTE为`c1247d65-734d-42a9-8f6f-16d6ab0a1173`；两游戏当前来源已分别绑定最终Main，后续新候选仍要新鲜取证。R33编辑资格、R35隐式回退拒绝保持；R36新上传首次精确元数据404有界可见性等待和同步验证pass已安装，精确代码CI成功，28工具/698应用文件验摘要。
 
-R35最小fail-closed门禁逐字段比较O/A/B，拒绝A→O隐式回退，连同刻意精确重置也拒绝；不自动改写导出、不实现完整reset-intent、不改变恢复reader。下一项为代理准备真实NTE修改并入库后发布/反向Main交接，再独立Genshin正常连续发布；两项仍待真实验收，独立key当前暂缓。当前只能接管两游戏既有指南6个本地化title/body字段，不是全16scope/所有类型；后台published不是部署，顺序双owner切流不是原子ReleaseMap激活。单Mac为既定范围，第二Mac/准确度/翻译均不再作门槛。以下轮次增量保留为历史，冲突以最新操作决定与V1清单为准。
+R35最小fail-closed门禁逐字段比较O/A/B，拒绝A→O隐式回退，连同刻意精确重置也拒绝；不自动改写导出、不实现完整reset-intent、不改变恢复reader。C03/C04已由R36真实验收关闭，后续按内容需求进入新批次，不重发旧run。当前只接管两游戏既有指南6个本地化title/body字段，不是全16scope/所有类型；后台published不是部署，顺序双owner切流不是原子ReleaseMap激活。单Mac为既定范围，第二Mac/准确度/翻译均不作门槛。以下轮次增量保留为历史，冲突以本节与V1清单为准。
 
 2026-11-03 R28当前增量：[恢复来源接续报告](../reports/payload-recovery-source-2026-11-03-r28/README.md)、[有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。安装版双游戏当前来源选择通过，10Worker前后与R27一致，仍保护7服务、单次只写game/Main；本轮无云/内容写入、无CMS重启或架构变更。24publisher模块+manager+2TS helper共27文件验摘要，不影响公众应用bundle。
 
@@ -38,14 +38,14 @@ R23当前权威增量：[staging/外部入口报告](../reports/payload-staging-
 
 ## 2. 已观测部署：6 个生产服务 + 4 个 staging
 
-服务清单沿用R19–R32已验拓扑，Payload能力列更新至R34；本轮无控制面重读，不以本地Wrangler模板补造新服务。
+服务清单与保护边界由R36控制面重新只读核对，Payload能力列更新至R36；不以本地Wrangler模板补造新服务。
 
 | Worker | 角色 | 当前 Payload 写入范围 | 控制面核验范围 |
 | --- | --- | --- | --- |
 | `gachia-router` | 正式域名入口/路径分流 | 不部署 | 七服务保护集 |
 | `gachia` | Main：共享页面、其余游戏、公开 JSON、账号停用接口、共享资源 | 每批 guides 与对应 game 组成双目标 | 七服务保护集 |
-| `gachia-game-genshin` | Genshin 专属路径 | R32真实指南文字已发布；正常独立连续发布待验 | 七服务保护集 |
-| `gachia-game-nte` | NTE 部分路径 | 协议/来源/共享Main只读交接通过；实际内容推广待验 | 七服务保护集 |
+| `gachia-game-genshin` | Genshin 专属路径 | R32首发、R36独立正常指南更新及Main交接通过 | 七服务保护集 |
+| `gachia-game-nte` | NTE 部分路径 | R36真实指南更新及双向共享Main交接通过 | 七服务保护集 |
 | `gachia-game-azur-promilia` | Azur Promilia 专属路径 | 暂不接管 | 七服务保护集 |
 | `gachia-game-lvmeng` | Lvmeng zh 专属路径 | 暂不接管 | 七服务保护集 |
 | `gachia-staging` | Main staging | 不部署 | 七服务保护集 |
@@ -107,8 +107,8 @@ Main 当前有网站 D1、`gachia-images` R2、自引用及已有 secret binding
 ```
 
 - 第一条指南文字发布仅变更 `[genshin, main]`；NTE 为 `[nte, main]`。不部署 Router、不动另两游戏、不批量发全部 Worker。
-- CMS的published是编辑状态，不是公网激活。R34只读DB仍84条：Genshin30 draft/hold与1 published/eligible（R32已公网更新），NTE53 draft/hold。没有下一条真实编辑；其他83条hold不表示现有网站页面消失。
-- 导出只允许既有Genshin/NTE指南title/body（zh/en/ja共6个旧JSON字段）；新增/删除、ID/URL/顺序/media/summary/FAQ等固定字段及其他内容类型未接通。R35已安装同游戏隐式O回退的前向拒绝门禁；导出器不自动保留A，显式重置/网站撤回契约仍未实现。跨游戏保留及其真实双向交接另行验收。
+- CMS的published是编辑状态，不是公网激活。R36最终DB84条：Genshin30 draft/hold与1 published/eligible，NTE52 draft/hold与1 published/eligible；两篇均已公网验收。其余82条hold不表示现有网站页面消失，不批量解除hold。
+- 导出只允许既有Genshin/NTE指南title/body（zh/en/ja共6个旧JSON字段）；新增/删除、ID/URL/顺序/media/summary/FAQ等固定字段及其他内容类型未接通。R35已安装同游戏隐式O回退的前向拒绝门禁；导出器不自动保留A，显式重置/网站撤回契约仍未实现。跨游戏保留及其真实双向交接本轮通过，不等于通用全类型激活。
 - 发布是**顺序双目标**，不是跨 Worker 原子事务。第二目标失败可能留下混合状态；保留 journal、停止写入、只读对账，再显式决定兼容恢复，不自动重试或回退。
 - 原始旧 UUID 可能没有新页面已引用的 chunks；兼容恢复必须是“上一公开 runtime + 新旧静态并集”，不能直接 rollback 到旧 UUID。
 - releaseKey 已绑定 manifest、制品摘要、UUID 和 HTTP 指纹；没有注入每一个普通公开响应。旧格式 reader + 封存 build 不等于全站 Snapshot/ReleaseMap 请求上下文已接管。
@@ -118,4 +118,4 @@ Main 当前有网站 D1、`gachia-images` R2、自引用及已有 secret binding
 
 R23实际读取GitHub两个部署变量均false，staging/production环境无变量覆盖，独立Genshin preview workflow disabled；main的9份workflow与维护分支相同，Payload CI仅验证。Cloudflare公开Builds/hooks API实际11次403，不是空列表；现有登录Dashboard确认仅Main连接Git且生产/预览builds关闭，另9Worker未连接Git，Main明确无deploy hooks。其余hook/token未独立完整枚举，不能声称十服务所有凭据入口封堵或账户级“只有本机发布”。普通生产deploy/promote/rollback继续fail-closed；持凭据或Dashboard权限的人仍可能绕过仓库命令人工部署。
 
-当前清单/CI与准备命令、R35最小隐式回退门禁已交付，首次真实发布与恢复后再发已验，不再重复。后续验真实NTE发布/反向Main交接及独立Genshin正常连续发布；独立key目的地具备即验证，不要求第二台Mac运行。首次无可信来源/外部未知UUID继续显式交接，不自动接纳。内容准确度、翻译、全类型/全scope迁移、通用队列和免重建快照后置。没有真实编辑时不造内容或重复演练凑发布；运行数据、密钥、私有媒体与原始日志不入Git。
+当前限定双游戏日常文字发布、恢复后再发与双向共享Main交接均已验，不再重复。下一批由代理规划并先入CMS，仍完整发布/验收；C05b暂缓，不要求第二台Mac。首次无可信来源/外部未知UUID继续显式交接，不自动接纳。内容准确度、翻译、全类型/全scope迁移、通用队列和免重建快照后置。没有真实编辑时不造内容或重复演练凑发布；运行数据、密钥、私有媒体与原始日志不入Git。
