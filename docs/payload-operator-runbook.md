@@ -6,6 +6,8 @@
 
 **R32首次真实Genshin公网发布与来源交接已完成。保存或 published 不等于公网更新。** 真实标题“原神快速上手指南：基础操作、元素反应与资源规划”已通过双owner构建、四个候选/兼容恢复版本精确云预览、新鲜续验、正式推广/公网验收/source-advance；NTE原UUID/JSON保持，真实共享Main只读重绑定和重新选择也通过。下一条独立正常发布、实际NTE推广和独立key仍待验，当前不是稳定限定V1或原始项目全部完成。
 
+**R34日常更新安全提示（待修）：** 已复现同游戏已上线A被hold/撤回后，再导出另一条B会将A隐式退回最初导入O，当前候选检查仍可接受。**不能仅看manifest.changed或“存在差异”就推广**；F1修复前必须逐记录/字段核对当前公开A→候选的完整差异，发现未明确批准的回退就停止，不通过手改pin/跳过门禁发布。hold/撤回不等于网站删除，也不能承诺已上线文字自动保留。下一工程首项及证据见[R34](../reports/payload-readiness-audit-2026-11-04-r34/README.md)。本轮线上内容与DB未变，没有实际回退事故；已成功首发仍成立。
+
 当前工作包见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，当前实测见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。R29不可靠历史content选择器已由[上传字节回执](payload-version-provenance-2026-11-03.md)替代：上传时绑定日志/UUID、出站multipart、响应ETag/字节及前后版本元数据；以后重验封存字节和新鲜不可变UUID身份，不伪造历史下载。三份旧来源仅接受审核原始pin，未知外部UUID仍拒绝。
 
 本账户部署POST可能只返回id；发布器封存原始POST，再按返回精确部署ID GET严格核对同ID、percentage、单一正确UUID/100%，最后仍核对当前活动七服务拓扑，不因字段缺失重复POST。实际partial/显式兼容恢复/source-recover和恢复后另建run再次成功发布均已通过；旧失败/恢复journal保留，不再执行旧run。

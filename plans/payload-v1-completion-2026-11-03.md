@@ -1,6 +1,6 @@
 # Payload V1 有限完成计划
 
-更新：2026-11-04，R33。当前执行清单以本文为准；完整历史范围仍见[任务表](project-task-status-current.md)。下一阶段安全修复见[R33编辑批准与撤回权限](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)，首次发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，本机恢复见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)，操作见[手册](../docs/payload-operator-runbook.md)。
+更新：2026-11-04，R34。当前执行清单以本文为准；完整范围与就绪判断见[任务表](project-task-status-current.md)和[R34审计](../reports/payload-readiness-audit-2026-11-04-r34/README.md)。下一工程首项为已复现的公开A保留/隐式O回退缺口；R33权限修复已安装，不重复开工。首次发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，本机恢复见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)，操作见[手册](../docs/payload-operator-runbook.md)。
 
 ## 1. 完成的定义
 
@@ -38,10 +38,12 @@ CMS/PostgreSQL均healthy/loaded，本机安全HTTP为9/9；完整数据库摘要
 
 ## 3. 执行顺序与停止扩建规则
 
-1. **下一条真实NTE编辑优先验C04**：仅针对确实希望公开的既有指南title/body编辑，单条明确发布意图；从本次已验证的NTE/新Main来源另建run，执行冷备、导出、完整双owner构建、四版本精确云预览/900秒新鲜续验、正式推广/公网/source-advance。随后只读反向交接Genshin来源。没有真实编辑时不制造文案、不解除其他hold，不重发旧候选。
-2. **下一条独立Genshin编辑验C03正常连续发布**：与R32首发及R31失败run分开；保留新Main中已公开的NTE JSON，全部新鲜门禁照常。恢复后再发已关闭，不重复故障/恢复演练凑进度。
-3. **独立key目的地具备即完成C05b**：独立介质/安全托管不需要运行CMS；不以同盘目录/R2密文/授权文字替代，不擅自上传iCloud、报告或密文桶。目的地尚未配置时明确保留待办，不影响已上线文字链路。
-4. **C01–C05实际关闭后冻结限定V1**：不扩建通用运营平台，不把测试或报告数量当验收。原始P0–P7/T01–T12另排；准确度、翻译和第二Mac均不作首发门槛。
+1. **先修R34 F1公开A保留/发布意图边界**：真实函数隔离复现已上线记录被hold/撤回后，发布另一条会在候选中将前者隐式退回O，现有inspect与非空差异检查仍通过。以可信公开A核对逐记录/字段差异与明确意图，未批准变化拒绝或保留；补hold/撤回、显式重置、草稿/三语言与跨游戏Main回归，验安装版再升级。没有真实编辑也可执行，不改旧manifest/历史run或把hold当网页删除。此项是日常安全验收前置，不否认已成功首发。
+2. **下一条真实NTE编辑验C04**：仅针对确实希望公开的既有指南title/body编辑，单条明确发布意图；续签官方认证并新鲜核对当前NTE/Main来源，另建run，执行冷备、导出、完整双owner构建、四版本精确云预览/900秒新鲜续验、正式推广/公网/source-advance。随后只读反向交接Genshin来源。没有真实编辑时不制造文案、不解除其他hold，不重发旧候选。
+3. **下一条独立Genshin编辑验C03正常连续发布**：与R32首发及R31失败run分开；保留新Main中已公开的NTE JSON，全部新鲜门禁照常。恢复后再发已关闭，不重复故障/恢复演练凑进度。
+4. **独立key具备目的地即收尾C05b，实际达标后冻结V1**：独立介质/安全托管不需要运行CMS；不以同盘目录/R2密文/授权文字替代，不擅自上传iCloud、报告或密文桶。尚未配置时明确保留待办，不影响已上线文字链路，不虚报稳定V1完整关闭。不扩建通用运营平台，原始P0–P7/T01–T12另排；准确度、翻译和第二Mac均不作上线门槛。
+
+R34只读复核CMS/PG健康、在线DB摘要与R33相同、83draft/hold+1已公网更新记录；两游戏JSON仍为已接受SHA，9公网样本通过，尚无下一条编辑。CMS174/174、发布784/784及typecheck/Worker契约重新通过；首次并行重负载的两项CMS超时证据保留，未放宽断言。OAuth已过期，本轮未刷新/重查控制面。限定双游戏指南文字日常更新预算2–4工程工作日（F1约0.5–1.5日，真实连续/双向验收约1–2日，交付约0.5日），以真实编辑/云门禁和目的地为条件，不是固定完成日；不适用于全游戏/全类型完成。
 
 R32本轮新增4个版本上传、2个成功部署POST，无恢复部署或云写重试；连同R31共21个版本上传/6个部署POST。生产Git main与两个GitHub部署false开关保持。四版本取证固定releaseKey/UUID，不等于普通应用请求已全程注入releaseKey或ReleaseMap原子激活；两owner仍顺序切流，partial后必须停止/只读对账/显式恢复。900秒实时门禁、字节/身份/写前漂移与媒体边界不放宽，详见[版本取证协议](../docs/payload-version-provenance-2026-11-03.md)。
 
