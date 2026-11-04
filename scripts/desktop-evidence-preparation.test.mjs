@@ -21,7 +21,8 @@ function stageNow(run) {
 
 async function fixture(t, game = 'genshin', options = {}) {
   const f = await catalogFixture(t, game);
-  const content = options.unchanged ? (options.reformatted ? json(JSON.parse(f.published)) : f.published.toString()) : json([{ id: 'one', title: 'B', content: 'Candidate B' }]);
+  const content = options.unchanged ? (options.reformatted ? json(JSON.parse(f.published)) : f.published.toString())
+    : json([{ id: 'one', title: options.reset ? JSON.parse(f.original)[0].title : 'B', content: 'Candidate B' }]);
   const candidate = await candidateFixture(t, game, { builtOnly: true, original: f.original.toString(), content });
   let config; const calls = [];
   const respond = url => {
@@ -139,6 +140,16 @@ test('formatting-only differences from A cannot manufacture a new publication', 
   const f = await fixture(t, 'nte', { unchanged: true, reformatted: true });
   assert.notEqual(f.plan.candidateSHA256, digest(f.published));
   await assert.rejects(prepareEvidence(f.input), /unchanged from current published A/);
+});
+
+for (const game of ['genshin', 'nte']) test(`${game}: local preparation refuses same-row implicit title reset even when body genuinely changes`, async t => {
+  const f = await fixture(t, game, { reset: true });
+  await assert.rejects(prepareEvidence(f.input), /Implicit reset to import O/);
+  const directory = attempts(f.run)[0];
+  assert.equal(JSON.parse(readFileSync(join(directory, 'failure.json'))).stage, 'baseline');
+  assert(!existsSync(join(directory, 'manifest.json')));
+  assert(!existsSync(join(f.run, 'operation.lock')));
+  assert(!readdirSync(f.run).some(name => name.startsWith('cloud-') || name.startsWith('promotion-')));
 });
 
 for (const kind of ['uuid', 'topology', 'cookie', 'static', 'baseline-O', 'module']) test(`rejects ${kind} drift during preparation`, async t => {

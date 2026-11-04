@@ -3,12 +3,12 @@ import { randomBytes } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { appendFileSync, mkdirSync, readFileSync, readdirSync, readlinkSync, realpathSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
-import { artifactFiles, validateGuideOverlay, verifyBuilt, withRunLock } from './desktop-publish.mjs';
+import { artifactFiles, verifyBuilt, withRunLock } from './desktop-publish.mjs';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
 import { digest, pinnedJson, retainCandidateWithLock, verifyAssetEvidence, verifyRetainedCandidate } from './desktop-release-assets.mjs';
 import { refreshAssetEvidence, prepareLocalRecovery } from './desktop-local-evidence.mjs';
 import { selectSourceCatalog, verifySelectedSourceCatalog } from './desktop-source-catalog.mjs';
-import { capturePublishedBaseline, verifyPublishedBaseline } from './desktop-published-baseline.mjs';
+import { capturePublishedBaseline, verifyPublishedBaseline, validatePublishedGuideUpdate } from './desktop-published-baseline.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { multipartModule } from './desktop-cloud-transport.mjs';
 
@@ -42,7 +42,9 @@ function selectedIdentity(value) {
 function changedFromPublished(run, plan, baselinePath) {
   const candidate = readFileSync(join(run, 'source/packages/data/games', plan.game, 'raw-guides.json'), 'utf8');
   const published = readFileSync(join(dirname(baselinePath), 'published.body'), 'utf8');
-  assert(validateGuideOverlay(published, candidate).changed.length > 0, 'Candidate is unchanged from current published A');
+  const original = readFileSync(join(dirname(baselinePath), 'import.body'), 'utf8');
+  assert.equal(digest(original), plan.sourceSHA256); assert.equal(digest(candidate), plan.candidateSHA256);
+  validatePublishedGuideUpdate(original, published, candidate);
 }
 
 async function checkLocal(manifest) {

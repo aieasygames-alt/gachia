@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from '
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { capturePublishedBaseline, recoveryBaselineSHA256, verifyPublishedBaseline } from './desktop-published-baseline.mjs';
+import { capturePublishedBaseline, recoveryBaselineSHA256, verifyPublishedBaseline, validatePublishedGuideUpdate, verifyPublishedGuideUpdate } from './desktop-published-baseline.mjs';
 import { SERVICES } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
 
@@ -49,4 +49,59 @@ test('baseline is bound to prior versions and saved bodies; real releases cannot
   writeFileSync(join(f.root, 'captured/published.body'), 'changed');
   assert.throws(() => verifyPublishedBaseline(captured.baselinePath, captured.baselinePin, f.plan, captured.versions));
   assert.equal(JSON.parse(readFileSync(captured.baselinePath)).contentSHA256, f.plan.sourceSHA256);
+});
+
+const encode = rows => JSON.stringify(rows);
+const fields = ['title', 'titleEn', 'titleJa', 'content', 'contentEn', 'contentJa'];
+for (const field of fields) test(`published ${field} cannot revert to O while a different field or guide changes`, () => {
+  const original = [{ id: 'one', [field]: 'O' }, { id: 'two', title: 'Other O' }];
+  const published = [{ ...original[0], [field]: 'Published A' }, original[1]];
+  const otherGuide = [original[0], { ...original[1], title: 'Candidate B' }];
+  const otherField = [{ ...original[0], [field === 'content' ? 'title' : 'content']: 'Candidate B' }, original[1]];
+  for (const candidate of [otherGuide, otherField]) {
+    assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode(candidate)), /Implicit reset to import O/);
+  }
+});
+
+test('published missing/null/empty original fields and added translations are not implicitly restored', () => {
+  for (const originalField of [{}, { titleJa: null }, { titleJa: '' }]) {
+    const original = [{ id: 'one', title: 'O', ...originalField }];
+    const published = [{ ...original[0], titleJa: 'Published Japanese A' }];
+    const candidate = [{ ...original[0], title: 'Candidate B' }];
+    assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode(candidate)));
+  }
+});
+
+test('normal O to A to B updates and explicit empty text preserve other public fields', () => {
+  const original = [{ id: 'one', title: 'O', content: 'Original', image: '/keep.webp' }, { id: 'two', title: 'Other O' }];
+  const published = [{ ...original[0], title: 'Published A' }, original[1]];
+  const candidate = [{ ...published[0], content: '' }, { ...original[1], title: 'Candidate B' }];
+  assert.deepEqual(validatePublishedGuideUpdate(encode(original), encode(published), encode(candidate)).changed, ['one', 'two']);
+  assert.equal(validatePublishedGuideUpdate(encode(original), encode(original), encode(published)).changed.length, 1);
+  assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode(published)), /unchanged from current published A/);
+  assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode([...candidate].reverse())), /identity\/order\/media\/metadata/);
+});
+
+test('deliberate reset to O also fails closed until a separate reset-intent contract exists', () => {
+  const original = [{ id: 'one', title: 'O', content: 'Original' }];
+  const published = [{ ...original[0], title: 'Published A' }];
+  assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode(original)), /Implicit reset to import O/);
+});
+
+test('disk update gate binds A to old UUIDs and B to frozen candidate SHA without changing recovery readers', async t => {
+  const f = fixture(t), published = Buffer.from(encode([{ id: 'one', title: 'A', content: 'Original' }]));
+  const captured = await capturePublishedBaseline({ plan: f.plan, importBytes: f.original, directory: join(f.root, 'update-baseline'),
+    observe: async () => structuredClone(f.snapshot), request: async () => new Response(published, { headers: { 'content-type': 'application/json' } }) });
+  const candidate = Buffer.from(encode([{ id: 'one', title: 'B', content: 'Original' }]));
+  const candidatePath = join(f.root, 'candidate.json'); writeFileSync(candidatePath, candidate);
+  f.plan.candidateSHA256 = digest(candidate);
+  const verified = { plan: f.plan, receipt: { owners: Object.fromEntries(Object.entries(captured.versions).map(([owner, version]) => [owner, { previousVersion: version }])) } };
+  assert.equal(verifyPublishedGuideUpdate({ ...captured, candidatePath, verified }).changed.length, 1);
+  writeFileSync(candidatePath, f.original);
+  assert.throws(() => verifyPublishedGuideUpdate({ ...captured, candidatePath, verified }), /Candidate digest mismatch/);
+  f.plan.candidateSHA256 = digest(f.original);
+  assert.throws(() => verifyPublishedGuideUpdate({ ...captured, candidatePath, verified }), /Implicit reset to import O/);
+  assert.equal(recoveryBaselineSHA256(captured, verified), digest(published), 'Recovery must still be able to restore public A');
+  verified.receipt.owners.main.previousVersion = uuid(999);
+  assert.throws(() => verifyPublishedGuideUpdate({ ...captured, candidatePath, verified }), /another deployed version/);
 });

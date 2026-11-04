@@ -4,7 +4,8 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync,
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { createPromotionTransport, promoteDesktopRelease } from './desktop-promotion-transport.mjs';
+import { createPromotionTransport, promoteDesktopRelease, verifyPromotionGuideUpdate } from './desktop-promotion-transport.mjs';
+import { capturePublishedBaseline } from './desktop-published-baseline.mjs';
 import { executePromotionContinuation, SERVICES } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { verifiedInPass, withVerificationPass } from './desktop-release-assets.mjs';
@@ -108,10 +109,53 @@ async function fixture(t, failure) {
     else assert.fail(`Unexpected route ${path}`);
     return Response.json({ success: true, result });
   };
-  const transport = createPromotionTransport({ run, evidence, candidateDirectory, recoveryDirectory, recoveryManifest: { owners: recoveryOwners }, token: 'test-only', request });
+  const transportOptions = { run, evidence, candidateDirectory, recoveryDirectory, recoveryManifest: { owners: recoveryOwners }, token: 'test-only', request };
+  const transport = createPromotionTransport(transportOptions);
   const options = { run, retentionId, verify: () => structuredClone(evidence), authorize: () => sha, transport };
-  return { run, options, calls, journal, evidence, current };
+  return { run, options, calls, journal, evidence, current, transportOptions };
 }
+
+async function updateGate(f, unsafe = false) {
+  const original = Buffer.from(JSON.stringify([{ id: 'guide', title: 'O', content: 'Original' }]));
+  const published = Buffer.from(JSON.stringify([{ id: 'guide', title: 'A', content: 'Original' }]));
+  const candidate = Buffer.from(JSON.stringify([{ id: 'guide', title: unsafe ? 'O' : 'B', content: 'New body' }]));
+  Object.assign(f.evidence.plan, { sourceSHA256: digest(original), candidateSHA256: digest(candidate) });
+  const baseline = await capturePublishedBaseline({ plan: f.evidence.plan, importBytes: original,
+    directory: join(f.run, 'update-baseline'), observe: async () => structuredClone(f.evidence.baseline),
+    request: async () => new Response(published, { headers: { 'content-type': 'application/json' } }) });
+  const retained = join(f.run, 'update-retained'), candidatePath = join(retained, 'main/.open-next/assets/data/genshin/raw-guides.json');
+  mkdirSync(join(retained, 'main/.open-next/assets/data/genshin'), { recursive: true }); writeFileSync(candidatePath, candidate);
+  const sealed = { recovery: baseline, retained: { plan: structuredClone(f.evidence.plan), directory: retained,
+    receipt: { owners: Object.fromEntries(Object.entries(baseline.versions).map(([owner, previousVersion]) => [owner, { previousVersion }])) } } };
+  f.options.verify = () => {
+    verifyPromotionGuideUpdate({ evidence: f.evidence, sealed });
+    return structuredClone(f.evidence);
+  };
+  f.options.transport = createPromotionTransport(f.transportOptions);
+  return { sealed, candidatePath };
+}
+
+test('forward update gate stops an O reset before transport preparation, journal or any deployment POST', async t => {
+  const f = await fixture(t); await updateGate(f, true);
+  await assert.rejects(executePromotionContinuation(f.options), /Implicit reset to import O/);
+  assert.equal(f.calls.length, 0);
+  assert(!existsSync(join(f.run, `promotion-${retentionId}.jsonl`)));
+});
+
+test('normal continuous publication passes the same per-field gate at every continuation boundary', async t => {
+  const f = await fixture(t); await updateGate(f);
+  assert.equal((await executePromotionContinuation(f.options)).status, 'production_accepted');
+  assert.equal(f.calls.filter(row => row.method === 'POST').length, 2);
+});
+
+test('candidate mutation during preflight is re-read by the update gate before any deployment', async t => {
+  const f = await fixture(t), gate = await updateGate(f), snapshot = f.options.transport.snapshot;
+  f.options.transport.snapshot = async () => {
+    const value = await snapshot(); writeFileSync(gate.candidatePath, 'changed'); return value;
+  };
+  await assert.rejects(executePromotionContinuation(f.options), /Candidate digest mismatch/);
+  assert.equal(f.calls.filter(row => row.method === 'POST').length, 0);
+});
 
 test('composed transport verifies four cloud modules, promotes exact versions and persists public proof', async t => {
   const f = await fixture(t); const result = await executePromotionContinuation(f.options);

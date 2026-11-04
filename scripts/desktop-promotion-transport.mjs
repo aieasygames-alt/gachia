@@ -10,10 +10,18 @@ import { promotionWriter } from './desktop-promotion-request.mjs';
 import { verifyPromotionEvidence, verifyRecoveryReceipt } from './desktop-recovery-receipt.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { revalidateUploadedModule } from './desktop-version-provenance.mjs';
+import { verifyPublishedGuideUpdate } from './desktop-published-baseline.mjs';
 
 const base = 'https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/';
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (path, value) => { const raw = json(value); writeFileSync(path, raw, { flag: 'wx', mode: 0o600 }); return digest(raw); };
+
+export function verifyPromotionGuideUpdate({ evidence, sealed }) {
+  assert.deepEqual(sealed.retained.plan, evidence.plan, 'Update gate must use the verified candidate plan');
+  const { baselinePath, baselinePin } = sealed.recovery;
+  return verifyPublishedGuideUpdate({ baselinePath, baselinePin, verified: sealed.retained,
+    candidatePath: join(sealed.retained.directory, 'main/.open-next/assets/data', evidence.plan.game, 'raw-guides.json') });
+}
 
 // Internal adapter. Only the continuation owns the journal/authorization gate.
 export function createPromotionTransport({ run, evidence, candidateDirectory, recoveryDirectory, recoveryManifest, token, request, evidenceDirectoryName }) {
@@ -113,6 +121,7 @@ export async function promoteDesktopRelease(input) {
     sealed = result.sealed;
     assert.equal(input.releaseKey, result.evidence.plan.releaseKey);
     assert.deepEqual(sealed.candidate.manifest, result.evidence.manifest);
+    verifyPromotionGuideUpdate(result);
     return result.evidence;
   };
   // The first full pass runs under the continuation's lock, not twice before it.

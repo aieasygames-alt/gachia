@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
+import { lstatSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { digest, pinnedJson } from './desktop-release-assets.mjs';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
@@ -8,6 +8,37 @@ import { boundedBody, exactPreviewOrigin } from './desktop-version-preview.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const serviceFor = owner => owner === 'main' ? 'gachia' : `gachia-game-${owner}`;
+
+export function validatePublishedGuideUpdate(importText, publishedText, candidateText) {
+  const { original, candidate: published } = validateGuideOverlay(importText, publishedText);
+  const { candidate } = validateGuideOverlay(importText, candidateText);
+  const delta = validateGuideOverlay(publishedText, candidateText);
+  // Excluded CMS records are replaced by O by the legacy exporter. A field
+  // reset to O is therefore ambiguous, even if another field on that row changes.
+  for (const [i, row] of candidate.entries()) for (const field of ['title', 'titleEn', 'titleJa', 'content', 'contentEn', 'contentJa']) {
+    assert(Object.is(published[i][field], row[field]) || !Object.is(original[i][field], row[field]),
+      `Implicit reset to import O: ${row.id}.${field}; preserve public A. Direct resets require a separate reset-intent contract`);
+  }
+  assert(delta.changed.length > 0, 'Candidate is unchanged from current published A');
+  return delta;
+}
+
+// Forward-update gate only. Recovery/history readers must still restore A even
+// when the candidate being abandoned would fail today's forward-update policy.
+export function verifyPublishedGuideUpdate({ baselinePath, baselinePin, candidatePath, verified }) {
+  const { plan, receipt } = verified;
+  assert.equal(plan.preview, false, 'Real non-preview update required');
+  verifyPublishedBaseline(baselinePath, baselinePin, plan,
+    Object.fromEntries(plan.owners.map(owner => [owner, receipt.owners[owner].previousVersion])));
+  assert.equal(realpathSync(candidatePath), resolve(candidatePath), 'Linked candidate forbidden');
+  const stat = lstatSync(candidatePath);
+  assert(stat.isFile() && stat.size <= 16 * 1024 * 1024, 'Candidate byte budget exceeded');
+  const candidate = readFileSync(candidatePath);
+  assert.equal(digest(candidate), plan.candidateSHA256, 'Candidate digest mismatch');
+  const directory = resolve(baselinePath, '..');
+  return validatePublishedGuideUpdate(readFileSync(join(directory, 'import.body')).toString(),
+    readFileSync(join(directory, 'published.body')).toString(), candidate.toString());
+}
 
 // Import provenance stays O; recovery follows the currently deployed A, not O.
 // Capture never advances published state or writes a cloud resource.
