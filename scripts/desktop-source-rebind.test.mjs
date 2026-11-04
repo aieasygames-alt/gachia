@@ -18,11 +18,13 @@ const uuid = '00000000-0000-0000-0000-000000000999';
 async function fixture(t, game = 'nte', legacy = false, options = {}) {
   const other = game === 'nte' ? 'genshin' : 'nte';
   const donor = await publishedFixture(t, other, { otherContent: options.otherContent ?? '[{"id":"one","title":"A","content":"Original"}]', preserveReferences: options.preserveReferences });
-  const target = await (legacy ? legacyFixture : historicalFixture)(t, game, { snapshot: donor.manifest.snapshot });
+  const target = await (legacy ? legacyFixture : historicalFixture)(t, game, { snapshot: donor.manifest.snapshot, robots: options.robots });
   const old = await (legacy ? registerSourceCatalog(target.input) : registerHistoricalSourceCatalog(target.historical));
   const main = await advanceSourceCatalog(donor.args);
   const input = { source: { path: old.manifestPath, pin: old.manifestPin }, mainSource: { path: main.manifestPath, pin: main.manifestPin } };
   const request = async (url, opts) => {
+    if (options.robots && new URL(url).pathname === '/robots.txt') return new Response('User-agent: *\nDisallow: /\n', {
+      headers: { 'content-type': 'text/plain; charset=utf-8', 'x-robots-tag': 'noindex' } });
     let response;
     if (new URL(url).hostname.includes(`gachia-game-${game}`)) response = await target.selection().request(url, opts);
     else if (new URL(url).pathname === `/data/${game}/raw-guides.json`) response = new Response(target.published, { headers: { 'content-type': 'application/json' } });
@@ -36,6 +38,48 @@ async function fixture(t, game = 'nte', legacy = false, options = {}) {
   const selection = () => ({ root: args.root, directory: join(target.root, 'select-rebound'), plan: { game, owners: [game, 'main'] }, reader, request });
   return { game, other, target, donor, input, old, main, args, reader, request, selection };
 }
+
+for (const game of ['genshin', 'nte']) test(`${game} rebind registration and selection accept deny-all preview robots without public cache or body identity`, async t => {
+  const f = await fixture(t, game, false, { robots: true }), result = await rebindSourceCatalog(f.args);
+  const selected = await selectSourceCatalog(f.selection());
+  assert.equal(selected.sourcePin, result.sourcePin);
+  for (const directory of [join(f.args.directory, 'register'), f.selection().directory]) {
+    const row = JSON.parse(readFileSync(join(directory, 'current.json'))).observations.find(row => row.path === '/robots.txt');
+    assert.equal(row.headers['cache-control'], undefined);
+    assert.equal(row.headers['x-robots-tag'], 'noindex');
+    assert.equal(readFileSync(join(directory, row.bodyFile), 'utf8'), 'User-agent: *\nDisallow: /\n');
+    assert.notEqual(row.sha256, digest('User-agent: *\nAllow: /\n'));
+  }
+});
+
+for (const stage of ['registration', 'selection']) for (const failure of ['robots-index', 'robots-allow', 'cookie', 'cache', 'html', 'html-robots', 'static', 'mime', 'status']) test(`strict preview ${stage} still rejects ${failure}`, async t => {
+  const f = await fixture(t, 'nte', false, { robots: true }), counts = new Map();
+  const request = async (url, opts) => {
+    const count = (counts.get(url) ?? 0) + 1; counts.set(url, count);
+    const response = await f.request(url, opts), path = new URL(url).pathname;
+    if (count < (stage === 'registration' ? 2 : 3)) return response;
+    if (path === '/robots.txt') {
+      if (failure === 'robots-index') response.headers.delete('x-robots-tag');
+      if (failure === 'robots-allow') return new Response('User-agent: *\nAllow: /\n', { headers: response.headers });
+      if (failure === 'cookie') response.headers.set('set-cookie', 'bad=1');
+      if (failure === 'mime') response.headers.set('content-type', 'text/html');
+      if (failure === 'status') return new Response('unavailable', { status: 503, headers: response.headers });
+    }
+    if (failure === 'cache' && path.includes('/guides/')) response.headers.set('cache-control', 'private');
+    if (failure === 'html' && path.includes('/guides/')) return new Response((await response.text()).replace('Published A', 'Wrong'), { headers: response.headers });
+    if (failure === 'html-robots' && path.includes('/guides/')) return new Response((await response.text()).replace('</head>', '<meta name="robots" content="noindex"/></head>'), { headers: response.headers });
+    if (failure === 'static' && path.includes('/_next/static/')) return new Response('wrong', { headers: response.headers });
+    return response;
+  };
+  f.args.request = request;
+  if (stage === 'registration') await assert.rejects(rebindSourceCatalog(f.args));
+  else {
+    await rebindSourceCatalog(f.args);
+    const selected = { ...f.selection(), request };
+    await assert.rejects(selectSourceCatalog(selected));
+    assert(!existsSync(join(selected.directory, 'selection.json')));
+  }
+});
 
 for (const game of ['genshin', 'nte']) for (const legacy of [false, true]) test(`${game} ${legacy ? 'retained' : 'historical'} game + other game's published Main creates source-only current pair`, async t => {
   const f = await fixture(t, game, legacy), oldBytes = readFileSync(f.old.manifestPath);

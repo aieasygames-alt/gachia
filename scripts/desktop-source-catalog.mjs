@@ -186,15 +186,17 @@ async function currentBytes({ plan, sources, versions, reader, request, director
     writeFileSync(join(directory, bodyFile), bytes, { flag: 'wx', mode: 0o600 });
     observations.push({ owner: reference.owner, origin: sourceOrigin, path: reference.path, status: response.status,
       headers: Object.fromEntries(response.headers), bytes: bytes.length, sha256: digest(bytes), bodyFile });
-    assert.equal(response.status, reference.status); assert(!response.headers.has('set-cookie'));
     const mime = response.headers.get('content-type')?.split(';')[0];
-    assert.equal(mime, reference.headers['content-type']?.split(';')[0]);
-    assert.deepEqual(policy(response.headers.get('cache-control')), policy(reference.headers['cache-control']), 'Historical source cache policy changed');
+    // Exact previews intentionally replace public robots with noindex/deny-all.
     if (sources.strictPreview) validatePreviewResponse({ path: reference.path, response, bytes, reference });
-    if (mime === 'text/html') {
-      assert.deepEqual(pageFingerprint(bytes.toString()), pageFingerprint(reference.body.toString()), 'Historical rendered source is not current');
-      assert.deepEqual(publicRobots(bytes.toString()), publicRobots(reference.body.toString()));
-    } else assert.equal(digest(bytes), reference.sha256, 'Historical source response differs from current');
+    else {
+      assert.equal(response.status, reference.status); assert(!response.headers.has('set-cookie'));
+      assert.equal(mime, reference.headers['content-type']?.split(';')[0]);
+      assert.deepEqual(policy(response.headers.get('cache-control')), policy(reference.headers['cache-control']), 'Historical source cache policy changed');
+      if (mime === 'text/html') assert.deepEqual(pageFingerprint(bytes.toString()), pageFingerprint(reference.body.toString()), 'Historical rendered source is not current');
+      else assert.equal(digest(bytes), reference.sha256, 'Historical source response differs from current');
+    }
+    if (mime === 'text/html') assert.deepEqual(publicRobots(bytes.toString()), publicRobots(reference.body.toString()));
   }
   save(join(directory, 'current.json'), { modules, runtimeSources, observations, contentSHA256: digest(body) });
   return { modules, ...(Object.keys(runtimeSources).length ? { runtimeSources } : {}), contentSHA256: digest(body), origin, path, status: response.status, headers: Object.fromEntries(response.headers), observations };

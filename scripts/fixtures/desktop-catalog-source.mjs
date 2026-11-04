@@ -88,6 +88,12 @@ export async function historicalFixture(t, game = 'nte', options = {}) {
       mkdirSync(dirname(path), { recursive: true }); writeFileSync(path, readFileSync(join(f.root, 'recovery', row.bodyFile)));
       return { ...row, bodyFile };
     });
+    if (options.robots && owner === game) {
+      const body = Buffer.from('User-agent: *\nAllow: /\n'), bodyFile = `${observations.length}.body`;
+      writeFileSync(join(work, `recovery-${owner}-http`, bodyFile), body);
+      observations.push({ path: '/robots.txt', status: 200, bodyFile, bytes: body.length, sha256: digest(body),
+        headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'public, s-maxage=3600, stale-while-revalidate=86400' } });
+    }
     proof.recovery[owner] = { status: 'passed', runtimeUnchanged: true, responses: observations.length, observations,
       artifactSHA256: save(join(work, `recovery-${owner}-inventory.json`), artifactFiles(directory)) };
   }
