@@ -8,7 +8,7 @@ import { multipartModule } from './desktop-cloud-transport.mjs';
 import { verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
-import { boundedBody, exactPreviewOrigin, pageFingerprint } from './desktop-version-preview.mjs';
+import { boundedBody, exactPreviewOrigin, pageFingerprint, sampleReadOnly } from './desktop-version-preview.mjs';
 import { publicRobots } from './desktop-public-acceptance.mjs';
 import { revalidateVersionModule } from './desktop-version-provenance.mjs';
 
@@ -68,10 +68,39 @@ async function sample(request, origin, path, directory, bodyFile) {
   return { body, row: { path, status: response.status, headers: Object.fromEntries(response.headers), bytes: body.length, sha256: digest(body), bodyFile } };
 }
 
+// Fixed public static GETs only. A partial body is never saved or accepted.
+export async function readPublicStatic(path, request, attempts, timeoutSignal = () => AbortSignal.timeout(30000)) {
+  assert(/^\/(?:_games\/(?:genshin|nte)\/)?_next\/static\//.test(path), 'Unreviewed static path');
+  localAssetPath('/inventory', path);
+  const url = new URL(path, 'https://gachia.com');
+  assert.equal(url.origin, 'https://gachia.com'); assert(!url.search && !url.hash);
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const signal = timeoutSignal(), row = { attempt, at: new Date().toISOString() };
+    assert(!signal.aborted, 'Static read already aborted');
+    attempts.push(row); let phase = 'fetch';
+    try {
+      const response = await request(url.href, { method: 'GET', credentials: 'omit', redirect: 'error', signal });
+      // HTTP failures are not transport failures and must never be retried.
+      assert.equal(response.status, 200, `Public static HTTP status: ${path}`);
+      phase = 'body'; const body = await boundedBody(response);
+      Object.assign(row, { outcome: 'received', status: response.status, bytes: body.length, sha256: digest(body) });
+      return { response, body };
+    } catch (error) {
+      const ownTimeout = signal.aborted && signal.reason?.name === 'TimeoutError' && ['TimeoutError', 'AbortError', 'TypeError'].includes(error.name);
+      const brokenBody = !signal.aborted && phase === 'body' && error instanceof TypeError && error.message === 'terminated' &&
+        ['UND_ERR_SOCKET', 'ECONNRESET', 'EPIPE', 'UND_ERR_RES_CONTENT_LENGTH_MISMATCH'].includes(error.cause?.code);
+      const retry = attempt === 1 && (ownTimeout || brokenBody);
+      Object.assign(row, { outcome: 'failed', phase, error: error.name, message: error.message,
+        ...(error.cause?.code ? { causeCode: error.cause.code } : {}), retry });
+      if (!retry) throw error;
+    }
+  }
+}
+
 export async function refreshAssetEvidence({ plan, evidencePath, evidencePin, directory, reader, request = fetch }) {
   const scope = assertReleaseScope(plan), original = verifyAssetEvidence(evidencePath, evidencePin, plan.game);
   mkdirSync(directory, { mode: 0o700 });
-  const result = { status: 'running', game: plan.game, releaseKey: plan.releaseKey, cloudWrites: false, observations: [] };
+  const result = { status: 'running', game: plan.game, releaseKey: plan.releaseKey, cloudWrites: false, observations: [], readAttempts: [] };
   try {
     const before = await reader.snapshot(); assertTopology(before, before);
     assert.equal(activeVersion(before, scope.services[0]), original.capture.summary.versionId, 'Game source is not current');
@@ -81,18 +110,26 @@ export async function refreshAssetEvidence({ plan, evidencePath, evidencePin, di
     const live = await reader.module(scope.services[0], original.capture.summary.versionId, original.evidence.moduleProofs?.[plan.game]);
     assert.equal(live.moduleSHA256, oldModule.moduleSHA256, 'Historical game runtime differs from current cloud version');
     writeFileSync(join(directory, 'game-worker.multipart'), live.archive, { flag: 'wx', mode: 0o600 });
+    const samples = [];
     for (const owner of scope.owners) {
       const files = owner === 'main' ? original.evidence.main.files : original.capture.files;
       assert(files.length > 0 && files.length <= 5000);
       for (const file of files) {
         const path = (owner === 'main' ? '/_next/static/' : `/_games/${plan.game}/_next/static/`) + file.path.split('/').map(encodeURIComponent).join('/');
         localAssetPath('/inventory', path);
-        const { row } = await sample(request, 'https://gachia.com', path, directory, `${result.observations.length}.body`);
-        result.observations.push({ owner, ...row });
-        assert.equal(row.status, 200); assert(!row.headers['set-cookie']);
-        assert.equal(row.bytes, Buffer.isBuffer(file.bytes) ? file.bytes.length : file.bytes); assert.equal(row.sha256, file.sha256, 'Current public static bytes differ');
+        samples.push({ owner, file, path });
       }
     }
+    await sampleReadOnly(samples, async ({ owner, file, path }, index) => {
+      const attempts = []; result.readAttempts[index] = { owner, path, attempts };
+      const { response, body } = await readPublicStatic(path, request, attempts), bodyFile = `${index}.body`;
+      writeFileSync(join(directory, bodyFile), body, { flag: 'wx', mode: 0o600 });
+      const row = { owner, path, status: response.status, headers: Object.fromEntries(response.headers), bytes: body.length,
+        sha256: digest(body), bodyFile, readAttempts: attempts };
+      result.observations[index] = row;
+      assert(!row.headers['set-cookie']);
+      assert.equal(row.bytes, Buffer.isBuffer(file.bytes) ? file.bytes.length : file.bytes); assert.equal(row.sha256, file.sha256, 'Current public static bytes differ');
+    });
     const after = await reader.snapshot(); assertTopology(before, after);
     verifyAssetEvidence(evidencePath, evidencePin, plan.game);
     const observationPin = save(join(directory, 'observations.json'), result.observations);
@@ -104,7 +141,7 @@ export async function refreshAssetEvidence({ plan, evidencePath, evidencePin, di
     result.status = 'passed';
     return { evidencePath: destination, evidencePin: pin, responses: result.observations.length, cloudWrites: false, productionReady: false };
   } catch (error) { result.status = 'failed'; result.error = error.message; throw new Error(`${error.message}; diagnostics: ${join(directory, 'diagnostic.json')}`, { cause: error }); }
-  finally { save(join(directory, 'diagnostic.json'), result); }
+  finally { result.observations = result.observations.filter(Boolean); result.readAttempts = result.readAttempts.filter(Boolean); save(join(directory, 'diagnostic.json'), result); }
 }
 
 function recoveryInputs({ verified, baselinePath, baselinePin, sourcePath, sourcePin }) {

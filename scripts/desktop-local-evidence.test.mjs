@@ -3,7 +3,7 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync,
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
-import { prepareLocalRecovery, preparationReader, refreshAssetEvidence } from './desktop-local-evidence.mjs';
+import { prepareLocalRecovery, preparationReader, readPublicStatic, refreshAssetEvidence } from './desktop-local-evidence.mjs';
 import { artifactFiles, options } from './desktop-publish.mjs';
 import { captureGameAssets, digest } from './desktop-release-assets.mjs';
 import { capturePublishedBaseline } from './desktop-published-baseline.mjs';
@@ -148,6 +148,87 @@ async function assetsFixture(t) {
 test('asset refresh saves new HTTP bytes/pins without replacing historical evidence', async t => {
   const f = await assetsFixture(t), before = readFileSync(f.input.evidencePath), result = await refreshAssetEvidence(f.input);
   assert.equal(result.responses, 2); assert.equal(result.cloudWrites, false); assert(readFileSync(f.input.evidencePath).equals(before));
+});
+
+test('static refresh overlaps reads while preserving exact evidence order and filenames', async t => {
+  const f = await assetsFixture(t); let active = 0, peak = 0;
+  f.input.request = async () => {
+    peak = Math.max(peak, ++active); await new Promise(resolve => setTimeout(resolve, 5)); active--;
+    return new Response('old static');
+  };
+  const result = await refreshAssetEvidence(f.input);
+  const proof = JSON.parse(readFileSync(result.evidencePath));
+  const rows = JSON.parse(readFileSync(proof.freshCapture.observationsPath));
+  assert.equal(peak, 2); assert.equal(active, 0);
+  assert.deepEqual(rows.map(row => [row.owner, row.bodyFile]), [['genshin', '0.body'], ['main', '1.body']]);
+  assert(rows.every(row => row.readAttempts.length === 1));
+});
+
+test('static body reset gets exactly one complete re-read and retains both attempts', async () => {
+  let calls = 0; const attempts = [];
+  const result = await readPublicStatic('/_next/static/fixed.js', async (url, options) => {
+    assert.equal(url, 'https://gachia.com/_next/static/fixed.js'); assert.equal(options.method, 'GET');
+    assert.equal(options.credentials, 'omit'); assert.equal(options.redirect, 'error');
+    if (++calls === 1) return new Response(new ReadableStream({ start(controller) {
+      controller.enqueue(Buffer.from('partial'));
+      controller.error(new TypeError('terminated', { cause: { code: 'UND_ERR_SOCKET' } }));
+    } }));
+    return new Response('complete');
+  }, attempts);
+  assert.equal(result.body.toString(), 'complete'); assert.equal(calls, 2);
+  assert.equal(attempts[0].retry, true); assert.equal(attempts[0].phase, 'body');
+  assert.equal(attempts[1].outcome, 'received');
+});
+
+test('only the static reader own timer may renew the request timeout', async () => {
+  const attempts = [], signals = []; let calls = 0;
+  const result = await readPublicStatic('/_next/static/fixed.js', async (_url, { signal }) => {
+    signals.push(signal);
+    if (++calls === 1) return new Promise((_resolve, reject) => {
+      const keepAlive = setTimeout(() => reject(Error('Test timer failed')), 1000);
+      signal.addEventListener('abort', () => { clearTimeout(keepAlive); reject(signal.reason); }, { once: true });
+    });
+    assert(!signal.aborted); return new Response('complete');
+  }, attempts, () => AbortSignal.timeout(5));
+  assert.equal(result.body.toString(), 'complete'); assert.equal(calls, 2); assert.notEqual(signals[0], signals[1]);
+  assert.equal(attempts[0].error, 'TimeoutError'); assert.equal(attempts[0].retry, true);
+});
+
+for (const failure of ['http', 'external-abort', 'other-type-error', 'budget', 'persistent-reset']) {
+  test(`static re-read refuses ${failure} without an unbounded retry`, async () => {
+    let calls = 0; const attempts = [];
+    await assert.rejects(readPublicStatic('/_next/static/fixed.js', async () => {
+      calls++;
+      if (failure === 'http') return new Response('unavailable', { status: 503 });
+      if (failure === 'external-abort') throw new DOMException('Caller cancelled', 'AbortError');
+      if (failure === 'other-type-error') throw new TypeError('programming error');
+      if (failure === 'budget') return new Response(Buffer.alloc(16 * 1024 * 1024 + 1));
+      return new Response(new ReadableStream({ start(controller) {
+        controller.error(new TypeError('terminated', { cause: { code: 'UND_ERR_SOCKET' } }));
+      } }));
+    }, attempts));
+    assert.equal(calls, failure === 'persistent-reset' ? 2 : 1);
+    assert.equal(attempts.at(-1).retry, false);
+  });
+}
+
+test('static reader rejects external origins, traversal and non-static endpoints before fetch', async () => {
+  for (const path of ['https://example.invalid/_next/static/x.js', '//evil.invalid/_next/static/x.js', '/_next/static/%2e%2e/x.js',
+    '/_next/static/x.js?escape', '/_next/static/x.js#escape', '/api/content-records', '/_games/unknown/_next/static/x.js']) {
+    await assert.rejects(readPublicStatic(path, () => assert.fail('Request forbidden'), []));
+  }
+});
+
+test('static refresh failure waits for active siblings and records no accepted evidence', async t => {
+  const f = await assetsFixture(t); let completed = 0;
+  f.input.request = async url => {
+    await new Promise(resolve => setTimeout(resolve, url.includes('/_games/') ? 1 : 20)); completed++;
+    return new Response(url.includes('/_games/') ? 'bad static' : 'old static');
+  };
+  await assert.rejects(refreshAssetEvidence(f.input), /Current public static bytes differ/);
+  assert.equal(completed, 2); assert(!existsSync(join(f.input.directory, 'asset-evidence.json')));
+  const diagnostic = JSON.parse(readFileSync(join(f.input.directory, 'diagnostic.json')));
+  assert.equal(diagnostic.status, 'failed'); assert.equal(diagnostic.observations.length, 2);
 });
 for (const failure of ['hash', 'cookie', 'module', 'version', 'topology', 'network']) test(`asset refresh rejects ${failure} and preserves failed diagnostics`, async t => {
   const f = await assetsFixture(t);
