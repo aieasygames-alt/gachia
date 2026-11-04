@@ -10,14 +10,18 @@ import { digest } from './desktop-release-assets.mjs';
 
 const versionId = '00000000-0000-0000-0000-000000000001';
 test('only a just-uploaded exact UUID metadata GET tolerates bounded visibility lag', async () => {
-  const waits = [], reads = [];
+  const waits = [], reads = [], evidence = [];
   const result = await readUploadVersion({ service: 'gachia-game-nte', versionId, token: 'fixture', allowPendingVersion: true,
-    pause: async ms => waits.push(ms), request: async (url, options) => {
+    pause: async ms => waits.push(ms), onVisibilityWait: row => evidence.push(row), request: async (url, options) => {
       reads.push({ url, method: options.method });
-      return reads.length < 4 ? new Response('{}', { status: 404 }) : Response.json({ success: true, result: { id: versionId } });
+      return reads.length < 5 ? new Response('{}', { status: 404 }) : Response.json({ success: true, result: { id: versionId } });
     } });
-  assert.deepEqual(result, { id: versionId }); assert.deepEqual(waits, [1000, 2000, 4000]);
-  assert.equal(reads.length, 4); assert(reads.every(row => row.method === 'GET' && row.url.endsWith(`/versions/${versionId}`)));
+  assert.deepEqual(result, { id: versionId }); assert.deepEqual(waits, [5000, 10000, 20000, 40000]);
+  assert.equal(waits.reduce((a, b) => a + b), 75000);
+  assert.equal(reads.length, 5); assert(reads.every(row => row.method === 'GET' && row.url.endsWith(`/versions/${versionId}`)));
+  assert.deepEqual(evidence.map(row => [row.service, row.versionId, row.status, row.attempt, row.delayMs]),
+    waits.map((delay, index) => ['gachia-game-nte', versionId, 404, index + 1, delay]));
+  assert(evidence.every(row => !JSON.stringify(row).includes('fixture')));
 });
 for (const scenario of ['ordinary-404', 'binary-404', 'pending-403', 'pending-503', 'pending-permanent-404']) {
   test(`version visibility handling remains fail closed for ${scenario}`, async () => {
@@ -27,8 +31,8 @@ for (const scenario of ['ordinary-404', 'binary-404', 'pending-403', 'pending-50
       allowPendingVersion: scenario !== 'ordinary-404', pause: async ms => waits.push(ms), request: async (_url, options) => {
         calls++; assert.equal(options.method, 'GET'); return new Response('{}', { status });
       } }), /Upload version read failed/);
-    assert.equal(calls, scenario === 'pending-permanent-404' ? 4 : 1);
-    assert.deepEqual(waits, scenario === 'pending-permanent-404' ? [1000, 2000, 4000] : []);
+    assert.equal(calls, scenario === 'pending-permanent-404' ? 5 : 1);
+    assert.deepEqual(waits, scenario === 'pending-permanent-404' ? [5000, 10000, 20000, 40000] : []);
   });
 }
 test('candidate and recovery multipart reads share a bounded transfer budget without write retries', t => {

@@ -268,7 +268,7 @@ export function uploadReadOptions(token, binary = false) {
 }
 
 export async function readUploadVersion({ service, versionId, token, binary = false, allowPendingVersion = false,
-  request = fetch, pause = ms => new Promise(resolve => setTimeout(resolve, ms)) }) {
+  request = fetch, pause = ms => new Promise(resolve => setTimeout(resolve, ms)), onVisibilityWait = () => {} }) {
   exactPreviewOrigin(service, versionId);
   const suffix = binary ? `/content/v2?version=${versionId}` : `/versions/${versionId}`;
   const url = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`;
@@ -279,9 +279,11 @@ export async function readUploadVersion({ service, versionId, token, binary = fa
       const response = await request(url, options);
       // Only the first metadata read after a confirmed upload can lag visibility.
       // This 404 grace never retries uploads, content GETs, or later identity checks.
-      if (allowPendingVersion && !binary && response.status === 404 && attempt < 3) {
+      if (allowPendingVersion && !binary && response.status === 404 && attempt < 4) {
         await boundedBody(response);
-        await pause(1000 * 2 ** attempt);
+        const delayMs = 5000 * 2 ** attempt;
+        onVisibilityWait({ at: new Date().toISOString(), service, versionId, status: 404, attempt: attempt + 1, delayMs });
+        await pause(delayMs);
         continue;
       }
       assert(response.ok, `Upload version read failed: ${response.status}`);
@@ -308,7 +310,8 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
   const directory = join(run, `cloud-preview-${id}`); mkdirSync(directory, { mode: 0o700 });
   const api = (service, versionId, binary = false, allowPendingVersion = false) => {
     assert(scope.services.includes(service), 'Release service/game mismatch');
-    return readUploadVersion({ service, versionId, token, binary, allowPendingVersion });
+    return readUploadVersion({ service, versionId, token, binary, allowPendingVersion,
+      onVisibilityWait: row => appendFileSync(join(directory, 'version-visibility.jsonl'), JSON.stringify(row) + '\n', { mode: 0o600 }) });
   };
   const recheck = () => verifyCloudBundle({ run, pin, id, bundlePin });
   let firstSnapshot = true;
@@ -388,7 +391,8 @@ export async function uploadRecoveryPreview(input) {
       const config = pinnedJson(join(verified.directory, owner, 'upload.json'), row.configSHA256);
       const form = await multipartModule(readFileSync(join(directory, `${owner}.multipart`)));
       assert.equal(form.moduleSHA256, row.moduleSHA256); assertUploadMetadata(form.metadata, config);
-      const version = await readVersion(row.service, versionId, false, true);
+      const version = await readUploadVersion({ service: row.service, versionId, token, allowPendingVersion: true,
+        onVisibilityWait: value => appendFileSync(join(directory, 'version-visibility.jsonl'), JSON.stringify(value) + '\n', { mode: 0o600 }) });
       assertUploadedVersion(version, versionId, config, verified.manifest.snapshot.bindings[row.service]);
       const moduleProof = await captureUploadedModule({ service: row.service, versionId, moduleSHA256: row.moduleSHA256,
         context: { role: 'recovery', releaseKey: input.releaseKey, configSHA256: row.configSHA256 }, directory: join(directory, `${owner}-module`),
