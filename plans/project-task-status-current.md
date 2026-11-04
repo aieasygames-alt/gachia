@@ -1,6 +1,18 @@
 # 当前审计任务表
 
-## 当前权威状态：R31 四版本云验收通过，首发仍被15分钟窗口阻塞（2026-11-03）
+## 当前权威状态：R32 首次真实公网发布完成，NTE共享Main交接通过（2026-11-04）
+
+**Payload本机编辑→Cloudflare正式发布首次真实闭环已完成，可以继续维护既有Genshin指南文字；稳定限定V1及原始全范围迁移仍未全部完成。** 仅此Mac、无Tunnel/Mac公网回源；内容准确度与翻译不作首发门槛。执行清单见[V1有限完成计划](payload-v1-completion-2026-11-03.md)，实际证据见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)。下方R31及更早为历史，不再代表当前上线状态。
+
+- **C01/C02关闭**：CLI安全保持；R31真实partial→显式兼容恢复/source-recover后，R32从该来源另建run成功再发、公网验收/source-advance。旧失败journal不改写，不自动重试云写。
+- **C03首发完成，独立正常第二次编辑发布待验**：真实标题“原神快速上手指南：基础操作、元素反应与资源规划”已公开，Main JSON为同一候选SHA。四版本云预览/新鲜续验/正式推广/公网与可信来源advance通过；202.16秒推广，两个intent时证明约96.85/134.24秒，未延长900秒窗口。公网不再是旧标题。
+- **C04真实共享Main交接通过，NTE实际发布待验**：NTE原UUID/JSON不变，已登记并重新选择NTE+已发布新Main来源。修复来源登记重复套用公网robots缓存/字节比较的错误，精确预览仍强制noindex/deny-all，HTML/静态/缓存/身份拒绝保留；首次失败只读目录保留，后续另建目录成功，零云写。尚未NTE上传/推广或反向Genshin交接。
+- **C05a关闭，C05b待办**：保留R30同机恢复验收；真实独立key目的地未配置，不要求另一台Mac，不重复恢复演练或把同盘副本当独立托管。
+- **交付边界**：桌面784/784、其他Node304/304、Python49/49通过，精确代码CI含CMS165/typecheck、Router/inventory通过，28发布工具文件安装验摘要。本轮4版本上传/2成功部署POST，累计21/6；仅Genshin/Main写，10Worker观察/7服务保护，NTE/Router/staging、生产main与两个GitHub部署false开关保持。DB83draft/hold+1published/eligible，本轮无DB/内容/媒体写入。
+
+**剩余顺序：下一条真实NTE编辑验实际发布及反向Main交接 → 下一条独立Genshin编辑验正常连续发布；独立key目的地具备即验C05b。** 没有真实编辑不制造文字、不批量解除hold、不重复当前releaseKey；C02恢复后再发已完成，不再作为待修阻塞。原始P0–P4/T03–T05仍部分完成，P5–P7/T06–T12不整体关闭；没有普通请求全链releaseKey/ReleaseMap原子激活或账户级仅本机发布强制声明。
+
+### 前轮 R31 四版本云验收通过，首发仍被15分钟窗口阻塞（2026-11-03）
 
 **本机Payload已可编辑，但首次完整公网发布仍未完成；不要把CMS published、非活动版本上传或云预览通过称为上线。** 只在此Mac运行，无Tunnel/Mac公网回源，不要求第二Mac。执行清单见[V1有限完成计划](payload-v1-completion-2026-11-03.md)，实际证据见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。历史报告保留；P0–P7/T01–T12全范围等级不整体提升。
 

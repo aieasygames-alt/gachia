@@ -1,18 +1,18 @@
 # Payload 最短操作手册
 
-更新：2026-11-03，适用 Mac 单用户 CMS 与 Genshin/NTE guides。公众网站仍由 Cloudflare 多 Worker 服务，不回源 Mac。本文替代旧部署说明中的过时状态；历史验收看各轮报告。
+更新：2026-11-04，适用 Mac 单用户 CMS 与 Genshin/NTE guides。公众网站仍由 Cloudflare 多 Worker 服务，不回源 Mac。本文替代旧部署说明中的过时状态；历史验收看各轮报告。
 
 **R30范围约束：Payload CMS只在这台Mac运行，不要求第二台Mac或跨机启动验收。** 最新异地备份的本机隔离PG/媒体恢复、实际CMS登录/导出/重启持久性已通过，详见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)。这是复用已安装应用的本机恢复，不是整机重建；独立密钥托管仍待办。
 
-**R31发布/恢复工程已安装，首次真实编辑的完整云推广仍未完成。保存或 published 不等于公网更新。** 四个候选/兼容恢复版本与新鲜续验已实际通过，但正式推广在首个intent前因重复本地校验耗尽15分钟窗口停止；公网仍旧标题。当前不是稳定限定V1或原始项目完成。
+**R32首次真实Genshin公网发布与来源交接已完成。保存或 published 不等于公网更新。** 真实标题“原神快速上手指南：基础操作、元素反应与资源规划”已通过双owner构建、四个候选/兼容恢复版本精确云预览、新鲜续验、正式推广/公网验收/source-advance；NTE原UUID/JSON保持，真实共享Main只读重绑定和重新选择也通过。下一条独立正常发布、实际NTE推广和独立key仍待验，当前不是稳定限定V1或原始项目全部完成。
 
-当前工作包见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，实测与失败证据见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。R29不可靠历史content选择器已由[上传字节回执](payload-version-provenance-2026-11-03.md)替代：上传时绑定日志/UUID、出站multipart、响应ETag/字节及前后版本元数据；以后重验封存字节和新鲜不可变UUID身份，不伪造历史下载。三份旧来源仅接受审核原始pin，未知外部UUID仍拒绝。
+当前工作包见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，当前实测见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。R29不可靠历史content选择器已由[上传字节回执](payload-version-provenance-2026-11-03.md)替代：上传时绑定日志/UUID、出站multipart、响应ETag/字节及前后版本元数据；以后重验封存字节和新鲜不可变UUID身份，不伪造历史下载。三份旧来源仅接受审核原始pin，未知外部UUID仍拒绝。
 
-本账户部署POST可能只返回id；发布器封存原始POST，再按返回精确部署ID GET严格核对同ID、percentage、单一正确UUID/100%，最后仍核对当前活动七服务拓扑，不因字段缺失重复POST。实际partial/显式兼容恢复/source-recover和下一候选准备已通过，恢复后再次成功发布未验。
+本账户部署POST可能只返回id；发布器封存原始POST，再按返回精确部署ID GET严格核对同ID、percentage、单一正确UUID/100%，最后仍核对当前活动七服务拓扑，不因字段缺失重复POST。实际partial/显式兼容恢复/source-recover和恢复后另建run再次成功发布均已通过；旧失败/恢复journal保留，不再执行旧run。
 
-发布前确认OAuth余量；本轮使用已安装Wrangler相同的官方refresh_token grant，在显式边界续签，权限集合不变，凭证仅写私有Wrangler配置、不进入报告，不伪造到期时间。认证续签不延长实时15分钟门禁。固定HTTPS目标GET的瞬时TypeError最多3次；仅上传后固定服务/UUID模块二进制GET自身传输超时可再读一次，每次180秒/最多两次/最多16MiB，尝试记录进入回执pin。HTTP错误、外部取消、元数据超时、预算/身份错误及云写不重试。HTTP采样最多4并发，失败等待活动同伴落盘。
+发布前确认OAuth余量；本轮使用已安装Wrangler相同的官方refresh_token grant，在显式边界续签，权限集合不变，凭证仅写私有Wrangler配置、不进入报告，不伪造到期时间。认证续签不延长实时15分钟门禁。固定HTTPS目标GET的瞬时TypeError最多3次；仅上传后固定服务/UUID模块二进制GET自身传输超时可再读一次，每次180秒/最多两次/最多16MiB，尝试记录进入回执pin。HTTP错误、外部取消、元数据超时、预算/身份错误及云写不重试。HTTP采样最多4并发，失败等待活动同伴落盘。R32公共静态采样只对自身超时或已识别断流允许一次完整新读取，保存尝试证据；字节/身份/HTTP错误及外部取消不借此重试。
 
-**下一次云上传前先解决已实测的重复封存校验耗时并证明时长余量。** 不再以新run盲发替代剖析；不得延长900秒、改acceptedAt、跳过字节或写前漂移检查。最后失败journal即使零promotion intent也不重放，确认修复后另建run执行全部门禁。不要求内容准确度审稿；发布意图、身份、安全和新增媒体权利仍保留。
+**R32已修复并实测通过推广重复封存校验耗时。** 去重仅限同步只读验证pass，不跨await、网络或写边界；写前仍重新读取字节、四版本身份、活动UUID/拓扑和900秒实时有效性。实测推广202.16秒，首/次intent时最老候选证明约96.85/134.24秒；不是网络时延保证。下一条真实编辑另建run，不重发本轮已成功releaseKey，不重放历史失败journal，不改acceptedAt/延长窗口/跳过写前漂移。不要求内容准确度审稿；发布意图、身份、安全和新增媒体权利仍保留。
 
 ## 1. 编辑者只需做什么
 
@@ -131,10 +131,10 @@ cms publish-recovery-verify-cloud --run "$RUN" --pin "$PLAN_PIN" --recovery "$RE
 R20发现当前系统对workers.dev的直连解析返回异常地址，Node默认不读取macOS PAC；既有系统PAC指向本机SOCKS5 `127.0.0.1:1080`。已用当前Node25.9.0验证，仅对本轮命令设置以下环境即可访问精确版本预览；没有改系统DNS/代理、启动新代理或关闭TLS校验。SOCKS支持仍为Node实验特性，其他机器须先验证，不盲用此端口。
 
 ```sh
-NODE_USE_ENV_PROXY=1 HTTPS_PROXY=socks5://127.0.0.1:1080 NO_PROXY=127.0.0.1,localhost,api.cloudflare.com,gachia.com cms publish-baseline-capture --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
+NODE_USE_ENV_PROXY=1 HTTPS_PROXY=socks5://127.0.0.1:1080 NO_PROXY=127.0.0.1,localhost,gachia.com cms publish-baseline-capture --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --retention "$RETENTION" --retention-pin "$RETENTION_PIN"
 ```
 
-同一环境可用于source-register/source-select、recovery-local-prepare及后续精确版本只读验收；loopback/API/正式域名保持直连。先核验已有本地代理和精确预览HTTP，不自动发现或信任任意远程代理。已经出现上传/推广intent时仍先对账，不能借网络修复重跑写操作；不得用普通公网别名或本地响应代替精确版本证据。
+同一环境可用于source-register/source-select、recovery-local-prepare及后续精确版本只读验收；R32成功实测API与workers.dev走既有代理，loopback/正式域名直连。Wrangler whoami及官方OAuth refresh单独取消HTTP_PROXY/HTTPS_PROXY/ALL_PROXY/NODE_USE_ENV_PROXY，认证凭据不得写报告；这不是修改系统代理或允许云写重试。先核验已有本地代理和精确预览HTTP，不自动发现或信任任意远程代理。已经出现上传/推广intent时仍先对账，不能借网络修复重跑写操作；不得用普通公网别名或本地响应代替精确版本证据。
 
 ## 5. 上传精确云预览与推广：以下会写云
 
@@ -159,7 +159,7 @@ R24新增显式`publish-source-advance`。仅在上述推广**完整成功**后�
 cms publish-source-advance --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --bundle "$BUNDLE" --bundle-pin "$BUNDLE_PIN" --promotion-journal-pin "$PROMOTION_JOURNAL_PIN"
 ```
 
-命令不上传或切流：重读完整发布journal、封存bundle及全部已保存公网正文，确认game/Main当前100% UUID，重新GET模块/版本配置、全部封存静态和动态精确预览，取得当前公开A的JSON。保留原树，仅派生副本替换下载runtime，自动生成两owner资源来源、baseline和完整树pin，登记到新UUID固定目录。Main使用明确的本机发布bundle/journal来源，不捏造GitHub artifact ID；下一轮retain可直接使用返回的资源证据。
+命令不上传或切流：重读完整发布journal、封存bundle及全部已保存公网正文，确认game/Main当前100% UUID，重验归档模块字节与新鲜精确UUID版本配置、全部封存静态和动态精确预览，取得当前公开A的JSON。保留原树，仅派生副本替换经验证的归档runtime，自动生成两owner资源来源、baseline和完整树pin，登记到新UUID固定目录。Main使用明确的本机发布bundle/journal来源，不捏造GitHub artifact ID；下一轮retain可直接使用返回的资源证据。
 
 下一次B仍prepare新run、source-select，并执行全部新鲜资源/基线/兼容恢复/云门禁；旧A的发布journal可以作为历史来源，但不延长候选/恢复批准的15分钟时效。没有“latest”、原始O回退或部署后自动接续：本命令是发布成功后的显式只读交接，且目标仍是当前精确UUID；不是后台自动追踪。partial failure或恢复UUID不符合本命令，已知完整兼容恢复走第6节source-recover；外部部署、未知版本或缺完整本机封存来源仍走第4节维护者交接，不猜版本或重复部署。跨游戏共享Main变化使用下节受控交接，不能直接套用另一游戏条目。首次无可信来源也仍需维护者，不宣称一键从零发布。
 
@@ -175,7 +175,7 @@ cms publish-source-rebind --source "$TARGET_SOURCE_MANIFEST" --source-pin "$TARG
 
 重读两方全部来源树/pin/历史HTTP、成功发布journal和公网证据；确认目标UUID未变、只有另一游戏/Main的历史部署变化且受保护配置不变。新Main源文件及新鲜精确版本JSON都必须仍等于目标上一公开A，而非O或另一套内容；三语言指南、body/metadata/JSON-LD/media、sitemap、账号禁用、已登记静态、双模块/版本配置和noindex/cookie/cache均重验。目标静态范围为已pin的当前游戏capture，不将本地恢复树的forward-only候选chunks冒称已在云端；新Main仍重验全部封存静态。未宣称完整未知云资源清单。原树/原目录不写，输出新固定目标game/Main条目和组合资源证据；已有/不完整条目不覆盖。返回的sourcePath/sourcePin与evidencePath/evidencePin只供后续source-select及第4节准备使用，不是新发布批准，也不延长15分钟批准。
 
-全部采样正文、版本模块和诊断保存在`~/.gachia-cms-releases/source-rebind-<id>/`，依赖两方原始run/目录，不是自包含备份。失败保留诊断、停止，不回退latest/O或自动部署。当前只有隔离双游戏和真实loopback测试，**真实跨游戏云发布/恢复后的成功重绑定仍待验**；无完整成功发布或兼容恢复时不运行假交接。首次可信来源、外部部署/未知手工恢复仍由维护者处理。
+全部采样正文、版本模块和诊断保存在`~/.gachia-cms-releases/source-rebind-<id>/`，依赖两方原始run/目录，不是自包含备份。失败保留诊断、停止，不回退latest/O或自动部署。R32已在真实Genshin成功发布/source-advance后完成NTE+新Main只读重绑定，并再次source-select通过；这不是实际NTE发布或双向交接全部通过。首次交接的robots合约失败目录保留，修复后使用新目录；精确预览robots只按既有noindex/deny-all合约验，不错误要求公网robots正文/缓存相同。非robots的body/metadata/JSON-LD/media/cache/静态字节及HTML robots仍严格验证。无完整成功发布或兼容恢复时不运行假交接。首次可信来源、外部部署/未知手工恢复仍由维护者处理。
 
 四个历史staging别名不是Payload发布中转站，不要为本流程部署它们或用其HTTP替代精确候选UUID验收。R23已完成限定HTTP/已知自动构建入口调查：动态noindex/robots禁爬成立，但语言cookie与公开缓存差异仍保留，未降低本流程的正式门禁；也未在账户层强制只有本机能部署。详见[R23报告](../reports/payload-staging-inspection-2026-11-02-r23/README.md)。
 
@@ -218,7 +218,7 @@ cms publish-source-recover --run "$RUN" --pin "$PLAN_PIN" --repo "$REPO" --recov
 
 命令只读云端、不上传/切流：重验原候选/封存兼容恢复、recover模式renewal、推广及完整恢复journal、历史multipart/版本配置/实际公网正文；重新读取当前双恢复UUID/模块/配置、全部封存静态和精确预览HTTP、公开A与七服务拓扑。派生副本仅替换runtime，原树不改；Main登记为明确的本机兼容恢复来源，不伪造成功推广或GitHub artifact身份。未知外部恢复、partial/torn journal、原始旧UUID、候选UUID、漂移或来源被篡改都拒绝。
 
-历史证据按已pin的实际恢复完成时间核验当时的时效，**不延长实时15分钟门禁，也不授权再次推广/恢复**。返回manifestPath/manifestPin、sourcePath/sourcePin、evidencePath/evidencePin用于下一次全新run的source-select/prepare-evidence/retain；恢复的是上一公开A，不是导入O或失败候选B。另一游戏共享Main变化可用该新manifest执行source-rebind，但目标game UUID及公开A仍必须不变。保留原run与全部依赖，不重跑旧发布或清journal。双游戏磁盘链/loopback工程回归已覆盖，真实云恢复→接续→再发仍归C03/C04待验。
+历史证据按已pin的实际恢复完成时间核验当时的时效，**不延长实时15分钟门禁，也不授权再次推广/恢复**。返回manifestPath/manifestPin、sourcePath/sourcePin、evidencePath/evidencePin用于下一次全新run的source-select/prepare-evidence/retain；恢复的是上一公开A，不是导入O或失败候选B。另一游戏共享Main变化可用该新manifest执行source-rebind，但目标game UUID及公开A仍必须不变。保留原run与全部依赖，不重跑旧发布或清journal。双游戏磁盘链/loopback工程回归已覆盖；R31真实云恢复→来源接续→R32另建run成功再发已通过。独立正常下一次发布及实际NTE发布仍归C03/C04待验。
 
 ## 7. 交付与安全边界
 
