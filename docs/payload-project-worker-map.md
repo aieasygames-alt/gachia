@@ -1,8 +1,10 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
+**最新操作/范围决定（2026-11-04）：** 由代理规划内容、经认证Payload API先写草稿并批准，再从CMS正式版本执行现有本机双owner发布；不再等待用户手动编辑。独立key C05b用户暂缓，移出当前上线条件，完整灾备不宣称完成。见[工作流](payload-agent-publishing-workflow.md)与[V1清单](../plans/payload-v1-completion-2026-11-03.md)。本轮未改Worker架构、真实内容或部署，下面R35为最新工程实测，不是本轮重验。
+
 **当前入口：2026-11-04 R35。** 架构仍为本机Payload/PG、Cloudflare公众多Worker，无Tunnel/Mac回源。R32已完成Genshin真实内容首发、partial后的兼容恢复来源再发及NTE共享Main只读交接；R33编辑资格修复已安装，R35隐式O回退保护也已通过精确代码CI并安装。本轮DB/公开内容保持，Worker源码契约通过，未刷新已过期OAuth或重查云控制面，因此10Worker/7服务及R32UUID是上次已验证拓扑，不是本轮新控制面观察。当前增量见[R35](../reports/payload-public-preservation-2026-11-04-r35/README.md)，完整审计见[R34](../reports/payload-readiness-audit-2026-11-04-r34/README.md)，执行见[V1清单](../plans/payload-v1-completion-2026-11-03.md)。
 
-R35最小fail-closed门禁逐字段比较O/A/B，拒绝A→O隐式回退，连同刻意精确重置也拒绝；不自动改写导出、不实现完整reset-intent、不改变恢复reader。下一项为真实NTE发布/反向Main交接，再独立Genshin正常连续发布；当前无新编辑，两项仍待验。独立key仍无配置目的地。当前只能接管两游戏既有指南6个本地化title/body字段，不是全16scope/所有类型；后台published不是部署，顺序双owner切流不是原子ReleaseMap激活。单Mac为既定范围，第二Mac/准确度/翻译均不再作门槛。以下轮次增量保留为历史，冲突以本段与R35为准。
+R35最小fail-closed门禁逐字段比较O/A/B，拒绝A→O隐式回退，连同刻意精确重置也拒绝；不自动改写导出、不实现完整reset-intent、不改变恢复reader。下一项为代理准备真实NTE修改并入库后发布/反向Main交接，再独立Genshin正常连续发布；两项仍待真实验收，独立key当前暂缓。当前只能接管两游戏既有指南6个本地化title/body字段，不是全16scope/所有类型；后台published不是部署，顺序双owner切流不是原子ReleaseMap激活。单Mac为既定范围，第二Mac/准确度/翻译均不再作门槛。以下轮次增量保留为历史，冲突以最新操作决定与V1清单为准。
 
 2026-11-03 R28当前增量：[恢复来源接续报告](../reports/payload-recovery-source-2026-11-03-r28/README.md)、[有限完成计划](../plans/payload-v1-completion-2026-11-03.md)。安装版双游戏当前来源选择通过，10Worker前后与R27一致，仍保护7服务、单次只写game/Main；本轮无云/内容写入、无CMS重启或架构变更。24publisher模块+manager+2TS helper共27文件验摘要，不影响公众应用bundle。
 

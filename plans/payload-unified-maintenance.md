@@ -1,6 +1,6 @@
 # Plan: Payload 全游戏统一维护
 
-> 当前权威入口（2026-11-04）：[R35隐式回退保护交付](../reports/payload-public-preservation-2026-11-04-r35/README.md)、[R34完整审计](../reports/payload-readiness-audit-2026-11-04-r34/README.md)、[V1有限完成计划](payload-v1-completion-2026-11-03.md)及[当前任务表](project-task-status-current.md)。R32首次真实Genshin内容发布与恢复来源后再发已完成；R33编辑资格和R35隐式O回退拒绝门禁均已安装。下一步真实NTE发布/反向Main交接，再独立Genshin正常连续发布；当前无下一编辑，独立key也尚无配置目的地，三项不虚报完成。限定V1与下文原始全游戏范围分别验收；准确度、翻译、第二Mac均不作上线门槛，不以新增工具或报告替代实际云验收。历史10Worker观察/7服务保护/每次game+Main写入边界不变，本轮未重读控制面。下方旧轮次保留当时证据，不作为当前执行顺序。
+> 当前权威入口（2026-11-04）：[代理策划→CMS入库→本机发布方案](../docs/payload-agent-publishing-workflow.md)、[V1有限完成计划](payload-v1-completion-2026-11-03.md)及[当前任务表](project-task-status-current.md)。用户本轮明确由代理规划并写入内容，不再等用户手动编辑；C05b独立key明确暂缓，移出当前V1门槛但未验收。工程最新为[R35隐式回退保护](../reports/payload-public-preservation-2026-11-04-r35/README.md)，R32真实首发/恢复后再发、R33权限均保持。下一步代理准备NTE真实修改入CMS后发布/反向Main交接，再独立Genshin正常更新；两次真实验收通过后冻结修订后的限定V1，不建设通用运营平台。限定V1与原始全游戏/完整灾备分开，准确度、翻译、第二Mac不作门槛。历史10Worker观察/7服务保护/每次game+Main写入边界不变，本轮仅调整方案，无内容/云写入或新控制面验收。下方旧轮次保留当时证据。
 
 > R20历史基线（2026-11-02）：[四项收口](../reports/payload-launch-closeout-2026-11-02-r20/README.md)。inventory版本化且历史不变，Router/inventory实际CI通过；工程提交a0634a9已推送。三个只读准备命令已安装，20工具文件摘要一致，547份公网资源响应已取证。CMS163、桌面387、既有Node304、Python49、Router35及相关类型检查通过。该轮真实编辑云E2E、独立key/跨机与完整交接未关；DB84draft/hold、0eligible，正式导出拒绝无合格记录。
 

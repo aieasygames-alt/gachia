@@ -1,5 +1,7 @@
 # Payload 私有异地备份与恢复
 
+**2026-11-04最新范围决定：** 用户暂不需要独立密钥存放位置，C05b改为未完成/明确暂缓，移出当前限定V1上线条件，后续恢复韧性工作另排；不再要求现在接入独立介质。保留本机现有key、备份与私有R2密文，不关闭备份、不将密钥随意外传。若Mac与同机key一并丢失，R2密文可能无法解密，因此不声称完整整机灾难恢复，T11/P7完整范围仍未关闭。详见[当前内容工作流与范围决定](payload-agent-publishing-workflow.md)。以下历史验收和工具保持可用，不将暂缓冒称已通过。
+
 更新：2026-11-04（R30异地备份的本机应用恢复通过；R32首次真实公网发布完成；R33本机编辑权限修复；独立key仍待办）。用户明确CMS只在这台Mac运行，**不要求第二台Mac或跨机安装/启动验收**。公众站点不回源本机；本流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。本文最新已验异地对象仍为R29，含1条published编辑与当时的已安装发布器；该编辑已在R32公网生效，不能再称为待首发。R32/R33另有本机冷备，R33为应用升级前备份，均未据此宣称已更新R2对象；新应用版本保留在本机，未完成其异地恢复验收。恢复结果见[R30报告](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，异地备份生成见[R29](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)，公开发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，当前本机应用见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)。
 
 ## 存储与交付边界
