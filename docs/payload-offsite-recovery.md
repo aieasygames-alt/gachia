@@ -1,6 +1,6 @@
 # Payload 私有异地备份与恢复
 
-更新：2026-11-03（R30最新异地备份的本机应用恢复通过；独立key仍待办）。用户明确CMS只在这台Mac运行，**不要求第二台Mac或跨机安装/启动验收**。公众站点不回源本机；本流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。当前冷备仍为R29，含1条published编辑与已安装发布器，但该编辑尚未公网生效；恢复结果见[R30报告](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，备份生成见[R29](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)。
+更新：2026-11-04（R30异地备份的本机应用恢复通过；R32首次真实公网发布完成；R33本机编辑权限修复；独立key仍待办）。用户明确CMS只在这台Mac运行，**不要求第二台Mac或跨机安装/启动验收**。公众站点不回源本机；本流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。本文最新已验异地对象仍为R29，含1条published编辑与当时的已安装发布器；该编辑已在R32公网生效，不能再称为待首发。R32/R33另有本机冷备，R33为应用升级前备份，均未据此宣称已更新R2对象；新应用版本保留在本机，未完成其异地恢复验收。恢复结果见[R30报告](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，异地备份生成见[R29](../reports/payload-real-lifecycle-2026-11-03-r29/README.md)，公开发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，当前本机应用见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)。
 
 ## 存储与交付边界
 

@@ -19,6 +19,8 @@
 1. 打开 `http://127.0.0.1:3100/admin` 并登录，进入内容记录，筛选游戏与 guides。账号密码只在本机私有文件中保存，不复制进报告或聊天。
 2. 选一条既有指南，切换 zh/en/ja locale，只修改后台的 **title / body**（导出时对应原文 title / content）。保留 ID、slug、URL、顺序、bodyFormat、sourceRecord 来源基线、媒体及其他字段；缺译不自动补齐。不要批量解除 hold。
 3. 查看差异，确认这是你希望公开的实际编辑。需要发布时将**这一条**记录 hold 设为 false，再用发布动作保存为 published。该动作要求 admin/reviewer 身份，editor 只能保存草稿；这是操作资格，不是事实准确度审稿。草稿或 hold=true 不进入正式导出。
+
+R33已补齐撤回边界：editor的更新必须显式保存草稿（REST为`?draft=true`），普通/批量非草稿更新均要求admin/reviewer；不能通过写入`_status: draft`直接撤回已批准记录。多语言草稿不会覆盖已批准版本的正式导出，`draft=true`也不授予editor发布资格。admin/reviewer可明确hold、撤回或恢复版本，但这些CMS动作**不等于网站页面已撤回或Cloudflare已切流**；仍须按实际差异和完整发布/恢复门禁处理。完整UI/并发和网站撤回流程尚未全部验收，见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)。
 4. 由下面的维护流程导出、构建、预览并推广。没有真实变更时返回 no_changes，应停止；不得加入演练文案凑一次发布。
 
 初始凭据位置：`~/Library/Application Support/GachiaCMS/initial-admin.txt`，首次登录后更改密码。未配置邮件找回；丢失密码应走本机管理员恢复，不能开放 first-user 注册。

@@ -1,6 +1,14 @@
 # 当前审计任务表
 
-## 当前权威状态：R32 首次真实公网发布完成，NTE共享Main交接通过（2026-11-04）
+## 当前权威状态：R33 编辑批准/撤回权限修复并安装（2026-11-04）
+
+**首次真实发布保持可用；本轮推进原T07的编辑安全缺口，不重复旧候选或等待准确度。** 复现editor可通过普通单条/批量更新写入draft来撤回已批准记录，修复为非草稿更新必须admin/reviewer，editor显式保存草稿；draft标志、overrideAccess与锁覆盖均不授予发布/恢复资格。CMS174/174、typecheck/build、精确代码CI通过，隔离PostgreSQL/实际HTTP验证通过，待安装应用又在HomebrewPG17.11通过角色/多语言/锁/恢复/注销检查。冷备后切换独立本机应用，698应用文件验摘要，原应用保留可回退；在线DB摘要仍不变，安全HTTP9/9，28发布工具文件摘要不变。详见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)和[V1执行清单](payload-v1-completion-2026-11-03.md)。
+
+T07的限定批准/撤回资格子项关闭，完整UI/设备/并发/实际网站撤回仍待验，T07/P1整体不关闭。C01/C02/C05a保持关闭；C03下一条独立Genshin发布、C04真实NTE发布/反向Main交接、C05b独立key仍待办。没有在线内容/hold/用户/媒体写入或Worker上传/部署；未重验云控制面，R32UUID仍为历史观察。
+
+**剩余执行：真实NTE编辑具备即验C04；独立Genshin编辑具备即验C03；独立key目的地具备即验C05b。无新编辑时，下一工程项为T07/T08撤回/hold与候选导出的公开A保留边界，先做隔离fixture回归，不制造公开变化。** 不新增第二Mac、内容准确度或通用运营平台门槛。以下R32及更早内容为历史，不覆盖本节。
+
+### 前轮 R32 首次真实公网发布完成，NTE共享Main交接通过（2026-11-04）
 
 **Payload本机编辑→Cloudflare正式发布首次真实闭环已完成，可以继续维护既有Genshin指南文字；稳定限定V1及原始全范围迁移仍未全部完成。** 仅此Mac、无Tunnel/Mac公网回源；内容准确度与翻译不作首发门槛。执行清单见[V1有限完成计划](payload-v1-completion-2026-11-03.md)，实际证据见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)。下方R31及更早为历史，不再代表当前上线状态。
 
@@ -11,6 +19,8 @@
 - **交付边界**：桌面784/784、其他Node304/304、Python49/49通过，精确代码CI含CMS165/typecheck、Router/inventory通过，28发布工具文件安装验摘要。本轮4版本上传/2成功部署POST，累计21/6；仅Genshin/Main写，10Worker观察/7服务保护，NTE/Router/staging、生产main与两个GitHub部署false开关保持。DB83draft/hold+1published/eligible，本轮无DB/内容/媒体写入。
 
 **剩余顺序：下一条真实NTE编辑验实际发布及反向Main交接 → 下一条独立Genshin编辑验正常连续发布；独立key目的地具备即验C05b。** 没有真实编辑不制造文字、不批量解除hold、不重复当前releaseKey；C02恢复后再发已完成，不再作为待修阻塞。原始P0–P4/T03–T05仍部分完成，P5–P7/T06–T12不整体关闭；没有普通请求全链releaseKey/ReleaseMap原子激活或账户级仅本机发布强制声明。
+
+**2026-11-04 12:25后续只读核对：** CMS/PG健康且loaded，安全HTTP 9/9，DB完整摘要与R32交付一致；仍83条draft/hold和1条已公网发布记录，没有新的NTE或Genshin编辑。公网直连指南HTML及两游戏JSON均200，Genshin候选SHA不变、NTE字节不变，标题/canonical/JSON-LD存在。首次上线保持可用；剩余C03/C04需下一条真实编辑，C05b需真实独立key目的地，均不靠重复旧发布或恢复关闭。本次无内容/hold/云写入、无新run和完整CI/控制面重验，仅纠正灾备文档的旧首发描述，详见[当前执行清单](payload-v1-completion-2026-11-03.md)。
 
 ### 前轮 R31 四版本云验收通过，首发仍被15分钟窗口阻塞（2026-11-03）
 

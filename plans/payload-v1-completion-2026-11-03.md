@@ -1,6 +1,6 @@
 # Payload V1 有限完成计划
 
-更新：2026-11-04，R32。当前执行清单以本文为准；完整历史范围仍见[任务表](project-task-status-current.md)。本轮见[R32首次真实发布与共享Main交接](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，本机恢复见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)，操作见[手册](../docs/payload-operator-runbook.md)。
+更新：2026-11-04，R33。当前执行清单以本文为准；完整历史范围仍见[任务表](project-task-status-current.md)。下一阶段安全修复见[R33编辑批准与撤回权限](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)，首次发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，本机恢复见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)，操作见[手册](../docs/payload-operator-runbook.md)。
 
 ## 1. 完成的定义
 
@@ -10,7 +10,7 @@
 - **稳定限定 V1：尚未全部完成。** C01–C05 均须满足各自关闭条件，包括独立正常连续发布、NTE 实际发布/双向共享 Main 连续性，以及独立密钥托管；恢复后再次成功发布已验证，不要求跨机运行。
 - **原始项目完整完成：仍未完成。** 全类型、全 scope、全 owner、完整 ReleaseMap/请求一致性与权威移交/退役等原始任务另行验收。稳定 V1 不能替代 P0–P7 / T01–T12 的全范围完成。
 
-不以新增测试数、报告轮数、工具数量或同机重复演练衡量进度。已完成首发，不再重复执行该候选或已有恢复；后续只围绕真实下一条编辑推进。
+不以新增测试数、报告轮数、工具数量或同机重复演练衡量进度。已完成首发，不再重复执行该候选或已有恢复；V1后续发布验收只围绕真实下一条编辑推进。用户要求进入下一阶段时，可以推进原任务中独立可做的编辑安全缺口，不把暂缺编辑输入等同于所有工程停工，也不扩建通用运营平台。
 
 ## 2. 仅五个 V1 工作包
 
@@ -23,6 +23,18 @@
 | C05 本机恢复与独立密钥 | **C05a本机应用恢复实际通过；C05b独立密钥托管待办；跨机运行出范围** | R30已完成私有R2新鲜下载、解密/归档/源码校验、隔离loopback PG与实际CMS登录/导出/重启验收，原DB摘要不变。复用本机应用，不声称离线重建或整机灾难恢复；密钥仍仅同机，真实独立目的地尚未配置。C05b不阻塞已完成的首次文字发布 |
 
 DB仍为Genshin31/NTE53共84条：**83条draft/hold，1条Genshin既有指南published/eligible且已公网更新**。已发布标题为“原神快速上手指南：基础操作、元素反应与资源规划”；releaseKey为`61cf1ede43df373693eea8cb2b83641ef3791876953ab8024c0233873de0bef6`。本轮未改DB、正文事实、身份、媒体或其他83记录；来源登记不授予下一次发布许可。
+
+### 后续只读核对（2026-11-04 12:25，Asia/Shanghai）
+
+CMS/PostgreSQL均healthy/loaded，本机安全HTTP为9/9；完整数据库摘要与R32交付一致，没有新增真实编辑。Genshin仍30条draft/hold加1条published/eligible，NTE仍53条draft/hold。公网curl直连复核已发布指南HTML、Genshin JSON、NTE JSON均200，标题/canonical/JSON-LD存在；Genshin JSON仍为已接受SHA `9e49bee84613e11cc261204eb83454ee1848809af094474fd8eccedcc550518b`，NTE JSON与既有公开文件逐字节一致。
+
+因此首次上线保持可用，C03/C04后续验收尚无新候选；已知安装配置未提供独立key目的地，当前挂载观察也未发现可用独立介质，不代表用户没有其他保管方式。本次未新建发布run、修改内容/hold、上传/部署、重跑恢复或重验云控制面/完整CI，不将R32版本快照当作新控制面观察。仅修正灾备手册中“尚未公网生效”的过期描述，不增加首发门槛或准备工具；C01–C05关闭状态不虚增。
+
+### 下一阶段：T07批准/撤回资格（R33）
+
+已复现并修复editor通过普通单条/批量更新写入draft而撤回已批准记录的问题。非草稿更新统一要求admin/reviewer；editor必须显式保存草稿，不能用draft标志或overrideAccess绕过发布权限。完整CMS174/174、typecheck/build、精确代码CI通过；真实PostgreSQL/HTTP覆盖多语言草稿保留正式A、reviewer批准B、hold/撤回、活跃锁/版本恢复与注销后的拒绝。待安装应用又在Homebrew PG17.11隔离运行通过，随后冷备/切换独立本机版本，在线DB摘要不变、安全HTTP9/9，旧应用保留可回退。25发布模块/manager/2helper摘要不变，无云写或在线内容写入。
+
+该限定子项关闭，T07/P1整体仍部分完成；C03/C04/C05b状态不变。下一可执行工程项是T07/T08的撤回/hold与后续候选导出保留边界：在隔离fixture中验证未批准记录不会在下一次B中被隐式退回导入O；不据此制造真实编辑或宣称网站撤回已实现。完整证据与边界见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)。
 
 ## 3. 执行顺序与停止扩建规则
 
