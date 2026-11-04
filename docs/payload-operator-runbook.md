@@ -6,7 +6,7 @@
 
 **R32首次真实Genshin公网发布与来源交接已完成。保存或 published 不等于公网更新。** 真实标题“原神快速上手指南：基础操作、元素反应与资源规划”已通过双owner构建、四个候选/兼容恢复版本精确云预览、新鲜续验、正式推广/公网验收/source-advance；NTE原UUID/JSON保持，真实共享Main只读重绑定和重新选择也通过。下一条独立正常发布、实际NTE推广和独立key仍待验，当前不是稳定限定V1或原始项目全部完成。
 
-**R34日常更新安全提示（待修）：** 已复现同游戏已上线A被hold/撤回后，再导出另一条B会将A隐式退回最初导入O，当前候选检查仍可接受。**不能仅看manifest.changed或“存在差异”就推广**；F1修复前必须逐记录/字段核对当前公开A→候选的完整差异，发现未明确批准的回退就停止，不通过手改pin/跳过门禁发布。hold/撤回不等于网站删除，也不能承诺已上线文字自动保留。下一工程首项及证据见[R34](../reports/payload-readiness-audit-2026-11-04-r34/README.md)。本轮线上内容与DB未变，没有实际回退事故；已成功首发仍成立。
+**R35日常更新保护已安装：** [R34](../reports/payload-readiness-audit-2026-11-04-r34/README.md)复现的同游戏hold/撤回后隐式回退O，现由本地证据准备及正式推广的逐字段O/A/B门禁拒绝，正常/renewed推广写前均重新核验。**这不是导出器自动保留A，不能仅看manifest.changed或inspect通过就发布。** 遇到`Implicit reset to import O`应停止，核对当前公开A与候选完整差异及CMS批准状态；不批量清hold、混入草稿、手改pin或绕过门禁。刻意恢复到精确O同样拒绝，显式reset-intent尚未实现。hold/撤回不等于网站删除，可信A的手动恢复reader保持可用。精确代码CI/三模块安装与安装版两游戏fixture证据见[R35](../reports/payload-public-preservation-2026-11-04-r35/README.md)；本轮DB/线上内容未变，下一项是真实NTE发布，不重发R32候选。
 
 当前工作包见[V1有限完成计划](../plans/payload-v1-completion-2026-11-03.md)，当前实测见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，历史失败见[R31](../reports/payload-version-provenance-2026-11-03-r31/README.md)。R29不可靠历史content选择器已由[上传字节回执](payload-version-provenance-2026-11-03.md)替代：上传时绑定日志/UUID、出站multipart、响应ETag/字节及前后版本元数据；以后重验封存字节和新鲜不可变UUID身份，不伪造历史下载。三份旧来源仅接受审核原始pin，未知外部UUID仍拒绝。
 
