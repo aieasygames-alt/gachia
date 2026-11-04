@@ -8,6 +8,13 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import EmbeddedPostgres from 'embedded-postgres'
 import { projectRoot } from '../src/local-environment'
+import { checkEditorialHTTP } from '../tests/editorial-http-checks'
+
+const [reportDirectory, ...extra] = process.argv.slice(2)
+assert.equal(extra.length, 0, 'Usage: postgres-smoke.ts [new-absolute-report-directory]')
+assert(!reportDirectory || path.isAbsolute(reportDirectory), 'Report directory must be absolute')
+const output = reportDirectory ?? path.resolve(projectRoot, '../../reports', `payload-postgres-smoke-${Date.now()}-${randomBytes(6).toString('hex')}`)
+await mkdir(output, { mode: 0o700 })
 
 async function freePort() {
   const server = createServer().listen(0, '127.0.0.1')
@@ -75,6 +82,8 @@ try {
   checks.push('non-superuser PostgreSQL role: empty database migrated; repeated migration idempotent; schema push disabled')
   await run(['exec', 'tsx', '--test', 'tests/payload.test.ts'])
   checks.push('real PostgreSQL editorial suite: login, ACL, locale, publish, locks, versions, rollback/commit, private media, immutable intake')
+  await run(['exec', 'tsx', '--test', 'tests/editorial-lifecycle.test.ts'])
+  checks.push('real PostgreSQL lifecycle: reviewer-only unpublish, single/bulk/override rejection, localized draft/export fidelity')
   await pg.dropDatabase(database)
   await provisionDatabase()
   await run(['exec', 'payload', 'migrate'])
@@ -143,6 +152,7 @@ try {
   assert.equal(page.headers.get('x-robots-tag'), 'noindex, nofollow')
   assert.equal((await fetch(`${base}/api/shadow/releases/${'a'.repeat(64)}`)).status, 404)
   checks.push('built Next + PostgreSQL HTTP: health, admin login HTML, closed registration, anonymous denial, login cookie, single admin, content create/edit, private media bytes, noindex, shadow disabled')
+  checks.push(...await checkEditorialHTTP(base, token, password, env.DATABASE_URL!))
   await pg.stop()
   started = false
   const unavailable = await fetch(`${base}/health`, { signal: AbortSignal.timeout(15000) })
@@ -162,8 +172,6 @@ try {
   if (started) await pg.stop()
   await rm(directory, { recursive: true, force: true })
   await rm(path.join(projectRoot, '.local', namespace), { recursive: true, force: true })
-  const output = path.resolve(projectRoot, '../../reports/payload-editor-launch-2026-11-01/verification')
-  await mkdir(output, { recursive: true })
   const redact = (text: string) => text.replaceAll(password, '[REDACTED]').replaceAll(secret, '[REDACTED]')
   await writeFile(path.join(output, 'postgres-smoke.log'), redact(logs.join('\n')))
   await writeFile(path.join(output, 'postgres-smoke.json'), JSON.stringify({ passed: !failure, engine: 'PostgreSQL 17.6',

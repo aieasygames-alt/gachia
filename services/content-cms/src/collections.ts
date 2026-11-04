@@ -109,7 +109,14 @@ export function collections(directory: string, options: { secureCookies?: boolea
       versions: { drafts: true, maxPerDoc: 20 },
       hooks: {
         beforeOperation: [async ({ operation, args, req }) => {
-          if (operation === 'update' || operation === 'delete') return { ...args, overrideLock: false }
+          if (operation === 'update') {
+            // A non-draft update can unpublish approved content without ever writing "published".
+            if (args.draft !== true && !hasRole(req.user, ['admin', 'reviewer'])) {
+              throw new APIError('Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.', 403)
+            }
+            return { ...args, overrideLock: false }
+          }
+          if (operation === 'delete') return { ...args, overrideLock: false }
           if (operation !== 'restoreVersion') return args
           if (!hasRole(req.user, ['admin', 'reviewer'])) throw new APIError('Only a reviewer can restore editorial versions.', 403)
           // Payload restoreVersion has no overrideLock option. Check its parent before restoring.
