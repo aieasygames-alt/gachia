@@ -3,7 +3,7 @@ import { mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from '
 import { dirname, join, resolve } from 'node:path';
 import { artifactFiles, inspectCandidate, prepareCandidate } from './desktop-publish.mjs';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
-import { digest, pinnedJson, verifiedInPass, verifyAssetEvidence } from './desktop-release-assets.mjs';
+import { digest, pinnedJson, verifiedInPass, verifyAssetEvidence, withVerificationPass } from './desktop-release-assets.mjs';
 import { verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
@@ -136,6 +136,10 @@ function sourcesFromHistory(origin, versions) {
 }
 
 function checkInputs({ verified, recovery, assets }, versions) {
+  return withVerificationPass(() => readInputs({ verified, recovery, assets }, versions));
+}
+
+function readInputs({ verified, recovery, assets }, versions) {
   assertReleaseScope(verified.plan);
   const original = verifyAssetEvidence(assets.path, assets.pin, verified.plan.game);
   assert.equal(original.capture.summary.versionId, versions[verified.plan.game], 'Game asset source is not current');

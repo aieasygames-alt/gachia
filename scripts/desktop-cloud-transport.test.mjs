@@ -9,6 +9,28 @@ import { boundedBody, exactPreviewOrigin, pageFingerprint, validatePreviewRespon
 import { digest } from './desktop-release-assets.mjs';
 
 const versionId = '00000000-0000-0000-0000-000000000001';
+test('only a just-uploaded exact UUID metadata GET tolerates bounded visibility lag', async () => {
+  const waits = [], reads = [];
+  const result = await readUploadVersion({ service: 'gachia-game-nte', versionId, token: 'fixture', allowPendingVersion: true,
+    pause: async ms => waits.push(ms), request: async (url, options) => {
+      reads.push({ url, method: options.method });
+      return reads.length < 4 ? new Response('{}', { status: 404 }) : Response.json({ success: true, result: { id: versionId } });
+    } });
+  assert.deepEqual(result, { id: versionId }); assert.deepEqual(waits, [1000, 2000, 4000]);
+  assert.equal(reads.length, 4); assert(reads.every(row => row.method === 'GET' && row.url.endsWith(`/versions/${versionId}`)));
+});
+for (const scenario of ['ordinary-404', 'binary-404', 'pending-403', 'pending-503', 'pending-permanent-404']) {
+  test(`version visibility handling remains fail closed for ${scenario}`, async () => {
+    let calls = 0; const waits = [];
+    const status = scenario === 'pending-403' ? 403 : scenario === 'pending-503' ? 503 : 404;
+    await assert.rejects(readUploadVersion({ service: 'gachia', versionId, token: 'fixture', binary: scenario === 'binary-404',
+      allowPendingVersion: scenario !== 'ordinary-404', pause: async ms => waits.push(ms), request: async (_url, options) => {
+        calls++; assert.equal(options.method, 'GET'); return new Response('{}', { status });
+      } }), /Upload version read failed/);
+    assert.equal(calls, scenario === 'pending-permanent-404' ? 4 : 1);
+    assert.deepEqual(waits, scenario === 'pending-permanent-404' ? [1000, 2000, 4000] : []);
+  });
+}
 test('candidate and recovery multipart reads share a bounded transfer budget without write retries', t => {
   const budgets = [], signal = new AbortController().signal;
   t.mock.method(AbortSignal, 'timeout', ms => { budgets.push(ms); return signal; });

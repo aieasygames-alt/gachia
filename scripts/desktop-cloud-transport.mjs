@@ -267,7 +267,8 @@ export function uploadReadOptions(token, binary = false) {
     signal: AbortSignal.timeout(binary ? 180000 : 30000) };
 }
 
-export async function readUploadVersion({ service, versionId, token, binary = false, request = fetch }) {
+export async function readUploadVersion({ service, versionId, token, binary = false, allowPendingVersion = false,
+  request = fetch, pause = ms => new Promise(resolve => setTimeout(resolve, ms)) }) {
   exactPreviewOrigin(service, versionId);
   const suffix = binary ? `/content/v2?version=${versionId}` : `/versions/${versionId}`;
   const url = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/workers/scripts/${service}${suffix}`;
@@ -276,6 +277,13 @@ export async function readUploadVersion({ service, versionId, token, binary = fa
     const options = uploadReadOptions(token, binary), started = Date.now();
     try {
       const response = await request(url, options);
+      // Only the first metadata read after a confirmed upload can lag visibility.
+      // This 404 grace never retries uploads, content GETs, or later identity checks.
+      if (allowPendingVersion && !binary && response.status === 404 && attempt < 3) {
+        await boundedBody(response);
+        await pause(1000 * 2 ** attempt);
+        continue;
+      }
       assert(response.ok, `Upload version read failed: ${response.status}`);
       const bytes = await boundedBody(response);
       readAttempts.push({ status: 'downloaded', elapsedMs: Date.now() - started, bytes: bytes.length });
@@ -298,9 +306,9 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
   assert.equal(verified.plan.preview, false, 'Never upload rehearsal/preview candidates');
   assert(verified.plan.changed.length > 0 && releaseKey === verified.plan.releaseKey, 'Explicit changed editorial release required');
   const directory = join(run, `cloud-preview-${id}`); mkdirSync(directory, { mode: 0o700 });
-  const api = (service, versionId, binary = false) => {
+  const api = (service, versionId, binary = false, allowPendingVersion = false) => {
     assert(scope.services.includes(service), 'Release service/game mismatch');
-    return readUploadVersion({ service, versionId, token, binary });
+    return readUploadVersion({ service, versionId, token, binary, allowPendingVersion });
   };
   const recheck = () => verifyCloudBundle({ run, pin, id, bundlePin });
   let firstSnapshot = true;
@@ -324,7 +332,7 @@ export async function uploadCloudPreview({ run, pin, id, bundlePin, releaseKey, 
       const form = await multipartModule(readFileSync(outfile));
       assert.equal(form.moduleSHA256, record.moduleSHA256, 'Uploaded form differs from sealed module');
       assertUploadMetadata(form.metadata, pinnedJson(join(verified.directory, args.owner, 'upload.json'), record.configSHA256));
-      const version = await api(args.service, versionId);
+      const version = await api(args.service, versionId, false, true);
       assertUploadedVersion(version, versionId, pinnedJson(join(verified.directory, args.owner, 'upload.json'), record.configSHA256), verified.manifest.snapshot.bindings[args.service]);
       const moduleProof = await captureUploadedModule({ service: args.service, versionId, moduleSHA256: record.moduleSHA256,
         context: { role: 'candidate', releaseKey, configSHA256: record.configSHA256 }, directory: join(directory, `${args.owner}-module`), uploadPath: outfile,
@@ -358,7 +366,7 @@ export async function uploadRecoveryPreview(input) {
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Cloud publishing is desktop-only');
   const { verifyRecoveryCloud } = await import('./desktop-recovery-cloud.mjs');
   const { run, token } = input;
-  const readVersion = (service, versionId, binary = false) => readUploadVersion({ service, versionId, token, binary });
+  const readVersion = (service, versionId, binary = false, allowPendingVersion = false) => readUploadVersion({ service, versionId, token, binary, allowPendingVersion });
   return executeRecoveryUpload({ input, verify: () => {
     const verified = verifyRecoveryCloud(input);
     assertEditorialRecovery(verified.candidate.plan, input.releaseKey);
@@ -380,7 +388,7 @@ export async function uploadRecoveryPreview(input) {
       const config = pinnedJson(join(verified.directory, owner, 'upload.json'), row.configSHA256);
       const form = await multipartModule(readFileSync(join(directory, `${owner}.multipart`)));
       assert.equal(form.moduleSHA256, row.moduleSHA256); assertUploadMetadata(form.metadata, config);
-      const version = await readVersion(row.service, versionId);
+      const version = await readVersion(row.service, versionId, false, true);
       assertUploadedVersion(version, versionId, config, verified.manifest.snapshot.bindings[row.service]);
       const moduleProof = await captureUploadedModule({ service: row.service, versionId, moduleSHA256: row.moduleSHA256,
         context: { role: 'recovery', releaseKey: input.releaseKey, configSHA256: row.configSHA256 }, directory: join(directory, `${owner}-module`),

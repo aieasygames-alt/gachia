@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
+import fs from 'node:fs';
+import { syncBuiltinESMExports } from 'node:module';
 import { chmodSync, existsSync, mkdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
@@ -7,6 +9,8 @@ import { registerHistoricalSourceCatalog, registerSourceCatalog, selectSourceCat
 import { artifactFiles, verifyPrepared } from './desktop-publish.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { guideDataHashes } from './desktop-cloud-transport.mjs';
+import { advanceSourceCatalog } from './desktop-source-advance.mjs';
+import { fixture as publishedFixture } from './fixtures/desktop-published-source.mjs';
 
 const json = x => JSON.stringify(x, null, 2) + '\n';
 const save = (path, x) => { mkdirSync(dirname(path), { recursive: true, mode: 0o700 }); writeFileSync(path, json(x), { mode: 0o600 }); return digest(json(x)); };
@@ -16,12 +20,19 @@ const html = game => `<html><head><title>A</title><link rel="canonical" href="ht
 
 import { fixture, historicalFixture } from './fixtures/desktop-catalog-source.mjs';
 
-async function preservedFixture(t, game = 'genshin') {
+async function preservedFixture(t, game = 'genshin', publishedParent = false) {
   const other = game === 'genshin' ? 'nte' : 'genshin';
   const otherContent = '[{"id":"one","title":"Other published A","content":"Original"}]';
-  const f = await fixture(t, game, { otherContent });
-  await registerSourceCatalog(f.input);
-  const repo = join(f.root, 'repo'), candidate = join(f.root, 'candidate'); mkdirSync(repo); mkdirSync(candidate);
+  let f;
+  if (publishedParent) {
+    const parent = await publishedFixture(t, game, { otherContent });
+    await advanceSourceCatalog(parent.args);
+    f = { ...parent, input: { root: parent.args.root, request: parent.request } };
+  } else {
+    f = await fixture(t, game, { otherContent });
+    await registerSourceCatalog(f.input);
+  }
+  const repo = join(f.root, 'next-repo'), candidate = join(f.root, 'next-candidate'); mkdirSync(repo); mkdirSync(candidate);
   for (const g of [game, other]) for (const path of [`packages/data/games/${g}/raw-guides.json`, `apps/web/public/data/${g}/raw-guides.json`]) {
     mkdirSync(dirname(join(repo, path)), { recursive: true }); writeFileSync(join(repo, path), f.original);
   }
@@ -37,6 +48,35 @@ async function preservedFixture(t, game = 'genshin') {
     request: async (url, opts) => url === `https://gachia.com/data/${other}/raw-guides.json` ? new Response(otherContent, { headers: { 'content-type': 'application/json' } }) : f.input.request(url, opts) };
   return { ...f, other, otherContent, input };
 }
+
+test('a synchronous prepared-source traversal deduplicates parent plans but rereads after await', async t => {
+  const f = await preservedFixture(t, 'genshin', true), prepared = await preparePublishedCandidate(f.input);
+  const reads = new Map(), artifacts = new Map(), original = fs.readFileSync;
+  fs.readFileSync = function (path, ...args) {
+    if (String(path).endsWith('/plan.json')) reads.set(String(path), (reads.get(String(path)) ?? 0) + 1);
+    if (String(path).includes('/artifacts/') && String(path).endsWith('/new.js')) artifacts.set(String(path), (artifacts.get(String(path)) ?? 0) + 1);
+    return original.call(this, path, ...args);
+  };
+  syncBuiltinESMExports();
+  try {
+    verifyPrepared(prepared.directory, prepared.planSHA256);
+    assert(reads.size >= 2, 'Fixture must traverse a parent plan');
+    assert([...reads.values()].every(count => count === 1), JSON.stringify([...reads]));
+    assert(artifacts.size > 0); assert([...artifacts.values()].every(count => count === 1), JSON.stringify([...artifacts]));
+    const firstPlans = [...reads.keys()].sort();
+    await Promise.resolve();
+    reads.clear();
+    verifyPrepared(prepared.directory, prepared.planSHA256);
+    assert.deepEqual([...reads.keys()].sort(), firstPlans);
+    assert([...reads.values()].every(count => count === 1));
+    const proof = JSON.parse(original(prepared.plan.preservedGuides.path));
+    writeFileSync(proof.selection.manifestPath, '{}');
+    await Promise.resolve();
+    assert.throws(() => verifyPrepared(prepared.directory, prepared.planSHA256));
+  } finally {
+    fs.readFileSync = original; syncBuiltinESMExports();
+  }
+});
 
 for (const game of ['genshin', 'nte']) test(`${game} preparation freezes the other game's published A in both Main build inputs and exact HTTP references`, async t => {
   const f = await preservedFixture(t, game), prepared = await preparePublishedCandidate(f.input);

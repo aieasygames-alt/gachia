@@ -7,7 +7,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { verifyWorkerArtifact } from './verify-worker-artifact.mjs';
 import { verifyPreservedGuides } from './desktop-source-catalog.mjs';
-import { verifiedInPass } from './desktop-release-assets.mjs';
+import { verifiedInPass, withVerificationPass } from './desktop-release-assets.mjs';
 
 const hash = value => createHash('sha256').update(value).digest('hex');
 const SHA = /^[a-f0-9]{64}$/;
@@ -126,7 +126,7 @@ export function prepareCandidate({ repo, directory, runs, commit = 'HEAD', prese
 }
 
 export function verifyPrepared(run, pin) {
-  return verifiedInPass(verifyPrepared, JSON.stringify([resolve(run), pin]), () => readPrepared(run, pin));
+  return withVerificationPass(() => verifiedInPass(verifyPrepared, JSON.stringify([resolve(run), pin]), () => readPrepared(run, pin)));
 }
 
 function readPrepared(run, pin) {
