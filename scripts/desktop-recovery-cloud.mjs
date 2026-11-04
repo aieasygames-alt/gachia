@@ -4,7 +4,7 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { verifyCloudBundle, sealCloudModule, assertOwnerSettings } from './desktop-cloud-transport.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
-import { digest, pinnedJson, verifyRetainedCandidate } from './desktop-release-assets.mjs';
+import { digest, pinnedJson, verifiedInPass, verifyRetainedCandidate, withVerificationPass } from './desktop-release-assets.mjs';
 import { withLocalWorker, withRunLock } from './desktop-publish.mjs';
 import { assertTopology } from './desktop-cloud-release.mjs';
 import { boundedBody, pageFingerprint } from './desktop-version-preview.mjs';
@@ -76,6 +76,11 @@ export async function prepareRecoveryCloud(input) {
 }
 
 export function verifyRecoveryCloud({ run, pin, recoveryId, recoveryBundlePin }) {
+  const input = { run, pin, recoveryId, recoveryBundlePin };
+  return withVerificationPass(() => verifiedInPass(verifyRecoveryCloud, JSON.stringify(input), () => readRecoveryCloud(input)));
+}
+
+function readRecoveryCloud({ run, pin, recoveryId, recoveryBundlePin }) {
   assert(/^[a-f0-9]{16}$/.test(recoveryId));
   const directory = join(run, 'recovery-bundles', recoveryId), manifest = pinnedJson(join(directory, 'manifest.json'), recoveryBundlePin);
   assert.equal(manifest.schemaVersion, 1); assert.equal(manifest.cloudWrites, false); assert.equal(manifest.cloudRecoveryAccepted, false);

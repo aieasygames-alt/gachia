@@ -6,7 +6,7 @@ import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
 import { createPromotionTransport } from './desktop-promotion-transport.mjs';
 import { readPromotionEvidenceForRenewal } from './desktop-recovery-receipt.mjs';
 import { verifyRecoveryCloud } from './desktop-recovery-cloud.mjs';
-import { digest, pinnedJson } from './desktop-release-assets.mjs';
+import { digest, pinnedJson, withVerificationPass } from './desktop-release-assets.mjs';
 import { withRunLock } from './desktop-publish.mjs';
 import { verifySavedPreview } from './desktop-release-readiness.mjs';
 import { verifyVersionPreview } from './desktop-version-preview.mjs';
@@ -35,7 +35,7 @@ export async function renewDesktopEvidence(input) {
 
 export async function executeEvidenceRenewal({ input, readEvidence, readSealed, makeTransport, preview }) {
   return withRunLock(input.run, async () => {
-    const evidence = readEvidence(input), sealed = readSealed(input);
+    const { evidence, sealed } = withVerificationPass(() => ({ evidence: readEvidence(input), sealed: readSealed(input) }));
     assert.equal(input.releaseKey, evidence.plan.releaseKey);
     const mode = input.mode ?? 'promote';
     const id = randomBytes(8).toString('hex'), directoryName = `renewal-${id}`, directory = join(input.run, directoryName);
@@ -84,7 +84,8 @@ export async function executeEvidenceRenewal({ input, readEvidence, readSealed, 
 }
 
 export async function verifyRenewedEvidence(input, mode) {
-  return verifyRenewalFiles({ input, mode, evidence: readPromotionEvidenceForRenewal(input), sealed: verifyRecoveryCloud(input) });
+  const original = withVerificationPass(() => ({ evidence: readPromotionEvidenceForRenewal(input), sealed: verifyRecoveryCloud(input) }));
+  return verifyRenewalFiles({ input, mode, ...original });
 }
 
 // Internal disk verifier: production callers first validate the original sealed chain.

@@ -38,10 +38,11 @@ export async function desktopCloudSnapshot(token, request = fetch, { allowSplit 
 // A separate continuation never calls upload. Its verifier must re-open pinned
 // preview bodies and cloud recovery evidence, not trust a caller-supplied flag.
 // The controlled desktop wrapper supplies the pinned recovery evidence gate.
-export async function executePromotionContinuation({ run, retentionId, verify, authorize, transport }) {
+export async function executePromotionContinuation({ run, retentionId, verify, authorize, transport, makeTransport }) {
   return withRunLock(run, async () => {
-    assert(/^[a-f0-9]{16}$/.test(retentionId));
     const initial = structuredClone(await verify());
+    retentionId ??= initial.manifest.retentionId;
+    assert(/^[a-f0-9]{16}$/.test(retentionId));
     const check = value => {
       assert.equal(value.plan.preview, false); assert(value.plan.changed.length > 0);
       const scope = assertReleaseScope(value.plan, value.manifest.owners);
@@ -70,6 +71,7 @@ export async function executePromotionContinuation({ run, retentionId, verify, a
       assertTopology(value.manifest.snapshot, value.baseline);
     };
     check(initial); assert.equal(await authorize(initial), initial.plan.releaseKey);
+    transport ??= makeTransport(initial);
     const revalidate = async () => { const fresh = await verify(); check(fresh); assert.deepEqual(fresh, initial, 'Promotion evidence changed'); };
     const journal = join(run, `promotion-${retentionId}.jsonl`);
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
@@ -86,7 +88,8 @@ export async function executePromotionContinuation({ run, retentionId, verify, a
       assert.deepEqual(remote.recoveryVersions, Object.fromEntries(initial.plan.owners.map(owner => [serviceFor(owner), initial.recovery.owners[owner].versionId])), 'Fresh cloud recovery verification required');
       assert(SHA.test(remote.evidenceSHA256)); record({ phase: 'remote_versions_verified', proof: remote });
       for (const owner of initial.plan.owners) {
-        await revalidate(); assertTopology(initial.baseline, await transport.snapshot(), promoted);
+        assertTopology(initial.baseline, await transport.snapshot(), promoted);
+        await revalidate();
         const service = serviceFor(owner), versionId = versions[service];
         pendingOperation = { phase: 'promotion', owner, service, versionId };
         record({ ...pendingOperation, phase: 'promotion_intent' });
@@ -99,8 +102,8 @@ export async function executePromotionContinuation({ run, retentionId, verify, a
       const proof = await transport.acceptProduction(initial);
       assert.equal(proof.status, 'passed'); assert.equal(proof.releaseKey, initial.plan.releaseKey);
       assert.deepEqual(proof.versions, versions); assert(SHA.test(proof.evidenceSHA256));
-      await revalidate();
       assertTopology(initial.baseline, await transport.snapshot(), promoted);
+      await revalidate();
       record({ phase: 'production_accepted', proof });
       return { status: 'production_accepted', versions, journalSHA256: digest(readFileSync(journal)) };
     } catch (error) {

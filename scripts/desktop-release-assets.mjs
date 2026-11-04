@@ -12,6 +12,29 @@ const SHA = /^[a-f0-9]{64}$/;
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const save = (path, value) => writeFileSync(path, json(value), { flag: 'wx', mode: 0o600 });
 
+let verificationPass;
+
+// Deduplicate nested, read-only traversal only within one synchronous pass.
+// Never retain results across an await, network request, or write boundary.
+export function withVerificationPass(read) {
+  const outer = verificationPass;
+  verificationPass ??= new Map();
+  try {
+    const result = read();
+    assert(!result || typeof result.then !== 'function', 'Verification pass must be synchronous');
+    return result;
+  } finally { verificationPass = outer; }
+}
+
+export function verifiedInPass(reader, key, read) {
+  if (!verificationPass) return read();
+  let entries = verificationPass.get(reader);
+  if (!entries) { entries = new Map(); verificationPass.set(reader, entries); }
+  if (!entries.has(key)) entries.set(key, read());
+  // A caller must not mutate a result used by another nested verifier.
+  return structuredClone(entries.get(key));
+}
+
 export function pinnedJson(path, pin) {
   assert(SHA.test(pin), 'External evidence SHA-256 required');
   assert.equal(realpathSync(path), resolve(path), 'Linked evidence forbidden');

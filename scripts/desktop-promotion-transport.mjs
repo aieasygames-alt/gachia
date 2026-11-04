@@ -3,7 +3,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { desktopCloudSnapshot, executePromotionContinuation } from './desktop-cloud-release.mjs';
 import { assertUploadedVersion } from './desktop-cloud-transport.mjs';
-import { digest, pinnedJson } from './desktop-release-assets.mjs';
+import { digest, pinnedJson, withVerificationPass } from './desktop-release-assets.mjs';
 import { boundedBody, exactPreviewOrigin } from './desktop-version-preview.mjs';
 import { loadPublicReferences, verifyPublicHTTP } from './desktop-public-acceptance.mjs';
 import { promotionWriter } from './desktop-promotion-request.mjs';
@@ -103,14 +103,20 @@ export function createPromotionTransport({ run, evidence, candidateDirectory, re
 // No raw target, percentage, URL, verifier, or transport can be passed by CLI.
 export async function promoteDesktopRelease(input) {
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Cloud publishing is desktop-only');
-  const verify = input.renewalId ? (await import('./desktop-evidence-renewal.mjs')).verifyRenewedPromotionEvidence : verifyPromotionEvidence;
-  const evidence = await verify(input);
-  assert.equal(input.releaseKey, evidence.plan.releaseKey);
   assert(typeof input.token === 'string' && input.token.length > 0, 'Cloudflare credential required');
-  const sealed = input.renewalId ? (await import('./desktop-recovery-cloud.mjs')).verifyRecoveryCloud(input) : verifyRecoveryReceipt(input).verified;
-  assert.deepEqual(sealed.candidate.manifest, evidence.manifest);
-  const transport = createPromotionTransport({ run: input.run, evidence, candidateDirectory: sealed.candidate.directory,
-    recoveryDirectory: sealed.directory, recoveryManifest: sealed.manifest, token: input.token, request: fetch });
-  return executePromotionContinuation({ run: input.run, retentionId: evidence.manifest.retentionId,
-    verify: () => verify(input), authorize: () => input.releaseKey, transport });
+  const renewal = input.renewalId ? await import('./desktop-evidence-renewal.mjs') : undefined;
+  let sealed;
+  const verify = async () => {
+    const result = renewal ? await renewal.verifyRenewedEvidence(input, 'promote') : withVerificationPass(() => ({
+      evidence: verifyPromotionEvidence(input), sealed: verifyRecoveryReceipt(input).verified,
+    }));
+    sealed = result.sealed;
+    assert.equal(input.releaseKey, result.evidence.plan.releaseKey);
+    assert.deepEqual(sealed.candidate.manifest, result.evidence.manifest);
+    return result.evidence;
+  };
+  // The first full pass runs under the continuation's lock, not twice before it.
+  return executePromotionContinuation({ run: input.run, verify, authorize: () => input.releaseKey,
+    makeTransport: evidence => createPromotionTransport({ run: input.run, evidence, candidateDirectory: sealed.candidate.directory,
+      recoveryDirectory: sealed.directory, recoveryManifest: sealed.manifest, token: input.token, request: fetch }) });
 }

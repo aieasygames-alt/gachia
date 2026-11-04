@@ -7,6 +7,7 @@ import test from 'node:test';
 import { createPromotionTransport, promoteDesktopRelease } from './desktop-promotion-transport.mjs';
 import { executePromotionContinuation, SERVICES } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
+import { verifiedInPass, withVerificationPass } from './desktop-release-assets.mjs';
 import { moduleReceipt } from './fixtures/desktop-module-receipt.mjs';
 
 const sha = 'a'.repeat(64), retentionId = 'a'.repeat(16);
@@ -120,6 +121,65 @@ test('composed transport verifies four cloud modules, promotes exact versions an
   assert.equal(JSON.parse(readFileSync(join(path, 'public-acceptance.json'))).status, 'passed');
   assert.equal(f.journal().at(-1).phase, 'production_accepted');
   const count = f.calls.length; await assert.rejects(executePromotionContinuation(f.options), /EEXIST/); assert.equal(f.calls.length, count);
+});
+
+test('transport preparation uses the first locked verification rather than an extra unlocked pass', async t => {
+  const f = await fixture(t), transport = f.options.transport;
+  let verifications = 0, preparations = 0;
+  delete f.options.transport; delete f.options.retentionId;
+  f.options.verify = () => {
+    assert(existsSync(join(f.run, 'operation.lock'))); verifications++;
+    return structuredClone(f.evidence);
+  };
+  f.options.makeTransport = evidence => {
+    assert.equal(verifications, 1); preparations++; assert.deepEqual(evidence, f.evidence);
+    return transport;
+  };
+  assert.equal((await executePromotionContinuation(f.options)).status, 'production_accepted');
+  assert.equal(preparations, 1); assert.equal(verifications, 5);
+});
+
+for (const boundary of ['first-snapshot', 'second-owner-snapshot', 'public-acceptance', 'final-snapshot']) {
+  test(`fresh pass rejects evidence mutation during ${boundary} without another write`, async t => {
+    const f = await fixture(t), file = join(f.run, 'pass-input'); writeFileSync(file, 'pinned');
+    const read = () => verifiedInPass(read, file, () => readFileSync(file, 'utf8'));
+    f.options.verify = () => withVerificationPass(() => {
+      assert.equal(read(), 'pinned', 'Pinned input changed');
+      assert.equal(read(), 'pinned');
+      return structuredClone(f.evidence);
+    });
+    let snapshots = 0;
+    const snapshot = f.options.transport.snapshot;
+    f.options.transport.snapshot = async () => {
+      const value = await snapshot(); snapshots++;
+      if (snapshots === ({ 'first-snapshot': 1, 'second-owner-snapshot': 4, 'final-snapshot': 6 }[boundary])) writeFileSync(file, 'edited');
+      return value;
+    };
+    const accept = f.options.transport.acceptProduction;
+    f.options.transport.acceptProduction = async evidence => {
+      const value = await accept(evidence);
+      if (boundary === 'public-acceptance') writeFileSync(file, 'edited');
+      return value;
+    };
+    await assert.rejects(executePromotionContinuation(f.options), /Pinned input changed/);
+    assert.equal(f.calls.filter(row => row.method === 'POST').length, boundary === 'first-snapshot' ? 0 : boundary === 'second-owner-snapshot' ? 1 : 2);
+    assert(!f.journal().some(row => row.phase === 'production_accepted'));
+  });
+}
+
+test('proof that expires during a slow write-preflight snapshot causes zero deployment POSTs', async t => {
+  const f = await fixture(t), snapshot = f.options.transport.snapshot, now = Date.now;
+  const advanced = now() + 900001; let snapshots = 0;
+  f.options.transport.snapshot = async () => {
+    const value = await snapshot();
+    if (++snapshots === 2) Date.now = () => advanced;
+    return value;
+  };
+  try {
+    await assert.rejects(executePromotionContinuation(f.options), /Preview acceptance expired/);
+    assert.equal(f.calls.filter(row => row.method === 'POST').length, 0);
+    assert(!f.journal().some(row => row.phase === 'promotion_intent'));
+  } finally { Date.now = now; }
 });
 
 test('latest content ignoring the selector cannot replace any of the four archived modules', async t => {

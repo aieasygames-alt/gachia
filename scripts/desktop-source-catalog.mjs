@@ -3,7 +3,7 @@ import { mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from '
 import { dirname, join, resolve } from 'node:path';
 import { artifactFiles, inspectCandidate, prepareCandidate } from './desktop-publish.mjs';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
-import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-assets.mjs';
+import { digest, pinnedJson, verifiedInPass, verifyAssetEvidence } from './desktop-release-assets.mjs';
 import { verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
@@ -281,6 +281,10 @@ async function registerOrigin({ root, directory, origin: verified, assets, recov
 // Recheck a pinned selection's transitive local inputs, including rebound origins.
 // This is not a fresh network selection or permission to use it as a rebound parent.
 export function verifySelectedSourceCatalog(selection, plan) {
+  return verifiedInPass(verifySelectedSourceCatalog, JSON.stringify([selection, plan]), () => readSelectedSourceCatalog(selection, plan));
+}
+
+function readSelectedSourceCatalog(selection, plan) {
   privateFile(selection.manifestPath);
   const manifest = pinnedJson(selection.manifestPath, selection.manifestPin);
   assert.equal(manifest.schemaVersion, 1); assert.equal(manifest.kind, 'verified_local_source_catalog');

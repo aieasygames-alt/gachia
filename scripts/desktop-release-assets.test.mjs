@@ -1,14 +1,60 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, readFileSync, realpathSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, readFileSync, realpathSync, rmSync, statSync, symlinkSync, utimesSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { captureGameAssets, digest, pinnedJson, stableVersion, verifyAssetEvidence } from './desktop-release-assets.mjs';
+import { captureGameAssets, digest, pinnedJson, stableVersion, verifiedInPass, verifyAssetEvidence, withVerificationPass } from './desktop-release-assets.mjs';
+import { artifactFiles } from './desktop-publish.mjs';
 import { previousAssetFiles } from './retain-web-assets.mjs';
 
 const versionId = '00000000-0000-0000-0000-000000000001';
 const deploymentId = '00000000-0000-0000-0000-000000000002';
 const observation = { versionId, deploymentId, scriptEtag: 'a'.repeat(64), percentage: 100 };
+
+test('verification pass deduplicates nested readers without leaking mutable results or keys', () => {
+  let reads = 0;
+  const read = key => verifiedInPass(read, key, () => ({ count: ++reads }));
+  withVerificationPass(() => {
+    const value = read('one'); value.count = 999;
+    assert.equal(withVerificationPass(() => read('one')).count, 1);
+    assert.equal(read('two').count, 2);
+  });
+  assert.equal(read('one').count, 3);
+  assert.equal(withVerificationPass(() => read('one')).count, 4);
+});
+
+test('verification failures and asynchronous boundaries cannot retain a trusted pass', async () => {
+  let reads = 0;
+  const read = () => verifiedInPass(read, 'one', () => ++reads);
+  assert.throws(() => withVerificationPass(() => { read(); throw Error('stop'); }), /stop/);
+  assert.equal(withVerificationPass(read), 2);
+  assert.throws(() => withVerificationPass(() => Promise.resolve(read())), /must be synchronous/);
+  await Promise.resolve();
+  assert.equal(withVerificationPass(read), 4);
+  const failing = () => verifiedInPass(failing, 'one', () => { throw Error('failed reader'); });
+  withVerificationPass(() => {
+    assert.throws(failing, /failed reader/);
+    assert.throws(failing, /failed reader/);
+  });
+});
+
+test('new passes rehash same-size same-mtime bytes and rewalk added files and links', t => {
+  const root = realpathSync(mkdtempSync(join(tmpdir(), 'cms-pass-artifact-')));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  mkdirSync(join(root, '.build')); mkdirSync(join(root, 'assets'));
+  writeFileSync(join(root, 'worker.js'), 'first');
+  writeFileSync(join(root, '.build/open-next.config.edge.mjs'), 'config');
+  writeFileSync(join(root, 'assets/BUILD_ID'), 'id');
+  const original = withVerificationPass(() => artifactFiles(root));
+  const file = join(root, 'worker.js'), stat = statSync(file);
+  writeFileSync(file, 'other'); utimesSync(file, stat.atime, stat.mtime);
+  assert.notDeepEqual(withVerificationPass(() => artifactFiles(root)), original);
+  writeFileSync(join(root, 'added'), 'new');
+  assert(withVerificationPass(() => artifactFiles(root)).some(row => row.path === 'added'));
+  symlinkSync('../outside', join(root, 'unsafe-link'));
+  assert.throws(() => withVerificationPass(() => artifactFiles(root)));
+});
+
 function fixture(t) {
   const root = realpathSync(mkdtempSync(join(tmpdir(), 'cms-assets-')));
   t.after(() => rmSync(root, { recursive: true, force: true }));

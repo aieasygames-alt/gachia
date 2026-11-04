@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { verifyRecoveryCloud } from './desktop-recovery-cloud.mjs';
 import { assertEditorialRecovery, assertUploadedVersion } from './desktop-cloud-transport.mjs';
 import { activeVersion, assertTopology } from './desktop-cloud-release.mjs';
-import { pinnedJson } from './desktop-release-assets.mjs';
+import { pinnedJson, withVerificationPass } from './desktop-release-assets.mjs';
 import { acceptedPreviewJournal, readReleaseJournal, verifySavedPreview } from './desktop-release-readiness.mjs';
 import { exactPreviewOrigin } from './desktop-version-preview.mjs';
 import { readUploadedModuleReceipt } from './desktop-version-provenance.mjs';
@@ -98,6 +98,10 @@ export function readPromotionEvidenceForRenewal(input) {
 }
 
 function readPromotionEvidence(input, renewalOnly) {
+  return withVerificationPass(() => readPromotionFiles(input, renewalOnly));
+}
+
+function readPromotionFiles(input, renewalOnly) {
   const recovery = renewalOnly ? verifyRecoveryReceiptFiles(input, verifyRecoveryCloud(input), Infinity) : verifyRecoveryReceipt(input);
   const candidate = recovery.verified.candidate, { plan, manifest } = candidate;
   const journal = readReleaseJournal(join(input.run, `cloud-${manifest.retentionId}.jsonl`), {
