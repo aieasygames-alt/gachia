@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto'
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, cpSync, lstatSync, mkdirSync, readFileSync, realpathSync, renameSync, rmSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
-import { assertDiskBudget, BUILD_TEMP_BUDGET, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
+import { assertDiskBudget, BUILD_TEMP_BUDGET, diskSpace, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 import { artifactFiles, isolatedEnvironment, withLocalWorker, withRunLock } from '../../../scripts/desktop-publish.mjs'
 import { PRODUCTION_TARGETS } from '../../../scripts/production-release.mjs'
 import { liveOwnerConfig } from '../../../scripts/live-owner-artifact.mjs'
@@ -16,6 +16,7 @@ const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
 type CommandOptions = { cwd: string; env: NodeJS.ProcessEnv; log: string }
 type Execute = (file: string, args: string[], options: CommandOptions) => Promise<void>
+type DiskProbe = (directory: string) => { filesystem: string; availableBytes: number }
 export type ConsumerExpectation = { owner: string; path: string; status: number; contains?: string[] }
 type PublicFile = { path: string; sha256: string }
 type ResponseReference = { path: string; status: number; headers: Record<string, string>; bytes: number; sha256: string; bodyFile: string }
@@ -90,12 +91,13 @@ export function validateConsumerExpectations(owners: string[], expectations: Con
 
 export async function buildUnifiedOwners(directory: string, pin: string, expectations: ConsumerExpectation[], {
   execute = executeCommand,
-}: { execute?: Execute } = {}) {
+  diskProbe = diskSpace,
+}: { execute?: Execute; diskProbe?: DiskProbe } = {}) {
   const initial = verifyUnifiedFrozenSource(directory, pin)
   validateConsumerExpectations(initial.owners, expectations)
   return withRunLock(directory, async () => {
     const plan = verifyUnifiedFrozenSource(directory, pin), workspace = path.join(directory, 'source')
-    assertDiskBudget({ path: directory, operation: 'unified owner build', estimatedBytes: BUILD_TEMP_BUDGET })
+    assertDiskBudget({ path: directory, operation: 'unified owner build', estimatedBytes: BUILD_TEMP_BUDGET, probe: diskProbe })
     const statePath = path.join(directory, 'build-state.json')
     const state: { status: string; owners: Record<string, OwnerResult>; error?: string; cloudWrites: boolean } = { status: 'building', owners: {}, cloudWrites: false }
     writeFileSync(statePath, json(state), { flag: 'wx', mode: 0o600 })
@@ -111,7 +113,7 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
         { cwd: workspace, env, log: path.join(directory, 'owner-install.log') })
       for (const owner of plan.owners) {
         verifyUnifiedFrozenSource(directory, pin)
-        assertDiskBudget({ path: directory, operation: `${owner} unified build`, estimatedBytes: 3 * GiB })
+        assertDiskBudget({ path: directory, operation: `${owner} unified build`, estimatedBytes: 3 * GiB, probe: diskProbe })
         state.owners[owner] = { status: 'building' }; saveState()
         const app = owner === 'main' ? 'web' : `game-${owner}`, cwd = path.join(workspace, 'apps', app)
         const target = ownerBuildTarget(owner, readFileSync(path.join(cwd, 'wrangler.jsonc'), 'utf8'))

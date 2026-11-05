@@ -13,6 +13,7 @@ import { freezeUnifiedContent } from '../src/unified-build'
 import { digest } from '../src/legacy-intake'
 import { objectValue } from '../src/unified-content'
 import { artifactFiles } from '../../../scripts/desktop-publish.mjs'
+import { BUILD_TEMP_BUDGET, DISK_RESERVE, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 
 const repo = path.resolve(projectRoot, '../..')
 for (const owner of ['genshin', 'nte', 'lvmeng', 'azur-promilia', 'main']) test(`${owner} builds the correct production configuration, not a default preview`, () => {
@@ -69,12 +70,19 @@ test('failed actual frozen builds are recorded and cannot be retried or mistaken
       assert.equal(options.env.DATABASE_URL, undefined)
       throw new Error('Controlled offline install failure')
     }
-    await assert.rejects(buildUnifiedOwners(frozen.directory, frozen.manifestPin, expectations, { execute }), /Controlled offline/)
+    const diskProbe = () => ({ filesystem: directory, availableBytes: 20 * GiB })
+    await assert.rejects(buildUnifiedOwners(frozen.directory, frozen.manifestPin, expectations, {
+      execute, diskProbe: () => ({ filesystem: directory, availableBytes: DISK_RESERVE + BUILD_TEMP_BUDGET - 1 }),
+    }), /Insufficient disk/)
+    assert.equal(calls, 0, 'Insufficient space must stop before install')
+    assert.equal(existsSync(path.join(frozen.directory, 'build-state.json')), false)
+    assert.equal(existsSync(path.join(frozen.directory, 'operation.lock')), false)
+    await assert.rejects(buildUnifiedOwners(frozen.directory, frozen.manifestPin, expectations, { execute, diskProbe }), /Controlled offline/)
     const state = JSON.parse(readFileSync(path.join(frozen.directory, 'build-state.json'), 'utf8'))
     assert.equal(state.status, 'failed'); assert.equal(state.cloudWrites, false)
     assert.equal(existsSync(path.join(frozen.directory, 'build.json')), false)
     assert.throws(() => verifyUnifiedOwnerBuild(frozen.directory, '0'.repeat(64)), /ENOENT/)
-    await assert.rejects(buildUnifiedOwners(frozen.directory, frozen.manifestPin, expectations, { execute }), /EEXIST/)
+    await assert.rejects(buildUnifiedOwners(frozen.directory, frozen.manifestPin, expectations, { execute, diskProbe }), /EEXIST/)
     assert.equal(calls, 1, 'A second attempt must not restart a failed run')
     assert.equal(existsSync(path.join(frozen.directory, 'operation.lock')), false)
   } finally { rmSync(directory, { recursive: true, force: true }) }
