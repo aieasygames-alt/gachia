@@ -6,6 +6,10 @@ from urllib.parse import urlsplit
 
 
 class Fingerprint(HTMLParser):
+    # Python 3.14 added title RCDATA handling. Keep strict title markup
+    # rejection identical to older runtimes; escaped literal text is valid.
+    RCDATA_CONTENT_ELEMENTS = ("textarea",)
+
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.body = False
@@ -31,6 +35,7 @@ class Fingerprint(HTMLParser):
         attrs = dict(attrs)
         if self.skip:
             return
+        assert self.title is None, "Markup inside title"
         if tag in ("script", "style"):
             if tag == "script" and "src" in attrs:
                 self.resources.append([tag, sorted(attrs.items())])
@@ -75,6 +80,7 @@ class Fingerprint(HTMLParser):
                     self.jsonld.append(json.loads(raw))
                 self.skip = None
             return
+        assert self.title is None or tag == "title", "Markup inside title"
         if tag == "body":
             assert self.body, "Unexpected body end"
             self.body = False

@@ -35,6 +35,8 @@ test('standard HTML parsing supports non-guide pages without inventing JSON-LD',
   assert.deepEqual(result.headings, [['h1', 'Characters']]); assert.equal(result.links.length, 1); assert.equal(result.media.length, 1);
   const withLd = html.replace('</head>', '<SCRIPT TYPE="application/ld+json">{"name":"Wiki"}</SCRIPT></head>');
   assert.deepEqual(unifiedPageFingerprints([{ html: withLd, status: 200 }])[0].jsonld, [{ name: 'Wiki' }]);
+  const escapedTitle = html.replace('Game &amp; Wiki', 'Game &lt;title&gt; &amp; Wiki');
+  assert.equal(unifiedPageFingerprints([{ html: escapedTitle, status: 200 }])[0].title, 'Game <title> & Wiki');
 });
 
 for (const [name, replacement] of [
@@ -53,9 +55,10 @@ for (const [name, replacement] of [
 
 test('malformed, unsafe or incomplete HTML fails closed', () => {
   for (const invalid of [html.replace('</body>', ''), html.replace('<body>', '<body><body>'), html.replace('<title>', '<title><title>'),
+    html.replace('<title>', '<title><em>'), html.replace('</title>', '</em></title>'),
     html.replace('https://gachia.com/zh', 'https://gachia.com.evil/zh'), html.replace('</head>', '<script type="application/ld+json">{"name":"x</ScRiPt><img>"}</script></head>'),
     html.replace('</head>', '<script type="application/ld+json">{}'), html.replace('name="description"', 'name="description" name="robots"')]) {
-    assert.throws(() => unifiedPageFingerprints([{ html: invalid, status: 200 }]));
+    assert.throws(() => unifiedPageFingerprints([{ html: invalid, status: 200 }]), undefined, invalid);
   }
 });
 
