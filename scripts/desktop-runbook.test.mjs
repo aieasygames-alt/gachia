@@ -55,7 +55,9 @@ test('Payload CI permits only the task branch, remains read-only and has no depl
   assert.match(workflow, /contents: read/);
   assert.match(workflow, /persist-credentials: false/);
   assert(!/secrets\.|(?:contents|actions|packages|id-token): write|wrangler|desktop\.py|release:production|\bpull_request:/.test(workflow));
-  for (const check of ['next typegen', 'typecheck', 'test:release', 'inventory:check', '@gachia/router check:generated', 'validate:game-deployments', '@gachia/router type-check', '@gachia/router test']) assert(workflow.includes(check));
+  for (const check of ['next typegen', 'typecheck', 'test:release', 'inventory:check', '@gachia/router check:generated', 'validate:game-deployments', '@gachia/router type-check', '@gachia/router test',
+    '@gachia/web test', '@gachia/data test', 'test:guides', '--incremental false', 'payload-verification-scope.mjs']) assert(workflow.includes(check));
+  assert(workflow.indexOf('id: scope') < workflow.indexOf('Install pinned pnpm'), 'Scope must be available before conditional installation');
 });
 
 test('limited V1 stays on this Mac and separates verified local recovery from independent key custody', () => {

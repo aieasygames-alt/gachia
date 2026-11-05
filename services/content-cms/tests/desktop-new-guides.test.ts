@@ -3,6 +3,7 @@ import test from 'node:test'
 import { readFileSync } from 'node:fs'
 import { newGuideSource } from '../../../scripts/desktop-guide-contract.mjs'
 import { exportDesktopGuides } from '../src/desktop-export'
+import { desktopNewGuideDraft, validateDesktopNewGuideIdentity } from '../src/desktop-new-guide'
 
 const original = { id: 'legacy', title: 'Imported', content: 'Original', image: '/keep.webp' }
 const input = { id: 'cms-resource-planning', title: 'Local fixture guide', summary: 'Isolated new-guide fixture', body: 'Isolated CMS content and publication contract. '.repeat(4) }
@@ -41,4 +42,19 @@ test('new guide drafts remain preview-only and export order is independent of da
   assert.equal(exportDesktopGuides('[]', 'genshin', rows, false).content, exportDesktopGuides('[]', 'genshin', rows.toReversed(), false).content)
   const draft = { ...record(), hold: true, _status: 'draft' }
   assert.equal(JSON.parse(exportDesktopGuides('[]', 'genshin', [draft], true).content)[0].id, input.id)
+})
+
+test('NTE Chinese additions have immutable game-bound draft identity and deterministic preview, not production authorization', () => {
+  const draft = desktopNewGuideDraft('nte', 2, input)
+  assert.equal(draft.hold, true); assert.equal(draft._status, 'draft')
+  assert.equal(validateDesktopNewGuideIdentity(draft), 'nte')
+  for (const patch of [{ game: 1 }, { legacyPath: '/genshin/guides/' + input.id }, { sourceRecord: newGuideSource('genshin', input) }]) {
+    assert.throws(() => validateDesktopNewGuideIdentity({ ...draft, ...patch }, draft), /immutable/)
+  }
+  const approved = { ...draft, title: { zh: input.title }, body: { zh: input.body }, hold: false, _status: 'published' }
+  const result = exportDesktopGuides(JSON.stringify([original]), 'nte', [approved], true)
+  assert.deepEqual(JSON.parse(result.content)[0], original)
+  assert.deepEqual(result.manifest.added, [input.id]); assert.equal(result.manifest.preview, true)
+  assert.throws(() => exportDesktopGuides(JSON.stringify([original]), 'nte', [approved], false), /preview-only/)
+  assert.throws(() => exportDesktopGuides(JSON.stringify([original]), 'nte', [approved, approved], true), /Duplicate/)
 })

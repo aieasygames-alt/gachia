@@ -17,7 +17,7 @@
     "test:postgres": "tsx scripts/postgres-smoke.ts",
     "desktop": "python3 scripts/desktop.py",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test tests/*.test.ts",
+    "test": "tsx --test --test-concurrency=2 tests/*.test.ts",
     "test:http": "tsx scripts/http-smoke.ts",
     "inventory": "tsx scripts/inventory.ts",
     "inventory:check": "tsx scripts/inventory.ts --check",

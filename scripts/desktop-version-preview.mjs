@@ -54,24 +54,36 @@ export async function boundedBody(response, limit = 16 * 1024 * 1024) {
 
 // Compare rendered text, metadata and media, not host-dependent Flight payloads
 // or Cloudflare transport headers. Canonical/JSON-LD still point to production.
+export function safeJsonLdScripts(html) {
+  // This is a fail-closed gate for our generated HTML, not a general HTML parser.
+  // HTML raw-text closing tags are ASCII case-insensitive, unlike JSON strings.
+  const openings = [...html.matchAll(/<script\b[^>]*\btype\s*=\s*["']application\/ld\+json["'][^>]*>/gi)];
+  const scripts = [...html.matchAll(/<script\b[^>]*\btype\s*=\s*["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script\s*>/gi)];
+  assert.equal(scripts.length, openings.length, 'Unclosed JSON-LD script');
+  return scripts.map(match => {
+    assert(!match[1].includes('<'), 'JSON-LD must escape HTML raw-text delimiters');
+    return JSON.parse(match[1]);
+  });
+}
+
 export function pageFingerprint(html, status = 200) {
+  const jsonld = safeJsonLdScripts(html);
   const one = re => { const matches = [...html.matchAll(re)]; assert.equal(matches.length, 1, 'Missing/duplicate document field'); return matches[0][1]; };
   const body = one(/<body\b[^>]*>([\s\S]*?)<\/body>/g);
-  const text = body.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const text = body.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
   if (status === 404) {
     assert.match(html, /<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/, 'Missing guide must be noindex');
     const rendered = /<h1\b[^>]*>404<\/h1>/.test(body);
     const streamed = body.includes('\\"digest\\":\\"NEXT_HTTP_ERROR_FALLBACK;404\\"');
     // Next may send a noindex 404 shell whose error boundary is in Flight, not visible HTML.
     assert(rendered || streamed, 'Expected the real missing-guide page');
-    assert(!html.includes('application/ld+json'), 'Missing guide cannot retain article structured data');
+    assert.equal(jsonld.length, 0, 'Missing guide cannot retain article structured data');
     assert(!/<link\b[^>]*rel="canonical"/.test(html), 'Missing guide cannot retain an article canonical');
     const titles = [...html.matchAll(/<title>([\s\S]*?)<\/title>/g)];
     assert(titles.length <= 1, 'Duplicate missing-page title');
     return { missingGuide: true, mode: rendered ? 'rendered' : 'flight-404', title: titles[0]?.[1] ?? null, text };
   }
   assert.equal(status, 200, 'Unreviewed HTML status');
-  const jsonld = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
   assert(text.length > 0, 'Missing rendered content/JSON-LD');
   const metadata = [...html.matchAll(/<meta\b[^>]*(?:name="description"|property="og:[^"]+"|name="twitter:[^"]+")[^>]*>/g)].map(m => m[0]).sort();
   assert(metadata.some(m => m.includes('name="description"')), 'Missing description');

@@ -17,7 +17,11 @@ export function validateDesktopNewGuideIdentity(record: Identity, previous?: Ide
     if (!isDeepStrictEqual(record[key], previous[key])) throw new Error('New guide identity and source template are immutable')
   }
   if (typeof record.legacyId !== 'string') throw new Error('New guide identity required')
-  readNewGuideSource(record.sourceRecord, 'genshin', record.legacyId)
-  if (record.stableKey !== `genshin:guides:${record.legacyId}` || record.kind !== 'guides'
-    || record.legacyPath !== `/genshin/guides/${record.legacyId}` || record.bodyFormat !== 'markdown') throw new Error('New guide identity mismatch')
+  const source = record.sourceRecord as { game?: unknown }
+  if (!source || typeof source.game !== 'string' || !['genshin', 'nte'].includes(source.game)) throw new Error('Unsupported new-guide game')
+  const game = source.game
+  readNewGuideSource(record.sourceRecord, game, record.legacyId)
+  if (record.stableKey !== `${game}:guides:${record.legacyId}` || record.kind !== 'guides'
+    || record.legacyPath !== `/${game}/guides/${record.legacyId}` || record.bodyFormat !== 'markdown') throw new Error('New guide identity mismatch')
+  return game
 }

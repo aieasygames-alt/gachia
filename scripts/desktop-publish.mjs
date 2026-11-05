@@ -9,6 +9,7 @@ import { verifyWorkerArtifact } from './verify-worker-artifact.mjs';
 import { verifyPreservedGuides } from './desktop-source-catalog.mjs';
 import { verifiedInPass, withVerificationPass } from './desktop-release-assets.mjs';
 import { CMS_GUIDE_ORIGIN, GUIDE_TEXT_FIELDS, validateNewGuide } from './desktop-guide-contract.mjs';
+import { assertDiskBudget, BUILD_TEMP_BUDGET, GiB } from './desktop-disk-preflight.mjs';
 
 const hash = value => createHash('sha256').update(value).digest('hex');
 const SHA = /^[a-f0-9]{64}$/;
@@ -28,7 +29,7 @@ function regular(file) {
   return readFileSync(file);
 }
 
-export function validateGuideOverlay(originalText, candidateText, game = 'genshin') {
+export function validateGuideOverlay(originalText, candidateText, game = 'genshin', { preview = false } = {}) {
   const original = JSON.parse(originalText), candidate = JSON.parse(candidateText);
   assert(Array.isArray(original) && Array.isArray(candidate) && original.length <= candidate.length, 'Guide deletions require a separate contract');
   const identities = rows => {
@@ -47,7 +48,7 @@ export function validateGuideOverlay(originalText, candidateText, game = 'genshi
   candidate.forEach((next, i) => {
     const row = byId.get(next.id);
     if (!row || row.cmsOrigin === CMS_GUIDE_ORIGIN) {
-      validateNewGuide(next, game); newSuffix = true;
+      validateNewGuide(next, game, { preview }); newSuffix = true;
       assert(next.id > last, 'CMS guide suffix must have deterministic identity order'); last = next.id;
     } else assert(!newSuffix && original[i]?.id === next.id, 'Guide identity/order/media/metadata must stay fixed');
     if (!row) { added.push(next.id); changed.push(next.id); return; }
@@ -83,7 +84,7 @@ export function inspectCandidate({ repo, directory, commit = 'HEAD' }) {
   assert.equal(hash(candidateBytes), manifest.candidateSHA256, 'Candidate digest mismatch');
   const releaseKey = hash(JSON.stringify({ game, source: hash(source), candidate: hash(candidateBytes), preview: manifest.preview }));
   assert.equal(manifest.releaseKey, releaseKey, 'Release identity mismatch');
-  const overlay = validateGuideOverlay(source.toString(), candidateBytes.toString(), game);
+  const overlay = validateGuideOverlay(source.toString(), candidateBytes.toString(), game, { preview: manifest.preview });
   if (overlay.added.length) {
     assert.equal(manifest.guideContract, 'additive-v1', 'Explicit additive guide contract required');
     assert.deepEqual(manifest.added, overlay.added, 'Added guide inventory mismatch');
@@ -117,7 +118,7 @@ function sourceDigest(workspace, paths) {
   return hash(JSON.stringify(paths.map(relative => [relative, hash(regular(join(workspace, relative)))])));
 }
 
-export function prepareCandidate({ repo, directory, runs, commit = 'HEAD', preservedGuides }) {
+export function prepareCandidate({ repo, directory, runs, commit = 'HEAD', preservedGuides, diskProbe }) {
   const plan = inspectCandidate({ repo, directory, commit });
   assert.notEqual(plan.status, 'no_changes', 'No content changes: do not build/upload an unchanged import');
   assert(!/[^A-Za-z0-9_./-]/.test(resolve(runs)), 'Current frozen game configs require a build directory without URL-encoded characters');
@@ -128,6 +129,9 @@ export function prepareCandidate({ repo, directory, runs, commit = 'HEAD', prese
     assert(source.equals(mirror), 'Non-target committed source/public mirror drift');
     validateGuideOverlay(source.toString(), preserved.body.toString(), preserved.proof.otherGame);
   }
+  const sourceBytes = git(repo, ['ls-tree', '-rl', plan.sourceCommit]).toString().split('\n').filter(Boolean)
+    .reduce((sum, row) => { const size = row.match(/^\d+ blob [a-f0-9]+\s+(\d+)\t/); assert(size, 'Unknown source size'); return sum + Number(size[1]); }, 0);
+  assertDiskBudget({ path: runs, operation: 'prepare', estimatedBytes: sourceBytes * 3 + GiB, probe: diskProbe });
   mkdirSync(runs, { recursive: true, mode: 0o700 });
   const runId = `${plan.releaseKey.slice(0, 16)}-${randomBytes(6).toString('hex')}`;
   const run = join(runs, runId), workspace = join(run, 'source');
@@ -213,32 +217,34 @@ export async function withRunLock(run, execute) {
   try { return await execute(lease); } finally { runLockLeases.delete(lease); unlinkSync(lock); }
 }
 
-export async function buildCandidate(run, pin) {
-  return withRunLock(run, () => buildUnlocked(run, pin));
+export async function buildCandidate(run, pin, { diskProbe, execute = command } = {}) {
+  return withRunLock(run, () => buildUnlocked(run, pin, { diskProbe, execute }));
 }
 
-async function buildUnlocked(run, pin) {
+async function buildUnlocked(run, pin, { diskProbe, execute }) {
   const plan = verifyPrepared(run, pin), workspace = join(run, 'source');
   const state = JSON.parse(regular(join(run, 'state.json')));
   assert.equal(state.status, 'prepared', 'No automatic retry/overwrite of a started release run');
+  assertDiskBudget({ path: run, operation: 'dual-owner build', estimatedBytes: BUILD_TEMP_BUDGET, probe: diskProbe });
   const save = () => { writeFileSync(join(run, 'state.json.tmp'), json(state), { mode: 0o600 }); renameSync(join(run, 'state.json.tmp'), join(run, 'state.json')); };
   state.status = 'building'; save();
   const home = join(run, 'home'); mkdirSync(home, { mode: 0o700 });
   const env = isolatedEnvironment(home);
   try {
     const store = execFileSync('pnpm', ['store', 'path'], { encoding: 'utf8' }).trim();
-    await command('pnpm', ['install', '--frozen-lockfile', '--offline', '--ignore-scripts', '--prod=false', '--store-dir', store],
+    await execute('pnpm', ['install', '--frozen-lockfile', '--offline', '--ignore-scripts', '--prod=false', '--store-dir', store],
       { cwd: workspace, env, log: join(run, 'install.log') });
     await runOwnerStages(plan.owners, async owner => {
+      assertDiskBudget({ path: run, operation: `${owner} build`, estimatedBytes: 3 * GiB, probe: diskProbe });
       verifyPrepared(run, pin);
       const app = owner === 'main' ? 'web' : `game-${owner}`, cwd = join(workspace, 'apps', app);
       const mode = owner === 'nte' ? 'live' : 'production';
       const buildEnv = { ...env, ...(owner === 'main' ? {} : { [`${owner.toUpperCase()}_DEPLOYMENT_MODE`]: mode }),
         CLOUDFLARE_ENV: '', SKIP_NEXT_APP_BUILD: 'false', SKIP_WRANGLER_CONFIG_CHECK: 'false' };
       const log = join(run, `${owner}-build.log`);
-      await command(process.execPath, [join(workspace, 'scripts/require-app-runtime.mjs')], { cwd, env: buildEnv, log });
-      await command('pnpm', ['exec', 'opennextjs-cloudflare', 'build', '--config', 'wrangler.jsonc', '--env', ''], { cwd, env: buildEnv, log });
-      if (owner !== 'main') await command(process.execPath, [join(workspace, 'scripts/game-release.mjs'), 'prepare-assets', '--game', owner, '--environment', 'production'], { cwd, env: buildEnv, log });
+      await execute(process.execPath, [join(workspace, 'scripts/require-app-runtime.mjs')], { cwd, env: buildEnv, log });
+      await execute('pnpm', ['exec', 'opennextjs-cloudflare', 'build', '--config', 'wrangler.jsonc', '--env', ''], { cwd, env: buildEnv, log });
+      if (owner !== 'main') await execute(process.execPath, [join(workspace, 'scripts/game-release.mjs'), 'prepare-assets', '--game', owner, '--environment', 'production'], { cwd, env: buildEnv, log });
       verifyPrepared(run, pin);
       const artifact = join(cwd, '.open-next');
       const portability = verifyWorkerArtifact(artifact);

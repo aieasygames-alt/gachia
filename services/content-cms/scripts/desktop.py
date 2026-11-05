@@ -279,7 +279,7 @@ def complete_install(cfg):
             env=dict(env, CMS_ADMIN_EMAIL='owner@localhost.invalid', CMS_ADMIN_PASSWORD=login_password), stdout=log, stderr=log)
     publisher = ROOT / 'publisher'
     publisher.mkdir(mode=0o700)
-    for name in ['desktop-guide-contract.mjs', 'desktop-publish.mjs', 'verify-worker-artifact.mjs', 'desktop-release-assets.mjs',
+    for name in ['desktop-disk-preflight.mjs', 'desktop-guide-contract.mjs', 'desktop-publish.mjs', 'verify-worker-artifact.mjs', 'desktop-release-assets.mjs',
                  'desktop-cloud-release.mjs', 'desktop-cloud-transport.mjs', 'desktop-version-provenance.mjs', 'desktop-version-preview.mjs', 'desktop-release-readiness.mjs',
                  'desktop-recovery-cloud.mjs', 'desktop-public-acceptance.mjs', 'retain-game-assets.mjs', 'retain-web-assets.mjs']:
         shutil.copy2(repo / 'scripts' / name, publisher / name)

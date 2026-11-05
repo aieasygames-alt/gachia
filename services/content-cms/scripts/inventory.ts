@@ -5,8 +5,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import ts from 'typescript'
 import { projectRoot } from '../src/local-environment'
+import { baselineDirectory } from '../src/inventory-baseline'
 
-export const baselineDirectory = 'services/content-cms/inventory/2026-11-02'
+export { baselineDirectory } from '../src/inventory-baseline'
 
 export function collectInventory(root: string, sourceCommit: string) {
   if (!/^[a-f0-9]{40}$/.test(sourceCommit)) throw new Error('Exact inventory source commit required')
@@ -41,7 +42,8 @@ export function collectInventory(root: string, sourceCommit: string) {
     throw new Error(`Missing ${name} in ${file}`)
   }
 
-  const files = execFileSync('git', ['ls-files', '-z'], { cwd: root, encoding: 'utf8' }).split('\0').filter(Boolean).sort()
+  const files = [...new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z', '--', 'apps', 'packages', 'scripts/scaffold-game.mjs'],
+    { cwd: root, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 }).split('\0').filter(Boolean))].sort()
   const ids: string[] = constant('packages/core/constants/index.ts', 'GAME_IDS')
   const games = constant('packages/core/constants/index.ts', 'GAMES')
   const deployments = constant('packages/core/deployments.ts', 'GAME_DEPLOYMENTS')
@@ -85,7 +87,7 @@ export function collectInventory(root: string, sourceCommit: string) {
     schemaVersion: 1,
     // Keep capture provenance when checking; unrelated documentation commits must not cause drift.
     sourceCommit,
-    scope: 'Tracked-file inventory, not semantic migration or live infrastructure audit',
+    scope: 'Tracked and non-ignored pending source inventory, not semantic migration or live infrastructure audit; sourceCommit is the capture base',
     scopes,
     sharedCandidates: sharedCandidates.map(file => ({ path: file, sha256: hash(file) })),
     reviewContract: { path: 'packages/data/raw-content-review.json', sha256: hash('packages/data/raw-content-review.json'), pending: review.pending, holds: review.holds },

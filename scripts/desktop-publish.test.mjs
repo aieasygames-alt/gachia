@@ -5,7 +5,8 @@ import { mkdtempSync, mkdirSync, readFileSync, realpathSync, rmSync, symlinkSync
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import test from 'node:test';
-import { inspectCandidate, prepareCandidate, verifyPrepared, verifyBuilt, artifactFiles, validateGuideOverlay, runOwnerStages, isolatedEnvironment, withRunLock, localAssetPath } from './desktop-publish.mjs';
+import { buildCandidate, inspectCandidate, prepareCandidate, verifyPrepared, verifyBuilt, artifactFiles, validateGuideOverlay, runOwnerStages, isolatedEnvironment, withRunLock, localAssetPath } from './desktop-publish.mjs';
+import { GiB } from './desktop-disk-preflight.mjs';
 import { newGuideSource } from './desktop-guide-contract.mjs';
 import { captureGameAssets, retainCandidate, verifyRetainedCandidate } from './desktop-release-assets.mjs';
 import { previousAssetFiles } from './retain-web-assets.mjs';
@@ -23,7 +24,8 @@ test('additive guide contract preserves the legacy prefix and only accepts a bou
     [...original, { ...one, titleEn: 'Incomplete translation' }], [...original, { ...one, cmsOrigin: 'forged' }]]) {
     assert.throws(() => validateGuideOverlay(encode(original), encode(rows)));
   }
-  assert.throws(() => validateGuideOverlay(encode(original), encode([...original, one]), 'nte'), /only for Genshin/);
+  assert.throws(() => validateGuideOverlay(encode(original), encode([...original, one]), 'nte'), /preview-only/);
+  assert.deepEqual(validateGuideOverlay(encode(original), encode([...original, one]), 'nte', { preview: true }).added, ['cms-one']);
   assert.throws(() => validateGuideOverlay(encode([...original, one]), encode(original)), /deletions/);
   assert.throws(() => validateGuideOverlay(encode([...original, one]), encode([...original, { ...one, summary: 'Metadata mutation' }])), /metadata/);
 });
@@ -76,6 +78,27 @@ test('unchanged import is a no-op and cannot create a build', t => {
   const f = fixture(t, { changed: false });
   assert.equal(inspectCandidate(f).status, 'no_changes');
   assert.throws(() => prepareCandidate({ ...f, runs: join(f.root, 'runs') }), /No content changes/);
+});
+
+test('insufficient destination disk refuses prepare and build before persistent state or child commands', async t => {
+  const f = fixture(t), runs = join(f.root, 'runs');
+  const diskProbe = () => ({ filesystem: f.root, availableBytes: 7 * GiB });
+  assert.throws(() => prepareCandidate({ ...f, runs, diskProbe }), /Insufficient disk/);
+  assert.throws(() => readFileSync(runs), { code: 'ENOENT' });
+  const prepared = prepareCandidate({ ...f, runs });
+  let executed = 0;
+  await assert.rejects(buildCandidate(prepared.directory, prepared.planSHA256, { diskProbe, execute: async () => { executed++; } }), /Insufficient disk/);
+  assert.equal(executed, 0);
+  assert.equal(JSON.parse(readFileSync(join(prepared.directory, 'state.json'))).status, 'prepared');
+  assert.throws(() => readFileSync(join(prepared.directory, 'home')), { code: 'ENOENT' });
+  let probes = 0;
+  await assert.rejects(buildCandidate(prepared.directory, prepared.planSHA256, {
+    diskProbe: () => ({ filesystem: f.root, availableBytes: ++probes === 1 ? 20 * GiB : 7 * GiB }),
+    execute: async () => { executed++; },
+  }), /Insufficient disk/);
+  assert.equal(executed, 1, 'Only installation ran; owner build never starts after capacity drops');
+  const state = JSON.parse(readFileSync(join(prepared.directory, 'state.json')));
+  assert.equal(state.status, 'failed'); assert.equal(state.owners.genshin.status, 'failed');
 });
 
 test('frozen commit excludes dirty and untracked code; only both content files are overlaid', t => {

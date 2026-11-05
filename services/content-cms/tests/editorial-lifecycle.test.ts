@@ -144,6 +144,32 @@ test('editorial publication lifecycle protects approved revisions', async t => {
         data: { body: input.body + ' Private draft B' } })
       assert.equal(exportDesktopGuides(JSON.stringify([original]), 'genshin', [await read(record.id)], false).content, exported.content)
     })
+
+    await t.test('NTE new-guide drafts enforce game binding, uniqueness, live locks and reviewer approval; release stays gated', async () => {
+      const nte = await payload.create({ collection: 'games', user: admin, overrideAccess: false,
+        data: { key: 'nte', name: 'Isolated NTE lifecycle', region: 'test', legacyRegistry: {} } })
+      const input = { id: 'cms-nte-lifecycle', title: '中文资源核验清单', summary: '隔离的新建攻略测试，不写入正式数据库。', body: '先核对当前客户端与官方公告，再记录自己的资源和目标，不把历史活动奖励当作当前预算。'.repeat(5) }
+      const draft = desktopNewGuideDraft('nte', nte.id, input)
+      await assert.rejects(payload.create({ collection: 'content-records', user: editor, overrideAccess: false, draft: true, locale: 'zh',
+        data: { ...draft, game: game.id } }), /game relationship mismatch/)
+      const record = await payload.create({ collection: 'content-records', user: editor, overrideAccess: false, draft: true, locale: 'zh', data: draft })
+      await assert.rejects(payload.create({ collection: 'content-records', user: editor, overrideAccess: false, draft: true, locale: 'zh', data: draft }))
+      await assert.rejects(payload.update({ collection: 'content-records', id: record.id, user: editor, overrideAccess: false, draft: true,
+        data: { _status: 'published', hold: false } }), forbidden)
+      const lock = await payload.create({ collection: 'payload-locked-documents', user: editor, overrideAccess: false,
+        data: { document: { relationTo: 'content-records', value: record.id }, user: { relationTo: 'users', value: editor.id } } })
+      await assert.rejects(payload.update({ collection: 'content-records', id: record.id, user: reviewer, overrideAccess: false, overrideLock: true,
+        data: { _status: 'published', hold: false } }), /locked/i)
+      await payload.delete({ collection: 'payload-locked-documents', id: lock.id, user: editor, overrideAccess: false })
+      await payload.update({ collection: 'content-records', id: record.id, user: reviewer, overrideAccess: false,
+        data: { _status: 'published', hold: false } })
+      const approved = await read(record.id)
+      const preview = exportDesktopGuides('[]', 'nte', [approved], true)
+      assert.equal(JSON.parse(preview.content)[0].title, input.title)
+      assert.throws(() => exportDesktopGuides('[]', 'nte', [approved], false), /preview-only/)
+      await assert.rejects(payload.update({ collection: 'content-records', id: record.id, user: reviewer, overrideAccess: false,
+        data: { game: game.id } }), /immutable/)
+    })
   } finally {
     await payload.destroy()
     if (postgres) assert.equal(payload.db.pool.ended, true)

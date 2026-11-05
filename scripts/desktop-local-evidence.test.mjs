@@ -12,6 +12,7 @@ import { previousAssetFiles } from './retain-web-assets.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { pageFingerprint, validatePreviewResponse } from './desktop-version-preview.mjs';
 import { publicRobots, validatePublicResponse } from './desktop-public-acceptance.mjs';
+import { GiB } from './desktop-disk-preflight.mjs';
 
 const json = x => JSON.stringify(x, null, 2) + '\n';
 const save = (file, x) => { mkdirSync(dirname(file), { recursive: true }); writeFileSync(file, json(x)); return digest(json(x)); };
@@ -88,21 +89,30 @@ test('404 fingerprints recognize a real streamed Next error but reject empty or 
     streamed.replace('</head>', '<link rel="canonical" href="https://gachia.com/zh/genshin/guides/cms-new"/></head>'),
     streamed.replace('</head>', '<script type="application/ld+json">{"@type":"Article"}</script></head>')]) assert.throws(() => pageFingerprint(html, 404));
 });
-test('new-guide recovery requires version-bound 404 evidence for all locales, never a fabricated 200', async t => {
-  const f = await recoveryFixture(t), id = 'cms-new';
+for (const game of ['genshin', 'nte']) test(`${game} new-guide recovery requires version-bound 404 evidence for all locales, never a fabricated 200`, async t => {
+  const f = await recoveryFixture(t, game), id = 'cms-new';
   f.plan.added = [id]; f.plan.changed = ['one', id];
   const request = f.input.request;
   f.input.request = async (url, options) => new URL(url).pathname.endsWith('/' + id)
     ? new Response(missingHTML, { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' } }) : request(url, options);
   const result = await prepareLocalRecovery(f.input), evidence = JSON.parse(readFileSync(result.evidencePath));
-  assert.equal(evidence.owners.genshin.observations.filter(row => row.status === 404).length, 3);
-  const reference = { path: `/zh/genshin/guides/${id}`, status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' },
+  assert.equal(evidence.owners[game].observations.filter(row => row.status === 404).length, 3);
+  const reference = { path: `/zh/${game}/guides/${id}`, status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' },
     fingerprint: pageFingerprint(missingHTML, 404), expectedRobots: publicRobots(missingHTML) };
   validatePreviewResponse({ path: reference.path, response: new Response(null, { status: 404, headers: { ...reference.headers, 'x-robots-tag': 'noindex' } }), bytes: Buffer.from(missingHTML), reference });
   validatePublicResponse(new Response(null, { status: 404, headers: reference.headers }), Buffer.from(missingHTML), reference);
-  const row = evidence.owners.genshin.observations.find(row => row.status === 404); row.status = 200;
+  const row = evidence.owners[game].observations.find(row => row.status === 404); row.status = 200;
   const pin = save(result.evidencePath, evidence);
   assert.throws(() => verifyRecoveryCompatibility(result.evidencePath, pin, f.input.verified));
+});
+
+test('recovery disk failure leaves no output directory, cloud reads, copy or local server', async t => {
+  const f = await recoveryFixture(t);
+  f.input.diskProbe = () => ({ filesystem: f.root, availableBytes: 7 * GiB });
+  f.reader.snapshot = async () => assert.fail('Network started before disk preflight');
+  f.input.serve = async () => assert.fail('Server started before disk preflight');
+  await assert.rejects(prepareLocalRecovery(f.input), /Insufficient disk/);
+  assert(!existsSync(f.input.directory));
 });
 
 test('a changed legacy guide cannot be disguised as a new missing route', async t => {

@@ -10,7 +10,7 @@ import { baselineDirectory, checkInventory, collectInventory } from '../scripts/
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..')
 const commit = 'a'.repeat(40)
 
-test('current inventory includes tracked shadow readers and preserves historical inputs', () => {
+test('current inventory includes shadow readers and preserves historical inputs', () => {
   const old = path.join(root, 'reports/payload-migration-2026-10-28/inventory.json')
   const before = readFileSync(old)
   const inventory = collectInventory(root, commit)
@@ -44,7 +44,10 @@ test('versioned check detects source/addition drift without rewriting any baseli
   assert(readFileSync(current).equals(saved))
   writeFileSync(source, '[]\n')
   const added = path.join(temp, 'packages/data/games/genshin/raw-extra.json')
-  writeFileSync(added, '[]\n'); execFileSync('git', ['add', added], { cwd: temp })
+  writeFileSync(added, '[]\n')
+  assert.throws(() => checkInventory(temp, collectInventory(temp, commit), true), /Inventory drift/)
+  assert(readFileSync(current).equals(saved))
+  execFileSync('git', ['add', added], { cwd: temp })
   assert.throws(() => checkInventory(temp, collectInventory(temp, commit), true), /Inventory drift/)
   assert(readFileSync(current).equals(saved))
 })

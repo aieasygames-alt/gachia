@@ -11,6 +11,7 @@ import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint, sampleReadOnly } from './desktop-version-preview.mjs';
 import { publicRobots } from './desktop-public-acceptance.mjs';
 import { revalidateVersionModule } from './desktop-version-provenance.mjs';
+import { assertDiskBudget, GiB, treeBytes } from './desktop-disk-preflight.mjs';
 
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const save = (file, value) => { writeFileSync(file, json(value), { flag: 'wx', mode: 0o600 }); return digest(json(value)); };
@@ -170,6 +171,9 @@ export async function prepareLocalRecovery(input) {
   const { plan, receipt } = verified;
   const { scope, baseline, sources, versions } = recoveryInputs(input);
   const guideStatuses = recoveryGuideStatuses(input, verified);
+  assertDiskBudget({ path: directory, operation: 'local recovery copy', probe: input.diskProbe,
+    estimatedBytes: GiB + scope.owners.reduce((sum, owner) => sum + treeBytes(sources.owners[owner].directory)
+      + treeBytes(join(verified.directory, owner, '.open-next', 'assets')), 0) });
   mkdirSync(directory, { mode: 0o700 });
   const result = { status: 'running', releaseKey: plan.releaseKey, owners: {}, cloudWrites: false };
   try {

@@ -1,5 +1,7 @@
 # Payload 新增指南：首个工程切片
 
+本轮开发增量：2026-11-05维护工作区已补NTE统一语言消费者、不可变新建草稿身份与隔离preview导出/404恢复回归，**未安装、未完成实际Worker候选验收或真实CMS新增发布**。NTE正式新增在CMS导出和publisher overlay两处继续拒绝；`preview=true`不具备推广资格。磁盘预检要求双owner构建至少14GiB，当前不足，不绕过恢复链。下文R39为已安装的历史生产基线，不代表本轮源码已上线。
+
 更新：2026-11-05 R39。**原神中文新增已完成常驻安装和首篇真实公网发布。** 精确代码独立构建/暂存HTTP、冷备升级、CMS-first真实新增、候选/恢复四版本、900秒、双owner推广、公网/source-advance及NTE共享Main交接通过；最新异地包同步验收。见[R39](../reports/payload-new-guide-launch-2026-11-05-r39/README.md)，工程来源见[R38](../reports/payload-new-guides-2026-11-05-r38/README.md)。每一篇仍必须完整发布；CMS published不等于已上线。新增场景真实partial/实际回滚未演练，NTE新增仍未启用。
 
 ## 1. 为什么先原神

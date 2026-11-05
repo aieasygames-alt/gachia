@@ -19,7 +19,8 @@ test('ledger reports candidates, unmapped facts, source ownership and holds with
 
 test('full ledger reconciles historical source identities without promoting bytes to rights', () => {
   const ledger = buildContentLedger()
-  assert.equal(ledger.historicalBatchMatches, true)
+  // Reader changes invalidate the batch identity even with unchanged content projections.
+  assert.equal(ledger.historicalBatchMatches, false)
   assert.equal(ledger.counts.scopes, 16)
   assert.equal(ledger.counts.sources, 116)
   assert.equal(ledger.counts.candidates, 3440)

@@ -1,5 +1,7 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
+**当前入口：2026-11-05 R39。** Genshin中文新建攻略已完成一次真实正常发布；NTE仍为既有攻略维护，新建切片尚未验收。公开Genshin32/NTE53，Git原始O为31/53，差异属于CMS叠加。见[R39](../reports/payload-new-guide-launch-2026-11-05-r39/README.md)、[全面审计](../reports/project-audit-2026-11-05/README.md)和[后续计划](../plans/project-next-development-2026-11-05.md)。以下R36/R37的计数、UUID与“新增未接通”均为当时历史状态；新发布必须重读当前来源/控制面，不使用本文历史值授权。请求归属和顺序双owner发布边界没有改变。
+
 **公众发布基线：2026-11-04 R36。** 由代理规划→认证Payload草稿/批准→本机双owner发布的真实路径已执行，NTE与独立Genshin更新、公网/source-advance、双向共享Main交接均通过，修订后的限定V1运行里程碑完成。架构仍为本机Payload/PG、Cloudflare公众多Worker，无Tunnel/Mac回源。C05b独立key用户暂缓，完整灾备不宣称完成。证据见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，操作见[工作流](payload-agent-publishing-workflow.md)与[V1清单](../plans/payload-v1-completion-2026-11-03.md)。
 
 **2026-11-05 R37运维复核：** 10Worker/7服务及额外staging前后新鲜重读，与R36最终UUID/部署/settings一致。新私有备份对象生成、下载认证和隔离DB/媒体恢复通过，r2.dev/自定义域名关闭且七服务无备份桶binding；没有Worker版本上传/部署、Router改动或内容编辑。最新备份/保留/依赖复核见[R37](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)，不改变下面公众请求归属或限定写入范围。

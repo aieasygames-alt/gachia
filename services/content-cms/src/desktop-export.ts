@@ -18,7 +18,7 @@ export function exportDesktopGuides(originalText: string, game: string, records:
       if (!preview && record.hold !== false) throw new Error('New guide requires explicit approval and hold=false')
       const source = readNewGuideSource(record.sourceRecord, game, record.legacyId) as { id: string; [key: string]: unknown }
       const guide = editedGuide(source, record)
-      validateNewGuide(guide, game)
+      validateNewGuide(guide, game, { preview })
       additions.push(guide)
       continue
     }

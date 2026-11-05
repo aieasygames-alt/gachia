@@ -78,8 +78,15 @@ for (const mode of ['preview', 'live', undefined]) {
     const { outputText } = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } });
     const module = { exports: {} };
     const requireFixture = (name) => {
+      if (name === './guide-policy') {
+        const policy = { exports: {} };
+        const compiled = ts.transpileModule(readFileSync(resolve(root, 'apps/game-nte/lib/guide-policy.ts'), 'utf8'),
+          { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } });
+        new Function('module', 'exports', compiled.outputText)(policy, policy.exports);
+        return policy.exports;
+      }
       assert.equal(name, './data');
-      return { isNteLocaleIndexable: (locale) => locale !== 'ja', isNteJapanesePathIndexable: () => false };
+      return { guides: [], isNteLocaleIndexable: (locale) => locale !== 'ja', isNteJapanesePathIndexable: () => false };
     };
     new Function('require', 'module', 'exports', 'process', outputText)(requireFixture, module, module.exports, { env: { NTE_DEPLOYMENT_MODE: mode } });
     for (const locale of ['zh', 'en', 'ja']) {

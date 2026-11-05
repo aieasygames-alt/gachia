@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
-import { isNteJapanesePathIndexable, isNteLocaleIndexable } from './data';
+import { guides, isNteJapanesePathIndexable, isNteLocaleIndexable } from './data';
+import { nteGuideAlternates } from './guide-policy';
 
 export const BASE_URL = 'https://gachia.com';
-const isPreview = process.env.NTE_DEPLOYMENT_MODE !== 'live';
 
 function limit(value: string, max: number) {
   return value.length <= max ? value : `${value.slice(0, Math.max(0, max - 1)).trimEnd()}...`;
@@ -21,6 +21,9 @@ function limitVisible(value: string, max: number) {
 }
 
 export function alternates(locale: SupportedLocale, path: string): Metadata['alternates'] {
+  const guideMatch = path.match(/^\/guides\/([^/]+)$/);
+  const guide = guideMatch && guides.find(entry => entry.id === guideMatch[1]);
+  if (guide) return nteGuideAlternates(guide, locale);
   const japaneseIndexable = isNteJapanesePathIndexable(path);
   const languages: Record<string, string> = {
     'zh-Hans': `${BASE_URL}/zh/nte${path}`,
@@ -35,6 +38,7 @@ export function alternates(locale: SupportedLocale, path: string): Metadata['alt
 }
 
 export function productionMetadata(title: string, description: string, locale: SupportedLocale, path = ''): Metadata {
+  const isPreview = process.env.NTE_DEPLOYMENT_MODE !== 'live';
   const indexable = isNteLocaleIndexable(locale, path);
   return {
     title: limitVisible(title, 68),

@@ -5,6 +5,7 @@ import ts from 'typescript'
 import { canonical, mapBatch, type Candidate } from './record-mapping'
 import { digest, readLegacySources } from './legacy-intake'
 import { projectRoot } from './local-environment'
+import { baselineDirectory } from './inventory-baseline'
 import { getRouteOwner } from '../../../packages/core/route-ownership'
 export const root = path.resolve(projectRoot, '../..')
 function registryConstants() {
@@ -58,7 +59,7 @@ export function candidateLedger(row: Candidate) {
 }
 export function buildContentLedger() {
   const readJSON = (file: string) => JSON.parse(readFileSync(path.join(root, file), 'utf8'))
-  const inventory = readJSON('reports/payload-migration-2026-10-28/inventory.json')
+  const inventory = readJSON(baselineDirectory + '/inventory.json')
   const registry = registryConstants()
   if (canonical(registry.GAME_IDS) !== canonical(inventory.scopes.map((scope: { id: string }) => scope.id)) ||
     canonical(registry.GAMES) !== canonical(Object.fromEntries(inventory.scopes.map((scope: { id: string; registry: unknown }) => [scope.id, scope.registry])))) {

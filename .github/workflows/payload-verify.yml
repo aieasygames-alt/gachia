@@ -21,22 +21,33 @@ jobs:
       - uses: actions/checkout@v7.0.0
         with:
           persist-credentials: false
+          fetch-depth: 0
       - uses: actions/setup-node@v6.4.0
         with:
           node-version: 22.23.4
+      - name: Classify bounded verification scope
+        id: scope
+        env:
+          PAYLOAD_BEFORE: ${{ github.event.before }}
+        run: node scripts/payload-verification-scope.mjs
       - name: Install pinned pnpm
+        if: steps.scope.outputs.consumers == 'true'
         run: npm install --global pnpm@10.10.0
       - name: Install public workspace and isolated CMS dependencies
+        if: steps.scope.outputs.consumers == 'true'
         run: |
           pnpm install --frozen-lockfile
           pnpm --dir services/content-cms install --frozen-lockfile
       - name: Verify CMS types without deployment credentials
+        if: steps.scope.outputs.consumers == 'true'
         run: |
           pnpm --dir services/content-cms exec next typegen
           pnpm --dir services/content-cms typecheck
       - name: Test isolated CMS
+        if: steps.scope.outputs.consumers == 'true'
         run: pnpm --dir services/content-cms test
       - name: Verify current content inventory and Router contracts
+        if: steps.scope.outputs.consumers == 'true'
         run: |
           pnpm --dir services/content-cms inventory:check
           pnpm --filter @gachia/router check:generated
@@ -44,4 +55,17 @@ jobs:
           pnpm --filter @gachia/router type-check
           pnpm --filter @gachia/router test
       - name: Test release tooling without deployment credentials
+        if: steps.scope.outputs.consumers == 'true'
         run: pnpm test:release
+      - name: Test public Web and Data consumers
+        if: steps.scope.outputs.consumers == 'true'
+        run: |
+          pnpm --filter @gachia/web test
+          pnpm --filter @gachia/data test
+          pnpm --filter @gachia/web exec playwright install --with-deps chromium
+          pnpm --filter @gachia/web test:guides
+      - name: Typecheck public consumers without builds
+        if: steps.scope.outputs.consumers == 'true'
+        run: pnpm --filter './apps/game-*' --filter @gachia/web --filter './packages/*' type-check --incremental false
+      - name: Test documentation and verification scope gates
+        run: node --test scripts/desktop-runbook.test.mjs scripts/payload-verification-scope.test.mjs

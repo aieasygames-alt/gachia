@@ -3,6 +3,7 @@ import { readFileSync, realpathSync } from 'node:fs'
 import path from 'node:path'
 import type { Payload } from 'payload'
 import { projectRoot } from './local-environment'
+import { baselineDirectory } from './inventory-baseline'
 
 export type SourceKind = 'registry' | 'raw-json' | 'review-contract' | 'inline-code'
 export const MAX_SNAPSHOT_BYTES = 2 * 1024 * 1024
@@ -31,7 +32,7 @@ export function profileJSON(text: string) {
 
 export function readLegacySources() {
   const root = realpathSync(path.resolve(projectRoot, '../..'))
-  const inventory = JSON.parse(readFileSync(path.join(root, 'reports/payload-migration-2026-10-28/inventory.json'), 'utf8'))
+  const inventory = JSON.parse(readFileSync(path.join(root, baselineDirectory, 'inventory.json'), 'utf8'))
   const readChecked = (file: { path: string; sha256: string }) => {
     const resolved = realpathSync(path.resolve(root, file.path))
     if (!resolved.startsWith(root + path.sep)) throw new Error(`Source escapes repository: ${file.path}`)

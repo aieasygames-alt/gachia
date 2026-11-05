@@ -1,6 +1,12 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 当前状态（2026-11-03，R28）
+## 当前入口（2026-11-05，R39）
+
+两游戏既有攻略维护与共享Main交接已在R36实机完成；R39已完成Genshin中文新建攻略的CMS-first正常发布。NTE中文新增仍须完成语言政策、候选/恢复与真实发布验收，不能由此视为已上线。公开JSON计数为Genshin32/NTE53；Git导入31/53是原始O，不要覆盖CMS公开A。准确身份与当批范围见[R39](../../reports/payload-new-guide-launch-2026-11-05-r39/README.md)。
+
+日常执行看[操作手册](../../docs/payload-operator-runbook.md)与[代理工作流](../../docs/payload-agent-publishing-workflow.md)；开发看[新审计](../../reports/project-audit-2026-11-05/README.md)和[下一阶段](../../plans/project-next-development-2026-11-05.md)。本机CMS/PG、账号关闭、IndexNow暂停、独立key暂缓均保持。历史UUID不作为新发布授权。
+
+## 历史状态（2026-11-03，R28）
 
 [R28恢复来源接续](../../reports/payload-recovery-source-2026-11-03-r28/README.md)关闭[V1五个有限工作包](../../plans/payload-v1-completion-2026-11-03.md)中的C02工程子项。显式只读`publish-source-recover`重验已知完整兼容恢复的封存/renewal/journal/实际响应、公开A/双UUID/模块/配置/静态/七服务拓扑，下一候选准备/retain与跨游戏共享Main交接可用；历史完成时间不延长实时门禁，未知外部UUID仍拒绝。57新回归含双游戏完整磁盘链与loopback，另修复NTE旧preview reader硬编码Genshin；CMS165/typegen/typecheck、桌面655/Node304/Python49/inventory通过，27工具/helper文件安装验摘要。安全HTTP9/9、DB84draft/hold/0eligible与10Worker不变，无bundle覆盖/内容或云写入/CMS重启。Router及1low结论沿用R27，不是新内容云验收。
 

@@ -138,11 +138,12 @@ export function collections(directory: string, options: { secureCookies?: boolea
           }
           const next = { ...originalDoc, ...data }
           if (isDesktopNewGuide(next) || (originalDoc && isDesktopNewGuide(originalDoc))) {
-            try { validateDesktopNewGuideIdentity(next, operation === 'create' ? undefined : originalDoc) }
-            catch { throw new APIError('New guide identity and source template must match the immutable Genshin contract.', 400) }
+            let sourceGame: string
+            try { sourceGame = validateDesktopNewGuideIdentity(next, operation === 'create' ? undefined : originalDoc) }
+            catch { throw new APIError('New guide identity and source template must match the immutable game contract.', 400) }
             const gameId = typeof next.game === 'object' ? next.game?.id : next.game
             const game = await req.payload.findByID({ collection: 'games', id: gameId, depth: 0, req, overrideAccess: false })
-            if (game.key !== 'genshin') throw new APIError('New guide game relationship mismatch.', 400)
+            if (game.key !== sourceGame) throw new APIError('New guide game relationship mismatch.', 400)
           }
           return data
         }],

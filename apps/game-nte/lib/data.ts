@@ -11,9 +11,10 @@ import rawRegions from '@gachia/data/games/nte/raw-regions.json';
 import rawBuilds from '@gachia/data/games/nte/raw-builds.json';
 import rawCharacterMaterials from '@gachia/data/games/nte/raw-character-materials.json';
 import type { SupportedLocale } from '@gachia/core';
+import { isNteGuideLocaleIndexable, type NteGuide } from './guide-policy';
 
 type LocalizedEntry = { name: string; nameEn: string; nameJa?: string; id: string; attribute?: string; rank?: string; roleEn?: string; weaponEn?: string; tierRank?: string; status?: string };
-type GuideEntry = { id: string; title: string; titleEn: string; titleJa?: string; content: string; contentEn: string; contentJa?: string; summary?: string; summaryEn?: string; summaryJa?: string };
+type GuideEntry = NteGuide;
 type CharacterText = { name?: string; nameEn?: string; description?: string; descriptionEn?: string; cooldown?: string; cost?: string; awakenReq?: number; level?: number };
 type CharacterFaq = { question?: string; questionZh?: string; answer?: string; answerZh?: string };
 type CharacterBuild = { bestWeapon?: string; bestWeaponEn?: string; alternativeWeapons?: Array<string | { id?: string; name?: string; nameEn?: string }>; bestDiskSet?: string; bestDiskSetEn?: string; mainStats?: Record<string, string>; mainStatsEn?: Record<string, string>; subStatPriority?: string[]; subStatPriorityEn?: string[] };
@@ -93,12 +94,8 @@ export const regions = rawRegions as Array<{ id: string; name: string; nameEn: s
 export const characterBuilds = rawBuilds as Array<{ characterId: string; builds: Array<{ id: string; name: string; nameEn: string; description: string; descriptionEn: string; mainStat: string; mainStatEn: string; subStats: string[]; subStatsEn: string[]; recommendedWeapons: string[]; teamComp: string[]; notes: string; notesEn: string }> }>;
 export const characterMaterials = rawCharacterMaterials as Array<{ characterId: string; levelingMaterials: Array<{ levelRange: string; materials: Array<{ id: string; quantity: number }> }>; skillMaterials: Array<{ id: string; quantity: number }> }>;
 
-function hasJapaneseText(value: unknown, minimumLength = 40): value is string {
-  return typeof value === 'string' && Array.from(value.trim()).length >= minimumLength && /[\u3040-\u30ff]/.test(value);
-}
-
 export function hasJapaneseNteGuideContent(guide: GuideEntry): boolean {
-  return hasJapaneseText(guide.titleJa, 8) && hasJapaneseText(guide.summaryJa) && hasJapaneseText(guide.contentJa, 200);
+  return isNteGuideLocaleIndexable(guide, 'ja');
 }
 
 export function isNteJapanesePathIndexable(path = ''): boolean {
@@ -109,6 +106,11 @@ export function isNteJapanesePathIndexable(path = ''): boolean {
 }
 
 export function isNteLocaleIndexable(locale: SupportedLocale, path = ''): boolean {
+  const match = path.match(/^\/guides\/([^/]+)$/);
+  if (match) {
+    const guide = guides.find(entry => entry.id === match[1]);
+    return Boolean(guide && isNteGuideLocaleIndexable(guide, locale));
+  }
   return locale !== 'ja' || isNteJapanesePathIndexable(path);
 }
 
