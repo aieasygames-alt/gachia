@@ -2,9 +2,14 @@
 
 **2026-11-04最新范围决定：** 用户暂不需要独立密钥存放位置，C05b改为未完成/明确暂缓，移出当前限定V1上线条件，后续恢复韧性工作另排；不再要求现在接入独立介质。保留本机现有key、备份与私有R2密文，不关闭备份、不将密钥随意外传。若Mac与同机key一并丢失，R2密文可能无法解密，因此不声称完整整机灾难恢复，T11/P7完整范围仍未关闭。详见[当前内容工作流与范围决定](payload-agent-publishing-workflow.md)。以下历史验收和工具保持可用，不将暂缓冒称已通过。
 
-更新：2026-11-05 R37。用户明确CMS只在这台Mac运行，**不要求第二台Mac或跨机安装/启动验收**。公众站点不回源本机；本备份流程只向专用私有R2写入AES-GCM密文，不上传明文DB、settings、媒体或密钥，不修改任何网站Worker。**最新已验异地对象为R37**，包含当前84记录/两篇published编辑、私有媒体/settings、全部28工具、本机导出状态及源码/锁/测试；新鲜下载、AES认证解密、45成员/2671源码校验、隔离PostgreSQL/媒体恢复通过，在线DB摘要不变。源码快照截止`f6a0b21d48ff2001635de6939dbb6cde742848c2`，不是后续R37文档提交；安装应用仍R33，归档不含已安装build/依赖或历史release完整链。
+更新：2026-11-05 R39。用户明确CMS只在这台Mac运行，不要求第二台Mac或跨机安装/启动验收。**最新已验异地对象为R39**，含85记录/3条published、私有媒体/settings、新应用来源清单、29安装工具、本机导出状态及源码/锁/测试。新鲜下载、AES认证、48归档成员/2678源码文件与隔离PostgreSQL/媒体恢复通过；在线DB未替换，摘要不变。源码快照为root manager修复提交`e1f2e54f13384edad44f55f1f611fe4bf5a70852`，常驻应用/publisher仍为`0b60f56`；不含后续R39文档提交、应用build/依赖或历史release完整链。
 
-当前证据见[R37](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)。本轮没有再次启动恢复应用，不把数据库/媒体恢复冒称从零应用重建或历史云run续跑。历史实际应用登录/导出/重启见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，双游戏发布见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，安装应用见[R33](../reports/payload-editorial-lifecycle-2026-11-04-r33/README.md)。C05b仍未完成/用户暂缓，限定V1保持完成，不称完整整机灾备。
+当前证据见[R39](../reports/payload-new-guide-launch-2026-11-05-r39/README.md)。新冷备`20261105T031643Z-779627`进入52,220,684字节私有R2密文；本轮共2个不同对象各PUT一次、无写重试。首包下载认证成功但旧SQL-dump摘要受修订记录行序影响而恢复拒绝；保留该对象和失败，不把它当作manager恢复通过。精确修复CI后仅更新root manager，再生成新包并完成下载认证/隔离恢复，CMS/PG健康。桶公开域名关闭、七服务无该桶binding；旧对象和key保留，新key也仅同机。C05b仍明确暂缓，不声称整机重建、跨机启动、历史云run续跑或本轮恢复应用启动；实际应用恢复沿用[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)。R37及以下均为历史记录。
+
+### 恢复摘要版本
+
+本轮manager修复来自`e1f2e54f13384edad44f55f1f611fe4bf5a70852`；常驻应用/publisher仍为`0b60f56`，未重复构建应用或部署Worker。新manifest保留原`logicalDigest`供在线不变性观察，另增`canonicalDataFormat=pg-json-rows-v1`和`canonicalDataDigest`。恢复按表名、列类型/默认值/非空/约束、完整JSON行多重集及序列定义/last_value/is_called比较，忽略物理行序但不去重；实际隔离内容/列/序列变更均拒绝。完整JSON行字符串保留精度和转义换行，不直接排序SQL文本。缺失一半字段、未知格式或非法摘要均拒绝；没有新字段的历史manifest继续严格旧摘要比较，不偷偷降级或改写旧包。
+
 
 R36三次本机冷备分别在NTE编辑前、Genshin编辑前及两次发布/交接后；最终目录为`~/Library/Application Support/GachiaCMS/backups/20261104T152116Z-424b09`，含84记录/2eligible、私有媒体/settings。该轮CMS/PG健康、9项安全HTTP和698应用/28工具摘要通过，但当时未更新R2对象；这一数据包刷新余项现由R37完成，不重开已验C05a，也不取消本机备份。
 
@@ -20,7 +25,7 @@ R37新冷备为`~/Library/Application Support/GachiaCMS/backups/20261105T001452Z
 
 ## 恢复顺序
 
-1. 从同一轮实际交付回执取得bucket/objectKey、encryptedSHA256、plaintextSHA256及keyPath。最新已验对象来自R37，回执在`reports/payload-postlaunch-operations-2026-11-05-r37/encrypted-backup.json`、`offsite-roundtrip.json`，隔离恢复结果为`downloaded-restore-result.json`。旧R17/R29回执保留，不混用密钥/对象/pin。回执不含密钥值，原始回执仅本机保留，不跟随Git提交；R37恢复步骤不是重跑一次性上传脚本。
+1. 从同一轮实际交付回执取得bucket/objectKey、encryptedSHA256、plaintextSHA256及keyPath。最新已验对象来自R39，回执在`reports/payload-new-guide-launch-2026-11-05-r39/backup-verified/encrypted-backup.json`、`offsite-roundtrip.json`，隔离恢复结果为`downloaded-restore-result.json`。旧R17/R29回执保留，不混用密钥/对象/pin。回执不含密钥值，原始回执仅本机保留，不跟随Git提交；R39恢复步骤不是重跑一次性上传脚本。
 2. 用已有Cloudflare账号只读下载精确对象；调用 `downloadEncryptedBackup({store,objectKey,pin,destination})`，destination必须为新私有工作目录中的新文件。函数固定使用该账号/桶，不接收任意远程地址。
 3. 使用另行保管的32字节密钥和 `desktop-encrypted-backup.mjs` 的 `decryptArchive`，认证解密到新文件并核对plaintextSHA256。格式为ASCII `GACHIA-BACKUP-v1`加NUL、12字节nonce、密文、16字节GCM tag；AAD为magic+nonce，AES-256-GCM。密钥不得与密文一起放进R2，也不要打印到终端、聊天或报告。
 4. 先检查tar成员仅为相对普通文件，拒绝链接/穿越/额外成员；按bundle-manifest逐文件核对SHA/大小后才提取到新目录。内含源码ZIP还有独立HANDOFF清单/pin；不要直接解包覆盖运行目录。
@@ -39,7 +44,7 @@ R30对同一R29对象重新只读下载51,649,337字节，校验密文SHA、AES�
 
 **R2密文副本与独立密钥托管是两件事。** 现有keyPath仍在同一Mac；没有验证独立密码管理器、另一台设备或离线介质里的密钥副本，也不因iCloud目录存在就宣称已同步。整机丢失时仍可能无法解密，因此L03/T11不能整体关闭。
 
-历史R29对挂载设备的观察不等于用户没有其他设备，也不要求用户再准备第二台Mac。最新R37及历史R17/R29密钥仍只在同一Mac，默认操作授权不是独立目的地已经存在的证据；不将key随意放到iCloud/报告/聊天或密文桶。独立目的地只需安全保管密钥，不需要运行CMS。C05a本机恢复已关，C05b独立key托管仍待办；后者按用户决定暂缓、移出当前门槛，不能据此宣称完整灾备完成。
+历史R29对挂载设备的观察不等于用户没有其他设备，也不要求用户再准备第二台Mac。最新R39及历史R17/R29/R37密钥仍只在同一Mac，默认操作授权不是独立目的地已经存在的证据；不将key随意放到iCloud/报告/聊天或密文桶。独立目的地只需安全保管密钥，不需要运行CMS。C05a本机恢复已关，C05b独立key托管仍待办；后者按用户决定暂缓、移出当前门槛，不能据此宣称完整灾备完成。
 
 ### 独立密钥副本工具
 

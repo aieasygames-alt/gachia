@@ -1,12 +1,12 @@
 # Payload V1 有限完成计划
 
-更新：2026-11-04 R36，**修订后的限定 V1 运行里程碑完成**。代理策划→CMS草稿/批准→真实NTE发布/反向Main交接→独立Genshin正常更新/再次反向交接均通过，已能按此流程维护线上既有指南文字。证据见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，责任/边界见[代理内容工作流](../docs/payload-agent-publishing-workflow.md)，全范围见[任务表](project-task-status-current.md)。C05b独立密钥仍未完成/用户暂缓，移出本阶段条件，不称完整灾备。首次发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，本机恢复见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，日常操作见[手册](../docs/payload-operator-runbook.md)。
+更新：2026-11-05 R39；既有V1于R36已验，**修订后的限定 V1 运行里程碑完成**。代理策划→CMS草稿/批准→真实NTE发布/反向Main交接→独立Genshin正常更新/再次反向交接均通过，已能按此流程维护线上既有指南文字。证据见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，责任/边界见[代理内容工作流](../docs/payload-agent-publishing-workflow.md)，全范围见[任务表](project-task-status-current.md)。C05b独立密钥仍未完成/用户暂缓，移出本阶段条件，不称完整灾备。首次发布见[R32](../reports/payload-promotion-critical-path-2026-11-04-r32/README.md)，本机恢复见[R30](../reports/payload-single-host-closeout-2026-11-03-r30/README.md)，日常操作见[手册](../docs/payload-operator-runbook.md)。
 
 2026-11-05 R37运维增量：最新异地对象已刷新，包含R36两篇编辑及当前28工具；新鲜R2下载/认证解密/完整成员与源码校验/隔离数据库媒体恢复通过，在线DB/公开内容/Worker版本保持。磁盘只读保留基线与low依赖复核完成，未执行删除/依赖升级；不改变V1关闭状态或C05b暂缓决定。最新证据见[R37](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)。
 
 ## 1. 完成的定义
 
-2026-11-05 R38扩范围增量：**原神中文新增指南的源码/构建/隔离PG HTTP与双Worker本地验收通过，常驻安装/首篇真实新增尚未完成**，见[R38](../reports/payload-new-guides-2026-11-05-r38/README.md)与[新增契约](../docs/payload-new-guide-contract.md)。它不是既有V1重新开工，也不扩大下方C03/C04的已验范围；NTE新增/删除/媒体等仍另排。下一工程先交付暂存安装，再由代理先写CMS真实新增、完整发布和来源交接，不能推广fixture。
+2026-11-05 R39扩范围增量：**原神中文新增已安装并首篇真实正常上线，最新异地包同步完成**，见[R39](../reports/payload-new-guide-launch-2026-11-05-r39/README.md)和[新增契约](../docs/payload-new-guide-contract.md)。G1–G3保持完成，G4安装/正常发布/来源交接子项关闭，新增场景真实partial/实际回滚仍未演练。NTE新增继续关闭，下一工程单独处理缺译文消费者和索引；不重开既有V1或扩大C03/C04原验范围。
 
 目标不是再扩建 CMS 平台，而是交付**代理策划并入库、本机单用户编辑、Genshin/NTE 既有指南文字可持续安全发布**。用户已明确 Payload CMS 只在这台 Mac 运行；第二台 Mac、跨机安装/启动/迁移不属于限定 V1 验收条件。Payload/PostgreSQL 保留在本机，公众请求继续由 Cloudflare 多 Worker 服务，不依赖 Mac 在线。内容事实准确度、翻译补齐不作为首发门槛。当前既有编辑可由代理产生，不再以“用户尚未手动编辑”作为等待条件。
 
@@ -20,13 +20,15 @@
 
 | ID | 当前状态 | 工作与关闭条件 |
 | --- | --- | --- |
-| C01 CLI 参数安全 | **工程/回归/安装关闭** | import/export/action 参数在环境/数据库/网络前拒绝；当前25模块+manager+2helper共28文件安装验摘要。精确提交CI通过，不以测试数代替云验收 |
+| C01 CLI 参数安全 | **工程/回归/安装关闭** | import/export/action 参数在环境/数据库/网络前拒绝；当前26模块+manager+2helper共29文件安装验摘要。精确提交CI通过，不以测试数代替云验收 |
 | C02 兼容恢复后的可信来源接续 | **工程与真实恢复后再发闭环关闭** | R31实际partial→显式双owner兼容恢复→source-recover；R32从该可信来源另建run，真实编辑成功推广、公网验收/source-advance通过。原失败journal保留，未重放/重试云写，未放宽900秒门禁；任意外部UUID仍拒绝 |
 | C03 Genshin 真实完整生命周期 | **关闭：首发、恢复后再发与独立正常连续发布均通过** | R36从CMS新批准中文导读生成独立run，四版本/900秒/推广/公网/source-advance通过；已发布NTE JSON保持。Genshin→NTE共享Main反向交接/重新选择通过。推广508.44秒，超过历史490秒预算但实际时效门禁全通过；不作延迟保证。R35隐式O回退拒绝保持，完整reset/网站撤回未实现 |
 | C04 NTE 与共享 Main 连续性 | **关闭：真实NTE发布及双向共享Main连续性通过** | R36新手指南中文标题/导读经CMS草稿、批准及真实双owner发布，公网/source-advance通过，推广333.07秒；NTE→Genshin交接成功，随后Genshin新发布保留NTE JSON，再反向交接NTE。两次早期仅非活动上传失败完整保留，成功使用新run，不重放云写 |
 | C05 本机恢复与独立密钥 | **C05a本机应用恢复实际通过；C05b独立密钥托管待办（用户暂缓，移出当前V1门槛）；跨机运行出范围** | R30已完成私有R2新鲜下载、解密/归档/源码校验、隔离loopback PG与实际CMS登录/导出/重启验收，原DB摘要不变。保留本机备份/密钥，不声称离线重建或整机灾难恢复；Mac与key一并丢失时R2密文可能无法解密。C05b不是已完成，不再要求当前准备独立目的地 |
 
-当前DB为Genshin31/NTE53共84条：**82条draft/hold，两游戏各1条published/eligible且已公网更新**。NTE releaseKey为`d871b48834f4c8fb532ef4d9373930af1a3f93470df60104714e2c540fa16174`，Genshin为`a19ab8868c3a526ab76085f061f29beef0d739687ff5af69a567ac47f1745f06`。本轮各自只改一篇中文文字，其他locale/身份/媒体保持；最终DB摘要为`7fb83e21f6a68ea89a08234cb673ffc20a270d2ec7448bd8c2230bd32e044c83`，三次本机冷备含发布后备份。来源登记不授予下一次发布许可。
+R36交付时DB为Genshin31/NTE53共84条：**82条draft/hold，两游戏各1条published/eligible且已公网更新**。NTE releaseKey为`d871b48834f4c8fb532ef4d9373930af1a3f93470df60104714e2c540fa16174`，Genshin为`a19ab8868c3a526ab76085f061f29beef0d739687ff5af69a567ac47f1745f06`。本轮各自只改一篇中文文字，其他locale/身份/媒体保持；最终DB摘要为`7fb83e21f6a68ea89a08234cb673ffc20a270d2ec7448bd8c2230bd32e044c83`，三次本机冷备含发布后备份。来源登记不授予下一次发布许可。
+
+R39当前DB为Genshin32/NTE53共85条，82draft/hold、原神2条/NTE1条published/eligible；新增releaseKey `e74ef566372fba6e0981ae0441bec163c77bb350ac4a9cc17eb354c520aa1fc0`，完整摘要`5a40df192c55974a193d02cfc9de1aa4be064c9928372b07a2cf14ad90f8624c`，原31篇原神公开文章及NTE JSON保持。新应用/29工具与85记录异地包已验，详细运行身份和回执以R39为准。
 
 ### 历史只读核对（2026-11-04 12:25，Asia/Shanghai）
 
@@ -52,7 +54,7 @@ F1的**最小前向拒绝修复已交付并安装**：六字段逐一比较O/A/B
 
 1. **日常内容批次**：既有Genshin/NTE指南按代理策划→CMS草稿/重读/批准→新run完整发布→公网/source-advance/另一游戏Main交接执行。无需用户为验收再编写内容，不重发本轮releaseKey，不把published按钮称为自动上线。
 2. **运维基线已刷新，余项独立安排**：R37最新异地密文已覆盖当前数据/工具，实际隔离DB/媒体恢复通过；[保留策略](../docs/payload-storage-retention.md)已建立只读盘点/预算，自动GC和调度未实现，不删除被pin依赖。low依赖11-05已复核仍无修复，11-16截止不顺延。C05b用户暂缓，不要求现在准备介质。
-3. **按需求扩范围，而非继续重复V1验收**：新增/删除指南、其他类型/游戏及完整网站撤回分别适配和验收；原始P0–P7/T01–T12另排，不建设通用运营平台来阻塞已可用的文字更新。准确度、翻译和第二Mac均不作当前门槛。
+3. **按需求扩范围，而非继续重复V1验收**：原神中文新增已正常上线，下一步NTE缺译文/索引与新增；删除、其他类型/游戏及完整网站撤回分别适配和验收；原始P0–P7/T01–T12另排，不建设通用运营平台来阻塞已可用的文字更新。准确度、翻译和第二Mac均不作当前门槛。
 
 R34/R35的工期估计已由R36实际完成替代，不再列剩余1–2工程工作日。本轮官方OAuth按阶段续签，10Worker/7服务控制面和4条公网最终样本新鲜复核通过；28工具/698应用文件、CMS/PG健康与9项安全HTTP通过。代码精确CI成功，完整测试及来源说明见R36；不是全游戏/全类型完成。
 
