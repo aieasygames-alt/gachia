@@ -1,6 +1,10 @@
 # Payload 本机磁盘预算与保留策略
 
-更新：2026-11-05 R37。适用仅此Mac的CMS/发布器，**当前只有只读盘点和操作规则，没有自动清理命令**。证据见[R37](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)，备份见[恢复手册](payload-offsite-recovery.md)。
+更新：2026-11-05 R40。适用仅此Mac的CMS/发布器，**当前只有只读盘点和操作规则，没有自动清理命令**。最新目录级建议见[R40](../reports/payload-next-delivery-2026-11-05-r40/README.md)，历史保留基线见[R37](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)，备份见[恢复手册](payload-offsite-recovery.md)。
+
+## 最新观察
+
+R40开始时可用约32.29GiB，前轮14GiB双owner预算阻塞已解除，不归因于任何清理；实际构建/验收后约30.39GiB，preview新run分配约1.77GiB并保留。发布根初始约45.54GiB仍保护；确认约1.54GiB的Next/Turbo cache子目录可优先审阅，完整路径/空间/停本地构建及外部引用检查前提见R40。另有约1GiB隔离DB、2.78GiB旧HI3工作台历史构建，不建议直接删。用户只要求提醒，本轮删除0文件、回收0字节；603个空测试目录不是有效的空间回收目标。
 
 ## 当前基线
 
