@@ -36,6 +36,7 @@ def maintenance_arguments(args):
 
 LABELS = {'postgres': 'com.gachia.cms.postgres', 'payload': 'com.gachia.cms.payload'}
 DOMAIN = f'gui/{os.getuid()}'
+CANONICAL_DATA_FORMAT = 'pg-json-rows-v1'
 
 
 def write_private(file, content):
@@ -78,6 +79,71 @@ def logical_digest(cfg, database):
     # PostgreSQL randomizes psql restriction tokens; those are not database data.
     stable = b'\n'.join(line for line in data.splitlines() if not line.startswith((b'\\restrict ', b'\\unrestrict ')))
     return hashlib.sha256(stable).hexdigest()
+
+
+def canonical_data_hash(snapshot):
+    # Sort complete JSON row strings, not SQL lines: preserve duplicates and embedded newlines.
+    for table in snapshot['tables']:
+        table['rows'].sort()
+    data = json.dumps(snapshot, sort_keys=True, ensure_ascii=True, separators=(',', ':')).encode('ascii')
+    return hashlib.sha256(data).hexdigest()
+
+
+def canonical_data_digest(cfg, database):
+    inventory = json.loads(sql(cfg, """
+        SELECT json_build_object(
+          'tables', COALESCE((SELECT json_agg(c.relname ORDER BY c.relname COLLATE "C")
+            FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace
+            WHERE n.nspname='public' AND c.relkind IN ('r','p')), '[]'::json),
+          'sequences', COALESCE((SELECT json_agg(c.relname ORDER BY c.relname COLLATE "C")
+            FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace
+            WHERE n.nspname='public' AND c.relkind='S'), '[]'::json));
+        """, database))
+    tables, sequences = [], []
+    for name in inventory['tables']:
+        relation = 'public."' + name.replace('"', '""') + '"'
+        literal = "'" + relation.replace("'", "''") + "'"
+        tables.append(f"""jsonb_build_object('name', {literal},
+          'columns', (SELECT COALESCE(jsonb_agg(jsonb_build_object(
+            'name', a.attname, 'type', format_type(a.atttypid,a.atttypmod),
+            'notNull', a.attnotnull, 'identity', a.attidentity, 'generated', a.attgenerated,
+            'default', pg_get_expr(d.adbin,d.adrelid)) ORDER BY a.attnum), '[]'::jsonb)
+            FROM pg_attribute a LEFT JOIN pg_attrdef d ON d.adrelid=a.attrelid AND d.adnum=a.attnum
+            WHERE a.attrelid={literal}::regclass AND a.attnum>0 AND NOT a.attisdropped),
+          'constraints', (SELECT COALESCE(jsonb_agg(jsonb_build_object(
+            'name', conname, 'definition', pg_get_constraintdef(oid)) ORDER BY conname COLLATE "C"), '[]'::jsonb)
+            FROM pg_constraint WHERE conrelid={literal}::regclass),
+          'rows', (SELECT COALESCE(jsonb_agg(to_jsonb(t)::text), '[]'::jsonb) FROM {relation} t))""")
+    for name in inventory['sequences']:
+        relation = 'public."' + name.replace('"', '""') + '"'
+        literal = "'" + relation.replace("'", "''") + "'"
+        sequences.append(f"""jsonb_build_object('name', {literal},
+          'definition', (SELECT jsonb_build_object('type', format_type(seqtypid,NULL),
+            'start', seqstart, 'increment', seqincrement, 'min', seqmin, 'max', seqmax,
+            'cache', seqcache, 'cycle', seqcycle) FROM pg_sequence WHERE seqrelid={literal}::regclass),
+          'state', (SELECT jsonb_build_object('lastValue', last_value, 'isCalled', is_called) FROM {relation}))""")
+    # The cold-backup lock prevents schema changes; all rows/metadata are read in one statement snapshot.
+    statement = "SELECT jsonb_build_object('format', '" + CANONICAL_DATA_FORMAT + "', 'tables', jsonb_build_array("
+    statement += ','.join(tables) + "), 'sequences', jsonb_build_array(" + ','.join(sequences) + '));'
+    return canonical_data_hash(json.loads(sql(cfg, statement, database)))
+
+
+def restored_data_format(manifest):
+    if 'canonicalDataFormat' not in manifest and 'canonicalDataDigest' not in manifest:
+        return 'legacy-pg-dump'
+    digest = manifest.get('canonicalDataDigest')
+    if (manifest.get('canonicalDataFormat') != CANONICAL_DATA_FORMAT or not isinstance(digest, str)
+            or len(digest) != 64 or any(c not in '0123456789abcdef' for c in digest)):
+        raise RuntimeError('Invalid canonical database digest manifest.')
+    return CANONICAL_DATA_FORMAT
+
+
+def verify_restored_data(cfg, database, manifest):
+    if restored_data_format(manifest) == CANONICAL_DATA_FORMAT:
+        if canonical_data_digest(cfg, database) != manifest['canonicalDataDigest']:
+            raise RuntimeError('Restored canonical database data differs.')
+    elif logical_digest(cfg, database) != manifest['logicalDigest']:
+        raise RuntimeError('Restored logical database data differs.')
 
 
 def file_digests(directory):
@@ -248,6 +314,8 @@ def backup(cfg):
         counts = sql(cfg, 'SELECT (SELECT count(*) FROM users), (SELECT count(*) FROM content_records), (SELECT count(*) FROM media);', 'gachia_cms')
         manifest = {'schemaVersion': 1, 'app': cfg['app'], 'files': files, 'counts': counts,
                     'logicalDigest': logical_digest(cfg, 'gachia_cms'), 'mediaDigests': file_digests(ROOT / 'data'),
+                    'canonicalDataFormat': CANONICAL_DATA_FORMAT,
+                    'canonicalDataDigest': canonical_data_digest(cfg, 'gachia_cms'),
                     'encrypted': False, 'offsite': False}
         write_private(destination / 'manifest.json', json.dumps(manifest, indent=2) + '\n')
     finally:
@@ -263,6 +331,7 @@ def restore_check(cfg, directory):
     if directory.parent != (ROOT / 'backups').resolve():
         raise RuntimeError('Only an installed local backup can be rehearsed.')
     manifest = json.loads((directory / 'manifest.json').read_text())
+    data_format = restored_data_format(manifest)
     for name, expected in manifest['files'].items():
         if name not in ['database.dump', 'media.tar.gz', 'settings.json'] or hashlib.sha256((directory / name).read_bytes()).hexdigest() != expected:
             raise RuntimeError('Backup integrity mismatch.')
@@ -274,8 +343,7 @@ def restore_check(cfg, directory):
         counts = sql(cfg, 'SELECT (SELECT count(*) FROM users), (SELECT count(*) FROM content_records), (SELECT count(*) FROM media);', database)
         if counts != manifest['counts']:
             raise RuntimeError('Restored counts differ.')
-        if logical_digest(cfg, database) != manifest['logicalDigest']:
-            raise RuntimeError('Restored logical database data differs.')
+        verify_restored_data(cfg, database, manifest)
         with tarfile.open(directory / 'media.tar.gz') as archive:
             for member in archive.getmembers():
                 parts = Path(member.name).parts
@@ -287,6 +355,7 @@ def restore_check(cfg, directory):
             raise RuntimeError('Restored media bytes differ.')
         media_count = len(restored_media)
         result = {'passed': True, 'counts': counts, 'mediaFiles': media_count, 'backup': directory.name,
+                  'databaseVerificationFormat': data_format,
                   'scope': 'isolated PostgreSQL restore and media extraction; no live replacement'}
         write_private(directory / 'restore-check.json', json.dumps(result, indent=2) + '\n')
         print(json.dumps(result))
