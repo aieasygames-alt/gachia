@@ -6,6 +6,8 @@ import { reviewCollections } from './review-collections'
 import { draftMergeCollections } from './draft-merge-collections'
 import { mergeWorkflowEvents } from './merge-workflow-events'
 import { isDesktopNewGuide, validateDesktopNewGuideIdentity } from './desktop-new-guide'
+import { isUnifiedRecord, validateUnifiedRecord } from './unified-content'
+import { isDeepStrictEqual } from 'node:util'
 
 const hasRole = (user: unknown, roles: string[]) => {
   if (!user || typeof user !== 'object' || !('role' in user)) return false
@@ -104,11 +106,15 @@ export function collections(directory: string, options: { secureCookies?: boolea
       ],
     },
     {
-      slug: 'content-records', admin: { useAsTitle: 'stableKey' },
+      slug: 'content-records', admin: { useAsTitle: 'stableKey', defaultColumns: ['game', 'kind', 'legacyId', 'hold', '_status'] },
       access: { read: staff, create: staff, update: staff, delete: admin },
       lockDocuments: { duration: 300 },
       versions: { drafts: true, maxPerDoc: 20 },
       hooks: {
+        beforeDelete: [async ({ id, req }) => {
+          const record = await req.payload.findByID({ collection: 'content-records', id, depth: 0, draft: true, req, overrideAccess: true })
+          if (isUnifiedRecord(record)) throw new APIError('Unified content withdrawal requires an explicit publication contract.', 409)
+        }],
         beforeOperation: [async ({ operation, args, req }) => {
           if (operation === 'update') {
             // A non-draft update can unpublish approved content without ever writing "published".
@@ -137,6 +143,17 @@ export function collections(directory: string, options: { secureCookies?: boolea
             throw new APIError('Only a reviewer can mark editorial content published.', 403)
           }
           const next = { ...originalDoc, ...data }
+          if (isUnifiedRecord(next) || isUnifiedRecord(originalDoc)) {
+            if (operation === 'create' && req.context.unifiedContentImport !== true) throw new APIError('Unified records must be created by the controlled source importer.', 403)
+            try { validateUnifiedRecord(next, operation === 'create' ? undefined : originalDoc) }
+            catch (error) { throw new APIError(error instanceof Error ? error.message : 'Invalid structured content', 400) }
+            const gameId = typeof next.game === 'object' ? next.game?.id : next.game
+            const game = await req.payload.findByID({ collection: 'games', id: gameId, depth: 0, req,
+              overrideAccess: operation === 'create' && req.context.unifiedContentImport === true && !req.user })
+            if (game.key !== next.sourceRecord.game) throw new APIError('Unified content game relationship mismatch.', 400)
+            if (data.hold === false && originalDoc?.hold !== false && !hasRole(req.user, ['admin', 'reviewer'])) throw new APIError('Only a reviewer can clear a unified content hold.', 403)
+            if (originalDoc && !isDeepStrictEqual(next.structuredValue, originalDoc.structuredValue) && data._status !== 'published') data.hold = true
+          } else if (next.structuredValue != null) throw new APIError('Structured content requires immutable source provenance.', 400)
           if (isDesktopNewGuide(next) || (originalDoc && isDesktopNewGuide(originalDoc))) {
             let sourceGame: string
             try { sourceGame = validateDesktopNewGuideIdentity(next, operation === 'create' ? undefined : originalDoc) }
@@ -154,10 +171,12 @@ export function collections(directory: string, options: { secureCookies?: boolea
         { name: 'kind', type: 'text', required: true },
         { name: 'legacyId', type: 'text', required: true },
         { name: 'legacyPath', type: 'text', required: true },
-        { name: 'title', type: 'text', localized: true },
-        { name: 'body', type: 'textarea', localized: true },
-        { name: 'bodyFormat', type: 'select', required: true, options: ['markdown', 'html', 'plain'], defaultValue: 'markdown' },
-        { name: 'sourceRecord', type: 'json', required: true },
+        { name: 'title', type: 'text', localized: true, admin: { condition: data => !isUnifiedRecord(data) } },
+        { name: 'body', type: 'textarea', localized: true, admin: { condition: data => !isUnifiedRecord(data) } },
+        { name: 'bodyFormat', type: 'select', required: true, options: ['markdown', 'html', 'plain'], defaultValue: 'markdown', admin: { condition: data => !isUnifiedRecord(data) } },
+        { name: 'sourceRecord', type: 'json', required: true, admin: { readOnly: true } },
+        { name: 'structuredValue', type: 'json', label: 'Structured Content',
+          admin: { condition: data => isUnifiedRecord(data) } },
         { name: 'reviewEvidence', type: 'json' },
         { name: 'hold', type: 'checkbox', defaultValue: true },
       ],

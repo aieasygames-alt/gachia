@@ -77,6 +77,8 @@ try {
     } finally { await client.end() }
   }
   await provisionDatabase(true)
+  await run(['exec', 'tsx', 'scripts/unified-migration-check.ts'])
+  checks.push('additive unified-content migration: legacy data survives up/down/up without schema push')
   await run(['exec', 'payload', 'migrate'])
   await run(['exec', 'payload', 'migrate'])
   checks.push('non-superuser PostgreSQL role: empty database migrated; repeated migration idempotent; schema push disabled')
@@ -84,6 +86,8 @@ try {
   checks.push('real PostgreSQL editorial suite: login, ACL, locale, publish, locks, versions, rollback/commit, private media, immutable intake')
   await run(['exec', 'tsx', '--test', 'tests/editorial-lifecycle.test.ts'])
   checks.push('real PostgreSQL lifecycle: reviewer-only unpublish, single/bulk/override rejection, localized draft/export fidelity')
+  await run(['exec', 'tsx', '--test', 'tests/unified-payload.test.ts'])
+  checks.push('real PostgreSQL unified content: all 16 scopes imported, ACL/identity/hold/versions/locks and idempotent preservation')
   await pg.dropDatabase(database)
   await provisionDatabase()
   await run(['exec', 'payload', 'migrate'])
@@ -93,6 +97,7 @@ try {
   ])
   assert.deepEqual(bootstrap.sort(), [0, 1])
   checks.push('concurrent administrator bootstraps create exactly one account; repeat refuses')
+  await run(['exec', 'tsx', 'scripts/unified-http-fixture.ts'])
 
   server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(httpPort)],
     { cwd: projectRoot, env, stdio: ['ignore', 'pipe', 'pipe'] })
@@ -133,6 +138,25 @@ try {
   const edited = await request(`/api/content-records/${draft.body.doc.id}?draft=true&locale=zh`, 'PATCH', { body: 'CMS editing works over real HTTP.' }, token)
   assert.equal(edited.response.status, 200)
   assert.equal(edited.body.doc.body, 'CMS editing works over real HTTP.')
+  const unifiedRows = await request('/api/content-records?where[stableKey][like]=unified%3Ahi3%3A&limit=1', 'GET', undefined, token)
+  assert.equal(unifiedRows.response.status, 200)
+  const unified = unifiedRows.body.docs[0]
+  assert.ok(unified?.structuredValue && typeof unified.structuredValue.name === 'string')
+  const unifiedRoute = `/api/content-records/${unified.id}`
+  const value = { ...unified.structuredValue, name: 'Isolated HTTP editorial fixture' }
+  const unifiedEdited = await request(`${unifiedRoute}?draft=true`, 'PATCH', { structuredValue: value }, token)
+  assert.equal(unifiedEdited.response.status, 200)
+  assert.deepEqual(unifiedEdited.body.doc.structuredValue, value)
+  assert.equal((await request(`${unifiedRoute}?draft=true`, 'PATCH', { structuredValue: { ...value, id: 'changed-id' } }, token)).response.status, 400)
+  assert.equal((await request('/api/content-records?draft=true', 'POST', { stableKey: unified.stableKey,
+    game: typeof unified.game === 'object' ? unified.game.id : unified.game, kind: unified.kind, legacyId: unified.legacyId,
+    legacyPath: unified.legacyPath, sourceRecord: unified.sourceRecord, structuredValue: value, bodyFormat: 'plain', hold: true }, token)).response.status, 403)
+  assert.equal((await request(unifiedRoute, 'DELETE', undefined, token)).response.status, 409)
+  const unifiedPublished = await request(unifiedRoute, 'PATCH', { _status: 'published', hold: false }, token)
+  assert.equal(unifiedPublished.response.status, 200)
+  await request(`${unifiedRoute}?draft=true`, 'PATCH', { structuredValue: { ...value, name: 'Later unapproved fixture' } }, token)
+  assert.deepEqual((await request(`${unifiedRoute}?draft=false`, 'GET', undefined, token)).body.structuredValue, value)
+  checks.push('built PostgreSQL HTTP unified editor: actual source draft edits, immutable identity, controlled import, withdrawal rejection, published/draft isolation')
   const pixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aX1sAAAAASUVORK5CYII=', 'base64')
   const form = new FormData()
   form.append('_payload', JSON.stringify({ alt: 'Synthetic test pixel' }))

@@ -30,8 +30,8 @@ export function profileJSON(text: string) {
   return { rootShape: Array.isArray(value) ? 'array' : value === null ? 'null' : typeof value, rowCount: rows.length, objectRows: objects.length, fields, identityCandidates, localeFieldCandidates: fields.filter(field => /(?:Zh|En|Ja)$/.test(field) || ['zh', 'en', 'ja'].includes(field)), mappingStatus: 'unmapped' }
 }
 
-export function readLegacySources() {
-  const root = realpathSync(path.resolve(projectRoot, '../..'))
+export function readLegacySources(repository = path.resolve(projectRoot, '../..')) {
+  const root = realpathSync(repository)
   const inventory = JSON.parse(readFileSync(path.join(root, baselineDirectory, 'inventory.json'), 'utf8'))
   const readChecked = (file: { path: string; sha256: string }) => {
     const resolved = realpathSync(path.resolve(root, file.path))

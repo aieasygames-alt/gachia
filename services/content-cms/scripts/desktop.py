@@ -370,6 +370,7 @@ def main():
         raise RuntimeError('The desktop manager cannot execute in CI.')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=['install', 'resume-install', 'serve', 'status', 'start', 'stop', 'backup', 'restore-check', 'content-import', 'content-export',
+                                         'unified-import', 'unified-export', 'unified-freeze',
                                          'publish-plan', 'publish-prepare', 'publish-build', 'publish-preview', 'publish-verify',
                                          'publish-retain', 'publish-verify-retained', 'publish-preview-retained', 'publish-cloud-check',
                                          'publish-cloud-prepare', 'publish-cloud-verify', 'publish-cloud-upload-preview',
@@ -406,12 +407,21 @@ def main():
     parser.add_argument('--source-pin')
     parser.add_argument('--main-source', type=Path)
     parser.add_argument('--main-source-pin')
+    parser.add_argument('--scope')
+    parser.add_argument('--selection', type=Path)
+    parser.add_argument('--selection-pin')
+    parser.add_argument('--active', type=Path)
+    parser.add_argument('--active-pin')
+    parser.add_argument('--output', type=Path)
     supplied_flags = [arg.split('=', 1)[0] for arg in sys.argv[1:] if arg.startswith('--')]
     if len(supplied_flags) != len(set(supplied_flags)):
         parser.error('Duplicate options are forbidden')
     args = parser.parse_args()
     if not args.action.startswith('publish-'):
-        required = {'restore-check': {'backup'}, 'content-import': {'repo', 'game'}, 'content-export': {'repo', 'game'}}.get(args.action, set())
+        unified_export = {'repo', 'pin', 'selection', 'selection_pin', 'active', 'active_pin'}
+        required = {'restore-check': {'backup'}, 'content-import': {'repo', 'game'}, 'content-export': {'repo', 'game'},
+                    'unified-import': {'repo', 'pin', 'scope'}, 'unified-export': unified_export,
+                    'unified-freeze': unified_export | {'commit', 'output'}}.get(args.action, set())
         allowed = required | ({'preview'} if args.action == 'content-export' else set())
         for key, value in vars(args).items():
             if key != 'action' and value is not None and value is not False and key not in allowed:
@@ -455,6 +465,10 @@ def main():
             command = [NODE, '--import', 'tsx', 'scripts/desktop-content.ts', args.action.removeprefix('content-'), str(args.repo.resolve()), args.game]
             if args.preview:
                 command.append('--preview')
+            run(command, cwd=cfg['app'], env=app_env(cfg))
+        elif args.action.startswith('unified-'):
+            command = [NODE, '--import', 'tsx', 'scripts/unified-desktop.ts', args.action.removeprefix('unified-')]
+            command += maintenance_arguments(args)
             run(command, cwd=cfg['app'], env=app_env(cfg))
         elif args.action.startswith('publish-'):
             action = args.action.removeprefix('publish-')

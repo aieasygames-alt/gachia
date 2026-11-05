@@ -38,6 +38,14 @@ export function literalModule(text: string, filename: string) {
     }
   }
   const active = new Set<string>()
+  const independent = (node: ts.Expression): boolean => {
+    if (ts.isAsExpression(node) || ts.isTypeAssertionExpression(node) || ts.isSatisfiesExpression(node) || ts.isParenthesizedExpression(node)) return independent(node.expression)
+    if (ts.isArrayLiteralExpression(node)) return node.elements.every(element => independent(element))
+    if (ts.isObjectLiteralExpression(node)) return node.properties.every(property => ts.isPropertyAssignment(property) && independent(property.initializer))
+    return ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node) || ts.isNumericLiteral(node)
+      || [ts.SyntaxKind.TrueKeyword, ts.SyntaxKind.FalseKeyword, ts.SyntaxKind.NullKeyword].includes(node.kind)
+      || ts.isPrefixUnaryExpression(node) && node.operator === ts.SyntaxKind.MinusToken && ts.isNumericLiteral(node.operand)
+  }
   let steps = 0
   const nameValue = (name: string, depth: number): Literal => {
     if (active.has(name)) throw new Error(`Cyclic constant: ${name}`)
@@ -82,5 +90,6 @@ export function literalModule(text: string, filename: string) {
     }
     throw new Error(`Unsupported literal expression: ${ts.SyntaxKind[node.kind]}`)
   }
-  return { units, read: (name: string) => { steps = 0; return nameValue(name, 0) } }
+  return { units, bindings: [...declarations].map(([name, expression]) => ({ name, independent: independent(expression) })),
+    read: (name: string) => { steps = 0; return nameValue(name, 0) } }
 }

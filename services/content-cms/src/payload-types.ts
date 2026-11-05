@@ -603,8 +603,17 @@ export interface ContentRecord {
   legacyPath: string;
   title?: string | null;
   body?: string | null;
-  bodyFormat: 'markdown' | 'html' | 'plain';
+  bodyFormat?: ('markdown' | 'html' | 'plain') | null;
   sourceRecord:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  structuredValue?:
     | {
         [k: string]: unknown;
       }
@@ -1140,6 +1149,7 @@ export interface ContentRecordsSelect<T extends boolean = true> {
   body?: T;
   bodyFormat?: T;
   sourceRecord?: T;
+  structuredValue?: T;
   reviewEvidence?: T;
   hold?: T;
   updatedAt?: T;

@@ -23,7 +23,7 @@ s=importlib.util.spec_from_file_location('manager',${JSON.stringify(manager)})
 m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
 sys.argv=[${JSON.stringify(manager)},*json.loads(${JSON.stringify(JSON.stringify(args))})]
 def record(command,**kwargs): print(json.dumps([str(x) for x in command]))
-with patch.dict(os.environ,{'CI':'','GITHUB_ACTIONS':''}),patch.object(m,'settings',return_value={'app':'/tmp/fixture app'}),patch.object(m,'run',record),patch('builtins.open',mock_open()),patch.object(m.fcntl,'flock'):
+with patch.dict(os.environ,{'CI':'','GITHUB_ACTIONS':''}),patch.object(m,'settings',return_value={'app':'/tmp/fixture app','environment':{}}),patch.object(m,'run',record),patch('builtins.open',mock_open()),patch.object(m.fcntl,'flock'):
  m.main()`;
   const child = spawnSync('python3', ['-B', '-c', script], { encoding: 'utf8' });
   return { ...child, command: child.status === 0 ? JSON.parse(child.stdout) : undefined };
@@ -53,6 +53,22 @@ test('non-publication commands reject irrelevant options before opening files or
   for (const args of [['content-import'], ['content-export', '--repo', '/tmp/repo'], ['restore-check']]) {
     const child = spawnSync('python3', ['-B', parserProbe, ...args], { encoding: 'utf8' });
     assert.equal(child.status, 2, child.stderr); assert.match(child.stderr, /Required arguments missing/);
+  }
+});
+
+test('unified manager actions require explicit scope or pinned selection and never accept preview', () => {
+  const common = ['--repo', '/tmp/repo', '--pin', sha];
+  const selected = [...common, '--selection', '/tmp/selected', '--selection-pin', sha, '--active', '/tmp/active', '--active-pin', sha];
+  for (const [action, args] of [['unified-import', [...common, '--scope', 'ananta']], ['unified-export', selected],
+    ['unified-freeze', [...selected, '--commit', 'a'.repeat(40), '--output', '/tmp/output']]]) {
+    const child = dispatch([action, ...args]); assert.equal(child.status, 0, child.stderr);
+    assert.deepEqual(child.command.slice(1, 5), ['--import', 'tsx', 'scripts/unified-desktop.ts', action.slice(8)]);
+    for (const extra of [['--preview'], ['--game', 'nte'], ['--backup', '/tmp/backup']]) {
+      const rejected = spawnSync('python3', ['-B', parserProbe, action, ...args, ...extra], { encoding: 'utf8' });
+      assert.equal(rejected.status, 2, rejected.stderr); assert.match(rejected.stderr, /Unexpected option/);
+    }
+    const missing = spawnSync('python3', ['-B', parserProbe, action], { encoding: 'utf8' });
+    assert.equal(missing.status, 2); assert.match(missing.stderr, /Required/);
   }
 });
 

@@ -1,5 +1,31 @@
 # 当前审计任务表
 
+## 2026-11-05 五目标精确预览合同与实时源身份 R45
+
+已接入 `unified:preview-local prepare|verify`，复用 R44 单模块与 R43 只读资产，不再构建。最终 `preview-02` 的十个真实 Worker 使用精确版本预览 Host 验收 **5,156 个响应**；通用 HTML 结构解析比较正文/标题/canonical/元数据/链接/媒体/脚本和样式引用，保留已有 JSON-LD，不强迫普通页面套攻略结构。静态/JSON 字节、cache/cookie/MIME 和预览 noindex/精确 robots 均通过。
+
+实际只读云观察核对七服务拓扑、五目标活动 UUID、运行配置与不可变版本元数据；五份旧恢复输入已与当前活动模块建立字节对应。原神 content 下载接口确实返回另一 ETag，失败证据保留，改用独立固定 pin 的原始上传回执，不绕过校验。蓝色星原/绿梦使用 ETag 绑定的当前下载；原神/异环/Main 用上传回执及新鲜版本元数据。详见 [R45](../reports/payload-unified-preview-2026-11-05-r45/README.md)。观察有时效，不能充当未来上传时的当前状态。
+
+候选/恢复上传协议核心已覆盖五 owner、Main-only、独占 journal、单次上传、失败停机/只读对账；**尚无生产上传适配器或推广入口**，测试依赖注入不构成生产授权。统一 fixture 继续 preview，不上传，不切流；常驻/公众仍 R39。下一步固定生产验证器/上传适配器、非 fixture 的审核批次、候选与兼容恢复实际云预览，再接受控推广/partial/source-advance、精确源码 CI 和常驻升级。公开内容来源认证仍不列前置。
+
+## 2026-11-05 五目标精确模块封存 R44
+
+五目标已接入 `unified:transport-local prepare|verify`。候选打包一次，恢复使用逐字节不变的旧单模块；两方向各再做实际 no-bundle dry-run。Main/蓝色星原保留服务分组，原神/异环保持空分组，绿梦显式 production，并通过固定 Wrangler 的实际配置/标签逻辑验证。复用 R43 只读资源树，没有重复五套构建或资产复制。成功批次 `transport-03` 完成 20 次无凭据 dry-run、十个真实 Worker、5,156 个 HTTP 响应与完整证据重读；前两次实际失败诊断保留。详见 [R44](../reports/payload-unified-transport-2026-11-05-r44/README.md)。
+
+本轮没有云上传/部署、常驻安装/数据库写入、Git 提交推送或实际 CI。所有 fixture 继续 `preview:true`，不因封存通过获得生产资格；常驻及公众仍 R39。下一主线转为五目标精确候选/恢复云预览协议、实时拓扑/运行时身份、受控推广/partial 对账/source-advance，随后冷备、有界常驻升级和真实 CMS 批次；不要求公开内容来源认证。
+
+## 2026-11-05 多目标资源兼容与恢复 R43
+
+已把五目标构建接入统一本地发布准备及独立 verifier。新运行时保留旧资源、旧运行时保留新资源，精确禁止跨版本复制 HTML/公开 JSON/server cache；四游戏原始/命名空间静态 URL 成对且同字节。Main 恢复核对 90 份公开 A。复用 R42 的 fixture 构建，实际十个 Worker、5,156 个 HTTP 响应通过，含两方向各 2,127 条静态 URL、Main 各 435 份 JSON；原神 32 篇（含公开 CMS 新增）和异环 53 篇攻略字节保持。CMS 246 项、相关发布工具 222 项和类型检查通过，详细证据见 [R43](../reports/payload-unified-recovery-2026-11-05-r43/README.md)。
+
+本轮没有安装、正式 CMS/数据库写入、云上传/推广、Git 提交推送或实际 CI；常驻/公众仍 R39，R42 候选固定 preview，不得上线。仅清理本轮沙箱缓存和失败副本，保留成功产物及全部历史源链。下一主线是五目标 no-bundle 传输、精确候选/恢复云预览及受控推广/partial 对账/source-advance，之后冷备和有界常驻升级；不再加入公开内容来源认证。
+
+## 2026-11-05 全游戏现有内容编辑工程 R42
+
+用户已要求加速覆盖所有游戏、所有内容，并明确取消玩家论坛的公开内容来源认证前置。[工程契约](../docs/payload-unified-content-editor.md)和[实施队列](payload-all-content-implementation-2026-11-05.md)覆盖 16 scope、115 份来源、2,795 个现有记录/具名区块，复用同一套 Payload 草稿/审核/版本模型。R41 隔离导入、三方编译、增量迁移与 HTTP 结果保留在[R41](../reports/payload-all-game-content-2026-11-05-r41/README.md)；R42 普通公开 JSON 基线、五 owner 构建/正文验收及产物重读结果见[R42](../reports/payload-community-publication-2026-11-05-r42/README.md)。**没有升级常驻 CMS 或接管公众消费**；下一主线是多目标正式发布与常驻接管，不再列公开来源认证待办。
+
+完整 A overlay、镜像/摘要/搜索与客户端生成、owner 计划及逐文件验 pin 保留。新增蓝色星原 raw 名称到实际角色页的受控构建适配；绿梦使用明确 production 环境。全领域/引用规则、旧资源兼容、恢复、统一云发布与常驻安装仍待完成，页面内联事实、实体新增/撤回/结构和媒体也未全覆盖；常驻/公网保持 R39，不能把代表性本地验收当全范围已上线。
+
 ## 2026-11-05 精确源码与空间增量 R40
 
 [R40执行与清理建议](../reports/payload-next-delivery-2026-11-05-r40/README.md)：62份指定文件已提交/推送维护分支`00eaf2c`，实际只读CI全绿；隔离Payload生成NTE 54篇preview并保留既有53篇公开文本，Main保留原神32篇。精确双owner已构建，真实Worker候选HTTP30响应、桌面/手机中英日12视图及旧来源新增前404等10响应通过。常驻CMS685应用/29工具与DB完整摘要保持。构建后约30.39GiB可用，前轮空间阻塞已解除；约1.54GiB可再生成cache只列建议，release/source链、隔离DB和HI3历史构建仍保留。没有删除、安装、正式CMS内容写入或Worker/R2上传部署；NTE正式新增仍拒绝，N01公网修复/N04云恢复/N05真实新增/N06激活仍未关闭。

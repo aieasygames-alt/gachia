@@ -1,5 +1,21 @@
 # Gachia Content CMS — 本机编辑后台
 
+## 常驻接入增量（2026-11-06，R46，执行中）
+
+用户已确认按首个 Main-only 闭环、四独立站、16 scope 现有内容、剩余内联内容、实体生命周期的顺序执行。新增独立受控桌面导入/正式导出/冻结，显式范围与选择 pin、当前安装应用门禁、批准版本重读和漂移检查；不会放开隔离 fixture 或直接推广。参数见[统一契约](../../docs/payload-unified-content-editor.md)，实际安装和验收以 [R46](../../reports/payload-desktop-unified-2026-11-06-r46/README.md) 为准，不能把源码新增当作常驻已升级。
+
+## 全游戏编辑工程进度（2026-11-05，R45）
+
+[统一编辑契约](../../docs/payload-unified-content-editor.md)已实现 16 scope、115 个数据来源、2,795 个现有记录/具名区块的共用导入、结构化编辑、审核和候选导出，隔离 SQLite/PostgreSQL 与真实 HTTP 已验。**常驻后台尚未安装该版本，网站未切换**；现有生产能力仍以下方 R39 为准。统一候选明确不可激活，页面内联余项、新增/撤回/媒体和全 owner 发布仍待接通，执行顺序见[实施队列](../../plans/payload-all-content-implementation-2026-11-05.md)。
+
+续接已增加普通公开 JSON 基线读取、`unified:freeze-local`、五 owner 的 `unified:build-local`、真实 Payload 编辑审核的 `unified:smoke-local` 和封存产物重读 `unified:verify-local`。用户明确取消公开内容来源认证前置；完整 A 用于防覆盖，不当作权威性证明。当前进展与真实失败/成功结果见 [R42](../../reports/payload-community-publication-2026-11-05-r42/README.md)。本地构建不等于正式安装/发布，现有双游戏云执行器尚未接受统一合同；参数与边界见统一契约。
+
+R43 已将五目标构建接入 `unified:publication-local prepare|verify`：候选保留旧资源，旧运行时保留新资源，禁止跨版本复制页面/JSON/cache；Main 恢复核对 90 份公开 A。实际十个本地 Worker、5,156 个 HTTP 响应通过，原神公开新增和异环既有攻略均保持。独立 verifier 重读输入、精确产物及全部 HTTP 证据，失败批次不可覆盖。见 [R43](../../reports/payload-unified-recovery-2026-11-05-r43/README.md)。仍是不可推广的 fixture，本轮没有正式 CMS 写入、安装或云操作；五目标云传输/恢复预览/推广和 source-advance 继续开发。
+
+R44 新增 `unified:transport-local prepare|verify`：五目标候选/恢复均封存唯一 Worker 模块，候选只打包一次，恢复不重打包，实际 no-bundle dry-run 核对精确字节与绑定。20 次 dry-run 及封存模块的十个真实 Worker、5,156 个响应通过。蓝色星原服务分组、绿梦显式 production 与其他目标配置通过实际 Wrangler 解析/标签逻辑校验；复用 R43 资产，不再复制或构建五套应用。全部 fixture 保持 preview，入口无凭据且不能上传/推广；云端精确预览、实时身份、推广/partial/source-advance 和常驻接管仍待完成。参数、证据和失败诊断见 [R44](../../reports/payload-unified-transport-2026-11-05-r44/README.md)。
+
+R45 新增 `unified:preview-local prepare|verify`：十个封存 Worker 在精确预览 Host 下通过最终 5,156 响应验收及独立复验；HTML 使用标准解析比较内容/SEO/链接/媒体/资源引用，JSON/静态保持逐字节，预览 discovery 禁止索引。另实际只读核对七服务拓扑与五份活动源模块，错误历史下载因 ETag 不同停机留档，再采用原始上传回执验证。五目标上传/失败对账协议只有核心和隔离测试，生产适配器与实际云候选/恢复预览仍待接入。没有 Worker 写入或常驻变更，fixture 仍不能上传；见 [R45](../../reports/payload-unified-preview-2026-11-05-r45/README.md)。
+
 ## 当前入口（2026-11-05，R39）
 
 两游戏既有攻略维护与共享Main交接已在R36实机完成；R39已完成Genshin中文新建攻略的CMS-first正常发布。NTE中文新增仍须完成语言政策、候选/恢复与真实发布验收，不能由此视为已上线。公开JSON计数为Genshin32/NTE53；Git导入31/53是原始O，不要覆盖CMS公开A。准确身份与当批范围见[R39](../../reports/payload-new-guide-launch-2026-11-05-r39/README.md)。
