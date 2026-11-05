@@ -4,6 +4,8 @@
 
 > 最新运维增量（2026-11-05 R37）：[报告](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)。当前数据/28工具/源码已生成新私有R2对象并完成新鲜下载、AES认证与隔离DB/媒体恢复；当前运行数据库/公开内容/Worker保持。磁盘只读盘点和[保留规则](../docs/payload-storage-retention.md)完成，未删除文件或交付自动GC；low依赖复核仍无修复、11-16截止不顺延。V1保持完成，C05b仍暂缓，原P/T全范围等级不提升。
 
+> 最新工程增量（2026-11-05 R38）：[原神新增指南](../reports/payload-new-guides-2026-11-05-r38/README.md)与[契约](../docs/payload-new-guide-contract.md)。原神中文新增的身份/来源/批准、导出清单、公开A保留、列表/详情/索引与恢复404工程已通过隔离验收；常驻CMS/发布器尚未安装新代码、未新增公众文章，NTE新增仍关闭。下一步是有界暂存安装→真实新增CMS-first完整双owner发布/来源交接→异地包刷新，不重复既有V1，也不将G1–G3工程结果写成全范围P/T关闭。
+
 > R20历史基线（2026-11-02）：[四项收口](../reports/payload-launch-closeout-2026-11-02-r20/README.md)。inventory版本化且历史不变，Router/inventory实际CI通过；工程提交a0634a9已推送。三个只读准备命令已安装，20工具文件摘要一致，547份公网资源响应已取证。CMS163、桌面387、既有Node304、Python49、Router35及相关类型检查通过。该轮真实编辑云E2E、独立key/跨机与完整交接未关；DB84draft/hold、0eligible，正式导出拒绝无合格记录。
 
 > 历史增量：[本机发布推进报告](../reports/payload-local-publish-2026-11-01/README.md)。已将候选检查、冻结 Git 源码与双 owner 构建/本地验收装入本机维护工具；Genshin + Main 的合成候选真实 Worker 构建及 14 响应通过。现有内容无变化，不重复发布。云端推广执行器和旧资源/回退证据仍未接通，Builds 权限核验返回 403；不关闭 T04/T05 或完整发布任务。

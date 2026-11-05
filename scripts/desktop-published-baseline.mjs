@@ -9,14 +9,16 @@ import { boundedBody, exactPreviewOrigin } from './desktop-version-preview.mjs';
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const serviceFor = owner => owner === 'main' ? 'gachia' : `gachia-game-${owner}`;
 
-export function validatePublishedGuideUpdate(importText, publishedText, candidateText) {
-  const { original, candidate: published } = validateGuideOverlay(importText, publishedText);
-  const { candidate } = validateGuideOverlay(importText, candidateText);
-  const delta = validateGuideOverlay(publishedText, candidateText);
+export function validatePublishedGuideUpdate(importText, publishedText, candidateText, game = 'genshin') {
+  const { original, candidate: published } = validateGuideOverlay(importText, publishedText, game);
+  const { candidate } = validateGuideOverlay(importText, candidateText, game);
+  const delta = validateGuideOverlay(publishedText, candidateText, game);
   // Excluded CMS records are replaced by O by the legacy exporter. A field
   // reset to O is therefore ambiguous, even if another field on that row changes.
-  for (const [i, row] of candidate.entries()) for (const field of ['title', 'titleEn', 'titleJa', 'content', 'contentEn', 'contentJa']) {
-    assert(Object.is(published[i][field], row[field]) || !Object.is(original[i][field], row[field]),
+  const imports = new Map(original.map(row => [row.id, row])), current = new Map(published.map(row => [row.id, row]));
+  for (const row of candidate) for (const field of ['title', 'titleEn', 'titleJa', 'content', 'contentEn', 'contentJa']) {
+    if (!imports.has(row.id)) continue;
+    assert(Object.is(current.get(row.id)[field], row[field]) || !Object.is(imports.get(row.id)[field], row[field]),
       `Implicit reset to import O: ${row.id}.${field}; preserve public A. Direct resets require a separate reset-intent contract`);
   }
   assert(delta.changed.length > 0, 'Candidate is unchanged from current published A');
@@ -37,7 +39,7 @@ export function verifyPublishedGuideUpdate({ baselinePath, baselinePin, candidat
   assert.equal(digest(candidate), plan.candidateSHA256, 'Candidate digest mismatch');
   const directory = resolve(baselinePath, '..');
   return validatePublishedGuideUpdate(readFileSync(join(directory, 'import.body')).toString(),
-    readFileSync(join(directory, 'published.body')).toString(), candidate.toString());
+    readFileSync(join(directory, 'published.body')).toString(), candidate.toString(), plan.game);
 }
 
 // Import provenance stays O; recovery follows the currently deployed A, not O.
@@ -53,7 +55,7 @@ export async function capturePublishedBaseline({ plan, importBytes, directory, o
   assert.equal(response.status, 200); assert(!response.headers.has('set-cookie'));
   assert.equal(response.headers.get('content-type')?.split(';')[0], 'application/json');
   const body = await boundedBody(response);
-  validateGuideOverlay(importBytes.toString(), body.toString());
+  validateGuideOverlay(importBytes.toString(), body.toString(), plan.game);
   const after = await observe(); assertTopology(before, after);
   mkdirSync(directory, { mode: 0o700 });
   writeFileSync(join(directory, 'import.body'), importBytes, { flag: 'wx', mode: 0o600 });
@@ -81,7 +83,7 @@ export function verifyPublishedBaseline(path, pin, plan, previousVersions) {
   const read = name => { const file = join(directory, name); assert.equal(realpathSync(file), file); return readFileSync(file); };
   const original = read('import.body'), published = read('published.body');
   assert.equal(digest(original), plan.sourceSHA256); assert.equal(digest(published), manifest.contentSHA256);
-  validateGuideOverlay(original.toString(), published.toString());
+  validateGuideOverlay(original.toString(), published.toString(), plan.game);
   return manifest;
 }
 
@@ -93,6 +95,18 @@ export function recoveryBaselineSHA256(recovery, verified) {
   // Old rehearsal evidence remains readable, but cannot authorize real recovery.
   assert.equal(verified.plan.preview, true, 'Real recovery requires a version-bound published baseline');
   return verified.plan.sourceSHA256;
+}
+
+export function recoveryGuideStatuses(recovery, verified) {
+  const { plan, receipt } = verified, ids = new Set();
+  if (plan.added?.length) {
+    verifyPublishedBaseline(recovery.baselinePath, recovery.baselinePin, plan,
+      Object.fromEntries(plan.owners.map(owner => [owner, receipt.owners[owner].previousVersion])));
+    for (const row of JSON.parse(readFileSync(join(resolve(recovery.baselinePath, '..'), 'published.body'), 'utf8'))) ids.add(row.id);
+  }
+  return new Map(plan.changed.flatMap(id => ['zh', 'en', 'ja'].map(locale => [
+    `/${locale}/${plan.game}/guides/${id}`, plan.added?.includes(id) && !ids.has(id) ? 404 : 200,
+  ])));
 }
 
 // Bind a new receipt instead of changing an already pinned recovery receipt.

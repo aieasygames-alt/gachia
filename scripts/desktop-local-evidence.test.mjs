@@ -9,6 +9,9 @@ import { captureGameAssets, digest } from './desktop-release-assets.mjs';
 import { capturePublishedBaseline } from './desktop-published-baseline.mjs';
 import { SERVICES } from './desktop-cloud-release.mjs';
 import { previousAssetFiles } from './retain-web-assets.mjs';
+import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
+import { pageFingerprint, validatePreviewResponse } from './desktop-version-preview.mjs';
+import { publicRobots, validatePublicResponse } from './desktop-public-acceptance.mjs';
 
 const json = x => JSON.stringify(x, null, 2) + '\n';
 const save = (file, x) => { mkdirSync(dirname(file), { recursive: true }); writeFileSync(file, json(x)); return digest(json(x)); };
@@ -75,6 +78,39 @@ for (const game of ['genshin', 'nte']) test(`${game} command generates complete 
   assert.notEqual(digest(f.published), f.plan.sourceSHA256);
   assert.equal(readFileSync(join(f.owners[game].directory, 'worker.js'), 'utf8'), 'old executable must not be used');
   assert(existsSync(join(f.input.directory, game, '.open-next/assets/_next/static/new.js')));
+});
+
+const missingHTML = '<html><head><title>404: This page could not be found.</title><meta name="robots" content="noindex"/></head><body><h1>404</h1><h2>This page could not be found.</h2></body></html>';
+test('404 fingerprints recognize a real streamed Next error but reject empty or article-shaped shells', () => {
+  const streamed = '<html><head><meta name="robots" content="noindex"/></head><body><script>self.__next_f.push([1,"6:E{\\"digest\\":\\"NEXT_HTTP_ERROR_FALLBACK;404\\"}"])</script></body></html>';
+  assert.equal(pageFingerprint(streamed, 404).mode, 'flight-404');
+  for (const html of [streamed.replace('NEXT_HTTP_ERROR_FALLBACK;404', 'different'), streamed.replace('noindex', 'index'),
+    streamed.replace('</head>', '<link rel="canonical" href="https://gachia.com/zh/genshin/guides/cms-new"/></head>'),
+    streamed.replace('</head>', '<script type="application/ld+json">{"@type":"Article"}</script></head>')]) assert.throws(() => pageFingerprint(html, 404));
+});
+test('new-guide recovery requires version-bound 404 evidence for all locales, never a fabricated 200', async t => {
+  const f = await recoveryFixture(t), id = 'cms-new';
+  f.plan.added = [id]; f.plan.changed = ['one', id];
+  const request = f.input.request;
+  f.input.request = async (url, options) => new URL(url).pathname.endsWith('/' + id)
+    ? new Response(missingHTML, { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' } }) : request(url, options);
+  const result = await prepareLocalRecovery(f.input), evidence = JSON.parse(readFileSync(result.evidencePath));
+  assert.equal(evidence.owners.genshin.observations.filter(row => row.status === 404).length, 3);
+  const reference = { path: `/zh/genshin/guides/${id}`, status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' },
+    fingerprint: pageFingerprint(missingHTML, 404), expectedRobots: publicRobots(missingHTML) };
+  validatePreviewResponse({ path: reference.path, response: new Response(null, { status: 404, headers: { ...reference.headers, 'x-robots-tag': 'noindex' } }), bytes: Buffer.from(missingHTML), reference });
+  validatePublicResponse(new Response(null, { status: 404, headers: reference.headers }), Buffer.from(missingHTML), reference);
+  const row = evidence.owners.genshin.observations.find(row => row.status === 404); row.status = 200;
+  const pin = save(result.evidencePath, evidence);
+  assert.throws(() => verifyRecoveryCompatibility(result.evidencePath, pin, f.input.verified));
+});
+
+test('a changed legacy guide cannot be disguised as a new missing route', async t => {
+  const f = await recoveryFixture(t), request = f.input.request;
+  f.plan.added = ['one'];
+  f.input.request = async (url, options) => new URL(url).pathname.endsWith('/one')
+    ? new Response(missingHTML, { status: 404, headers: { 'content-type': 'text/html' } }) : request(url, options);
+  await assert.rejects(prepareLocalRecovery(f.input));
 });
 
 for (const failure of ['wrong-game', 'wrong-version', 'source-tamper', 'collision', 'second-target', 'baseline-O', 'public-content', 'topology']) test(`local recovery rejects ${failure} and never authorizes cloud writes`, async t => {

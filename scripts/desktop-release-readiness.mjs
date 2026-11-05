@@ -4,8 +4,8 @@ import { join, resolve } from 'node:path';
 import { artifactFiles } from './desktop-publish.mjs';
 import { digest, pinnedJson } from './desktop-release-assets.mjs';
 import { assertTopology, reconcileRelease } from './desktop-cloud-release.mjs';
-import { exactPreviewOrigin, validatePreviewResponse } from './desktop-version-preview.mjs';
-import { recoveryBaselineSHA256 } from './desktop-published-baseline.mjs';
+import { exactPreviewOrigin, pageFingerprint, validatePreviewResponse } from './desktop-version-preview.mjs';
+import { recoveryBaselineSHA256, recoveryGuideStatuses } from './desktop-published-baseline.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 
 const SHA = /^[a-f0-9]{64}$/;
@@ -123,6 +123,7 @@ export function verifyRecoveryCompatibility(path, pin, verified) {
   assert.equal(recovery.cloudWrites, false); assert.equal(recovery.rawUuidRollbackAuthorized, false);
   assert.deepEqual(Object.keys(recovery.owners).sort(), [...plan.owners].sort());
   const publishedBaselineSHA256 = recoveryBaselineSHA256(recovery, verified);
+  const guideStatuses = recoveryGuideStatuses(recovery, verified);
   const owners = {};
   for (const owner of plan.owners) {
     const row = recovery.owners[owner]; assert.equal(row.status, 'passed'); assert.equal(row.oldVersionId, receipt.owners[owner].previousVersion);
@@ -135,7 +136,7 @@ export function verifyRecoveryCompatibility(path, pin, verified) {
     for (const observation of row.observations) {
       assert(!observations.has(observation.path), 'Duplicate recovery HTTP path');
       assert.match(observation.bodyFile, new RegExp(`^${owner}-[0-9]+\\.body$`));
-      assert.equal(observation.status, 200); assert.equal(digest(bytes(join(recovery.directory, observation.bodyFile))), observation.sha256, 'Recovery HTTP evidence changed');
+      assert.equal(observation.status, guideStatuses.get(observation.path) ?? 200); assert.equal(digest(bytes(join(recovery.directory, observation.bodyFile))), observation.sha256, 'Recovery HTTP evidence changed');
       observations.set(observation.path, observation);
     }
     for (const file of staticFiles) {
@@ -144,8 +145,17 @@ export function verifyRecoveryCompatibility(path, pin, verified) {
       assert.equal(observations.get(url)?.sha256, file.sha256, 'Recovery HTTP lacks candidate asset');
     }
     assert(observations.has('/sitemap.xml'));
+    if (owner !== 'main' && plan.added?.length) for (const locale of ['zh', 'en', 'ja']) assert(observations.has(`/${locale}/${plan.game}/guides`), 'Missing baseline guide list response');
     if (owner === 'main') assert.equal(observations.get(`/data/${plan.game}/raw-guides.json`)?.sha256, publishedBaselineSHA256, 'Recovery Main content is not baseline');
-    else for (const key of plan.changed) assert(observations.has(`/zh/${plan.game}/guides/${key}`), 'Missing baseline guide response');
+    else for (const key of plan.changed) for (const locale of plan.added?.length ? ['zh', 'en', 'ja'] : ['zh']) {
+      const path = `/${locale}/${plan.game}/guides/${key}`;
+      assert(observations.has(path), 'Missing baseline guide response');
+      if (guideStatuses.get(path) === 404) {
+        const row = observations.get(path);
+        assert(row.headers?.['content-type']?.startsWith('text/html'), 'Missing guide evidence must be HTML');
+        pageFingerprint(bytes(join(recovery.directory, row.bodyFile)).toString(), 404);
+      }
+    }
     owners[owner] = { oldVersionId: row.oldVersionId, artifactSHA256: row.artifactSHA256, staticPaths: staticFiles.length, responses: row.observations.length };
   }
   return { status: 'local_recovery_evidence_verified', owners, recoveryPin: pin, cloudRecoveryAccepted: false, rawUuidRollbackAuthorized: false, productionReady: false };

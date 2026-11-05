@@ -5,7 +5,7 @@ import { artifactFiles, localAssetPath, withLocalWorker } from './desktop-publis
 import { activeVersion, assertTopology, desktopCloudSnapshot, SERVICES } from './desktop-cloud-release.mjs';
 import { digest, pinnedJson, verifyAssetEvidence } from './desktop-release-assets.mjs';
 import { multipartModule } from './desktop-cloud-transport.mjs';
-import { verifyPublishedBaseline } from './desktop-published-baseline.mjs';
+import { recoveryGuideStatuses, verifyPublishedBaseline } from './desktop-published-baseline.mjs';
 import { verifyRecoveryCompatibility } from './desktop-release-readiness.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 import { boundedBody, exactPreviewOrigin, pageFingerprint, sampleReadOnly } from './desktop-version-preview.mjs';
@@ -169,6 +169,7 @@ export async function prepareLocalRecovery(input) {
   const { verified, directory, reader, request = fetch, serve = withLocalWorker, run } = input;
   const { plan, receipt } = verified;
   const { scope, baseline, sources, versions } = recoveryInputs(input);
+  const guideStatuses = recoveryGuideStatuses(input, verified);
   mkdirSync(directory, { mode: 0o700 });
   const result = { status: 'running', releaseKey: plan.releaseKey, owners: {}, cloudWrites: false };
   try {
@@ -197,7 +198,8 @@ export async function prepareLocalRecovery(input) {
         ...(owner === 'main' ? { d1_databases: [{ binding: 'DB', database_name: 'recovery-local-only', database_id: '00000000-0000-0000-0000-000000000000' }], r2_buckets: [{ binding: 'IMAGES', bucket_name: 'recovery-local-only' }] } : {}) };
       const configPath = join(directory, `${owner}-local.json`); save(configPath, config);
       const dynamic = owner === 'main' ? [`/data/${plan.game}/raw-guides.json`, '/sitemap.xml', '/api/auth/get-session']
-        : ['/sitemap.xml', ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
+        : ['/sitemap.xml', ...(plan.added?.length ? ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides`) : []),
+          ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
       const hashes = new Map(tree.filter(staticFile).map(file => [staticURL(file), file.sha256]));
       const observations = [], auxiliary = []; let sequence = 0;
       result.owners[owner] = { status: 'running', observations, auxiliary };
@@ -206,7 +208,7 @@ export async function prepareLocalRecovery(input) {
           const index = sequence++;
           const { body, row } = await sample(request, origin, path, directory, `${owner}-${index}.body`);
           (path.startsWith('/api/') ? auxiliary : observations).push(row);
-          assert.equal(row.status, path.startsWith('/api/') ? 404 : 200); assert(!row.headers['set-cookie']);
+          assert.equal(row.status, path.startsWith('/api/') ? 404 : (guideStatuses.get(path) ?? 200)); assert(!row.headers['set-cookie']);
           if (hashes.has(path)) assert.equal(row.sha256, hashes.get(path), 'Recovery local static bytes differ');
           else {
             const { body: remote, row: publicRow } = await sample(request, exactPreviewOrigin(scope.serviceFor(owner), versions[owner]), path, directory, `${owner}-baseline-${index}.body`);
@@ -214,7 +216,7 @@ export async function prepareLocalRecovery(input) {
             assert.equal(publicRow.status, row.status); assert(!publicRow.headers['set-cookie']);
             assert.equal(publicRow.headers['content-type']?.split(';')[0], row.headers['content-type']?.split(';')[0]);
             if (row.headers['content-type']?.startsWith('text/html')) {
-              assert.deepEqual(pageFingerprint(body.toString()), pageFingerprint(remote.toString()), 'Recovery content is not current public baseline');
+              assert.deepEqual(pageFingerprint(body.toString(), row.status), pageFingerprint(remote.toString(), publicRow.status), 'Recovery content is not current public baseline');
               assert.deepEqual(publicRobots(body.toString()), publicRobots(remote.toString()), 'Recovery HTML robots changed');
             } else assert.equal(digest(remote), row.sha256, 'Recovery baseline response differs');
           }

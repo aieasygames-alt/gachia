@@ -54,17 +54,33 @@ export async function boundedBody(response, limit = 16 * 1024 * 1024) {
 
 // Compare rendered text, metadata and media, not host-dependent Flight payloads
 // or Cloudflare transport headers. Canonical/JSON-LD still point to production.
-export function pageFingerprint(html) {
+export function pageFingerprint(html, status = 200) {
   const one = re => { const matches = [...html.matchAll(re)]; assert.equal(matches.length, 1, 'Missing/duplicate document field'); return matches[0][1]; };
   const body = one(/<body\b[^>]*>([\s\S]*?)<\/body>/g);
   const text = body.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g, '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  if (status === 404) {
+    assert.match(html, /<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/, 'Missing guide must be noindex');
+    const rendered = /<h1\b[^>]*>404<\/h1>/.test(body);
+    const streamed = body.includes('\\"digest\\":\\"NEXT_HTTP_ERROR_FALLBACK;404\\"');
+    // Next may send a noindex 404 shell whose error boundary is in Flight, not visible HTML.
+    assert(rendered || streamed, 'Expected the real missing-guide page');
+    assert(!html.includes('application/ld+json'), 'Missing guide cannot retain article structured data');
+    assert(!/<link\b[^>]*rel="canonical"/.test(html), 'Missing guide cannot retain an article canonical');
+    const titles = [...html.matchAll(/<title>([\s\S]*?)<\/title>/g)];
+    assert(titles.length <= 1, 'Duplicate missing-page title');
+    return { missingGuide: true, mode: rendered ? 'rendered' : 'flight-404', title: titles[0]?.[1] ?? null, text };
+  }
+  assert.equal(status, 200, 'Unreviewed HTML status');
   const jsonld = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
-  assert(jsonld.length > 0 && text.length > 0, 'Missing rendered content/JSON-LD');
+  assert(text.length > 0, 'Missing rendered content/JSON-LD');
   const metadata = [...html.matchAll(/<meta\b[^>]*(?:name="description"|property="og:[^"]+"|name="twitter:[^"]+")[^>]*>/g)].map(m => m[0]).sort();
   assert(metadata.some(m => m.includes('name="description"')), 'Missing description');
   const canonical = one(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"[^>]*>/g);
   assert(canonical.startsWith('https://gachia.com/'), 'Non-production canonical');
+  const guideList = /^https:\/\/gachia\.com\/(?:zh|en|ja)\/(?:genshin|nte)\/guides$/.test(canonical);
+  assert(jsonld.length > 0 || guideList, 'Missing rendered content/JSON-LD');
   return { title: one(/<title>([\s\S]*?)<\/title>/g), h1: one(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g), text, canonical, metadata, jsonld,
+    ...(guideList ? { guideLinks: [...html.matchAll(/<a\b[^>]*href="(\/(?:zh|en|ja)\/(?:genshin|nte)\/guides\/[^"?#]+)"/g)].map(m => m[1]) } : {}),
     media: [...body.matchAll(/<(?:img|source)\b[^>]*>/g)].map(m => m[0]).sort() };
 }
 
@@ -80,7 +96,7 @@ export function validatePreviewResponse({ path, response, bytes, reference }) {
   if (mime === 'application/xml' || path === '/robots.txt') assert.match(response.headers.get('x-robots-tag') ?? '', /\bnoindex\b/, 'Preview discovery must be noindex');
   if (mime === 'text/html') {
     assert.match(response.headers.get('x-robots-tag') ?? '', /\bnoindex\b/, 'Version preview must be noindex');
-    assert.deepEqual(pageFingerprint(bytes.toString()), reference.fingerprint, 'Rendered body/metadata/JSON-LD/media differ from the sealed local candidate');
+    assert.deepEqual(pageFingerprint(bytes.toString(), reference.status), reference.fingerprint, 'Rendered body/metadata/JSON-LD/media differ from the sealed local candidate');
     assert(response.headers.get('cache-control'), 'Missing HTML cache policy');
   } else if (path === '/robots.txt') {
     assert.match(bytes.toString(), /Disallow:\s*\/\s*(?:\n|$)/, 'Preview robots must disallow crawling');

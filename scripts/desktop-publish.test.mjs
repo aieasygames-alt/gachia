@@ -6,10 +6,27 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import test from 'node:test';
 import { inspectCandidate, prepareCandidate, verifyPrepared, verifyBuilt, artifactFiles, validateGuideOverlay, runOwnerStages, isolatedEnvironment, withRunLock, localAssetPath } from './desktop-publish.mjs';
+import { newGuideSource } from './desktop-guide-contract.mjs';
 import { captureGameAssets, retainCandidate, verifyRetainedCandidate } from './desktop-release-assets.mjs';
 import { previousAssetFiles } from './retain-web-assets.mjs';
 
 const sha = value => createHash('sha256').update(value).digest('hex');
+
+test('additive guide contract preserves the legacy prefix and only accepts a bounded Chinese-only suffix', () => {
+  const original = [{ id: 'legacy', title: 'O', image: '/fixed.webp' }], encode = JSON.stringify;
+  const make = id => newGuideSource('genshin', { id, title: 'New guide', summary: 'Fixture', body: 'Isolated fixture body. '.repeat(6) }).guide;
+  const one = make('cms-one'), two = make('cms-two');
+  assert.deepEqual(validateGuideOverlay(encode(original), encode([...original, one])).added, ['cms-one']);
+  assert.deepEqual(validateGuideOverlay(encode([...original, one]), encode([...original, one, two])).changed, ['cms-two']);
+  for (const rows of [[one, ...original], [...original, one, one], [...original, two, one], [...original, { ...one, image: '/new.webp' }],
+    [...original, { ...one, id: 'legacy' }], [...original, { ...one, content: '</script>' + one.content }],
+    [...original, { ...one, titleEn: 'Incomplete translation' }], [...original, { ...one, cmsOrigin: 'forged' }]]) {
+    assert.throws(() => validateGuideOverlay(encode(original), encode(rows)));
+  }
+  assert.throws(() => validateGuideOverlay(encode(original), encode([...original, one]), 'nte'), /only for Genshin/);
+  assert.throws(() => validateGuideOverlay(encode([...original, one]), encode(original)), /deletions/);
+  assert.throws(() => validateGuideOverlay(encode([...original, one]), encode([...original, { ...one, summary: 'Metadata mutation' }])), /metadata/);
+});
 function fixture(t, { game = 'genshin', changed = true, preview = true } = {}) {
   const root = realpathSync(mkdtempSync(join(tmpdir(), 'cms-release-')));
   t.after(() => rmSync(root, { recursive: true, force: true }));
@@ -36,6 +53,23 @@ for (const game of ['genshin', 'nte']) test(`${game}: derive Main and game owner
   assert.deepEqual(plan.owners, [game, 'main']);
   assert.equal(plan.productionReady, false); assert.equal(plan.cloudWrites, false);
   assert.equal(plan.status, 'preview_candidate');
+});
+
+test('inspect and frozen preparation bind the explicit added inventory to both owner inputs', t => {
+  const f = fixture(t, { preview: true, changed: false });
+  const guide = newGuideSource('genshin', { id: 'cms-inspect', title: 'Isolated new guide', summary: 'Fixture', body: 'Isolated content. '.repeat(8) }).guide;
+  const content = JSON.stringify([...f.original, guide]) + '\n';
+  const manifest = { ...f.manifest, candidateSHA256: sha(content), changed: [guide.id], added: [guide.id], guideContract: 'additive-v1' };
+  manifest.releaseKey = sha(JSON.stringify({ game: manifest.game, source: manifest.sourceSHA256, candidate: manifest.candidateSHA256, preview: true }));
+  writeFileSync(join(f.directory, 'raw-guides.json'), content);
+  writeFileSync(join(f.directory, 'manifest.json'), JSON.stringify(manifest));
+  const plan = inspectCandidate(f); assert.deepEqual(plan.added, [guide.id]); assert.equal(plan.guideContract, 'additive-v1');
+  const prepared = prepareCandidate({ ...f, runs: join(f.root, 'runs') });
+  for (const path of f.paths) assert.equal(readFileSync(join(prepared.directory, 'source', path), 'utf8'), content);
+  for (const patch of [{ added: [] }, { guideContract: 'unknown' }, { changed: [] }]) {
+    writeFileSync(join(f.directory, 'manifest.json'), JSON.stringify({ ...manifest, ...patch }));
+    assert.throws(() => inspectCandidate(f));
+  }
 });
 
 test('unchanged import is a no-op and cannot create a build', t => {
@@ -84,7 +118,7 @@ test('links cannot substitute candidate inputs', t => {
   assert.throws(() => inspectCandidate(f), /Symlink/);
 });
 
-test('overlay forbids new IDs, order changes, media, hidden fields and non-text edits', () => {
+test('overlay forbids uncontracted IDs, order changes, media, hidden fields and non-text edits', () => {
   const original = [{ id: 'one', title: 'One', image: 'keep' }, { id: 'two', title: 'Two', image: 'keep' }];
   for (const edited of [[], [...original].reverse(), [{ ...original[0], id: 'other' }, original[1]],
     [{ ...original[0], image: 'new' }, original[1]], [{ ...original[0], secret: 'x' }, original[1]],

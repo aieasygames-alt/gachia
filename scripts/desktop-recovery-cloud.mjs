@@ -8,7 +8,7 @@ import { digest, pinnedJson, verifiedInPass, verifyRetainedCandidate, withVerifi
 import { withLocalWorker, withRunLock } from './desktop-publish.mjs';
 import { assertTopology } from './desktop-cloud-release.mjs';
 import { boundedBody, pageFingerprint } from './desktop-version-preview.mjs';
-import { recoveryBaselineSHA256 } from './desktop-published-baseline.mjs';
+import { recoveryBaselineSHA256, recoveryGuideStatuses } from './desktop-published-baseline.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
 
 const json = x => JSON.stringify(x, null, 2) + '\n';
@@ -25,6 +25,7 @@ export async function prepareRecoveryCloud(input) {
   return withRunLock(input.run, async () => {
     const { candidate, recovery, retained } = inputs(input), { plan } = candidate;
     const publishedBaselineSHA256 = recoveryBaselineSHA256(recovery, retained);
+    const guideStatuses = recoveryGuideStatuses(recovery, retained);
     assertTopology(candidate.manifest.snapshot, input.snapshot);
     const id = randomBytes(8).toString('hex'), directory = join(input.run, 'recovery-bundles', id), temp = join(input.run, `recovery-temp-${id}`);
     mkdirSync(directory, { recursive: true, mode: 0o700 }); mkdirSync(temp, { mode: 0o700 });
@@ -35,7 +36,8 @@ export async function prepareRecoveryCloud(input) {
       const inventory = pinnedJson(join(recovery.directory, `${owner}-inventory.json`), recovery.owners[owner].artifactSHA256);
       const hashes = new Map(inventory.filter(row => row.type === 'file' && (row.path.startsWith('assets/_next/static/') || row.path.startsWith(`assets/_games/${owner}/_next/static/`))).map(row => ['/' + row.path.slice(7).split('/').map(encodeURIComponent).join('/'), row.sha256]));
       const paths = owner === 'main' ? [`/data/${plan.game}/raw-guides.json`, '/sitemap.xml', '/robots.txt', '/api/auth/get-session']
-        : ['/sitemap.xml', '/robots.txt', ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
+        : ['/sitemap.xml', '/robots.txt', ...(plan.added?.length ? ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides`) : []),
+          ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
       const preserved = owner === 'main' && plan.preservedGuides ? pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin) : undefined;
       const preservedPath = preserved && `/data/${preserved.otherGame}/raw-guides.json`;
       if (preserved) paths.push(preservedPath);
@@ -47,16 +49,17 @@ export async function prepareRecoveryCloud(input) {
         const rows = [];
         for (const path of paths) {
           const response = await fetch(origin + path, { redirect: 'error', signal: AbortSignal.timeout(30000) }), body = await boundedBody(response);
-          assert.equal(response.status, path.startsWith('/api/auth/') ? 404 : 200);
+          assert.equal(response.status, path.startsWith('/api/auth/') ? 404 : (guideStatuses.get(path) ?? 200));
           const row = { path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(body) };
           if (path === preservedPath) row.preservedMainVersion = preserved.mainVersionId;
           if (hashes.has(path)) assert.equal(row.sha256, hashes.get(path), 'Recovery static HTTP changed');
           if (path.startsWith('/data/')) assert.equal(row.sha256, path === preservedPath ? preserved.sha256 : publishedBaselineSHA256, 'Recovery must serve the previous published JSON');
           if (path.startsWith('/api/auth/')) { assert.equal(JSON.parse(body).code, 'ACCOUNT_FEATURES_DISABLED'); assert.match(row.headers['cache-control'], /no-store/); }
-          if (row.headers['content-type']?.startsWith('text/html')) row.fingerprint = pageFingerprint(body.toString());
+          if (row.headers['content-type']?.startsWith('text/html')) row.fingerprint = pageFingerprint(body.toString(), row.status);
           const old = recovery.owners[owner].observations.find(x => x.path === path);
           if (old) {
-            if (row.fingerprint) assert.deepEqual(row.fingerprint, pageFingerprint(readFileSync(join(recovery.directory, old.bodyFile), 'utf8')), 'Recovery rendered baseline changed');
+            assert.equal(row.status, old.status, 'Recovery status differs from original evidence');
+            if (row.fingerprint) assert.deepEqual(row.fingerprint, pageFingerprint(readFileSync(join(recovery.directory, old.bodyFile), 'utf8'), old.status), 'Recovery rendered baseline changed');
             else assert.equal(row.sha256, old.sha256, 'Recovery response differs from original recovery evidence');
           }
           writeFileSync(join(ownerDir, `${rows.length}.body`), body, { flag: 'wx', mode: 0o600 }); rows.push(row);

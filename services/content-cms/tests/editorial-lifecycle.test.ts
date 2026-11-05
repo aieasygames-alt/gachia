@@ -5,6 +5,7 @@ import test from 'node:test'
 import { cmsEnvironment } from '../src/cms-environment'
 import { exportDesktopGuides } from '../src/desktop-export'
 import { localEnvironment } from '../src/local-environment'
+import { desktopNewGuideDraft } from '../src/desktop-new-guide'
 
 test('editorial publication lifecycle protects approved revisions', async t => {
   const postgres = process.env.CMS_MODE === 'postgres-local'
@@ -121,6 +122,27 @@ test('editorial publication lifecycle protects approved revisions', async t => {
       const unpublished = await read(record.id)
       assert.equal(unpublished._status, 'draft')
       assert.throws(() => exportDesktopGuides(text, 'genshin', [unpublished], false), /Unapproved/)
+    })
+
+    await t.test('authenticated editors create new drafts, reviewers approve, identity stays immutable', async () => {
+      const input = { id: 'cms-isolated-creation', title: 'Isolated new guide', summary: 'Private test fixture', body: 'Isolated new guide content for the real Payload lifecycle. '.repeat(4) }
+      const record = await payload.create({ collection: 'content-records', user: editor, overrideAccess: false, draft: true, locale: 'zh',
+        data: desktopNewGuideDraft('genshin', game.id, input) })
+      assert.equal(record.hold, true); assert.equal(record._status, 'draft')
+      await assert.rejects(payload.update({ collection: 'content-records', id: record.id, user: editor, overrideAccess: false, draft: true,
+        data: { legacyId: 'cms-renamed' } }), /immutable/)
+      await assert.rejects(payload.update({ collection: 'content-records', id: record.id, user: reviewer, overrideAccess: false,
+        data: { sourceRecord: original } }), /immutable/)
+      await assert.rejects(payload.update({ collection: 'content-records', id: record.id, user: editor, overrideAccess: false, draft: true,
+        data: { _status: 'published', hold: false } }), forbidden)
+      await payload.update({ collection: 'content-records', id: record.id, user: reviewer, overrideAccess: false,
+        data: { _status: 'published', hold: false } })
+      const exported = exportDesktopGuides(JSON.stringify([original]), 'genshin', [await read(record.id)], false)
+      assert.equal(JSON.parse(exported.content)[1].title, input.title)
+      assert.deepEqual(exported.manifest.added, [input.id])
+      await payload.update({ collection: 'content-records', id: record.id, user: editor, overrideAccess: false, draft: true, locale: 'zh',
+        data: { body: input.body + ' Private draft B' } })
+      assert.equal(exportDesktopGuides(JSON.stringify([original]), 'genshin', [await read(record.id)], false).content, exported.content)
     })
   } finally {
     await payload.destroy()

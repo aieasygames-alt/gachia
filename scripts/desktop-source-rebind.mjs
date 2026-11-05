@@ -39,7 +39,7 @@ function inputs(input) {
   const normalize = reference => {
     assert(!reference.headers['set-cookie']); assert.equal(digest(reference.body), reference.sha256);
     return { path: reference.path, status: reference.status, headers: reference.headers, sha256: reference.sha256,
-      ...(reference.headers['content-type']?.startsWith('text/html') ? { fingerprint: pageFingerprint(reference.body.toString()), expectedRobots: publicRobots(reference.body.toString()) } : {}) };
+      ...(reference.headers['content-type']?.startsWith('text/html') ? { fingerprint: pageFingerprint(reference.body.toString(), reference.status), expectedRobots: publicRobots(reference.body.toString()) } : {}) };
   };
   // Recovery trees may include forward-only candidate chunks. Only the pinned
   // current-game capture claims those statics exist on the unchanged cloud UUID.

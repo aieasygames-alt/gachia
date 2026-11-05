@@ -34,7 +34,7 @@ export function publicReferences(owner, references, game = owner === 'main' ? 'g
       if (path === '/robots.txt') continue; // Main owns the public robots document.
       if (path === '/sitemap.xml') publicPath = `/sitemaps/${game}/index.xml`;
       else if (path.startsWith('/_next/static/')) publicPath = `/_games/${game}` + path;
-      else assert(path.startsWith(`/_games/${game}/_next/static/`) || new RegExp(`^/(zh|en|ja)/${game}/guides/[^/]+$`).test(path), 'Unexpected game public route');
+      else assert(path.startsWith(`/_games/${game}/_next/static/`) || new RegExp(`^/(zh|en|ja)/${game}/guides(?:/[^/]+)?$`).test(path), 'Unexpected game public route');
     } else {
       const other = game === 'genshin' ? 'nte' : 'genshin';
       const preserved = path === `/data/${other}/raw-guides.json` && /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(reference.preservedMainVersion ?? '');
@@ -56,12 +56,12 @@ export function validatePublicResponse(response, body, reference) {
   assert.equal(mime, reference.headers['content-type']?.split(';')[0], 'Public MIME changed');
   const policy = value => (value ?? '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean).sort();
   assert.deepEqual(policy(response.headers.get('cache-control')), policy(reference.headers['cache-control']), 'Public cache policy changed');
-  if (mime === 'text/html' || mime === 'application/xml' || reference.path === '/robots.txt') assert(!/\bnoindex\b/i.test(response.headers.get('x-robots-tag') ?? ''), 'Public discovery must be indexable');
+  if ((mime === 'text/html' && reference.status !== 404) || mime === 'application/xml' || reference.path === '/robots.txt') assert(!/\bnoindex\b/i.test(response.headers.get('x-robots-tag') ?? ''), 'Public discovery must be indexable');
   if (mime === 'text/html') {
     const html = body.toString();
     assert(Array.isArray(reference.expectedRobots), 'Sealed HTML robots evidence required');
     assert.deepEqual(publicRobots(html), reference.expectedRobots, 'Public HTML robots policy changed');
-    assert.deepEqual(pageFingerprint(html), reference.fingerprint, 'Public rendered content differs');
+    assert.deepEqual(pageFingerprint(html, reference.status), reference.fingerprint, 'Public rendered content differs');
   }
   else if (reference.path === '/robots.txt') {
     assert.equal(digest(body.subarray(0, ROBOTS_PREFIX_BYTES)), ROBOTS_PREFIX_SHA256, 'Managed robots prefix changed');

@@ -193,7 +193,8 @@ export async function prepareCloudBundle({ run, pin, retentionId, retentionPin, 
         ...(owner === 'main' ? { d1_databases: [{ binding: 'DB', database_name: 'local-only', database_id: '00000000-0000-0000-0000-000000000000' }], r2_buckets: [{ binding: 'IMAGES', bucket_name: 'local-only' }] } : {}) };
       const localConfig = join(temp, `${owner}-local.json`); save(localConfig, local);
       const paths = owner === 'main' ? [`/data/${plan.game}/raw-guides.json`, '/sitemap.xml', '/robots.txt', '/api/auth/get-session']
-        : ['/sitemap.xml', '/robots.txt', ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
+        : ['/sitemap.xml', '/robots.txt', ...(plan.added?.length ? ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides`) : []),
+          ...plan.changed.flatMap(key => ['zh', 'en', 'ja'].map(lang => `/${lang}/${plan.game}/guides/${key}`))];
       const dataHashes = guideDataHashes(plan);
       if (owner === 'main' && plan.preservedGuides) {
         const preserved = pinnedJson(plan.preservedGuides.path, plan.preservedGuides.pin);

@@ -6,6 +6,7 @@ import test from 'node:test';
 import { capturePublishedBaseline, recoveryBaselineSHA256, verifyPublishedBaseline, validatePublishedGuideUpdate, verifyPublishedGuideUpdate } from './desktop-published-baseline.mjs';
 import { SERVICES } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
+import { newGuideSource } from './desktop-guide-contract.mjs';
 
 const uuid = n => `00000000-0000-0000-0000-${String(n).padStart(12, '0')}`;
 function fixture(t) {
@@ -52,6 +53,17 @@ test('baseline is bound to prior versions and saved bodies; real releases cannot
 });
 
 const encode = rows => JSON.stringify(rows);
+
+test('successive additions and edits preserve public CMS-born records without requiring fake import provenance', () => {
+  const original = [{ id: 'legacy', title: 'O' }];
+  const one = newGuideSource('genshin', { id: 'cms-one', title: 'New guide', summary: 'Fixture', body: 'Isolated content. '.repeat(8) }).guide;
+  const another = { ...one, id: 'cms-another' }, published = [...original, one];
+  const candidate = [...original, another, { ...one, title: 'Updated guide' }];
+  assert.deepEqual(validatePublishedGuideUpdate(encode(original), encode(published), encode(candidate)).added, ['cms-another']);
+  assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode([...original, another])), /identity\/order/);
+  assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode([...original, { ...one, summary: 'Changed metadata' }])), /metadata/);
+  assert.throws(() => validatePublishedGuideUpdate(encode(original), encode(published), encode(published)), /unchanged/);
+});
 const fields = ['title', 'titleEn', 'titleJa', 'content', 'contentEn', 'contentJa'];
 for (const field of fields) test(`published ${field} cannot revert to O while a different field or guide changes`, () => {
   const original = [{ id: 'one', [field]: 'O' }, { id: 'two', title: 'Other O' }];

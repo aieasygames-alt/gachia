@@ -8,11 +8,12 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { verifyWorkerArtifact } from './verify-worker-artifact.mjs';
 import { verifyPreservedGuides } from './desktop-source-catalog.mjs';
 import { verifiedInPass, withVerificationPass } from './desktop-release-assets.mjs';
+import { CMS_GUIDE_ORIGIN, GUIDE_TEXT_FIELDS, validateNewGuide } from './desktop-guide-contract.mjs';
 
 const hash = value => createHash('sha256').update(value).digest('hex');
 const SHA = /^[a-f0-9]{64}$/;
 const COMMIT = /^[a-f0-9]{40}$/;
-const EDITABLE = new Set(['title', 'titleEn', 'titleJa', 'content', 'contentEn', 'contentJa']);
+const EDITABLE = new Set(GUIDE_TEXT_FIELDS);
 const ROOT = join(homedir(), 'Library/Application Support/GachiaCMS');
 // The existing game configs use URL.pathname for tracing roots. Keep the frozen
 // source outside Application Support so spaces cannot become literal "%20" paths.
@@ -27,14 +28,29 @@ function regular(file) {
   return readFileSync(file);
 }
 
-export function validateGuideOverlay(originalText, candidateText) {
+export function validateGuideOverlay(originalText, candidateText, game = 'genshin') {
   const original = JSON.parse(originalText), candidate = JSON.parse(candidateText);
-  assert(Array.isArray(original) && Array.isArray(candidate) && original.length === candidate.length, 'Guide additions/deletions require a separate contract');
-  const seen = new Set(), changed = [];
-  original.forEach((row, i) => {
-    const next = candidate[i];
-    assert(row && next && typeof row.id === 'string' && /^[a-z0-9-]+$/.test(row.id) && !seen.has(row.id), 'Invalid guide identity');
-    seen.add(row.id);
+  assert(Array.isArray(original) && Array.isArray(candidate) && original.length <= candidate.length, 'Guide deletions require a separate contract');
+  const identities = rows => {
+    const seen = new Set();
+    for (const row of rows) {
+      assert(row && typeof row.id === 'string' && /^[a-z0-9-]+$/.test(row.id) && !seen.has(row.id), 'Invalid guide identity');
+      seen.add(row.id);
+    }
+    return seen;
+  };
+  const oldIds = identities(original); identities(candidate);
+  // Keep the legacy prefix and relative order of already accepted CMS additions.
+  assert.deepEqual(candidate.filter(row => oldIds.has(row.id)).map(row => row.id), original.map(row => row.id), 'Guide identity/order/media/metadata must stay fixed');
+  const changed = [], added = [], byId = new Map(original.map(row => [row.id, row]));
+  let newSuffix = false, last = '';
+  candidate.forEach((next, i) => {
+    const row = byId.get(next.id);
+    if (!row || row.cmsOrigin === CMS_GUIDE_ORIGIN) {
+      validateNewGuide(next, game); newSuffix = true;
+      assert(next.id > last, 'CMS guide suffix must have deterministic identity order'); last = next.id;
+    } else assert(!newSuffix && original[i]?.id === next.id, 'Guide identity/order/media/metadata must stay fixed');
+    if (!row) { added.push(next.id); changed.push(next.id); return; }
     const fixed = value => Object.fromEntries(Object.entries(value).filter(([key]) => !EDITABLE.has(key)));
     assert.deepEqual(fixed(next), fixed(row), 'Only existing guide text fields may change; identity/order/media/metadata must stay fixed');
     for (const field of EDITABLE) if (!Object.is(row[field], next[field])) {
@@ -45,7 +61,7 @@ export function validateGuideOverlay(originalText, candidateText) {
       if ([...EDITABLE].some(field => !Object.is(row[field], next[field]))) changed.push(row.id);
     }
   });
-  return { original, candidate, changed };
+  return { original, candidate, changed, added };
 }
 
 export function inspectCandidate({ repo, directory, commit = 'HEAD' }) {
@@ -67,13 +83,17 @@ export function inspectCandidate({ repo, directory, commit = 'HEAD' }) {
   assert.equal(hash(candidateBytes), manifest.candidateSHA256, 'Candidate digest mismatch');
   const releaseKey = hash(JSON.stringify({ game, source: hash(source), candidate: hash(candidateBytes), preview: manifest.preview }));
   assert.equal(manifest.releaseKey, releaseKey, 'Release identity mismatch');
-  const overlay = validateGuideOverlay(source.toString(), candidateBytes.toString());
+  const overlay = validateGuideOverlay(source.toString(), candidateBytes.toString(), game);
+  if (overlay.added.length) {
+    assert.equal(manifest.guideContract, 'additive-v1', 'Explicit additive guide contract required');
+    assert.deepEqual(manifest.added, overlay.added, 'Added guide inventory mismatch');
+  } else assert(!manifest.added?.length, 'Invented guide additions');
   assert.deepEqual([...manifest.changed].sort(), [...overlay.changed].sort(), 'Changed-record inventory mismatch');
   const ownership = JSON.parse(git(repo, ['show', `${sourceCommit}:packages/core/route-ownership.json`]));
   assert(ownership.games[game]?.pages.includes('guides') && ownership.games[game]?.details.includes('guides'), 'Guide routing contract changed');
   return { schemaVersion: 1, releaseKey, sourceCommit, game, preview: manifest.preview,
     candidateManifestSHA256: hash(manifestBytes), sourceSHA256: hash(source), candidateSHA256: hash(candidateBytes),
-    changed: overlay.changed, sourcePaths: [sourcePath, mirrorPath],
+    changed: overlay.changed, ...(overlay.added.length ? { added: overlay.added, guideContract: 'additive-v1' } : {}), sourcePaths: [sourcePath, mirrorPath],
     // Main serves the public JSON even when the guide HTML belongs to the game Worker.
     owners: [game, 'main'], services: [`gachia-game-${game}`, 'gachia'],
     status: overlay.changed.length ? (manifest.preview ? 'preview_candidate' : 'editorial_candidate') : 'no_changes',
@@ -106,7 +126,7 @@ export function prepareCandidate({ repo, directory, runs, commit = 'HEAD', prese
   if (preserved) {
     const [source, mirror] = preserved.proof.paths.map(path => git(repo, ['show', `${plan.sourceCommit}:${path}`]));
     assert(source.equals(mirror), 'Non-target committed source/public mirror drift');
-    validateGuideOverlay(source.toString(), preserved.body.toString());
+    validateGuideOverlay(source.toString(), preserved.body.toString(), preserved.proof.otherGame);
   }
   mkdirSync(runs, { recursive: true, mode: 0o700 });
   const runId = `${plan.releaseKey.slice(0, 16)}-${randomBytes(6).toString('hex')}`;
@@ -370,6 +390,19 @@ async function previewUnlocked(run, pin, retained) {
             const jsonld = [...page.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)];
             assert(jsonld.length > 0, 'Missing JSON-LD');
             jsonld.forEach(match => JSON.parse(match[1]));
+            if (plan.added?.includes(id)) {
+              assert(xml.includes(`<loc>https://gachia.com/zh/${plan.game}/guides/${id}</loc>`), 'New Chinese guide missing from sitemap');
+              for (const locale of ['zh', 'en', 'ja']) {
+                const list = (await get(`/${locale}/${plan.game}/guides`)).toString();
+                assert(list.includes(`href="/${locale}/${plan.game}/guides/${id}"`), 'New guide missing from guide list');
+                if (locale !== 'zh') {
+                  const fallback = (await get(`/${locale}/${plan.game}/guides/${id}`)).toString();
+                  assert.match(fallback, /<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/, 'Incomplete translation must be noindex');
+                  assert(fallback.includes('data-guide-fallback') && fallback.includes(escaped), 'Missing readable source-language fallback');
+                  assert(!xml.includes(`<loc>https://gachia.com/${locale}/${plan.game}/guides/${id}</loc>`), 'Incomplete translation leaked into sitemap');
+                }
+              }
+            }
             const assets = [...new Set([...page.matchAll(/(?:src|href)="([^"?]+\.(?:js|css))(?:\?[^"]*)?"/g)].map(match => match[1]))].filter(value => value.startsWith('/'));
             assert(assets.length > 0, 'Missing rendered static assets');
             for (const asset of assets) {

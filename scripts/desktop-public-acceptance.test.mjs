@@ -12,6 +12,17 @@ import { verifyRecoveryCloud } from './desktop-recovery-cloud.mjs';
 const html = '<html><head><title>Old guide</title><meta name="description" content="Old body"/><link rel="canonical" href="https://gachia.com/zh/genshin/guides/one"/></head><body><h1>Old guide</h1><p>Old body</p><script type="application/ld+json">{"name":"Old guide"}</script></body></html>';
 const reference = { path: '/zh/genshin/guides/one', status: 200, headers: { 'content-type': 'text/html', 'cache-control': 's-maxage=31536000' }, sha256: digest(html), fingerprint: pageFingerprint(html), expectedRobots: [] };
 
+test('guide-list fingerprints bind actual article links, not just visible card text', () => {
+  const list = '<html><head><title>Guides</title><meta name="description" content="Guides"/><link rel="canonical" href="https://gachia.com/zh/genshin/guides"/></head><body><h1>Guides</h1><a href="/zh/genshin/guides/cms-new">New guide</a></body></html>';
+  const fingerprint = pageFingerprint(list);
+  assert.deepEqual(fingerprint.guideLinks, ['/zh/genshin/guides/cms-new']);
+  const row = { ...reference, path: '/zh/genshin/guides', fingerprint };
+  assert.equal(publicReferences('genshin', [row])[0].path, row.path);
+  assert.throws(() => validatePublicResponse(new Response(null, { status: 200, headers: row.headers }),
+    Buffer.from(list.replace('/guides/cms-new', '/guides/wrong-target')), row), /rendered content differs/);
+  assert.throws(() => pageFingerprint(list.replace('href="https://gachia.com/zh/genshin/guides"', 'href="https://gachia.com/zh/genshin/guides/cms-new"')), /JSON-LD/);
+});
+
 test('NTE public references use their own sitemap, Router assets and guide routes', () => {
   const rows = publicReferences('nte', ['/sitemap.xml', '/robots.txt', '/_next/static/a.js', '/zh/nte/guides/one'].map(path => ({ ...reference, path })));
   assert.deepEqual(rows.map(row => row.path), ['/sitemaps/nte/index.xml', '/_games/nte/_next/static/a.js', '/zh/nte/guides/one']);

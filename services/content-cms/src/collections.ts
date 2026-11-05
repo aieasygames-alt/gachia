@@ -5,6 +5,7 @@ import { MAX_SNAPSHOT_BYTES } from './legacy-intake'
 import { reviewCollections } from './review-collections'
 import { draftMergeCollections } from './draft-merge-collections'
 import { mergeWorkflowEvents } from './merge-workflow-events'
+import { isDesktopNewGuide, validateDesktopNewGuideIdentity } from './desktop-new-guide'
 
 const hasRole = (user: unknown, roles: string[]) => {
   if (!user || typeof user !== 'object' || !('role' in user)) return false
@@ -130,10 +131,18 @@ export function collections(directory: string, options: { secureCookies?: boolea
           }
           return args
         }],
-        beforeChange: [({ data, req }) => {
+        beforeChange: [async ({ data, req, originalDoc, operation }) => {
           // Editorial publication is not authorization to activate a website release.
           if (data._status === 'published' && !hasRole(req.user, ['admin', 'reviewer'])) {
             throw new APIError('Only a reviewer can mark editorial content published.', 403)
+          }
+          const next = { ...originalDoc, ...data }
+          if (isDesktopNewGuide(next) || (originalDoc && isDesktopNewGuide(originalDoc))) {
+            try { validateDesktopNewGuideIdentity(next, operation === 'create' ? undefined : originalDoc) }
+            catch { throw new APIError('New guide identity and source template must match the immutable Genshin contract.', 400) }
+            const gameId = typeof next.game === 'object' ? next.game?.id : next.game
+            const game = await req.payload.findByID({ collection: 'games', id: gameId, depth: 0, req, overrideAccess: false })
+            if (game.key !== 'genshin') throw new APIError('New guide game relationship mismatch.', 400)
           }
           return data
         }],

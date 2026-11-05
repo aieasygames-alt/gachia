@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict'
+import { desktopNewGuideDraft } from '../src/desktop-new-guide'
+import { exportDesktopGuides } from '../src/desktop-export'
 
 export async function checkEditorialHTTP(base: string, adminToken: string, password: string, databaseURL: string) {
   assert.equal(new URL(databaseURL).hostname, '127.0.0.1')
@@ -61,6 +63,28 @@ export async function checkEditorialHTTP(base: string, adminToken: string, passw
   assert.equal((await read()).title, 'Draft B')
   assert.equal((await read('?draft=false&locale=en')).title, 'English draft B')
   checks.push('localized editor drafts preserve approved A; explicit reviewer publication advances both locales to B')
+
+  const newGame = await request('/api/games', 'POST', { key: 'genshin', name: 'Isolated new-guide HTTP', region: 'test', legacyRegistry: {} })
+  assert.equal(newGame.response.status, 201)
+  const newInput = { id: 'cms-http-fixture', title: 'Private new-guide fixture', summary: 'Isolated HTTP contract', body: 'Actual authenticated HTTP creation and approval. '.repeat(5) }
+  const newData = desktopNewGuideDraft('genshin', newGame.body.doc.id, newInput)
+  const newDraft = await request('/api/content-records?draft=true&locale=zh', 'POST', newData, editor.token)
+  assert.equal(newDraft.response.status, 201); assert.equal(newDraft.body.doc.hold, true); assert.equal(newDraft.body.doc._status, 'draft')
+  const duplicate = await request('/api/content-records?draft=true&locale=zh', 'POST', newData, editor.token)
+  assert.equal(duplicate.response.status, 400)
+  const newRoute = `/api/content-records/${newDraft.body.doc.id}`
+  assert.equal((await request(newRoute, 'PATCH', { _status: 'published', hold: false }, editor.token)).response.status, 403)
+  assert.equal((await request(newRoute + '?draft=true', 'PATCH', { legacyId: 'cms-renamed' }, editor.token)).response.status, 400)
+  assert.equal((await request(newRoute, 'PATCH', { _status: 'published', hold: false }, reviewer.token)).response.status, 200)
+  const approvedNew = await request(newRoute + '?draft=false&locale=all&depth=0')
+  assert.equal(approvedNew.response.status, 200)
+  const newExport = exportDesktopGuides('[]', 'genshin', [approvedNew.body], false)
+  assert.equal(JSON.parse(newExport.content)[0].content, newInput.body)
+  const wrongGame = await request('/api/content-records?draft=true&locale=zh', 'POST', { ...newData, stableKey: 'genshin:guides:cms-wrong-game',
+    legacyId: 'cms-wrong-game', legacyPath: '/genshin/guides/cms-wrong-game', game: game.body.doc.id,
+    sourceRecord: desktopNewGuideDraft('genshin', newGame.body.doc.id, { ...newInput, id: 'cms-wrong-game' }).sourceRecord }, editor.token)
+  assert.equal(wrongGame.response.status, 400)
+  checks.push('new Genshin guide HTTP: editor draft, unique identity, denied editor approval/identity changes, reviewer publish, formal export, wrong-game denial')
 
   const lock = await request('/api/payload-locked-documents', 'POST', { document: { relationTo: 'content-records', value: id },
     user: { relationTo: 'users', value: editor.id } }, editor.token)

@@ -197,7 +197,7 @@ async function currentBytes({ plan, sources, versions, reader, request, director
       assert.equal(response.status, reference.status); assert(!response.headers.has('set-cookie'));
       assert.equal(mime, reference.headers['content-type']?.split(';')[0]);
       assert.deepEqual(policy(response.headers.get('cache-control')), policy(reference.headers['cache-control']), 'Historical source cache policy changed');
-      if (mime === 'text/html') assert.deepEqual(pageFingerprint(bytes.toString()), pageFingerprint(reference.body.toString()), 'Historical rendered source is not current');
+      if (mime === 'text/html') assert.deepEqual(pageFingerprint(bytes.toString(), reference.status), pageFingerprint(reference.body.toString(), reference.status), 'Historical rendered source is not current');
       else assert.equal(digest(bytes), reference.sha256, 'Historical source response differs from current');
     }
     if (mime === 'text/html') assert.deepEqual(publicRobots(bytes.toString()), publicRobots(reference.body.toString()));
@@ -209,7 +209,7 @@ async function currentBytes({ plan, sources, versions, reader, request, director
 // The catalog is a private index of already verified inputs, not a new approval.
 // Its fixed game/Main UUID key never advances itself after a deployment.
 export async function registerSourceCatalog({ root, directory, verified, recovery, reader, request = fetch }) {
-  const origin = { plan: { game: verified.plan.game, owners: verified.plan.owners, changed: verified.plan.changed,
+  const origin = { plan: { game: verified.plan.game, owners: verified.plan.owners, changed: verified.plan.changed, ...(verified.plan.added ? { added: verified.plan.added } : {}),
     releaseKey: verified.plan.releaseKey, preview: verified.plan.preview, sourceSHA256: verified.plan.sourceSHA256 },
     receipt: verified.receipt, directory: verified.directory, retentionPin: verified.retentionPin };
   return registerOrigin({ root, directory, origin, assets: { path: verified.receipt.evidencePath, pin: verified.receipt.evidencePin }, recovery, reader, request });
