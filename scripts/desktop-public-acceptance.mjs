@@ -43,7 +43,7 @@ export function publicReferences(owner, references, game = owner === 'main' ? 'g
     assert.equal(new URL(publicPath, 'https://gachia.com').pathname, publicPath, 'Public path normalization forbidden');
     if (mapped.has(publicPath)) assert.equal(mapped.get(publicPath).sha256, reference.sha256, 'Conflicting public asset references');
     else mapped.set(publicPath, { ...reference, path: publicPath, headers: { ...reference.headers,
-      ...(owner !== 'main' && reference.headers['content-type']?.startsWith('text/html') ? { 'cache-control': GAME_HTML_CACHE } : {}) } });
+      ...(owner !== 'main' && reference.status === 200 && reference.headers['content-type']?.startsWith('text/html') ? { 'cache-control': GAME_HTML_CACHE } : {}) } });
   }
   assert(mapped.size > 0 && mapped.size <= 2500, 'Invalid public coverage');
   return [...mapped.values()];

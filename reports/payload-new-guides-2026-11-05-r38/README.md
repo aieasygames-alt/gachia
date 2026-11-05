@@ -25,7 +25,7 @@
 
 本机最终CMS **179/179**、typecheck、CMS production build通过。隔离PostgreSQL 17.6、非超级用户/禁schema push、重复迁移及构建后真实HTTP共12组通过，涵盖新建草稿、重复ID拒绝、editor批准/改身份拒绝、reviewer批准、正式导出、错误game拒绝，以及旧锁/restore/logout/私有媒体和故障503。
 
-最终发布工具 **813/813**、其余Node **304/304**、Python **49/49**通过；新增/前向/恢复定向 **68/68**通过，包含旧文章不能伪装新增404、404证据不能改200、缺noindex/带文章canonical/JSON-LD拒绝、连续新增/编辑/缺记录拒绝等。新增列表链接的篡改回归另纳入813总数。
+最终发布工具 **814/814**、其余Node **304/304**、Python **49/49**通过；新增/前向/恢复定向 **68/68**通过，包含旧文章不能伪装新增404、404证据不能改200、缺noindex/带文章canonical/JSON-LD拒绝、连续新增/编辑/缺记录拒绝等。新增列表链接的篡改与Router只重写200 HTML缓存的回归另纳入814总数。
 
 真实Genshin+Main双owner构建完成；最终本地候选HTTP **19响应**（Genshin16/Main3）通过，另以R36已接受Genshin制品副本执行旧版HTTP **7响应**，三语言新URL均404。旧制品原件与副本前后SHA保持。最后一次验收保存全部响应body/headers，前置失败记录不覆盖。
 
@@ -39,6 +39,7 @@
 2. CMS首次构建失败：Next独立根不能解析仓库根scripts合约。改为独立根各带同字节合约、测试强制同步；第二次CMS production build与实际PG/HTTP通过，不扩大Next追踪根到整个仓库。
 3. 首次旧Worker404取证失败：真实Next 404以Flight错误边界返回，无直接h1；校验改为识别精确404 digest且保持HTTP404/noindex/无文章canonical/JSON-LD。新attempt保留两种形态的拒绝回归，最终三语言实测通过；没有改成接受任意空HTML。
 4. 私有快照首次git apply使用绝对directory被Git拒绝，尚未patch即停止；改在拥有的临时Git目录相对应用后成功。没有覆盖用户仓库或生产内容。
+5. 最终多Worker源码复核发现Router只重写200 HTML缓存，旧public mapper却会重写所有HTML；本轮新增404恢复响应必须保留Worker原缓存策略。已将映射限定200并加真实404/public校验回归，不修改Router或放宽缓存比较。
 
 ## 5. 现有运行保持
 
@@ -63,5 +64,5 @@ Git只提交本README与产品源码/操作文档，不提交数据库、凭证�
 - `postgres-http/`：隔离PG/构建后HTTP及新建/批准/导出、旧安全回归，生成凭证已脱敏且临时服务清理。
 - `isolated-candidate/`、`cms-isolated.json`、`source-snapshot.json`、`prepared.json`、`built.json`：隔离输入、来源、pin及双owner构建，不可用于真实推广。
 - `http-attempt2/`与其`preview-final.json`引用的preview目录：19份候选及7份旧Worker实际HTTP，body/headers与SHA留存；前次404失败日志保留。
-- `release-tests-final.log`、`additive-focused-final.log`、`local-final.json`、`public-final.json`、`prior-sealed-reports.json`：回归和现有运行/既有封存只读核对。
+- `release-tests-complete.log`、`additive-focused-final.log`、`local-final.json`、`public-final.json`、`prior-sealed-reports.json`：回归和现有运行/既有封存只读核对。
 - `delivery.json`、`evidence-index.json`：提交/CI与本轮排除自身的本机证据索引；封存后不改写本轮记录。

@@ -12,6 +12,15 @@ import { verifyRecoveryCloud } from './desktop-recovery-cloud.mjs';
 const html = '<html><head><title>Old guide</title><meta name="description" content="Old body"/><link rel="canonical" href="https://gachia.com/zh/genshin/guides/one"/></head><body><h1>Old guide</h1><p>Old body</p><script type="application/ld+json">{"name":"Old guide"}</script></body></html>';
 const reference = { path: '/zh/genshin/guides/one', status: 200, headers: { 'content-type': 'text/html', 'cache-control': 's-maxage=31536000' }, sha256: digest(html), fingerprint: pageFingerprint(html), expectedRobots: [] };
 
+test('Router cache rewriting applies to successful HTML only, not missing-guide recovery responses', () => {
+  const missing = '<html><head><meta name="robots" content="noindex"/></head><body><h1>404</h1></body></html>';
+  const row = { ...reference, status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' },
+    fingerprint: pageFingerprint(missing, 404), expectedRobots: publicRobots(missing) };
+  const mapped = publicReferences('genshin', [row])[0];
+  assert.equal(mapped.headers['cache-control'], 'no-store');
+  validatePublicResponse(new Response(null, { status: 404, headers: row.headers }), Buffer.from(missing), mapped);
+});
+
 test('guide-list fingerprints bind actual article links, not just visible card text', () => {
   const list = '<html><head><title>Guides</title><meta name="description" content="Guides"/><link rel="canonical" href="https://gachia.com/zh/genshin/guides"/></head><body><h1>Guides</h1><a href="/zh/genshin/guides/cms-new">New guide</a></body></html>';
   const fingerprint = pageFingerprint(list);
