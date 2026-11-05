@@ -1,6 +1,6 @@
 # Payload 最短操作手册
 
-更新：2026-11-04，适用 Mac 单用户 CMS 与 Genshin/NTE guides。公众网站仍由 Cloudflare 多 Worker 服务，不回源 Mac。本文替代旧部署说明中的过时状态；历史验收看各轮报告。
+更新：2026-11-05，适用 Mac 单用户 CMS 与 Genshin/NTE guides。公众网站仍由 Cloudflare 多 Worker 服务，不回源 Mac。R36限定V1保持完成，R37补齐最新异地数据包的下载/认证/隔离DB与媒体恢复；历史验收看各轮报告。
 
 **最新操作决定：代理规划内容→先写Payload草稿→差异检查/批准→执行下述本机发布链路。** 不再等待用户手工编辑，不要求每篇人工事实审稿；当前仅既有指南title/body，首批单篇中文，先NTE后Genshin。优先复用已认证loopback API，不直接SQL改表或修改公开JSON、不绕过角色/文档锁，完整约束见[代理内容工作流](payload-agent-publishing-workflow.md)。独立key按用户要求暂缓，移出当前限定V1上线门槛；未完成不等于已验证，保留本机备份/密钥和整机丢失可能无法解密的风险。
 
@@ -20,7 +20,7 @@
 
 **R32已修复并实测通过推广重复封存校验耗时。** 去重仅限同步只读验证pass，不跨await、网络或写边界；写前仍重新读取字节、四版本身份、活动UUID/拓扑和900秒实时有效性。实测推广202.16秒，首/次intent时最老候选证明约96.85/134.24秒；不是网络时延保证。下一条真实编辑另建run，不重发本轮已成功releaseKey，不重放历史失败journal，不改acceptedAt/延长窗口/跳过写前漂移。不要求内容准确度审稿；发布意图、身份、安全和新增媒体权利仍保留。
 
-R36将现有同步pass用于prepare/source输入重验，读取不跨网络缓存。实际NTE/Genshin推广333.07/508.44秒；后者超过历史490秒保守分配，实际900秒门禁仍全通过，不能把490当延迟保证。收尾DB为82draft/hold+2published/eligible，最终冷备已含两次编辑；当前R2仍R29，不代表最新异地保护。
+R36将现有同步pass用于prepare/source输入重验，读取不跨网络缓存。实际NTE/Genshin推广333.07/508.44秒；后者超过历史490秒保守分配，实际900秒门禁仍全通过，不能把490当延迟保证。收尾DB为82draft/hold+2published/eligible；R37新冷备已进入最新私有R2对象，新鲜下载/认证解密/隔离DB与媒体恢复通过，源码截止R36文档HEAD，未含历史release完整链或依赖/build。不宣称整机恢复或再次恢复应用启动，详见[备份手册](payload-offsite-recovery.md)。
 
 ## 1. 内容入库与批准（默认代理执行，也支持手动编辑）
 
@@ -49,6 +49,8 @@ cms backup
 ```
 
 `GAME` 可改为 nte；所有 publish 命令从候选读取 game，不额外加 --game。每次实际发布前保留新冷备。backup 会短暂停止并恢复 CMS，不影响公网；备份含数据库、私有媒体、settings，不能公开。
+
+开始新构建前检查磁盘可用空间。R37策略为低于10GiB预警、低于8GiB停止开始新构建并先安排审阅清理；这是操作预算，不是已接入manager的自动门禁。不得直接删除旧run、source-catalog、停止journal或被pin的node_modules/工具来腾空间；当前没有自动GC，见[磁盘保留策略](payload-storage-retention.md)。
 
 命令参数严格按各action白名单检查；不适用的`--game`、`--preview`、`--backup`等会拒绝，不会静默忽略。`content-import`没有preview模式，执行会导入缺少的记录，日常编辑/发布不需要重导入；**`--preview`只适用于`content-export`**。无关参数及导入的多余参数必须修正后重试，不通过绕过manager或直接调用脚本规避门禁。
 

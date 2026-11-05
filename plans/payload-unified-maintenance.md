@@ -1,6 +1,8 @@
 # Plan: Payload 全游戏统一维护
 
-> 当前权威入口（2026-11-04 R36）：[代理策划→CMS入库→本机发布工作流](../docs/payload-agent-publishing-workflow.md)、[V1有限完成计划](payload-v1-completion-2026-11-03.md)及[当前任务表](project-task-status-current.md)。**修订后的限定V1运行里程碑完成**：真实NTE与独立Genshin修改均先入CMS草稿/批准，再完成四版本预览/900秒/双owner推广/公网/source-advance及双向共享Main交接，C01/C02/C03/C04/C05a关闭，详见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)。C05b独立key用户暂缓、未验收；原始全游戏/完整灾备分开。10Worker/7服务已新鲜重查，每次仅game+Main写；Router/staging/main与两个false部署开关保持。后续进入实际内容批次，不重复上线演练或扩建通用平台，准确度/翻译/第二Mac不作门槛。下方旧轮次保留当时证据。
+> 当前权威入口（2026-11-05；公众发布验收R36）：[代理策划→CMS入库→本机发布工作流](../docs/payload-agent-publishing-workflow.md)、[V1有限完成计划](payload-v1-completion-2026-11-03.md)及[当前任务表](project-task-status-current.md)。**修订后的限定V1运行里程碑完成**：真实NTE与独立Genshin修改均先入CMS草稿/批准，再完成四版本预览/900秒/双owner推广/公网/source-advance及双向共享Main交接，C01/C02/C03/C04/C05a关闭，详见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)。C05b独立key用户暂缓、未验收；原始全游戏/完整灾备分开。10Worker/7服务已新鲜重查，每次仅game+Main写；Router/staging/main与两个false部署开关保持。后续进入实际内容批次，不重复上线演练或扩建通用平台，准确度/翻译/第二Mac不作门槛。下方旧轮次保留当时证据。
+
+> 最新运维增量（2026-11-05 R37）：[报告](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)。当前数据/28工具/源码已生成新私有R2对象并完成新鲜下载、AES认证与隔离DB/媒体恢复；当前运行数据库/公开内容/Worker保持。磁盘只读盘点和[保留规则](../docs/payload-storage-retention.md)完成，未删除文件或交付自动GC；low依赖复核仍无修复、11-16截止不顺延。V1保持完成，C05b仍暂缓，原P/T全范围等级不提升。
 
 > R20历史基线（2026-11-02）：[四项收口](../reports/payload-launch-closeout-2026-11-02-r20/README.md)。inventory版本化且历史不变，Router/inventory实际CI通过；工程提交a0634a9已推送。三个只读准备命令已安装，20工具文件摘要一致，547份公网资源响应已取证。CMS163、桌面387、既有Node304、Python49、Router35及相关类型检查通过。该轮真实编辑云E2E、独立key/跨机与完整交接未关；DB84draft/hold、0eligible，正式导出拒绝无合格记录。
 
@@ -22,7 +24,7 @@
 
 用户故事：U1 全游戏统一管理；U2 日常更新；U3 新增游戏；U4 多 Worker 一致发布；U5 持续维护和恢复。
 
-完整剩余任务定义保留R8的T01–T12表，执行状态以`project-task-status-current.md`的R36权威节和V1计划为准。双游戏来源登记/重选与真实双向共享Main交接已通过，成功/恢复来源接续已有真实证据；首次无来源或外部未知版本继续拒绝。R35已拒绝同游戏A→O隐式回退，不是导出自动保留或显式reset-intent工作流。独立密钥用户暂缓，不要求跨Mac运行；下一步按真实内容需求日常更新，新增类型/范围独立验收。当前Git/实际验证CI已交付，但最新R2仍R29，源码ZIP/密文往返不等于整机丢失后可恢复。两个GitHub部署开关保持false，不代表账号级所有外部入口均被强制封堵；事实校对/缺译/命名差异后置。不把限定guides验收当全站公众接管，不公开草稿或未经授权的媒体。
+完整剩余任务定义保留R8的T01–T12表，执行状态以`project-task-status-current.md`的R37权威节和V1计划为准。双游戏来源登记/重选与真实双向共享Main交接已通过，成功/恢复来源接续已有真实证据；首次无来源或外部未知版本继续拒绝。R35已拒绝同游戏A→O隐式回退，不是导出自动保留或显式reset-intent工作流。独立密钥用户暂缓，不要求跨Mac运行；下一步按真实内容需求日常更新，新增类型/范围独立验收。当前Git/验证CI已交付，最新R2已刷新到R37并实际隔离恢复DB/媒体，但不含build/依赖及历史release完整链，也不等于整机丢失后可恢复。两个GitHub部署开关保持false，不代表账号级所有外部入口均被强制封堵；事实校对/缺译/命名差异后置。不把限定guides验收当全站公众接管，不公开草稿或未经授权的媒体。
 
 ## P0：全游戏迁移基线
 

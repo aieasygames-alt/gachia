@@ -1,6 +1,8 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
-**当前入口：2026-11-04 R36。** 由代理规划→认证Payload草稿/批准→本机双owner发布的真实路径已执行，NTE与独立Genshin更新、公网/source-advance、双向共享Main交接均通过，修订后的限定V1运行里程碑完成。架构仍为本机Payload/PG、Cloudflare公众多Worker，无Tunnel/Mac回源。C05b独立key用户暂缓，完整灾备不宣称完成。证据见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，操作见[工作流](payload-agent-publishing-workflow.md)与[V1清单](../plans/payload-v1-completion-2026-11-03.md)。
+**公众发布基线：2026-11-04 R36。** 由代理规划→认证Payload草稿/批准→本机双owner发布的真实路径已执行，NTE与独立Genshin更新、公网/source-advance、双向共享Main交接均通过，修订后的限定V1运行里程碑完成。架构仍为本机Payload/PG、Cloudflare公众多Worker，无Tunnel/Mac回源。C05b独立key用户暂缓，完整灾备不宣称完成。证据见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，操作见[工作流](payload-agent-publishing-workflow.md)与[V1清单](../plans/payload-v1-completion-2026-11-03.md)。
+
+**2026-11-05 R37运维复核：** 10Worker/7服务及额外staging前后新鲜重读，与R36最终UUID/部署/settings一致。新私有备份对象生成、下载认证和隔离DB/媒体恢复通过，r2.dev/自定义域名关闭且七服务无备份桶binding；没有Worker版本上传/部署、Router改动或内容编辑。最新备份/保留/依赖复核见[R37](../reports/payload-postlaunch-operations-2026-11-05-r37/README.md)，不改变下面公众请求归属或限定写入范围。
 
 本轮实际重查10Worker/7服务，Router/staging及其他服务保持，单次仍只写game+Main。最终Main UUID为`63b9b839-5ad7-4f61-9add-5df5ee336bc4`，Genshin为`347eb5c8-36d5-4f9c-b548-bb19c8617304`，NTE为`c1247d65-734d-42a9-8f6f-16d6ab0a1173`；两游戏当前来源已分别绑定最终Main，后续新候选仍要新鲜取证。R33编辑资格、R35隐式回退拒绝保持；R36新上传首次精确元数据404有界可见性等待和同步验证pass已安装，精确代码CI成功，28工具/698应用文件验摘要。
 
