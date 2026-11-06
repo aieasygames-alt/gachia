@@ -2,6 +2,9 @@ import assert from 'node:assert/strict'
 import { unifiedOwnerPlan } from './unified-build'
 import { verifyUnifiedPlan, type UnifiedPlan } from './unified-plan'
 import type { exportUnifiedContent } from './unified-export'
+import type { SourceBytes } from './unified-export'
+import { objectValue, type UnifiedRecord } from './unified-content'
+import { locateValue, readSourceValue } from './unified-sources'
 
 type Candidate = ReturnType<typeof exportUnifiedContent>['manifest']
 
@@ -39,4 +42,30 @@ export function unifiedEditorialScope(candidate: Candidate, plan: UnifiedPlan, o
   return { editorial: { ...editorial, paths: editorialPaths, changed: [...candidate.changed] },
     preservationPaths, build, preservationOnlyOwners: build.owners.filter(owner => !editorial.owners.includes(owner)),
     uploadOwners: build.owners, preservationOwnerOmissionAuthorized: false }
+}
+
+// Qualification grows only after each domain/consumer slice is accepted.
+// Generic JSON fidelity and a published flag cannot qualify all 16 scopes.
+export function unifiedPilotQualification(records: UnifiedRecord[], active: SourceBytes[], candidate: ReturnType<typeof exportUnifiedContent>) {
+  assert.equal(candidate.manifest.changed.length, 1, 'Only the accepted single-record pilot is production-qualified')
+  const record = records.find(row => row.stableKey === candidate.manifest.changed[0])
+  assert(record, 'Pilot record missing')
+  const source = record.sourceRecord
+  assert.equal(source.game, 'ananta', 'Game domain is not production-qualified yet')
+  assert.equal(source.sourcePath, 'packages/data/games/ananta/raw-guides.json', 'Content domain is not production-qualified yet')
+  assert.deepEqual(source.locator, { identity: { id: 'download-install-guide' } }, 'Consumer is not production-qualified yet')
+  const a = active.find(row => row.sourcePath === source.sourcePath), b = candidate.files.find(row => row.sourcePath === source.sourcePath)
+  assert(a && b, 'Pilot public/candidate source missing')
+  const before = locateValue(readSourceValue(a.text, source.sourcePath, source.locator), source.locator)
+  const after = locateValue(readSourceValue(b.content, source.sourcePath, source.locator), source.locator)
+  assert(objectValue(before) && objectValue(after) && typeof before.content === 'string' && typeof after.content === 'string')
+  const { content: originalContent, ...originalRest } = before, { content: editedContent, ...editedRest } = after
+  assert.deepEqual(editedRest, originalRest, 'Only the accepted Chinese content field is production-qualified')
+  assert(editedContent.trim() && editedContent !== originalContent, 'Pilot must contain a genuine nonempty content edit')
+  return { policy: 'ananta-existing-installation-content-v1', game: 'ananta', changed: [record.stableKey], fields: ['/content'], locale: 'zh' }
+}
+
+export function assertUnifiedProductionOwnerClosure(scope: ReturnType<typeof unifiedEditorialScope>) {
+  assert.equal(scope.preservationOnlyOwners.length, 0, 'Main-only preservation runtime proof is still required; no broader cloud upload is authorized')
+  assert.deepEqual(scope.uploadOwners, scope.editorial.owners, 'Production owner scope is not closed')
 }

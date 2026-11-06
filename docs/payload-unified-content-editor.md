@@ -149,6 +149,8 @@ R46 实际安装源码 `7b12684262338511bbcc2d3468bacaeff9a2404a` 已通过完�
 
 `unifiedEditorialScope` 已区分本批 A→B 与 O→B 保留 overlay，当前真实审核为 Main 编辑、原神/异环保留。分类不自动缩减上传 owner，`preservationOwnerOmissionAuthorized:false`；只有另行证明活动运行时已完整承载公开 A 才能跳过。独占 journal、上传时强 ETag/不可变模块、完整精确云 Host HTTP 与独立重验保持，未知结果不重试、只读对账。实际工程/诊断见 [R47](../reports/payload-unified-production-2026-11-06-r47/README.md)，目前没有统一云上传或推广，原双游戏守卫不变。
 
+当前生产资格固定为 Ananta 既有 `download-install-guide` 中文 `/content` 单条试点，其余字段/语言必须与公开 A 相同。其他游戏/内容、多条批次不能用通用 JSON 和 published 绕过后续领域/消费者验收；保留 owner 未闭合时，实际上传入口拒绝更大批次，不能因只读预检通过便开始上传。该限制按第 2、3 项的真实验收逐片扩展，不是“所有内容已可正式更新”。
+
 ## 开发入口
 
 在 `services/content-cms` 执行：

@@ -11,7 +11,7 @@ import { unifiedPlan } from '../src/unified-plan'
 import { readUnifiedSources } from '../src/unified-sources'
 import { verifyUnifiedPublishedDocuments } from '../src/unified-desktop'
 import { exportUnifiedContent } from '../src/unified-export'
-import { unifiedEditorialScope } from '../src/unified-production-scope'
+import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification } from '../src/unified-production-scope'
 import { unifiedProductionRequest, verifyUnifiedCI } from '../src/unified-production'
 
 const repo = path.resolve(projectRoot, '../..'), inventory = JSON.parse(readFileSync(path.join(repo, baselineDirectory, 'inventory.json'), 'utf8'))
@@ -84,6 +84,28 @@ test('production request accepts only pinned inputs, never authorization or depe
   for (const key of ['verify', 'transport', 'productionReady', 'skipCI', 'ownerOrder', 'promote']) assert.throws(() => unifiedProductionRequest({ ...value, [key]: true }))
   assert.throws(() => unifiedProductionRequest({ ...value, localPreview: { ...proof, pin: 'bad' } }))
   assert.throws(() => unifiedProductionRequest({ ...value, sourceRunID: 0 }))
+})
+
+test('only the accepted real-domain pilot qualifies; generic published JSON cannot authorize other fields or games', () => {
+  const source = plan.sources.find(source => source.sourcePath === 'packages/data/games/ananta/raw-guides.json')!
+  const record = structuredClone(source.records.find(row => row.sourceRecord.locator.identity?.id === 'download-install-guide')!)
+  record._status = 'published'; record.hold = false
+  const value = record.structuredValue as Record<string, string>
+  record.structuredValue = { ...value, content: value.content + '\nIsolated content fixture.' }
+  const candidate = exportUnifiedContent([record], originals, originals, false)
+  assert.equal(unifiedPilotQualification([record], originals, candidate).policy, 'ananta-existing-installation-content-v1')
+  const otherField = structuredClone(record); otherField.structuredValue = { ...otherField.structuredValue as object, title: 'Unqualified title edit' }
+  assert.throws(() => unifiedPilotQualification([otherField], originals, exportUnifiedContent([otherField], originals, originals, false)), /Chinese content/)
+  const other = fixture(); assert.throws(() => unifiedPilotQualification([other.record], originals, { manifest: other.candidate, files: [] }), /Consumer/)
+  assert.throws(() => unifiedPilotQualification([record], originals, { ...candidate, manifest: { ...candidate.manifest, changed: [...candidate.manifest.changed, 'extra'] } }), /single-record/)
+})
+
+test('preservation-only owners block the production upload instead of silently authorizing a larger batch', () => {
+  const { candidate } = fixture(), scope = unifiedEditorialScope(candidate, plan, ownership)
+  assert.throws(() => assertUnifiedProductionOwnerClosure(scope), /no broader cloud upload/)
+  const main = structuredClone(scope); main.uploadOwners = ['main']; main.preservationOnlyOwners = []
+  assert.doesNotThrow(() => assertUnifiedProductionOwnerClosure(main))
+  main.uploadOwners = ['genshin', 'main']; assert.throws(() => assertUnifiedProductionOwnerClosure(main), /not closed/)
 })
 
 test('CI verification requires exact source, full non-skipped tests and the fixed workflow', async t => {

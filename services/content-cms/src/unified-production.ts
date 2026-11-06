@@ -19,7 +19,7 @@ import { assertUnifiedInstalledApplication, loadUnifiedDesktopPlan, readPinnedUn
 import { exportUnifiedContent, type SourceBytes } from './unified-export'
 import { verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { verifyUnifiedPreviewContract } from './unified-preview'
-import { unifiedEditorialScope } from './unified-production-scope'
+import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification } from './unified-production-scope'
 import { verifyUnifiedTransport } from './unified-transport'
 
 type Proof = { path: string; pin: string }
@@ -117,6 +117,7 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
   }
   const ownership = JSON.parse(readFileSync(path.join(build, 'source/packages/core/route-ownership.json'), 'utf8'))
   const scope = unifiedEditorialScope(candidate.manifest, plan, ownership)
+  const qualification = unifiedPilotQualification(review.records, active, candidate)
   assert.deepEqual(frozen.owners, scope.build.owners)
   const root = path.join(homedir(), 'Library/Application Support/GachiaCMS'), application = pinned<Record<string, any>>(request.application)
   assertUnifiedInstalledApplication(root, application.app)
@@ -139,7 +140,7 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
     assert.equal(digest(readFileSync(path.resolve(application.app, '../..', name))), pin, 'Installed release integrity changed')
   }
   assert.equal((await liveReview(plan, selected, cmsToken)).reviewPin, review.reviewPin, 'Formal CMS review changed during preflight')
-  return { preview, transport, publication, built, build, editorial, review, scope, request }
+  return { preview, transport, publication, built, build, editorial, review, scope, qualification, request }
 }
 
 export async function createUnifiedProductionVerifier(request: UnifiedProductionRequest, { cmsToken, cloudToken }: { cmsToken: string; cloudToken: string }) {
@@ -210,6 +211,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
 export async function uploadUnifiedProductionPreviews(input: { request: UnifiedProductionRequest; cmsToken: string; cloudToken: string; releaseKey: string }) {
   const evidence = await createUnifiedProductionVerifier(input.request, input)
   assert.equal(input.releaseKey, evidence.value.releaseKey, 'Explicit matching reviewed release key required')
+  assertUnifiedProductionOwnerClosure(evidence.scope)
   const run = evidence.build, directory = path.join(run, `unified-cloud-preview-${evidence.value.transportPin}`)
   assertDiskBudget({ path: run, operation: 'unified cloud preview evidence', estimatedBytes: 2 * GiB })
   return executeUnifiedPreviewProtocol({ run, directory, transportPin: evidence.value.transportPin, verify: evidence.verify,
