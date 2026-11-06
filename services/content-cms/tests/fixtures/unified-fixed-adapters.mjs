@@ -8,7 +8,9 @@ import test, { mock } from 'node:test';
 import { unifiedSourceFixture, sourceFixtureUUID } from '../../../../scripts/fixtures/unified-source-fixture.mjs';
 import { unifiedMainFixture } from '../../../../scripts/fixtures/unified-main-fixture.mjs';
 import { digest } from '../../../../scripts/desktop-release-assets.mjs';
+import { artifactFiles } from '../../../../scripts/desktop-publish.mjs';
 import { unifiedMainPublicReferences } from '../../../../scripts/unified-main-public.mjs';
+import { selectUnifiedNextPrevious } from '../../../../scripts/unified-source-advance.mjs';
 
 // Only this child process replaces external trust boundaries. Completed receipt,
 // module, renewal, public, source and local-publication readers remain real.
@@ -49,12 +51,10 @@ mock.module(src('unified-production'), { namedExports: { ...production, createUn
 
 const historical = await import(src('unified-historical-publication'));
 mock.module(src('unified-historical-publication'), { namedExports: { ...historical,
-  verifyUnifiedHistoricalPublication: async (request, token) => {
+  readUnifiedHistoricalPublication: async request => {
     assert.deepEqual(request, state.historyRequest); state.historyReads++;
     if (state.failHistory) throw Error('Isolated historical source rejected');
-    const sourceCI = await production.verifyUnifiedCI(state.historical.sourceCI.runID, state.historical.sourceCI.commit, token);
-    const originExecutorCI = await production.verifyUnifiedCI(state.historical.originExecutorCI.runID, state.historical.originExecutorCI.commit, token);
-    return { ...state.historical, sourceCI, originExecutorCI };
+    return state.historical;
   },
   readUnifiedHistoricalMainPreviews: async (_historical, proof) => {
     assert.deepEqual(proof, state.previewsProof);
@@ -128,7 +128,7 @@ mock.method(globalThis, 'fetch', async (input, options) => {
     assert.equal(new Headers(options.headers).get('authorization'), 'Bearer isolated-cloud-token');
     const version = url.pathname.match(/\/scripts\/([^/]+)\/versions\/([^/]+)$/);
     if (version) {
-      assert.equal(options.method, 'GET'); s.versionReads++;
+      assert.equal(options.method, 'GET'); s.versionReads++; s.onVersion?.();
       const row = s.versions.get(version[1] + '/' + version[2]); assert(row, 'Unexpected immutable version');
       return Response.json({ success: true, result: s.changedVersion === version[2] ? { ...row, number: row.number + 1 } : row });
     }
@@ -149,8 +149,17 @@ mock.method(globalThis, 'fetch', async (input, options) => {
   return new Response(url.pathname === '/robots.txt' ? Buffer.concat([prefix, bytes]) : bytes, { status: row.status, headers: row.headers });
 });
 
-async function fixture(t) {
-  const s = await unifiedSourceFixture(t, { originalMain: true }), f = await unifiedMainFixture(t, s.spec.baseline, s);
+async function fixture(t, { baseline, generation = 0 } = {}) {
+  const s = await unifiedSourceFixture(t, { originalMain: true });
+  if (generation) {
+    for (const row of [s.spec.sources.find(row => row.sourcePath.endsWith('/ananta/raw-guides.json')), s.spec.sources.find(row => row.sourcePath.endsWith('.ts'))]) {
+      row.text = row.sourcePath.endsWith('.json') ? '[{"id":"existing","title":"second published increment"}]\n' : 'export const ranks = 999\n';
+      row.sha256 = digest(row.text);
+      if (row.sourcePath.endsWith('.json')) writeFileSync(path.join(s.spec.owners.main.directory, 'assets/data/ananta/raw-guides.json'), row.text);
+    }
+    s.spec.owners.main.artifactSHA256 = digest(JSON.stringify(artifactFiles(s.spec.owners.main.directory), null, 2) + '\n');
+  }
+  const f = await unifiedMainFixture(t, baseline ?? s.spec.baseline, s, { generation });
   const originalOwners = structuredClone(s.spec.owners), versions = new Map(Object.values(originalOwners).map(row => [row.service + '/' + row.versionId, row.version]));
   for (const version of Object.values(f.versions)) versions.set('gachia/' + version.id, version);
   const buildDirectory = f.input.run, publicationDirectory = path.join(s.root, 'publication');
@@ -171,7 +180,11 @@ async function fixture(t) {
   const historyMain = f.save(path.join(s.root, 'main-history.json'), { ...publishedRequest, kind: 'unified_historical_main_previews_request', promotion: undefined });
   s.current = structuredClone(s.spec.baseline); s.current.services.gachia = { id: f.deploymentId, versions: [{ version_id: f.versions.candidate.id, percentage: 100 }] };
   state = { s, f, versions, publishedProof, publishedRequest, historyMain, historyRequest, previewsProof, executorCI: ci(5), recoveryDeployment: sourceFixtureUUID(999),
-    historical: { request: { production: f.input.productionRequest }, sources: { owners: old, handoff: { owners: originalOwners, transportPin: s.spec.transportPin } }, value: f.input.value,
+    historical: { request: { production: f.input.productionRequest }, sources: { owners: old,
+      provenance: Object.fromEntries(Object.entries(originalOwners).map(([owner, row]) => [owner, { ...row, proofTransportPin: s.spec.transportPin }])),
+      handoff: { owners: originalOwners, transportPin: s.spec.transportPin } }, value: f.input.value,
+      production: { sourceRunID: 1, executorRunID: 2 }, built: { frozen: { sourceCommit: ci(1).commit } },
+      audit: { sourceCI: f.input.sourceCI, executorCI: f.input.originExecutorCI },
       plan: { sources: s.spec.sources, planSHA256: s.spec.planSHA256 }, build: buildDirectory, sealedSources: s.spec.sources,
       transport: { receipt: { publicationDirectory } }, publication: { owners: { main: { candidate: { artifactSHA256: originalOwners.main.artifactSHA256 } } } },
       sourceCI: f.input.sourceCI, originExecutorCI: f.input.originExecutorCI },
@@ -212,6 +225,13 @@ function nextBuild(s, next) {
     build: proof, expectations: baseline, executorRunID: 5 };
 }
 
+function sourceBinding(s, next) {
+  const active = JSON.parse(readFileSync(next.value.active.path, 'utf8'));
+  const frozen = { planSHA256: s.s.spec.planSHA256, owners: ['main'], candidate: { baselines: active.map(row => ({ sourcePath: row.sourcePath, activeSHA256: row.sha256 })) } };
+  const allPrevious = JSON.parse(readFileSync(next.value.previous.path, 'utf8'));
+  return { active, frozen, identityObservedAt: Date.now(), baseline: structuredClone(s.s.current), previous: selectUnifiedNextPrevious({ value: next.value, sources: active, previous: allPrevious }, frozen) };
+}
+
 function stopped(s) {
   const file = path.join(s.f.input.run, `unified-promotion-${s.f.input.value.transportPin}.jsonl`);
   const rows = readFileSync(file, 'utf8').trim().split('\n').map(JSON.parse), last = rows[2];
@@ -235,6 +255,86 @@ test('fixed source entry reopens real completed evidence and consumes all five o
   assert.equal(s.publicReads, s.f.paths.length * 2); assert.equal(s.writes, 0);
   for (const runID of [1, 2, 3, 4, 5]) assert(s.ciReads.includes(runID));
   for (const result of [advanced, next]) { assert.equal(result.cloudWrites, false); assert.equal(result.newPublicationAuthorized, false); }
+});
+
+test('fixed production source adapter keeps legacy all-five handoffs compatible and revalidates all identities', async t => {
+  const s = await fixture(t), proof = (name, value) => s.f.save(path.join(s.s.root, name), value);
+  const owners = {}, old = {};
+  for (const [owner, row] of Object.entries(s.s.spec.owners)) {
+    old[owner] = Object.fromEntries(['service', 'versionId', 'directory', 'artifactSHA256', 'modulePath', 'archiveSHA256', 'moduleSHA256'].map(key => [key, row[key]]));
+    owners[owner] = { service: row.service, sourceVersionId: row.versionId, moduleSHA256: row.moduleSHA256, mode: row.mode, moduleProof: row.moduleProof,
+      versionProof: proof(`${owner}-legacy-version.json`, row.version) };
+  }
+  const handoff = proof('legacy-handoff.json', { schemaVersion: 1, kind: 'unified_observed_source_handoff', status: 'all_five_active_source_modules_verified',
+    transportPin: s.s.spec.transportPin, previous: proof('legacy-previous.json', { schemaVersion: 1, kind: 'unified_previous_artifacts', purpose: 'local_compatibility_only', owners: old }),
+    owners, workerWrites: 0, authPOSTs: 0, activationSupported: false, rawUuidRollbackAuthorized: false, topologyUnchanged: true,
+    before: proof('legacy-before.json', s.s.spec.baseline), after: proof('legacy-after.json', s.s.spec.baseline), observedAt: new Date().toISOString() });
+  const result = await source.verifyUnifiedProductionSources(handoff, { baseline: s.s.spec.baseline }, { githubToken: 'isolated-github-token', cloudToken: 'isolated-cloud-token' });
+  assert.equal(result.handoff.kind, 'unified_observed_source_handoff'); assert.equal(s.versionReads, 5);
+  assert.equal(s.ciReads.length, 0); assert.equal(s.writes, 0);
+});
+
+for (const fault of ['none', 'old-A', 'missing-code', 'legacy-Main', 'old-baseline', 'expired', 'source-ci', 'preview-ci', 'promotion-ci',
+  'unchanged-version', 'request-mutation', 'expired-during-read']) {
+  test(`fixed production source adapter accepts only fresh complete next-batch evidence: ${fault}`, async t => {
+    const s = await fixture(t), index = await advance(s), next = await advance(s, 'baseline', index.proof), binding = sourceBinding(s, next);
+    const proof = { ...next.proof }, original = structuredClone(binding), now = Date.now();
+    if (fault === 'old-A') binding.active[0].text = 'old O';
+    if (fault === 'missing-code') binding.active = binding.active.filter(row => !row.sourcePath.endsWith('.ts'));
+    if (fault === 'legacy-Main') binding.previous.owners.main.versionId = s.s.spec.owners.main.versionId;
+    if (fault === 'old-baseline') binding.baseline = s.s.spec.baseline;
+    if (fault === 'expired') t.mock.method(Date, 'now', () => now + 900001);
+    if (fault.endsWith('-ci')) s.skippedCI = { 'source-ci': 1, 'preview-ci': 4, 'promotion-ci': 3 }[fault];
+    if (fault === 'unchanged-version') s.changedVersion = s.s.spec.owners['azur-promilia'].versionId;
+    s.versionReads = 0;
+    if (fault === 'request-mutation') s.onVersion = () => { proof.pin = 'f'.repeat(64); binding.active[0].text = 'mutated after await'; };
+    if (fault === 'expired-during-read') s.onVersion = () => { if (s.versionReads === 5) t.mock.method(Date, 'now', () => now + 900001); };
+    const input = () => source.verifyUnifiedProductionSources(proof, binding, { githubToken: 'isolated-github-token', cloudToken: 'isolated-cloud-token' });
+    if (['none', 'request-mutation'].includes(fault)) {
+      const result = await input(); assert.deepEqual(Object.keys(result.owners).sort(), Object.keys(s.s.spec.owners).sort());
+      assert.equal(result.owners.main.versionId, s.f.versions.candidate.id); assert.equal(s.versionReads, 5);
+      assert.equal(result.provenance.main.mode, 'unified_upload_time_module_receipt');
+      assert.deepEqual(result.previous.owners.main, original.previous.owners.main);
+    } else await assert.rejects(input(), error => { assert(!(error instanceof TypeError)); return true; });
+    assert.equal(s.writes, 0);
+  });
+}
+
+test('fixed historical next-source read stays offline after expiry and revalidates ancestor CI only when requested', async t => {
+  const s = await fixture(t), index = await advance(s), next = await advance(s, 'baseline', index.proof), binding = sourceBinding(s, next);
+  const now = Date.now(); t.mock.method(Date, 'now', () => now + 900001);
+  const counts = [s.snapshots, s.versionReads, s.publicReads, s.ciReads.length];
+  const opened = await source.readUnifiedPublicationSources(next.proof, binding);
+  assert.equal(opened.freshnessRenewed, false); assert.equal(opened.currentCloudRead, false);
+  assert.deepEqual([s.snapshots, s.versionReads, s.publicReads, s.ciReads.length], counts);
+  for (const githubToken of [undefined, '']) {
+    await assert.rejects(source.verifyUnifiedNextSource({ publication: s.publishedProof, handoff: next.proof, githubToken }), /Authenticated ancestor CI/);
+    await assert.rejects(source.verifyUnifiedProductionSources(next.proof, binding, { githubToken, cloudToken: 'isolated-cloud-token' }), /Authenticated ancestor CI/);
+  }
+  await assert.rejects(source.verifyUnifiedProductionSources(next.proof, binding, { githubToken: 'isolated-github-token', cloudToken: '' }), /Authenticated immutable/);
+  await assert.rejects(source.readUnifiedPublicationSources(next.proof, { ...binding, identityObservedAt: now + 900001 }), /while fresh/);
+  await assert.rejects(source.readUnifiedPublicationSources(next.proof, { ...binding, identityObservedAt: next.value.observation.startedAt - 1 }), /while fresh/);
+  const evidence = { ...s.historical, sources: opened };
+  assert.equal((await historical.verifyUnifiedHistoricalPublicationEvidence(evidence, 'isolated-github-token')).ciVerified, true);
+  for (const runID of [1, 2, 3, 4]) assert(s.ciReads.slice(counts[3]).includes(runID));
+  s.skippedCI = 3;
+  await assert.rejects(historical.verifyUnifiedHistoricalPublicationEvidence(evidence, 'isolated-github-token'), /Full exact-CI/);
+  assert.deepEqual([s.snapshots, s.versionReads, s.publicReads], counts.slice(0, 3)); assert.equal(s.writes, 0);
+});
+
+test('a second completed publication advances new Main and nonpublic A while preserving the first baseline ancestry', async t => {
+  const first = await fixture(t), index = await advance(first), next = await advance(first, 'baseline', index.proof);
+  const sources = await source.readUnifiedPublicationSources(next.proof, sourceBinding(first, next));
+  const second = await fixture(t, { baseline: sources.baseline, generation: 1 });
+  second.historical.sources = sources;
+  const advanced = await advance(second);
+  assert.notEqual(advanced.value.owners.main.versionId, sources.owners.main.versionId);
+  assert.equal(readFileSync(path.join(advanced.value.owners.main.directory, 'worker.js'), 'utf8'), 'sealed candidate batch 1');
+  const active = JSON.parse(readFileSync(advanced.value.active.path, 'utf8'));
+  assert.equal(active.length, 115); assert(active.find(row => row.sourcePath.endsWith('.ts')).text.includes('999'));
+  assert(active.find(row => row.sourcePath.endsWith('/ananta/raw-guides.json')).text.includes('second published increment'));
+  for (const owner of ['genshin', 'nte', 'azur-promilia', 'lvmeng']) assert.equal(advanced.value.owners[owner].versionId, sources.owners[owner].versionId);
+  assert.equal(first.writes + second.writes, 0);
 });
 
 for (const fault of ['history', 'incomplete-sources', 'incomplete-pairs', 'stopped-promotion', 'module', 'public-body', 'deployment', 'preview-execution',

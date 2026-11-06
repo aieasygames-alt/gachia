@@ -20,6 +20,10 @@ const bound = (directory, name, value) => {
 const pinned = proof => unifiedPinnedJSON(proof.path, proof.pin);
 const owners = rows => assert.deepEqual(Object.keys(rows).sort(), UNIFIED_SOURCE_OWNERS, 'Complete five-owner source index required');
 const treePin = directory => digest(json(artifactFiles(directory)));
+const canonical = value => JSON.stringify(value, function (key, row) {
+  return row && typeof row === 'object' && !Array.isArray(row)
+    ? Object.fromEntries(Object.keys(row).sort().map(name => [name, row[name]])) : row;
+});
 
 export async function readUnifiedSourceOwner(row) {
   const { service, versionId, moduleSHA256, moduleProof } = row;
@@ -214,4 +218,22 @@ export function selectUnifiedNextPrevious(next, frozen) {
   assert(frozen.owners.length > 0 && frozen.owners.includes('main') && new Set(frozen.owners).size === frozen.owners.length);
   for (const owner of frozen.owners) assert(UNIFIED_SOURCE_OWNERS.includes(owner), 'Unknown next-build owner');
   return { ...next.previous, owners: Object.fromEntries(frozen.owners.map(owner => [owner, next.previous.owners[owner]])) };
+}
+
+// Normalize only a re-opened next baseline, never caller-declared provenance.
+// Keep the complete index even when this build selects Main alone.
+export function bindUnifiedNextSources(next, { baseline, active, frozen, previous }) {
+  assertTopology(next.baseline, baseline);
+  assert.deepEqual(active, next.sources, 'Production must consume the complete published A');
+  assert.deepEqual(previous, selectUnifiedNextPrevious(next, frozen), 'Publication must use the exact next-batch previous artifacts');
+  const provenance = {}, normalized = {};
+  for (const owner of UNIFIED_SOURCE_OWNERS) {
+    const row = next.index.value.owners[owner], old = next.previous.owners[owner];
+    assert.equal(old.versionId, activeVersion(baseline, old.service));
+    provenance[owner] = { mode: row.mode, moduleProof: row.moduleProof, proofTransportPin: row.proofTransportPin,
+      moduleContext: row.moduleContext, service: row.service, sourceVersionId: row.versionId, moduleSHA256: row.moduleSHA256 };
+    normalized[owner] = { ...old, version: row.version, sourceIdentityPin: digest(canonical({ proof: row.moduleProof, version: row.version })) };
+  }
+  return { handoff: next.value, previous: next.previous, baseline, owners: normalized, provenance,
+    currentCloudRead: false, freshnessRenewed: false };
 }

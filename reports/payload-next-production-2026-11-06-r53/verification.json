@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "kind": "unified_next_production_verification",
+  "status": "local_regressions_passed_exact_ci_pending",
+  "runtime": "Node 25.9.0",
+  "cms": { "passed": 349, "failed": 0, "skipped": 0 },
+  "fixedAdapters": { "passed": 58, "failed": 0, "skipped": 0, "independentRuntime": "Node 22.22.2" },
+  "releaseNode": { "passed": 1489, "failed": 0, "groups": [197, 988, 304] },
+  "releasePython": { "passed": 56, "failed": 0 },
+  "documentation": { "passed": 38, "failed": 0 },
+  "typecheck": "passed",
+  "whitespace": "passed",
+  "cloudWrites": false,
+  "installedApplicationChanged": false,
+  "databaseChanged": false,
+  "productionQualificationGranted": false,
+  "qualificationBoundary": "Synthetic fixtures replace historical publication, current executor, cloud snapshot and build verification boundaries; not full production qualification",
+  "next": "Independently verify full exact CI for the committed current executor; qualify the unreplaced fixed request chain before fresh renewal and controlled promotion"
+}

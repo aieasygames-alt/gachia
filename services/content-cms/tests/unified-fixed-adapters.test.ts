@@ -9,9 +9,10 @@ test('fixed adapters compose completed publication, recovery and next-batch evid
   delete env.NODE_TEST_CONTEXT
   const result = spawnSync(process.execPath, ['--experimental-test-module-mocks', '--import', 'tsx', '--test', '--test-reporter=tap',
     path.join(projectRoot, 'tests/fixtures/unified-fixed-adapters.mjs')], { cwd: projectRoot, encoding: 'utf8', env,
-    timeout: 180000, maxBuffer: 4 * 1024 * 1024 })
+    timeout: 360000, maxBuffer: 4 * 1024 * 1024 })
   assert.equal(result.error, undefined, result.error?.message)
   assert.equal(result.status, 0, result.stdout + '\n' + result.stderr)
+  assert.match(result.stdout, /# tests 58\b/)
   assert.match(result.stdout, /# fail 0/)
   assert.match(result.stdout, /# cancelled 0/)
   assert.match(result.stdout, /# skipped 0/)

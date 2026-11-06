@@ -14,7 +14,7 @@ const sha = 'a'.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).pad
 const defaultPaths = ['/sitemap.xml', '/robots.txt', '/api/auth/get-session', '/data/ananta/raw-guides.json', '/data/genshin/raw-guides.json', '/data/nte/raw-guides.json',
   '/zh/ananta/guides/download-install-guide', '/en/ananta/guides/download-install-guide'];
 const json = value => JSON.stringify(value, null, 2) + '\n';
-export async function unifiedMainFixture(t, baselineOverride, sources) {
+export async function unifiedMainFixture(t, baselineOverride, sources, { generation = 0 } = {}) {
   const paths = sources ? sources.spec.publicReferences.map(row => row.path) : defaultPaths;
   const run = realpathSync(mkdtempSync(join(tmpdir(), 'unified-main-completed-'))); t.after(() => rmSync(run, { recursive: true, force: true }));
   const save = (file, value) => { const text = json(value); writeFileSync(file, text); return { path: file, pin: digest(text) }; };
@@ -29,7 +29,7 @@ export async function unifiedMainFixture(t, baselineOverride, sources) {
   const roleReferences = {}, roleBodies = {}, accepted = { recovery: {}, candidate: {} }, renewed = { recovery: {}, candidate: {} }, targets = {}, versions = {};
   for (const [i, role] of ['recovery', 'candidate'].entries()) {
     const root = join(cloud, `${role}-main`); mkdirSync(root);
-    const versionId = uuid(100 + i), code = `sealed ${role}`, form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
+    const versionId = uuid(100 + i + generation * 100), code = `sealed ${role}${generation ? ` batch ${generation}` : ''}`, form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
     const archive = Buffer.from(await new Response(form).arrayBuffer()), outbound = join(root, 'outbound.multipart'), log = join(root, 'upload.log');
     writeFileSync(outbound, archive); writeFileSync(log, `Worker Version ID: ${versionId}\nVersion Preview URL: ${exactUnifiedPreviewOrigin('gachia', versionId)}\n`);
     const version = { id: versionId, number: i + 1, metadata: { has_preview: true }, resources: { script: { etag: 'e'.repeat(64) }, bindings: [],

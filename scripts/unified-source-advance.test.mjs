@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import test from 'node:test';
 import { unifiedSourceFixture, sourceFixtureUUID } from './fixtures/unified-source-fixture.mjs';
 import { UNIFIED_SOURCE_OWNERS } from './unified-historical-sources.mjs';
-import { advanceUnifiedSourceIndex, captureUnifiedNextBaseline, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from './unified-source-advance.mjs';
+import { advanceUnifiedSourceIndex, bindUnifiedNextSources, captureUnifiedNextBaseline, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from './unified-source-advance.mjs';
 
 test('source advance keeps all five owners, exact published runtime/static union and all 115 new A inputs', async t => {
   const f = await unifiedSourceFixture(t), result = await advanceUnifiedSourceIndex({ ...f, directory: join(f.root, 'advance') });
@@ -48,7 +48,35 @@ test('historical index remains readable but old next-batch observations never gr
   const now = Date.now(); t.mock.method(Date, 'now', () => now + 900001);
   assert.equal((await readUnifiedSourceIndex({ spec: f.spec, proof: index.proof })).freshnessRenewed, false);
   await assert.rejects(readUnifiedNextBaseline({ spec: f.spec, handoff: next.proof, fresh: true }), /expired/);
+  const historical = await readUnifiedNextBaseline({ spec: f.spec, handoff: next.proof });
+  assert.deepEqual(historical.sources, f.spec.sources); assert.equal(historical.newPublicationAuthorized, false);
 });
+
+for (const fault of ['none', 'old-A', 'missing-code', 'duplicate-A', 'old-Main', 'partial-index', 'wrong-plan', 'old-baseline', 'topology', 'unselected-owner']) {
+  test(`production/historical next-source binding preserves complete A and exact Main: ${fault}`, async t => {
+    const f = await unifiedSourceFixture(t), index = await advanceUnifiedSourceIndex({ ...f, directory: join(f.root, 'advance') });
+    const handoff = await captureUnifiedNextBaseline({ ...f, proof: index.proof, directory: join(f.root, 'next') });
+    const next = await readUnifiedNextBaseline({ spec: f.spec, handoff: handoff.proof });
+    const frozen = { planSHA256: f.spec.planSHA256, owners: ['main'], candidate: { baselines: next.sources.map(row => ({ sourcePath: row.sourcePath, activeSHA256: row.sha256 })) } };
+    const binding = { active: structuredClone(next.sources), frozen, previous: selectUnifiedNextPrevious(next, frozen), baseline: structuredClone(next.baseline) };
+    if (fault === 'old-A') binding.active[0].text = 'old Git O';
+    if (fault === 'missing-code') binding.active = binding.active.filter(row => !row.sourcePath.endsWith('.ts'));
+    if (fault === 'duplicate-A') binding.active.push(binding.active[0]);
+    if (fault === 'old-Main') binding.previous.owners.main = f.spec.owners.main;
+    if (fault === 'partial-index') delete next.previous.owners.nte;
+    if (fault === 'wrong-plan') frozen.planSHA256 = '0'.repeat(64);
+    if (fault === 'old-baseline') binding.baseline = f.spec.baseline;
+    if (fault === 'topology') binding.baseline.routes.push({ pattern: 'changed' });
+    if (fault === 'unselected-owner') binding.previous.owners.nte = next.previous.owners.nte;
+    if (fault !== 'none') { assert.throws(() => bindUnifiedNextSources(next, binding)); return; }
+    const opened = bindUnifiedNextSources(next, binding);
+    assert.deepEqual(Object.keys(opened.owners), UNIFIED_SOURCE_OWNERS); assert.deepEqual(Object.keys(binding.previous.owners), ['main']);
+    assert.equal(opened.owners.main.versionId, f.spec.owners.main.versionId);
+    assert.equal(opened.provenance.main.mode, 'unified_upload_time_module_receipt');
+    assert.deepEqual(opened.provenance.main.moduleContext, f.spec.owners.main.moduleContext);
+    assert.equal(opened.currentCloudRead, false); assert.equal(opened.freshnessRenewed, false);
+  });
+}
 
 for (const fault of ['unknown-main', 'old-main', 'same-uuid-new-deployment', 'protected-game', 'topology', 'immutable-version', 'public-A', 'public-unavailable', 'public-cookie', 'public-private',
   'partial-http', 'missing-owner', 'missing-source', 'duplicate-source', 'code-bytes', 'static-tamper', 'module-receipt', 'mid-observation-drift']) {

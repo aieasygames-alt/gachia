@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import path from 'node:path'
 import { readUnifiedCompletedMainPromotion } from '../../../scripts/unified-main-evidence.mjs'
 import { readPinnedUnifiedInput } from './unified-desktop'
-import { readUnifiedHistoricalMainPreviews, unifiedHistoricalPublicationRequest, verifyUnifiedHistoricalPublication } from './unified-historical-publication'
+import { readUnifiedHistoricalMainPreviews, readUnifiedHistoricalPublication, unifiedHistoricalPublicationRequest, verifyUnifiedHistoricalPublicationEvidence } from './unified-historical-publication'
 import { verifyUnifiedCI } from './unified-production'
 
 type Proof = { path: string; pin: string }
@@ -26,27 +26,49 @@ function parse(value: unknown, kind: string, fields: string[]) {
 export const unifiedHistoricalMainRequest = (value: unknown) => parse(value, 'unified_historical_main_previews_request', ['history', 'previews', 'previewExecution']) as UnifiedHistoricalMainRequest
 export const unifiedPublishedMainRequest = (value: unknown) => parse(value, 'unified_published_main_request', ['history', 'previews', 'previewExecution', 'promotion']) as UnifiedPublishedMainRequest
 
-export async function verifyUnifiedHistoricalMain(request: UnifiedHistoricalMainRequest, githubToken: string) {
-  unifiedHistoricalMainRequest(request)
-  const historical = await verifyUnifiedHistoricalPublication(unifiedHistoricalPublicationRequest(pinned(request.history)), githubToken)
+export async function readUnifiedHistoricalMain(input: UnifiedHistoricalMainRequest) {
+  const request = structuredClone(unifiedHistoricalMainRequest(input))
+  const historical = await readUnifiedHistoricalPublication(unifiedHistoricalPublicationRequest(pinned(request.history)))
   const cloud = await readUnifiedHistoricalMainPreviews(historical, request.previews)
   const execution = pinned(request.previewExecution)
-  const previewExecutorCI = await verifyUnifiedCI(execution.executorCI.runID, execution.executorCI.commit, githubToken)
+  const previewExecutorCI = execution.executorCI
   assert.deepEqual(execution, { ...cloud.previews.receipt, directory: cloud.previews.directory, receiptPin: cloud.previews.pin,
-    sourceCI: historical.sourceCI, originExecutorCI: historical.originExecutorCI, executorCI: previewExecutorCI }, 'Preview execution is not the exact sealed result')
-  return { historical, ...cloud, previewExecutorCI, currentCMSRead: false, currentCloudRead: false, freshnessRenewed: false } as const
+    sourceCI: historical.audit.sourceCI, originExecutorCI: historical.audit.executorCI, executorCI: previewExecutorCI }, 'Preview execution is not the exact sealed result')
+  return { historical, ...cloud, previewExecutorCI, currentCMSRead: false, currentCloudRead: false, freshnessRenewed: false, ciVerified: false } as const
 }
 
-// This fixed reader accepts no verifier, transport, current CMS document or
-// caller-supplied "passed" flag. Every CI and every transitive receipt is read.
-export async function verifyUnifiedPublishedMain(input: UnifiedPublishedMainRequest, githubToken: string) {
-  const request = unifiedPublishedMainRequest(input)
-  const opened = await verifyUnifiedHistoricalMain({ schemaVersion: 1, kind: 'unified_historical_main_previews_request', history: request.history,
-    previews: request.previews, previewExecution: request.previewExecution }, githubToken)
+async function verifyHistoricalMainEvidence(evidence: Awaited<ReturnType<typeof readUnifiedHistoricalMain>>, githubToken: string): Promise<any> {
+  const historical = await verifyUnifiedHistoricalPublicationEvidence(evidence.historical, githubToken)
+  const previewExecutorCI = await verifyUnifiedCI(evidence.previewExecutorCI.runID, evidence.previewExecutorCI.commit, githubToken)
+  assert.deepEqual(previewExecutorCI, evidence.previewExecutorCI)
+  return { ...evidence, historical, previewExecutorCI, ciVerified: true }
+}
+
+export async function verifyUnifiedHistoricalMain(request: UnifiedHistoricalMainRequest, githubToken: string) {
+  return verifyHistoricalMainEvidence(await readUnifiedHistoricalMain(request), githubToken)
+}
+
+// Offline integrity reads retain original CI identities. The verified entry
+// below rechecks every ancestor CI before any production adapter can use it.
+export async function readUnifiedPublishedMain(input: UnifiedPublishedMainRequest): Promise<any> {
+  const request = structuredClone(unifiedPublishedMainRequest(input))
+  const opened = await readUnifiedHistoricalMain({ schemaVersion: 1, kind: 'unified_historical_main_previews_request', history: request.history,
+    previews: request.previews, previewExecution: request.previewExecution })
   const receipt = pinned(request.promotion)
-  const executorCI = await verifyUnifiedCI(receipt.executorCI.runID, receipt.executorCI.commit, githubToken)
+  const executorCI = receipt.executorCI
   const completed = await readUnifiedCompletedMainPromotion({ run: opened.historical.build, proof: request.promotion, value: opened.historical.value,
     previews: opened.previews, references: opened.references, publicReferences: opened.publicReferences('candidate'), runtimeConfig: opened.runtimeConfig,
-    productionRequest: opened.historical.request.production, sourceCI: opened.historical.sourceCI, originExecutorCI: opened.historical.originExecutorCI, executorCI })
+    productionRequest: opened.historical.request.production, sourceCI: opened.historical.audit.sourceCI, originExecutorCI: opened.historical.audit.executorCI, executorCI })
   return { ...opened, request, completed, executorCI, sourceAdvanced: false } as const
+}
+
+export async function verifyUnifiedPublishedMainEvidence(evidence: Awaited<ReturnType<typeof readUnifiedPublishedMain>>, githubToken: string): Promise<any> {
+  const opened = await verifyHistoricalMainEvidence(evidence, githubToken)
+  const executorCI = await verifyUnifiedCI(evidence.executorCI.runID, evidence.executorCI.commit, githubToken)
+  assert.deepEqual(executorCI, evidence.executorCI)
+  return { ...opened, executorCI }
+}
+
+export async function verifyUnifiedPublishedMain(input: UnifiedPublishedMainRequest, githubToken: string) {
+  return verifyUnifiedPublishedMainEvidence(await readUnifiedPublishedMain(input), githubToken)
 }

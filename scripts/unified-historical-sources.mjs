@@ -62,5 +62,8 @@ export async function readUnifiedHistoricalSources(proof, baseline) {
     assertModuleVersionIdentity(saved.version, version);
     owners[owner] = { ...old, version, sourceIdentityPin: digest(JSON.stringify(sorted({ proof: source.moduleProof, version }))) };
   }
-  return { handoff, previous, baseline, owners, currentCloudRead: false, freshnessRenewed: false };
+  const provenance = Object.fromEntries(UNIFIED_SOURCE_OWNERS.map(owner => [owner, {
+    ...handoff.owners[owner], proofTransportPin: handoff.transportPin,
+  }]));
+  return { handoff, previous, baseline, owners, provenance, currentCloudRead: false, freshnessRenewed: false };
 }

@@ -3,16 +3,14 @@ import { execFileSync } from 'node:child_process'
 import { readFileSync, realpathSync } from 'node:fs'
 import { homedir } from 'node:os'
 import path from 'node:path'
-import { activeVersion, assertTopology, desktopCloudSnapshot } from '../../../scripts/desktop-cloud-release.mjs'
+import { assertTopology, desktopCloudSnapshot } from '../../../scripts/desktop-cloud-release.mjs'
 import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
-import { assertModuleVersionIdentity, revalidateUploadedModule } from '../../../scripts/desktop-version-provenance.mjs'
 import { boundedBody } from '../../../scripts/desktop-version-preview.mjs'
 import { digest } from '../../../scripts/desktop-release-assets.mjs'
 import { assertUnifiedOwnerSettings, unifiedTransportTarget } from '../../../scripts/unified-cloud-module.mjs'
 import { assertUnifiedPreviewUploadScope, executeUnifiedPreviewProtocol } from '../../../scripts/unified-preview-protocol.mjs'
 import { unifiedProductionRead, unifiedProductionTransport } from '../../../scripts/unified-production-transport.mjs'
-import { readUnifiedVersion, revalidateUnifiedSourceModule } from '../../../scripts/unified-version-identity.mjs'
 import { canonical } from './record-mapping'
 import { projectRoot } from './local-environment'
 import { assertUnifiedInstalledApplication, loadUnifiedDesktopPlan, readPinnedUnifiedInput, unifiedSelection, verifyUnifiedPublishedDocuments } from './unified-desktop'
@@ -202,29 +200,24 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
   const executorCI = executor.executorCI
   const originExecutorCI = options.originExecutor ? await verifyUnifiedCI(options.originExecutor.runID, options.originExecutor.commit, githubToken) : executorCI
   const handoff = pinned<Record<string, any>>(request.sourceHandoff)
-  assert.equal(handoff.kind, 'unified_observed_source_handoff'); assert.equal(handoff.status, 'all_five_active_source_modules_verified')
-  assert.equal(handoff.workerWrites, 0); assert.equal(handoff.topologyUnchanged, true)
-  const historical = pinned<any>(handoff.before), baseline = await desktopCloudSnapshot(cloudToken, unifiedProductionRead)
-  assertTopology(historical, baseline)
+  const baseline = await desktopCloudSnapshot(cloudToken, unifiedProductionRead)
   const previous = readPinnedUnifiedInput(local.publication.previousPath, local.publication.previousPin) as any
+  const { verifyUnifiedProductionSources } = await import('./unified-source-advance')
   const verify = async () => {
     executor.verify()
     assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed')
     const fresh = await verifyUnifiedProductionLocal(request, cmsToken)
+    const sources = await verifyUnifiedProductionSources(request.sourceHandoff, { baseline, active: pinned(request.active),
+      frozen: fresh.built.frozen, previous }, { githubToken, cloudToken })
     const identityObservedAt = Date.now()
     const owners: Record<string, any> = {}
     const preservedOwners: Record<string, PreservedRuntime> = {}
     for (const owner of fresh.scope.build.owners) {
-      const source = handoff.owners[owner], old = previous.owners[owner], service = old.service
-      assert(['original_upload_time_receipt_fresh_immutable_identity', 'fresh_etag_bound_source_capture'].includes(source.mode), 'Unreviewed source provenance mode')
+      const source = sources.provenance[owner], old = previous.owners[owner], service = old.service
       assert.equal(source.service, service); assert.equal(source.sourceVersionId, old.versionId)
-      assert.equal(old.versionId, activeVersion(baseline, service)); assert.equal(source.moduleSHA256, old.moduleSHA256)
-      const readVersion = (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken, request: unifiedProductionRead })
-      const saved = source.mode === 'original_upload_time_receipt_fresh_immutable_identity'
-        ? await revalidateUploadedModule({ proof: source.moduleProof, service, versionId: old.versionId, moduleSHA256: old.moduleSHA256, context: undefined, readVersion })
-        : await revalidateUnifiedSourceModule({ proof: source.moduleProof, service, versionId: old.versionId, moduleSHA256: old.moduleSHA256,
-          transportPin: handoff.transportPin, readVersion })
-      assertModuleVersionIdentity(pinned(source.versionProof), saved.version)
+      const { version: _version, sourceIdentityPin: _pin, ...expected } = sources.owners[owner]
+      assert.deepEqual(old, expected, 'Production previous artifacts differ from verified sources')
+      assert.equal(source.moduleSHA256, old.moduleSHA256)
       const archive = readFileSync(old.modulePath); assert.equal(digest(archive), old.archiveSHA256)
       const module = await multipartModule(archive); assert.equal(module.moduleSHA256, source.moduleSHA256)
       const sealed = fresh.transport.receipt.owners[owner]
@@ -232,7 +225,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
       const metadata = (await multipartModule(readFileSync(path.join(fresh.transport.directory, owner, 'recovery/exact.multipart')))).metadata
       assertUnifiedOwnerSettings(owner, target, metadata, baseline)
       assert.equal(local.publication.owners[owner].sourceVersionId, old.versionId)
-      owners[owner] = { service, sourceVersionId: old.versionId, sourceIdentityPin: digest(canonical({ proof: source.moduleProof, version: saved.version })),
+      owners[owner] = { service, sourceVersionId: old.versionId, sourceIdentityPin: sources.owners[owner].sourceIdentityPin,
         ...Object.fromEntries(['candidate', 'recovery'].map(role => [role, { moduleSHA256: sealed[role as 'candidate' | 'recovery'].moduleSHA256,
           configPin: sealed[role as 'candidate' | 'recovery'].uploadConfigPin, artifactPin: local.publication.owners[owner][role].artifactSHA256,
           referencesPin: sealed[role as 'candidate' | 'recovery'].referencesPin }])) }
@@ -243,6 +236,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
     const releaseKey = digest(canonical({ candidate: fresh.built.frozen.candidate.candidateSHA256, review: fresh.review.reviewPin,
       transport: fresh.transport.transportPin, executorCommit: originExecutorCI.commit, sourceCommit: fresh.built.frozen.sourceCommit, owners: scope.uploadOwners,
       ...(fresh.preservation ? { preservation: request.preservation!.pin, preservedOwners } : {}) }))
+    if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
     return { preview: false, transportPin: fresh.transport.transportPin, releaseKey, changed: fresh.built.frozen.candidate.changed,
       ownerOrder: scope.uploadOwners, owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])),
       preservedOwners, baseline, identityObservedAt }

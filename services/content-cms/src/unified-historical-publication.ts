@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { assertUnifiedOwnerSettings, unifiedRuntimeConfig, unifiedTransportTarget } from '../../../scripts/unified-cloud-module.mjs'
 import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
-import { readUnifiedHistoricalBytes, readUnifiedHistoricalSources } from '../../../scripts/unified-historical-sources.mjs'
+import { readUnifiedHistoricalBytes } from '../../../scripts/unified-historical-sources.mjs'
 import { readUnifiedMainPreviewModules } from '../../../scripts/unified-main-evidence.mjs'
 import { unifiedMainPublicReferences } from '../../../scripts/unified-main-public.mjs'
 import { readUnifiedCloudPreviews } from '../../../scripts/unified-promotion-protocol.mjs'
@@ -14,6 +14,7 @@ import { canonical } from './record-mapping'
 import { readPinnedUnifiedInput, unifiedSelection } from './unified-desktop'
 import type { SourceBytes } from './unified-export'
 import { verifyUnifiedHistoricalReview } from './unified-historical-review'
+import { withUnifiedHistoryChain } from './unified-history-chain'
 import { verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { unifiedPlan } from './unified-plan'
 import { verifyUnifiedPreviewContract } from './unified-preview'
@@ -66,7 +67,12 @@ export function readUnifiedHistoricalPlan(repo: string, commit: string, planPin:
 // Reopen the sealed publication after CMS documents, installed releases or the
 // active Main have advanced. No current CMS/cloud state is used as historical O.
 export async function readUnifiedHistoricalPublication(input: UnifiedHistoricalPublicationRequest) {
-  const request = unifiedHistoricalPublicationRequest(input), production = unifiedProductionRequest(pinned(request.production)), audit = pinned(request.audit)
+  const request = structuredClone(unifiedHistoricalPublicationRequest(input))
+  return withUnifiedHistoryChain(request.production.path, () => readHistoricalPublication(request))
+}
+
+async function readHistoricalPublication(request: UnifiedHistoricalPublicationRequest) {
+  const production = unifiedProductionRequest(pinned(request.production)), audit = pinned(request.audit)
   assert.equal(audit.requestPin, request.production.pin); assert.equal(audit.status, 'production_preview_preflight_passed_no_upload')
   assert.equal(audit.scopeClosureRequired, false); assert.equal(audit.productionPromoted, false); assert.equal(audit.cloudWrites, false)
   assert.deepEqual(audit.ownerOrder, ['main']); assert.equal(audit.executorCI.runID, production.executorRunID)
@@ -93,8 +99,10 @@ export async function readUnifiedHistoricalPublication(input: UnifiedHistoricalP
   const initialScope = unifiedEditorialScope(review.candidate.manifest, plan, ownership)
   const qualification = unifiedPilotQualification(review.records, active, review.candidate)
   assert.deepEqual(built.frozen.owners, initialScope.build.owners); assert.deepEqual(qualification, audit.qualification)
-  const sources = await readUnifiedHistoricalSources(production.sourceHandoff, audit.baseline)
   const previous = pinned({ path: publication.previousPath, pin: publication.previousPin })
+  const { readUnifiedPublicationSources } = await import('./unified-source-advance')
+  const sources = await readUnifiedPublicationSources(production.sourceHandoff, { baseline: audit.baseline, active, frozen: built.frozen, previous,
+    identityObservedAt: audit.identityObservedAt })
   assert.deepEqual(Object.keys(previous.owners).sort(), [...built.frozen.owners].sort())
   const preservation = readUnifiedPreservationCatalogs(unifiedPreservationSelection(pinned(production.preservation!), initialScope.preservationOnlyOwners),
     initialScope, plan, active, production.repo)
@@ -103,7 +111,7 @@ export async function readUnifiedHistoricalPublication(input: UnifiedHistoricalP
   for (const owner of built.frozen.owners) {
     const old = (sources.owners as Record<string, any>)[owner]
     const { version, sourceIdentityPin, ...original } = old
-    assert.deepEqual(previous.owners[owner], original, 'Publication must use the original all-five handoff')
+    assert.deepEqual(previous.owners[owner], original, 'Publication must use the exact source handoff')
     const sealed = transport.receipt.owners[owner], row = publication.owners[owner]
     assert.equal(row.service, old.service); assert.equal(row.sourceVersionId, old.versionId); assert.equal(row.runtimeModuleSHA256, old.moduleSHA256)
     const target = unifiedTransportTarget(owner, readUnifiedHistoricalBytes(path.join(build, 'source/apps', owner === 'main' ? 'web' : `game-${owner}`, 'wrangler.jsonc')).toString())
@@ -129,6 +137,14 @@ export async function readUnifiedHistoricalPublication(input: UnifiedHistoricalP
 
 export async function verifyUnifiedHistoricalPublication(request: UnifiedHistoricalPublicationRequest, githubToken: string) {
   const evidence = await readUnifiedHistoricalPublication(request)
+  return verifyUnifiedHistoricalPublicationEvidence(evidence, githubToken)
+}
+
+export async function verifyUnifiedHistoricalPublicationEvidence(evidence: Awaited<ReturnType<typeof readUnifiedHistoricalPublication>>, githubToken: string): Promise<any> {
+  if (evidence.sources.ancestor) {
+    const { verifyUnifiedPublishedMainEvidence } = await import('./unified-published-main')
+    await verifyUnifiedPublishedMainEvidence(evidence.sources.ancestor, githubToken)
+  }
   const sourceCI = await verifyUnifiedCI(evidence.production.sourceRunID, evidence.built.frozen.sourceCommit, githubToken)
   const originExecutorCI = await verifyUnifiedCI(evidence.production.executorRunID, evidence.audit.executorCI.commit, githubToken)
   assert.deepEqual(sourceCI, evidence.audit.sourceCI); assert.deepEqual(originExecutorCI, evidence.audit.executorCI)

@@ -4,13 +4,14 @@ import path from 'node:path'
 import { mkdirSync, realpathSync, writeFileSync } from 'node:fs'
 import { desktopCloudSnapshot } from '../../../scripts/desktop-cloud-release.mjs'
 import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
-import { readUnifiedHistoricalBytes, UNIFIED_SOURCE_OWNERS } from '../../../scripts/unified-historical-sources.mjs'
+import { assertModuleVersionIdentity, revalidateUploadedModule } from '../../../scripts/desktop-version-provenance.mjs'
+import { readUnifiedHistoricalBytes, readUnifiedHistoricalSources, UNIFIED_SOURCE_OWNERS } from '../../../scripts/unified-historical-sources.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
-import { advanceUnifiedSourceIndex, captureUnifiedNextBaseline, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from '../../../scripts/unified-source-advance.mjs'
-import { readUnifiedVersion } from '../../../scripts/unified-version-identity.mjs'
+import { advanceUnifiedSourceIndex, bindUnifiedNextSources, captureUnifiedNextBaseline, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from '../../../scripts/unified-source-advance.mjs'
+import { readUnifiedVersion, revalidateUnifiedSourceModule, revalidateUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
 import { readPinnedUnifiedInput } from './unified-desktop'
 import { createUnifiedExecutorVerifier } from './unified-production'
-import { unifiedPublishedMainRequest, verifyUnifiedPublishedMain } from './unified-published-main'
+import { readUnifiedPublishedMain, unifiedPublishedMainRequest, verifyUnifiedPublishedMain } from './unified-published-main'
 import { verifyUnifiedOwnerBuild, type ConsumerExpectation } from './unified-owner-build'
 import { prepareUnifiedPublication } from './unified-publication'
 import { digest } from './legacy-intake'
@@ -43,7 +44,15 @@ export function unifiedSourceRequest(value: unknown) {
 }
 
 async function openPublication(proof: Proof, githubToken: string) {
-  const opened = await verifyUnifiedPublishedMain(unifiedPublishedMainRequest(pinned(proof)), githubToken)
+  assert(typeof githubToken === 'string' && githubToken.length > 0, 'Authenticated ancestor CI verification required')
+  return publicationSpec(proof, await verifyUnifiedPublishedMain(unifiedPublishedMainRequest(pinned(proof)), githubToken))
+}
+
+async function readPublication(proof: Proof) {
+  return publicationSpec(proof, await readUnifiedPublishedMain(unifiedPublishedMainRequest(pinned(proof))))
+}
+
+function publicationSpec(proof: Proof, opened: Awaited<ReturnType<typeof readUnifiedPublishedMain>>) {
   const { historical, completed } = opened
   const { sources, value, transport, publication, plan, build } = historical
   assert.equal(plan.sources.length, 115, 'The complete registered source set is required')
@@ -51,9 +60,11 @@ async function openPublication(proof: Proof, githubToken: string) {
   assert.equal(ledger.pairs.length, 90)
   const rows: Record<string, any> = {}
   for (const owner of UNIFIED_SOURCE_OWNERS) {
-    const old = (sources.owners as Record<string, any>)[owner], original = sources.handoff.owners[owner]
+    const old = (sources.owners as Record<string, any>)[owner], original = sources.provenance[owner]
     const { version, sourceIdentityPin: _pin, ...artifact } = old
-    rows[owner] = { ...artifact, owner, version, moduleProof: original.moduleProof, mode: original.mode, proofTransportPin: sources.handoff.transportPin }
+    rows[owner] = { ...artifact, owner, version, moduleProof: original.moduleProof, mode: original.mode,
+      ...(original.proofTransportPin === undefined ? {} : { proofTransportPin: original.proofTransportPin }),
+      ...(original.moduleContext === undefined ? {} : { moduleContext: original.moduleContext }) }
   }
   const module = (completed.modules as Record<string, any>).candidate, accepted = opened.previews.receipt.accepted.candidate.main
   rows.main = { owner: 'main', service: 'gachia', versionId: accepted.versionId,
@@ -76,6 +87,47 @@ export async function verifyUnifiedNextSource(input: { publication: Proof; hando
   const { publication, handoff, githubToken } = structuredClone(input)
   const { spec } = await openPublication(publication, githubToken)
   return readUnifiedNextBaseline({ spec, handoff, fresh: true })
+}
+
+type SourceBinding = { baseline: any; active: any; frozen: any; previous: any }
+
+// Historical reads never renew freshness or consult today's CMS/cloud state.
+// Production uses the same complete binding plus fresh handoff and ancestor CI.
+export async function readUnifiedPublicationSources(proof: Proof, binding: SourceBinding & { identityObservedAt: number }): Promise<any> {
+  proof = structuredClone(proof)
+  binding = structuredClone(binding)
+  const handoff = pinned(proof)
+  if (handoff.kind !== 'unified_next_batch_baseline') return readUnifiedHistoricalSources(proof, binding.baseline)
+  const { opened: ancestor, spec } = await readPublication(handoff.publication)
+  const next = await readUnifiedNextBaseline({ spec, handoff: proof })
+  assert(Number.isSafeInteger(binding.identityObservedAt) && binding.identityObservedAt >= next.value.observation.observedAt
+    && binding.identityObservedAt - next.value.observation.startedAt < 900000, 'Historical publication did not use its next baseline while fresh')
+  return { ...bindUnifiedNextSources(next, binding), ancestor }
+}
+
+export async function verifyUnifiedProductionSources(proof: Proof, binding: SourceBinding,
+  { githubToken, cloudToken }: { githubToken: string; cloudToken: string }): Promise<any> {
+  assert(typeof githubToken === 'string' && githubToken.length > 0, 'Authenticated ancestor CI verification required')
+  assert(typeof cloudToken === 'string' && cloudToken.length > 0, 'Authenticated immutable-version reads required')
+  proof = structuredClone(proof)
+  binding = structuredClone(binding)
+  const handoff = pinned(proof)
+  const sources: any = handoff.kind !== 'unified_next_batch_baseline' ? await readUnifiedHistoricalSources(proof, binding.baseline)
+    : bindUnifiedNextSources(await verifyUnifiedNextSource({ publication: handoff.publication, handoff: proof, githubToken }), binding)
+  const readVersion = (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken, request: unifiedProductionRead })
+  for (const owner of UNIFIED_SOURCE_OWNERS) {
+    const source = sources.provenance[owner], old = sources.owners[owner]
+    const common = { proof: source.moduleProof, service: old.service, versionId: old.versionId, moduleSHA256: old.moduleSHA256, readVersion }
+    const saved = source.mode === 'unified_upload_time_module_receipt'
+      ? await revalidateUnifiedUploadedModule({ ...common, context: source.moduleContext })
+      : source.mode === 'original_upload_time_receipt_fresh_immutable_identity'
+        ? await revalidateUploadedModule({ ...common, context: undefined })
+        : await revalidateUnifiedSourceModule({ ...common, transportPin: source.proofTransportPin })
+    assertModuleVersionIdentity(old.version, saved.version)
+  }
+  if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during identity reads')
+  assert.deepEqual(pinned(proof), handoff, 'Source handoff changed during identity reads')
+  return sources
 }
 
 // No caller-provided readers, snapshots or success flags enter this adapter.
