@@ -42,7 +42,7 @@ export function unifiedUploadResponse(output, service) {
 
 // Internal fixed adapter. Only the desktop production wrapper supplies verified
 // evidence; the CLI cannot replace fetch, verification, or any write operation.
-export function unifiedProductionTransport({ evidence, token, directory }) {
+export function unifiedProductionTransport({ evidence, token, directory, previewRequest = fetch, parserVersion = 'legacy-v1' }) {
   assert(typeof token === 'string' && token.length > 0, 'Cloudflare credential required');
   const { transport, baseline, build } = evidence;
   const rowFor = ({ owner, role, service, row }) => {
@@ -100,10 +100,10 @@ export function unifiedProductionTransport({ evidence, token, directory }) {
       const raw = readFileSync(join(http, 'references.json')); assert.equal(digest(raw), sealed.referencesPin);
       const references = unifiedPreviewReferences(JSON.parse(raw), (row, index) => {
         assert.equal(row.bodyFile, `${index}.body`); return readFileSync(join(http, row.bodyFile));
-      });
+      }, parserVersion);
       const output = join(proofDirectory(args.owner, args.role), 'http');
-      const proof = await verifyUnifiedVersionPreview({ service: args.service, versionId: args.versionId, references, directory: output });
-      recheckUnifiedPreview(output, proof.evidenceSHA256, { service: args.service, versionId: args.versionId, references });
+      const proof = await verifyUnifiedVersionPreview({ service: args.service, versionId: args.versionId, references, directory: output, request: previewRequest, parserVersion });
+      recheckUnifiedPreview(output, proof.evidenceSHA256, { service: args.service, versionId: args.versionId, references, parserVersion });
       return proof;
     },
     revalidate: async args => {

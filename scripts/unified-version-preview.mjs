@@ -11,7 +11,16 @@ const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const SHA = /^[a-f0-9]{64}$/;
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const parser = fileURLToPath(new URL('./unified-html-fingerprint.py', import.meta.url));
-export const unifiedHTMLParserPin = () => digest(readFileSync(parser));
+const streamingParser = fileURLToPath(new URL('./unified-html-streaming-fingerprint.py', import.meta.url));
+function parserPath(version) {
+  assert(['legacy-v1', 'streaming-v2'].includes(version), 'Unreviewed HTML parser version');
+  return version === 'legacy-v1' ? parser : streamingParser;
+}
+export function unifiedHTMLParserPin(version = 'legacy-v1') {
+  parserPath(version);
+  const legacy = digest(readFileSync(parser));
+  return version === 'legacy-v1' ? legacy : digest(JSON.stringify({ legacy, streaming: digest(readFileSync(streamingParser)) }));
+}
 
 export function exactUnifiedPreviewOrigin(service, versionId) {
   assert(UNIFIED_OWNERS.some(owner => unifiedService(owner) === service), 'Unreviewed unified preview service');
@@ -26,9 +35,9 @@ export function unifiedPreviewPath(path, origin) {
   return url.href;
 }
 
-export function unifiedPageFingerprints(rows) {
+export function unifiedPageFingerprints(rows, parserVersion = 'legacy-v1') {
   assert(rows.length > 0 && rows.every(row => typeof row.html === 'string' && Buffer.byteLength(row.html) <= 16 * 1024 * 1024));
-  const output = execFileSync('python3', ['-B', parser], { input: JSON.stringify(rows), timeout: 30000,
+  const output = execFileSync('python3', ['-B', parserPath(parserVersion)], { input: JSON.stringify(rows), timeout: 30000,
     maxBuffer: 32 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
   const result = JSON.parse(output.toString()); assert.equal(result.length, rows.length); return result;
 }
@@ -36,7 +45,8 @@ export function unifiedPageFingerprints(rows) {
 const mime = headers => new Headers(headers).get('content-type')?.split(';')[0].trim().toLowerCase();
 const policy = value => (value ?? '').toLowerCase().split(',').map(x => x.trim()).filter(Boolean).sort();
 
-export function unifiedPreviewReferences(references, readBody) {
+export function unifiedPreviewReferences(references, readBody, parserVersion = 'legacy-v1') {
+  parserPath(parserVersion);
   assert(Array.isArray(references) && references.length > 0 && references.length <= 2500, 'Invalid unified preview coverage');
   assert.equal(new Set(references.map(row => row.path)).size, references.length, 'Duplicate preview reference');
   const html = [], indices = [], result = references.map((row, index) => {
@@ -48,13 +58,14 @@ export function unifiedPreviewReferences(references, readBody) {
     if (mime(headers) === 'text/html') { html.push({ html: body.toString(), status: row.status }); indices.push(index); }
     return { ...row };
   });
-  if (html.length) unifiedPageFingerprints(html).forEach((fingerprint, i) => { result[indices[i]].fingerprint = fingerprint; });
+  if (html.length) unifiedPageFingerprints(html, parserVersion).forEach((fingerprint, i) => { result[indices[i]].fingerprint = fingerprint; });
   assert(result.some(row => mime(row.headers) === 'text/html'), 'Missing HTML preview coverage');
   for (const path of ['/sitemap.xml', '/robots.txt']) assert(result.some(row => row.path === path), 'Missing preview discovery coverage');
   return result;
 }
 
-export function validateUnifiedPreviewResponse({ response, bytes, reference }) {
+export function validateUnifiedPreviewResponse({ response, bytes, reference, parserVersion = 'legacy-v1' }) {
+  parserPath(parserVersion);
   const path = reference.path;
   assert.equal(response.status, reference.status, `Unified preview HTTP status: ${path}`);
   assert(!response.headers.has('set-cookie'), 'Unified preview sets a cookie');
@@ -65,21 +76,21 @@ export function validateUnifiedPreviewResponse({ response, bytes, reference }) {
   }
   if (type === 'text/html') {
     assert(reference.fingerprint && response.headers.get('cache-control'), 'Missing HTML reference/cache policy');
-    assert.deepEqual(unifiedPageFingerprints([{ html: bytes.toString(), status: response.status }])[0], reference.fingerprint,
+    assert.deepEqual(unifiedPageFingerprints([{ html: bytes.toString(), status: response.status }], parserVersion)[0], reference.fingerprint,
       `Unified preview rendered content/metadata/links/media differ: ${path}`);
   } else if (path === '/robots.txt') {
     assert.equal(bytes.toString().replaceAll('\r\n', '\n'), 'User-agent: *\nDisallow: /\n', 'Preview robots must exactly prohibit all crawling');
   } else assert.equal(digest(bytes), reference.sha256, `Unified preview bytes differ: ${path}`);
 }
 
-export async function verifyUnifiedVersionPreview({ service, versionId, references, directory, request = fetch, observationMode = 'cloud_exact_version' }) {
+export async function verifyUnifiedVersionPreview({ service, versionId, references, directory, request = fetch, observationMode = 'cloud_exact_version', parserVersion = 'legacy-v1' }) {
   const origin = exactUnifiedPreviewOrigin(service, versionId);
   assert(['cloud_exact_version', 'loopback_exact_host'].includes(observationMode));
   assert(references.length > 0 && references.length <= 2500 && new Set(references.map(row => row.path)).size === references.length);
   references.forEach(row => unifiedPreviewPath(row.path, origin));
   mkdirSync(directory, { mode: 0o700 });
   const result = { schemaVersion: 1, kind: 'unified_exact_version_preview', status: 'running', service, versionId, origin, observationMode,
-    parserPin: unifiedHTMLParserPin(), observations: [] };
+    parserPin: unifiedHTMLParserPin(parserVersion), ...(parserVersion === 'legacy-v1' ? {} : { parserVersion }), observations: [] };
   try {
     await sampleReadOnly(references, async (reference, index) => {
       const response = await request(unifiedPreviewPath(reference.path, origin), { method: 'GET', credentials: 'omit', redirect: 'error',
@@ -88,7 +99,7 @@ export async function verifyUnifiedVersionPreview({ service, versionId, referenc
       writeFileSync(join(directory, bodyFile), bytes, { flag: 'wx', mode: 0o600 });
       result.observations[index] = { path: reference.path, status: response.status, headers: Object.fromEntries(response.headers),
         sha256: digest(bytes), bytes: bytes.length, bodyFile };
-      validateUnifiedPreviewResponse({ response, bytes, reference });
+      validateUnifiedPreviewResponse({ response, bytes, reference, parserVersion });
     });
     result.status = 'passed';
   } catch (error) { result.status = 'failed'; result.error = error.message; throw error; }
@@ -99,7 +110,7 @@ export async function verifyUnifiedVersionPreview({ service, versionId, referenc
   return { ...result, evidenceSHA256: digest(readFileSync(join(directory, 'result.json'))) };
 }
 
-export function recheckUnifiedPreview(directory, pin, { service, versionId, references, observationMode = 'cloud_exact_version' }) {
+export function recheckUnifiedPreview(directory, pin, { service, versionId, references, observationMode = 'cloud_exact_version', parserVersion = 'legacy-v1' }) {
   assert(SHA.test(pin));
   const root = resolve(directory); assert.equal(realpathSync(root), root, 'Linked preview evidence forbidden');
   const bytes = file => {
@@ -111,12 +122,13 @@ export function recheckUnifiedPreview(directory, pin, { service, versionId, refe
   assert.equal(result.schemaVersion, 1); assert.equal(result.kind, 'unified_exact_version_preview'); assert.equal(result.status, 'passed');
   assert.equal(result.service, service); assert.equal(result.versionId, versionId);
   assert.equal(result.observationMode, observationMode, 'Local preview is not cloud evidence');
-  assert.equal(result.origin, exactUnifiedPreviewOrigin(service, versionId)); assert.equal(result.parserPin, unifiedHTMLParserPin(), 'HTML parser changed');
+  assert.equal(result.origin, exactUnifiedPreviewOrigin(service, versionId)); assert.equal(result.parserPin, unifiedHTMLParserPin(parserVersion), 'HTML parser changed');
+  assert.equal(result.parserVersion, parserVersion === 'legacy-v1' ? undefined : parserVersion, 'HTML parser version changed');
   assert.equal(result.observations.length, references.length, 'Incomplete preview evidence');
   result.observations.forEach((row, index) => {
     assert.equal(row.path, references[index].path); assert.equal(row.bodyFile, `${index}.body`);
     const body = bytes(row.bodyFile); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
-    validateUnifiedPreviewResponse({ response: { status: row.status, headers: new Headers(row.headers) }, bytes: body, reference: references[index] });
+    validateUnifiedPreviewResponse({ response: { status: row.status, headers: new Headers(row.headers) }, bytes: body, reference: references[index], parserVersion });
   });
   return result;
 }

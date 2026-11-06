@@ -1,6 +1,6 @@
 # 全游戏现有内容编辑契约
 
-更新：2026-11-06，R48。目标是把现有内容的维护从双游戏攻略扩展到所有注册游戏；本契约不是全站正式接管声明。
+更新：2026-11-06，R49。目标是把现有内容的维护从双游戏攻略扩展到所有注册游戏；本契约不是全站正式接管声明。
 
 用户已明确：作为玩家论坛，不要求公开内容来源认证或资料权威性审批。`community-editorial-v1` 将 `factualSourceApprovalRequired` 和 `publicSourceAttestationRequired` 均设为 false。读取当前公开内容是为了防止覆盖线上增量，不是重新引入来源认证；文件 SHA、版本/权限、构建、资源兼容和恢复检查仍属于工程安全要求。
 
@@ -154,6 +154,12 @@ R48 为上述证明增加受限 reader。`preservation` 指向 `{schemaVersion:1
 唯一代码差异例外是已审查的 `apps/game-nte/lib/data.ts` 精确历史/当前 SHA 对：该差异只改语言 reader/类型，不改四个内容单元；已有 TypeScript literal parser 再核对全部内容值及具名 reader 集合，任何其他字节或内容差异拒绝。此处保留原活动 NTE reader，不发布新版语言策略；第 2 项仍需独立验收。
 
 每个写前仍重读证据与云模块身份，只有真实观察时间可单调更新，release key、内容、模块与省略站身份不得变化；不得修改旧云预览的验收时间延长有效期。本机 catalog 复验只证明历史完整性，`audit-local` 不产生 Main-only 云授权。
+
+### R49 已知恢复观察续接
+
+R48 的实际上传只完成恢复 UUID，首个 HTTP 连接在零观察处失败，候选未尝试，基线未漂移。原上传器和失败 journal 均不可重跑或修改。`unified-preview-completion.ts` 仅接受这一已知恢复、零 HTTP、无候选意图的完整 pin 链；新独占尝试先重新观察现有恢复 UUID，再仅首次上传候选，没有恢复重传或推广能力。新旧执行器都要求精确完整 CI，release key 保持原值。
+
+预览读流量可经显式无凭据 loopback 代理，不改变系统配置或 TLS 校验。`streaming-v2` 对绑定旧/新解析器的独立 pin 比较文档 title 及完整 hreflang 属性/数量，允许这两类元数据的流式输出位置变化；正文、链接、媒体、JSON-LD 及脚本/样式顺序继续严格比较。默认 legacy-v1 和所有历史 pin 不变，旧证据不得改签。完整恢复 1,267 项只读诊断已通过，实际续接及正式闭环状态见 [R49](../reports/payload-main-promotion-2026-11-06-r49/README.md)。
 
 当前生产资格固定为 Ananta 既有 `download-install-guide` 中文 `/content` 单条试点，其余字段/语言必须与公开 A 相同。其他游戏/内容、多条批次不能用通用 JSON 和 published 绕过后续领域/消费者验收；保留 owner 未闭合时，实际上传入口拒绝更大批次，不能因只读预检通过便开始上传。该限制按第 2、3 项的真实验收逐片扩展，不是“所有内容已可正式更新”。
 

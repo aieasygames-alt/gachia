@@ -73,6 +73,21 @@ export async function verifyUnifiedCI(runID: number, commit: string, githubToken
   return { runID, commit, runAttempt: run.run_attempt, status: 'full_exact_ci_passed' }
 }
 
+type ExecutorIdentity = { commit: string; runID: number }
+function assertExecutorIdentity(value: ExecutorIdentity) {
+  assert(value && typeof value === 'object' && !Array.isArray(value)); keys(value, ['commit', 'runID'])
+  assert(typeof value.commit === 'string' && /^[a-f0-9]{40}$/.test(value.commit))
+  assert(Number.isSafeInteger(value.runID) && value.runID > 0)
+}
+
+export async function verifyUnifiedExecutorCI(current: ExecutorIdentity, githubToken: string, origin?: ExecutorIdentity) {
+  assertExecutorIdentity(current)
+  if (origin !== undefined) assertExecutorIdentity(origin)
+  const executorCI = await verifyUnifiedCI(current.runID, current.commit, githubToken)
+  const originExecutorCI = origin ? await verifyUnifiedCI(origin.runID, origin.commit, githubToken) : executorCI
+  return { executorCI, originExecutorCI }
+}
+
 export async function readUnifiedProductionReview(plan: Parameters<typeof verifyUnifiedPublishedDocuments>[0], selected: string[], cmsToken: string) {
   assert(typeof cmsToken === 'string' && cmsToken.length > 0, 'Authenticated loopback CMS credential required')
   // Long synchronous historical verification must not reuse a loopback socket
@@ -152,7 +167,10 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
   return { preview, transport, publication, built, build, editorial, review, scope, qualification, preservation, request }
 }
 
-export async function createUnifiedProductionVerifier(request: UnifiedProductionRequest, { cmsToken, cloudToken }: { cmsToken: string; cloudToken: string }) {
+export async function createUnifiedProductionVerifier(request: UnifiedProductionRequest, { cmsToken, cloudToken }: { cmsToken: string; cloudToken: string },
+  options: { originExecutor?: ExecutorIdentity } = {}) {
+  keys(options, Object.hasOwn(options, 'originExecutor') ? ['originExecutor'] : [])
+  if (Object.hasOwn(options, 'originExecutor')) assertExecutorIdentity(options.originExecutor!)
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Unified production is single-Mac desktop only')
   request = structuredClone(unifiedProductionRequest(request))
   const repo = path.resolve(projectRoot, '../..'), executorCommit = git(repo, ['rev-parse', 'HEAD'])
@@ -168,8 +186,10 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
   const local = await verifyUnifiedProductionLocal(request, cmsToken)
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const ci = await verifyUnifiedCI(request.sourceRunID, local.built.frozen.sourceCommit, githubToken)
-  const executorCI = request.executorRunID === request.sourceRunID && executorCommit === local.built.frozen.sourceCommit ? ci
-    : await verifyUnifiedCI(request.executorRunID, executorCommit, githubToken)
+  // A read-only observation stop may be completed by newer reviewed tooling.
+  // Preserve the original release key, while requiring full CI for BOTH the
+  // original executor and this exact current writer. This is not a CLI flag.
+  const { executorCI, originExecutorCI } = await verifyUnifiedExecutorCI({ runID: request.executorRunID, commit: executorCommit }, githubToken, options.originExecutor)
   const handoff = pinned<Record<string, any>>(request.sourceHandoff)
   assert.equal(handoff.kind, 'unified_observed_source_handoff'); assert.equal(handoff.status, 'all_five_active_source_modules_verified')
   assert.equal(handoff.workerWrites, 0); assert.equal(handoff.topologyUnchanged, true)
@@ -210,7 +230,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
     }
     const scope = fresh.preservation ? closeUnifiedProductionOwnerScope(fresh.scope, preservedOwners) : fresh.scope
     const releaseKey = digest(canonical({ candidate: fresh.built.frozen.candidate.candidateSHA256, review: fresh.review.reviewPin,
-      transport: fresh.transport.transportPin, executorCommit, sourceCommit: fresh.built.frozen.sourceCommit, owners: scope.uploadOwners,
+      transport: fresh.transport.transportPin, executorCommit: originExecutorCI.commit, sourceCommit: fresh.built.frozen.sourceCommit, owners: scope.uploadOwners,
       ...(fresh.preservation ? { preservation: request.preservation!.pin, preservedOwners } : {}) }))
     return { preview: false, transportPin: fresh.transport.transportPin, releaseKey, changed: fresh.built.frozen.candidate.changed,
       ownerOrder: scope.uploadOwners, owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])),
@@ -219,7 +239,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
   const value = await verify(); assertUnifiedPreviewUploadScope(value, value.transportPin)
   assertTopology(baseline, await desktopCloudSnapshot(cloudToken, unifiedProductionRead))
   const scope = local.preservation ? closeUnifiedProductionOwnerScope(local.scope, value.preservedOwners) : local.scope
-  return { ...local, scope, ci, executorCI, baseline, value, verify }
+  return { ...local, scope, ci, executorCI, originExecutorCI, baseline, value, verify }
 }
 
 // This is the only production upload entry. Neither request JSON nor CLI flags
