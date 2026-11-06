@@ -51,14 +51,16 @@ const readJSON = async (url: string, headers: Record<string, string> = {}) => {
   return JSON.parse((await boundedBody(response)).toString())
 }
 
-export async function verifyUnifiedCI(runID: number, commit: string) {
+export async function verifyUnifiedCI(runID: number, commit: string, githubToken = process.env.GITHUB_TOKEN) {
   assert(Number.isSafeInteger(runID) && runID > 0 && /^[a-f0-9]{40}$/.test(commit))
+  assert(typeof githubToken === 'string' && githubToken.length > 0, 'Private repository CI requires an authenticated GitHub read')
   const base = `https://api.github.com/repos/aieasygames-alt/gachia/actions/runs/${runID}`
-  const run = await readJSON(base, { accept: 'application/vnd.github+json' })
+  const headers = { accept: 'application/vnd.github+json', authorization: `Bearer ${githubToken}` }
+  const run = await readJSON(base, headers)
   assert.equal(run.repository?.full_name, 'aieasygames-alt/gachia'); assert.equal(run.id, runID)
   assert.equal(run.path, '.github/workflows/payload-verify.yml'); assert.equal(run.head_branch, 'codex/payload-unified-maintenance')
   assert.equal(run.head_sha, commit); assert.equal(run.status, 'completed'); assert.equal(run.conclusion, 'success')
-  const jobs = await readJSON(base + '/jobs?per_page=100', { accept: 'application/vnd.github+json' })
+  const jobs = await readJSON(base + '/jobs?per_page=100', headers)
   assert.equal(jobs.total_count, 1); assert.equal(jobs.jobs[0].conclusion, 'success')
   for (const name of ['Verify CMS types without deployment credentials', 'Test isolated CMS', 'Verify current content inventory and Router contracts',
     'Test release tooling without deployment credentials', 'Test public Web and Data consumers', 'Typecheck public consumers without builds', 'Test documentation and verification scope gates']) {
@@ -154,9 +156,10 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
     assert.equal(digest(readFileSync(path.join(repo, file))), digest(exact), 'Production executor has unverified source edits')
   }
   const local = await verifyUnifiedProductionLocal(request, cmsToken)
-  const ci = await verifyUnifiedCI(request.sourceRunID, local.built.frozen.sourceCommit)
+  const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
+  const ci = await verifyUnifiedCI(request.sourceRunID, local.built.frozen.sourceCommit, githubToken)
   const executorCI = request.executorRunID === request.sourceRunID && executorCommit === local.built.frozen.sourceCommit ? ci
-    : await verifyUnifiedCI(request.executorRunID, executorCommit)
+    : await verifyUnifiedCI(request.executorRunID, executorCommit, githubToken)
   const handoff = pinned<Record<string, any>>(request.sourceHandoff)
   assert.equal(handoff.kind, 'unified_observed_source_handoff'); assert.equal(handoff.status, 'all_five_active_source_modules_verified')
   assert.equal(handoff.workerWrites, 0); assert.equal(handoff.topologyUnchanged, true)

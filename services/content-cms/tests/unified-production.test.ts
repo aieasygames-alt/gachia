@@ -94,11 +94,13 @@ test('CI verification requires exact source, full non-skipped tests and the fixe
   const jobs = { total_count: 1, jobs: [{ conclusion: 'success', steps: steps.map(name => ({ name, conclusion: 'success' })) }] }
   const mock = t.mock.method(globalThis, 'fetch', async (url: string | URL | Request, options?: RequestInit) => {
     assert.equal(options?.method, 'GET'); assert(String(url).startsWith('https://api.github.com/repos/aieasygames-alt/gachia/actions/runs/123'))
+    assert.equal(new Headers(options?.headers).get('authorization'), 'Bearer isolated-test-token')
     return new Response(JSON.stringify(String(url).includes('/jobs?') ? jobs : run))
   })
-  assert.equal((await verifyUnifiedCI(123, commit)).status, 'full_exact_ci_passed')
-  jobs.jobs[0].steps[0].conclusion = 'skipped'; await assert.rejects(verifyUnifiedCI(123, commit), /Full exact-CI/)
-  jobs.jobs[0].steps[0].conclusion = 'success'; run.head_sha = 'b'.repeat(40); await assert.rejects(verifyUnifiedCI(123, commit))
+  await assert.rejects(verifyUnifiedCI(123, commit, ''), /authenticated GitHub read/); assert.equal(mock.mock.callCount(), 0)
+  assert.equal((await verifyUnifiedCI(123, commit, 'isolated-test-token')).status, 'full_exact_ci_passed')
+  jobs.jobs[0].steps[0].conclusion = 'skipped'; await assert.rejects(verifyUnifiedCI(123, commit, 'isolated-test-token'), /Full exact-CI/)
+  jobs.jobs[0].steps[0].conclusion = 'success'; run.head_sha = 'b'.repeat(40); await assert.rejects(verifyUnifiedCI(123, commit, 'isolated-test-token'))
   assert.equal(mock.mock.callCount(), 5)
 })
 
