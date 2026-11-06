@@ -1,6 +1,21 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { unifiedUploadArguments, unifiedUploadResponse } from './unified-production-transport.mjs';
+import { unifiedProductionRead, unifiedUploadArguments, unifiedUploadResponse } from './unified-production-transport.mjs';
+
+test('fixed reads disable idle connection reuse, never retry, and cannot issue writes', async t => {
+  const mock = t.mock.method(globalThis, 'fetch', async (url, options) => {
+    assert.equal(url, 'https://api.cloudflare.com/client/v4/test'); assert.equal(options.method, 'GET');
+    assert.equal(new Headers(options.headers).get('connection'), 'close');
+    assert.equal(new Headers(options.headers).get('authorization'), 'Bearer private-test-token');
+    return Response.json({ success: true });
+  });
+  const options = { method: 'GET', headers: { authorization: 'Bearer private-test-token' } };
+  assert.equal((await unifiedProductionRead('https://api.cloudflare.com/client/v4/test', options)).status, 200);
+  await assert.rejects(unifiedProductionRead('https://api.cloudflare.com/client/v4/test', { ...options, method: 'POST' }), /cannot write/);
+  mock.mock.mockImplementation(async () => { throw new TypeError('fetch failed'); });
+  await assert.rejects(unifiedProductionRead('https://api.cloudflare.com/client/v4/test', options), /Production read failed: https:\/\/api.cloudflare.com\/client\/v4\/test/);
+  assert.equal(mock.mock.callCount(), 2);
+});
 import { UNIFIED_OWNERS, unifiedService } from './unified-release-assets.mjs';
 import { exactUnifiedPreviewOrigin } from './unified-version-preview.mjs';
 

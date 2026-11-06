@@ -15,6 +15,18 @@ const save = (file, value) => {
   const text = JSON.stringify(value, null, 2) + '\n'; writeFileSync(file, text, { flag: 'wx', mode: 0o600 }); return digest(text);
 };
 
+// Synchronous evidence traversal can outlive a server's keepalive timeout.
+// Use independent GET connections, without retrying any request or write.
+export async function unifiedProductionRead(input, options) {
+  assert.equal(options?.method, 'GET', 'Production reader cannot write');
+  const headers = new Headers(options.headers); headers.set('connection', 'close');
+  try { return await fetch(input, { ...options, headers }); }
+  catch (cause) {
+    const target = new URL(input);
+    throw new Error(`Production read failed: ${target.origin}${target.pathname}`, { cause });
+  }
+}
+
 export function unifiedUploadArguments(config, environment, outfile) {
   assert(typeof environment === 'string');
   return ['versions', 'upload', '--no-bundle', '--config', config, '--env', environment, '--outfile', outfile];
@@ -39,11 +51,11 @@ export function unifiedProductionTransport({ evidence, token, directory }) {
     return { sealed: transport.receipt.owners[owner][role], path: join(transport.directory, owner, role),
       target: unifiedTransportTarget(owner, readFileSync(join(build, 'source/apps', owner === 'main' ? 'web' : `game-${owner}`, 'wrangler.jsonc'), 'utf8')) };
   };
-  const readVersion = (service, versionId) => readUnifiedVersion({ service, versionId, token });
+  const readVersion = (service, versionId) => readUnifiedVersion({ service, versionId, token, request: unifiedProductionRead });
   const context = (role, row) => ({ role, transportPin: evidence.value.transportPin, configPin: row.configPin });
   const proofDirectory = (owner, role) => join(directory, `${role}-${owner}`);
   return {
-    snapshot: () => desktopCloudSnapshot(token, fetch, { allowSplit: true }),
+    snapshot: () => desktopCloudSnapshot(token, unifiedProductionRead, { allowSplit: true }),
     upload: async args => {
       const { sealed, path, target } = rowFor(args), tool = transport.receipt.tool;
       verifyUnifiedTool(tool);
@@ -78,7 +90,7 @@ export function unifiedProductionTransport({ evidence, token, directory }) {
       const moduleProof = await captureUnifiedUploadedModule({ service: args.service, versionId: args.versionId,
         moduleSHA256: args.row.moduleSHA256, context: context(args.role, args.row), directory: join(outputDir, 'module'),
         uploadPath: outfile, uploadLogPath: join(outputDir, 'upload.log'), expectedVersion: version, readVersion,
-        readContent: (service, versionId) => readUnifiedVersion({ service, versionId, token, binary: true }) });
+        readContent: (service, versionId) => readUnifiedVersion({ service, versionId, token, binary: true, request: unifiedProductionRead }) });
       const versionPin = save(join(outputDir, 'version.json'), version);
       assert.equal(digest(readFileSync(join(path, 'upload.json'))), args.row.configPin);
       return { moduleSHA256: form.moduleSHA256, moduleProof, versionPin };

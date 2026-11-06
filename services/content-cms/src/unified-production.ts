@@ -11,7 +11,7 @@ import { boundedBody } from '../../../scripts/desktop-version-preview.mjs'
 import { digest } from '../../../scripts/desktop-release-assets.mjs'
 import { assertUnifiedOwnerSettings, unifiedTransportTarget } from '../../../scripts/unified-cloud-module.mjs'
 import { assertUnifiedPreviewUploadScope, executeUnifiedPreviewProtocol } from '../../../scripts/unified-preview-protocol.mjs'
-import { unifiedProductionTransport } from '../../../scripts/unified-production-transport.mjs'
+import { unifiedProductionRead, unifiedProductionTransport } from '../../../scripts/unified-production-transport.mjs'
 import { readUnifiedVersion, revalidateUnifiedSourceModule } from '../../../scripts/unified-version-identity.mjs'
 import { canonical } from './record-mapping'
 import { projectRoot } from './local-environment'
@@ -50,7 +50,7 @@ export function unifiedProductionRequest(value: unknown): UnifiedProductionReque
 const pinned = <T>(proof: Proof) => readPinnedUnifiedInput(proof.path, proof.pin) as T
 const git = (repo: string, args: string[]) => execFileSync('git', args, { cwd: repo, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).trim()
 const readJSON = async (url: string, headers: Record<string, string> = {}) => {
-  const response = await fetch(url, { method: 'GET', redirect: 'error', credentials: 'omit', headers, signal: AbortSignal.timeout(30000) })
+  const response = await unifiedProductionRead(url, { method: 'GET', redirect: 'error', credentials: 'omit', headers, signal: AbortSignal.timeout(30000) })
   assert(response.ok, `Read-only production preflight HTTP ${response.status}`)
   return JSON.parse((await boundedBody(response)).toString())
 }
@@ -73,9 +73,11 @@ export async function verifyUnifiedCI(runID: number, commit: string, githubToken
   return { runID, commit, runAttempt: run.run_attempt, status: 'full_exact_ci_passed' }
 }
 
-async function liveReview(plan: Parameters<typeof verifyUnifiedPublishedDocuments>[0], selected: string[], cmsToken: string) {
+export async function readUnifiedProductionReview(plan: Parameters<typeof verifyUnifiedPublishedDocuments>[0], selected: string[], cmsToken: string) {
   assert(typeof cmsToken === 'string' && cmsToken.length > 0, 'Authenticated loopback CMS credential required')
-  const base = 'http://127.0.0.1:3100', headers = { authorization: `JWT ${cmsToken}`, origin: base }
+  // Long synchronous historical verification must not reuse a loopback socket
+  // whose idle close could not be processed while the event loop was blocked.
+  const base = 'http://127.0.0.1:3100', headers = { authorization: `JWT ${cmsToken}`, origin: base, connection: 'close' }
   const user = await readJSON(base + '/api/users/me', headers)
   assert(['admin', 'reviewer'].includes(user.user?.role), 'Production review requires reviewer access')
   const docs: Record<string, unknown>[] = [], games = new Map<unknown, { id: unknown; key: unknown }>()
@@ -109,7 +111,7 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
   const { plan, originals } = loadUnifiedDesktopPlan(repo, frozen.planSHA256)
   assert.equal(editorial.planSHA256, plan.planSHA256)
   const selected = unifiedSelection(pinned(request.selection), plan), active = pinned<SourceBytes[]>(request.active)
-  const review = await liveReview(plan, selected, cmsToken)
+  const review = await readUnifiedProductionReview(plan, selected, cmsToken)
   assert.deepEqual(review.reviews, editorial.reviews, 'CMS formal review changed since freezing')
   assert.equal(review.reviewPin, editorial.reviewPin)
   const candidate = exportUnifiedContent(review.records, originals, active, false)
@@ -146,7 +148,7 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
   const preservation = request.preservation ? readUnifiedPreservationCatalogs(unifiedPreservationSelection(pinned(request.preservation), scope.preservationOnlyOwners),
     scope, plan, active, repo) : undefined
   if (preservation) verifyUnifiedPreservedMainResources(transport, Object.keys(preservation))
-  assert.equal((await liveReview(plan, selected, cmsToken)).reviewPin, review.reviewPin, 'Formal CMS review changed during preflight')
+  assert.equal((await readUnifiedProductionReview(plan, selected, cmsToken)).reviewPin, review.reviewPin, 'Formal CMS review changed during preflight')
   return { preview, transport, publication, built, build, editorial, review, scope, qualification, preservation, request }
 }
 
@@ -171,7 +173,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
   const handoff = pinned<Record<string, any>>(request.sourceHandoff)
   assert.equal(handoff.kind, 'unified_observed_source_handoff'); assert.equal(handoff.status, 'all_five_active_source_modules_verified')
   assert.equal(handoff.workerWrites, 0); assert.equal(handoff.topologyUnchanged, true)
-  const historical = pinned<any>(handoff.before), baseline = await desktopCloudSnapshot(cloudToken)
+  const historical = pinned<any>(handoff.before), baseline = await desktopCloudSnapshot(cloudToken, unifiedProductionRead)
   assertTopology(historical, baseline)
   const previous = readPinnedUnifiedInput(local.publication.previousPath, local.publication.previousPin) as any
   const verify = async () => {
@@ -186,7 +188,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
       assert(['original_upload_time_receipt_fresh_immutable_identity', 'fresh_etag_bound_source_capture'].includes(source.mode), 'Unreviewed source provenance mode')
       assert.equal(source.service, service); assert.equal(source.sourceVersionId, old.versionId)
       assert.equal(old.versionId, activeVersion(baseline, service)); assert.equal(source.moduleSHA256, old.moduleSHA256)
-      const readVersion = (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken })
+      const readVersion = (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken, request: unifiedProductionRead })
       const saved = source.mode === 'original_upload_time_receipt_fresh_immutable_identity'
         ? await revalidateUploadedModule({ proof: source.moduleProof, service, versionId: old.versionId, moduleSHA256: old.moduleSHA256, context: undefined, readVersion })
         : await revalidateUnifiedSourceModule({ proof: source.moduleProof, service, versionId: old.versionId, moduleSHA256: old.moduleSHA256,
@@ -215,7 +217,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
       preservedOwners, baseline, identityObservedAt }
   }
   const value = await verify(); assertUnifiedPreviewUploadScope(value, value.transportPin)
-  assertTopology(baseline, await desktopCloudSnapshot(cloudToken))
+  assertTopology(baseline, await desktopCloudSnapshot(cloudToken, unifiedProductionRead))
   const scope = local.preservation ? closeUnifiedProductionOwnerScope(local.scope, value.preservedOwners) : local.scope
   return { ...local, scope, ci, executorCI, baseline, value, verify }
 }

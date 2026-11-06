@@ -12,7 +12,7 @@ import { readUnifiedSources } from '../src/unified-sources'
 import { verifyUnifiedPublishedDocuments } from '../src/unified-desktop'
 import { exportUnifiedContent } from '../src/unified-export'
 import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification } from '../src/unified-production-scope'
-import { unifiedProductionRequest, verifyUnifiedCI } from '../src/unified-production'
+import { readUnifiedProductionReview, unifiedProductionRequest, verifyUnifiedCI } from '../src/unified-production'
 
 const repo = path.resolve(projectRoot, '../..'), inventory = JSON.parse(readFileSync(path.join(repo, baselineDirectory, 'inventory.json'), 'utf8'))
 const plan = unifiedPlan(readUnifiedSources().sources, inventory.scopes.map((scope: { id: string }) => scope.id))
@@ -86,6 +86,26 @@ test('production request accepts only pinned inputs, never authorization or depe
   for (const key of ['verify', 'transport', 'productionReady', 'skipCI', 'ownerOrder', 'promote']) assert.throws(() => unifiedProductionRequest({ ...value, [key]: true }))
   assert.throws(() => unifiedProductionRequest({ ...value, localPreview: { ...proof, pin: 'bad' } }))
   assert.throws(() => unifiedProductionRequest({ ...value, sourceRunID: 0 }))
+})
+
+test('formal loopback rereads use fresh connections and report transport failures without exposing credentials', async t => {
+  const f = fixture(), paths: string[] = []
+  const mock = t.mock.method(globalThis, 'fetch', async (url: string | URL | Request, options?: RequestInit) => {
+    const target = new URL(String(url)); paths.push(target.pathname)
+    assert.equal(target.origin, 'http://127.0.0.1:3100'); assert.equal(options?.method, 'GET')
+    assert.equal(new Headers(options?.headers).get('connection'), 'close')
+    assert.equal(new Headers(options?.headers).get('authorization'), 'JWT private-test-token')
+    if (target.pathname === '/api/users/me') return Response.json({ user: { role: 'reviewer' } })
+    if (target.pathname === '/api/content-records') return Response.json({ totalDocs: 1, docs: [f.doc], hasNextPage: false })
+    assert.equal(target.pathname, '/api/games/1'); return Response.json(f.games[0])
+  })
+  const result = await readUnifiedProductionReview(plan, [f.record.stableKey], 'private-test-token')
+  assert.equal(result.reviewPin, digest(canonical(result.reviews))); assert.equal(paths.length, 3)
+  mock.mock.mockImplementation(async () => { throw new TypeError('fetch failed') })
+  await assert.rejects(readUnifiedProductionReview(plan, [f.record.stableKey], 'private-test-token'), error => {
+    assert.match((error as Error).message, /^Production read failed: http:\/\/127\.0\.0\.1:3100\/api\/users\/me$/)
+    assert(!(error as Error).message.includes('private-test-token')); return true
+  })
 })
 
 test('only the accepted real-domain pilot qualifies; generic published JSON cannot authorize other fields or games', () => {
