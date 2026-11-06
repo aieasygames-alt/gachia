@@ -19,7 +19,8 @@ import { assertUnifiedInstalledApplication, loadUnifiedDesktopPlan, readPinnedUn
 import { exportUnifiedContent, type SourceBytes } from './unified-export'
 import { verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { verifyUnifiedPreviewContract } from './unified-preview'
-import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification } from './unified-production-scope'
+import { assertUnifiedProductionOwnerClosure, closeUnifiedProductionOwnerScope, unifiedEditorialScope, unifiedPilotQualification } from './unified-production-scope'
+import { bindUnifiedPreservedRuntime, readUnifiedPreservationCatalogs, unifiedPreservationSelection, verifyUnifiedPreservedMainResources, type PreservedRuntime } from './unified-preservation'
 import { verifyUnifiedTransport } from './unified-transport'
 
 type Proof = { path: string; pin: string }
@@ -27,15 +28,18 @@ export type UnifiedProductionRequest = {
   schemaVersion: 1; kind: 'unified_production_preview_request'; repo: string
   localPreview: Proof; editorial: Proof; selection: Proof; active: Proof; application: Proof; sourceHandoff: Proof
   sourceRunID: number; executorRunID: number
+  preservation?: Proof
 }
 const keys = (value: object, expected: string[]) => assert.deepEqual(Object.keys(value).sort(), [...expected].sort(), 'Unknown production request fields')
 export function unifiedProductionRequest(value: unknown): UnifiedProductionRequest {
   assert(value && typeof value === 'object' && !Array.isArray(value))
-  keys(value, ['schemaVersion', 'kind', 'repo', 'localPreview', 'editorial', 'selection', 'active', 'application', 'sourceHandoff', 'sourceRunID', 'executorRunID'])
+  keys(value, ['schemaVersion', 'kind', 'repo', 'localPreview', 'editorial', 'selection', 'active', 'application', 'sourceHandoff', 'sourceRunID', 'executorRunID',
+    ...(Object.hasOwn(value, 'preservation') ? ['preservation'] : [])])
   const request = value as UnifiedProductionRequest
   assert.equal(request.schemaVersion, 1); assert.equal(request.kind, 'unified_production_preview_request')
   assert(typeof request.repo === 'string' && path.isAbsolute(request.repo))
-  for (const field of ['localPreview', 'editorial', 'selection', 'active', 'application', 'sourceHandoff'] as const) {
+  for (const field of ['localPreview', 'editorial', 'selection', 'active', 'application', 'sourceHandoff',
+    ...(Object.hasOwn(value, 'preservation') ? ['preservation' as const] : [])] as const) {
     const proof = request[field]; assert(proof && typeof proof === 'object'); keys(proof, ['path', 'pin'])
     assert(typeof proof.path === 'string' && path.isAbsolute(proof.path) && /^[a-f0-9]{64}$/.test(proof.pin))
   }
@@ -139,8 +143,11 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
     assert(name && !path.isAbsolute(name) && name.split('/').every(part => part && part !== '.' && part !== '..'))
     assert.equal(digest(readFileSync(path.resolve(application.app, '../..', name))), pin, 'Installed release integrity changed')
   }
+  const preservation = request.preservation ? readUnifiedPreservationCatalogs(unifiedPreservationSelection(pinned(request.preservation), scope.preservationOnlyOwners),
+    scope, plan, active, repo) : undefined
+  if (preservation) verifyUnifiedPreservedMainResources(transport, Object.keys(preservation))
   assert.equal((await liveReview(plan, selected, cmsToken)).reviewPin, review.reviewPin, 'Formal CMS review changed during preflight')
-  return { preview, transport, publication, built, build, editorial, review, scope, qualification, request }
+  return { preview, transport, publication, built, build, editorial, review, scope, qualification, preservation, request }
 }
 
 export async function createUnifiedProductionVerifier(request: UnifiedProductionRequest, { cmsToken, cloudToken }: { cmsToken: string; cloudToken: string }) {
@@ -167,13 +174,14 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
   const historical = pinned<any>(handoff.before), baseline = await desktopCloudSnapshot(cloudToken)
   assertTopology(historical, baseline)
   const previous = readPinnedUnifiedInput(local.publication.previousPath, local.publication.previousPin) as any
-  const identityObservedAt = Date.now()
   const verify = async () => {
     assert.equal(git(repo, ['rev-parse', 'HEAD']), executorCommit); assert.deepEqual(executorPins(), initialPins, 'Production executor bytes changed')
     assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed')
     const fresh = await verifyUnifiedProductionLocal(request, cmsToken)
+    const identityObservedAt = Date.now()
     const owners: Record<string, any> = {}
-    for (const owner of fresh.scope.uploadOwners) {
+    const preservedOwners: Record<string, PreservedRuntime> = {}
+    for (const owner of fresh.scope.build.owners) {
       const source = handoff.owners[owner], old = previous.owners[owner], service = old.service
       assert(['original_upload_time_receipt_fresh_immutable_identity', 'fresh_etag_bound_source_capture'].includes(source.mode), 'Unreviewed source provenance mode')
       assert.equal(source.service, service); assert.equal(source.sourceVersionId, old.versionId)
@@ -195,15 +203,21 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
         ...Object.fromEntries(['candidate', 'recovery'].map(role => [role, { moduleSHA256: sealed[role as 'candidate' | 'recovery'].moduleSHA256,
           configPin: sealed[role as 'candidate' | 'recovery'].uploadConfigPin, artifactPin: local.publication.owners[owner][role].artifactSHA256,
           referencesPin: sealed[role as 'candidate' | 'recovery'].referencesPin }])) }
+      if (fresh.preservation?.[owner]) preservedOwners[owner] = bindUnifiedPreservedRuntime(fresh.preservation[owner],
+        { ...owners[owner], moduleSHA256: source.moduleSHA256 }, baseline)
     }
+    const scope = fresh.preservation ? closeUnifiedProductionOwnerScope(fresh.scope, preservedOwners) : fresh.scope
     const releaseKey = digest(canonical({ candidate: fresh.built.frozen.candidate.candidateSHA256, review: fresh.review.reviewPin,
-      transport: fresh.transport.transportPin, executorCommit, sourceCommit: fresh.built.frozen.sourceCommit, owners: fresh.scope.uploadOwners }))
+      transport: fresh.transport.transportPin, executorCommit, sourceCommit: fresh.built.frozen.sourceCommit, owners: scope.uploadOwners,
+      ...(fresh.preservation ? { preservation: request.preservation!.pin, preservedOwners } : {}) }))
     return { preview: false, transportPin: fresh.transport.transportPin, releaseKey, changed: fresh.built.frozen.candidate.changed,
-      ownerOrder: fresh.scope.uploadOwners, owners, baseline, identityObservedAt }
+      ownerOrder: scope.uploadOwners, owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])),
+      preservedOwners, baseline, identityObservedAt }
   }
   const value = await verify(); assertUnifiedPreviewUploadScope(value, value.transportPin)
   assertTopology(baseline, await desktopCloudSnapshot(cloudToken))
-  return { ...local, ci, executorCI, baseline, value, verify }
+  const scope = local.preservation ? closeUnifiedProductionOwnerScope(local.scope, value.preservedOwners) : local.scope
+  return { ...local, scope, ci, executorCI, baseline, value, verify }
 }
 
 // This is the only production upload entry. Neither request JSON nor CLI flags

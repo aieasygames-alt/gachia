@@ -1,6 +1,6 @@
 # 全游戏现有内容编辑契约
 
-更新：2026-11-06，R47。目标是把现有内容的维护从双游戏攻略扩展到所有注册游戏；本契约不是全站正式接管声明。
+更新：2026-11-06，R48。目标是把现有内容的维护从双游戏攻略扩展到所有注册游戏；本契约不是全站正式接管声明。
 
 用户已明确：作为玩家论坛，不要求公开内容来源认证或资料权威性审批。`community-editorial-v1` 将 `factualSourceApprovalRequired` 和 `publicSourceAttestationRequired` 均设为 false。读取当前公开内容是为了防止覆盖线上增量，不是重新引入来源认证；文件 SHA、版本/权限、构建、资源兼容和恢复检查仍属于工程安全要求。
 
@@ -141,13 +141,19 @@ R46 实际安装源码 `7b12684262338511bbcc2d3468bacaeff9a2404a` 已通过完�
 
 ## 固定生产预检（R47）
 
-`unified:production audit-local|audit|upload-previews` 与无凭据本地准备入口分离。请求 JSON 只允许 `schemaVersion:1`、`kind:unified_production_preview_request`、`repo`、六个 `{path,pin}` 输入（`localPreview`、`editorial`、`selection`、`active`、`application`、`sourceHandoff`）及精确 `sourceRunID`/`executorRunID`；拒绝 verifier、transport、skipCI、临时 owner 和推广标记。命令显式传 `--request`、`--pin`、新 `--output`，只有上传预览另需 `--release-key`。
+`unified:production audit-local|audit|upload-previews` 与无凭据本地准备入口分离。请求 JSON 只允许 `schemaVersion:1`、`kind:unified_production_preview_request`、`repo`、六个必需 `{path,pin}` 输入（`localPreview`、`editorial`、`selection`、`active`、`application`、`sourceHandoff`）、可选的同型 `preservation` 输入及精确 `sourceRunID`/`executorRunID`；拒绝 verifier、transport、skipCI、临时 owner 和推广标记。命令显式传 `--request`、`--pin`、新 `--output`，只有上传预览另需 `--release-key`。
 
 本地预检用 `GACHIA_CMS_REVIEW_TOKEN` 读取固定 `http://127.0.0.1:3100` 正式审核，不传入数据库配置或记录正文；核对实际游戏/来源、published/hold、审核摘要，重新三方编译，要求全部候选与原冻结一致。安装路径必须仍由 settings 指向，源码清单与冻结提交逐字节匹配，应用/build ID 及附加 release 文件重新验 pin。准备前后正式审核不变。`audit-local` 不接受云凭据获得权限，输出仍不可激活。
 
 完整云预检还要求两个精确提交的完整 CI，包括未跳过的 CMS/发布工具/公共消费者与类型检查；执行器代码必须已提交且字节一致。使用 `CLOUDFLARE_API_TOKEN` 只读重取七服务拓扑、活动 UUID、绑定、预览设置及原始模块证据的当前不可变元数据。旧 source handoff 仅作 pin 入口，不能充当新鲜观察。上传入口固定调用上述 verifier 和适配器，按正确 environment 执行封存 no-bundle 模块，只允许候选/兼容恢复精确云预览；没有部署/切流命令。
 
 `unifiedEditorialScope` 已区分本批 A→B 与 O→B 保留 overlay，当前真实审核为 Main 编辑、原神/异环保留。分类不自动缩减上传 owner，`preservationOwnerOmissionAuthorized:false`；只有另行证明活动运行时已完整承载公开 A 才能跳过。独占 journal、上传时强 ETag/不可变模块、完整精确云 Host HTTP 与独立重验保持，未知结果不重试、只读对账。实际工程/诊断见 [R47](../reports/payload-unified-production-2026-11-06-r47/README.md)，目前没有统一云上传或推广，原双游戏守卫不变。
+
+R48 为上述证明增加受限 reader。`preservation` 指向 `{schemaVersion:1,kind:unified_preservation_catalog_selection,catalogs:{genshin:{path,pin},nte:{path,pin}}}`，集合必须精确等于保留 owner，不能携带通过状态或授权标记。只接受原始已完成发布 catalog，重读完整构建/云预览/公网接受/source-advance 链，全部游戏来源与 A 相同；只允许已验的攻略保留 overlay，其他来源核对该历史发布精确源码。再绑定当前活动 UUID/原始上传模块及不可变资源、服务语义，不能把历史 NTE Main 当作当前 Main。Main 候选/恢复 HTML 不得引用省略站资源。全部通过才将上传 owner 收敛至 Main，原三 owner 构建和完整 A 保持。缺少或不匹配任何证明仍阻止上传，不放开其他游戏领域。实际验证见 [R48](../reports/payload-main-only-preservation-2026-11-06-r48/README.md)。
+
+唯一代码差异例外是已审查的 `apps/game-nte/lib/data.ts` 精确历史/当前 SHA 对：该差异只改语言 reader/类型，不改四个内容单元；已有 TypeScript literal parser 再核对全部内容值及具名 reader 集合，任何其他字节或内容差异拒绝。此处保留原活动 NTE reader，不发布新版语言策略；第 2 项仍需独立验收。
+
+每个写前仍重读证据与云模块身份，只有真实观察时间可单调更新，release key、内容、模块与省略站身份不得变化；不得修改旧云预览的验收时间延长有效期。本机 catalog 复验只证明历史完整性，`audit-local` 不产生 Main-only 云授权。
 
 当前生产资格固定为 Ananta 既有 `download-install-guide` 中文 `/content` 单条试点，其余字段/语言必须与公开 A 相同。其他游戏/内容、多条批次不能用通用 JSON 和 published 绕过后续领域/消费者验收；保留 owner 未闭合时，实际上传入口拒绝更大批次，不能因只读预检通过便开始上传。该限制按第 2、3 项的真实验收逐片扩展，不是“所有内容已可正式更新”。
 

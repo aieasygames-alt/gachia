@@ -49,10 +49,14 @@ export async function executeUnifiedPreviewProtocol({ run, directory, transportP
     const journal = join(run, `unified-preview-${transportPin}.jsonl`);
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = value => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), releaseKey: initial.releaseKey, transportPin, ...value }) + '\n', { flush: true });
-    const accepted = {}, uploaded = {}; let pendingOperation;
+    const accepted = {}, uploaded = {}; let pendingOperation, lastIdentityObservedAt = initial.identityObservedAt;
     const recheck = async () => {
       const current = await verify(); assertUnifiedPreviewUploadScope(current, transportPin);
-      assert.deepEqual(current, initial, 'Unified upload evidence changed');
+      // The fixed verifier renews immutable source observations at each write
+      // boundary. Only the read timestamp may advance, never release identity.
+      assert(current.identityObservedAt >= lastIdentityObservedAt, 'Unified identity observation moved backwards');
+      assert.deepEqual({ ...current, identityObservedAt: initial.identityObservedAt }, initial, 'Unified upload evidence changed');
+      lastIdentityObservedAt = current.identityObservedAt;
     };
     record({ phase: 'baseline', baseline: initial.baseline, directory });
     try {

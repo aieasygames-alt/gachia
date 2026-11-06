@@ -5,6 +5,7 @@ import type { exportUnifiedContent } from './unified-export'
 import type { SourceBytes } from './unified-export'
 import { objectValue, type UnifiedRecord } from './unified-content'
 import { locateValue, readSourceValue } from './unified-sources'
+import type { PreservedRuntime } from './unified-preservation'
 
 type Candidate = ReturnType<typeof exportUnifiedContent>['manifest']
 
@@ -41,7 +42,7 @@ export function unifiedEditorialScope(candidate: Candidate, plan: UnifiedPlan, o
   const preservationPaths = overlayPaths.filter(file => !editorialPaths.includes(file))
   return { editorial: { ...editorial, paths: editorialPaths, changed: [...candidate.changed] },
     preservationPaths, build, preservationOnlyOwners: build.owners.filter(owner => !editorial.owners.includes(owner)),
-    uploadOwners: build.owners, preservationOwnerOmissionAuthorized: false }
+    uploadOwners: build.owners, preservationOwnerOmissionAuthorized: false, preservedOwners: {} as Record<string, PreservedRuntime> }
 }
 
 // Qualification grows only after each domain/consumer slice is accepted.
@@ -66,6 +67,22 @@ export function unifiedPilotQualification(records: UnifiedRecord[], active: Sour
 }
 
 export function assertUnifiedProductionOwnerClosure(scope: ReturnType<typeof unifiedEditorialScope>) {
-  assert.equal(scope.preservationOnlyOwners.length, 0, 'Main-only preservation runtime proof is still required; no broader cloud upload is authorized')
+  if (scope.preservationOnlyOwners.length) {
+    assert.equal(scope.preservationOwnerOmissionAuthorized, true, 'Main-only preservation runtime proof is still required; no broader cloud upload is authorized')
+    assert.deepEqual(Object.keys(scope.preservedOwners).sort(), [...scope.preservationOnlyOwners].sort(), 'Preserved owner proof is incomplete')
+    for (const [owner, proof] of Object.entries(scope.preservedOwners)) {
+      assert.equal(proof.policy, 'accepted-published-runtime-v1'); assert.equal(proof.service, `gachia-game-${owner}`)
+      for (const key of ['moduleSHA256', 'catalogPin', 'sourcesPin', 'identityPin'] as const) assert(/^[a-f0-9]{64}$/.test(proof[key]))
+      assert(/^[a-f0-9]{40}$/.test(proof.sourceCommit)); assert(/^[a-f0-9-]{36}$/.test(proof.versionId))
+    }
+  } else assert.deepEqual(scope.preservedOwners, {})
   assert.deepEqual(scope.uploadOwners, scope.editorial.owners, 'Production owner scope is not closed')
+}
+
+export function closeUnifiedProductionOwnerScope(scope: ReturnType<typeof unifiedEditorialScope>, preservedOwners: Record<string, PreservedRuntime>) {
+  assert.deepEqual(scope.editorial.owners, ['main'], 'Only Main-only preservation is qualified')
+  const closed = { ...scope, uploadOwners: [...scope.editorial.owners], preservedOwners,
+    preservationOwnerOmissionAuthorized: scope.preservationOnlyOwners.length > 0 }
+  assertUnifiedProductionOwnerClosure(closed)
+  return closed
 }

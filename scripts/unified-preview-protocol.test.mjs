@@ -77,3 +77,26 @@ test('concurrent attempts cannot overlap an upload', async t => {
   const first = executeUnifiedPreviewProtocol(f.args); await started;
   await assert.rejects(executeUnifiedPreviewProtocol(f.args), /EEXIST|lock/i); release(); await first;
 });
+
+test('freshly reread source timestamps may advance while release and preserved identities stay immutable', async t => {
+  const f = fixture(t, ['main']); f.value.identityObservedAt = Date.now() - 1000;
+  f.value.preservedOwners = { genshin: { identityPin: sha } };
+  let sequence = 0;
+  f.args.verify = async () => ({ ...structuredClone(f.value), identityObservedAt: f.value.identityObservedAt + sequence++ });
+  await executeUnifiedPreviewProtocol(f.args); assert.equal(f.calls.length, 2);
+});
+
+for (const fault of ['backwards', 'preserved-identity']) test(`renewal cannot hide ${fault} drift`, async t => {
+  const f = fixture(t, ['main']); f.value.identityObservedAt = Date.now() - 1000;
+  f.value.preservedOwners = { genshin: { identityPin: sha } };
+  let calls = 0;
+  f.args.verify = async () => {
+    const current = structuredClone(f.value);
+    if (++calls > 1) {
+      if (fault === 'backwards') current.identityObservedAt--;
+      else current.preservedOwners.genshin.identityPin = 'b'.repeat(64);
+    }
+    return current;
+  };
+  await assert.rejects(executeUnifiedPreviewProtocol(f.args)); assert.equal(f.calls.length, 0);
+});

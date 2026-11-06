@@ -6,6 +6,8 @@
 
 当前冻结合同把原神/异环公开 A 的保留 overlay 计入 owner，因此真实首批为 `genshin → nte → main`，不能冒称 Main-only 或省略公开增量。R47 已实现固定生产预检/精确预览适配器，并对真实常驻审核和全部封存只读复验；已分类 Main 编辑与两游戏保留，但未授权缩减 owner。实际候选/恢复云预览及推广/来源接续仍待完成，第 2 至 5 项未销项。参数见[统一契约](../../docs/payload-unified-content-editor.md)，安装、冷备和实际验收见 [R46](../../reports/payload-desktop-unified-2026-11-06-r46/README.md) 与 [R47](../../reports/payload-unified-production-2026-11-06-r47/README.md)。
 
+R48 新增受限的原始已发布 catalog 保全 reader：完整来源对应 A，且新鲜活动 UUID/模块/服务配置匹配后，才允许仅上传 Main；构建和恢复封存不变。可选 `preservation` 是证据输入，不接受通过/跳过标记。本机历史复验不代替云授权，推广和全内容接管尚未完成。实际结果见 [R48](../../reports/payload-main-only-preservation-2026-11-06-r48/README.md)。
+
 ## 全游戏编辑工程进度（2026-11-05，R45）
 
 [统一编辑契约](../../docs/payload-unified-content-editor.md)已实现 16 scope、115 个数据来源、2,795 个现有记录/具名区块的共用导入、结构化编辑、审核和候选导出，隔离 SQLite/PostgreSQL 与真实 HTTP 已验。此段为 R45 工程历史，常驻已由上方 R46 更新；网站仍未切换，现有公网生产能力仍以下方 R39 为准。统一候选明确不可激活，页面内联余项、新增/撤回/媒体和全 owner 发布仍待接通，执行顺序见[实施队列](../../plans/payload-all-content-implementation-2026-11-05.md)。

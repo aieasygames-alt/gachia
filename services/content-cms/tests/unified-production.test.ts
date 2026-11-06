@@ -81,6 +81,8 @@ test('production request accepts only pinned inputs, never authorization or depe
   const value = { schemaVersion: 1, kind: 'unified_production_preview_request', repo, localPreview: proof, editorial: proof,
     selection: proof, active: proof, application: proof, sourceHandoff: proof, sourceRunID: 1, executorRunID: 2 }
   assert.equal(unifiedProductionRequest(value), value)
+  assert.doesNotThrow(() => unifiedProductionRequest({ ...value, preservation: proof }))
+  assert.throws(() => unifiedProductionRequest({ ...value, preservation: { ...proof, productionReady: true } }))
   for (const key of ['verify', 'transport', 'productionReady', 'skipCI', 'ownerOrder', 'promote']) assert.throws(() => unifiedProductionRequest({ ...value, [key]: true }))
   assert.throws(() => unifiedProductionRequest({ ...value, localPreview: { ...proof, pin: 'bad' } }))
   assert.throws(() => unifiedProductionRequest({ ...value, sourceRunID: 0 }))

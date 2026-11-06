@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "unified_preservation_catalog_selection",
+  "catalogs": {
+    "genshin": {
+      "path": "/Users/robert/.gachia-cms-releases/source-catalog/genshin/8c75bec6-f269-4684-9601-5cf9ca441fce-c2615493-d3da-4598-b488-1583cc734311/manifest.json",
+      "pin": "c04b2aeba37ecafe35fafa47528e472105622475d9e08cc1602b917da2cad80b"
+    },
+    "nte": {
+      "path": "/Users/robert/.gachia-cms-releases/source-catalog/nte/c1247d65-734d-42a9-8f6f-16d6ab0a1173-8388fe49-f4c3-4954-abea-917540839a14/manifest.json",
+      "pin": "f2b51d5042da7b8f72d1325ddf28045b5754d45c11983edeb623c76cdc87b346"
+    }
+  }
+}
