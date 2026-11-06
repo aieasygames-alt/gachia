@@ -53,6 +53,8 @@ test('Payload CI permits only the task branch, remains read-only and has no depl
   const triggers = workflow.split('\npermissions:')[0];
   assert(!/\bmain\b|\*|pull_request|branches-ignore/.test(triggers));
   assert.match(workflow, /contents: read/);
+  assert.match(workflow, /runs-on: ubuntu-24\.04/);
+  assert(!workflow.includes('runs-on: ubuntu-latest'), 'Verification must not follow an unreviewed runner image rollout');
   assert.match(workflow, /persist-credentials: false/);
   assert(!/secrets\.|(?:contents|actions|packages|id-token): write|wrangler|desktop\.py|release:production|\bpull_request:/.test(workflow));
   for (const check of ['next typegen', 'typecheck', 'test:release', 'inventory:check', '@gachia/router check:generated', 'validate:game-deployments', '@gachia/router type-check', '@gachia/router test',

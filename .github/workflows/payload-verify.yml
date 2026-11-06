@@ -15,7 +15,8 @@ concurrency:
 jobs:
   verify:
     if: github.ref == 'refs/heads/codex/payload-unified-maintenance'
-    runs-on: ubuntu-latest
+    # Keep Playwright dependencies on its supported image during runner rollouts.
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7.0.0
