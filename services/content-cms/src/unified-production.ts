@@ -3,22 +3,20 @@ import { execFileSync } from 'node:child_process'
 import { readFileSync, realpathSync } from 'node:fs'
 import { homedir } from 'node:os'
 import path from 'node:path'
-import { assertTopology, desktopCloudSnapshot } from '../../../scripts/desktop-cloud-release.mjs'
 import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
-import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
 import { boundedBody } from '../../../scripts/desktop-version-preview.mjs'
 import { digest } from '../../../scripts/desktop-release-assets.mjs'
-import { assertUnifiedOwnerSettings, unifiedTransportTarget } from '../../../scripts/unified-cloud-module.mjs'
-import { assertUnifiedPreviewUploadScope, executeUnifiedPreviewProtocol } from '../../../scripts/unified-preview-protocol.mjs'
+import { executeUnifiedPreviewProtocol } from '../../../scripts/unified-preview-protocol.mjs'
 import { unifiedProductionRead, unifiedProductionTransport } from '../../../scripts/unified-production-transport.mjs'
-import { canonical } from './record-mapping'
 import { projectRoot } from './local-environment'
-import { assertUnifiedInstalledApplication, loadUnifiedDesktopPlan, readPinnedUnifiedInput, unifiedSelection, verifyUnifiedPublishedDocuments } from './unified-desktop'
+import { loadUnifiedDesktopPlan, readPinnedUnifiedInput, unifiedSelection, verifyUnifiedPublishedDocuments } from './unified-desktop'
+import { verifyUnifiedInstalledApplication } from './unified-installed-application'
 import { exportUnifiedContent, type SourceBytes } from './unified-export'
+import { captureUnifiedExecutorSource } from './unified-executor-source'
 import { verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { verifyUnifiedPreviewContract } from './unified-preview'
-import { assertUnifiedProductionOwnerClosure, closeUnifiedProductionOwnerScope, unifiedEditorialScope, unifiedPilotQualification } from './unified-production-scope'
-import { bindUnifiedPreservedRuntime, readUnifiedPreservationCatalogs, unifiedPreservationSelection, verifyUnifiedPreservedMainResources, type PreservedRuntime } from './unified-preservation'
+import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification } from './unified-production-scope'
+import { readUnifiedPreservationCatalogs, unifiedPreservationSelection, verifyUnifiedPreservedMainResources } from './unified-preservation'
 import { verifyUnifiedTransport } from './unified-transport'
 
 type Proof = { path: string; pin: string }
@@ -46,7 +44,6 @@ export function unifiedProductionRequest(value: unknown): UnifiedProductionReque
   return request
 }
 const pinned = <T>(proof: Proof) => readPinnedUnifiedInput(proof.path, proof.pin) as T
-const git = (repo: string, args: string[]) => execFileSync('git', args, { cwd: repo, encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 }).trim()
 const readJSON = async (url: string, headers: Record<string, string> = {}) => {
   const response = await unifiedProductionRead(url, { method: 'GET', redirect: 'error', credentials: 'omit', headers, signal: AbortSignal.timeout(30000) })
   assert(response.ok, `Read-only production preflight HTTP ${response.status}`)
@@ -106,7 +103,7 @@ export async function readUnifiedProductionReview(plan: Parameters<typeof verify
 }
 
 export async function verifyUnifiedProductionLocal(request: UnifiedProductionRequest, cmsToken: string) {
-  unifiedProductionRequest(request)
+  request = structuredClone(unifiedProductionRequest(request))
   const repo = path.resolve(projectRoot, '../..'); assert.equal(realpathSync(request.repo), repo, 'Production executor must use this reviewed checkout')
   const preview = await verifyUnifiedPreviewContract(path.dirname(request.localPreview.path), request.localPreview.pin)
   assert.equal(request.localPreview.path, path.join(preview.directory, 'preview.json'))
@@ -138,51 +135,27 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
   const scope = unifiedEditorialScope(candidate.manifest, plan, ownership)
   const qualification = unifiedPilotQualification(review.records, active, candidate)
   assert.deepEqual(frozen.owners, scope.build.owners)
-  const root = path.join(homedir(), 'Library/Application Support/GachiaCMS'), application = pinned<Record<string, any>>(request.application)
-  assertUnifiedInstalledApplication(root, application.app)
-  assert.equal(request.application.path, path.resolve(application.app, '../..', 'application-manifest.json'))
-  assert.equal(application.sourceCommit, frozen.sourceCommit)
-  assert.equal(application.schemaVersion, 1)
-  assert.equal(readFileSync(path.join(application.app, '.next/BUILD_ID'), 'utf8').trim(), application.buildID)
-  const installedSources = git(repo, ['ls-tree', '-r', '--name-only', frozen.sourceCommit, 'services/content-cms/src', 'services/content-cms/scripts']).split('\n')
-  for (const source of installedSources) {
-    const relative = source.slice('services/content-cms/'.length)
-    const original = execFileSync('git', ['show', `${frozen.sourceCommit}:${source}`], { cwd: repo, maxBuffer: 16 * 1024 * 1024 })
-    assert.equal(application.files[relative], digest(original), 'Installed source is not the exact reviewed commit')
-  }
-  for (const [name, pin] of Object.entries(application.files) as [string, string][]) {
-    assert(name && !path.isAbsolute(name) && name.split('/').every(part => part && part !== '.' && part !== '..'))
-    assert.equal(digest(readFileSync(path.join(application.app, name))), pin, 'Installed application integrity changed')
-  }
-  for (const [name, pin] of Object.entries(application.releaseFiles) as [string, string][]) {
-    assert(name && !path.isAbsolute(name) && name.split('/').every(part => part && part !== '.' && part !== '..'))
-    assert.equal(digest(readFileSync(path.resolve(application.app, '../..', name))), pin, 'Installed release integrity changed')
-  }
+  const root = path.join(homedir(), 'Library/Application Support/GachiaCMS')
+  verifyUnifiedInstalledApplication(root, repo, frozen.sourceCommit, request.application)
   const preservation = request.preservation ? readUnifiedPreservationCatalogs(unifiedPreservationSelection(pinned(request.preservation), scope.preservationOnlyOwners),
     scope, plan, active, repo) : undefined
   if (preservation) verifyUnifiedPreservedMainResources(transport, Object.keys(preservation))
   assert.equal((await readUnifiedProductionReview(plan, selected, cmsToken)).reviewPin, review.reviewPin, 'Formal CMS review changed during preflight')
+  verifyUnifiedInstalledApplication(root, repo, frozen.sourceCommit, request.application)
   return { preview, transport, publication, built, build, editorial, review, scope, qualification, preservation, request }
 }
 
 export async function createUnifiedExecutorVerifier(runID: number, githubToken: string) {
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Unified production is single-Mac desktop only')
-  const repo = path.resolve(projectRoot, '../..'), executorCommit = git(repo, ['rev-parse', 'HEAD'])
-  const executorPaths = ['scripts', 'services/content-cms', '.github/workflows', 'pnpm-lock.yaml', 'package.json']
-  assert.equal(git(repo, ['ls-files', '--others', '--exclude-standard', ...executorPaths]), '', 'Uncommitted production executor files')
-  const executorFiles = git(repo, ['ls-files', '-z', ...executorPaths]).split('\0').filter(Boolean)
-  const executorPins = () => executorFiles.map(file => [file, digest(readFileSync(path.join(repo, file)))])
-  const initialPins = executorPins()
-  for (const [file] of initialPins) {
-    const exact = execFileSync('git', ['show', `${executorCommit}:${file}`], { cwd: repo, maxBuffer: 16 * 1024 * 1024 })
-    assert.equal(digest(readFileSync(path.join(repo, file))), digest(exact), 'Production executor has unverified source edits')
-  }
+  return verifyUnifiedExecutorCheckout(path.resolve(projectRoot, '../..'), runID, githubToken)
+}
+
+// Read-only integrity verification; desktop eligibility remains at the fixed entry.
+export async function verifyUnifiedExecutorCheckout(repo: string, runID: number, githubToken: string) {
+  const source = captureUnifiedExecutorSource(repo), executorCommit = source.commit
   const executorCI = await verifyUnifiedCI(runID, executorCommit, githubToken)
-  const verify = () => {
-    assert.equal(git(repo, ['rev-parse', 'HEAD']), executorCommit); assert.deepEqual(executorPins(), initialPins, 'Production executor bytes changed')
-    assert.equal(git(repo, ['ls-files', '--others', '--exclude-standard', ...executorPaths]), '', 'Uncommitted production executor files')
-  }
-  return { executorCommit, executorCI, verify }
+  source.verify()
+  return { executorCommit, executorCI, verify: source.verify }
 }
 
 export async function createUnifiedProductionVerifier(request: UnifiedProductionRequest, { cmsToken, cloudToken }: { cmsToken: string; cloudToken: string },
@@ -190,61 +163,9 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
   keys(options, Object.hasOwn(options, 'originExecutor') ? ['originExecutor'] : [])
   if (Object.hasOwn(options, 'originExecutor')) assertExecutorIdentity(options.originExecutor!)
   request = structuredClone(unifiedProductionRequest(request))
-  const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
-  const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
-  const local = await verifyUnifiedProductionLocal(request, cmsToken)
-  const ci = await verifyUnifiedCI(request.sourceRunID, local.built.frozen.sourceCommit, githubToken)
-  // A read-only observation stop may be completed by newer reviewed tooling.
-  // Preserve the original release key, while requiring full CI for BOTH the
-  // original executor and this exact current writer. This is not a CLI flag.
-  const executorCI = executor.executorCI
-  const originExecutorCI = options.originExecutor ? await verifyUnifiedCI(options.originExecutor.runID, options.originExecutor.commit, githubToken) : executorCI
-  const handoff = pinned<Record<string, any>>(request.sourceHandoff)
-  const baseline = await desktopCloudSnapshot(cloudToken, unifiedProductionRead)
-  const previous = readPinnedUnifiedInput(local.publication.previousPath, local.publication.previousPin) as any
-  const { verifyUnifiedProductionSources } = await import('./unified-source-advance')
-  const verify = async () => {
-    executor.verify()
-    assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed')
-    const fresh = await verifyUnifiedProductionLocal(request, cmsToken)
-    const sources = await verifyUnifiedProductionSources(request.sourceHandoff, { baseline, active: pinned(request.active),
-      frozen: fresh.built.frozen, previous }, { githubToken, cloudToken })
-    const identityObservedAt = Date.now()
-    const owners: Record<string, any> = {}
-    const preservedOwners: Record<string, PreservedRuntime> = {}
-    for (const owner of fresh.scope.build.owners) {
-      const source = sources.provenance[owner], old = previous.owners[owner], service = old.service
-      assert.equal(source.service, service); assert.equal(source.sourceVersionId, old.versionId)
-      const { version: _version, sourceIdentityPin: _pin, ...expected } = sources.owners[owner]
-      assert.deepEqual(old, expected, 'Production previous artifacts differ from verified sources')
-      assert.equal(source.moduleSHA256, old.moduleSHA256)
-      const archive = readFileSync(old.modulePath); assert.equal(digest(archive), old.archiveSHA256)
-      const module = await multipartModule(archive); assert.equal(module.moduleSHA256, source.moduleSHA256)
-      const sealed = fresh.transport.receipt.owners[owner]
-      const target = unifiedTransportTarget(owner, readFileSync(path.join(fresh.build, 'source/apps', owner === 'main' ? 'web' : `game-${owner}`, 'wrangler.jsonc'), 'utf8'))
-      const metadata = (await multipartModule(readFileSync(path.join(fresh.transport.directory, owner, 'recovery/exact.multipart')))).metadata
-      assertUnifiedOwnerSettings(owner, target, metadata, baseline)
-      assert.equal(local.publication.owners[owner].sourceVersionId, old.versionId)
-      owners[owner] = { service, sourceVersionId: old.versionId, sourceIdentityPin: sources.owners[owner].sourceIdentityPin,
-        ...Object.fromEntries(['candidate', 'recovery'].map(role => [role, { moduleSHA256: sealed[role as 'candidate' | 'recovery'].moduleSHA256,
-          configPin: sealed[role as 'candidate' | 'recovery'].uploadConfigPin, artifactPin: local.publication.owners[owner][role].artifactSHA256,
-          referencesPin: sealed[role as 'candidate' | 'recovery'].referencesPin }])) }
-      if (fresh.preservation?.[owner]) preservedOwners[owner] = bindUnifiedPreservedRuntime(fresh.preservation[owner],
-        { ...owners[owner], moduleSHA256: source.moduleSHA256 }, baseline)
-    }
-    const scope = fresh.preservation ? closeUnifiedProductionOwnerScope(fresh.scope, preservedOwners) : fresh.scope
-    const releaseKey = digest(canonical({ candidate: fresh.built.frozen.candidate.candidateSHA256, review: fresh.review.reviewPin,
-      transport: fresh.transport.transportPin, executorCommit: originExecutorCI.commit, sourceCommit: fresh.built.frozen.sourceCommit, owners: scope.uploadOwners,
-      ...(fresh.preservation ? { preservation: request.preservation!.pin, preservedOwners } : {}) }))
-    if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
-    return { preview: false, transportPin: fresh.transport.transportPin, releaseKey, changed: fresh.built.frozen.candidate.changed,
-      ownerOrder: scope.uploadOwners, owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])),
-      preservedOwners, baseline, identityObservedAt }
-  }
-  const value = await verify(); assertUnifiedPreviewUploadScope(value, value.transportPin)
-  assertTopology(baseline, await desktopCloudSnapshot(cloudToken, unifiedProductionRead))
-  const scope = local.preservation ? closeUnifiedProductionOwnerScope(local.scope, value.preservedOwners) : local.scope
-  return { ...local, scope, ci, executorCI, originExecutorCI, baseline, value, verify }
+  options = structuredClone(options)
+  const { verifyUnifiedProductionState } = await import('./unified-production-verifier')
+  return verifyUnifiedProductionState(request, { cmsToken, cloudToken }, options)
 }
 
 // This is the only production upload entry. Neither request JSON nor CLI flags

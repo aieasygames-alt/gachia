@@ -43,6 +43,7 @@ export function unifiedRecoveryRequest(value: unknown): UnifiedRecoveryRequest {
 }
 
 export async function openUnifiedRecovery(input: { request: UnifiedRecoveryRequest; cloudToken: string }) {
+  const { cloudToken } = input
   const request = structuredClone(unifiedRecoveryRequest(input.request))
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
@@ -63,19 +64,19 @@ export async function openUnifiedRecovery(input: { request: UnifiedRecoveryReque
     const proof = previews.receipt.accepted[role].main, target = value.owners.main[role]
     const saved = await revalidateUnifiedUploadedModule({ proof: proof.moduleProof, service: 'gachia', versionId: proof.versionId, moduleSHA256: target.moduleSHA256,
       context: { role, transportPin: value.transportPin, configPin: target.configPin },
-      readVersion: (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }) })
+      readVersion: (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken, request: unifiedProductionRead }) })
     assertUploadedVersion(saved.version, proof.versionId, opened.runtimeConfig, value.baseline.bindings.gachia); return saved
   }
   const verify = async () => {
     executor.verify(); readJournal(); assert.deepEqual(pinned(request.network), network); assert.deepEqual(pinned(request.history), historyRequest)
     const historicalAgain = await verifyUnifiedHistoricalMain(historyRequest, githubToken)
     assert.deepEqual(historicalAgain.historical.value, value); assert.deepEqual(historicalAgain.previews.receipt, previews.receipt)
-    const observed = await desktopCloudSnapshot(input.cloudToken, unifiedProductionRead, { allowSplit: true })
+    const observed = await desktopCloudSnapshot(cloudToken, unifiedProductionRead, { allowSplit: true })
     const main = activeVersion(observed, 'gachia')
     assert([original.expected.candidate, original.expected.recovery].includes(main), 'Unknown active Main cannot enter recovery')
     assertTopology(value.baseline, observed, { gachia: main })
     for (const source of Object.values(historical.sources.owners) as any[]) {
-      const version = await readUnifiedVersion({ service: source.service, versionId: source.versionId, token: input.cloudToken, request: unifiedProductionRead })
+      const version = await readUnifiedVersion({ service: source.service, versionId: source.versionId, token: cloudToken, request: unifiedProductionRead })
       assertModuleVersionIdentity(source.version, version)
     }
     for (const role of ['recovery', 'candidate']) await revalidateModule(role)
@@ -89,9 +90,11 @@ export async function openUnifiedRecovery(input: { request: UnifiedRecoveryReque
 // Remains private until the next-batch source path is qualified. The CLI can
 // audit this fixed adapter, but cannot invoke it or inject the core protocol.
 async function recoverUnifiedMain(input: { request: UnifiedRecoveryRequest; cloudToken: string; releaseKey: string }) {
-  const opened = await openUnifiedRecovery(input), { historical, original, previews, references } = opened
+  const { cloudToken, releaseKey } = input
+  const request = structuredClone(unifiedRecoveryRequest(input.request))
+  const opened = await openUnifiedRecovery({ request, cloudToken }), { historical, original, previews, references } = opened
   const run = historical.build, value = historical.value
-  assert.equal(input.releaseKey, value.releaseKey, 'Explicit matching compatible recovery authorization required')
+  assert.equal(releaseKey, value.releaseKey, 'Explicit matching compatible recovery authorization required')
   assert(!existsSync(path.join(run, `unified-manual-recovery-${value.transportPin}.jsonl`)), 'Existing recovery requires read-only reconciliation, never retry')
   assertDiskBudget({ path: run, operation: 'Main compatible recovery evidence', estimatedBytes: GiB })
   const directory = path.join(run, `unified-main-recovery-${randomUUID()}`); mkdirSync(directory, { mode: 0o700 })
@@ -118,14 +121,14 @@ async function recoverUnifiedMain(input: { request: UnifiedRecoveryRequest; clou
       recovery, evidenceDirectory: directory, identityObservedAt: current.identityObservedAt }
   }
   const publicReferences = opened.publicReferences('recovery')
-  const result = await executeUnifiedManualRecovery({ run, verify, authorize: () => input.releaseKey, makeTransport: () => ({
-    snapshot: () => desktopCloudSnapshot(input.cloudToken, unifiedProductionRead, { allowSplit: true }),
+  const result = await executeUnifiedManualRecovery({ run, verify, authorize: () => releaseKey, makeTransport: () => ({
+    snapshot: () => desktopCloudSnapshot(cloudToken, unifiedProductionRead, { allowSplit: true }),
     verifyVersions: async () => {
       const saved = await opened.revalidateModule('recovery'), proof = { status: 'passed', versions: { gachia: original.expected.recovery },
         modules: { gachia: recovery.moduleSHA256 }, version: saved.version, moduleProof: recovery.moduleProof }
       return { ...proof, evidenceSHA256: save(path.join(directory, 'remote.json'), proof) }
     },
-    promote: unifiedMainDeploymentWriter({ releaseKey: input.releaseKey, versionId: original.expected.recovery, token: input.cloudToken, request: fetch,
+    promote: unifiedMainDeploymentWriter({ releaseKey, versionId: original.expected.recovery, token: cloudToken, request: fetch,
       recordResponse: ({ kind, status, headers, bytes }: any) => {
         writeFileSync(path.join(directory, `deployment-${kind}.body`), bytes, { flag: 'wx', mode: 0o600 })
         save(path.join(directory, `deployment-${kind}.json`), { kind, status, headers, sha256: digest(bytes), bytes: bytes.length })

@@ -1,0 +1,43 @@
+import assert from 'node:assert/strict'
+import { execFileSync } from 'node:child_process'
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import path from 'node:path'
+import test, { type TestContext } from 'node:test'
+import { captureUnifiedExecutorSource } from '../src/unified-executor-source'
+
+function fixture(t: TestContext) {
+  const repo = mkdtempSync(path.join(tmpdir(), 'unified-executor-'))
+  t.after(() => rmSync(repo, { recursive: true, force: true }))
+  const git = (...args: string[]) => execFileSync('git', ['-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
+    '-c', 'commit.gpgsign=false', ...args], { cwd: repo, stdio: ['ignore', 'pipe', 'pipe'] })
+  const write = (file: string, text: string) => { mkdirSync(path.dirname(path.join(repo, file)), { recursive: true }); writeFileSync(path.join(repo, file), text) }
+  git('init'); write('scripts/executor.mjs', 'export const value = 1\n'); write('package.json', '{}\n')
+  git('add', '.'); git('commit', '-m', 'fixture')
+  return { repo, git, write }
+}
+
+test('executor source guard uses real Git bytes and permits unrelated report files', t => {
+  const f = fixture(t), source = captureUnifiedExecutorSource(f.repo)
+  assert.equal(source.commit, f.git('rev-parse', 'HEAD').toString().trim())
+  f.write('reports/result.json', '{}'); source.verify()
+})
+
+for (const timing of ['initial', 'after-capture']) for (const fault of ['edit', 'untracked', 'staged-add', 'staged-delete', 'rename']) {
+  test(`executor source rejects ${fault} ${timing} against real Git`, t => {
+    const f = fixture(t), source = timing === 'after-capture' ? captureUnifiedExecutorSource(f.repo) : undefined
+    if (fault === 'edit') f.write('scripts/executor.mjs', 'export const value = 2\n')
+    if (fault === 'untracked' || fault === 'staged-add') f.write('scripts/new.mjs', 'export {}\n')
+    if (fault === 'staged-add') f.git('add', 'scripts/new.mjs')
+    if (fault === 'staged-delete') f.git('rm', 'scripts/executor.mjs')
+    if (fault === 'rename') f.git('mv', 'scripts/executor.mjs', 'scripts/renamed.mjs')
+    assert.throws(() => source ? source.verify() : captureUnifiedExecutorSource(f.repo),
+      /unverified source edits|Uncommitted production executor files|file inventory changed/)
+  })
+}
+
+test('executor source rejects a changed HEAD even when executor bytes are unchanged', t => {
+  const f = fixture(t), source = captureUnifiedExecutorSource(f.repo)
+  f.git('commit', '--allow-empty', '-m', 'changed head')
+  assert.throws(() => source.verify(), /commit changed/)
+})

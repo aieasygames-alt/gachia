@@ -9,16 +9,19 @@ import { unifiedMainPublicReferences, verifyUnifiedMainPublic } from '../unified
 import { executeUnifiedPromotionProtocol } from '../unified-promotion-protocol.mjs';
 import { captureUnifiedUploadedModule } from '../unified-version-identity.mjs';
 import { exactUnifiedPreviewOrigin, unifiedHTMLParserPin, unifiedPreviewReferences, verifyUnifiedVersionPreview } from '../unified-version-preview.mjs';
+import { sealUnifiedMainPreviewHistory } from './unified-main-preview-history.mjs';
 
 const sha = 'a'.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
 const defaultPaths = ['/sitemap.xml', '/robots.txt', '/api/auth/get-session', '/data/ananta/raw-guides.json', '/data/genshin/raw-guides.json', '/data/nte/raw-guides.json',
   '/zh/ananta/guides/download-install-guide', '/en/ananta/guides/download-install-guide'];
 const json = value => JSON.stringify(value, null, 2) + '\n';
-export async function unifiedMainFixture(t, baselineOverride, sources, { generation = 0 } = {}) {
+export async function unifiedMainFixture(t, baselineOverride, sources, { generation = 0, moduleCode, sealedHistory = false, networkPin,
+  productionIdentity } = {}) {
   const paths = sources ? sources.spec.publicReferences.map(row => row.path) : defaultPaths;
   const run = realpathSync(mkdtempSync(join(tmpdir(), 'unified-main-completed-'))); t.after(() => rmSync(run, { recursive: true, force: true }));
   const save = (file, value) => { const text = json(value); writeFileSync(file, text); return { path: file, pin: digest(text) }; };
-  const directory = join(run, `unified-main-promotion-${randomUUID()}`), renewalDirectory = join(directory, 'renewal'), cloud = join(run, 'cloud');
+  const directory = join(run, `unified-main-promotion-${randomUUID()}`), renewalDirectory = join(directory, 'renewal'),
+    cloud = join(run, sealedHistory ? `unified-cloud-preview-completion-${sha}` : 'cloud'), transportDirectory = join(run, 'sealed-transport');
   mkdirSync(renewalDirectory, { recursive: true }); mkdirSync(cloud);
   const config = { name: 'gachia', compatibility_date: '2026-07-08', compatibility_flags: ['nodejs_compat'] };
   const assets = { serve_directly: true, raw_run_worker_first: false, base_path: '/',
@@ -29,14 +32,16 @@ export async function unifiedMainFixture(t, baselineOverride, sources, { generat
   const roleReferences = {}, roleBodies = {}, accepted = { recovery: {}, candidate: {} }, renewed = { recovery: {}, candidate: {} }, targets = {}, versions = {};
   for (const [i, role] of ['recovery', 'candidate'].entries()) {
     const root = join(cloud, `${role}-main`); mkdirSync(root);
-    const versionId = uuid(100 + i + generation * 100), code = `sealed ${role}${generation ? ` batch ${generation}` : ''}`, form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
+    const versionId = uuid(100 + i + generation * 100), code = moduleCode?.[role] ?? `sealed ${role}${generation ? ` batch ${generation}` : ''}`, form = new FormData(); form.set('worker.js', new Blob([code]), 'worker.js');
     const archive = Buffer.from(await new Response(form).arrayBuffer()), outbound = join(root, 'outbound.multipart'), log = join(root, 'upload.log');
     writeFileSync(outbound, archive); writeFileSync(log, `Worker Version ID: ${versionId}\nVersion Preview URL: ${exactUnifiedPreviewOrigin('gachia', versionId)}\n`);
-    const version = { id: versionId, number: i + 1, metadata: { has_preview: true }, resources: { script: { etag: 'e'.repeat(64) }, bindings: [],
+    const version = { id: versionId, number: i + 1, metadata: { has_preview: true }, resources: { script: { etag: 'e'.repeat(64) }, bindings: productionIdentity ? baseline.bindings.gachia : [],
       script_runtime: { compatibility_date: config.compatibility_date, compatibility_flags: config.compatibility_flags, usage_model: 'standard', assets } } };
     versions[role] = version;
+    const moduleRoot = sealedHistory && role === 'recovery' ? join(run, `unified-cloud-preview-${sha}`, 'recovery-main') : root;
+    mkdirSync(moduleRoot, { recursive: true });
     const moduleProof = await captureUnifiedUploadedModule({ service: 'gachia', versionId, moduleSHA256: digest(code),
-      context: { role, transportPin: sha, configPin: sha }, directory: join(root, 'module'), uploadPath: outbound, uploadLogPath: log,
+      context: { role, transportPin: sha, configPin: sha }, directory: join(moduleRoot, 'module'), uploadPath: outbound, uploadLogPath: log,
       readVersion: async () => version, readContent: async () => ({ archive, etag: 'e'.repeat(64) }) });
     const html = `<html><head><title>Guide</title><meta name="description" content="Install guide"><link rel="canonical" href="https://gachia.com/zh/ananta/guides/download-install-guide"></head><body><main><h1>Guide</h1><p>${role}</p></main></body></html>`;
     const bodies = paths.map(path => Buffer.from(path.includes('/guides/') ? html : path.startsWith('/api/') ? '{"code":"ACCOUNT_FEATURES_DISABLED"}'
@@ -58,10 +63,18 @@ export async function unifiedMainFixture(t, baselineOverride, sources, { generat
     const fresh = await verifyUnifiedVersionPreview({ service: 'gachia', versionId, references, directory: join(renewalDirectory, role), request, parserVersion: 'streaming-v2' });
     renewed[role].main = { ...proof, originalEvidenceSHA256: proof.evidenceSHA256, evidenceSHA256: fresh.evidenceSHA256, acceptedAt: Date.now() };
     targets[role] = { moduleSHA256: digest(code), configPin: sha, artifactPin: sha, referencesPin: sha };
+    if (sealedHistory) {
+      const http = join(transportDirectory, 'main', role, 'http'); mkdirSync(http, { recursive: true });
+      bodies.forEach((body, n) => writeFileSync(join(http, `${n}.body`), body));
+      targets[role].referencesPin = save(join(http, 'references.json'), rows).pin;
+    }
   }
   const previews = { directory: cloud, pin: sha, receipt: { accepted } };
-  const releaseKey = 'b'.repeat(64), value = { preview: false, transportPin: sha, releaseKey, changed: ['unified:record'], ownerOrder: ['main'], baseline,
-    identityObservedAt: Date.now(), owners: { main: { service: 'gachia', sourceVersionId: baseline.services.gachia.versions[0].version_id, sourceIdentityPin: sha, ...targets } } };
+  const releaseKey = productionIdentity?.releaseKey ?? 'b'.repeat(64), value = { preview: false, transportPin: sha, releaseKey, changed: ['unified:record'], ownerOrder: ['main'], baseline,
+    ...(productionIdentity ? { preservedOwners: {} } : {}),
+    identityObservedAt: Date.now(), owners: { main: { service: 'gachia', sourceVersionId: baseline.services.gachia.versions[0].version_id,
+      sourceIdentityPin: productionIdentity?.sourceIdentityPin ?? sha, ...targets } } };
+  if (sealedHistory) Object.assign(previews, sealUnifiedMainPreviewHistory({ run, directory: cloud, value, accepted, versions, save, networkPin }));
   const renewalPin = save(join(renewalDirectory, 'receipt.json'), { schemaVersion: 1, kind: 'unified_main_preview_renewal', releaseKey, transportPin: sha,
     previewPin: previews.pin, accepted: renewed, cloudWrites: false, productionPromoted: false }).pin;
   const initial = { ...value, previewPin: previews.pin, renewalPin, accepted: renewed, evidenceDirectory: directory, renewalDirectory };
@@ -98,6 +111,6 @@ export async function unifiedMainFixture(t, baselineOverride, sources, { generat
   const receipt = { ...result, directory, productionRequest, preview: { path: join(cloud, 'receipt.json'), pin: previews.pin }, sourceCI, originExecutorCI, executorCI };
   const input = { run, proof: save(join(directory, 'receipt.json'), receipt), value, previews, references: (_owner, role) => roleReferences[role], publicReferences,
     runtimeConfig: config, productionRequest, sourceCI, originExecutorCI, executorCI };
-  return { input, save, directory, renewalDirectory, receipt, roleBodies, paths, versions, config, deploymentId,
+  return { input, save, directory, renewalDirectory, receipt, roleBodies, paths, versions, config, deploymentId, transportDirectory,
     changeReceipt: fn => { fn(receipt); input.proof = save(input.proof.path, receipt); } };
 }

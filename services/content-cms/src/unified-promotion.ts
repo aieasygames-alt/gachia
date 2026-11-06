@@ -41,16 +41,19 @@ export function unifiedPromotionRequest(value: unknown): UnifiedPromotionRequest
 }
 
 export async function openUnifiedPromotion(input: { request: UnifiedPromotionRequest; cmsToken: string; cloudToken: string }) {
-  const request = unifiedPromotionRequest(input.request), production = unifiedProductionRequest(pinned(request.production)), audit = pinned(request.audit)
+  const { cmsToken, cloudToken } = input
+  const request = structuredClone(unifiedPromotionRequest(input.request)), production = unifiedProductionRequest(pinned(request.production)), audit = pinned(request.audit)
   assert.equal(audit.requestPin, request.production.pin, 'Original upload request differs from its exact audit')
   assert.equal(audit.status, 'production_preview_preflight_passed_no_upload'); assert.equal(audit.scopeClosureRequired, false)
   assert.equal(audit.productionPromoted, false); assert.deepEqual(audit.ownerOrder, ['main'])
   assert.equal(audit.executorCI.runID, production.executorRunID); assert.equal(audit.executorCI.status, 'full_exact_ci_passed')
-  const evidence = await createUnifiedProductionVerifier({ ...production, executorRunID: request.executorRunID }, input,
+  const evidence = await createUnifiedProductionVerifier({ ...production, executorRunID: request.executorRunID }, { cmsToken, cloudToken },
     { originExecutor: { runID: production.executorRunID, commit: audit.executorCI.commit } })
   assertUnifiedProductionOwnerClosure(evidence.scope); assert.deepEqual(evidence.value.ownerOrder, ['main'], 'Only Main promotion is qualified')
   assert.equal(evidence.value.releaseKey, audit.releaseKey); assert.deepEqual(evidence.qualification, audit.qualification)
   const historical = await readUnifiedHistoricalPublication({ schemaVersion: 1, kind: 'unified_historical_publication_request', production: request.production, audit: request.audit })
+  assert.deepEqual(evidence.ci, historical.audit.sourceCI, 'Source CI differs from sealed historical audit')
+  assert.deepEqual(evidence.originExecutorCI, historical.audit.executorCI, 'Original executor CI differs from sealed historical audit')
   assert.deepEqual(historical.scope, evidence.scope)
   assertTopology(historical.value.baseline, evidence.value.baseline)
   assert.deepEqual({ ...evidence.value, baseline: historical.value.baseline, identityObservedAt: historical.value.identityObservedAt }, historical.value,
@@ -67,7 +70,7 @@ export async function openUnifiedPromotion(input: { request: UnifiedPromotionReq
     const row = evidence.value.owners.main[role]
     const saved = await revalidateUnifiedUploadedModule({ proof: proof.moduleProof, service: 'gachia', versionId: proof.versionId,
       moduleSHA256: row.moduleSHA256, context: { role, transportPin: evidence.value.transportPin, configPin: row.configPin },
-      readVersion: (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }) })
+      readVersion: (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken, request: unifiedProductionRead }) })
     assertUploadedVersion(saved.version, proof.versionId, unifiedRuntimeConfig(target), (evidence.baseline.bindings as Record<string, unknown>).gachia)
     return saved
   }
@@ -93,6 +96,7 @@ export async function renewUnifiedMainPreviews(opened: Awaited<ReturnType<typeof
     }
   } finally { await network.close() }
   const current = await evidence.verify()
+  assert.deepEqual(pinned(opened.request.network), opened.network, 'Preview network input changed during renewal')
   assert.deepEqual({ ...current, identityObservedAt: evidence.value.identityObservedAt }, evidence.value, 'Renewal source or review changed')
   assertTopology(evidence.baseline, await desktopCloudSnapshot(cloudToken, unifiedProductionRead))
   const receipt = { schemaVersion: 1, kind: 'unified_main_preview_renewal', releaseKey: current.releaseKey, transportPin: current.transportPin,
@@ -100,13 +104,28 @@ export async function renewUnifiedMainPreviews(opened: Awaited<ReturnType<typeof
   return { directory, pin: save(path.join(directory, 'receipt.json'), receipt), receipt }
 }
 
+export async function auditUnifiedMainPreviewRenewal(input: { request: UnifiedPromotionRequest; cmsToken: string; cloudToken: string; directory: string }) {
+  const { directory, cmsToken, cloudToken, request } = input
+  assert(path.isAbsolute(directory), 'Preview renewal requires an absolute new directory')
+  assert(!existsSync(directory), 'Preview renewal directory already exists; preserve previous evidence')
+  const opened = await openUnifiedPromotion({ request, cmsToken, cloudToken })
+  assertDiskBudget({ path: opened.evidence.build, operation: 'Read-only Main preview renewal', estimatedBytes: 2 * GiB })
+  const renewal = await renewUnifiedMainPreviews(opened, cloudToken, directory)
+  return { status: 'unified_main_preview_renewal_passed_no_promotion', directory: renewal.directory, pin: renewal.pin,
+    releaseKey: renewal.receipt.releaseKey, previewPin: opened.request.previews.pin,
+    sourceCI: opened.evidence.ci, executorCI: opened.evidence.executorCI, originExecutorCI: opened.evidence.originExecutorCI,
+    cloudWrites: false, productionPromoted: false }
+}
+
 async function promoteUnifiedMain(input: { request: UnifiedPromotionRequest; cmsToken: string; cloudToken: string; releaseKey: string }) {
-  const opened = await openUnifiedPromotion(input), { evidence, previews, references, revalidateModule } = opened
-  assert.equal(input.releaseKey, evidence.value.releaseKey, 'Explicit matching release authorization required')
+  const { cmsToken, cloudToken, releaseKey } = input
+  const request = structuredClone(unifiedPromotionRequest(input.request))
+  const opened = await openUnifiedPromotion({ request, cmsToken, cloudToken }), { evidence, previews, references, revalidateModule } = opened
+  assert.equal(releaseKey, evidence.value.releaseKey, 'Explicit matching release authorization required')
   assert(!existsSync(path.join(evidence.build, `unified-promotion-${evidence.value.transportPin}.jsonl`)), 'Existing promotion requires read-only reconciliation, never retry')
   assertDiskBudget({ path: evidence.build, operation: 'Main promotion and fresh preview evidence', estimatedBytes: 2 * GiB })
   const directory = path.join(evidence.build, `unified-main-promotion-${randomUUID()}`); mkdirSync(directory, { mode: 0o700 })
-  const renewal = await renewUnifiedMainPreviews(opened, input.cloudToken, path.join(directory, 'renewal'))
+  const renewal = await renewUnifiedMainPreviews(opened, cloudToken, path.join(directory, 'renewal'))
   const publicReferences = unifiedMainPublicReferences(references('main', 'candidate'), (row: { bodyFile: string }) =>
     readFileSync(path.join(evidence.transport.directory, 'main/candidate/http', row.bodyFile)))
   const verify = async () => {
@@ -127,9 +146,9 @@ async function promoteUnifiedMain(input: { request: UnifiedPromotionRequest; cms
       evidenceDirectory: directory, renewalDirectory: renewal.directory }
   }
   let remoteCount = 0
-  const result = await executeUnifiedPromotionProtocol({ run: evidence.build, verify, authorize: () => input.releaseKey,
+  const result = await executeUnifiedPromotionProtocol({ run: evidence.build, verify, authorize: () => releaseKey,
     makeTransport: (initial: any) => ({
-      snapshot: () => desktopCloudSnapshot(input.cloudToken, unifiedProductionRead, { allowSplit: true }),
+      snapshot: () => desktopCloudSnapshot(cloudToken, unifiedProductionRead, { allowSplit: true }),
       verifyVersions: async () => {
         const observed = []
         for (const role of ['recovery', 'candidate']) {
@@ -140,7 +159,7 @@ async function promoteUnifiedMain(input: { request: UnifiedPromotionRequest; cms
           modules: { gachia: initial.accepted.candidate.main.moduleSHA256 }, recoveryVersions: { gachia: initial.accepted.recovery.main.versionId }, observed }
         return { ...proof, evidenceSHA256: save(path.join(directory, `remote-${remoteCount++}.json`), proof) }
       },
-      promote: unifiedMainDeploymentWriter({ releaseKey: input.releaseKey, versionId: initial.accepted.candidate.main.versionId, token: input.cloudToken,
+      promote: unifiedMainDeploymentWriter({ releaseKey, versionId: initial.accepted.candidate.main.versionId, token: cloudToken,
         request: fetch, recordResponse: ({ kind, status, headers, bytes }: any) => {
           const file = path.join(directory, `deployment-${kind}`)
           writeFileSync(file + '.body', bytes, { flag: 'wx', mode: 0o600 }); save(file + '.json', { kind, status, headers, sha256: digest(bytes), bytes: bytes.length })
@@ -148,12 +167,12 @@ async function promoteUnifiedMain(input: { request: UnifiedPromotionRequest; cms
       acceptProduction: async () => {
         const http = path.join(directory, 'public'), result = await verifyUnifiedMainPublic({ references: publicReferences, directory: http, request: unifiedProductionRead })
         recheckUnifiedMainPublic(http, result.evidenceSHA256, publicReferences)
-        const proof = { status: 'passed', releaseKey: input.releaseKey, versions: { gachia: initial.accepted.candidate.main.versionId },
+        const proof = { status: 'passed', releaseKey, versions: { gachia: initial.accepted.candidate.main.versionId },
           owners: { main: { directory: http, evidenceSHA256: result.evidenceSHA256, responses: result.observations.length } } }
         return { ...proof, evidenceSHA256: save(path.join(directory, 'public-acceptance.json'), proof) }
       },
     }) })
-  const receipt = { ...result, directory, productionRequest: input.request.production, preview: input.request.previews,
+  const receipt = { ...result, directory, productionRequest: opened.request.production, preview: opened.request.previews,
     executorCI: evidence.executorCI, originExecutorCI: evidence.originExecutorCI, sourceCI: evidence.ci }
   return { ...receipt, receiptPin: save(path.join(directory, 'receipt.json'), receipt) }
 }

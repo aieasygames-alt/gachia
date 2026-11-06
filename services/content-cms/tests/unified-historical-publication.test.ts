@@ -58,6 +58,18 @@ test('historical CLI has no activation or freshness capability and rejects unpin
   }
 })
 
+test('sealed-history local qualification requires explicit pinned evidence rather than silently skipping', () => {
+  const env = { ...process.env }
+  delete env.UNIFIED_SEALED_HISTORY_REQUEST
+  delete env.UNIFIED_SEALED_HISTORY_PIN
+  delete env.NODE_TEST_CONTEXT
+  const result = spawnSync(process.execPath, ['--import', 'tsx', '--test', path.join(projectRoot, 'tests/fixtures/unified-sealed-history.mjs')],
+    { cwd: projectRoot, encoding: 'utf8', env, timeout: 30000 })
+  assert.equal(result.error, undefined)
+  assert.equal(result.status, 1)
+  assert.match(result.stdout + result.stderr, /Require UNIFIED_SEALED_HISTORY_REQUEST/)
+})
+
 test('fixed published-source reader separates exact preview completion from accepted production without injected authority', () => {
   const proof = { path: '/tmp/pinned.json', pin: 'a'.repeat(64) }
   const previews = { schemaVersion: 1, kind: 'unified_historical_main_previews_request', history: proof, previews: proof, previewExecution: proof }
