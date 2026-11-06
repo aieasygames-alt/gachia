@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "unified_source_advance_local_verification",
+  "observedAt": "2026-11-06T04:19:13.278Z",
+  "cms": {
+    "tests": 345,
+    "passed": 345
+  },
+  "release": {
+    "tests": 1479,
+    "passed": 1479,
+    "groups": [
+      187,
+      988,
+      304
+    ]
+  },
+  "python": {
+    "tests": 56,
+    "passed": 56
+  },
+  "documentation": {
+    "tests": 38,
+    "passed": 38
+  },
+  "logs": {
+    "cms.log": "b10ea790116845b4538036782b59dc6d83eaffdd7ec2bafa12a250e663b134c7",
+    "release.log": "336a7a54150b05781b1927c42fabf3a9b873f6f103f3c4962dc0e031de9f5106",
+    "documentation-final.log": "47dccbf80bd2cd767b398b5eed6a612cf0fa3a9c90bae000a757cd8191b590eb",
+    "public-final/result.json": "a7a25aca24efcd2057bb11e4bc5955e0fc8fc7de3bda098e1efa84baeb419872"
+  },
+  "public": {
+    "status": "public_A_unchanged_editorial_not_activated",
+    "responses": 5,
+    "genshinGuides": 32,
+    "nteGuides": 53,
+    "accountsEnabled": false
+  },
+  "cloudWrites": false,
+  "productionPromoted": false,
+  "sourceAdvanced": false,
+  "newExecutorInstalledInCMS": false,
+  "allGameContentProductionQualified": false
+}

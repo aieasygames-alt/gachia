@@ -1,0 +1,47 @@
+{
+  "status": "public_A_unchanged_editorial_not_activated",
+  "observedAt": "2026-11-06T04:17:37.022Z",
+  "observations": [
+    {
+      "path": "/data/ananta/raw-guides.json",
+      "status": 200,
+      "bytes": 96937,
+      "sha256": "239272401eac2a09a0c0edcafe9e8eb5df37fbc64443e627f0794b5abeb7eaf1",
+      "bodyFile": "0.body",
+      "records": 19
+    },
+    {
+      "path": "/data/genshin/raw-guides.json",
+      "status": 200,
+      "bytes": 279706,
+      "sha256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72",
+      "bodyFile": "1.body",
+      "records": 32
+    },
+    {
+      "path": "/data/nte/raw-guides.json",
+      "status": 200,
+      "bytes": 600357,
+      "sha256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6",
+      "bodyFile": "2.body",
+      "records": 53
+    },
+    {
+      "path": "/zh/ananta/guides/download-install-guide",
+      "status": 200,
+      "bytes": 70939,
+      "sha256": "be93a54eedcc1bdb79f513ed8b891058f81fdc13e1fb18fc950c5f1d015ab071",
+      "bodyFile": "3.body"
+    },
+    {
+      "path": "/api/auth/get-session",
+      "status": 404,
+      "bytes": 76,
+      "sha256": "cac6410b809d18c77747b845646d72a027995d4ff23b54b94a4d056f07ec52e0",
+      "bodyFile": "4.body"
+    }
+  ],
+  "cloudWrites": false,
+  "productionPromoted": false,
+  "sourceAdvanced": false
+}

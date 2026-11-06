@@ -177,6 +177,16 @@ R48 的实际上传只完成恢复 UUID，首个 HTTP 连接在零观察处失�
 
 R50 的真实只读复验、初次历史时效错误及修复后的执行分别记录在 [R50](../reports/payload-unified-history-2026-11-06-r50/README.md)。这些实现不表示 source-advance 已完成，也不代替当前执行器精确 CI、新鲜预览续验、真实切流和下一批接续；第 1 阶段仍进行中。
 
+### R51：统一来源接续与下一批
+
+`unified:source advance|baseline|prepare --request FILE --pin SHA256 --output NEW_DIRECTORY` 只写本地来源/验收记录，不上传、切流或修改 CMS。三类请求分别为 `unified_source_advance_request`（已完成发布的 `publication` pin、`executorRunID`）、`unified_next_source_request`（再加 `sourceIndex` pin）、`unified_next_publication_request`（改为 `handoff`、`build`、`expectations` pin）。每类另有固定 `schemaVersion:1` 和对应 `kind`，不接受 owner、传输实现、通过标记或跳过检查参数。
+
+`advance` 固定重开已完成发布的整个历史、审核、构建、两预览、推广、部署、全公网及精确 CI 链。Main 仅用已接受候选的实际封存 Worker 和兼容静态并集；其他四站复用各自完整原来源，不能取历史原神/异环 catalog 中的 Main。全部 115 来源从封存源码取得，包括非公开代码和派生输入；90 份公开 JSON 同时匹配新 Main 资产及已接受公网引用。再取七服务前后拓扑、五站不可变版本前后身份和完整 Main 公网观察，生成五 owner `source-index.json`，不把历史复验当成当前观察。
+
+`baseline` 重读该完整索引并取独立的新鲜观察，输出 `active.json`、五 owner `previous.json` 和 `source-handoff.json`；代码 A 不重新退回旧 Git，交接的 15 分钟时效从整段观察起点计算。历史索引过期仍可读，但新鲜交接过期必须重新只读观察。`prepare` 重开已完成发布与索引、核对新鲜交接及下一批完整 A，再精确选择本批构建目标的旧产物，调用既有本地候选/恢复准备器；索引本身不删减 owner。它不扩大当前 Ananta 单条试点生产资格，也不替代下一批 CMS 审核或现存领域守卫。
+
+R51 覆盖 38 项来源协议隔离测试、三方编译器跨游戏保留回归及真实推广协议完成态到来源接续的缩小数据集联合隔离测试。固定恢复与来源完整请求级联合资格、当前精确 CI、实际推广/公网接受/来源接续仍分别是未完成项。没有真实完成推广收据就不能运行生产 source-advance；所有新结果均保持 `cloudWrites:false`、`activationSupported:false`、`newPublicationAuthorized:false`。见 [R51](../reports/payload-unified-source-advance-2026-11-06-r51/README.md)。
+
 ## 开发入口
 
 在 `services/content-cms` 执行：

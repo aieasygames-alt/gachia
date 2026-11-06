@@ -48,7 +48,8 @@
     "media:runtime": "node ../../scripts/owner-media-runtime-audit.mjs",
     "unified:promotion": "tsx scripts/unified-promotion.ts",
     "unified:history": "tsx scripts/unified-history.ts",
-    "unified:recovery": "tsx scripts/unified-recovery.ts"
+    "unified:recovery": "tsx scripts/unified-recovery.ts",
+    "unified:source": "tsx scripts/unified-source.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.92.1",

@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { SERVICES } from './desktop-cloud-release.mjs';
+import { artifactFiles } from './desktop-publish.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { unifiedMainDeploymentWriter } from './unified-main-deployment.mjs';
 import { readUnifiedCompletedMainPromotion } from './unified-main-evidence.mjs';
@@ -12,12 +13,14 @@ import { unifiedMainPublicReferences, verifyUnifiedMainPublic } from './unified-
 import { executeUnifiedPromotionProtocol } from './unified-promotion-protocol.mjs';
 import { captureUnifiedUploadedModule } from './unified-version-identity.mjs';
 import { exactUnifiedPreviewOrigin, unifiedHTMLParserPin, unifiedPreviewReferences, verifyUnifiedVersionPreview } from './unified-version-preview.mjs';
+import { unifiedSourceFixture } from './fixtures/unified-source-fixture.mjs';
+import { advanceUnifiedSourceIndex, captureUnifiedNextBaseline, readUnifiedNextBaseline } from './unified-source-advance.mjs';
 
 const sha = 'a'.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
 const paths = ['/sitemap.xml', '/robots.txt', '/api/auth/get-session', '/data/ananta/raw-guides.json', '/data/genshin/raw-guides.json', '/data/nte/raw-guides.json',
   '/zh/ananta/guides/download-install-guide', '/en/ananta/guides/download-install-guide'];
 const json = value => JSON.stringify(value, null, 2) + '\n';
-async function fixture(t) {
+async function fixture(t, baselineOverride) {
   const run = realpathSync(mkdtempSync(join(tmpdir(), 'unified-main-completed-'))); t.after(() => rmSync(run, { recursive: true, force: true }));
   const save = (file, value) => { const text = json(value); writeFileSync(file, text); return { path: file, pin: digest(text) }; };
   const directory = join(run, `unified-main-promotion-${randomUUID()}`), renewalDirectory = join(directory, 'renewal'), cloud = join(run, 'cloud');
@@ -26,7 +29,7 @@ async function fixture(t) {
   const assets = { serve_directly: true, raw_run_worker_first: false, base_path: '/',
     headers: { version: 2, rules: { '/_next/static/*': { set: { 'cache-control': 'public,max-age=31536000,immutable' }, unset: [] } } },
     raw_headers: '/_next/static/*\n  Cache-Control: public,max-age=31536000,immutable\n' };
-  const baseline = { services: Object.fromEntries(SERVICES.map((service, i) => [service, { id: uuid(i + 10), versions: [{ version_id: uuid(i + 1), percentage: 100 }] }])),
+  const baseline = baselineOverride ?? { services: Object.fromEntries(SERVICES.map((service, i) => [service, { id: uuid(i + 10), versions: [{ version_id: uuid(i + 1), percentage: 100 }] }])),
     bindings: { gachia: [] }, settings: {}, subdomains: {}, scripts: SERVICES, routes: [], domains: [] };
   const roleReferences = {}, roleBodies = {}, accepted = { recovery: {}, candidate: {} }, renewed = { recovery: {}, candidate: {} }, targets = {}, versions = {};
   for (const [i, role] of ['recovery', 'candidate'].entries()) {
@@ -61,7 +64,7 @@ async function fixture(t) {
   }
   const previews = { directory: cloud, pin: sha, receipt: { accepted } };
   const releaseKey = 'b'.repeat(64), value = { preview: false, transportPin: sha, releaseKey, changed: ['unified:record'], ownerOrder: ['main'], baseline,
-    identityObservedAt: Date.now(), owners: { main: { service: 'gachia', sourceVersionId: uuid(1), sourceIdentityPin: sha, ...targets } } };
+    identityObservedAt: Date.now(), owners: { main: { service: 'gachia', sourceVersionId: baseline.services.gachia.versions[0].version_id, sourceIdentityPin: sha, ...targets } } };
   const renewalPin = save(join(renewalDirectory, 'receipt.json'), { schemaVersion: 1, kind: 'unified_main_preview_renewal', releaseKey, transportPin: sha,
     previewPin: previews.pin, accepted: renewed, cloudWrites: false, productionPromoted: false }).pin;
   const initial = { ...value, previewPin: previews.pin, renewalPin, accepted: renewed, evidenceDirectory: directory, renewalDirectory };
@@ -115,6 +118,41 @@ test('old accepted evidence remains independently readable without making it fre
   const result = await readUnifiedCompletedMainPromotion(f.input);
   assert.equal(result.freshnessRenewed, false);
   assert(result.renewal.receipt.accepted.candidate.main.acceptedAt < Date.now() - 900000);
+});
+
+test('completed promotion evidence feeds five-owner source advance and fresh next-batch consumption in one isolated protocol chain', async t => {
+  const s = await unifiedSourceFixture(t), f = await fixture(t, s.spec.baseline);
+  const completed = await readUnifiedCompletedMainPromotion(f.input), candidate = completed.modules.candidate;
+  const accepted = f.input.previews.receipt.accepted.candidate.main;
+  s.spec.publication = f.input.proof; s.spec.releaseKey = f.input.value.releaseKey; s.spec.transportPin = f.input.value.transportPin;
+  s.spec.deploymentId = completed.original.rows[3].result.deploymentId;
+  s.spec.publicReferences = f.input.publicReferences;
+  s.spec.pairs = ['ananta/raw-guides.json', 'genshin/raw-guides.json', 'nte/raw-guides.json'];
+  s.spec.sources = s.spec.sources.filter(row => row.sourcePath.endsWith('.ts'));
+  for (const pair of s.spec.pairs) {
+    const reference = f.input.publicReferences.find(row => row.path === '/data/' + pair), index = f.input.publicReferences.indexOf(reference);
+    const text = f.roleBodies.candidate.bodies[index].toString();
+    writeFileSync(join(s.spec.owners.main.directory, 'assets/data', pair), text);
+    s.spec.sources.push({ sourcePath: 'packages/data/games/' + pair, text, sha256: digest(text) });
+  }
+  s.spec.sources.sort((a, b) => a.sourcePath.localeCompare(b.sourcePath));
+  s.spec.owners.main = { ...s.spec.owners.main, versionId: accepted.versionId, version: candidate.version,
+    moduleProof: accepted.moduleProof, moduleContext: candidate.receipt.context, modulePath: candidate.receipt.archive.path,
+    archiveSHA256: candidate.receipt.archive.pin, moduleSHA256: accepted.moduleSHA256,
+    artifactSHA256: digest(json(artifactFiles(s.spec.owners.main.directory))) };
+  s.versions.gachia = candidate.version;
+  s.current.services.gachia = { id: s.spec.deploymentId, versions: [{ version_id: accepted.versionId, percentage: 100 }] };
+  const request = async url => {
+    const index = f.input.publicReferences.findIndex(row => row.path === new URL(url).pathname), reference = f.input.publicReferences[index];
+    return new Response(readFileSync(join(f.directory, 'public', `${index}.body`)), { status: reference.status, headers: reference.headers });
+  };
+  const advanced = await advanceUnifiedSourceIndex({ ...s, request, directory: join(s.root, 'advance') });
+  const next = await captureUnifiedNextBaseline({ ...s, request, proof: advanced.proof, directory: join(s.root, 'next') });
+  const opened = await readUnifiedNextBaseline({ spec: s.spec, handoff: next.proof, fresh: true });
+  assert.equal(opened.previous.owners.main.versionId, completed.receipt.versions.gachia);
+  assert.deepEqual(opened.index.value.publication, f.input.proof); assert.equal(opened.sources.length, 28);
+  assert.equal(opened.sources.filter(row => row.sourcePath.endsWith('.ts')).length, 25);
+  assert.equal(readFileSync(join(opened.previous.owners.main.directory, 'worker.js'), 'utf8'), candidate.code.toString());
 });
 
 test('a valid stopped journal cannot be repackaged as a completed public source', async t => {
