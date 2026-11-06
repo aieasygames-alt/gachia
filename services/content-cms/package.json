@@ -45,7 +45,10 @@
     "maintenance:plan": "tsx scripts/maintenance-plan.ts",
     "contracts:coverage": "tsx scripts/contract-coverage.ts",
     "media:check": "tsx scripts/media-manifest-check.ts",
-    "media:runtime": "node ../../scripts/owner-media-runtime-audit.mjs"
+    "media:runtime": "node ../../scripts/owner-media-runtime-audit.mjs",
+    "unified:promotion": "tsx scripts/unified-promotion.ts",
+    "unified:history": "tsx scripts/unified-history.ts",
+    "unified:recovery": "tsx scripts/unified-recovery.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.92.1",

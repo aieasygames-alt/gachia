@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "unified_historical_publication_audit",
+  "status": "sealed_cloud_previews_reverified",
+  "requestPin": "6ce31beb55834442e79d9f0c4d5f7a87f55f534a148a1d369f282f295ecdc6dc",
+  "releaseKey": "806b0a875d42b2433df204385cca0329aedb357cff6f9ed2e6a3823c2b6491cb",
+  "candidateSHA256": "50a15bc167cb9ad92e1939cd5049cde58f4d5cb9f908033f03cf5463e5aea277",
+  "reviewPin": "f6d8261c83089250acf860602a8e6b20d64aab2a9c52fc7427c255bc891a3b23",
+  "sourceCI": {
+    "runID": 42130525825,
+    "commit": "7b12684262338511bbcc2d3468bacaeff9a2404a",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "originExecutorCI": {
+    "runID": 42143094792,
+    "commit": "ccd0416ad0f6973d4904e68eecd32a57bd45877e",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "sources": 115,
+  "owners": [
+    "azur-promilia",
+    "genshin",
+    "lvmeng",
+    "main",
+    "nte"
+  ],
+  "previewPin": "0b05868a8d601307c59b398c5dcdc70510ba93c994225fe9d46fef79d6773bb9",
+  "previewExecutorCI": {
+    "runID": 42148840745,
+    "commit": "ca0fc9c963b6ed13461c98ebf17f74bc0f0d5159",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "versions": {
+    "recovery": "572c9e2b-47bd-4cf4-ac1f-f6bbd0ceb446",
+    "candidate": "b4055676-45d2-460e-8d0e-3e649ddd3001"
+  },
+  "currentCMSRead": false,
+  "currentCloudRead": false,
+  "freshnessRenewed": false,
+  "approvalGranted": false,
+  "cloudWrites": false,
+  "promotionPerformed": false,
+  "sourceAdvanced": false
+}

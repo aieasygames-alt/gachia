@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "kind": "unified_historical_main_previews_request",
+  "history": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-unified-history-2026-11-06-r50/request.json",
+    "pin": "f063c28266887c1aed85ebf3d71d4c0be5bc628059451d5b61b392613aa2288d"
+  },
+  "previews": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/unified-cloud-preview-completion-3ba5e4f94862e9493c6cda97197b4a59043df8b3d96865a288cdbf033499c33d/receipt.json",
+    "pin": "0b05868a8d601307c59b398c5dcdc70510ba93c994225fe9d46fef79d6773bb9"
+  },
+  "previewExecution": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-main-promotion-2026-11-06-r49/completion-complete-previews.json",
+    "pin": "4a14aa5f5d19fe32972050a9b5d4584e1321d35f0f6ad1e65a211b1cd32d717e"
+  }
+}

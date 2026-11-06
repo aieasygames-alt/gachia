@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "kind": "unified_historical_publication_request",
+  "production": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-main-only-preservation-2026-11-06-r48/upload-previews-request.json",
+    "pin": "99b9b4da50e8c5ab9ff754388ab4418b8060d702ca1e730e10e05c91f1e77b7e"
+  },
+  "audit": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-main-only-preservation-2026-11-06-r48/audit.json",
+    "pin": "b0700ad572a0c11332c85345f04dab843d9719d33123a81ffb53c911cb5b3b72"
+  }
+}

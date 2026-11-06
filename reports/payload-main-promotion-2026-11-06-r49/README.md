@@ -26,6 +26,25 @@
 
 ## 验证与余项
 
-定向 Node 回归 55/55、CMS 生产与续接回归 21/21、CMS 类型检查通过。补充停止证据 chronology/schema 拒绝用例后，完整本机 CMS 308/308、发布工具 988/988、其他 Node 304/304、Python 56/56 全部通过，文档与 scope 门禁通过。实际云诊断单独通过，不代替本批精确完整 CI。实际候选续接尚未执行；正式推广、公网验收、统一 source-advance 尚未完成。
+定向 Node 回归 55/55、CMS 生产与续接回归 21/21、CMS 类型检查通过。补充停止证据 chronology/schema 拒绝用例后，完整本机 CMS 308/308、发布工具 988/988、其他 Node 304/304、Python 56/56 全部通过，文档与 scope 门禁通过。续接执行器 `ca0fc9c963b6ed13461c98ebf17f74bc0f0d5159` 的精确完整 CI `42148840745` 随后通过。
 
-`draft/` 为未集成、未验收的推广草案，不是生产入口。不得用它直接切流。当前可用空间约 28 GiB，没有删除备份、密钥、旧应用或历史发布/恢复链；约 597 MiB 的可再生 `.next` 仍仅为清理建议。
+## 实际续接结果
+
+- 真实只读生产续接审计通过，审计与执行请求逐字节相同。恢复 UUID `572c9e2b-47bd-4cf4-ac1f-f6bbd0ceb446` 只重读、不重传；候选 UUID `b4055676-45d2-460e-8d0e-3e649ddd3001` 仅首次上传一次。没有执行原上传入口，也没有重放本次续接。
+- 独占 completion journal 完整七阶段，终态 `all_cloud_previews_accepted_no_promotion`。恢复与候选各 1,267 项精确 Host HTTP 全部通过；两份接受在结束时满足原 15 分钟门禁，未改时间戳。收据 pin `0b05868a8d601307c59b398c5dcdc70510ba93c994225fe9d46fef79d6773bb9`。
+- `completion-independent-recheck.json` 独立重新打开两份 HTTP、版本与上传模块回执，核对原停止四份证据未变和请求逐字节相同。该复验不延长云观察时效、不授权推广。
+- `public-after/result.json` 五项公网观察确认公开 A 未变：原神 32 篇（含公开新增 checklist）、异环 53 篇、Ananta 仍旧正文、账号继续关闭。没有生产推广或统一来源接续。
+
+## 推广基础接线
+
+草案中的完成态 reader、推广协议、Main 专用 deployment writer、完整公网 HTTP 验证和只读对账已移入正式 `scripts/`，修复迁移后的依赖路径。新增证据目录的直接父目录、UUID 命名、固定 renewal 子目录及符号链接限制；对账拒绝缺段、乱序、停止后续写和缺失败观察的 journal。固定 `unified-main-reconcile.mjs` 只有只读能力，不授予接受、恢复或来源接续。
+
+CMS request/wrapper 与 CLI 已接入，**CLI 只允许 audit，拒绝 promote/recover**。内部推广组合保持非导出，尚不能实际切流。隔离兼容恢复核心只允许已停止 promotion 的已知候选转至原兼容恢复，绑定原模块/资源身份、新鲜来源与 HTTP、独占 journal；25 项拒绝/失败测试通过，尚无固定生产恢复适配器。推广/完成态 reader/公网/对账/CLI 的 80 项测试和 CMS 两项边界测试通过，类型检查通过；新实现不复用上方旧提交的 CI 作为上线资格。
+
+新增 `verifyUnifiedHistoricalReview` 从完整封存源码及原审核摘要复验历史值，重跑三方导出并核对全部来源，不查询当前 CMS、不重新批准内容或续时效。18 项隔离测试通过；已对真实 R46 的 115 来源执行独立复验，确认 1 条历史审核和候选 SHA 完全相符，见 `historical-review-independent-recheck.json`。它仅关闭本批历史审核重读切片，不是已完成发布 reader 或 source-advance；发生无法反向重建的三方合并时仍拒绝，需另行封存原审核值，不得用未来 CMS 文档冒充。
+
+最终本机验证：CMS 328/328、新增推广/完成态/公网/对账/恢复协议 105/105、既有发布工具 988/988、其他 Node 304/304、Python 56/56；CMS 类型检查、文档与 scope 门禁、差异空白检查全部通过。日志分别为 `promotion-final-cms.log`、`promotion-final-release.log`、`promotion-final-typecheck.log`、`promotion-final-docs.log`。上述新增实现仍未取得独立的当前精确完整 CI，未执行新的生产写入。
+
+首个正式闭环仍未关闭。剩余是固定生产恢复适配器、可独立重读且不依赖未来 CMS 审核状态的统一 source-advance/下一批 reader、当前精确完整 CI、两版本新鲜续验、真实推广和完整公网接受。`draft/READINESS.md` 记录余项，不是可执行生产入口。
+
+当前可用空间约 28 GiB，没有删除备份、密钥、旧应用或历史发布/恢复链。最终 `du -sh services/content-cms/.next` 为约 576 MiB，可再生但仍仅为清理建议；常驻安装目录、封存构建、冷备和上传/恢复证据不属于这项缓存建议。

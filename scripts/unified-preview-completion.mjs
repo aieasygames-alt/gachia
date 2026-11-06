@@ -4,7 +4,7 @@ import { join, resolve } from 'node:path';
 import { assertTopology, reconcileRelease } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { withRunLock } from './desktop-publish.mjs';
-import { assertUnifiedPreviewUploadScope } from './unified-preview-protocol.mjs';
+import { assertUnifiedPreviewIdentity, assertUnifiedPreviewUploadScope } from './unified-preview-protocol.mjs';
 import { exactUnifiedPreviewOrigin, unifiedHTMLParserPin } from './unified-version-preview.mjs';
 
 const SHA = /^[a-f0-9]{64}$/;
@@ -19,7 +19,7 @@ function pinned(file, pin) {
 // upload, zero HTTP observations and no candidate intent. It never treats a
 // lost upload response, semantic failure or partial candidate as resumable.
 export function readUnifiedObservationStop({ run, stop, value }) {
-  assertUnifiedPreviewUploadScope(value, value.transportPin); assert.deepEqual(value.ownerOrder, ['main']);
+  assertUnifiedPreviewIdentity(value, value.transportPin); assert.deepEqual(value.ownerOrder, ['main']);
   const root = join(run, `unified-cloud-preview-${value.transportPin}`), service = value.owners.main.service;
   const expected = { journal: join(run, `unified-preview-${value.transportPin}.jsonl`),
     http: join(root, 'recovery-main/http/result.json'), version: join(root, 'recovery-main/version.json'), module: join(root, 'recovery-main/module/receipt.json') };

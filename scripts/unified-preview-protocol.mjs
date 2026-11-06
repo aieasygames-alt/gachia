@@ -19,7 +19,7 @@ function fresh(at) {
 // This protocol core has no CLI or production transport. Its verifier and
 // adapters are trusted code, never caller-supplied authorization JSON. A fixed
 // production wrapper must prove source handoff and CMS review before using it.
-export function assertUnifiedPreviewUploadScope(value, transportPin) {
+export function assertUnifiedPreviewIdentity(value, transportPin) {
   assert.equal(value.preview, false, 'Never upload unified fixture/rehearsal content');
   assert(SHA.test(value.transportPin) && value.transportPin === transportPin, 'Pinned unified transport required');
   assert(SHA.test(value.releaseKey), 'Explicit unified editorial release required');
@@ -28,7 +28,8 @@ export function assertUnifiedPreviewUploadScope(value, transportPin) {
   assert.equal(new Set(value.ownerOrder).size, value.ownerOrder.length);
   assert(value.ownerOrder.every(owner => UNIFIED_OWNERS.includes(owner)), 'Unreviewed unified owner');
   assert.deepEqual(Object.keys(value.owners).sort(), [...value.ownerOrder].sort(), 'Incomplete unified owner set');
-  assertTopology(value.baseline, value.baseline); fresh(value.identityObservedAt);
+  assertTopology(value.baseline, value.baseline);
+  assert(Number.isSafeInteger(value.identityObservedAt) && value.identityObservedAt <= Date.now(), 'Invalid unified source observation time');
   for (const owner of value.ownerOrder) {
     const row = value.owners[owner]; assert.equal(row.service, unifiedService(owner));
     assert.equal(row.sourceVersionId, activeVersion(value.baseline, row.service), 'Recovery source is no longer active');
@@ -38,6 +39,10 @@ export function assertUnifiedPreviewUploadScope(value, transportPin) {
       for (const field of ['moduleSHA256', 'configPin', 'artifactPin', 'referencesPin']) assert(SHA.test(target[field]), `Missing ${role} ${field}`);
     }
   }
+}
+
+export function assertUnifiedPreviewUploadScope(value, transportPin) {
+  assertUnifiedPreviewIdentity(value, transportPin); fresh(value.identityObservedAt);
 }
 
 // Single-attempt, exclusive journal per sealed transport. Recovery versions are

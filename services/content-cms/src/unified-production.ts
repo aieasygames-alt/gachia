@@ -167,12 +167,8 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
   return { preview, transport, publication, built, build, editorial, review, scope, qualification, preservation, request }
 }
 
-export async function createUnifiedProductionVerifier(request: UnifiedProductionRequest, { cmsToken, cloudToken }: { cmsToken: string; cloudToken: string },
-  options: { originExecutor?: ExecutorIdentity } = {}) {
-  keys(options, Object.hasOwn(options, 'originExecutor') ? ['originExecutor'] : [])
-  if (Object.hasOwn(options, 'originExecutor')) assertExecutorIdentity(options.originExecutor!)
+export async function createUnifiedExecutorVerifier(runID: number, githubToken: string) {
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS, 'Unified production is single-Mac desktop only')
-  request = structuredClone(unifiedProductionRequest(request))
   const repo = path.resolve(projectRoot, '../..'), executorCommit = git(repo, ['rev-parse', 'HEAD'])
   const executorPaths = ['scripts', 'services/content-cms', '.github/workflows', 'pnpm-lock.yaml', 'package.json']
   assert.equal(git(repo, ['ls-files', '--others', '--exclude-standard', ...executorPaths]), '', 'Uncommitted production executor files')
@@ -183,13 +179,28 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
     const exact = execFileSync('git', ['show', `${executorCommit}:${file}`], { cwd: repo, maxBuffer: 16 * 1024 * 1024 })
     assert.equal(digest(readFileSync(path.join(repo, file))), digest(exact), 'Production executor has unverified source edits')
   }
-  const local = await verifyUnifiedProductionLocal(request, cmsToken)
+  const executorCI = await verifyUnifiedCI(runID, executorCommit, githubToken)
+  const verify = () => {
+    assert.equal(git(repo, ['rev-parse', 'HEAD']), executorCommit); assert.deepEqual(executorPins(), initialPins, 'Production executor bytes changed')
+    assert.equal(git(repo, ['ls-files', '--others', '--exclude-standard', ...executorPaths]), '', 'Uncommitted production executor files')
+  }
+  return { executorCommit, executorCI, verify }
+}
+
+export async function createUnifiedProductionVerifier(request: UnifiedProductionRequest, { cmsToken, cloudToken }: { cmsToken: string; cloudToken: string },
+  options: { originExecutor?: ExecutorIdentity } = {}) {
+  keys(options, Object.hasOwn(options, 'originExecutor') ? ['originExecutor'] : [])
+  if (Object.hasOwn(options, 'originExecutor')) assertExecutorIdentity(options.originExecutor!)
+  request = structuredClone(unifiedProductionRequest(request))
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
+  const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
+  const local = await verifyUnifiedProductionLocal(request, cmsToken)
   const ci = await verifyUnifiedCI(request.sourceRunID, local.built.frozen.sourceCommit, githubToken)
   // A read-only observation stop may be completed by newer reviewed tooling.
   // Preserve the original release key, while requiring full CI for BOTH the
   // original executor and this exact current writer. This is not a CLI flag.
-  const { executorCI, originExecutorCI } = await verifyUnifiedExecutorCI({ runID: request.executorRunID, commit: executorCommit }, githubToken, options.originExecutor)
+  const executorCI = executor.executorCI
+  const originExecutorCI = options.originExecutor ? await verifyUnifiedCI(options.originExecutor.runID, options.originExecutor.commit, githubToken) : executorCI
   const handoff = pinned<Record<string, any>>(request.sourceHandoff)
   assert.equal(handoff.kind, 'unified_observed_source_handoff'); assert.equal(handoff.status, 'all_five_active_source_modules_verified')
   assert.equal(handoff.workerWrites, 0); assert.equal(handoff.topologyUnchanged, true)
@@ -197,7 +208,7 @@ export async function createUnifiedProductionVerifier(request: UnifiedProduction
   assertTopology(historical, baseline)
   const previous = readPinnedUnifiedInput(local.publication.previousPath, local.publication.previousPin) as any
   const verify = async () => {
-    assert.equal(git(repo, ['rev-parse', 'HEAD']), executorCommit); assert.deepEqual(executorPins(), initialPins, 'Production executor bytes changed')
+    executor.verify()
     assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed')
     const fresh = await verifyUnifiedProductionLocal(request, cmsToken)
     const identityObservedAt = Date.now()
