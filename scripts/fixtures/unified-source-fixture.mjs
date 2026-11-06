@@ -13,14 +13,14 @@ import { exactUnifiedPreviewOrigin, unifiedPreviewReferences } from '../unified-
 
 export const sourceFixtureUUID = n => `1234abcd-0000-4000-8000-${String(n).padStart(12, '0')}`;
 export const sourceFixtureJSON = value => JSON.stringify(value, null, 2) + '\n';
-export async function unifiedSourceFixture(t) {
+export async function unifiedSourceFixture(t, { originalMain = false } = {}) {
   const root = realpathSync(mkdtempSync(join(tmpdir(), 'unified-source-next-'))); t.after(() => rmSync(root, { recursive: true, force: true }));
   const save = (file, value) => { const text = sourceFixtureJSON(value); writeFileSync(file, text); return { path: file, pin: digest(text) }; };
   const baseline = { services: Object.fromEntries(SERVICES.map((service, i) => [service, { id: sourceFixtureUUID(i + 100), versions: [{ version_id: sourceFixtureUUID(i + 1), percentage: 100 }] }])),
     bindings: { gachia: [] }, settings: {}, subdomains: {}, scripts: SERVICES, routes: [], domains: [] };
   const owners = {}, versions = {}, transportPin = 'a'.repeat(64);
   for (const owner of UNIFIED_SOURCE_OWNERS) {
-    const service = unifiedService(owner), versionId = owner === 'main' ? sourceFixtureUUID(200) : baseline.services[service].versions[0].version_id;
+    const service = unifiedService(owner), versionId = owner === 'main' && !originalMain ? sourceFixtureUUID(200) : baseline.services[service].versions[0].version_id;
     const directory = join(root, owner); mkdirSync(directory);
     const artifact = join(directory, 'artifact'); mkdirSync(join(artifact, 'assets/_next/static'), { recursive: true });
     mkdirSync(join(artifact, '.build')); writeFileSync(join(artifact, '.build/open-next.config.edge.mjs'), 'export default {}');
@@ -37,7 +37,7 @@ export async function unifiedSourceFixture(t) {
     const args = { service, versionId, moduleSHA256: digest(code), directory: join(directory, 'capture'),
       readVersion: async () => version, readContent: async () => ({ archive, etag: 'e'.repeat(64) }) };
     let moduleProof, mode, moduleContext;
-    if (owner === 'main' || ['genshin', 'nte'].includes(owner)) {
+    if ((owner === 'main' && !originalMain) || ['genshin', 'nte'].includes(owner)) {
       const log = join(directory, 'upload.log'); writeFileSync(log, `Worker Version ID: ${versionId}\nVersion Preview URL: ${exactUnifiedPreviewOrigin(service, versionId)}\n`);
       moduleContext = owner === 'main' ? { role: 'candidate', transportPin, configPin: 'b'.repeat(64) }
         : { role: 'candidate', releaseKey: 'c'.repeat(64), configSHA256: 'b'.repeat(64) };

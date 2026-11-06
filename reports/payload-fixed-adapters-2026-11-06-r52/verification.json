@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "kind": "unified_fixed_adapter_local_verification",
+  "phase": "r52",
+  "baseCommit": "321f6f9ce1e826c2f83662d64721c39e262a524c",
+  "status": "local_regression_passed_not_production_qualification",
+  "localNode": "25.9.0",
+  "additionalCompatibilityNode": "22.22.2",
+  "cms": { "passed": 346, "failed": 0, "log": "cms-tests.log" },
+  "fixedAdapters": { "passed": 43, "failed": 0, "log": "fixed-adapters-43.log" },
+  "node22Wrapper": { "passed": 1, "failed": 0, "log": "node22-adapters.log" },
+  "releaseNode": { "passed": 1479, "failed": 0, "groups": [187, 988, 304], "log": "release-tests.log" },
+  "releasePython": { "passed": 56, "failed": 0, "log": "release-tests.log" },
+  "documentation": { "passed": 38, "failed": 0, "log": "documentation-tests.log" },
+  "cmsTypecheck": { "status": "passed", "log": "typecheck.log" },
+  "whitespace": "passed",
+  "isolatedBoundaries": [
+    "historical publication entry and original preview lookup",
+    "current executor worktree guard; real CI parser reads synthetic GitHub responses",
+    "cloud topology snapshot; immutable version reader reads synthetic Cloudflare responses",
+    "owner build verifier; local preparation uses synthetic preview-only artifacts",
+    "explicit preview network; production network requests are synthetic",
+    "loopback HTTP substitutes for OpenNext process"
+  ],
+  "realComposition": [
+    "fixed published and recovery request readers",
+    "completed promotion, module, renewal, deployment and public evidence readers",
+    "five-owner 115-source 90-public-pair source and next-baseline protocols",
+    "local candidate and compatible recovery preparation and verification",
+    "private fixed recovery writer and manual recovery protocol in isolated child only"
+  ],
+  "cloudWrites": false,
+  "cmsDatabaseWrites": false,
+  "cmsInstalled": false,
+  "activationSupported": false,
+  "productionQualificationGranted": false,
+  "productionNextSourceFormatAccepted": false,
+  "implementationCheckpointExactCI": "pending_commit_and_independent_verification",
+  "phaseOneComplete": false,
+  "diskAvailableGiBApprox": 28,
+  "cleanupOnlySuggested": ["services/content-cms/.next: 576 MiB"],
+  "deletedHistoricalArtifacts": false
+}

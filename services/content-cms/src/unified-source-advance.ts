@@ -67,13 +67,15 @@ async function openPublication(proof: Proof, githubToken: string) {
 }
 
 export async function verifyUnifiedPublishedSource(input: { publication: Proof; sourceIndex: Proof; githubToken: string }) {
-  const { spec } = await openPublication(input.publication, input.githubToken)
-  return readUnifiedSourceIndex({ spec, proof: input.sourceIndex })
+  const { publication, sourceIndex, githubToken } = structuredClone(input)
+  const { spec } = await openPublication(publication, githubToken)
+  return readUnifiedSourceIndex({ spec, proof: sourceIndex })
 }
 
 export async function verifyUnifiedNextSource(input: { publication: Proof; handoff: Proof; githubToken: string }) {
-  const { spec } = await openPublication(input.publication, input.githubToken)
-  return readUnifiedNextBaseline({ spec, handoff: input.handoff, fresh: true })
+  const { publication, handoff, githubToken } = structuredClone(input)
+  const { spec } = await openPublication(publication, githubToken)
+  return readUnifiedNextBaseline({ spec, handoff, fresh: true })
 }
 
 // No caller-provided readers, snapshots or success flags enter this adapter.
@@ -81,29 +83,35 @@ export async function verifyUnifiedNextSource(input: { publication: Proof; hando
 export async function advanceUnifiedPublishedSources(input: {
   request: UnifiedSourceAdvanceRequest | UnifiedNextSourceRequest; directory: string; cloudToken: string
 }) {
-  const request = unifiedSourceRequest(input.request)
+  const request = structuredClone(unifiedSourceRequest(input.request)), directory = path.resolve(input.directory)
   assert(request.kind !== 'unified_next_publication_request')
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
   const { spec } = await openPublication(request.publication, githubToken)
-  assertDiskBudget({ path: input.directory, operation: 'unified source index and next-batch evidence', estimatedBytes: GiB })
+  assertDiskBudget({ path: directory, operation: 'unified source index and next-batch evidence', estimatedBytes: GiB })
   const reader = { snapshot: async () => { executor.verify(); return desktopCloudSnapshot(input.cloudToken, unifiedProductionRead) },
     version: (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }) }
   const result = request.kind === 'unified_source_advance_request'
-    ? await advanceUnifiedSourceIndex({ spec, directory: input.directory, reader, request: unifiedProductionRead })
-    : await captureUnifiedNextBaseline({ spec, proof: request.sourceIndex, directory: input.directory, reader, request: unifiedProductionRead })
-  executor.verify()
+    ? await advanceUnifiedSourceIndex({ spec, directory, reader, request: unifiedProductionRead })
+    : await captureUnifiedNextBaseline({ spec, proof: request.sourceIndex, directory, reader, request: unifiedProductionRead })
+  try { executor.verify() }
+  catch (error) {
+    // A protocol receipt must not survive failure of the fixed executor gate.
+    writeFileSync(path.join(directory, 'failure.json'), JSON.stringify({ status: 'failed', error: (error as Error).message,
+      cloudWrites: false, automaticRetry: false }) + '\n', { flag: 'wx', mode: 0o600 })
+    throw error
+  }
   return { ...result, executorCI: executor.executorCI, cloudWrites: false, newPublicationAuthorized: false }
 }
 
 export async function prepareUnifiedNextPublication(input: { request: UnifiedNextPublicationRequest; directory: string }) {
-  const request = unifiedSourceRequest(input.request); assert.equal(request.kind, 'unified_next_publication_request')
+  const request = structuredClone(unifiedSourceRequest(input.request)); assert(request.kind === 'unified_next_publication_request')
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
   const { spec } = await openPublication(request.publication, githubToken)
-  const next = await readUnifiedNextBaseline({ handoff: input.request.handoff, spec, fresh: true })
-  const built = verifyUnifiedOwnerBuild(path.dirname(input.request.build.path), input.request.build.pin)
-  assert.equal(input.request.build.path, path.join(built.directory, 'build.json'))
+  const next = await readUnifiedNextBaseline({ handoff: request.handoff, spec, fresh: true })
+  const built = verifyUnifiedOwnerBuild(path.dirname(request.build.path), request.build.pin)
+  assert.equal(request.build.path, path.join(built.directory, 'build.json'))
   const previous = selectUnifiedNextPrevious(next, built.frozen)
   const directory = path.resolve(input.directory); assert.equal(realpathSync(path.dirname(directory)), path.dirname(directory))
   mkdirSync(directory, { mode: 0o700 })
@@ -114,10 +122,10 @@ export async function prepareUnifiedNextPublication(input: { request: UnifiedNex
   try {
     const selected = save('previous.json', previous)
     const result = await prepareUnifiedPublication({ buildDirectory: built.directory, buildPin: built.buildPin,
-      previousPath: selected.path, previousPin: selected.pin, baselineExpectations: pinned(input.request.expectations) as ConsumerExpectation[],
+      previousPath: selected.path, previousPin: selected.pin, baselineExpectations: pinned(request.expectations) as ConsumerExpectation[],
       directory: path.join(directory, 'publication') })
-    await readUnifiedNextBaseline({ handoff: input.request.handoff, spec, fresh: true }); executor.verify()
-    const value = { schemaVersion: 1, kind: 'unified_next_publication_preparation', status: 'next_candidate_and_recovery_locally_accepted', request: input.request,
+    await readUnifiedNextBaseline({ handoff: request.handoff, spec, fresh: true }); executor.verify()
+    const value = { schemaVersion: 1, kind: 'unified_next_publication_preparation', status: 'next_candidate_and_recovery_locally_accepted', request,
       sourceIndex: next.value.sourceIndex, active: next.value.active, previous: selected,
       publication: { path: path.join(result.directory, 'publication.json'), pin: result.publicationPin }, executorCI: executor.executorCI,
       cloudWrites: false, activationSupported: false, newPublicationAuthorized: false }

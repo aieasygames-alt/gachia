@@ -185,7 +185,15 @@ R50 的真实只读复验、初次历史时效错误及修复后的执行分别�
 
 `baseline` 重读该完整索引并取独立的新鲜观察，输出 `active.json`、五 owner `previous.json` 和 `source-handoff.json`；代码 A 不重新退回旧 Git，交接的 15 分钟时效从整段观察起点计算。历史索引过期仍可读，但新鲜交接过期必须重新只读观察。`prepare` 重开已完成发布与索引、核对新鲜交接及下一批完整 A，再精确选择本批构建目标的旧产物，调用既有本地候选/恢复准备器；索引本身不删减 owner。它不扩大当前 Ananta 单条试点生产资格，也不替代下一批 CMS 审核或现存领域守卫。
 
-R51 覆盖 38 项来源协议隔离测试、三方编译器跨游戏保留回归及真实推广协议完成态到来源接续的缩小数据集联合隔离测试。固定恢复与来源完整请求级联合资格、当前精确 CI、实际推广/公网接受/来源接续仍分别是未完成项。没有真实完成推广收据就不能运行生产 source-advance；所有新结果均保持 `cloudWrites:false`、`activationSupported:false`、`newPublicationAuthorized:false`。见 [R51](../reports/payload-unified-source-advance-2026-11-06-r51/README.md)。
+R51 覆盖 38 项来源协议隔离测试、三方编译器跨游戏保留回归及真实推广协议完成态到来源接续的缩小数据集联合隔离测试。提交 `321f6f9` 的精确完整 CI `42161996721` 随后已独立验过，不覆盖后续执行器修改。固定恢复与来源完整请求级联合资格、实际推广/公网接受/来源接续仍分别是未完成项。没有真实完成推广收据就不能运行生产 source-advance；所有新结果均保持 `cloudWrites:false`、`activationSupported:false`、`newPublicationAuthorized:false`。见 [R51](../reports/payload-unified-source-advance-2026-11-06-r51/README.md)。
+
+### R52：固定入口组合与失败输出
+
+新增固定请求的独立进程组合测试，使用合成五 owner/115 来源/90 公开对，执行真实的完成态 reader、模块/renewal/部署/公网证据重读、来源接续、新鲜下一批和本地候选/恢复准备。私有恢复写组合仅由测试进程加载器访问，线上导出与 CLI 不变；未知写结果保留 journal 并停止，即使已知候选再次活动也拒绝重试。测试替换历史入口、当前执行器、云拓扑和构建验证边界，并以受限本机 HTTP 代替 OpenNext 进程，不是完整生产资格或真实切流。
+
+来源/下一批协议成功后若最终执行器检查失败，固定适配器保留 `failure.json`；后续 reader 拒绝该目录，不能复用协议收据冒充成功，也不覆盖失败目录。来源、下一批准备和恢复入口在异步验证前复制固定请求；后续验证及返回收据只使用同一份已校验的 pin，不再次读取调用方可变请求。
+
+生产验证器目前只接受旧 `unified_observed_source_handoff`，尚不接受新 `unified_next_batch_baseline`；本地 `prepare` 成功不赋予新一批上传资格。下一步应接通该新格式的生产及历史读取合同，再补无替换的固定链路资格和新执行器精确 CI。没有开放推广/恢复写命令，没有扩大 Ananta 单条试点资格，没有安装或修改常驻 CMS。见 [R52](../reports/payload-fixed-adapters-2026-11-06-r52/README.md)。
 
 ## 开发入口
 

@@ -43,7 +43,7 @@ export function unifiedRecoveryRequest(value: unknown): UnifiedRecoveryRequest {
 }
 
 export async function openUnifiedRecovery(input: { request: UnifiedRecoveryRequest; cloudToken: string }) {
-  const request = unifiedRecoveryRequest(input.request)
+  const request = structuredClone(unifiedRecoveryRequest(input.request))
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
   const historyRequest = unifiedHistoricalMainRequest(pinned(request.history)), opened = await verifyUnifiedHistoricalMain(historyRequest, githubToken)
