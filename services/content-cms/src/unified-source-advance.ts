@@ -135,14 +135,14 @@ export async function verifyUnifiedProductionSources(proof: Proof, binding: Sour
 export async function advanceUnifiedPublishedSources(input: {
   request: UnifiedSourceAdvanceRequest | UnifiedNextSourceRequest; directory: string; cloudToken: string
 }) {
-  const request = structuredClone(unifiedSourceRequest(input.request)), directory = path.resolve(input.directory)
+  const request = structuredClone(unifiedSourceRequest(input.request)), directory = path.resolve(input.directory), cloudToken = input.cloudToken
   assert(request.kind !== 'unified_next_publication_request')
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
   const { spec } = await openPublication(request.publication, githubToken)
   assertDiskBudget({ path: directory, operation: 'unified source index and next-batch evidence', estimatedBytes: GiB })
-  const reader = { snapshot: async () => { executor.verify(); return desktopCloudSnapshot(input.cloudToken, unifiedProductionRead) },
-    version: (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }) }
+  const reader = { snapshot: async () => { executor.verify(); return desktopCloudSnapshot(cloudToken, unifiedProductionRead) },
+    version: (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken, request: unifiedProductionRead }) }
   const result = request.kind === 'unified_source_advance_request'
     ? await advanceUnifiedSourceIndex({ spec, directory, reader, request: unifiedProductionRead })
     : await captureUnifiedNextBaseline({ spec, proof: request.sourceIndex, directory, reader, request: unifiedProductionRead })
@@ -157,7 +157,8 @@ export async function advanceUnifiedPublishedSources(input: {
 }
 
 export async function prepareUnifiedNextPublication(input: { request: UnifiedNextPublicationRequest; directory: string }) {
-  const request = structuredClone(unifiedSourceRequest(input.request)); assert(request.kind === 'unified_next_publication_request')
+  const request = structuredClone(unifiedSourceRequest(input.request)), directory = path.resolve(input.directory)
+  assert(request.kind === 'unified_next_publication_request')
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
   const { spec } = await openPublication(request.publication, githubToken)
@@ -165,7 +166,7 @@ export async function prepareUnifiedNextPublication(input: { request: UnifiedNex
   const built = verifyUnifiedOwnerBuild(path.dirname(request.build.path), request.build.pin)
   assert.equal(request.build.path, path.join(built.directory, 'build.json'))
   const previous = selectUnifiedNextPrevious(next, built.frozen)
-  const directory = path.resolve(input.directory); assert.equal(realpathSync(path.dirname(directory)), path.dirname(directory))
+  assert.equal(realpathSync(path.dirname(directory)), path.dirname(directory))
   mkdirSync(directory, { mode: 0o700 })
   const save = (name: string, value: unknown) => {
     const text = JSON.stringify(value, null, 2) + '\n', file = path.join(directory, name)

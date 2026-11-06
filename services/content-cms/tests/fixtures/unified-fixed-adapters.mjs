@@ -353,6 +353,19 @@ for (const fault of ['none', 'caller-mutation', 'open-caller-mutation', 'authori
       assert.equal(opened.value.owners.main.versionId, f.versions.candidate.id);
       assert.equal(s.writes, 1);
       assert(s.localPreflights > 2); for (const runID of [1, 2, 5]) assert(s.ciReads.includes(runID));
+      if (fault === 'none') {
+        const next = await advance(s, 'baseline', advanced.proof), request = nextBuild(s, next);
+        s.output = path.join(s.s.root, 'promoted-next-preparation');
+        const prepared = await source.prepareUnifiedNextPublication({ request, directory: s.output });
+        const checked = await publication.verifyUnifiedPublication(path.dirname(prepared.value.publication.path), prepared.value.publication.pin);
+        assert.deepEqual(prepared.value.sourceIndex, advanced.proof);
+        const previous = JSON.parse(readFileSync(prepared.value.previous.path, 'utf8'));
+        assert.equal(previous.owners.main.versionId, f.versions.candidate.id);
+        assert.equal(checked.receipt.owners.main.runtimeModuleSHA256, digest(f.moduleCode.candidate));
+        assert.equal(Object.keys(JSON.parse(readFileSync(next.value.previous.path, 'utf8')).owners).length, 5);
+        assert.equal(prepared.value.activationSupported, false); assert.equal(s.writes, 1);
+        assert(s.localWorkerReads >= 190);
+      }
     } else {
       const messages = { authorization: /Explicit matching release authorization/, preview: /Isolated preview failed/,
         'lost-response': /Main deployment outcome unknown/, public: /Production read failed/,
@@ -381,12 +394,29 @@ for (const fault of ['none', 'caller-mutation', 'open-caller-mutation', 'authori
     assert.equal(s.networkOpened, s.networkClosed);
     if (s.writes) {
       const writes = s.writes;
+      const afterPromotion = structuredClone(s.s.current);
       s.onPromotionOpen = undefined; s.failLocalPreflight = false;
       await assert.rejects(promotion.promoteUnifiedMain(original), /Protected deployment drift/);
       // Even if the simulated cloud returns to the old baseline, the journal forbids replay.
       s.s.current = structuredClone(value.baseline);
       await assert.rejects(promotion.promoteUnifiedMain(original), /Existing promotion requires read-only reconciliation/);
       assert.equal(s.writes, writes);
+      if (fault === 'public') {
+        // Consume this writer's stopped journal unchanged, not the synthetic stopped() helper.
+        s.s.current = afterPromotion; s.failPublic = false; s.promotionEvidence = false;
+        const bytes = readFileSync(journal);
+        const history = f.save(path.join(s.s.root, 'stopped-main-history.json'), {
+          ...s.publishedRequest, kind: 'unified_historical_main_previews_request', promotion: undefined,
+        });
+        const request = { schemaVersion: 1, kind: 'unified_main_compatible_recovery_request', history,
+          promotionJournal: { path: journal, pin: digest(bytes) }, network: original.request.network, executorRunID: 5 };
+        const recovered = await recovery.recoverUnifiedMain({ request, cloudToken: original.cloudToken, releaseKey: original.releaseKey });
+        assert.equal(recovered.status, 'recovery_accepted'); assert.equal(recovered.sourceAdvanced, false);
+        assert.equal(s.writes, writes + 1); assert.deepEqual(readFileSync(journal), bytes);
+        assert.equal(s.s.current.services.gachia.versions[0].version_id, f.versions.recovery.id);
+        assert(!existsSync(path.join(s.s.root, 'advance/source-index.json')));
+        assert.equal(s.networkOpened, s.networkClosed);
+      }
     }
   });
 }
@@ -693,8 +723,11 @@ for (const kind of ['advance', 'baseline']) test(`fixed ${kind} invalidates prot
 
 test('fixed source request cannot change its pinned publication during asynchronous verification', async t => {
   const s = await fixture(t), request = { schemaVersion: 1, kind: 'unified_source_advance_request', publication: { ...s.publishedProof }, executorRunID: 5 };
-  s.onExecutor = () => { request.publication.pin = 'f'.repeat(64); };
-  const result = await source.advanceUnifiedPublishedSources({ request, directory: path.join(s.s.root, 'immutable-request'), cloudToken: 'isolated-cloud-token' });
+  const directory = path.join(s.s.root, 'immutable-request'), changedDirectory = path.join(s.s.root, 'changed-output');
+  const input = { request, directory, cloudToken: 'isolated-cloud-token' };
+  s.onExecutor = () => { request.publication.pin = 'f'.repeat(64); input.cloudToken = 'changed'; input.directory = changedDirectory; };
+  const result = await source.advanceUnifiedPublishedSources(input);
+  assert(existsSync(path.join(directory, 'source-index.json'))); assert(!existsSync(changedDirectory));
   assert.deepEqual(result.value.publication, s.publishedProof); assert.equal(s.writes, 0);
 });
 
@@ -718,11 +751,15 @@ for (const fault of ['none', 'missing-A', 'wrong-build-path', 'expired-handoff',
     if (fault === 'build-pin') request.build.pin = '0'.repeat(64);
     if (fault === 'manifest') corrupt('manifest.json', '{}');
     const original = structuredClone(request);
-    if (fault === 'request-mutation') s.onExecutor = () => { request.handoff.pin = 'f'.repeat(64); request.expectations.pin = 'f'.repeat(64); };
     s.output = path.join(s.s.root, 'next-preparation');
     const input = { request, directory: s.output };
+    const changedDirectory = path.join(s.s.root, 'changed-preparation');
+    if (fault === 'request-mutation') s.onExecutor = () => {
+      request.handoff.pin = 'f'.repeat(64); request.expectations.pin = 'f'.repeat(64); input.directory = changedDirectory;
+    };
     if (['none', 'request-mutation'].includes(fault)) {
       const result = await source.prepareUnifiedNextPublication(input);
+      assert.equal(result.proof.path, path.join(s.output, 'next-publication.json')); assert(!existsSync(changedDirectory));
       assert.deepEqual(result.value.request, original); assert.deepEqual(result.value.sourceIndex, index.proof);
       assert.equal(result.value.activationSupported, false); assert.equal(result.value.newPublicationAuthorized, false);
       const selected = JSON.parse(readFileSync(result.value.previous.path, 'utf8'));
