@@ -20,3 +20,7 @@ This round does not expose promotion/recovery CLI writes, widen the Ananta pilot
 - Staged whitespace check: passed.
 
 These results do not establish real cloud publication. Exact-commit GitHub verification is pending at this checkpoint; its outcome will be recorded separately without changing this executor commit. Disk space remaining is approximately 28 GiB; no historical evidence or backups were removed.
+
+## CI timeout correction
+
+The first exact-commit run (42203831399, commit 31bdb8ff40f6742122bf005dd90076f42b20b713) failed: 378 CMS tests passed, while the fixed-adapter child hit its 360-second timeout. The local child had already required 292 seconds. The timeout is now bounded at 900 seconds within the unchanged 30-minute workflow limit, and timeout diagnostics include child stdout/stderr. All 118 child cases and zero-failure/zero-skip assertions remain required. This failed run cannot authorize publication; the correction requires a new exact-commit full CI run.
