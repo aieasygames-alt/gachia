@@ -21,8 +21,9 @@ sha = lambda file: hashlib.sha256(file.read_bytes()).hexdigest()
 stage = read(report / 'staged-app.json')
 ci = read(report / 'github-code-result.json')
 assert ci['headSha'] == stage['sourceCommit'] and ci['conclusion'] == 'success' and ci['status'] == 'completed'
-runtime = read(report / 'staged-runtime.json')
+runtime = read(report / 'staged-runtime-desktop.json')
 assert runtime['passed'] and runtime['sourceCommit'] == stage['sourceCommit'] and runtime['legacyRowsAndVersionsPreserved']
+assert runtime['cmsMode'] == 'desktop'
 assert read(report / 'postgres/postgres-smoke.json')['passed']
 assert sha(Path(stage['manifestPath'])) == stage['manifestSHA256']
 app = Path(stage['app'])

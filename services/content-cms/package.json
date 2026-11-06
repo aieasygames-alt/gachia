@@ -38,6 +38,7 @@
     "unified:publication-local": "tsx scripts/unified-publication.ts",
     "unified:transport-local": "tsx scripts/unified-transport.ts",
     "unified:preview-local": "tsx scripts/unified-preview.ts",
+    "unified:production": "tsx scripts/unified-production.ts",
     "review:stage": "tsx scripts/review-stage.ts",
     "local:admin": "tsx scripts/local-admin.ts",
     "generate:types": "payload generate:types",

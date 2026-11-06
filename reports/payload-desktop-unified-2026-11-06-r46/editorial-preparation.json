@@ -1,0 +1,88 @@
+{
+  "status": "reviewed_candidate_frozen_not_published",
+  "sourceCommit": "7b12684262338511bbcc2d3468bacaeff9a2404a",
+  "selectionPin": "aaa4b364a4f1d144303b13633ce95a61019f4008f23a8ddc9cdffbdfd58b7c59",
+  "activePin": "771e4008b0b3bba170d69503e9bbf60b1ee47d39d94671d25fc3d903324ecd65",
+  "results": {
+    "export": {
+      "action": "export",
+      "directory": "/Users/robert/Library/Application Support/GachiaCMS/publish/unified/50a15bc167cb9ad92e1939cd5049cde58f4d5cb9f908033f03cf5463e5aea277",
+      "editorialPin": "0bb9dd838f41fc2a9550bbb9646aa0162018dfb5820b94a2bb4e58c7ed999cc9",
+      "schemaVersion": 1,
+      "kind": "unified_desktop_editorial_selection",
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "candidateSHA256": "50a15bc167cb9ad92e1939cd5049cde58f4d5cb9f908033f03cf5463e5aea277",
+      "changed": [
+        "unified:ananta:9ecba53c6d049281870c15a2758c33111c45185368c2d9e25732c0c04061a8e8"
+      ],
+      "selectionPin": "aaa4b364a4f1d144303b13633ce95a61019f4008f23a8ddc9cdffbdfd58b7c59",
+      "activePin": "771e4008b0b3bba170d69503e9bbf60b1ee47d39d94671d25fc3d903324ecd65",
+      "reviews": [
+        {
+          "id": 99,
+          "stableKey": "unified:ananta:9ecba53c6d049281870c15a2758c33111c45185368c2d9e25732c0c04061a8e8",
+          "updatedAt": "2026-11-05T23:50:34.905Z",
+          "sourceSHA256": "0c701d645ca7ad8b471259a896d51103afe9d4c90c7e1d6efa5a02cd60f468cb",
+          "valueSHA256": "84425883b574124659b65d9acccc16317932a6b8f79c0251173669e2e2ebce48"
+        }
+      ],
+      "reviewPin": "f6d8261c83089250acf860602a8e6b20d64aab2a9c52fc7427c255bc891a3b23",
+      "frozenManifestPin": null,
+      "preview": false,
+      "cmsMode": "desktop",
+      "productionReady": false,
+      "activationSupported": false,
+      "cloudWrites": false
+    },
+    "freeze": {
+      "action": "freeze",
+      "directory": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01",
+      "editorialPin": "17783e61701491d5ff2ab06c90c1f875da1546d6a34be75d46d5da8a1cf99c94",
+      "schemaVersion": 1,
+      "kind": "unified_desktop_editorial_selection",
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "candidateSHA256": "50a15bc167cb9ad92e1939cd5049cde58f4d5cb9f908033f03cf5463e5aea277",
+      "changed": [
+        "unified:ananta:9ecba53c6d049281870c15a2758c33111c45185368c2d9e25732c0c04061a8e8"
+      ],
+      "selectionPin": "aaa4b364a4f1d144303b13633ce95a61019f4008f23a8ddc9cdffbdfd58b7c59",
+      "activePin": "771e4008b0b3bba170d69503e9bbf60b1ee47d39d94671d25fc3d903324ecd65",
+      "reviews": [
+        {
+          "id": 99,
+          "stableKey": "unified:ananta:9ecba53c6d049281870c15a2758c33111c45185368c2d9e25732c0c04061a8e8",
+          "updatedAt": "2026-11-05T23:50:34.905Z",
+          "sourceSHA256": "0c701d645ca7ad8b471259a896d51103afe9d4c90c7e1d6efa5a02cd60f468cb",
+          "valueSHA256": "84425883b574124659b65d9acccc16317932a6b8f79c0251173669e2e2ebce48"
+        }
+      ],
+      "reviewPin": "f6d8261c83089250acf860602a8e6b20d64aab2a9c52fc7427c255bc891a3b23",
+      "frozenManifestPin": "bc07ca04cd53a866f81372d160f43c5099a64c60b8a195b8e2d68d12f603ccd2",
+      "preview": false,
+      "cmsMode": "desktop",
+      "productionReady": false,
+      "activationSupported": false,
+      "cloudWrites": false
+    }
+  },
+  "games": [
+    "ananta",
+    "genshin",
+    "nte"
+  ],
+  "owners": [
+    "genshin",
+    "nte",
+    "main"
+  ],
+  "changed": [
+    "unified:ananta:9ecba53c6d049281870c15a2758c33111c45185368c2d9e25732c0c04061a8e8"
+  ],
+  "preservationOverlayFiles": [
+    "packages/data/games/ananta/raw-guides.json",
+    "packages/data/games/genshin/raw-guides.json",
+    "packages/data/games/nte/raw-guides.json"
+  ],
+  "productionPromoted": false,
+  "cloudWrites": false
+}

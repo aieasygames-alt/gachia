@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-05T23:49:42.664571+00:00",
+  "sourceCommit": "7b12684262338511bbcc2d3468bacaeff9a2404a",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261105T234619Z-unified-7b126842/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261105T012223Z-additive-0b60f567/services/content-cms",
+  "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/unified-r46-3f54dc0f2d35",
+  "coldBackup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261105T234940Z-24bbad",
+  "coldBackupManifestPin": "b33c2f0b74f1ac0cf98ae1075f752dfa23233ef1e4007d48a28e709f9666a386",
+  "manifestSHA256": "5c7780e844cba0e28b20a26f072ff48a50f59e56aca90d0ba24a404a5ebb0afc",
+  "schemaMigrationRun": true,
+  "cloudWrites": false,
+  "contentWrites": false,
+  "previousApplicationPreserved": true,
+  "status": "installed_and_healthy",
+  "legacyRowsAndVersionsPreserved": true,
+  "counts": "1|85|1",
+  "projectedLegacyDataSHA256": "e7b59cbd8823dbde99b7cbd25cef995616f8e192f172d7a0d4f6c07cccba4d70",
+  "applicationFilesVerified": 711,
+  "releaseFilesVerified": 184,
+  "publisherUnchanged": true,
+  "managerSHA256": "9f9e20595bc685c0574aa689cbd104c7fec9f1633b794f0873713420aab795e7",
+  "mediaUnchanged": true
+}

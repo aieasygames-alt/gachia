@@ -1,0 +1,29 @@
+{
+  "status": "own_frozen_dependencies_removed_seals_reverified",
+  "before": {
+    "filesystem": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46",
+    "availableBytes": 28695384064
+  },
+  "after": {
+    "filesystem": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46",
+    "availableBytes": 28719001600
+  },
+  "removed": [
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/apps/admin/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/apps/game-azur-promilia/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/apps/game-genshin/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/apps/game-lvmeng/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/apps/game-nte/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/apps/router/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/apps/web/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/packages/core/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/packages/data/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/packages/db/node_modules",
+    "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/payload-desktop-unified-2026-11-06-r46/frozen-ananta-01/source/packages/ui/node_modules"
+  ],
+  "previewPin": "bfa4097e1983e8395b5acf0c8b3cf160684a305463ebe03f7f2dcc675a639bea",
+  "sourcesArtifactsReceiptsAndRecoveryRetained": true,
+  "installedApplicationUntouched": true,
+  "cloudWrites": false
+}

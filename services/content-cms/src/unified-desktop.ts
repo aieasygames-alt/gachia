@@ -94,15 +94,27 @@ export async function readUnifiedPublishedSelection(payload: Payload, plan: Unif
   assert.deepEqual(unifiedSelection({ stableKeys: keys }, plan), keys, 'Canonical editorial selection required')
   const result = await payload.find({ collection: 'content-records', overrideAccess: true, draft: false, locale: 'all', depth: 0,
     pagination: false, where: { and: [{ stableKey: { in: keys } }, { _status: { equals: 'published' } }, { hold: { equals: false } }] } })
-  assert.deepEqual(result.docs.map(doc => doc.stableKey).sort(), keys, 'Selected records must all be published and approved; drafts cannot substitute')
-  const templates = new Map(plan.sources.flatMap(source => source.records.map(record => [record.stableKey, record] as const)))
   const games = await payload.find({ collection: 'games', overrideAccess: true, pagination: false, depth: 0 })
-  const gameKeys = new Map(games.docs.map(game => [game.id, game.key]))
-  const records = result.docs.sort((a, b) => a.stableKey.localeCompare(b.stableKey)).map(doc => {
+  return verifyUnifiedPublishedDocuments(plan, keys, result.docs, games.docs)
+}
+
+export function verifyUnifiedPublishedDocuments(plan: UnifiedPlan, keys: string[], inputDocuments: object[], games: { id: unknown; key: unknown }[]) {
+  assert(Array.isArray(inputDocuments) && inputDocuments.every(doc => doc && typeof doc === 'object' && !Array.isArray(doc)), 'Formal documents required')
+  const documents = inputDocuments as Record<string, unknown>[]
+  assert.deepEqual(unifiedSelection({ stableKeys: keys }, plan), keys, 'Canonical editorial selection required')
+  assert.deepEqual(documents.map(doc => doc.stableKey).sort(), keys, 'Selected records must all be published and approved; drafts cannot substitute')
+  const templates = new Map(plan.sources.flatMap(source => source.records.map(record => [record.stableKey, record] as const)))
+  const gameKeys = new Map(games.map(game => [game.id, game.key]))
+  const records = [...documents].sort((a, b) => String(a.stableKey).localeCompare(String(b.stableKey))).map(doc => {
+    assert.equal(doc._status, 'published', 'Draft cannot substitute for approved content')
+    assert.equal(doc.hold, false, 'Held content cannot enter production')
+    assert(typeof doc.id === 'number' || typeof doc.id === 'string')
+    assert(typeof doc.updatedAt === 'string' && Number.isFinite(Date.parse(doc.updatedAt)), 'Review timestamp required')
+    assert(typeof doc.stableKey === 'string')
     const template = templates.get(doc.stableKey)!
     validateUnifiedRecord(doc as unknown as Record<string, unknown>)
     assert(isDeepStrictEqual(doc.sourceRecord, template.sourceRecord), 'Published source differs from pinned plan')
-    const gameId = typeof doc.game === 'object' ? doc.game.id : doc.game
+    const gameId = doc.game && typeof doc.game === 'object' ? (doc.game as { id: unknown }).id : doc.game
     assert.equal(gameKeys.get(gameId), template.sourceRecord.game, 'Published record belongs to another game')
     return doc
   })

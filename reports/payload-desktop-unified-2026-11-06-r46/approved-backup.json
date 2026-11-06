@@ -1,0 +1,19 @@
+{
+  "at": "2026-11-05T23:53:05.706810+00:00",
+  "status": "approved_content_backup_restored_separately",
+  "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261105T235301Z-8ad1bd",
+  "manifestPin": "00f80f1349d612be49d34af70e870b7188b3d130e4952afb21f8b3654ad76b79",
+  "restore": {
+    "passed": true,
+    "counts": "1|150|1",
+    "mediaFiles": 1,
+    "backup": "20261105T235301Z-8ad1bd",
+    "databaseVerificationFormat": "pg-json-rows-v1",
+    "scope": "isolated PostgreSQL restore and media extraction; no live replacement"
+  },
+  "liveDatabaseUnchanged": true,
+  "liveMediaUnchanged": true,
+  "canonicalDataDigest": "2a2ff4ea3cc8688d342ba389ed397bee6e26aac35d516ecc6c32ca5eed7a18b2",
+  "cloudWrites": false,
+  "healthy": true
+}

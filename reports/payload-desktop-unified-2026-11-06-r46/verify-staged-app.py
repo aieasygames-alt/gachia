@@ -35,11 +35,10 @@ pg, node = manager.PG, manager.NODE
 temporary = Path(tempfile.mkdtemp(prefix='r46-upgrade-probe-'))
 os.chmod(temporary, 0o700)
 password, secret = secrets.token_hex(32), secrets.token_hex(48)
-namespace = 'pg-probe-r46-' + secrets.token_hex(6)
-database = 'cms_probe_r46_' + secrets.token_hex(6)
+database = 'gachia_cms'
 logs, server, started = [], None, False
 result = {'at': datetime.datetime.now(datetime.timezone.utc).isoformat(), 'sourceCommit': staged['sourceCommit'],
-    'app': str(app), 'passed': False, 'liveDatabaseWrites': False, 'liveReadOnlyDump': True}
+    'app': str(app), 'passed': False, 'liveDatabaseWrites': False, 'liveReadOnlyDump': True, 'cmsMode': 'desktop'}
 
 def port():
     with socket.socket() as sock:
@@ -50,20 +49,22 @@ pg_port, http_port = port(), port()
 assert pg_port not in [3100, 54329] and http_port not in [3100, 54329, pg_port]
 env = {key: value for key, value in os.environ.items() if not key.startswith(('CMS_', 'PAYLOAD_'))
     and key not in ['DATABASE_URL', 'D1_DATABASE_ID', 'R2_BUCKET', 'CI', 'GITHUB_ACTIONS']}
-env.update(CMS_MODE='postgres-local', CMS_LOCAL_ONLY='1', CMS_LOCAL_NAMESPACE=namespace, CMS_PG_SCHEMA_PUSH='0',
-    CMS_SERVER_URL=f'http://127.0.0.1:{http_port}', PAYLOAD_SECRET=secret,
+env.update(CMS_MODE='desktop', CMS_DATA_DIR=str(temporary / 'media'),
+    CMS_SERVER_URL='http://127.0.0.1:3100', PAYLOAD_SECRET=secret,
     DATABASE_URL=f'postgres://cms_app:{password}@127.0.0.1:{pg_port}/{database}', NODE_ENV='production', NEXT_TELEMETRY_DISABLED='1',
     PGHOST='127.0.0.1', PGPORT=str(pg_port), PGUSER='probe', PGPASSWORD=password, PGDATABASE='postgres')
 
-def run(args, **kwargs):
+def run(args, log_output=True, **kwargs):
     done = subprocess.run([str(arg) for arg in args], cwd=app, env=env, text=True, capture_output=True, timeout=180, **kwargs)
-    logs.extend([done.stdout, done.stderr])
+    if log_output:
+        logs.append(done.stdout)
+    logs.append(done.stderr)
     if done.returncode:
-        raise RuntimeError(f'{Path(str(args[0])).name} failed; see redacted staged-runtime.log')
+        raise RuntimeError(f'{Path(str(args[0])).name} failed; see redacted staged-runtime-desktop.log')
     return done.stdout
 
 def sql(statement):
-    return run([pg / 'psql', '-X', '-v', 'ON_ERROR_STOP=1', '-At', '-d', database], input=statement).strip()
+    return run([pg / 'psql', '-X', '-v', 'ON_ERROR_STOP=1', '-At', '-d', database], input=statement, log_output=False).strip()
 
 def legacy_rows():
     tables = json.loads(sql("SELECT json_agg(tablename ORDER BY tablename COLLATE \"C\") FROM pg_tables WHERE schemaname='public' AND tablename <> 'payload_migrations';"))
@@ -106,7 +107,7 @@ try:
             assert server.poll() is None, 'Staged server exited'
             try:
                 conn = http.client.HTTPConnection('127.0.0.1', http_port, timeout=2)
-                conn.request('GET', '/health')
+                conn.request('GET', '/health', headers={'Host': '127.0.0.1:3100'})
                 response = conn.getresponse()
                 ready = response.status == 200
                 response.read()
@@ -122,14 +123,14 @@ try:
             ('/api/content-records', {}, 403), ('/api/media', {}, 403), ('/health', {'Origin': 'https://external.invalid'}, 403),
             ('/health', {'Host': 'external.invalid'}, 403), ('/health', {'Sec-Fetch-Site': 'cross-site'}, 403)]:
             conn = http.client.HTTPConnection('127.0.0.1', http_port, timeout=20)
-            conn.request('GET', target, headers=headers)
+            conn.request('GET', target, headers={'Host': '127.0.0.1:3100', **headers})
             response = conn.getresponse()
             response.read()
             checks.append({'path': target, 'status': response.status, 'passed': response.status == expected})
             conn.close()
+        result['safetyHTTP'] = checks
         assert all(check['passed'] for check in checks)
         assert legacy_rows() == before['projectedLegacyDataSHA256']
-        result['safetyHTTP'] = checks
     result['passed'] = True
 finally:
     if server and server.poll() is None:
@@ -144,14 +145,13 @@ finally:
     for file in [temporary / 'next.log', temporary / 'postgres.log']:
         if file.exists():
             logs.append(file.read_text())
-    with (report / 'staged-runtime.log').open('x') as stream:
+    with (report / 'staged-runtime-desktop.log').open('x') as stream:
         stream.write('\n'.join(logs).replace(password, '[REDACTED]').replace(secret, '[REDACTED]'))
     shutil.rmtree(temporary)
-    shutil.rmtree(app / '.local' / namespace, ignore_errors=True)
     result['temporaryServicesStopped'] = True
     result['privateDumpRemoved'] = True
     assert manager.canonical_data_digest(cfg, 'gachia_cms') == before['canonicalDataDigest']
-    with (report / 'staged-runtime.json').open('x') as stream:
+    with (report / 'staged-runtime-desktop.json').open('x') as stream:
         json.dump(result, stream, indent=2)
         stream.write('\n')
 print(json.dumps(result, indent=2))

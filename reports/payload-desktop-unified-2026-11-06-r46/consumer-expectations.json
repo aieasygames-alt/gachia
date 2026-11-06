@@ -1,0 +1,26 @@
+[
+  {
+    "owner": "genshin",
+    "path": "/zh/genshin/guides/cms-returning-player-checklist",
+    "status": 200,
+    "contains": ["原神回坑整理清单：先确认进度，再安排养成与探索", "回坑先做整理，不必一次追完进度"]
+  },
+  {
+    "owner": "nte",
+    "path": "/zh/nte/guides/beginner-guide",
+    "status": 200,
+    "contains": ["异环新手入门指南：基础系统、养成顺序与探索规划", "刚进入异环时，可以先熟悉基础操作"]
+  },
+  {
+    "owner": "main",
+    "path": "/zh/ananta/guides/download-install-guide",
+    "status": 200,
+    "contains": ["安装前检查清单", "不要把验证码或密码交给代下载服务"]
+  },
+  {
+    "owner": "main",
+    "path": "/en/ananta/guides/download-install-guide",
+    "status": 200,
+    "contains": ["Ananta Download and Specs Guide", "Before switching platforms, confirm cross-save and account-linking rules."]
+  }
+]

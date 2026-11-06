@@ -13,7 +13,8 @@ sha = lambda file: hashlib.sha256(file.read_bytes()).hexdigest()
 ci = json.loads((report / 'github-code-result.json').read_text())
 assert ci['status'] == 'completed' and ci['conclusion'] == 'success'
 assert subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=repo, text=True).strip() == ci['headSha']
-assert not subprocess.check_output(['git', 'status', '--porcelain', '-uno'], cwd=repo, text=True).strip()
+changed = subprocess.check_output(['git', 'diff', '--name-only', 'HEAD'], cwd=repo, text=True).splitlines()
+assert all(name.startswith(('reports/', 'docs/', 'plans/')) for name in changed), 'Runtime source must remain on the exact CI commit'
 assert json.loads((report / 'cms-edit-result.json').read_text())['status'] == 'cms_approved_not_website_activated'
 selection, active = report / 'selection-ananta.json', report / 'baseline-release/active.json'
 baseline = json.loads((report / 'baseline-release/manifest.json').read_text())

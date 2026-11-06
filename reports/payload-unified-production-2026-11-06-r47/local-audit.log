@@ -1,0 +1,33 @@
+node:internal/child_process:1127
+    result.error = new ErrnoException(result.error, 'spawnSync ' + options.file);
+                   ^
+
+<ref *1> Error: spawnSync python3 ETIMEDOUT
+    at Object.spawnSync (node:internal/child_process:1127:20)
+    at spawnSync (node:child_process:911:24)
+    at execFileSync (node:child_process:954:15)
+    at unifiedPageFingerprints (file:///Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/scripts/unified-version-preview.mjs:31:18)
+    at validateUnifiedPreviewResponse (file:///Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/scripts/unified-version-preview.mjs:68:22)
+    at file:///Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/scripts/unified-version-preview.mjs:119:5
+    at Array.forEach (<anonymous>)
+    at recheckUnifiedPreview (file:///Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/scripts/unified-version-preview.mjs:116:23)
+    at verifyUnifiedPreviewContract (/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/services/content-cms/src/unified-preview.ts:132:7)
+    at async verifyUnifiedProductionLocal (/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/services/content-cms/src/unified-production.ts:89:19) {
+  errno: -60,
+  code: 'ETIMEDOUT',
+  syscall: 'spawnSync python3',
+  path: 'python3',
+  spawnargs: [
+    '-B',
+    '/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/scripts/unified-html-fingerprint.py'
+  ],
+  error: [Circular *1],
+  status: null,
+  signal: 'SIGTERM',
+  output: [ null, Buffer(0) [Uint8Array] [], Buffer(0) [Uint8Array] [] ],
+  pid: 60231,
+  stdout: Buffer(0) [Uint8Array] [],
+  stderr: Buffer(0) [Uint8Array] []
+}
+
+Node.js v25.9.0

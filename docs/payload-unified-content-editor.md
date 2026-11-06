@@ -1,6 +1,6 @@
 # 全游戏现有内容编辑契约
 
-更新：2026-11-05，R44。目标是把现有内容的维护从双游戏攻略扩展到所有注册游戏；本契约不是全站正式接管声明。
+更新：2026-11-06，R47。目标是把现有内容的维护从双游戏攻略扩展到所有注册游戏；本契约不是全站正式接管声明。
 
 用户已明确：作为玩家论坛，不要求公开内容来源认证或资料权威性审批。`community-editorial-v1` 将 `factualSourceApprovalRequired` 和 `publicSourceAttestationRequired` 均设为 false。读取当前公开内容是为了防止覆盖线上增量，不是重新引入来源认证；文件 SHA、版本/权限、构建、资源兼容和恢复检查仍属于工程安全要求。
 
@@ -82,7 +82,7 @@ pnpm unified:publication-local verify \
 
 R43 已实际运行五目标共十个 Worker，5,156 个响应通过；候选和恢复各覆盖 2,127 条静态 URL，Main 两方向各验证 435 份公开 JSON。原神 32 篇（含 `cms-returning-player-checklist`）及异环 53 篇攻略两方向字节相同。见 [R43](../reports/payload-unified-recovery-2026-11-05-r43/README.md)。本次候选仍是 R42 测试 fixture，必须保持 `preview:true`，不得上传或正式推广。
 
-`unified_local_publication` 始终 `productionReady:false`、`activationSupported:false`、`rawUuidRollbackAuthorized:false`、`cloudWrites:false`。真实旧运行时加新资源的本地通过不等于云恢复已验收，也不授权直接回退原 UUID。精确版本预览、推广/partial 对账/source-advance 与常驻接管仍待接入，原双游戏云发布器的范围守卫不变。
+`unified_local_publication` 始终 `productionReady:false`、`activationSupported:false`、`rawUuidRollbackAuthorized:false`、`cloudWrites:false`。真实旧运行时加新资源的本地通过不等于云恢复已验收，也不授权直接回退原 UUID。统一精确版本云预览、推广/partial 对账/source-advance 仍待接入，原双游戏云发布器的范围守卫不变；首批常驻接入见 R46。
 
 ## 精确模块封存
 
@@ -102,7 +102,7 @@ pnpm unified:transport-local verify \
   --directory <上述输出目录> --pin <transport.json的SHA256>
 ```
 
-所有输出仍为 `productionReady:false`、`activationSupported:false`、`cloudWrites:false`、`credentials:false`；原有 `preview:true` 必须传播，fixture 不可转为正式发布。失败目录不覆盖或自动续跑；磁盘预检保留 8 GiB，成功后只可清理本轮 Wrangler 沙箱，保留模块、multipart 和 HTTP 证据。执行结果与失败诊断见 [R44](../reports/payload-unified-transport-2026-11-05-r44/README.md)。精确候选/恢复云预览、实时拓扑/运行时身份、受控推广及常驻升级仍是后续工作。
+所有输出仍为 `productionReady:false`、`activationSupported:false`、`cloudWrites:false`、`credentials:false`；原有 `preview:true` 必须传播，fixture 不可转为正式发布。失败目录不覆盖或自动续跑；磁盘预检保留 8 GiB，成功后只可清理本轮 Wrangler 沙箱，保留模块、multipart 和 HTTP 证据。执行结果与失败诊断见 [R44](../reports/payload-unified-transport-2026-11-05-r44/README.md)。精确候选/恢复云预览、实时拓扑/运行时身份、受控推广仍是后续工作；首批常驻升级见 R46。
 
 ## 精确预览合同与身份
 
@@ -119,13 +119,13 @@ HTML 通过 Python 标准库 `HTMLParser` 解析，不使用正则剥标签作�
 
 `unified-version-identity.mjs` 独立支持五目标不可变版本读取、上传时模块封存及重验。`content/v2?version=UUID` 不可仅凭选择器信任：HTTP 强 ETag 必须等于前后不变的版本元数据，模块还须与外部 pin 的封存字节一致。历史接口返回其他版本时停机留档；有原始上传回执的目标可重验该回执和当前不可变元数据，不能重新给错误下载贴历史标签。活动 UUID 与七服务拓扑也须单独实时检查。
 
-`unified-preview-protocol.mjs` 是无 CLI、无生产适配器的协议核心。它按显式 owner 集合先验恢复、再验候选，支持 Main-only，使用独占 journal、单次写入、失败停机和只读对账，不含切流/自动回滚。注入依赖只用于协议测试，不是用户提供 JSON 就能获得的生产授权；固定生产验证器、审核/source handoff 接管、实际云候选/恢复预览与推广仍待完成。R45 实际云观察/失败/源码对应和最终本地证据见 [R45](../reports/payload-unified-preview-2026-11-05-r45/README.md)，有时效的旧观察必须在未来云写前重新核对。
+`unified-preview-protocol.mjs` 是无 CLI 的协议核心，固定生产适配器见 R47 小节。它按显式 owner 集合先验恢复、再验候选，支持 Main-only，使用独占 journal、单次写入、失败停机和只读对账，不含切流/自动回滚。注入依赖只用于协议测试，不是用户提供 JSON 就能获得的生产授权；实际云候选/恢复预览与推广仍待完成。R45 实际云观察/失败/源码对应和最终本地证据见 [R45](../reports/payload-unified-preview-2026-11-05-r45/README.md)，有时效的旧观察必须在未来云写前重新核对。
 
 ## 数据库迁移
 
 `20261105_063243_unified_content` 仅添加 `content_records.structured_value` 和版本表对应 JSONB 列。没有在线 schema push、表重建或旧记录覆盖。
 
-空字段可在隔离测试中 down/up 验证；只要新列或版本历史存在内容，down 会拒绝删除。应用回退应保留增量列，不能用 schema downgrade 清掉新编辑成果。本轮迁移只在隔离 PostgreSQL 验证，尚未升级常驻 CMS。
+空字段可在隔离测试中 down/up 验证；只要新列或版本历史存在内容，down 会拒绝删除。应用回退应保留增量列，不能用 schema downgrade 清掉新编辑成果。R41 首先在隔离 PostgreSQL 验证；R46 已经真实数据库副本演练、冷备和显式常驻迁移，旧 85 条内容及版本保持，详见下节。
 
 ## 桌面接入增量（R46，执行中）
 
@@ -134,6 +134,20 @@ HTML 通过 Python 标准库 `HTMLParser` 解析，不使用正则剥标签作�
 导入要求 `--repo`、完整 `--pin` 和单一 `--scope`，按游戏事务创建 held 草稿，重复导入只验来源，不覆盖编辑。正式导出要求 `--repo`、`--pin`、`--selection`/`--selection-pin`、`--active`/`--active-pin`；选择 JSON 只能包含 `stableKeys`，1-200 条，不接受传入正文或批准标记。冻结再要求精确 `--commit` 与新 `--output`。不提供 preview、force、token 或云目标参数。
 
 正式选择读取实际 published、hold=false 记录，核对来源计划及 game 关系；后续未批准草稿不会替代已批准值。准备前后核对批准摘要，漂移即拒绝。成功输出 `editorial.json` 绑定选择、公开 A、批准值和冻结回执；仍明确 `productionReady:false`、`activationSupported:false`、`cloudWrites:false`，不因桌面导出就允许云推广。安装和实际执行状态以 [R46](../reports/payload-desktop-unified-2026-11-06-r46/README.md) 为准。
+
+R46 实际安装源码 `7b12684262338511bbcc2d3468bacaeff9a2404a` 已通过完整 GitHub CI。常驻显式迁移后原有 85 条内容、版本和媒体未变，711 份应用文件及 184 份附加 release 文件验 pin，旧应用与原发布器保留。首批仅导入无限大 65 个 held 草稿，总内容数 150；通过真实认证 REST 修改并批准下载指南的中文 `content`，其他 149 条记录、其他字段和语言保持。正式导出与冻结候选摘要一致，不是隔离 fixture；公众仍 R39，尚未统一云上传或推广。
+
+当前冻结 owner 合同按全部 O→候选 overlay 计算，因保留原神/异环的公开 A，首批实际为 `genshin → nte → main`，不能标成 Main-only。后续固定生产验证器必须明确真实 A→B 编辑与 A 保留 overlay 的边界；不能删掉公开增量或绕过 owner 守卫来缩小批次。
+
+## 固定生产预检（R47）
+
+`unified:production audit-local|audit|upload-previews` 与无凭据本地准备入口分离。请求 JSON 只允许 `schemaVersion:1`、`kind:unified_production_preview_request`、`repo`、六个 `{path,pin}` 输入（`localPreview`、`editorial`、`selection`、`active`、`application`、`sourceHandoff`）及精确 `sourceRunID`/`executorRunID`；拒绝 verifier、transport、skipCI、临时 owner 和推广标记。命令显式传 `--request`、`--pin`、新 `--output`，只有上传预览另需 `--release-key`。
+
+本地预检用 `GACHIA_CMS_REVIEW_TOKEN` 读取固定 `http://127.0.0.1:3100` 正式审核，不传入数据库配置或记录正文；核对实际游戏/来源、published/hold、审核摘要，重新三方编译，要求全部候选与原冻结一致。安装路径必须仍由 settings 指向，源码清单与冻结提交逐字节匹配，应用/build ID 及附加 release 文件重新验 pin。准备前后正式审核不变。`audit-local` 不接受云凭据获得权限，输出仍不可激活。
+
+完整云预检还要求两个精确提交的完整 CI，包括未跳过的 CMS/发布工具/公共消费者与类型检查；执行器代码必须已提交且字节一致。使用 `CLOUDFLARE_API_TOKEN` 只读重取七服务拓扑、活动 UUID、绑定、预览设置及原始模块证据的当前不可变元数据。旧 source handoff 仅作 pin 入口，不能充当新鲜观察。上传入口固定调用上述 verifier 和适配器，按正确 environment 执行封存 no-bundle 模块，只允许候选/兼容恢复精确云预览；没有部署/切流命令。
+
+`unifiedEditorialScope` 已区分本批 A→B 与 O→B 保留 overlay，当前真实审核为 Main 编辑、原神/异环保留。分类不自动缩减上传 owner，`preservationOwnerOmissionAuthorized:false`；只有另行证明活动运行时已完整承载公开 A 才能跳过。独占 journal、上传时强 ETag/不可变模块、完整精确云 Host HTTP 与独立重验保持，未知结果不重试、只读对账。实际工程/诊断见 [R47](../reports/payload-unified-production-2026-11-06-r47/README.md)，目前没有统一云上传或推广，原双游戏守卫不变。
 
 ## 开发入口
 
@@ -154,4 +168,4 @@ pnpm typecheck
 
 ## 剩余边界
 
-页面 TSX 内联事实、其他尚未适配的代码内容、实体新增/撤回、字段结构扩展、媒体替换、全类型语义与跨引用、全 owner 公众消费及正式安装/发布仍未完成。16 scope 有编辑单元不是“所有内容已接管”。下一顺序见[实施队列](../plans/payload-all-content-implementation-2026-11-05.md)。
+页面 TSX 内联事实、其他尚未适配的代码内容、实体新增/撤回、字段结构扩展、媒体替换、全类型语义与跨引用、其余 scope 常驻接管和全 owner 正式发布仍未完成。首批常驻安装与真实审核不等于所有游戏已可上线。下一顺序见[实施队列](../plans/payload-all-content-implementation-2026-11-05.md)。

@@ -1,0 +1,93 @@
+{
+  "at": "2026-11-05T23:57:34.991921+00:00",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261105T234619Z-unified-7b126842/services/content-cms",
+  "sourceCommit": "7b12684262338511bbcc2d3468bacaeff9a2404a",
+  "applicationFilesVerified": 711,
+  "releaseFilesVerified": 184,
+  "counts": "1|150|1",
+  "states": "ananta|draft|t|64\nananta|published|f|1\ngenshin|draft|t|30\ngenshin|published|f|2\nnte|draft|t|52\nnte|published|f|1",
+  "projectedLegacyDataSHA256": "d356e094c4868566037ec1846ed8f39c68398d2143ced6a2171e4ab40f78bd1a",
+  "logicalDigest": "e8270330606d00a170a811ba3622be6913d9d6cb9272d404511aeb83737f455e",
+  "canonicalDataDigest": "2a2ff4ea3cc8688d342ba389ed397bee6e26aac35d516ecc6c32ca5eed7a18b2",
+  "mediaDigests": {
+    "media/backup-rehearsal.png": "f3ec9e14b9c085b55edc96155f7bd26b6fdeda2462f02af4e0279d8319b365e3"
+  },
+  "safetyHTTP": [
+    {
+      "path": "/health",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/admin/login",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/api/users",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "path": "/api/content-records",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "path": "/api/media",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "path": "/health",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "path": "/health",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "path": "/health",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "path": "/api/media/file/backup-rehearsal.png",
+      "status": 403,
+      "passed": true
+    }
+  ],
+  "managerSHA256": "9f9e20595bc685c0574aa689cbd104c7fec9f1633b794f0873713420aab795e7",
+  "publisherDigests": {
+    "desktop-cloud-release.mjs": "1820e0699fc44a26ab43aefd44e20dfea5f26898d04a5836c2ee32c91d4981d4",
+    "desktop-cloud-transport.mjs": "4944bb7cd937c60843adb87ba775dea160b2e7a599b5ceaa6140d20057840b5a",
+    "desktop-evidence-preparation.mjs": "3c2184035b417cc909f1c518e39f04837339b6007ebbc993a5e5ce6211d16ffd",
+    "desktop-evidence-renewal.mjs": "9efc34580e8b5d6705e8e83b92b97a152274c5b575076da921a2b3e4e74a764d",
+    "desktop-guide-contract.mjs": "497451911706cab97ab9082892a699e2f4d2125d260c54bcc0665a37344814ee",
+    "desktop-local-evidence.mjs": "2eb716899e94b2503ee33d8b202b54457537a5f046be21029040c4bbe6e25bda",
+    "desktop-manual-recovery.mjs": "2cd1ad9f1b46433cfdb3aa617baa6c6ba5ed8f4ce07cf53611bf394d1a37ab16",
+    "desktop-promotion-request.mjs": "13d9eb2f273003f5e122fc2cf39ecf99b83e44b3d1213176c66a5d2ffacbf477",
+    "desktop-promotion-transport.mjs": "5ab9c0fdab91767cd2d74b2bf037a8b3268cc5981d9272eb260946f652cb808f",
+    "desktop-public-acceptance.mjs": "28cc5fad21ad0b6ca428c5d36c931870c3fe8600d632dcbdceec1d42afd5e995",
+    "desktop-publish.mjs": "db4446bc8188c14c84904e2e9999541fea2325fef8c82ae6ba33026844c091c5",
+    "desktop-published-baseline.mjs": "6e9f8bbd6cad80cfdf6bc40694d84e7324cf8e3cb4d50d6cab11e421dc38423f",
+    "desktop-recovered-source.mjs": "c5c5f191248e69b204c8e2b7715ebbb4933398f017058212580d63dadb0805e2",
+    "desktop-recovery-cloud.mjs": "f46fae27ee179c751222ab46627f29c74ec2e3c1ba9fe5a8761e757b6032d9d6",
+    "desktop-recovery-receipt.mjs": "595f2c5a38c4e73b1c5f76b16a5ed93f83075ae7776c8196b35c6205f3f0e5ed",
+    "desktop-release-assets.mjs": "b21f7b7e10cc23c702db8f24e67eda5a4d2d3e8db82bf9cabd3f60e50e269cf9",
+    "desktop-release-readiness.mjs": "094c983f6a642361ac37a4c4f89ac174353ccc445c46c90a9f4ddbcdde129cf8",
+    "desktop-release-scope.mjs": "d014f4a633fdac596c1b75424abce599b916c64f9162d32456b7ec0405b4a461",
+    "desktop-source-advance.mjs": "68ea5614e078c41ba5db300ccda4b716d3466464231403e91c9a040c021708a7",
+    "desktop-source-catalog.mjs": "950d05bf5c64891c69da5c2d367eb6cb3a7fe67c970dec3f7b45c615c5b00837",
+    "desktop-source-rebind.mjs": "ecd56942b9a83f81b00efb9ae721beb0efdbddc8f05c2c0e2626922fcb96d842",
+    "desktop-version-preview.mjs": "89eb6418bfeda2cd3657b5fb44298cb78a8992ea9b5b14b39cf4f47898414ec4",
+    "desktop-version-provenance.mjs": "fa933258c36be7f049d40b7a6d4940209c784c240a48d7b7cd7add5f19a34cf6",
+    "retain-game-assets.mjs": "a225a1d692ee584ddf5270fb351fbc0914e3999c31a6c4907d49d45b50ed2bb2",
+    "retain-web-assets.mjs": "9ee95bfadd2ea1611b09c475d119910b0f9e1bdd1a34cb8c0c72736004da10ac",
+    "verify-worker-artifact.mjs": "0c0a8b39d177d77091a4248389548f033669a796d3dbe53851e9b4273f1a2933"
+  },
+  "healthy": true,
+  "observationReadOnly": true
+}

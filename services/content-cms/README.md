@@ -1,12 +1,14 @@
 # Gachia Content CMS — 本机编辑后台
 
-## 常驻接入增量（2026-11-06，R46，执行中）
+## 常驻接入与真实审核（2026-11-06，R46）
 
-用户已确认按首个 Main-only 闭环、四独立站、16 scope 现有内容、剩余内联内容、实体生命周期的顺序执行。新增独立受控桌面导入/正式导出/冻结，显式范围与选择 pin、当前安装应用门禁、批准版本重读和漂移检查；不会放开隔离 fixture 或直接推广。参数见[统一契约](../../docs/payload-unified-content-editor.md)，实际安装和验收以 [R46](../../reports/payload-desktop-unified-2026-11-06-r46/README.md) 为准，不能把源码新增当作常驻已升级。
+用户已确认按首个 Main-only 闭环、四独立站、16 scope 现有内容、剩余内联内容、实体生命周期的顺序执行，第 1 项进行中。源码 `7b12684` 已通过完整 CI、真实数据库副本的桌面模式迁移/HTTP 演练并冷备安装。独立桌面导入/正式导出/冻结已实际使用：无限大 65 条 held 草稿进入同一后台，总计 150 条；下载指南中文正文经真实 REST 保存、重读、审核并正式冻结，其他 149 条内容和旧版本保持。常驻已 R46，公众仍 R39，没有统一云上传或推广。
+
+当前冻结合同把原神/异环公开 A 的保留 overlay 计入 owner，因此真实首批为 `genshin → nte → main`，不能冒称 Main-only 或省略公开增量。R47 已实现固定生产预检/精确预览适配器，并对真实常驻审核和全部封存只读复验；已分类 Main 编辑与两游戏保留，但未授权缩减 owner。实际候选/恢复云预览及推广/来源接续仍待完成，第 2 至 5 项未销项。参数见[统一契约](../../docs/payload-unified-content-editor.md)，安装、冷备和实际验收见 [R46](../../reports/payload-desktop-unified-2026-11-06-r46/README.md) 与 [R47](../../reports/payload-unified-production-2026-11-06-r47/README.md)。
 
 ## 全游戏编辑工程进度（2026-11-05，R45）
 
-[统一编辑契约](../../docs/payload-unified-content-editor.md)已实现 16 scope、115 个数据来源、2,795 个现有记录/具名区块的共用导入、结构化编辑、审核和候选导出，隔离 SQLite/PostgreSQL 与真实 HTTP 已验。**常驻后台尚未安装该版本，网站未切换**；现有生产能力仍以下方 R39 为准。统一候选明确不可激活，页面内联余项、新增/撤回/媒体和全 owner 发布仍待接通，执行顺序见[实施队列](../../plans/payload-all-content-implementation-2026-11-05.md)。
+[统一编辑契约](../../docs/payload-unified-content-editor.md)已实现 16 scope、115 个数据来源、2,795 个现有记录/具名区块的共用导入、结构化编辑、审核和候选导出，隔离 SQLite/PostgreSQL 与真实 HTTP 已验。此段为 R45 工程历史，常驻已由上方 R46 更新；网站仍未切换，现有公网生产能力仍以下方 R39 为准。统一候选明确不可激活，页面内联余项、新增/撤回/媒体和全 owner 发布仍待接通，执行顺序见[实施队列](../../plans/payload-all-content-implementation-2026-11-05.md)。
 
 续接已增加普通公开 JSON 基线读取、`unified:freeze-local`、五 owner 的 `unified:build-local`、真实 Payload 编辑审核的 `unified:smoke-local` 和封存产物重读 `unified:verify-local`。用户明确取消公开内容来源认证前置；完整 A 用于防覆盖，不当作权威性证明。当前进展与真实失败/成功结果见 [R42](../../reports/payload-community-publication-2026-11-05-r42/README.md)。本地构建不等于正式安装/发布，现有双游戏云执行器尚未接受统一合同；参数与边界见统一契约。
 
