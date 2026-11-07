@@ -1,10 +1,33 @@
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, realpathSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { digest } from './desktop-release-assets.mjs';
 import { join } from 'node:path';
 import test from 'node:test';
 import { unifiedSourceFixture, sourceFixtureUUID } from './fixtures/unified-source-fixture.mjs';
 import { UNIFIED_SOURCE_OWNERS } from './unified-historical-sources.mjs';
-import { advanceUnifiedSourceIndex, bindUnifiedNextSources, captureUnifiedNextBaseline, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from './unified-source-advance.mjs';
+import { advanceUnifiedSourceIndex, bindUnifiedNextSources, captureUnifiedNextBaseline, publishedUnifiedSources, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from './unified-source-advance.mjs';
+
+test('published JSON uses accepted bytes only for exactly equal structured content', t => {
+  const root = realpathSync(mkdtempSync(join(tmpdir(), 'published-format-')));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  mkdirSync(join(root, 'assets/data/sea'), { recursive: true });
+  const file = join(root, 'assets/data/sea/raw-guides.json');
+  const value = [{ id: 'guide', enabled: false, title: 'Reviewed', optional: null }];
+  const text = JSON.stringify(value, null, 2), published = JSON.stringify(value) + '\n';
+  const source = { sourcePath: 'packages/data/games/sea/raw-guides.json', text, sha256: digest(text) };
+  const typed = { sourcePath: 'packages/data/games/sea/tier-lists.ts', text: 'export {}', sha256: digest('export {}') };
+  writeFileSync(file, published);
+  const result = publishedUnifiedSources([source, typed], ['sea/raw-guides.json'], root);
+  assert.equal(result[0].text, published); assert.equal(result[0].sha256, digest(published));
+  assert.deepEqual(result[1], typed); assert.equal(source.text, text);
+  for (const changed of [[{ ...value[0], title: 'Unreviewed' }], [{ ...value[0], enabled: 'false' }], [], [value[0], value[0]]]) {
+    writeFileSync(file, JSON.stringify(changed));
+    assert.throws(() => publishedUnifiedSources([source], ['sea/raw-guides.json'], root), /Published JSON differs/);
+  }
+  writeFileSync(file, published);
+  assert.throws(() => publishedUnifiedSources([{ ...source, sha256: '0'.repeat(64) }], ['sea/raw-guides.json'], root), /Corrupt sealed/);
+});
 
 test('source advance keeps all five owners, exact published runtime/static union and all 115 new A inputs', async t => {
   const f = await unifiedSourceFixture(t), result = await advanceUnifiedSourceIndex({ ...f, directory: join(f.root, 'advance') });

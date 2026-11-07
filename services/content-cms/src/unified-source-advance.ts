@@ -7,7 +7,7 @@ import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.m
 import { assertModuleVersionIdentity, revalidateUploadedModule } from '../../../scripts/desktop-version-provenance.mjs'
 import { readUnifiedHistoricalBytes, readUnifiedHistoricalSources, UNIFIED_SOURCE_OWNERS } from '../../../scripts/unified-historical-sources.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
-import { advanceUnifiedSourceIndex, bindUnifiedNextSources, captureUnifiedNextBaseline, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from '../../../scripts/unified-source-advance.mjs'
+import { advanceUnifiedSourceIndex, bindUnifiedNextSources, captureUnifiedNextBaseline, publishedUnifiedSources, readUnifiedNextBaseline, readUnifiedSourceIndex, selectUnifiedNextPrevious } from '../../../scripts/unified-source-advance.mjs'
 import { readUnifiedVersion, revalidateUnifiedSourceModule, revalidateUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
 import { readPinnedUnifiedInput } from './unified-desktop'
 import { createUnifiedExecutorVerifier } from './unified-production'
@@ -73,7 +73,8 @@ function publicationSpec(proof: Proof, opened: Awaited<ReturnType<typeof readUni
     version: module.version, mode: 'unified_upload_time_module_receipt', moduleProof: accepted.moduleProof, moduleContext: module.receipt.context }
   const spec = { kind: 'unified_completed_main_source_spec', publication: proof, releaseKey: value.releaseKey, transportPin: value.transportPin,
     planSHA256: plan.planSHA256, baseline: value.baseline, deploymentId: completed.original.rows[3].result.deploymentId,
-    owners: rows, sources: historical.sealedSources, pairs: ledger.pairs, publicReferences: opened.publicReferences('candidate') }
+    owners: rows, sources: publishedUnifiedSources(historical.sealedSources, ledger.pairs, rows.main.directory),
+    pairs: ledger.pairs, publicReferences: opened.publicReferences('candidate') }
   return { opened, spec }
 }
 

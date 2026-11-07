@@ -25,6 +25,21 @@ const canonical = value => JSON.stringify(value, function (key, row) {
     ? Object.fromEntries(Object.keys(row).sort().map(name => [name, row[name]])) : row;
 });
 
+// Public JSON may be formatted during a build. Preserve the accepted bytes as
+// the next baseline only when they represent exactly the reviewed source value.
+export function publishedUnifiedSources(sources, pairs, directory) {
+  const publicPaths = new Set(pairs.map(pair => `packages/data/games/${pair}`));
+  return sources.map(source => {
+    assert.equal(digest(source.text), source.sha256, 'Corrupt sealed content input');
+    if (!publicPaths.has(source.sourcePath)) return { ...source };
+    const pair = source.sourcePath.slice('packages/data/games/'.length);
+    assert(/^[a-z0-9-]+\/raw-[a-z0-9-]+\.json$/.test(pair));
+    const text = readUnifiedHistoricalBytes(join(directory, 'assets/data', pair)).toString('utf8');
+    assert.deepEqual(JSON.parse(text), JSON.parse(source.text), 'Published JSON differs from reviewed source');
+    return { ...source, text, sha256: digest(text) };
+  });
+}
+
 export async function readUnifiedSourceOwner(row) {
   const { service, versionId, moduleSHA256, moduleProof } = row;
   const version = row.version;
