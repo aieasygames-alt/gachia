@@ -6,6 +6,8 @@ import type { SourceBytes } from './unified-export'
 import { objectValue, type UnifiedRecord } from './unified-content'
 import { locateValue, readSourceValue } from './unified-sources'
 import type { PreservedRuntime } from './unified-preservation'
+import { UNIFIED_MAIN_GUIDE_GAMES } from './unified-guide-contract'
+export { UNIFIED_MAIN_GUIDE_GAMES } from './unified-guide-contract'
 
 type Candidate = ReturnType<typeof exportUnifiedContent>['manifest']
 
@@ -13,6 +15,35 @@ export const UNIFIED_PILOT_SCOPE = Object.freeze({
   game: 'ananta', sourcePath: 'packages/data/games/ananta/raw-guides.json',
   id: 'download-install-guide', field: '/content', locale: 'zh',
 } as const)
+
+export function isUnifiedMainGuide(record: UnifiedRecord) {
+  const source = record.sourceRecord
+  return (UNIFIED_MAIN_GUIDE_GAMES as readonly string[]).includes(source.game)
+    && source.sourcePath === `packages/data/games/${source.game}/raw-guides.json`
+    && typeof source.locator.identity?.id === 'string'
+    && Object.keys(source.locator).length === 1 && Object.keys(source.locator.identity).length === 1
+    && objectValue(record.structuredValue) && typeof record.structuredValue.content === 'string'
+}
+
+export function unifiedProductionQualification(records: UnifiedRecord[], active: SourceBytes[], candidate: ReturnType<typeof exportUnifiedContent>) {
+  assert.equal(candidate.manifest.changed.length, 1, 'Only a single existing guide per release is production-qualified')
+  const record = records.find(row => row.stableKey === candidate.manifest.changed[0])
+  assert(record && isUnifiedMainGuide(record), 'Content consumer is not production-qualified')
+  // Keep the exact historical result so accepted pilot receipts remain reproducible.
+  if (record.sourceRecord.game === UNIFIED_PILOT_SCOPE.game && record.sourceRecord.locator.identity?.id === UNIFIED_PILOT_SCOPE.id) {
+    return unifiedPilotQualification(records, active, candidate)
+  }
+  const source = record.sourceRecord
+  const a = active.find(row => row.sourcePath === source.sourcePath), b = candidate.files.find(row => row.sourcePath === source.sourcePath)
+  assert(a && b, 'Guide public/candidate source missing')
+  const before = locateValue(readSourceValue(a.text, source.sourcePath, source.locator), source.locator)
+  const after = locateValue(readSourceValue(b.content, source.sourcePath, source.locator), source.locator)
+  assert(objectValue(before) && objectValue(after) && typeof before.content === 'string' && typeof after.content === 'string')
+  const { content: previous, ...rest } = before, { content: edited, ...nextRest } = after
+  assert.deepEqual(nextRest, rest, 'Only existing Chinese guide content is production-qualified')
+  assert(edited.trim() && edited !== previous, 'Guide must contain a genuine nonempty content edit')
+  return { policy: 'main-existing-guide-content-v1', game: source.game, changed: [record.stableKey], fields: ['/content'], locale: 'zh' }
+}
 
 // A build overlay is O -> B. Editorial intent is A -> B. Keeping these
 // separate does not by itself prove that a preservation owner can be skipped.

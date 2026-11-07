@@ -1,6 +1,5 @@
 import { structuredEditableLeaves } from './unified-content'
-import { isDeepStrictEqual } from 'node:util'
-import { UNIFIED_PILOT_SCOPE } from './unified-production-scope'
+import { isUnifiedMainGuide } from './unified-production-scope'
 import { verifyUnifiedPlan, type UnifiedPlan } from './unified-plan'
 
 // This is source capability coverage, not a claim about the installed database or live consumers.
@@ -12,11 +11,8 @@ export function unifiedCoverage(plan: UnifiedPlan, ownership: { games: Record<st
     return families.map(family => {
       const records = source.records.filter(record => record.kind === family)
       const leaves = records.map(record => structuredEditableLeaves(record.structuredValue))
-      const qualified = records.filter((record, index) => source.game === UNIFIED_PILOT_SCOPE.game
-        && source.sourcePath === UNIFIED_PILOT_SCOPE.sourcePath
-        && isDeepStrictEqual(record.sourceRecord.locator, { identity: { id: UNIFIED_PILOT_SCOPE.id } })
-        && leaves[index].some(leaf => leaf.pointer === UNIFIED_PILOT_SCOPE.field && typeof leaf.value === 'string'))
-        .map(record => ({ stableKey: record.stableKey, fields: [UNIFIED_PILOT_SCOPE.field], locale: UNIFIED_PILOT_SCOPE.locale }))
+      const qualified = records.filter(isUnifiedMainGuide)
+        .map(record => ({ stableKey: record.stableKey, fields: ['/content'], locale: 'zh' }))
       return { game: source.game, family, sourcePath: source.sourcePath, sourceSHA256: source.sourceSHA256,
         records: records.length, leafEditableRecords: leaves.filter(row => row.length > 0).length,
         editableLeaves: leaves.reduce((count, row) => count + row.length, 0),

@@ -19,7 +19,7 @@ import { verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { unifiedPlan } from './unified-plan'
 import { verifyUnifiedPreviewContract } from './unified-preview'
 import { unifiedProductionRequest, verifyUnifiedCI } from './unified-production'
-import { assertUnifiedProductionOwnerClosure, closeUnifiedProductionOwnerScope, unifiedEditorialScope, unifiedPilotQualification } from './unified-production-scope'
+import { assertUnifiedProductionOwnerClosure, closeUnifiedProductionOwnerScope, unifiedEditorialScope, unifiedProductionQualification } from './unified-production-scope'
 import { bindUnifiedPreservedRuntime, readUnifiedPreservationCatalogs, unifiedPreservationSelection, verifyUnifiedPreservedMainResources, type PreservedRuntime } from './unified-preservation'
 
 type Proof = { path: string; pin: string }
@@ -97,7 +97,7 @@ async function readHistoricalPublication(request: UnifiedHistoricalPublicationRe
     frozen: built.frozen, frozenPin: built.receipt.frozenPin })
   const ownership = JSON.parse(readUnifiedHistoricalBytes(path.join(build, 'source/packages/core/route-ownership.json')).toString())
   const initialScope = unifiedEditorialScope(review.candidate.manifest, plan, ownership)
-  const qualification = unifiedPilotQualification(review.records, active, review.candidate)
+  const qualification = unifiedProductionQualification(review.records, active, review.candidate)
   assert.deepEqual(built.frozen.owners, initialScope.build.owners); assert.deepEqual(qualification, audit.qualification)
   const previous = pinned({ path: publication.previousPath, pin: publication.previousPin })
   const { readUnifiedPublicationSources } = await import('./unified-source-advance')

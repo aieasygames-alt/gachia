@@ -15,7 +15,7 @@ import { exportUnifiedContent, type SourceBytes } from './unified-export'
 import { captureUnifiedExecutorSource } from './unified-executor-source'
 import { verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { verifyUnifiedPreviewContract } from './unified-preview'
-import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification } from './unified-production-scope'
+import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedProductionQualification } from './unified-production-scope'
 import { readUnifiedPreservationCatalogs, unifiedPreservationSelection, verifyUnifiedPreservedMainResources } from './unified-preservation'
 import { verifyUnifiedTransport } from './unified-transport'
 
@@ -133,7 +133,7 @@ export async function verifyUnifiedProductionLocal(request: UnifiedProductionReq
   }
   const ownership = JSON.parse(readFileSync(path.join(build, 'source/packages/core/route-ownership.json'), 'utf8'))
   const scope = unifiedEditorialScope(candidate.manifest, plan, ownership)
-  const qualification = unifiedPilotQualification(review.records, active, candidate)
+  const qualification = unifiedProductionQualification(review.records, active, candidate)
   assert.deepEqual(frozen.owners, scope.build.owners)
   const root = path.join(homedir(), 'Library/Application Support/GachiaCMS')
   verifyUnifiedInstalledApplication(root, repo, frozen.sourceCommit, request.application)

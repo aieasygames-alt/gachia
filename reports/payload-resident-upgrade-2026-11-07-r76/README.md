@@ -1,5 +1,9 @@
 # R76 Resident CMS Upgrade
 
+Completed: exact CI passed and the resident application was upgraded with all
+2,880 content records, versions and media unchanged. See [execution record](EXECUTION.md)
+and `completion.json` for the observed result. The checkpoint plan below is retained.
+
 Objective: install the R74 scalar JSON editorial fix while preserving the R75
 resident database (2,880 content records), versions, media and published state.
 

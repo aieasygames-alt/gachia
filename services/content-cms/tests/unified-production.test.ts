@@ -11,7 +11,7 @@ import { unifiedPlan } from '../src/unified-plan'
 import { readUnifiedSources } from '../src/unified-sources'
 import { verifyUnifiedPublishedDocuments } from '../src/unified-desktop'
 import { exportUnifiedContent } from '../src/unified-export'
-import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification } from '../src/unified-production-scope'
+import { assertUnifiedProductionOwnerClosure, unifiedEditorialScope, unifiedPilotQualification, unifiedProductionQualification, UNIFIED_MAIN_GUIDE_GAMES } from '../src/unified-production-scope'
 import { readUnifiedProductionReview, unifiedProductionRequest, verifyUnifiedCI } from '../src/unified-production'
 
 const repo = path.resolve(projectRoot, '../..'), inventory = JSON.parse(readFileSync(path.join(repo, baselineDirectory, 'inventory.json'), 'utf8'))
@@ -128,6 +128,35 @@ test('preservation-only owners block the production upload instead of silently a
   const main = structuredClone(scope); main.uploadOwners = ['main']; main.preservationOnlyOwners = []
   assert.doesNotThrow(() => assertUnifiedProductionOwnerClosure(main))
   main.uploadOwners = ['genshin', 'main']; assert.throws(() => assertUnifiedProductionOwnerClosure(main), /not closed/)
+})
+
+test('Main guide qualification covers existing Chinese bodies with A-relative metadata and locale protection', () => {
+  for (const game of UNIFIED_MAIN_GUIDE_GAMES) {
+    const source = plan.sources.find(row => row.sourcePath === `packages/data/games/${game}/raw-guides.json`)!
+    for (const original of source.records) {
+      const record = structuredClone(original)
+      record._status = 'published'; record.hold = false
+      const value = record.structuredValue as Record<string, string>
+      record.structuredValue = { ...value, content: value.content + '\nCMS regression body.' }
+      const candidate = exportUnifiedContent([record], originals, originals, false)
+      assert.equal(unifiedProductionQualification([record], originals, candidate).game, game)
+      assert.deepEqual(unifiedEditorialScope(candidate.manifest, plan, ownership).editorial.owners, ['main'])
+    }
+    const record = structuredClone(source.records[0]); record._status = 'published'; record.hold = false
+    const value = record.structuredValue as Record<string, string>
+    const patches: Record<string, string>[] = [{ content: ' ' }, { title: 'Rejected metadata' }, { contentEn: 'Rejected translation' }]
+    for (const patch of patches) {
+      record.structuredValue = { ...value, ...patch }
+      assert.throws(() => unifiedProductionQualification([record], originals, exportUnifiedContent([record], originals, originals, false)))
+    }
+    record.structuredValue = { ...value, content: value.content + '\nCMS regression body.' }
+    const active = structuredClone(originals), a = active.find(row => row.sourcePath === source.sourcePath)!
+    const list = JSON.parse(a.text); list.find((row: { id: string }) => row.id === value.id).title += ' public increment'
+    a.text = JSON.stringify(list); a.sha256 = digest(a.text)
+    assert.doesNotThrow(() => unifiedProductionQualification([record], active, exportUnifiedContent([record], originals, active, false)))
+  }
+  const sea = structuredClone(plan.sources.find(row => row.sourcePath === 'packages/data/games/sea/raw-guides.json')!.records[0])
+  assert.throws(() => unifiedProductionQualification([sea], originals, { files: [], manifest: { ...fixture().candidate, changed: [sea.stableKey] } }), /not production-qualified/)
 })
 
 test('CI verification requires exact source, full non-skipped tests and the fixed workflow', async t => {
