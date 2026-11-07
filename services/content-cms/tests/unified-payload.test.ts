@@ -9,6 +9,9 @@ import { localEnvironment, projectRoot } from '../src/local-environment'
 import { cmsEnvironment } from '../src/cms-environment'
 import { unifiedPlan, importUnifiedPlan } from '../src/unified-plan'
 import { readUnifiedPublishedSelection } from '../src/unified-desktop'
+import { exportUnifiedContent } from '../src/unified-export'
+import { locateValue, readSourceValue } from '../src/unified-sources'
+import { editProbe } from './fixtures/unified-edit-probe'
 
 test('all-game source import and editorial controls use real Payload transactions and versions', async t => {
   const postgres = process.env.CMS_MODE === 'postgres-local'
@@ -120,6 +123,50 @@ test('all-game source import and editorial controls use real Payload transaction
       const before = (await payload.count({ collection: 'content-records', overrideAccess: true })).totalDocs
       await assert.rejects(importUnifiedPlan(payload, unifiedPlan([changed], ['hi3'])), /Source revision changed/)
       assert.equal((await payload.count({ collection: 'content-records', overrideAccess: true })).totalDocs, before)
+    })
+    await t.test('every editable game/source/family completes draft, review, published selection and batch export', async () => {
+      const selectedKeys: string[] = [], expectedValues = new Map<string, unknown>()
+      const coveredGames = new Set<string>(), coveredFamilies = new Set<string>()
+      const scalarStrings: string[] = []
+      const docs = await payload.find({ collection: 'content-records', overrideAccess: true, draft: true, depth: 0,
+        pagination: false, where: { stableKey: { like: 'unified:' } } })
+      const byKey = new Map(docs.docs.map(doc => [doc.stableKey, doc]))
+      for (const source of plan.sources) for (const family of new Set(source.records.map(record => record.kind))) {
+        const template = source.records.find(record => record.kind === family && editProbe(record.structuredValue) !== null)
+        if (!template) continue // Empty lists and protected-only units require the separate structural contract.
+        const value = editProbe(template.structuredValue)!, doc = byKey.get(template.stableKey)!
+        assert(doc, template.stableKey)
+        const draft = await payload.update({ collection: 'content-records', id: doc.id, user: editor, overrideAccess: false, draft: true,
+          data: { structuredValue: value } })
+        assert.equal(draft.hold, true)
+        if (template.stableKey === imported.stableKey) {
+          const previous = await readUnifiedPublishedSelection(payload, plan, [template.stableKey])
+          assert.notDeepEqual(previous.records[0].structuredValue, value)
+        } else await assert.rejects(readUnifiedPublishedSelection(payload, plan, [template.stableKey]), /published and approved/)
+        await payload.update({ collection: 'content-records', id: doc.id, user: reviewer, overrideAccess: false,
+          data: { structuredValue: value, _status: 'published', hold: false } })
+        selectedKeys.push(template.stableKey); expectedValues.set(template.stableKey, value)
+        coveredGames.add(source.game); coveredFamilies.add(`${source.sourcePath}:${family}`)
+        if (typeof value === 'string') scalarStrings.push(`${source.game}:${family}`)
+      }
+      assert.deepEqual([...coveredGames].sort(), plan.games)
+      assert(scalarStrings.length > 0, 'Scalar string blocks must be included in real Payload publication coverage')
+      const selected = await readUnifiedPublishedSelection(payload, plan, selectedKeys.sort())
+      assert.equal(selected.records.length, coveredFamilies.size)
+      const known = new Set(plan.sources.map(source => source.sourcePath))
+      const originals = readUnifiedSources().sources.filter(source => known.has(source.sourcePath))
+        .map(source => ({ sourcePath: source.sourcePath, text: source.rawText, sha256: source.sourceDigest }))
+      const exported = exportUnifiedContent(selected.records, originals, originals, false)
+      assert.equal(exported.manifest.changed.length, selectedKeys.length)
+      for (const record of selected.records) {
+        const source = record.sourceRecord, output = exported.files.find(file => file.sourcePath === source.sourcePath)!
+        assert.deepEqual(record.structuredValue, expectedValues.get(record.stableKey))
+        assert.deepEqual(locateValue(readSourceValue(output.content, source.sourcePath, source.locator), source.locator), record.structuredValue)
+      }
+      assert.equal(exported.manifest.cloudWrites, false)
+      assert.equal(exported.manifest.activationSupported, false)
+      t.diagnostic(`Batch verified: ${coveredGames.size} scopes, ${coveredFamilies.size} editable source/family rows; no public deployment`)
+      t.diagnostic(`Scalar string blocks: ${scalarStrings.join(', ')}`)
     })
   } finally {
     await payload.destroy()

@@ -21,6 +21,23 @@ const protectedField = (key: string) => identityFields.has(key)
   || /^(?:source|contentReview|review|evidence|rights|license|hold|publish|indexable|verified|_comment)/i.test(key)
   || /^(?:image|icon|portrait|splash|thumbnail|avatar|media|asset|logo|url)(?:$|[A-Z_])/.test(key)
 
+// Uses the same field policy as validation; nulls and empty containers need a structural contract.
+export function structuredEditableLeaves(value: JSONValue): { pointer: string; value: string | number | boolean }[] {
+  assertJSON(value)
+  const leaves: { pointer: string; value: string | number | boolean }[] = []
+  const visit = (node: JSONValue, pointer: string) => {
+    if (node === null) return
+    if (Array.isArray(node)) node.forEach((child, index) => visit(child, `${pointer}/${index}`))
+    else if (objectValue(node)) {
+      for (const [key, child] of Object.entries(node)) if (!protectedField(key)) {
+        visit(child, `${pointer}/${key.replaceAll('~', '~0').replaceAll('/', '~1')}`)
+      }
+    } else leaves.push({ pointer, value: node })
+  }
+  visit(value, '')
+  return leaves
+}
+
 export function assertJSON(value: unknown): asserts value is JSONValue {
   let nodes = 0
   const visit = (node: unknown, depth: number) => {

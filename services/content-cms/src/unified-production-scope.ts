@@ -9,6 +9,11 @@ import type { PreservedRuntime } from './unified-preservation'
 
 type Candidate = ReturnType<typeof exportUnifiedContent>['manifest']
 
+export const UNIFIED_PILOT_SCOPE = Object.freeze({
+  game: 'ananta', sourcePath: 'packages/data/games/ananta/raw-guides.json',
+  id: 'download-install-guide', field: '/content', locale: 'zh',
+} as const)
+
 // A build overlay is O -> B. Editorial intent is A -> B. Keeping these
 // separate does not by itself prove that a preservation owner can be skipped.
 export function unifiedEditorialScope(candidate: Candidate, plan: UnifiedPlan, ownership: { games: Record<string, unknown> }) {
@@ -52,9 +57,9 @@ export function unifiedPilotQualification(records: UnifiedRecord[], active: Sour
   const record = records.find(row => row.stableKey === candidate.manifest.changed[0])
   assert(record, 'Pilot record missing')
   const source = record.sourceRecord
-  assert.equal(source.game, 'ananta', 'Game domain is not production-qualified yet')
-  assert.equal(source.sourcePath, 'packages/data/games/ananta/raw-guides.json', 'Content domain is not production-qualified yet')
-  assert.deepEqual(source.locator, { identity: { id: 'download-install-guide' } }, 'Consumer is not production-qualified yet')
+  assert.equal(source.game, UNIFIED_PILOT_SCOPE.game, 'Game domain is not production-qualified yet')
+  assert.equal(source.sourcePath, UNIFIED_PILOT_SCOPE.sourcePath, 'Content domain is not production-qualified yet')
+  assert.deepEqual(source.locator, { identity: { id: UNIFIED_PILOT_SCOPE.id } }, 'Consumer is not production-qualified yet')
   const a = active.find(row => row.sourcePath === source.sourcePath), b = candidate.files.find(row => row.sourcePath === source.sourcePath)
   assert(a && b, 'Pilot public/candidate source missing')
   const before = locateValue(readSourceValue(a.text, source.sourcePath, source.locator), source.locator)

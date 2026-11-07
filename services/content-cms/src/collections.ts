@@ -6,7 +6,7 @@ import { reviewCollections } from './review-collections'
 import { draftMergeCollections } from './draft-merge-collections'
 import { mergeWorkflowEvents } from './merge-workflow-events'
 import { isDesktopNewGuide, validateDesktopNewGuideIdentity } from './desktop-new-guide'
-import { isUnifiedRecord, validateUnifiedRecord } from './unified-content'
+import { assertJSON, isUnifiedRecord, validateUnifiedRecord } from './unified-content'
 import { isDeepStrictEqual } from 'node:util'
 
 const hasRole = (user: unknown, roles: string[]) => {
@@ -176,6 +176,13 @@ export function collections(directory: string, options: { secureCookies?: boolea
         { name: 'bodyFormat', type: 'select', required: true, options: ['markdown', 'html', 'plain'], defaultValue: 'markdown', admin: { condition: data => !isUnifiedRecord(data) } },
         { name: 'sourceRecord', type: 'json', required: true, admin: { readOnly: true } },
         { name: 'structuredValue', type: 'json', label: 'Structured Content',
+          // Payload's default JSON validator parses scalar strings as serialized JSON.
+          // This field stores JSON values, including literal string blocks from data.ts.
+          validate: value => {
+            if (value === undefined) return true
+            try { assertJSON(value); return true }
+            catch (error) { return error instanceof Error ? error.message : 'Invalid JSON content' }
+          },
           admin: { condition: data => isUnifiedRecord(data) } },
         { name: 'reviewEvidence', type: 'json' },
         { name: 'hold', type: 'checkbox', defaultValue: true },

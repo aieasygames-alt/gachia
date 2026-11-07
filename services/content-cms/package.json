@@ -30,6 +30,7 @@
     "records:local": "tsx scripts/record-intake.ts --apply-local",
     "records:diff": "tsx scripts/record-diff.ts",
     "unified:plan": "tsx scripts/unified-content.ts plan",
+    "unified:coverage": "tsx scripts/unified-coverage.ts",
     "unified:desktop": "python3 scripts/desktop.py",
     "unified:import-local": "tsx scripts/unified-content.ts import-local",
     "unified:export-local": "tsx scripts/unified-content.ts export-local",
