@@ -27,8 +27,11 @@ test('shared executor guard refuses CI before any desktop credentials or files a
   finally { if (old === undefined) delete process.env.CI; else process.env.CI = old }
 })
 
-test('fixed recovery CLI remains audit-only and refuses write, retry and injection before reading credentials', () => {
-  for (const args of [[], ['recover'], ['promote'], ['retry'], ['audit'], ['audit', '--request', 'x', '--pin', 'x', '--output', 'x', '--source-state', 'candidate']]) {
+test('fixed recovery CLI refuses incomplete writes, retry and injection before reading credentials', () => {
+  for (const args of [[], ['recover'], ['promote'], ['retry'], ['audit'], ['audit', '--request', 'x', '--pin', 'x', '--output', 'x', '--source-state', 'candidate'],
+    ['recover', '--request', 'missing', '--pin', 'a'.repeat(64), '--output', 'missing-output'],
+    ['recover', '--request', 'missing', '--pin', 'a'.repeat(64), '--output', 'missing-output', '--release-key', 'bad'],
+    ['recover', '--request', 'missing', '--pin', 'a'.repeat(64), '--output', 'missing-output', '--release-key', 'a'.repeat(64), '--force', 'true']]) {
     const result = spawnSync(process.execPath, ['--import', 'tsx', path.join(projectRoot, 'scripts/unified-recovery.ts'), ...args], { cwd: projectRoot, encoding: 'utf8' })
     assert.equal(result.status, 1); assert.match(result.stderr, /Usage: unified-recovery|Invalid recovery audit arguments|Require explicit/)
   }

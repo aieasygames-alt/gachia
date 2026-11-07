@@ -87,9 +87,8 @@ export async function openUnifiedRecovery(input: { request: UnifiedRecoveryReque
   return { ...opened, request, executor, original, server, network, verify, revalidateModule }
 }
 
-// Remains private until the next-batch source path is qualified. The CLI can
-// audit this fixed adapter, but cannot invoke it or inject the core protocol.
-async function recoverUnifiedMain(input: { request: UnifiedRecoveryRequest; cloudToken: string; releaseKey: string }) {
+// Recovery is explicit and consumes a stopped promotion, never an automatic retry.
+export async function recoverUnifiedMain(input: { request: UnifiedRecoveryRequest; cloudToken: string; releaseKey: string }) {
   const { cloudToken, releaseKey } = input
   const request = structuredClone(unifiedRecoveryRequest(input.request))
   const opened = await openUnifiedRecovery({ request, cloudToken }), { historical, original, previews, references } = opened

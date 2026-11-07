@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import childProcess from 'node:child_process';
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
-import { registerHooks, syncBuiltinESMExports } from 'node:module';
+import { syncBuiltinESMExports } from 'node:module';
 import path from 'node:path';
 import test, { mock } from 'node:test';
 import { unifiedSourceFixture, sourceFixtureUUID } from '../../../../scripts/fixtures/unified-source-fixture.mjs';
@@ -83,17 +83,9 @@ mock.module(script('unified-preview-network'), { namedExports: { ...previewNetwo
   }, close: async () => { state.networkClosed++; } };
 } } });
 
-// Access the private writer for qualification only; production exports and CLI
-// stay audit-only. No body or production request grammar is changed by the hook.
-const hook = registerHooks({ load(url, context, next) {
-  const result = next(url, context);
-  const name = url === src('unified-recovery') ? 'recoverUnifiedMain' : url === src('unified-promotion') ? 'promoteUnifiedMain' : undefined;
-  return name ? { ...result, source: Buffer.from(result.source).toString() + `\nexport { ${name} };\n` } : result;
-} });
 const source = await import(src('unified-source-advance'));
 const recovery = await import(src('unified-recovery'));
 const promotion = await import(src('unified-promotion'));
-hook.deregister();
 
 const steps = ['Verify CMS types without deployment credentials', 'Test isolated CMS', 'Verify current content inventory and Router contracts',
   'Test release tooling without deployment credentials', 'Test public Web and Data consumers', 'Typecheck public consumers without builds',

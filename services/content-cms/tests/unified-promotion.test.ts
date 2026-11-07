@@ -23,9 +23,12 @@ test('Main promotion accepts only pins and the exact executor CI, never caller a
   }
 })
 
-test('fixed CLI remains read-only until recovery and source advancement are integrated', () => {
+test('fixed CLI refuses incomplete writes and injected authority before reading inputs', () => {
   for (const args of [[], ['promote'], ['recover'], ['audit'], ['renew'], ['renew', '--release-key', 'x'], ['audit', '--request', 'x', '--pin', 'x', '--output', 'x', '--skip-ci', 'true'],
-    ['audit', '--release-key', 'x']]) {
+    ['audit', '--release-key', 'x'],
+    ['promote', '--request', 'missing', '--pin', 'a'.repeat(64), '--output', 'missing-output'],
+    ['promote', '--request', 'missing', '--pin', 'a'.repeat(64), '--output', 'missing-output', '--release-key', 'bad'],
+    ['promote', '--request', 'missing', '--pin', 'a'.repeat(64), '--output', 'missing-output', '--release-key', 'a'.repeat(64), '--force', 'true']]) {
     const result = spawnSync(process.execPath, ['--import', 'tsx', path.join(projectRoot, 'scripts/unified-promotion.ts'), ...args], { cwd: projectRoot, encoding: 'utf8' })
     assert.equal(result.status, 1); assert.match(result.stderr, /Usage: unified-promotion|Invalid promotion arguments|Require explicit/)
   }

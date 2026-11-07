@@ -117,7 +117,7 @@ export async function auditUnifiedMainPreviewRenewal(input: { request: UnifiedPr
     cloudWrites: false, productionPromoted: false }
 }
 
-async function promoteUnifiedMain(input: { request: UnifiedPromotionRequest; cmsToken: string; cloudToken: string; releaseKey: string }) {
+export async function promoteUnifiedMain(input: { request: UnifiedPromotionRequest; cmsToken: string; cloudToken: string; releaseKey: string }) {
   const { cmsToken, cloudToken, releaseKey } = input
   const request = structuredClone(unifiedPromotionRequest(input.request))
   const opened = await openUnifiedPromotion({ request, cmsToken, cloudToken }), { evidence, previews, references, revalidateModule } = opened
