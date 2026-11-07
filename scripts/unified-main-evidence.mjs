@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { join } from 'node:path';
+import { existsSync, realpathSync } from 'node:fs';
+import { dirname, join } from 'node:path';
 import { assertUploadedVersion } from './desktop-cloud-transport.mjs';
 import { assertTopology } from './desktop-cloud-release.mjs';
 import { assertModuleVersionIdentity } from './desktop-version-provenance.mjs';
@@ -70,14 +71,51 @@ function deploymentResponse(directory, kind, expected) {
 // An accepted status is not enough: reload the journal, fresh-at-the-time
 // preview, exact deployment responses, module receipts and every public body.
 export async function readUnifiedCompletedMainPromotion(input) {
+  const receipt = unifiedPinnedJSON(input.proof.path, input.proof.pin);
+  const completion = receipt.kind === 'unified_readonly_promotion_completion';
+  const result = await readPromotion(input, receipt, completion);
+  if (completion) {
+    assert.equal(input.proof.path, join(receipt.completionDirectory, 'receipt.json'));
+    assert.equal(dirname(receipt.completionDirectory), input.run);
+    assert.equal(realpathSync(receipt.completionDirectory), receipt.completionDirectory);
+    assert(!existsSync(join(receipt.completionDirectory, 'failure.json')), 'Failed completion cannot be consumed');
+    assert.equal(receipt.cloudWrites, false);
+    assert(receipt.promotionExecutorCI?.status === 'full_exact_ci_passed');
+    const observations = unifiedPinnedJSON(join(receipt.completionDirectory, 'observations.json'), receipt.observationsPin);
+    at(observations.startedAt); at(observations.finishedAt);
+    assert(observations.startedAt >= Date.parse(result.original.rows.at(-1).at));
+    assert(observations.finishedAt >= observations.startedAt && observations.finishedAt <= Date.now());
+    assert(observations.finishedAt - observations.startedAt < 900000, 'Completion observations expired');
+    for (const snapshot of [observations.before, observations.after]) {
+      assertTopology(input.value.baseline, snapshot, receipt.versions);
+      assert.equal(snapshot.services.gachia.id, result.original.rows[3].result.deploymentId, 'Completion deployment changed');
+    }
+    assert.deepEqual(Object.keys(observations.versions).sort(), ROLES.slice().sort());
+    for (const role of ROLES) assertModuleVersionIdentity(result.modules[role].version, observations.versions[role]);
+    result.publicHTTP = recheckUnifiedMainPublic(join(receipt.completionDirectory, 'public'), receipt.publicEvidencePin, input.publicReferences);
+  }
+  return result;
+}
+
+// This diagnostic reader cannot produce accepted publication evidence on its own.
+export async function readUnifiedStoppedMainPromotion(input) {
+  return readPromotion(input, input.receipt, true);
+}
+
+async function readPromotion(input, receipt, completion) {
   const { run, proof, value, previews, references, publicReferences, runtimeConfig, productionRequest, sourceCI, originExecutorCI, executorCI } = input;
-  const receipt = unifiedPinnedJSON(proof.path, proof.pin);
-  assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.kind, 'unified_publication_promotion');
+  assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.kind, completion ? 'unified_readonly_promotion_completion' : 'unified_publication_promotion');
   assert.equal(receipt.status, 'production_accepted'); assert.equal(receipt.productionPromoted, true); assert.equal(receipt.sourceAdvanced, false);
   assert.equal(receipt.releaseKey, value.releaseKey); assert.equal(receipt.transportPin, value.transportPin); assert.equal(receipt.previewPin, previews.pin);
   const original = readUnifiedMainPromotionJournal({ run, pin: receipt.journalPin, releaseKey: value.releaseKey, transportPin: value.transportPin });
-  assert.equal(original.stopped, false, 'A stopped promotion is never a published source');
-  assert.equal(proof.path, join(original.first.directory, 'receipt.json')); assert.equal(receipt.directory, original.first.directory);
+  assert.equal(original.stopped, completion, 'A stopped promotion requires explicit read-only completion');
+  if (completion) {
+    assert.deepEqual(original.rows.map(row => row.phase), ['baseline', 'remote_versions_verified', 'promotion_intent', 'promoted', 'stopped', 'read_only_reconciliation']);
+    assert.equal(original.rows[4].error, 'Unified promotion preview expired');
+    assert.equal(original.rows[4].pendingOperation, undefined);
+    assert.deepEqual(original.rows[4].promoted, { gachia: original.expected.candidate });
+  } else assert.equal(proof.path, join(original.first.directory, 'receipt.json'));
+  assert.equal(receipt.directory, original.first.directory);
   assert.equal(receipt.renewalPin, original.first.renewalPin); assert.deepEqual(receipt.productionRequest, productionRequest);
   assert.deepEqual(receipt.preview, { path: join(previews.directory, 'receipt.json'), pin: previews.pin });
   for (const [name, expected] of Object.entries({ sourceCI, originExecutorCI, executorCI })) {
@@ -108,7 +146,8 @@ export async function readUnifiedCompletedMainPromotion(input) {
     if (kind === 'verification' || Object.hasOwn(response, 'strategy')) assert.equal(response.strategy, 'percentage');
     if (kind === 'verification' || Object.hasOwn(response, 'versions')) assert.deepEqual(response.versions, allocation, 'Deployment allocation differs');
   }
-  const publicProof = original.rows[4].proof, acceptedPublic = unifiedPinnedJSON(join(receipt.directory, 'public-acceptance.json'), publicProof.evidenceSHA256);
+  const publicProof = completion ? receipt.publicProof : original.rows[4].proof;
+  const acceptedPublic = unifiedPinnedJSON(join(receipt.directory, 'public-acceptance.json'), publicProof.evidenceSHA256);
   const { evidenceSHA256: _publicPin, ...publicIdentity } = publicProof;
   assert.deepEqual(acceptedPublic, publicIdentity); assert.deepEqual(receipt.publicProof, publicProof);
   assert.equal(publicProof.status, 'passed'); assert.equal(publicProof.releaseKey, value.releaseKey); assert.deepEqual(publicProof.versions, versions);

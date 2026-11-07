@@ -86,6 +86,7 @@ mock.module(script('unified-preview-network'), { namedExports: { ...previewNetwo
 const source = await import(src('unified-source-advance'));
 const recovery = await import(src('unified-recovery'));
 const promotion = await import(src('unified-promotion'));
+const completion = await import(src('unified-promotion-completion'));
 
 const steps = ['Verify CMS types without deployment credentials', 'Test isolated CMS', 'Verify current content inventory and Router contracts',
   'Test release tooling without deployment credentials', 'Test public Web and Data consumers', 'Typecheck public consumers without builds',
@@ -262,7 +263,7 @@ for (const fault of ['none', 'preview', 'module', 'review', 'network', 'topology
   });
 }
 
-for (const fault of ['none', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
+for (const fault of ['none', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
   'preflight-ci', 'preflight-handoff', 'preflight-version', 'preflight-settings', 'preflight-metadata', 'preflight-review', 'late-review',
   'preflight-snapshot', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt']) {
   test(`private fixed promotion writer produces independently consumable evidence: ${fault}`, async t => {
@@ -333,6 +334,9 @@ for (const fault of ['none', 'caller-mutation', 'open-caller-mutation', 'authori
     if (fault === 'preflight-review') s.failLocalPreflight = true;
     if (fault === 'preflight-executor-drift') s.onVersion = () => { writeFileSync(s.executorFile, 'changed during immutable-version reads'); };
     if (fault === 'late-review') s.onPromotionOpen = () => { s.failLocalPreflight = s.writes > 0; };
+    if (fault === 'completion') s.onPromotionOpen = () => {
+      if (s.writes && s.publicReads) throw Error('Unified promotion preview expired');
+    };
     if (['none', 'caller-mutation'].includes(fault)) {
       const result = await promotion.promoteUnifiedMain(input);
       assert.equal(result.status, 'production_accepted'); assert.equal(s.writes, 1);
@@ -360,6 +364,7 @@ for (const fault of ['none', 'caller-mutation', 'open-caller-mutation', 'authori
       }
     } else {
       const messages = { authorization: /Explicit matching release authorization/, preview: /Isolated preview failed/,
+        completion: /Unified promotion preview expired/,
         'lost-response': /Main deployment outcome unknown/, public: /Production read failed/,
         'preflight-ci': /Full exact-CI/, 'preflight-handoff': /Editorial input pin/, 'preflight-settings': /drift/,
         'preflight-executor-drift': /unverified source edits/,
@@ -372,7 +377,7 @@ for (const fault of ['none', 'caller-mutation', 'open-caller-mutation', 'authori
         else assert.equal(error.code, 'ERR_ASSERTION');
         return true;
       });
-      assert.equal(s.writes, ['lost-response', 'public', 'late-review'].includes(fault) ? 1 : 0);
+      assert.equal(s.writes, ['lost-response', 'public', 'late-review', 'completion'].includes(fault) ? 1 : 0);
       const attempts = readdirSync(f.input.run).filter(name => name.startsWith('unified-main-promotion-') && path.join(f.input.run, name) !== f.directory);
       assert.equal(attempts.length, fault === 'authorization' || fault.startsWith('preflight-') ? 0 : 1);
       for (const attempt of attempts) assert.equal(existsSync(path.join(f.input.run, attempt, 'receipt.json')), false);
@@ -393,6 +398,24 @@ for (const fault of ['none', 'caller-mutation', 'open-caller-mutation', 'authori
       s.s.current = structuredClone(value.baseline);
       await assert.rejects(promotion.promoteUnifiedMain(original), /Existing promotion requires read-only reconciliation/);
       assert.equal(s.writes, writes);
+      if (fault === 'completion') {
+        s.s.current = afterPromotion;
+        const bytes = readFileSync(journal);
+        const history = f.save(path.join(s.s.root, 'completion-history.json'), {
+          ...s.publishedRequest, kind: 'unified_historical_main_previews_request', promotion: undefined,
+        });
+        const result = await completion.completeStoppedMainPromotion({ history,
+          journal: { path: journal, pin: digest(bytes) }, promotionCI: f.save(path.join(s.s.root, 'promotion-ci.json'), { ci: s.executorCI }),
+          executorRunID: 5, directory: path.join(f.input.run, 'readonly-completion'), cloudToken: original.cloudToken });
+        assert.equal(result.status, 'production_accepted'); assert.equal(result.cloudWrites, false);
+        assert.equal(s.writes, writes); assert.deepEqual(readFileSync(journal), bytes);
+        s.publishedRequest.promotion = result.proof;
+        s.publishedProof = f.save(s.publishedProof.path, s.publishedRequest);
+        const advanced = await advance(s);
+        const checked = await source.verifyUnifiedPublishedSource({ publication: s.publishedProof, sourceIndex: advanced.proof, githubToken: 'isolated-github-token' });
+        assert.equal(checked.sources.length, 115); assert.equal(checked.value.owners.main.versionId, f.versions.candidate.id);
+        assert.equal(s.writes, writes);
+      }
       if (fault === 'public') {
         // Consume this writer's stopped journal unchanged, not the synthetic stopped() helper.
         s.s.current = afterPromotion; s.failPublic = false; s.promotionEvidence = false;

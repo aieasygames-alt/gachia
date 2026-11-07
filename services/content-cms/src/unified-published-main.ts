@@ -66,6 +66,8 @@ export async function verifyUnifiedPublishedMainEvidence(evidence: Awaited<Retur
   const opened = await verifyHistoricalMainEvidence(evidence, githubToken)
   const executorCI = await verifyUnifiedCI(evidence.executorCI.runID, evidence.executorCI.commit, githubToken)
   assert.deepEqual(executorCI, evidence.executorCI)
+  const promotionCI = evidence.completed.receipt.promotionExecutorCI
+  if (promotionCI) assert.deepEqual(await verifyUnifiedCI(promotionCI.runID, promotionCI.commit, githubToken), promotionCI)
   return { ...opened, executorCI }
 }
 

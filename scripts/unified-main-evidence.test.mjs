@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import test from 'node:test';
 import { artifactFiles } from './desktop-publish.mjs';
@@ -13,6 +13,40 @@ const sha = 'a'.repeat(64);
 const paths = ['/sitemap.xml', '/robots.txt', '/api/auth/get-session', '/data/ananta/raw-guides.json', '/data/genshin/raw-guides.json', '/data/nte/raw-guides.json',
   '/zh/ananta/guides/download-install-guide', '/en/ananta/guides/download-install-guide'];
 const json = value => JSON.stringify(value, null, 2) + '\n';
+
+for (const fault of ['none', 'stop-cause', 'unknown-write', 'deployment', 'stale', 'module', 'body', 'failure']) {
+  test(`read-only completion preserves stopped deployment and independently checks observations: ${fault}`, async t => {
+    const f = await fixture(t), input = f.input;
+    const journal = join(input.run, `unified-promotion-${sha}.jsonl`), rows = readFileSync(journal, 'utf8').trim().split('\n').map(JSON.parse);
+    const last = rows.pop();
+    rows.push({ ...last, phase: 'stopped', error: fault === 'stop-cause' ? 'Other failure' : 'Unified promotion preview expired',
+      promoted: { gachia: f.versions.candidate.id }, automaticRetry: false, automaticRollback: false,
+      ...(fault === 'unknown-write' ? { pendingOperation: { service: 'gachia' } } : {}) },
+      { ...last, phase: 'read_only_reconciliation' });
+    const bytes = rows.map(JSON.stringify).join('\n') + '\n'; writeFileSync(journal, bytes);
+    const receipt = JSON.parse(readFileSync(input.proof.path)), directory = join(input.run, 'readonly-completion'); mkdirSync(directory);
+    cpSync(join(f.directory, 'public'), join(directory, 'public'), { recursive: true });
+    const snapshot = structuredClone(input.value.baseline);
+    snapshot.services.gachia = { id: rows[3].result.deploymentId, versions: [{ version_id: f.versions.candidate.id, percentage: 100 }] };
+    if (fault === 'deployment') snapshot.services.gachia.id = 'different';
+    const now = Date.now(), observations = { startedAt: now, finishedAt: now, before: snapshot, after: snapshot,
+      versions: { candidate: f.versions.candidate, recovery: f.versions.recovery } };
+    if (fault === 'stale') observations.startedAt -= 900001;
+    if (fault === 'module') observations.versions.candidate = { ...f.versions.candidate, number: 9999 };
+    const observationsProof = f.save(join(directory, 'observations.json'), observations);
+    const proof = f.save(join(directory, 'receipt.json'), { ...receipt, kind: 'unified_readonly_promotion_completion',
+      journalPin: digest(bytes), completionDirectory: directory, cloudWrites: false, promotionExecutorCI: receipt.executorCI,
+      observationsPin: observationsProof.pin, publicEvidencePin: receipt.publicProof.owners.main.evidenceSHA256 });
+    if (fault === 'body') writeFileSync(join(directory, 'public/0.body'), 'tampered');
+    if (fault === 'failure') f.save(join(directory, 'failure.json'), { error: 'stopped' });
+    if (fault === 'none') {
+      const result = await readUnifiedCompletedMainPromotion({ ...input, proof });
+      assert.equal(result.original.stopped, true); assert.equal(result.receipt.cloudWrites, false);
+      assert.equal(result.publicHTTP.observations.length, paths.length);
+    } else await assert.rejects(readUnifiedCompletedMainPromotion({ ...input, proof }));
+    assert.equal(readFileSync(journal, 'utf8'), bytes);
+  });
+}
 
 test('completed Main reader reloads real protocol, module, renewal, deployment and public evidence without live requests', async t => {
   const f = await fixture(t); let calls = 0;
