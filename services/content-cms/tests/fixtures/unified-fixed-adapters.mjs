@@ -7,6 +7,7 @@ import test, { mock } from 'node:test';
 import { unifiedSourceFixture, sourceFixtureUUID } from '../../../../scripts/fixtures/unified-source-fixture.mjs';
 import { unifiedMainFixture } from '../../../../scripts/fixtures/unified-main-fixture.mjs';
 import { unifiedWorkerFixture } from '../../../../scripts/fixtures/unified-worker-fixture.mjs';
+import { uploadedPairHistoryFixture } from '../../../../scripts/fixtures/unified-uploaded-pair-history.mjs';
 import { digest } from '../../../../scripts/desktop-release-assets.mjs';
 import { artifactFiles } from '../../../../scripts/desktop-publish.mjs';
 import { selectUnifiedNextPrevious } from '../../../../scripts/unified-source-advance.mjs';
@@ -264,7 +265,7 @@ for (const fault of ['none', 'preview', 'module', 'review', 'network', 'topology
   });
 }
 
-for (const fault of ['none', 'normal-previews', 'normal-preview-legacy', 'normal-preview-parser', 'normal-preview-downgrade', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
+for (const fault of ['none', 'reconciled', 'preflight-reconciled-ci', 'preflight-reconciled-input', 'normal-previews', 'normal-preview-legacy', 'normal-preview-parser', 'normal-preview-downgrade', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
   'preflight-ci', 'preflight-handoff', 'preflight-version', 'preflight-settings', 'preflight-metadata', 'preflight-review', 'late-review',
   'preflight-snapshot', 'preflight-guarded-reuse', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt']) {
   test(`private fixed promotion writer produces independently consumable evidence: ${fault}`, async t => {
@@ -281,12 +282,29 @@ for (const fault of ['none', 'normal-previews', 'normal-preview-legacy', 'normal
       active: f.save(path.join(s.s.root, 'production-active.json'), s.s.spec.sources) };
     const productionProof = f.save(f.input.productionRequest.path, productionRequest);
     const { scope, qualification } = s.productionLocal;
-    const audit = f.save(path.join(s.s.root, 'promotion-audit.json'), { requestPin: productionProof.pin,
+    let audit = f.save(path.join(s.s.root, 'promotion-audit.json'), { requestPin: productionProof.pin,
       status: 'production_preview_preflight_passed_no_upload', scopeClosureRequired: false, productionPromoted: false,
       ownerOrder: ['main'], executorCI: f.input.originExecutorCI, releaseKey: value.releaseKey, qualification });
     s.historyRequest = { schemaVersion: 1, kind: 'unified_historical_publication_request', production: productionProof, audit };
     s.publishedRequest.history = f.save(s.publishedRequest.history.path, s.historyRequest);
     s.historical.request = s.historyRequest; s.historical.scope = scope;
+    if (fault.includes('reconciled')) {
+      const pair = uploadedPairHistoryFixture(f, digest(JSON.stringify(network, null, 2) + '\n'));
+      const executorCI = { runID: 4, commit: '4'.repeat(40), runAttempt: 1, status: 'full_exact_ci_passed' };
+      const originalProduction = f.save(path.join(s.s.root, 'original-upload-request.json'), { ...productionRequest,
+        ...(fault === 'preflight-reconciled-input' ? { sourceRunID: 3 } : {}) });
+      const data = { ...JSON.parse(readFileSync(audit.path)), schemaVersion: 1, kind: 'unified_uploaded_pair_reconciled_preflight',
+        status: 'readonly_uploaded_pair_preflight_passed', transportPin: value.transportPin, sourceCI: f.input.sourceCI,
+        reconciliation: { originalProduction, previews: pair.proof, executorCI }, cloudWrites: false, productionReady: false, activationSupported: false };
+      audit = f.save(audit.path, data);
+      s.historyRequest = { ...s.historyRequest, audit };
+      s.historical.request = s.historyRequest; s.historical.audit = data; s.historical.production = productionRequest;
+      s.publishedRequest.history = f.save(s.publishedRequest.history.path, s.historyRequest);
+      s.previewsProof = pair.proof; s.publishedRequest.previews = pair.proof;
+      s.publishedRequest.previewExecution = f.save(s.publishedRequest.previewExecution.path, { ...pair.receipt, directory: pair.directory, receiptPin: pair.proof.pin,
+        sourceCI: f.input.sourceCI, originExecutorCI: f.input.originExecutorCI, executorCI });
+      if (fault === 'preflight-reconciled-ci') s.changedCIAttempt = 4;
+    }
     if (fault.startsWith('normal-preview')) {
       const directory = path.join(f.input.run, `unified-cloud-preview-${value.transportPin}`);
       const accepted = structuredClone(f.input.previews.receipt.accepted);
@@ -378,7 +396,7 @@ for (const fault of ['none', 'normal-previews', 'normal-preview-legacy', 'normal
     if (fault === 'completion') s.onPromotionOpen = () => {
       if (s.writes && s.publicReads) throw Error('Unified promotion preview expired');
     };
-    if (['none', 'normal-previews', 'normal-preview-legacy', 'caller-mutation'].includes(fault)) {
+    if (['none', 'reconciled', 'normal-previews', 'normal-preview-legacy', 'caller-mutation'].includes(fault)) {
       const result = await promotion.promoteUnifiedMain(input);
       assert.equal(result.status, 'production_accepted'); assert.equal(s.writes, 1);
       assert.deepEqual(result.productionRequest, original.request.production); assert.deepEqual(result.preview, original.request.previews);
@@ -390,7 +408,7 @@ for (const fault of ['none', 'normal-previews', 'normal-preview-legacy', 'normal
       assert.equal(opened.value.owners.main.versionId, f.versions.candidate.id);
       assert.equal(s.writes, 1);
       assert(s.localPreflights > 2); for (const runID of [1, 2, 5]) assert(s.ciReads.includes(runID));
-      if (fault === 'none') {
+      if (fault === 'none' || fault === 'reconciled') {
         const next = await advance(s, 'baseline', advanced.proof), request = nextBuild(s, next);
         s.output = path.join(s.s.root, 'promoted-next-preparation');
         const prepared = await source.prepareUnifiedNextPublication({ request, directory: s.output });

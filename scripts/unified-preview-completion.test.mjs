@@ -1,12 +1,13 @@
 import assert from 'node:assert/strict';
-import { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { SERVICES } from './desktop-cloud-release.mjs';
+import { SERVICES, reconcileRelease } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
-import { executeUnifiedPreviewCompletion, readUnifiedObservationStop } from './unified-preview-completion.mjs';
-import { unifiedHTMLParserPin } from './unified-version-preview.mjs';
+import { executeUnifiedPreviewCompletion, executeUnifiedUploadedPairCompletion, readUnifiedObservationStop, readUnifiedUploadedPairStop, unifiedUploadedPairStopPin } from './unified-preview-completion.mjs';
+import { readUnifiedCloudPreviews } from './unified-promotion-protocol.mjs';
+import { unifiedHTMLParserPin, unifiedPreviewReferences, verifyUnifiedVersionPreview } from './unified-version-preview.mjs';
 
 const sha = 'a'.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
 const json = value => JSON.stringify(value, null, 2) + '\n';
@@ -94,4 +95,143 @@ for (const fault of ['recovery-http', 'local-evidence', 'legacy-parser', 'change
   assert.equal(rows.at(-2).automaticRetry, false); assert.equal(rows.at(-2).automaticRollback, false);
   if (fault === 'lost-candidate-response') assert.equal(rows.at(-1).candidateUploadOutcomeUnknown, true);
   const count = f.calls.length; await assert.rejects(executeUnifiedPreviewCompletion(f.args), /EEXIST/); assert.equal(f.calls.length, count);
+});
+
+async function uploadedPairFixture(t) {
+  const f = fixture(t), { run } = f.args, root = join(run, `unified-cloud-preview-${sha}`);
+  const stop = { journal: f.stop.journal }, savedRows = readFileSync(f.stop.journal.path, 'utf8').trim().split('\n').map(JSON.parse);
+  const rows = [savedRows[0]], save = (file, contents) => { writeFileSync(file, contents); return { path: file, pin: digest(contents) }; };
+  const bodies = ['<xml/>', 'User-agent: *\nDisallow: /\n', '<!doctype html><html><head><title>HI3</title><meta name="description" content="Guide"><link rel="canonical" href="https://gachia.com/zh/hi3/guide"></head><body><h1>Guide</h1></body></html>'],
+    paths = ['/sitemap.xml', '/robots.txt', '/zh/hi3/guide'];
+  const refs = bodies.map((body, i) => ({ path: paths[i], status: 200, headers: { 'content-type': ['application/xml', 'text/plain', 'text/html'][i], 'cache-control': 'private, no-store' },
+    bytes: Buffer.byteLength(body), sha256: digest(body), bodyFile: `${i}.body` }));
+  const references = () => unifiedPreviewReferences(refs, (_, i) => Buffer.from(bodies[i]), 'streaming-v2');
+  const uploaded = {}, accepted = { recovery: {}, candidate: {} };
+  for (const [i, role] of ['recovery', 'candidate'].entries()) {
+    const directory = join(root, `${role}-main`), versionId = uuid(100 + i);
+    mkdirSync(join(directory, 'module'), { recursive: true });
+    rmSync(join(directory, 'http'), { recursive: true, force: true });
+    await verifyUnifiedVersionPreview({ directory: join(directory, 'http'), service: 'gachia', versionId, references: references(), parserVersion: 'streaming-v2',
+      request: async url => { const n = paths.indexOf(new URL(url).pathname); return new Response(bodies[n], { headers: { ...refs[n].headers, 'x-robots-tag': 'noindex' } }); } });
+    stop[role] = { http: { path: join(directory, 'http/result.json'), pin: digest(readFileSync(join(directory, 'http/result.json'))) },
+      version: save(join(directory, 'version.json'), json({ id: versionId })),
+      module: save(join(directory, 'module/receipt.json'), json({ schemaVersion: 1, kind: 'unified_upload_time_module_receipt', service: 'gachia', versionId, moduleSHA256: sha })) };
+    for (const phase of ['upload_intent', 'upload_response', 'upload_returned']) rows.push({ ...savedRows[1], phase, role,
+      ...(phase === 'upload_intent' ? {} : { versionId }) });
+    uploaded[role] = { gachia: { versionId } };
+    if (role === 'recovery') {
+      const proof = { service: 'gachia', versionId, moduleSHA256: sha, artifactPin: sha, versionPin: stop[role].version.pin,
+        moduleProof: stop[role].module, evidenceSHA256: stop[role].http.pin, acceptedAt: Date.parse(savedRows[1].at),
+        parserVersion: 'streaming-v2', parserPin: unifiedHTMLParserPin('streaming-v2') };
+      accepted.recovery.main = proof; rows.push({ ...savedRows[1], phase: 'preview_accepted', proof });
+    }
+  }
+  const pendingOperation = { role: 'candidate', owner: 'main', service: 'gachia', versionId: uuid(101) };
+  rows.push({ ...savedRows[4], pendingOperation, uploaded, accepted, error: 'Next-batch source handoff expired; take fresh read-only observations' },
+    { ...savedRows[5], pendingOperation, recovery: reconcileRelease(f.value.baseline, f.value.baseline, uploaded.recovery),
+      candidate: reconcileRelease(f.value.baseline, f.value.baseline, uploaded.candidate) });
+  const flush = () => { stop.journal = save(stop.journal.path, rows.map(JSON.stringify).join('\n') + '\n'); };
+  flush();
+  return { ...f, stop, rows, flush, references, read: () => readUnifiedUploadedPairStop({ run, stop, value: f.value, references }),
+    mutate: (role, name, fn) => { const p = stop[role][name], obj = JSON.parse(readFileSync(p.path)); fn(obj); stop[role][name] = save(p.path, json(obj)); } };
+}
+
+test('uploaded pair reader preserves original evidence and is not fresh acceptance', async t => {
+  const f = await uploadedPairFixture(t), before = readFileSync(f.stop.journal.path), result = f.read();
+  assert.equal(result.historicalOnly, true); assert.equal(result.cloudWrites, false);
+  assert.equal(result.existing.candidate.versionId, uuid(101)); assert.equal(result.accepted, undefined);
+  assert.deepEqual(readFileSync(f.stop.journal.path), before); assert.deepEqual(f.calls, []);
+  assert.throws(() => readUnifiedObservationStop({ run: f.args.run, value: f.value, stop: { journal: f.stop.journal, ...f.stop.recovery } }), /Only a known recovery/);
+});
+
+async function pairCompletionFixture(t) {
+  const f = await uploadedPairFixture(t), original = f.read(), observations = [], boundaries = [];
+  const args = { run: f.args.run, authorize: () => f.value.releaseKey,
+    verify: async () => {
+      boundaries.push(observations.length);
+      return { ...f.value, identityObservedAt: Date.now(), stop: f.stop, stopPin: unifiedUploadedPairStopPin(f.stop), networkPin: sha, existingPair: original.existing };
+    },
+    transport: { snapshot: async () => f.value.baseline, revalidate: async () => {}, observe: async args => {
+      observations.push(args.role); mkdirSync(args.directory);
+      writeFileSync(join(args.directory, 'version.json'), readFileSync(f.stop[args.role].version.path));
+      const old = JSON.parse(readFileSync(f.stop[args.role].http.path)), root = join(f.stop[args.role].http.path, '..');
+      return verifyUnifiedVersionPreview({ directory: join(args.directory, 'http'), service: args.service, versionId: args.versionId,
+        references: f.references(), parserVersion: 'streaming-v2', request: async url => {
+          const row = old.observations.find(row => row.path === new URL(url).pathname);
+          return new Response(readFileSync(join(root, row.bodyFile)), { status: row.status, headers: row.headers });
+        } });
+    } } };
+  return { ...f, completionArgs: args, observations, boundaries, reopen: result => readUnifiedCloudPreviews({ run: args.run, directory: result.directory,
+    pin: result.receiptPin, value: f.value, references: f.references }) };
+}
+
+test('read-only uploaded pair completion is consumable by promotion reader without rewriting original evidence', async t => {
+  const f = await pairCompletionFixture(t), bytes = readFileSync(f.stop.journal.path);
+  const result = await executeUnifiedUploadedPairCompletion(f.completionArgs), reopened = f.reopen(result);
+  assert.equal(result.cloudWrites, false); assert.deepEqual(reopened.receipt.accepted, result.accepted);
+  assert.deepEqual(f.observations, ['recovery', 'candidate']); assert.deepEqual(readFileSync(f.stop.journal.path), bytes);
+  assert.deepEqual(f.boundaries, [0, 1, 2], 'Verify before observation and after each version without redundant adjacent passes');
+  await assert.rejects(executeUnifiedUploadedPairCompletion(f.completionArgs), /EEXIST/);
+});
+
+for (const fault of ['writer', 'authorization', 'source', 'final-source', 'topology', 'module', 'late-module', 'http', 'parser', 'stop-pin']) test(`read-only pair completion rejects ${fault}`, async t => {
+  const f = await pairCompletionFixture(t), args = f.completionArgs;
+  if (fault === 'writer') args.transport.upload = async () => { throw Error('must never run'); };
+  if (fault === 'authorization') args.authorize = () => sha;
+  if (['source', 'final-source', 'stop-pin'].includes(fault)) {
+    const verify = args.verify; let calls = 0;
+    args.verify = async () => { const value = await verify();
+      if (fault === 'stop-pin') value.stopPin = sha;
+      else if (++calls > (fault === 'final-source' ? 2 : 1)) value.releaseKey = sha;
+      return value;
+    };
+  }
+  if (fault === 'topology') args.transport.snapshot = async () => ({ ...f.value.baseline, scripts: [] });
+  if (fault === 'module') args.transport.revalidate = async () => { throw Error('module mismatch'); };
+  if (fault === 'late-module') { let calls = 0; args.transport.revalidate = async () => { if (++calls === 4) throw Error('module changed after HTTP'); }; }
+  if (fault === 'http') args.transport.observe = async () => { throw Error('HTTP mismatch'); };
+  if (fault === 'parser') { const observe = args.transport.observe; args.transport.observe = async input => ({ ...await observe(input), parserVersion: 'legacy-v1' }); }
+  await assert.rejects(executeUnifiedUploadedPairCompletion(args));
+  assert.equal(existsSync(join(args.run, `unified-cloud-uploaded-pair-completion-${sha}`, 'receipt.json')), false);
+  if (!['writer', 'authorization', 'stop-pin'].includes(fault)) await assert.rejects(executeUnifiedUploadedPairCompletion(args));
+});
+
+for (const fault of ['original-body', 'fresh-body', 'network', 'version', 'accepted-time', 'journal']) test(`uploaded pair completion reader rejects ${fault}`, async t => {
+  const f = await pairCompletionFixture(t), result = await executeUnifiedUploadedPairCompletion(f.completionArgs);
+  const receiptPath = join(result.directory, 'receipt.json'), receipt = JSON.parse(readFileSync(receiptPath));
+  if (fault === 'original-body') writeFileSync(join(f.stop.candidate.http.path, '..', '0.body'), 'changed');
+  if (fault === 'fresh-body') writeFileSync(join(result.directory, 'candidate-main/http/0.body'), 'changed');
+  if (fault === 'network') receipt.networkPin = 'b'.repeat(64);
+  if (fault === 'version') receipt.accepted.candidate.main.versionId = uuid(999);
+  if (fault === 'accepted-time') receipt.accepted.candidate.main.acceptedAt = 0;
+  if (fault === 'journal') writeFileSync(join(f.args.run, `unified-uploaded-pair-completion-${sha}.jsonl`), '{}\n');
+  const raw = json(receipt); writeFileSync(receiptPath, raw); result.receiptPin = digest(raw);
+  assert.throws(() => f.reopen(result));
+});
+
+for (const fault of ['missing-response', 'unknown-version', 'different-return', 'other-error', 'candidate-accepted', 'changed-pending', 'changed-reconciliation',
+  'changed-release', 'future-time', 'backward-time', 'wrong-module', 'wrong-version', 'partial-http', 'legacy-parser', 'local-http', 'body', 'foreign-path',
+  'changed-pin', 'wrong-accepted-pin', 'accepted-after-journal']) test(`uploaded pair reader refuses ${fault}`, async t => {
+  const f = await uploadedPairFixture(t);
+  if (fault === 'missing-response') f.rows.splice(6, 1);
+  if (fault === 'unknown-version') delete f.rows[6].versionId;
+  if (fault === 'different-return') f.rows[7].versionId = uuid(999);
+  if (fault === 'other-error') f.rows[8].error = 'HTTP mismatch';
+  if (fault === 'candidate-accepted') f.rows[8].accepted.candidate.main = {};
+  if (fault === 'changed-pending') f.rows[8].pendingOperation = {};
+  if (fault === 'changed-reconciliation') f.rows[9].candidate.owners.gachia.candidate = uuid(999);
+  if (fault === 'changed-release') f.rows[5].releaseKey = sha;
+  if (fault === 'future-time') f.rows[9].at = new Date(Date.now() + 60000).toISOString();
+  if (fault === 'backward-time') f.rows[5].at = new Date(0).toISOString();
+  if (fault === 'wrong-module') f.mutate('candidate', 'module', obj => { obj.moduleSHA256 = 'c'.repeat(64); });
+  if (fault === 'wrong-version') f.mutate('candidate', 'version', obj => { obj.id = uuid(999); });
+  if (fault === 'partial-http') f.mutate('candidate', 'http', obj => { obj.observations.pop(); });
+  if (fault === 'legacy-parser') f.mutate('candidate', 'http', obj => { obj.parserVersion = 'legacy-v1'; obj.parserPin = unifiedHTMLParserPin(); });
+  if (fault === 'local-http') f.mutate('candidate', 'http', obj => { obj.observationMode = 'loopback_exact_host'; });
+  if (fault === 'body') writeFileSync(join(f.stop.candidate.http.path, '..', '0.body'), 'wrong');
+  if (fault === 'foreign-path') f.stop.candidate.module.path += '.other';
+  if (fault === 'changed-pin') f.stop.candidate.http.pin = sha;
+  if (fault === 'wrong-accepted-pin') f.rows[4].proof.evidenceSHA256 = sha;
+  if (fault === 'accepted-after-journal') f.rows[4].proof.acceptedAt += 1;
+  f.flush(); assert.throws(f.read); assert.deepEqual(f.calls, []);
 });

@@ -4,6 +4,7 @@ import { readUnifiedCompletedMainPromotion } from '../../../scripts/unified-main
 import { readPinnedUnifiedInput } from './unified-desktop'
 import { readUnifiedHistoricalMainPreviews, readUnifiedHistoricalPublication, unifiedHistoricalPublicationRequest, verifyUnifiedHistoricalPublicationEvidence } from './unified-historical-publication'
 import { verifyUnifiedCI } from './unified-production'
+import { readUnifiedPreflightBinding, RECONCILED_PREFLIGHT } from './unified-reconciled-preflight'
 
 type Proof = { path: string; pin: string }
 export type UnifiedHistoricalMainRequest = {
@@ -32,6 +33,11 @@ export async function readUnifiedHistoricalMain(input: UnifiedHistoricalMainRequ
   const cloud = await readUnifiedHistoricalMainPreviews(historical, request.previews)
   const execution = pinned(request.previewExecution)
   const previewExecutorCI = execution.executorCI
+  if (historical.audit.status === RECONCILED_PREFLIGHT) {
+    const binding = readUnifiedPreflightBinding(historical.audit, historical.production, historical.request.production)!
+    assert.deepEqual(request.previews, binding.previews, 'Historical preview differs from reconciled pair')
+    assert.deepEqual(previewExecutorCI, binding.executorCI, 'Preview executor differs from reconciliation executor')
+  }
   assert.deepEqual(execution, { ...cloud.previews.receipt, directory: cloud.previews.directory, receiptPin: cloud.previews.pin,
     sourceCI: historical.audit.sourceCI, originExecutorCI: historical.audit.executorCI, executorCI: previewExecutorCI }, 'Preview execution is not the exact sealed result')
   return { historical, ...cloud, previewExecutorCI, currentCMSRead: false, currentCloudRead: false, freshnessRenewed: false, ciVerified: false } as const

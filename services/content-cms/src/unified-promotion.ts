@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { execFileSync } from 'node:child_process'
 import { randomUUID } from 'node:crypto'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -16,7 +17,8 @@ import { readUnifiedVersion, revalidateUnifiedUploadedModule } from '../../../sc
 import { recheckUnifiedPreview, verifyUnifiedVersionPreview } from '../../../scripts/unified-version-preview.mjs'
 import { readUnifiedHistoricalMainPreviews, readUnifiedHistoricalPublication } from './unified-historical-publication'
 import { assertUnifiedProductionOwnerClosure } from './unified-production-scope'
-import { createUnifiedProductionVerifier, unifiedProductionRequest } from './unified-production'
+import { createUnifiedProductionVerifier, unifiedProductionRequest, verifyUnifiedCI } from './unified-production'
+import { readUnifiedPreflightBinding } from './unified-reconciled-preflight'
 
 type Proof = { path: string; pin: string }
 export type UnifiedPromotionRequest = {
@@ -43,8 +45,9 @@ export function unifiedPromotionRequest(value: unknown): UnifiedPromotionRequest
 export async function openUnifiedPromotion(input: { request: UnifiedPromotionRequest; cmsToken: string; cloudToken: string }) {
   const { cmsToken, cloudToken } = input
   const request = structuredClone(unifiedPromotionRequest(input.request)), production = unifiedProductionRequest(pinned(request.production)), audit = pinned(request.audit)
-  assert.equal(audit.requestPin, request.production.pin, 'Original upload request differs from its exact audit')
-  assert.equal(audit.status, 'production_preview_preflight_passed_no_upload'); assert.equal(audit.scopeClosureRequired, false)
+  const reconciliation = readUnifiedPreflightBinding(audit, production, request.production)
+  if (reconciliation) assert.deepEqual(request.previews, reconciliation.previews, 'Promotion must use the reconciled uploaded pair')
+  assert.equal(audit.scopeClosureRequired, false)
   assert.equal(audit.productionPromoted, false); assert.deepEqual(audit.ownerOrder, ['main'])
   assert.equal(audit.executorCI.runID, production.executorRunID); assert.equal(audit.executorCI.status, 'full_exact_ci_passed')
   const evidence = await createUnifiedProductionVerifier({ ...production, executorRunID: request.executorRunID }, { cmsToken, cloudToken },
@@ -52,6 +55,11 @@ export async function openUnifiedPromotion(input: { request: UnifiedPromotionReq
   assertUnifiedProductionOwnerClosure(evidence.scope); assert.deepEqual(evidence.value.ownerOrder, ['main'], 'Only Main promotion is qualified')
   assert.equal(evidence.value.releaseKey, audit.releaseKey); assert.deepEqual(evidence.qualification, audit.qualification)
   const historical = await readUnifiedHistoricalPublication({ schemaVersion: 1, kind: 'unified_historical_publication_request', production: request.production, audit: request.audit })
+  if (reconciliation) {
+    const ci = reconciliation.executorCI
+    const token = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim()
+    assert.deepEqual(await verifyUnifiedCI(ci.runID, ci.commit, token), ci, 'Reconciliation executor CI changed')
+  }
   assert.deepEqual(evidence.ci, historical.audit.sourceCI, 'Source CI differs from sealed historical audit')
   assert.deepEqual(evidence.originExecutorCI, historical.audit.executorCI, 'Original executor CI differs from sealed historical audit')
   assert.deepEqual(historical.scope, evidence.scope)
@@ -63,7 +71,9 @@ export async function openUnifiedPromotion(input: { request: UnifiedPromotionReq
   assert.equal(network.schemaVersion, 1); assert.equal(network.kind, 'explicit_loopback_preview_network')
   const server = unifiedPreviewProxy(network.server)
   const { references, previews } = await readUnifiedHistoricalMainPreviews(historical, request.previews)
-  if (previews.receipt.kind === 'unified_completed_observation_stop_cloud_previews') assert.equal(previews.receipt.networkPin, request.network.pin)
+  if (['unified_completed_observation_stop_cloud_previews', 'unified_readonly_uploaded_pair_cloud_previews'].includes(previews.receipt.kind)) {
+    assert.equal(previews.receipt.networkPin, request.network.pin)
+  }
   const target = unifiedTransportTarget('main', readFileSync(path.join(evidence.build, 'source/apps/web/wrangler.jsonc'), 'utf8'))
   const revalidateModule = async (role: string, proof: any) => {
     const row = evidence.value.owners.main[role]

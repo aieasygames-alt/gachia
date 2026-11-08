@@ -5,7 +5,7 @@ import { assertTopology, reconcileRelease } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { withRunLock } from './desktop-publish.mjs';
 import { assertUnifiedPreviewIdentity, assertUnifiedPreviewUploadScope } from './unified-preview-protocol.mjs';
-import { readUnifiedObservationStop } from './unified-preview-completion.mjs';
+import { readUnifiedObservationStop, readUnifiedUploadedPairStop, unifiedUploadedPairStopPin } from './unified-preview-completion.mjs';
 import { exactUnifiedPreviewOrigin, recheckUnifiedPreview, unifiedHTMLParserPin } from './unified-version-preview.mjs';
 
 const SHA = /^[a-f0-9]{64}$/;
@@ -41,6 +41,7 @@ function acceptedIdentity(accepted, value, requireFresh = false) {
 export function readUnifiedCloudPreviews({ run, directory, pin, value, references }) {
   assertUnifiedPreviewIdentity(value, value.transportPin);
   const receipt = unifiedPinnedJSON(join(directory, 'receipt.json'), pin);
+  if (receipt.kind === 'unified_readonly_uploaded_pair_cloud_previews') return readUploadedPairCompletion({ run, directory, pin, value, references, receipt });
   if (receipt.kind === 'unified_completed_observation_stop_cloud_previews') return readCompletedPreviews({ run, directory, pin, value, references, receipt });
   assert.equal(directory, join(run, `unified-cloud-preview-${value.transportPin}`));
   assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.kind, 'unified_candidate_recovery_cloud_previews');
@@ -80,6 +81,42 @@ export function readUnifiedCloudPreviews({ run, directory, pin, value, reference
       references: references(owner, role, parserVersion), parserVersion });
   }
   assert.equal(rows[index].phase, 'all_cloud_previews_accepted_no_promotion'); assert.deepEqual(rows[index].accepted, receipt.accepted);
+  return { receipt, directory, pin, baseline: rows[0].baseline };
+}
+
+function readUploadedPairCompletion({ run, directory, pin, value, references, receipt }) {
+  assert.equal(directory, join(run, `unified-cloud-uploaded-pair-completion-${value.transportPin}`));
+  assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.status, 'all_cloud_previews_accepted_no_promotion');
+  assert.equal(receipt.transportPin, value.transportPin); assert.equal(receipt.releaseKey, value.releaseKey);
+  assert.equal(receipt.cloudWrites, false); assert.equal(receipt.productionPromoted, false); assert.equal(receipt.activationSupported, false);
+  assert(SHA.test(receipt.networkPin)); assert.equal(receipt.stopPin, unifiedUploadedPairStopPin(receipt.stop));
+  const original = readUnifiedUploadedPairStop({ run, stop: receipt.stop, value, references });
+  const raw = readFileSync(join(run, `unified-uploaded-pair-completion-${value.transportPin}.jsonl`));
+  assert.equal(digest(raw), receipt.journalPin); assert(raw.length <= 16 * 1024 * 1024 && raw.toString().endsWith('\n'));
+  const rows = raw.toString().trimEnd().split('\n').map(JSON.parse);
+  assert.deepEqual(rows.map(row => row.phase), ['baseline', 'observation_intent', 'preview_accepted', 'observation_intent', 'preview_accepted', 'all_cloud_previews_accepted_no_promotion']);
+  let at = -Infinity;
+  for (const row of rows) {
+    assert.equal(row.releaseKey, value.releaseKey); assert.equal(row.transportPin, value.transportPin); assert.equal(row.stopPin, receipt.stopPin);
+    const current = Date.parse(row.at); assert(current >= at && current <= Date.now()); at = current;
+  }
+  assertTopology(rows[0].baseline, value.baseline); assert.equal(rows[0].directory, directory);
+  assert.deepEqual(rows[0].stop, receipt.stop); assert.equal(rows[0].networkPin, receipt.networkPin);
+  acceptedIdentity(receipt.accepted, value);
+  for (const [index, role] of ROLES.entries()) {
+    const proof = receipt.accepted[role].main, old = original.existing[role], intent = rows[1 + index * 2], accepted = rows[2 + index * 2];
+    assert.equal(intent.role, role); assert.equal(intent.versionId, old.versionId);
+    assert.equal(accepted.role, role); assert.deepEqual(accepted.proof, proof);
+    assert(proof.acceptedAt >= Date.parse(intent.at) && proof.acceptedAt <= Date.parse(accepted.at));
+    assert.equal(proof.versionId, old.versionId); assert.equal(proof.versionPin, old.inspected.versionPin);
+    assert.deepEqual(proof.moduleProof, old.inspected.moduleProof);
+    assert.equal(proof.parserVersion, 'streaming-v2'); assert.equal(proof.parserPin, unifiedHTMLParserPin('streaming-v2'));
+    const root = join(directory, `${role}-main`);
+    assert.equal(unifiedPinnedJSON(join(root, 'version.json'), proof.versionPin).id, proof.versionId);
+    recheckUnifiedPreview(join(root, 'http'), proof.evidenceSHA256, { service: 'gachia', versionId: proof.versionId,
+      references: references('main', role, 'streaming-v2'), parserVersion: 'streaming-v2' });
+  }
+  assert.deepEqual(rows[5].accepted, receipt.accepted);
   return { receipt, directory, pin, baseline: rows[0].baseline };
 }
 

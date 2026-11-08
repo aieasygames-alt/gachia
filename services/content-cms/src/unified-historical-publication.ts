@@ -19,6 +19,7 @@ import { verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { unifiedPlan } from './unified-plan'
 import { verifyUnifiedPreviewContract } from './unified-preview'
 import { unifiedProductionRequest, verifyUnifiedCI } from './unified-production'
+import { readUnifiedPreflightBinding, RECONCILED_PREFLIGHT } from './unified-reconciled-preflight'
 import { assertUnifiedProductionOwnerClosure, closeUnifiedProductionOwnerScope, unifiedEditorialScope, unifiedProductionQualification } from './unified-production-scope'
 import { bindUnifiedPreservedRuntime, readUnifiedPreservationCatalogs, unifiedPreservationSelection, verifyUnifiedPreservedMainResources, type PreservedRuntime } from './unified-preservation'
 
@@ -73,7 +74,7 @@ export async function readUnifiedHistoricalPublication(input: UnifiedHistoricalP
 
 async function readHistoricalPublication(request: UnifiedHistoricalPublicationRequest) {
   const production = unifiedProductionRequest(pinned(request.production)), audit = pinned(request.audit)
-  assert.equal(audit.requestPin, request.production.pin); assert.equal(audit.status, 'production_preview_preflight_passed_no_upload')
+  const reconciliation = readUnifiedPreflightBinding(audit, production, request.production)
   assert.equal(audit.scopeClosureRequired, false); assert.equal(audit.productionPromoted, false); assert.equal(audit.cloudWrites, false)
   assert.deepEqual(audit.ownerOrder, ['main']); assert.equal(audit.executorCI.runID, production.executorRunID)
   const preview = await verifyUnifiedPreviewContract(path.dirname(production.localPreview.path), production.localPreview.pin)
@@ -131,6 +132,7 @@ async function readHistoricalPublication(request: UnifiedHistoricalPublicationRe
     owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])), preservedOwners, baseline: sources.baseline, identityObservedAt: audit.identityObservedAt }
   for (const [key, expected] of Object.entries(value)) assert.deepEqual(audit[key], expected, `Historical audit differs: ${key}`)
   assert.equal(audit.sourceCI.runID, production.sourceRunID); assert.equal(audit.sourceCI.commit, built.frozen.sourceCommit)
+  if (reconciliation) await readUnifiedHistoricalMainPreviews({ build, transport, value }, reconciliation.previews)
   return { request, production, audit, preview, transport, publication, built, build, plan, originals, active, sealedSources, review, scope, qualification, sources, value,
     currentCMSRead: false, currentCloudRead: false, freshnessRenewed: false, ciVerified: false, productionReady: false } as const
 }
@@ -148,6 +150,11 @@ export async function verifyUnifiedHistoricalPublicationEvidence(evidence: Await
   const sourceCI = await verifyUnifiedCI(evidence.production.sourceRunID, evidence.built.frozen.sourceCommit, githubToken)
   const originExecutorCI = await verifyUnifiedCI(evidence.production.executorRunID, evidence.audit.executorCI.commit, githubToken)
   assert.deepEqual(sourceCI, evidence.audit.sourceCI); assert.deepEqual(originExecutorCI, evidence.audit.executorCI)
+  if (evidence.audit.status === RECONCILED_PREFLIGHT) {
+    const reconciliation = readUnifiedPreflightBinding(evidence.audit, evidence.production, evidence.request.production)!
+    const ci = reconciliation.executorCI
+    assert.deepEqual(await verifyUnifiedCI(ci.runID, ci.commit, githubToken), ci, 'Reconciliation executor CI changed')
+  }
   return { ...evidence, sourceCI, originExecutorCI, ciVerified: true } as const
 }
 
