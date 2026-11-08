@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { cpSync, lstatSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { artifactFiles, localAssetPath } from './desktop-publish.mjs';
-import { digest } from './desktop-release-assets.mjs';
+import { digest, withVerificationPass } from './desktop-release-assets.mjs';
 
 export const UNIFIED_OWNERS = Object.freeze(['azur-promilia', 'genshin', 'lvmeng', 'nte', 'main']);
 export const unifiedService = owner => {
@@ -100,9 +100,14 @@ function assertProjection(source, output, additions, runtimeSHA256) {
 }
 
 export function verifyUnifiedAssetPair({ owner, previous, candidate, forward, recovery, runtimeSHA256 }) {
-  const oldFiles = unifiedStaticFiles(previous, owner), newFiles = unifiedStaticFiles(candidate, owner);
-  assertProjection(candidate, forward, oldFiles);
-  assertProjection(previous, recovery, newFiles, runtimeSHA256);
-  assert.deepEqual(unifiedStaticFiles(forward, owner), unifiedStaticFiles(recovery, owner), 'Both runtimes need the identical static union');
-  return { staticPaths: unifiedStaticFiles(forward, owner).length };
+  // All projections share one synchronous read pass; nothing survives a later
+  // verification call or an asynchronous/write boundary.
+  return withVerificationPass(() => {
+    const oldFiles = unifiedStaticFiles(previous, owner), newFiles = unifiedStaticFiles(candidate, owner);
+    assertProjection(candidate, forward, oldFiles);
+    assertProjection(previous, recovery, newFiles, runtimeSHA256);
+    const forwardFiles = unifiedStaticFiles(forward, owner);
+    assert.deepEqual(forwardFiles, unifiedStaticFiles(recovery, owner), 'Both runtimes need the identical static union');
+    return { staticPaths: forwardFiles.length };
+  });
 }

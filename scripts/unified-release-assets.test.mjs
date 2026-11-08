@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import fs, { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, statSync, symlinkSync, utimesSync, writeFileSync } from 'node:fs';
+import { syncBuiltinESMExports } from 'node:module';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
@@ -80,4 +81,31 @@ test('dedicated raw and namespaced URLs must both exist with identical bytes', t
   assert.throws(() => unifiedStaticFiles(f.input.previous, 'nte'), /alias missing or changed/);
   rmSync(join(f.root, alias));
   assert.throws(() => unifiedStaticFiles(f.input.previous, 'nte'), /alias missing or changed/);
+});
+
+test('one synchronous pair check reads each artifact once, but later checks read again', t => {
+  const f = fixture(t); prepareUnifiedAssetPair(f.input);
+  const targets = ['previous', 'candidate', 'forward', 'recovery'].map(role => join(f.input[role], 'assets/data/game/raw-characters.json'));
+  const counts = new Map(targets.map(file => [file, 0])), original = fs.readFileSync;
+  const mock = t.mock.method(fs, 'readFileSync', function(file, ...args) {
+    if (counts.has(String(file))) counts.set(String(file), counts.get(String(file)) + 1);
+    return original.call(this, file, ...args);
+  });
+  syncBuiltinESMExports();
+  try {
+    f.check(); assert.deepEqual([...counts.values()], [1, 1, 1, 1]);
+    f.check(); assert.deepEqual([...counts.values()], [2, 2, 2, 2]);
+  } finally { mock.mock.restore(); syncBuiltinESMExports(); }
+});
+
+test('pair check rejects same-size same-mtime changes after success and discards failed passes', async t => {
+  const f = fixture(t); prepareUnifiedAssetPair(f.input); f.check();
+  const file = join(f.input.forward, 'assets/data/game/raw-characters.json');
+  const original = readFileSync(file), stat = statSync(file);
+  await Promise.resolve();
+  writeFileSync(file, original.toString().replace('new', 'bad')); utimesSync(file, stat.atime, stat.mtime);
+  assert.throws(f.check, /unauthorized non-static change/);
+  writeFileSync(file, original); utimesSync(file, stat.atime, stat.mtime); f.check();
+  f.write('forward/added-after-success', 'new'); assert.throws(f.check, /unauthorized non-static change/);
+  rmSync(join(f.input.forward, 'added-after-success')); f.check();
 });

@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import test from 'node:test'
 import { SERVICES } from '../../../scripts/desktop-cloud-release.mjs'
+import { verifiedInPass } from '../../../scripts/desktop-release-assets.mjs'
 import { digest } from '../src/legacy-intake'
 import { projectRoot } from '../src/local-environment'
 import { baselineDirectory } from '../src/inventory-baseline'
@@ -41,7 +42,8 @@ function fixture() {
       sources: { baseline: { contentSHA256: content }, profile: { owners: { [owner]: { versionId } } }, evidence: { owners: { [owner]: { runtimeModuleSHA256: sha } } } } }]
   }))
   const calls: string[] = []
-  const read = () => readUnifiedPreservationCatalogs(input, scope, plan, active, repo, (proof: { path: string; pin: string }) => {
+  const read = (observe: () => void = () => {}) => readUnifiedPreservationCatalogs(input, scope, plan, active, repo, (proof: { path: string; pin: string }) => {
+    observe()
     const owner = Object.keys(input.catalogs).find(owner => input.catalogs[owner].path === proof.path)!
     assert.equal(proof.pin, sha); calls.push(owner); return catalogs[owner]
   })
@@ -55,6 +57,20 @@ test('accepted original publications bind every preserved game source, without a
     assert.equal(result[owner].catalogPin, sha); assert.match(result[owner].sourcesPin, /^[a-f0-9]{64}$/)
     assert.equal(result[owner].service, `gachia-game-${owner}`)
   }
+})
+
+test('preserved catalogs share only a synchronous traversal pass and failures do not retain it', () => {
+  const f = fixture()
+  let reads = 0
+  const shared = () => verifiedInPass(shared, 'shared-ancestor', () => ++reads)
+  f.read(shared); assert.equal(reads, 1)
+  f.read(shared); assert.equal(reads, 2)
+  assert.equal(shared(), 3)
+  f.catalogs.nte.manifest.game = 'wrong'
+  assert.throws(() => f.read(shared)); assert.equal(reads, 4)
+  f.catalogs.nte.manifest.game = 'nte'
+  f.read(shared); assert.equal(reads, 5)
+  assert.deepEqual(f.calls, ['genshin', 'nte', 'genshin', 'nte', 'genshin', 'nte', 'genshin', 'nte'])
 })
 
 for (const fault of ['missing-owner', 'foreign-owner', 'injected-status', 'unqualified-domain', 'bad-pin', 'wrong-kind']) test(`catalog selection rejects ${fault}`, () => {

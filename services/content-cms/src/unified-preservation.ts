@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { activeVersion } from '../../../scripts/desktop-cloud-release.mjs'
-import { digest } from '../../../scripts/desktop-release-assets.mjs'
+import { digest, withVerificationPass } from '../../../scripts/desktop-release-assets.mjs'
 import { readPinnedSourceCatalog } from '../../../scripts/desktop-source-catalog.mjs'
 import { unifiedPageFingerprints } from '../../../scripts/unified-version-preview.mjs'
 import { canonical } from './record-mapping'
@@ -76,6 +76,11 @@ export function unifiedPreservationSelection(value: unknown, owners: string[]): 
 // Read the completed publication and its transitive build, preview, public
 // acceptance and source-advance chain. A historical Main is never asserted live.
 export function readUnifiedPreservationCatalogs(input: PreservationSelection, scope: Scope, plan: UnifiedPlan, active: SourceBytes[], repo: string,
+  readCatalog: typeof readPinnedSourceCatalog = readPinnedSourceCatalog): ReturnType<typeof readPreservationCatalogs> {
+  return withVerificationPass(() => readPreservationCatalogs(input, scope, plan, active, repo, readCatalog))
+}
+
+function readPreservationCatalogs(input: PreservationSelection, scope: Scope, plan: UnifiedPlan, active: SourceBytes[], repo: string,
   readCatalog: typeof readPinnedSourceCatalog = readPinnedSourceCatalog) {
   unifiedPreservationSelection(input, scope.preservationOnlyOwners)
   assert.deepEqual(scope.editorial.owners, ['main'], 'Only the Main-only pilot can omit preservation owners')

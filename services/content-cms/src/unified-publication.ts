@@ -5,7 +5,7 @@ import { artifactFiles, withLocalWorker, withRunLock } from '../../../scripts/de
 import { assertDiskBudget, GiB, treeBytes } from '../../../scripts/desktop-disk-preflight.mjs'
 import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
 import { boundedBody } from '../../../scripts/desktop-version-preview.mjs'
-import { digest } from '../../../scripts/desktop-release-assets.mjs'
+import { digest, withVerificationPass } from '../../../scripts/desktop-release-assets.mjs'
 import { prepareUnifiedAssetPair, unifiedService, unifiedStaticFiles, verifyUnifiedAssetPair } from '../../../scripts/unified-release-assets.mjs'
 import { consumerRequests, ownerBuildTarget, publicFiles, validateConsumerExpectations, validateUnifiedConsumer,
   verifyUnifiedOwnerBuild, type ConsumerExpectation } from './unified-owner-build'
@@ -209,7 +209,7 @@ export async function prepareUnifiedPublication(input: Input, { serve = serveUni
   })
 }
 
-export async function verifyUnifiedPublication(directory: string, publicationPin: string) {
+export async function verifyUnifiedPublication(directory: string, publicationPin: string): Promise<{ directory: string; publicationPin: string; receipt: PublicationReceipt }> {
   const root = path.resolve(directory)
   assert.equal(realpathSync(root), root, 'Linked publication directory forbidden')
   const receipt = pinned<PublicationReceipt>(path.join(root, 'publication.json'), publicationPin)
@@ -220,6 +220,12 @@ export async function verifyUnifiedPublication(directory: string, publicationPin
   assert.deepEqual(receipt.pending, PENDING)
   assert.deepEqual(JSON.parse(bytes(path.join(root, 'state.json')).toString()), { status: 'complete', cloudWrites: false }, 'Partial or failed publication')
   const { built, previous } = await inputs(receipt), build = built.directory
+  return withVerificationPass(() => verifyPublicationArtifacts(root, publicationPin, receipt, built, previous, build))
+}
+
+// Start after module parsing has completed: this pass must never span an await.
+function verifyPublicationArtifacts(root: string, publicationPin: string, receipt: PublicationReceipt,
+  built: Awaited<ReturnType<typeof inputs>>['built'], previous: UnifiedPrevious, build: string) {
   assert.equal(receipt.candidateSHA256, built.receipt.candidateSHA256); assert.equal(receipt.preview, built.receipt.preview)
   assert.deepEqual(Object.keys(receipt.owners).sort(), [...built.frozen.owners].sort(), 'Incomplete publication owner set')
   const baseline = pinned<ConsumerExpectation[]>(path.join(root, 'baseline-expectations.json'), receipt.baselineExpectationsPin)
