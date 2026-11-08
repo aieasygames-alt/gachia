@@ -73,7 +73,11 @@ export function readUnifiedCloudPreviews({ run, directory, pin, value, reference
     }
     const root = join(directory, `${role}-${owner}`);
     unifiedPinnedJSON(join(root, 'version.json'), proof.versionPin);
-    recheckUnifiedPreview(join(root, 'http'), proof.evidenceSHA256, { service: proof.service, versionId: proof.versionId, references: references(owner, role) });
+    const parserVersion = proof.parserVersion ?? 'legacy-v1';
+    assert(['legacy-v1', 'streaming-v2'].includes(parserVersion), 'Unreviewed cloud preview parser');
+    assert.equal(proof.parserPin, parserVersion === 'legacy-v1' ? undefined : unifiedHTMLParserPin(parserVersion), 'Cloud preview parser changed');
+    recheckUnifiedPreview(join(root, 'http'), proof.evidenceSHA256, { service: proof.service, versionId: proof.versionId,
+      references: references(owner, role, parserVersion), parserVersion });
   }
   assert.equal(rows[index].phase, 'all_cloud_previews_accepted_no_promotion'); assert.deepEqual(rows[index].accepted, receipt.accepted);
   return { receipt, directory, pin, baseline: rows[0].baseline };

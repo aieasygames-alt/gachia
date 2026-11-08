@@ -176,6 +176,7 @@ export async function uploadUnifiedProductionPreviews(input: { request: UnifiedP
   assertUnifiedProductionOwnerClosure(evidence.scope)
   const run = evidence.build, directory = path.join(run, `unified-cloud-preview-${evidence.value.transportPin}`)
   assertDiskBudget({ path: run, operation: 'unified cloud preview evidence', estimatedBytes: 2 * GiB })
-  return executeUnifiedPreviewProtocol({ run, directory, transportPin: evidence.value.transportPin, verify: evidence.verify,
-    authorize: async () => input.releaseKey, transport: unifiedProductionTransport({ evidence, token: input.cloudToken, directory }) })
+  const result = await executeUnifiedPreviewProtocol({ run, directory, transportPin: evidence.value.transportPin, verify: evidence.verify,
+    authorize: async () => input.releaseKey, transport: unifiedProductionTransport({ evidence, token: input.cloudToken, directory, parserVersion: 'streaming-v2' }) })
+  return { ...result, sourceCI: evidence.ci, originExecutorCI: evidence.originExecutorCI, executorCI: evidence.executorCI }
 }

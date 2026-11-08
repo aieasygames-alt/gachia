@@ -6,6 +6,7 @@ import test from 'node:test';
 import { SERVICES } from './desktop-cloud-release.mjs';
 import { UNIFIED_OWNERS, unifiedService } from './unified-release-assets.mjs';
 import { executeUnifiedPreviewProtocol } from './unified-preview-protocol.mjs';
+import { unifiedHTMLParserPin } from './unified-version-preview.mjs';
 
 const sha = 'a'.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
 function fixture(t, owners = UNIFIED_OWNERS) {
@@ -34,6 +35,22 @@ for (const owners of [UNIFIED_OWNERS, ['main'], ['azur-promilia', 'main'], ['lvm
   assert.deepEqual(f.calls, ['recovery', 'candidate'].flatMap(role => owners.map(owner => ['upload', owner, role])));
   assert.equal(f.journal().at(-1).phase, 'all_cloud_previews_accepted_no_promotion');
   await assert.rejects(executeUnifiedPreviewProtocol(f.args), /EEXIST/);
+});
+
+for (const fault of ['none', 'unknown', 'pin']) test(`new cloud acceptance binds its reviewed streaming parser: ${fault}`, async t => {
+  const f = fixture(t, ['main']), preview = f.args.transport.preview;
+  f.args.transport.preview = async args => ({ ...await preview(args), parserVersion: fault === 'unknown' ? 'unreviewed' : 'streaming-v2',
+    parserPin: fault === 'pin' ? sha : unifiedHTMLParserPin('streaming-v2') });
+  if (fault === 'none') {
+    const result = await executeUnifiedPreviewProtocol(f.args);
+    for (const role of ['recovery', 'candidate']) {
+      assert.equal(result.accepted[role].main.parserVersion, 'streaming-v2');
+      assert.equal(result.accepted[role].main.parserPin, unifiedHTMLParserPin('streaming-v2'));
+    }
+  } else {
+    await assert.rejects(executeUnifiedPreviewProtocol(f.args), /parser/);
+    assert.equal(f.calls.length, 1); assert.equal(f.journal().at(-1).phase, 'read_only_reconciliation');
+  }
 });
 
 for (const failure of ['fixture', 'empty', 'missing-main', 'unknown-owner', 'missing-owner', 'stale-identity', 'wrong-source', 'missing-source-proof', 'wrong-pin', 'wrong-authorization']) test(`rejects before cloud writes: ${failure}`, async t => {

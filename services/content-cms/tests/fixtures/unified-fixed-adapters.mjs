@@ -11,6 +11,7 @@ import { digest } from '../../../../scripts/desktop-release-assets.mjs';
 import { artifactFiles } from '../../../../scripts/desktop-publish.mjs';
 import { selectUnifiedNextPrevious } from '../../../../scripts/unified-source-advance.mjs';
 import { SERVICES } from '../../../../scripts/desktop-cloud-release.mjs';
+import { unifiedHTMLParserPin } from '../../../../scripts/unified-version-preview.mjs';
 import { prepareProductionSource, sealProductionLocal } from './unified-production-state.mjs';
 
 // Only this child process redirects desktop checkout selection and replaces
@@ -263,7 +264,7 @@ for (const fault of ['none', 'preview', 'module', 'review', 'network', 'topology
   });
 }
 
-for (const fault of ['none', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
+for (const fault of ['none', 'normal-previews', 'normal-preview-legacy', 'normal-preview-parser', 'normal-preview-downgrade', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
   'preflight-ci', 'preflight-handoff', 'preflight-version', 'preflight-settings', 'preflight-metadata', 'preflight-review', 'late-review',
   'preflight-snapshot', 'preflight-guarded-reuse', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt']) {
   test(`private fixed promotion writer produces independently consumable evidence: ${fault}`, async t => {
@@ -286,6 +287,35 @@ for (const fault of ['none', 'completion', 'caller-mutation', 'open-caller-mutat
     s.historyRequest = { schemaVersion: 1, kind: 'unified_historical_publication_request', production: productionProof, audit };
     s.publishedRequest.history = f.save(s.publishedRequest.history.path, s.historyRequest);
     s.historical.request = s.historyRequest; s.historical.scope = scope;
+    if (fault.startsWith('normal-preview')) {
+      const directory = path.join(f.input.run, `unified-cloud-preview-${value.transportPin}`);
+      const accepted = structuredClone(f.input.previews.receipt.accepted);
+      if (fault === 'normal-preview-parser') accepted.candidate.main.parserPin = '0'.repeat(64);
+      for (const role of ['recovery', 'candidate']) cpSync(path.join(f.input.previews.directory, `${role}-main`), path.join(directory, `${role}-main`), { recursive: true });
+      if (fault === 'normal-preview-legacy' || fault === 'normal-preview-downgrade') for (const role of ['recovery', 'candidate']) {
+        delete accepted[role].main.parserVersion; delete accepted[role].main.parserPin;
+        if (fault === 'normal-preview-legacy') {
+          const file = path.join(directory, `${role}-main/http/result.json`), result = JSON.parse(readFileSync(file));
+          delete result.parserVersion; result.parserPin = unifiedHTMLParserPin();
+          accepted[role].main.evidenceSHA256 = f.save(file, result).pin;
+        }
+      }
+      const common = { at: new Date().toISOString(), releaseKey: value.releaseKey, transportPin: value.transportPin };
+      const rows = [{ ...common, phase: 'baseline', baseline: value.baseline, directory }];
+      for (const role of ['recovery', 'candidate']) for (const phase of ['upload_intent', 'upload_response', 'upload_returned', 'preview_accepted']) {
+        rows.push({ ...common, phase, owner: 'main', role, ...(phase === 'preview_accepted' ? { proof: accepted[role].main }
+          : { service: 'gachia', ...(phase === 'upload_intent' ? { moduleSHA256: accepted[role].main.moduleSHA256 } : { versionId: accepted[role].main.versionId }) }) });
+      }
+      rows.push({ ...common, phase: 'all_cloud_previews_accepted_no_promotion', accepted });
+      const raw = rows.map(row => JSON.stringify(row) + '\n').join('');
+      writeFileSync(path.join(f.input.run, `unified-preview-${value.transportPin}.jsonl`), raw);
+      const receipt = { schemaVersion: 1, kind: 'unified_candidate_recovery_cloud_previews', status: 'all_cloud_previews_accepted_no_promotion',
+        transportPin: value.transportPin, releaseKey: value.releaseKey, accepted, journalPin: digest(raw), productionPromoted: false, activationSupported: false };
+      s.previewsProof = f.save(path.join(directory, 'receipt.json'), receipt);
+      s.publishedRequest.previews = s.previewsProof;
+      s.publishedRequest.previewExecution = f.save(s.publishedRequest.previewExecution.path, { ...receipt, directory, receiptPin: s.previewsProof.pin,
+        sourceCI: f.input.sourceCI, originExecutorCI: f.input.originExecutorCI, executorCI: { runID: 4, commit: '4'.repeat(40), runAttempt: 1, status: 'full_exact_ci_passed' } });
+    }
     s.promotionEvidence = true;
     s.onVersion = id => { s.previewRole = id === f.versions.candidate.id ? 'candidate' : 'recovery'; };
     const input = { request: { schemaVersion: 1, kind: 'unified_main_promotion_request', production: structuredClone(productionProof), audit,
@@ -348,7 +378,7 @@ for (const fault of ['none', 'completion', 'caller-mutation', 'open-caller-mutat
     if (fault === 'completion') s.onPromotionOpen = () => {
       if (s.writes && s.publicReads) throw Error('Unified promotion preview expired');
     };
-    if (['none', 'caller-mutation'].includes(fault)) {
+    if (['none', 'normal-previews', 'normal-preview-legacy', 'caller-mutation'].includes(fault)) {
       const result = await promotion.promoteUnifiedMain(input);
       assert.equal(result.status, 'production_accepted'); assert.equal(s.writes, 1);
       assert.deepEqual(result.productionRequest, original.request.production); assert.deepEqual(result.preview, original.request.previews);
@@ -390,7 +420,7 @@ for (const fault of ['none', 'completion', 'caller-mutation', 'open-caller-mutat
       });
       assert.equal(s.writes, ['lost-response', 'public', 'late-review', 'completion'].includes(fault) ? 1 : 0);
       const attempts = readdirSync(f.input.run).filter(name => name.startsWith('unified-main-promotion-') && path.join(f.input.run, name) !== f.directory);
-      assert.equal(attempts.length, fault === 'authorization' || fault.startsWith('preflight-') ? 0 : 1);
+      assert.equal(attempts.length, ['authorization', 'normal-preview-parser', 'normal-preview-downgrade'].includes(fault) || fault.startsWith('preflight-') ? 0 : 1);
       for (const attempt of attempts) assert.equal(existsSync(path.join(f.input.run, attempt, 'receipt.json')), false);
       if (s.writes) {
         const rows = readFileSync(journal, 'utf8').trim().split('\n').map(line => JSON.parse(line));

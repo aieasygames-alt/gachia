@@ -152,13 +152,13 @@ export async function verifyUnifiedHistoricalPublicationEvidence(evidence: Await
 }
 
 export async function readUnifiedHistoricalMainPreviews(evidence: Pick<Awaited<ReturnType<typeof readUnifiedHistoricalPublication>>, 'build' | 'transport' | 'value'>, proof: Proof) {
-  const references = (owner: string, role: string) => {
+  const references = (owner: string, role: string, parserVersion = 'streaming-v2') => {
     assert.equal(owner, 'main'); assert(['candidate', 'recovery'].includes(role))
     const root = path.join(evidence.transport.directory, owner, role, 'http')
     const rows = pinned({ path: path.join(root, 'references.json'), pin: evidence.value.owners.main[role].referencesPin })
     return unifiedPreviewReferences(rows, (row: { bodyFile: string }, index: number) => {
       assert.equal(row.bodyFile, `${index}.body`); return readUnifiedHistoricalBytes(path.join(root, row.bodyFile))
-    }, 'streaming-v2')
+    }, parserVersion)
   }
   const previews = readUnifiedCloudPreviews({ run: evidence.build, directory: path.dirname(proof.path), pin: proof.pin, value: evidence.value, references })
   assert.equal(proof.path, path.join(previews.directory, 'receipt.json'))

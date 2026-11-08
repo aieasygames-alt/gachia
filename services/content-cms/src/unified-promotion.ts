@@ -58,13 +58,12 @@ export async function openUnifiedPromotion(input: { request: UnifiedPromotionReq
   assertTopology(historical.value.baseline, evidence.value.baseline)
   assert.deepEqual({ ...evidence.value, baseline: historical.value.baseline, identityObservedAt: historical.value.identityObservedAt }, historical.value,
     'Live release differs from sealed historical publication')
-  assert.equal(request.previews.path, path.join(evidence.build, `unified-cloud-preview-completion-${evidence.value.transportPin}`, 'receipt.json'))
   const network = pinned(request.network)
   assert.deepEqual(Object.keys(network).sort(), ['kind', 'schemaVersion', 'server'])
   assert.equal(network.schemaVersion, 1); assert.equal(network.kind, 'explicit_loopback_preview_network')
   const server = unifiedPreviewProxy(network.server)
   const { references, previews } = await readUnifiedHistoricalMainPreviews(historical, request.previews)
-  assert.equal(previews.receipt.networkPin, request.network.pin)
+  if (previews.receipt.kind === 'unified_completed_observation_stop_cloud_previews') assert.equal(previews.receipt.networkPin, request.network.pin)
   const target = unifiedTransportTarget('main', readFileSync(path.join(evidence.build, 'source/apps/web/wrangler.jsonc'), 'utf8'))
   const revalidateModule = async (role: string, proof: any) => {
     const row = evidence.value.owners.main[role]

@@ -5,7 +5,7 @@ import { activeVersion, assertTopology, reconcileRelease } from './desktop-cloud
 import { digest } from './desktop-release-assets.mjs';
 import { withRunLock } from './desktop-publish.mjs';
 import { UNIFIED_OWNERS, unifiedService } from './unified-release-assets.mjs';
-import { exactUnifiedPreviewOrigin } from './unified-version-preview.mjs';
+import { exactUnifiedPreviewOrigin, unifiedHTMLParserPin } from './unified-version-preview.mjs';
 
 const SHA = /^[a-f0-9]{64}$/;
 const FRESH_MS = 15 * 60 * 1000;
@@ -87,10 +87,15 @@ export async function executeUnifiedPreviewProtocol({ run, directory, transportP
           const proof = await transport.preview({ directory, owner, role, service, versionId: result.versionId, row: target, inspected });
           assert.equal(proof.status, 'passed'); assert.equal(proof.observationMode, 'cloud_exact_version', 'Local Host checks cannot authorize cloud acceptance');
           assert.equal(proof.service, service); assert.equal(proof.versionId, result.versionId); assert(SHA.test(proof.evidenceSHA256));
+          if (proof.parserVersion !== undefined) {
+            assert.equal(proof.parserVersion, 'streaming-v2', 'Unreviewed cloud preview parser');
+            assert.equal(proof.parserPin, unifiedHTMLParserPin(proof.parserVersion), 'Cloud preview parser changed');
+          }
           await transport.revalidate({ owner, role, service, versionId: result.versionId, row: target, inspected });
           await recheck(); assertTopology(initial.baseline, await transport.snapshot());
           accepted[role][owner] = { service, versionId: result.versionId, moduleSHA256: target.moduleSHA256, artifactPin: target.artifactPin,
-            versionPin: inspected.versionPin, moduleProof: inspected.moduleProof, evidenceSHA256: proof.evidenceSHA256, acceptedAt: Date.now() };
+            versionPin: inspected.versionPin, moduleProof: inspected.moduleProof, evidenceSHA256: proof.evidenceSHA256, acceptedAt: Date.now(),
+            ...(proof.parserVersion === undefined ? {} : { parserVersion: proof.parserVersion, parserPin: proof.parserPin }) };
           record({ phase: 'preview_accepted', owner, role, proof: accepted[role][owner] }); pendingOperation = undefined;
         }
       }
