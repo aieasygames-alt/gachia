@@ -60,7 +60,7 @@ export async function verifyUnifiedMainPublic({ references, directory, request =
       result.observations[index] = { path: reference.path, status: response.status, headers: Object.fromEntries(response.headers),
         sha256: digest(bytes), bytes: bytes.length, bodyFile };
       validateUnifiedMainPublic(response, bytes, reference);
-    });
+    }, 16);
     result.status = 'passed';
   } catch (error) { result.status = 'failed'; result.error = error.message; throw error; }
   finally {

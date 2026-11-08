@@ -6,6 +6,8 @@ import { dirname, join } from 'node:path';
 import test from 'node:test';
 import { prepareUnifiedAssetPair, unifiedService, unifiedStaticFiles, verifyUnifiedAssetPair, UNIFIED_OWNERS } from './unified-release-assets.mjs';
 import { digest } from './desktop-release-assets.mjs';
+import { createArtifactVerificationSession, guardedArtifactInventory } from './artifact-verification-session.mjs';
+import { artifactFiles } from './desktop-publish.mjs';
 
 function fixture(t, owner = 'main') {
   const root = realpathSync(mkdtempSync(join(tmpdir(), 'unified-asset-pair-')));
@@ -108,4 +110,63 @@ test('pair check rejects same-size same-mtime changes after success and discards
   writeFileSync(file, original); utimesSync(file, stat.atime, stat.mtime); f.check();
   f.write('forward/added-after-success', 'new'); assert.throws(f.check, /unauthorized non-static change/);
   rmSync(join(f.input.forward, 'added-after-success')); f.check();
+});
+
+test('operation inventory reuse rechecks ctime, replacements, nested additions, removals and hardlink edits', async t => {
+  const f = fixture(t), session = createArtifactVerificationSession();
+  const file = join(f.input.previous, 'assets/data/game/raw-characters.json'), original = readFileSync(file), stat = statSync(file);
+  let reads = 0;
+  const read = () => guardedArtifactInventory(f.input.previous, () => { reads++; return artifactFiles(f.input.previous); });
+  const first = await session.run(read); first[0].path = 'caller-mutated';
+  await Promise.resolve();
+  assert.notEqual((await session.run(read))[0].path, 'caller-mutated'); assert.equal(reads, 1);
+  writeFileSync(file, original.toString().replace('old', 'bad')); utimesSync(file, stat.atime, stat.mtime);
+  const changed = await session.run(read); assert.equal(reads, 2);
+  assert.equal(changed.find(row => row.path === 'assets/data/game/raw-characters.json').sha256, digest(readFileSync(file)));
+  rmSync(file); writeFileSync(file, original); utimesSync(file, stat.atime, stat.mtime);
+  await session.run(read); assert.equal(reads, 3);
+  f.write('old/assets/nested/new.txt', 'added');
+  assert((await session.run(read)).some(row => row.path === 'assets/nested/new.txt')); assert.equal(reads, 4);
+  rmSync(join(f.input.previous, 'assets/nested/new.txt'));
+  assert(!(await session.run(read)).some(row => row.path === 'assets/nested/new.txt')); assert.equal(reads, 5);
+  const alias = join(f.root, 'hardlink'); fs.linkSync(file, alias);
+  await session.run(read); const beforeEdit = reads;
+  writeFileSync(alias, original.toString().replace('old', 'bad')); utimesSync(file, stat.atime, stat.mtime);
+  await session.run(read); assert.equal(reads, beforeEdit + 1);
+});
+
+test('inventory sessions reject changing reads, discard failures and isolate overlapping operations', async t => {
+  const f = fixture(t), failed = createArtifactVerificationSession();
+  await assert.rejects(failed.run(() => guardedArtifactInventory(f.input.previous, () => {
+    const result = artifactFiles(f.input.previous); f.write('old/changed-during-read', 'changed'); return result;
+  })), /changed while/);
+  await assert.rejects(failed.run(() => artifactFiles(f.input.previous)), /failed/);
+  let release;
+  const gate = new Promise(resolve => { release = resolve; }), a = createArtifactVerificationSession(), b = createArtifactVerificationSession();
+  let reads = 0;
+  const read = () => guardedArtifactInventory(f.input.previous, () => { reads++; return artifactFiles(f.input.previous); });
+  const pending = a.run(async () => { read(); await gate; read(); });
+  await assert.rejects(a.run(read), /busy/);
+  await b.run(read); assert.equal(reads, 2);
+  release(); await pending; assert.equal(reads, 2);
+  read(); assert.equal(reads, 3);
+});
+
+test('a link introduced after inventory reuse is checked by the original portability verifier', async t => {
+  const f = fixture(t), session = createArtifactVerificationSession();
+  await session.run(() => artifactFiles(f.input.previous));
+  symlinkSync('/outside', join(f.input.previous, 'unsafe'));
+  await assert.rejects(session.run(() => artifactFiles(f.input.previous)), /Non-portable artifact link/);
+});
+
+test('portable links participate in reuse and target/content changes invalidate their inventory', async t => {
+  const f = fixture(t), session = createArtifactVerificationSession();
+  symlinkSync('assets/data/game/raw-characters.json', join(f.input.previous, 'portable'));
+  let reads = 0;
+  const read = () => guardedArtifactInventory(f.input.previous, () => { reads++; return artifactFiles(f.input.previous); });
+  await session.run(read); await session.run(read); assert.equal(reads, 1);
+  f.write('old/assets/data/game/raw-characters.json', '{"role":"changed"}');
+  await session.run(read); assert.equal(reads, 2);
+  rmSync(join(f.input.previous, 'portable')); symlinkSync('worker.js', join(f.input.previous, 'portable'));
+  assert.equal((await session.run(read)).find(row => row.path === 'portable').target, 'worker.js'); assert.equal(reads, 3);
 });

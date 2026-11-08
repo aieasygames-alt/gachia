@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import childProcess from 'node:child_process';
-import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, statSync, utimesSync, writeFileSync } from 'node:fs';
 import { syncBuiltinESMExports } from 'node:module';
 import path from 'node:path';
 import test, { mock } from 'node:test';
@@ -265,7 +265,7 @@ for (const fault of ['none', 'preview', 'module', 'review', 'network', 'topology
 
 for (const fault of ['none', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
   'preflight-ci', 'preflight-handoff', 'preflight-version', 'preflight-settings', 'preflight-metadata', 'preflight-review', 'late-review',
-  'preflight-snapshot', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt']) {
+  'preflight-snapshot', 'preflight-guarded-reuse', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt']) {
   test(`private fixed promotion writer produces independently consumable evidence: ${fault}`, async t => {
     const network = { schemaVersion: 1, kind: 'explicit_loopback_preview_network', server: 'http://127.0.0.1:7890' };
     const s = await fixture(t, { networkPin: digest(JSON.stringify(network, null, 2) + '\n'), productionState: true }), f = s.f, value = f.input.value;
@@ -306,15 +306,26 @@ for (const fault of ['none', 'completion', 'caller-mutation', 'open-caller-mutat
       assert.equal(s.writes, 0); assert.equal(existsSync(journal), false);
       return;
     }
-    if (fault === 'preflight-snapshot') {
+    if (['preflight-snapshot', 'preflight-guarded-reuse'].includes(fault)) {
       const request = structuredClone({ ...productionRequest, executorRunID: 5 });
       const options = { originExecutor: { runID: 2, commit: '2'.repeat(40) } };
       s.onExecutorCI = () => { request.sourceHandoff.pin = '0'.repeat(64); options.originExecutor.runID = 999; options.originExecutor.commit = '9'.repeat(40); };
       const evidence = await production.createUnifiedProductionVerifier(request, input, options);
+      assert.equal(s.localPreflights, 1, 'Initialization must perform one complete local preflight');
       assert.equal(evidence.value.releaseKey, value.releaseKey);
       assert.deepEqual(evidence.originExecutorCI, f.input.originExecutorCI);
+      const identities = s.versionReads;
       assert.equal((await evidence.verify()).releaseKey, value.releaseKey);
+      assert.equal(s.localPreflights, 2, 'Current CMS/local checks must run at each boundary');
+      assert(s.versionReads >= identities + 5, 'Every owner immutable identity must be read again');
       assert.equal(s.ciReads.includes(999), false); assert.equal(s.writes, 0);
+      if (fault === 'preflight-guarded-reuse') {
+        const file = path.join(s.s.spec.owners.nte.directory, 'worker.js'), original = readFileSync(file), stat = statSync(file);
+        writeFileSync(file, Buffer.concat([original.subarray(0, -1), Buffer.from('!')])); utimesSync(file, stat.atime, stat.mtime);
+        await assert.rejects(evidence.verify(), /artifact|module|changed|differs/i);
+        writeFileSync(file, original); utimesSync(file, stat.atime, stat.mtime);
+        await assert.rejects(evidence.verify(), /session is busy or failed/);
+      }
       return;
     }
     if (fault === 'caller-mutation') s.onPromotionOpen = () => {

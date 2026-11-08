@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
+import { createArtifactVerificationSession } from '../../../scripts/artifact-verification-session.mjs'
 import { assertTopology, desktopCloudSnapshot } from '../../../scripts/desktop-cloud-release.mjs'
 import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
 import { digest } from '../../../scripts/desktop-release-assets.mjs'
@@ -23,19 +24,18 @@ export async function verifyUnifiedProductionState(request: UnifiedProductionReq
   options: { originExecutor?: { runID: number; commit: string } }) {
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
-  const local = await verifyUnifiedProductionLocal(request, cmsToken)
-  const ci = await verifyUnifiedCI(request.sourceRunID, local.built.frozen.sourceCommit, githubToken)
+  const artifacts = createArtifactVerificationSession()
   const executorCI = executor.executorCI
   // Keep the original release identity while independently checking the current executor.
   const originExecutorCI = options.originExecutor ? await verifyUnifiedCI(options.originExecutor.runID, options.originExecutor.commit, githubToken) : executorCI
   const handoff = pinned<Record<string, any>>(request.sourceHandoff)
   const baseline = await desktopCloudSnapshot(cloudToken, unifiedProductionRead)
-  const previous = pinned({ path: local.publication.previousPath, pin: local.publication.previousPin })
   const { verifyUnifiedProductionSources } = await import('./unified-source-advance')
-  const verify = async () => {
+  const check = () => artifacts.run(async () => {
     executor.verify()
     assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed')
     const fresh = await verifyUnifiedProductionLocal(request, cmsToken)
+    const previous = pinned({ path: fresh.publication.previousPath, pin: fresh.publication.previousPin })
     const sources = await verifyUnifiedProductionSources(request.sourceHandoff, { baseline, active: pinned(request.active),
       frozen: fresh.built.frozen, previous }, { githubToken, cloudToken })
     const identityObservedAt = Date.now()
@@ -53,10 +53,10 @@ export async function verifyUnifiedProductionState(request: UnifiedProductionReq
       const target = unifiedTransportTarget(owner, readFileSync(path.join(fresh.build, 'source/apps', owner === 'main' ? 'web' : `game-${owner}`, 'wrangler.jsonc'), 'utf8'))
       const metadata = (await multipartModule(readFileSync(path.join(fresh.transport.directory, owner, 'recovery/exact.multipart')))).metadata
       assertUnifiedOwnerSettings(owner, target, metadata, baseline)
-      assert.equal(local.publication.owners[owner].sourceVersionId, old.versionId)
+      assert.equal(fresh.publication.owners[owner].sourceVersionId, old.versionId)
       owners[owner] = { service, sourceVersionId: old.versionId, sourceIdentityPin: sources.owners[owner].sourceIdentityPin,
         ...Object.fromEntries(['candidate', 'recovery'].map(role => [role, { moduleSHA256: sealed[role as 'candidate' | 'recovery'].moduleSHA256,
-          configPin: sealed[role as 'candidate' | 'recovery'].uploadConfigPin, artifactPin: local.publication.owners[owner][role].artifactSHA256,
+          configPin: sealed[role as 'candidate' | 'recovery'].uploadConfigPin, artifactPin: fresh.publication.owners[owner][role].artifactSHA256,
           referencesPin: sealed[role as 'candidate' | 'recovery'].referencesPin }])) }
       if (fresh.preservation?.[owner]) preservedOwners[owner] = bindUnifiedPreservedRuntime(fresh.preservation[owner],
         { ...owners[owner], moduleSHA256: source.moduleSHA256 }, baseline)
@@ -67,13 +67,17 @@ export async function verifyUnifiedProductionState(request: UnifiedProductionReq
       ...(fresh.preservation ? { preservation: request.preservation!.pin, preservedOwners } : {}) }))
     if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
     executor.verify()
-    return { preview: false, transportPin: fresh.transport.transportPin, releaseKey, changed: fresh.built.frozen.candidate.changed,
+    return { local: fresh, value: { preview: false, transportPin: fresh.transport.transportPin, releaseKey, changed: fresh.built.frozen.candidate.changed,
       ownerOrder: scope.uploadOwners, owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])),
-      preservedOwners, baseline, identityObservedAt }
-  }
-  const value = await verify(); assertUnifiedPreviewUploadScope(value, value.transportPin)
+      preservedOwners, baseline, identityObservedAt } }
+  })
+  const { local, value } = await check()
+  const ci = await verifyUnifiedCI(request.sourceRunID, local.built.frozen.sourceCommit, githubToken)
   assertTopology(baseline, await desktopCloudSnapshot(cloudToken, unifiedProductionRead))
+  assertUnifiedPreviewUploadScope(value, value.transportPin)
+  if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
   executor.verify()
   const scope = local.preservation ? closeUnifiedProductionOwnerScope(local.scope, value.preservedOwners) : local.scope
+  const verify = async () => (await check()).value
   return { ...local, scope, ci, executorCI, originExecutorCI, baseline, value, verify }
 }

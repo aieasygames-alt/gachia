@@ -22,10 +22,11 @@ export function readRetryFetch(request, { pause = ms => new Promise(resolve => s
   };
 }
 
-export async function sampleReadOnly(items, sample) {
+export async function sampleReadOnly(items, sample, concurrency = 4) {
+  assert(Number.isSafeInteger(concurrency) && concurrency >= 1 && concurrency <= 16, 'Invalid read-only sampling concurrency');
   let next = 0, failed;
   // Only reads overlap. All active writers settle before a failure is returned.
-  await Promise.all(Array.from({ length: Math.min(4, items.length) }, async () => {
+  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, async () => {
     while (!failed && next < items.length) {
       const index = next++;
       try { await sample(items[index], index); } catch (error) { failed ??= { error }; }

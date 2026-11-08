@@ -164,6 +164,36 @@ test('cloud snapshot uses GET only and strips secret values before persistence',
   assertTopology(result, result);
 });
 
+test('cloud snapshot overlaps at most four service reads and preserves service ordering', async () => {
+  let active = 0, peak = 0, completed = 0;
+  const result = await desktopCloudSnapshot('test', async (url, options) => {
+    assert.equal(options.method, 'GET'); peak = Math.max(peak, ++active);
+    await new Promise(resolve => setImmediate(resolve));
+    active--; completed++;
+    let result = [];
+    if (url.endsWith('/deployments')) result = { deployments: [snapshot().services.gachia] };
+    if (url.endsWith('/settings')) result = { bindings: [] };
+    if (url.endsWith('/subdomain')) result = { enabled: true };
+    if (url.endsWith('/scripts')) result = SERVICES.map(id => ({ id }));
+    return Response.json({ success: true, result });
+  });
+  assert.equal(peak, 4); assert.equal(active, 0); assert.equal(completed, SERVICES.length * 3 + 3);
+  for (const field of ['services', 'settings', 'bindings', 'subdomains']) assert.deepEqual(Object.keys(result[field]), SERVICES);
+});
+
+test('failed snapshot drains all in-flight reads before returning and starts no further services', async () => {
+  let active = 0, deployments = 0;
+  await assert.rejects(desktopCloudSnapshot('test', async url => {
+    active++; await new Promise(resolve => setImmediate(resolve)); active--;
+    if (url.endsWith('/deployments')) {
+      deployments++; if (url.includes('/gachia/')) return Response.json({ success: false }, { status: 503 });
+      return Response.json({ success: true, result: { deployments: [snapshot().services.gachia] } });
+    }
+    return Response.json({ success: true, result: url.endsWith('/settings') ? { bindings: [] } : { enabled: true } });
+  }), /503/);
+  assert.equal(active, 0); assert.equal(deployments, 4);
+});
+
 test('read-only diagnostics preserve split deployments while strict preflight still rejects them', async () => {
   const request = async (url, options) => {
     assert.equal(options.method, 'GET'); let result = [];

@@ -10,6 +10,7 @@ import { verifyPreservedGuides } from './desktop-source-catalog.mjs';
 import { verifiedInPass, withVerificationPass } from './desktop-release-assets.mjs';
 import { CMS_GUIDE_ORIGIN, GUIDE_TEXT_FIELDS, validateNewGuide } from './desktop-guide-contract.mjs';
 import { assertDiskBudget, BUILD_TEMP_BUDGET, GiB } from './desktop-disk-preflight.mjs';
+import { guardedArtifactInventory } from './artifact-verification-session.mjs';
 
 const hash = value => createHash('sha256').update(value).digest('hex');
 const SHA = /^[a-f0-9]{64}$/;
@@ -264,7 +265,7 @@ async function buildUnlocked(run, pin, { diskProbe, execute }) {
 }
 
 export function artifactFiles(root) {
-  return verifiedInPass(artifactFiles, resolve(root), () => readArtifactFiles(root));
+  return verifiedInPass(artifactFiles, resolve(root), () => guardedArtifactInventory(root, () => readArtifactFiles(root)));
 }
 
 function readArtifactFiles(root) {

@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { digest, verifyRetainedCandidate } from './desktop-release-assets.mjs';
 import { withRunLock } from './desktop-publish.mjs';
 import { assertReleaseScope } from './desktop-release-scope.mjs';
+import { sampleReadOnly } from './desktop-version-preview.mjs';
 
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const SHA = /^[a-f0-9]{64}$/;
@@ -19,15 +20,20 @@ export async function desktopCloudSnapshot(token, request = fetch, { allowSplit 
     return body.result;
   };
   const snapshot = { services: {}, settings: {}, bindings: {}, subdomains: {} };
-  for (const service of SERVICES) {
+  const rows = [];
+  await sampleReadOnly(SERVICES, async (service, index) => {
     const base = `${account}/workers/scripts/${service}`;
-    snapshot.services[service] = (await get(base + '/deployments')).deployments.toSorted((a, b) => Date.parse(a.created_on) - Date.parse(b.created_on)).at(-1);
-    if (!allowSplit) activeVersion(snapshot, service);
+    const deployment = (await get(base + '/deployments')).deployments.toSorted((a, b) => Date.parse(a.created_on) - Date.parse(b.created_on)).at(-1);
+    if (!allowSplit) activeVersion({ services: { [service]: deployment } }, service);
     const settings = await get(base + '/settings');
     settings.bindings = settings.bindings.map(binding => binding.type === 'secret_text' ? { type: binding.type, name: binding.name } : binding);
-    snapshot.settings[service] = settings;
-    snapshot.bindings[service] = settings.bindings;
-    snapshot.subdomains[service] = await get(base + '/subdomain');
+    rows[index] = { deployment, settings, subdomain: await get(base + '/subdomain') };
+  });
+  for (const [index, service] of SERVICES.entries()) {
+    snapshot.services[service] = rows[index].deployment;
+    snapshot.settings[service] = rows[index].settings;
+    snapshot.bindings[service] = rows[index].settings.bindings;
+    snapshot.subdomains[service] = rows[index].subdomain;
   }
   snapshot.scripts = (await get(`${account}/workers/scripts`)).map(row => row.id).sort();
   snapshot.routes = await get('zones/9ebfe7f1aeb7225947a1fc50c0deffc8/workers/routes');

@@ -43,3 +43,20 @@ test('sample failure stops scheduling and waits for active siblings', async () =
   }), /failed/);
   assert.equal(started, 4); assert.equal(completed, 4);
 });
+
+test('unified sampling permits sixteen bounded reads, keeps indices and drains failures', async () => {
+  let active = 0, peak = 0;
+  const result = [];
+  await sampleReadOnly(Array.from({ length: 35 }, (_, i) => i), async (item, index) => {
+    peak = Math.max(peak, ++active); await new Promise(resolve => setImmediate(resolve));
+    result[index] = item; active--;
+  }, 16);
+  assert.equal(peak, 16); assert.equal(active, 0); assert.deepEqual(result, Array.from({ length: 35 }, (_, i) => i));
+  let completed = 0, started = 0;
+  await assert.rejects(sampleReadOnly(Array(40), async (_, index) => {
+    started++; await new Promise(resolve => setImmediate(resolve)); completed++;
+    if (index === 0) throw Error('failed');
+  }, 16), /failed/);
+  assert.equal(started, 16); assert.equal(completed, 16);
+  for (const limit of [0, -1, 17, Infinity, 1.5, '16']) await assert.rejects(sampleReadOnly([], () => {}, limit), /concurrency/);
+});

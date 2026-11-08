@@ -100,7 +100,7 @@ export async function verifyUnifiedVersionPreview({ service, versionId, referenc
       result.observations[index] = { path: reference.path, status: response.status, headers: Object.fromEntries(response.headers),
         sha256: digest(bytes), bytes: bytes.length, bodyFile };
       validateUnifiedPreviewResponse({ response, bytes, reference, parserVersion });
-    });
+    }, 16);
     result.status = 'passed';
   } catch (error) { result.status = 'failed'; result.error = error.message; throw error; }
   finally {
