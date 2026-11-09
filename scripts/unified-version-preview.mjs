@@ -36,10 +36,26 @@ export function unifiedPreviewPath(path, origin) {
 }
 
 export function unifiedPageFingerprints(rows, parserVersion = 'legacy-v1') {
-  assert(rows.length > 0 && rows.every(row => typeof row.html === 'string' && Buffer.byteLength(row.html) <= 16 * 1024 * 1024));
-  const output = execFileSync('python3', ['-B', parserPath(parserVersion)], { input: JSON.stringify(rows), timeout: 30000,
-    maxBuffer: 32 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
-  const result = JSON.parse(output.toString()); assert.equal(result.length, rows.length); return result;
+  const executable = parserPath(parserVersion);
+  assert(Array.isArray(rows) && rows.length > 0 && rows.length <= 2500 &&
+    rows.every(row => row && typeof row.html === 'string' && Buffer.byteLength(row.html) <= 16 * 1024 * 1024));
+  const result = [];
+  let batch = [], bytes = 2;
+  const flush = () => {
+    const output = execFileSync('python3', ['-B', executable], { input: `[${batch.join(',')}]`, timeout: 30000,
+      maxBuffer: 32 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
+    const parsed = JSON.parse(output.toString()); assert(Array.isArray(parsed)); assert.equal(parsed.length, batch.length);
+    result.push(...parsed); batch = []; bytes = 2;
+  };
+  // Bound aggregate parsing work without changing either versioned parser.
+  // An individually valid large page is processed alone, never truncated.
+  for (const row of rows) {
+    const encoded = JSON.stringify(row), size = Buffer.byteLength(encoded);
+    if (batch.length && (batch.length >= 32 || bytes + 1 + size > 4 * 1024 * 1024)) flush();
+    bytes += size + (batch.length ? 1 : 0); batch.push(encoded);
+  }
+  if (batch.length) flush();
+  return result;
 }
 
 const mime = headers => new Headers(headers).get('content-type')?.split(';')[0].trim().toLowerCase();

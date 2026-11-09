@@ -265,7 +265,7 @@ for (const fault of ['none', 'preview', 'module', 'review', 'network', 'topology
   });
 }
 
-for (const fault of ['none', 'reconciled', 'preflight-reconciled-ci', 'preflight-reconciled-input', 'normal-previews', 'normal-preview-legacy', 'normal-preview-parser', 'normal-preview-downgrade', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
+for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-reconciled-ci', 'preflight-reconciled-input', 'normal-previews', 'normal-preview-legacy', 'normal-preview-parser', 'normal-preview-downgrade', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
   'preflight-ci', 'preflight-handoff', 'preflight-version', 'preflight-settings', 'preflight-metadata', 'preflight-review', 'late-review',
   'preflight-snapshot', 'preflight-guarded-reuse', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt']) {
   test(`private fixed promotion writer produces independently consumable evidence: ${fault}`, async t => {
@@ -289,7 +289,7 @@ for (const fault of ['none', 'reconciled', 'preflight-reconciled-ci', 'preflight
     s.publishedRequest.history = f.save(s.publishedRequest.history.path, s.historyRequest);
     s.historical.request = s.historyRequest; s.historical.scope = scope;
     if (fault.includes('reconciled')) {
-      const pair = uploadedPairHistoryFixture(f, digest(JSON.stringify(network, null, 2) + '\n'));
+      const pair = uploadedPairHistoryFixture(f, digest(JSON.stringify(network, null, 2) + '\n'), { continued: fault === 'reconciled-continued' });
       const executorCI = { runID: 4, commit: '4'.repeat(40), runAttempt: 1, status: 'full_exact_ci_passed' };
       const originalProduction = f.save(path.join(s.s.root, 'original-upload-request.json'), { ...productionRequest,
         ...(fault === 'preflight-reconciled-input' ? { sourceRunID: 3 } : {}) });
@@ -396,7 +396,7 @@ for (const fault of ['none', 'reconciled', 'preflight-reconciled-ci', 'preflight
     if (fault === 'completion') s.onPromotionOpen = () => {
       if (s.writes && s.publicReads) throw Error('Unified promotion preview expired');
     };
-    if (['none', 'reconciled', 'normal-previews', 'normal-preview-legacy', 'caller-mutation'].includes(fault)) {
+    if (['none', 'reconciled', 'reconciled-continued', 'normal-previews', 'normal-preview-legacy', 'caller-mutation'].includes(fault)) {
       const result = await promotion.promoteUnifiedMain(input);
       assert.equal(result.status, 'production_accepted'); assert.equal(s.writes, 1);
       assert.deepEqual(result.productionRequest, original.request.production); assert.deepEqual(result.preview, original.request.previews);
@@ -408,7 +408,7 @@ for (const fault of ['none', 'reconciled', 'preflight-reconciled-ci', 'preflight
       assert.equal(opened.value.owners.main.versionId, f.versions.candidate.id);
       assert.equal(s.writes, 1);
       assert(s.localPreflights > 2); for (const runID of [1, 2, 5]) assert(s.ciReads.includes(runID));
-      if (fault === 'none' || fault === 'reconciled') {
+      if (['none', 'reconciled', 'reconciled-continued'].includes(fault)) {
         const next = await advance(s, 'baseline', advanced.proof), request = nextBuild(s, next);
         s.output = path.join(s.s.root, 'promoted-next-preparation');
         const prepared = await source.prepareUnifiedNextPublication({ request, directory: s.output });

@@ -22,6 +22,16 @@ test('uploaded pair request explicitly separates original production, fresh sour
   const value = request(); assert.deepEqual(unifiedUploadedPairRequest(value), value)
 })
 
+test('continuation requires three explicit pinned proofs and cannot supply retry options', () => {
+  const value = { ...request(), completionStop: { journal: proof, recovery: proof, candidate: proof } }
+  assert.deepEqual(unifiedUploadedPairRequest(value), value)
+  for (const completionStop of [undefined, null, {}, { ...value.completionStop, retry: true },
+    { ...value.completionStop, candidate: { path: 'relative', pin: proof.pin } },
+    { ...value.completionStop, journal: { ...proof, pin: 'invalid' } }]) {
+    assert.throws(() => unifiedUploadedPairRequest({ ...value, completionStop }))
+  }
+})
+
 for (const fault of ['audit', 'writer', 'missing-source', 'old-kind', 'bad-commit', 'bad-run', 'relative', 'bad-pin', 'missing-module', 'extra-proof']) {
   test(`uploaded pair request rejects ${fault}`, () => {
     const value = request() as any

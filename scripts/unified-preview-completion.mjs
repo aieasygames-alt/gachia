@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { appendFileSync, mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { assertTopology, reconcileRelease } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
@@ -83,6 +83,48 @@ export function readUnifiedUploadedPairStop({ run, stop, value, references }) {
   return { stop, existing, historicalOnly: true, cloudWrites: false };
 }
 
+export function readUnifiedUploadedPairCompletionStop({ run, completionStop, stop, value, references }) {
+  const original = readUnifiedUploadedPairStop({ run, stop, value, references });
+  assert.deepEqual(Object.keys(completionStop).sort(), ['candidate', 'journal', 'recovery']);
+  for (const proof of Object.values(completionStop)) assert.deepEqual(Object.keys(proof).sort(), ['path', 'pin']);
+  const root = join(run, `unified-cloud-uploaded-pair-completion-${value.transportPin}`);
+  assert.equal(completionStop.journal.path, join(run, `unified-uploaded-pair-completion-${value.transportPin}.jsonl`));
+  assert(!existsSync(join(root, 'receipt.json')), 'Completed attempt cannot be continued');
+  const raw = pinned(completionStop.journal.path, completionStop.journal.pin);
+  assert(raw.toString().endsWith('\n'));
+  const rows = raw.toString().trimEnd().split('\n').map(JSON.parse);
+  assert.deepEqual(rows.map(row => row.phase), ['baseline', 'observation_intent', 'preview_accepted', 'observation_intent', 'stopped']);
+  let at = -Infinity;
+  for (const row of rows) {
+    assert.equal(row.releaseKey, value.releaseKey); assert.equal(row.transportPin, value.transportPin);
+    assert.equal(row.stopPin, unifiedUploadedPairStopPin(stop));
+    assert.equal(row.completionStop, undefined, 'Recursive continuation forbidden');
+    const time = Date.parse(row.at); assert(time >= at && time <= Date.now()); at = time;
+  }
+  assert.equal(rows[0].directory, root); assertTopology(rows[0].baseline, value.baseline);
+  assert.deepEqual(rows[0].stop, stop); assert(SHA.test(rows[0].networkPin));
+  const stopped = rows[4];
+  assert.equal(stopped.error, 'spawnSync python3 ETIMEDOUT');
+  for (const key of ['cloudWrites', 'automaticRetry', 'automaticRollback']) assert.equal(stopped[key], false);
+  for (const [index, role] of ['recovery', 'candidate'].entries()) {
+    const old = original.existing[role], directory = join(root, `${role}-main`), intent = rows[index === 0 ? 1 : 3];
+    assert.equal(intent.role, role); assert.equal(intent.versionId, old.versionId);
+    assert.equal(completionStop[role].path, join(directory, 'http/result.json'));
+    pinned(completionStop[role].path, completionStop[role].pin);
+    assert.equal(JSON.parse(pinned(join(directory, 'version.json'), old.inspected.versionPin)).id, old.versionId);
+    recheckUnifiedPreview(join(directory, 'http'), completionStop[role].pin, { service: 'gachia', versionId: old.versionId,
+      references: references('main', role, 'streaming-v2'), parserVersion: 'streaming-v2' });
+  }
+  const proof = rows[2].proof, old = original.existing.recovery;
+  assert.equal(rows[2].role, 'recovery');
+  assert(Number.isSafeInteger(proof.acceptedAt) && proof.acceptedAt >= Date.parse(rows[1].at) && proof.acceptedAt <= Date.parse(rows[2].at));
+  assert.deepEqual(proof, { service: 'gachia', versionId: old.versionId, moduleSHA256: value.owners.main.recovery.moduleSHA256,
+    artifactPin: value.owners.main.recovery.artifactPin, versionPin: old.inspected.versionPin, moduleProof: old.inspected.moduleProof,
+    evidenceSHA256: completionStop.recovery.pin, parserVersion: 'streaming-v2', parserPin: unifiedHTMLParserPin('streaming-v2'), acceptedAt: proof.acceptedAt });
+  assert.deepEqual(stopped.accepted, { recovery: { main: proof }, candidate: {} });
+  return { ...original, completionStop };
+}
+
 // Trusted fixed adapters must verify current CMS/source state and immutable
 // modules. This protocol deliberately has no upload or deployment adapter.
 export async function executeUnifiedUploadedPairCompletion({ run, verify, authorize, transport }) {
@@ -92,11 +134,13 @@ export async function executeUnifiedUploadedPairCompletion({ run, verify, author
     assert.deepEqual(initial.ownerOrder, ['main']); assert(SHA.test(initial.stopPin) && SHA.test(initial.networkPin));
     assert.equal(initial.stopPin, unifiedUploadedPairStopPin(initial.stop));
     assert.equal(await authorize(initial), initial.releaseKey);
-    const directory = join(run, `unified-cloud-uploaded-pair-completion-${initial.transportPin}`);
-    const journal = join(run, `unified-uploaded-pair-completion-${initial.transportPin}.jsonl`);
+    const suffix = initial.completionStop === undefined ? '' : '-continued';
+    const ancestry = initial.completionStop === undefined ? {} : { completionStop: initial.completionStop };
+    const directory = join(run, `unified-cloud-uploaded-pair-completion-${initial.transportPin}${suffix}`);
+    const journal = join(run, `unified-uploaded-pair-completion-${initial.transportPin}${suffix}.jsonl`);
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = row => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), releaseKey: initial.releaseKey,
-      transportPin: initial.transportPin, stopPin: initial.stopPin, ...row }) + '\n', { flush: true });
+      transportPin: initial.transportPin, stopPin: initial.stopPin, ...ancestry, ...row }) + '\n', { flush: true });
     const accepted = { recovery: {}, candidate: {} }; let lastAt = initial.identityObservedAt;
     const recheck = async () => {
       const current = await verify(); assertUnifiedPreviewUploadScope(current, initial.transportPin);
@@ -136,7 +180,7 @@ export async function executeUnifiedUploadedPairCompletion({ run, verify, author
       record({ phase: 'all_cloud_previews_accepted_no_promotion', accepted });
       const receipt = { schemaVersion: 1, kind: 'unified_readonly_uploaded_pair_cloud_previews', status: 'all_cloud_previews_accepted_no_promotion',
         releaseKey: initial.releaseKey, transportPin: initial.transportPin, stop: initial.stop, stopPin: initial.stopPin,
-        networkPin: initial.networkPin, accepted, journalPin: digest(readFileSync(journal)), cloudWrites: false,
+        networkPin: initial.networkPin, ...ancestry, accepted, journalPin: digest(readFileSync(journal)), cloudWrites: false,
         productionPromoted: false, activationSupported: false };
       const raw = JSON.stringify(receipt, null, 2) + '\n'; writeFileSync(join(directory, 'receipt.json'), raw, { flag: 'wx', mode: 0o600 });
       return { directory, receiptPin: digest(raw), ...receipt };

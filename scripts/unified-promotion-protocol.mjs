@@ -5,7 +5,7 @@ import { assertTopology, reconcileRelease } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { withRunLock } from './desktop-publish.mjs';
 import { assertUnifiedPreviewIdentity, assertUnifiedPreviewUploadScope } from './unified-preview-protocol.mjs';
-import { readUnifiedObservationStop, readUnifiedUploadedPairStop, unifiedUploadedPairStopPin } from './unified-preview-completion.mjs';
+import { readUnifiedObservationStop, readUnifiedUploadedPairStop, readUnifiedUploadedPairCompletionStop, unifiedUploadedPairStopPin } from './unified-preview-completion.mjs';
 import { exactUnifiedPreviewOrigin, recheckUnifiedPreview, unifiedHTMLParserPin } from './unified-version-preview.mjs';
 
 const SHA = /^[a-f0-9]{64}$/;
@@ -85,19 +85,22 @@ export function readUnifiedCloudPreviews({ run, directory, pin, value, reference
 }
 
 function readUploadedPairCompletion({ run, directory, pin, value, references, receipt }) {
-  assert.equal(directory, join(run, `unified-cloud-uploaded-pair-completion-${value.transportPin}`));
+  const suffix = receipt.completionStop === undefined ? '' : '-continued';
+  assert.equal(directory, join(run, `unified-cloud-uploaded-pair-completion-${value.transportPin}${suffix}`));
   assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.status, 'all_cloud_previews_accepted_no_promotion');
   assert.equal(receipt.transportPin, value.transportPin); assert.equal(receipt.releaseKey, value.releaseKey);
   assert.equal(receipt.cloudWrites, false); assert.equal(receipt.productionPromoted, false); assert.equal(receipt.activationSupported, false);
   assert(SHA.test(receipt.networkPin)); assert.equal(receipt.stopPin, unifiedUploadedPairStopPin(receipt.stop));
-  const original = readUnifiedUploadedPairStop({ run, stop: receipt.stop, value, references });
-  const raw = readFileSync(join(run, `unified-uploaded-pair-completion-${value.transportPin}.jsonl`));
+  const original = receipt.completionStop === undefined ? readUnifiedUploadedPairStop({ run, stop: receipt.stop, value, references }) :
+    readUnifiedUploadedPairCompletionStop({ run, completionStop: receipt.completionStop, stop: receipt.stop, value, references });
+  const raw = readFileSync(join(run, `unified-uploaded-pair-completion-${value.transportPin}${suffix}.jsonl`));
   assert.equal(digest(raw), receipt.journalPin); assert(raw.length <= 16 * 1024 * 1024 && raw.toString().endsWith('\n'));
   const rows = raw.toString().trimEnd().split('\n').map(JSON.parse);
   assert.deepEqual(rows.map(row => row.phase), ['baseline', 'observation_intent', 'preview_accepted', 'observation_intent', 'preview_accepted', 'all_cloud_previews_accepted_no_promotion']);
   let at = -Infinity;
   for (const row of rows) {
     assert.equal(row.releaseKey, value.releaseKey); assert.equal(row.transportPin, value.transportPin); assert.equal(row.stopPin, receipt.stopPin);
+    assert.deepEqual(row.completionStop, receipt.completionStop);
     const current = Date.parse(row.at); assert(current >= at && current <= Date.now()); at = current;
   }
   assertTopology(rows[0].baseline, value.baseline); assert.equal(rows[0].directory, directory);

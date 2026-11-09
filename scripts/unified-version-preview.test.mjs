@@ -3,6 +3,8 @@ import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from '
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
+import childProcess from 'node:child_process';
+import { syncBuiltinESMExports } from 'node:module';
 import { digest } from './desktop-release-assets.mjs';
 import { exactPreviewOrigin } from './desktop-version-preview.mjs';
 import { UNIFIED_OWNERS, unifiedService } from './unified-release-assets.mjs';
@@ -16,6 +18,62 @@ const html = '<!doctype html><html><head><title>Game &amp; Wiki</title><meta con
   '<script>self.__next_f.push(["host-dependent"])</script></body></html>';
 const headers = { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'private, no-store' };
 const ref = (path, body, headers) => ({ path, status: 200, headers, bytes: Buffer.byteLength(body), sha256: digest(body), bodyFile: 'unused' });
+
+for (const parserVersion of ['legacy-v1', 'streaming-v2']) test(`bounded fingerprints preserve ${parserVersion} semantics and order`, t => {
+  const rows = Array.from({ length: 65 }, (_, i) => ({ html: html.replace('123', String(i)), status: 200 }));
+  const execute = childProcess.execFileSync;
+  const calls = [];
+  t.mock.method(childProcess, 'execFileSync', (file, args, options) => {
+    calls.push({ count: JSON.parse(options.input).length, timeout: options.timeout });
+    return execute(file, args, options);
+  });
+  syncBuiltinESMExports();
+  try {
+    const actual = unifiedPageFingerprints(rows, parserVersion);
+    const parser = parserVersion === 'legacy-v1' ? 'unified-html-fingerprint.py' : 'unified-html-streaming-fingerprint.py';
+    const expected = JSON.parse(execute('python3', ['-B', new URL(parser, import.meta.url).pathname], { input: JSON.stringify(rows) }));
+    assert.deepEqual(actual, expected);
+    assert.deepEqual(calls, [32, 32, 1].map(count => ({ count, timeout: 30000 })));
+  } finally { t.mock.restoreAll(); syncBuiltinESMExports(); }
+});
+
+test('fingerprint batches bound serialized bytes and keep a large page intact', t => {
+  const sizes = [3, 3, 5, 1];
+  const rows = sizes.map(size => ({ html: html.replace('host-dependent', 'x'.repeat(size * 1024 * 1024)), status: 200 }));
+  const execute = childProcess.execFileSync, calls = [];
+  t.mock.method(childProcess, 'execFileSync', (file, args, options) => {
+    calls.push(JSON.parse(options.input)); return execute(file, args, options);
+  });
+  syncBuiltinESMExports();
+  try {
+    const actual = unifiedPageFingerprints(rows);
+    assert.deepEqual(calls, rows.map(row => [row]));
+    assert(actual.every(value => JSON.stringify(value) === JSON.stringify(actual[0])));
+  } finally { t.mock.restoreAll(); syncBuiltinESMExports(); }
+});
+
+test('fingerprint batches reject invalid total coverage and propagate later batch failures', t => {
+  const row = { html, status: 200 }, execute = childProcess.execFileSync;
+  let calls = 0;
+  t.mock.method(childProcess, 'execFileSync', (file, args, options) => {
+    calls++;
+    if (calls === 2) throw Object.assign(new Error('parser timeout'), { code: 'ETIMEDOUT' });
+    return execute(file, args, options);
+  });
+  syncBuiltinESMExports();
+  try {
+    for (const invalid of [[], Array(2501).fill(row), [null]]) assert.throws(() => unifiedPageFingerprints(invalid));
+    assert.equal(calls, 0);
+    assert.throws(() => unifiedPageFingerprints(Array(65).fill(row)), { code: 'ETIMEDOUT' });
+    assert.equal(calls, 2, 'No retry or later batch after failure');
+  } finally { t.mock.restoreAll(); syncBuiltinESMExports(); }
+});
+
+test('malformed HTML in a later fingerprint batch rejects the whole result', () => {
+  const rows = Array(33).fill({ html, status: 200 });
+  rows[32] = { html: html.replace('</body>', ''), status: 200 };
+  assert.throws(() => unifiedPageFingerprints(rows));
+});
 
 test('five exact targets are separate from the legacy dual-game guard', () => {
   for (const owner of UNIFIED_OWNERS) assert.equal(exactUnifiedPreviewOrigin(unifiedService(owner), versionId), `https://1234abcd-${unifiedService(owner)}.aieasygames.workers.dev`);

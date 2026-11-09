@@ -6,7 +6,7 @@ import { assertUploadedVersion } from '../../../scripts/desktop-cloud-transport.
 import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 import { digest } from '../../../scripts/desktop-release-assets.mjs'
 import { unifiedRuntimeConfig, unifiedTransportTarget } from '../../../scripts/unified-cloud-module.mjs'
-import { executeUnifiedUploadedPairCompletion, readUnifiedUploadedPairStop, unifiedUploadedPairStopPin } from '../../../scripts/unified-preview-completion.mjs'
+import { executeUnifiedUploadedPairCompletion, readUnifiedUploadedPairStop, readUnifiedUploadedPairCompletionStop, unifiedUploadedPairStopPin } from '../../../scripts/unified-preview-completion.mjs'
 import { createUnifiedPreviewNetwork, unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
 import { readUnifiedVersion, revalidateUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
@@ -22,6 +22,7 @@ export type UnifiedUploadedPairRequest = {
   schemaVersion: 1; kind: 'unified_uploaded_pair_completion_request'
   production: Proof; sourceHandoff: Proof; network: Proof; originExecutorCommit: string; executorRunID: number
   stopped: { journal: Proof; recovery: RoleProof; candidate: RoleProof }
+  completionStop?: { journal: Proof; recovery: Proof; candidate: Proof }
 }
 const pinned = (proof: Proof) => readPinnedUnifiedInput(proof.path, proof.pin) as any
 const keys = (value: object, expected: string[]) => {
@@ -29,15 +30,17 @@ const keys = (value: object, expected: string[]) => {
   assert.deepEqual(Object.keys(value).sort(), [...expected].sort(), 'Unknown uploaded pair request fields')
 }
 export function unifiedUploadedPairRequest(value: unknown): UnifiedUploadedPairRequest {
-  keys(value as object, ['schemaVersion', 'kind', 'production', 'sourceHandoff', 'network', 'originExecutorCommit', 'executorRunID', 'stopped'])
+  keys(value as object, ['schemaVersion', 'kind', 'production', 'sourceHandoff', 'network', 'originExecutorCommit', 'executorRunID', 'stopped',
+    ...(Object.hasOwn(value as object, 'completionStop') ? ['completionStop'] : [])])
   const request = value as UnifiedUploadedPairRequest
   assert.equal(request.schemaVersion, 1); assert.equal(request.kind, 'unified_uploaded_pair_completion_request')
   assert(/^[a-f0-9]{40}$/.test(request.originExecutorCommit))
   assert(Number.isSafeInteger(request.executorRunID) && request.executorRunID > 0)
   keys(request.stopped, ['journal', 'recovery', 'candidate'])
+  if (Object.hasOwn(request, 'completionStop')) keys(request.completionStop!, ['journal', 'recovery', 'candidate'])
   for (const role of ['recovery', 'candidate'] as const) keys(request.stopped[role], ['http', 'module', 'version'])
   for (const proof of [request.production, request.sourceHandoff, request.network, request.stopped.journal,
-    ...Object.values(request.stopped.recovery), ...Object.values(request.stopped.candidate)]) {
+    ...Object.values(request.stopped.recovery), ...Object.values(request.stopped.candidate), ...Object.values(request.completionStop ?? {})]) {
     keys(proof, ['path', 'pin']); assert(typeof proof.path === 'string' && path.isAbsolute(proof.path) && /^[a-f0-9]{64}$/.test(proof.pin))
   }
   return request
@@ -74,12 +77,13 @@ export async function createUnifiedUploadedPairVerifier(input: { request: Unifie
     assert.deepEqual(unifiedProductionRequest(pinned(request.production)), original)
     assert.deepEqual(pinned(request.network), network)
     pinned(original.sourceHandoff)
-    const stopped = readUnifiedUploadedPairStop({ run: evidence.build, stop: request.stopped, value, references })
+    const stopped = request.completionStop === undefined ? readUnifiedUploadedPairStop({ run: evidence.build, stop: request.stopped, value, references }) :
+      readUnifiedUploadedPairCompletionStop({ run: evidence.build, completionStop: request.completionStop, stop: request.stopped, value, references })
     const existingPair = stopped.existing as Record<string, { versionId: string; inspected: { moduleSHA256: string; versionPin: string; moduleProof: Proof } }>
     for (const role of ['recovery', 'candidate']) await revalidate({ role, ...existingPair[role] })
     assertTopology(value.baseline, await desktopCloudSnapshot(input.cloudToken, unifiedProductionRead))
     return { ...value, stop: request.stopped, stopPin: unifiedUploadedPairStopPin(request.stopped), networkPin: request.network.pin,
-      existingPair }
+      existingPair, ...(request.completionStop === undefined ? {} : { completionStop: request.completionStop }) }
   }
   const verify = async () => check(await evidence.verify())
   const value = await check(evidence.value)
@@ -89,7 +93,8 @@ export async function createUnifiedUploadedPairVerifier(input: { request: Unifie
 export async function completeUnifiedUploadedPair(input: { request: UnifiedUploadedPairRequest; cmsToken: string; cloudToken: string; releaseKey: string }) {
   const verified = await createUnifiedUploadedPairVerifier(input), { evidence } = verified
   assert.equal(input.releaseKey, verified.value.releaseKey)
-  assert(!existsSync(path.join(evidence.build, `unified-uploaded-pair-completion-${evidence.value.transportPin}.jsonl`)), 'Completion already attempted; preserve evidence')
+  const suffix = verified.request.completionStop === undefined ? '' : '-continued'
+  assert(!existsSync(path.join(evidence.build, `unified-uploaded-pair-completion-${evidence.value.transportPin}${suffix}.jsonl`)), 'Completion already attempted; preserve evidence')
   assertDiskBudget({ path: evidence.build, operation: 'Read-only uploaded pair completion', estimatedBytes: 2 * GiB })
   const network = await createUnifiedPreviewNetwork(verified.server)
   try {

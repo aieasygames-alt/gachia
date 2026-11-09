@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import test from 'node:test';
 import { SERVICES, reconcileRelease } from './desktop-cloud-release.mjs';
 import { digest } from './desktop-release-assets.mjs';
-import { executeUnifiedPreviewCompletion, executeUnifiedUploadedPairCompletion, readUnifiedObservationStop, readUnifiedUploadedPairStop, unifiedUploadedPairStopPin } from './unified-preview-completion.mjs';
+import { executeUnifiedPreviewCompletion, executeUnifiedUploadedPairCompletion, readUnifiedObservationStop, readUnifiedUploadedPairStop, readUnifiedUploadedPairCompletionStop, unifiedUploadedPairStopPin } from './unified-preview-completion.mjs';
 import { readUnifiedCloudPreviews } from './unified-promotion-protocol.mjs';
 import { unifiedHTMLParserPin, unifiedPreviewReferences, verifyUnifiedVersionPreview } from './unified-version-preview.mjs';
 
@@ -172,6 +172,82 @@ test('read-only uploaded pair completion is consumable by promotion reader witho
   assert.deepEqual(f.observations, ['recovery', 'candidate']); assert.deepEqual(readFileSync(f.stop.journal.path), bytes);
   assert.deepEqual(f.boundaries, [0, 1, 2], 'Verify before observation and after each version without redundant adjacent passes');
   await assert.rejects(executeUnifiedUploadedPairCompletion(f.completionArgs), /EEXIST/);
+});
+
+async function interruptedPairFixture(t) {
+  const f = await pairCompletionFixture(t), args = f.completionArgs, verify = args.verify;
+  args.verify = async () => {
+    if (f.observations.length === 2) throw Error('spawnSync python3 ETIMEDOUT');
+    return verify();
+  };
+  await assert.rejects(executeUnifiedUploadedPairCompletion(args), /ETIMEDOUT/);
+  const proof = path => ({ path, pin: digest(readFileSync(path)) });
+  const root = join(args.run, `unified-cloud-uploaded-pair-completion-${sha}`);
+  const completionStop = { journal: proof(join(args.run, `unified-uploaded-pair-completion-${sha}.jsonl`)),
+    recovery: proof(join(root, 'recovery-main/http/result.json')), candidate: proof(join(root, 'candidate-main/http/result.json')) };
+  const read = () => readUnifiedUploadedPairCompletionStop({ run: args.run, completionStop, stop: f.stop, value: f.value, references: f.references });
+  args.verify = async () => { read(); return { ...await verify(), completionStop }; };
+  const rows = readFileSync(completionStop.journal.path, 'utf8').trim().split('\n').map(JSON.parse);
+  const flush = () => { writeFileSync(completionStop.journal.path, rows.map(JSON.stringify).join('\n') + '\n'); completionStop.journal = proof(completionStop.journal.path); };
+  return { ...f, root, completionStop, readContinuation: read, completionRows: rows, flushCompletion: flush };
+}
+
+test('stopped read-only completion continues once in a separate journal and reopens both ancestors', async t => {
+  const f = await interruptedPairFixture(t);
+  const originals = [f.stop.journal, f.completionStop.journal].map(p => readFileSync(p.path));
+  assert.equal(f.readContinuation().historicalOnly, true);
+  const result = await executeUnifiedUploadedPairCompletion(f.completionArgs);
+  assert(result.directory.endsWith('-continued'));
+  assert.deepEqual(f.reopen(result).receipt.completionStop, f.completionStop);
+  assert.deepEqual(f.observations, ['recovery', 'candidate', 'recovery', 'candidate']);
+  assert.deepEqual([f.stop.journal, f.completionStop.journal].map(p => readFileSync(p.path)), originals);
+  await assert.rejects(executeUnifiedUploadedPairCompletion(f.completionArgs), /EEXIST/);
+  const file = join(result.directory, 'receipt.json'), saved = readFileSync(file), downgraded = JSON.parse(saved);
+  delete downgraded.completionStop; writeFileSync(file, json(downgraded));
+  assert.throws(() => f.reopen({ ...result, receiptPin: digest(readFileSync(file)) }));
+  writeFileSync(file, saved);
+  writeFileSync(join(f.root, 'candidate-main/http/0.body'), 'changed ancestor');
+  assert.throws(() => f.reopen(result));
+});
+
+for (const fault of ['other-error', 'extra-write', 'candidate-accepted', 'wrong-stop', 'wrong-version', 'future', 'backward',
+  'recursive', 'automatic-retry', 'accepted-time', 'accepted-module', 'body', 'partial-http', 'foreign-path', 'completed']) {
+  test(`read-only continuation refuses ${fault}`, async t => {
+    const f = await interruptedPairFixture(t), rows = f.completionRows;
+    if (fault === 'other-error') rows[4].error = 'HTTP mismatch';
+    if (fault === 'extra-write') rows.splice(3, 0, { ...rows[3], phase: 'upload_intent' });
+    if (fault === 'candidate-accepted') rows[4].accepted.candidate.main = {};
+    if (fault === 'wrong-stop') rows[0].stopPin = 'c'.repeat(64);
+    if (fault === 'wrong-version') rows[3].versionId = uuid(999);
+    if (fault === 'future') rows[4].at = new Date(Date.now() + 60000).toISOString();
+    if (fault === 'backward') rows[3].at = new Date(0).toISOString();
+    if (fault === 'recursive') rows[0].completionStop = f.completionStop;
+    if (fault === 'automatic-retry') rows[4].automaticRetry = true;
+    if (fault === 'accepted-time') rows[2].proof.acceptedAt = 0;
+    if (fault === 'accepted-module') rows[2].proof.moduleProof.pin = sha;
+    if (fault === 'body') writeFileSync(join(f.root, 'candidate-main/http/0.body'), 'tampered');
+    if (fault === 'partial-http') {
+      const p = f.completionStop.candidate, body = JSON.parse(readFileSync(p.path)); body.observations.pop();
+      writeFileSync(p.path, json(body)); p.pin = digest(readFileSync(p.path));
+    }
+    if (fault === 'foreign-path') f.completionStop.candidate = f.stop.candidate.http;
+    if (fault === 'completed') writeFileSync(join(f.root, 'receipt.json'), '{}');
+    f.flushCompletion();
+    assert.throws(f.readContinuation);
+    const count = f.observations.length;
+    await assert.rejects(executeUnifiedUploadedPairCompletion(f.completionArgs));
+    assert.equal(f.observations.length, count);
+    assert.equal(existsSync(join(f.completionArgs.run, `unified-uploaded-pair-completion-${sha}-continued.jsonl`)), false);
+  });
+}
+
+test('failed continuation remains stopped and cannot overwrite its own journal', async t => {
+  const f = await interruptedPairFixture(t);
+  f.completionArgs.transport.observe = async () => { throw Error('HTTP failure'); };
+  await assert.rejects(executeUnifiedUploadedPairCompletion(f.completionArgs), /HTTP failure/);
+  const journal = join(f.completionArgs.run, `unified-uploaded-pair-completion-${sha}-continued.jsonl`), before = readFileSync(journal);
+  await assert.rejects(executeUnifiedUploadedPairCompletion(f.completionArgs), /EEXIST/);
+  assert.deepEqual(readFileSync(journal), before);
 });
 
 for (const fault of ['writer', 'authorization', 'source', 'final-source', 'topology', 'module', 'late-module', 'http', 'parser', 'stop-pin']) test(`read-only pair completion rejects ${fault}`, async t => {
