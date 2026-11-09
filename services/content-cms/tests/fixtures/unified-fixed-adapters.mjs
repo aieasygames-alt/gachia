@@ -3,7 +3,7 @@ import childProcess from 'node:child_process';
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, renameSync, statSync, utimesSync, writeFileSync } from 'node:fs';
 import { syncBuiltinESMExports } from 'node:module';
 import path from 'node:path';
-import test, { mock } from 'node:test';
+import nodeTest, { mock } from 'node:test';
 import { unifiedSourceFixture, sourceFixtureUUID } from '../../../../scripts/fixtures/unified-source-fixture.mjs';
 import { unifiedMainFixture } from '../../../../scripts/fixtures/unified-main-fixture.mjs';
 import { unifiedWorkerFixture } from '../../../../scripts/fixtures/unified-worker-fixture.mjs';
@@ -14,6 +14,14 @@ import { selectUnifiedNextPrevious } from '../../../../scripts/unified-source-ad
 import { SERVICES } from '../../../../scripts/desktop-cloud-release.mjs';
 import { unifiedHTMLParserPin } from '../../../../scripts/unified-version-preview.mjs';
 import { prepareProductionSource, sealProductionLocal } from './unified-production-state.mjs';
+
+const shard = process.env.GACHIA_FIXED_ADAPTER_TEST_SHARD;
+assert(shard === undefined || ['0/2', '1/2'].includes(shard), 'Unknown fixed-adapter test shard');
+let registeredTests = 0;
+const test = (name, run) => {
+  const index = registeredTests++;
+  if (shard === undefined || index % 2 === Number(shard[0])) nodeTest(name, run);
+};
 
 // Only this child process redirects desktop checkout selection and replaces
 // historical publication root/network boundaries and promotion-only installed/CMS local checks.
@@ -949,3 +957,5 @@ for (const fault of ['none', 'caller-mutation', 'authorization', 'preview', 'los
     const count = s.writes; await assert.rejects(recovery.recoverUnifiedMain(originalInput), /Existing recovery requires read-only reconciliation/); assert.equal(s.writes, count);
   }
 });
+
+assert.equal(registeredTests, 134, 'Update both complete shard counts when adding a fixed-adapter case');

@@ -14,10 +14,21 @@ The original production, audit and preview proofs remain the historical release 
 - Full source-reader integration: six cases passed, reopening a complete five-owner next baseline and rejecting expired operation time, modified public bodies, changed source index, changed modules and changed provenance.
 - Promotion protocol and completed-evidence focused tests: 71 passed.
 - All unified script tests plus documentation/scope gates: 478 passed, no skips or failures.
+- Complete local `pnpm test:release`: 1,576 JavaScript tests and 56 Python tests passed. This additionally covers legacy publishing, recovery, backup and source-continuation contracts; see `release-tests.log`.
 - CMS typecheck and `git diff --check`: passed.
-- Full CMS suite and exact remote executor CI: pending at this checkpoint.
+- Full CMS suite: 439 passed, including the independently executed 134-case fixed-adapter child suite; no failures, cancellations or skips. Duration: 466.990 seconds.
+- Executor commit: `44a1a2b216b2f138819a533ca1759cfad58a95fa`, pushed to `codex/payload-unified-maintenance`.
+- First exact remote executor CI: https://github.com/aieasygames-alt/gachia/actions/runs/42559385332 failed in the fixed-adapter child process at its unchanged 900-second timeout. The first 117 child cases completed without an assertion failure; 17 were not reached. The overall CMS result was 438 passed / one failed wrapper, so later CI gates did not run. See `ci-failed.log`. This is not exact-CI acceptance and does not permit the real audit.
 
 The integration tests retain the existing documented isolation boundaries. They do not claim a real cloud promotion or a complete no-substitution fresh-source writer qualification.
+
+The new historical promotion-source reader was also run against the real R89 sealed chain, using its original observation time rather than today's clock. It reopened all 115 sources / five owners and verified ancestor CI in 207.843 seconds. Original request and source bytes were unchanged. See `sealed-source-verification.json`, pin `38d53dc23f2d6ac12cc308b348d78ec2071ee2b49c049266522a87cffd5bb164`. This was not a new live observation or freshness renewal.
+
+## Bounded CI Follow-Up
+
+The fixed-adapter fixture now supports exactly two ordinal shards in separate child processes. Its default direct invocation still registers all 134 cases. The wrapper runs both shards, requires 67 passing cases each, zero failures/cancellations/skips, and 134 unique test names across the union. Each child's existing 900-second timeout is retained. The registered-case assertion prevents adding a case without updating complete coverage expectations. Production code, source freshness and acceptance rules are unchanged by this test-runner fix.
+
+The complete local CMS suite is being rerun. The runner fix must also pass a new exact remote CI before any real baseline or promotion audit. No real baseline or promotion audit was attempted after the failed CI.
 
 ## Operational Status
 

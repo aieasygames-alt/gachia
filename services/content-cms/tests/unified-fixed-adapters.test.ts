@@ -1,20 +1,23 @@
 import assert from 'node:assert/strict'
-import { spawnSync } from 'node:child_process'
+import { execFile } from 'node:child_process'
 import path from 'node:path'
 import test from 'node:test'
+import { promisify } from 'node:util'
 import { projectRoot } from '../src/local-environment'
 
-test('fixed adapters compose completed publication, recovery and next-batch evidence in an isolated process', () => {
+test('fixed adapters compose completed publication, recovery and next-batch evidence in isolated shards', async () => {
   const env = { ...process.env }
   delete env.NODE_TEST_CONTEXT
-  const result = spawnSync(process.execPath, ['--experimental-test-module-mocks', '--import', 'tsx', '--test', '--test-reporter=tap',
-    path.join(projectRoot, 'tests/fixtures/unified-fixed-adapters.mjs')], { cwd: projectRoot, encoding: 'utf8', env,
-    // Real Git, builds and Worker checks take about five minutes even locally.
-    timeout: 900000, maxBuffer: 4 * 1024 * 1024 })
-  assert.equal(result.error, undefined, [result.error?.message, result.stdout, result.stderr].join('\n'))
-  assert.equal(result.status, 0, result.stdout + '\n' + result.stderr)
-  assert.match(result.stdout, /# tests 134\b/)
-  assert.match(result.stdout, /# fail 0/)
-  assert.match(result.stdout, /# cancelled 0/)
-  assert.match(result.stdout, /# skipped 0/)
+  const results = await Promise.all(['0/2', '1/2'].map(async shard => {
+    const result = await promisify(execFile)(process.execPath, ['--experimental-test-module-mocks', '--import', 'tsx', '--test', '--test-reporter=tap',
+      path.join(projectRoot, 'tests/fixtures/unified-fixed-adapters.mjs')], { cwd: projectRoot, encoding: 'utf8',
+      env: { ...env, GACHIA_FIXED_ADAPTER_TEST_SHARD: shard }, timeout: 900000, maxBuffer: 4 * 1024 * 1024 })
+      .catch(error => assert.fail([`Fixed-adapter shard ${shard}`, error.message, error.stdout, error.stderr].join('\n')))
+    assert.match(result.stdout, /# tests 67\b/)
+    for (const count of ['fail', 'cancelled', 'skipped']) assert.match(result.stdout, new RegExp(`# ${count} 0\\b`))
+    return result
+  }))
+  const names = results.flatMap(result => [...result.stdout.matchAll(/^# Subtest: (.+)$/gm)].map(match => match[1]))
+  assert.equal(names.length, 134)
+  assert.equal(new Set(names).size, 134, 'Every fixed-adapter case must run exactly once')
 })
