@@ -82,6 +82,43 @@ test('old accepted evidence remains independently readable without making it fre
   assert(result.renewal.receipt.accepted.candidate.main.acceptedAt < Date.now() - 900000);
 });
 
+for (const fault of ['none-long-acceptance', 'missing-authorization', 'stale-identity', 'at-mismatch', 'policy-change',
+  'receipt-policy', 'receipt-authorization', 'stale-preview-at-write', 'legacy-long-acceptance', 'unknown-policy']) {
+  test(`completed promotion enforces recorded freshness semantics: ${fault}`, async t => {
+    const f = await fixture(t), input = f.input, journal = join(input.run, `unified-promotion-${sha}.jsonl`);
+    const rows = readFileSync(journal, 'utf8').trim().split('\n').map(JSON.parse), intent = rows[2];
+    const authorizedAt = Date.parse(intent.at), receipt = structuredClone(f.receipt);
+    if (fault !== 'legacy-long-acceptance') {
+      for (const row of rows) row.freshnessPolicy = 'write-boundary-v1';
+      intent.writeAuthorization = { authorizedAt, identityObservedAt: input.value.identityObservedAt };
+      receipt.freshnessPolicy = 'write-boundary-v1';
+      receipt.writeAuthorizations = { main: structuredClone(intent.writeAuthorization) };
+    }
+    rows.at(-1).at = new Date(authorizedAt + 900001).toISOString();
+    t.mock.method(Date, 'now', () => authorizedAt + 1800000);
+    if (fault === 'missing-authorization') delete intent.writeAuthorization;
+    if (fault === 'stale-identity') intent.writeAuthorization.identityObservedAt = authorizedAt - 900000;
+    if (fault === 'at-mismatch') intent.writeAuthorization.authorizedAt++;
+    if (fault === 'policy-change') delete rows[3].freshnessPolicy;
+    if (fault === 'receipt-policy') delete receipt.freshnessPolicy;
+    if (fault === 'receipt-authorization') receipt.writeAuthorizations.main.authorizedAt++;
+    if (fault === 'unknown-policy') for (const row of rows) row.freshnessPolicy = 'skip-all-checks';
+    if (fault === 'stale-preview-at-write') {
+      for (const row of rows.slice(2, 4)) row.at = new Date(authorizedAt + 900000).toISOString();
+      intent.writeAuthorization = { authorizedAt: Date.parse(intent.at), identityObservedAt: Date.parse(intent.at) - 1 };
+      receipt.writeAuthorizations.main = structuredClone(intent.writeAuthorization);
+    }
+    const bytes = rows.map(JSON.stringify).join('\n') + '\n'; writeFileSync(journal, bytes);
+    receipt.journalPin = digest(bytes);
+    const proof = f.save(input.proof.path, receipt);
+    if (fault === 'none-long-acceptance') {
+      const opened = await readUnifiedCompletedMainPromotion({ ...input, proof });
+      assert.deepEqual(opened.receipt.writeAuthorizations, { main: intent.writeAuthorization });
+      assert.equal(opened.freshnessRenewed, false);
+    } else await assert.rejects(readUnifiedCompletedMainPromotion({ ...input, proof }));
+  });
+}
+
 test('completed promotion evidence feeds five-owner source advance and fresh next-batch consumption in one isolated protocol chain', async t => {
   const s = await unifiedSourceFixture(t), f = await fixture(t, s.spec.baseline);
   const completed = await readUnifiedCompletedMainPromotion(f.input), candidate = completed.modules.candidate;

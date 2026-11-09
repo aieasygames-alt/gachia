@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import path from 'node:path'
 import { readUnifiedCompletedMainPromotion } from '../../../scripts/unified-main-evidence.mjs'
+import { unifiedMainPromotionAuthorizationAt } from '../../../scripts/unified-promotion-reconciliation.mjs'
 import { readPinnedUnifiedInput } from './unified-desktop'
 import { readUnifiedHistoricalMainPreviews, readUnifiedHistoricalPublication, unifiedHistoricalPublicationRequest, verifyUnifiedHistoricalPublicationEvidence } from './unified-historical-publication'
 import { verifyUnifiedCI } from './unified-production'
@@ -67,8 +68,7 @@ export async function readUnifiedPublishedMain(input: UnifiedPublishedMainReques
     previews: opened.previews, references: opened.references, publicReferences: opened.publicReferences('candidate'), runtimeConfig: opened.runtimeConfig,
     productionRequest: opened.historical.request.production, sourceCI: opened.historical.audit.sourceCI, originExecutorCI: opened.historical.audit.executorCI, executorCI })
   const promotionSources = receipt.sourceHandoff === undefined ? undefined : await readUnifiedHistoricalPromotionSource(opened.historical,
-    receipt.sourceHandoff, Date.parse((completed.original.stopped
-      ? completed.original.rows.find((row: any) => row.phase === 'promotion_intent') : completed.original.rows.at(-1)).at))
+    receipt.sourceHandoff, unifiedMainPromotionAuthorizationAt(completed.original))
   return { ...opened, request, completed, executorCI, promotionSources, sourceAdvanced: false } as const
 }
 

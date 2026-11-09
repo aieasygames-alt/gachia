@@ -11,7 +11,7 @@ import { advanceUnifiedSourceIndex, bindUnifiedNextSources, captureUnifiedNextBa
 import { readUnifiedVersion, revalidateUnifiedSourceModule, revalidateUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
 import { readPinnedUnifiedInput } from './unified-desktop'
 import { createUnifiedExecutorVerifier } from './unified-production'
-import { readUnifiedPublishedMain, unifiedPublishedMainRequest, verifyUnifiedPublishedMain } from './unified-published-main'
+import { readUnifiedPublishedMain, unifiedPublishedMainRequest, verifyUnifiedPublishedMain, verifyUnifiedPublishedMainEvidence } from './unified-published-main'
 import { verifyUnifiedOwnerBuild, type ConsumerExpectation } from './unified-owner-build'
 import { prepareUnifiedPublication } from './unified-publication'
 import { digest } from './legacy-intake'
@@ -101,20 +101,35 @@ export async function readUnifiedPublicationSources(proof: Proof, binding: Sourc
   if (handoff.kind !== 'unified_next_batch_baseline') return readUnifiedHistoricalSources(proof, binding.baseline)
   const { opened: ancestor, spec } = await readPublication(handoff.publication)
   const next = await readUnifiedNextBaseline({ spec, handoff: proof })
-  assert(Number.isSafeInteger(binding.identityObservedAt) && binding.identityObservedAt >= next.value.observation.observedAt
+  assert(Number.isSafeInteger(binding.identityObservedAt) && binding.identityObservedAt <= Date.now() && binding.identityObservedAt >= next.value.observation.observedAt
     && binding.identityObservedAt - next.value.observation.startedAt < 900000, 'Historical publication did not use its next baseline while fresh')
   return { ...bindUnifiedNextSources(next, binding), ancestor }
 }
 
 export async function verifyUnifiedProductionSources(proof: Proof, binding: SourceBinding,
   { githubToken, cloudToken }: { githubToken: string; cloudToken: string }): Promise<any> {
+  return verifyProductionSources(proof, binding, { githubToken, cloudToken })
+}
+
+// Only the fixed promotion verifier supplies its captured write authorization.
+// This reopens fresh-at-write history, then still reads every live module/CI.
+export async function verifyUnifiedAuthorizedProductionSources(proof: Proof, binding: SourceBinding & { identityObservedAt: number },
+  tokens: { githubToken: string; cloudToken: string }): Promise<any> {
+  return verifyProductionSources(proof, binding, tokens, binding.identityObservedAt)
+}
+
+async function verifyProductionSources(proof: Proof, binding: SourceBinding,
+  { githubToken, cloudToken }: { githubToken: string; cloudToken: string }, authorizedAt?: number): Promise<any> {
+  if (authorizedAt !== undefined) assert(Number.isSafeInteger(authorizedAt) && authorizedAt <= Date.now(), 'Invalid source write authorization time')
   assert(typeof githubToken === 'string' && githubToken.length > 0, 'Authenticated ancestor CI verification required')
   assert(typeof cloudToken === 'string' && cloudToken.length > 0, 'Authenticated immutable-version reads required')
   proof = structuredClone(proof)
   binding = structuredClone(binding)
   const handoff = pinned(proof)
-  const sources: any = handoff.kind !== 'unified_next_batch_baseline' ? await readUnifiedHistoricalSources(proof, binding.baseline)
+  const sources: any = authorizedAt !== undefined ? await readUnifiedPublicationSources(proof, { ...binding, identityObservedAt: authorizedAt })
+    : handoff.kind !== 'unified_next_batch_baseline' ? await readUnifiedHistoricalSources(proof, binding.baseline)
     : bindUnifiedNextSources(await verifyUnifiedNextSource({ publication: handoff.publication, handoff: proof, githubToken }), binding)
+  if (sources.ancestor) await verifyUnifiedPublishedMainEvidence(sources.ancestor, githubToken)
   const readVersion = (service: string, versionId: string) => readUnifiedVersion({ service, versionId, token: cloudToken, request: unifiedProductionRead })
   for (const owner of UNIFIED_SOURCE_OWNERS) {
     const source = sources.provenance[owner], old = sources.owners[owner]
@@ -126,7 +141,7 @@ export async function verifyUnifiedProductionSources(proof: Proof, binding: Sour
         : await revalidateUnifiedSourceModule({ ...common, transportPin: source.proofTransportPin })
     assertModuleVersionIdentity(old.version, saved.version)
   }
-  if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during identity reads')
+  if (authorizedAt === undefined && handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during identity reads')
   assert.deepEqual(pinned(proof), handoff, 'Source handoff changed during identity reads')
   return sources
 }

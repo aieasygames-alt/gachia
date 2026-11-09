@@ -13,11 +13,11 @@ test('fixed adapters compose completed publication, recovery and next-batch evid
       path.join(projectRoot, 'tests/fixtures/unified-fixed-adapters.mjs')], { cwd: projectRoot, encoding: 'utf8',
       env: { ...env, GACHIA_FIXED_ADAPTER_TEST_SHARD: shard }, timeout: 900000, maxBuffer: 4 * 1024 * 1024 })
       .catch(error => assert.fail([`Fixed-adapter shard ${shard}`, error.message, error.stdout, error.stderr].join('\n')))
-    assert.match(result.stdout, /# tests 67\b/)
+    assert.match(result.stdout, /# tests 74\b/)
     for (const count of ['fail', 'cancelled', 'skipped']) assert.match(result.stdout, new RegExp(`# ${count} 0\\b`))
     return result
   }))
   const names = results.flatMap(result => [...result.stdout.matchAll(/^# Subtest: (.+)$/gm)].map(match => match[1]))
-  assert.equal(names.length, 134)
-  assert.equal(new Set(names).size, 134, 'Every fixed-adapter case must run exactly once')
+  assert.equal(names.length, 148)
+  assert.equal(new Set(names).size, 148, 'Every fixed-adapter case must run exactly once')
 })

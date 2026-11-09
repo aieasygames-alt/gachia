@@ -5,7 +5,7 @@ import { assertUploadedVersion } from './desktop-cloud-transport.mjs';
 import { assertTopology } from './desktop-cloud-release.mjs';
 import { assertModuleVersionIdentity } from './desktop-version-provenance.mjs';
 import { unifiedPinnedJSON } from './unified-promotion-protocol.mjs';
-import { readUnifiedMainPromotionJournal } from './unified-promotion-reconciliation.mjs';
+import { readUnifiedMainPromotionJournal, unifiedMainPromotionAuthorizationAt, unifiedMainPromotionFreshness } from './unified-promotion-reconciliation.mjs';
 import { recheckUnifiedMainPublic } from './unified-main-public.mjs';
 import { recheckUnifiedPreview } from './unified-version-preview.mjs';
 import { readUnifiedUploadedModule } from './unified-version-identity.mjs';
@@ -43,8 +43,7 @@ export function readUnifiedMainRenewal({ original, value, previews, references }
   assert.deepEqual(receipt.sourceHandoff, original.first.sourceHandoff, 'Renewal source differs from promotion journal');
   assert.deepEqual(Object.keys(receipt.accepted).sort(), [...ROLES].sort());
   assert.deepEqual(receipt.accepted, original.first.accepted, 'Journal differs from its pinned renewal');
-  const firstAt = Date.parse(original.first.at), lastAt = Date.parse((original.stopped
-    ? original.rows.find(row => row.phase === 'promotion_intent') ?? original.first : original.rows.at(-1)).at);
+  const firstAt = Date.parse(original.first.at), lastAt = unifiedMainPromotionAuthorizationAt(original);
   for (const role of ROLES) {
     assert.deepEqual(Object.keys(receipt.accepted[role]), ['main']);
     const proof = receipt.accepted[role].main, old = previews.receipt.accepted[role].main;
@@ -119,6 +118,9 @@ async function readPromotion(input, receipt, completion) {
   assert.equal(receipt.directory, original.first.directory);
   assert.equal(receipt.renewalPin, original.first.renewalPin); assert.deepEqual(receipt.productionRequest, productionRequest);
   assert.deepEqual(receipt.sourceHandoff, original.first.sourceHandoff, 'Promotion source differs from receipt');
+  const freshness = unifiedMainPromotionFreshness(original);
+  assert.equal(receipt.freshnessPolicy, freshness.freshnessPolicy, 'Promotion freshness policy differs from receipt');
+  assert.deepEqual(receipt.writeAuthorizations, freshness.writeAuthorizations, 'Promotion write authorizations differ from receipt');
   assert.deepEqual(receipt.preview, { path: join(previews.directory, 'receipt.json'), pin: previews.pin });
   for (const [name, expected] of Object.entries({ sourceCI, originExecutorCI, executorCI })) {
     assert(expected && expected.status === 'full_exact_ci_passed', 'Independently verified exact CI required');

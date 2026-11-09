@@ -5,7 +5,7 @@ import path from 'node:path'
 import { desktopCloudSnapshot, assertTopology } from '../../../scripts/desktop-cloud-release.mjs'
 import { digest } from '../../../scripts/desktop-release-assets.mjs'
 import { readUnifiedStoppedMainPromotion, readUnifiedCompletedMainPromotion } from '../../../scripts/unified-main-evidence.mjs'
-import { readUnifiedMainPromotionJournal } from '../../../scripts/unified-promotion-reconciliation.mjs'
+import { readUnifiedMainPromotionJournal, unifiedMainPromotionAuthorizationAt, unifiedMainPromotionFreshness } from '../../../scripts/unified-promotion-reconciliation.mjs'
 import { verifyUnifiedMainPublic } from '../../../scripts/unified-main-public.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
 import { readUnifiedVersion, revalidateUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
@@ -41,6 +41,7 @@ export async function completeStoppedMainPromotion(input: {
     productionPromoted: true, sourceAdvanced: false, cloudWrites: false, releaseKey: value.releaseKey, transportPin: value.transportPin,
     previewPin: previews.pin, renewalPin: original.first.renewalPin, journalPin: request.journal.pin,
     ...(original.first.sourceHandoff === undefined ? {} : { sourceHandoff: original.first.sourceHandoff }),
+    ...unifiedMainPromotionFreshness(original),
     directory: original.first.directory, completionDirectory: request.directory,
     productionRequest: historical.request.production, preview: requestProof(previews), sourceCI: historical.audit.sourceCI,
     originExecutorCI: historical.audit.executorCI, executorCI: executor.executorCI, promotionExecutorCI,
@@ -50,7 +51,7 @@ export async function completeStoppedMainPromotion(input: {
   await readUnifiedStoppedMainPromotion({ ...spec, receipt })
   if (original.first.sourceHandoff) {
     const sources = await readUnifiedHistoricalPromotionSource(historical, original.first.sourceHandoff,
-      Date.parse(original.rows.find((row: any) => row.phase === 'promotion_intent').at))
+      unifiedMainPromotionAuthorizationAt(original))
     if (sources.ancestor) {
       const { verifyUnifiedPublishedMainEvidence } = await import('./unified-published-main')
       await verifyUnifiedPublishedMainEvidence(sources.ancestor, githubToken)

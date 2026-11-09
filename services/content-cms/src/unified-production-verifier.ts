@@ -30,14 +30,16 @@ export async function verifyUnifiedProductionState(request: UnifiedProductionReq
   const originExecutorCI = options.originExecutor ? await verifyUnifiedCI(options.originExecutor.runID, options.originExecutor.commit, githubToken) : executorCI
   const handoff = pinned<Record<string, any>>(request.sourceHandoff)
   const baseline = await desktopCloudSnapshot(cloudToken, unifiedProductionRead)
-  const { verifyUnifiedProductionSources } = await import('./unified-source-advance')
-  const check = () => artifacts.run(async () => {
+  const { verifyUnifiedProductionSources, verifyUnifiedAuthorizedProductionSources } = await import('./unified-source-advance')
+  const check = (authorizedAt?: number) => artifacts.run(async () => {
     executor.verify()
     assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed')
     const fresh = await verifyUnifiedProductionLocal(request, cmsToken)
     const previous = pinned({ path: fresh.publication.previousPath, pin: fresh.publication.previousPin })
-    const sources = await verifyUnifiedProductionSources(request.sourceHandoff, { baseline, active: pinned(request.active),
-      frozen: fresh.built.frozen, previous }, { githubToken, cloudToken })
+    const binding = { baseline, active: pinned(request.active), frozen: fresh.built.frozen, previous }
+    const sources = authorizedAt === undefined
+      ? await verifyUnifiedProductionSources(request.sourceHandoff, binding, { githubToken, cloudToken })
+      : await verifyUnifiedAuthorizedProductionSources(request.sourceHandoff, { ...binding, identityObservedAt: authorizedAt }, { githubToken, cloudToken })
     const identityObservedAt = Date.now()
     const owners: Record<string, any> = {}
     const preservedOwners: Record<string, PreservedRuntime> = {}
@@ -65,7 +67,7 @@ export async function verifyUnifiedProductionState(request: UnifiedProductionReq
     const releaseKey = digest(canonical({ candidate: fresh.built.frozen.candidate.candidateSHA256, review: fresh.review.reviewPin,
       transport: fresh.transport.transportPin, executorCommit: originExecutorCI.commit, sourceCommit: fresh.built.frozen.sourceCommit, owners: scope.uploadOwners,
       ...(fresh.preservation ? { preservation: request.preservation!.pin, preservedOwners } : {}) }))
-    if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
+    if (authorizedAt === undefined && handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
     executor.verify()
     return { local: fresh, value: { preview: false, transportPin: fresh.transport.transportPin, releaseKey, changed: fresh.built.frozen.candidate.changed,
       ownerOrder: scope.uploadOwners, owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])),
@@ -78,6 +80,32 @@ export async function verifyUnifiedProductionState(request: UnifiedProductionReq
   if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
   executor.verify()
   const scope = local.preservation ? closeUnifiedProductionOwnerScope(local.scope, value.preservedOwners) : local.scope
-  const verify = async () => (await check()).value
-  return { ...local, scope, ci, executorCI, originExecutorCI, baseline, value, verify }
+  let lastFreshObservation = value.identityObservedAt
+  let freshVerificationValid = true
+  let authorization: { authorizedAt: number; identityObservedAt: number } | undefined
+  const verify = async () => {
+    assert(!authorization, 'A write-authorized verifier cannot authorize another operation')
+    freshVerificationValid = false
+    const current = (await check()).value
+    lastFreshObservation = current.identityObservedAt
+    freshVerificationValid = true
+    return current
+  }
+  const authorizePromotionSource = () => {
+    assert(!authorization, 'Promotion source already authorized')
+    assert(freshVerificationValid, 'A complete successful fresh verification is required before write')
+    assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed before write')
+    executor.verify()
+    const authorizedAt = Date.now()
+    assert(authorizedAt >= lastFreshObservation && authorizedAt - lastFreshObservation < 900000, 'Source identity expired before write')
+    if (handoff.kind === 'unified_next_batch_baseline') assert(authorizedAt >= handoff.observation.observedAt
+      && authorizedAt - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired before write')
+    authorization = { authorizedAt, identityObservedAt: lastFreshObservation }
+    return { ...authorization }
+  }
+  const verifyAfterPromotion = async () => {
+    assert(authorization, 'Fresh write authorization required before post-promotion verification')
+    return (await check(authorization.authorizedAt)).value
+  }
+  return { ...local, scope, ci, executorCI, originExecutorCI, baseline, value, verify, authorizePromotionSource, verifyAfterPromotion }
 }

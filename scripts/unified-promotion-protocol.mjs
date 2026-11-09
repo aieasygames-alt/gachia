@@ -163,8 +163,14 @@ function readCompletedPreviews({ run, directory, pin, value, references, receipt
 
 export function assertUnifiedPromotionEvidence(value) {
   assertUnifiedPreviewUploadScope(value, value.transportPin);
-  assert(SHA.test(value.previewPin) && SHA.test(value.renewalPin), 'Pinned cloud acceptance and renewal required');
+  assertUnifiedPromotionIdentity(value);
   acceptedIdentity(value.accepted, value, true);
+}
+
+function assertUnifiedPromotionIdentity(value) {
+  assertUnifiedPreviewIdentity(value, value.transportPin);
+  assert(SHA.test(value.previewPin) && SHA.test(value.renewalPin), 'Pinned cloud acceptance and renewal required');
+  acceptedIdentity(value.accepted, value);
 }
 
 export function assertUnifiedPromotionDirectories(run, directory, renewalDirectory) {
@@ -177,8 +183,11 @@ export function assertUnifiedPromotionDirectories(run, directory, renewalDirecto
 
 // No upload or automatic recovery capability. Every write target comes from
 // accepted exact UUIDs; an existing journal permanently blocks replay.
-export async function executeUnifiedPromotionProtocol({ run, verify, authorize, makeTransport }) {
+export async function executeUnifiedPromotionProtocol({ run, verify, authorize, makeTransport, authorizeWrite, verifyAfterWrite }) {
   return withRunLock(run, async () => {
+    assert.equal(typeof authorizeWrite, typeof verifyAfterWrite, 'Both write-boundary adapters are required');
+    assert(authorizeWrite === undefined || typeof authorizeWrite === 'function');
+    const lifecycle = authorizeWrite === undefined ? {} : { freshnessPolicy: 'write-boundary-v1' };
     const initial = structuredClone(await verify()); assertUnifiedPromotionEvidence(initial);
     assert.equal(await authorize(initial), initial.releaseKey);
     assertUnifiedPromotionDirectories(run, initial.evidenceDirectory, initial.renewalDirectory);
@@ -186,12 +195,15 @@ export async function executeUnifiedPromotionProtocol({ run, verify, authorize, 
     const source = initial.sourceHandoff === undefined ? {} : { sourceHandoff: initial.sourceHandoff };
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = row => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), releaseKey: initial.releaseKey,
-      transportPin: initial.transportPin, previewPin: initial.previewPin, renewalPin: initial.renewalPin, ...source, ...row }) + '\n', { flush: true });
+      transportPin: initial.transportPin, previewPin: initial.previewPin, renewalPin: initial.renewalPin, ...source, ...lifecycle, ...row }) + '\n', { flush: true });
     const transport = makeTransport(initial), promoted = {};
     const versions = Object.fromEntries(initial.ownerOrder.map(owner => [initial.owners[owner].service, initial.accepted.candidate[owner].versionId]));
-    let pendingOperation, lastObservedAt = initial.identityObservedAt;
-    const revalidate = async () => {
-      const current = await verify(); assertUnifiedPromotionEvidence(current);
+    let pendingOperation, lastObservedAt = initial.identityObservedAt, current = initial;
+    const writeAuthorizations = {};
+    const revalidate = async (afterWrite = false) => {
+      current = await (afterWrite && verifyAfterWrite ? verifyAfterWrite() : verify());
+      if (afterWrite && verifyAfterWrite) assertUnifiedPromotionIdentity(current);
+      else assertUnifiedPromotionEvidence(current);
       assert(current.identityObservedAt >= lastObservedAt, 'Unified source observation moved backwards');
       assert.deepEqual({ ...current, identityObservedAt: initial.identityObservedAt }, initial, 'Unified promotion identity changed');
       lastObservedAt = current.identityObservedAt;
@@ -207,23 +219,37 @@ export async function executeUnifiedPromotionProtocol({ run, verify, authorize, 
       assert(SHA.test(remote.evidenceSHA256)); record({ phase: 'remote_versions_verified', proof: remote });
       for (const owner of initial.ownerOrder) {
         await revalidate(); assertTopology(initial.baseline, await transport.snapshot(), promoted);
+        // The final snapshot is asynchronous: recheck clocks immediately before
+        // the durable intent, not just at the start of the preceding verifier.
+        assertUnifiedPromotionEvidence(current);
+        const authorization = authorizeWrite?.();
+        if (authorizeWrite) {
+          assert.deepEqual(Object.keys(authorization).sort(), ['authorizedAt', 'identityObservedAt']);
+          assert.equal(authorization.identityObservedAt, current.identityObservedAt);
+          assert(Number.isSafeInteger(authorization.authorizedAt) && authorization.authorizedAt <= Date.now());
+          assert(authorization.authorizedAt >= current.identityObservedAt && authorization.authorizedAt - current.identityObservedAt < 900000);
+          writeAuthorizations[owner] = structuredClone(authorization);
+        }
+        assertUnifiedPromotionEvidence(current);
         const service = initial.owners[owner].service, versionId = versions[service];
         pendingOperation = { owner, service, versionId };
-        record({ phase: 'promotion_intent', ...pendingOperation });
+        record({ phase: 'promotion_intent', ...pendingOperation, ...(authorization ? {
+          at: new Date(authorization.authorizedAt).toISOString(), writeAuthorization: authorization } : {}) });
         const result = await transport.promote({ ...pendingOperation, releaseKey: initial.releaseKey });
         promoted[service] = versionId;
         assertTopology(initial.baseline, await transport.snapshot(), promoted);
         record({ phase: 'promoted', ...pendingOperation, result }); pendingOperation = undefined;
       }
-      await revalidate();
+      await revalidate(true);
       const proof = await transport.acceptProduction(initial);
       assert.equal(proof.status, 'passed'); assert.equal(proof.releaseKey, initial.releaseKey);
       assert.deepEqual(proof.versions, versions); assert(SHA.test(proof.evidenceSHA256));
-      assertTopology(initial.baseline, await transport.snapshot(), promoted); await revalidate();
+      assertTopology(initial.baseline, await transport.snapshot(), promoted); await revalidate(true);
       record({ phase: 'production_accepted', proof });
       return { schemaVersion: 1, kind: 'unified_publication_promotion', status: 'production_accepted', releaseKey: initial.releaseKey,
         transportPin: initial.transportPin, previewPin: initial.previewPin, renewalPin: initial.renewalPin, versions,
-        ...source, publicProof: proof, journalPin: digest(readFileSync(journal)), productionPromoted: true, sourceAdvanced: false };
+        ...source, ...lifecycle, ...(authorizeWrite ? { writeAuthorizations } : {}),
+        publicProof: proof, journalPin: digest(readFileSync(journal)), productionPromoted: true, sourceAdvanced: false };
     } catch (error) {
       record({ phase: 'stopped', error: error.message, pendingOperation, promoted, automaticRetry: false, automaticRollback: false });
       try {

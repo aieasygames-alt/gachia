@@ -146,10 +146,10 @@ export async function promoteUnifiedMain(input: { request: UnifiedPromotionReque
   const renewal = await renewUnifiedMainPreviews(opened, cloudToken, path.join(directory, 'renewal'))
   const publicReferences = unifiedMainPublicReferences(references('main', 'candidate'), (row: { bodyFile: string }) =>
     readFileSync(path.join(evidence.transport.directory, 'main/candidate/http', row.bodyFile)))
-  const verify = async () => {
+  const verifyEvidence = async (verifySource: () => Promise<any>) => {
     assert.deepEqual(unifiedProductionRequest(pinned(opened.request.production)), opened.production, 'Historical production input changed')
     assert.deepEqual(pinned(opened.request.network), opened.network)
-    const value = await evidence.verify()
+    const value = await verifySource()
     readUnifiedCloudPreviews({ run: evidence.build, directory: previews.directory, pin: previews.pin, value, references })
     const fresh = unifiedPinnedJSON(path.join(renewal.directory, 'receipt.json'), renewal.pin)
     assert.deepEqual(fresh, renewal.receipt)
@@ -166,7 +166,8 @@ export async function promoteUnifiedMain(input: { request: UnifiedPromotionReque
       evidenceDirectory: directory, renewalDirectory: renewal.directory }
   }
   let remoteCount = 0
-  const result = await executeUnifiedPromotionProtocol({ run: evidence.build, verify, authorize: () => releaseKey,
+  const result = await executeUnifiedPromotionProtocol({ run: evidence.build, verify: () => verifyEvidence(evidence.verify), authorize: () => releaseKey,
+    authorizeWrite: evidence.authorizePromotionSource, verifyAfterWrite: () => verifyEvidence(evidence.verifyAfterPromotion),
     makeTransport: (initial: any) => ({
       snapshot: () => desktopCloudSnapshot(cloudToken, unifiedProductionRead, { allowSplit: true }),
       verifyVersions: async () => {

@@ -15,6 +15,7 @@ export function readUnifiedMainPromotionJournal({ run, pin, transportPin, releas
   const raw = readFileSync(file); assert.equal(digest(raw), pin, 'Promotion journal changed'); assert(raw.toString().endsWith('\n'));
   const rows = raw.toString().trimEnd().split('\n').map(JSON.parse), first = rows[0];
   assert.equal(first.phase, 'baseline'); assert.deepEqual(first.ownerOrder, ['main']);
+  assert(first.freshnessPolicy === undefined || first.freshnessPolicy === 'write-boundary-v1', 'Unknown promotion freshness policy');
   assertUnifiedPromotionDirectories(run, first.directory, first.renewalDirectory);
   assert.equal(rows.filter(row => row.phase === 'baseline').length, 1);
   const phases = ['baseline', 'remote_versions_verified', 'promotion_intent', 'promoted', 'production_accepted', 'stopped', 'read_only_reconciliation', 'observation_unavailable'];
@@ -24,6 +25,15 @@ export function readUnifiedMainPromotionJournal({ run, pin, transportPin, releas
     assert.equal(row.releaseKey, releaseKey); assert.equal(row.transportPin, transportPin);
     assert.equal(row.previewPin, first.previewPin); assert.equal(row.renewalPin, first.renewalPin);
     assert.deepEqual(row.sourceHandoff, first.sourceHandoff, 'Promotion source selection changed in journal');
+    assert.equal(row.freshnessPolicy, first.freshnessPolicy, 'Promotion freshness policy changed in journal');
+    if (first.freshnessPolicy && row.phase === 'promotion_intent') {
+      const authorization = row.writeAuthorization;
+      assert(authorization && typeof authorization === 'object');
+      assert.deepEqual(Object.keys(authorization).sort(), ['authorizedAt', 'identityObservedAt']);
+      assert.equal(authorization.authorizedAt, Date.parse(row.at), 'Write authorization differs from intent time');
+      assert(Number.isSafeInteger(authorization.identityObservedAt) && authorization.identityObservedAt <= authorization.authorizedAt
+        && authorization.authorizedAt - authorization.identityObservedAt < 900000, 'Source identity expired at write');
+    } else assert.equal(row.writeAuthorization, undefined, 'Unexpected write authorization');
     const time = Date.parse(row.at); assert(time >= at && time <= Date.now()); at = time;
   }
   assert(SHA.test(first.previewPin) && SHA.test(first.renewalPin));
@@ -54,6 +64,18 @@ export function readUnifiedMainPromotionJournal({ run, pin, transportPin, releas
     }
   }
   return { file, rows, first, expected, stopped: stopped !== -1 };
+}
+
+export function unifiedMainPromotionFreshness(original) {
+  return original.first.freshnessPolicy === undefined ? {} : { freshnessPolicy: original.first.freshnessPolicy,
+    writeAuthorizations: Object.fromEntries(original.rows.filter(row => row.phase === 'promotion_intent').map(row => [row.owner, row.writeAuthorization])) };
+}
+
+// Legacy successes required freshness through acceptance. New successes bind it
+// to the write intent; subsequent reads cannot grant another write capability.
+export function unifiedMainPromotionAuthorizationAt(original) {
+  return Date.parse((original.first.freshnessPolicy || original.stopped
+    ? original.rows.find(row => row.phase === 'promotion_intent') ?? original.first : original.rows.at(-1)).at);
 }
 
 // Diagnostic only: even a known candidate/recovery allocation does not grant

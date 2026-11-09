@@ -277,7 +277,8 @@ for (const fault of ['none', 'preview', 'module', 'review', 'network', 'topology
 
 for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-reconciled-ci', 'preflight-reconciled-input', 'normal-previews', 'normal-preview-legacy', 'normal-preview-parser', 'normal-preview-downgrade', 'completion', 'caller-mutation', 'open-caller-mutation', 'authorization', 'preview', 'lost-response', 'public',
   'preflight-ci', 'preflight-handoff', 'preflight-version', 'preflight-settings', 'preflight-metadata', 'preflight-review', 'late-review',
-  'preflight-snapshot', 'preflight-guarded-reuse', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt']) {
+  'preflight-snapshot', 'preflight-guarded-reuse', 'preflight-executor-drift', 'preflight-source-attempt', 'preflight-origin-attempt',
+  'post-write-expiry', 'post-public-expiry', 'late-version', 'late-executor', 'write-expiry', 'authorization-lifecycle']) {
   test(`private fixed promotion writer produces independently consumable evidence: ${fault}`, async t => {
     const network = { schemaVersion: 1, kind: 'explicit_loopback_preview_network', server: 'http://127.0.0.1:7890' };
     const s = await fixture(t, { networkPin: digest(JSON.stringify(network, null, 2) + '\n'), productionState: true }), f = s.f, value = f.input.value;
@@ -350,6 +351,21 @@ for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-re
       previews: structuredClone(s.previewsProof), network: f.save(path.join(s.s.root, 'promotion-network.json'), network), executorRunID: 5 },
       cmsToken: 'isolated-cms-token', cloudToken: 'isolated-cloud-token', releaseKey: value.releaseKey };
     const original = structuredClone(input);
+    if (fault === 'authorization-lifecycle') {
+      const evidence = await production.createUnifiedProductionVerifier({ ...productionRequest, executorRunID: 5 }, input,
+        { originExecutor: { runID: 2, commit: '2'.repeat(40) } });
+      await assert.rejects(evidence.verifyAfterPromotion(), /Fresh write authorization required/);
+      const verified = await evidence.verify(), authorization = evidence.authorizePromotionSource();
+      assert.equal(authorization.identityObservedAt, verified.identityObservedAt);
+      authorization.authorizedAt = 0;
+      assert.throws(evidence.authorizePromotionSource, /already authorized/);
+      await assert.rejects(evidence.verify(), /cannot authorize another operation/);
+      t.mock.timers.enable({ apis: ['Date'], now: Date.now() + 900001 });
+      const versions = s.versionReads, reviews = s.localPreflights;
+      assert.equal((await evidence.verifyAfterPromotion()).releaseKey, verified.releaseKey);
+      assert.equal(s.localPreflights, reviews + 1); assert.equal(s.versionReads, versions + 5);
+      assert.equal(s.writes, 0); return;
+    }
     if (fault === 'open-caller-mutation') {
       s.onPromotionOpen = () => {
         input.cmsToken = 'changed-cms-token'; input.cloudToken = 'changed-cloud-token';
@@ -381,6 +397,7 @@ for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-re
         const file = path.join(s.s.spec.owners.nte.directory, 'worker.js'), original = readFileSync(file), stat = statSync(file);
         writeFileSync(file, Buffer.concat([original.subarray(0, -1), Buffer.from('!')])); utimesSync(file, stat.atime, stat.mtime);
         await assert.rejects(evidence.verify(), /artifact|module|changed|differs/i);
+        assert.throws(evidence.authorizePromotionSource, /complete successful fresh verification/);
         writeFileSync(file, original); utimesSync(file, stat.atime, stat.mtime);
         await assert.rejects(evidence.verify(), /session is busy or failed/);
       }
@@ -403,13 +420,33 @@ for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-re
     if (fault === 'preflight-review') s.failLocalPreflight = true;
     if (fault === 'preflight-executor-drift') s.onVersion = () => { writeFileSync(s.executorFile, 'changed during immutable-version reads'); };
     if (fault === 'late-review') s.onPromotionOpen = () => { s.failLocalPreflight = s.writes > 0; };
+    if (fault === 'write-expiry') {
+      s.onVersion = id => {
+        s.previewRole = id === f.versions.candidate.id ? 'candidate' : 'recovery';
+        if (s.networkClosed && !s.clockAdvanced) {
+          t.mock.timers.enable({ apis: ['Date'], now: Date.now() + 900001 }); s.clockAdvanced = true;
+        }
+      };
+    }
+    if (fault.startsWith('post-') || fault === 'late-version' || fault === 'late-executor') s.onPromotionOpen = () => {
+      if (!s.writes) return;
+      if (fault === 'post-write-expiry' || fault === 'post-public-expiry' && s.publicReads) {
+        if (!s.clockAdvanced) { t.mock.timers.enable({ apis: ['Date'], now: Date.now() + 900001 }); s.clockAdvanced = true; }
+      }
+      if (fault === 'late-version') s.changedVersion = s.s.spec.owners.nte.versionId;
+      if (fault === 'late-executor') writeFileSync(s.executorFile, 'executor changed after write');
+    };
     if (fault === 'completion') s.onPromotionOpen = () => {
       if (s.writes && s.publicReads) throw Error('Unified promotion preview expired');
     };
-    if (['none', 'reconciled', 'reconciled-continued', 'normal-previews', 'normal-preview-legacy', 'caller-mutation'].includes(fault)) {
+    if (['none', 'reconciled', 'reconciled-continued', 'normal-previews', 'normal-preview-legacy', 'caller-mutation', 'post-write-expiry', 'post-public-expiry'].includes(fault)) {
       const result = await promotion.promoteUnifiedMain(input);
       assert.equal(result.status, 'production_accepted'); assert.equal(s.writes, 1);
       assert.deepEqual(result.productionRequest, original.request.production); assert.deepEqual(result.preview, original.request.previews);
+      assert.equal(result.freshnessPolicy, 'write-boundary-v1');
+      const intent = readFileSync(journal, 'utf8').trim().split('\n').map(JSON.parse).find(row => row.phase === 'promotion_intent');
+      assert.deepEqual(result.writeAuthorizations, { main: intent.writeAuthorization });
+      if (fault.startsWith('post-')) assert(Date.now() - result.writeAuthorizations.main.authorizedAt > 900000);
       s.publishedRequest.promotion = { path: path.join(result.directory, 'receipt.json'), pin: result.receiptPin };
       s.publishedProof = f.save(s.publishedProof.path, s.publishedRequest);
       const advanced = await advance(s);
@@ -439,14 +476,15 @@ for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-re
         'preflight-executor-drift': /unverified source edits/,
         'preflight-source-attempt': /Source CI differs from sealed historical audit/,
         'preflight-origin-attempt': /Original executor CI differs from sealed historical audit/,
-        'preflight-review': /current CMS review changed/, 'late-review': /current CMS review changed/ };
+        'preflight-review': /current CMS review changed/, 'late-review': /current CMS review changed/,
+        'late-executor': /unverified source edits/, 'write-expiry': /expired/ };
       await assert.rejects(promotion.promoteUnifiedMain(input), error => {
         assert(!(error instanceof TypeError), 'Fixture wiring must not masquerade as preflight rejection');
         if (messages[fault]) assert.match(error.message, messages[fault]);
         else assert.equal(error.code, 'ERR_ASSERTION');
         return true;
       });
-      assert.equal(s.writes, ['lost-response', 'public', 'late-review', 'completion'].includes(fault) ? 1 : 0);
+      assert.equal(s.writes, ['lost-response', 'public', 'late-review', 'late-version', 'late-executor', 'completion'].includes(fault) ? 1 : 0);
       const attempts = readdirSync(f.input.run).filter(name => name.startsWith('unified-main-promotion-') && path.join(f.input.run, name) !== f.directory);
       assert.equal(attempts.length, ['authorization', 'normal-preview-parser', 'normal-preview-downgrade'].includes(fault) || fault.startsWith('preflight-') ? 0 : 1);
       for (const attempt of attempts) assert.equal(existsSync(path.join(f.input.run, attempt, 'receipt.json')), false);
@@ -462,6 +500,8 @@ for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-re
       const writes = s.writes;
       const afterPromotion = structuredClone(s.s.current);
       s.onPromotionOpen = undefined; s.failLocalPreflight = false;
+      if (fault === 'late-version') s.changedVersion = undefined;
+      if (fault === 'late-executor') writeFileSync(s.executorFile, s.executorText);
       await assert.rejects(promotion.promoteUnifiedMain(original), /Protected deployment drift/);
       // Even if the simulated cloud returns to the old baseline, the journal forbids replay.
       s.s.current = structuredClone(value.baseline);
@@ -724,6 +764,67 @@ test('fixed historical next-source read stays offline after expiry and revalidat
   assert.deepEqual([s.snapshots, s.versionReads, s.publicReads], counts.slice(0, 3)); assert.equal(s.writes, 0);
 });
 
+for (const fault of ['none-expired', 'expired-at-write', 'future-authorization', 'body', 'module', 'ancestor-ci']) {
+  test(`post-write source verification preserves time-bound authorization and live identity checks: ${fault}`, async t => {
+    const s = await fixture(t), index = await advance(s), next = await advance(s, 'baseline', index.proof), binding = sourceBinding(s, next);
+    const authorizedAt = Date.now();
+    t.mock.timers.enable({ apis: ['Date'], now: authorizedAt + 900001 });
+    binding.identityObservedAt = fault === 'expired-at-write' ? next.value.observation.startedAt + 900000
+      : fault === 'future-authorization' ? Date.now() + 1 : authorizedAt;
+    if (fault === 'body') writeFileSync(path.join(path.dirname(next.proof.path), 'public/0.body'), 'tampered');
+    if (fault === 'module') s.changedVersion = s.s.spec.owners.nte.versionId;
+    if (fault === 'ancestor-ci') s.changedCIAttempt = 3;
+    const versions = s.versionReads, ciReads = s.ciReads.length;
+    const run = () => source.verifyUnifiedAuthorizedProductionSources(next.proof, binding,
+      { githubToken: 'isolated-github-token', cloudToken: 'isolated-cloud-token' });
+    if (fault === 'none-expired') {
+      const result = await run();
+      assert.equal(result.owners.main.versionId, s.f.versions.candidate.id);
+      assert.equal(s.versionReads, versions + 5); assert(s.ciReads.length > ciReads);
+      assert.equal(result.freshnessRenewed, false);
+    } else await assert.rejects(run(), error => { assert(!(error instanceof TypeError)); return true; });
+    assert.equal(s.writes, 0);
+  });
+}
+
+for (const fault of ['none-expired', 'expired-before-authorization']) {
+  test(`fixed production verifier composes next-baseline write authorization with post-write reads: ${fault}`, async t => {
+    const first = await fixture(t, { productionState: true }), index = await advance(first), next = await advance(first, 'baseline', index.proof);
+    const binding = sourceBinding(first, next);
+    const s = await fixture(t, { baseline: binding.baseline, generation: 1, productionState: true });
+    s.historyRequest = first.historyRequest; s.historical = first.historical;
+    s.s.current = structuredClone(binding.baseline);
+    s.versions = new Map([...s.versions, ...first.versions]);
+    const previous = s.f.save(s.preparedProduction.previous.path, binding.previous);
+    const local = s.productionLocal;
+    local.publication.previousPath = previous.path; local.publication.previousPin = previous.pin;
+    local.publication.owners.main.sourceVersionId = binding.previous.owners.main.versionId;
+    local.built.frozen.planSHA256 = binding.frozen.planSHA256;
+    local.built.frozen.owners = binding.frozen.owners;
+    local.built.frozen.candidate.baselines = binding.frozen.candidate.baselines;
+    const dummy = s.f.save(path.join(s.s.root, 'next-production-dummy.json'), {});
+    const request = { schemaVersion: 1, kind: 'unified_production_preview_request', repo: s.s.root,
+      ...Object.fromEntries(['localPreview', 'editorial', 'selection', 'application'].map(key => [key, dummy])),
+      sourceRunID: 1, executorRunID: 5, sourceHandoff: next.proof, active: next.value.active };
+    const evidence = await production.createUnifiedProductionVerifier(request, { cmsToken: 'isolated-cms-token', cloudToken: 'isolated-cloud-token' },
+      { originExecutor: { runID: 2, commit: '2'.repeat(40) } });
+    const verified = await evidence.verify();
+    if (fault === 'expired-before-authorization') {
+      t.mock.timers.enable({ apis: ['Date'], now: next.value.observation.startedAt + 900000 });
+      assert.throws(evidence.authorizePromotionSource, /Next-batch source handoff expired before write/);
+      await assert.rejects(evidence.verifyAfterPromotion(), /Fresh write authorization required/);
+    } else {
+      const authorization = evidence.authorizePromotionSource(), reads = s.versionReads, reviews = s.localPreflights;
+      t.mock.timers.enable({ apis: ['Date'], now: authorization.authorizedAt + 900001 });
+      const current = await evidence.verifyAfterPromotion();
+      assert.equal(current.releaseKey, verified.releaseKey); assert.deepEqual(current.owners, verified.owners);
+      assert.equal(s.versionReads, reads + 5); assert.equal(s.localPreflights, reviews + 1);
+      await assert.rejects(evidence.verify(), /cannot authorize another operation/);
+    }
+    assert.equal(s.writes, 0);
+  });
+}
+
 test('a second completed publication advances new Main and nonpublic A while preserving the first baseline ancestry', async t => {
   const first = await fixture(t), index = await advance(first), next = await advance(first, 'baseline', index.proof);
   const sources = await source.readUnifiedPublicationSources(next.proof, sourceBinding(first, next));
@@ -958,4 +1059,4 @@ for (const fault of ['none', 'caller-mutation', 'authorization', 'preview', 'los
   }
 });
 
-assert.equal(registeredTests, 134, 'Update both complete shard counts when adding a fixed-adapter case');
+assert.equal(registeredTests, 148, 'Update both complete shard counts when adding a fixed-adapter case');

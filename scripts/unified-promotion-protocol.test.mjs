@@ -52,6 +52,69 @@ test('promotion binds the explicit source proof in every journal row and the com
   assert(f.journal().every(row => JSON.stringify(row.sourceHandoff) === JSON.stringify(f.value.sourceHandoff)));
 });
 
+function writeBoundary(f) {
+  let observedAt;
+  const verify = f.args.verify;
+  f.args.verify = async () => { const value = await verify(); observedAt = value.identityObservedAt; return value; };
+  f.args.authorizeWrite = () => ({ authorizedAt: Date.now(), identityObservedAt: observedAt });
+  f.args.verifyAfterWrite = () => verify();
+}
+
+for (const boundary of ['deployment', 'public']) test(`write-boundary verification accepts expiry during ${boundary} without renewing authorization`, async t => {
+  const f = fixture(t); writeBoundary(f);
+  t.mock.timers.enable({ apis: ['Date'], now: Date.now() });
+  const method = boundary === 'deployment' ? 'promote' : 'acceptProduction', original = f.transport[method];
+  f.transport[method] = async (...args) => { const result = await original(...args); t.mock.timers.tick(900001); return result; };
+  let reads = 0;
+  const post = f.args.verifyAfterWrite;
+  f.args.verifyAfterWrite = async () => { reads++; return post(); };
+  const result = await executeUnifiedPromotionProtocol(f.args), intent = f.journal().find(row => row.phase === 'promotion_intent');
+  assert.equal(reads, 2); assert.equal(f.calls.length, 1);
+  assert.equal(result.freshnessPolicy, 'write-boundary-v1');
+  assert.deepEqual(result.writeAuthorizations, { main: intent.writeAuthorization });
+  assert.equal(intent.writeAuthorization.authorizedAt, Date.parse(intent.at));
+  assert(Date.parse(f.journal().at(-1).at) - intent.writeAuthorization.authorizedAt > 900000);
+  await assert.rejects(executeUnifiedPromotionProtocol(f.args), /expired/);
+  assert.equal(f.calls.length, 1);
+});
+
+for (const fault of ['snapshot-expiry', 'authorization-expiry', 'post-review', 'post-module', 'post-backwards', 'missing-adapter']) {
+  test(`write-boundary verification retains its rejection gates: ${fault}`, async t => {
+    const f = fixture(t); writeBoundary(f);
+    t.mock.timers.enable({ apis: ['Date'], now: Date.now() });
+    if (fault === 'snapshot-expiry') {
+      const snapshot = f.transport.snapshot; let count = 0;
+      f.transport.snapshot = async () => { if (++count === 2) t.mock.timers.tick(900001); return snapshot(); };
+    }
+    if (fault === 'authorization-expiry') {
+      const authorize = f.args.authorizeWrite;
+      f.args.authorizeWrite = () => { t.mock.timers.tick(900001); return authorize(); };
+    }
+    if (fault === 'post-review') f.args.verifyAfterWrite = async () => { throw Error('Current review changed'); };
+    if (fault === 'post-module' || fault === 'post-backwards') {
+      const post = f.args.verifyAfterWrite;
+      f.args.verifyAfterWrite = async () => { const value = await post();
+        if (fault === 'post-module') value.owners.main.candidate.configPin = 'c'.repeat(64);
+        else value.identityObservedAt -= 10;
+        return value;
+      };
+    }
+    if (fault === 'missing-adapter') delete f.args.verifyAfterWrite;
+    await assert.rejects(executeUnifiedPromotionProtocol(f.args));
+    assert.equal(f.calls.length, fault.startsWith('post-') ? 1 : 0);
+  });
+}
+
+test('write authorization for one owner cannot excuse stale evidence at the next owner', async t => {
+  const f = fixture(t, ['nte', 'main']); writeBoundary(f);
+  t.mock.timers.enable({ apis: ['Date'], now: Date.now() });
+  const promote = f.transport.promote;
+  f.transport.promote = async args => { const result = await promote(args); t.mock.timers.tick(900001); return result; };
+  await assert.rejects(executeUnifiedPromotionProtocol(f.args), /expired/);
+  assert.deepEqual(f.calls.map(row => row.owner), ['nte']);
+  assert.equal(f.journal().at(-1).result.status, 'partial_promotion_requires_manual_reconciliation');
+});
+
 test('changed source selection stops before deployment', async t => {
   const f = fixture(t); f.value.sourceHandoff = { path: '/sealed/fresh-source.json', pin: sha };
   const verify = f.args.verify; let calls = 0;
