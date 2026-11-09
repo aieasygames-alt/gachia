@@ -12,6 +12,7 @@ import { readUnifiedVersion, revalidateUnifiedUploadedModule } from '../../../sc
 import { createUnifiedExecutorVerifier, verifyUnifiedCI } from './unified-production'
 import { readPinnedUnifiedInput } from './unified-desktop'
 import { unifiedHistoricalMainRequest, verifyUnifiedHistoricalMain } from './unified-published-main'
+import { readUnifiedHistoricalPromotionSource } from './unified-promotion-source'
 
 type Proof = { path: string; pin: string }
 export async function completeStoppedMainPromotion(input: {
@@ -39,6 +40,7 @@ export async function completeStoppedMainPromotion(input: {
   const receipt = { schemaVersion: 1, kind: 'unified_readonly_promotion_completion', status: 'production_accepted',
     productionPromoted: true, sourceAdvanced: false, cloudWrites: false, releaseKey: value.releaseKey, transportPin: value.transportPin,
     previewPin: previews.pin, renewalPin: original.first.renewalPin, journalPin: request.journal.pin,
+    ...(original.first.sourceHandoff === undefined ? {} : { sourceHandoff: original.first.sourceHandoff }),
     directory: original.first.directory, completionDirectory: request.directory,
     productionRequest: historical.request.production, preview: requestProof(previews), sourceCI: historical.audit.sourceCI,
     originExecutorCI: historical.audit.executorCI, executorCI: executor.executorCI, promotionExecutorCI,
@@ -46,6 +48,14 @@ export async function completeStoppedMainPromotion(input: {
   const spec = { run, value, previews, references, publicReferences: opened.publicReferences('candidate'), runtimeConfig,
     productionRequest: historical.request.production, sourceCI: receipt.sourceCI, originExecutorCI: receipt.originExecutorCI, executorCI: receipt.executorCI }
   await readUnifiedStoppedMainPromotion({ ...spec, receipt })
+  if (original.first.sourceHandoff) {
+    const sources = await readUnifiedHistoricalPromotionSource(historical, original.first.sourceHandoff,
+      Date.parse(original.rows.find((row: any) => row.phase === 'promotion_intent').at))
+    if (sources.ancestor) {
+      const { verifyUnifiedPublishedMainEvidence } = await import('./unified-published-main')
+      await verifyUnifiedPublishedMainEvidence(sources.ancestor, githubToken)
+    }
+  }
   executor.verify()
   mkdirSync(request.directory, { mode: 0o700 })
   const save = (name: string, value: unknown) => {

@@ -23,6 +23,7 @@ export function readUnifiedMainPromotionJournal({ run, pin, transportPin, releas
     assert(phases.includes(row.phase), 'Unreviewed promotion phase');
     assert.equal(row.releaseKey, releaseKey); assert.equal(row.transportPin, transportPin);
     assert.equal(row.previewPin, first.previewPin); assert.equal(row.renewalPin, first.renewalPin);
+    assert.deepEqual(row.sourceHandoff, first.sourceHandoff, 'Promotion source selection changed in journal');
     const time = Date.parse(row.at); assert(time >= at && time <= Date.now()); at = time;
   }
   assert(SHA.test(first.previewPin) && SHA.test(first.renewalPin));

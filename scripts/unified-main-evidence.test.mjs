@@ -56,6 +56,24 @@ test('completed Main reader reloads real protocol, module, renewal, deployment a
   assert.equal(result.freshnessRenewed, false); assert.equal(result.sourceAdvanced, false); assert.equal(result.publicHTTP.observations.length, paths.length);
 });
 
+for (const fault of ['none', 'receipt', 'renewal', 'journal']) test(`completed Main source proof remains bound across evidence: ${fault}`, async t => {
+  const f = await fixture(t), input = f.input, sourceHandoff = { path: '/sealed/new-source.json', pin: sha };
+  const receipt = JSON.parse(readFileSync(input.proof.path));
+  const renewalFile = join(f.directory, 'renewal/receipt.json'), renewal = JSON.parse(readFileSync(renewalFile));
+  renewal.sourceHandoff = sourceHandoff;
+  const renewalProof = f.save(renewalFile, renewal);
+  const journal = join(input.run, `unified-promotion-${sha}.jsonl`), rows = readFileSync(journal, 'utf8').trim().split('\n').map(JSON.parse);
+  for (const row of rows) { row.sourceHandoff = sourceHandoff; row.renewalPin = renewalProof.pin; }
+  if (fault === 'journal') delete rows[2].sourceHandoff;
+  if (fault === 'renewal') { delete renewal.sourceHandoff; const changed = f.save(renewalFile, renewal); for (const row of rows) row.renewalPin = changed.pin; }
+  const bytes = rows.map(JSON.stringify).join('\n') + '\n'; writeFileSync(journal, bytes);
+  receipt.sourceHandoff = sourceHandoff; receipt.journalPin = digest(bytes); receipt.renewalPin = rows[0].renewalPin;
+  if (fault === 'receipt') delete receipt.sourceHandoff;
+  const proof = f.save(input.proof.path, receipt);
+  if (fault === 'none') assert.deepEqual((await readUnifiedCompletedMainPromotion({ ...input, proof })).receipt.sourceHandoff, sourceHandoff);
+  else await assert.rejects(readUnifiedCompletedMainPromotion({ ...input, proof }));
+});
+
 test('old accepted evidence remains independently readable without making it fresh for another operation', async t => {
   const f = await fixture(t), now = Date.now();
   t.mock.method(Date, 'now', () => now + 86400000);

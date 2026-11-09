@@ -40,6 +40,7 @@ export function readUnifiedMainRenewal({ original, value, previews, references }
   assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.kind, 'unified_main_preview_renewal');
   assert.equal(receipt.releaseKey, value.releaseKey); assert.equal(receipt.transportPin, value.transportPin);
   assert.equal(receipt.previewPin, previews.pin); assert.equal(receipt.cloudWrites, false); assert.equal(receipt.productionPromoted, false);
+  assert.deepEqual(receipt.sourceHandoff, original.first.sourceHandoff, 'Renewal source differs from promotion journal');
   assert.deepEqual(Object.keys(receipt.accepted).sort(), [...ROLES].sort());
   assert.deepEqual(receipt.accepted, original.first.accepted, 'Journal differs from its pinned renewal');
   const firstAt = Date.parse(original.first.at), lastAt = Date.parse((original.stopped
@@ -117,6 +118,7 @@ async function readPromotion(input, receipt, completion) {
   } else assert.equal(proof.path, join(original.first.directory, 'receipt.json'));
   assert.equal(receipt.directory, original.first.directory);
   assert.equal(receipt.renewalPin, original.first.renewalPin); assert.deepEqual(receipt.productionRequest, productionRequest);
+  assert.deepEqual(receipt.sourceHandoff, original.first.sourceHandoff, 'Promotion source differs from receipt');
   assert.deepEqual(receipt.preview, { path: join(previews.directory, 'receipt.json'), pin: previews.pin });
   for (const [name, expected] of Object.entries({ sourceCI, originExecutorCI, executorCI })) {
     assert(expected && expected.status === 'full_exact_ci_passed', 'Independently verified exact CI required');

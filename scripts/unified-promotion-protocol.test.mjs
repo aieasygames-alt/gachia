@@ -45,6 +45,21 @@ for (const owners of [['main'], ['azur-promilia', 'genshin', 'lvmeng', 'nte', 'm
   await assert.rejects(executeUnifiedPromotionProtocol(f.args), /EEXIST/); assert.equal(f.calls.length, owners.length);
 });
 
+test('promotion binds the explicit source proof in every journal row and the completed receipt', async t => {
+  const f = fixture(t); f.value.sourceHandoff = { path: '/sealed/fresh-source.json', pin: sha };
+  const result = await executeUnifiedPromotionProtocol(f.args);
+  assert.deepEqual(result.sourceHandoff, f.value.sourceHandoff);
+  assert(f.journal().every(row => JSON.stringify(row.sourceHandoff) === JSON.stringify(f.value.sourceHandoff)));
+});
+
+test('changed source selection stops before deployment', async t => {
+  const f = fixture(t); f.value.sourceHandoff = { path: '/sealed/fresh-source.json', pin: sha };
+  const verify = f.args.verify; let calls = 0;
+  f.args.verify = async () => { const value = await verify(); if (++calls > 1) value.sourceHandoff.pin = 'c'.repeat(64); return value; };
+  await assert.rejects(executeUnifiedPromotionProtocol(f.args), /identity changed/);
+  assert.equal(f.calls.length, 0);
+});
+
 for (const fault of ['fixture', 'scope', 'stale-source', 'stale-candidate', 'stale-recovery', 'future-preview', 'raw-old-uuid', 'same-uuid',
   'candidate-module', 'recovery-artifact', 'missing-owner', 'missing-module-proof', 'missing-renewal', 'authorization']) test(`refuses before writes: ${fault}`, async t => {
   const f = fixture(t);

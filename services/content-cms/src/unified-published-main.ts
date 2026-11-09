@@ -5,6 +5,7 @@ import { readPinnedUnifiedInput } from './unified-desktop'
 import { readUnifiedHistoricalMainPreviews, readUnifiedHistoricalPublication, unifiedHistoricalPublicationRequest, verifyUnifiedHistoricalPublicationEvidence } from './unified-historical-publication'
 import { verifyUnifiedCI } from './unified-production'
 import { readUnifiedPreflightBinding, RECONCILED_PREFLIGHT } from './unified-reconciled-preflight'
+import { readUnifiedHistoricalPromotionSource } from './unified-promotion-source'
 
 type Proof = { path: string; pin: string }
 export type UnifiedHistoricalMainRequest = {
@@ -65,11 +66,15 @@ export async function readUnifiedPublishedMain(input: UnifiedPublishedMainReques
   const completed = await readUnifiedCompletedMainPromotion({ run: opened.historical.build, proof: request.promotion, value: opened.historical.value,
     previews: opened.previews, references: opened.references, publicReferences: opened.publicReferences('candidate'), runtimeConfig: opened.runtimeConfig,
     productionRequest: opened.historical.request.production, sourceCI: opened.historical.audit.sourceCI, originExecutorCI: opened.historical.audit.executorCI, executorCI })
-  return { ...opened, request, completed, executorCI, sourceAdvanced: false } as const
+  const promotionSources = receipt.sourceHandoff === undefined ? undefined : await readUnifiedHistoricalPromotionSource(opened.historical,
+    receipt.sourceHandoff, Date.parse((completed.original.stopped
+      ? completed.original.rows.find((row: any) => row.phase === 'promotion_intent') : completed.original.rows.at(-1)).at))
+  return { ...opened, request, completed, executorCI, promotionSources, sourceAdvanced: false } as const
 }
 
 export async function verifyUnifiedPublishedMainEvidence(evidence: Awaited<ReturnType<typeof readUnifiedPublishedMain>>, githubToken: string): Promise<any> {
   const opened = await verifyHistoricalMainEvidence(evidence, githubToken)
+  if (evidence.promotionSources?.ancestor) await verifyUnifiedPublishedMainEvidence(evidence.promotionSources.ancestor, githubToken)
   const executorCI = await verifyUnifiedCI(evidence.executorCI.runID, evidence.executorCI.commit, githubToken)
   assert.deepEqual(executorCI, evidence.executorCI)
   const promotionCI = evidence.completed.receipt.promotionExecutorCI

@@ -23,6 +23,14 @@ test('Main promotion accepts only pins and the exact executor CI, never caller a
   }
 })
 
+test('fresh promotion source is an explicit pin and rejects malformed overrides', () => {
+  const value = { ...request(), sourceHandoff: proof }
+  assert.equal(unifiedPromotionRequest(value), value)
+  for (const sourceHandoff of [undefined, null, 'latest', { ...proof, path: 'relative' }, { ...proof, pin: 'bad' }, { ...proof, approved: true }]) {
+    assert.throws(() => unifiedPromotionRequest({ ...value, sourceHandoff }))
+  }
+})
+
 test('fixed CLI refuses incomplete writes and injected authority before reading inputs', () => {
   for (const args of [[], ['promote'], ['recover'], ['audit'], ['renew'], ['renew', '--release-key', 'x'], ['audit', '--request', 'x', '--pin', 'x', '--output', 'x', '--skip-ci', 'true'],
     ['audit', '--release-key', 'x'],

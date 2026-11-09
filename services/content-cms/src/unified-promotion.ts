@@ -19,10 +19,12 @@ import { readUnifiedHistoricalMainPreviews, readUnifiedHistoricalPublication } f
 import { assertUnifiedProductionOwnerClosure } from './unified-production-scope'
 import { createUnifiedProductionVerifier, unifiedProductionRequest, verifyUnifiedCI } from './unified-production'
 import { readUnifiedPreflightBinding } from './unified-reconciled-preflight'
+import { readUnifiedPromotionSourceSelection } from './unified-promotion-source'
 
 type Proof = { path: string; pin: string }
 export type UnifiedPromotionRequest = {
   schemaVersion: 1; kind: 'unified_main_promotion_request'; production: Proof; audit: Proof; previews: Proof; network: Proof; executorRunID: number
+  sourceHandoff?: Proof
 }
 const SHA = /^[a-f0-9]{64}$/
 const save = (file: string, value: unknown) => {
@@ -31,11 +33,13 @@ const save = (file: string, value: unknown) => {
 const pinned = (proof: Proof) => unifiedPinnedJSON(proof.path, proof.pin)
 export function unifiedPromotionRequest(value: unknown): UnifiedPromotionRequest {
   assert(value && typeof value === 'object' && !Array.isArray(value))
-  assert.deepEqual(Object.keys(value).sort(), ['audit', 'executorRunID', 'kind', 'network', 'previews', 'production', 'schemaVersion'])
+  assert.deepEqual(Object.keys(value).sort(), ['audit', 'executorRunID', 'kind', 'network', 'previews', 'production', 'schemaVersion',
+    ...(Object.hasOwn(value, 'sourceHandoff') ? ['sourceHandoff'] : [])].sort())
   const request = value as UnifiedPromotionRequest
   assert.equal(request.schemaVersion, 1); assert.equal(request.kind, 'unified_main_promotion_request')
   assert(Number.isSafeInteger(request.executorRunID) && request.executorRunID > 0)
-  for (const proof of [request.production, request.audit, request.previews, request.network]) {
+  for (const proof of [request.production, request.audit, request.previews, request.network,
+    ...(Object.hasOwn(request, 'sourceHandoff') ? [request.sourceHandoff!] : [])]) {
     assert(proof && typeof proof === 'object'); assert.deepEqual(Object.keys(proof).sort(), ['path', 'pin'])
     assert(typeof proof.path === 'string' && path.isAbsolute(proof.path) && SHA.test(proof.pin))
   }
@@ -50,8 +54,12 @@ export async function openUnifiedPromotion(input: { request: UnifiedPromotionReq
   assert.equal(audit.scopeClosureRequired, false)
   assert.equal(audit.productionPromoted, false); assert.deepEqual(audit.ownerOrder, ['main'])
   assert.equal(audit.executorCI.runID, production.executorRunID); assert.equal(audit.executorCI.status, 'full_exact_ci_passed')
-  const evidence = await createUnifiedProductionVerifier({ ...production, executorRunID: request.executorRunID }, { cmsToken, cloudToken },
+  const source = request.sourceHandoff === undefined ? undefined : readUnifiedPromotionSourceSelection(production, request.sourceHandoff)
+  const sourceSelection = request.sourceHandoff === undefined ? {} : { sourceHandoff: request.sourceHandoff }
+  const evidence = await createUnifiedProductionVerifier({ ...production, ...sourceSelection, executorRunID: request.executorRunID }, { cmsToken, cloudToken },
     { originExecutor: { runID: production.executorRunID, commit: audit.executorCI.commit } })
+  assert.deepEqual(unifiedProductionRequest(pinned(request.production)), production, 'Historical production input changed')
+  if (request.sourceHandoff) assert.deepEqual(readUnifiedPromotionSourceSelection(production, request.sourceHandoff), source)
   assertUnifiedProductionOwnerClosure(evidence.scope); assert.deepEqual(evidence.value.ownerOrder, ['main'], 'Only Main promotion is qualified')
   assert.equal(evidence.value.releaseKey, audit.releaseKey); assert.deepEqual(evidence.qualification, audit.qualification)
   const historical = await readUnifiedHistoricalPublication({ schemaVersion: 1, kind: 'unified_historical_publication_request', production: request.production, audit: request.audit })
@@ -83,7 +91,7 @@ export async function openUnifiedPromotion(input: { request: UnifiedPromotionReq
     assertUploadedVersion(saved.version, proof.versionId, unifiedRuntimeConfig(target), (evidence.baseline.bindings as Record<string, unknown>).gachia)
     return saved
   }
-  return { evidence, historical, previews, references, revalidateModule, request, network, server }
+  return { evidence, historical, production, previews, references, revalidateModule, request, network, server }
 }
 
 // Only fresh network observations create a new renewal. The old upload receipt,
@@ -109,7 +117,8 @@ export async function renewUnifiedMainPreviews(opened: Awaited<ReturnType<typeof
   assert.deepEqual({ ...current, identityObservedAt: evidence.value.identityObservedAt }, evidence.value, 'Renewal source or review changed')
   assertTopology(evidence.baseline, await desktopCloudSnapshot(cloudToken, unifiedProductionRead))
   const receipt = { schemaVersion: 1, kind: 'unified_main_preview_renewal', releaseKey: current.releaseKey, transportPin: current.transportPin,
-    previewPin: opened.request.previews.pin, accepted, cloudWrites: false, productionPromoted: false }
+    previewPin: opened.request.previews.pin, ...(opened.request.sourceHandoff === undefined ? {} : { sourceHandoff: opened.request.sourceHandoff }),
+    accepted, cloudWrites: false, productionPromoted: false }
   return { directory, pin: save(path.join(directory, 'receipt.json'), receipt), receipt }
 }
 
@@ -138,6 +147,7 @@ export async function promoteUnifiedMain(input: { request: UnifiedPromotionReque
   const publicReferences = unifiedMainPublicReferences(references('main', 'candidate'), (row: { bodyFile: string }) =>
     readFileSync(path.join(evidence.transport.directory, 'main/candidate/http', row.bodyFile)))
   const verify = async () => {
+    assert.deepEqual(unifiedProductionRequest(pinned(opened.request.production)), opened.production, 'Historical production input changed')
     assert.deepEqual(pinned(opened.request.network), opened.network)
     const value = await evidence.verify()
     readUnifiedCloudPreviews({ run: evidence.build, directory: previews.directory, pin: previews.pin, value, references })
@@ -152,6 +162,7 @@ export async function promoteUnifiedMain(input: { request: UnifiedPromotionReque
       recheckUnifiedPreview(path.join(renewal.directory, role), proof.evidenceSHA256, { service: 'gachia', versionId: proof.versionId, references: references('main', role), parserVersion: 'streaming-v2' })
     }
     return { ...value, previewPin: previews.pin, renewalPin: renewal.pin, accepted: fresh.accepted,
+      ...(opened.request.sourceHandoff === undefined ? {} : { sourceHandoff: opened.request.sourceHandoff }),
       evidenceDirectory: directory, renewalDirectory: renewal.directory }
   }
   let remoteCount = 0

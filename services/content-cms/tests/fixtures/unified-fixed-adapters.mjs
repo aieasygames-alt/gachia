@@ -89,6 +89,8 @@ const source = await import(src('unified-source-advance'));
 const recovery = await import(src('unified-recovery'));
 const promotion = await import(src('unified-promotion'));
 const completion = await import(src('unified-promotion-completion'));
+const promotionSource = await import(src('unified-promotion-source'));
+const published = await import(src('unified-published-main'));
 
 const steps = ['Verify CMS types without deployment credentials', 'Test isolated CMS', 'Verify current content inventory and Router contracts',
   'Test release tooling without deployment credentials', 'Test public Web and Data consumers', 'Typecheck public consumers without builds',
@@ -558,6 +560,38 @@ function sourceBinding(s, next) {
   const frozen = { planSHA256: s.s.spec.planSHA256, owners: ['main'], candidate: { baselines: active.map(row => ({ sourcePath: row.sourcePath, activeSHA256: row.sha256 })) } };
   const allPrevious = JSON.parse(readFileSync(next.value.previous.path, 'utf8'));
   return { active, frozen, identityObservedAt: Date.now(), baseline: structuredClone(s.s.current), previous: selectUnifiedNextPrevious({ value: next.value, sources: active, previous: allPrevious }, frozen) };
+}
+
+for (const fault of ['none', 'expired-at-operation', 'source-body', 'source-index', 'source-module', 'source-provenance']) {
+  test(`historical promotion source reopens the full new observation while preserving sealed A: ${fault}`, async t => {
+    const s = await fixture(t), index = await advance(s), original = await advance(s, 'baseline', index.proof);
+    const binding = sourceBinding(s, original), sealed = await source.readUnifiedPublicationSources(original.proof, binding);
+    const previous = s.f.save(path.join(s.s.root, 'promotion-source-previous.json'), binding.previous);
+    const historical = { production: { active: original.value.active, sourceHandoff: original.proof }, active: binding.active,
+      built: { frozen: binding.frozen }, value: { baseline: binding.baseline }, sources: sealed,
+      publication: { previousPath: previous.path, previousPin: previous.pin } };
+    const next = await source.advanceUnifiedPublishedSources({ request: { schemaVersion: 1, kind: 'unified_next_source_request',
+      publication: s.publishedProof, sourceIndex: index.proof, executorRunID: 5 }, directory: path.join(s.s.root, 'promotion-fresh-baseline'), cloudToken: 'isolated-cloud-token' });
+    const proof = next.proof, before = readFileSync(original.proof.path);
+    let observedAt = Date.now();
+    if (fault === 'expired-at-operation') observedAt = next.value.observation.startedAt + 900001;
+    if (fault === 'source-body') writeFileSync(path.join(path.dirname(proof.path), 'public/0.body'), 'tampered');
+    if (fault === 'source-index') {
+      const value = { ...next.value, sourceIndex: original.proof };
+      Object.assign(proof, s.f.save(proof.path, value));
+    }
+    if (fault === 'source-module') historical.sources.owners.main.moduleSHA256 = '0'.repeat(64);
+    if (fault === 'source-provenance') historical.sources.provenance.main.moduleProof.pin = '0'.repeat(64);
+    if (fault === 'none') {
+      const opened = await promotionSource.readUnifiedHistoricalPromotionSource(historical, proof, observedAt);
+      assert.equal(opened.ancestor.historical.value.releaseKey, s.f.input.value.releaseKey);
+      assert.deepEqual(opened.owners, sealed.owners);
+      const reads = s.ciReads.length;
+      await published.verifyUnifiedPublishedMainEvidence(opened.ancestor, 'isolated-github-token');
+      assert(s.ciReads.length > reads);
+    } else await assert.rejects(promotionSource.readUnifiedHistoricalPromotionSource(historical, proof, observedAt));
+    assert.deepEqual(readFileSync(original.proof.path), before); assert.equal(s.writes, 0);
+  });
 }
 
 function stopped(s) {

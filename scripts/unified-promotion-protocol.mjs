@@ -183,9 +183,10 @@ export async function executeUnifiedPromotionProtocol({ run, verify, authorize, 
     assert.equal(await authorize(initial), initial.releaseKey);
     assertUnifiedPromotionDirectories(run, initial.evidenceDirectory, initial.renewalDirectory);
     const journal = join(run, `unified-promotion-${initial.transportPin}.jsonl`);
+    const source = initial.sourceHandoff === undefined ? {} : { sourceHandoff: initial.sourceHandoff };
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = row => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), releaseKey: initial.releaseKey,
-      transportPin: initial.transportPin, previewPin: initial.previewPin, renewalPin: initial.renewalPin, ...row }) + '\n', { flush: true });
+      transportPin: initial.transportPin, previewPin: initial.previewPin, renewalPin: initial.renewalPin, ...source, ...row }) + '\n', { flush: true });
     const transport = makeTransport(initial), promoted = {};
     const versions = Object.fromEntries(initial.ownerOrder.map(owner => [initial.owners[owner].service, initial.accepted.candidate[owner].versionId]));
     let pendingOperation, lastObservedAt = initial.identityObservedAt;
@@ -222,7 +223,7 @@ export async function executeUnifiedPromotionProtocol({ run, verify, authorize, 
       record({ phase: 'production_accepted', proof });
       return { schemaVersion: 1, kind: 'unified_publication_promotion', status: 'production_accepted', releaseKey: initial.releaseKey,
         transportPin: initial.transportPin, previewPin: initial.previewPin, renewalPin: initial.renewalPin, versions,
-        publicProof: proof, journalPin: digest(readFileSync(journal)), productionPromoted: true, sourceAdvanced: false };
+        ...source, publicProof: proof, journalPin: digest(readFileSync(journal)), productionPromoted: true, sourceAdvanced: false };
     } catch (error) {
       record({ phase: 'stopped', error: error.message, pendingOperation, promoted, automaticRetry: false, automaticRollback: false });
       try {
