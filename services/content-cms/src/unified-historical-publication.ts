@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
 import path from 'node:path'
+import { withArtifactVerificationSession } from '../../../scripts/artifact-verification-session.mjs'
 import { assertUnifiedOwnerSettings, unifiedRuntimeConfig, unifiedTransportTarget } from '../../../scripts/unified-cloud-module.mjs'
 import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
 import { readUnifiedHistoricalBytes } from '../../../scripts/unified-historical-sources.mjs'
@@ -69,7 +70,7 @@ export function readUnifiedHistoricalPlan(repo: string, commit: string, planPin:
 // active Main have advanced. No current CMS/cloud state is used as historical O.
 export async function readUnifiedHistoricalPublication(input: UnifiedHistoricalPublicationRequest) {
   const request = structuredClone(unifiedHistoricalPublicationRequest(input))
-  return withUnifiedHistoryChain(request.production.path, () => readHistoricalPublication(request))
+  return withArtifactVerificationSession(() => withUnifiedHistoryChain(request.production.path, () => readHistoricalPublication(request)))
 }
 
 async function readHistoricalPublication(request: UnifiedHistoricalPublicationRequest) {

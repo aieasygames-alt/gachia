@@ -75,6 +75,22 @@ test('malformed HTML in a later fingerprint batch rejects the whole result', () 
   assert.throws(() => unifiedPageFingerprints(rows));
 });
 
+test('fingerprint failures retain the parser, bounded workload, original cause and error code without retry', t => {
+  const cause = Object.assign(new Error('spawnSync python3 ETIMEDOUT'), { code: 'ETIMEDOUT' });
+  const row = { html, status: 200 };
+  let calls = 0;
+  t.mock.method(childProcess, 'execFileSync', () => { calls++; throw cause; });
+  syncBuiltinESMExports();
+  try {
+    assert.throws(() => unifiedPageFingerprints([row], 'streaming-v2'), error => {
+      assert.equal(error.code, 'ETIMEDOUT'); assert.equal(error.cause, cause);
+      assert.match(error.message, new RegExp(`streaming-v2, 1 pages, ${Buffer.byteLength(JSON.stringify([row]))} serialized bytes`));
+      return true;
+    });
+    assert.equal(calls, 1);
+  } finally { t.mock.restoreAll(); syncBuiltinESMExports(); }
+});
+
 test('five exact targets are separate from the legacy dual-game guard', () => {
   for (const owner of UNIFIED_OWNERS) assert.equal(exactUnifiedPreviewOrigin(unifiedService(owner), versionId), `https://1234abcd-${unifiedService(owner)}.aieasygames.workers.dev`);
   for (const service of ['gachia-router', 'gachia-staging', 'gachia-game-hi3', 'gachia-game-lvmeng-staging', 'gachia@evil.invalid']) assert.throws(() => exactUnifiedPreviewOrigin(service, versionId));

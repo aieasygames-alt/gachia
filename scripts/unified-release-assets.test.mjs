@@ -6,7 +6,7 @@ import { dirname, join } from 'node:path';
 import test from 'node:test';
 import { prepareUnifiedAssetPair, unifiedService, unifiedStaticFiles, verifyUnifiedAssetPair, UNIFIED_OWNERS } from './unified-release-assets.mjs';
 import { digest } from './desktop-release-assets.mjs';
-import { createArtifactVerificationSession, guardedArtifactInventory } from './artifact-verification-session.mjs';
+import { createArtifactVerificationSession, guardedArtifactInventory, withArtifactVerificationSession } from './artifact-verification-session.mjs';
 import { artifactFiles } from './desktop-publish.mjs';
 
 function fixture(t, owner = 'main') {
@@ -150,6 +150,52 @@ test('inventory sessions reject changing reads, discard failures and isolate ove
   await b.run(read); assert.equal(reads, 2);
   release(); await pending; assert.equal(reads, 2);
   read(); assert.equal(reads, 3);
+});
+
+test('historical roots share guarded inventories across recursive reads but not across root operations', async t => {
+  const f = fixture(t);
+  let reads = 0;
+  const read = () => guardedArtifactInventory(f.input.previous, () => { reads++; return artifactFiles(f.input.previous); });
+  await withArtifactVerificationSession(async () => {
+    const first = read(); first[0].path = 'caller-mutated';
+    await Promise.resolve();
+    assert.notEqual((await withArtifactVerificationSession(read))[0].path, 'caller-mutated');
+    assert.equal(reads, 1);
+  });
+  await withArtifactVerificationSession(read); assert.equal(reads, 2);
+});
+
+test('historical readers join the live verifier session and recheck same-mtime edits after awaits', async t => {
+  const f = fixture(t), session = createArtifactVerificationSession();
+  const file = join(f.input.previous, 'assets/data/game/raw-characters.json'), original = readFileSync(file), stat = statSync(file);
+  let reads = 0;
+  const read = () => guardedArtifactInventory(f.input.previous, () => { reads++; return artifactFiles(f.input.previous); });
+  await session.run(() => withArtifactVerificationSession(read));
+  await session.run(() => withArtifactVerificationSession(read)); assert.equal(reads, 1);
+  writeFileSync(file, original.toString().replace('old', 'bad')); utimesSync(file, stat.atime, stat.mtime);
+  const changed = await session.run(() => withArtifactVerificationSession(read)); assert.equal(reads, 2);
+  assert.equal(changed.find(row => row.path === 'assets/data/game/raw-characters.json').sha256, digest(readFileSync(file)));
+});
+
+test('a caught recursive verification failure invalidates the entire root session', async t => {
+  const f = fixture(t), session = createArtifactVerificationSession();
+  await assert.rejects(session.run(async () => {
+    artifactFiles(f.input.previous);
+    await assert.rejects(withArtifactVerificationSession(async () => { throw new Error('corrupt historical proof'); }), /corrupt historical proof/);
+    await assert.rejects(withArtifactVerificationSession(() => artifactFiles(f.input.previous)), /session failed/);
+  }), /session failed/);
+  await assert.rejects(session.run(() => artifactFiles(f.input.previous)), /failed/);
+  await withArtifactVerificationSession(() => artifactFiles(f.input.previous));
+});
+
+test('overlapping historical root operations never share inventories', async t => {
+  const f = fixture(t);
+  let release, reads = 0;
+  const gate = new Promise(resolve => { release = resolve; });
+  const read = () => guardedArtifactInventory(f.input.previous, () => { reads++; return artifactFiles(f.input.previous); });
+  const first = withArtifactVerificationSession(async () => { read(); await gate; await withArtifactVerificationSession(read); });
+  await withArtifactVerificationSession(read); assert.equal(reads, 2);
+  release(); await first; assert.equal(reads, 2);
 });
 
 test('a link introduced after inventory reuse is checked by the original portability verifier', async t => {

@@ -35,8 +35,16 @@ Focused protocol/history regression passed, followed by the complete release
 suite: 1,595 JavaScript and 56 Python tests passed. CMS type checking and all 38
 documentation/scope tests passed. The final full CMS suite passed all 439 tests
 in 344.987 seconds, including 148 unique fixed-adapter cases across two complete
-74-case shards with no failures, cancellations or skips. Exact remote CI is
-pending.
+74-case shards with no failures, cancellations or skips. Exact remote CI passed
+all required gates.
+
+Implementation commit: `2dba812c4cf2015bfccbaf5198e5fe4cee09c6cb`, pushed to
+`codex/payload-unified-maintenance`. Full exact CI run
+[42568051118](https://github.com/aieasygames-alt/gachia/actions/runs/42568051118)
+passed in 23m23s. CMS, inventory/Router, release tooling, public Web/Data,
+public-consumer types and documentation/scope gates all passed. The independent
+GitHub API verification is saved in `exact-ci.json` (SHA256
+`d89d976897b0c2019177f3fa36e06b0b9456504b1a280166071aece4b899d394`).
 
 The initial test run exposed defects in the new expiry fixture, not a production
 write: an overwritten preview role selector and repeated clock-method mocks.
@@ -51,6 +59,21 @@ expiry before a write, missing/changed/forged authorization, stale preview at
 write, changed current review/module/executor, source body corruption and
 ancestor CI changes. No production operation has been started in this round.
 
+## Real Historical Regression
+
+`verify-history.mjs` independently reopened the real R89 historical Main request
+using this commit's readers, without substituting publication/module/HTTP/CI
+validators. It verified the complete 115-source / five-owner set, both original
+version previews and ancestor CI in 142.679 seconds. A network guard permitted
+only the 18 actual GitHub API GETs: there were no current CMS or Cloudflare
+reads. Selected operational proofs were unchanged before and after the read.
+
+- Result: `historical-verification.json`
+- Result SHA256: `3add364ff58a18dda8ee6bca2b8a693d1aa9e2ef546b7c1a96d5ce703237459e`
+- Status: `real_historical_preview_and_source_regression_passed`
+- No freshness renewal, write authorization, cloud write or source advancement
+  is granted by this regression.
+
 ## Operational Status
 
 No upload, deployment, preview renewal, CMS content edit, installation, or source
@@ -58,9 +81,12 @@ advancement has occurred in R91. R89 and R90 evidence remains unchanged except
 for the already-pending R90 documentation close-out. The existing HI3 release
 and full public A are unchanged.
 
-Disk preflight: approximately 21 GiB available. Do not delete historical
+Disk preflight: approximately 21 GiB available initially and 19 GiB at the final
+local check. No cleanup was performed. Do not delete historical
 evidence, frozen sources, backups, or installed releases.
 
-Next: finish regressions and exact CI, then measure/qualify the complete fresh
-pre-write path before a real single-attempt promotion. A code/test success is
-not a claim that every game/content type is formally publishable.
+Next: measure/qualify the complete fresh pre-write path before a real
+single-attempt promotion of the existing HI3 versions, then complete public
+acceptance and source advancement. No earlier successful operation should be
+replayed. A code/test success is not a claim that every game/content type is
+formally publishable.

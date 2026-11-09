@@ -42,10 +42,16 @@ export function unifiedPageFingerprints(rows, parserVersion = 'legacy-v1') {
   const result = [];
   let batch = [], bytes = 2;
   const flush = () => {
-    const output = execFileSync('python3', ['-B', executable], { input: `[${batch.join(',')}]`, timeout: 30000,
-      maxBuffer: 32 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
-    const parsed = JSON.parse(output.toString()); assert(Array.isArray(parsed)); assert.equal(parsed.length, batch.length);
-    result.push(...parsed); batch = []; bytes = 2;
+    try {
+      const output = execFileSync('python3', ['-B', executable], { input: `[${batch.join(',')}]`, timeout: 30000,
+        maxBuffer: 32 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
+      const parsed = JSON.parse(output.toString()); assert(Array.isArray(parsed)); assert.equal(parsed.length, batch.length);
+      result.push(...parsed); batch = []; bytes = 2;
+    } catch (cause) {
+      const error = new Error(`Unified HTML fingerprint parsing failed (${parserVersion}, ${batch.length} pages, ${bytes} serialized bytes): ${cause.message}`, { cause });
+      if (typeof cause.code === 'string') error.code = cause.code;
+      throw error;
+    }
   };
   // Bound aggregate parsing work without changing either versioned parser.
   // An individually valid large page is processed alone, never truncated.

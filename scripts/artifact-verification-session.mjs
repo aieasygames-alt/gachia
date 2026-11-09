@@ -32,11 +32,25 @@ export function createArtifactVerificationSession() {
     async run(read) {
       assert(!state.current && !state.failed, 'Artifact verification session is busy or failed');
       const turn = Symbol(); state.current = turn;
-      try { return await sessions.run({ state, turn }, read); }
+      try {
+        const result = await sessions.run({ state, turn }, read);
+        assert(!state.failed, 'Artifact verification session failed');
+        return result;
+      }
       catch (error) { state.entries.clear(); state.failed = true; throw error; }
       finally { state.current = undefined; }
     },
   };
+}
+
+// Recursive historical readers share guarded inventories, never validation or
+// network results. Each independent root operation starts a new session.
+export async function withArtifactVerificationSession(read) {
+  const context = sessions.getStore(), state = context?.state;
+  if (!state || state.current !== context.turn) return createArtifactVerificationSession().run(read);
+  assert(!state.failed, 'Artifact verification session failed');
+  try { return await read(); }
+  catch (error) { state.entries.clear(); state.failed = true; throw error; }
 }
 
 export function guardedArtifactInventory(directory, read) {
