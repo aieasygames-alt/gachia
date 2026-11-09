@@ -40,7 +40,8 @@ export async function sealProductionLocal(s, f, prepared) {
   const form = new FormData(); form.set('metadata', JSON.stringify(prepared.metadata)); form.set('worker.js', new Blob(['sealed recovery metadata']), 'worker.js');
   writeFileSync(path.join(root, 'exact.multipart'), Buffer.from(await new Response(form).arrayBuffer()));
   const scope = { preservationOnlyOwners: [], preservedOwners: {}, uploadOwners: ['main'], editorial: { owners: ['main'] }, build: { owners: ['main'] } };
-  const qualification = { policy: 'isolated-promotion-fixture' };
+  const qualification = { policy: 'ananta-existing-installation-content-v1', game: 'ananta',
+    changed: [...f.input.value.changed], fields: ['/content'], locale: 'zh' };
   const transport = { directory: f.transportDirectory, transportPin: f.input.value.transportPin, receipt: { owners: { main: Object.fromEntries(
     ['candidate', 'recovery'].map(role => [role, { moduleSHA256: f.input.value.owners.main[role].moduleSHA256,
       uploadConfigPin: f.input.value.owners.main[role].configPin, referencesPin: f.input.value.owners.main[role].referencesPin }])) } } };

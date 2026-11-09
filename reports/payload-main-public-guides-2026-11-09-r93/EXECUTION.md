@@ -73,6 +73,16 @@ The first real projection also exposed the unrelated mandatory English pilot
 page, which is now selected by the verified release policy as described above.
 Both initial failure logs are retained. Neither was a public deployment.
 
+The initial full CMS regression exposed the isolated production fixture's
+old placeholder `{ policy: 'isolated-promotion-fixture' }`, which is not a
+valid release qualification. The fixture now supplies the complete accepted
+pilot shape and its actual changed key. Production validation was not relaxed;
+the failing full-suite log is retained and the corrected suite must pass.
+The three focused private-promotion success variants then passed with the
+corrected fixture. Superseded CI `42579662704` for `12e6d38` was cancelled
+after this deterministic local fixture failure was found; it is not a passed
+checkpoint. The fixture correction is a separate commit, not an amendment.
+
 No production operation is authorized by these changes alone. Both existing
 cloud versions and public Main remain unchanged. A complete fresh pre-write
 qualification is still required before the first HI3 promotion.
