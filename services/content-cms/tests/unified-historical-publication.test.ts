@@ -42,7 +42,8 @@ test('historical request cannot inject CMS, live baseline, skip gates or write a
   const proof = { path: '/tmp/pinned.json', pin: 'a'.repeat(64) }
   const value = { schemaVersion: 1, kind: 'unified_historical_publication_request', production: proof, audit: proof }
   assert.equal(unifiedHistoricalPublicationRequest(value), value)
-  for (const key of ['cmsToken', 'current', 'sourceState', 'skipCI', 'verify', 'transport', 'productionReady', 'freshnessRenewed']) {
+  for (const key of ['cmsToken', 'current', 'sourceState', 'skipCI', 'verify', 'transport', 'productionReady', 'freshnessRenewed',
+    'qualification', 'publicPolicy', 'skipPublic']) {
     assert.throws(() => unifiedHistoricalPublicationRequest({ ...value, [key]: true }))
   }
   for (const invalid of [null, [], { ...value, kind: 'renewal' }, { ...value, audit: { ...proof, pin: 'bad' } },

@@ -68,9 +68,44 @@ versus the previous 113.580 seconds: about 26% less elapsed time in this one
 local comparison. See `guarded-history-benchmark.json`. This is not a claim that
 the complete pre-write path fits its original 15-minute source window.
 
-Full local regression and exact remote CI are the next gates. Operational
-qualification with this implementation has not run yet. Existing HI3 candidate
-and recovery versions, public Main and resident CMS content remain unchanged.
+Full local regression passed: CMS 439 tests, release tooling 1,600 JavaScript
+and 56 Python tests, 38 documentation/scope checks and CMS types. Implementation
+commit `ae0f39759e056daaf858df911351768a339a9b7f` passed all mandatory exact CI
+gates in run `42573869451` (18m36s). Independent API verification is saved in
+`exact-ci.json`, SHA256
+`eee45eedc1a1ee470e8eccd090a2a3e4acf233ace17351aa94745a9188a5abdf`.
+
+An independent real historical regression also passed with all 115 sources,
+five owners, both previews and 18 actual GitHub GETs in 102.195 seconds. See
+`historical-verification.json`, SHA256
+`9fc0ac57cdba44ce4ac041c3681a94625c8fe17c42131196f84ef0e801150d00`.
+There were no current CMS/Cloudflare reads or freshness renewal in that read.
+
+## Guarded Implementation Measurement
+
+`qualify-guarded.mjs` made one independent read-only attempt against the verified
+new implementation. It pins its own script, rejects all application/cloud
+writes and does not instantiate a deployment writer or promotion journal.
+
+- New baseline: 1,267 responses passed, 195.543 seconds.
+- Actual promotion opening: passed, 226.418 seconds; source age 345.695 seconds.
+- Actual preview renewal: both original UUIDs passed 1,318 responses each;
+  final CMS/source/module/topology checks passed, 275.401 seconds total.
+- The next actual public-reference projection failed with
+  `Unqualified Main public consumer`. The sealed HI3 Chinese guide path was
+  still excluded by the old Ananta-only public reader.
+- Failure source age: 621.365 seconds, not expired. The protocol's initial and
+  final pre-write verification stages were not reached. The complete pre-write
+  duration is therefore still unqualified.
+- Result: `guarded/failure.json`, SHA256
+  `2cc4deb405981f2036baa4f20fdc06d135ae4dfe8cd4e10d0bfa36afef5be91c`.
+- No promotion authorization or journal, deployment, CMS content edit or source
+  advancement. CMS logout succeeded, original proof pins remain unchanged.
+
+The existing HI3 candidate and recovery versions, public Main and resident CMS
+content remain unchanged. The next implementation corrects the public consumer
+policy mismatch; see R93. Do not retry this completed measurement or treat its
+renewal as reusable write authorization.
 Formal scope remains 11 Main games / 237 existing Chinese guide bodies, one
 record per release, not all 16 scopes or all content types.
 

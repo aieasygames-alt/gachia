@@ -15,7 +15,8 @@ test('Main promotion accepts only pins and the exact executor CI, never caller a
     { ...value, production: { ...proof, path: 'relative' } }, { ...value, previews: { ...proof, pin: 'bad' } }]) {
     assert.throws(() => unifiedPromotionRequest(invalid))
   }
-  for (const key of ['verify', 'transport', 'ownerOrder', 'skipCI', 'originExecutor', 'sourceState', 'recovery', 'releaseKey']) {
+  for (const key of ['verify', 'transport', 'ownerOrder', 'skipCI', 'originExecutor', 'sourceState', 'recovery', 'releaseKey',
+    'qualification', 'publicReferences', 'publicPolicy', 'skipPublic']) {
     assert.throws(() => unifiedPromotionRequest({ ...value, [key]: true }))
   }
   for (const key of ['production', 'audit', 'previews', 'network'] as const) {

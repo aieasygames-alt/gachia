@@ -5,26 +5,56 @@ import { digest } from './desktop-release-assets.mjs';
 import { boundedBody, sampleReadOnly } from './desktop-version-preview.mjs';
 import { publicRobots, validatePublicResponse } from './desktop-public-acceptance.mjs';
 import { unifiedHTMLParserPin, unifiedPageFingerprints, unifiedPreviewPath } from './unified-version-preview.mjs';
+import { UNIFIED_MAIN_GUIDE_GAMES } from './unified-main-guide-contract.mjs';
 
 const policy = value => (value ?? '').toLowerCase().split(',').map(x => x.trim()).filter(Boolean).sort();
 const mime = headers => new Headers(headers).get('content-type')?.split(';')[0].trim().toLowerCase();
+const pilotGuides = ['/zh/ananta/guides/download-install-guide', '/en/ananta/guides/download-install-guide'];
+const qualifiedGuide = path => {
+  const match = /^\/zh\/([a-z0-9-]+)\/guides\/([a-z0-9]+(?:-[a-z0-9]+)*)$/.exec(path);
+  return !!match && UNIFIED_MAIN_GUIDE_GAMES.includes(match[1]);
+};
 
-export function unifiedMainPublicReferences(references, readBody) {
+export function unifiedMainPublicReferences(references, readBody, qualification) {
   assert(references.length > 0 && references.length <= 2500);
   assert.equal(new Set(references.map(row => row.path)).size, references.length);
+  // Fixed adapters supply their verified release qualification; requests cannot
+  // select public policy. Omitted qualification retains historical pilot rules.
+  let guideGame;
+  if (qualification !== undefined) {
+    const value = structuredClone(qualification);
+    assert.deepEqual(Object.keys(value).sort(), ['changed', 'fields', 'game', 'locale', 'policy']);
+    assert.deepEqual(value.fields, ['/content']); assert.equal(value.locale, 'zh');
+    assert(Array.isArray(value.changed) && value.changed.length === 1 && typeof value.changed[0] === 'string' && value.changed[0]);
+    if (value.policy === 'main-existing-guide-content-v1') {
+      assert(UNIFIED_MAIN_GUIDE_GAMES.includes(value.game), 'Unqualified Main guide game'); guideGame = value.game;
+    } else {
+      assert.equal(value.policy, 'ananta-existing-installation-content-v1', 'Unqualified Main guide policy'); assert.equal(value.game, 'ananta');
+    }
+  }
   const result = references.map((row, index) => {
     unifiedPreviewPath(row.path, 'https://gachia.com');
     assert(row.path.startsWith('/_next/static/') || /^\/(?:data|data-client|data-manifest)\/.+\.json$/.test(row.path)
-      || ['/sitemap.xml', '/robots.txt', '/api/auth/get-session', '/zh/ananta/guides/download-install-guide', '/en/ananta/guides/download-install-guide'].includes(row.path),
+      || ['/sitemap.xml', '/robots.txt', '/api/auth/get-session', ...pilotGuides].includes(row.path) || guideGame !== undefined && qualifiedGuide(row.path),
     'Unqualified Main public consumer');
     const bytes = readBody(row, index); assert.equal(bytes.length, row.bytes); assert.equal(digest(bytes), row.sha256);
+    const guide = qualifiedGuide(row.path) && !pilotGuides.includes(row.path);
+    if (guide) {
+      assert.equal(row.status, 200, 'Qualified existing guide must be present');
+      assert.equal(mime(row.headers), 'text/html', 'Qualified guide must render HTML');
+    }
     if (mime(row.headers) !== 'text/html') return { ...row };
-    return { ...row, fingerprint: unifiedPageFingerprints([{ html: bytes.toString(), status: row.status }], 'streaming-v2')[0], expectedRobots: publicRobots(bytes.toString()) };
+    const fingerprint = unifiedPageFingerprints([{ html: bytes.toString(), status: row.status }], 'streaming-v2')[0];
+    if (guide) assert.deepEqual(fingerprint.canonical, [`https://gachia.com${row.path}`], 'Qualified guide canonical differs from its exact path');
+    return { ...row, fingerprint, expectedRobots: publicRobots(bytes.toString()) };
   });
   for (const path of ['/sitemap.xml', '/robots.txt', '/api/auth/get-session', '/data/ananta/raw-guides.json',
-    '/data/genshin/raw-guides.json', '/data/nte/raw-guides.json', '/zh/ananta/guides/download-install-guide', '/en/ananta/guides/download-install-guide']) {
+    '/data/genshin/raw-guides.json', '/data/nte/raw-guides.json', pilotGuides[0],
+    ...(guideGame === undefined ? [pilotGuides[1]] : [`/data/${guideGame}/raw-guides.json`])]) {
     assert(result.some(row => row.path === path), `Missing Main public coverage: ${path}`);
   }
+  if (guideGame !== undefined) assert(result.some(row => qualifiedGuide(row.path) && !pilotGuides.includes(row.path)
+    && row.path.startsWith(`/zh/${guideGame}/guides/`)), 'Missing Main public coverage for the qualified guide game');
   return result;
 }
 

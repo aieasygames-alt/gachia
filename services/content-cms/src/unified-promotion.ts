@@ -145,7 +145,7 @@ export async function promoteUnifiedMain(input: { request: UnifiedPromotionReque
   const directory = path.join(evidence.build, `unified-main-promotion-${randomUUID()}`); mkdirSync(directory, { mode: 0o700 })
   const renewal = await renewUnifiedMainPreviews(opened, cloudToken, path.join(directory, 'renewal'))
   const publicReferences = unifiedMainPublicReferences(references('main', 'candidate'), (row: { bodyFile: string }) =>
-    readFileSync(path.join(evidence.transport.directory, 'main/candidate/http', row.bodyFile)))
+    readFileSync(path.join(evidence.transport.directory, 'main/candidate/http', row.bodyFile)), evidence.qualification)
   const verifyEvidence = async (verifySource: () => Promise<any>) => {
     assert.deepEqual(unifiedProductionRequest(pinned(opened.request.production)), opened.production, 'Historical production input changed')
     assert.deepEqual(pinned(opened.request.network), opened.network)

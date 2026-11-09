@@ -133,7 +133,7 @@ async function readHistoricalPublication(request: UnifiedHistoricalPublicationRe
     owners: Object.fromEntries(scope.uploadOwners.map(owner => [owner, owners[owner]])), preservedOwners, baseline: sources.baseline, identityObservedAt: audit.identityObservedAt }
   for (const [key, expected] of Object.entries(value)) assert.deepEqual(audit[key], expected, `Historical audit differs: ${key}`)
   assert.equal(audit.sourceCI.runID, production.sourceRunID); assert.equal(audit.sourceCI.commit, built.frozen.sourceCommit)
-  if (reconciliation) await readUnifiedHistoricalMainPreviews({ build, transport, value }, reconciliation.previews)
+  if (reconciliation) await readUnifiedHistoricalMainPreviews({ build, transport, value, qualification }, reconciliation.previews)
   return { request, production, audit, preview, transport, publication, built, build, plan, originals, active, sealedSources, review, scope, qualification, sources, value,
     currentCMSRead: false, currentCloudRead: false, freshnessRenewed: false, ciVerified: false, productionReady: false } as const
 }
@@ -159,7 +159,7 @@ export async function verifyUnifiedHistoricalPublicationEvidence(evidence: Await
   return { ...evidence, sourceCI, originExecutorCI, ciVerified: true } as const
 }
 
-export async function readUnifiedHistoricalMainPreviews(evidence: Pick<Awaited<ReturnType<typeof readUnifiedHistoricalPublication>>, 'build' | 'transport' | 'value'>, proof: Proof) {
+export async function readUnifiedHistoricalMainPreviews(evidence: Pick<Awaited<ReturnType<typeof readUnifiedHistoricalPublication>>, 'build' | 'transport' | 'value' | 'qualification'>, proof: Proof) {
   const references = (owner: string, role: string, parserVersion = 'streaming-v2') => {
     assert.equal(owner, 'main'); assert(['candidate', 'recovery'].includes(role))
     const root = path.join(evidence.transport.directory, owner, role, 'http')
@@ -174,6 +174,6 @@ export async function readUnifiedHistoricalMainPreviews(evidence: Pick<Awaited<R
   const runtimeConfig = unifiedRuntimeConfig(target)
   const modules = await readUnifiedMainPreviewModules({ value: evidence.value, previews, runtimeConfig })
   const publicReferences = (role: string) => unifiedMainPublicReferences(references('main', role), (row: { bodyFile: string }) =>
-    readUnifiedHistoricalBytes(path.join(evidence.transport.directory, 'main', role, 'http', row.bodyFile)))
+    readUnifiedHistoricalBytes(path.join(evidence.transport.directory, 'main', role, 'http', row.bodyFile)), evidence.qualification)
   return { previews, references, modules, runtimeConfig, publicReferences }
 }
