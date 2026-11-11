@@ -21,6 +21,7 @@ import { unifiedConfigSemantics, unifiedDryRun, unifiedTransportTool, verifyUnif
 const serviceFor = { genshin: 'gachia-game-genshin', router: 'gachia-router', main: 'gachia' };
 const appFor = { genshin: 'game-genshin', router: 'router', main: 'web' };
 const treePin = directory => digest(migrationJSON(artifactFiles(directory)));
+export { localConfig as migrationLocalConfig, seal as sealMigrationOwner };
 export function migrationRuntimeConfig(workspace, owner, role) {
   const raw = readFileSync(join(workspace, 'apps', appFor[owner], 'wrangler.jsonc'), 'utf8');
   const candidate = genshinMigrationConfig(owner, raw);

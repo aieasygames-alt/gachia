@@ -1,10 +1,19 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { request as playwright } from '@playwright/test';
-import { assertUnifiedPreviewRead, createUnifiedPreviewNetwork, unifiedPreviewProxy } from './unified-preview-network.mjs';
+import { assertGenshinMigrationPreviewRead, assertUnifiedPreviewRead, createUnifiedPreviewNetwork, unifiedPreviewProxy } from './unified-preview-network.mjs';
 
 const origin = 'https://1234abcd-gachia.aieasygames.workers.dev';
 const options = { method: 'GET', redirect: 'error', credentials: 'omit', headers: { 'accept-language': 'zh' } };
+test('migration proxy scope adds only its exact Router and never broadens the ordinary editorial reader', () => {
+  const router = 'https://1234abcd-gachia-router.aieasygames.workers.dev';
+  for (const service of ['gachia', 'gachia-router', 'gachia-game-genshin']) assertGenshinMigrationPreviewRead(`https://1234abcd-${service}.aieasygames.workers.dev/robots.txt`, options);
+  assert.throws(() => assertUnifiedPreviewRead(router + '/robots.txt', options));
+  for (const url of ['https://api.cloudflare.com/', 'https://gachia.com/', router.replace('1234abcd', 'latest'), router + '?query=1',
+    'https://1234abcd-gachia-game-nte.aieasygames.workers.dev', router.replace('https:', 'http:')]) assert.throws(() => assertGenshinMigrationPreviewRead(url, options));
+  for (const patch of [{ method: 'POST' }, { redirect: 'follow' }, { credentials: 'include' }, { headers: { authorization: 'secret' } }, { headers: { cookie: 'secret' } }])
+    assert.throws(() => assertGenshinMigrationPreviewRead(router, { ...options, ...patch }));
+});
 
 test('preview routing accepts only explicit credential-free loopback proxies', () => {
   assert.equal(unifiedPreviewProxy('socks5://127.0.0.1:1080'), 'socks5://127.0.0.1:1080');

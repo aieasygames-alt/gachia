@@ -5,6 +5,9 @@ import { genshinProductionMigrationRequest } from '../src/genshin-production-mig
 const valid = () => ({ schemaVersion: 1, kind: 'genshin_initial_production_migration_request', bundle: { path: '/sealed/bundle.json', pin: 'a'.repeat(64) }, executorRunID: 1 })
 test('migration request accepts only a pinned bundle and exact CI identity', () => {
   assert.deepEqual(genshinProductionMigrationRequest(valid()), valid())
+  assert.deepEqual(genshinProductionMigrationRequest({ ...valid(), previewProxy: 'http://127.0.0.1:1087' }).previewProxy, 'http://127.0.0.1:1087')
+  for (const previewProxy of ['http://example.com:1087', 'http://user:secret@127.0.0.1:1087', 'http://127.0.0.1:1087/path'])
+    assert.throws(() => genshinProductionMigrationRequest({ ...valid(), previewProxy }))
   for (const extra of ['transport', 'verify', 'token', 'owner', 'skipCI', 'productionReady', 'sourceIndex']) {
     assert.throws(() => genshinProductionMigrationRequest({ ...valid(), [extra]: true }))
   }

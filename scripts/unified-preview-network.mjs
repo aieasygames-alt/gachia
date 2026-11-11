@@ -10,20 +10,24 @@ export function unifiedPreviewProxy(value) {
   return url.origin === 'null' ? `${url.protocol}//127.0.0.1:${url.port}` : url.origin;
 }
 
-export function assertUnifiedPreviewRead(input, options) {
+function assertOwnedPreviewRead(input, options, host) {
   const url = new URL(input instanceof Request ? input.url : input);
   assert(url.protocol === 'https:' && !url.port && !url.username && !url.password && !url.search && !url.hash
-    && /^[a-f0-9]{8}-(?:gachia|gachia-game-(?:azur-promilia|genshin|lvmeng|nte))\.aieasygames\.workers\.dev$/.test(url.hostname),
+    && host.test(url.hostname),
   'Only exact owned Worker previews may use this reader');
   assert.equal(options?.method, 'GET'); assert.equal(options.redirect, 'error'); assert.equal(options.credentials, 'omit');
   const headers = new Headers(options.headers);
   assert([...headers.keys()].every(key => ['accept-language', 'connection'].includes(key)), 'Preview reader cannot send authentication or arbitrary headers');
   return { url: url.href, headers };
 }
+export const assertUnifiedPreviewRead = (input, options) => assertOwnedPreviewRead(input, options,
+  /^[a-f0-9]{8}-(?:gachia|gachia-game-(?:azur-promilia|genshin|lvmeng|nte))\.aieasygames\.workers\.dev$/);
+export const assertGenshinMigrationPreviewRead = (input, options) => assertOwnedPreviewRead(input, options,
+  /^[a-f0-9]{8}-(?:gachia|gachia-router|gachia-game-genshin)\.aieasygames\.workers\.dev$/);
 
 // Use the existing pinned HTTP client, not a browser/profile or global proxy.
 // SOCKS5 resolves the exact TLS hostname through the user's existing local proxy.
-export async function createUnifiedPreviewNetwork(proxy) {
+async function createOwnedPreviewNetwork(proxy, assertRead) {
   const server = unifiedPreviewProxy(proxy);
   const context = await playwright.newContext({ proxy: { server }, ignoreHTTPSErrors: false, timeout: 30000, userAgent: 'node',
     storageState: { cookies: [], origins: [] } });
@@ -31,7 +35,7 @@ export async function createUnifiedPreviewNetwork(proxy) {
     route: { kind: 'explicit_loopback_preview_proxy', server, userAgent: 'node', credentials: false, tlsVerification: true, redirects: false, retries: 0 },
     close: () => context.dispose(),
     request: async (input, options) => {
-      const { url, headers } = assertUnifiedPreviewRead(input, options); options.signal?.throwIfAborted();
+      const { url, headers } = assertRead(input, options); options.signal?.throwIfAborted();
       // Override the isolated client's cookie jar, even if a rejected response
       // attempted to set a cookie during another in-flight read.
       headers.set('cookie', '');
@@ -47,3 +51,5 @@ export async function createUnifiedPreviewNetwork(proxy) {
     },
   };
 }
+export const createUnifiedPreviewNetwork = proxy => createOwnedPreviewNetwork(proxy, assertUnifiedPreviewRead);
+export const createGenshinMigrationPreviewNetwork = proxy => createOwnedPreviewNetwork(proxy, assertGenshinMigrationPreviewRead);

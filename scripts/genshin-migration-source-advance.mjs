@@ -23,7 +23,8 @@ export async function readCompletedGenshinMigration(proof) {
   const evidence = await verifyGenshinMigrationBundle(value.bundle);
   assert.equal(value.executorCI.status, 'full_exact_ci_passed'); assert.equal(value.executorCI.commit, evidence.value.sourceCommit);
   assert.equal(value.executorCI.runID, value.request.executorRunID);
-  assert.equal(value.releaseKey, digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, bundle: value.bundle, sourceCI: value.executorCI })));
+  assert.equal(value.releaseKey, digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, bundle: value.bundle, sourceCI: value.executorCI,
+    ...(value.request.previewProxy ? { previewProxy: value.request.previewProxy } : {}) })));
   assert.equal(value.journal.path, join(directory, `genshin-migration-${value.releaseKey}.jsonl`)); assert.equal(value.journal.pin, value.journalPin);
   const raw = readFileSync(value.journal.path); assert.equal(digest(raw), value.journal.pin); assert(raw.toString().endsWith('\n'));
   const rows = raw.toString().trimEnd().split('\n').map(JSON.parse);

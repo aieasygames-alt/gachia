@@ -48,7 +48,7 @@ export function migrationRouterDeploymentWriter({ releaseKey, versionId, token, 
 
 // Only the fixed desktop wrapper supplies the independently verified bundle.
 // No request field can replace a reader, validator, module or write operation.
-export function genshinMigrationTransport({ evidence, releaseKey, token, directory }) {
+export function genshinMigrationTransport({ evidence, releaseKey, token, directory, previewRequest = unifiedProductionRead }) {
   const { value, expected, bases } = evidence, uploads = new Map(), writers = new Map();
   const readVersion = (service, versionId) => service === 'gachia-router'
     ? readMigrationRouterVersion({ versionId, token, request: unifiedProductionRead }) : readUnifiedVersion({ service, versionId, token, request: unifiedProductionRead });
@@ -117,7 +117,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
     },
     preview: async args => {
       const { output } = rowFor(args); const proof = await verifyMigrationHTTP({ origin: migrationPreviewOrigin(args.service, args.versionId), references: references(args.owner, args.role),
-        directory: join(output, 'preview'), owner: args.owner, role: args.role, expected, bases, preview: true, request: unifiedProductionRead });
+        directory: join(output, 'preview'), owner: args.owner, role: args.role, expected, bases, preview: true, request: previewRequest });
       return { ...proof, service: args.service, versionId: args.versionId };
     },
     revalidate: async args => {

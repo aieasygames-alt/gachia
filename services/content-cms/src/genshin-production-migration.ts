@@ -14,16 +14,18 @@ import { readMigrationRouterSource, readMigrationRouterVersion } from '../../../
 import { advanceGenshinMigrationSources, readCompletedGenshinMigration } from '../../../scripts/genshin-migration-source-advance.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
 import { readUnifiedVersion } from '../../../scripts/unified-version-identity.mjs'
+import { createGenshinMigrationPreviewNetwork, unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
 import { createUnifiedExecutorVerifier } from './unified-production'
 import { verifyUnifiedPublishedSource } from './unified-source-advance'
 
 type Proof = { path: string; pin: string }
-type Request = { schemaVersion: 1; kind: 'genshin_initial_production_migration_request'; bundle: Proof; executorRunID: number }
+type Request = { schemaVersion: 1; kind: 'genshin_initial_production_migration_request'; bundle: Proof; executorRunID: number; previewProxy?: string }
 
 export function genshinProductionMigrationRequest(value: unknown): Request {
   assert(value && typeof value === 'object' && !Array.isArray(value))
   const request = value as Request
-  assert.deepEqual(Object.keys(request).sort(), ['schemaVersion', 'kind', 'bundle', 'executorRunID'].sort())
+  assert.deepEqual(Object.keys(request).sort(), ['schemaVersion', 'kind', 'bundle', 'executorRunID', ...(Object.hasOwn(request, 'previewProxy') ? ['previewProxy'] : [])].sort())
+  if (Object.hasOwn(request, 'previewProxy')) assert.equal(unifiedPreviewProxy(request.previewProxy), request.previewProxy)
   assert.equal(request.schemaVersion, 1); assert.equal(request.kind, 'genshin_initial_production_migration_request')
   assert.deepEqual(Object.keys(request.bundle).sort(), ['path', 'pin']); assert(path.isAbsolute(request.bundle.path) && /^[a-f0-9]{64}$/.test(request.bundle.pin))
   assert(Number.isSafeInteger(request.executorRunID) && request.executorRunID > 0)
@@ -48,7 +50,8 @@ export async function auditGenshinProductionMigration(input: unknown, cloudToken
   assertModuleVersionIdentity(router.version, await readMigrationRouterVersion({ versionId: router.value.versionId, token: cloudToken, request: unifiedProductionRead }))
   assertGenshinMigrationTopology(before, await desktopCloudSnapshot(cloudToken, unifiedProductionRead))
   executor.verify()
-  const releaseKey = digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, bundle: request.bundle, sourceCI: executor.executorCI }))
+  const releaseKey = digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, bundle: request.bundle, sourceCI: executor.executorCI,
+    ...(request.previewProxy ? { previewProxy: request.previewProxy } : {}) }))
   const identity = { policy: GENSHIN_MIGRATION_POLICY, releaseKey, sourceCommit: executor.executorCommit, sourceCI: executor.executorCI,
     sourceIndexPin: evidence.value.sourceIndex.pin, activePin: evidence.value.active.pin, baseline: evidence.value.baseline, observedAt: Date.now(), owners: evidence.value.owners }
   assertGenshinMigrationIdentity(identity)
@@ -73,8 +76,14 @@ export async function activateGenshinProductionMigration(input: { request: unkno
   mkdirSync(directory, { mode: 0o700 })
   migrationSave(directory, 'request.json', audited.request)
   migrationSave(directory, 'identity.json', audited.identity)
-  const transport = genshinMigrationTransport({ evidence: audited.evidence, releaseKey: input.releaseKey, token: input.cloudToken, directory })
-  const result = await executeGenshinMigration({ run: directory, releaseKey: input.releaseKey, verify: audited.verify, transport })
+  const network = audited.request.previewProxy ? await createGenshinMigrationPreviewNetwork(audited.request.previewProxy) : undefined
+  migrationSave(directory, 'preview-network.json', network?.route ?? { kind: 'direct_exact_version_read', retries: 0 })
+  let result
+  try {
+    const transport = genshinMigrationTransport({ evidence: audited.evidence, releaseKey: input.releaseKey, token: input.cloudToken, directory,
+      ...(network ? { previewRequest: network.request } : {}) })
+    result = await executeGenshinMigration({ run: directory, releaseKey: input.releaseKey, verify: audited.verify, transport })
+  } finally { await network?.close() }
   audited.executor.verify()
   const value = { kind: 'genshin_initial_production_migration_completion', schemaVersion: 1, request: audited.request,
     bundle: audited.request.bundle, executorCI: audited.executor.executorCI, releaseKey: input.releaseKey, ...result,

@@ -16,6 +16,9 @@ export function genshinProductionOwnerScope(manifest: ReturnType<typeof exportUn
   assert.deepEqual(manifest.baselines.map(row => ({ sourcePath: row.sourcePath, sha256: row.activeSHA256 })).sort((a, b) => a.sourcePath.localeCompare(b.sourcePath)),
     active.map(({ sourcePath, sha256 }) => ({ sourcePath, sha256 })).sort((a, b) => a.sourcePath.localeCompare(b.sourcePath)))
   for (const row of active) assert.equal(digest(row.text), row.sha256)
+  assert.equal(new Set(overlays.map(row => row.sourcePath)).size, overlays.length, 'Duplicate production overlay')
+  assert.deepEqual(overlays.map(row => ({ sourcePath: row.sourcePath, sha256: row.sha256 })),
+    manifest.files.map(row => ({ sourcePath: row.sourcePath, sha256: row.candidateSHA256 })), 'Production overlay differs from compiler manifest')
   const edited = overlays.filter(row => {
     const before = active.find(source => source.sourcePath === row.sourcePath); assert(before)
     assert.equal(digest(row.text), row.sha256)

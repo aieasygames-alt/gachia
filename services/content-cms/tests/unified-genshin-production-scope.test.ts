@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { execFileSync } from 'node:child_process'
+import { mkdtempSync, readFileSync, realpathSync, rmSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
 import { baselineDirectory } from '../src/inventory-baseline'
@@ -10,6 +12,7 @@ import { exportUnifiedContent } from '../src/unified-export'
 import { genshinProductionOwnerScope, GENSHIN_PRODUCTION_SCOPE } from '../src/unified-genshin-production-scope'
 import { unifiedPlan } from '../src/unified-plan'
 import { readUnifiedSources } from '../src/unified-sources'
+import { freezeUnifiedContent, verifyUnifiedFrozenSource } from '../src/unified-build'
 
 const repo = path.resolve(projectRoot, '../..')
 const inventory = JSON.parse(readFileSync(path.join(repo, baselineDirectory, 'inventory.json'), 'utf8'))
@@ -41,4 +44,15 @@ test('formal scope refuses rehearsal, partial A, nonrendered fields and cross-ga
   assert.throws(() => scope([record('genshin', 'rarity')]))
   assert.throws(() => scope([record('nte')]))
   assert.throws(() => scope([record(), record('nte')]))
+})
+test('the real compiler independently reopens an explicit formal Genshin-only freeze with complete A', () => {
+  const root = realpathSync(mkdtempSync(path.join(tmpdir(), 'genshin-formal-freeze-')))
+  try {
+    const frozen = freezeUnifiedContent({ repo, commit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: repo, encoding: 'utf8' }).trim(),
+      directory: path.join(root, 'freeze'), plan, records: [record()], activeSources: original, preview: false, productionScope: GENSHIN_PRODUCTION_SCOPE })
+    const reopened = verifyUnifiedFrozenSource(frozen.directory, frozen.manifestPin)
+    assert.equal(reopened.productionScope, GENSHIN_PRODUCTION_SCOPE); assert.equal(reopened.localScope, undefined)
+    assert.deepEqual(reopened.owners, ['genshin']); assert.equal(reopened.candidate.preview, false); assert.equal(reopened.candidate.baselines.length, 115)
+    assert.equal(reopened.productionReady, false); assert.equal(reopened.cloudWrites, false)
+  } finally { rmSync(root, { recursive: true, force: true }) }
 })

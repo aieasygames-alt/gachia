@@ -56,6 +56,7 @@ function migratedBindings(owner, baseline) {
 // Only the two explicitly reviewed binding deltas are permitted. Routes,
 // domains, tags, secret names, staging and other games remain byte-for-byte
 // controlled by the original topology checker.
+/** @param {any} before @param {any} after @param {{configured?: string[], deployed?: Record<string, string>}} [options] */
 export function assertGenshinMigrationTopology(before, after, { configured = [], deployed = {} } = {}) {
   assert.deepEqual(configured, GENSHIN_MIGRATION_ORDER.slice(0, configured.length), 'Invalid configured owner order');
   assert(Object.keys(deployed).every(owner => configured.includes(owner)), 'Unconfigured deployment');
