@@ -111,7 +111,44 @@ export function assertGenshinMigrationIdentity(value) {
 // sealed new/compatible-old artifacts. Each downstream preview is taken only
 // after its dependency is live: Genshin, Router (still compatible with old Main),
 // then Main. No zero-percent deployment or preview dependency override is used.
-export async function executeGenshinMigration({ run, releaseKey, verify, transport }) {
+export function assertGenshinMigrationStoppedPrefix(identity, rows) {
+  assertGenshinMigrationIdentity({ ...identity, observedAt: Date.now() });
+  assert.deepEqual(rows.map(row => row.phase), ['baseline', 'upload_intent', 'upload_returned', 'preview_accepted',
+    'upload_intent', 'upload_returned', 'preview_accepted', 'deployment_intent', 'deployed', 'stopped', 'read_only_reconciliation'],
+  'Only a known Genshin deployment stopped before step acceptance can continue');
+  let previousAt = -Infinity;
+  for (const row of rows) {
+    assert.equal(row.releaseKey, identity.releaseKey); assert.equal(row.policy, identity.policy);
+    const at = Date.parse(row.at); assert(at >= previousAt && at <= Date.now()); previousAt = at;
+  }
+  assert.deepEqual(rows[0].baseline, identity.baseline); assert.deepEqual(rows[0].owners, identity.owners);
+  const accepted = { genshin: { recovery: rows[3].proof, candidate: rows[6].proof } };
+  const deployed = { genshin: accepted.genshin.candidate.versionId };
+  assert(UUID.test(deployed.genshin)); assert.equal(rows[8].versionId, deployed.genshin);
+  assert.equal(rows[8].owner, 'genshin'); assert.equal(rows[8].result.versionId, deployed.genshin);
+  assert(UUID.test(rows[8].result.deploymentId));
+  assert.equal(rows[9].pendingOperation, undefined); assert.equal(rows[10].pendingOperation, undefined);
+  assert.equal(rows[9].automaticRetry, false); assert.equal(rows[9].automaticRollback, false);
+  assert.deepEqual(rows[9].deployed, deployed); assert.deepEqual(rows[9].accepted, accepted);
+  assertGenshinMigrationTopology(identity.baseline, rows[10].snapshot, { configured: ['genshin'], deployed });
+  assert.equal(rows[10].snapshot.services[services.genshin].id, rows[8].result.deploymentId);
+  return { accepted, deployed };
+}
+
+export function executeGenshinMigration(input) {
+  return executeMigration(input);
+}
+
+export function executeGenshinMigrationContinuation(input) {
+  assert(input.previous && SHA.test(input.previous.journal.pin));
+  assert.equal(digest(readFileSync(input.previous.journal.path)), input.previous.journal.pin);
+  const rows = readFileSync(input.previous.journal.path, 'utf8').trimEnd().split('\n').map(JSON.parse);
+  const state = assertGenshinMigrationStoppedPrefix(input.previous.identity, rows);
+  assert.notEqual(input.releaseKey, input.previous.identity.releaseKey, 'Continuation requires its own release identity');
+  return executeMigration(input, { ...state, proof: input.previous.journal, identity: input.previous.identity });
+}
+
+async function executeMigration({ run, releaseKey, verify, transport }, continuation) {
   return withRunLock(run, async () => {
     const initial = structuredClone(await verify());
     assertGenshinMigrationIdentity(initial);
@@ -119,7 +156,8 @@ export async function executeGenshinMigration({ run, releaseKey, verify, transpo
     const journal = join(run, `genshin-migration-${releaseKey}.jsonl`);
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = value => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), policy: initial.policy, releaseKey, ...value }) + '\n', { flush: true });
-    const configured = [], deployed = {}, accepted = {};
+    if (continuation) assert.deepEqual({ ...initial, releaseKey: continuation.identity.releaseKey, observedAt: continuation.identity.observedAt }, continuation.identity);
+    const configured = continuation ? ['genshin'] : [], deployed = structuredClone(continuation?.deployed ?? {}), accepted = structuredClone(continuation?.accepted ?? {});
     let pendingOperation, observedAt = initial.observedAt;
     const revalidate = async () => {
       const current = await verify(); assertGenshinMigrationIdentity(current);
@@ -128,10 +166,17 @@ export async function executeGenshinMigration({ run, releaseKey, verify, transpo
       observedAt = current.observedAt;
       assertGenshinMigrationTopology(initial.baseline, await transport.snapshot(), { configured, deployed });
     };
-    record({ phase: 'baseline', baseline: initial.baseline, owners: initial.owners });
+    record({ phase: continuation ? 'continuation_baseline' : 'baseline', baseline: initial.baseline, owners: initial.owners,
+      ...(continuation ? { previousJournal: continuation.proof, previousReleaseKey: continuation.identity.releaseKey, deployed, accepted } : {}) });
     try {
       await revalidate();
-      for (const owner of GENSHIN_MIGRATION_ORDER) {
+      if (continuation) {
+        const proof = await transport.acceptStep({ owner: 'genshin', deployed: { ...deployed } });
+        assert.equal(proof.status, 'passed'); assert(SHA.test(proof.evidenceSHA256));
+        record({ phase: 'step_accepted', owner: 'genshin', proof });
+        await revalidate();
+      }
+      for (const owner of GENSHIN_MIGRATION_ORDER.slice(continuation ? 1 : 0)) {
         const row = initial.owners[owner];
         accepted[owner] = {};
         for (const role of ['recovery', 'candidate']) {

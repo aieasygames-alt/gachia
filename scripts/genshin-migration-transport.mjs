@@ -11,6 +11,7 @@ import { boundedBody } from './desktop-version-preview.mjs';
 import { migrationExpectedBindings } from './genshin-migration-prepare.mjs';
 import { assertMigrationRouterMetadata, migrationRouterModule, readMigrationRouterVersion } from './genshin-migration-router.mjs';
 import { migrationPinned, migrationPreviewOrigin, migrationSave, verifyMigrationHTTP } from './genshin-migration-http.mjs';
+import { migrationGenshinStepReferences } from './genshin-migration-source-advance.mjs';
 import { unifiedProductionRead } from './unified-production-transport.mjs';
 import { verifyUnifiedTool } from './unified-cloud-module.mjs';
 import { unifiedOwnerDeploymentWriter } from './unified-owner-deployment.mjs';
@@ -146,9 +147,8 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
     },
     acceptStep: async ({ owner }) => {
       if (owner === 'genshin') {
-        const refs = references('genshin', 'candidate').filter(row => /^\/(zh|en|ja)\/genshin\//.test(row.path) || row.path.startsWith('/_games/genshin/_next/static/'))
-          .map(row => /^\/(zh|en|ja)\//.test(row.path) ? { ...row, headers: { ...row.headers, 'cache-control': 'private, no-cache, no-store, max-age=0, must-revalidate' } } : row);
-        return acceptPublic('genshin', refs);
+        // The original Router already enforces this public GET freshness policy.
+        return acceptPublic('genshin', migrationGenshinStepReferences(evidence));
       }
       return acceptPublic('router', owner === 'router' ? references('router', 'candidate') : migrationPinned(value.finalReferences));
     },

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
+import { closeSync, mkdirSync, mkdtempSync, openSync, readFileSync, realpathSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { digest } from './desktop-release-assets.mjs';
@@ -42,15 +43,25 @@ export function unifiedPageFingerprints(rows, parserVersion = 'legacy-v1') {
   const result = [];
   let batch = [], bytes = 2;
   const flush = () => {
+    let temporary, input;
     try {
-      const output = execFileSync('python3', ['-B', executable], { input: `[${batch.join(',')}]`, timeout: 30000,
-        maxBuffer: 32 * 1024 * 1024, stdio: ['pipe', 'pipe', 'pipe'] });
+      // Avoid a synchronous stdin pipe waiting for EOF on macOS. The parser
+      // receives identical JSON from a private read-only regular-file handle.
+      temporary = mkdtempSync(join(tmpdir(), 'gachia-html-parser-'));
+      const file = join(temporary, 'input.json');
+      writeFileSync(file, `[${batch.join(',')}]`, { flag: 'wx', mode: 0o600 });
+      input = openSync(file, 'r');
+      const output = execFileSync('python3', ['-B', executable], { timeout: 30000,
+        maxBuffer: 32 * 1024 * 1024, stdio: [input, 'pipe', 'pipe'] });
       const parsed = JSON.parse(output.toString()); assert(Array.isArray(parsed)); assert.equal(parsed.length, batch.length);
       result.push(...parsed); batch = []; bytes = 2;
     } catch (cause) {
       const error = new Error(`Unified HTML fingerprint parsing failed (${parserVersion}, ${batch.length} pages, ${bytes} serialized bytes): ${cause.message}`, { cause });
       if (typeof cause.code === 'string') error.code = cause.code;
       throw error;
+    } finally {
+      if (input !== undefined) closeSync(input);
+      if (temporary !== undefined) rmSync(temporary, { recursive: true, force: true });
     }
   };
   // Bound aggregate parsing work without changing either versioned parser.

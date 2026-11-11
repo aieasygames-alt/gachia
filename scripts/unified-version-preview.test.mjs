@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs';
+import { fstatSync, mkdtempSync, readFileSync, readSync, realpathSync, rmSync, writeFileSync, writeSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
@@ -18,13 +18,21 @@ const html = '<!doctype html><html><head><title>Game &amp; Wiki</title><meta con
   '<script>self.__next_f.push(["host-dependent"])</script></body></html>';
 const headers = { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'private, no-store' };
 const ref = (path, body, headers) => ({ path, status: 200, headers, bytes: Buffer.byteLength(body), sha256: digest(body), bodyFile: 'unused' });
+function parserInput(options) {
+  assert.equal(options.input, undefined);
+  const fd = options.stdio[0], stat = fstatSync(fd);
+  assert(stat.isFile()); assert.equal(stat.mode & 0o777, 0o600);
+  assert.throws(() => writeSync(fd, Buffer.from('invalid')), { code: 'EBADF' });
+  const bytes = Buffer.alloc(stat.size); assert.equal(readSync(fd, bytes, 0, bytes.length, 0), bytes.length);
+  return JSON.parse(bytes.toString());
+}
 
 for (const parserVersion of ['legacy-v1', 'streaming-v2']) test(`bounded fingerprints preserve ${parserVersion} semantics and order`, t => {
   const rows = Array.from({ length: 65 }, (_, i) => ({ html: html.replace('123', String(i)), status: 200 }));
   const execute = childProcess.execFileSync;
   const calls = [];
   t.mock.method(childProcess, 'execFileSync', (file, args, options) => {
-    calls.push({ count: JSON.parse(options.input).length, timeout: options.timeout });
+    calls.push({ count: parserInput(options).length, timeout: options.timeout });
     return execute(file, args, options);
   });
   syncBuiltinESMExports();
@@ -42,7 +50,7 @@ test('fingerprint batches bound serialized bytes and keep a large page intact', 
   const rows = sizes.map(size => ({ html: html.replace('host-dependent', 'x'.repeat(size * 1024 * 1024)), status: 200 }));
   const execute = childProcess.execFileSync, calls = [];
   t.mock.method(childProcess, 'execFileSync', (file, args, options) => {
-    calls.push(JSON.parse(options.input)); return execute(file, args, options);
+    calls.push(parserInput(options)); return execute(file, args, options);
   });
   syncBuiltinESMExports();
   try {
@@ -66,6 +74,26 @@ test('fingerprint batches reject invalid total coverage and propagate later batc
     assert.equal(calls, 0);
     assert.throws(() => unifiedPageFingerprints(Array(65).fill(row)), { code: 'ETIMEDOUT' });
     assert.equal(calls, 2, 'No retry or later batch after failure');
+  } finally { t.mock.restoreAll(); syncBuiltinESMExports(); }
+});
+
+test('parser input is closed on success and failure without changing parser identity or output bounds', t => {
+  const execute = childProcess.execFileSync, descriptors = [], pin = unifiedHTMLParserPin('streaming-v2');
+  let fail = false;
+  t.mock.method(childProcess, 'execFileSync', (file, args, options) => {
+    descriptors.push(options.stdio[0]); parserInput(options);
+    assert.equal(options.timeout, 30000); assert.equal(options.maxBuffer, 32 * 1024 * 1024);
+    if (fail) throw Object.assign(new Error('input failure'), { code: 'EIO' });
+    return execute(file, args, options);
+  });
+  syncBuiltinESMExports();
+  try {
+    assert.equal(unifiedPageFingerprints([{ html, status: 200 }], 'streaming-v2').length, 1);
+    assert.throws(() => fstatSync(descriptors[0]), { code: 'EBADF' });
+    fail = true;
+    assert.throws(() => unifiedPageFingerprints([{ html, status: 200 }], 'streaming-v2'), { code: 'EIO' });
+    assert.throws(() => fstatSync(descriptors[1]), { code: 'EBADF' });
+    assert.equal(unifiedHTMLParserPin('streaming-v2'), pin);
   } finally { t.mock.restoreAll(); syncBuiltinESMExports(); }
 });
 

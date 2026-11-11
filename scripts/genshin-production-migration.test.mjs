@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { SERVICES } from './desktop-cloud-release.mjs';
+import { digest } from './desktop-release-assets.mjs';
 import { GENSHIN_MIGRATION_ORDER, GENSHIN_MIGRATION_POLICY, assertGenshinMigrationIdentity,
-  assertGenshinMigrationTopology, executeGenshinMigration, genshinMigrationConfig } from './genshin-production-migration.mjs';
+  assertGenshinMigrationStoppedPrefix, assertGenshinMigrationTopology, executeGenshinMigration, executeGenshinMigrationContinuation, genshinMigrationConfig } from './genshin-production-migration.mjs';
 
 const sha = char => char.repeat(64);
 const uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
@@ -161,4 +162,51 @@ test('a failed step acceptance prevents all later activations', async t => {
   f.transport.acceptStep = async () => { throw Error('public mismatch'); };
   await assert.rejects(executeGenshinMigration({ ...f, releaseKey: f.value.releaseKey }), /public mismatch/);
   assert.deepEqual(f.calls.filter(row => row.startsWith('promote:')), ['promote:genshin']);
+});
+
+async function stoppedFixture(t) {
+  const f = fixture(t), acceptStep = f.transport.acceptStep;
+  f.transport.acceptStep = async () => { throw Error('read-only validation failed'); };
+  await assert.rejects(executeGenshinMigration({ ...f, releaseKey: f.value.releaseKey }), /read-only validation failed/);
+  const original = structuredClone(f.value), file = join(f.run, `genshin-migration-${original.releaseKey}.jsonl`), bytes = readFileSync(file);
+  const rows = bytes.toString().trimEnd().split('\n').map(JSON.parse);
+  const run = join(f.run, 'continuation'); mkdirSync(run);
+  f.value.releaseKey = sha('f'); f.transport.acceptStep = acceptStep; f.calls.length = 0;
+  return { ...f, run, rows, original, bytes, previous: { journal: { path: file, pin: digest(bytes) }, identity: original }, releaseKey: f.value.releaseKey };
+}
+
+test('known deployed Genshin continues with a new journal and only Router/Main writes', async t => {
+  const f = await stoppedFixture(t), result = await executeGenshinMigrationContinuation(f);
+  assert.equal(result.status, 'production_accepted'); assert.deepEqual(readFileSync(f.previous.journal.path), f.bytes);
+  assert.deepEqual(f.calls.filter(row => row.startsWith('promote:') || row.startsWith('accept:')),
+    ['accept:genshin', 'promote:router', 'accept:router', 'promote:main', 'accept:main']);
+  assert(!f.calls.some(row => /^(upload|preview|inspect):genshin/.test(row)));
+  const rows = readFileSync(join(f.run, `genshin-migration-${f.releaseKey}.jsonl`), 'utf8').trimEnd().split('\n').map(JSON.parse);
+  assert.equal(rows[0].phase, 'continuation_baseline'); assert.deepEqual(rows[0].previousJournal, f.previous.journal);
+  await assert.rejects(executeGenshinMigrationContinuation(f), /EEXIST/);
+});
+
+test('continuation refuses unknown writes, reordered prefixes, changed proofs and widened completed owners', async t => {
+  const f = await stoppedFixture(t);
+  for (const mutate of [
+    rows => rows[9].pendingOperation = { phase: 'deployment', owner: 'genshin' },
+    rows => rows[10].pendingOperation = { phase: 'upload', owner: 'router' },
+    rows => rows[9].deployed.router = uuid(999),
+    rows => rows[8].result.deploymentId = 'unknown',
+    rows => rows[9].accepted.genshin.candidate.versionId = uuid(999),
+    rows => rows[10].snapshot.services.gachia.id = uuid(999),
+    rows => rows[8].phase = 'deployment_intent',
+    rows => rows.push(rows.at(-1)),
+  ]) {
+    const rows = structuredClone(f.rows); mutate(rows); assert.throws(() => assertGenshinMigrationStoppedPrefix(f.original, rows));
+  }
+  writeFileSync(f.previous.journal.path, f.bytes.toString().replace('read-only validation failed', 'changed'));
+  assert.throws(() => executeGenshinMigrationContinuation(f), /strictly equal/); assert.deepEqual(f.calls, []);
+});
+
+test('continuation rechecks current topology and Genshin public acceptance before any remaining writes', async t => {
+  const f = await stoppedFixture(t); f.transport.acceptStep = async () => { throw Error('public mismatch'); };
+  await assert.rejects(executeGenshinMigrationContinuation(f), /public mismatch/); assert.deepEqual(f.calls, []);
+  const g = await stoppedFixture(t); g.cloud.services.gachia.id = uuid(999);
+  await assert.rejects(executeGenshinMigrationContinuation(g), /deployment drift/); assert.deepEqual(g.calls, []);
 });
