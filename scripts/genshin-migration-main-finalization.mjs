@@ -191,24 +191,20 @@ export async function executeGenshinMainFinalization({ run, releaseKey, verify, 
   });
 }
 
-export async function readFinalizedGenshinMigration(proof) {
-  const value = migrationPinned(proof), directory = dirname(proof.path), previous = await readStoppedMainMigration(value.request), evidence = previous.evidence;
-  assert.equal(proof.path, join(directory, 'completion.json')); assert.equal(value.kind, 'genshin_initial_production_migration_completion'); assert.equal(value.schemaVersion, 1);
-  assert.equal(value.status, 'production_accepted'); assert.equal(value.policy, GENSHIN_MIGRATION_POLICY); assert.equal(value.sourceAdvanced, false);
-  assert.deepEqual(value.bundle, previous.original.request.bundle); assert.deepEqual(value.executorCI, previous.identity.sourceCI);
-  assert.deepEqual(value.continuationExecutorCI, value.request.continuationCI);
-  assert.equal(value.finalizationExecutorCI.status, 'full_exact_ci_passed'); assert.equal(value.finalizationExecutorCI.runID, value.request.executorRunID);
-  assert(/^[a-f0-9]{40}$/.test(value.finalizationExecutorCI.commit));
-  assert.equal(value.releaseKey, genshinMainFinalizationKey(value.request, value.finalizationExecutorCI));
-  assert.equal(value.journal.path, join(directory, `genshin-migration-${value.releaseKey}.jsonl`)); assert.equal(value.journal.pin, value.journalPin);
-  const rows = migrationJournalRows(value.journal, value.releaseKey);
-  assert.deepEqual(rows.map(row => row.phase), ['main_finalization_baseline', 'preview_accepted', 'preview_accepted', 'deployment_intent', 'deployed', 'production_accepted']);
-  assert.deepEqual(rows[0].previousJournal, value.request.stopped.journal); assert.deepEqual(rows[0].baseline, previous.identity.baseline); assert.deepEqual(rows[0].deployed, previous.deployed);
+export async function readMainDeploymentEvidence({ request, executorCI, journal }) {
+  const previous = await readStoppedMainMigration(request), evidence = previous.evidence, directory = dirname(journal.path);
+  assert.equal(executorCI.status, 'full_exact_ci_passed'); assert.equal(executorCI.runID, request.executorRunID);
+  assert(/^[a-f0-9]{40}$/.test(executorCI.commit));
+  const releaseKey = genshinMainFinalizationKey(request, executorCI);
+  assert.equal(journal.path, join(directory, `genshin-migration-${releaseKey}.jsonl`));
+  const rows = migrationJournalRows(journal, releaseKey);
+  assert.deepEqual(rows.slice(0, 5).map(row => row.phase), ['main_finalization_baseline', 'preview_accepted', 'preview_accepted', 'deployment_intent', 'deployed']);
+  assert.deepEqual(rows[0].previousJournal, request.stopped.journal); assert.deepEqual(rows[0].baseline, previous.identity.baseline); assert.deepEqual(rows[0].deployed, previous.deployed);
   assert(Date.parse(rows[0].at) >= Date.parse(previous.rows.at(-1).at));
-  const accepted = { ...previous.accepted, main: value.accepted }, modules = previous.modules;
+  const accepted = { ...previous.accepted, main: { recovery: rows[1].proof, candidate: rows[2].proof } }, modules = previous.modules;
   for (const [i, role] of ['recovery', 'candidate'].entries()) {
-    assert.equal(rows[i + 1].owner, 'main'); assert.equal(rows[i + 1].role, role); assert.deepEqual(rows[i + 1].proof, value.accepted[role]);
-    const recorded = value.accepted[role];
+    assert.equal(rows[i + 1].owner, 'main'); assert.equal(rows[i + 1].role, role);
+    const recorded = accepted.main[role];
     const { evidenceSHA256, acceptedAt, ...moduleIdentity } = recorded;
     const { evidenceSHA256: oldEvidence, acceptedAt: oldAcceptedAt, ...oldModuleIdentity } = previous.accepted.main[role];
     assert.deepEqual(moduleIdentity, oldModuleIdentity);
@@ -217,19 +213,38 @@ export async function readFinalizedGenshinMigration(proof) {
       references: migrationPinned({ path: join(evidence.directory, 'main', role, 'local-http/responses/references.json'), pin: evidence.value.owners.main[role].referencesPin }),
       owner: 'main', role, expected: evidence.expected, bases: evidence.bases, preview: true });
   }
-  const deployment = value.deployment;
+  const deployment = rows[4].result;
   for (const row of rows.slice(3, 5)) { assert.equal(row.owner, 'main'); assert.equal(row.service, service); assert.equal(row.versionId, accepted.main.candidate.versionId); }
   assert.deepEqual(rows[4].result, deployment); assert.equal(deployment.service, service); assert.equal(deployment.versionId, accepted.main.candidate.versionId);
-  assert.equal(deployment.releaseKey, value.releaseKey); assert(UUID.test(deployment.deploymentId));
+  assert.equal(deployment.releaseKey, releaseKey); assert(UUID.test(deployment.deploymentId));
   assert(rows[3].observedAt <= Date.parse(rows[3].at) && Date.parse(rows[3].at) - rows[3].observedAt < 900000);
   for (const kind of ['creation', 'verification']) {
     const raw = readFileSync(join(directory, `deployment-main-${kind}.body`)), metadata = migrationPinned({ path: join(directory, `deployment-main-${kind}.json`), pin: digest(readFileSync(join(directory, `deployment-main-${kind}.json`))) });
     assert.equal(metadata.kind, kind); assert.equal(metadata.sha256, digest(raw)); assert.equal(metadata.bytes, raw.length); assert(metadata.status >= 200 && metadata.status < 300);
+    assert.deepEqual(deployment.responses[kind], { status: metadata.status, sha256: metadata.sha256, bytes: metadata.bytes });
     const body = JSON.parse(raw); assert.equal(body.success, true); assert.equal(body.result.id, deployment.deploymentId);
     if (kind === 'verification' || body.result.strategy) assert.equal(body.result.strategy, 'percentage');
     if (kind === 'verification' || body.result.versions) assert.deepEqual(body.result.versions, [{ version_id: deployment.versionId, percentage: 100 }]);
   }
   const versions = Object.fromEntries(GENSHIN_MIGRATION_ORDER.map(owner => [evidence.value.owners[owner].service, accepted[owner].candidate.versionId]));
+  return { previous, directory, evidence, rows, accepted, modules, deployment, releaseKey, versions,
+    deployed: { ...previous.deployed, main: accepted.main.candidate.versionId }, deployments: { ...previous.deployments, main: deployment } };
+}
+
+export async function readFinalizedGenshinMigration(proof) {
+  const value = migrationPinned(proof);
+  if (Object.hasOwn(value, 'readOnlyExecutorCI')) {
+    const { readReadonlyGenshinCompletion } = await import('./genshin-migration-readonly-completion.mjs');
+    return readReadonlyGenshinCompletion(proof);
+  }
+  const opened = await readMainDeploymentEvidence({ request: value.request, executorCI: value.finalizationExecutorCI, journal: value.journal });
+  const { previous, directory, evidence, rows, accepted, modules, deployment, versions } = opened;
+  assert.equal(proof.path, join(directory, 'completion.json')); assert.equal(value.kind, 'genshin_initial_production_migration_completion'); assert.equal(value.schemaVersion, 1);
+  assert.equal(value.status, 'production_accepted'); assert.equal(value.policy, GENSHIN_MIGRATION_POLICY); assert.equal(value.sourceAdvanced, false);
+  assert.deepEqual(value.bundle, previous.original.request.bundle); assert.deepEqual(value.executorCI, previous.identity.sourceCI);
+  assert.deepEqual(value.continuationExecutorCI, value.request.continuationCI); assert.equal(value.releaseKey, opened.releaseKey);
+  assert.equal(value.journal.pin, value.journalPin); assert.deepEqual(value.accepted, accepted.main); assert.deepEqual(value.deployment, deployment);
+  assert.deepEqual(rows.map(row => row.phase), ['main_finalization_baseline', 'preview_accepted', 'preview_accepted', 'deployment_intent', 'deployed', 'production_accepted']);
   assert.deepEqual(value.versions, versions); assert.deepEqual(rows[5].proof.versions, versions); assert.equal(rows[5].proof.status, 'passed');
   recheckMigrationHTTP({ directory: join(directory, 'public'), pin: rows[5].proof.evidenceSHA256, origin: 'https://gachia.com',
     references: migrationPinned(evidence.value.finalReferences), owner: 'router', role: 'candidate', expected: evidence.expected, bases: evidence.bases });

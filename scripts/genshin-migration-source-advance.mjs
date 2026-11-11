@@ -195,6 +195,7 @@ export async function advanceGenshinMigrationSources({ completion, directory, re
       sourceCommit: evidence.value.sourceCommit, executorCI: completed.value.executorCI,
       ...(completed.value.continuationExecutorCI ? { continuationExecutorCI: completed.value.continuationExecutorCI } : {}), releaseKey: completed.value.releaseKey, owners, router,
       ...(completed.value.finalizationExecutorCI ? { finalizationExecutorCI: completed.value.finalizationExecutorCI } : {}),
+      ...(completed.value.readOnlyExecutorCI ? { readOnlyExecutorCI: completed.value.readOnlyExecutorCI } : {}),
       active: migrationSave(directory, 'active.json', evidence.sources), baseline: migrationSave(directory, 'baseline.json', after),
       observation: { before: migrationSave(directory, 'before.json', before), after: migrationSave(directory, 'after.json', after), versions, publicAcceptance, observedAt: Date.now() },
       cloudWrites: false, newPublicationAuthorized: false };

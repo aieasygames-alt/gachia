@@ -2,8 +2,22 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import { genshinMigrationContinuationRequest, genshinProductionMigrationRequest } from '../src/genshin-production-migration'
 import { genshinMainFinalizationRequest } from '../src/genshin-migration-main-finalization'
+import { genshinReadonlyCompletionRequest } from '../src/genshin-migration-readonly-completion'
 
 const valid = () => ({ schemaVersion: 1, kind: 'genshin_initial_production_migration_request', bundle: { path: '/sealed/bundle.json', pin: 'a'.repeat(64) }, executorRunID: 1 })
+test('read-only completion accepts only pinned known deployment evidence, never injected writes or success', () => {
+  const request = { schemaVersion: 1, kind: 'genshin_deployed_migration_readonly_request', executorRunID: 5,
+    finalizationCI: { status: 'full_exact_ci_passed', commit: 'e'.repeat(40), runID: 4 },
+    stopped: Object.fromEntries(['request', 'identity', 'journal', 'publicResult'].map(key => [key, { path: `/prior/${key}.json`, pin: 'b'.repeat(64) }])) }
+  assert.deepEqual(genshinReadonlyCompletionRequest(request), request)
+  for (const key of ['transport', 'verify', 'promote', 'upload', 'accepted', 'skipCI', 'publicProxy', 'success', 'retry'])
+    assert.throws(() => genshinReadonlyCompletionRequest({ ...request, [key]: true }))
+  for (const stopped of [{ ...request.stopped, extra: true }, { ...request.stopped, journal: { path: '../old', pin: 'b'.repeat(64) } },
+    { ...request.stopped, publicResult: { path: '/prior/result', pin: 'invalid' } }])
+    assert.throws(() => genshinReadonlyCompletionRequest({ ...request, stopped }))
+  assert.throws(() => genshinReadonlyCompletionRequest({ ...request, executorRunID: 0 }))
+  assert.throws(() => genshinReadonlyCompletionRequest({ ...request, finalizationCI: { ...request.finalizationCI, status: 'local_passed' } }))
+})
 test('migration request accepts only a pinned bundle and exact CI identity', () => {
   assert.deepEqual(genshinProductionMigrationRequest(valid()), valid())
   assert.deepEqual(genshinProductionMigrationRequest({ ...valid(), previewProxy: 'http://127.0.0.1:1087' }).previewProxy, 'http://127.0.0.1:1087')

@@ -96,12 +96,13 @@ export async function advanceGenshinProductionMigration(input: { completion: Pro
   const githubToken = execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', maxBuffer: 65536, stdio: ['ignore', 'pipe', 'pipe'] }).trim()
   const executor = await createUnifiedExecutorVerifier(input.executorRunID, githubToken)
   const completed = await readCompletedGenshinMigration(input.completion)
-  const currentCI = completed.value.finalizationExecutorCI ?? completed.value.continuationExecutorCI ?? completed.value.executorCI
+  const currentCI = completed.value.readOnlyExecutorCI ?? completed.value.finalizationExecutorCI ?? completed.value.continuationExecutorCI ?? completed.value.executorCI
   assert.equal(currentCI.commit, executor.executorCommit); assert.deepEqual(currentCI, executor.executorCI)
   assert.deepEqual(await verifyUnifiedCI(completed.value.executorCI.runID, completed.value.executorCI.commit, githubToken), completed.value.executorCI)
   if (completed.value.continuationExecutorCI) assert.deepEqual(await verifyUnifiedCI(completed.value.continuationExecutorCI.runID, completed.value.continuationExecutorCI.commit, githubToken), completed.value.continuationExecutorCI)
   const preflightCI = completed.value.request.preflightStop?.executorCI
   if (preflightCI) assert.deepEqual(await verifyUnifiedCI(preflightCI.runID, preflightCI.commit, githubToken), preflightCI)
+  if (completed.value.finalizationExecutorCI) assert.deepEqual(await verifyUnifiedCI(completed.value.finalizationExecutorCI.runID, completed.value.finalizationExecutorCI.commit, githubToken), completed.value.finalizationExecutorCI)
   await verifyUnifiedPublishedSource({ publication: completed.evidence.index.publication, sourceIndex: completed.evidence.value.sourceIndex, githubToken })
   assertDiskBudget({ path: input.directory, operation: 'migrated complete source index', estimatedBytes: GiB })
   const reader = { snapshot: () => { executor.verify(); return desktopCloudSnapshot(input.cloudToken, unifiedProductionRead) },
