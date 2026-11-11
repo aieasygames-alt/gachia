@@ -8,7 +8,6 @@ import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 // --- Element maps ---
 
-const GenshinCalculator = dynamic(() => import('./genshin-calculator-client').then((mod) => mod.GenshinCalculator), { loading: () => <CalculatorLoading /> });
 const WuWaCalculator = dynamic(() => import('./wuwa-calculator-client').then((mod) => mod.WuWaCalculator), { loading: () => <CalculatorLoading /> });
 const StarRailCalculator = dynamic(() => import('./starrail-calculator-client').then((mod) => mod.StarRailCalculator), { loading: () => <CalculatorLoading /> });
 const ZzzCalculator = dynamic(() => import('./zzz-calculator-client').then((mod) => mod.ZzzCalculator), { loading: () => <CalculatorLoading /> });
@@ -35,8 +34,7 @@ export function CalculatorClient({ gameId, locale }: { gameId: GameId; locale: S
   if (gameId === 'wuwa') return <WuWaCalculator locale={locale} />;
   if (gameId === 'starrail') return <StarRailCalculator locale={locale} />;
   if (gameId === 'zzz') return <ZzzCalculator locale={locale} />;
-  if (gameId !== 'genshin') return <ComingSoon locale={locale} />;
-  return <GenshinCalculator locale={locale} />;
+  return <ComingSoon locale={locale} />;
 }
 
 // =====================================================================

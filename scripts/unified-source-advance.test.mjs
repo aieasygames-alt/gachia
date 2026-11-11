@@ -32,6 +32,8 @@ test('published JSON uses accepted bytes only for exactly equal structured conte
 test('source advance keeps all five owners, exact published runtime/static union and all 115 new A inputs', async t => {
   const f = await unifiedSourceFixture(t), result = await advanceUnifiedSourceIndex({ ...f, directory: join(f.root, 'advance') });
   const opened = await readUnifiedSourceIndex({ spec: f.spec, proof: result.proof });
+  assert.equal(opened.value.schemaVersion, 1); assert.equal(Object.hasOwn(opened.value, 'ownerOrder'), false);
+  assert.equal(Object.hasOwn(opened.value, 'deploymentIds'), false, 'Historical Main receipts keep their exact format');
   assert.equal(opened.sources.length, 115); assert.deepEqual(Object.keys(opened.value.owners), UNIFIED_SOURCE_OWNERS);
   assert.equal(readFileSync(join(opened.value.owners.main.directory, 'worker.js'), 'utf8'), 'published main');
   for (const path of ['old.js', 'new.js']) assert(existsSync(join(opened.value.owners.main.directory, 'assets/_next/static', path)));

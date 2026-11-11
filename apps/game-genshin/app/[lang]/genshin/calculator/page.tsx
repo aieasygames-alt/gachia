@@ -1,8 +1,23 @@
 import { GameNav } from '@/components/game-nav';
-import { genshinMaterials } from '@/lib/data';
-import { MaterialPlanner } from '@/components/material-planner';
+import { genshinCharacters, genshinMaterials, getGenshinCharacterImage } from '@/lib/data';
+import { characterMaterials } from '@gachia/data/games/genshin/extras';
+import { GenshinCalculator } from '@/components/calculator';
 import { asLocale, text } from '@/lib/i18n';
 import { genshinMetadata } from '@/lib/seo';
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) { const locale = asLocale((await params).lang); const title = text(locale, { zh: '原神养成材料计算参考', en: 'Genshin Impact Material Planner', ja: '原神育成素材計画' }); return genshinMetadata(locale, 'calculator', title, text(locale, { zh: '原神角色养成材料、库存和刷取路线参考。', en: 'Genshin Impact character material, inventory, and farming-route reference.', ja: '原神キャラクター育成素材、在庫、周回ルート参考。' })); }
-export default async function Calculator({ params }: { params: Promise<{ lang: string }> }) { const locale = asLocale((await params).lang); const title = text(locale, { zh: '原神养成材料计算参考', en: 'Genshin Impact Material Planner', ja: '原神育成素材計画' }); return <><GameNav locale={locale} current="calculator"/><main id="main-content" tabIndex={-1} className="content"><div className="eyebrow">Material planner</div><h1>{title}</h1><p className="lead">{text(locale, { zh: '按名称、分类和稀有度查找材料，并把近期需要刷取的项目保存到本地清单。具体消耗与账号库存仍以游戏内资料为准。', en: 'Find materials by name, type, and rarity, then save items to a local farming list. Confirm exact costs and account inventory in-game.', ja: '名前、分類、レアリティで素材を探し、近日中に集める項目をローカルリストに保存できます。正確な消費量と在庫はゲーム内で確認してください。' })}</p><MaterialPlanner materials={genshinMaterials} locale={locale}/></main></>; }
+const titleFor = (locale: ReturnType<typeof asLocale>) => text(locale, { zh: '原神养成与伤害计算器', en: 'Genshin Impact Calculator', ja: '原神育成・ダメージ計算機' });
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const locale = asLocale((await params).lang);
+  return genshinMetadata(locale, 'calculator', titleFor(locale), text(locale, { zh: '原神角色养成材料、库存和简化伤害计算。', en: 'Genshin Impact character materials, inventory, and simplified damage calculations.', ja: '原神キャラクター育成素材、在庫、簡易ダメージ計算。' }));
+}
+export default async function Calculator({ params }: { params: Promise<{ lang: string }> }) {
+  const locale = asLocale((await params).lang);
+  const characters = genshinCharacters.map(character => {
+    const { id, name, nameEn, nameJa, element, rarity } = character;
+    return { id, name, nameEn, nameJa, element, rarity, image: getGenshinCharacterImage(character) };
+  });
+  return <><GameNav locale={locale} current="calculator"/><main id="main-content" tabIndex={-1} className="content calculator-page">
+    <h1>{titleFor(locale)}</h1><p className="lead">{text(locale, { zh: '具体消耗与账号库存仍以游戏内资料为准。', en: 'Confirm exact costs and account inventory in-game.', ja: '正確な消費量と在庫はゲーム内で確認してください。' })}</p>
+    <GenshinCalculator catalog={{ characters, materials: genshinMaterials, requirements: characterMaterials }} locale={locale} />
+  </main></>;
+}

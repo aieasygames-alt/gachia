@@ -1,4 +1,5 @@
 import { serializeJsonLd } from '@/lib/jsonld-script';
+import { notFound } from 'next/navigation';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
@@ -29,11 +30,6 @@ const HOME_MSG: Record<string, HomeMessages> = {
 
 // --- Game descriptions (SEO meta + on-page) ---
 const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
-  genshin: {
-    zh: '原神角色图鉴、武器数据库、圣遗物推荐与攻略百科，覆盖 6.x Nod-Krai 区域，整理 116+ 角色属性、技能、突破材料、命座、配队推荐、材料路线、交互地图和版本热点，方便你快速查资料、规划培养并持续跟进版本变化，同时附版本专题和实用入口。',
-    en: 'Genshin Impact character builds, weapon database, artifact recommendations, and guides up to v6.x Nod-Krai. Browse 116+ characters, team comps, maps, materials, and version topics for faster farming and build planning.',
-    ja: '原神のキャラビルド、武器データベース、聖遺物おすすめ、攻略百科をまとめ、v6.x Nod-Krai まで対応。116+ キャラの性能、突破素材、命ノ星座、編成、素材ルート、インタラクティブマップ、版本トピックを一度に確認でき、育成計画にも役立ちます。版本特集と実用導線も整理済みです。',
-  },
   starrail: {
     zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐与配队攻略，覆盖 4.x 版本、4.6正式版本、直播码、下期跃迁、星琼规划与队伍构筑。Gachia 提供完整角色属性、命途、技能、突破材料、光锥适配、遗器词条和版本专题入口，帮助你规划抽卡和养成路线。',
     en: 'Honkai: Star Rail character guides, light cone database, relic recommendations, and team comps for v4.x, v4.6 lives, livestream codes, next warps, Stellar Jade planning, and team building. Gachia connects character stats, Paths, skills, materials, light cones, relic stats, and version hubs for pull and build planning.',
@@ -93,11 +89,6 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
 
 // SEO-rich about paragraphs per game per locale
 const GAME_ABOUT: Record<string, Record<string, string>> = {
-  genshin: {
-    zh: '原神（Genshin Impact）是米哈游开发的开放世界动作 RPG，当前版本6.x「空月之歌」已开放Nod-Krai区域。Gachia 提供完整的原神角色图鉴，覆盖116+五星、四星角色的属性、技能、命之座、突破材料与配装推荐。圣遗物数据库包含所有套装效果与最佳适配角色。武器数据库按类型和稀有度分类。交互地图支持实时标记与进度追踪，节奏榜帮助玩家了解当前版本强势角色。',
-    en: 'Genshin Impact is an open-world action RPG by HoYoverse, currently in v6.x "Song of the Hollow Moon" with the new Nod-Krai region. Gachia provides a complete character database covering 116+ 5-star and 4-star characters with stats, talents, constellations, ascension materials, and builds. Our artifact database lists every set with effects and best characters. The interactive map supports real-time markers and progress tracking. Use the tier list to find meta characters.',
-    ja: '原神（Genshin Impact）はHoYoverseのオープンワールドアクションRPG、現在v6.x「空月の歌」Nod-Krai地域が開放済み。Gachiaでは116+キャラクターのステータス、スキル、命ノ星座、突破素材、ビルドを網羅。聖遺物データベースには全セット効果と最適キャラを掲載。インタラクティブマップでリアルタイムマーカーと進捗追跡に対応。Tierリストでメタキャラを確認できます。',
-  },
   starrail: {
     zh: '崩坏：星穹铁道（Honkai: Star Rail）是米哈游开发的回合制策略 RPG，当前版本4.x已开放Planarcadia星球并新增「愉悦」命途。Gachia 提供全86+角色图鉴、光锥数据库、遗器推荐、配队方案与伤害计算器。角色按8条命途（毁灭、存护、巡猎、智识、谐乐、虚无、丰饶、愉悦）分类，包含完整技能与行迹数据。',
     en: 'Honkai: Star Rail is a turn-based strategy RPG by HoYoverse, currently in v4.x with the new Planarcadia planet and Elation Path. Gachia offers a full 86+ character database, light cone encyclopedia, relic recommendations, team comps, and damage calculator. Characters are organized by 8 Paths (Destruction, Preservation, Hunt, Erudition, Harmony, Nihility, Abundance, Elation) with complete skill and trace data.',
@@ -185,7 +176,6 @@ const GAME_META_TITLES: Partial<Record<GameId, Record<SupportedLocale, string>>>
 
 // --- Featured character IDs per game ---
 const FEATURED_CHARS: Record<string, string[]> = {
-  genshin: ['hu-tao', 'raiden-shogun', 'furina', 'nahida', 'kazuha', 'zhongli', 'yelan'],
   starrail: ['kafka', 'jingliu', 'acheron', 'firefly', 'robin', 'ruan-mei'],
   wuwa: ['jiyan', 'yinlin', 'jinhsi', 'changli', 'zhezhi'],
   nte: ['chiz', 'aurelia', 'skia', 'haniel', 'sakiri', 'nanally'],
@@ -237,115 +227,6 @@ type RocoDashboardStats = {
 };
 
 const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
-  genshin: {
-    eyebrow: { zh: '6.x 版本专题入口', en: 'v6.x Version Hub', ja: 'v6.x バージョン特集' },
-    title: { zh: '原神版本重点入口', en: 'Genshin hot-topic landing hub', ja: '原神 注目トピック導線' },
-    description: {
-      zh: '把月之八、桑多涅、地区探索和圣遗物配装集中放进首页，先覆盖当前版本和养成高频问题。',
-      en: 'Surface Moon 8, Sandrone, region exploration, and artifact builds on the homepage first.',
-      ja: '月之八、桑多涅、地域探索、聖遺物ビルドをトップで受け止めます。',
-    },
-    chips: {
-      zh: ['月之八', '桑多涅', '圣遗物', '武器图鉴', '交互地图', '版本前瞻'],
-      en: ['Moon 8', 'Sandrone', 'Artifacts', 'Weapons', 'Interactive map', 'Version preview'],
-      ja: ['月之八', '桑多涅', '聖遺物', '武器', 'マップ', '前瞻'],
-    },
-    cta: { zh: '去版本专题', en: 'Open version hub', ja: 'バージョン特集へ' },
-    tracks: {
-      zh: [
-        {
-          title: '版本节点',
-          description: '先整理版本前瞻和核心版本重点。',
-          links: [
-            { href: '/genshin/version', label: '版本专题' },
-            { href: '/genshin/guides/snezhnaya-version-guide', label: '版本指南' },
-          ],
-        },
-        {
-          title: '养成与配装',
-          description: '一起查看角色、武器和圣遗物培养建议。',
-          links: [
-            { href: '/genshin/build', label: '配装推荐' },
-            { href: '/genshin/artifacts', label: '圣遗物图鉴' },
-          ],
-        },
-        {
-          title: '地图与机制',
-          description: '继续查看地区探索和新机制攻略。',
-          links: [
-            { href: '/genshin/map', label: '交互地图' },
-            { href: '/genshin/guides/lunar-reaction-guide', label: '机制攻略' },
-          ],
-        },
-      ],
-      en: [
-        {
-          title: 'Version node',
-          description: 'Anchor the homepage to current patch preview topics.',
-          links: [
-            { href: '/genshin/version', label: 'Version hub' },
-            { href: '/genshin/guides/snezhnaya-version-guide', label: 'Version guide' },
-          ],
-        },
-        {
-          title: 'Builds and artifacts',
-          description: 'Continue into practical character, weapon, and artifact pages.',
-          links: [
-            { href: '/genshin/build', label: 'Builds' },
-            { href: '/genshin/artifacts', label: 'Artifacts' },
-          ],
-        },
-        {
-          title: 'Map and mechanics',
-          description: 'Continue into region exploration and system guides.',
-          links: [
-            { href: '/genshin/map', label: 'Interactive map' },
-            { href: '/genshin/guides/lunar-reaction-guide', label: 'Mechanics guide' },
-          ],
-        },
-      ],
-      ja: [
-        {
-          title: 'バージョン導線',
-          description: 'ホームを最新の前瞻・バージョン語に結びつけます。',
-          links: [
-            { href: '/genshin/version', label: 'バージョン特集' },
-            { href: '/genshin/guides/snezhnaya-version-guide', label: 'バージョンガイド' },
-          ],
-        },
-        {
-          title: '育成と聖遺物',
-          description: 'キャラ、武器、聖遺物を実用ページへ送ります。',
-          links: [
-            { href: '/genshin/build', label: 'ビルド' },
-            { href: '/genshin/artifacts', label: '聖遺物図鑑' },
-          ],
-        },
-        {
-          title: '地図と機構',
-          description: '地域探索と機構系の検索意図をさらに下へつなげます。',
-          links: [
-            { href: '/genshin/map', label: 'マップ' },
-            { href: '/genshin/guides/lunar-reaction-guide', label: '機構攻略' },
-          ],
-        },
-      ],
-    },
-    faq: [
-      {
-        question: {
-          zh: '原神首页先看什么最有用？',
-          en: 'What should I open first on the Genshin homepage?',
-          ja: '原神ホームで最初に見るべきものは？',
-        },
-        answer: {
-          zh: '先看版本专题和圣遗物/配装入口，再看地图和机制攻略。',
-          en: 'Start with the version hub and build/artifact pages, then open map and mechanics guides.',
-          ja: 'まずバージョン特集とビルド/聖遺物、次にマップと機構攻略を見るのがおすすめです。',
-        },
-      },
-    ],
-  },
   starrail: {
     eyebrow: { zh: '4.6正式版本 / 直播码入口', en: 'v4.6 Preview / Codes Hub', ja: 'v4.6配信中 / コード導線' },
     title: { zh: '星穹铁道 4.6正式版本、直播码与下期跃迁重点入口', en: 'Star Rail v4.6 live, codes, and next-warps hub', ja: 'スターレイル v4.6配信中・コード・次回跳躍導線' },
@@ -728,7 +609,6 @@ async function getCharInfos(gameId: GameId, locale: SupportedLocale): Promise<Ch
 interface GuideInfo { id: string; title: string; summary: string }
 
 const FEATURED_GUIDE_IDS: Record<string, string[]> = {
-  genshin: ['lightrace-wish-phase-ii-faq', 'phase-ii-columbina-raiden-pull-plan', 'banner-schedule-guide'],
   starrail: ['banner-schedule-guide', 'fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan'],
   wuwa: ['v3-7-live-route', 'echo-advanced-guide', 'farming-guide'],
   nte: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
@@ -784,6 +664,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') return { robots: { index: false, follow: false } };
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
@@ -819,6 +700,7 @@ export default async function GameHome({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') notFound();
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];

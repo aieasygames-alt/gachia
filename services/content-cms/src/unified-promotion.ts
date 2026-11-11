@@ -167,7 +167,8 @@ export async function promoteUnifiedMain(input: { request: UnifiedPromotionReque
   }
   let remoteCount = 0
   const result = await executeUnifiedPromotionProtocol({ run: evidence.build, verify: () => verifyEvidence(evidence.verify), authorize: () => releaseKey,
-    authorizeWrite: evidence.authorizePromotionSource, verifyAfterWrite: () => verifyEvidence(evidence.verifyAfterPromotion),
+    authorizeWrite: evidence.authorizePromotionSource, confirmWrite: evidence.confirmPromotionSource,
+    verifyAfterWrite: () => verifyEvidence(evidence.verifyAfterPromotion),
     makeTransport: (initial: any) => ({
       snapshot: () => desktopCloudSnapshot(cloudToken, unifiedProductionRead, { allowSplit: true }),
       verifyVersions: async () => {

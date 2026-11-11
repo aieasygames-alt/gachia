@@ -38,6 +38,7 @@
     "unified:baseline": "tsx scripts/unified-baseline.ts",
     "unified:build-local": "tsx scripts/unified-owners.ts",
     "unified:smoke-local": "tsx scripts/unified-owner-smoke.ts",
+    "unified:genshin-smoke": "tsx scripts/unified-genshin-smoke.ts",
     "unified:verify-local": "tsx scripts/unified-verify.ts",
     "unified:publication-local": "tsx scripts/unified-publication.ts",
     "unified:transport-local": "tsx scripts/unified-transport.ts",

@@ -25,23 +25,6 @@ type LocaleMeta = Partial<Record<SupportedLocale, {
 
 
 export const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
-  genshin: [
-    {
-      href: '/genshin/weapons',
-      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
-      description: { zh: '先把角色适配武器补齐', en: 'Fill in the best weapon options first', ja: '相性の良い武器を先に確認' },
-    },
-    {
-      href: '/genshin/items',
-      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
-      description: { zh: '继续看养成材料和刷取路径', en: 'Continue with ascension materials and farming routes', ja: '育成素材と周回ルートを確認' },
-    },
-    {
-      href: '/genshin/guides',
-      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '查看这个角色相关的版本、活动和抽卡内容', en: 'Open version, event, and pull-planning links for this character', ja: 'このキャラに関連する版本・イベント・ガチャ情報を確認' },
-    },
-  ],
   starrail: [
     {
       href: '/starrail/weapons',
@@ -330,46 +313,6 @@ export const SEA_ELEMENT_COLORS: Record<string, string> = {
 };
 
 export const CHARACTER_META_OVERRIDES: Record<string, LocaleMeta> = {
-  'genshin/barbara': {
-    zh: {
-      title: '芭芭拉培养攻略：武器、圣遗物、配队与治疗手法',
-      description: '原神芭芭拉培养攻略，整理武器选择、圣遗物搭配、队伍定位和治疗循环，适合想快速上手的玩家。',
-    },
-    en: {
-      title: 'Barbara Build Guide: Weapons, Artifacts, Teams & Healing',
-      description: 'Genshin Impact Barbara build guide covering weapons, artifact sets, team roles, and healing rotation tips.',
-    },
-  },
-  'genshin/fischl': {
-    zh: {
-      title: '菲谢尔培养攻略：武器、圣遗物、配队与输出思路',
-      description: '原神菲谢尔培养攻略，整理武器、圣遗物、配队和输出思路，帮助你把奥兹伤害吃满。',
-    },
-    en: {
-      title: 'Fischl Build Guide: Weapons, Artifacts, Teams & DPS',
-      description: 'Genshin Impact Fischl build guide covering best weapons, artifact sets, teams, and damage-focused setup tips.',
-    },
-  },
-  'genshin/kirara': {
-    zh: {
-      title: '绮良良培养攻略：护盾、武器、圣遗物与配队',
-      description: '原神绮良良培养攻略，包含护盾强度、武器选择、圣遗物搭配和实用配队建议。',
-    },
-    en: {
-      title: 'Kirara Build Guide: Shields, Weapons, Artifacts & Teams',
-      description: 'Genshin Impact Kirara build guide with shield value, weapon picks, artifact sets, and team options.',
-    },
-  },
-  'genshin/beidou': {
-    zh: {
-      title: '北斗培养攻略：武器、圣遗物、配队与反击玩法',
-      description: '原神北斗培养攻略，整理武器、圣遗物、配队与弹反思路，方便你快速搭建雷系副 C。',
-    },
-    en: {
-      title: 'Beidou Build Guide: Weapons, Artifacts, Teams & Counterplay',
-      description: 'Genshin Impact Beidou build guide covering weapons, artifact sets, teams, and counter/parry play patterns.',
-    },
-  },
 
 };
 

@@ -7,6 +7,7 @@ import { artifactFiles } from './desktop-publish.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { assertModuleVersionIdentity, revalidateUploadedModule } from './desktop-version-provenance.mjs';
 import { readUnifiedHistoricalBytes, UNIFIED_SOURCE_OWNERS } from './unified-historical-sources.mjs';
+import { recheckUnifiedGenshinPublic, verifyUnifiedGenshinPublic } from './unified-genshin-public.mjs';
 import { recheckUnifiedMainPublic, verifyUnifiedMainPublic } from './unified-main-public.mjs';
 import { unifiedPinnedJSON } from './unified-promotion-protocol.mjs';
 import { unifiedService, unifiedStaticFiles } from './unified-release-assets.mjs';
@@ -24,6 +25,11 @@ const canonical = value => JSON.stringify(value, function (key, row) {
   return row && typeof row === 'object' && !Array.isArray(row)
     ? Object.fromEntries(Object.keys(row).sort().map(name => [name, row[name]])) : row;
 });
+const PAIR = Object.freeze(['genshin', 'main']);
+const sourceOwners = spec => spec.kind === 'unified_completed_genshin_main_source_spec' ? PAIR : ['main'];
+const pairSpec = spec => sourceOwners(spec).length === 2;
+const sourceIdentity = spec => pairSpec(spec) ? { schemaVersion: 2, ownerOrder: [...PAIR], deploymentIds: spec.deploymentIds } : { schemaVersion: 1 };
+const references = (spec, owner) => pairSpec(spec) ? spec.publicReferences[owner] : spec.publicReferences;
 
 // Public JSON may be formatted during a build. Preserve the accepted bytes as
 // the next baseline only when they represent exactly the reviewed source value.
@@ -66,7 +72,25 @@ export async function readUnifiedSourceOwner(row) {
 // The fixed adapter derives this specification only after independently opening
 // the completed publication. Protocol injection is for isolated tests, not CLI.
 async function validateSpec(spec) {
-  assert.equal(spec.kind, 'unified_completed_main_source_spec'); owners(spec.owners);
+  assert(['unified_completed_main_source_spec', 'unified_completed_genshin_main_source_spec'].includes(spec.kind), 'Unreviewed source specification');
+  owners(spec.owners);
+  if (pairSpec(spec)) {
+    assert.equal(spec.sources.length, 115, 'Complete registered pair sources required');
+    assert.equal(spec.pairs.length, 90, 'Complete registered public pairs required');
+    assert(spec.pairs.includes('genshin/raw-characters.json'), 'Genshin character mirror required');
+    assert.deepEqual(spec.ownerOrder, PAIR, 'Only the fixed Genshin/Main pair can replace two source owners');
+    assert.deepEqual(Object.keys(spec.deploymentIds).sort(), [...PAIR].sort());
+    assert.deepEqual(Object.keys(spec.publicReferences).sort(), [...PAIR].sort());
+    assert.equal(spec.deploymentId, undefined, 'A single deployment cannot represent two owners');
+    for (const owner of PAIR) {
+      assert(/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(spec.deploymentIds[owner]), 'Exact pair deployment ID required');
+      assert.notEqual(spec.owners[owner].versionId, activeVersion(spec.baseline, unifiedService(owner)), 'Both pair owners must use their accepted new versions');
+      assert.equal(spec.owners[owner].mode, 'unified_upload_time_module_receipt');
+      assert.equal(spec.owners[owner].moduleContext?.role, 'candidate');
+      assert.equal(spec.owners[owner].moduleContext?.transportPin, spec.transportPin);
+      assert(Array.isArray(references(spec, owner)) && references(spec, owner).length > 0, 'Both public evidence sets required');
+    }
+  }
   assert(spec.sources.length > 0 && spec.sources.length <= 200);
   const sourcePaths = spec.sources.map(row => row.sourcePath);
   assert.equal(new Set(sourcePaths).size, sourcePaths.length, 'Duplicate source input');
@@ -81,25 +105,43 @@ async function validateSpec(spec) {
     assert(source, 'Public source is missing');
     assert.equal(digest(readUnifiedHistoricalBytes(join(spec.owners.main.directory, 'assets/data', pair))), source.sha256,
       'New Main must contain the complete published A');
-    assert.equal(spec.publicReferences.find(row => row.path === `/data/${pair}`)?.sha256, source.sha256, 'Public acceptance must bind new A');
+    assert.equal(references(spec, 'main').find(row => row.path === `/data/${pair}`)?.sha256, source.sha256, 'Public acceptance must bind new A');
   }
   assertTopology(spec.baseline, spec.baseline);
   for (const owner of UNIFIED_SOURCE_OWNERS) {
     const row = spec.owners[owner]; assert.equal(row.owner, owner); assert.equal(row.service, unifiedService(owner));
-    if (owner !== 'main') assert.equal(activeVersion(spec.baseline, row.service), row.versionId);
+    if (!sourceOwners(spec).includes(owner)) assert.equal(activeVersion(spec.baseline, row.service), row.versionId);
     await readUnifiedSourceOwner(row);
   }
 }
 
-function assertMainProjection(spec, row) {
-  const expected = artifactFiles(spec.owners.main.directory).map(file => file.path === 'worker.js'
-    ? { path: 'worker.js', type: 'file', sha256: spec.owners.main.moduleSHA256 } : file);
-  assert.deepEqual(artifactFiles(row.directory), expected, 'Published Main may change only its sealed runtime, never its compatible static union or content');
+function assertOwnerProjection(spec, owner, row) {
+  const expected = artifactFiles(spec.owners[owner].directory).map(file => file.path === 'worker.js'
+    ? { path: 'worker.js', type: 'file', sha256: spec.owners[owner].moduleSHA256 } : file);
+  assert.deepEqual(artifactFiles(row.directory), expected, `Published ${owner === 'main' ? 'Main' : owner} may change only its sealed runtime, never its compatible static union or content`);
 }
 
 function sourceTopology(spec, snapshot) {
-  assertTopology(spec.baseline, snapshot, { gachia: spec.owners.main.versionId });
-  assert.equal(snapshot.services.gachia.id, spec.deploymentId, 'Main must still be the exact accepted deployment');
+  assertTopology(spec.baseline, snapshot, Object.fromEntries(sourceOwners(spec).map(owner => [unifiedService(owner), spec.owners[owner].versionId])));
+  for (const owner of sourceOwners(spec)) assert.equal(snapshot.services[unifiedService(owner)].id,
+    pairSpec(spec) ? spec.deploymentIds[owner] : spec.deploymentId, `${owner === 'main' ? 'Main' : owner} must still be the exact accepted deployment`);
+}
+
+async function observePublic(spec, directory, request) {
+  if (!pairSpec(spec)) {
+    const http = await verifyUnifiedMainPublic({ references: spec.publicReferences, directory: join(directory, 'public'), request });
+    recheckUnifiedMainPublic(join(directory, 'public'), http.evidenceSHA256, spec.publicReferences);
+    return { path: join(directory, 'public/result.json'), pin: http.evidenceSHA256 };
+  }
+  mkdirSync(join(directory, 'public'), { mode: 0o700 });
+  const result = {};
+  for (const owner of PAIR) {
+    const target = join(directory, 'public', owner), expected = references(spec, owner);
+    const http = await (owner === 'main' ? verifyUnifiedMainPublic : verifyUnifiedGenshinPublic)({ references: expected, directory: target, request });
+    (owner === 'main' ? recheckUnifiedMainPublic : recheckUnifiedGenshinPublic)(target, http.evidenceSHA256, expected);
+    result[owner] = { path: join(target, 'result.json'), pin: http.evidenceSHA256 };
+  }
+  return result;
 }
 
 async function observe(spec, directory, reader, request) {
@@ -111,25 +153,37 @@ async function observe(spec, directory, reader, request) {
     assertModuleVersionIdentity(row.version, version);
     versions[owner] = bound(directory, `${owner}-version.json`, version);
   }
-  const http = await verifyUnifiedMainPublic({ references: spec.publicReferences, directory: join(directory, 'public'), request });
-  recheckUnifiedMainPublic(join(directory, 'public'), http.evidenceSHA256, spec.publicReferences);
+  const publicProof = await observePublic(spec, directory, request);
   // Include the whole HTTP interval between two fresh immutable-version reads.
   for (const owner of UNIFIED_SOURCE_OWNERS) {
     const row = spec.owners[owner]; assertModuleVersionIdentity(pinned(versions[owner]), await reader.version(row.service, row.versionId));
   }
   const after = await reader.snapshot(); assertTopology(before, after);
   return { before: beforeProof, after: bound(directory, 'after.json', after), versions,
-    public: { path: join(directory, 'public/result.json'), pin: http.evidenceSHA256 }, startedAt, observedAt: Date.now() };
+    public: publicProof, startedAt, observedAt: Date.now() };
 }
 
-function readObservation(spec, observation) {
+function readObservation(spec, observation, directory) {
   assert(Number.isSafeInteger(observation.startedAt) && observation.startedAt > 0);
   assert(Number.isSafeInteger(observation.observedAt) && observation.startedAt <= observation.observedAt && observation.observedAt <= Date.now());
   const before = pinned(observation.before), after = pinned(observation.after);
   sourceTopology(spec, before); assertTopology(before, after); owners(observation.versions);
+  if (pairSpec(spec)) {
+    for (const name of ['before', 'after']) assert.equal(observation[name].path, join(directory, `${name}.json`), 'Pair snapshot belongs to another observation');
+    for (const owner of UNIFIED_SOURCE_OWNERS) assert.equal(observation.versions[owner].path, join(directory, `${owner}-version.json`), 'Pair version belongs to another observation');
+  }
   for (const owner of UNIFIED_SOURCE_OWNERS) assertModuleVersionIdentity(spec.owners[owner].version, pinned(observation.versions[owner]));
-  assert.equal(observation.public.path, join(dirname(observation.public.path), 'result.json'));
-  recheckUnifiedMainPublic(dirname(observation.public.path), observation.public.pin, spec.publicReferences);
+  if (pairSpec(spec)) {
+    assert.deepEqual(Object.keys(observation.public).sort(), [...PAIR].sort(), 'Both observed public owners required');
+    for (const owner of PAIR) {
+      const proof = observation.public[owner];
+      assert.equal(proof.path, join(directory, 'public', owner, 'result.json'), 'Pair public evidence must belong to this observation');
+      (owner === 'main' ? recheckUnifiedMainPublic : recheckUnifiedGenshinPublic)(dirname(proof.path), proof.pin, references(spec, owner));
+    }
+  } else {
+    assert.equal(observation.public.path, join(dirname(observation.public.path), 'result.json'));
+    recheckUnifiedMainPublic(dirname(observation.public.path), observation.public.pin, spec.publicReferences);
+  }
 }
 
 function exclusiveDirectory(directory, spec) {
@@ -142,20 +196,22 @@ function exclusiveDirectory(directory, spec) {
 }
 
 export async function advanceUnifiedSourceIndex({ spec, directory, reader, request = fetch }) {
+  spec = structuredClone(spec);
   await validateSpec(spec);
   const root = exclusiveDirectory(directory, spec);
   try {
-    const mainDirectory = join(root, 'main');
-    cpSync(spec.owners.main.directory, mainDirectory, { recursive: true, verbatimSymlinks: true, force: false, errorOnExist: true });
-    const main = await readUnifiedSourceOwner(spec.owners.main);
-    assert.equal(realpathSync(join(mainDirectory, 'worker.js')), join(mainDirectory, 'worker.js'));
-    writeFileSync(join(mainDirectory, 'worker.js'), main.code, { mode: 0o600 });
     const rows = structuredClone(spec.owners);
-    rows.main = { ...rows.main, directory: mainDirectory, artifactSHA256: treePin(mainDirectory) };
-    assertMainProjection(spec, rows.main);
+    for (const owner of sourceOwners(spec)) {
+      const target = join(root, owner), module = await readUnifiedSourceOwner(spec.owners[owner]);
+      cpSync(spec.owners[owner].directory, target, { recursive: true, verbatimSymlinks: true, force: false, errorOnExist: true });
+      assert.equal(realpathSync(join(target, 'worker.js')), join(target, 'worker.js'));
+      writeFileSync(join(target, 'worker.js'), module.code, { mode: 0o600 });
+      rows[owner] = { ...rows[owner], directory: target, artifactSHA256: treePin(target) };
+      assertOwnerProjection(spec, owner, rows[owner]);
+    }
     const active = bound(root, 'active.json', spec.sources), observation = await observe(spec, root, reader, request);
     await validateSpec(spec);
-    const value = { schemaVersion: 1, kind: 'unified_published_source_index', status: 'published_sources_observed', publication: spec.publication,
+    const value = { ...sourceIdentity(spec), kind: 'unified_published_source_index', status: 'published_sources_observed', publication: spec.publication,
       releaseKey: spec.releaseKey, transportPin: spec.transportPin, planSHA256: spec.planSHA256, owners: rows, active, observation,
       cloudWrites: false, activationSupported: false, newPublicationAuthorized: false };
     const proof = bound(root, 'source-index.json', value);
@@ -164,26 +220,29 @@ export async function advanceUnifiedSourceIndex({ spec, directory, reader, reque
 }
 
 export async function readUnifiedSourceIndex({ proof, spec }) {
+  spec = structuredClone(spec); proof = structuredClone(proof);
   await validateSpec(spec);
   assert(!existsSync(join(dirname(proof.path), 'failure.json')), 'Failed source advance cannot be consumed');
   const value = pinned(proof);
   assert.equal(proof.path, join(dirname(proof.path), 'source-index.json'));
-  assert.equal(value.schemaVersion, 1); assert.equal(value.kind, 'unified_published_source_index'); assert.equal(value.status, 'published_sources_observed');
+  assert.equal(value.schemaVersion, sourceIdentity(spec).schemaVersion);
+  if (pairSpec(spec)) for (const key of ['ownerOrder', 'deploymentIds']) assert.deepEqual(value[key], sourceIdentity(spec)[key]);
+  assert.equal(value.kind, 'unified_published_source_index'); assert.equal(value.status, 'published_sources_observed');
   for (const key of ['publication', 'releaseKey', 'transportPin', 'planSHA256']) assert.deepEqual(value[key], spec[key]);
   for (const key of ['cloudWrites', 'activationSupported', 'newPublicationAuthorized']) assert.equal(value[key], false);
   assert.deepEqual(pinned(value.active), spec.sources, 'All public, code and derived A must follow the completed publication');
   owners(value.owners);
   for (const owner of UNIFIED_SOURCE_OWNERS) {
     const row = value.owners[owner], original = spec.owners[owner];
-    if (owner === 'main') {
-      assert.equal(row.directory, join(dirname(proof.path), 'main'));
+    if (sourceOwners(spec).includes(owner)) {
+      assert.equal(row.directory, join(dirname(proof.path), owner));
       const { directory: _d, artifactSHA256: _a, ...identity } = row;
       const { directory: _od, artifactSHA256: _oa, ...expected } = original;
-      assert.deepEqual(identity, expected); assertMainProjection(spec, row);
+      assert.deepEqual(identity, expected); assertOwnerProjection(spec, owner, row);
     } else assert.deepEqual(row, original, 'Unchanged owner cannot come from a historical per-game Main catalog');
     await readUnifiedSourceOwner(row);
   }
-  readObservation(spec, value.observation);
+  readObservation(spec, value.observation, dirname(proof.path));
   return { proof, value, sources: pinned(value.active), freshnessRenewed: false, newPublicationAuthorized: false };
 }
 
@@ -194,6 +253,7 @@ function previousArtifacts(rows) {
 }
 
 export async function captureUnifiedNextBaseline({ proof, spec, directory, reader, request = fetch }) {
+  spec = structuredClone(spec); proof = structuredClone(proof);
   const target = resolve(directory), source = dirname(proof.path);
   assert(target !== source && !target.startsWith(source + '/') && !source.startsWith(target + '/'), 'Next baseline overlaps its source index');
   const index = await readUnifiedSourceIndex({ proof, spec }), root = exclusiveDirectory(target, spec);
@@ -201,7 +261,7 @@ export async function captureUnifiedNextBaseline({ proof, spec, directory, reade
     const observation = await observe(spec, root, reader, request);
     await readUnifiedSourceIndex({ proof, spec });
     const active = bound(root, 'active.json', index.sources), previous = bound(root, 'previous.json', previousArtifacts(index.value.owners));
-    const value = { schemaVersion: 1, kind: 'unified_next_batch_baseline', status: 'published_A_freshly_observed', sourceIndex: proof,
+    const value = { ...sourceIdentity(spec), kind: 'unified_next_batch_baseline', status: 'published_A_freshly_observed', sourceIndex: proof,
       publication: spec.publication, releaseKey: spec.releaseKey, planSHA256: spec.planSHA256, active, previous, observation,
       cloudWrites: false, activationSupported: false, newPublicationAuthorized: false };
     const handoff = bound(root, 'source-handoff.json', value);
@@ -210,16 +270,19 @@ export async function captureUnifiedNextBaseline({ proof, spec, directory, reade
 }
 
 export async function readUnifiedNextBaseline({ handoff, spec, fresh = false }) {
+  spec = structuredClone(spec); handoff = structuredClone(handoff);
   assert(!existsSync(join(dirname(handoff.path), 'failure.json')), 'Failed next baseline cannot be consumed');
   const value = pinned(handoff);
   assert.equal(handoff.path, join(dirname(handoff.path), 'source-handoff.json'));
-  assert.equal(value.schemaVersion, 1); assert.equal(value.kind, 'unified_next_batch_baseline'); assert.equal(value.status, 'published_A_freshly_observed');
+  assert.equal(value.schemaVersion, sourceIdentity(spec).schemaVersion);
+  if (pairSpec(spec)) for (const key of ['ownerOrder', 'deploymentIds']) assert.deepEqual(value[key], sourceIdentity(spec)[key]);
+  assert.equal(value.kind, 'unified_next_batch_baseline'); assert.equal(value.status, 'published_A_freshly_observed');
   for (const key of ['publication', 'releaseKey', 'planSHA256']) assert.deepEqual(value[key], spec[key]);
   for (const key of ['cloudWrites', 'activationSupported', 'newPublicationAuthorized']) assert.equal(value[key], false);
   const index = await readUnifiedSourceIndex({ proof: value.sourceIndex, spec });
   assert.deepEqual(pinned(value.active), index.sources, 'Next batch must preserve the exact new A, including nonpublic code');
   assert.deepEqual(pinned(value.previous), previousArtifacts(index.value.owners), 'Next batch must use current Main, not legacy game catalogs');
-  readObservation(spec, value.observation);
+  readObservation(spec, value.observation, dirname(handoff.path));
   assert(value.observation.startedAt >= index.value.observation.observedAt, 'Next handoff cannot reuse the source-advance observation');
   if (fresh) assert(Date.now() - value.observation.startedAt < 900000, 'Next-batch source handoff expired; take fresh read-only observations');
   return { value, index, sources: index.sources, previous: pinned(value.previous), baseline: pinned(value.observation.after), newPublicationAuthorized: false };

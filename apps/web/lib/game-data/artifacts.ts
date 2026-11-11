@@ -26,27 +26,6 @@ export interface ArtifactDetailData extends ArtifactSetSummary {
 
 export async function getArtifactListData(gameId: GameId, locale: SupportedLocale): Promise<ArtifactListData | null> {
   switch (gameId) {
-    case 'genshin': {
-      const [artifacts, characters] = await Promise.all([
-        import('@gachia/data/games/genshin/artifacts'),
-        import('@gachia/data/games/genshin/characters'),
-      ]);
-      const sections = [5, 4, 3].map((rarity) => {
-        const sets = artifacts.artifactSets.filter((set) => set.rarity === rarity).map((set) => ({
-          id: set.id,
-          name: artifacts.getArtifactSetName(set, locale),
-          rarity: set.rarity,
-          bonus2pc: artifacts.getArtifactSetDesc2pc(set, locale),
-          bonus4pc: artifacts.getArtifactSetDesc4pc(set, locale),
-          characterNames: set.characters.slice(0, 8).flatMap((charId) => {
-            const char = characters.getGenshinCharacterById(charId);
-            return char ? [characters.getGenshinCharacterName(char, locale)] : [];
-          }),
-        }));
-        return { id: String(rarity), title: `${rarity}★`, sets };
-      }).filter((section) => section.sets.length > 0);
-      return { gameId, total: artifacts.artifactSets.length, sections };
-    }
     case 'starrail': {
       const [relics, characters] = await Promise.all([
         import('@gachia/data/games/starrail/relics'),
@@ -103,10 +82,6 @@ export async function getArtifactListData(gameId: GameId, locale: SupportedLocal
 
 export async function getArtifactsForStaticParams(gameId: GameId): Promise<Array<{ id: string }>> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/artifacts');
-      return mod.artifactSets.map((set) => ({ id: set.id }));
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/relics');
       return mod.relicSets.map((set) => ({ id: set.id }));
@@ -118,36 +93,6 @@ export async function getArtifactsForStaticParams(gameId: GameId): Promise<Array
 
 export async function getArtifactDetailData(gameId: GameId, id: string, locale: SupportedLocale): Promise<ArtifactDetailData | null> {
   switch (gameId) {
-    case 'genshin': {
-      const [artifacts, characters] = await Promise.all([
-        import('@gachia/data/games/genshin/artifacts'),
-        import('@gachia/data/games/genshin/characters'),
-      ]);
-      const set = artifacts.getArtifactSetById(id);
-      if (!set) return null;
-      const bestFor = set.bestFor.flatMap((charId) => {
-        const char = characters.getGenshinCharacterById(charId);
-        return char ? [{ id: charId, name: characters.getGenshinCharacterName(char, locale), href: `/genshin/characters/${charId}` }] : [];
-      });
-      return {
-        gameId,
-        id: set.id,
-        name: artifacts.getArtifactSetName(set, locale),
-        nameAlt: set.nameEn,
-        rarity: set.rarity,
-        bonus2pc: artifacts.getArtifactSetDesc2pc(set, locale),
-        bonus4pc: artifacts.getArtifactSetDesc4pc(set, locale),
-        characterNames: set.characters.flatMap((charId) => {
-          const char = characters.getGenshinCharacterById(charId);
-          return char ? [characters.getGenshinCharacterName(char, locale)] : [];
-        }),
-        bestFor,
-        characters: set.characters.flatMap((charId) => {
-          const char = characters.getGenshinCharacterById(charId);
-          return char ? [{ id: charId, name: characters.getGenshinCharacterName(char, locale), href: `/genshin/characters/${charId}`, isBest: set.bestFor.includes(charId) }] : [];
-        }),
-      };
-    }
     case 'starrail': {
       const [relics, characters] = await Promise.all([
         import('@gachia/data/games/starrail/relics'),

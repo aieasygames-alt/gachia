@@ -10,7 +10,6 @@ import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 const BASE_URL = 'https://gachia.com';
 
 const ITEM_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神全材料图鉴，覆盖角色突破材料、天赋书、Boss掉落、区域特产和日常刷取路线，帮助你快速定位每个角色的培养来源。', en: 'Genshin Impact materials wiki with ascension materials, talent books, weekly boss drops, local specialties, enemy drops, locations, and farming routes for character upgrades.', ja: '原神全素材図鑑。キャラ突破素材、天賦本、ボスドロップ、地域特産品、周回場所をまとめて確認できます。' },
   starrail: { zh: '崩坏：星穹铁道全材料图鉴，覆盖角色突破材料、行迹材料、Boss掉落和刷取来源，方便你按角色或用途快速查找所需素材。', en: 'Complete Honkai: Star Rail material list with ascension materials, trace materials, boss drops, and farming sources organized for quick character planning.', ja: 'スターレイル全素材図鑑。キャラ突破素材、軌跡素材、ボスドロップ、周回先を整理して確認できます。' },
   wuwa: { zh: '鸣潮全材料图鉴，整理技能材料、Boss材料、区域特产和养成来源，适合在培养角色前先看清每种素材该去哪里刷。', en: 'Complete Wuthering Waves material list with skill materials, boss materials, local specialties, and farming routes so you can prep upgrades efficiently.', ja: '鳴潮全素材図鑑。スキル素材、ボス素材、地域特産品、周回ルートを整理して案内します。' },
   nte: { zh: '异环全材料图鉴，覆盖突破材料、Boss掉落、技能手册和养成来源，方便你按角色、阶段或用途快速整理资源。', en: 'Complete Neverness to Everness material list with ascension materials, boss drops, skill manuals, and farming sources for efficient progression planning.', ja: '異環全素材図鑑。昇格素材、ボスドロップ、スキルマニュアル、周回先を整理しています。' },
@@ -32,17 +31,6 @@ const NTE_TYPE_LABELS: Record<string, Record<string, string>> = {
   currency: { zh: '货币', en: 'Currency', ja: '通貨' },
   permit: { zh: '许可', en: 'Permit', ja: '許可証' },
   manual: { zh: '技能手册', en: 'Skill Manual', ja: 'スキルマニュアル' },
-};
-
-const GENSHIN_TYPE_LABELS: Record<string, Record<string, string>> = {
-  'character-ascension': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
-  'talent-book': { zh: '天赋书', en: 'Talent Book', ja: '天賦本' },
-  'boss-drop': { zh: 'Boss掉落', en: 'Boss Drop', ja: 'ボスドロップ' },
-  'weekly-boss': { zh: '周本材料', en: 'Weekly Boss', ja: '週ボス素材' },
-  'local-specialty': { zh: '区域特产', en: 'Local Specialty', ja: '地域特産品' },
-  'common-drop': { zh: '普通怪物掉落', en: 'Common Drop', ja: '一般ドロップ' },
-  currency: { zh: '货币', en: 'Currency', ja: '通貨' },
-  'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
 };
 
 const RARITY_COLORS = ['', '#9ca3af', '#4ade80', '#60a5fa', '#a855f7', '#eab308'];
@@ -145,6 +133,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'genshin') return { robots: { index: false, follow: false } };
   if (gameId === 'roco') notFound();
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.items?.[locale] ?? 'Items';
@@ -155,12 +144,6 @@ export async function generateMetadata({
 
   const title = gameId === 'hi3'
     ? { zh: '崩坏3材料资料 — 源晶、以太燃素与圣痕自选', en: 'HI3 Materials — Source Prism, Ether Fuel & Stigma Selector', ja: '崩壊3rd素材資料 — 源晶・エーテル燃料・聖痕選択箱' }[locale]
-    : gameId === 'genshin'
-    ? locale === 'zh'
-      ? '原神材料图鉴 — 突破材料、天赋书、Boss掉落与刷取路线'
-      : locale === 'ja'
-        ? '原神素材図鑑 — 突破素材、天賦本、ボス素材、周回'
-        : 'Genshin Materials Wiki — Talent Books, Boss Drops & Farming Routes'
     : gameId === 'zzz'
     ? locale === 'zh'
       ? '绝区零材料图鉴 Wiki — 代理人突破、技能材料与刷取来源'
@@ -197,7 +180,7 @@ export default async function ItemsPage({
 }) {
   const { lang, game } = await params;
   const gameId = game as GameId;
-  if (gameId === 'roco') notFound();
+  if (gameId === 'genshin' || gameId === 'roco') notFound();
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? '';
@@ -210,11 +193,6 @@ export default async function ItemsPage({
       { '@type': 'ListItem', position: 2, name: CATEGORY_LABELS.items?.[locale] ?? 'Items', item: `${BASE_URL}/${locale}/${gameId}/items` },
     ],
   };
-
-  if (gameId === 'genshin') {
-    const content = await GenshinItemsPage({ locale, gameId });
-    return <>{content}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} /></>;
-  }
 
   if (gameId === 'starrail') {
     const content = await StarRailItemsPage({ locale, gameId });
@@ -298,53 +276,6 @@ export default async function ItemsPage({
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         <div className="flex h-32 items-center justify-center rounded-lg border border-dashed border-game-border text-sm text-game-text-muted">Coming Soon</div>
       </div>
-    </div>
-  );
-}
-
-// --- Genshin Items ---
-
-async function GenshinItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = await getItemListData(gameId as GameId, locale);
-  const grouped = groupByType(materials);
-  const typeOrder = ['character-ascension', 'talent-book', 'boss-drop', 'weekly-boss', 'local-specialty', 'common-drop', 'exp-material', 'currency'];
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: GAMES.genshin.theme.primary }}>
-        {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
-      </p>
-      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
-        {getItemIntro('genshin', locale)}
-      </p>
-
-      {typeOrder.map((type) => {
-        const list = grouped[type];
-        if (!list || list.length === 0) return null;
-        const typeLabel = GENSHIN_TYPE_LABELS[type]?.[locale] ?? type;
-        return (
-          <section key={type} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
-            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {list.map((mat) => (
-                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
-                  <div className="mb-1 flex items-center gap-2">
-                    <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
-                  </div>
-                  <div className="mb-1 flex items-center gap-2">
-                    <span className="text-xs text-game-text-muted">{typeLabel}</span>
-                    <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
-                  </div>
-                  <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
-                </Link>
-              ))}
-            </div>
-          </section>
-        );
-      })}
     </div>
   );
 }

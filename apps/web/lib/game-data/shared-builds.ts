@@ -1,4 +1,5 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
+import { getGenshinPlatformContent } from '@/lib/genshin-platform-content';
 
 export interface SharedBuildCharacterEntry {
   id: string;
@@ -16,10 +17,10 @@ export async function getSharedBuildCharacters(
 ): Promise<SharedBuildCharacterEntry[]> {
   switch (gameId) {
     case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/characters');
+      const { data } = await getGenshinPlatformContent();
       return characterIds.flatMap((id) => {
-        const char = mod.genshinCharacters.find((character) => character.id === id);
-        return char ? [{ id, name: mod.getGenshinCharacterName(char, locale), imageUrl: mod.getGenshinCharacterImage(char), imageAlt: char.nameEn, element: char.element, rarity: char.rarity }] : [];
+        const char = data.characters.find((character) => character.id === id);
+        return char ? [{ ...char, name: char.name[locale] }] : [];
       });
     }
     case 'starrail': {

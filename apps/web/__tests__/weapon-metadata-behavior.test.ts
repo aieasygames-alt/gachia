@@ -68,10 +68,10 @@ describe('weapon page metadata behavior (not rendered Next head)', () => {
   for (const page of ['page.tsx', '[id]/page.tsx']) {
     it(`${page} leaves other games without a new Twitter override or square image`, async () => {
       const generate = metadataExport(page, { name: 'Fixture', effectDescription: '', statsLine: '' });
-      const metadata = await generate({ lang: 'en', game: 'genshin', id: 'fixture-not-an-override' });
+      const metadata = await generate({ lang: 'en', game: 'starrail', id: 'fixture-not-an-override' });
       expect(metadata.twitter).toBeUndefined();
       expect(metadata.openGraph?.images).toEqual([
-        { url: 'https://gachia.com/images/og/genshin.webp', width: 1200, height: 630 },
+        { url: 'https://gachia.com/images/og/starrail.webp', width: 1200, height: 630 },
       ]);
     });
   }

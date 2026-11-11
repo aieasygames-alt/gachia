@@ -9,8 +9,8 @@ import { readUnifiedMainPreviewModules } from '../../../scripts/unified-main-evi
 import { unifiedMainPublicReferences } from '../../../scripts/unified-main-public.mjs'
 import { readUnifiedCloudPreviews } from '../../../scripts/unified-promotion-protocol.mjs'
 import { unifiedPreviewReferences } from '../../../scripts/unified-version-preview.mjs'
-import { baselineDirectory } from './inventory-baseline'
 import { digest, snapshot } from './legacy-intake'
+import { literalModule } from './literal-module'
 import { canonical } from './record-mapping'
 import { readPinnedUnifiedInput, unifiedSelection } from './unified-desktop'
 import type { SourceBytes } from './unified-export'
@@ -50,7 +50,18 @@ export function readUnifiedHistoricalPlan(repo: string, commit: string, planPin:
     const bytes = execFileSync('git', ['show', `${commit}:${file}`], { cwd: repo, maxBuffer: 16 * 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'] }), text = bytes.toString('utf8')
     assert(Buffer.from(text).equals(bytes), 'Historical Git source must be UTF-8'); return text
   }
-  const inventory = JSON.parse(git(path.join(baselineDirectory, 'inventory.json')))
+  // Resolve the inventory from the same commit as O, never from the current workspace.
+  const baselineFile = 'services/content-cms/src/inventory-baseline.ts'
+  const baselineModule = literalModule(git(baselineFile), baselineFile)
+  assert.deepEqual(baselineModule.units.map(({ name, kind }) => ({ name, kind })), [{ name: 'baselineDirectory', kind: 'constant' }])
+  assert(baselineModule.bindings.find(binding => binding.name === 'baselineDirectory')?.independent, 'Historical inventory must be a static literal')
+  const baselineDirectory = baselineModule.read('baselineDirectory')
+  const inventoryPath = typeof baselineDirectory === 'string'
+    ? baselineDirectory.match(/^services\/content-cms\/inventory\/(\d{4}-\d{2}-\d{2})(?:-r[1-9]\d*)?$/) : null
+  assert(inventoryPath, 'Unregistered historical inventory path')
+  const date = inventoryPath[1]
+  assert.equal(new Date(date).toISOString().slice(0, 10), date, 'Invalid historical inventory date')
+  const inventory = JSON.parse(git(`${baselineDirectory}/inventory.json`))
   const originals = baselines.map(row => {
     const text = git(row.sourcePath); assert.equal(digest(text), row.originalSHA256, 'Historical Git import differs from frozen O')
     return { sourcePath: row.sourcePath, text, sha256: row.originalSHA256 }

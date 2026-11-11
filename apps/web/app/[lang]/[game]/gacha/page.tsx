@@ -1,4 +1,5 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
+import { notFound } from 'next/navigation';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import {
   gachaBanners as nteGachaBanners,
@@ -65,6 +66,7 @@ export default async function GachaPage({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') notFound();
   const gameId = game as GameId;
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];

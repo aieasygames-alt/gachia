@@ -262,13 +262,24 @@ function routeMiddleware(request: NextRequest) {
     return redirectTo(request, `/${targetLocale}${pathname}`);
   }
 
+  // These routes now belong to the game Worker; never serve an empty Main fallback.
+  if (locale && game === 'genshin' && (!thirdSegment ||
+      ['characters', 'weapons', 'items', 'artifacts', 'guides', 'redeem-codes', 'build', 'calculator', 'compare', 'teams', 'tier-list', 'map', 'version', 'download', 'gacha'].includes(thirdSegment))) {
+    return new NextResponse(null, {
+      status: 404,
+      headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' },
+    });
+  }
+
   const response = intlMiddleware(request);
 
   // Override cache-control for public pages to allow Googlebot caching
   const isStaticAsset = pathname.startsWith('/_next') || pathname.startsWith('/images');
   const isApiRoute = pathname.startsWith('/api/');
-  if (locale && game && thirdSegment === 'shared') {
-    // Public shares can expire; never override their dynamic response with a public TTL.
+  const isHomepage = pathname === '/' || Boolean(locale && segments.length === 1);
+  const isMarketIntel = locale && secondSegment === 'tools' && thirdSegment === 'market-intel' && segments.length === 3;
+  if (isHomepage || isMarketIntel || (locale && game && thirdSegment === 'shared')) {
+    // Owner-backed pages read per request; public shares can expire.
     response.headers.set('Cache-Control', 'no-store');
   } else if (!isStaticAsset && !isApiRoute) {
     response.headers.set(

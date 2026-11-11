@@ -13,6 +13,7 @@ import { artifactFiles } from '../../../../scripts/desktop-publish.mjs';
 import { selectUnifiedNextPrevious } from '../../../../scripts/unified-source-advance.mjs';
 import { SERVICES } from '../../../../scripts/desktop-cloud-release.mjs';
 import { unifiedHTMLParserPin } from '../../../../scripts/unified-version-preview.mjs';
+import { executeUnifiedPromotionProtocol } from '../../../../scripts/unified-promotion-protocol.mjs';
 import { prepareProductionSource, sealProductionLocal } from './unified-production-state.mjs';
 
 const shard = process.env.GACHIA_FIXED_ADAPTER_TEST_SHARD;
@@ -163,7 +164,7 @@ mock.method(globalThis, 'fetch', async (input, options) => {
   return new Response(url.pathname === '/robots.txt' ? Buffer.concat([prefix, bytes]) : bytes, { status: row.status, headers: row.headers });
 });
 
-async function fixture(t, { baseline, generation = 0, networkPin, productionState = false } = {}) {
+async function fixture(t, { baseline, generation = 0, networkPin, productionState = false, productionOwners = ['main'] } = {}) {
   const s = await unifiedSourceFixture(t, { originalMain: true });
   s.spec.baseline.bindings = Object.fromEntries(SERVICES.map(service => [service, []]));
   s.spec.baseline.settings = Object.fromEntries(SERVICES.map(service => [service, { bindings: [] }]));
@@ -178,7 +179,7 @@ async function fixture(t, { baseline, generation = 0, networkPin, productionStat
     s.spec.owners.main.artifactSHA256 = digest(JSON.stringify(artifactFiles(s.spec.owners.main.directory), null, 2) + '\n');
   }
   const moduleCode = { candidate: unifiedWorkerFixture('published editorial increment', generation), recovery: unifiedWorkerFixture('previous editorial', generation) };
-  const preparedProduction = productionState ? prepareProductionSource(s) : undefined;
+  const preparedProduction = productionState ? prepareProductionSource(s, productionOwners) : undefined;
   const f = await unifiedMainFixture(t, baseline ?? s.spec.baseline, s, { generation, moduleCode, sealedHistory: true, networkPin,
     productionIdentity: preparedProduction?.productionIdentity });
   f.moduleCode = moduleCode;
@@ -190,6 +191,11 @@ async function fixture(t, { baseline, generation = 0, networkPin, productionStat
   mkdirSync(path.join(buildDirectory, 'source/packages/data'), { recursive: true });
   mkdirSync(path.join(buildDirectory, 'source/apps/web'), { recursive: true });
   cpSync(new URL('../../../../apps/web/wrangler.jsonc', import.meta.url), path.join(buildDirectory, 'source/apps/web/wrangler.jsonc'));
+  for (const owner of productionOwners.filter(owner => owner !== 'main')) {
+    const app = `game-${owner}`;
+    mkdirSync(path.join(buildDirectory, 'source/apps', app), { recursive: true });
+    cpSync(new URL(`../../../../apps/${app}/wrangler.jsonc`, import.meta.url), path.join(buildDirectory, 'source/apps', app, 'wrangler.jsonc'));
+  }
   f.save(path.join(buildDirectory, 'source/packages/data/raw-content-review.json'), { pairs: s.spec.pairs });
   const old = Object.fromEntries(Object.entries(originalOwners).map(([owner, row]) => [owner, { ...row, sourceIdentityPin: 'a'.repeat(64) }]));
   const ci = n => ({ runID: n, commit: String(n).repeat(40), runAttempt: 1, status: 'full_exact_ci_passed' });
@@ -360,6 +366,8 @@ for (const fault of ['none', 'reconciled', 'reconciled-continued', 'preflight-re
       authorization.authorizedAt = 0;
       assert.throws(evidence.authorizePromotionSource, /already authorized/);
       await assert.rejects(evidence.verify(), /cannot authorize another operation/);
+      await assert.rejects(evidence.verifyAfterPromotion(), /All promotion owners must be confirmed/);
+      evidence.confirmPromotionSource('main');
       t.mock.timers.enable({ apis: ['Date'], now: Date.now() + 900001 });
       const versions = s.versionReads, reviews = s.localPreflights;
       assert.equal((await evidence.verifyAfterPromotion()).releaseKey, verified.releaseKey);
@@ -570,7 +578,7 @@ function nextBuild(s, next, { missingA = false, workerFault } = {}) {
   });
   for (const pair of s.s.spec.pairs) write(path.join(directory, 'source/apps/web/public/data', pair), readFileSync(path.join(candidate, 'assets/data', pair)));
   const files = unifiedTree(path.join(directory, 'source'));
-  const compiler = { preview: true, productionReady: false, activationSupported: false, cloudWrites: false,
+  const compiler = { preview: true, productionReady: false, activationSupported: false, cloudWrites: false, files: [],
     baselines: sources.map(row => ({ sourcePath: row.sourcePath, activeSHA256: row.sha256 })) };
   const frozen = { schemaVersion: 1, kind: 'unified_frozen_source', status: 'generated_source_only',
     sourceAuthentication: 'not_required_by_operator', publicationPolicy: COMMUNITY_PUBLICATION_POLICY,
@@ -787,6 +795,69 @@ for (const fault of ['none-expired', 'expired-at-write', 'future-authorization',
   });
 }
 
+for (const fault of ['none', 'pending-result', 'reuse', 'wrong-owner', 'review', 'source-module', 'executor', 'expiry']) {
+  test(`fixed verifier requires independent genshin then main write authorization: ${fault}`, async t => {
+    // Only installed/CMS qualification is synthetic. The production verifier,
+    // source handoff, all five immutable source readers and executor gates run.
+    const s = await fixture(t, { productionState: true, productionOwners: ['genshin', 'main'] }), f = s.f;
+    s.s.current = structuredClone(s.s.spec.baseline);
+    const dummy = f.save(path.join(s.s.root, 'ordered-production-dummy.json'), {});
+    const request = { schemaVersion: 1, kind: 'unified_production_preview_request', repo: s.s.root,
+      ...Object.fromEntries(['localPreview', 'editorial', 'selection', 'application'].map(key => [key, dummy])),
+      sourceRunID: 1, executorRunID: 5, sourceHandoff: s.preparedProduction.handoff,
+      active: f.save(path.join(s.s.root, 'ordered-active.json'), s.s.spec.sources) };
+    const evidence = await production.createUnifiedProductionVerifier(request, { cmsToken: 'isolated-cms-token', cloudToken: 'isolated-cloud-token' },
+      { originExecutor: { runID: 2, commit: '2'.repeat(40) } });
+    assert.deepEqual(evidence.value.ownerOrder, ['genshin', 'main']);
+    if (fault === 'none') {
+      const journal = path.join(evidence.build, `unified-promotion-${evidence.value.transportPin}.jsonl`);
+      renameSync(journal, journal + '.fixture-seed');
+      const evidenceDirectory = path.join(evidence.build, `unified-main-promotion-${sourceFixtureUUID(812)}`), renewalDirectory = path.join(evidenceDirectory, 'renewal');
+      mkdirSync(renewalDirectory, { recursive: true });
+      const accepted = Object.fromEntries(['candidate', 'recovery'].map(role => [role, Object.fromEntries(evidence.value.ownerOrder.map(owner => [owner,
+        { ...f.input.previews.receipt.accepted[role].main, service: evidence.value.owners[owner].service }]))]));
+      const decorate = value => ({ ...value, previewPin: 'a'.repeat(64), renewalPin: 'a'.repeat(64), accepted, evidenceDirectory, renewalDirectory });
+      const versions = Object.fromEntries(evidence.value.ownerOrder.map(owner => [evidence.value.owners[owner].service, accepted.candidate[owner].versionId]));
+      const calls = [], reads = s.versionReads, reviews = s.localPreflights;
+      const result = await executeUnifiedPromotionProtocol({ run: evidence.build, verify: async () => decorate(await evidence.verify()),
+        authorize: () => evidence.value.releaseKey, authorizeWrite: evidence.authorizePromotionSource, confirmWrite: evidence.confirmPromotionSource,
+        verifyAfterWrite: async () => decorate(await evidence.verifyAfterPromotion()), makeTransport: () => ({
+          snapshot: async () => structuredClone(s.s.current),
+          verifyVersions: async () => ({ status: 'passed', versions, evidenceSHA256: 'a'.repeat(64),
+            modules: Object.fromEntries(evidence.value.ownerOrder.map(owner => [evidence.value.owners[owner].service, accepted.candidate[owner].moduleSHA256])),
+            recoveryVersions: Object.fromEntries(evidence.value.ownerOrder.map(owner => [evidence.value.owners[owner].service, accepted.recovery[owner].versionId])) }),
+          promote: async operation => { calls.push(operation.owner); s.s.current.services[operation.service] = {
+            id: sourceFixtureUUID(813 + calls.length), versions: [{ version_id: operation.versionId, percentage: 100 }] }; return { deploymentId: sourceFixtureUUID(813 + calls.length) }; },
+          acceptProduction: async () => ({ status: 'passed', releaseKey: evidence.value.releaseKey, versions, evidenceSHA256: 'a'.repeat(64) }),
+        }) });
+      assert.deepEqual(calls, ['genshin', 'main']); assert.deepEqual(Object.keys(result.writeAuthorizations), calls);
+      assert.equal(s.localPreflights, reviews + 5); assert.equal(s.versionReads, reads + 25);
+      assert.equal(result.status, 'production_accepted'); assert.equal(result.sourceAdvanced, false);
+      assert.equal(s.writes, 0, 'The ordered transport is synthetic and must not write a cloud endpoint');
+      return;
+    }
+    await evidence.verify(); evidence.authorizePromotionSource('genshin');
+    if (fault === 'pending-result') {
+      await assert.rejects(evidence.verify(), /cannot authorize another operation/);
+      await assert.rejects(evidence.verifyAfterPromotion(), /All promotion owners must be confirmed/);
+      assert.throws(() => evidence.authorizePromotionSource('main'), /already authorized/);
+    } else {
+      evidence.confirmPromotionSource('genshin');
+      if (fault === 'reuse') assert.throws(() => evidence.authorizePromotionSource('main'), /complete successful fresh verification/);
+      if (fault === 'wrong-owner') { await evidence.verify(); assert.throws(() => evidence.authorizePromotionSource('genshin'), /Explicit next promotion owner/); }
+      if (fault === 'review') s.failLocalPreflight = true;
+      if (fault === 'source-module') s.changedVersion = s.s.spec.owners.genshin.versionId;
+      if (fault === 'executor') writeFileSync(s.executorFile, 'changed between owners');
+      if (['review', 'source-module', 'executor'].includes(fault)) {
+        await assert.rejects(evidence.verify()); assert.throws(() => evidence.authorizePromotionSource('main'), /complete successful fresh verification/);
+      }
+      if (fault === 'expiry') { await evidence.verify(); t.mock.timers.enable({ apis: ['Date'], now: Date.now() + 900001 });
+        assert.throws(() => evidence.authorizePromotionSource('main'), /Source identity expired/); }
+    }
+    assert.equal(s.writes, 0);
+  });
+}
+
 for (const fault of ['none-expired', 'expired-before-authorization']) {
   test(`fixed production verifier composes next-baseline write authorization with post-write reads: ${fault}`, async t => {
     const first = await fixture(t, { productionState: true }), index = await advance(first), next = await advance(first, 'baseline', index.proof);
@@ -815,6 +886,7 @@ for (const fault of ['none-expired', 'expired-before-authorization']) {
       await assert.rejects(evidence.verifyAfterPromotion(), /Fresh write authorization required/);
     } else {
       const authorization = evidence.authorizePromotionSource(), reads = s.versionReads, reviews = s.localPreflights;
+      evidence.confirmPromotionSource('main');
       t.mock.timers.enable({ apis: ['Date'], now: authorization.authorizedAt + 900001 });
       const current = await evidence.verifyAfterPromotion();
       assert.equal(current.releaseKey, verified.releaseKey); assert.deepEqual(current.owners, verified.owners);
@@ -1059,4 +1131,4 @@ for (const fault of ['none', 'caller-mutation', 'authorization', 'preview', 'los
   }
 });
 
-assert.equal(registeredTests, 148, 'Update both complete shard counts when adding a fixed-adapter case');
+assert.equal(registeredTests, 156, 'Update both complete shard counts when adding a fixed-adapter case');

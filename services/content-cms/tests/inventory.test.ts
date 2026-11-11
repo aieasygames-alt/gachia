@@ -15,9 +15,20 @@ test('current inventory includes shadow readers and preserves historical inputs'
   const before = readFileSync(old)
   const inventory = collectInventory(root, commit)
   assert.equal(inventory.scopes.length, 16)
+  for (const file of ['apps/web/app/[lang]/page.tsx', 'apps/web/lib/homepage-content.ts',
+    'apps/web/lib/genshin-platform-content.ts', 'apps/web/public/data-client/genshin-platform.json',
+    'packages/core/genshin-platform.ts', 'packages/data/scripts/main-manifests.mjs', 'scripts/genshin-content-assets.mjs',
+    'packages/core/genshin-map.ts', 'apps/router/src/genshin-map.ts', 'apps/web/app/api/map/progress/route.ts',
+    'packages/core/vendor/streamparser-json/jsonparser.js']) {
+    assert(inventory.sharedCandidates.some(row => row.path === file), `Missing runtime content input: ${file}`)
+  }
   for (const game of ['genshin', 'nte']) {
     const scope = inventory.scopes.find(row => row.id === game)!
     assert(scope.appCandidates.some(row => row.path.endsWith('/lib/shadow-reader.ts')))
+  }
+  const genshin = inventory.scopes.find(row => row.id === 'genshin')!
+  for (const file of ['leaflet.js', 'leaflet.css', 'LICENSE', 'leaflet.markercluster.js', 'locate.svg', 'PROVENANCE.md']) {
+    assert(genshin.appCandidates.some(row => row.path === `apps/game-genshin/public/_games/genshin/vendor/map-v1/${file}`))
   }
   assert(readFileSync(old).equals(before))
   assert(!baselineDirectory.startsWith('reports/'))
@@ -39,6 +50,8 @@ test('versioned check detects source/addition drift without rewriting any baseli
   checkInventory(temp, inventory, false)
   checkInventory(temp, collectInventory(temp, commit), true)
   const current = path.join(temp, baselineDirectory, 'inventory.json'), saved = readFileSync(current)
+  assert.throws(() => checkInventory(temp, inventory, false), /already exists/)
+  assert(readFileSync(current).equals(saved))
   writeFileSync(source, '[{"id":"changed"}]\n')
   assert.throws(() => checkInventory(temp, collectInventory(temp, commit), true), /Inventory drift/)
   assert(readFileSync(current).equals(saved))
@@ -49,5 +62,10 @@ test('versioned check detects source/addition drift without rewriting any baseli
   assert(readFileSync(current).equals(saved))
   execFileSync('git', ['add', added], { cwd: temp })
   assert.throws(() => checkInventory(temp, collectInventory(temp, commit), true), /Inventory drift/)
+  assert(readFileSync(current).equals(saved))
+  rmSync(source)
+  const deleted = collectInventory(temp, commit)
+  assert(!deleted.scopes.find(row => row.id === 'genshin')!.sourceFiles.some(row => row.path.endsWith('/raw-guides.json')))
+  assert.throws(() => checkInventory(temp, deleted, true), /Inventory drift/)
   assert(readFileSync(current).equals(saved))
 })

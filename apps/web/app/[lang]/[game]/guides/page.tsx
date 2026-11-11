@@ -1,4 +1,5 @@
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
+import { notFound } from 'next/navigation';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
 import type { GuideListEntry } from '@/lib/game-data/guides';
@@ -9,7 +10,6 @@ import { ROCO_LIST_REVIEW } from '@/lib/roco-public-review';
 const BASE_URL = 'https://gachia.com';
 
 const GUIDE_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神攻略百科，覆盖新手开荒、角色培养、配队推荐、深渊挑战、版本专题与热点攻略，帮助你快速找到当前版本最实用的下一步。', en: 'Genshin Impact guides for current banners, Luna VIII/Nod-Krai, Lunar reactions, character builds, teams, materials, boss strategies, codes, and Primogem planning.', ja: '原神攻略百科。初心者向け、キャラ育成、編成、深境螺旋、版本特集までまとめて、今知りたい攻略へすぐ進めます。' },
   starrail: { zh: '崩坏：星穹铁道攻略百科，涵盖新手指南、角色培养、配队思路、忘却之庭、虚构叙事和版本热点，让你更快进入可执行的攻略页面。', en: 'Honkai: Star Rail guides covering beginner tips, character builds, team recommendations, endgame modes, version hubs, and practical next steps for fast progress.', ja: 'スターレイル攻略百科。初心者ガイド、キャラ育成、編成、忘却の庭、虚構叙事、版本トピックをまとめて案内します。' },
   wuwa: { zh: '鸣潮 3.7 攻略百科，优先整理梦枢天罗、心/锁暝、当前活动、卡池预算、声骸配装、波片规划、兑换码与更新后平台检查。', en: 'Wuthering Waves v3.7 guides for the Simulacrum Nexus of Mengzhou, Hsin/Suoming, current events, banner budgeting, Echo builds, Waveplate planning, codes, and post-update platform checks.', ja: '鳴潮Ver.3.7攻略百科。夢枢天羅、心/鎖暝、現在イベント、バナー予算、エコー、スタミナ、コード、更新後のプラットフォーム確認を整理します。' },
   nte: { zh: '异环攻略百科，包含下载安装、新手指南、角色培养、Boss 攻略、伤害公式、弧盘推荐和版本专题，帮助你快速了解当前版本最值得关注的内容。', en: 'Neverness to Everness guides with download/install help, beginner tips, character builds, boss guides, damage formulas, arc recommendations, and version hubs focused on the current patch.', ja: '異環攻略百科。DL/インストール、初心者ガイド、キャラ育成、ボス攻略、ダメージ計算、弧盤、版本特集を整理して案内します。' },
@@ -26,7 +26,6 @@ const GUIDE_DESC: Record<string, Record<string, string>> = {
 };
 
 const FEATURED_GUIDE_IDS: Partial<Record<GameId, string[]>> = {
-  genshin: ['banner-schedule-guide', 'snezhnaya-version-guide', 'lunar-reaction-guide'],
   starrail: ['banner-schedule-guide', 'v4-4-preview-guide', 'fate-collab-guide'],
   wuwa: ['v3-7-live-route', 'banner-schedule-guide', 'farming-route-guide'],
   nte: ['photo-mode-guide', 'damage-formula', 'boss-guide'],
@@ -275,18 +274,13 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'genshin') return { robots: { index: false, follow: false } };
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.guides?.[locale] ?? 'Guides';
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/guides`, LOCALES);
 
   const desc = (gameId === 'roco' ? ROCO_LIST_REVIEW.guides[locale].description : GUIDE_DESC[gameId]?.[locale]) ?? `${gameName} ${categoryLabel} with beginner tips, builds, teams, and practical walkthroughs`;
-  const title = gameId === 'genshin'
-    ? locale === 'zh'
-      ? '原神攻略大全 — 当前祈愿、Nod-Krai、月反应、配队与材料'
-      : locale === 'ja'
-        ? '原神攻略 — バナー、Nod-Krai、月反応、編成、素材'
-        : 'Genshin Guides — Current Banner, Nod-Krai, Lunar Reactions & Builds'
-    : gameId === 'wuwa'
+  const title = gameId === 'wuwa'
       ? locale === 'zh'
         ? '鸣潮攻略大全 — 当前卡池、声骸、体力、配队与材料'
         : locale === 'ja'
@@ -336,6 +330,7 @@ export default async function GuidesPage({
 }) {
   const { lang, game } = await params;
   const gameId = game as GameId;
+  if (gameId === 'genshin') notFound();
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
@@ -403,7 +398,7 @@ export default async function GuidesPage({
   }
 
   // Unsupported games
-  if (gameId !== 'nte' && gameId !== 'genshin' && gameId !== 'starrail') {
+  if (gameId !== 'nte' && gameId !== 'starrail') {
     return (
       <div>
         <h1 className="mb-6 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
@@ -422,127 +417,7 @@ export default async function GuidesPage({
     return await StarRailGuides({ locale, gameId });
   }
 
-  if (gameId === 'genshin') {
-    return await GenshinGuides({ locale, gameId });
-  }
-
   return await NteGuides({ locale, gameId });
-}
-
-async function GenshinGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {
-  const { guides, categories, categoryLabels } = await getGuideListData(gameId, locale);
-  const gameConfig = GAMES.genshin;
-  const featuredGuides = pickFeaturedGuides(guides, FEATURED_GUIDE_IDS.genshin ?? []);
-
-  return (
-    <div>
-      <h1 className="mb-2 text-2xl font-bold" style={{ color: gameConfig.theme.primary }}>
-        {CATEGORY_LABELS.guides?.[locale] ?? 'Guides'}
-      </h1>
-      <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh'
-          ? `共 ${guides.length} 篇攻略`
-          : locale === 'ja'
-          ? `${guides.length} 件のガイド`
-          : `${guides.length} guides`}
-      </p>
-
-      {featuredGuides.length > 0 && (
-        <section className="mb-8">
-          <div className="mb-4 flex items-center justify-between gap-4">
-            <h2 className="text-lg font-semibold text-game-text">
-              {locale === 'zh' ? '热门攻略' : locale === 'ja' ? '注目ガイド' : 'Featured Guides'}
-            </h2>
-            <span className="text-xs text-game-text-muted">
-              {locale === 'zh' ? '版本热词入口' : locale === 'ja' ? 'バージョン注目' : 'Version hot topics'}
-            </span>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {featuredGuides.map((guide) => (
-              <Link
-                key={guide.id}
-                href={`/genshin/guides/${guide.id}`}
-                className="group flex flex-col rounded-xl border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
-              >
-                <div className="mb-3 flex items-center justify-between gap-3">
-                  <span className="rounded-full bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                    {guide.categoryLabel}
-                  </span>
-                  <span className="text-xs text-game-text-muted">{guide.tags[0] ?? 'Guide'}</span>
-                </div>
-                <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                  {guide.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-game-text-muted">
-                  {guide.summary}
-                </p>
-                <GuideFreshnessMeta guide={guide} locale={locale} />
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Category filter */}
-      <div className="mb-6 flex flex-wrap gap-2">
-        {categories.map((cat) => {
-          const count = guides.filter((g) => g.category === cat).length;
-          return (
-            <a
-              key={cat}
-              href={`#category-${cat}`}
-              className="rounded-full border border-game-border bg-game-surface px-3 py-1 text-sm transition-colors hover:border-game-primary hover:text-game-primary"
-            >
-              {categoryLabels[cat] ?? cat}
-              <span className="ml-1 text-game-text-muted">({count})</span>
-            </a>
-          );
-        })}
-      </div>
-
-      {/* Guide groups by category */}
-      {categories.map((cat) => {
-        const categoryGuides = guides.filter((g) => g.category === cat);
-        return (
-          <section key={cat} id={`category-${cat}`} className="mb-8">
-            <h2 className="mb-4 text-lg font-semibold text-game-text">
-              {categoryLabels[cat] ?? cat}
-            </h2>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {categoryGuides.map((guide) => (
-                <Link
-                  key={guide.id}
-                  href={`/genshin/guides/${guide.id}`}
-                  className="group flex flex-col rounded-lg border border-game-border bg-game-surface p-4 transition-all hover:border-game-primary hover:shadow-lg"
-                >
-                  <h3 className="mb-2 text-base font-semibold text-game-text group-hover:text-game-primary">
-                    {guide.title}
-                  </h3>
-                  <p className="mb-3 flex-1 text-sm leading-relaxed text-game-text-muted">
-                    {guide.summary}
-                  </p>
-                  <GuideFreshnessMeta guide={guide} locale={locale} />
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-primary">
-                      {guide.categoryLabel}
-                    </span>
-                    {guide.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded bg-game-surface-alt px-2 py-0.5 text-xs text-game-text-muted"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        );
-      })}
-    </div>
-  );
 }
 
 async function StarRailGuides({ locale, gameId }: { locale: SupportedLocale; gameId: GameId }) {

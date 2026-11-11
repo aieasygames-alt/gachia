@@ -13,7 +13,6 @@ import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page'
 const BASE_URL = 'https://gachia.com';
 
 const TIER_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神角色强度参考，按深渊、大世界与队伍依赖整理 SS 至 B 分级。结构化数据最后更新于 2026-06-28，抽卡或养成前请核对当前版本与配队条件。', en: 'Genshin Impact character tier reference with SS to B groups for Spiral Abyss, overworld, and team dependence. Structured data was last updated on 2026-06-28; verify current patch and teams before investing.', ja: '原神キャラ評価の参考。深境螺旋、大世界、編成依存をSSからBで整理。構造化データは2026-06-28更新のため、育成前に現行版本と編成条件を確認してください。' },
   starrail: { zh: '崩坏：星穹铁道角色强度参考，按忘却之庭、虚构叙事、末日幻影与队伍依赖解读。查看更新时间和配队条件后，再决定培养或抽取。', en: 'Honkai: Star Rail character tier reference with Memory of Chaos, Pure Fiction, Apocalyptic Shadow, and team-dependence context. Check the data date and team conditions before investing.', ja: '崩壊：スターレイルのキャラ評価参考。忘却の庭、虚構叙事、末日幻影、編成依存を整理し、更新日と条件を確認してから育成を判断します。' },
   wuwa: { zh: '2026年鸣潮角色强度排行，覆盖全角色综合评级、SS/S/A/B分级、主流玩法与培养优先级，帮助你把资源投到最值得的角色上。', en: 'Wuthering Waves character tier list (2026) with SS to B rankings for endgame and exploration value, plus build priority and team context.', ja: '2026年鳴潮キャラTierリスト。全キャラの総合評価、SS/S/A/B分類、育成優先度、編成参考を掲載。' },
   nte: { zh: '异环角色强度排行，覆盖SS/S+/A+/A/B分级、场景表现和推荐优先级，帮助你在抽卡与养成前快速判断角色价值。', en: 'Neverness to Everness character tier list (2026) with SS to B rankings, content performance, and investment priority for pull planning.', ja: '異環キャラTierリスト。SS/S+/A+/A/B評価、場面別性能、育成優先度を整理しています。' },
@@ -26,10 +25,6 @@ const TIER_DESC: Record<string, Record<string, string>> = {
 };
 
 // P1-2: Lazy load tier list client components to reduce initial bundle size
-const GenshinTierListClient = dynamic(() => import('./genshin-tier-client').then(mod => ({ default: mod.GenshinTierListClient })), {
-  loading: () => <div className="p-8 text-center">Loading tier list...</div>
-});
-
 const StarRailTierListClient = dynamic(() => import('./starrail-tier-client').then(mod => ({ default: mod.StarRailTierListClient })), {
   loading: () => <div className="p-8 text-center">Loading tier list...</div>
 });
@@ -72,7 +67,7 @@ export async function generateMetadata({
       ? `${gameName}角色强度排行 — SS/S/A/B分级 | 攻略`
       : locale === 'ja'
         ? `${gameName}キャラTierリスト 2026 — SS/S/A/B評価`
-      : gameId === 'genshin' || gameId === 'starrail'
+      : gameId === 'starrail'
         ? `${gameName} Character Tier Reference — Roles, Teams & Data Date`
         : `${gameName} Character Tier List 2026 — Best Characters SS/S/A/B Ranked`;
 
@@ -106,14 +101,7 @@ export default async function TierListPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
-  if (gameId === 'genshin') {
-    return (
-      <div>
-        <TierDataNotice gameId="genshin" locale={locale} />
-        <GenshinTierListClient locale={locale} />
-      </div>
-    );
-  }
+  if (gameId === 'genshin') notFound();
 
   if (gameId === 'starrail') {
     return (
@@ -163,8 +151,8 @@ export default async function TierListPage({
   notFound();
 }
 
-function TierDataNotice({ gameId, locale }: { gameId: 'genshin' | 'starrail'; locale: SupportedLocale }) {
-  const gameName = gameId === 'genshin' ? '原神' : '崩坏：星穹铁道';
+function TierDataNotice({ locale }: { gameId: 'starrail'; locale: SupportedLocale }) {
+  const gameName = '崩坏：星穹铁道';
   const copy = locale === 'zh'
     ? `${gameName}当前结构化评级数据最后更新于 2026-06-28。它适合作为角色定位和旧队伍参考，但不应替代当前版本的卡池、敌人环境或实战配队判断。`
     : locale === 'ja'
@@ -247,11 +235,6 @@ function getTierTitle(gameId: GameId, locale: SupportedLocale) {
 
 function getTierIntro(gameId: GameId, locale: SupportedLocale) {
   const gameSpecific: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
-    genshin: {
-      zh: '按深境螺旋、大世界、队伍协同和养成成本综合评估原神角色；评级是版本参考，抽卡前请结合命座、武器和已有队伍判断。',
-      en: 'Genshin ratings combine Spiral Abyss, overworld value, team synergy, and investment cost. Use the patch snapshot with your constellations, weapons, and existing roster.',
-      ja: '深境螺旋、大世界、編成相性、育成コストで原神キャラを評価。命ノ星座、武器、手持ちと合わせて判断してください。',
-    },
     starrail: {
       zh: '按忘却之庭、虚构叙事、末日幻影、日常自动战斗和队伍绑定综合评估崩铁角色；不同模式的最优解可能不同。',
       en: 'HSR ratings combine Memory of Chaos, Pure Fiction, Apocalyptic Shadow, auto-battle value, and team dependence. The best pick can change by mode.',

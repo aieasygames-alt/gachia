@@ -14,8 +14,9 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:guides": "GUIDE_GAME=genshin vitest run --config vitest.guides.config.ts && GUIDE_GAME=nte vitest run --config vitest.guides.config.ts",
+    "test:characters": "CHARACTER_GAME=genshin vitest run --config vitest.characters.config.ts && CHARACTER_GAME=nte vitest run --config vitest.characters.config.ts && CHARACTER_GAME=azur-promilia vitest run --config vitest.characters.config.ts && CHARACTER_GAME=lvmeng vitest run --config vitest.characters.config.ts",
     "type-check": "tsc --noEmit",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "cf-typegen": "wrangler types --env-interface GachiaWorkerEnv --include-runtime false --strict-vars false cloudflare-bindings.d.ts",
     "clean": "rm -rf .next .open-next node_modules",
     "release:plan": "node ../../scripts/production-release.mjs plan --targets main"
   },

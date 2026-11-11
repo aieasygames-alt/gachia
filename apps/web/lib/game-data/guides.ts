@@ -94,10 +94,6 @@ async function loadGuideListData(
   locale: SupportedLocale,
 ): Promise<GuideListData> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/guides');
-      return buildGuideListData(mod.genshinGuides, locale, mod.getGuideTitle, mod.getGuideSummary, mod.getGuideCategory);
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/guides');
       return buildGuideListData(mod.starrailGuides, locale, mod.getGuideTitle, mod.getGuideSummary, mod.getGuideCategory);

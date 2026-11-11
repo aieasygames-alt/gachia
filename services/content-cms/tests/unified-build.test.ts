@@ -12,6 +12,7 @@ import { readUnifiedSources, readSourceValue } from '../src/unified-sources'
 import { unifiedPlan } from '../src/unified-plan'
 import { freezeUnifiedContent, unifiedOwnerPlan, unifiedTree, verifyUnifiedFrozenSource } from '../src/unified-build'
 import { objectValue, type JSONValue } from '../src/unified-content'
+import { frozenCharacterTextContract } from '../src/unified-owner-build'
 
 const repo = path.resolve(projectRoot, '../..')
 const inventory = JSON.parse(readFileSync(path.join(repo, baselineDirectory, 'inventory.json'), 'utf8'))
@@ -67,15 +68,20 @@ test('freeze rejects no-op, incomplete public A, foreign records, and floating c
 test('real 115-source freeze projects CMS raw and literal edits to mirrors, summaries, search and client payloads while preserving public-only guides', context => {
   const directory = temporary('gachia-unified-freeze-')
   const genshin = recordAt('packages/data/games/genshin/raw-characters.json')
+  const nte = recordAt('packages/data/games/nte/raw-characters.json')
   const hi3 = recordAt('packages/data/games/hi3/raw-characters.json')
   const roco = recordAt('packages/data/games/roco-cn/raw-characters.json')
   const azur = recordAt('packages/data/games/azur-promilia/raw-characters.json')
   const lvmeng = recordAt('apps/game-lvmeng/lib/data.ts')
+  const lvmengCharacter = structuredClone(plan.sources.find(source => source.sourcePath === 'apps/game-lvmeng/lib/data.ts')!.records
+    .find(row => row.sourceRecord.locator.symbol === 'playableCharacters')!)
   genshin.structuredValue = updateField(genshin.structuredValue, 'name', 'Isolated Genshin fixture')
+  nte.structuredValue = updateField(nte.structuredValue, 'name', 'Isolated NTE fixture')
   hi3.structuredValue = updateField(hi3.structuredValue, 'name', 'Isolated HI3 fixture')
   roco.structuredValue = updateField(roco.structuredValue, 'name', 'Isolated Roco fixture')
   azur.structuredValue = updateField(azur.structuredValue, 'name', 'Isolated Azur fixture')
   lvmeng.structuredValue = updateField(lvmeng.structuredValue, 'version', 'Isolated literal fixture')
+  lvmengCharacter.structuredValue = updateField(lvmengCharacter.structuredValue, 'note', 'Isolated Lvmeng character fixture')
   const active = originalSources()
   const guides = active.find(source => source.sourcePath === 'packages/data/games/genshin/raw-guides.json')!
   const rows = JSON.parse(guides.text)
@@ -85,8 +91,8 @@ test('real 115-source freeze projects CMS raw and literal edits to mirrors, summ
   const originalHI3 = readFileSync(path.join(repo, hi3.sourceRecord.sourcePath), 'utf8')
   try {
     const result = freezeUnifiedContent({ repo, commit, directory: path.join(directory, 'frozen'), plan,
-      records: [genshin, hi3, roco, azur, lvmeng], activeSources: active, preview: true })
-    assert.deepEqual(result.owners, ['azur-promilia', 'genshin', 'lvmeng', 'main'])
+      records: [genshin, nte, hi3, roco, azur, lvmeng, lvmengCharacter], activeSources: active, preview: true })
+    assert.deepEqual(result.owners, ['azur-promilia', 'genshin', 'lvmeng', 'nte', 'main'])
     assert.equal(result.candidate.baselines.length, 115)
     assert.equal(result.sourceAuthentication, 'not_required_by_operator')
     assert.equal(result.publicationPolicy.publicSourceAttestationRequired, false)
@@ -101,6 +107,8 @@ test('real 115-source freeze projects CMS raw and literal edits to mirrors, summ
       if (game !== 'roco-cn') assert.equal(JSON.parse(read('apps/web/public/data-manifest/search-zh.json'))[game].characters[0].name, name)
     }
     assert.equal(rowsAt('packages/data/games/genshin/raw-character-summaries.json')[0].name, 'Isolated Genshin fixture')
+    assert.equal(rowsAt('packages/data/games/nte/raw-character-summaries.json')[0].name, 'Isolated NTE fixture')
+    assert.equal(rowsAt('apps/web/public/data/nte/raw-characters.json')[0].name, 'Isolated NTE fixture')
     assert.equal(rowsAt('packages/data/games/azur-promilia/raw-characters.json')[0].name, 'Isolated Azur fixture')
     assert(read('packages/data/games/azur-promilia/characters.ts').includes('character.name = { zh: row.name, en: row.nameEn, ja: row.nameJa };'))
     assert.equal(rowsAt('apps/web/public/data-client/tier-list-genshin.json')[0].name, 'Isolated Genshin fixture')
@@ -115,6 +123,9 @@ test('real 115-source freeze projects CMS raw and literal edits to mirrors, summ
     assert.equal(read('apps/web/public/data/nte/raw-guides.json'), untouched.text)
     assert.equal(digest(readFileSync(path.join(result.directory, 'manifest.json'), 'utf8')), result.manifestPin)
     assert.equal(verifyUnifiedFrozenSource(result.directory, result.manifestPin).sourceTreeSHA256, result.sourceTreeSHA256)
+    const contract = frozenCharacterTextContract(result.directory, verifyUnifiedFrozenSource(result.directory, result.manifestPin))
+    assert.deepEqual(contract.changes.map(row => row.game), ['genshin', 'nte', 'azur-promilia', 'lvmeng'])
+    assert(contract.expectations.some(row => row.path.startsWith('/zh/lvmeng/characters/') && row.contains.includes('>Isolated Lvmeng character fixture<')))
     assert.throws(() => verifyUnifiedFrozenSource(result.directory, '0'.repeat(64)), /manifest changed/)
     const source = path.join(result.workspace, hi3.sourceRecord.sourcePath), saved = readFileSync(source)
     writeFileSync(source, '[]')

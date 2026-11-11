@@ -35,10 +35,6 @@ export function sortWeaponRanks(a: string, b: string) {
 
 export async function getWeaponsForStaticParams(gameId: GameId): Promise<Array<{ id: string }>> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/weapons');
-      return mod.genshinWeapons.map((weapon) => ({ id: weapon.id }));
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/weapons');
       return mod.starrailLightCones.map((weapon) => ({ id: weapon.id }));
@@ -93,24 +89,6 @@ export async function getWeaponListData(
   locale: SupportedLocale,
 ): Promise<WeaponListEntry[]> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/weapons');
-      return mod.genshinWeapons.map((weapon) => {
-        const effect = mod.getGenshinWeaponEffect(weapon, locale);
-        const rank = rankFromRarity(weapon.rarity);
-        return {
-          id: weapon.id,
-          name: mod.getGenshinWeaponName(weapon, locale),
-          rankGroup: rank,
-          rankLabel: rank,
-          typeGroup: weapon.weaponType,
-          typeLabel: weapon.weaponType,
-          stats: [`ATK ${weapon.baseAtk}`, `${weapon.subStatValue} ${weapon.subStat}`],
-          effectDescription: effect.description,
-          signatureCharacter: weapon.signatureCharacter,
-        };
-      });
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/weapons');
       return mod.starrailLightCones.map((weapon) => {
@@ -297,13 +275,6 @@ export async function getWeaponListData(
 
 export async function getWeaponMetaData(gameId: GameId, id: string, locale: SupportedLocale) {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/weapons');
-      const weapon = mod.getGenshinWeaponById(id);
-      if (!weapon) return null;
-      const effect = mod.getGenshinWeaponEffect(weapon, locale);
-      return { weapon, name: mod.getGenshinWeaponName(weapon, locale), effect };
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/weapons');
       const weapon = mod.getStarRailLightConeById(id);
@@ -483,27 +454,6 @@ export async function getWeaponDetailData(
   locale: SupportedLocale,
 ): Promise<WeaponDetailData | null> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/weapons');
-      const weapon = mod.getGenshinWeaponById(id);
-      if (!weapon) return null;
-      const effect = mod.getGenshinWeaponEffect(weapon, locale);
-      const source = mod.getGenshinWeaponSource(weapon, locale);
-      const name = mod.getGenshinWeaponName(weapon, locale);
-      const subBase = weapon.subStat ? substatText(locale, weapon.subStat, weapon.subStatValue) : '';
-      const subValue = parseFloat(weapon.subStatValue);
-      const titleStat = weapon.subStat && !Number.isNaN(subValue) ? `${weapon.subStat} ${(subValue * 4.6).toFixed(1)}%` : undefined;
-      const statsLine = locale === 'zh'
-        ? `${weapon.rarity}★, 基础攻击力${weapon.baseAtk}${titleStat ? `, 满级${titleStat}` : ''}`
-        : `★${weapon.rarity}, Base ATK ${weapon.baseAtk}${titleStat ? `, Lv.90 ${titleStat}` : ''}`;
-      const infoCards = [
-        { label: statLabel(locale, '武器类型', '武器タイプ', 'Weapon Type'), value: GENSHIN_WEAPON_TYPE[weapon.weaponType]?.[locale] ?? weapon.weaponType },
-        { label: 'Base ATK', value: String(weapon.baseAtk) },
-      ];
-      if (subBase) infoCards.push({ label: 'Sub Stat (Lv.1)', value: subBase });
-      if (titleStat) infoCards.push({ label: statLabel(locale, '满级副属性 (Lv.90)', 'Lv.90サブステータス', 'Sub Stat at Lv.90'), value: titleStat });
-      return { gameId, id: weapon.id, name, nameAlt: locale === 'zh' ? weapon.nameEn : weapon.name, rarity: weapon.rarity, infoCards, effectTitle: getWeaponEffectTitle(gameId, locale), effectName: effect.name, effectDescription: effect.description, source, statsLine, titleStat, hasPassive: true };
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/weapons');
       const weapon = mod.getStarRailLightConeById(id);

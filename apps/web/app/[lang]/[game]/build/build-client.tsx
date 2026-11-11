@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
 import type { ReactNode } from 'react';
 
-const GenshinBuildRecommender = dynamic(() => import('./genshin-build-client').then((mod) => mod.GenshinBuildRecommender), { loading: () => <BuildLoading /> });
 const StarRailBuildRecommender = dynamic(() => import('./starrail-build-client').then((mod) => mod.StarRailBuildRecommender), { loading: () => <BuildLoading /> });
 const WuWaBuildRecommender = dynamic(() => import('./wuwa-build-client').then((mod) => mod.WuWaBuildRecommender), { loading: () => <BuildLoading /> });
 const NteBuildRecommender = dynamic(() => import('./nte-build-client').then((mod) => mod.NteBuildRecommender), { loading: () => <BuildLoading /> });
@@ -102,7 +101,6 @@ function withNextSteps(content: ReactNode, locale: SupportedLocale, links: NextS
   );
 }
 export function BuildClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  if (gameId === 'genshin') return withNextSteps(<GenshinBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
   if (gameId === 'starrail') return withNextSteps(<StarRailBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
   if (gameId === 'wuwa') return withNextSteps(<WuWaBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));
   if (gameId === 'nte') return withNextSteps(<NteBuildRecommender locale={locale} />, locale, getBuildNextSteps(gameId, locale));

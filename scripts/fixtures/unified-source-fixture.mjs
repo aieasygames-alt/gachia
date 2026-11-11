@@ -48,7 +48,7 @@ export async function unifiedSourceFixture(t, { originalMain = false } = {}) {
       mode = 'fresh_etag_bound_source_capture';
     }
     owners[owner] = { owner, service, versionId, version, directory: artifact, modulePath, archiveSHA256: digest(archive), moduleSHA256: digest(code),
-      moduleProof, mode, ...(owner === 'main' ? { moduleContext } : { proofTransportPin: transportPin }) };
+      moduleProof, mode, ...(moduleContext && owner === 'main' ? { moduleContext } : { proofTransportPin: transportPin }) };
     versions[service] = version;
   }
   const pairs = ['ananta/raw-guides.json', 'genshin/raw-guides.json', 'nte/raw-guides.json', ...Array.from({ length: 87 }, (_, i) => `fixture-${i}/raw-characters.json`)];

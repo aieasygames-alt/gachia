@@ -57,7 +57,9 @@ jobs:
           pnpm --filter @gachia/router test
       - name: Test release tooling without deployment credentials
         if: steps.scope.outputs.consumers == 'true'
-        run: pnpm test:release
+        run: |
+          pnpm test:genshin-content
+          pnpm test:release
       - name: Test public Web and Data consumers
         if: steps.scope.outputs.consumers == 'true'
         run: |
@@ -65,6 +67,7 @@ jobs:
           pnpm --filter @gachia/data test
           pnpm --filter @gachia/web exec playwright install --with-deps chromium
           pnpm --filter @gachia/web test:guides
+          pnpm --filter @gachia/web test:characters
       - name: Typecheck public consumers without builds
         if: steps.scope.outputs.consumers == 'true'
         run: pnpm --filter './apps/game-*' --filter @gachia/web --filter './packages/*' type-check --incremental false

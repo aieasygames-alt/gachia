@@ -1,6 +1,6 @@
 import { execFileSync } from 'node:child_process'
 import { createHash } from 'node:crypto'
-import { readFileSync, mkdirSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import ts from 'typescript'
@@ -42,8 +42,8 @@ export function collectInventory(root: string, sourceCommit: string) {
     throw new Error(`Missing ${name} in ${file}`)
   }
 
-  const files = [...new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z', '--', 'apps', 'packages', 'scripts/scaffold-game.mjs'],
-    { cwd: root, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 }).split('\0').filter(Boolean))].sort()
+  const files = [...new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z', '--', 'apps', 'packages', 'scripts/scaffold-game.mjs', 'scripts/genshin-content-assets.mjs'],
+    { cwd: root, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 }).split('\0').filter(file => file && existsSync(path.join(root, file))))].sort()
   const ids: string[] = constant('packages/core/constants/index.ts', 'GAME_IDS')
   const games = constant('packages/core/constants/index.ts', 'GAMES')
   const deployments = constant('packages/core/deployments.ts', 'GAME_DEPLOYMENTS')
@@ -54,19 +54,26 @@ export function collectInventory(root: string, sourceCommit: string) {
   for (const file of scopedData) if (!ids.includes(file.split('/')[3])) throw new Error(`Unregistered content scope: ${file}`)
   for (const id of Object.keys(ownership.games)) if (!ids.includes(id)) throw new Error(`Unregistered route owner: ${id}`)
 
-  const sharedCandidates = files.filter(file => /\.(ts|tsx|json|mjs)$/.test(file) && (
+  const sharedCandidates = files.filter(file => (/\.(ts|tsx|json|mjs)$/.test(file) || (file.startsWith('packages/core/vendor/streamparser-json/') && file.endsWith('.js'))) && (
     file.startsWith('apps/web/app/[lang]/[game]/') ||
     file.startsWith('apps/web/lib/game-data/') ||
     file.startsWith('packages/ui/') ||
     file.startsWith('apps/web/public/data-manifest/') ||
-    ['apps/web/lib/version-snapshots.ts', 'apps/web/lib/redeem-codes.ts', 'packages/data/index.ts', 'packages/data/lib/game-data-access.ts', 'packages/data/load-json.ts', 'packages/core/constants/index.ts', 'packages/core/types/index.ts', 'apps/web/lib/games/registry.ts', 'apps/web/app/sitemaps/main/sitemap.ts', 'packages/data/scripts/generate-manifests.mjs', 'scripts/scaffold-game.mjs'].includes(file)
+    file.startsWith('packages/core/vendor/streamparser-json/') ||
+    ['apps/web/lib/version-snapshots.ts', 'apps/web/lib/redeem-codes.ts', 'packages/data/index.ts', 'packages/data/lib/game-data-access.ts', 'packages/data/load-json.ts', 'packages/core/constants/index.ts', 'packages/core/types/index.ts', 'apps/web/lib/games/registry.ts', 'apps/web/app/sitemaps/main/sitemap.ts', 'packages/data/scripts/generate-manifests.mjs', 'scripts/scaffold-game.mjs',
+      'packages/core/genshin-map.ts', 'apps/router/src/index.ts', 'apps/router/src/genshin-map.ts',
+      'apps/web/app/api/map/route.ts', 'apps/web/app/api/map/points/route.ts', 'apps/web/app/api/map/tile/route.ts', 'apps/web/app/api/map/progress/route.ts',
+      'apps/web/app/[lang]/page.tsx', 'apps/web/lib/homepage-content.ts', 'apps/web/lib/genshin-platform-content.ts',
+      'apps/web/public/data-client/genshin-platform.json', 'packages/core/genshin-content.json', 'packages/core/genshin-platform.ts',
+      'packages/data/scripts/game-public-projections.mjs', 'packages/data/scripts/main-manifests.mjs', 'scripts/genshin-content-assets.mjs'].includes(file)
   ))
   const scopes = ids.map(id => {
     const dedicated = deployments[id]?.deployment === 'game'
     const sourceFiles = scopedData.filter(file => file.startsWith(`packages/data/games/${id}/`))
     const mirrors = files.filter(file => file.startsWith(`apps/web/public/data/${id}/`))
     const derivedFiles = files.filter(file => file.startsWith(`apps/web/public/data-client/${id}/`))
-    const appCandidates = files.filter(file => file.startsWith(`apps/game-${id}/`) && /\.(ts|tsx|json)$/.test(file) && !/test\.|\.test\.|tsconfig|package\.json/.test(file))
+    const appCandidates = files.filter(file => file.startsWith(`apps/game-${id}/`) && ((/\.(ts|tsx|json)$/.test(file) && !/test\.|\.test\.|tsconfig|package\.json/.test(file))
+      || file.startsWith(`apps/game-${id}/public/_games/${id}/vendor/`)))
     const resourceFiles = files.filter(file => file.startsWith(`apps/game-${id}/public/`) || file.startsWith(`apps/web/public/images/${id}/`))
     return {
       id, names: games[id].name, registry: games[id],
@@ -119,6 +126,7 @@ export function renderCoverage(inventory: ReturnType<typeof collectInventory>) {
 
 export function checkInventory(root: string, inventory: ReturnType<typeof collectInventory>, checking: boolean) {
   const destination = path.join(root, baselineDirectory)
+  if (!checking && existsSync(destination)) throw new Error('Inventory baseline already exists; select a new revision instead of overwriting history.')
   const table = renderCoverage(inventory)
   for (const [name, data] of [['inventory.json', JSON.stringify(inventory, null, 2) + '\n'], ['coverage.md', table]]) {
     const target = path.join(destination, name)
@@ -126,7 +134,7 @@ export function checkInventory(root: string, inventory: ReturnType<typeof collec
       if (readFileSync(target, 'utf8') !== data) throw new Error(`Inventory drift: ${name}; regenerate and review.`)
     } else {
       mkdirSync(destination, { recursive: true })
-      writeFileSync(target, data)
+      writeFileSync(target, data, { flag: 'wx' })
     }
   }
 }

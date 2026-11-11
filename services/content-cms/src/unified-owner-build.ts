@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { createHash } from 'node:crypto'
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, cpSync, lstatSync, mkdirSync, readFileSync, realpathSync, renameSync, rmSync, writeFileSync } from 'node:fs'
+import { createRequire } from 'node:module'
 import path from 'node:path'
 import { assertDiskBudget, BUILD_TEMP_BUDGET, diskSpace, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 import { artifactFiles, isolatedEnvironment, withLocalWorker, withRunLock } from '../../../scripts/desktop-publish.mjs'
@@ -11,6 +12,8 @@ import { parseWrangler } from '../../../scripts/game-release.mjs'
 import { boundedBody } from '../../../scripts/desktop-version-preview.mjs'
 import { digest } from './legacy-intake'
 import { verifyUnifiedFrozenSource } from './unified-build'
+import { dedicatedCharacterTextContract, dedicatedCharacterTextPairContract, DEDICATED_CHARACTER_TEXT_SOURCES, mergeCharacterTextExpectations } from './unified-character-text'
+import { GENSHIN_LOCAL_SCOPE } from './unified-genshin-local-scope'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
@@ -23,7 +26,30 @@ type ResponseReference = { path: string; status: number; headers: Record<string,
 type OwnerResult = { status: string; artifactSHA256?: string; responses?: number; referencesPin?: string }
 type BuildReceipt = { schemaVersion: number; kind: string; frozenPin: string; sourceTreeSHA256: string;
   candidateSHA256: string; publicationPolicy: unknown; owners: Record<string, OwnerResult>; expectationsPin: string;
+  characterTextContract?: ReturnType<typeof dedicatedCharacterTextContract>;
+  localScope?: typeof GENSHIN_LOCAL_SCOPE;
+  dependencyMode?: 'locked-online';
   preview: boolean; productionReady: boolean; cloudWrites: boolean; pending: string[] }
+
+function frozenCharacterTextInputs(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
+  const paths = new Set<string>(Object.values(DEDICATED_CHARACTER_TEXT_SOURCES))
+  const files = JSON.parse(readFileSync(path.join(directory, 'active.json'), 'utf8')) as { sourcePath: string; sha256: string; file: string }[]
+  const active = files.filter(row => paths.has(row.sourcePath)).map(row => ({ sourcePath: row.sourcePath, sha256: row.sha256,
+    text: readFileSync(path.join(directory, row.file), 'utf8') }))
+  const overlays = frozen.candidate.files.filter(row => paths.has(row.sourcePath) && row.activeSHA256 !== row.candidateSHA256)
+    .map(row => ({ sourcePath: row.sourcePath, sha256: row.candidateSHA256, text: readFileSync(path.join(directory, 'source', row.sourcePath), 'utf8') }))
+  return { active, overlays }
+}
+
+export function frozenCharacterTextContract(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
+  const { active, overlays } = frozenCharacterTextInputs(directory, frozen)
+  return dedicatedCharacterTextContract(active, overlays)
+}
+
+export function frozenCharacterTextPairContract(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
+  const { active, overlays } = frozenCharacterTextInputs(directory, frozen)
+  return dedicatedCharacterTextPairContract(active, overlays)
+}
 
 export function publicFiles(directory: string, owner: string) {
   return owner === 'main' ? (JSON.parse(readFileSync(path.join(directory, 'files.json'), 'utf8')) as PublicFile[])
@@ -83,7 +109,7 @@ export function validateConsumerExpectations(owners: string[], expectations: Con
     assert(row.owner === 'main' || row.path.split('/')[2] === row.owner, 'Cross-owner consumer path')
     assert(!seen.has(`${row.owner}:${row.path}`), 'Duplicate consumer expectation')
     assert(row.status === 200 && Array.isArray(row.contains) && row.contains.length > 0
-      && row.contains.every(value => typeof value === 'string' && value.length > 0 && value.length <= 1000), 'An actual edited-content assertion is required')
+      && row.contains.every(value => typeof value === 'string' && value.length > 0 && value.length <= 6 * 16384 + 2), 'An actual edited-content assertion is required')
     seen.add(`${row.owner}:${row.path}`)
   }
   for (const owner of owners) assert(expectations.some(row => row.owner === owner), `Missing rendered content acceptance: ${owner}`)
@@ -92,8 +118,13 @@ export function validateConsumerExpectations(owners: string[], expectations: Con
 export async function buildUnifiedOwners(directory: string, pin: string, expectations: ConsumerExpectation[], {
   execute = executeCommand,
   diskProbe = diskSpace,
-}: { execute?: Execute; diskProbe?: DiskProbe } = {}) {
+  allowNetworkInstall = false,
+}: { execute?: Execute; diskProbe?: DiskProbe; allowNetworkInstall?: boolean } = {}) {
   const initial = verifyUnifiedFrozenSource(directory, pin)
+  assert(typeof allowNetworkInstall === 'boolean')
+  assert(!allowNetworkInstall || initial.localScope === GENSHIN_LOCAL_SCOPE, 'Network dependency installation is limited to the explicit Genshin local preview')
+  const characterTextContract = frozenCharacterTextContract(directory, initial)
+  expectations = mergeCharacterTextExpectations(expectations, characterTextContract)
   validateConsumerExpectations(initial.owners, expectations)
   return withRunLock(directory, async () => {
     const plan = verifyUnifiedFrozenSource(directory, pin), workspace = path.join(directory, 'source')
@@ -105,11 +136,11 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
     const save = (file: string, value: unknown) => { const text = json(value); writeFileSync(file, text, { flag: 'wx', mode: 0o600 }); return digest(text) }
     const home = path.join(directory, 'home')
     mkdirSync(home, { mode: 0o700 })
-    const env = { ...isolatedEnvironment(home), NODE_ENV: 'production' as const }
+    const env = { ...isolatedEnvironment(home), NODE_ENV: 'production' as const, npm_config_manage_package_manager_versions: 'false' }
     try {
       save(path.join(directory, 'consumer-expectations.json'), expectations)
       const store = execFileSync('pnpm', ['store', 'path'], { encoding: 'utf8' }).trim()
-      await execute('pnpm', ['install', '--frozen-lockfile', '--offline', '--ignore-scripts', '--prod=false', '--store-dir', store],
+      await execute('pnpm', ['install', '--frozen-lockfile', ...(!allowNetworkInstall ? ['--offline'] : []), '--ignore-scripts', '--prod=false', '--store-dir', store],
         { cwd: workspace, env, log: path.join(directory, 'owner-install.log') })
       for (const owner of plan.owners) {
         verifyUnifiedFrozenSource(directory, pin)
@@ -141,6 +172,8 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
         const references: ResponseReference[] = []
         const http = path.join(directory, `${owner}-http`)
         mkdirSync(http, { mode: 0o700 })
+        const require = createRequire(path.join(cwd, 'package.json'))
+        const wranglerEntrypoint = path.join(path.dirname(require.resolve('wrangler/package.json')), 'bin/wrangler.js')
         await withLocalWorker(cwd, configPath, home, path.join(directory, `${owner}-local.log`), async (origin: string) => {
           const requests = consumerRequests(owner, expectations, expectedPublic)
           for (const row of requests) {
@@ -151,7 +184,7 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
             references.push({ path: row.path, status: response.status, headers: Object.fromEntries(response.headers), bytes: body.length, sha256: bytesSHA(body), bodyFile })
             validateUnifiedConsumer(response, body, row)
           }
-        })
+        }, { wranglerEntrypoint })
         assert.deepEqual(artifactFiles(artifact), tree, 'Artifact changed during local acceptance')
         const referencesPin = save(path.join(http, 'references.json'), references)
         state.owners[owner] = { status: 'built_and_locally_accepted', artifactSHA256, responses: references.length, referencesPin }; saveState()
@@ -161,10 +194,13 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
       }
       verifyUnifiedFrozenSource(directory, pin)
       state.status = 'all_owners_built_and_locally_accepted'; saveState()
-      const receipt = { schemaVersion: 1, kind: 'unified_owner_build', frozenPin: pin, sourceTreeSHA256: plan.sourceTreeSHA256,
+      const receipt = { schemaVersion: 2, kind: 'unified_owner_build', frozenPin: pin, sourceTreeSHA256: plan.sourceTreeSHA256,
         candidateSHA256: plan.candidate.candidateSHA256, publicationPolicy: plan.publicationPolicy, owners: state.owners,
+        characterTextContract,
         expectationsPin: bytesSHA(readFileSync(path.join(directory, 'consumer-expectations.json'))), preview: plan.candidate.preview,
-        productionReady: false, cloudWrites: false, pending: ['old/new asset compatibility and compatible recovery', 'controlled multi-owner cloud activation'] }
+        productionReady: false, cloudWrites: false, ...(plan.localScope ? { localScope: plan.localScope } : {}),
+        ...(allowNetworkInstall ? { dependencyMode: 'locked-online' as const } : {}),
+        pending: ['old/new asset compatibility and compatible recovery', plan.localScope ? 'frozen Main readback' : 'controlled multi-owner cloud activation'] }
       const buildPin = save(path.join(directory, 'build.json'), receipt)
       return { directory, buildPin, ...receipt }
     } catch (error) { state.status = 'failed'; state.error = (error as Error).message; saveState(); throw error }
@@ -190,8 +226,13 @@ export function verifyUnifiedOwnerBuild(directory: string, buildPin: string) {
     return JSON.parse(bytes.toString())
   }
   const receipt = pinned('build.json', buildPin) as BuildReceipt
-  assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.kind, 'unified_owner_build')
+  assert([1, 2].includes(receipt.schemaVersion)); assert.equal(receipt.kind, 'unified_owner_build')
   const frozen = verifyUnifiedFrozenSource(root, receipt.frozenPin)
+  assert.equal(receipt.localScope, frozen.localScope, 'Local build scope changed')
+  if (receipt.dependencyMode !== undefined) {
+    assert.equal(receipt.dependencyMode, 'locked-online'); assert.equal(frozen.localScope, GENSHIN_LOCAL_SCOPE)
+  }
+  if (frozen.localScope) assert.equal(receipt.schemaVersion, 2, 'Genshin-only builds require the character evidence contract')
   assert.equal(receipt.sourceTreeSHA256, frozen.sourceTreeSHA256)
   assert.equal(receipt.candidateSHA256, frozen.candidate.candidateSHA256)
   assert.deepEqual(receipt.publicationPolicy, frozen.publicationPolicy)
@@ -204,6 +245,12 @@ export function verifyUnifiedOwnerBuild(directory: string, buildPin: string) {
   assert.deepEqual(state.owners, receipt.owners, 'Owner build state changed')
   const expectations = pinned('consumer-expectations.json', receipt.expectationsPin) as ConsumerExpectation[]
   validateConsumerExpectations(frozen.owners, expectations)
+  if (receipt.schemaVersion === 2) {
+    const contract = frozenCharacterTextContract(root, frozen)
+    assert.deepEqual(receipt.characterTextContract, contract, 'Character text contract changed')
+    assert.deepEqual(mergeCharacterTextExpectations(expectations, contract), expectations,
+      'Required character consumer acceptance missing')
+  }
   for (const owner of frozen.owners) {
     const result = receipt.owners[owner]
     assert.equal(result.status, 'built_and_locally_accepted', 'Owner did not complete local acceptance')

@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import { NextStepStrip, type NextStepLink } from '@/components/wiki/next-step-strip';
 import type { ReactNode } from 'react';
 
-const GenshinCompare = dynamic(() => import('./genshin-compare-client').then((mod) => mod.GenshinCompare), { loading: () => <CompareLoading /> });
 const StarRailCompare = dynamic(() => import('./starrail-compare-client').then((mod) => mod.StarRailCompare), { loading: () => <CompareLoading /> });
 const WuWaCompare = dynamic(() => import('./wuwa-compare-client').then((mod) => mod.WuWaCompare), { loading: () => <CompareLoading /> });
 const NteCompare = dynamic(() => import('./nte-compare-client').then((mod) => mod.NteCompare), { loading: () => <CompareLoading /> });
@@ -114,7 +113,6 @@ function withNextSteps(content: ReactNode, locale: SupportedLocale, links: NextS
 // =====================================================================
 
 export function CompareClient({ gameId, locale }: { gameId: GameId; locale: SupportedLocale }) {
-  if (gameId === 'genshin') return withNextSteps(<GenshinCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
   if (gameId === 'starrail') return withNextSteps(<StarRailCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
   if (gameId === 'wuwa') return withNextSteps(<WuWaCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));
   if (gameId === 'nte') return withNextSteps(<NteCompare locale={locale} />, locale, getCompareNextSteps(gameId, locale));

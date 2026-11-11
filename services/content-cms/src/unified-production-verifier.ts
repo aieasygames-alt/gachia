@@ -14,6 +14,7 @@ import { readPinnedUnifiedInput } from './unified-desktop'
 import { createUnifiedExecutorVerifier, verifyUnifiedCI, verifyUnifiedProductionLocal, type UnifiedProductionRequest } from './unified-production'
 import { closeUnifiedProductionOwnerScope } from './unified-production-scope'
 import { bindUnifiedPreservedRuntime, type PreservedRuntime } from './unified-preservation'
+import { createUnifiedPromotionAuthorization } from './unified-promotion-authorization'
 
 type Proof = { path: string; pin: string }
 const pinned = <T = any>(proof: Proof) => readPinnedUnifiedInput(proof.path, proof.pin) as T
@@ -80,32 +81,13 @@ export async function verifyUnifiedProductionState(request: UnifiedProductionReq
   if (handoff.kind === 'unified_next_batch_baseline') assert(Date.now() - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired during preflight')
   executor.verify()
   const scope = local.preservation ? closeUnifiedProductionOwnerScope(local.scope, value.preservedOwners) : local.scope
-  let lastFreshObservation = value.identityObservedAt
-  let freshVerificationValid = true
-  let authorization: { authorizedAt: number; identityObservedAt: number } | undefined
-  const verify = async () => {
-    assert(!authorization, 'A write-authorized verifier cannot authorize another operation')
-    freshVerificationValid = false
-    const current = (await check()).value
-    lastFreshObservation = current.identityObservedAt
-    freshVerificationValid = true
-    return current
-  }
-  const authorizePromotionSource = () => {
-    assert(!authorization, 'Promotion source already authorized')
-    assert(freshVerificationValid, 'A complete successful fresh verification is required before write')
-    assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed before write')
-    executor.verify()
-    const authorizedAt = Date.now()
-    assert(authorizedAt >= lastFreshObservation && authorizedAt - lastFreshObservation < 900000, 'Source identity expired before write')
-    if (handoff.kind === 'unified_next_batch_baseline') assert(authorizedAt >= handoff.observation.observedAt
-      && authorizedAt - handoff.observation.startedAt < 900000, 'Next-batch source handoff expired before write')
-    authorization = { authorizedAt, identityObservedAt: lastFreshObservation }
-    return { ...authorization }
-  }
-  const verifyAfterPromotion = async () => {
-    assert(authorization, 'Fresh write authorization required before post-promotion verification')
-    return (await check(authorization.authorizedAt)).value
-  }
-  return { ...local, scope, ci, executorCI, originExecutorCI, baseline, value, verify, authorizePromotionSource, verifyAfterPromotion }
+  const authorization = createUnifiedPromotionAuthorization({ initial: value,
+    sourceObservation: handoff.kind === 'unified_next_batch_baseline' ? handoff.observation : undefined,
+    verify: async () => (await check()).value,
+    verifyAuthorized: async authorizedAt => (await check(authorizedAt)).value,
+    assertWriteInputs: () => {
+      assert.deepEqual(pinned(request.sourceHandoff), handoff, 'Source handoff changed before write')
+      executor.verify()
+    } })
+  return { ...local, scope, ci, executorCI, originExecutorCI, baseline, value, ...authorization }
 }

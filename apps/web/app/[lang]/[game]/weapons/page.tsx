@@ -14,7 +14,6 @@ const BASE_URL = 'https://gachia.com';
 const ZzzQueuedWeapons = dynamic(() => import('./zzz-queued-weapons').then((mod) => mod.ZzzQueuedWeapons));
 
 const WEAPON_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神全武器图鉴，覆盖五星、四星、三星武器的属性、被动效果、适配角色和获取方式，方便你快速筛选毕业武器。', en: 'Complete Genshin Impact weapon list with stats, passive effects, rarity tiers, recommended users, and acquisition methods for faster build planning.', ja: '原神全武器図鑑。ステータス、武器スキル、適性キャラ、入手方法をまとめて、武器選びをしやすくします。' },
   starrail: { zh: '崩坏：星穹铁道全光锥图鉴，覆盖五星、四星光锥的属性、效果、适配命途和获取方式，方便你迅速判断是否值得培养。', en: 'Complete Honkai: Star Rail light cone list with stats, passive effects, path fit, rarity tiers, and acquisition methods for efficient gear decisions.', ja: 'スターレイル全光円錐図鑑。ステータス、効果、命途相性、入手方法をまとめて確認できます。' },
   wuwa: { zh: '鸣潮全武器图鉴，整理五星、四星武器的属性、被动技能、推荐角色和获取来源，帮助你快速找到最适合的武器。', en: 'Complete Wuthering Waves weapon list with stats, passive abilities, best-fit characters, and acquisition routes for quick gearing decisions.', ja: '鳴潮全武器図鑑。ステータス、パッシブ、適性キャラ、入手先を整理して案内します。' },
   nte: { zh: '异环全弧盘图鉴，覆盖S级、A级弧盘的属性、技能效果、推荐角色和获取来源，适合在配装前先看核心加成。', en: 'Complete Neverness to Everness Arc list with S-Rank and A-Rank data, skill effects, best users, and acquisition info for build planning.', ja: '異環全アルク図鑑。S級・A級データ、効果、適性キャラ、入手先をまとめています。' },
@@ -96,6 +95,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'genshin') return { robots: { index: false, follow: false } };
   if (gameId === 'roco') return rocoPublicReviewMetadata('weapons', locale);
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.weapons?.[locale] ?? 'Weapons';
@@ -137,6 +137,7 @@ export default async function WeaponsPage({
 }) {
   const { lang, game } = await params;
   const gameId = game as GameId;
+  if (gameId === 'genshin') notFound();
   const locale = lang as SupportedLocale;
   if (gameId === 'roco') return <RocoPublicReviewPage route="weapons" locale={locale} />;
   const gameConfig = GAMES[gameId];

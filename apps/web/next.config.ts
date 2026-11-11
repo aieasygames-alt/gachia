@@ -37,7 +37,13 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   outputFileTracingRoot: join(__dirname, '../..'),
   outputFileTracingExcludes: {
-    '*': ['../../packages/data/games/**/raw-*.json'],
+    '*': [
+      '../../packages/data/games/**/raw-*.json',
+      // Compatibility readers use ASSETS; these must not become server filesystem fallbacks.
+      './public/data/genshin/**',
+      './public/data-client/genshin-platform.json',
+      './public/data-client/tier-list-genshin.json',
+    ],
   },
   transpilePackages: ['react-leaflet', '@react-leaflet/core', 'react-leaflet-cluster'],
 };

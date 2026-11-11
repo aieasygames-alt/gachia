@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict'
 import { execFileSync, spawnSync } from 'node:child_process'
-import { readFileSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 import path from 'node:path'
-import test from 'node:test'
+import test, { type TestContext } from 'node:test'
 import { baselineDirectory } from '../src/inventory-baseline'
 import { digest } from '../src/legacy-intake'
 import { projectRoot } from '../src/local-environment'
@@ -21,6 +22,84 @@ test('historical plan reopens exact Git O and inventory without consulting mutab
   assert.deepEqual(result.plan, plan)
   for (const row of result.originals) assert.equal(digest(row.text), row.sha256)
 })
+
+const baselineFile = 'services/content-cms/src/inventory-baseline.ts'
+function inventoryFixture(t: TestContext) {
+  const repo = mkdtempSync(path.join(tmpdir(), 'unified-historical-inventory-'))
+  t.after(() => rmSync(repo, { recursive: true, force: true }))
+  const git = (...args: string[]) => execFileSync('git', ['-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
+    '-c', 'commit.gpgsign=false', ...args], { cwd: repo, stdio: ['ignore', 'pipe', 'pipe'] }).toString().trim()
+  const write = (file: string, text: string) => {
+    mkdirSync(path.dirname(path.join(repo, file)), { recursive: true }); writeFileSync(path.join(repo, file), text)
+  }
+  const commit = () => { git('add', '.'); git('commit', '-m', 'historical inventory fixture'); return git('rev-parse', 'HEAD') }
+  git('init', '--quiet')
+  return { repo, write, commit }
+}
+
+test('historical inventory follows each Git commit despite a newer pointer and corrupted working-tree inventories', t => {
+  const f = inventoryFixture(t), oldDirectory = 'services/content-cms/inventory/2026-11-02', newDirectory = 'services/content-cms/inventory/2026-11-05'
+  f.write(baselineFile, `export const baselineDirectory = '${oldDirectory}'\n`)
+  f.write(`${oldDirectory}/inventory.json`, JSON.stringify({ scopes: [{ id: 'genshin' }] }))
+  const oldCommit = f.commit(), oldPlan = unifiedPlan([], ['genshin'])
+  f.write(baselineFile, `export const baselineDirectory = '${newDirectory}'\n`)
+  f.write(`${newDirectory}/inventory.json`, JSON.stringify({ scopes: [{ id: 'genshin' }, { id: 'nte' }] }))
+  const newCommit = f.commit(), newPlan = unifiedPlan([], ['genshin', 'nte'])
+  f.write(baselineFile, "export const baselineDirectory = 'services/content-cms/inventory/2099-01-01'\n")
+  for (const directory of [oldDirectory, newDirectory]) f.write(`${directory}/inventory.json`, 'not JSON')
+  assert.deepEqual(readUnifiedHistoricalPlan(f.repo, oldCommit, oldPlan.planSHA256, []).plan, oldPlan)
+  assert.deepEqual(readUnifiedHistoricalPlan(f.repo, newCommit, newPlan.planSHA256, []).plan, newPlan)
+  assert.throws(() => readUnifiedHistoricalPlan(f.repo, oldCommit, newPlan.planSHA256, []), /original pin/)
+})
+
+test('same-day inventory revisions remain pinned to their own Git commit', t => {
+  const f = inventoryFixture(t), base = 'services/content-cms/inventory/2026-11-10'
+  const plans = [unifiedPlan([], ['genshin']), unifiedPlan([], ['genshin', 'nte'])]
+  const commits = plans.map((plan, index) => {
+    const directory = `${base}-r${index + 102}`
+    f.write(baselineFile, `export const baselineDirectory = '${directory}'\n`)
+    f.write(`${directory}/inventory.json`, JSON.stringify({ scopes: plan.scopeCoverage.map(row => ({ id: row.game })) }))
+    return f.commit()
+  })
+  f.write(baselineFile, "export const baselineDirectory = 'reports/untrusted'\n")
+  for (const revision of ['r102', 'r103']) f.write(`${base}-${revision}/inventory.json`, 'not JSON')
+  for (const [index, commit] of commits.entries()) {
+    assert.deepEqual(readUnifiedHistoricalPlan(f.repo, commit, plans[index].planSHA256, []).plan, plans[index])
+  }
+})
+
+for (const [fault, source] of Object.entries({
+  'missing-export': 'export const other = 1',
+  'private-binding': "const baselineDirectory = 'services/content-cms/inventory/2026-11-05'",
+  'duplicate-binding': "export const baselineDirectory = 'services/content-cms/inventory/2026-11-05'; export const baselineDirectory = 'elsewhere'",
+  'dynamic-expression': "export const baselineDirectory = (() => { throw new Error('Historical code must not execute') })()",
+  'indirect-binding': "const directory = 'services/content-cms/inventory/2026-11-05'; export const baselineDirectory = directory",
+  'path-escape': "export const baselineDirectory = 'services/content-cms/inventory/../2026-11-05'",
+  'absolute-path': "export const baselineDirectory = '/services/content-cms/inventory/2026-11-05'",
+  'foreign-path': "export const baselineDirectory = 'reports/2026-11-05'",
+  'invalid-date': "export const baselineDirectory = 'services/content-cms/inventory/2026-02-30'",
+  'invalid-revision-date': "export const baselineDirectory = 'services/content-cms/inventory/2026-02-30-r102'",
+  'zero-revision': "export const baselineDirectory = 'services/content-cms/inventory/2026-11-10-r0'",
+  'leading-zero-revision': "export const baselineDirectory = 'services/content-cms/inventory/2026-11-10-r0102'",
+  'revision-path-escape': "export const baselineDirectory = 'services/content-cms/inventory/2026-11-10-r102/../../other'",
+  'non-string': 'export const baselineDirectory = 20261105',
+  'missing-inventory': "export const baselineDirectory = 'services/content-cms/inventory/2026-11-06'",
+  'invalid-syntax': 'export const baselineDirectory = ',
+})) {
+  test(`historical inventory refuses ${fault} without falling back to the current baseline`, t => {
+    const f = inventoryFixture(t)
+    f.write(baselineFile, source)
+    f.write('services/content-cms/inventory/2026-11-05/inventory.json', JSON.stringify({ scopes: [{ id: 'genshin' }] }))
+    const commit = f.commit(), plan = unifiedPlan([], ['genshin'])
+    assert.throws(() => readUnifiedHistoricalPlan(f.repo, commit, plan.planSHA256, []), error => {
+      assert(error instanceof Error); assert.notEqual(error.message, 'Historical code must not execute')
+      if (['invalid-revision-date', 'zero-revision', 'leading-zero-revision', 'revision-path-escape'].includes(fault)) {
+        assert.match(error.message, /Unregistered historical inventory path|Invalid historical inventory date/)
+      }
+      return true
+    })
+  })
+}
 
 for (const fault of ['missing-source', 'duplicate-source', 'wrong-O', 'wrong-plan', 'unknown-commit', 'path-escape', 'foreign-source']) {
   test(`historical plan refuses ${fault}`, () => {

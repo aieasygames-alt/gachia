@@ -1,7 +1,7 @@
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import type { Metadata } from 'next';
-import { MapLoader } from './_components/MapLoader';
+import { notFound } from 'next/navigation';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import { getMapPageData } from '@/lib/game-data/maps';
 import type { MapPageData, MapRegionEntry } from '@/lib/game-data/maps';
@@ -74,7 +74,7 @@ export async function generateMetadata({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
-  if (!gameConfig || (gameId !== 'genshin' && gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte' && gameId !== 'endfield' && gameId !== 'skjh' && gameId !== 'aniimo' && gameId !== 'roco' && gameId !== 'roco-cn')) {
+  if (!gameConfig || (gameId !== 'starrail' && gameId !== 'wuwa' && gameId !== 'nte' && gameId !== 'endfield' && gameId !== 'skjh' && gameId !== 'aniimo' && gameId !== 'roco' && gameId !== 'roco-cn')) {
     return { title: 'Map', robots: { index: false, follow: false } };
   }
   const gameName = gameConfig.name[locale];
@@ -129,6 +129,7 @@ export default async function MapPage({
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
+  if (gameId === 'genshin') notFound();
   if (!gameConfig) return null;
   if (gameId === 'roco') return <RocoPublicReviewPage route="map" locale={locale} />;
 
@@ -160,30 +161,6 @@ export default async function MapPage({
 }
 
 function RegionMapPage({ data, locale }: { data: MapPageData; locale: SupportedLocale }) {
-  if (data.gameId === 'genshin' && data.mapData) {
-    const regionNames = Object.fromEntries(data.regions.map((region) => [region.id, { zh: region.name, en: region.name, ja: region.name }]));
-    return (
-      <div>
-        <div className="sr-only">
-          <h2>{locale === 'zh' ? '原神互动地图包含以下区域' : locale === 'ja' ? '原神マップのエリア一覧' : 'Genshin Impact map covers these regions'}</h2>
-          <ul>
-            {Object.entries(regionNames).map(([key, names]) => (
-              <li key={key}>{names[locale] || names.en}</li>
-            ))}
-          </ul>
-          <p>
-            {locale === 'zh'
-              ? '使用互动地图查看传送锚点、七天神像、宝箱、神瞳、材料采集点、世界任务位置。支持标记已收集物品和规划采集路线。'
-              : locale === 'ja'
-                ? 'インタラクティブマップでテレポート、七天神像、宝箱、神瞳、素材採集ポイント、世界任務の位置を確認できます。'
-                : 'Use the interactive map to find teleport waypoints, Statues of the Seven, chests, oculi, material farming spots, and world quest locations.'}
-          </p>
-        </div>
-        <MapLoader mapData={data.mapData} locale={locale} />
-      </div>
-    );
-  }
-
   const gameConfig = GAMES[data.gameId];
   const stats = getRegionStats(data.gameId, data.regions, locale);
 

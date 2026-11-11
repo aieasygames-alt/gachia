@@ -307,8 +307,12 @@ export function localAssetPath(root, urlPath) {
   return join(root, ...parts);
 }
 
-export async function withLocalWorker(cwd, config, home, log, accept) {
-  const child = spawn('pnpm', ['exec', 'wrangler', 'dev', '--local', '--ip', '127.0.0.1', '--port', '0', '--inspector-port', '0', '--env', '', '--config', config],
+export async function withLocalWorker(cwd, config, home, log, accept, options = /** @type {{ wranglerEntrypoint?: string, additionalConfigs?: string[] }} */ ({})) {
+  const { wranglerEntrypoint, additionalConfigs = [] } = options;
+  assert(Array.isArray(additionalConfigs) && additionalConfigs.every(file => typeof file === 'string' && file.length > 0 && !file.startsWith('-')), 'Invalid auxiliary Worker configs');
+  const args = ['dev', '--local', '--ip', '127.0.0.1', '--port', '0', '--inspector-port', '0', '--env', '', '--config', config,
+    ...additionalConfigs.flatMap(file => ['--config', file])];
+  const child = spawn(wranglerEntrypoint ? process.execPath : 'pnpm', wranglerEntrypoint ? [wranglerEntrypoint, ...args] : ['exec', 'wrangler', ...args],
     { cwd, env: isolatedEnvironment(home), stdio: ['ignore', 'pipe', 'pipe'], detached: true });
   let timer;
   try {

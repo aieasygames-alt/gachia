@@ -6,6 +6,7 @@ import { Link } from '@/lib/i18n/navigation';
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import { getSharedBuildCharacters } from '@/lib/game-data/shared-builds';
 import type { SharedBuildCharacterEntry } from '@/lib/game-data/shared-builds';
+import { GENSHIN_UNAVAILABLE, GenshinContentUnavailableError } from '@/lib/genshin-platform-content';
 
 const GENSHIN_ELEMENT_COLORS: Record<string, string> = {
   pyro: '#ef4444', hydro: '#3b82f6', electro: '#8b5cf6',
@@ -77,7 +78,13 @@ export default async function SharedBuildPage({
 }
 
 async function SharedTeamView({ gameId, locale, characterIds }: { gameId: GameId; locale: SupportedLocale; characterIds: string[] }) {
-  const characters = await getSharedBuildCharacters(gameId, characterIds, locale);
+  let characters: SharedBuildCharacterEntry[];
+  try {
+    characters = await getSharedBuildCharacters(gameId, characterIds, locale);
+  } catch (error) {
+    if (!(error instanceof GenshinContentUnavailableError)) throw error;
+    return <p role="status" className="text-game-text-muted">{GENSHIN_UNAVAILABLE[locale]}</p>;
+  }
 
   if (characters.length === 0) {
     return (

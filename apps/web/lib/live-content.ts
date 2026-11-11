@@ -101,15 +101,6 @@ export const LIVE_BANNERS: LiveBanner[] = [
     priority: 1,
   },
   {
-    gameId: 'genshin',
-    title: {"zh": "原神7.1已上线：版本与当前祈愿", "en": "Genshin v7.1 Live: Version and Wishes", "ja": "原神v7.1配信中：バージョンと祈願"},
-    summary: {"zh": "官方确认7.1「往冥府的安魂歌」已上线。先查当前祈愿、活动期限与角色材料，直播码按实际有效期分层。", "en": "The official site confirms v7.1 is live. Check wishes, event deadlines and materials; separate codes by verified validity.", "ja": "公式サイトでv7.1の配信を確認。祈願、イベント期限、素材を確認し、コードは確認済み期限で区分します。"},
-    href: '/genshin/version',
-    status: 'fresh',
-    updatedAt: '2026-10-15',
-    priority: 2,
-  },
-  {
     gameId: 'roco',
     title: {
       zh: 'Roco Global 测试信息待核实',
@@ -262,23 +253,6 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
 ];
 
 export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
-  {
-    gameId: 'genshin',
-    title: {
-      zh: '原神 7.1 前瞻直播码',
-      en: 'Genshin v7.1 Livestream Codes',
-      ja: '原神 v7.1配信コード',
-    },
-    summary: {
-      zh: '把 7.1 直播码、active codes、expired codes 和 Nod-Krai 长尾入口分层核验。',
-      en: 'Separate v7.1 livestream codes, active codes, expired codes, and Nod-Krai long-tail routes.',
-      ja: 'v7.1配信コード、active、expired、Nod-Krai長尾を分けて確認します。',
-    },
-    href: '/genshin/redeem-codes',
-    status: 'watch',
-    updatedAt: '2026-10-15',
-    priority: 1,
-  },
   {
     gameId: 'starrail',
     title: {

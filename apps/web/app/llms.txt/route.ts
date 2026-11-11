@@ -36,7 +36,7 @@ It covers Genshin Impact, Honkai: Star Rail, Wuthering Waves, Neverness to Evern
 - ZZZ v3.3 watch hub: ${BASE_URL}/en/zzz/version
 - WuWa v3.7 watch hub: ${BASE_URL}/en/wuwa/version
 - HSR v4.6 version hub: ${BASE_URL}/en/starrail/version
-- Genshin Luna VIII version hub: ${BASE_URL}/en/genshin/version
+- Genshin Impact version hub: ${BASE_URL}/en/genshin/version
 - NTE v1.2 version hub: ${BASE_URL}/en/nte/version
 - Sea of Remnants launch guide: ${BASE_URL}/en/sea/guides/launch-day-guide
 - Sea of Remnants download guide: ${BASE_URL}/en/sea/guides/download-install-guide

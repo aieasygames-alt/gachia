@@ -89,10 +89,6 @@ function toItemListEntry<T extends MaterialEntry>(
 
 export async function getItemsForStaticParams(gameId: GameId): Promise<Array<{ id: string }>> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/items');
-      return mod.genshinMaterials.map((m) => ({ id: m.id }));
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/items');
       return mod.starrailMaterials.map((m) => ({ id: m.id }));
@@ -148,11 +144,6 @@ export async function getItemData(
   locale: SupportedLocale,
 ): Promise<ItemData | null> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/items');
-      const material = mod.getGenshinMaterialById(id);
-      return material ? toItemData(material, locale, mod.getGenshinMaterialName) : null;
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/items');
       const material = mod.getStarRailMaterialById(id);
@@ -218,10 +209,6 @@ export async function getItemListData(
   locale: SupportedLocale,
 ): Promise<ItemListEntry[]> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/items');
-      return mod.genshinMaterials.map((material) => toItemListEntry(material, locale, mod.getGenshinMaterialName));
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/items');
       return mod.starrailMaterials.map((material) => toItemListEntry(material, locale, mod.getStarRailMaterialName));
@@ -298,23 +285,6 @@ export async function getCharactersNeedingMaterial(
   materialId: string,
 ): Promise<MaterialCharacter[]> {
   switch (gameId) {
-    case 'genshin': {
-      const [{ characterMaterials }, { genshinCharacters, getGenshinCharacterImage }] = await Promise.all([
-        import('@gachia/data/games/genshin/extras'),
-        import('@gachia/data/games/genshin/characters'),
-      ]);
-      const charIds = new Set<string>();
-      for (const cm of characterMaterials) {
-        if (cm.ascensionMaterials.some((a) => a.materials.some((m) => m.id === materialId))
-          || cm.talentMaterials.some((t) => t.materials.some((m) => m.id === materialId))) {
-          charIds.add(cm.characterId);
-        }
-      }
-      return dedupeById([...charIds].map((id) => {
-        const char = genshinCharacters.find((c) => c.id === id);
-        return char ? { id: char.id, element: char.element, image: getGenshinCharacterImage(char) } : null;
-      }).filter(Boolean) as MaterialCharacter[]);
-    }
     case 'starrail': {
       const [{ characterMaterials }, { starrailCharacters, getStarRailCharacterImage }] = await Promise.all([
         import('@gachia/data/games/starrail/extras'),

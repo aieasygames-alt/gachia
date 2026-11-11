@@ -1,5 +1,4 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
-import type { GameMapData } from '@gachia/data/games/genshin/map-data';
 import type { WuWaSourceReview } from '@gachia/data/games/wuwa/types';
 
 export interface MapRegionEntry {
@@ -19,34 +18,13 @@ export interface MapRegionEntry {
 }
 
 export interface MapPageData {
-  gameId: Extract<GameId, 'genshin' | 'starrail' | 'wuwa' | 'nte' | 'endfield' | 'aniimo'>;
+  gameId: Extract<GameId, 'starrail' | 'wuwa' | 'nte' | 'endfield' | 'aniimo'>;
   regions: MapRegionEntry[];
-  mapData?: GameMapData;
 }
 
 export async function getMapPageData(gameId: GameId, locale: SupportedLocale): Promise<MapPageData | null> {
   switch (gameId) {
-    case 'genshin': {
-      const [regionsMod, mapMod] = await Promise.all([
-        import('@gachia/data/games/genshin/regions'),
-        import('@gachia/data/games/genshin/map-data'),
-      ]);
-      return {
-        gameId,
-        mapData: mapMod.genshinMapData,
-        regions: regionsMod.regions.map((region) => ({
-          id: region.id,
-          name: regionsMod.getRegionName(region, locale),
-          description: regionsMod.getRegionDescription(region, locale),
-          subRegions: [],
-          bosses: region.bosses,
-          specialties: region.specialties,
-          domains: region.domains,
-          highlights: region.highlights,
-          tips: region.tips,
-        })),
-      };
-    }
+    case 'genshin': return null;
     case 'wuwa': {
       const mod = await import('@gachia/data/games/wuwa/regions');
       return {

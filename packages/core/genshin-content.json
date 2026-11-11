@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "owner": "genshin",
+  "prefix": "/_games/genshin/content",
+  "rawFiles": [
+    "raw-artifacts.json",
+    "raw-character-materials.json",
+    "raw-character-summaries.json",
+    "raw-characters.json",
+    "raw-guides.json",
+    "raw-materials.json",
+    "raw-redeem-codes.json",
+    "raw-regions.json",
+    "raw-weapons.json"
+  ],
+  "locales": ["zh", "en", "ja"]
+}

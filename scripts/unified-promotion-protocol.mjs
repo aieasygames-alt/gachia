@@ -183,12 +183,14 @@ export function assertUnifiedPromotionDirectories(run, directory, renewalDirecto
 
 // No upload or automatic recovery capability. Every write target comes from
 // accepted exact UUIDs; an existing journal permanently blocks replay.
-export async function executeUnifiedPromotionProtocol({ run, verify, authorize, makeTransport, authorizeWrite, verifyAfterWrite }) {
+export async function executeUnifiedPromotionProtocol({ run, verify, authorize, makeTransport, authorizeWrite, confirmWrite, verifyAfterWrite }) {
   return withRunLock(run, async () => {
     assert.equal(typeof authorizeWrite, typeof verifyAfterWrite, 'Both write-boundary adapters are required');
     assert(authorizeWrite === undefined || typeof authorizeWrite === 'function');
+    assert(confirmWrite === undefined || (typeof authorizeWrite === 'function' && typeof confirmWrite === 'function'), 'Invalid write confirmation adapter');
     const lifecycle = authorizeWrite === undefined ? {} : { freshnessPolicy: 'write-boundary-v1' };
     const initial = structuredClone(await verify()); assertUnifiedPromotionEvidence(initial);
+    if (authorizeWrite && initial.ownerOrder.length > 1) assert.equal(typeof confirmWrite, 'function', 'Ordered promotion requires an owner confirmation adapter');
     assert.equal(await authorize(initial), initial.releaseKey);
     assertUnifiedPromotionDirectories(run, initial.evidenceDirectory, initial.renewalDirectory);
     const journal = join(run, `unified-promotion-${initial.transportPin}.jsonl`);
@@ -222,7 +224,7 @@ export async function executeUnifiedPromotionProtocol({ run, verify, authorize, 
         // The final snapshot is asynchronous: recheck clocks immediately before
         // the durable intent, not just at the start of the preceding verifier.
         assertUnifiedPromotionEvidence(current);
-        const authorization = authorizeWrite?.();
+        const authorization = authorizeWrite?.(owner);
         if (authorizeWrite) {
           assert.deepEqual(Object.keys(authorization).sort(), ['authorizedAt', 'identityObservedAt']);
           assert.equal(authorization.identityObservedAt, current.identityObservedAt);
@@ -238,7 +240,8 @@ export async function executeUnifiedPromotionProtocol({ run, verify, authorize, 
         const result = await transport.promote({ ...pendingOperation, releaseKey: initial.releaseKey });
         promoted[service] = versionId;
         assertTopology(initial.baseline, await transport.snapshot(), promoted);
-        record({ phase: 'promoted', ...pendingOperation, result }); pendingOperation = undefined;
+        record({ phase: 'promoted', ...pendingOperation, result });
+        await confirmWrite?.(owner); pendingOperation = undefined;
       }
       await revalidate(true);
       const proof = await transport.acceptProduction(initial);

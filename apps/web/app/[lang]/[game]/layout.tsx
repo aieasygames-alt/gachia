@@ -52,7 +52,7 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
-    Object.keys(GAMES).map((game) => ({
+    Object.keys(GAMES).filter(game => game !== 'genshin').map((game) => ({
       lang,
       game,
     }))

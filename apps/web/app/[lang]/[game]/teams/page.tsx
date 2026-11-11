@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { GAMES } from '@gachia/core';
 
@@ -51,6 +52,7 @@ export default async function TeamsPage({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') notFound();
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 

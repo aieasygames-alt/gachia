@@ -97,7 +97,6 @@ const CHARACTER_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
 };
 
 const CHAR_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神全角色图鉴，覆盖五星、四星角色的属性、技能、突破材料和培养方向，方便你在抽卡和练角前先看清定位。', en: 'Complete Genshin Impact character roster with stats, skills, ascension materials, roles, and build directions for better team and pull planning.', ja: '原神全キャラクター図鑑。属性、スキル、突破素材、役割、育成方針をまとめて確認できます。' },
   starrail: { zh: '崩坏：星穹铁道全角色图鉴，覆盖属性、命途、技能数据和培养方向，帮助你在配队前快速看懂角色定位。', en: 'Complete Honkai: Star Rail character roster with elements, paths, skills, and build directions so you can understand each unit before investing.', ja: 'スターレイル全キャラ図鑑。属性、運命、スキル、育成方針を整理しています。' },
   wuwa: { zh: '鸣潮全角色图鉴，覆盖属性、武器类型、技能数据和培养方向，适合在组队和资源分配前快速查角色定位。', en: 'Complete Wuthering Waves character roster with elements, weapon types, skills, and build directions to help with team and resource planning.', ja: '鳴潮全キャラ図鑑。属性、武器タイプ、スキル、育成方針をまとめています。' },
   nte: { zh: '异环全角色图鉴，覆盖S级、A级角色的数据、定位和培养方向，方便你在抽卡与配队时快速判断是否值得投入。', en: 'Complete Neverness to Everness character roster with S-Rank and A-Rank data, roles, and build directions for pull and team planning.', ja: '異環全キャラ図鑑。S級・A級のデータ、役割、育成方針を整理しています。' },
@@ -180,6 +179,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'genshin') return { robots: { index: false, follow: false } };
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.characters?.[locale] ?? 'Characters';
   const desc = CHAR_DESC[gameId]?.[locale];
@@ -233,6 +233,7 @@ export default async function CharactersPage({
 }) {
   const { lang, game } = await params;
   const gameId = game as GameId;
+  if (gameId === 'genshin') notFound();
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
   const gameName = gameConfig?.name[locale] ?? '';

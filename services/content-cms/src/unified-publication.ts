@@ -7,9 +7,12 @@ import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
 import { boundedBody } from '../../../scripts/desktop-version-preview.mjs'
 import { digest, withVerificationPass } from '../../../scripts/desktop-release-assets.mjs'
 import { prepareUnifiedAssetPair, unifiedService, unifiedStaticFiles, verifyUnifiedAssetPair } from '../../../scripts/unified-release-assets.mjs'
-import { consumerRequests, ownerBuildTarget, publicFiles, validateConsumerExpectations, validateUnifiedConsumer,
+import { unifiedGenshinPublicReferences } from '../../../scripts/unified-genshin-public.mjs'
+import { mergeCharacterTextExpectations, type dedicatedCharacterTextPairContract } from './unified-character-text'
+import { consumerRequests, frozenCharacterTextPairContract, ownerBuildTarget, publicFiles, validateConsumerExpectations, validateUnifiedConsumer,
   verifyUnifiedOwnerBuild, type ConsumerExpectation } from './unified-owner-build'
 import { projectRoot } from './local-environment'
+import { GENSHIN_LOCAL_RAW, GENSHIN_LOCAL_SCOPE } from './unified-genshin-local-scope'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const SHA = /^[a-f0-9]{64}$/
@@ -32,9 +35,12 @@ type PublicationReceipt = Pick<Input, 'buildDirectory' | 'buildPin' | 'previousP
   schemaVersion: number; kind: string; status: string; candidateSHA256: string; baselineExpectationsPin: string;
   owners: Record<string, OwnerResult>; preview: boolean; productionReady: boolean; activationSupported: boolean; cloudWrites: boolean;
   rawUuidRollbackAuthorized: boolean; previousRuntimeVerification: string; pending: string[]
+  characterTextContract?: ReturnType<typeof dedicatedCharacterTextPairContract>
+  localScope?: typeof GENSHIN_LOCAL_SCOPE
 }
 const PENDING = ['fresh cloud topology and immutable-version module verification', 'reviewed multi-owner no-bundle transport',
   'exact candidate and recovery cloud previews', 'controlled promotion, partial reconciliation and source advance']
+const GENSHIN_LOCAL_PENDING = ['frozen Main readback with candidate and recovery', 'single-owner source advance and production qualification']
 
 export async function serveUnifiedWorker(cwd: string, config: string, home: string, log: string, accept: (origin: string) => Promise<void>) {
   // Reuse installed tooling after frozen build dependencies have been cleaned.
@@ -97,15 +103,30 @@ function publicBaseline(build: string, previous: string) {
   }
 }
 
+function verifyPublicationBaseline(built: ReturnType<typeof verifyUnifiedOwnerBuild>, previous: UnifiedPrevious) {
+  if (!built.frozen.localScope) return publicBaseline(built.directory, previous.owners.main.directory)
+  const [file] = built.frozen.candidate.files
+  const pathFor = (artifact: string) => path.join(artifact, 'assets', GENSHIN_LOCAL_RAW)
+  assert.equal(digest(bytes(pathFor(previous.owners.genshin.directory))), file.activeSHA256, 'Previous Genshin does not preserve public A')
+  assert.equal(digest(bytes(pathFor(path.join(built.directory, 'artifacts/genshin')))), file.candidateSHA256, 'Built Genshin does not contain candidate B')
+}
+
 function oldPublicFiles(directory: string) {
   return (artifactFiles(directory) as ArtifactEntry[]).filter(row => row.type === 'file' && /^assets\/(?:data|data-client|data-manifest)\/.+\.json$/.test(row.path))
     .map(row => ({ path: `apps/web/public/${row.path.slice('assets/'.length)}`, sha256: row.sha256! }))
 }
 
-export function unifiedPublicationRequests(build: string, owner: string, role: Role, artifact: string, expectations: ConsumerExpectation[]): RequestRow[] {
+export function unifiedPublicationRequests(build: string, owner: string, role: Role, artifact: string, expectations: ConsumerExpectation[], localRawSHA256?: string): RequestRow[] {
   const files = role === 'candidate' ? publicFiles(build, owner) : owner === 'main' ? oldPublicFiles(artifact) : []
-  return [...consumerRequests(owner, expectations, files), ...(unifiedStaticFiles(artifact, owner) as ArtifactEntry[]).map(file => ({ owner,
+  return [...consumerRequests(owner, expectations, files), ...(localRawSHA256 ? [{ owner, path: GENSHIN_LOCAL_RAW, status: 200, sha256: localRawSHA256 }] : []),
+    ...(unifiedStaticFiles(artifact, owner) as ArtifactEntry[]).map(file => ({ owner,
     path: '/' + file.path.slice('assets/'.length).split('/').map(encodeURIComponent).join('/'), status: 200, sha256: file.sha256, static: true }))]
+}
+
+function scopedPublicationRequests(built: ReturnType<typeof verifyUnifiedOwnerBuild>, owner: string, role: Role, artifact: string, expectations: ConsumerExpectation[]) {
+  const file = built.frozen.localScope ? built.frozen.candidate.files[0] : undefined
+  return unifiedPublicationRequests(built.directory, owner, role, artifact, expectations,
+    role === 'candidate' ? file?.candidateSHA256 : file?.activeSHA256)
 }
 
 export function validateUnifiedPublicationResponse(response: { status: number; headers: Headers }, body: Buffer, wanted: RequestRow) {
@@ -141,11 +162,28 @@ function expectationsMatch(build: string, baseline: ConsumerExpectation[]) {
   return candidate
 }
 
+export function unifiedRecoveryExpectations(candidate: ConsumerExpectation[], provided: ConsumerExpectation[],
+  contract: ReturnType<typeof dedicatedCharacterTextPairContract>) {
+  assert.deepEqual(mergeCharacterTextExpectations(candidate, contract.candidate), candidate, 'Candidate character acceptance missing')
+  const merged = mergeCharacterTextExpectations(provided, contract.recovery)
+  assert.equal(merged.length, candidate.length, 'Recovery must cover exactly the candidate consumers')
+  const ordered = candidate.map(row => {
+    const old = merged.find(wanted => wanted.owner === row.owner && wanted.path === row.path)
+    assert(old && old.status === row.status, 'Recovery must cover every changed consumer')
+    return old
+  })
+  assert.equal(new Set(candidate.map(row => `${row.owner}:${row.path}`)).size, candidate.length, 'Duplicate candidate consumer')
+  return ordered
+}
+
 export async function prepareUnifiedPublication(input: Input, { serve = serveUnifiedWorker }: { serve?: typeof withLocalWorker } = {}) {
   const initial = await inputs(input), root = path.resolve(input.directory), build = initial.built.directory
-  validateConsumerExpectations(initial.built.frozen.owners, input.baselineExpectations)
-  const candidateExpectations = expectationsMatch(build, input.baselineExpectations)
-  publicBaseline(build, initial.previous.owners.main.directory)
+  const characterTextContract = frozenCharacterTextPairContract(build, initial.built.frozen)
+  const candidateExpectations = JSON.parse(bytes(path.join(build, 'consumer-expectations.json')).toString()) as ConsumerExpectation[]
+  const baselineExpectations = unifiedRecoveryExpectations(candidateExpectations, input.baselineExpectations, characterTextContract)
+  validateConsumerExpectations(initial.built.frozen.owners, baselineExpectations)
+  expectationsMatch(build, baselineExpectations)
+  verifyPublicationBaseline(initial.built, initial.previous)
   const sources = [build, ...Object.values(initial.previous.owners).map(row => row.directory)]
   assert(sources.every(source => root !== source && !source.startsWith(root + path.sep) && !root.startsWith(source + path.sep)), 'Output overlaps publication inputs')
   assert.equal(realpathSync(path.dirname(root)), path.dirname(root), 'Linked publication parent forbidden')
@@ -157,7 +195,7 @@ export async function prepareUnifiedPublication(input: Input, { serve = serveUni
     const stateFile = path.join(root, 'state.json')
     save(stateFile, { status: 'preparing', cloudWrites: false })
     try {
-      save(path.join(root, 'baseline-expectations.json'), input.baselineExpectations)
+      save(path.join(root, 'baseline-expectations.json'), baselineExpectations)
       mkdirSync(path.join(root, 'home'), { mode: 0o700 })
       for (const owner of initial.built.frozen.owners) {
         const prior = initial.previous.owners[owner], ownerDir = path.join(root, owner)
@@ -172,7 +210,7 @@ export async function prepareUnifiedPublication(input: Input, { serve = serveUni
           const configPath = path.join(ownerDir, `${role}-local.json`), configPin = save(configPath, config)
           const refs: Reference[] = [], http = path.join(ownerDir, `${role}-http`)
           mkdirSync(http, { mode: 0o700 })
-          const expected = unifiedPublicationRequests(build, owner, role, artifact, role === 'candidate' ? candidateExpectations : input.baselineExpectations)
+          const expected = scopedPublicationRequests(initial.built, owner, role, artifact, role === 'candidate' ? candidateExpectations : baselineExpectations)
           const app = owner === 'main' ? 'web' : `game-${owner}`
           await serve(path.join(build, 'source/apps', app), configPath, path.join(root, 'home'), path.join(ownerDir, `${role}.log`), async (origin: string) => {
             for (const wanted of expected) {
@@ -192,12 +230,14 @@ export async function prepareUnifiedPublication(input: Input, { serve = serveUni
       }
       const fresh = await inputs(input)
       assert.deepEqual(fresh.previous, initial.previous, 'Previous publication inputs changed')
-      publicBaseline(build, initial.previous.owners.main.directory)
-      const receipt: PublicationReceipt = { schemaVersion: 1, kind: 'unified_local_publication', status: 'candidate_and_compatible_recovery_locally_accepted',
+      verifyPublicationBaseline(fresh.built, fresh.previous)
+      const receipt: PublicationReceipt = { schemaVersion: 2, kind: 'unified_local_publication', status: 'candidate_and_compatible_recovery_locally_accepted',
         buildDirectory: build, buildPin: input.buildPin, previousPath: path.resolve(input.previousPath), previousPin: input.previousPin,
         candidateSHA256: initial.built.receipt.candidateSHA256, baselineExpectationsPin: digest(bytes(path.join(root, 'baseline-expectations.json'))),
-        owners, preview: initial.built.receipt.preview, productionReady: false, activationSupported: false, cloudWrites: false,
-        rawUuidRollbackAuthorized: false, previousRuntimeVerification: 'pinned_local_module_not_fresh_cloud_verification', pending: PENDING }
+        owners, characterTextContract, preview: initial.built.receipt.preview, productionReady: false, activationSupported: false, cloudWrites: false,
+        rawUuidRollbackAuthorized: false, previousRuntimeVerification: 'pinned_local_module_not_fresh_cloud_verification',
+        ...(fresh.built.frozen.localScope ? { localScope: fresh.built.frozen.localScope } : {}),
+        pending: fresh.built.frozen.localScope ? GENSHIN_LOCAL_PENDING : PENDING }
       writeFileSync(stateFile, json({ status: 'complete', cloudWrites: false }), { mode: 0o600 })
       const publicationPin = save(path.join(root, 'publication.json'), receipt)
       await verifyUnifiedPublication(root, publicationPin)
@@ -209,17 +249,22 @@ export async function prepareUnifiedPublication(input: Input, { serve = serveUni
   })
 }
 
-export async function verifyUnifiedPublication(directory: string, publicationPin: string): Promise<{ directory: string; publicationPin: string; receipt: PublicationReceipt }> {
+export async function verifyUnifiedPublication(directory: string, publicationPin: string): Promise<{ directory: string; publicationPin: string; receipt: PublicationReceipt;
+  genshinPublic?: Record<Role, ReturnType<typeof unifiedGenshinPublicReferences>> }> {
   const root = path.resolve(directory)
   assert.equal(realpathSync(root), root, 'Linked publication directory forbidden')
   const receipt = pinned<PublicationReceipt>(path.join(root, 'publication.json'), publicationPin)
-  assert.equal(receipt.schemaVersion, 1); assert.equal(receipt.kind, 'unified_local_publication')
+  assert([1, 2].includes(receipt.schemaVersion)); assert.equal(receipt.kind, 'unified_local_publication')
   assert.equal(receipt.status, 'candidate_and_compatible_recovery_locally_accepted')
   for (const field of ['productionReady', 'activationSupported', 'cloudWrites', 'rawUuidRollbackAuthorized'] as const) assert.equal(receipt[field], false)
   assert.equal(receipt.previousRuntimeVerification, 'pinned_local_module_not_fresh_cloud_verification')
-  assert.deepEqual(receipt.pending, PENDING)
   assert.deepEqual(JSON.parse(bytes(path.join(root, 'state.json')).toString()), { status: 'complete', cloudWrites: false }, 'Partial or failed publication')
   const { built, previous } = await inputs(receipt), build = built.directory
+  assert.equal(receipt.localScope, built.frozen.localScope, 'Local publication scope changed')
+  assert.deepEqual(receipt.pending, built.frozen.localScope ? GENSHIN_LOCAL_PENDING : PENDING)
+  if (built.receipt.schemaVersion === 2 && built.receipt.characterTextContract!.changes.length) {
+    assert.equal(receipt.schemaVersion, 2, 'Character publication requires the candidate/recovery contract; schema downgrade forbidden')
+  }
   return withVerificationPass(() => verifyPublicationArtifacts(root, publicationPin, receipt, built, previous, build))
 }
 
@@ -231,7 +276,12 @@ function verifyPublicationArtifacts(root: string, publicationPin: string, receip
   const baseline = pinned<ConsumerExpectation[]>(path.join(root, 'baseline-expectations.json'), receipt.baselineExpectationsPin)
   validateConsumerExpectations(built.frozen.owners, baseline)
   const candidate = expectationsMatch(build, baseline)
-  publicBaseline(build, previous.owners.main.directory)
+  if (receipt.schemaVersion === 2) {
+    const contract = frozenCharacterTextPairContract(build, built.frozen)
+    assert.deepEqual(receipt.characterTextContract, contract, 'Publication character text pair changed')
+    assert.deepEqual(unifiedRecoveryExpectations(candidate, baseline, contract), baseline, 'Required recovery character acceptance missing')
+  }
+  verifyPublicationBaseline(built, previous)
   for (const owner of built.frozen.owners) {
     const result = receipt.owners[owner], prior = previous.owners[owner], ownerDir = path.join(root, owner)
     assert.equal(result.service, prior.service); assert.equal(result.sourceVersionId, prior.versionId)
@@ -242,7 +292,7 @@ function verifyPublicationArtifacts(root: string, publicationPin: string, receip
       const row = result[role], artifact = path.join(ownerDir, role), http = path.join(ownerDir, `${role}-http`)
       assert.deepEqual(artifactFiles(artifact), pinned(path.join(ownerDir, `${role}-artifact.json`), row.artifactSHA256), 'Publication artifact changed')
       assert.deepEqual(pinned(path.join(ownerDir, `${role}-local.json`), row.configPin), localConfig(build, owner, role, artifact), 'Publication runtime configuration changed')
-      const expected = unifiedPublicationRequests(build, owner, role, artifact, role === 'candidate' ? candidate : baseline)
+      const expected = scopedPublicationRequests(built, owner, role, artifact, role === 'candidate' ? candidate : baseline)
       const refs = pinned<Reference[]>(path.join(http, 'references.json'), row.referencesPin)
       assert.equal(refs.length, expected.length, 'Incomplete publication HTTP coverage'); assert.equal(row.responses, refs.length)
       for (const [index, reference] of refs.entries()) {
@@ -253,5 +303,17 @@ function verifyPublicationArtifacts(root: string, publicationPin: string, receip
       }
     }
   }
-  return { directory: root, publicationPin, receipt }
+  let genshinPublic: Record<Role, ReturnType<typeof unifiedGenshinPublicReferences>> | undefined
+  const contract = receipt.characterTextContract
+  if (receipt.schemaVersion === 2 && contract?.candidate.changes.length === 1 && contract.candidate.changes[0].game === 'genshin') {
+    const project = (role: Role) => {
+      const http = path.join(root, 'genshin', `${role}-http`)
+      const references = pinned<Reference[]>(path.join(http, 'references.json'), receipt.owners.genshin[role].referencesPin)
+      // Raw bytes were checked above; this adapter only projects public pages and chunks.
+      const projected = receipt.localScope ? references.filter(row => row.path !== GENSHIN_LOCAL_RAW) : references
+      return unifiedGenshinPublicReferences(projected, (row: Reference) => bytes(path.join(http, row.bodyFile)), contract[role].expectations)
+    }
+    genshinPublic = { candidate: project('candidate'), recovery: project('recovery') }
+  }
+  return { directory: root, publicationPin, receipt, ...(genshinPublic ? { genshinPublic } : {}) }
 }

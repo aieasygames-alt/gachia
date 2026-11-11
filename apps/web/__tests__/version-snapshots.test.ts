@@ -9,7 +9,7 @@ import { getZzzGuideById } from '@gachia/data/games/zzz/guides';
 import { getEndfieldGuideById, getEndfieldGuideContent } from '@gachia/data/games/endfield/guides';
 
 const locales = ['zh', 'en', 'ja'] as const;
-const priorityGames = ['zzz', 'wuwa', 'starrail', 'genshin', 'endfield', 'aniimo', 'sea', 'roco', 'roco-cn', 'ananta', 'skjh'] as const;
+const priorityGames = ['zzz', 'wuwa', 'starrail', 'endfield', 'aniimo', 'sea', 'roco', 'roco-cn', 'ananta', 'skjh'] as const;
 
 describe('version snapshots', () => {
   it('covers priority version hubs', () => {
@@ -28,7 +28,7 @@ describe('version snapshots', () => {
 
   it('uses the 2026-10-09 snapshot batch', () => {
     expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-10-09');
-    expect(getVersionSnapshot('genshin')?.currentVersion).toBe('7.1 往冥府的安魂歌');
+    expect(getVersionSnapshot('genshin')).toBeUndefined();
     expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 月升之前，与兽共舞');
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('CN 丹青渡 / Pioneer Test archive');
     expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('S1 逐风启程');

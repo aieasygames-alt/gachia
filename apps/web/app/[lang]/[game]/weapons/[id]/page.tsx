@@ -26,23 +26,6 @@ type NextStepLink = {
 };
 
 const WEAPON_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
-  genshin: [
-    {
-      href: '/genshin/characters',
-      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
-      description: { zh: '把武器和适合它的角色对上', en: 'Match the weapon to the right characters', ja: '適性キャラを確認' },
-    },
-    {
-      href: '/genshin/items',
-      title: { zh: '看材料图鉴', en: 'Browse materials', ja: '素材図鑑へ' },
-      description: { zh: '继续看武器突破材料来源', en: 'Continue with ascension material sources', ja: '突破素材の入手先を確認' },
-    },
-    {
-      href: '/genshin/guides',
-      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '继续查看版本与养成专题', en: 'Continue into version and build guides', ja: '版本・育成ガイドへ進む' },
-    },
-  ],
   starrail: [
     {
       href: '/starrail/characters',
@@ -212,76 +195,6 @@ const BASE_URL = 'https://gachia.com';
 type LocaleMeta = Partial<Record<SupportedLocale, { title: string; description: string }>>;
 
 const WEAPON_META_OVERRIDES: Record<string, LocaleMeta> = {
-  'genshin/sacrificial-jade': {
-    en: {
-      title: 'Sacrificial Jade Genshin: Stats, Best Users & Builds',
-      description: 'Sacrificial Jade guide for Genshin Impact: 4-star Catalyst, CRIT Rate 36.8% at Lv.90, HP and EM passive, best users, and builds.',
-    },
-    zh: {
-      title: '遗祀玉珑攻略：属性、适用角色与配装推荐',
-      description: '原神遗祀玉珑属性解析：4星法器，满级暴击率36.8%，离场提升生命值与元素精通，查看适用角色和配装思路。',
-    },
-  },
-  'genshin/jadefalls-splendor': {
-    en: {
-      title: "Jadefall's Splendor Genshin: Stats, Best Users & Build Tips",
-      description: "Jadefall's Splendor guide for Genshin Impact: 5-star Catalyst stats, passive details, best characters, and build tips.",
-    },
-    zh: {
-      title: '碧落之珑攻略：属性、适用角色与配装推荐',
-      description: '原神碧落之珑攻略，整理属性、技能效果、适用角色与配装建议，帮助你判断是否值得培养。',
-    },
-  },
-  'genshin/favonius-codex': {
-    en: {
-      title: 'Favonius Codex Genshin: Stats, Best Users & Builds',
-      description: 'Favonius Codex guide for Genshin Impact: 4-star Catalyst stats, Energy Recharge passive, best users, and build recommendations.',
-    },
-    zh: {
-      title: '西风秘典攻略：属性、适用角色与配装推荐',
-      description: '原神西风秘典攻略，整理属性、充能效果、适用角色和配装建议，方便快速做出培养判断。',
-    },
-  },
-  'genshin/wolf-fang': {
-    en: {
-      title: 'Wolf-Fang Genshin: Stats, Passive, Battle Pass & Best Users',
-      description: 'Wolf-Fang Genshin guide: 4-star Sword, CRIT Rate substat, Normal Attack and Elemental Skill CRIT passive, Battle Pass source, and best-user checks.',
-    },
-    zh: {
-      title: '狼牙攻略：属性、被动、纪行获取与适用角色',
-      description: '原神狼牙攻略：4星单手剑、暴击率副属性、普攻与元素战技暴击被动、纪行获取方式，以及适配角色判断。',
-    },
-  },
-  'genshin/lost-prayer-to-the-sacred-winds': {
-    en: {
-      title: 'Lost Prayer Genshin: Stats, Passive & Best Catalyst Users',
-      description: 'Lost Prayer to the Sacred Winds guide: 5-star Catalyst, CRIT Rate substat, movement speed and on-field Elemental DMG passive, Gacha source, and best-user checks.',
-    },
-    zh: {
-      title: '四风原典攻略：属性、被动与适用法器角色',
-      description: '原神四风原典攻略：5星法器、暴击率副属性、移速与站场元素伤害被动、祈愿获取方式，以及适配角色判断。',
-    },
-  },
-  'genshin/key-of-khaj-nisut': {
-    en: {
-      title: 'Key of Khaj-Nisut Genshin: HP Sword Stats, Passive & Users',
-      description: 'Key of Khaj-Nisut guide: 5-star HP Sword, HP substat, HP and Elemental Mastery passive, Gacha source, signature association, and best-user checks.',
-    },
-    zh: {
-      title: '圣显之钥攻略：生命单手剑属性、被动与适用角色',
-      description: '原神圣显之钥攻略：5星生命值单手剑、生命值与元素精通被动、祈愿获取方式、妮露关联与适配角色判断。',
-    },
-  },
-  'genshin/a-thousand-blazing-suns': {
-    en: {
-      title: 'A Thousand Blazing Suns Genshin: Stats, Best Users & Builds',
-      description: 'A Thousand Blazing Suns guide for Genshin Impact: 5-star Claymore stats, passive, best users, and build tips.',
-    },
-    zh: {
-      title: 'A Thousand Blazing Suns 攻略：属性、适用角色与配装推荐',
-      description: '原神 A Thousand Blazing Suns 攻略，整理属性、技能效果、适用角色与配装建议，适合想快速判断是否培养。',
-    },
-  },
 };
 
 function buildAlternates(locale: SupportedLocale, gameId: string, id: string) {

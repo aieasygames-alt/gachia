@@ -2,14 +2,11 @@ import type { Metadata } from 'next';
 import { Archive, BarChart3, CheckCircle2, FileText, Link2, Radar, ShieldAlert, Target } from 'lucide-react';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
-import { join } from 'node:path';
-import { loadJson } from '@gachia/data/load-json';
 import {
-  scanFreshnessGuides,
   summarizeFreshnessFindings,
   type FreshnessFinding,
-  type FreshnessGuide,
 } from '@/lib/content-freshness';
+import { getDashboardFreshnessFindings } from '@/lib/market-intel-freshness';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 import { KEYWORD_RISK_RULES } from '@/lib/keyword-governance';
 import {
@@ -35,6 +32,8 @@ const DESCRIPTION = {
   en: 'Review Gachia market-intel sampling, content backlog, keyword governance, and execution status locally.',
   ja: 'Gachia の市場インテル、コンテンツ backlog、キーワード治理、実行状態をローカルで確認します。',
 };
+
+export const dynamic = 'force-dynamic';
 
 function t(locale: SupportedLocale, zh: string, en: string, ja: string) {
   return locale === 'zh' ? zh : locale === 'ja' ? ja : en;
@@ -140,17 +139,6 @@ function gameName(gameId: GameId, locale: SupportedLocale) {
   return GAMES[gameId].name[locale] ?? GAMES[gameId].name.zh;
 }
 
-const freshnessGuideGames = ['genshin', 'starrail', 'wuwa', 'zzz', 'endfield', 'sea', 'aniimo'] as const satisfies readonly GameId[];
-
-async function getDashboardFreshnessFindings() {
-  const findings = await Promise.all(freshnessGuideGames.map(async (gameId) => {
-    const assetPath = `/data/${gameId}/raw-guides.json`;
-    const guides = await loadJson<FreshnessGuide[]>(join(process.cwd(), 'public', assetPath), assetPath);
-    return scanFreshnessGuides(gameId, guides, `apps/web/public${assetPath}`);
-  }));
-  return findings.flat();
-}
-
 export default async function MarketIntelPage({
   params,
 }: {
@@ -164,7 +152,7 @@ export default async function MarketIntelPage({
   const p1Count = getMarketIntelByPriority('P1').length;
   const coveredGames = new Set(MARKET_INTEL_OPPORTUNITIES.map((item) => item.gameId)).size;
   const riskyTerms = new Set(MARKET_INTEL_OPPORTUNITIES.flatMap((item) => item.riskTerms)).size;
-  const freshnessFindings = await getDashboardFreshnessFindings();
+  const { findings: freshnessFindings, genshinGuideCount, genshinRuleCount } = await getDashboardFreshnessFindings();
   const freshnessSummary = summarizeFreshnessFindings(freshnessFindings);
   const freshnessRisks = freshnessFindings.filter((finding) => finding.severity === 'risk');
   const archivedFreshnessMatches = freshnessFindings.filter((finding) => finding.severity === 'archive');
@@ -222,7 +210,7 @@ export default async function MarketIntelPage({
             </p>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Badge className={freshnessSummary.risk === 0 ? 'border-green-500/30 bg-green-500/10 text-green-200' : 'border-red-500/30 bg-red-500/10 text-red-200'}>
+            <Badge className={freshnessSummary.risk > 0 ? 'border-red-500/30 bg-red-500/10 text-red-200' : genshinGuideCount === null ? 'border-amber-500/30 bg-amber-500/10 text-amber-200' : 'border-green-500/30 bg-green-500/10 text-green-200'}>
               {t(locale, '风险', 'Risks', 'リスク')}: {freshnessSummary.risk}
             </Badge>
             <Badge className="border-sky-500/30 bg-sky-500/10 text-sky-200">
@@ -230,6 +218,12 @@ export default async function MarketIntelPage({
             </Badge>
           </div>
         </div>
+
+        <p role="status" className="mb-4 break-words text-sm text-game-text-muted">
+          {genshinGuideCount === null
+            ? t(locale, '原神攻略检查暂不可用，本轮检查未完成。', 'Genshin guide checks are unavailable; this scan is incomplete.', '原神の攻略チェックは利用できず、今回の検査は未完了です。')
+            : t(locale, `原神：${genshinGuideCount} 篇攻略 / ${genshinRuleCount} 条检测规则`, `Genshin: ${genshinGuideCount} guides / ${genshinRuleCount} rules`, `原神：攻略${genshinGuideCount}件 / 検査ルール${genshinRuleCount}件`)}
+        </p>
 
         {freshnessRisks.length > 0 ? (
           <div className="mb-4 rounded-lg border border-red-500/30 bg-red-500/10 p-3">
@@ -242,11 +236,11 @@ export default async function MarketIntelPage({
               ))}
             </ul>
           </div>
-        ) : (
+        ) : genshinGuideCount !== null ? (
           <div className="mb-4 rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-green-100">
-            {t(locale, '当前入口未发现过期词风险。', 'No stale-term risk found in current guide routing.', '現在導線に古い語のリスクは見つかりません。')}
+            {t(locale, '已配置的检测规则未发现过期词风险。', 'No stale-term risk found by the configured rules.', '設定済みルールでは古い語のリスクは見つかりません。')}
           </div>
-        )}
+        ) : null}
 
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {archivedFreshnessMatches.slice(0, 9).map((finding: FreshnessFinding) => (

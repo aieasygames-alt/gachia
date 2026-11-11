@@ -64,6 +64,7 @@ function invocation(tool: Receipt['tool'], config: string, environment: string, 
 
 async function inputEvidence(input: Pick<Input, 'publicationDirectory' | 'publicationPin'>) {
   const publication = await verifyUnifiedPublication(input.publicationDirectory, input.publicationPin)
+  assert.equal(publication.receipt.localScope, undefined, 'Genshin-only rehearsal cannot enter the formal transport pipeline')
   const workspace = path.resolve(projectRoot, '../..'), build = publication.receipt.buildDirectory
   assert.equal(digest(bytes(path.join(workspace, 'pnpm-lock.yaml'))), digest(bytes(path.join(build, 'source/pnpm-lock.yaml'))), 'Transport tool lock differs from frozen source')
   return { publication, build, workspace, tool: unifiedTransportTool(workspace) }

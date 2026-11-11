@@ -1,4 +1,5 @@
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
+import { notFound } from 'next/navigation';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getRedeemCodeReward, getRedeemCodesForGame, GAMES_WITH_REDEEM_CODES } from '@/lib/game-data/redeem-codes';
 import type { RedeemCodeEntry } from '@/lib/game-data/redeem-codes';
@@ -7,11 +8,6 @@ import { RocoPublicReviewPage } from '@/components/wiki/roco-public-review-page'
 import { rocoPublicReviewMetadata } from '@/lib/roco-public-review';
 
 const REDEEM_DESC: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
-  genshin: {
-    zh: '原神兑换码大全，整理前瞻直播、活动福利、永久码和领取方法，帮助你快速查看当前可用礼包并及时兑换原石、经验书和摩拉。',
-    en: 'Genshin Impact redeem code tracker covering livestream codes, event rewards, permanent codes, and redemption steps so you can claim Primogems and resources quickly.',
-    ja: '原神の交換コード一覧。生放送コード、イベント報酬、恒常コード、受け取り方法を整理し、原石や育成素材を素早く回収できます。',
-  },
   starrail: {
     zh: '崩坏：星穹铁道兑换码大全，追踪前瞻直播、活动奖励、长期有效码和领取入口，方便你第一时间兑换星琼和养成资源。',
     en: 'Honkai: Star Rail redeem code tracker covering livestream codes, event rewards, permanent codes, and redemption steps so you can claim Stellar Jade and materials fast.',
@@ -108,6 +104,7 @@ export default async function RedeemCodesPage({
 }) {
   const { lang, game } = await params;
   const gameId = game as GameId;
+  if (gameId === 'genshin') notFound();
   const locale = lang as SupportedLocale;
   const gameConfig = GAMES[gameId];
 
@@ -151,11 +148,6 @@ export default async function RedeemCodesPage({
   };
 
   const redeemInstructions: Record<string, Record<string, string>> = {
-    genshin: {
-      zh: '前往官方兑换页面或游戏内设置→账户→兑换码，输入兑换码即可领取奖励。需冒险等级10+。',
-      en: 'Go to the official redemption page or in-game Settings → Account → Redeem Code. Requires AR 10+.',
-      ja: '公式交換ページまたはゲーム内の設定→アカウント→コード交換から入力。冒険ランク10以上が必要。',
-    },
     starrail: {
       zh: '前往官方兑换页面或游戏内手机→设置→兑换码，输入兑换码领取奖励。',
       en: 'Visit the official redemption page or in-game Phone → Settings → Redemption Code to claim rewards.',

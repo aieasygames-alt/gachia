@@ -73,7 +73,6 @@ type GuideArticleImage = {
 };
 
 const ARTICLE_IMAGE_COUNTS: Partial<Record<GameId, number>> = {
-  genshin: 10,
   starrail: 10,
   wuwa: 10,
   nte: 17,
@@ -88,7 +87,6 @@ const ARTICLE_IMAGE_COUNTS: Partial<Record<GameId, number>> = {
 };
 
 const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, string>>> = {
-  genshin: { zh: '原神攻略参考图', en: 'Genshin Impact guide reference image', ja: '原神ガイド参考画像' },
   starrail: { zh: '崩坏：星穹铁道攻略参考图', en: 'Honkai: Star Rail guide reference image', ja: '崩壊：スターレイルガイド参考画像' },
   wuwa: { zh: '鸣潮攻略参考图', en: 'Wuthering Waves guide reference image', ja: '鳴潮ガイド参考画像' },
   nte: { zh: '异环攻略参考图', en: 'Neverness to Everness guide reference image', ja: 'Neverness to Evernessガイド参考画像' },
@@ -104,32 +102,6 @@ const ARTICLE_IMAGE_LABELS: Partial<Record<GameId, Record<SupportedLocale, strin
 };
 
 const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> = {
-  genshin: {
-    'banner-schedule-guide': {
-      heading: { zh: '快速结论：先看当前卡池、下期和复刻', en: 'Quick answer: check current banner, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
-      points: {
-        zh: ['先看当前卡池，再看下期和复刻预测。', '抽卡前把保底、原石预算和版本目标放在一起。', '只有一次大保底时，优先补队伍缺口最大的角色。'],
-        en: ['Use this page to compare current banners, next banners, reruns, pity, and Primogem budget.', 'Check guarantee status, remaining income, and future version targets before pulling.', 'If you only have one full guarantee, secure the character that fixes the biggest team gap first.'],
-        ja: ['現在、次回、復刻、天井、原石予算を同時に確認。', '引く前に保証、残り収入、次版本目標をチェック。', '大天井が一回だけなら、編成不足を埋めるキャラを優先。'],
-      },
-    },
-    'cross-game-comparison-guide': {
-      heading: { zh: '快速结论：按玩法而不是热度选游戏', en: 'Quick answer: choose by playstyle, not hype', ja: '要点：流行より遊び方で選ぶ' },
-      points: {
-        zh: ['想探索大世界，优先原神或鸣潮。', '想省时间和回合策略，优先崩铁。', '想要快节奏动作和都市风格，优先绝区零。'],
-        en: ['Pick Genshin or WuWa if open-world exploration matters most.', 'Pick HSR if you want turn-based strategy and lower daily time.', 'Pick ZZZ if you want fast action combat and a compact urban style.'],
-        ja: ['探索重視なら原神か鳴潮が向きます。', '時短とターン制ならスターレイルが安定です。', '高速アクションと都市感ならZZZが向きます。'],
-      },
-    },
-    'lunar-reaction-guide': {
-      heading: { zh: '快速结论：先确认月反应定位和队伍缺口', en: 'Quick answer: check Lunar reaction role, teams, and banner fit first', ja: '要点：月反応の役割、編成、バナー適性を先に確認' },
-      points: {
-        zh: ['先确认月元素和月反应是否能补当前队伍短板。', '再看 Sandrone、Nod-Krai 角色、圣遗物和伤害倍率。', '抽卡前把月反应收益和当前祈愿目标放在一起比较。'],
-        en: ['Use this as a Genshin Lunar reaction guide for Lunar element basics, reaction types, teams, and damage scaling.', 'Compare Sandrone and Nod-Krai characters with artifact needs before farming.', 'Before pulling, match Lunar reaction value against current banners and your existing roster gaps.'],
-        ja: ['月元素と月反応が現在編成の不足を補えるか確認。', 'Sandrone、Nod-Kraiキャラ、聖遺物、倍率を比較。', '引く前に月反応価値と現在バナーを並べて判断。'],
-      },
-    },
-  },
   starrail: {
     'banner-schedule-guide': {
       heading: { zh: '快速结论：先看当前跃迁、下期和复刻', en: 'Quick answer: check current warp, next banner, and reruns first', ja: '要点：現在、次回、復刻を先に確認' },
@@ -242,25 +214,6 @@ const GUIDE_QUICK_ANSWERS: Partial<Record<GameId, Record<string, QuickAnswer>>> 
 
 const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> = {
   hi3: HI3_GUIDE_NEXT_STEPS,
-  genshin: {
-    'banner-schedule-guide': [
-      { href: '/genshin/guides/luna-viii-sandrone-guide', label: { zh: 'Luna VIII 专题', en: 'Luna VIII guide', ja: 'Luna VIII特集' }, description: { zh: '继续看版本、角色和活动路线。', en: 'Continue into version, character, and event routing.', ja: '版本、キャラ、イベントへ。' } },
-      { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '抽卡前先补资源。', en: 'Claim resources before pulling.', ja: 'ガチャ前に資源を回収。' } },
-      { href: '/calendar', label: { zh: '跨游戏日历', en: 'Banner calendar', ja: 'ガチャ日程' }, description: { zh: '对比多游戏卡池、版本和兑换码期限。', en: 'Compare banners, versions, and code deadlines across games.', ja: '複数ゲームのバナー、版本、コード期限を比較。' } },
-    ],
-    'snezhnaya-version-guide': [
-      { href: '/genshin/guides/lunar-reaction-guide', label: { zh: '月反应指南', en: 'Lunar reaction guide', ja: '月反応ガイド' }, description: { zh: '把 Nod-Krai 角色、月元素和队伍机制接起来。', en: 'Connect Nod-Krai characters, Lunar element rules, and team value.', ja: 'Nod-Kraiキャラ、月元素、編成価値を接続。' } },
-      { href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前祈愿', en: 'Current banners', ja: '現在バナー' }, description: { zh: '继续看 Sandrone、复刻和原石规划。', en: 'Check Sandrone, reruns, and Primogem planning next.', ja: 'Sandrone、復刻、原石計画を確認。' } },
-    ],
-    'lunar-reaction-guide': [
-      { href: '/genshin/guides/snezhnaya-version-guide', label: { zh: 'Nod-Krai 版本', en: 'Nod-Krai version', ja: 'Nod-Krai版本' }, description: { zh: '回到版本路线看角色、地图和活动。', en: 'Return to the version route for characters, map, and events.', ja: 'キャラ、地図、イベントへ戻る。' } },
-      { href: '/genshin/build', label: { zh: '角色配装', en: 'Build routes', ja: 'ビルド' }, description: { zh: '按月反应收益继续看武器、圣遗物和词条。', en: 'Turn Lunar reaction value into weapon, artifact, and stat choices.', ja: '月反応価値を武器、聖遺物、ステータスへ。' } },
-    ],
-    'boss-strategy-guide': [
-      { href: '/genshin/items', label: { zh: '材料图鉴', en: 'Material database', ja: '素材図鑑' }, description: { zh: '按周本和世界 Boss 继续查突破材料。', en: 'Use boss drops to plan ascension and talent materials.', ja: 'ボス素材で突破と天賦を計画。' } },
-      { href: '/genshin/build', label: { zh: '角色配装', en: 'Build routes', ja: 'ビルド' }, description: { zh: '按 Boss 弱点选择主 C、护盾、治疗和元素反应。', en: 'Match DPS, shields, healing, and reactions to boss weaknesses.', ja: '弱点に合わせてDPS、盾、回復、反応を選択。' } },
-    ],
-  },
   starrail: {
     'banner-schedule-guide': [
       { href: '/starrail/guides/himeko-nova-fate-pull-plan', label: { zh: 'Fate 抽卡规划', en: 'Fate pull plan', ja: 'Fateガチャ計画' }, description: { zh: '把当前跃迁和联动预算放一起。', en: 'Connect current warps with collab budget.', ja: '現在跳躍とコラボ予算を接続。' } },
@@ -371,10 +324,6 @@ const GUIDE_NEXT_STEPS: Partial<Record<GameId, Record<string, NextStepLink[]>>> 
 };
 
 const GUIDE_FALLBACK_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
-  genshin: [
-    { href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '继续看抽卡和资源规划。', en: 'Continue with pull and resource planning.', ja: 'ガチャと資源計画へ。' } },
-    { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '先补可领取资源。', en: 'Claim available resources.', ja: '資源を回収。' } },
-  ],
   starrail: [
     { href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前跃迁', en: 'Current warps', ja: '現在跳躍' }, description: { zh: '继续看星琼规划。', en: 'Continue with Jade planning.', ja: '星玉計画へ。' } },
     { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '先领版本资源。', en: 'Claim patch resources.', ja: '版本資源を回収。' } },
@@ -409,10 +358,6 @@ const GUIDE_INTENT_GROUPS = [
 
 async function getGuideRuntime(gameId: GameId): Promise<GuideRuntime> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/guides');
-      return makeRuntime(mod.genshinGuides, mod.GENSHIN_GUIDE_CATEGORIES, mod.getGuideById, mod.getGuideTitle, mod.getGuideSummary, mod.getGuideContent, mod.getGuideCategory, mod.getGuideFaqQuestion, mod.getGuideFaqAnswer);
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/guides');
       return makeRuntime(mod.starrailGuides, mod.STARRAIL_GUIDE_CATEGORIES, mod.getGuideById, mod.getGuideTitle, mod.getGuideSummary, mod.getGuideContent, mod.getGuideCategory, mod.getGuideFaqQuestion, mod.getGuideFaqAnswer);
@@ -724,10 +669,6 @@ function buildGuideMeta(guide: GuideLike, guideTitle: string, summary: string, g
 function getBannerIntentMeta(slug: string, gameName: string, locale: SupportedLocale, gameId?: GameId) {
   if (slug !== 'banner-schedule-guide') return null;
   const copy: Record<string, { title: string; description: string }> = {
-    genshin: {
-      title: locale === 'zh' ? '原神卡池时间表 2026：当前、下一个祈愿与复刻' : locale === 'ja' ? '原神バナー予定 2026：現在・次回・復刻' : 'Genshin Impact Banner Schedule 2026: Current, Next & Reruns',
-      description: locale === 'zh' ? '查看原神当前卡池、下一个祈愿、复刻预测、结束时间和原石规划。按版本持续更新，抽卡前快速确认目标。' : locale === 'ja' ? '原神の現在・次回・復刻バナー、終了日、原石計画を確認。バージョンごとに更新します。' : 'Check the current Genshin Impact banners, next wishes, reruns, end dates, and Primogem planning. Updated for each version before you pull.',
-    },
     starrail: {
       title: locale === 'zh' ? '崩坏：星穹铁道卡池时间表 2026：当前、下期与复刻' : locale === 'ja' ? '崩壊スターレイル バナー予定 2026：現在・次回・復刻' : 'Honkai: Star Rail Banner Schedule 2026: Current, Next & Reruns',
       description: locale === 'zh' ? '查看崩坏：星穹铁道当前跃迁、下期角色、复刻、结束时间和星琼预算，按版本及时更新。' : locale === 'ja' ? '崩壊：スターレイルの現在跳躍、次回、復刻、終了日、星玉計画を確認。' : 'Track current Honkai: Star Rail warps, next characters, reruns, end dates, and Stellar Jade planning with version updates.',

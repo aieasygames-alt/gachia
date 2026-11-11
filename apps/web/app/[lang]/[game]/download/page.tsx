@@ -81,34 +81,6 @@ const DOWNLOAD_COPY: Partial<Record<GameId, DownloadCopy>> = {
       answer: { zh: '先检查客户端地区、登录方式、账号与服务器是否和之前一致。仍无法找到时，通过官网客服入口提供账号信息进行核查。', en: 'Check that client region, sign-in method, account, and server match your previous device. If progress is still missing, contact official support through the site.', ja: 'クライアント地域、ログイン方法、アカウント、サーバーが以前と同じか確認し、見つからない場合は公式サイトのサポートに連絡してください。' },
     }],
   },
-  genshin: {
-    officialUrl: 'https://genshin.hoyoverse.com/',
-    status: {
-      zh: '原神已长期上线，PC、移动端和主机端均以 HoYoverse 官方入口及平台商店为准。',
-      en: 'Genshin Impact is live across PC, mobile, and console; use HoYoverse official entry points and platform stores.',
-      ja: '原神はPC、モバイル、コンソールで配信中です。HoYoverse公式入口と各ストアを基準にしてください。',
-    },
-    intro: {
-      zh: '这个页面先帮你确认原神官网、下载、云游戏、配置要求和兑换码入口，再继续查看版本、地图和养成路线。',
-      en: 'This page captures official site, download, cloud gaming, specs, and code intent, then routes you into patches, maps, and build planning.',
-      ja: '公式、DL、クラウド、推奨環境、コード検索を受け、版本、マップ、育成導線へつなぎます。',
-    },
-    officialNote: DEFAULT_STATUS,
-    platforms: [
-      platform('PC launcher / Epic', '可玩', 'Live', '配信中', '优先使用官网启动器或平台商店。', 'Use the official launcher or platform store.', '公式ランチャーまたはストアを利用。'),
-      platform('iOS / Android', '可玩', 'Live', '配信中', '移动端建议预留充足空间并使用 Wi-Fi 更新。', 'Keep enough storage and update over Wi-Fi.', '容量を確保しWi-Fi更新を推奨。'),
-      platform('PlayStation / Xbox', '可玩', 'Live', '配信中', '主机端以对应商店页面和账号地区为准。', 'Follow each console store and account region.', '各ストアとアカウント地域に従ってください。'),
-    ],
-    specs: specs('建议预留 100GB 级别空间给完整客户端与后续资源。', 'Reserve roughly 100GB-class storage for the full client and future assets.', '完全版と追加データ用に100GB級の空き容量を推奨。'),
-    cloud: {
-      zh: '云游戏入口可能按地区和平台开放，优先确认 HoYoverse 官方说明。',
-      en: 'Cloud gaming availability depends on region and platform; confirm HoYoverse notices first.',
-      ja: 'クラウド版は地域とプラットフォームで異なるため公式告知を確認してください。',
-    },
-    crossPlay: crossSaveHoyoverse(),
-    nextLinks: commonLinks('genshin', 'banner-schedule-guide'),
-    faq: liveFaq('原神', 'Genshin Impact', '原神'),
-  },
   starrail: {
     officialUrl: 'https://hsr.hoyoverse.com/',
     status: {
@@ -493,7 +465,7 @@ const DOWNLOAD_COPY: Partial<Record<GameId, DownloadCopy>> = {
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
-    Object.keys(GAMES).map((game) => ({ lang, game }))
+    Object.keys(GAMES).filter(game => game !== 'genshin').map((game) => ({ lang, game }))
   );
 }
 
@@ -503,6 +475,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') return { robots: { index: false, follow: false } };
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];
@@ -541,6 +514,7 @@ export default async function DownloadPage({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') notFound();
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameConfig = GAMES[gameId];

@@ -33,23 +33,6 @@ const ITEM_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       description: { zh: '继续查看源晶、以太燃素与自选箱', en: 'Browse Source Prisms, Ether Fuel, and the selector', ja: '源晶、エーテル燃料、選択箱を見る' },
     },
   ],
-  genshin: [
-    {
-      href: '/genshin/characters',
-      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
-      description: { zh: '直接看哪些角色会消耗这些材料', en: 'See which characters consume these materials', ja: '誰が使うかを確認' },
-    },
-    {
-      href: '/genshin/weapons',
-      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
-      description: { zh: '把角色材料和武器材料一起规划', en: 'Plan character and weapon materials together', ja: 'キャラと武器の素材を一緒に計画' },
-    },
-    {
-      href: '/genshin/guides',
-      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '继续看养成、版本和活动专题', en: 'Continue with build, version, and event guides', ja: '育成・版本・イベントへ' },
-    },
-  ],
   starrail: [
     {
       href: '/starrail/characters',
@@ -288,16 +271,6 @@ const ITEM_META_OVERRIDES: Record<string, LocaleMeta> = {
     en: {
       title: 'Tri-Key NTE Guide: Uses, Sources & Farming Route',
       description: 'Tri-Key guide for Neverness to Everness with sources, Hunter Exchange, event rewards, crafting routes, uses, and farming priorities.',
-    },
-  },
-  'genshin/subdetection-unit': {
-    zh: {
-      title: '子探测单元获取攻略：用途、位置与刷取路线',
-      description: '原神子探测单元材料攻略，整理用途说明、获取位置和刷取路线，方便你快速规划材料。',
-    },
-    en: {
-      title: 'Subdetection Unit Guide: Uses, Locations & Farming',
-      description: 'Genshin Impact Subdetection Unit guide with uses, locations, and farming routes so you can plan ahead.',
     },
   },
   'wuwa/violet-coral': {

@@ -7,6 +7,9 @@ interface Env {
   GENSHIN_SITE?: Fetcher;
   GENSHIN_ENABLED?: string;
   GENSHIN_FULL_CUTOVER?: string;
+  GENSHIN_CONTENT_ENABLED?: string;
+  GENSHIN_MAP_ENABLED?: string;
+  GENSHIN_MEDIA_ENABLED?: string;
   LVMENG_SITE?: Fetcher;
   LVMENG_ENABLED?: string;
   PREVIEW_MODE?: string;
@@ -21,6 +24,10 @@ interface Env {
 import { GENERATED_GAME_DEPLOYMENTS } from './generated-game-deployments';
 import { useHi3Reading } from './hi3-reading-policy';
 import { getRouteOwner } from '../../../packages/core/route-ownership';
+import { isGenshinContentPath, serveGenshinContent, unavailableGenshinContent } from './genshin-content';
+import { genshinMapPath } from '../../../packages/core/genshin-map';
+import { serveGenshinMap, unavailableGenshinMap } from './genshin-map';
+import { isGenshinMediaPath, serveGenshinMedia } from './genshin-media';
 
 const NTE_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'nte');
 const AZUR_PROMILIA_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'azur-promilia');
@@ -108,6 +115,26 @@ async function fetchWithRouteMarker(worker: Fetcher, request: Request, marker: s
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    // Turning off media ownership restores Main without changing page or data ownership.
+    if (isEnabled(env.GENSHIN_MEDIA_ENABLED) && isGenshinMediaPath(url.pathname)) {
+      const owner = isEnabled(env.GENSHIN_ENABLED) && isEnabled(env.GENSHIN_FULL_CUTOVER) ? env.GENSHIN_SITE : undefined;
+      return serveGenshinMedia(request, owner);
+    }
+
+    // Public map data is a separate migration opt-in; player progress stays on Main.
+    if (isEnabled(env.GENSHIN_MAP_ENABLED) && genshinMapPath(url.pathname)) {
+      if (!env.GENSHIN_SITE || !isEnabled(env.GENSHIN_ENABLED) || !isEnabled(env.GENSHIN_FULL_CUTOVER)) return unavailableGenshinMap(request);
+      return serveGenshinMap(request, env.GENSHIN_SITE);
+    }
+
+    // This separate opt-in stays off until the new game assets and compatibility reads are accepted.
+    if (isEnabled(env.GENSHIN_CONTENT_ENABLED) && isGenshinContentPath(url.pathname)) {
+      if (!env.GENSHIN_SITE || !isEnabled(env.GENSHIN_ENABLED) || !isEnabled(env.GENSHIN_FULL_CUTOVER)) {
+        return unavailableGenshinContent(request);
+      }
+      return serveGenshinContent(request, env.GENSHIN_SITE, env.MAIN_SITE);
+    }
 
     // Preview hosts must stay out of search indexes; production keeps its existing robots file.
     if (env.PREVIEW_MODE === 'true' && url.pathname === '/robots.txt') {

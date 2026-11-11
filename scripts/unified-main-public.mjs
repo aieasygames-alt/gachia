@@ -61,6 +61,9 @@ export function unifiedMainPublicReferences(references, readBody, qualification)
 export function validateUnifiedMainPublic(response, bytes, reference) {
   if (mime(reference.headers) !== 'text/html') {
     validatePublicResponse(response, bytes, reference);
+    if (['application/xml', 'text/xml'].includes(mime(reference.headers))) {
+      assert(!/\bnoindex\b/i.test(response.headers.get('x-robots-tag') ?? ''), 'Public sitemap must be indexable');
+    }
     if (reference.path === '/api/auth/get-session') {
       assert.equal(response.status, 404); assert.equal(JSON.parse(bytes).code, 'ACCOUNT_FEATURES_DISABLED');
       assert(policy(response.headers.get('cache-control')).includes('no-store'));
@@ -77,9 +80,20 @@ export function validateUnifiedMainPublic(response, bytes, reference) {
     'Main public rendered content, metadata, links or media differ');
 }
 
-export async function verifyUnifiedMainPublic({ references, directory, request = fetch }) {
+function publicTarget(owner) {
+  assert(['main', 'genshin'].includes(owner), 'Unreviewed unified public owner');
+  return { origin: 'https://gachia.com', kind: owner === 'main' ? 'unified_main_public_http' : 'unified_genshin_public_http' };
+}
+
+// Fixed owner adapters supply their own coverage projection. Sharing the HTTP
+// invariant does not grant another owner Main's guide qualification.
+export async function verifyUnifiedOwnerPublic({ owner, references, directory, request = fetch }) {
+  const target = publicTarget(owner);
+  assert(Array.isArray(references) && references.length > 0 && references.length <= 2500);
+  assert.equal(new Set(references.map(row => row.path)).size, references.length);
+  references.forEach(row => unifiedPreviewPath(row.path, target.origin));
   mkdirSync(directory, { mode: 0o700 });
-  const result = { schemaVersion: 1, kind: 'unified_main_public_http', status: 'running', origin: 'https://gachia.com',
+  const result = { schemaVersion: 1, kind: target.kind, status: 'running', origin: target.origin,
     parserVersion: 'streaming-v2', parserPin: unifiedHTMLParserPin('streaming-v2'), observations: [] };
   try {
     await sampleReadOnly(references, async (reference, index) => {
@@ -100,10 +114,11 @@ export async function verifyUnifiedMainPublic({ references, directory, request =
   return { ...result, evidenceSHA256: digest(readFileSync(join(directory, 'result.json'))) };
 }
 
-export function recheckUnifiedMainPublic(directory, pin, references) {
+export function recheckUnifiedOwnerPublic(owner, directory, pin, references) {
+  const target = publicTarget(owner);
   const raw = readFileSync(join(directory, 'result.json')); assert.equal(digest(raw), pin);
-  const result = JSON.parse(raw); assert.equal(result.schemaVersion, 1); assert.equal(result.kind, 'unified_main_public_http');
-  assert.equal(result.status, 'passed'); assert.equal(result.origin, 'https://gachia.com');
+  const result = JSON.parse(raw); assert.equal(result.schemaVersion, 1); assert.equal(result.kind, target.kind);
+  assert.equal(result.status, 'passed'); assert.equal(result.origin, target.origin);
   assert.equal(result.parserVersion, 'streaming-v2'); assert.equal(result.parserPin, unifiedHTMLParserPin('streaming-v2'));
   assert.equal(result.observations.length, references.length);
   result.observations.forEach((row, index) => {
@@ -113,3 +128,6 @@ export function recheckUnifiedMainPublic(directory, pin, references) {
   });
   return result;
 }
+
+export const verifyUnifiedMainPublic = input => verifyUnifiedOwnerPublic({ ...input, owner: 'main' });
+export const recheckUnifiedMainPublic = (directory, pin, references) => recheckUnifiedOwnerPublic('main', directory, pin, references);

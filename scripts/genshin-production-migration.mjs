@@ -1,0 +1,172 @@
+import assert from 'node:assert/strict';
+import { appendFileSync, readFileSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { activeVersion, assertTopology, SERVICES } from './desktop-cloud-release.mjs';
+import { normalizedBindings } from './desktop-cloud-transport.mjs';
+import { digest } from './desktop-release-assets.mjs';
+import { withRunLock } from './desktop-publish.mjs';
+import { parseWrangler } from './game-release.mjs';
+
+export const GENSHIN_MIGRATION_POLICY = 'genshin-content-production-migration-v1';
+export const GENSHIN_MIGRATION_ORDER = Object.freeze(['genshin', 'main', 'router']);
+const services = { genshin: 'gachia-game-genshin', main: 'gachia', router: 'gachia-router' };
+const configPins = {
+  genshin: '71044abce9df463b547e471016b62f83715aba87c764d394bdd9336e0724add2',
+  main: 'b1693ed74f4428f9180e877643d3455c43aef29161dc03ed223c3f4c64b973ff',
+  router: '271086b3498a5fa24dd77e5be3f04da8211b0ef2bc0be158c67f137f51d2219a',
+};
+const SHA = /^[a-f0-9]{64}$/;
+const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
+const fresh = at => assert(Number.isSafeInteger(at) && at <= Date.now() && Date.now() - at < 900000, 'Migration evidence expired');
+const exactKeys = (value, keys) => assert.deepEqual(Object.keys(value).sort(), [...keys].sort(), 'Unexpected migration fields');
+
+// Configuration derivation is local only. It does not grant upload authority or
+// relax the existing editorial production configuration allowlist.
+export function genshinMigrationConfig(owner, source) {
+  assert(Object.hasOwn(configPins, owner), 'Unknown migration owner');
+  assert.equal(digest(source), configPins[owner], 'Migration configuration requires review');
+  const config = parseWrangler(source);
+  assert.equal(config.name, services[owner]);
+  if (owner === 'main') {
+    assert(!config.services.some(row => row.binding === 'GENSHIN_CONTENT'));
+    assert(!Object.hasOwn(config.vars, 'GENSHIN_CONTENT_ENABLED'));
+    config.services.push({ binding: 'GENSHIN_CONTENT', service: services.genshin });
+    config.vars.GENSHIN_CONTENT_ENABLED = 'true';
+  } else if (owner === 'router') {
+    assert.equal(config.vars.GENSHIN_ENABLED, 'true');
+    assert.equal(config.vars.GENSHIN_FULL_CUTOVER, 'true');
+    assert(!Object.hasOwn(config.vars, 'GENSHIN_CONTENT_ENABLED'));
+    config.vars.GENSHIN_CONTENT_ENABLED = 'true';
+  }
+  return config;
+}
+
+function migratedBindings(owner, baseline) {
+  const bindings = structuredClone(baseline);
+  if (owner === 'genshin') return normalizedBindings(bindings);
+  assert(!bindings.some(row => row.name === 'GENSHIN_CONTENT_ENABLED'), 'Content migration is already configured');
+  bindings.push({ name: 'GENSHIN_CONTENT_ENABLED', text: 'true', type: 'plain_text' });
+  if (owner === 'main') {
+    assert(!bindings.some(row => row.name === 'GENSHIN_CONTENT'), 'Content service binding already exists');
+    bindings.push({ name: 'GENSHIN_CONTENT', service: services.genshin, environment: 'production', type: 'service' });
+  }
+  return normalizedBindings(bindings);
+}
+
+// Only the two explicitly reviewed binding deltas are permitted. Routes,
+// domains, tags, secret names, staging and other games remain byte-for-byte
+// controlled by the original topology checker.
+export function assertGenshinMigrationTopology(before, after, { configured = [], deployed = {} } = {}) {
+  assert.deepEqual(configured, GENSHIN_MIGRATION_ORDER.filter(owner => configured.includes(owner)), 'Invalid configured owner order');
+  assert(Object.keys(deployed).every(owner => configured.includes(owner)), 'Unconfigured deployment');
+  const expected = structuredClone(before);
+  for (const owner of configured) {
+    assert(GENSHIN_MIGRATION_ORDER.includes(owner));
+    const service = services[owner], bindings = migratedBindings(owner, before.bindings[service]);
+    assert.deepEqual(normalizedBindings(before.settings[service].bindings), normalizedBindings(before.bindings[service]), 'Inconsistent migration baseline');
+    expected.bindings[service] = bindings;
+    expected.settings[service].bindings = bindings;
+  }
+  const observed = structuredClone(after);
+  for (const service of SERVICES) {
+    observed.bindings[service] = normalizedBindings(observed.bindings[service]);
+    observed.settings[service].bindings = normalizedBindings(observed.settings[service].bindings);
+    expected.bindings[service] = normalizedBindings(expected.bindings[service]);
+    expected.settings[service].bindings = normalizedBindings(expected.settings[service].bindings);
+  }
+  const changed = Object.fromEntries(Object.entries(deployed).map(([owner, version]) => {
+    assert(UUID.test(version), 'Invalid migration deployment UUID'); return [services[owner], version];
+  }));
+  assertTopology(expected, observed, changed);
+}
+
+export function assertGenshinMigrationIdentity(value) {
+  exactKeys(value, ['policy', 'releaseKey', 'sourceCommit', 'sourceCI', 'sourceIndexPin', 'activePin', 'baseline', 'observedAt', 'owners']);
+  assert.equal(value.policy, GENSHIN_MIGRATION_POLICY);
+  for (const key of ['releaseKey', 'sourceIndexPin', 'activePin']) assert(SHA.test(value[key]), `Missing ${key}`);
+  assert(/^[a-f0-9]{40}$/.test(value.sourceCommit));
+  assert.equal(value.sourceCI.status, 'full_exact_ci_passed');
+  assert.equal(value.sourceCI.commit, value.sourceCommit);
+  assert(Number.isSafeInteger(value.sourceCI.runID) && value.sourceCI.runID > 0);
+  assertTopology(value.baseline, value.baseline);
+  fresh(value.observedAt);
+  exactKeys(value.owners, GENSHIN_MIGRATION_ORDER);
+  for (const owner of GENSHIN_MIGRATION_ORDER) {
+    const row = value.owners[owner];
+    exactKeys(row, ['service', 'sourceVersionId', 'sourceIdentityPin', 'candidate', 'recovery']);
+    assert.equal(row.service, services[owner]);
+    assert.equal(row.sourceVersionId, activeVersion(value.baseline, row.service));
+    assert(SHA.test(row.sourceIdentityPin));
+    for (const role of ['candidate', 'recovery']) {
+      exactKeys(row[role], ['versionId', 'moduleSHA256', 'artifactPin', 'configPin', 'previewPin', 'acceptedAt']);
+      const proof = row[role];
+      assert(UUID.test(proof.versionId)); assert.notEqual(proof.versionId, row.sourceVersionId, 'Raw old UUID is not compatible recovery');
+      for (const key of ['moduleSHA256', 'artifactPin', 'configPin', 'previewPin']) assert(SHA.test(proof[key]));
+      fresh(proof.acceptedAt);
+    }
+    assert.notEqual(row.candidate.versionId, row.recovery.versionId);
+  }
+}
+
+// Protocol core, deliberately without a CLI or a production adapter. A fixed
+// adapter must independently reopen CI, current published A, source identities,
+// sealed new/compatible-old artifacts and exact UUID HTTP evidence.
+export async function executeGenshinMigration({ run, releaseKey, verify, transport }) {
+  return withRunLock(run, async () => {
+    const initial = structuredClone(await verify());
+    assertGenshinMigrationIdentity(initial);
+    assert.equal(releaseKey, initial.releaseKey, 'Explicit migration release identity required');
+    const journal = join(run, `genshin-migration-${releaseKey}.jsonl`);
+    writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
+    const record = value => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), policy: initial.policy, releaseKey, ...value }) + '\n', { flush: true });
+    const configured = [...GENSHIN_MIGRATION_ORDER], deployed = {};
+    let pendingOperation, observedAt = initial.observedAt;
+    const revalidate = async () => {
+      const current = await verify(); assertGenshinMigrationIdentity(current);
+      assert(current.observedAt >= observedAt, 'Migration observation moved backwards');
+      assert.deepEqual({ ...current, observedAt: initial.observedAt }, initial, 'Migration identity changed');
+      observedAt = current.observedAt;
+      assertGenshinMigrationTopology(initial.baseline, await transport.snapshot(), { configured, deployed });
+    };
+    record({ phase: 'baseline', baseline: initial.baseline, owners: initial.owners });
+    try {
+      await revalidate();
+      for (const owner of GENSHIN_MIGRATION_ORDER) {
+        const row = initial.owners[owner];
+        // Both forward and compatible recovery versions must still exist with
+        // the exact same modules immediately before each activation.
+        for (const role of ['recovery', 'candidate']) {
+          const proof = await transport.inspect({ owner, role, service: row.service, ...row[role] });
+          assert.equal(proof.versionId, row[role].versionId);
+          assert.equal(proof.moduleSHA256, row[role].moduleSHA256);
+          assert.equal(proof.previewPin, row[role].previewPin);
+        }
+        await revalidate();
+        pendingOperation = { owner, service: row.service, versionId: row.candidate.versionId };
+        record({ phase: 'deployment_intent', ...pendingOperation, observedAt });
+        const result = await transport.promote({ ...pendingOperation, releaseKey });
+        assert.equal(result.service, row.service); assert.equal(result.versionId, row.candidate.versionId);
+        assert(UUID.test(result.deploymentId), 'Unknown deployment outcome; do not retry');
+        deployed[owner] = row.candidate.versionId;
+        record({ phase: 'deployed', ...pendingOperation, result }); pendingOperation = undefined;
+        await revalidate();
+        const proof = await transport.acceptStep({ owner, deployed: { ...deployed } });
+        assert.equal(proof.status, 'passed'); assert(SHA.test(proof.evidenceSHA256));
+        record({ phase: 'step_accepted', owner, proof });
+      }
+      await revalidate();
+      const proof = await transport.acceptProduction();
+      assert.equal(proof.status, 'passed'); assert(SHA.test(proof.evidenceSHA256));
+      assert.deepEqual(proof.versions, Object.fromEntries(GENSHIN_MIGRATION_ORDER.map(owner => [services[owner], deployed[owner]])));
+      await revalidate();
+      record({ phase: 'production_accepted', proof });
+      return { policy: initial.policy, status: 'production_accepted', versions: proof.versions,
+        journalPin: digest(readFileSync(journal)), sourceAdvanced: false };
+    } catch (error) {
+      record({ phase: 'stopped', pendingOperation, deployed, error: error.message, automaticRetry: false, automaticRollback: false });
+      try { record({ phase: 'read_only_reconciliation', snapshot: await transport.snapshot(), pendingOperation }); }
+      catch (failure) { record({ phase: 'observation_unavailable', error: failure.message }); }
+      throw error;
+    }
+  });
+}

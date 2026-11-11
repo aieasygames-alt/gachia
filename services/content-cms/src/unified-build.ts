@@ -12,6 +12,7 @@ import { verifyUnifiedPlan, type UnifiedPlan } from './unified-plan'
 import type { UnifiedRecord } from './unified-content'
 import { COMMUNITY_PUBLICATION_POLICY } from './unified-baseline'
 import { AZUR_NAME_CONSUMER, projectAzurRawNames } from './unified-consumers'
+import { GENSHIN_LOCAL_SCOPE, genshinLocalOwnerScope } from './unified-genshin-local-scope'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
@@ -61,6 +62,7 @@ export function unifiedTree(root: string, relative = '', buildOutputs = false): 
 type FreezeInput = {
   repo: string; commit: string; directory: string; plan: UnifiedPlan
   records: UnifiedRecord[]; activeSources: SourceBytes[]; preview: boolean
+  localScope?: typeof GENSHIN_LOCAL_SCOPE
 }
 
 // A source/compiler receipt only. It cannot authorize cloud upload, CMS install or promotion.
@@ -80,6 +82,9 @@ export function freezeUnifiedContent(input: FreezeInput) {
   for (const record of records) assert.deepEqual(record.sourceRecord, knownRecords.get(record.stableKey)?.sourceRecord, 'Record is outside the pinned plan')
   const candidate = exportUnifiedContent(records, originals, activeSources, preview)
   assert.equal(candidate.manifest.status, 'editorial_candidate', 'No new editorial changes: do not freeze an unchanged import')
+  assert(input.localScope === undefined || input.localScope === GENSHIN_LOCAL_SCOPE, 'Unknown local scope')
+  const local = input.localScope && genshinLocalOwnerScope(candidate.manifest, activeSources,
+    candidate.files.map(file => ({ sourcePath: file.sourcePath, text: file.content, sha256: file.candidateSHA256 })))
   assert(directory !== repo && !repo.startsWith(directory + path.sep), 'Output cannot contain the source repository')
   assert.equal(realpathSync(path.dirname(directory)), path.dirname(directory), 'Linked output parent forbidden')
   const tree = git(repo, ['ls-tree', '-rlz', input.commit]).toString().split('\0').filter(Boolean).map(row => {
@@ -157,7 +162,7 @@ export function freezeUnifiedContent(input: FreezeInput) {
       assert(projection(file.path), `Generator changed an unrelated input: ${file.path}`)
       modified.push(file)
     }
-    const scope = unifiedOwnerPlan(candidate.files.map(file => file.sourcePath), plan,
+    const scope: { games: string[]; owners: string[]; services: string[]; localScope?: typeof GENSHIN_LOCAL_SCOPE } = local || unifiedOwnerPlan(candidate.files.map(file => file.sourcePath), plan,
       JSON.parse(readFileSync(regular(workspace, 'packages/core/route-ownership.json'), 'utf8')))
     mkdirSync(path.join(directory, 'active'), { mode: 0o700 })
     const activeFiles = [...activeSources].sort((a, b) => a.sourcePath.localeCompare(b.sourcePath)).map((source, index) => {
@@ -172,7 +177,7 @@ export function freezeUnifiedContent(input: FreezeInput) {
       publicationPolicy: COMMUNITY_PUBLICATION_POLICY, sourceAuthentication: 'not_required_by_operator', status: 'generated_source_only', productionReady: false, activationSupported: false,
       cloudWrites: false, websiteChanged: false,
       pending: ['domain and reference validation',
-        'exact owner builds and consumer acceptance', 'compatible recovery', 'controlled multi-owner activation'] }
+        'exact owner builds and consumer acceptance', 'compatible recovery', local ? 'frozen Main readback' : 'controlled multi-owner activation'] }
     const manifestPin = save(path.join(directory, 'manifest.json'), manifest)
     return { directory, workspace, manifestPin, ...manifest }
   } catch (error) {
@@ -215,5 +220,14 @@ export function verifyUnifiedFrozenSource(directory: string, pin: string) {
   const files = unifiedTree(path.join(root, 'source'), '', true)
   assert.deepEqual(files, JSON.parse(filesText), 'Frozen source files changed')
   assert.equal(digest(canonical(files)), manifest.sourceTreeSHA256, 'Frozen source tree changed')
-  return manifest
+  const scoped = manifest as Manifest & { localScope?: typeof GENSHIN_LOCAL_SCOPE }
+  if (scoped.localScope !== undefined) {
+    assert.equal(scoped.localScope, GENSHIN_LOCAL_SCOPE, 'Unknown local scope')
+    const local = genshinLocalOwnerScope(manifest.candidate,
+      activeFiles.map(row => ({ ...row, text: readFileSync(regular(root, row.file), 'utf8') })),
+      candidate.files.map(row => ({ sourcePath: row.sourcePath, sha256: row.candidateSHA256,
+        text: readFileSync(regular(path.join(root, 'source'), row.sourcePath), 'utf8') })))
+    for (const key of ['games', 'owners', 'services'] as const) assert.deepEqual(manifest[key], local[key], 'Genshin-only owner plan changed')
+  } else assert(manifest.owners.includes('main'), 'Main can only be omitted in the explicit Genshin local preview')
+  return scoped
 }

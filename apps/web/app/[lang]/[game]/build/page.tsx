@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { GAMES } from '@gachia/core';
 import { ensureMetaLength } from '@/lib/seo-metadata';
@@ -57,6 +58,8 @@ export default async function BuildPage({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+
+  if (gameId === 'genshin') notFound();
 
   return (
     <>

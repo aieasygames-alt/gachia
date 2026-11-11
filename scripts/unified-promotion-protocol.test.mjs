@@ -57,7 +57,63 @@ function writeBoundary(f) {
   const verify = f.args.verify;
   f.args.verify = async () => { const value = await verify(); observedAt = value.identityObservedAt; return value; };
   f.args.authorizeWrite = () => ({ authorizedAt: Date.now(), identityObservedAt: observedAt });
+  f.args.confirmWrite = () => {};
   f.args.verifyAfterWrite = () => verify();
+}
+
+test('ordered write callbacks bind authorization and confirmation to the current owner', async t => {
+  const f = fixture(t, ['genshin', 'main']); writeBoundary(f);
+  const calls = [], authorize = f.args.authorizeWrite;
+  f.args.authorizeWrite = owner => { calls.push(['authorize', owner]); return authorize(); };
+  f.args.confirmWrite = owner => {
+    assert.equal(f.journal().at(-1).phase, 'promoted');
+    assert.equal(f.journal().at(-1).owner, owner); calls.push(['confirm', owner]);
+  };
+  const result = await executeUnifiedPromotionProtocol(f.args);
+  assert.deepEqual(calls, [['authorize', 'genshin'], ['confirm', 'genshin'], ['authorize', 'main'], ['confirm', 'main']]);
+  assert.deepEqual(Object.keys(result.writeAuthorizations), ['genshin', 'main']);
+  for (const row of f.journal().filter(row => row.phase === 'promotion_intent')) {
+    assert.deepEqual(row.writeAuthorization, result.writeAuthorizations[row.owner]);
+  }
+});
+
+for (const fault of ['missing', 'invalid', 'without-authorization']) test(`write confirmation adapter fails closed: ${fault}`, async t => {
+  const f = fixture(t, ['genshin', 'main']); writeBoundary(f);
+  if (fault === 'missing') delete f.args.confirmWrite;
+  if (fault === 'invalid') f.args.confirmWrite = true;
+  if (fault === 'without-authorization') { delete f.args.authorizeWrite; delete f.args.verifyAfterWrite; }
+  await assert.rejects(executeUnifiedPromotionProtocol(f.args), /confirmation adapter/);
+  assert.equal(f.calls.length, 0);
+});
+
+for (const fault of ['lost-response', 'post-write-drift', 'confirmation', 'async-confirmation', 'second-verification', 'second-write', 'public']) {
+  test(`ordered genshin/main promotion stops without retry or rollback: ${fault}`, async t => {
+    const f = fixture(t, ['genshin', 'main']); writeBoundary(f);
+    const confirmations = [], promote = f.transport.promote;
+    f.args.confirmWrite = async owner => { confirmations.push(owner); if (fault.endsWith('confirmation')) throw Error('Confirmation failed'); };
+    f.transport.promote = async operation => {
+      if (fault === 'second-write' && operation.owner === 'main') throw Error('Main result unknown');
+      const result = await promote(operation);
+      if (operation.owner === 'genshin') {
+        if (fault === 'lost-response') throw Error('Genshin response lost');
+        if (fault === 'post-write-drift') f.current().routes.push({ unexpected: true });
+      }
+      return result;
+    };
+    if (fault === 'second-verification') {
+      const verify = f.args.verify;
+      f.args.verify = async () => { if (f.calls.length) throw Error('Second owner review changed'); return verify(); };
+    }
+    if (fault === 'public') f.transport.acceptProduction = async () => { throw Error('Public acceptance failed'); };
+    await assert.rejects(executeUnifiedPromotionProtocol(f.args));
+    assert.deepEqual(f.calls.map(row => row.owner), fault === 'public' ? ['genshin', 'main'] : ['genshin']);
+    assert.deepEqual(confirmations, ['lost-response', 'post-write-drift'].includes(fault) ? [] : fault === 'public' ? ['genshin', 'main'] : ['genshin']);
+    const stopped = f.journal().find(row => row.phase === 'stopped');
+    assert.equal(stopped.automaticRetry, false); assert.equal(stopped.automaticRollback, false);
+    assert.equal(f.journal().at(-1).phase, 'read_only_reconciliation');
+    const count = f.calls.length;
+    await assert.rejects(executeUnifiedPromotionProtocol(f.args)); assert.equal(f.calls.length, count);
+  });
 }
 
 for (const boundary of ['deployment', 'public']) test(`write-boundary verification accepts expiry during ${boundary} without renewing authorization`, async t => {

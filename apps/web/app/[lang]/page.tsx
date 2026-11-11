@@ -11,11 +11,7 @@ import jaMessages from '@/messages/ja.json';
 import { ArrowRight, Calculator, CalendarDays, Gamepad2, Gift, Radio, Sparkles, TrendingUp } from 'lucide-react';
 import {
   HOMEPAGE_PRIORITY_GAMES,
-  LIVE_BANNERS,
-  LIVE_CODE_SUMMARIES,
-  LIVE_GUIDES,
   LIVE_UPDATED_AT,
-  LIVE_VERSION_UPDATES,
   type LiveStatus,
   type LocalizedText,
   localizeText,
@@ -24,6 +20,10 @@ import {
 import { THREE_GAME_STATUS_CARDS, THREE_GAME_STATUS_LABELS } from '@/lib/three-game-status';
 import { platformMetadata } from '@/lib/platform-metadata';
 import { ThreeGameNextStep } from '@/components/three-game-next-step';
+import { getHomepageContent, homepageStatus } from '@/lib/homepage-content';
+import { GENSHIN_UNAVAILABLE } from '@/lib/genshin-platform-content';
+
+export const dynamic = 'force-dynamic';
 
 const MESSAGES: Record<string, Record<string, string>> = {
   zh: zhMessages.homepage!,
@@ -34,16 +34,10 @@ const MESSAGES: Record<string, Record<string, string>> = {
 type FeaturedCharacter = {
   id: string;
   name: Record<SupportedLocale, string>;
+  imageUrl?: string;
 };
 
 const FEATURED: Partial<Record<keyof typeof GAMES, FeaturedCharacter[]>> = {
-  genshin: [
-    { id: 'hu-tao', name: { zh: '胡桃', en: 'Hu Tao', ja: '胡桃' } },
-    { id: 'raiden-shogun', name: { zh: '雷电将军', en: 'Raiden Shogun', ja: '雷電将軍' } },
-    { id: 'furina', name: { zh: '芙宁娜', en: 'Furina', ja: 'フリーナ' } },
-    { id: 'nahida', name: { zh: '纳西妲', en: 'Nahida', ja: 'ナヒーダ' } },
-    { id: 'kazuha', name: { zh: '枫原万叶', en: 'Kaedehara Kazuha', ja: '楓原万葉' } },
-  ],
   starrail: [
     { id: 'kafka', name: { zh: '卡芙卡', en: 'Kafka', ja: 'カフカ' } },
     { id: 'jingliu', name: { zh: '镜流', en: 'Jingliu', ja: '鏡流' } },
@@ -358,13 +352,6 @@ function getRouteCount(gameId: keyof typeof GAMES) {
   return Object.values(GAMES[gameId].routes).filter(Boolean).length;
 }
 
-function getStatusForGame(gameId: keyof typeof GAMES) {
-  const liveItem: HomeFeedItem | undefined = [...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]
-    .filter((item) => item.gameId === gameId)
-    .sort((a, b) => a.priority - b.priority)[0];
-  return liveItem?.status;
-}
-
 const DESCRIPTIONS: Record<SupportedLocale, string> = {
   zh: 'Gachia 是多游戏攻略 Wiki 与实时规划入口，覆盖原神、崩铁、鸣潮、绝区零、异环、蓝色星原：旅谣等游戏的当前卡池、版本专题、兑换码、角色图鉴、武器数据和攻略。',
   en: 'Gachia is a multi-game wiki and live planning hub for banners, version updates, redeem codes, characters, weapons, builds, and guides across Genshin, HSR, WuWa, ZZZ, NTE, Azur Promilia, and more.',
@@ -398,10 +385,13 @@ export default async function LocaleHome({
   const { lang } = await params;
   const locale = lang as SupportedLocale;
   const t = (MESSAGES[locale] ?? MESSAGES.zh) as Record<string, string>;
-  const liveBanners = sortByPriority(LIVE_BANNERS).slice(0, 3);
-  const liveVersions = sortByPriority(LIVE_VERSION_UPDATES).slice(0, 3);
-  const liveCodes = sortByPriority(LIVE_CODE_SUMMARIES).slice(0, 3);
-  const liveGuides = sortByPriority(LIVE_GUIDES).slice(0, 3);
+  const content = await getHomepageContent();
+  const featured: typeof FEATURED = { ...FEATURED, genshin: content.featured };
+  const getStatusForGame = (gameId: keyof typeof GAMES) => homepageStatus(gameId, content);
+  const liveBanners = sortByPriority(content.banners).slice(0, 3);
+  const liveVersions = sortByPriority(content.versions).slice(0, 3);
+  const liveCodes = sortByPriority(content.codes).slice(0, 3);
+  const liveGuides = sortByPriority(content.guides).slice(0, 3);
   const availableGameIds = locale === 'zh' ? GAME_IDS : GAME_IDS.filter((gameId) => gameId !== 'lvmeng');
   const priorityGames = HOMEPAGE_PRIORITY_GAMES.filter((gameId) => availableGameIds.includes(gameId));
   const geoBrief = GEO_BRIEF[locale];
@@ -409,15 +399,16 @@ export default async function LocaleHome({
 
   const orderedGames = [...priorityGames, ...availableGameIds.filter((gameId) => !priorityGames.includes(gameId))];
   const spotlightGames = orderedGames.slice(0, 5);
-  const updateFeed: HomeFeedItem[] = sortByPriority([...LIVE_BANNERS, ...LIVE_VERSION_UPDATES, ...LIVE_CODE_SUMMARIES, ...LIVE_GUIDES]).slice(0, 8);
+  const updateFeed: HomeFeedItem[] = sortByPriority([...content.banners, ...content.versions, ...content.codes, ...content.guides]).slice(0, 8);
   const threeGameStatus = locale === 'zh' ? THREE_GAME_STATUS_CARDS : [];
 
   return (
     <div className="container mx-auto min-w-0 max-w-full px-4 py-6 md:py-8">
+      {content.genshinUnavailable ? <p role="status" className="mb-4 text-sm text-game-text-muted">{GENSHIN_UNAVAILABLE[locale]}</p> : null}
       {/* Live Hub */}
       <section className="mb-8 overflow-hidden rounded-lg border border-game-border bg-game-surface">
-        <div className="grid gap-0 xl:grid-cols-[minmax(0,1.05fr)_minmax(380px,0.95fr)]">
-          <div className="relative border-b border-game-border p-5 md:p-8 xl:border-b-0 xl:border-r">
+        <div className="grid grid-cols-1 gap-0 xl:grid-cols-[minmax(0,1.05fr)_minmax(380px,0.95fr)]">
+          <div className="relative min-w-0 border-b border-game-border p-5 md:p-8 xl:border-b-0 xl:border-r">
             <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(135deg,rgba(255,255,255,.08)_1px,transparent_1px)] [background-size:22px_22px]" aria-hidden="true" />
             <div className="relative">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-game-primary/40 bg-game-primary/10 px-3 py-1 text-xs font-semibold uppercase text-game-primary">
@@ -492,7 +483,7 @@ export default async function LocaleHome({
             </div>
           </div>
 
-          <div className="grid gap-px bg-game-border md:grid-cols-2">
+          <div className="grid min-w-0 grid-cols-1 gap-px bg-game-border md:grid-cols-2">
             <LivePanel
               title={HOME_COPY.currentBanners[locale]}
               icon={<Sparkles className="h-4 w-4" aria-hidden="true" />}
@@ -580,7 +571,7 @@ export default async function LocaleHome({
       </div>
 
       {/* Game Cards */}
-      <section className="mb-10 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+      <section className="mb-10 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
         {orderedGames.map((gameId, index) => {
           const game = GAMES[gameId];
           const ctas = getGameCtas(gameId, locale);
@@ -615,8 +606,8 @@ export default async function LocaleHome({
                     </h2>
                     <div className="mt-1 flex flex-wrap gap-2 text-[11px] text-game-text-muted">
                       <span>{getRouteCount(gameId)} {TRACK_LABELS.routes[locale]}</span>
-                      {FEATURED[gameId]?.length ? (
-                        <span>{FEATURED[gameId]?.length ?? 0} {TRACK_LABELS.chars[locale]}</span>
+                      {featured[gameId]?.length ? (
+                        <span>{featured[gameId]?.length ?? 0} {TRACK_LABELS.chars[locale]}</span>
                       ) : null}
                       {status ? <span>{STATUS_LABELS[status][locale]}</span> : null}
                     </div>
@@ -651,7 +642,7 @@ export default async function LocaleHome({
           <Gamepad2 className="h-5 w-5 text-game-primary" aria-hidden="true" />
           {HOME_COPY.liveFeed[locale]}
         </div>
-        <div className="grid gap-2 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
           {updateFeed.map((item) => {
             const game = GAMES[item.gameId];
             return (
@@ -672,9 +663,9 @@ export default async function LocaleHome({
       </section>
 
       {/* Featured Characters per Game */}
-      {GAME_IDS.filter((id) => (FEATURED[id]?.length ?? 0) > 0).map((gameId) => {
+      {GAME_IDS.filter((id) => (featured[id]?.length ?? 0) > 0).map((gameId) => {
         const game = GAMES[gameId];
-        const chars = FEATURED[gameId] ?? [];
+        const chars = featured[gameId] ?? [];
         if (chars.length < 3) return null;
 
         return (
@@ -694,7 +685,7 @@ export default async function LocaleHome({
                 >
                   <div className="relative h-12 w-12 overflow-hidden rounded-full">
                     <img
-                      src={`/images/${gameId}/characters/${char.id}.webp`}
+                      src={char.imageUrl ?? `/images/${gameId}/characters/${char.id}.webp`}
                       alt={char.name[locale]}
                       width={48}
                       height={48}
@@ -741,7 +732,7 @@ export default async function LocaleHome({
             </li>
           ))}
         </ul>
-        <div className="mt-4 overflow-hidden rounded-md border border-game-border">
+        <div className="mt-4 overflow-x-auto rounded-md border border-game-border">
           <table className="w-full text-left text-sm">
             <tbody>
               {geoBrief.table.map(([topic, coverage]) => (
@@ -787,7 +778,7 @@ export default async function LocaleHome({
         <p className="max-w-4xl leading-relaxed text-game-text-muted">
           {citationGuide.lead}
         </p>
-        <div className="mt-4 overflow-hidden rounded-md border border-game-border">
+        <div className="mt-4 overflow-x-auto rounded-md border border-game-border">
           <table className="w-full text-left text-sm">
             <thead className="bg-game-surface-alt text-game-text">
               <tr>

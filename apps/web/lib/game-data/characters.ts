@@ -1,5 +1,6 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getCharacterIdsFromManifest } from './manifests';
+import { getGenshinPlatformContent } from '../genshin-platform-content';
 
 export interface CharacterSummary {
   id: string;
@@ -44,10 +45,10 @@ export async function getCharacterSummariesByIds(
 ): Promise<CharacterSummary[]> {
   switch (gameId) {
     case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/character-summaries');
-      return ids.flatMap((id) => {
-        const character = mod.genshinCharacterSummaries.find((entry) => entry.id === id);
-        return character ? [{ id: character.id, name: mod.getGenshinCharacterSummaryName(character, locale), image: toAbs(mod.getGenshinCharacterSummaryImage(character)) }] : [];
+      const content = await getGenshinPlatformContent();
+      return ids.flatMap(id => {
+        const character = content.data.characters.find(entry => entry.id === id);
+        return character ? [{ id: character.id, name: character.name[locale], image: character.imageUrl }] : [];
       });
     }
     case 'starrail': {
@@ -140,12 +141,9 @@ export async function getCharacterSummariesByIds(
 }
 
 export async function getCharactersForStaticParams(gameId: GameId): Promise<Array<{ id: string }>> {
+  if (gameId === 'genshin') return [];
   if (process.env.NODE_ENV !== 'production') return getCharacterIdsFromManifest(gameId);
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/character-summaries');
-      return mod.genshinCharacterSummaries.map((character) => ({ id: character.id }));
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/character-summaries');
       return mod.starrailCharacterSummaries.map((character) => ({ id: character.id }));
@@ -205,21 +203,6 @@ export async function getCharacterMetaData(
   locale: SupportedLocale,
 ): Promise<CharacterMetaData | null> {
   switch (gameId) {
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/characters');
-      const character = mod.getGenshinCharacterById(id);
-      if (!character) return null;
-      return {
-        id: character.id,
-        name: mod.getGenshinCharacterName(character, locale),
-        description: mod.getGenshinCharacterDescription(character, locale),
-        image: toAbs(mod.getGenshinCharacterImage(character)),
-        element: character.element,
-        elementLabel: labelFromId(character.element),
-        weaponLabel: character.weaponType,
-        tierRank: character.tierRank,
-      };
-    }
     case 'starrail': {
       const mod = await import('@gachia/data/games/starrail/characters');
       const character = mod.getStarRailCharacterById(id);
@@ -425,19 +408,6 @@ export async function getCharacterListData(
         rarityLabel: character.rank,
         rankGroup: character.rank,
         subtitle: locale === 'zh' ? character.type : character.typeEn,
-      }));
-    }
-    case 'genshin': {
-      const mod = await import('@gachia/data/games/genshin/character-summaries');
-      return mod.genshinCharacterSummaries.map((character) => ({
-        id: character.id,
-        name: mod.getGenshinCharacterSummaryName(character, locale),
-        image: toAbs(mod.getGenshinCharacterSummaryImage(character)),
-        element: character.element,
-        elementLabel: labelFromId(character.element),
-        rarityLabel: `${character.rarity}★`,
-        rankGroup: `${character.rarity}★`,
-        subtitle: character.weaponType,
       }));
     }
     case 'starrail': {

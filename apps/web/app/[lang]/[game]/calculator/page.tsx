@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { notFound } from 'next/navigation';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
@@ -6,7 +7,6 @@ import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 const BASE_URL = 'https://gachia.com';
 
 const CALC_DESC: Record<string, Record<string, string>> = {
-  genshin: { zh: '原神角色养成计算器，计算升级、突破所需材料数量，支持材料库存管理', en: 'Genshin Impact character upgrade calculator — compute ascension materials, level-up costs, and track your inventory', ja: '原神キャラ育成計算機、昇格素材・レベルアップ必要数を計算、在庫管理対応' },
   starrail: { zh: '崩坏：星穹铁道角色养成计算器，计算升级、突破所需材料数量', en: 'Honkai: Star Rail character upgrade calculator — compute ascension and trace materials needed', ja: 'スターレイルキャラ育成計算機、昇格素材・軌跡素材の必要数を計算' },
   wuwa: { zh: '鸣潮角色养成计算器，计算升级、突破所需材料数量，支持材料库存管理', en: 'Wuthering Waves character upgrade calculator — compute ascension materials and track your inventory', ja: '鳴潮キャラ育成計算機、昇格素材必要数を計算、在庫管理対応' },
   zzz: { zh: '绝区零代理人养成计划器，按等级、核心技、技能和音擎目标汇总材料、丁尼、库存缺口与体力刷取顺序。', en: 'Zenless Zone Zero agent planner for level, Core Skill, skills, and W-Engine targets with materials, Denny, inventory gaps, and farming order.', ja: 'ゼンレスゾーンゼロのエージェント育成計画。レベル、コアスキル、スキル、Wエンジン目標ごとの素材、ディニー、在庫不足、周回順を確認。' },
@@ -37,6 +37,7 @@ export async function generateMetadata({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'genshin') return { robots: { index: false, follow: false } };
   const gameName = GAMES[gameId]?.name[locale];
   const categoryLabel = CATEGORY_LABELS.calculator?.[locale] ?? 'Calculator';
   const alternates = buildLocalizedAlternates(locale, (lang) => `/${lang}/${gameId}/calculator`, LOCALES);
@@ -58,5 +59,6 @@ export default async function CalculatorPage({
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
 
+  if (gameId === 'genshin') notFound();
   return <CalculatorClient gameId={gameId} locale={locale} />;
 }

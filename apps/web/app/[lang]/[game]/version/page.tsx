@@ -48,20 +48,6 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
   title: string;
   description: string;
 }>>>> = {
-  genshin: {
-    zh: {
-      title: '原神 7.1正式版本专题：直播码、Snezhnaya 与卡池',
-      description: '追踪原神 7.1正式版本、Luna II、Snezhnaya、Sandrone、直播码、当前/下期卡池、Nod-Krai 长尾和原石规划。',
-    },
-    en: {
-      title: 'Genshin v7.1 Live: Livestream Codes, Snezhnaya & Banners',
-      description: 'Track Genshin v7.1 live, Luna II, Snezhnaya, Sandrone, livestream codes, current and next banners, Nod-Krai long-tail intent, and Primogem planning.',
-    },
-    ja: {
-      title: '原神 v7.1 注目：配信コード、Snezhnaya、バナー',
-      description: '原神 v7.1、Luna II、Snezhnaya、Sandrone、配信コード、現在/次回バナー、Nod-Krai長尾、原石計画を確認できます。',
-    },
-  },
   starrail: {
     zh: {
       title: '崩铁 4.6正式版本专题：直播码、卡池与资源规划',
@@ -143,11 +129,6 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/aniimo/redeem-codes', label: { zh: '兑换码 / 奖励', en: 'Codes / Rewards', ja: 'コード / 報酬' }, description: { zh: '区分暂无公开兑换码、预注册奖励和上线后待核验入口。', en: 'Separate no public codes from pre-registration rewards and launch checks.', ja: '公開コード未確認、事前登録報酬、リリース後確認を分けます。' } },
     { href: '/aniimo/map', label: { zh: '区域 / 路线', en: 'Regions / Routes', ja: '地域 / ルート' }, description: { zh: '查看 6 个区域、已知 Aniimo 和上线后刷新点核验清单。', en: 'Review 6 regions, known Aniimo, and post-launch spawn checks.', ja: '6地域、既知Aniimo、リリース後の出現確認を整理。' } },
   ],
-  genshin: [
-    { href: '/genshin/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中整理官网、版本、活动和卡池信息。', en: 'Collect official, version, event, and banner information.', ja: '公式、版本、イベント、バナー情報を整理します。' } },
-    { href: '/genshin/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '直播码、版本码和过期状态集中查看。', en: 'Check livestream, version, and expired code status.', ja: '配信コード、版本コード、期限切れを確認。' } },
-    { href: '/genshin/guides/banner-schedule-guide', label: { zh: '当前卡池', en: 'Current banners', ja: '現在バナー' }, description: { zh: '把当前卡池、下期角色、原石和保底放到同一条路线里。', en: 'Plan current banners, next characters, Primogems, and pity in one path.', ja: '現在バナー、次回キャラ、原石、天井を一緒に計画。' } },
-  ],
   starrail: [
     { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 4.6正式版本、直播码、下期跃迁和 当前版本资源。', en: 'Check v4.6 live, livestream codes, next warps, and current-version resources.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ資源を確認。' } },
     { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '4.6正式版本直播码、版本码和过期状态入口。', en: 'v4.6 live codes, patch codes, and expiry status.', ja: 'v4.6配信中コード、版本コード、期限状態入口。' } },
@@ -196,30 +177,6 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
 };
 
 const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
-  genshin: {
-    title: { zh: '7.1正式版本 / Snezhnaya 专题', en: 'v7.1 Live / Snezhnaya Hub', ja: 'v7.1配信中 / Snezhnaya特集' },
-    description: {
-      zh: '围绕 7.1正式版本、Luna II、Snezhnaya、Sandrone、直播码、当前/下期卡池和 Nod-Krai 长尾需求定位版本重点。',
-      en: 'Track v7.1 live, Luna II, Snezhnaya, Sandrone, livestream codes, current/next banners, and Nod-Krai long-tail needs.',
-      ja: 'v7.1配信中、Luna II、Snezhnaya、Sandrone、配信コード、現在/次回バナー、Nod-Krai長尾需要をまとめます。',
-    },
-    highlights: {
-      zh: ['7.1正式版本', 'Snezhnaya', '直播码', 'Nod-Krai 长尾'],
-      en: ['v7.1 live', 'Snezhnaya', 'Livestream codes', 'Nod-Krai long-tail'],
-      ja: ['v7.1配信中', 'Snezhnaya', '配信コード', 'Nod-Krai長尾'],
-    },
-    kicker: { zh: '前瞻码窗口', en: 'Livestream-code window', ja: '配信コード期間' },
-    freshness: {
-      zh: '持续整理 7.1正式版本、下一版本卡池、直播码有效期和 Nod-Krai 历史入口。',
-      en: 'Kept current with v7.1 previews, next banners, livestream-code validity, and Nod-Krai history routes.',
-      ja: 'v7.1前瞻、次回バナー、配信コード期限、Nod-Krai履歴導線を継続整理しています。',
-    },
-    faq: [
-      { question: { zh: '这个版本专题主要看什么？', en: 'What is this version hub for?', ja: 'このバージョン特集では何を見ればいいですか？' }, answer: { zh: '这里优先收录 7.1正式版本、直播码、Snezhnaya / Sandrone、当前与下期卡池，以及 Nod-Krai 地图和材料长尾。', en: 'It highlights v7.1 live, livestream codes, Snezhnaya / Sandrone, current and next banners, plus Nod-Krai map and material long-tail needs.', ja: 'v7.1配信中、配信コード、Snezhnaya / Sandrone、現在/次回バナー、Nod-Kraiマップと素材長尾を優先整理します。' } },
-      { question: { zh: 'Luna I / Nod-Krai 内容还看吗？', en: 'Should I still read Luna I / Nod-Krai content?', ja: 'Luna I / Nod-Krai内容はまだ見るべき？' }, answer: { zh: '要看。Nod-Krai 地图、材料和奖励仍是长尾入口，但首屏应先回答 7.1 直播码和下一版本卡池问题。', en: 'Yes. Nod-Krai maps, materials, and rewards remain useful long-tail routes, but the first screen should answer v7.1 codes and next-banner questions first.', ja: 'はい。Nod-Kraiのマップ、素材、報酬は長尾導線として残しつつ、首屏ではv7.1コードと次回バナーを優先します。' } },
-    ],
-    guideIds: ['nod-krai-cryoculus-phase-ii-checklist', 'phase-ii-columbina-raiden-pull-plan', 'luna-viii-sandrone-guide'],
-  },
   starrail: {
     title: { zh: '4.6正式版本 / 直播码专题', en: 'v4.6 Special Program / Codes Hub', ja: 'v4.6配信中 / コード特集' },
     description: { zh: '聚焦 4.6正式版本、直播兑换码、下期跃迁、当前版本、活动奖励、星琼缺口与队伍规划。', en: 'Track the v4.6 live update, livestream codes, next warps, current-version, event rewards, Stellar Jade gaps, and team planning.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ、イベント報酬、星玉不足、編成計画を整理します。' },
@@ -1412,35 +1369,6 @@ async function getGuidesForGame(gameId: GameId, locale: SupportedLocale) {
 
 function getVersionNextSteps(gameId: GameId): NextStepLink[] {
   const linksByGame: Partial<Record<GameId, NextStepLink[]>> = {
-    genshin: [
-      {
-        href: '/genshin/characters',
-        title: { zh: '角色图鉴', en: 'Character Wiki', ja: 'キャラ図鑑' },
-        description: {
-          zh: '把版本内容和角色定位连起来看，更容易判断抽取和培养优先级。',
-          en: 'Connect version updates to character roles, then decide pulls and priorities.',
-          ja: 'バージョン内容と役割をつなげて見ると、育成優先度が決めやすくなります。',
-        },
-      },
-      {
-        href: '/genshin/weapons',
-        title: { zh: '武器图鉴', en: 'Weapon Wiki', ja: '武器図鑑' },
-        description: {
-          zh: '查看当前版本里更合适的主武器和备选方案。',
-          en: 'Review the best weapon and fallback options for the current patch.',
-          ja: '現行バージョンで使いやすい武器と代替案を確認できます。',
-        },
-      },
-      {
-        href: '/genshin/guides',
-        title: { zh: '攻略专题', en: 'Guides', ja: '攻略' },
-        description: {
-          zh: '继续看更完整的活动、机制和养成攻略。',
-          en: 'Continue into full event, mechanic, and progression guides.',
-          ja: 'イベント、機構、育成の詳細攻略へ進めます。',
-        },
-      },
-    ],
     starrail: [
       {
         href: '/starrail/characters',
@@ -1693,6 +1621,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') return { robots: { index: false, follow: false } };
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   const gameName = GAMES[gameId]?.name[locale];
@@ -1724,6 +1653,7 @@ export default async function VersionHubPage({
   params: Promise<{ lang: string; game: string }>;
 }) {
   const { lang, game } = await params;
+  if (game === 'genshin') notFound();
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   if (gameId === 'hi3') return <Hi3VersionArchive locale={locale} />;

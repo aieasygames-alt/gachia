@@ -90,7 +90,10 @@ describe('market intelligence backlog', () => {
 
     for (const opportunity of p0) {
       expect(opportunity.status).toBe(opportunity.id === 'roco-global-quack-quack-test-official-watch' ? 'watch' : 'done');
-      if (opportunity.gameId !== 'azur-promilia' && opportunity.gameId !== 'lvmeng') {
+      if (opportunity.gameId === 'genshin') {
+        expect(VERSION_SNAPSHOTS.genshin).toBeUndefined();
+        expect(existsSync(join(repoRoot, 'apps/game-genshin/app/[lang]/genshin/version/page.tsx'))).toBe(true);
+      } else if (opportunity.gameId !== 'azur-promilia' && opportunity.gameId !== 'lvmeng') {
         expect(VERSION_SNAPSHOTS[opportunity.gameId]).toBeDefined();
       }
       expect(opportunity.targetPages.length).toBeGreaterThan(0);
