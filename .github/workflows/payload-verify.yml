@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-24.04
     # Serial publication-history checks can exceed 30 minutes on slower runners.
     timeout-minutes: 45
+    env:
+      PLAYWRIGHT_CI_IMAGE: mcr.microsoft.com/playwright:v1.63.0-noble@sha256:eff16c30e6f3f4af0a03fa4b706120d5e9b0891c344a27d64559aff5900a4a27
     steps:
       - uses: actions/checkout@v7.0.0
         with:
@@ -40,6 +42,9 @@ jobs:
         run: |
           pnpm install --frozen-lockfile
           pnpm --dir services/content-cms install --frozen-lockfile
+      - name: Prepare pinned browser environment
+        if: steps.scope.outputs.consumers == 'true'
+        run: docker pull "$PLAYWRIGHT_CI_IMAGE"
       - name: Verify CMS types without deployment credentials
         if: steps.scope.outputs.consumers == 'true'
         run: |
@@ -66,11 +71,15 @@ jobs:
         run: |
           pnpm --filter @gachia/web test
           pnpm --filter @gachia/data test
-          # Preserve Ubuntu signature checks while avoiding the failing Azure mirror.
-          printf '%s\n' 'https://archive.ubuntu.com/ubuntu/' 'https://security.ubuntu.com/ubuntu/' | sudo tee /etc/apt/apt-mirrors.txt >/dev/null
-          pnpm --filter @gachia/web exec playwright install --with-deps chromium
-          pnpm --filter @gachia/web test:guides
-          pnpm --filter @gachia/web test:characters
+          # Keep the same pinned Node/pnpm and locked dependencies; browsers and OS libraries are preinstalled.
+          node_root="$(dirname "$(dirname "$(command -v node)")")"
+          docker run --rm --init --ipc=host \
+            --volume "$PWD:/work" --volume "$node_root:/ci-node:ro" --workdir /work \
+            --env CI=true --env PATH=/ci-node/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
+            "$PLAYWRIGHT_CI_IMAGE" /bin/bash -e -c '
+              pnpm --filter @gachia/web test:guides
+              pnpm --filter @gachia/web test:characters
+            '
       - name: Typecheck public consumers without builds
         if: steps.scope.outputs.consumers == 'true'
         run: pnpm --filter './apps/game-*' --filter @gachia/web --filter './packages/*' type-check --incremental false
