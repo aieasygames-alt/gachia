@@ -16,6 +16,15 @@ import { GENSHIN_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
 
 type Proof = { path: string; pin: string }
 const treePin = (directory: string) => digest(migrationJSON(artifactFiles(directory)))
+export function writeGenshinLocalDependencyModules(directory: string, routerCode: Uint8Array) {
+  const router = path.join(directory, 'router-module'), unused = path.join(directory, 'unused-module')
+  // Wrangler watches the no-bundle module tree. Keep mutable evidence/logs outside it.
+  mkdirSync(router); mkdirSync(unused)
+  const files = { router: path.join(router, 'worker.js'), unused: path.join(unused, 'worker.js') }
+  writeFileSync(files.router, routerCode, { flag: 'wx', mode: 0o600 })
+  writeFileSync(files.unused, 'export default {fetch(){return new Response(null,{status:503})}};\n', { flag: 'wx', mode: 0o600 })
+  return files
+}
 function inputs(build: Proof) {
   const built = verifyUnifiedOwnerBuild(path.dirname(build.path), build.pin)
   assert.equal(build.path, path.join(built.directory, 'build.json')); assert.equal(built.frozen.productionScope, GENSHIN_PRODUCTION_SCOPE)
@@ -69,19 +78,16 @@ export async function prepareGenshinIndependentBundle(input: { build: Proof; sou
       for (const graph of ['direct', 'router']) {
         const http = graph === 'direct' ? path.join(local, 'local-http') : path.join(directory, `${role}-graph`)
         mkdirSync(http); mkdirSync(path.join(http, 'home'))
+        const dependencyModules = writeGenshinLocalDependencyModules(http, sources.routerCode)
         const selected: Record<string, string> = {}
         for (const dependency of ['genshin', 'main', 'router']) {
           const target = dependency === 'genshin' ? artifact : dependency === 'main' ? sources.owners.main.directory : undefined
           const module = dependency === 'genshin' ? path.join(local, 'module/worker.js') : dependency === 'main'
-            ? path.join(sources.owners.main.directory, 'worker.js') : path.join(http, 'router-worker.js')
-          if (dependency === 'router') {
-            writeFileSync(module, sources.routerCode, { flag: 'wx', mode: 0o600 })
-          }
+            ? path.join(sources.owners.main.directory, 'worker.js') : dependencyModules.router
           const config = migrationLocalConfig(migrationRuntimeConfig(workspace, dependency, 'candidate'), dependency, target, module)
           selected[dependency] = migrationSave(http, dependency + '.json', config).path
         }
-        writeFileSync(path.join(http, 'unused.mjs'), 'export default {fetch(){return new Response(null,{status:503})}};\n', { flag: 'wx' })
-        const unused = migrationSave(http, 'unused.json', { name: 'migration-unused', main: path.join(http, 'unused.mjs'), compatibility_date: '2026-07-08' })
+        const unused = migrationSave(http, 'unused.json', { name: 'migration-unused', main: dependencyModules.unused, compatibility_date: '2026-07-08' })
         let captured: any
         await withLocalWorker(path.join(workspace, 'apps/web'), selected[graph === 'direct' ? 'genshin' : 'router'], path.join(http, 'home'), path.join(http, 'worker.log'), async (origin: string) => {
           captured = await captureMigrationHTTP({ origin, requests: requests({ owner: graph === 'direct' ? 'genshin' : 'router', role: 'candidate', artifact, expected: current,
