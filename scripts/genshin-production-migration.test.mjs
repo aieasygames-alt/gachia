@@ -37,18 +37,32 @@ function identity() {
   for (const [i, owner] of GENSHIN_MIGRATION_ORDER.entries()) {
     const service = serviceFor[owner];
     value.owners[owner] = { service, sourceVersionId: value.baseline.services[service].versions[0].version_id, sourceIdentityPin: sha('e'),
-      ...Object.fromEntries(['recovery', 'candidate'].map((role, r) => [role, { versionId: uuid(100 + i * 2 + r), moduleSHA256: sha('1'), artifactPin: sha('2'),
-        configPin: sha('3'), previewPin: sha('4'), acceptedAt: Date.now() }])) };
+      ...Object.fromEntries(['recovery', 'candidate'].map(role => [role, { moduleSHA256: sha('1'), artifactPin: sha('2'),
+        configPin: sha('3'), referencesPin: sha('4') }])) };
   }
   return value;
 }
 function fixture(t, failure) {
   const run = mkdtempSync(join(tmpdir(), 'genshin-migration-'));
   t.after(() => rmSync(run, { recursive: true, force: true }));
-  const value = identity(), cloud = configured(value.baseline), calls = [];
-  return { run, value, cloud, calls, verify: async () => value, transport: {
+  const value = identity(), cloud = structuredClone(value.baseline), calls = [], uploaded = {};
+  return { run, value, cloud, calls, uploaded, verify: async () => value, transport: {
     snapshot: async () => structuredClone(cloud),
-    inspect: async row => { calls.push(`inspect:${row.owner}:${row.role}`); return row; },
+    upload: async row => {
+      calls.push(`upload:${row.owner}:${row.role}`);
+      if (row.role === 'candidate') {
+        const next = configured(value.baseline), service = serviceFor[row.owner];
+        cloud.bindings[service] = next.bindings[service]; cloud.settings[service].bindings = next.settings[service].bindings;
+      }
+      const versionId = uuid(100 + GENSHIN_MIGRATION_ORDER.indexOf(row.owner) * 2 + (row.role === 'candidate' ? 1 : 0));
+      uploaded[row.owner + ':' + row.role] = versionId;
+      return { versionId };
+    },
+    inspect: async row => { calls.push(`inspect:${row.owner}:${row.role}`); return { versionId: row.versionId,
+      moduleSHA256: row.sealed.moduleSHA256, moduleProof: { pin: sha('7') }, versionPin: sha('8') }; },
+    preview: async row => { calls.push(`preview:${row.owner}:${row.role}`); return { service: row.service, versionId: row.versionId,
+      observationMode: 'cloud_exact_version', status: 'passed', evidenceSHA256: sha('9') }; },
+    revalidate: async () => {},
     promote: async row => {
       calls.push(`promote:${row.owner}`);
       if (row.owner === failure) throw Error('response lost');
@@ -58,7 +72,7 @@ function fixture(t, failure) {
     },
     acceptStep: async ({ owner }) => { calls.push(`accept:${owner}`); return { status: 'passed', evidenceSHA256: sha('5') }; },
     acceptProduction: async () => ({ status: 'passed', evidenceSHA256: sha('6'),
-      versions: Object.fromEntries(GENSHIN_MIGRATION_ORDER.map(owner => [serviceFor[owner], value.owners[owner].candidate.versionId])) }),
+      versions: Object.fromEntries(GENSHIN_MIGRATION_ORDER.map(owner => [serviceFor[owner], uploaded[owner + ':candidate']])) }),
   } };
 }
 
@@ -102,19 +116,24 @@ test('rejects missing CI, stale evidence, raw recovery UUID and scope expansion'
     value => value.sourceCI.status = 'local_passed',
     value => value.sourceCI.commit = 'f'.repeat(40),
     value => value.observedAt -= 900001,
-    value => value.owners.main.recovery.acceptedAt -= 900001,
+    value => value.owners.main.recovery.configPin = 'unreviewed',
     value => value.owners.genshin.recovery.versionId = value.owners.genshin.sourceVersionId,
     value => value.owners.nte = structuredClone(value.owners.genshin),
     value => value.owners.main.candidate.extra = true,
   ]) { const value = identity(); change(value); assert.throws(() => assertGenshinMigrationIdentity(value)); }
 });
 
-test('activates only genshin then main then router with acceptance after every write', async t => {
+test('activates genshin then router then main with dependent previews and acceptance after every write', async t => {
   const f = fixture(t);
   const result = await executeGenshinMigration({ ...f, releaseKey: f.value.releaseKey });
   assert.equal(result.status, 'production_accepted'); assert.equal(result.sourceAdvanced, false);
   assert.deepEqual(f.calls.filter(row => row.startsWith('promote:') || row.startsWith('accept:')),
-    ['promote:genshin', 'accept:genshin', 'promote:main', 'accept:main', 'promote:router', 'accept:router']);
+    ['promote:genshin', 'accept:genshin', 'promote:router', 'accept:router', 'promote:main', 'accept:main']);
+  for (const [i, owner] of GENSHIN_MIGRATION_ORDER.entries()) {
+    assert(f.calls.indexOf(`preview:${owner}:recovery`) < f.calls.indexOf(`promote:${owner}`));
+    assert(f.calls.indexOf(`preview:${owner}:candidate`) < f.calls.indexOf(`promote:${owner}`));
+    if (i) assert(f.calls.indexOf(`accept:${GENSHIN_MIGRATION_ORDER[i - 1]}`) < f.calls.indexOf(`upload:${owner}:recovery`));
+  }
   await assert.rejects(executeGenshinMigration({ ...f, releaseKey: f.value.releaseKey }), /EEXIST/);
   assert.equal(f.calls.filter(row => row.startsWith('promote:')).length, 3, 'A completed journal cannot be replayed');
 });
@@ -134,7 +153,7 @@ test('a mismatched exact module or a changed verifier prevents activation', asyn
   const f = fixture(t);
   f.transport.inspect = async row => ({ ...row, moduleSHA256: sha('9') });
   await assert.rejects(executeGenshinMigration({ ...f, releaseKey: f.value.releaseKey }));
-  assert.equal(f.calls.length, 0);
+  assert.equal(f.calls.filter(row => row.startsWith('promote:')).length, 0);
 });
 
 test('a failed step acceptance prevents all later activations', async t => {

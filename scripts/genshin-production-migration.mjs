@@ -8,7 +8,7 @@ import { withRunLock } from './desktop-publish.mjs';
 import { parseWrangler } from './game-release.mjs';
 
 export const GENSHIN_MIGRATION_POLICY = 'genshin-content-production-migration-v1';
-export const GENSHIN_MIGRATION_ORDER = Object.freeze(['genshin', 'main', 'router']);
+export const GENSHIN_MIGRATION_ORDER = Object.freeze(['genshin', 'router', 'main']);
 const services = { genshin: 'gachia-game-genshin', main: 'gachia', router: 'gachia-router' };
 const configPins = {
   genshin: '71044abce9df463b547e471016b62f83715aba87c764d394bdd9336e0724add2',
@@ -57,7 +57,7 @@ function migratedBindings(owner, baseline) {
 // domains, tags, secret names, staging and other games remain byte-for-byte
 // controlled by the original topology checker.
 export function assertGenshinMigrationTopology(before, after, { configured = [], deployed = {} } = {}) {
-  assert.deepEqual(configured, GENSHIN_MIGRATION_ORDER.filter(owner => configured.includes(owner)), 'Invalid configured owner order');
+  assert.deepEqual(configured, GENSHIN_MIGRATION_ORDER.slice(0, configured.length), 'Invalid configured owner order');
   assert(Object.keys(deployed).every(owner => configured.includes(owner)), 'Unconfigured deployment');
   const expected = structuredClone(before);
   for (const owner of configured) {
@@ -98,19 +98,18 @@ export function assertGenshinMigrationIdentity(value) {
     assert.equal(row.sourceVersionId, activeVersion(value.baseline, row.service));
     assert(SHA.test(row.sourceIdentityPin));
     for (const role of ['candidate', 'recovery']) {
-      exactKeys(row[role], ['versionId', 'moduleSHA256', 'artifactPin', 'configPin', 'previewPin', 'acceptedAt']);
+      exactKeys(row[role], ['moduleSHA256', 'artifactPin', 'configPin', 'referencesPin']);
       const proof = row[role];
-      assert(UUID.test(proof.versionId)); assert.notEqual(proof.versionId, row.sourceVersionId, 'Raw old UUID is not compatible recovery');
-      for (const key of ['moduleSHA256', 'artifactPin', 'configPin', 'previewPin']) assert(SHA.test(proof[key]));
-      fresh(proof.acceptedAt);
+      for (const key of ['moduleSHA256', 'artifactPin', 'configPin', 'referencesPin']) assert(SHA.test(proof[key]));
     }
-    assert.notEqual(row.candidate.versionId, row.recovery.versionId);
   }
 }
 
 // Protocol core, deliberately without a CLI or a production adapter. A fixed
 // adapter must independently reopen CI, current published A, source identities,
-// sealed new/compatible-old artifacts and exact UUID HTTP evidence.
+// sealed new/compatible-old artifacts. Each downstream preview is taken only
+// after its dependency is live: Genshin, Router (still compatible with old Main),
+// then Main. No zero-percent deployment or preview dependency override is used.
 export async function executeGenshinMigration({ run, releaseKey, verify, transport }) {
   return withRunLock(run, async () => {
     const initial = structuredClone(await verify());
@@ -119,7 +118,7 @@ export async function executeGenshinMigration({ run, releaseKey, verify, transpo
     const journal = join(run, `genshin-migration-${releaseKey}.jsonl`);
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = value => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), policy: initial.policy, releaseKey, ...value }) + '\n', { flush: true });
-    const configured = [...GENSHIN_MIGRATION_ORDER], deployed = {};
+    const configured = [], deployed = {}, accepted = {};
     let pendingOperation, observedAt = initial.observedAt;
     const revalidate = async () => {
       const current = await verify(); assertGenshinMigrationIdentity(current);
@@ -133,29 +132,53 @@ export async function executeGenshinMigration({ run, releaseKey, verify, transpo
       await revalidate();
       for (const owner of GENSHIN_MIGRATION_ORDER) {
         const row = initial.owners[owner];
-        // Both forward and compatible recovery versions must still exist with
-        // the exact same modules immediately before each activation.
+        accepted[owner] = {};
         for (const role of ['recovery', 'candidate']) {
-          const proof = await transport.inspect({ owner, role, service: row.service, ...row[role] });
-          assert.equal(proof.versionId, row[role].versionId);
-          assert.equal(proof.moduleSHA256, row[role].moduleSHA256);
-          assert.equal(proof.previewPin, row[role].previewPin);
+          await revalidate();
+          pendingOperation = { phase: 'upload', owner, role, service: row.service };
+          record({ ...pendingOperation, phase: 'upload_intent', sealed: row[role] });
+          const result = await transport.upload({ owner, role, service: row.service, sealed: row[role], releaseKey });
+          assert(UUID.test(result.versionId), 'Unknown upload outcome; do not retry');
+          assert.notEqual(result.versionId, row.sourceVersionId, 'Raw old UUID is not compatible recovery');
+          if (role === 'candidate') {
+            assert.notEqual(result.versionId, accepted[owner].recovery.versionId);
+            configured.push(owner);
+          }
+          pendingOperation.versionId = result.versionId;
+          record({ ...pendingOperation, phase: 'upload_returned' });
+          const proof = await transport.inspect({ owner, role, service: row.service, versionId: result.versionId, sealed: row[role] });
+          assert.equal(proof.versionId, result.versionId); assert.equal(proof.moduleSHA256, row[role].moduleSHA256);
+          assert(SHA.test(proof.moduleProof?.pin) && SHA.test(proof.versionPin), 'Immutable uploaded module proof required');
+          await revalidate();
+          const preview = await transport.preview({ owner, role, service: row.service, versionId: result.versionId, sealed: row[role], inspected: proof });
+          assert.equal(preview.status, 'passed'); assert.equal(preview.observationMode, 'cloud_exact_version');
+          assert.equal(preview.service, row.service); assert.equal(preview.versionId, result.versionId); assert(SHA.test(preview.evidenceSHA256));
+          await transport.revalidate({ owner, role, service: row.service, versionId: result.versionId, sealed: row[role], inspected: proof });
+          await revalidate();
+          accepted[owner][role] = { ...proof, evidenceSHA256: preview.evidenceSHA256, acceptedAt: Date.now() };
+          record({ phase: 'preview_accepted', owner, role, proof: accepted[owner][role] }); pendingOperation = undefined;
         }
         await revalidate();
-        pendingOperation = { owner, service: row.service, versionId: row.candidate.versionId };
-        record({ phase: 'deployment_intent', ...pendingOperation, observedAt });
+        for (const role of ['recovery', 'candidate']) {
+          fresh(accepted[owner][role].acceptedAt);
+          await transport.revalidate({ owner, role, service: row.service, versionId: accepted[owner][role].versionId,
+            sealed: row[role], inspected: accepted[owner][role] });
+        }
+        await revalidate();
+        pendingOperation = { phase: 'deployment', owner, service: row.service, versionId: accepted[owner].candidate.versionId };
+        record({ ...pendingOperation, phase: 'deployment_intent', observedAt });
         const result = await transport.promote({ ...pendingOperation, releaseKey });
-        assert.equal(result.service, row.service); assert.equal(result.versionId, row.candidate.versionId);
+        assert.equal(result.service, row.service); assert.equal(result.versionId, accepted[owner].candidate.versionId);
         assert(UUID.test(result.deploymentId), 'Unknown deployment outcome; do not retry');
-        deployed[owner] = row.candidate.versionId;
-        record({ phase: 'deployed', ...pendingOperation, result }); pendingOperation = undefined;
+        deployed[owner] = accepted[owner].candidate.versionId;
+        record({ ...pendingOperation, phase: 'deployed', result }); pendingOperation = undefined;
         await revalidate();
         const proof = await transport.acceptStep({ owner, deployed: { ...deployed } });
         assert.equal(proof.status, 'passed'); assert(SHA.test(proof.evidenceSHA256));
         record({ phase: 'step_accepted', owner, proof });
       }
       await revalidate();
-      const proof = await transport.acceptProduction();
+      const proof = await transport.acceptProduction({ deployed: { ...deployed }, accepted: structuredClone(accepted) });
       assert.equal(proof.status, 'passed'); assert(SHA.test(proof.evidenceSHA256));
       assert.deepEqual(proof.versions, Object.fromEntries(GENSHIN_MIGRATION_ORDER.map(owner => [services[owner], deployed[owner]])));
       await revalidate();
@@ -163,7 +186,7 @@ export async function executeGenshinMigration({ run, releaseKey, verify, transpo
       return { policy: initial.policy, status: 'production_accepted', versions: proof.versions,
         journalPin: digest(readFileSync(journal)), sourceAdvanced: false };
     } catch (error) {
-      record({ phase: 'stopped', pendingOperation, deployed, error: error.message, automaticRetry: false, automaticRollback: false });
+      record({ phase: 'stopped', pendingOperation, deployed, accepted, error: error.message, automaticRetry: false, automaticRollback: false });
       try { record({ phase: 'read_only_reconciliation', snapshot: await transport.snapshot(), pendingOperation }); }
       catch (failure) { record({ phase: 'observation_unavailable', error: failure.message }); }
       throw error;

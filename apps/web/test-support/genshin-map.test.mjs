@@ -1,10 +1,11 @@
 import { readFileSync } from 'node:fs';
+import { gunzipSync } from 'node:zlib';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { expect, it } from 'vitest';
 import MapPage from '../../game-genshin/app/[lang]/genshin/map/page';
 import { collectedMapPoints, emptyMapProgress, filterMapPoints, mapCatalog, mapCoordinates, parseMapPoints, parseMapTiles, persistMapProgress, progressKey, projectMapPoints, readMapProgress, updateMapProgress } from '../../game-genshin/lib/map-model';
 
-const read = file => JSON.parse(readFileSync(new URL(`../../../reports/genshin-map-api-owner-2026-11-10-r109/public-source/${file}`, import.meta.url)));
+const read = file => JSON.parse(gunzipSync(readFileSync(new URL(`./fixtures/genshin-map/${file}.gz`, import.meta.url))));
 const storage = initial => {
   const values = new Map(Object.entries(initial ?? {}));
   return { values, getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
