@@ -67,6 +67,9 @@ test('browser CI pins the matching preinstalled image without bypassing browser 
   const version = JSON.parse(readFileSync(new URL('../node_modules/@playwright/test/package.json', import.meta.url), 'utf8')).version;
   assert.match(workflow, new RegExp(`mcr\\.microsoft\\.com/playwright:v${version.replaceAll('.', '\\.')}\\-noble@sha256:[a-f0-9]{64}`));
   assert.match(workflow, /docker pull "\$PLAYWRIGHT_CI_IMAGE"/);
+  assert.match(workflow, /sudo rm -rf -- \/usr\/local\/lib\/android\n/);
+  assert.match(workflow, /operation: "full CI with pinned browser image", estimatedBytes: 6 \* GiB/);
+  assert(workflow.indexOf('Reclaim unused hosted Android SDK') < workflow.indexOf('Prepare pinned browser environment'));
   assert.match(workflow, /--volume "\$node_root:\/ci-node:ro"/);
   assert.match(workflow, /\/bin\/bash -e -c '\n\s+pnpm --filter @gachia\/web test:guides\n\s+pnpm --filter @gachia\/web test:characters\n\s+'/);
   assert(!/continue-on-error|playwright install|apt-mirrors/.test(workflow));

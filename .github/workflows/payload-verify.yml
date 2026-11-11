@@ -37,6 +37,14 @@ jobs:
       - name: Install pinned pnpm
         if: steps.scope.outputs.consumers == 'true'
         run: npm install --global pnpm@10.10.0
+      - name: Reclaim unused hosted Android SDK
+        if: steps.scope.outputs.consumers == 'true'
+        run: |
+          # This verification has no Android build; only reclaim the ephemeral runner's SDK.
+          if test -d /usr/local/lib/android; then
+            du -sh /usr/local/lib/android
+            sudo rm -rf -- /usr/local/lib/android
+          fi
       - name: Install public workspace and isolated CMS dependencies
         if: steps.scope.outputs.consumers == 'true'
         run: |
@@ -44,7 +52,9 @@ jobs:
           pnpm --dir services/content-cms install --frozen-lockfile
       - name: Prepare pinned browser environment
         if: steps.scope.outputs.consumers == 'true'
-        run: docker pull "$PLAYWRIGHT_CI_IMAGE"
+        run: |
+          docker pull "$PLAYWRIGHT_CI_IMAGE"
+          node --input-type=module -e 'import { assertDiskBudget, GiB } from "./scripts/desktop-disk-preflight.mjs"; assertDiskBudget({ path: process.cwd(), operation: "full CI with pinned browser image", estimatedBytes: 6 * GiB });'
       - name: Verify CMS types without deployment credentials
         if: steps.scope.outputs.consumers == 'true'
         run: |
