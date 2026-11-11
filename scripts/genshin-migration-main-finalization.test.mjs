@@ -1,12 +1,28 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { SERVICES } from './desktop-cloud-release.mjs';
 import { GENSHIN_MIGRATION_ORDER, GENSHIN_MIGRATION_POLICY } from './genshin-production-migration.mjs';
-import { assertGenshinMainFinalizationPrefix, executeGenshinMainFinalization } from './genshin-migration-main-finalization.mjs';
+import { assertGenshinMainFinalizationPrefix, executeGenshinMainFinalization, genshinMainFinalizationTransport } from './genshin-migration-main-finalization.mjs';
+import { digest } from './desktop-release-assets.mjs';
+import { migrationSave } from './genshin-migration-http.mjs';
 const sha = c => c.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`;
+test('real Main preview adapter preserves the exact requested UUID in its protocol response', async t => {
+  const root = realpathSync(mkdtempSync(join(tmpdir(), 'main-preview-adapter-'))); t.after(() => rmSync(root, { recursive: true, force: true }));
+  const local = join(root, 'main/recovery/local-http/responses'); mkdirSync(local, { recursive: true });
+  const body = Buffer.from('fixture-static-file'), headers = { 'content-type': 'application/octet-stream', 'cache-control': 'public,max-age=31536000,immutable' };
+  const reference = migrationSave(local, 'references.json', [{ path: '/_next/static/fixture.bin', status: 200, sha256: digest(body), bytes: body.length, headers }]);
+  const versionId = uuid(42), requested = [];
+  const transport = genshinMainFinalizationTransport({ previous: { accepted: { main: { recovery: { versionId } } },
+    evidence: { directory: root, value: { owners: { main: { recovery: { referencesPin: reference.pin } } } } } },
+    releaseKey: sha('a'), token: 'not-used-by-preview', directory: root,
+    previewRequest: async url => { requested.push(String(url)); return new Response(body, { headers: { ...headers, 'x-robots-tag': 'noindex' } }); } });
+  const result = await transport.preview('recovery');
+  assert.equal(result.versionId, versionId); assert.equal(result.service, 'gachia'); assert.equal(result.observationMode, 'cloud_exact_version');
+  assert.deepEqual(requested, [`https://${versionId.slice(0, 8)}-gachia.aieasygames.workers.dev/_next/static/fixture.bin`]);
+});
 function fixture(t) {
   const run = mkdtempSync(join(tmpdir(), 'known-main-finalization-')); t.after(() => rmSync(run, { recursive: true, force: true }));
   const baseline = { services: {}, bindings: {}, settings: {}, subdomains: {}, scripts: [...SERVICES], routes: [], domains: [] };

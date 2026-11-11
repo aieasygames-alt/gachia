@@ -48,4 +48,10 @@ test('Main finalization binds the failed preview, exact modules and both ancesto
   for (const continuationCI of [{ ...request.continuationCI, status: 'local_passed' }, { ...request.continuationCI, commit: 'invalid' }, { ...request.continuationCI, runID: 0 }])
     assert.throws(() => genshinMainFinalizationRequest({ ...request, continuationCI }))
   assert.throws(() => genshinMainFinalizationRequest({ ...request, publicProxy: 'http://external.example:1087' }))
+  const preflightStop = { request: request.stopped.request, identity: request.stopped.identity, journal: request.stopped.journal,
+    executorCI: { status: 'full_exact_ci_passed', commit: 'd'.repeat(40), runID: 4 } }
+  assert.deepEqual(genshinMainFinalizationRequest({ ...request, preflightStop }).preflightStop, preflightStop)
+  for (const stop of [{ ...preflightStop, extra: true }, { ...preflightStop, executorCI: { ...preflightStop.executorCI, status: 'local_passed' } },
+    { ...preflightStop, journal: { path: '../stop', pin: 'a'.repeat(64) } }])
+    assert.throws(() => genshinMainFinalizationRequest({ ...request, preflightStop: stop }))
 })

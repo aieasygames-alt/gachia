@@ -100,6 +100,8 @@ export async function advanceGenshinProductionMigration(input: { completion: Pro
   assert.equal(currentCI.commit, executor.executorCommit); assert.deepEqual(currentCI, executor.executorCI)
   assert.deepEqual(await verifyUnifiedCI(completed.value.executorCI.runID, completed.value.executorCI.commit, githubToken), completed.value.executorCI)
   if (completed.value.continuationExecutorCI) assert.deepEqual(await verifyUnifiedCI(completed.value.continuationExecutorCI.runID, completed.value.continuationExecutorCI.commit, githubToken), completed.value.continuationExecutorCI)
+  const preflightCI = completed.value.request.preflightStop?.executorCI
+  if (preflightCI) assert.deepEqual(await verifyUnifiedCI(preflightCI.runID, preflightCI.commit, githubToken), preflightCI)
   await verifyUnifiedPublishedSource({ publication: completed.evidence.index.publication, sourceIndex: completed.evidence.value.sourceIndex, githubToken })
   assertDiskBudget({ path: input.directory, operation: 'migrated complete source index', estimatedBytes: GiB })
   const reader = { snapshot: () => { executor.verify(); return desktopCloudSnapshot(input.cloudToken, unifiedProductionRead) },

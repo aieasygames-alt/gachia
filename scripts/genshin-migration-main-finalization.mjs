@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { appendFileSync, readFileSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { assertUploadedVersion } from './desktop-cloud-transport.mjs';
 import { desktopCloudSnapshot } from './desktop-cloud-release.mjs';
@@ -84,6 +84,30 @@ export async function readStoppedMainMigration(request) {
   const deployed = { ...original.deployed, router: accepted.router.candidate.versionId };
   assert.deepEqual(rows[16].deployed, deployed);
   assert.deepEqual(rows[16].accepted, { ...accepted, main: { recovery: accepted.main.recovery } });
+  if (request.preflightStop) {
+    const stop = request.preflightStop, priorRequest = migrationPinned(stop.request), priorIdentity = migrationPinned(stop.identity), priorDirectory = dirname(stop.journal.path);
+    assert(!Object.hasOwn(priorRequest, 'preflightStop'), 'Only one known pre-write adapter stop may continue');
+    const { preflightStop, ...currentRequest } = request;
+    assert.deepEqual({ ...priorRequest, executorRunID: request.executorRunID }, currentRequest);
+    assert.equal(stop.executorCI.status, 'full_exact_ci_passed'); assert.equal(stop.executorCI.runID, priorRequest.executorRunID);
+    assert.equal(stop.request.path, join(priorDirectory, 'request.json')); assert.equal(stop.identity.path, join(priorDirectory, 'identity.json'));
+    assert.equal(priorIdentity.releaseKey, genshinMainFinalizationKey(priorRequest, stop.executorCI));
+    assert.deepEqual({ ...priorIdentity, releaseKey: identity.releaseKey, observedAt: identity.observedAt }, identity);
+    assert.equal(stop.journal.path, join(priorDirectory, `genshin-migration-${priorIdentity.releaseKey}.jsonl`));
+    const priorRows = migrationJournalRows(stop.journal, priorIdentity.releaseKey);
+    assert.deepEqual(priorRows.map(row => row.phase), ['main_finalization_baseline', 'stopped', 'read_only_reconciliation']);
+    assert.deepEqual(priorRows[0].previousJournal, stopped.journal); assert.deepEqual(priorRows[0].baseline, identity.baseline); assert.deepEqual(priorRows[0].deployed, deployed);
+    assert.deepEqual(priorRows[1].deployed, deployed); assert.deepEqual(priorRows[1].accepted, {});
+    for (const row of priorRows.slice(1)) assert.equal(row.pendingOperation, undefined, 'An unknown write cannot continue');
+    assert.equal(priorRows[1].automaticRetry, false); assert.equal(priorRows[1].automaticRollback, false);
+    assert(priorRows[1].error.includes('undefined') && priorRows[1].error.includes(accepted.main.recovery.versionId));
+    assertGenshinMigrationTopology(identity.baseline, priorRows[2].snapshot, { configured: [...GENSHIN_MIGRATION_ORDER], deployed });
+    assert(!existsSync(join(priorDirectory, 'main-candidate-preview')));
+    const previewPath = join(priorDirectory, 'main-recovery-preview/result.json');
+    recheckMigrationHTTP({ directory: dirname(previewPath), pin: digest(readFileSync(previewPath)), origin: migrationPreviewOrigin(service, accepted.main.recovery.versionId),
+      references: migrationPinned({ path: join(evidence.directory, 'main/recovery/local-http/responses/references.json'), pin: evidence.value.owners.main.recovery.referencesPin }),
+      owner: 'main', role: 'recovery', expected: evidence.expected, bases: evidence.bases, preview: true });
+  }
   return { request: previousRequest, identity, original, evidence, rows, directory, modules, accepted, deployed,
     deployments: { ...original.deployments, router: router.deployment } };
 }
@@ -99,9 +123,13 @@ export function genshinMainFinalizationTransport({ previous, releaseKey, token, 
       return revalidateUnifiedUploadedModule({ proof: recorded.moduleProof, service, versionId: recorded.versionId, moduleSHA256: sealed.moduleSHA256,
         context: { role, transportPin: previous.identity.releaseKey, configPin: sealed.configPin }, readVersion });
     },
-    preview: role => verifyMigrationHTTP({ origin: migrationPreviewOrigin(service, previous.accepted.main[role].versionId),
-      references: migrationPinned({ path: join(evidence.directory, 'main', role, 'local-http/responses/references.json'), pin: evidence.value.owners.main[role].referencesPin }),
-      directory: join(directory, 'main-' + role + '-preview'), owner: 'main', role, expected: evidence.expected, bases: evidence.bases, preview: true, request: previewRequest }),
+    preview: async role => {
+      const versionId = previous.accepted.main[role].versionId;
+      const proof = await verifyMigrationHTTP({ origin: migrationPreviewOrigin(service, versionId),
+        references: migrationPinned({ path: join(evidence.directory, 'main', role, 'local-http/responses/references.json'), pin: evidence.value.owners.main[role].referencesPin }),
+        directory: join(directory, 'main-' + role + '-preview'), owner: 'main', role, expected: evidence.expected, bases: evidence.bases, preview: true, request: previewRequest });
+      return { ...proof, versionId };
+    },
     promote: async args => {
       assert.equal(args.owner, 'main'); assert.equal(args.service, service); assert.equal(args.versionId, previous.accepted.main.candidate.versionId);
       if (!writer) writer = unifiedOwnerDeploymentWriter({ owner: 'main', releaseKey, versionId: args.versionId, token, request: fetch,

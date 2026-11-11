@@ -17,10 +17,11 @@ import { verifyUnifiedPublishedSource } from './unified-source-advance'
 
 type Proof = { path: string; pin: string }
 type Request = { schemaVersion: 1; kind: 'genshin_main_migration_finalization_request'; executorRunID: number; continuationCI: any; publicProxy?: string;
+  preflightStop?: { request: Proof; identity: Proof; journal: Proof; executorCI: any };
   stopped: { request: Proof; identity: Proof; journal: Proof; mainCandidateModule: Proof; mainCandidateVersion: Proof; failedPreview: Proof } }
 export function genshinMainFinalizationRequest(value: unknown): Request {
   assert(value && typeof value === 'object' && !Array.isArray(value)); const request = value as Request
-  assert.deepEqual(Object.keys(request).sort(), ['continuationCI', 'executorRunID', 'kind', 'schemaVersion', 'stopped', ...(Object.hasOwn(request, 'publicProxy') ? ['publicProxy'] : [])].sort())
+  assert.deepEqual(Object.keys(request).sort(), ['continuationCI', 'executorRunID', 'kind', 'schemaVersion', 'stopped', ...(Object.hasOwn(request, 'publicProxy') ? ['publicProxy'] : []), ...(Object.hasOwn(request, 'preflightStop') ? ['preflightStop'] : [])].sort())
   assert.equal(request.schemaVersion, 1); assert.equal(request.kind, 'genshin_main_migration_finalization_request')
   assert(Number.isSafeInteger(request.executorRunID) && request.executorRunID > 0)
   assert.deepEqual(Object.keys(request.stopped).sort(), ['failedPreview', 'identity', 'journal', 'mainCandidateModule', 'mainCandidateVersion', 'request'])
@@ -30,6 +31,15 @@ export function genshinMainFinalizationRequest(value: unknown): Request {
   assert.equal(request.continuationCI.status, 'full_exact_ci_passed'); assert(/^[a-f0-9]{40}$/.test(request.continuationCI.commit))
   assert(Number.isSafeInteger(request.continuationCI.runID) && request.continuationCI.runID > 0)
   if (Object.hasOwn(request, 'publicProxy')) assert.equal(unifiedPreviewProxy(request.publicProxy), request.publicProxy)
+  if (request.preflightStop) {
+    assert.deepEqual(Object.keys(request.preflightStop).sort(), ['executorCI', 'identity', 'journal', 'request'])
+    for (const key of ['request', 'identity', 'journal'] as const) {
+      const proof: Proof = request.preflightStop[key]
+      assert.deepEqual(Object.keys(proof).sort(), ['path', 'pin']); assert(path.isAbsolute(proof.path) && /^[a-f0-9]{64}$/.test(proof.pin))
+    }
+    assert.equal(request.preflightStop.executorCI.status, 'full_exact_ci_passed'); assert(/^[a-f0-9]{40}$/.test(request.preflightStop.executorCI.commit))
+    assert(Number.isSafeInteger(request.preflightStop.executorCI.runID) && request.preflightStop.executorCI.runID > 0)
+  }
   return structuredClone(request)
 }
 export async function auditGenshinMainFinalization(input: unknown, cloudToken: string) {
@@ -38,7 +48,7 @@ export async function auditGenshinMainFinalization(input: unknown, cloudToken: s
   const executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
   const previous: any = await readStoppedMainMigration(request), evidence = previous.evidence
   assert.equal(request.publicProxy, previous.request.publicProxy)
-  for (const ci of [previous.identity.sourceCI, request.continuationCI]) {
+  for (const ci of [previous.identity.sourceCI, request.continuationCI, ...(request.preflightStop ? [request.preflightStop.executorCI] : [])]) {
     assert.deepEqual(await verifyUnifiedCI(ci.runID, ci.commit, githubToken), ci)
     execFileSync('git', ['merge-base', '--is-ancestor', ci.commit, executor.executorCommit], { stdio: ['ignore', 'pipe', 'pipe'] })
   }
