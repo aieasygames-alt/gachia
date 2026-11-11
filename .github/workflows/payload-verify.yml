@@ -66,6 +66,8 @@ jobs:
         run: |
           pnpm --filter @gachia/web test
           pnpm --filter @gachia/data test
+          # Preserve Ubuntu signature checks while avoiding the failing Azure mirror.
+          printf '%s\n' 'https://archive.ubuntu.com/ubuntu/' 'https://security.ubuntu.com/ubuntu/' | sudo tee /etc/apt/apt-mirrors.txt >/dev/null
           pnpm --filter @gachia/web exec playwright install --with-deps chromium
           pnpm --filter @gachia/web test:guides
           pnpm --filter @gachia/web test:characters
