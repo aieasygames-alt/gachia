@@ -16,7 +16,8 @@ const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const treePin = directory => digest(migrationJSON(artifactFiles(directory)));
 export const genshinMigrationReleaseKey = (request, executorCI) => digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, bundle: request.bundle, sourceCI: executorCI,
   ...(request.previewProxy ? { previewProxy: request.previewProxy } : {}) }));
-export const genshinMigrationContinuationKey = (request, executorCI) => digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, stopped: request.stopped, executorCI }));
+export const genshinMigrationContinuationKey = (request, executorCI) => digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, stopped: request.stopped, executorCI,
+  ...(request.publicProxy ? { publicProxy: request.publicProxy } : {}) }));
 
 function journalRows(proof, releaseKey) {
   assert.equal(realpathSync(proof.path), resolve(proof.path), 'Linked migration journal forbidden');
@@ -184,7 +185,7 @@ export async function advanceGenshinMigrationSources({ completion, directory, re
       moduleProof: completed.accepted.router.candidate.moduleProof, version: completed.modules.router.candidate.version, deploymentId: completed.deployments.router.deploymentId };
     assertModuleVersionIdentity(router.version, await reader.version(router.service, router.versionId));
     const publicAcceptance = await verifyMigrationHTTP({ origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences),
-      directory: join(directory, 'public'), owner: 'router', role: 'candidate', expected: evidence.expected, bases: evidence.bases, request: unifiedProductionRead });
+      directory: join(directory, 'public'), owner: 'router', role: 'candidate', expected: evidence.expected, bases: evidence.bases, request: reader.publicRequest ?? unifiedProductionRead });
     const after = await reader.snapshot(); assertGenshinMigrationTopology(before, after);
     const value = { schemaVersion: 1, kind: 'genshin_independent_published_source_index', status: 'published_sources_observed', completion, originalSourceIndex: evidence.value.sourceIndex,
       sourceCommit: evidence.value.sourceCommit, executorCI: completed.value.executorCI,

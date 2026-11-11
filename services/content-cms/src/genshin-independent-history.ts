@@ -84,7 +84,7 @@ export async function readCompletedGenshinIndependentRelease(proof: Proof, depth
   assert.equal(value.executorCI.commit, evidence.value.sourceCommit); assert.equal(value.executorCI.status, 'full_exact_ci_passed')
   assert.deepEqual(value.bundle, value.request.bundle); assert.equal(value.request.executorRunID, value.executorCI.runID)
   assert.equal(value.releaseKey, digest(migrationJSON({ policy: GENSHIN_INDEPENDENT_POLICY, bundle: value.bundle, executorCI: value.executorCI,
-    ...(value.request.previewProxy ? { previewProxy: value.request.previewProxy } : {}) })))
+    ...(value.request.previewProxy ? { previewProxy: value.request.previewProxy } : {}), ...(value.request.publicProxy ? { publicProxy: value.request.publicProxy } : {}) })))
   assert.equal(value.journal.path, path.join(directory, `genshin-independent-${value.releaseKey}.jsonl`)); assert.equal(value.journal.pin, value.journalPin)
   const bytes = readFileSync(value.journal.path); assert.equal(digest(bytes), value.journal.pin); assert(bytes.toString().endsWith('\n'))
   const rows = bytes.toString().trimEnd().split('\n').map(text => JSON.parse(text))
@@ -145,7 +145,7 @@ export async function advanceGenshinIndependentSources(input: { completion: Proo
     }
     assertModuleVersionIdentity(evidence.sources.router.version, await input.reader.version('gachia-router', evidence.sources.router.versionId))
     const publicAcceptance = await verifyMigrationHTTP({ origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences), directory: path.join(directory, 'public'),
-      owner: 'router', role: 'candidate', expected: evidence.expected, bases: evidence.bases, request: unifiedProductionRead })
+      owner: 'router', role: 'candidate', expected: evidence.expected, bases: evidence.bases, request: input.reader.publicRequest ?? unifiedProductionRead })
     const after = await input.reader.snapshot(); assertTopology(before, after)
     const value = { schemaVersion: 1, kind: 'genshin_independent_editorial_source_index', status: 'published_sources_observed', completion: input.completion,
       previousSourceIndex: evidence.value.sourceIndex, sourceCommit: evidence.value.sourceCommit, executorCI: completed.value.executorCI, owners, router: evidence.sources.router,

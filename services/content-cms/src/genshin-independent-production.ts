@@ -13,7 +13,7 @@ import { readMigrationRouterVersion } from '../../../scripts/genshin-migration-r
 import { GENSHIN_INDEPENDENT_POLICY, executeGenshinIndependentRelease } from '../../../scripts/genshin-independent-release.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
 import { readUnifiedVersion } from '../../../scripts/unified-version-identity.mjs'
-import { createGenshinMigrationPreviewNetwork, unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
+import { createGenshinMigrationPreviewNetwork, createGenshinPublicNetwork, unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
 import { freezeUnifiedContent } from './unified-build'
 import { loadUnifiedDesktopPlan, unifiedSelection } from './unified-desktop'
 import { verifyUnifiedInstalledApplication } from './unified-installed-application'
@@ -30,12 +30,13 @@ import { readUnifiedSources } from './unified-sources'
 import { buildUnifiedOwners } from './unified-owner-build'
 
 type Proof = { path: string; pin: string }
-type Request = { schemaVersion: 1; kind: 'genshin_independent_editorial_request'; bundle: Proof; executorRunID: number; previewProxy?: string }
+type Request = { schemaVersion: 1; kind: 'genshin_independent_editorial_request'; bundle: Proof; executorRunID: number; previewProxy?: string; publicProxy?: string }
 const githubCredential = () => execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'], maxBuffer: 65536 }).trim()
 export function genshinIndependentRequest(value: unknown): Request {
   assert(value && typeof value === 'object' && !Array.isArray(value)); const request = value as Request
-  assert.deepEqual(Object.keys(request).sort(), ['bundle', 'executorRunID', 'kind', 'schemaVersion', ...(Object.hasOwn(request, 'previewProxy') ? ['previewProxy'] : [])].sort())
+  assert.deepEqual(Object.keys(request).sort(), ['bundle', 'executorRunID', 'kind', 'schemaVersion', ...(Object.hasOwn(request, 'previewProxy') ? ['previewProxy'] : []), ...(Object.hasOwn(request, 'publicProxy') ? ['publicProxy'] : [])].sort())
   if (Object.hasOwn(request, 'previewProxy')) assert.equal(unifiedPreviewProxy(request.previewProxy), request.previewProxy)
+  if (Object.hasOwn(request, 'publicProxy')) assert.equal(unifiedPreviewProxy(request.publicProxy), request.publicProxy)
   assert.equal(request.schemaVersion, 1); assert.equal(request.kind, 'genshin_independent_editorial_request')
   assert.deepEqual(Object.keys(request.bundle).sort(), ['path', 'pin']); assert(path.isAbsolute(request.bundle.path) && /^[a-f0-9]{64}$/.test(request.bundle.pin))
   assert(Number.isSafeInteger(request.executorRunID) && request.executorRunID > 0); return structuredClone(request)
@@ -101,7 +102,7 @@ export async function auditGenshinIndependentProduction(input: unknown, tokens: 
   assertModuleVersionIdentity(evidence.sources.router.version, await readMigrationRouterVersion({ versionId: evidence.sources.router.versionId, token: tokens.cloudToken, request: unifiedProductionRead }))
   assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
   const releaseKey = digest(migrationJSON({ policy: GENSHIN_INDEPENDENT_POLICY, bundle: request.bundle, executorCI: executor.executorCI,
-    ...(request.previewProxy ? { previewProxy: request.previewProxy } : {}) }))
+    ...(request.previewProxy ? { previewProxy: request.previewProxy } : {}), ...(request.publicProxy ? { publicProxy: request.publicProxy } : {}) }))
   const identity = { policy: GENSHIN_INDEPENDENT_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI, bundlePin: request.bundle.pin,
     reviewPin: review.reviewPin, baseline: evidence.sources.baseline, observedAt: Date.now(), owners: evidence.value.owners }
   const verify = async () => {
@@ -117,13 +118,15 @@ export async function activateGenshinIndependentProduction(input: { request: unk
   const directory = path.resolve(input.directory); assertDiskBudget({ path: directory, operation: 'single Genshin cloud evidence', estimatedBytes: 2 * GiB }); mkdirSync(directory, { mode: 0o700 })
   migrationSave(directory, 'request.json', audited.request); migrationSave(directory, 'identity.json', audited.identity)
   const network = audited.request.previewProxy ? await createGenshinMigrationPreviewNetwork(audited.request.previewProxy) : undefined
+  const publicNetwork = audited.request.publicProxy ? await createGenshinPublicNetwork(audited.request.publicProxy) : undefined
   migrationSave(directory, 'preview-network.json', network?.route ?? { kind: 'direct_exact_version_read', retries: 0 })
+  migrationSave(directory, 'public-network.json', publicNetwork?.route ?? { kind: 'direct_public_read', retries: 0 })
   let result
   try {
     const transport = genshinMigrationTransport({ evidence: audited.evidence, releaseKey: input.releaseKey, token: input.cloudToken, directory,
-      ...(network ? { previewRequest: network.request } : {}) })
+      ...(network ? { previewRequest: network.request } : {}), ...(publicNetwork ? { publicRequest: publicNetwork.request } : {}) })
     result = await executeGenshinIndependentRelease({ run: directory, releaseKey: input.releaseKey, verify: audited.verify, transport })
-  } finally { await network?.close() }
+  } finally { await network?.close(); await publicNetwork?.close() }
   audited.executor.verify()
   const value = { schemaVersion: 1, kind: 'genshin_independent_editorial_completion', request: audited.request, bundle: audited.request.bundle,
     executorCI: audited.executor.executorCI, releaseKey: input.releaseKey, ...result,
@@ -142,5 +145,9 @@ export async function advanceGenshinIndependentProduction(input: { completion: P
   const reader = { snapshot: () => { executor.verify(); return desktopCloudSnapshot(input.cloudToken, unifiedProductionRead) },
     version: (service: string, versionId: string) => service === 'gachia-router' ? readMigrationRouterVersion({ versionId, token: input.cloudToken, request: unifiedProductionRead })
       : readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }) }
-  const result = await advanceGenshinIndependentSources({ completion: input.completion, directory: input.directory, reader }); executor.verify(); return result
+  const network = completed.value.request.publicProxy ? await createGenshinPublicNetwork(completed.value.request.publicProxy) : undefined
+  try {
+    const result = await advanceGenshinIndependentSources({ completion: input.completion, directory: input.directory, reader: { ...reader, ...(network ? { publicRequest: network.request } : {}) } })
+    executor.verify(); return result
+  } finally { await network?.close() }
 }

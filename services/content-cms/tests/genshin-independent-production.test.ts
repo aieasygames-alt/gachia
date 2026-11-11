@@ -7,6 +7,9 @@ const valid = () => ({ schemaVersion: 1, kind: 'genshin_independent_editorial_re
 test('independent request cannot inject scope, transport, live review or retry authority', () => {
   assert.deepEqual(genshinIndependentRequest(valid()), valid())
   assert.equal(genshinIndependentRequest({ ...valid(), previewProxy: 'http://127.0.0.1:1087' }).previewProxy, 'http://127.0.0.1:1087')
+  assert.equal(genshinIndependentRequest({ ...valid(), publicProxy: 'http://127.0.0.1:1087' }).publicProxy, 'http://127.0.0.1:1087')
+  for (const publicProxy of ['http://example.com:1087', 'http://user:secret@127.0.0.1:1087', 'http://127.0.0.1:1087/path'])
+    assert.throws(() => genshinIndependentRequest({ ...valid(), publicProxy }))
   for (const previewProxy of ['http://example.com:1087', 'http://user:secret@127.0.0.1:1087', 'http://127.0.0.1:1087/path'])
     assert.throws(() => genshinIndependentRequest({ ...valid(), previewProxy }))
   for (const key of ['verify', 'transport', 'skipCI', 'record', 'sourceIndex', 'owner', 'baseline', 'retry', 'productionReady']) assert.throws(() => genshinIndependentRequest({ ...valid(), [key]: true }))

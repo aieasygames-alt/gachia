@@ -21,6 +21,9 @@ test('continuation accepts only pinned stopped evidence and current exact CI, ne
   const request = { schemaVersion: 1, kind: 'genshin_migration_continuation_request', executorRunID: 2,
     stopped: Object.fromEntries(['request', 'identity', 'journal'].map(key => [key, { path: `/prior/${key}.json`, pin: 'b'.repeat(64) }])) }
   assert.deepEqual(genshinMigrationContinuationRequest(request), request)
+  assert.equal(genshinMigrationContinuationRequest({ ...request, publicProxy: 'http://127.0.0.1:1087' }).publicProxy, 'http://127.0.0.1:1087')
+  for (const publicProxy of ['http://example.com:1087', 'http://user:secret@127.0.0.1:1087', 'http://127.0.0.1:1087/path'])
+    assert.throws(() => genshinMigrationContinuationRequest({ ...request, publicProxy }))
   for (const key of ['transport', 'accepted', 'deployed', 'owners', 'skipCI', 'previewProxy', 'bundle', 'success'])
     assert.throws(() => genshinMigrationContinuationRequest({ ...request, [key]: true }))
   for (const stopped of [{ ...request.stopped, extra: true }, { request: request.stopped.request },

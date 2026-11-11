@@ -24,15 +24,16 @@ export const assertUnifiedPreviewRead = (input, options) => assertOwnedPreviewRe
   /^[a-f0-9]{8}-(?:gachia|gachia-game-(?:azur-promilia|genshin|lvmeng|nte))\.aieasygames\.workers\.dev$/);
 export const assertGenshinMigrationPreviewRead = (input, options) => assertOwnedPreviewRead(input, options,
   /^[a-f0-9]{8}-(?:gachia|gachia-router|gachia-game-genshin)\.aieasygames\.workers\.dev$/);
+export const assertGenshinPublicRead = (input, options) => assertOwnedPreviewRead(input, options, /^gachia\.com$/);
 
 // Use the existing pinned HTTP client, not a browser/profile or global proxy.
 // SOCKS5 resolves the exact TLS hostname through the user's existing local proxy.
-async function createOwnedPreviewNetwork(proxy, assertRead) {
+async function createOwnedPreviewNetwork(proxy, assertRead, kind = 'explicit_loopback_preview_proxy') {
   const server = unifiedPreviewProxy(proxy);
   const context = await playwright.newContext({ proxy: { server }, ignoreHTTPSErrors: false, timeout: 30000, userAgent: 'node',
     storageState: { cookies: [], origins: [] } });
   return {
-    route: { kind: 'explicit_loopback_preview_proxy', server, userAgent: 'node', credentials: false, tlsVerification: true, redirects: false, retries: 0 },
+    route: { kind, server, userAgent: 'node', credentials: false, tlsVerification: true, redirects: false, retries: 0 },
     close: () => context.dispose(),
     request: async (input, options) => {
       const { url, headers } = assertRead(input, options); options.signal?.throwIfAborted();
@@ -53,3 +54,4 @@ async function createOwnedPreviewNetwork(proxy, assertRead) {
 }
 export const createUnifiedPreviewNetwork = proxy => createOwnedPreviewNetwork(proxy, assertUnifiedPreviewRead);
 export const createGenshinMigrationPreviewNetwork = proxy => createOwnedPreviewNetwork(proxy, assertGenshinMigrationPreviewRead);
+export const createGenshinPublicNetwork = proxy => createOwnedPreviewNetwork(proxy, assertGenshinPublicRead, 'explicit_loopback_public_proxy');

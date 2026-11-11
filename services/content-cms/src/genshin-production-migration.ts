@@ -14,7 +14,7 @@ import { readMigrationRouterSource, readMigrationRouterVersion } from '../../../
 import { advanceGenshinMigrationSources, genshinMigrationContinuationKey, readCompletedGenshinMigration, readStoppedGenshinMigration } from '../../../scripts/genshin-migration-source-advance.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
 import { readUnifiedVersion } from '../../../scripts/unified-version-identity.mjs'
-import { createGenshinMigrationPreviewNetwork, unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
+import { createGenshinMigrationPreviewNetwork, createGenshinPublicNetwork, unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
 import { createUnifiedExecutorVerifier, verifyUnifiedCI } from './unified-production'
 import { verifyUnifiedPublishedSource } from './unified-source-advance'
 
@@ -105,16 +105,19 @@ export async function advanceGenshinProductionMigration(input: { completion: Pro
     version: (service: string, versionId: string) => service === 'gachia-router'
       ? readMigrationRouterVersion({ versionId, token: input.cloudToken, request: unifiedProductionRead })
       : readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }) }
-  const result = await advanceGenshinMigrationSources({ completion: input.completion, directory: input.directory, reader })
-  executor.verify()
-  return result
+  const network = completed.value.request.publicProxy ? await createGenshinPublicNetwork(completed.value.request.publicProxy) : undefined
+  try {
+    const result = await advanceGenshinMigrationSources({ completion: input.completion, directory: input.directory, reader: { ...reader, ...(network ? { publicRequest: network.request } : {}) } })
+    executor.verify(); return result
+  } finally { await network?.close() }
 }
 
-type ContinuationRequest = { schemaVersion: 1; kind: 'genshin_migration_continuation_request'; stopped: { request: Proof; identity: Proof; journal: Proof }; executorRunID: number }
+type ContinuationRequest = { schemaVersion: 1; kind: 'genshin_migration_continuation_request'; stopped: { request: Proof; identity: Proof; journal: Proof }; executorRunID: number; publicProxy?: string }
 export function genshinMigrationContinuationRequest(value: unknown): ContinuationRequest {
   assert(value && typeof value === 'object' && !Array.isArray(value))
   const request = value as ContinuationRequest
-  assert.deepEqual(Object.keys(request).sort(), ['executorRunID', 'kind', 'schemaVersion', 'stopped'])
+  assert.deepEqual(Object.keys(request).sort(), ['executorRunID', 'kind', 'schemaVersion', 'stopped', ...(Object.hasOwn(request, 'publicProxy') ? ['publicProxy'] : [])].sort())
+  if (Object.hasOwn(request, 'publicProxy')) assert.equal(unifiedPreviewProxy(request.publicProxy), request.publicProxy)
   assert.equal(request.schemaVersion, 1); assert.equal(request.kind, 'genshin_migration_continuation_request')
   assert(Number.isSafeInteger(request.executorRunID) && request.executorRunID > 0)
   assert.deepEqual(Object.keys(request.stopped).sort(), ['identity', 'journal', 'request'])
@@ -172,14 +175,16 @@ export async function activateGenshinMigrationContinuation(input: { request: unk
   mkdirSync(directory, { mode: 0o700 }); migrationSave(directory, 'request.json', audited.request); migrationSave(directory, 'identity.json', audited.identity)
   const proxy = audited.previous.request.previewProxy
   const network = proxy ? await createGenshinMigrationPreviewNetwork(proxy) : undefined
+  const publicNetwork = audited.request.publicProxy ? await createGenshinPublicNetwork(audited.request.publicProxy) : undefined
   migrationSave(directory, 'preview-network.json', network?.route ?? { kind: 'direct_exact_version_read', retries: 0 })
+  migrationSave(directory, 'public-network.json', publicNetwork?.route ?? { kind: 'direct_public_read', retries: 0 })
   let result
   try {
     const transport = genshinMigrationTransport({ evidence: audited.evidence, releaseKey: input.releaseKey, token: input.cloudToken, directory,
-      ...(network ? { previewRequest: network.request } : {}) })
+      ...(network ? { previewRequest: network.request } : {}), ...(publicNetwork ? { publicRequest: publicNetwork.request } : {}) })
     result = await executeGenshinMigrationContinuation({ run: directory, releaseKey: input.releaseKey, verify: audited.verify, transport,
       previous: { journal: audited.request.stopped.journal, identity: audited.previous.identity } })
-  } finally { await network?.close() }
+  } finally { await network?.close(); await publicNetwork?.close() }
   audited.executor.verify()
   const value = { kind: 'genshin_initial_production_migration_completion', schemaVersion: 1, request: audited.request,
     bundle: audited.previous.request.bundle, executorCI: audited.previous.identity.sourceCI, continuationExecutorCI: audited.executor.executorCI,
