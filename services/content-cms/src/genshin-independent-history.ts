@@ -26,9 +26,10 @@ export async function readGenshinIndependentSourceIndex(proof: Proof, depth = 0)
     const completed: any = await readCompletedGenshinMigration(value.completion), e = completed.evidence
     assert.deepEqual(value.originalSourceIndex, e.value.sourceIndex); assert.deepEqual(value.executorCI, completed.value.executorCI)
     assert.deepEqual(value.continuationExecutorCI, completed.value.continuationExecutorCI)
+    assert.deepEqual(value.finalizationExecutorCI, completed.value.finalizationExecutorCI)
     sources = e.sources; workspace = e.workspace; routerCode = completed.modules.router.candidate.code
     originalPublication = e.index.publication; originalSourceIndex = e.value.sourceIndex
-    ancestors = [completed.value.executorCI, ...(completed.value.continuationExecutorCI ? [completed.value.continuationExecutorCI] : [])]
+    ancestors = [completed.value.executorCI, ...(completed.value.continuationExecutorCI ? [completed.value.continuationExecutorCI] : []), ...(completed.value.finalizationExecutorCI ? [completed.value.finalizationExecutorCI] : [])]
     baseline = migrationPinned(value.baseline)
     const deployed = Object.fromEntries(GENSHIN_MIGRATION_ORDER.map(owner => [owner, completed.accepted[owner].candidate.versionId]))
     assertGenshinMigrationTopology(e.value.baseline, baseline, { configured: [...GENSHIN_MIGRATION_ORDER], deployed })

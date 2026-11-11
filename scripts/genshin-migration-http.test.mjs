@@ -5,9 +5,24 @@ import { join } from 'node:path';
 import test from 'node:test';
 import { digest } from './desktop-release-assets.mjs';
 import { genshinContentAssets } from './genshin-content-assets.mjs';
-import { migrationAggregateBases, migrationPinned, migrationSave, recheckMigrationReferences, validateMigrationJSON, verifyMigrationHTTP } from './genshin-migration-http.mjs';
+import { MIGRATION_FINGERPRINT_POLICY, assertMigrationFingerprint, migrationAggregateBases, migrationPinned, migrationSave, recheckMigrationReferences, validateMigrationJSON, verifyMigrationHTTP } from './genshin-migration-http.mjs';
 
 const root = new URL('../', import.meta.url).pathname, expected = genshinContentAssets(), bases = migrationAggregateBases(root);
+test('only redundant hints for exactly rendered images may vary across async streaming', () => {
+  const image = ['img', [['src', '/images/og/genshin.webp'], ['alt', 'Genshin']]], style = ['link', [['rel', 'stylesheet'], ['href', '/app.css']]];
+  const before = { title: 'Page', text: 'Content', media: [image], resources: [style], jsonld: [{ name: 'Content' }], links: ['/en'] };
+  const hint = ['link', [['rel', 'preload'], ['as', 'image'], ['href', '/images/og/genshin.webp'], ['fetchpriority', 'high']]];
+  const after = { ...before, resources: [hint, style, hint] };
+  assertMigrationFingerprint(after, before, 'same page', MIGRATION_FINGERPRINT_POLICY);
+  assert.throws(() => assertMigrationFingerprint(after, before, 'legacy exact'), /legacy exact/);
+  for (const mutate of [
+    row => row.text = 'Changed', row => row.title = 'Changed', row => row.jsonld[0].name = 'Changed', row => row.links.push('/bad'),
+    row => row.media[0][1][1][1] = 'Changed', row => row.resources[1][1][1][1] = '/changed.css',
+    row => row.resources[0][1][2][1] = '/not-rendered.webp', row => row.resources[0][1][1][1] = 'script',
+    row => row.resources[0][1].push(['crossorigin', 'anonymous']), row => row.resources[0][1][3][1] = 'invalid',
+  ]) { const changed = structuredClone(after); mutate(changed); assert.throws(() => assertMigrationFingerprint(changed, before, 'protected', MIGRATION_FINGERPRINT_POLICY)); }
+  assert.throws(() => assertMigrationFingerprint(after, before, 'unknown', 'skip'));
+});
 function output(t) { const root = realpathSync(mkdtempSync(join(tmpdir(), 'migration-http-'))); t.after(() => rmSync(root, { recursive: true, force: true })); return join(root, 'observations'); }
 test('pinned evidence rejects symlinks and nonabsolute paths', t => {
   const directory = join(output(t), '..'), proof = migrationSave(directory, 'input.json', { fixture: true });

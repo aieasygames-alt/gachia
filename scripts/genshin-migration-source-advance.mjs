@@ -19,7 +19,7 @@ export const genshinMigrationReleaseKey = (request, executorCI) => digest(migrat
 export const genshinMigrationContinuationKey = (request, executorCI) => digest(migrationJSON({ policy: GENSHIN_MIGRATION_POLICY, stopped: request.stopped, executorCI,
   ...(request.publicProxy ? { publicProxy: request.publicProxy } : {}) }));
 
-function journalRows(proof, releaseKey) {
+export function migrationJournalRows(proof, releaseKey) {
   assert.equal(realpathSync(proof.path), resolve(proof.path), 'Linked migration journal forbidden');
   const stat = lstatSync(proof.path); assert(stat.isFile() && stat.size <= 16 * 1024 * 1024, 'Migration journal bounds exceeded');
   const raw = readFileSync(proof.path); assert.equal(digest(raw), proof.pin); assert(raw.toString().endsWith('\n'));
@@ -42,7 +42,7 @@ export async function readStoppedGenshinMigration(stopped) {
   assert.equal(identity.releaseKey, genshinMigrationReleaseKey(request, identity.sourceCI));
   assert.equal(identity.sourceIndexPin, evidence.value.sourceIndex.pin); assert.equal(identity.activePin, evidence.value.active.pin);
   assert.equal(stopped.journal.path, join(directory, `genshin-migration-${identity.releaseKey}.jsonl`));
-  const rows = journalRows(stopped.journal, identity.releaseKey), state = assertGenshinMigrationStoppedPrefix(identity, rows);
+  const rows = migrationJournalRows(stopped.journal, identity.releaseKey), state = assertGenshinMigrationStoppedPrefix(identity, rows);
   assert.deepEqual(identity.baseline, evidence.value.baseline); assert.deepEqual(identity.owners, evidence.value.owners);
   const owner = await readMigrationOwner({ owner: 'genshin', rows, offset: 1, directory, releaseKey: identity.releaseKey, evidence, requireStep: false });
   assert.deepEqual(owner.accepted, state.accepted.genshin);
@@ -51,6 +51,10 @@ export async function readStoppedGenshinMigration(stopped) {
 
 export async function readCompletedGenshinMigration(proof) {
   const value = migrationPinned(proof), directory = dirname(proof.path);
+  if (Object.hasOwn(value, 'finalizationExecutorCI')) {
+    const { readFinalizedGenshinMigration } = await import('./genshin-migration-main-finalization.mjs');
+    return readFinalizedGenshinMigration(proof);
+  }
   assert.equal(proof.path, join(directory, 'completion.json')); assert.equal(value.kind, 'genshin_initial_production_migration_completion');
   assert.equal(value.schemaVersion, 1); assert.equal(value.status, 'production_accepted'); assert.equal(value.policy, GENSHIN_MIGRATION_POLICY); assert.equal(value.sourceAdvanced, false);
   const continued = Object.hasOwn(value, 'continuationExecutorCI');
@@ -69,7 +73,7 @@ export async function readCompletedGenshinMigration(proof) {
     assert.equal(value.releaseKey, genshinMigrationReleaseKey(value.request, value.executorCI));
   }
   assert.equal(value.journal.path, join(directory, `genshin-migration-${value.releaseKey}.jsonl`)); assert.equal(value.journal.pin, value.journalPin);
-  const rows = journalRows(value.journal, value.releaseKey);
+  const rows = migrationJournalRows(value.journal, value.releaseKey);
   const phases = [continued ? 'continuation_baseline' : 'baseline', ...(continued ? ['step_accepted'] : []),
     ...GENSHIN_MIGRATION_ORDER.slice(continued ? 1 : 0).flatMap(() => ['upload_intent', 'upload_returned', 'preview_accepted', 'upload_intent', 'upload_returned', 'preview_accepted', 'deployment_intent', 'deployed', 'step_accepted']), 'production_accepted'];
   assert.deepEqual(rows.map(row => row.phase), phases, 'Stopped, incomplete or reordered migrations cannot advance sources');
@@ -105,7 +109,7 @@ export function migrationGenshinStepReferences(evidence) {
     .map(row => /^\/(zh|en|ja)\//.test(row.path) ? { ...row, headers: { ...row.headers, 'cache-control': 'private, no-cache, no-store, max-age=0, must-revalidate' } } : row);
 }
 
-async function readMigrationOwner({ owner, rows, offset, directory, releaseKey, evidence, requireStep = true }) {
+export async function readMigrationOwner({ owner, rows, offset, directory, releaseKey, evidence, requireStep = true }) {
     const sealedOwner = evidence.value.owners[owner], modules = {}, accepted = {};
     for (const [j, role] of ['recovery', 'candidate'].entries()) {
       const intent = rows[offset + j * 3], returned = rows[offset + j * 3 + 1], acceptance = rows[offset + j * 3 + 2], sealed = sealedOwner[role];
@@ -190,6 +194,7 @@ export async function advanceGenshinMigrationSources({ completion, directory, re
     const value = { schemaVersion: 1, kind: 'genshin_independent_published_source_index', status: 'published_sources_observed', completion, originalSourceIndex: evidence.value.sourceIndex,
       sourceCommit: evidence.value.sourceCommit, executorCI: completed.value.executorCI,
       ...(completed.value.continuationExecutorCI ? { continuationExecutorCI: completed.value.continuationExecutorCI } : {}), releaseKey: completed.value.releaseKey, owners, router,
+      ...(completed.value.finalizationExecutorCI ? { finalizationExecutorCI: completed.value.finalizationExecutorCI } : {}),
       active: migrationSave(directory, 'active.json', evidence.sources), baseline: migrationSave(directory, 'baseline.json', after),
       observation: { before: migrationSave(directory, 'before.json', before), after: migrationSave(directory, 'after.json', after), versions, publicAcceptance, observedAt: Date.now() },
       cloudWrites: false, newPublicationAuthorized: false };

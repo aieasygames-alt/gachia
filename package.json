@@ -13,7 +13,7 @@
     "gsc:report": "node scripts/analyze-gsc-export.mjs",
     "validate:game-deployments": "node scripts/validate-game-deployment.mjs",
     "generate:router-config": "node scripts/generate-router-game-config.mjs",
-    "test:genshin-content": "node --test scripts/genshin-independent-release.test.mjs scripts/genshin-migration-source.test.mjs scripts/genshin-production-migration.test.mjs scripts/genshin-migration-recovery.test.mjs scripts/genshin-migration-http.test.mjs scripts/genshin-migration-transport.test.mjs scripts/genshin-content-assets.test.mjs scripts/genshin-main-base.test.mjs scripts/genshin-main-candidate.test.mjs scripts/genshin-content-delivery.test.mjs",
+    "test:genshin-content": "node --test scripts/genshin-migration-main-finalization.test.mjs scripts/genshin-independent-release.test.mjs scripts/genshin-migration-source.test.mjs scripts/genshin-production-migration.test.mjs scripts/genshin-migration-recovery.test.mjs scripts/genshin-migration-http.test.mjs scripts/genshin-migration-transport.test.mjs scripts/genshin-content-assets.test.mjs scripts/genshin-main-base.test.mjs scripts/genshin-main-candidate.test.mjs scripts/genshin-content-delivery.test.mjs",
     "genshin:seo-baseline": "node scripts/genshin-seo-baseline.mjs",
     "scaffold:game": "node scripts/scaffold-game.mjs",
     "audit:seo-contract": "node scripts/seo-contract-audit.mjs",

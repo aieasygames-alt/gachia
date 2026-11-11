@@ -42,6 +42,23 @@ function validateRetiredData(response, body) {
   assert(publicRobots(body.toString()).some(value => /\bnoindex\b/.test(value)), 'Retired JSON must stay absent and nonindexable');
 }
 const policy = value => (value ?? '').toLowerCase().split(',').map(value => value.trim()).filter(Boolean).sort();
+export const MIGRATION_FINGERPRINT_POLICY = 'rendered-image-preloads-v1';
+export function assertMigrationFingerprint(actual, expected, message, comparison = 'exact') {
+  if (comparison === 'exact') return assert.deepEqual(actual, expected, message);
+  assert.equal(comparison, MIGRATION_FINGERPRINT_POLICY);
+  const normalize = value => {
+    const images = new Set(value.media.filter(([tag]) => tag === 'img').map(([, attrs]) => Object.fromEntries(attrs).src));
+    return { ...value, resources: value.resources.filter(([tag, entries]) => {
+      const attrs = Object.fromEntries(entries);
+      // React may emit these hints before or after an async stream boundary.
+      // Only hints for an exactly protected rendered image are redundant.
+      return !(tag === 'link' && attrs.rel === 'preload' && attrs.as === 'image' && images.has(attrs.href)
+        && Object.keys(attrs).every(key => ['rel', 'as', 'href', 'fetchpriority'].includes(key))
+        && (!Object.hasOwn(attrs, 'fetchpriority') || ['high', 'low', 'auto'].includes(attrs.fetchpriority)));
+    }) };
+  };
+  assert.deepEqual(normalize(actual), normalize(expected), message);
+}
 function validateMigrationHTML(response, body, reference, preview) {
   assert.equal(response.status, reference.status); assert(!response.headers.has('set-cookie'));
   assert.equal(response.headers.get('content-type')?.split(';')[0], 'text/html');
@@ -173,10 +190,10 @@ export async function verifyMigrationHTTP({ origin, references, directory, owner
       else validateUnifiedMainPublic(response, body, reference);
     }, 8);
     if (html.length) unifiedPageFingerprints(html, 'streaming-v2').forEach((fingerprint, index) => {
-      assert.deepEqual(fingerprint, htmlReferences[index].fingerprint, `Migration rendered content/metadata/links/media differ: ${htmlReferences[index].path}`);
+      assertMigrationFingerprint(fingerprint, htmlReferences[index].fingerprint, `Migration rendered content/metadata/links/media differ: ${htmlReferences[index].path}`, MIGRATION_FINGERPRINT_POLICY);
     });
     const value = { kind: 'genshin_migration_http_acceptance', status: 'passed', origin, owner, role, preview,
-      parserVersion: 'streaming-v2', parserPin: unifiedHTMLParserPin('streaming-v2'), observations };
+      parserVersion: 'streaming-v2', parserPin: unifiedHTMLParserPin('streaming-v2'), fingerprintPolicy: MIGRATION_FINGERPRINT_POLICY, observations };
     const proof = migrationSave(directory, 'result.json', value);
     return { status: 'passed', evidenceSHA256: proof.pin, ...(preview ? { service: new URL(origin).hostname.includes('-gachia-router.') ? 'gachia-router' : owner === 'main' ? 'gachia' : 'gachia-game-genshin', observationMode: 'cloud_exact_version' } : {}) };
   } catch (error) { migrationSave(directory, 'failure.json', { error: error.message, observations: observations.filter(Boolean), automaticRetry: false }); throw error; }
@@ -186,6 +203,12 @@ export function recheckMigrationHTTP({ directory, pin, origin, references, owner
   const result = migrationPinned({ path: join(directory, 'result.json'), pin });
   assert.equal(result.kind, 'genshin_migration_http_acceptance'); assert.equal(result.status, 'passed');
   for (const [key, value] of Object.entries({ origin, owner, role, preview, parserVersion: 'streaming-v2', parserPin: unifiedHTMLParserPin('streaming-v2') })) assert.equal(result[key], value);
+  recheckMigrationObservations({ directory, references, owner, role, expected, bases, preview, observations: result.observations, fingerprintPolicy: result.fingerprintPolicy ?? 'exact' });
+  return result;
+}
+
+export function recheckMigrationObservations({ directory, observations, references, owner, role, expected, bases, preview = false, fingerprintPolicy = 'exact' }) {
+  const result = { observations };
   assert.equal(result.observations.length, references.length); const html = [], htmlReferences = [];
   for (const [i, row] of result.observations.entries()) {
     const reference = references[i]; assert.equal(row.path, reference.path); assert.equal(row.bodyFile, `${i}.body`);
@@ -201,6 +224,5 @@ export function recheckMigrationHTTP({ directory, pin, origin, references, owner
     } else if (preview) validateUnifiedPreviewResponse({ response, bytes: body, reference, parserVersion: 'streaming-v2' });
     else validateUnifiedMainPublic(response, body, reference);
   }
-  if (html.length) unifiedPageFingerprints(html, 'streaming-v2').forEach((fingerprint, i) => assert.deepEqual(fingerprint, htmlReferences[i].fingerprint));
-  return result;
+  if (html.length) unifiedPageFingerprints(html, 'streaming-v2').forEach((fingerprint, i) => assertMigrationFingerprint(fingerprint, htmlReferences[i].fingerprint, 'Saved migration rendered content differs: ' + htmlReferences[i].path, fingerprintPolicy));
 }

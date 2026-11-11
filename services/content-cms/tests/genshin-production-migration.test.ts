@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { genshinMigrationContinuationRequest, genshinProductionMigrationRequest } from '../src/genshin-production-migration'
+import { genshinMainFinalizationRequest } from '../src/genshin-migration-main-finalization'
 
 const valid = () => ({ schemaVersion: 1, kind: 'genshin_initial_production_migration_request', bundle: { path: '/sealed/bundle.json', pin: 'a'.repeat(64) }, executorRunID: 1 })
 test('migration request accepts only a pinned bundle and exact CI identity', () => {
@@ -32,4 +33,19 @@ test('continuation accepts only pinned stopped evidence and current exact CI, ne
     { ...request.stopped, request: { ...request.stopped.request, success: true } }])
     assert.throws(() => genshinMigrationContinuationRequest({ ...request, stopped }))
   assert.throws(() => genshinMigrationContinuationRequest({ ...request, executorRunID: 0 }))
+})
+
+test('Main finalization binds the failed preview, exact modules and both ancestor CI identities', () => {
+  const request = { schemaVersion: 1, kind: 'genshin_main_migration_finalization_request', executorRunID: 3,
+    continuationCI: { status: 'full_exact_ci_passed', commit: 'c'.repeat(40), runID: 2 }, publicProxy: 'http://127.0.0.1:1087',
+    stopped: Object.fromEntries(['request', 'identity', 'journal', 'mainCandidateModule', 'mainCandidateVersion', 'failedPreview'].map(key => [key, { path: `/prior/${key}.json`, pin: 'b'.repeat(64) }])) }
+  assert.deepEqual(genshinMainFinalizationRequest(request), request)
+  for (const key of ['transport', 'accepted', 'deployed', 'owners', 'skipCI', 'previewProxy', 'bundle', 'success', 'fingerprintPolicy'])
+    assert.throws(() => genshinMainFinalizationRequest({ ...request, [key]: true }))
+  for (const stopped of [{ ...request.stopped, extra: true }, { request: request.stopped.request },
+    { ...request.stopped, failedPreview: { path: '../failure', pin: 'b'.repeat(64) } }])
+    assert.throws(() => genshinMainFinalizationRequest({ ...request, stopped }))
+  for (const continuationCI of [{ ...request.continuationCI, status: 'local_passed' }, { ...request.continuationCI, commit: 'invalid' }, { ...request.continuationCI, runID: 0 }])
+    assert.throws(() => genshinMainFinalizationRequest({ ...request, continuationCI }))
+  assert.throws(() => genshinMainFinalizationRequest({ ...request, publicProxy: 'http://external.example:1087' }))
 })
