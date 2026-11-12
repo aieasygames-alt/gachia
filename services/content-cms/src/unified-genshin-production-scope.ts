@@ -4,11 +4,18 @@ import type { exportUnifiedContent, SourceBytes } from './unified-export'
 import { digest } from './legacy-intake'
 
 export const GENSHIN_PRODUCTION_SCOPE = 'genshin-independent-existing-character-text-v1'
+export const NTE_PRODUCTION_SCOPE = 'nte-independent-existing-character-text-v1'
+export type IndependentProductionScope = typeof GENSHIN_PRODUCTION_SCOPE | typeof NTE_PRODUCTION_SCOPE
 
 // Source/build qualification only. The fixed production entry additionally
 // requires the completed migration, current full A, live CMS review, exact CI,
 // compatible recovery and unchanged Main/Router deployment identities.
 export function genshinProductionOwnerScope(manifest: ReturnType<typeof exportUnifiedContent>['manifest'], active: SourceBytes[], overlays: SourceBytes[]) {
+  return independentProductionOwnerScope('genshin', manifest, active, overlays)
+}
+
+export function independentProductionOwnerScope(owner: 'genshin' | 'nte', manifest: ReturnType<typeof exportUnifiedContent>['manifest'], active: SourceBytes[], overlays: SourceBytes[]) {
+  assert(['genshin', 'nte'].includes(owner), 'Unqualified independent owner')
   assert.equal(manifest.preview, false, 'Rehearsal content cannot enter independent production')
   assert.equal(manifest.status, 'editorial_candidate'); assert.equal(manifest.changed.length, 1, 'One existing character per independent release')
   assert.equal(active.length, 115, 'Complete registered published A required')
@@ -24,8 +31,8 @@ export function genshinProductionOwnerScope(manifest: ReturnType<typeof exportUn
     assert.equal(digest(row.text), row.sha256)
     return row.sha256 !== before.sha256
   })
-  assert.deepEqual(edited.map(row => row.sourcePath), [DEDICATED_CHARACTER_TEXT_SOURCES.genshin], 'Other games and non-character sources must stay at published A')
+  assert.deepEqual(edited.map(row => row.sourcePath), [DEDICATED_CHARACTER_TEXT_SOURCES[owner]], 'Other games and non-character sources must stay at published A')
   const pair = dedicatedCharacterTextPairContract(active, edited)
-  assert.equal(pair.candidate.changes.length, 1); assert.equal(pair.candidate.changes[0].game, 'genshin')
-  return { games: ['genshin'], owners: ['genshin'], services: ['gachia-game-genshin'], productionScope: GENSHIN_PRODUCTION_SCOPE }
+  assert.equal(pair.candidate.changes.length, 1); assert.equal(pair.candidate.changes[0].game, owner)
+  return { games: [owner], owners: [owner], services: [`gachia-game-${owner}`], productionScope: owner === 'genshin' ? GENSHIN_PRODUCTION_SCOPE : NTE_PRODUCTION_SCOPE }
 }

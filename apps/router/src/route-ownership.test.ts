@@ -12,7 +12,7 @@ describe('shared path ownership', () => {
       expect(rule.mainIndexableDetails.some(section => rule.details.includes(section))).toBe(false);
     }
   });
-  it('preserves the legacy Router dispatch matrix without changing traffic switches', async () => {
+  it('pins the Router dispatch matrix after moving NTE material details', async () => {
     const paths = new Set<string>();
     for (const [game, rule] of Object.entries(routes.games)) {
       for (const locale of ['zh', 'en', 'ja', 'fr']) {
@@ -26,16 +26,17 @@ describe('shared path ownership', () => {
       }
     }
     const matrix = [...paths].sort().map(path => `${path}\t${getRouteOwner(path)}\n`).join('');
-    // Frozen from S2.15's actual Router tables, not from the new classifier.
+    // R120 moves only NTE item details; explicit delivery assertions below
+    // retain the locale and other-game boundaries.
     const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(matrix));
-    expect([...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('')).toBe('6f4629fabf35c459f9518341c811c8337762fbd4505af0f82291f355259e08f3');
+    expect([...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('')).toBe('adeaedc93c6201685ffae1912c880088d19bac0070e5c5649f1c6ed62318ab10');
   });
 
   it('does not turn arbitrary Main fallbacks into indexable pages', () => {
     for (const locale of ['zh', 'en', 'ja']) {
       const item = `/${locale}/nte/items/annulith`;
-      expect(getRouteOwner(item)).toBe('main');
-      expect(isMainSitemapPath(item)).toBe(true);
+      expect(getRouteOwner(item)).toBe('nte');
+      expect(isMainSitemapPath(item)).toBe(false);
       expect(getRouteOwner(`/${locale}/nte/items`)).toBe('nte');
       expect(isMainSitemapPath(`/${locale}/nte/unknown/sample`)).toBe(false);
       expect(isMainSitemapPath(`/${locale}/nte/items/annulith/extra`)).toBe(false);
@@ -44,7 +45,7 @@ describe('shared path ownership', () => {
     }
   });
 
-  it('delivers item details to Main and item lists to NTE with all bindings enabled', async () => {
+  it('delivers item details and lists to NTE with all bindings enabled', async () => {
     const fetcher = (name: string) => ({
       fetch: async () => new Response(name),
       connect: () => { throw new Error('connect is not used'); },
@@ -57,7 +58,7 @@ describe('shared path ownership', () => {
     };
     for (const locale of ['zh', 'en', 'ja']) {
       for (const [path, owner] of [
-        [`/${locale}/nte/items/annulith`, 'main'], [`/${locale}/nte/items`, 'nte'],
+        [`/${locale}/nte/items/annulith`, 'nte'], [`/${locale}/nte/items`, 'nte'],
         [`/${locale}/nte/characters/aurelia`, 'nte'], [`/${locale}/lvmeng`, locale === 'zh' ? 'lvmeng' : 'main'],
       ]) {
         const response = await router.fetch(new Request(`https://gachia.com${path}`), env);

@@ -1,6 +1,7 @@
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getCharacterIdsFromManifest } from './manifests';
 import { getGenshinPlatformContent } from '../genshin-platform-content';
+import { getNtePlatformContent } from '../nte-platform-content';
 
 export interface CharacterSummary {
   id: string;
@@ -66,10 +67,10 @@ export async function getCharacterSummariesByIds(
       });
     }
     case 'nte': {
-      const mod = await import('@gachia/data/games/nte/character-summaries');
+      const content = await getNtePlatformContent();
       return ids.flatMap((id) => {
-        const character = mod.nteCharacterSummaries.find((entry) => entry.id === id);
-        return character ? [{ id: character.id, name: mod.getNteCharacterSummaryName(character, locale), image: toAbs(mod.getNteCharacterSummaryImage(character)) }] : [];
+        const character = content.data.characters.find(entry => entry.id === id);
+        return character?.imageUrl ? [{ id: character.id, name: character.name[locale], image: character.imageUrl }] : [];
       });
     }
     case 'zzz': {

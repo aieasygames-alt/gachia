@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
-import { guides, isNteJapanesePathIndexable, isNteLocaleIndexable } from './data';
+import { guides } from './data';
+import { isNteJapanesePathIndexable, isNteLocaleIndexable } from './indexing-policy';
 import { nteGuideAlternates } from './guide-policy';
 
 export const BASE_URL = 'https://gachia.com';

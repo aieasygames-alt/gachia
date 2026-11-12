@@ -13,7 +13,7 @@ import type { UnifiedRecord } from './unified-content'
 import { COMMUNITY_PUBLICATION_POLICY } from './unified-baseline'
 import { AZUR_NAME_CONSUMER, projectAzurRawNames } from './unified-consumers'
 import { GENSHIN_LOCAL_SCOPE, genshinLocalOwnerScope } from './unified-genshin-local-scope'
-import { GENSHIN_PRODUCTION_SCOPE, genshinProductionOwnerScope } from './unified-genshin-production-scope'
+import { GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope, type IndependentProductionScope } from './unified-genshin-production-scope'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
@@ -64,7 +64,7 @@ type FreezeInput = {
   repo: string; commit: string; directory: string; plan: UnifiedPlan
   records: UnifiedRecord[]; activeSources: SourceBytes[]; preview: boolean
   localScope?: typeof GENSHIN_LOCAL_SCOPE
-  productionScope?: typeof GENSHIN_PRODUCTION_SCOPE
+  productionScope?: IndependentProductionScope
 }
 
 // A source/compiler receipt only. It cannot authorize cloud upload, CMS install or promotion.
@@ -87,9 +87,9 @@ export function freezeUnifiedContent(input: FreezeInput) {
   assert(input.localScope === undefined || input.localScope === GENSHIN_LOCAL_SCOPE, 'Unknown local scope')
   const local = input.localScope && genshinLocalOwnerScope(candidate.manifest, activeSources,
     candidate.files.map(file => ({ sourcePath: file.sourcePath, text: file.content, sha256: file.candidateSHA256 })))
-  assert(input.productionScope === undefined || input.productionScope === GENSHIN_PRODUCTION_SCOPE, 'Unknown production source scope')
+  assert(input.productionScope === undefined || [GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE].includes(input.productionScope), 'Unknown production source scope')
   assert(!(input.localScope && input.productionScope), 'Local and production source scopes cannot be combined')
-  const independent = input.productionScope && genshinProductionOwnerScope(candidate.manifest, activeSources,
+  const independent = input.productionScope && independentProductionOwnerScope(input.productionScope === NTE_PRODUCTION_SCOPE ? 'nte' : 'genshin', candidate.manifest, activeSources,
     candidate.files.map(file => ({ sourcePath: file.sourcePath, text: file.content, sha256: file.candidateSHA256 })))
   assert(directory !== repo && !repo.startsWith(directory + path.sep), 'Output cannot contain the source repository')
   assert.equal(realpathSync(path.dirname(directory)), path.dirname(directory), 'Linked output parent forbidden')
@@ -168,7 +168,7 @@ export function freezeUnifiedContent(input: FreezeInput) {
       assert(projection(file.path), `Generator changed an unrelated input: ${file.path}`)
       modified.push(file)
     }
-    const scope: { games: string[]; owners: string[]; services: string[]; localScope?: typeof GENSHIN_LOCAL_SCOPE; productionScope?: typeof GENSHIN_PRODUCTION_SCOPE } = local || independent || unifiedOwnerPlan(candidate.files.map(file => file.sourcePath), plan,
+    const scope: { games: string[]; owners: string[]; services: string[]; localScope?: typeof GENSHIN_LOCAL_SCOPE; productionScope?: IndependentProductionScope } = local || independent || unifiedOwnerPlan(candidate.files.map(file => file.sourcePath), plan,
       JSON.parse(readFileSync(regular(workspace, 'packages/core/route-ownership.json'), 'utf8')))
     mkdirSync(path.join(directory, 'active'), { mode: 0o700 })
     const activeFiles = [...activeSources].sort((a, b) => a.sourcePath.localeCompare(b.sourcePath)).map((source, index) => {
@@ -226,11 +226,11 @@ export function verifyUnifiedFrozenSource(directory: string, pin: string) {
   const files = unifiedTree(path.join(root, 'source'), '', true)
   assert.deepEqual(files, JSON.parse(filesText), 'Frozen source files changed')
   assert.equal(digest(canonical(files)), manifest.sourceTreeSHA256, 'Frozen source tree changed')
-  const scoped = manifest as Manifest & { localScope?: typeof GENSHIN_LOCAL_SCOPE; productionScope?: typeof GENSHIN_PRODUCTION_SCOPE }
+  const scoped = manifest as Manifest & { localScope?: typeof GENSHIN_LOCAL_SCOPE; productionScope?: IndependentProductionScope }
   assert(!(scoped.localScope && scoped.productionScope), 'Mixed source scopes')
   if (scoped.productionScope !== undefined) {
-    assert.equal(scoped.productionScope, GENSHIN_PRODUCTION_SCOPE, 'Unknown production source scope')
-    const independent = genshinProductionOwnerScope(manifest.candidate,
+    assert([GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE].includes(scoped.productionScope), 'Unknown production source scope')
+    const independent = independentProductionOwnerScope(scoped.productionScope === NTE_PRODUCTION_SCOPE ? 'nte' : 'genshin', manifest.candidate,
       activeFiles.map(row => ({ ...row, text: readFileSync(regular(root, row.file), 'utf8') })),
       candidate.files.map(row => ({ sourcePath: row.sourcePath, sha256: row.candidateSHA256, text: readFileSync(regular(path.join(root, 'source'), row.sourcePath), 'utf8') })))
     for (const key of ['games', 'owners', 'services'] as const) assert.deepEqual(manifest[key], independent[key])

@@ -31,11 +31,10 @@
         "characters",
         "guides",
         "disk-sets",
-        "weapons"
-      ],
-      "mainIndexableDetails": [
+        "weapons",
         "items"
-      ]
+      ],
+      "mainIndexableDetails": []
     },
     "azur-promilia": {
       "locales": [

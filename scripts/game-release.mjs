@@ -9,6 +9,7 @@ import { verifyAppRuntime } from './require-app-runtime.mjs';
 import { readPreviousGameAssets, retainPreviousGameAssets } from './retain-game-assets.mjs';
 import { rejectProductionMutation } from './production-release.mjs';
 import { prepareGenshinContentAssets } from './genshin-content-assets.mjs';
+import { prepareNteContentAssets } from './nte-content-assets.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const TARGETS = Object.freeze({
@@ -147,7 +148,7 @@ export function prepareNamespacedAssets(plan, root = ROOT) {
   }
   copy(resolve(assets, '_next'), target);
   if (!files) throw new Error('No generated assets to publish');
-  const content = plan.game === 'genshin' ? prepareGenshinContentAssets(root) : undefined;
+  const content = plan.game === 'genshin' ? prepareGenshinContentAssets(root) : plan.game === 'nte' ? prepareNteContentAssets(root) : undefined;
   return { files, prefix: `/_games/${plan.game}/_next`, originalPathsPreserved: true, ...(content ? { content } : {}) };
 }
 

@@ -23,7 +23,7 @@ function validateSearch(value: unknown) {
   }
 }
 
-async function jsonBytes(worker: Fetcher, request: Request, path: string) {
+export async function jsonBytes(worker: Pick<Fetcher, 'fetch'>, request: Request, path: string) {
   const url = new URL(request.url);
   url.pathname = path;
   url.search = '';

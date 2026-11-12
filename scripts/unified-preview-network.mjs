@@ -24,6 +24,8 @@ export const assertUnifiedPreviewRead = (input, options) => assertOwnedPreviewRe
   /^[a-f0-9]{8}-(?:gachia|gachia-game-(?:azur-promilia|genshin|lvmeng|nte))\.aieasygames\.workers\.dev$/);
 export const assertGenshinMigrationPreviewRead = (input, options) => assertOwnedPreviewRead(input, options,
   /^[a-f0-9]{8}-(?:gachia|gachia-router|gachia-game-genshin)\.aieasygames\.workers\.dev$/);
+export const assertNteMigrationPreviewRead = (input, options) => assertOwnedPreviewRead(input, options,
+  /^[a-f0-9]{8}-(?:gachia|gachia-router|gachia-game-nte)\.aieasygames\.workers\.dev$/);
 export const assertGenshinPublicRead = (input, options) => assertOwnedPreviewRead(input, options, /^gachia\.com$/);
 
 // Use the existing pinned HTTP client, not a browser/profile or global proxy.
@@ -54,4 +56,5 @@ async function createOwnedPreviewNetwork(proxy, assertRead, kind = 'explicit_loo
 }
 export const createUnifiedPreviewNetwork = proxy => createOwnedPreviewNetwork(proxy, assertUnifiedPreviewRead);
 export const createGenshinMigrationPreviewNetwork = proxy => createOwnedPreviewNetwork(proxy, assertGenshinMigrationPreviewRead);
+export const createNteMigrationPreviewNetwork = proxy => createOwnedPreviewNetwork(proxy, assertNteMigrationPreviewRead);
 export const createGenshinPublicNetwork = proxy => createOwnedPreviewNetwork(proxy, assertGenshinPublicRead, 'explicit_loopback_public_proxy');

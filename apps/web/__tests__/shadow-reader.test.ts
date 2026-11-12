@@ -8,8 +8,8 @@ describe('Main shadow boundary', () => {
     expect(shadowLocalEnabled('main', 'gachia.com', env)).toBe(false);
     expect(shadowLocalEnabled('main', '127.0.0.1:3333', { ...env, MAIN_SHADOW_READER: '0' })).toBe(false);
   });
-  it('keeps NTE items detail and character owners distinct', () => {
-    expect(getRouteOwner('/zh/nte/items/ore')).toBe('main');
+  it('keeps NTE item details with the character and item list owner', () => {
+    expect(getRouteOwner('/zh/nte/items/ore')).toBe('nte');
     expect(getRouteOwner('/zh/nte/characters/index')).toBe('nte');
     expect(getRouteOwner('/zh/nte/items')).toBe('nte');
   });

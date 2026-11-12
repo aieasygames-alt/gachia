@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { SupportedLocale } from '@gachia/core';
-import { isNteJapanesePathIndexable, isNteLocaleIndexable } from './data';
+import { isNteJapanesePathIndexable, isNteLocaleIndexable } from './indexing-policy';
 
 const isPreview = process.env.NTE_DEPLOYMENT_MODE !== 'live';
 

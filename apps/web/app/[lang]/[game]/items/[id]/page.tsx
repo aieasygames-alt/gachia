@@ -67,23 +67,6 @@ const ITEM_NEXT_STEPS: Partial<Record<GameId, NextStepLink[]>> = {
       description: { zh: '继续看声骸、版本和刷取专题', en: 'Continue with echo, version, and farming guides', ja: '声骸・版本・周回へ' },
     },
   ],
-  nte: [
-    {
-      href: '/nte/characters',
-      title: { zh: '看角色图鉴', en: 'Browse characters', ja: 'キャラ図鑑へ' },
-      description: { zh: '把材料和角色需求直接对接', en: 'Directly connect materials with character needs', ja: '素材と必要キャラを接続' },
-    },
-    {
-      href: '/nte/weapons',
-      title: { zh: '看武器图鉴', en: 'Browse weapons', ja: '武器図鑑へ' },
-      description: { zh: '继续看武器培养材料', en: 'Continue with weapon upgrade materials', ja: '武器強化素材を確認' },
-    },
-    {
-      href: '/nte/guides',
-      title: { zh: '看攻略专题', en: 'Open guide hub', ja: '攻略特集へ' },
-      description: { zh: '继续看 Boss、伤害和新手专题', en: 'Continue with boss, damage, and beginner guides', ja: 'ボス・ダメージ・初心者へ' },
-    },
-  ],
   zzz: [
     {
       href: '/zzz/characters',
@@ -263,16 +246,6 @@ const ITEM_INTENT_CONTENT: Record<string, ItemIntentContent> = {
 };
 
 const ITEM_META_OVERRIDES: Record<string, LocaleMeta> = {
-  'nte/tri-key': {
-    zh: {
-      title: '三把钥匙获取攻略：用途、来源与刷取路线',
-      description: '异环三把钥匙 Tri-Key 材料攻略，整理灭碑石加工、猎手交易所、活动奖励、用途说明和刷取优先级。',
-    },
-    en: {
-      title: 'Tri-Key NTE Guide: Uses, Sources & Farming Route',
-      description: 'Tri-Key guide for Neverness to Everness with sources, Hunter Exchange, event rewards, crafting routes, uses, and farming priorities.',
-    },
-  },
   'wuwa/violet-coral': {
     zh: {
       title: '鸣潮紫珊瑚获取攻略：用途、来源与角色需求',

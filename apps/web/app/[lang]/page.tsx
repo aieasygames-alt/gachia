@@ -22,6 +22,7 @@ import { platformMetadata } from '@/lib/platform-metadata';
 import { ThreeGameNextStep } from '@/components/three-game-next-step';
 import { getHomepageContent, homepageStatus } from '@/lib/homepage-content';
 import { GENSHIN_UNAVAILABLE } from '@/lib/genshin-platform-content';
+import { NTE_UNAVAILABLE } from '@/lib/nte-platform-content';
 
 export const dynamic = 'force-dynamic';
 
@@ -386,7 +387,7 @@ export default async function LocaleHome({
   const locale = lang as SupportedLocale;
   const t = (MESSAGES[locale] ?? MESSAGES.zh) as Record<string, string>;
   const content = await getHomepageContent();
-  const featured: typeof FEATURED = { ...FEATURED, genshin: content.featured };
+  const featured: typeof FEATURED = { ...FEATURED, genshin: content.featured, nte: content.nteFeatured };
   const getStatusForGame = (gameId: keyof typeof GAMES) => homepageStatus(gameId, content);
   const liveBanners = sortByPriority(content.banners).slice(0, 3);
   const liveVersions = sortByPriority(content.versions).slice(0, 3);
@@ -405,6 +406,7 @@ export default async function LocaleHome({
   return (
     <div className="container mx-auto min-w-0 max-w-full px-4 py-6 md:py-8">
       {content.genshinUnavailable ? <p role="status" className="mb-4 text-sm text-game-text-muted">{GENSHIN_UNAVAILABLE[locale]}</p> : null}
+      {content.nteUnavailable ? <p role="status" className="mb-4 text-sm text-game-text-muted">{NTE_UNAVAILABLE[locale]}</p> : null}
       {/* Live Hub */}
       <section className="mb-8 overflow-hidden rounded-lg border border-game-border bg-game-surface">
         <div className="grid grid-cols-1 gap-0 xl:grid-cols-[minmax(0,1.05fr)_minmax(380px,0.95fr)]">

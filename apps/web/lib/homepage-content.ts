@@ -1,6 +1,8 @@
 import type { GameId } from '@gachia/core';
 import type { GenshinPlatformContent } from '@gachia/core/genshin-platform';
 import { getGenshinPlatformContent } from '@/lib/genshin-platform-content';
+import { getNtePlatformContent } from '@/lib/nte-platform-content';
+import type { NtePlatformContent } from '@gachia/core/nte-platform';
 import {
   LIVE_BANNERS, LIVE_CODE_SUMMARIES, LIVE_GUIDES, LIVE_VERSION_UPDATES,
   type LiveBanner, type LiveCodeSummary, type LiveStatus,
@@ -8,8 +10,9 @@ import {
 
 // Recommendation order belongs to the platform; names and images belong to the game.
 const FEATURED_GENSHIN_IDS = ['hu-tao', 'raiden-shogun', 'furina', 'nahida', 'kazuha'];
+const FEATURED_NTE_IDS = ['nanally', 'sakiri', 'fadia', 'lacrimosa', 'mint'];
 
-export function composeHomepageContent(content: GenshinPlatformContent | null, now = new Date()) {
+export function composeHomepageContent(content: GenshinPlatformContent | null, now = new Date(), nte: NtePlatformContent | null = null) {
   const featured = content ? FEATURED_GENSHIN_IDS.flatMap(id => {
     const character = content.data.characters.find(row => row.id === id);
     return character ? [character] : [];
@@ -31,16 +34,16 @@ export function composeHomepageContent(content: GenshinPlatformContent | null, n
       updatedAt: revealed.map(row => row.revealedAt).sort().at(-1)!, priority: 1 });
   }
   return { banners, codes, guides: LIVE_GUIDES, versions: LIVE_VERSION_UPDATES, featured,
+    nteFeatured: nte ? FEATURED_NTE_IDS.flatMap(id => {
+      const row = nte.data.characters.find(character => character.id === id);
+      return row?.imageUrl ? [{ id: row.id, name: row.name, imageUrl: row.imageUrl }] : [];
+    }) : [], nteUnavailable: nte === null, nteVersion: nte?.version ?? null,
     genshinUnavailable: content === null, version: content?.version ?? null };
 }
 
 export async function getHomepageContent() {
-  try {
-    return composeHomepageContent(await getGenshinPlatformContent());
-  } catch {
-    // Keep the platform and other games available without presenting stale Genshin facts.
-    return composeHomepageContent(null);
-  }
+  const [genshin, nte] = await Promise.allSettled([getGenshinPlatformContent(), getNtePlatformContent()]);
+  return composeHomepageContent(genshin.status === 'fulfilled' ? genshin.value : null, new Date(), nte.status === 'fulfilled' ? nte.value : null);
 }
 
 export function homepageStatus(gameId: GameId, content: ReturnType<typeof composeHomepageContent>) {

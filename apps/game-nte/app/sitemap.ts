@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { diskSets, guides, nteCharacterSummaries, nteWeapons } from '@/lib/data';
+import { diskSets, materials, guides, nteCharacterSummaries, nteWeapons } from '@/lib/data';
 import { isNteGuideLocaleIndexable } from '@/lib/guide-policy';
 
 const baseUrl = 'https://gachia.com';
@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const weapon of nteWeapons) entries.push({ url: `${baseUrl}/${locale}/nte/weapons/${weapon.id}`, changeFrequency: 'monthly', priority: 0.5 });
     for (const diskSet of diskSets) entries.push({ url: `${baseUrl}/${locale}/nte/disk-sets/${diskSet.id}`, changeFrequency: 'monthly', priority: 0.5 });
   }
+
+  for (const locale of locales) for (const material of materials) entries.push({ url: `${baseUrl}/${locale}/nte/items/${material.id}`, changeFrequency: 'monthly', priority: 0.5 });
 
   for (const guide of guides) {
     if (!isNteGuideLocaleIndexable(guide, 'ja')) continue;

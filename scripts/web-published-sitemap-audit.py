@@ -28,17 +28,20 @@ def local_proxy(value):
     return {"http": value, "https": value}
 
 
-def main_fallback_coverage(main_urls, materials):
+def material_coverage(urls, materials, owner):
     ids = [entry.get("id") for entry in materials]
     if not ids or any(not isinstance(value, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", value) for value in ids) or len(ids) != len(set(ids)):
-        raise ValueError("Invalid Main-owned NTE material inventory")
+        raise ValueError("Invalid NTE material inventory")
     # Inventory coverage must agree with path ownership, not merely a game prefix.
-    required = {f"{contract.PUBLIC}/{locale}/nte/items/{value}" for locale in ("zh", "en", "ja") for value in ids}
-    if any(not contract.main_sitemap_path(contract.canonical_path(url)) for url in required):
-        raise ValueError("Main fallback inventory conflicts with route ownership contract")
-    missing = sorted(required - set(main_urls))
+    required = {f"{contract.PUBLIC}/{locale}/nte/items/{value}" for locale in ("zh", "en", "ja") for value in ids
+                if contract.route_owner(f"/{locale}/nte/items/{value}") == owner}
+    missing = sorted(required - set(urls))
     return {"requiredCount": len(required), "missingCount": len(missing), "missing": missing,
-            "status": "blocked_main_owned_urls_missing" if missing else "main_fallback_urls_present"}
+            "owner": owner, "status": "blocked_material_urls_missing" if missing else "material_urls_present"}
+
+
+def main_fallback_coverage(main_urls, materials):
+    return material_coverage(main_urls, materials, "main")
 
 
 def verify_owner_pages(pages, owner):
@@ -156,6 +159,9 @@ def main():
         if set(actual["children"]) != set(expected["children"]) or set(actual["mainUrls"]) != set(expected["mainUrls"]):
             raise ValueError("Published Main sitemap differs from the sealed artifact")
         graph = verify_graph(index, main_xml, get)
+        nte_coverage = material_coverage(graph["owners"]["nte"], json.loads((ROOT / "packages/data/games/nte/raw-materials.json").read_text()), "nte")
+        if nte_coverage["missingCount"]:
+            raise ValueError(f"Dedicated NTE sitemap lost {nte_coverage['missingCount']} material URLs")
     except Exception as error:
         failure = {**precheck, "status": "failed", "error": str(error), "observations": observations}
         args.output.write_text(json.dumps(failure, ensure_ascii=False, indent=2) + "\n")

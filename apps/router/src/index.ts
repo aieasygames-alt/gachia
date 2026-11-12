@@ -2,6 +2,7 @@ interface Env {
   MAIN_SITE: Fetcher;
   NTE_SITE?: Fetcher;
   NTE_ENABLED?: string;
+  NTE_CONTENT_ENABLED?: string;
   AZUR_PROMILIA_SITE?: Fetcher;
   AZUR_PROMILIA_ENABLED?: string;
   GENSHIN_SITE?: Fetcher;
@@ -28,6 +29,7 @@ import { isGenshinContentPath, serveGenshinContent, unavailableGenshinContent } 
 import { genshinMapPath } from '../../../packages/core/genshin-map';
 import { serveGenshinMap, unavailableGenshinMap } from './genshin-map';
 import { isGenshinMediaPath, serveGenshinMedia } from './genshin-media';
+import { isNteContentPath, serveNteContent, unavailableNteContent } from './nte-content';
 
 const NTE_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'nte');
 const AZUR_PROMILIA_DEPLOYMENT = GENERATED_GAME_DEPLOYMENTS.find((deployment) => deployment.id === 'azur-promilia');
@@ -115,6 +117,19 @@ async function fetchWithRouteMarker(worker: Fetcher, request: Request, marker: s
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    if (isEnabled(env.NTE_CONTENT_ENABLED) && isNteContentPath(url.pathname)) {
+      if (!env.NTE_SITE || env.NTE_ENABLED === 'false') return unavailableNteContent(request);
+      const base: Pick<Fetcher, 'fetch'> = { fetch: async input => {
+        const next = input instanceof Request ? input : new Request(input);
+        if (isEnabled(env.GENSHIN_CONTENT_ENABLED) && isGenshinContentPath(new URL(next.url).pathname)) {
+          if (!env.GENSHIN_SITE || !isEnabled(env.GENSHIN_ENABLED) || !isEnabled(env.GENSHIN_FULL_CUTOVER)) return unavailableGenshinContent(next);
+          return serveGenshinContent(next, env.GENSHIN_SITE, env.MAIN_SITE);
+        }
+        return env.MAIN_SITE.fetch(next);
+      } };
+      return serveNteContent(request, env.NTE_SITE, base);
+    }
 
     // Turning off media ownership restores Main without changing page or data ownership.
     if (isEnabled(env.GENSHIN_MEDIA_ENABLED) && isGenshinMediaPath(url.pathname)) {

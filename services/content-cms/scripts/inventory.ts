@@ -42,7 +42,7 @@ export function collectInventory(root: string, sourceCommit: string) {
     throw new Error(`Missing ${name} in ${file}`)
   }
 
-  const files = [...new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z', '--', 'apps', 'packages', 'scripts/scaffold-game.mjs', 'scripts/genshin-content-assets.mjs'],
+  const files = [...new Set(execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '-z', '--', 'apps', 'packages', 'scripts/scaffold-game.mjs', 'scripts/genshin-content-assets.mjs', 'scripts/nte-content-assets.mjs'],
     { cwd: root, encoding: 'utf8', maxBuffer: 16 * 1024 * 1024 }).split('\0').filter(file => file && existsSync(path.join(root, file))))].sort()
   const ids: string[] = constant('packages/core/constants/index.ts', 'GAME_IDS')
   const games = constant('packages/core/constants/index.ts', 'GAMES')
@@ -65,7 +65,9 @@ export function collectInventory(root: string, sourceCommit: string) {
       'apps/web/app/api/map/route.ts', 'apps/web/app/api/map/points/route.ts', 'apps/web/app/api/map/tile/route.ts', 'apps/web/app/api/map/progress/route.ts',
       'apps/web/app/[lang]/page.tsx', 'apps/web/lib/homepage-content.ts', 'apps/web/lib/genshin-platform-content.ts',
       'apps/web/public/data-client/genshin-platform.json', 'packages/core/genshin-content.json', 'packages/core/genshin-platform.ts',
-      'packages/data/scripts/game-public-projections.mjs', 'packages/data/scripts/main-manifests.mjs', 'scripts/genshin-content-assets.mjs'].includes(file)
+      'packages/data/scripts/game-public-projections.mjs', 'packages/data/scripts/main-manifests.mjs', 'scripts/genshin-content-assets.mjs',
+      'packages/core/nte-content.json', 'packages/core/nte-platform.ts', 'apps/router/src/nte-content.ts',
+      'apps/web/lib/nte-platform-content.ts', 'apps/web/public/data-client/nte-platform.json', 'scripts/nte-content-assets.mjs'].includes(file)
   ))
   const scopes = ids.map(id => {
     const dedicated = deployments[id]?.deployment === 'game'
@@ -114,7 +116,7 @@ export function renderCoverage(inventory: ReturnType<typeof collectInventory>) {
     '',
     '## 边界与缺口', '',
     '- 16 个技术 scope 包括 roco/roco-cn 地区差异；对应产品口径约 15 款游戏。地区不是语言。',
-    '- NTE 的 items 详情仍归 Main；绿梦独立 owner 只覆盖 zh。共享搜索、导航、图片与 sitemap 不能随整款游戏一起归给单个 Worker。',
+    '- NTE 的 items 详情已纳入独立应用路由合同；生产迁移与单 Worker 发布须另有真实完成回执。绿梦独立 owner 只覆盖 zh。共享搜索、导航、图片与 sitemap 仍按路径分工。',
     '- 绿梦没有 packages/data/games 目录，内容在独立应用 TypeScript/页面中，不能按 JSON 数量判断迁移完整性。',
     '- JSON 保留 raw 文件类型、源/镜像路径和 SHA-256；独立应用与共享组件为待人工确认的候选，包含渲染代码，不表示全部是内容。',
     '- sharedCandidates 是横跨全部 scope 的公共候选池。外部 R2、非约定目录素材、非注册文件、运行时来源和具体消费者仍待核实；本次没有访问生产存储。',

@@ -25,12 +25,15 @@ class PublishedSitemapTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 audit.local_proxy(proxy)
 
-    def test_main_owned_item_details_cannot_disappear_with_whole_game_filtering(self):
+    def test_material_inventory_must_be_complete_at_the_current_owner(self):
         records = [{"id": "annulith"}, {"id": "fons"}]
         result = audit.main_fallback_coverage([], records)
-        self.assertEqual(result["status"], "blocked_main_owned_urls_missing")
+        self.assertEqual(result["missingCount"], 0)
+        self.assertEqual(result["requiredCount"], 0)
+        result = audit.material_coverage([], records, "nte")
+        self.assertEqual(result["status"], "blocked_material_urls_missing")
         self.assertEqual(result["missingCount"], 6)
-        self.assertEqual(audit.main_fallback_coverage(result["missing"], records)["missingCount"], 0)
+        self.assertEqual(audit.material_coverage(result["missing"], records, "nte")["missingCount"], 0)
         for bad in [[], [{"id": "../other"}], [{"id": "a"}, {"id": "a"}]]:
             with self.assertRaises(ValueError):
                 audit.main_fallback_coverage([], bad)
@@ -55,17 +58,19 @@ class PublishedSitemapTests(unittest.TestCase):
                 audit.verify_graph(self.index, self.main, documents.__getitem__)
 
     def test_rejects_wrong_page_owner_unknown_owner_and_duplicates(self):
-        for paths in [["/en/roco"], ["/zh/nte", "/zh/nte"], ["/xx/nte"], ["/ja/nte/items/annulith"], ["/zh/nte/unknown/sample"]]:
+        for paths in [["/en/roco"], ["/zh/nte", "/zh/nte"], ["/xx/nte"], ["/zh/nte/unknown/sample"]]:
             documents = {**self.documents, "/sitemaps/nte/index.xml": xml("urlset", "url", paths)}
             with self.assertRaises(ValueError):
                 audit.verify_graph(self.index, self.main, documents.__getitem__)
         with self.assertRaises(ValueError):
             audit.verify_graph(self.index.replace("lvmeng", "unknown"), self.main, self.documents.__getitem__)
 
-    def test_main_item_and_dedicated_list_are_disjoint_by_route_not_game(self):
-        main = xml("urlset", "url", ["/zh", "/ja/nte/items/annulith"])
-        result = audit.verify_graph(self.index, main, self.documents.__getitem__)
-        self.assertIn("https://gachia.com/ja/nte/items/annulith", result["owners"]["main"])
+    def test_migrated_item_details_must_be_listed_by_the_dedicated_owner(self):
+        documents = {**self.documents, "/sitemaps/nte/index.xml": xml("urlset", "url", ["/zh/nte", "/ja/nte/items/annulith"])}
+        result = audit.verify_graph(self.index, self.main, documents.__getitem__)
+        self.assertIn("https://gachia.com/ja/nte/items/annulith", result["owners"]["nte"])
+        with self.assertRaises(ValueError):
+            audit.verify_graph(self.index, xml("urlset", "url", ["/zh", "/ja/nte/items/annulith"]), documents.__getitem__)
         with self.assertRaises(ValueError):
             audit.verify_owner_pages(["https://gachia.com/en/lvmeng"], "lvmeng")
 

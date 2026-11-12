@@ -26,7 +26,8 @@ test('migration upload accepts one exact UUID and its exact version preview, nev
   assert.deepEqual(migrationUploadResponse(log, 'gachia-router'), { versionId });
   assert.throws(() => migrationUploadResponse(log + log, 'gachia-router'));
   assert.throws(() => migrationUploadResponse(log.replace(versionId.slice(0, 8) + '-gachia-router', 'latest-gachia-router'), 'gachia-router'));
-  for (const service of ['gachia-staging', 'gachia-game-nte', 'injected']) assert.throws(() => migrationPreviewOrigin(service, versionId));
+  assert.equal(migrationPreviewOrigin('gachia-game-nte', versionId), `https://${versionId.slice(0, 8)}-gachia-game-nte.aieasygames.workers.dev`);
+  for (const service of ['gachia-staging', 'injected']) assert.throws(() => migrationPreviewOrigin(service, versionId));
 });
 test('fixed Router deployment writes once, verifies allocation and records both responses', async () => {
   const requests = [], responses = [];

@@ -34,17 +34,18 @@ class SitemapContractTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "dedicated owner"):
             audit.verify_documents(self.index, xml("urlset", "url", ["/ja/nte/guides/untranslated"]))
 
-    def test_only_approved_main_fallback_details_are_accepted(self):
+    def test_migrated_nte_material_details_are_not_main_fallbacks(self):
         paths = [f"/{locale}/nte/items/annulith" for locale in ("zh", "en", "ja")]
-        self.assertEqual(len(audit.verify_documents(self.index, xml("urlset", "url", paths))["mainUrls"]), 3)
+        for path in paths:
+            with self.assertRaisesRegex(ValueError, "dedicated owner"):
+                audit.verify_documents(self.index, xml("urlset", "url", [path]))
         for path in ["/ja/nte/items", "/en/lvmeng", "/zh/nte/unknown/sample", "/ja/nte/items/annulith/extra", "/ja/nte/items/%61nnulith"]:
             with self.assertRaises(ValueError):
                 audit.verify_documents(self.index, xml("urlset", "url", [path]))
 
-    def test_main_fallback_removal_cannot_be_excused_as_a_dedicated_owner(self):
+    def test_migrated_material_removal_is_explained_by_the_dedicated_owner(self):
         result = audit.verify_documents(self.index, self.pages)
-        with self.assertRaisesRegex(ValueError, "Unexplained removal"):
-            audit.compare_before([{"url": "https://gachia.com/ja/nte/items/annulith"}], result)
+        audit.compare_before([{"url": "https://gachia.com/ja/nte/items/annulith"}], result)
 
     def test_legacy_dispatch_matrix_matches_typescript(self):
         paths = set()
@@ -58,7 +59,7 @@ class SitemapContractTests(unittest.TestCase):
                 for suffix in ("", "/index.xml", "/nested/file"):
                     paths.add(f"/{prefix}/{game}{suffix}")
         matrix = "".join(f"{path}\t{audit.route_owner(path)}\n" for path in sorted(paths))
-        self.assertEqual(audit.hashlib.sha256(matrix.encode()).hexdigest(), "6f4629fabf35c459f9518341c811c8337762fbd4505af0f82291f355259e08f3")
+        self.assertEqual(audit.hashlib.sha256(matrix.encode()).hexdigest(), "adeaedc93c6201685ffae1912c880088d19bac0070e5c5649f1c6ed62318ab10")
 
     def test_no_duplicates_or_preview_origins(self):
         for pages in [xml("urlset", "url", ["/zh", "/zh"]), self.pages.replace("https://gachia.com", "https://preview.workers.dev")]:

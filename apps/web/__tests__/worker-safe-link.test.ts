@@ -38,14 +38,15 @@ describe('main runtime navigation boundary', () => {
 
   it('uses the localized target owner, not whole-game ownership', () => {
     for (const locale of ['zh', 'en', 'ja'] as const) {
-      expect(requiresMainDocumentNavigation('/nte/items/annulith', locale)).toBe(false);
-      expect(requiresMainDocumentNavigation(`/${locale}/nte/items/annulith?x=1#details`)).toBe(false);
+      expect(requiresMainDocumentNavigation('/nte/items/annulith', locale)).toBe(true);
+      expect(requiresMainDocumentNavigation(`/${locale}/nte/items/annulith?x=1#details`)).toBe(true);
       expect(requiresMainDocumentNavigation('/nte/items', locale)).toBe(true);
       expect(requiresMainDocumentNavigation('/nte/characters/aurelia', locale)).toBe(true);
       expect(requiresMainDocumentNavigation('/lvmeng', locale)).toBe(locale === 'zh');
     }
     const html = renderToStaticMarkup(createElement(WorkerSafeLink, { href: '/nte/items/annulith' }, 'Item'));
-    expect(html).toContain('data-next-link="/nte/items/annulith"');
+    expect(html).toContain('href="/en/nte/items/annulith"');
+    expect(html).not.toContain('data-next-link');
     expect(requiresMainDocumentNavigation('/lvmeng', 'en')).toBe(false);
     const localized = renderToStaticMarkup(createElement(WorkerSafeLink, { href: '/lvmeng', locale: 'zh' }, 'Game'));
     expect(localized).toContain('href="/zh/lvmeng"');

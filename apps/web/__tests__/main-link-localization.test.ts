@@ -11,7 +11,7 @@ for (const locale of ['zh', 'en', 'ja'] as const) {
     expect(requiresMainDocumentNavigation(path)).toBe(true);
     const item = getPathname({ href: { pathname: '/nte/items/annulith', query: { source: 'search' } }, locale });
     expect(item).toBe(`/${locale}/nte/items/annulith?source=search`);
-    expect(requiresMainDocumentNavigation(item)).toBe(false);
+    expect(requiresMainDocumentNavigation(item)).toBe(true);
     expect(getPathname({ href: 'https://gachia.com/en/genshin', locale })).toBe('https://gachia.com/en/genshin');
   });
 }

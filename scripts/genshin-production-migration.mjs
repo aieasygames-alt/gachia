@@ -6,6 +6,7 @@ import { normalizedBindings } from './desktop-cloud-transport.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { withRunLock } from './desktop-publish.mjs';
 import { parseWrangler } from './game-release.mjs';
+import { NTE_MIGRATION_ORDER, assertNteMigrationIdentity, assertNteMigrationTopology } from './nte-release-config.mjs';
 
 export const GENSHIN_MIGRATION_POLICY = 'genshin-content-production-migration-v1';
 export const GENSHIN_MIGRATION_ORDER = Object.freeze(['genshin', 'router', 'main']);
@@ -138,6 +139,7 @@ export function assertGenshinMigrationStoppedPrefix(identity, rows) {
 export function executeGenshinMigration(input) {
   return executeMigration(input);
 }
+export function executeNteMigration(input) { return executeMigration(input, undefined, 'nte'); }
 
 export function executeGenshinMigrationContinuation(input) {
   assert(input.previous && SHA.test(input.previous.journal.pin));
@@ -148,23 +150,28 @@ export function executeGenshinMigrationContinuation(input) {
   return executeMigration(input, { ...state, proof: input.previous.journal, identity: input.previous.identity });
 }
 
-async function executeMigration({ run, releaseKey, verify, transport }, continuation) {
+async function executeMigration({ run, releaseKey, verify, transport }, continuation, game = 'genshin') {
+  assert(['genshin', 'nte'].includes(game)); assert(game === 'genshin' || !continuation);
+  const order = game === 'nte' ? NTE_MIGRATION_ORDER : GENSHIN_MIGRATION_ORDER;
+  const gameServices = game === 'nte' ? { nte: 'gachia-game-nte', router: 'gachia-router', main: 'gachia' } : services;
+  const assertIdentity = game === 'nte' ? assertNteMigrationIdentity : assertGenshinMigrationIdentity;
+  const assertMigrationTopology = game === 'nte' ? assertNteMigrationTopology : assertGenshinMigrationTopology;
   return withRunLock(run, async () => {
     const initial = structuredClone(await verify());
-    assertGenshinMigrationIdentity(initial);
+    assertIdentity(initial);
     assert.equal(releaseKey, initial.releaseKey, 'Explicit migration release identity required');
-    const journal = join(run, `genshin-migration-${releaseKey}.jsonl`);
+    const journal = join(run, `${game}-migration-${releaseKey}.jsonl`);
     writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = value => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), policy: initial.policy, releaseKey, ...value }) + '\n', { flush: true });
     if (continuation) assert.deepEqual({ ...initial, releaseKey: continuation.identity.releaseKey, observedAt: continuation.identity.observedAt }, continuation.identity);
     const configured = continuation ? ['genshin'] : [], deployed = structuredClone(continuation?.deployed ?? {}), accepted = structuredClone(continuation?.accepted ?? {});
     let pendingOperation, observedAt = initial.observedAt;
     const revalidate = async () => {
-      const current = await verify(); assertGenshinMigrationIdentity(current);
+      const current = await verify(); assertIdentity(current);
       assert(current.observedAt >= observedAt, 'Migration observation moved backwards');
       assert.deepEqual({ ...current, observedAt: initial.observedAt }, initial, 'Migration identity changed');
       observedAt = current.observedAt;
-      assertGenshinMigrationTopology(initial.baseline, await transport.snapshot(), { configured, deployed });
+      assertMigrationTopology(initial.baseline, await transport.snapshot(), { configured, deployed });
     };
     record({ phase: continuation ? 'continuation_baseline' : 'baseline', baseline: initial.baseline, owners: initial.owners,
       ...(continuation ? { previousJournal: continuation.proof, previousReleaseKey: continuation.identity.releaseKey, deployed, accepted } : {}) });
@@ -176,7 +183,7 @@ async function executeMigration({ run, releaseKey, verify, transport }, continua
         record({ phase: 'step_accepted', owner: 'genshin', proof });
         await revalidate();
       }
-      for (const owner of GENSHIN_MIGRATION_ORDER.slice(continuation ? 1 : 0)) {
+      for (const owner of order.slice(continuation ? 1 : 0)) {
         const row = initial.owners[owner];
         accepted[owner] = {};
         for (const role of ['recovery', 'candidate']) {
@@ -226,7 +233,7 @@ async function executeMigration({ run, releaseKey, verify, transport }, continua
       await revalidate();
       const proof = await transport.acceptProduction({ deployed: { ...deployed }, accepted: structuredClone(accepted) });
       assert.equal(proof.status, 'passed'); assert(SHA.test(proof.evidenceSHA256));
-      assert.deepEqual(proof.versions, Object.fromEntries(GENSHIN_MIGRATION_ORDER.map(owner => [services[owner], deployed[owner]])));
+      assert.deepEqual(proof.versions, Object.fromEntries(order.map(owner => [gameServices[owner], deployed[owner]])));
       await revalidate();
       record({ phase: 'production_accepted', proof });
       return { policy: initial.policy, status: 'production_accepted', versions: proof.versions,

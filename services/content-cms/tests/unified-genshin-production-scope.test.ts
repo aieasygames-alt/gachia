@@ -9,7 +9,7 @@ import { digest } from '../src/legacy-intake'
 import { projectRoot } from '../src/local-environment'
 import { objectValue } from '../src/unified-content'
 import { exportUnifiedContent } from '../src/unified-export'
-import { genshinProductionOwnerScope, GENSHIN_PRODUCTION_SCOPE } from '../src/unified-genshin-production-scope'
+import { genshinProductionOwnerScope, GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope } from '../src/unified-genshin-production-scope'
 import { unifiedPlan } from '../src/unified-plan'
 import { readUnifiedSources } from '../src/unified-sources'
 import { freezeUnifiedContent, verifyUnifiedFrozenSource } from '../src/unified-build'
@@ -44,6 +44,26 @@ test('formal scope refuses rehearsal, partial A, nonrendered fields and cross-ga
   assert.throws(() => scope([record('genshin', 'rarity')]))
   assert.throws(() => scope([record('nte')]))
   assert.throws(() => scope([record(), record('nte')]))
+})
+test('formal NTE character scope qualifies one owner and preserves Hu Tao and the five guide increments', () => {
+  const active = structuredClone(original)
+  for (const game of ['ananta', 'genshin', 'hi3', 'nte', 'sea']) {
+    const source = active.find(row => row.sourcePath === `packages/data/games/${game}/raw-guides.json`)!
+    const rows = JSON.parse(source.text); rows[0].content += '\nPreserved public text'
+    source.text = JSON.stringify(rows, null, 2) + '\n'; source.sha256 = digest(source.text)
+  }
+  const genshin = active.find(row => row.sourcePath === 'packages/data/games/genshin/raw-characters.json')!
+  const characters = JSON.parse(genshin.text); characters.find((row: any) => row.id === 'hu-tao').descriptionEn = 'Previously approved Hu Tao text'
+  genshin.text = JSON.stringify(characters, null, 2) + '\n'; genshin.sha256 = digest(genshin.text)
+  const candidate = exportUnifiedContent([record('nte')], original, active, false)
+  const overlays = candidate.files.map(row => ({ sourcePath: row.sourcePath, text: row.content, sha256: row.candidateSHA256 }))
+  assert.deepEqual(independentProductionOwnerScope('nte', candidate.manifest, active, overlays), {
+    games: ['nte'], owners: ['nte'], services: ['gachia-game-nte'], productionScope: NTE_PRODUCTION_SCOPE,
+  })
+  const other = exportUnifiedContent([record()], original, active, false)
+  assert.throws(() => independentProductionOwnerScope('nte', other.manifest, active, other.files.map(row => ({ sourcePath: row.sourcePath, text: row.content, sha256: row.candidateSHA256 }))))
+  assert.throws(() => independentProductionOwnerScope('nte', { ...candidate.manifest, preview: true }, active, overlays))
+  assert.throws(() => independentProductionOwnerScope('nte', candidate.manifest, active.slice(1), overlays))
 })
 test('the real compiler independently reopens an explicit formal Genshin-only freeze with complete A', () => {
   const root = realpathSync(mkdtempSync(path.join(tmpdir(), 'genshin-formal-freeze-')))

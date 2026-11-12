@@ -16,6 +16,8 @@ import { unifiedProductionRead } from './unified-production-transport.mjs';
 import { verifyUnifiedTool } from './unified-cloud-module.mjs';
 import { unifiedOwnerDeploymentWriter } from './unified-owner-deployment.mjs';
 import { captureUnifiedUploadedModule, readUnifiedVersion, revalidateUnifiedUploadedModule } from './unified-version-identity.mjs';
+import { nteExpectedBindings } from './nte-release-config.mjs';
+import { verifyNteHTTP } from './nte-release-http.mjs';
 
 export function migrationUploadResponse(output, service) {
   const versions = [...output.matchAll(/Worker Version ID:\s*([a-f0-9-]{36})/g)].map(row => row[1]);
@@ -51,10 +53,12 @@ export function migrationRouterDeploymentWriter({ releaseKey, versionId, token, 
 // No request field can replace a reader, validator, module or write operation.
 export function genshinMigrationTransport({ evidence, releaseKey, token, directory, previewRequest = unifiedProductionRead, publicRequest = unifiedProductionRead }) {
   const { value, expected, bases } = evidence, uploads = new Map(), writers = new Map();
+  const nte = ['nte_migration_bundle', 'nte_independent_bundle'].includes(value.kind);
+  const verifyHTTP = nte ? verifyNteHTTP : verifyMigrationHTTP;
   const readVersion = (service, versionId) => service === 'gachia-router'
     ? readMigrationRouterVersion({ versionId, token, request: unifiedProductionRead }) : readUnifiedVersion({ service, versionId, token, request: unifiedProductionRead });
   const rowFor = args => {
-    assert(['genshin', 'router', 'main'].includes(args.owner)); assert(['recovery', 'candidate'].includes(args.role));
+    assert((nte ? ['nte', 'router', 'main'] : ['genshin', 'router', 'main']).includes(args.owner)); assert(['recovery', 'candidate'].includes(args.role));
     const owner = value.owners[args.owner]; assert.equal(args.service, owner.service); assert.deepEqual(args.sealed, owner[args.role]);
     const local = join(evidence.directory, args.owner, args.role), output = join(directory, args.owner + '-' + args.role);
     const config = migrationPinned({ path: join(local, 'upload.json'), pin: args.sealed.configPin });
@@ -63,7 +67,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
   };
   const references = (owner, role) => migrationPinned({ path: join(evidence.directory, owner, role, 'local-http/responses/references.json'), pin: value.owners[owner][role].referencesPin });
   const checkVersion = (args, version, config) => {
-    const bindings = migrationExpectedBindings(value.baseline, args.owner, args.role);
+    const bindings = nte ? nteExpectedBindings(value.baseline, args.owner, args.role, value.kind === 'nte_migration_bundle') : migrationExpectedBindings(value.baseline, args.owner, args.role);
     if (args.owner !== 'router') assertUploadedVersion(version, args.versionId, config, bindings);
     else {
       assert.equal(version.id, args.versionId); assert.equal(version.metadata.has_preview, true);
@@ -74,7 +78,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
     }
   };
   let acceptanceCount = 0;
-  const acceptPublic = async (owner, refs, role = 'candidate') => verifyMigrationHTTP({ origin: 'https://gachia.com', references: refs,
+  const acceptPublic = async (owner, refs, role = 'candidate') => verifyHTTP({ origin: 'https://gachia.com', references: refs,
     directory: join(directory, `public-${acceptanceCount++}-${owner}`), owner, role, expected, bases, request: publicRequest });
   return {
     snapshot: () => desktopCloudSnapshot(token, unifiedProductionRead, { allowSplit: true }),
@@ -117,7 +121,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
       return { versionId: args.versionId, moduleSHA256: args.sealed.moduleSHA256, moduleProof, versionPin };
     },
     preview: async args => {
-      const { output } = rowFor(args); const proof = await verifyMigrationHTTP({ origin: migrationPreviewOrigin(args.service, args.versionId), references: references(args.owner, args.role),
+      const { output } = rowFor(args); const proof = await verifyHTTP({ origin: migrationPreviewOrigin(args.service, args.versionId), references: references(args.owner, args.role),
         directory: join(output, 'preview'), owner: args.owner, role: args.role, expected, bases, preview: true, request: previewRequest });
       return { ...proof, service: args.service, versionId: args.versionId };
     },
@@ -146,6 +150,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
       return writers.get(args.owner)(args);
     },
     acceptStep: async ({ owner }) => {
+      if (nte && owner === 'nte') return acceptPublic('nte', migrationPinned(value.stepReferences));
       if (owner === 'genshin') {
         // The original Router already enforces this public GET freshness policy.
         return acceptPublic('genshin', migrationGenshinStepReferences(evidence));

@@ -263,6 +263,10 @@ function routeMiddleware(request: NextRequest) {
   }
 
   // These routes now belong to the game Worker; never serve an empty Main fallback.
+  if (locale && game === 'nte' && thirdSegment === 'items') {
+    return new NextResponse(null, { status: 404,
+      headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' } });
+  }
   if (locale && game === 'genshin' && (!thirdSegment ||
       ['characters', 'weapons', 'items', 'artifacts', 'guides', 'redeem-codes', 'build', 'calculator', 'compare', 'teams', 'tier-list', 'map', 'version', 'download', 'gacha'].includes(thirdSegment))) {
     return new NextResponse(null, {

@@ -5,6 +5,7 @@ import { verifyRawInventory } from './raw-inventory-contract.mjs';
 import { tierListProjection } from './game-public-projections.mjs';
 import { mainManifests } from './main-manifests.mjs';
 import { genshinContentAssets } from '../../../scripts/genshin-content-assets.mjs';
+import { nteContentAssets } from '../../../scripts/nte-content-assets.mjs';
 
 const gamesRoot = new URL('../games/', import.meta.url);
 const outputRoot = new URL('../../../apps/web/public/data-manifest/', import.meta.url);
@@ -18,6 +19,7 @@ await mkdir(clientDataRoot, { recursive: true });
 const manifests = await mainManifests(gamesRoot);
 for (const [file, value] of manifests) await writeFile(new URL(file, outputRoot), `${JSON.stringify(value)}\n`);
 await writeFile(new URL('genshin-platform.json', clientDataRoot), genshinContentAssets().files.get('platform.json'));
+await writeFile(new URL('nte-platform.json', clientDataRoot), nteContentAssets().files.get('platform.json'));
 
 const tierListFields = {
   genshin: ['element', 'weaponType'],

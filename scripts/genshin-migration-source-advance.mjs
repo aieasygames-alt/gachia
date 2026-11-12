@@ -11,6 +11,7 @@ import { unifiedProductionRead } from './unified-production-transport.mjs';
 import { migrationRouterModule } from './genshin-migration-router.mjs';
 import { readUnifiedUploadedModule } from './unified-version-identity.mjs';
 import { readUnifiedSourceOwner } from './unified-source-advance.mjs';
+import { recheckNteHTTP } from './nte-release-http.mjs';
 
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const treePin = directory => digest(migrationJSON(artifactFiles(directory)));
@@ -109,7 +110,7 @@ export function migrationGenshinStepReferences(evidence) {
     .map(row => /^\/(zh|en|ja)\//.test(row.path) ? { ...row, headers: { ...row.headers, 'cache-control': 'private, no-cache, no-store, max-age=0, must-revalidate' } } : row);
 }
 
-export async function readMigrationOwner({ owner, rows, offset, directory, releaseKey, evidence, requireStep = true }) {
+export async function readMigrationOwner({ owner, rows, offset, directory, releaseKey, evidence, requireStep = true, nte = false }) {
     const sealedOwner = evidence.value.owners[owner], modules = {}, accepted = {};
     for (const [j, role] of ['recovery', 'candidate'].entries()) {
       const intent = rows[offset + j * 3], returned = rows[offset + j * 3 + 1], acceptance = rows[offset + j * 3 + 2], sealed = sealedOwner[role];
@@ -134,7 +135,9 @@ export async function readMigrationOwner({ owner, rows, offset, directory, relea
       }
       assertModuleVersionIdentity(version, modules[role].version);
       const references = migrationPinned({ path: join(evidence.directory, owner, role, 'local-http/responses/references.json'), pin: sealed.referencesPin });
-      recheckMigrationHTTP({ directory: join(output, 'preview'), pin: recorded.evidenceSHA256, origin: migrationPreviewOrigin(sealedOwner.service, recorded.versionId),
+      if (nte) recheckNteHTTP({ proof: { path: join(output, 'preview/result.json'), pin: recorded.evidenceSHA256 },
+        origin: migrationPreviewOrigin(sealedOwner.service, recorded.versionId), references, preview: true });
+      else recheckMigrationHTTP({ directory: join(output, 'preview'), pin: recorded.evidenceSHA256, origin: migrationPreviewOrigin(sealedOwner.service, recorded.versionId),
         references, owner, role, expected: evidence.expected, bases: evidence.bases, preview: true });
     }
     assert.notEqual(accepted.candidate.versionId, accepted.recovery.versionId);
@@ -142,7 +145,7 @@ export async function readMigrationOwner({ owner, rows, offset, directory, relea
     for (const row of [intent, deployed, ...(requireStep ? [step] : [])]) assert.equal(row.owner, owner);
     if (requireStep) { assert.equal(step.proof.status, 'passed'); assert(/^[a-f0-9]{64}$/.test(step.proof.evidenceSHA256)); }
     assert.equal(intent.service, sealedOwner.service); assert.equal(intent.versionId, accepted.candidate.versionId);
-    assert.equal(deployed.versionId, intent.versionId); assert.equal(deployed.result.service, sealedOwner.service);
+    assert.equal(deployed.versionId ?? (!requireStep ? deployed.result.versionId : undefined), intent.versionId); assert.equal(deployed.result.service, sealedOwner.service);
     assert.equal(deployed.result.versionId, intent.versionId); assert.equal(deployed.result.releaseKey, releaseKey); assert(UUID.test(deployed.result.deploymentId));
     assert(intent.observedAt <= Date.parse(intent.at) && Date.parse(intent.at) - intent.observedAt < 900000);
     for (const role of ['candidate', 'recovery']) assert(accepted[role].acceptedAt <= Date.parse(intent.at) && Date.parse(intent.at) - accepted[role].acceptedAt < 900000);

@@ -18,7 +18,7 @@ import { prepareUnifiedAssetPair, verifyUnifiedAssetPair } from './unified-relea
 import { readUnifiedSourceOwner } from './unified-source-advance.mjs';
 import { unifiedConfigSemantics, unifiedDryRun, unifiedTransportTool, verifyUnifiedTool } from './unified-cloud-module.mjs';
 
-const serviceFor = { genshin: 'gachia-game-genshin', router: 'gachia-router', main: 'gachia' };
+const serviceFor = { genshin: 'gachia-game-genshin', nte: 'gachia-game-nte', router: 'gachia-router', main: 'gachia' };
 const appFor = { genshin: 'game-genshin', router: 'router', main: 'web' };
 const treePin = directory => digest(migrationJSON(artifactFiles(directory)));
 export { localConfig as migrationLocalConfig, seal as sealMigrationOwner };
@@ -60,14 +60,16 @@ function configForSeal(workspace, owner, role, artifact, module) {
   const config = migrationRuntimeConfig(workspace, owner, role);
   return { ...config, main: module, ...(owner === 'router' ? {} : { assets: { ...config.assets, directory: join(artifact, 'assets') } }) };
 }
-async function seal({ workspace, directory, owner, role, artifact, tool }) {
+async function seal({ workspace, directory, owner, role, artifact, tool, runtimeConfig = undefined }) {
   const local = join(directory, owner, role), temp = join(local, 'seal'); mkdirSync(temp, { mode: 0o700 }); mkdirSync(join(temp, 'home'), { mode: 0o700 });
   const moduleDir = join(local, 'module'); mkdirSync(moduleDir, { mode: 0o700 });
   const modulePath = join(moduleDir, 'worker.js');
   if (role === 'recovery') writeFileSync(modulePath, readFileSync(join(artifact, 'worker.js')), { flag: 'wx', mode: 0o600 });
   if (owner === 'router' && role === 'candidate') writeFileSync(join(temp, 'worker.ts'), `export { default } from ${JSON.stringify(join(workspace, 'apps/router/src/index.ts'))};\n`, { flag: 'wx' });
   const main = role === 'recovery' ? modulePath : owner === 'router' ? join(temp, 'worker.ts') : join(artifact, 'worker.js');
-  const config = { ...configForSeal(workspace, owner, role, artifact, main), ...(role === 'recovery' ? { no_bundle: true, minify: false } : {}) }, configPath = join(temp, 'compile.json');
+  const base = runtimeConfig ? { ...runtimeConfig, main, ...(owner === 'router' ? {} : { assets: { ...runtimeConfig.assets, directory: join(artifact, 'assets') } }) }
+    : configForSeal(workspace, owner, role, artifact, main);
+  const config = { ...base, ...(role === 'recovery' ? { no_bundle: true, minify: false } : {}) }, configPath = join(temp, 'compile.json');
   migrationSave(temp, 'compile.json', config);
   unifiedDryRun(tool, { config: configPath, environment: '', outfile: join(temp, 'compiled.multipart'), exact: role === 'recovery', cwd: temp, home: join(temp, 'home'), log: join(temp, 'compile.log') });
   const compiled = await multipartModule(readFileSync(join(temp, 'compiled.multipart')));
@@ -78,7 +80,7 @@ async function seal({ workspace, directory, owner, role, artifact, tool }) {
   const exactConfig = { ...config, main: modulePath, no_bundle: true, minify: false };
   const proof = migrationSave(local, 'upload.json', exactConfig);
   const tags = unifiedConfigSemantics(tool, proof.path, '').tags;
-  assert.deepEqual(tags, owner === 'genshin' ? [] : ['cf:service=' + serviceFor[owner]]);
+  assert.deepEqual(tags, ['genshin', 'nte'].includes(owner) ? [] : ['cf:service=' + serviceFor[owner]]);
   unifiedDryRun(tool, { config: proof.path, environment: '', outfile: join(temp, 'exact.multipart'), exact: true, cwd: temp, home: join(temp, 'home'), log: join(temp, 'exact.log') });
   const exact = await multipartModule(readFileSync(join(temp, 'exact.multipart')));
   assert.equal(exact.moduleSHA256, compiled.moduleSHA256); (owner === 'router' ? assertMigrationRouterMetadata : assertUploadMetadata)(exact.metadata, exactConfig);

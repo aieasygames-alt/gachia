@@ -43,6 +43,8 @@ const nextConfig: NextConfig = {
       './public/data/genshin/**',
       './public/data-client/genshin-platform.json',
       './public/data-client/tier-list-genshin.json',
+      './public/data/nte/**',
+      './public/data-client/nte-platform.json',
     ],
   },
   transpilePackages: ['react-leaflet', '@react-leaflet/core', 'react-leaflet-cluster'],

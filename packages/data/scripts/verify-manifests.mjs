@@ -3,12 +3,15 @@ import { verifySeaGuideContract } from './sea-guide-contract.mjs';
 import { verifyRawMirrors } from './raw-mirror-contract.mjs';
 import { verifyRawInventory } from './raw-inventory-contract.mjs';
 import { genshinContentAssets } from '../../../scripts/genshin-content-assets.mjs';
+import { nteContentAssets } from '../../../scripts/nte-content-assets.mjs';
 
 await verifySeaGuideContract();
 await verifyRawMirrors();
 await verifyRawInventory();
 const platform = await readFile(new URL('../../../apps/web/public/data-client/genshin-platform.json', import.meta.url));
 if (!platform.equals(genshinContentAssets().files.get('platform.json'))) throw new Error('Genshin compatibility platform data differs from the current owner projection');
+const ntePlatform = await readFile(new URL('../../../apps/web/public/data-client/nte-platform.json', import.meta.url));
+if (!ntePlatform.equals(nteContentAssets().files.get('platform.json'))) throw new Error('NTE compatibility platform data differs from the current owner projection');
 
 const outputRoot = new URL('../../../apps/web/public/data-manifest/', import.meta.url);
 const clientDataRoot = new URL('../../../apps/web/public/data-client/', import.meta.url);

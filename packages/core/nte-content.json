@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "owner": "nte",
+  "prefix": "/_games/nte/content",
+  "rawFiles": [
+    "raw-anomalies.json",
+    "raw-builds.json",
+    "raw-character-materials.json",
+    "raw-character-summaries.json",
+    "raw-characters.json",
+    "raw-disk-sets.json",
+    "raw-gacha-system.json",
+    "raw-guides.json",
+    "raw-materials.json",
+    "raw-redeem-codes.json",
+    "raw-regions.json",
+    "raw-weapons.json"
+  ],
+  "sourceOnlyFiles": ["raw-image-sources.json"],
+  "locales": ["zh", "en", "ja"]
+}

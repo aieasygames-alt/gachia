@@ -97,10 +97,7 @@ export async function getItemsForStaticParams(gameId: GameId): Promise<Array<{ i
       const mod = await import('@gachia/data/games/wuwa/items');
       return mod.wuwaMaterials.map((m) => ({ id: m.id }));
     }
-    case 'nte': {
-      const mod = await import('@gachia/data/games/nte/items');
-      return mod.nteMaterials.map((m) => ({ id: m.id }));
-    }
+    case 'nte': return [];
     case 'zzz': {
       const mod = await import('@gachia/data/games/zzz/items');
       return mod.zzzMaterials.map((m) => ({ id: m.id }));
@@ -154,11 +151,7 @@ export async function getItemData(
       const material = mod.getWuWaMaterialById(id);
       return material ? toItemData(material, locale, mod.getWuWaMaterialName) : null;
     }
-    case 'nte': {
-      const mod = await import('@gachia/data/games/nte/items');
-      const material = mod.getNteMaterialById(id);
-      return material ? toItemData(material, locale, mod.getNteMaterialName) : null;
-    }
+    case 'nte': return null;
     case 'zzz': {
       const mod = await import('@gachia/data/games/zzz/items');
       const material = mod.getZzzMaterialById(id);
@@ -217,10 +210,7 @@ export async function getItemListData(
       const mod = await import('@gachia/data/games/wuwa/items');
       return mod.wuwaMaterials.map((material) => toItemListEntry(material, locale, mod.getWuWaMaterialName));
     }
-    case 'nte': {
-      const mod = await import('@gachia/data/games/nte/items');
-      return mod.nteMaterials.map((material) => toItemListEntry(material, locale, mod.getNteMaterialName));
-    }
+    case 'nte': return [];
     case 'zzz': {
       const mod = await import('@gachia/data/games/zzz/items');
       return mod.zzzMaterials.map((material) => toItemListEntry(material, locale, mod.getZzzMaterialName));
@@ -316,23 +306,7 @@ export async function getCharactersNeedingMaterial(
         })
         .map((char) => ({ id: char.id, element: char.element, image: getWuWaCharacterImage(char) })));
     }
-    case 'nte': {
-      const [{ characterMaterials }, { nteCharacters, getNteCharacterImage }] = await Promise.all([
-        import('@gachia/data/games/nte/extras'),
-        import('@gachia/data/games/nte/characters'),
-      ]);
-      const charIds = new Set<string>();
-      for (const cm of characterMaterials) {
-        if (cm.levelingMaterials.some((lv) => lv.materials.some((m) => m.id === materialId))
-          || cm.skillMaterials.some((m) => m.id === materialId)) {
-          charIds.add(cm.characterId);
-        }
-      }
-      return dedupeById([...charIds].map((id) => {
-        const char = nteCharacters.find((c) => c.id === id);
-        return char ? { id: char.id, element: char.attribute, image: getNteCharacterImage(char) } : null;
-      }).filter(Boolean) as MaterialCharacter[]);
-    }
+    case 'nte': return [];
     case 'guihuan': {
       const [{ characterMaterials }, { guihuanCharacters, getGuihuanCharacterImage }] = await Promise.all([
         import('@gachia/data/games/guihuan/extras'),

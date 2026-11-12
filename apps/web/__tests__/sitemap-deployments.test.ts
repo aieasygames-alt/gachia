@@ -35,7 +35,7 @@ describe('sitemap deployment shards', () => {
     expect(() => getSitemapPaths({ a: deployment, b: deployment })).toThrow();
   });
 
-  it('keeps dedicated paths out while restoring every confirmed Main fallback item', async () => {
+  it('keeps dedicated paths out after moving the NTE material details', async () => {
     const urls = (await sitemap()).map(entry => entry.url);
     expect(new Set(urls).size).toBe(urls.length);
     for (const url of urls) {
@@ -44,8 +44,8 @@ describe('sitemap deployment shards', () => {
     }
     const expectedItems = ['zh', 'en', 'ja'].flatMap(locale => nteMaterials.map(item => `https://gachia.com/${locale}/nte/items/${item.id}`));
     expect(expectedItems.length).toBe(171);
-    expect(urls.filter(url => new URL(url).pathname.split('/')[2] === 'nte').sort()).toEqual(expectedItems.sort());
-    for (const game of ['genshin', 'azur-promilia', 'lvmeng']) {
+    expect(urls.filter(url => new URL(url).pathname.split('/')[2] === 'nte')).toEqual([]);
+    for (const game of ['genshin', 'nte', 'azur-promilia', 'lvmeng']) {
       expect(urls.some(url => new URL(url).pathname.split('/')[2] === game)).toBe(false);
     }
     expect(urls).not.toContain('https://gachia.com/ja/nte/guides/untranslated');

@@ -75,6 +75,7 @@ jobs:
         if: steps.scope.outputs.consumers == 'true'
         run: |
           pnpm test:genshin-content
+          pnpm test:nte-content
           pnpm test:release
       - name: Test public Web and Data consumers
         if: steps.scope.outputs.consumers == 'true'
