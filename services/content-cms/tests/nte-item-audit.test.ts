@@ -10,7 +10,7 @@ test('semantic audit distinguishes explicit translations, legacy fallbacks and o
   const result = auditNteItems(raw, observations())
   assert.equal(result.counts.differingViews, 2)
   assert.equal(result.counts.fallbackViews, 2)
-  assert.ok(result.pages.every(row => row.owner === 'main' && row.collectionOwner === 'nte'))
+  assert.ok(result.pages.every(row => row.owner === 'nte' && row.collectionOwner === 'nte'))
   assert.equal(result.materials[0].translations.some(row => row.locale === 'ja'), false)
   assert.equal(result.publishable, false)
 })

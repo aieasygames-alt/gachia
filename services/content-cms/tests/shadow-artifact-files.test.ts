@@ -8,6 +8,7 @@ import test from 'node:test'
 import { shadowArtifactFiles } from '../src/shadow-artifact-files'
 import { loadShadowConsumer } from '../src/shadow-consumer'
 import { SHADOW_SCHEMA } from '../src/shadow-release'
+import { currentShadowFixture } from '../test-support/current-shadow-fixture'
 
 const exec = promisify(execFile)
 const fixturePath = new URL('../../../reports/payload-status-audit-2026-10-30/batch17-shadow.json', import.meta.url)
@@ -15,7 +16,7 @@ const worker = new URL('../scripts/shadow-file-consumer.ts', import.meta.url)
 async function setup() {
   const root = await realpath(await mkdtemp(path.join(tmpdir(), 'shadow-files-')))
   const files = await shadowArtifactFiles(root)
-  const fixture = JSON.parse(await readFile(fixturePath, 'utf8'))
+  const fixture = currentShadowFixture(JSON.parse(await readFile(fixturePath, 'utf8')))
   const owners = ['main', 'nte', 'genshin', 'azur-promilia', 'lvmeng']
   const context = { owner: 'main', releaseKey: fixture.next.releaseKey, scopes: fixture.next.scopes,
     capabilities: Object.fromEntries(owners.map(owner => [owner, [SHADOW_SCHEMA]])), asOf: '2026-10-30T00:00:00.000Z' }
@@ -63,7 +64,7 @@ test('file transport rejects overwrite, partial artifacts, traversal, links and 
   } finally { await rm(f.root, { recursive: true, force: true }) }
 })
 
-test('five isolated consumer processes share pinned files, split NTE owners and revalidate rollback', { timeout: 60000 }, async () => {
+test('five isolated consumers share pinned files, keep NTE materials with NTE and revalidate rollback', { timeout: 60000 }, async () => {
   const f = await setup()
   try {
     await f.populate()
@@ -84,9 +85,10 @@ test('five isolated consumer processes share pinned files, split NTE owners and 
       }
     }
     const main = results.find(r => r.owner === 'main'), nte = results.find(r => r.owner === 'nte')
-    assert.equal(main.documents.find((r: any) => r.document.path === '/zh/nte/items/ore').document.title, 'Updated synthetic item')
+    assert.equal(main.documents.some((r: any) => r.document.path === '/zh/nte/items/ore'), false)
+    assert.equal(nte.documents.find((r: any) => r.document.path === '/zh/nte/items/ore').document.title, 'Updated synthetic item')
     assert.equal(nte.documents.find((r: any) => r.document.path === '/zh/nte/characters/example').document.title, 'Updated synthetic character')
-    const old = JSON.parse((await f.consume({ releaseKey: f.fixture.baseline.releaseKey })).stdout)
+    const old = JSON.parse((await f.consume({ owner: 'nte', releaseKey: f.fixture.baseline.releaseKey })).stdout)
     assert.equal(old.index.releaseKey, f.fixture.baseline.releaseKey)
     assert.equal(old.documents.find((r: any) => r.document.path === '/zh/nte/items/ore').document.title, 'Synthetic shadow fixture')
     await assert.rejects(f.consume({ capabilities: { ...f.context.capabilities, nte: [] } }), /Unsupported schema/)

@@ -5,8 +5,10 @@ import { loadLocalShadow, shadowDocument } from '../../../packages/core/shadow-l
 import { canonical, digest } from '../../../packages/core/shadow-canonical'
 import { canonical as legacyCanonical } from '../src/record-mapping'
 import { shadowFixtureResponse } from '../src/shadow-http-fixture'
+import { currentShadowFixture } from '../test-support/current-shadow-fixture'
 
-const fixture = JSON.parse(readFileSync(new URL('../../../reports/shadow-fixture-2026-10-31.json', import.meta.url), 'utf8'))
+const historicalFixture = JSON.parse(readFileSync(new URL('../../../reports/shadow-fixture-2026-10-31.json', import.meta.url), 'utf8'))
+const fixture = currentShadowFixture(historicalFixture)
 const env = { CONTENT_SHADOW_LOCAL_ONLY: '1', GENSHIN_SHADOW_READER: '1', NTE_SHADOW_READER: '1',
   CONTENT_CMS_SHADOW_ORIGIN: 'http://127.0.0.1:3100', CONTENT_CMS_SHADOW_RELEASE_KEY: fixture.release.releaseKey }
 const host = '127.0.0.1:3317'
@@ -23,8 +25,8 @@ function transport(data = fixture) {
 }
 
 test('shared canonicalization preserves historical fixture identities', () => {
-  assert.equal(canonical(fixture), legacyCanonical(fixture))
-  const { releaseKey, ...release } = fixture.release
+  assert.equal(canonical(historicalFixture), legacyCanonical(historicalFixture))
+  const { releaseKey, ...release } = historicalFixture.release
   assert.equal(digest(canonical(release)), releaseKey)
 })
 
@@ -78,15 +80,15 @@ test('CMS fixture HTTP endpoint is off without explicit local opt-in', async () 
   }
 })
 
-test('Main and NTE share one scope snapshot but never expose each other\'s documents', async () => {
-  const split = JSON.parse(readFileSync(new URL('../../../reports/payload-next-phase-2026-11-01/shadow-split-fixture.json', import.meta.url), 'utf8'))
+test('NTE now reads both its material and character documents while Main rejects those paths', async () => {
+  const split = currentShadowFixture(JSON.parse(readFileSync(new URL('../../../reports/payload-next-phase-2026-11-01/shadow-split-fixture.json', import.meta.url), 'utf8')))
   const splitEnv = { ...env, MAIN_SHADOW_READER: '1', CONTENT_CMS_SHADOW_RELEASE_KEY: split.release.releaseKey }
   const main = await loadLocalShadow('main', split.release.releaseKey, host, splitEnv, transport(split).fetcher)
   const nte = await loadLocalShadow('nte', split.release.releaseKey, host, splitEnv, transport(split).fetcher)
   assert.equal(main.releaseKey, nte.releaseKey)
-  assert.deepEqual(main.entries.map(entry => entry.path), ['/zh/nte/items/ore'])
-  assert.deepEqual(nte.entries.map(entry => entry.path), ['/zh/nte/characters/index'])
-  assert.equal(shadowDocument(main, '/zh/nte/items/ore')!.document.title, 'Main NTE item fixture')
+  assert.deepEqual(main.entries.map(entry => entry.path), [])
+  assert.deepEqual(nte.entries.map(entry => entry.path), ['/zh/nte/characters/index', '/zh/nte/items/ore'])
+  assert.equal(shadowDocument(nte, '/zh/nte/items/ore')!.document.title, 'Main NTE item fixture')
   assert.throws(() => shadowDocument(main, '/zh/nte/characters/index'), /Wrong consumer/)
-  assert.throws(() => shadowDocument(nte, '/zh/nte/items/ore'), /Wrong consumer/)
+  assert.throws(() => shadowDocument(main, '/zh/nte/items/ore'), /Wrong consumer/)
 })

@@ -16,12 +16,12 @@ function fixture() {
   return { snapshots, store, refs, release }
 }
 
-test('shadow DTO strips private data, is deterministic, and respects real NTE split ownership', () => {
+test('shadow DTO strips private data and assigns both NTE details to their game owner', () => {
   const a = { ...input('/zh/nte/items/ore'), actorEmail: 'private', rawRecord: 'secret', reviewText: 'internal' }
   const b = input('/zh/nte/characters/hero')
   const snapshot = buildShadowSnapshot('nte', [a, b], true, now)
   assert.deepEqual(snapshot, buildShadowSnapshot('nte', [b, a], true, now))
-  assert.deepEqual(snapshot.pages.map(p => p.owner), ['nte', 'main'])
+  assert.deepEqual(snapshot.pages.map(p => p.owner), ['nte', 'nte'])
   assert.ok(!JSON.stringify(snapshot).includes('secret'))
   assert.ok(!JSON.stringify(snapshot).includes('actorEmail'))
   assert.deepEqual(Object.keys(snapshot.pages[0]).sort(), ['body', 'expiresAt', 'owner', 'path', 'schema', 'title'])
@@ -48,18 +48,18 @@ test('complete ReleaseMap retains unchanged snapshots, pins reads/index/cache an
   assert.equal(next.snapshots.genshin, release.snapshots.genshin)
   assert.equal(next.snapshots.hsr, release.snapshots.hsr)
   const view = openShadowView(next, scopes, store, capabilities, now)
-  assert.equal(view.read('main', '/zh/nte/items/ore')?.title, 'New version')
-  assert.equal(old.read('main', '/zh/nte/items/ore')?.title, 'Synthetic title')
-  assert.equal(view.index('main').find(p => p.path === '/zh/nte/items/ore')?.title, 'New version')
-  assert.notEqual(view.cacheKey('main', '/zh/nte/items/ore'), old.cacheKey('main', '/zh/nte/items/ore'))
-  assert.throws(() => view.read('nte', '/zh/nte/items/ore'), /Wrong consumer/)
-  assert.equal(view.read('main', '/zh/nte/items/missing'), null)
+  assert.equal(view.read('nte', '/zh/nte/items/ore')?.title, 'New version')
+  assert.equal(old.read('nte', '/zh/nte/items/ore')?.title, 'Synthetic title')
+  assert.equal(view.index('nte').find(p => p.path === '/zh/nte/items/ore')?.title, 'New version')
+  assert.notEqual(view.cacheKey('nte', '/zh/nte/items/ore'), old.cacheKey('nte', '/zh/nte/items/ore'))
+  assert.throws(() => view.read('main', '/zh/nte/items/ore'), /Wrong consumer/)
+  assert.equal(view.read('nte', '/zh/nte/items/missing'), null)
   changed.pages[0].title = 'Mutated store'
   assert.equal(view.read('nte', '/zh/nte/characters/hero')?.title, 'Synthetic title')
   assert.throws(() => openShadowView(next, scopes, store, capabilities, now), /integrity/)
   assert.equal(openShadowView(release, scopes, store, capabilities, now).releaseKey, old.releaseKey)
-  const returned = old.read('main', '/zh/nte/items/ore')!; returned.title = 'Caller mutation'
-  assert.equal(old.read('main', '/zh/nte/items/ore')?.title, 'Synthetic title')
+  const returned = old.read('nte', '/zh/nte/items/ore')!; returned.title = 'Caller mutation'
+  assert.equal(old.read('nte', '/zh/nte/items/ore')?.title, 'Synthetic title')
 })
 
 test('partial owners, missing snapshots, scope mismatch and tampering never open a partial view', () => {
@@ -81,8 +81,8 @@ test('explicit empty replacement removes a scope page; expired snapshots cannot 
   const { store, refs, release } = fixture()
   const empty = buildShadowSnapshot('nte', [], true, now); store.set(empty.snapshotKey, empty)
   const next = buildShadowRelease(scopes, { ...refs, nte: empty.snapshotKey }, store, capabilities, now)
-  assert.equal(openShadowView(next, scopes, store, capabilities, now).read('main', '/zh/nte/items/ore'), null)
-  assert.ok(openShadowView(release, scopes, store, capabilities, now).read('main', '/zh/nte/items/ore'))
+  assert.equal(openShadowView(next, scopes, store, capabilities, now).read('nte', '/zh/nte/items/ore'), null)
+  assert.ok(openShadowView(release, scopes, store, capabilities, now).read('nte', '/zh/nte/items/ore'))
   const expiring = buildShadowSnapshot('nte', [{ ...input('/zh/nte/items/ore'), expiresAt: '2026-10-31T00:00:00.000Z' }], true, now)
   store.set(expiring.snapshotKey, expiring)
   const limited = buildShadowRelease(scopes, { ...refs, nte: expiring.snapshotKey }, store, capabilities, now)

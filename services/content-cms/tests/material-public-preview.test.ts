@@ -15,7 +15,7 @@ test('typed material projection preserves presence and routes without fallback o
   const raw = { id: 'ore', name: 'Ore', type: 'ore', rarity: 1, nameEn: '', nameJa: null, acquisition: [], notes: null }
   const candidate = candidates('nte', [raw])[0], result = materialPublicPreview(candidate)
   assert.deepEqual(materialSource(result.dto.material), raw)
-  assert.equal(result.dto.routes[0].owner, 'main')
+  assert.equal(result.dto.routes[0].owner, 'nte')
   assert.equal(result.dto.routes[0].collectionOwner, 'nte')
   assert.equal(result.dto.routes[0].path, '/zh/nte/items/ore')
   assert.equal(materialPublicPreview(candidates('genshin')[0]).dto.routes[0].owner, 'genshin')

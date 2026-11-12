@@ -31,7 +31,10 @@ export function nteReleaseConfig(owner, source, role = 'candidate', migration = 
   assert(Object.hasOwn(NTE_SERVICES, owner)); assert(['candidate', 'recovery'].includes(role));
   const config = owner === 'nte' ? parseWrangler(source) : genshinMigrationConfig(owner, source);
   if (owner === 'nte') assert.equal(digest(source), '24a9c035334cd7cd8fd9587ed36d8fbac2b2d4a685b0ee8277b92f3ca7724ebf');
-  assert.equal(config.name, NTE_SERVICES[owner]); delete config.env;
+  assert.equal(config.name, NTE_SERVICES[owner]);
+  // Wrangler derives existing Main/Router service tags from their environment
+  // blocks. Only NTE's live contract deliberately has no environment block.
+  if (owner === 'nte') delete config.env;
   if (owner !== 'nte' && (!migration || role === 'candidate')) {
     assert(!Object.hasOwn(config.vars, 'NTE_CONTENT_ENABLED')); config.vars.NTE_CONTENT_ENABLED = 'true';
     if (owner === 'main') config.services.push({ binding: 'NTE_CONTENT', service: NTE_SERVICES.nte });

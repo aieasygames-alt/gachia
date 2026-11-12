@@ -25,7 +25,8 @@ test('candidate adds NTE while recovery retains the published Genshin bindings',
     const raw = readFileSync(new URL(`../apps/${app}/wrangler.jsonc`, import.meta.url), 'utf8');
     for (const role of ['candidate', 'recovery']) {
       const config = nteReleaseConfig(owner, raw, role);
-      assert.equal(config.env, undefined);
+      if (owner === 'nte') assert.equal(config.env, undefined);
+      else assert(config.env);
       if (owner !== 'nte') {
         assert.equal(config.vars.GENSHIN_CONTENT_ENABLED, 'true');
         assert.equal(config.vars.NTE_CONTENT_ENABLED, role === 'candidate' ? 'true' : undefined);
