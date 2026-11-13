@@ -12,6 +12,35 @@ const canonical = value => JSON.stringify(Array.isArray(value) ? value.map(row =
   : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(key => [key, JSON.parse(canonical(value[key]))])) : value);
 const policy = value => (value ?? '').toLowerCase().split(',').map(part => part.trim()).filter(Boolean).sort();
 const readBody = response => response.status === 404 && response.body === null ? Buffer.alloc(0) : boundedBody(response);
+const MISSING_PAGE_POLICY = 'next-nte-not-found-route-echo-v1';
+
+// The historical Next not-found cache can echo the first material request in
+// its RSC bootstrap `c` array. The exact same archived module then emits a
+// different echoed path in another isolate. Keep every other byte and every
+// bootstrap field, including the not-found tree, in the comparison.
+export function nteMissingPageIdentity(body) {
+  let roots = 0;
+  const normalized = body.toString().replace(/<script>self\.__next_f\.push\((\[[\s\S]*?\])\)<\/script>/g, (script, argument) => {
+    const chunk = JSON.parse(argument);
+    if (chunk[0] !== 1 || typeof chunk[1] !== 'string') return script;
+    assert.equal(chunk.length, 2);
+    let changed = false;
+    const payload = chunk[1].split('\n').map(line => {
+      if (!line.startsWith('0:')) return line;
+      const root = JSON.parse(line.slice(2));
+      if (root.p !== '/_games/nte' || !Array.isArray(root.c) || root.c[2] !== 'nte' || root.c[3] !== 'items') return line;
+      assert.equal(++roots, 1, 'Duplicate NTE not-found bootstrap');
+      assert.equal(root.c.length, 5); assert.equal(root.c[0], '');
+      assert(/^(zh|en|ja)$/.test(root.c[1]) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(root.c[4]), 'Invalid NTE not-found route echo');
+      assert(Array.isArray(root.f) && JSON.stringify(root.f).includes('"/_not-found"'), 'Not an NTE not-found tree');
+      changed = true;
+      root.c = ['', '__locale__', 'nte', 'items', '__not_found_material__'];
+      return '0:' + JSON.stringify(root);
+    }).join('\n');
+    return changed ? '<script>self.__next_f.push(' + JSON.stringify([1, payload]) + ')</script>' : script;
+  });
+  return digest(normalized);
+}
 
 function validate(response, body, reference, preview) {
   assert.equal(response.status, reference.status, reference.path); assert(!response.headers.has('set-cookie'));
@@ -27,10 +56,14 @@ function validate(response, body, reference, preview) {
     else assert.equal(response.headers.get('x-robots-tag') ?? '', reference.headers['x-robots-tag'] ?? '');
     if (reference.status === 404) {
       // Historical NTE/Main not-found HTML is not always a complete document.
-      // Compare the entire response byte-for-byte rather than weaken the
-      // successful-page parser or ignore any field in a missing-page response.
+      // Preserve the full response identity, with only the explicitly versioned
+      // historical Next material route echo normalization when captured.
       assert.equal(reference.exactMissingPagePin, reference.sha256);
-      assert.equal(digest(body), reference.exactMissingPagePin, `Missing page bytes changed: ${reference.path}`);
+      if (reference.missingPagePolicy !== undefined) {
+        assert.equal(reference.missingPagePolicy, MISSING_PAGE_POLICY);
+        assert(/^[a-f0-9]{64}$/.test(reference.missingPageIdentityPin));
+        assert.equal(nteMissingPageIdentity(body), reference.missingPageIdentityPin, `Missing page content changed: ${reference.path}`);
+      } else assert.equal(digest(body), reference.exactMissingPagePin, `Missing page bytes changed: ${reference.path}`);
       assert.equal(reference.fingerprint, undefined);
       assert(/noindex/i.test([...publicRobots(body.toString()), response.headers.get('x-robots-tag') ?? ''].join(' ')));
     } else assert(reference.fingerprint, 'Successful HTML requires a complete rendered-page fingerprint');
@@ -68,7 +101,11 @@ export async function captureNteHTTP({ origin, requests, directory, jsonValues =
         row.expectedRobots = publicRobots(body.toString());
         const main = body.toString().match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
         for (const text of wanted.contains ?? []) assert(main?.includes(text), `Edited consumer missing: ${wanted.path}`);
-        if (response.status === 404) row.exactMissingPagePin = row.sha256;
+        if (response.status === 404) {
+          row.exactMissingPagePin = row.sha256;
+          row.missingPagePolicy = MISSING_PAGE_POLICY;
+          row.missingPageIdentityPin = nteMissingPageIdentity(body);
+        }
         else pages.push({ index, html: body.toString(), status: response.status });
       }
       references[index] = row;

@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from '
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { captureNteHTTP, recheckNteHTTP, recheckNteReferences, verifyNteHTTP } from './nte-release-http.mjs';
+import { captureNteHTTP, nteMissingPageIdentity, recheckNteHTTP, recheckNteReferences, verifyNteHTTP } from './nte-release-http.mjs';
 import { digest } from './desktop-release-assets.mjs';
 
 function fixture(t) {
@@ -63,9 +63,26 @@ test('historical not-found fragments require exact bytes and noindex while succe
   const refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/unknown', status: 404 }], directory: join(f.directory, 'missing'), request });
   assert.equal(refs.references[0].exactMissingPagePin, digest(html)); assert.equal(refs.references[0].fingerprint, undefined);
   await verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory: join(f.directory, 'exact'), request });
-  await assert.rejects(verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory: join(f.directory, 'changed'), request: async () => new Response(html.replace('<h1>404', '<h1>Changed'), { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' } }) }), /Missing page bytes changed/);
+  await assert.rejects(verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory: join(f.directory, 'changed'), request: async () => new Response(html.replace('<h1>404', '<h1>Changed'), { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' } }) }), /Missing page content changed/);
   await assert.rejects(captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/unknown', status: 200 }], directory: join(f.directory, 'successful-fragment'), request: async () => new Response(html, { headers: { 'content-type': 'text/html' } }) }), /fingerprint parsing failed/);
   await assert.rejects(captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/unknown', status: 404 }], directory: join(f.directory, 'indexable-missing'), request: async () => new Response(html.replace('content="noindex"', 'content="index"'), { status: 404, headers: { 'content-type': 'text/html' } }) }));
+});
+
+test('historical NTE not-found isolate route echoes vary without hiding any page or bootstrap content change', async t => {
+  const f = fixture(t);
+  const root = { b: 'original-build', p: '/_games/nte', c: ['', 'zh', 'nte', 'items', 'light-dye'], f: [[['/_not-found', { title: '404' }]]], S: true };
+  const page = value => '<meta name="robots" content="noindex"/><title>404</title><h1>404</h1><script>self.__next_f.push(' + JSON.stringify([1, '0:' + JSON.stringify(value) + '\n']) + ')</script></body></html>';
+  const cloud = { ...root, c: ['', 'en', 'nte', 'items', 'rising-hunter-guide'] };
+  assert.equal(nteMissingPageIdentity(page(root)), nteMissingPageIdentity(page(cloud)));
+  for (const value of [{ ...cloud, b: 'different-build' }, { ...cloud, S: false }, { ...cloud, f: [[['/_not-found', { title: 'Changed' }]]] }]) assert.notEqual(nteMissingPageIdentity(page(root)), nteMissingPageIdentity(page(value)));
+  assert.notEqual(nteMissingPageIdentity(page(root)), nteMissingPageIdentity(page(cloud).replace('<h1>404', '<h1>Changed')));
+  assert.throws(() => nteMissingPageIdentity(page({ ...cloud, f: [['success-page']] })), /not-found tree/);
+  assert.throws(() => nteMissingPageIdentity(page({ ...cloud, c: ['', 'en', 'nte', 'items', '../other'] })), /route echo/);
+  const response = html => new Response(html, { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' } });
+  const refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/rising-hunter-guide', status: 404 }], directory: join(f.directory, 'route-echo'), request: async () => response(page(root)) });
+  const result = await verifyNteHTTP({ origin: 'https://version.example.com', preview: true, references: refs.references, directory: join(f.directory, 'cloud-echo'), request: async () => response(page(cloud)) });
+  recheckNteHTTP({ proof: { path: join(f.directory, 'cloud-echo/result.json'), pin: result.evidenceSHA256 }, origin: 'https://version.example.com', preview: true, references: refs.references });
+  await assert.rejects(verifyNteHTTP({ origin: 'https://version.example.com', preview: true, references: refs.references, directory: join(f.directory, 'cloud-changed'), request: async () => response(page({ ...cloud, b: 'wrong' })) }), /Missing page content changed/);
 });
 
 test('an empty retired Main route must be an explicit no-store noindex 404', async t => {
