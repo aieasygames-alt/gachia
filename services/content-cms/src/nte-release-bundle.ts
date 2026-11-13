@@ -114,8 +114,9 @@ export async function nteRequests(workspace: string, owner: string, role: string
   }
   if (owner !== 'main') {
     const materials = JSON.parse(nte.files.get('data/raw-materials.json'))
+    const ownership = JSON.parse(readFileSync(path.join(workspace, 'packages/core/route-ownership.json'), 'utf8')).games.nte
     for (const lang of ['zh', 'en', 'ja']) {
-      for (const page of ['', 'characters', 'weapons', 'items', 'artifacts', 'guides', 'redeem-codes', 'characters/nanally']) add(`/${lang}/nte/${page}`.replace(/\/$/, ''))
+      for (const page of ['', ...ownership.pages, 'characters/nanally']) add(`/${lang}/nte/${page}`.replace(/\/$/, ''))
       for (const item of materials) add(`/${lang}/nte/items/${item.id}`, migration && owner === 'nte' && role === 'recovery' ? 404 : 200)
       add(`/${lang}/nte/items/nonexistent-material`, 404)
       if (owner === 'router') for (const page of ['characters/hu-tao', 'items/silk-flower', 'guides/banner-schedule-guide']) add(`/${lang}/genshin/${page}`)

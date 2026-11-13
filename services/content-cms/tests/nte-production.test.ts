@@ -35,6 +35,8 @@ test('NTE acceptance covers all 171 material URLs and distinguishes former mirro
   for (const lang of ['zh', 'en', 'ja']) for (const row of materials) assert(result.requests.some(request => request.path === `/${lang}/nte/items/${row.id}` && request.status === 200))
   assert.equal(result.requests.find(row => row.path === '/data/nte/raw-image-sources.json')?.status, 404)
   assert.equal(result.requests.find(row => row.path === '/data/nte/raw-character-summaries.json')?.status, 200)
+  assert(result.requests.some(row => row.path === '/zh/nte/disk-sets' && row.status === 200))
+  assert(!result.requests.some(row => row.path === '/zh/nte/artifacts'))
   const recovery = await nteRequests(repo, 'router', 'recovery', undefined, true, sources)
   assert.equal(recovery.requests.find(row => row.path === '/data/nte/raw-image-sources.json')?.status, 200)
   assert.equal(recovery.requests.find(row => row.path === '/data-client/nte-platform.json')?.status, 404)
