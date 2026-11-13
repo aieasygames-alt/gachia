@@ -138,6 +138,7 @@ export async function activateNteProduction(input: { request: unknown; cmsToken?
 export async function advanceNteProduction(input: { completion: Proof; executorRunID: number; directory: string; cloudToken: string }) {
   const githubToken = githubCredential(), executor = await createUnifiedExecutorVerifier(input.executorRunID, githubToken), completed = await readCompletedNteRelease(input.completion)
   assert.deepEqual(await verifyUnifiedCI(completed.value.executorCI.runID, completed.value.executorCI.commit, githubToken), completed.value.executorCI)
+  if (completed.value.continuationExecutorCI) assert.deepEqual(await verifyUnifiedCI(completed.value.continuationExecutorCI.runID, completed.value.continuationExecutorCI.commit, githubToken), completed.value.continuationExecutorCI)
   await verifyUnifiedPublishedSource({ publication: completed.evidence.sources.originalPublication, sourceIndex: completed.evidence.sources.originalSourceIndex, githubToken })
   for (const ancestor of completed.evidence.sources.ancestors) assert.deepEqual(await verifyUnifiedCI(ancestor.runID, ancestor.commit, githubToken), ancestor)
   assertDiskBudget({ path: input.directory, operation: 'NTE complete source continuation', estimatedBytes: GiB })

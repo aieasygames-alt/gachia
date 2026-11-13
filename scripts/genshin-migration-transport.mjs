@@ -51,9 +51,16 @@ export function migrationRouterDeploymentWriter({ releaseKey, versionId, token, 
 
 // Only the fixed desktop wrapper supplies the independently verified bundle.
 // No request field can replace a reader, validator, module or write operation.
-export function genshinMigrationTransport({ evidence, releaseKey, token, directory, previewRequest = unifiedProductionRead, publicRequest = unifiedProductionRead }) {
+/** @param {{evidence:any, releaseKey:string, token:string, directory:string, previewRequest?:any, publicRequest?:any, knownRouterRecovery?:{versionId:string, releaseKey:string}}} input */
+export function genshinMigrationTransport({ evidence, releaseKey, token, directory, previewRequest = unifiedProductionRead, publicRequest = unifiedProductionRead, knownRouterRecovery }) {
   const { value, expected, bases } = evidence, uploads = new Map(), writers = new Map();
   const nte = ['nte_migration_bundle', 'nte_independent_bundle'].includes(value.kind);
+  if (knownRouterRecovery) {
+    assert.equal(value.kind, 'nte_migration_bundle');
+    assert(/^[a-f0-9]{64}$/.test(knownRouterRecovery.releaseKey));
+    uploads.set('router:recovery', { versionId: knownRouterRecovery.versionId });
+  }
+  const transportPin = args => knownRouterRecovery && args.owner === 'router' && args.role === 'recovery' ? knownRouterRecovery.releaseKey : releaseKey;
   const verifyHTTP = nte ? verifyNteHTTP : verifyMigrationHTTP;
   const readVersion = (service, versionId) => service === 'gachia-router'
     ? readMigrationRouterVersion({ versionId, token, request: unifiedProductionRead }) : readUnifiedVersion({ service, versionId, token, request: unifiedProductionRead });
@@ -103,7 +110,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
       const version = await readVersion(args.service, args.versionId); checkVersion(args, version, config);
       const versionPin = migrationSave(output, 'version.json', version).pin;
       let moduleProof;
-      const context = { role: args.role, transportPin: releaseKey, configPin: args.sealed.configPin };
+      const context = { role: args.role, transportPin: transportPin(args), configPin: args.sealed.configPin };
       if (args.owner !== 'router') moduleProof = await captureUnifiedUploadedModule({ service: args.service, versionId: args.versionId,
         moduleSHA256: args.sealed.moduleSHA256, context, directory: join(output, 'module'), uploadPath: join(output, 'uploaded.multipart'), uploadLogPath: join(output, 'upload.log'),
         readVersion, expectedVersion: version, readContent: (service, versionId) => readUnifiedVersion({ service, versionId, token, binary: true, request: unifiedProductionRead }) });
@@ -133,7 +140,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
       else {
         const proof = migrationPinned(args.inspected.moduleProof); assert.equal(proof.kind, 'genshin_migration_router_upload_module');
         assert.equal(proof.service, args.service); assert.equal(proof.versionId, args.versionId); assert.equal(proof.moduleSHA256, args.sealed.moduleSHA256);
-        assert.deepEqual(proof.context, { role: args.role, transportPin: releaseKey, configPin: args.sealed.configPin });
+        assert.deepEqual(proof.context, { role: args.role, transportPin: transportPin(args), configPin: args.sealed.configPin });
         assertModuleVersionIdentity(proof.before, proof.after); assertModuleVersionIdentity(proof.before, version); assert.equal(scriptETag(proof.etag), version.resources.script.etag);
         const bytes = readFileSync(join(output, 'module/download.multipart')); assert.equal(digest(bytes), proof.archivePin);
         assert.equal((await migrationRouterModule(bytes)).moduleSHA256, args.sealed.moduleSHA256);

@@ -12,6 +12,12 @@ import { NTE_INDEPENDENT_POLICY } from '../../../scripts/genshin-independent-rel
 import { recheckNteHTTP, verifyNteHTTP } from '../../../scripts/nte-release-http.mjs'
 import { readUnifiedSourceOwner } from '../../../scripts/unified-source-advance.mjs'
 import { readGenshinIndependentSourceIndex } from './genshin-independent-history'
+import { assertNteStoppedRouterRecovery } from '../../../scripts/nte-migration-continuation.mjs'
+import { migrationRouterModule } from '../../../scripts/genshin-migration-router.mjs'
+import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
+import { scriptETag } from '../../../scripts/desktop-version-provenance.mjs'
+import { migrationUploadResponse } from '../../../scripts/genshin-migration-transport.mjs'
+import { unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
 
 type Proof = { path: string; pin: string }
 const treePin = (directory: string) => digest(migrationJSON(artifactFiles(directory)))
@@ -19,10 +25,49 @@ export const nteReleaseKey = (request: any, executorCI: any, migration: boolean)
   policy: migration ? NTE_MIGRATION_POLICY : NTE_INDEPENDENT_POLICY, bundle: request.bundle, executorCI,
   ...(request.previewProxy ? { previewProxy: request.previewProxy } : {}), ...(request.publicProxy ? { publicProxy: request.publicProxy } : {}),
 }))
+export const nteContinuationKey = (request: any, executorCI: any) => digest(migrationJSON({ policy: 'nte-known-router-recovery-continuation-v1', request, executorCI }))
+export function nteMigrationContinuationRequest(input: any) {
+  assert(input && typeof input === 'object' && !Array.isArray(input))
+  assert.deepEqual(Object.keys(input).sort(), ['schemaVersion', 'kind', 'stopped', 'executorRunID', ...(Object.hasOwn(input, 'publicProxy') ? ['publicProxy'] : [])].sort())
+  assert.equal(input.schemaVersion, 1); assert.equal(input.kind, 'nte_migration_continuation_request')
+  assert(Number.isSafeInteger(input.executorRunID) && input.executorRunID > 0)
+  if (Object.hasOwn(input, 'publicProxy')) assert.equal(unifiedPreviewProxy(input.publicProxy), input.publicProxy)
+  assert.deepEqual(Object.keys(input.stopped).sort(), ['identity', 'journal', 'request'])
+  for (const proof of Object.values(input.stopped) as any[]) { assert.deepEqual(Object.keys(proof).sort(), ['path', 'pin']); assert(path.isAbsolute(proof.path)); assert(/^[a-f0-9]{64}$/.test(proof.pin)) }
+  return structuredClone(input)
+}
+export async function readStoppedNteMigration(proofs: { request: Proof; identity: Proof; journal: Proof }, depth = 0): Promise<any> {
+  assert(depth < 32)
+  const request = migrationPinned(proofs.request), identity = migrationPinned(proofs.identity), directory = path.dirname(proofs.journal.path)
+  assert.equal(proofs.request.path, path.join(directory, 'request.json')); assert.equal(proofs.identity.path, path.join(directory, 'identity.json'))
+  assert.equal(request.kind, 'nte_release_request'); assert.equal(proofs.journal.path, path.join(directory, `nte-migration-${identity.releaseKey}.jsonl`))
+  const { verifyNteReleaseBundle } = await import('./nte-release-bundle'), evidence = await verifyNteReleaseBundle(request.bundle, depth + 1)
+  assert.equal(evidence.migration, true); assert.equal(identity.sourceCommit, evidence.value.sourceCommit)
+  assert.equal(identity.sourceCI.commit, identity.sourceCommit); assert.equal(request.executorRunID, identity.sourceCI.runID)
+  assert.equal(identity.releaseKey, nteReleaseKey(request, identity.sourceCI, true)); assert.deepEqual(identity.baseline, evidence.value.baseline)
+  assert.deepEqual(identity.owners, evidence.value.owners); assert.equal(identity.sourceIndexPin, evidence.value.sourceIndex.pin); assert.equal(identity.activePin, evidence.built.value.active.pin)
+  const bytes = readFileSync(proofs.journal.path); assert.equal(digest(bytes), proofs.journal.pin); assert(bytes.toString().endsWith('\n'))
+  const rows = bytes.toString().trimEnd().split('\n').map((s: string) => JSON.parse(s)), state = assertNteStoppedRouterRecovery(identity, rows)
+  const nte = await readMigrationOwner({ owner: 'nte', rows, offset: 1, directory, releaseKey: identity.releaseKey, evidence, nte: true })
+  recheckNteHTTP({ proof: { path: path.join(directory, 'public-0-nte/result.json'), pin: rows[9].proof.evidenceSHA256 }, origin: 'https://gachia.com', references: migrationPinned(evidence.value.stepReferences) })
+  const output = path.join(directory, 'router-recovery'), sealed = evidence.value.owners.router.recovery
+  assert.deepEqual(migrationUploadResponse(readFileSync(path.join(output, 'upload.log'), 'utf8'), 'gachia-router'), { versionId: state.routerRecoveryVersionId })
+  const receiptPath = path.join(output, 'module/receipt.json'), moduleProof = { path: receiptPath, pin: digest(readFileSync(receiptPath)) }
+  const module = migrationPinned(moduleProof), versionBytes = readFileSync(path.join(output, 'version.json')), version = JSON.parse(versionBytes.toString())
+  assert.equal(module.kind, 'genshin_migration_router_upload_module'); assert.equal(module.service, 'gachia-router'); assert.equal(module.versionId, state.routerRecoveryVersionId)
+  assert.equal(version.id, module.versionId); assert.deepEqual(module.context, { role: 'recovery', transportPin: identity.releaseKey, configPin: sealed.configPin })
+  assertModuleVersionIdentity(module.before, module.after); assertModuleVersionIdentity(module.before, version); assert.equal(scriptETag(module.etag), version.resources.script.etag)
+  const archive = readFileSync(path.join(output, 'module/download.multipart')); assert.equal(digest(archive), module.archivePin)
+  const downloaded = await migrationRouterModule(archive), uploaded = await multipartModule(readFileSync(path.join(output, 'uploaded.multipart')))
+  assert.equal(downloaded.moduleSHA256, sealed.moduleSHA256); assert.equal(uploaded.moduleSHA256, sealed.moduleSHA256); assert(downloaded.code.equals(uploaded.code))
+  assert.equal(module.moduleSHA256, sealed.moduleSHA256)
+  return { request, identity, evidence, directory, rows, ...state, modules: { nte: nte.modules, routerRecovery: { version, receipt: module } }, deployments: { nte: nte.deployment }, routerRecovery: { versionId: module.versionId, moduleSHA256: sealed.moduleSHA256, moduleProof, versionPin: digest(versionBytes) } }
+}
 export async function readCompletedNteRelease(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
   assert.equal(proof.path, path.join(directory, 'completion.json')); assert.equal(value.schemaVersion, 1)
   assert.equal(value.kind, 'nte_release_completion'); assert.equal(value.status, 'production_accepted'); assert.equal(value.sourceAdvanced, false)
+  if (value.request.kind === 'nte_migration_continuation_request') return readCompletedNteContinuation(proof, depth + 1)
   const { verifyNteReleaseBundle } = await import('./nte-release-bundle'), evidence = await verifyNteReleaseBundle(value.bundle, depth + 1), migration = evidence.migration
   const order = migration ? NTE_MIGRATION_ORDER : ['nte'], policy = migration ? NTE_MIGRATION_POLICY : NTE_INDEPENDENT_POLICY
   assert.equal(value.policy, policy); assert.equal(value.executorCI.status, 'full_exact_ci_passed'); assert.equal(value.executorCI.commit, evidence.value.sourceCommit)
@@ -50,6 +95,42 @@ export async function readCompletedNteRelease(proof: Proof, depth = 0): Promise<
   assert.deepEqual(value.versions, versions); assert.deepEqual(rows.at(-1).proof.versions, versions); assert.equal(rows.at(-1).proof.status, 'passed')
   recheckNteHTTP({ proof: { path: path.join(directory, `public-${migration ? 3 : 0}-router/result.json`), pin: rows.at(-1).proof.evidenceSHA256 },
     origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences) })
+  return { value, directory, evidence, accepted, modules, deployments, versions }
+}
+async function readCompletedNteContinuation(proof: Proof, depth: number): Promise<any> {
+  assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
+  nteMigrationContinuationRequest(value.request)
+  const previous = await readStoppedNteMigration(value.request.stopped, depth + 1), evidence = previous.evidence
+  assert.deepEqual(value.bundle, previous.request.bundle); assert.deepEqual(value.executorCI, previous.identity.sourceCI)
+  assert.equal(value.continuationExecutorCI.status, 'full_exact_ci_passed'); assert.equal(value.request.executorRunID, value.continuationExecutorCI.runID)
+  assert.equal(value.releaseKey, nteContinuationKey(value.request, value.continuationExecutorCI)); assert.equal(value.policy, NTE_MIGRATION_POLICY)
+  assert.equal(value.journal.path, path.join(directory, `nte-migration-${value.releaseKey}.jsonl`)); assert.equal(value.journal.pin, value.journalPin)
+  const bytes = readFileSync(value.journal.path); assert.equal(digest(bytes), value.journal.pin); assert(bytes.toString().endsWith('\n'))
+  const rows = bytes.toString().trimEnd().split('\n').map((s: string) => JSON.parse(s))
+  assert.deepEqual(rows.map((r: any) => r.phase), ['continuation_baseline', 'step_accepted', 'known_upload_reopened', 'preview_accepted', 'upload_intent', 'upload_returned', 'preview_accepted', 'deployment_intent', 'deployed', 'step_accepted', ...['upload_intent', 'upload_returned', 'preview_accepted', 'upload_intent', 'upload_returned', 'preview_accepted', 'deployment_intent', 'deployed', 'step_accepted'], 'production_accepted'])
+  let at = -Infinity; for (const row of rows) { assert.equal(row.policy, value.policy); assert.equal(row.releaseKey, value.releaseKey); const next = Date.parse(row.at); assert(next >= at && next <= Date.now()); at = next }
+  assert.deepEqual(rows[0].previousJournal, value.request.stopped.journal); assert.equal(rows[0].previousReleaseKey, previous.identity.releaseKey)
+  assert.deepEqual(rows[0].baseline, previous.identity.baseline); assert.deepEqual(rows[0].owners, previous.identity.owners)
+  assert.deepEqual(rows[0].deployed, previous.deployed); assert.deepEqual(rows[0].accepted, { nte: previous.accepted.nte })
+  assert.equal(rows[1].owner, 'nte'); assert.equal(rows[1].proof.status, 'passed')
+  recheckNteHTTP({ proof: { path: path.join(directory, 'public-0-nte/result.json'), pin: rows[1].proof.evidenceSHA256 }, origin: 'https://gachia.com', references: migrationPinned(evidence.value.stepReferences) })
+  assert.equal(rows[2].owner, 'router'); assert.equal(rows[2].role, 'recovery'); assert.equal(rows[2].service, 'gachia-router')
+  assert.equal(rows[2].versionId, previous.routerRecoveryVersionId); assert.deepEqual(rows[2].proof, previous.routerRecovery)
+  assert.deepEqual({ ...rows[3].proof, evidenceSHA256: undefined, acceptedAt: undefined }, { ...previous.routerRecovery, evidenceSHA256: undefined, acceptedAt: undefined })
+  // Normalize only in memory: the two upload events come from the pinned old
+  // journal, while their fresh acceptance comes from this continuation.
+  const routerRows = [previous.rows[10], previous.rows[11], rows[3], ...rows.slice(4, 10)]
+  const router: any = await readMigrationOwner({ owner: 'router', rows: routerRows, offset: 0, directory, releaseKey: value.releaseKey, evidence, nte: true, roleTransportPins: { recovery: previous.identity.releaseKey } })
+  assert.deepEqual(router.accepted.recovery.moduleProof, previous.routerRecovery.moduleProof)
+  const main = await readMigrationOwner({ owner: 'main', rows, offset: 10, directory, releaseKey: value.releaseKey, evidence, nte: true })
+  for (const [i, owner, refs] of [[1, 'router', { path: path.join(evidence.directory, 'router/candidate/local-http/responses/references.json'), pin: evidence.value.owners.router.candidate.referencesPin }], [2, 'main', evidence.value.finalReferences]] as any[]) {
+    const offset = owner === 'router' ? 9 : 18
+    recheckNteHTTP({ proof: { path: path.join(directory, `public-${i}-router/result.json`), pin: rows[offset].proof.evidenceSHA256 }, origin: 'https://gachia.com', references: migrationPinned(refs) })
+  }
+  const accepted: Record<string, any> = { nte: previous.accepted.nte, router: router.accepted, main: main.accepted }, modules = { nte: previous.modules.nte, router: router.modules, main: main.modules }, deployments = { nte: previous.deployments.nte, router: router.deployment, main: main.deployment }
+  const versions = Object.fromEntries(NTE_MIGRATION_ORDER.map(owner => [evidence.value.owners[owner].service, accepted[owner].candidate.versionId]))
+  assert.deepEqual(value.versions, versions); assert.deepEqual(rows.at(-1).proof.versions, versions); assert.equal(rows.at(-1).proof.status, 'passed')
+  recheckNteHTTP({ proof: { path: path.join(directory, 'public-3-router/result.json'), pin: rows.at(-1).proof.evidenceSHA256 }, origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences) })
   return { value, directory, evidence, accepted, modules, deployments, versions }
 }
 export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> {
@@ -82,7 +163,7 @@ export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> 
   recheckNteHTTP({ proof: { path: path.join(directory, 'public/result.json'), pin: value.observation.publicAcceptance.evidenceSHA256 }, origin: 'https://gachia.com', references: migrationPinned(e.value.finalReferences) })
   return { value, owners: value.owners, router: value.router, baseline, sources: e.candidateSources, workspace: e.workspace,
     routerCode: e.migration ? completed.modules.router.candidate.code : previous.routerCode,
-    ancestors: [...previous.ancestors, completed.value.executorCI], originalPublication: previous.originalPublication, originalSourceIndex: previous.originalSourceIndex }
+    ancestors: [...previous.ancestors, completed.value.executorCI, ...(completed.value.continuationExecutorCI ? [completed.value.continuationExecutorCI] : [])], originalPublication: previous.originalPublication, originalSourceIndex: previous.originalSourceIndex }
 }
 export async function advanceNteSources(input: { completion: Proof; directory: string; reader: any }) {
   const completed = await readCompletedNteRelease(input.completion), e = completed.evidence, directory = path.resolve(input.directory), order = e.migration ? NTE_MIGRATION_ORDER : ['nte']

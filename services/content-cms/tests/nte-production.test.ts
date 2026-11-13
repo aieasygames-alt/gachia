@@ -7,7 +7,20 @@ import { nteProductionRequest } from '../src/nte-release-production'
 import { nteLocalConfig, nteRequests } from '../src/nte-release-bundle'
 import { readUnifiedSources } from '../src/unified-sources'
 import { projectRoot } from '../src/local-environment'
+import { nteMigrationContinuationRequest, nteContinuationKey } from '../src/nte-release-history'
 const valid = () => ({ schemaVersion: 1, kind: 'nte_release_request', bundle: { path: '/sealed/bundle.json', pin: 'a'.repeat(64) }, executorRunID: 1 })
+test('NTE continuation pins the precise stopped request, identity and journal without replay options', () => {
+  const proof = { path: '/stopped/proof.json', pin: 'a'.repeat(64) }
+  const input = { schemaVersion: 1, kind: 'nte_migration_continuation_request', stopped: { request: proof, identity: proof, journal: proof }, executorRunID: 2 }
+  assert.deepEqual(nteMigrationContinuationRequest(input), input)
+  for (const key of ['skipCI', 'retry', 'owner', 'knownRouterRecovery', 'baseline', 'transport', 'bundle']) assert.throws(() => nteMigrationContinuationRequest({ ...input, [key]: true }))
+  assert.throws(() => nteMigrationContinuationRequest({ ...input, stopped: { ...input.stopped, extra: proof } }))
+  assert.throws(() => nteMigrationContinuationRequest({ ...input, stopped: { ...input.stopped, journal: { ...proof, path: 'relative' } } }))
+  assert.throws(() => nteMigrationContinuationRequest({ ...input, publicProxy: 'https://example.com' }))
+  const key = nteContinuationKey(input, { commit: 'b'.repeat(40), runID: 2 })
+  assert.notEqual(key, nteContinuationKey({ ...input, executorRunID: 3 }, { commit: 'b'.repeat(40), runID: 3 }))
+  assert.notEqual(key, nteContinuationKey({ ...input, stopped: { ...input.stopped, journal: { ...proof, pin: 'c'.repeat(64) } } }, { commit: 'b'.repeat(40), runID: 2 }))
+})
 test('NTE request cannot inject owner, transport, retry or weaker evidence', () => {
   assert.deepEqual(nteProductionRequest(valid()), valid())
   for (const key of ['owner', 'transport', 'verify', 'skipCI', 'baseline', 'retry', 'productionReady', 'record']) assert.throws(() => nteProductionRequest({ ...valid(), [key]: true }))

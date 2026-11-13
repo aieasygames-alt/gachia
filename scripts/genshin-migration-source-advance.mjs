@@ -110,7 +110,7 @@ export function migrationGenshinStepReferences(evidence) {
     .map(row => /^\/(zh|en|ja)\//.test(row.path) ? { ...row, headers: { ...row.headers, 'cache-control': 'private, no-cache, no-store, max-age=0, must-revalidate' } } : row);
 }
 
-export async function readMigrationOwner({ owner, rows, offset, directory, releaseKey, evidence, requireStep = true, nte = false }) {
+export async function readMigrationOwner({ owner, rows, offset, directory, releaseKey, evidence, requireStep = true, nte = false, roleTransportPins = {} }) {
     const sealedOwner = evidence.value.owners[owner], modules = {}, accepted = {};
     for (const [j, role] of ['recovery', 'candidate'].entries()) {
       const intent = rows[offset + j * 3], returned = rows[offset + j * 3 + 1], acceptance = rows[offset + j * 3 + 2], sealed = sealedOwner[role];
@@ -121,7 +121,7 @@ export async function readMigrationOwner({ owner, rows, offset, directory, relea
       assert.equal(recorded.moduleSHA256, sealed.moduleSHA256);
       const output = join(directory, owner + '-' + role), version = migrationPinned({ path: join(output, 'version.json'), pin: recorded.versionPin });
       assert.equal(version.id, recorded.versionId);
-      const context = { role, transportPin: releaseKey, configPin: sealed.configPin };
+      const context = { role, transportPin: roleTransportPins[role] ?? releaseKey, configPin: sealed.configPin };
       if (owner !== 'router') modules[role] = await readUnifiedUploadedModule(recorded.moduleProof, { service: sealedOwner.service,
         versionId: recorded.versionId, moduleSHA256: sealed.moduleSHA256, context });
       else {
