@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from '
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { captureNteHTTP, nteMissingPageIdentity, recheckNteHTTP, recheckNteReferences, verifyNteHTTP } from './nte-release-http.mjs';
+import { captureNteHTTP, nteMissingPageIdentity, legacyMainMissingPageMatches, recheckNteFailedHTTP, recheckNteHTTP, recheckNteReferences, verifyNteHTTP } from './nte-release-http.mjs';
 import { digest } from './desktop-release-assets.mjs';
 
 function fixture(t) {
@@ -94,4 +94,25 @@ test('an empty retired Main route must be an explicit no-store noindex 404', asy
   const refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests, directory: join(f.directory, 'retired'), request });
   await verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory: join(f.directory, 'retired-public'), request });
   await assert.rejects(captureNteHTTP({ origin: 'http://localhost:8787', requests, directory: join(f.directory, 'unsafe-empty'), request: async () => new Response(null, { status: 404 }) }), /Missing response MIME/);
+});
+
+test('archived Main data 404 keeps its original hash and compares every byte except a bounded global route echo', async t => {
+  const f = fixture(t), root = { b: 'original-build', p: '', c: ['', 'data', 'genshin', 'raw-artifacts.json'], f: [[['/_not-found', { title: '404' }]]], S: true };
+  const page = value => '<meta name="robots" content="noindex"/><h1>404</h1><script>self.__next_f.push(' + JSON.stringify([1, '0:' + JSON.stringify(value) + '\n']) + ')</script>';
+  const response = body => new Response(body, { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' } });
+  const refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/data/genshin/raw-character-materials.json', status: 404 }], directory: join(f.directory, 'legacy-main'), request: async () => response(page(root)) });
+  const reference = refs.references[0], original = structuredClone(reference), cloud = { ...root, c: ['', 'data', 'genshin', 'raw-character-materials.json'] };
+  assert.equal(reference.missingPageIdentityPin, digest(page(root)));
+  assert(legacyMainMissingPageMatches(page(cloud), reference));
+  await verifyNteHTTP({ origin: 'https://version.example.com', preview: true, references: refs.references, directory: join(f.directory, 'legacy-main-cloud'), request: async () => response(page(cloud)) });
+  assert.deepEqual(reference, original);
+  for (const value of [{ ...cloud, b: 'changed' }, { ...cloud, S: false }, { ...cloud, p: '/_games/nte' }, { ...cloud, f: [['app-route']] }, { ...cloud, c: ['', 'data', 'unknown', 'raw-characters.json'] }]) assert.equal(legacyMainMissingPageMatches(page(value), reference), false);
+  assert.equal(legacyMainMissingPageMatches(page(cloud).replace('<h1>404', '<h1>Changed'), reference), false);
+  assert.equal(legacyMainMissingPageMatches(page(cloud), { ...reference, path: '/unreviewed.json' }), false);
+  assert.equal(legacyMainMissingPageMatches(page(cloud), { ...reference, status: 200 }), false);
+  assert.throws(() => legacyMainMissingPageMatches(page(cloud) + page(cloud), reference), /Duplicate/);
+  const failedDirectory = join(f.directory, 'failed-main');
+  await assert.rejects(verifyNteHTTP({ origin: 'https://version.example.com', preview: true, references: refs.references, directory: failedDirectory, request: async () => response(page({ ...cloud, b: 'wrong' })) }));
+  const failure = join(failedDirectory, 'failure.json');
+  assert.throws(() => recheckNteFailedHTTP({ proof: { path: failure, pin: digest(readFileSync(failure)) }, references: refs.references }), /Missing page content changed/);
 });

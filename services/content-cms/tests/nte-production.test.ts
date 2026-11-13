@@ -20,6 +20,11 @@ test('NTE continuation pins the precise stopped request, identity and journal wi
   const key = nteContinuationKey(input, { commit: 'b'.repeat(40), runID: 2 })
   assert.notEqual(key, nteContinuationKey({ ...input, executorRunID: 3 }, { commit: 'b'.repeat(40), runID: 3 }))
   assert.notEqual(key, nteContinuationKey({ ...input, stopped: { ...input.stopped, journal: { ...proof, pin: 'c'.repeat(64) } } }, { commit: 'b'.repeat(40), runID: 2 }))
+  const main = { ...input, kind: 'nte_main_migration_continuation_request', stopped: { ...input.stopped, failedPreview: proof }, continuationCI: { status: 'full_exact_ci_passed', commit: 'b'.repeat(40), runID: 2 } }
+  assert.deepEqual(nteMigrationContinuationRequest(main), main)
+  assert.throws(() => nteMigrationContinuationRequest({ ...main, continuationCI: { ...main.continuationCI, status: 'local_passed' } }))
+  assert.throws(() => nteMigrationContinuationRequest({ ...main, stopped: input.stopped }))
+  assert.notEqual(nteContinuationKey(main, { commit: 'c'.repeat(40), runID: 3 }), key)
 })
 test('NTE request cannot inject owner, transport, retry or weaker evidence', () => {
   assert.deepEqual(nteProductionRequest(valid()), valid())

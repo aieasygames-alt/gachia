@@ -35,38 +35,72 @@ export function assertNteStoppedRouterRecovery(identity, rows) {
   return { accepted, deployed, routerRecoveryVersionId: rows[11].versionId };
 }
 
+export function assertNteStoppedMainRecovery(identity, rows) {
+  assertNteMigrationIdentity({ ...identity, observedAt: Date.now() });
+  assert.deepEqual(rows.map(row => row.phase), ['continuation_baseline', 'step_accepted', 'known_upload_reopened', 'preview_accepted', 'upload_intent', 'upload_returned', 'preview_accepted', 'deployment_intent', 'deployed', 'step_accepted', 'upload_intent', 'upload_returned', 'stopped', 'read_only_reconciliation']);
+  let at = -Infinity; for (const row of rows) { assert.equal(row.releaseKey, identity.releaseKey); assert.equal(row.policy, identity.policy); const next = Date.parse(row.at); assert(next >= at && next <= Date.now()); at = next; }
+  assert.deepEqual(rows[0].baseline, identity.baseline); assert.deepEqual(rows[0].owners, identity.owners);
+  const accepted = { nte: rows[0].accepted.nte, router: { recovery: rows[3].proof, candidate: rows[6].proof }, main: {} };
+  const deployed = { nte: accepted.nte.candidate.versionId, router: accepted.router.candidate.versionId };
+  assert.deepEqual(rows[0].deployed, { nte: deployed.nte });
+  assert.equal(rows[1].owner, 'nte'); assert.equal(rows[1].proof.status, 'passed');
+  assert.equal(rows[2].owner, 'router'); assert.equal(rows[2].role, 'recovery');
+  for (const row of rows.slice(4, 7)) { assert.equal(row.owner, 'router'); assert.equal(row.role, 'candidate'); }
+  assert.equal(rows[8].owner, 'router'); assert.equal(rows[8].versionId, deployed.router); assert.equal(rows[8].result.versionId, deployed.router); assert(UUID.test(rows[8].result.deploymentId));
+  assert.equal(rows[9].owner, 'router'); assert.equal(rows[9].proof.status, 'passed');
+  for (const row of rows.slice(10, 12)) { assert.equal(row.owner, 'main'); assert.equal(row.role, 'recovery'); assert.equal(row.service, 'gachia'); }
+  assert.deepEqual(rows[10].sealed, identity.owners.main.recovery); assert(UUID.test(rows[11].versionId)); assert.notEqual(rows[11].versionId, identity.owners.main.sourceVersionId);
+  const pending = { phase: 'upload', owner: 'main', role: 'recovery', service: 'gachia', versionId: rows[11].versionId };
+  assert.deepEqual(rows[12].pendingOperation, pending); assert.deepEqual(rows[13].pendingOperation, pending);
+  assert.equal(rows[12].automaticRetry, false); assert.equal(rows[12].automaticRollback, false);
+  assert.deepEqual(rows[12].accepted, accepted); assert.deepEqual(rows[12].deployed, deployed);
+  assert(rows[12].error.startsWith('Missing page content changed: /data/genshin/raw-character-materials.json'));
+  assertNteMigrationTopology(identity.baseline, rows[13].snapshot, { configured: ['nte', 'router'], deployed });
+  assert.equal(rows[13].snapshot.services['gachia-router'].id, rows[8].result.deploymentId);
+  return { accepted, deployed, mainRecoveryVersionId: rows[11].versionId };
+}
+
 // One explicit continuation of a known returned upload. This never invokes the
 // NTE writer or the Router recovery uploader, and cannot accept an unknown write.
 export async function executeNteRouterContinuation({ run, releaseKey, verify, transport, previous }) {
   assert.equal(digest(readFileSync(previous.journal.path)), previous.journal.pin);
   const rows = readFileSync(previous.journal.path, 'utf8').trimEnd().split('\n').map(JSON.parse);
   const state = assertNteStoppedRouterRecovery(previous.identity, rows);
+  return executeRemaining({ run, releaseKey, verify, transport, previous }, state, ['nte'], ['router', 'main'], 'router', previous.routerRecovery);
+}
+export async function executeNteMainContinuation({ run, releaseKey, verify, transport, previous }) {
+  assert.equal(digest(readFileSync(previous.journal.path)), previous.journal.pin);
+  const rows = readFileSync(previous.journal.path, 'utf8').trimEnd().split('\n').map(JSON.parse);
+  const state = assertNteStoppedMainRecovery(previous.identity, rows);
+  return executeRemaining({ run, releaseKey, verify, transport, previous }, state, ['nte', 'router'], ['main'], 'main', previous.mainRecovery);
+}
+async function executeRemaining({ run, releaseKey, verify, transport, previous }, state, finished, remaining, knownOwner, knownProof) {
   assert.notEqual(releaseKey, previous.identity.releaseKey);
   return withRunLock(run, async () => {
     const initial = structuredClone(await verify()); assertNteMigrationIdentity(initial); assert.equal(initial.releaseKey, releaseKey);
     assert.deepEqual({ ...initial, releaseKey: previous.identity.releaseKey, observedAt: previous.identity.observedAt }, previous.identity);
     const journal = join(run, `nte-migration-${releaseKey}.jsonl`); writeFileSync(journal, '', { flag: 'wx', mode: 0o600 });
     const record = value => appendFileSync(journal, JSON.stringify({ at: new Date().toISOString(), policy: initial.policy, releaseKey, ...value }) + '\n', { flush: true });
-    const configured = ['nte'], deployed = structuredClone(state.deployed), accepted = { nte: state.accepted.nte };
+    const configured = [...finished], deployed = structuredClone(state.deployed), accepted = Object.fromEntries(finished.map(owner => [owner, state.accepted[owner]]));
     let pendingOperation, observedAt = initial.observedAt;
     const revalidate = async () => {
       const current = await verify(); assertNteMigrationIdentity(current); assert(current.observedAt >= observedAt);
       assert.deepEqual({ ...current, observedAt: initial.observedAt }, initial); observedAt = current.observedAt;
       assertNteMigrationTopology(initial.baseline, await transport.snapshot(), { configured, deployed });
     };
-    record({ phase: 'continuation_baseline', previousJournal: previous.journal, previousReleaseKey: previous.identity.releaseKey, baseline: initial.baseline, owners: initial.owners, deployed, accepted });
+    record({ phase: knownOwner === 'main' ? 'main_continuation_baseline' : 'continuation_baseline', previousJournal: previous.journal, previousReleaseKey: previous.identity.releaseKey, baseline: initial.baseline, owners: initial.owners, deployed, accepted });
     try {
       await revalidate();
-      const step = await transport.acceptStep({ owner: 'nte', deployed: { ...deployed } });
-      assert.equal(step.status, 'passed'); assert(SHA.test(step.evidenceSHA256)); record({ phase: 'step_accepted', owner: 'nte', proof: step });
-      for (const owner of ['router', 'main']) {
+      const liveOwner = finished.at(-1), step = await transport.acceptStep({ owner: liveOwner, deployed: { ...deployed } });
+      assert.equal(step.status, 'passed'); assert(SHA.test(step.evidenceSHA256)); record({ phase: 'step_accepted', owner: liveOwner, proof: step });
+      for (const owner of remaining) {
         const row = initial.owners[owner]; accepted[owner] = {};
         for (const role of ['recovery', 'candidate']) {
           await revalidate();
           const args = { owner, role, service: row.service, sealed: row[role] };
           let result, proof;
-          if (owner === 'router' && role === 'recovery') {
-            result = { versionId: state.routerRecoveryVersionId }; proof = previous.routerRecovery;
+          if (owner === knownOwner && role === 'recovery') {
+            result = { versionId: knownOwner === 'main' ? state.mainRecoveryVersionId : state.routerRecoveryVersionId }; proof = knownProof;
             assert.equal(proof.versionId, result.versionId); assert.equal(proof.moduleSHA256, row.recovery.moduleSHA256);
             await transport.revalidate({ ...args, ...result, inspected: proof });
             record({ phase: 'known_upload_reopened', owner, role, service: row.service, versionId: result.versionId, proof });

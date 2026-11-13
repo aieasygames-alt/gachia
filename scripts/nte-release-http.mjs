@@ -13,6 +13,35 @@ const canonical = value => JSON.stringify(Array.isArray(value) ? value.map(row =
 const policy = value => (value ?? '').toLowerCase().split(',').map(part => part.trim()).filter(Boolean).sort();
 const readBody = response => response.status === 404 && response.body === null ? Buffer.alloc(0) : boundedBody(response);
 const MISSING_PAGE_POLICY = 'next-nte-not-found-route-echo-v1';
+const LEGACY_MAIN_MISSING_PATHS = Object.freeze([
+  ...['artifacts', 'character-materials', 'characters', 'guides', 'materials', 'redeem-codes', 'regions', 'weapons'].map(name => `/data/genshin/raw-${name}.json`),
+  ...['anomalies', 'builds', 'character-materials', 'characters', 'disk-sets', 'gacha-system', 'guides', 'image-sources', 'materials', 'redeem-codes', 'regions', 'weapons'].map(name => `/data/nte/raw-${name}.json`),
+  '/data-client/genshin-platform.json', '/data-client/tier-list-genshin.json', '/data-client/nte-platform.json',
+]);
+
+// Old Main's global not-found cache also echoes the first retired data URL.
+// Keep the archived reference SHA unchanged: try only the finite retired URL
+// set in the c array, requiring every other response byte to match that SHA.
+export function legacyMainMissingPageMatches(body, reference) {
+  if (!LEGACY_MAIN_MISSING_PATHS.includes(reference.path) || reference.status !== 404 || reference.missingPageIdentityPin !== reference.sha256) return false;
+  for (const replacement of LEGACY_MAIN_MISSING_PATHS) {
+    let roots = 0;
+    const normalized = body.toString().replace(/<script>self\.__next_f\.push\((\[[\s\S]*?\])\)<\/script>/g, (script, argument) => {
+      const chunk = JSON.parse(argument); if (chunk[0] !== 1 || typeof chunk[1] !== 'string') return script;
+      let changed = false;
+      const payload = chunk[1].split('\n').map(line => {
+        if (!line.startsWith('0:') || !line.includes('"p":""') || !line.includes('"/_not-found"')) return line;
+        const root = JSON.parse(line.slice(2));
+        if (root.p !== '' || !Array.isArray(root.c) || root.c[0] !== '' || !LEGACY_MAIN_MISSING_PATHS.includes(root.c.join('/')) || !Array.isArray(root.f) || !JSON.stringify(root.f).includes('"/_not-found"')) return line;
+        assert.equal(++roots, 1, 'Duplicate Main not-found bootstrap'); assert.equal(chunk.length, 2);
+        root.c = replacement.split('/'); changed = true; return '0:' + JSON.stringify(root);
+      }).join('\n');
+      return changed ? '<script>self.__next_f.push(' + JSON.stringify([1, payload]) + ')</script>' : script;
+    });
+    if (roots === 1 && digest(normalized) === reference.missingPageIdentityPin) return true;
+  }
+  return false;
+}
 
 // The historical Next not-found cache can echo the first material request in
 // its RSC bootstrap `c` array. The exact same archived module then emits a
@@ -67,7 +96,7 @@ function validate(response, body, reference, preview) {
       if (reference.missingPagePolicy !== undefined) {
         assert.equal(reference.missingPagePolicy, MISSING_PAGE_POLICY);
         assert(/^[a-f0-9]{64}$/.test(reference.missingPageIdentityPin));
-        assert.equal(nteMissingPageIdentity(body), reference.missingPageIdentityPin, `Missing page content changed: ${reference.path}`);
+        assert(nteMissingPageIdentity(body) === reference.missingPageIdentityPin || legacyMainMissingPageMatches(body, reference), `Missing page content changed: ${reference.path}`);
       } else assert.equal(digest(body), reference.exactMissingPagePin, `Missing page bytes changed: ${reference.path}`);
       assert.equal(reference.fingerprint, undefined);
       assert(/noindex/i.test([...publicRobots(body.toString()), response.headers.get('x-robots-tag') ?? ''].join(' ')));
@@ -176,5 +205,23 @@ export function recheckNteHTTP({ proof, origin, references, preview = false }) {
   }
   if (pages.length) unifiedPageFingerprints(pages, 'streaming-v2').forEach((fingerprint, index) =>
     assertMigrationFingerprint(fingerprint, expected[index].fingerprint, `Saved NTE rendered content changed: ${expected[index].path}`, MIGRATION_FINGERPRINT_POLICY));
+  return value;
+}
+
+// A failed preview remains failed. Reopen its captured subset only to establish
+// the exact known stop; it never substitutes for a new complete cloud preview.
+export function recheckNteFailedHTTP({ proof, references, preview = true }) {
+  const value = migrationPinned(proof), directory = join(proof.path, '..');
+  assert.equal(value.automaticRetry, false); assert(typeof value.error === 'string');
+  assert(Array.isArray(value.observations) && value.observations.length > 0 && value.observations.length <= references.length);
+  const seen = new Set(), pages = [], expected = [];
+  for (const row of value.observations) {
+    assert(/^\d+\.body$/.test(row.bodyFile)); const index = Number(row.bodyFile.slice(0, -5)), reference = references[index];
+    assert(reference && !seen.has(index)); seen.add(index); assert.equal(row.path, reference.path);
+    const body = readFileSync(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
+    validate({ status: row.status, headers: new Headers(row.headers) }, body, reference, preview);
+    if (reference.fingerprint) { pages.push({ html: body.toString(), status: row.status }); expected.push(reference); }
+  }
+  if (pages.length) unifiedPageFingerprints(pages, 'streaming-v2').forEach((fingerprint, index) => assertMigrationFingerprint(fingerprint, expected[index].fingerprint, 'Failed preview captured content changed', MIGRATION_FINGERPRINT_POLICY));
   return value;
 }
