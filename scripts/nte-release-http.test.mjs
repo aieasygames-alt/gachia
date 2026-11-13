@@ -76,7 +76,10 @@ test('historical NTE not-found isolate route echoes vary without hiding any page
   assert.equal(nteMissingPageIdentity(page(root)), nteMissingPageIdentity(page(cloud)));
   for (const value of [{ ...cloud, b: 'different-build' }, { ...cloud, S: false }, { ...cloud, f: [[['/_not-found', { title: 'Changed' }]]] }]) assert.notEqual(nteMissingPageIdentity(page(root)), nteMissingPageIdentity(page(value)));
   assert.notEqual(nteMissingPageIdentity(page(root)), nteMissingPageIdentity(page(cloud).replace('<h1>404', '<h1>Changed')));
-  assert.throws(() => nteMissingPageIdentity(page({ ...cloud, f: [['success-page']] })), /not-found tree/);
+  const appRoute = page({ ...cloud, f: [['app-route-notFound-boundary']] });
+  assert.equal(nteMissingPageIdentity(appRoute), digest(appRoute), 'App-route notFound() keeps exact response identity');
+  const chunked = '<meta name="robots" content="noindex"/><script>self.__next_f.push(' + JSON.stringify([1, '0:{"p":"/_games/nte","c":["","en","nte","items","unknown"],"f":[["app-route-partial']) + ')</script>';
+  assert.equal(nteMissingPageIdentity(chunked), digest(chunked), 'Partial app-route RSC is retained byte-for-byte');
   assert.throws(() => nteMissingPageIdentity(page({ ...cloud, c: ['', 'en', 'nte', 'items', '../other'] })), /route echo/);
   const response = html => new Response(html, { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' } });
   const refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/rising-hunter-guide', status: 404 }], directory: join(f.directory, 'route-echo'), request: async () => response(page(root)) });

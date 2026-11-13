@@ -27,12 +27,17 @@ export function nteMissingPageIdentity(body) {
     let changed = false;
     const payload = chunk[1].split('\n').map(line => {
       if (!line.startsWith('0:')) return line;
+      // Other app-route bootstraps can span several RSC script chunks. They
+      // are compared exactly and must not be parsed as standalone root JSON.
+      if (!line.includes('"p":"/_games/nte"') || !line.includes('"/_not-found"')) return line;
       const root = JSON.parse(line.slice(2));
       if (root.p !== '/_games/nte' || !Array.isArray(root.c) || root.c[2] !== 'nte' || root.c[3] !== 'items') return line;
+      // App-route notFound() responses use their own route tree and retain
+      // exact identity. Only the archived global /_not-found cache has this echo.
+      if (!Array.isArray(root.f) || !JSON.stringify(root.f).includes('"/_not-found"')) return line;
       assert.equal(++roots, 1, 'Duplicate NTE not-found bootstrap');
       assert.equal(root.c.length, 5); assert.equal(root.c[0], '');
       assert(/^(zh|en|ja)$/.test(root.c[1]) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(root.c[4]), 'Invalid NTE not-found route echo');
-      assert(Array.isArray(root.f) && JSON.stringify(root.f).includes('"/_not-found"'), 'Not an NTE not-found tree');
       changed = true;
       root.c = ['', '__locale__', 'nte', 'items', '__not_found_material__'];
       return '0:' + JSON.stringify(root);
