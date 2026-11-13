@@ -1,7 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { afterEach, describe, expect, it, vi } from '../../web/test-support/guide-test-runtime';
-import { guides, isNteLocaleIndexable } from '../lib/data';
+import { guides, materials, isNteLocaleIndexable } from '../lib/data';
 import { isNteGuideLocaleIndexable, nteGuideAlternates, nteGuideFaq, nteGuideReading, type NteGuide } from '../lib/guide-policy';
 import { productionMetadata } from '../lib/seo';
 import sitemap from '../app/sitemap';
@@ -43,7 +43,9 @@ describe('NTE guide locale contract', () => {
         expect(urls.has(`https://gachia.com/${locale}/nte/guides/${guide.id}`)).toBe(isNteGuideLocaleIndexable(guide, locale));
       }
     }
-    expect([...urls].some(url => /\/nte\/items\//.test(url))).toBe(false);
+    const materialUrls = [...urls].filter(url => /\/nte\/items\//.test(url));
+    expect(materialUrls).toHaveLength(materials.length * 3);
+    for (const material of materials) for (const locale of ['zh', 'en', 'ja']) expect(urls.has(`https://gachia.com/${locale}/nte/items/${material.id}`)).toBe(true);
   });
 
   it('uses one policy in actual detail/list/metadata/JSON-LD/sitemap and keeps unqualified locale URLs readable', async () => {
