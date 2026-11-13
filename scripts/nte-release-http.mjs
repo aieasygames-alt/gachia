@@ -11,15 +11,29 @@ const mime = headers => headers.get('content-type')?.split(';')[0].trim().toLowe
 const canonical = value => JSON.stringify(Array.isArray(value) ? value.map(row => JSON.parse(canonical(row)))
   : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(key => [key, JSON.parse(canonical(value[key]))])) : value);
 const policy = value => (value ?? '').toLowerCase().split(',').map(part => part.trim()).filter(Boolean).sort();
+const readBody = response => response.status === 404 && response.body === null ? Buffer.alloc(0) : boundedBody(response);
 
 function validate(response, body, reference, preview) {
   assert.equal(response.status, reference.status, reference.path); assert(!response.headers.has('set-cookie'));
   assert.equal(mime(response.headers), mime(new Headers(reference.headers)), reference.path);
+  if (!mime(response.headers)) {
+    assert.equal(response.status, 404); assert.equal(body.length, 0);
+    assert.equal(response.headers.get('cache-control'), 'no-store'); assert(/noindex/i.test(response.headers.get('x-robots-tag') ?? ''));
+  }
   if (mime(response.headers) === 'text/html') {
     assert.deepEqual(policy(response.headers.get('cache-control')), policy(reference.headers['cache-control']));
     assert.deepEqual(publicRobots(body.toString()), reference.expectedRobots);
     if (preview) assert(/noindex/.test(response.headers.get('x-robots-tag') ?? ''), 'Exact Worker preview must be noindex');
     else assert.equal(response.headers.get('x-robots-tag') ?? '', reference.headers['x-robots-tag'] ?? '');
+    if (reference.status === 404) {
+      // Historical NTE/Main not-found HTML is not always a complete document.
+      // Compare the entire response byte-for-byte rather than weaken the
+      // successful-page parser or ignore any field in a missing-page response.
+      assert.equal(reference.exactMissingPagePin, reference.sha256);
+      assert.equal(digest(body), reference.exactMissingPagePin, `Missing page bytes changed: ${reference.path}`);
+      assert.equal(reference.fingerprint, undefined);
+      assert(/noindex/i.test([...publicRobots(body.toString()), response.headers.get('x-robots-tag') ?? ''].join(' ')));
+    } else assert(reference.fingerprint, 'Successful HTML requires a complete rendered-page fingerprint');
   } else if (reference.path === '/robots.txt') {
     if (preview) assert(/Disallow:\s*\//.test(body.toString()) && /noindex/.test(response.headers.get('x-robots-tag') ?? ''));
     else if (digest(body) !== reference.sha256) validatePublicResponse(response, body, reference);
@@ -40,9 +54,11 @@ export async function captureNteHTTP({ origin, requests, directory, jsonValues =
     await sampleReadOnly(requests, async (wanted, index) => {
       const response = await request(unifiedPreviewPath(wanted.path, origin), { method: 'GET', redirect: 'error', credentials: 'omit',
         headers: { 'accept-language': wanted.path.match(/^\/(zh|en|ja)(?:\/|$)/)?.[1] ?? 'zh', connection: 'close' }, signal: AbortSignal.timeout(30000) });
-      const body = await boundedBody(response), bodyFile = `${index}.body`;
+      const body = await readBody(response), bodyFile = `${index}.body`;
       writeFileSync(join(directory, bodyFile), body, { flag: 'wx', mode: 0o600 });
-      assert.equal(response.status, wanted.status, wanted.path); assert(!response.headers.has('set-cookie')); assert(mime(response.headers));
+      assert.equal(response.status, wanted.status, wanted.path); assert(!response.headers.has('set-cookie'));
+      assert(mime(response.headers) || (response.status === 404 && body.length === 0 && response.headers.get('cache-control') === 'no-store'
+        && /noindex/i.test(response.headers.get('x-robots-tag') ?? '')), `Missing response MIME: ${wanted.path}`);
       if (wanted.sha256) assert.equal(digest(body), wanted.sha256, `Local static bytes changed: ${wanted.path}`);
       const row = { path: wanted.path, status: response.status, headers: Object.fromEntries(response.headers), sha256: digest(body), bytes: body.length, bodyFile };
       if (mime(response.headers) === 'application/json') {
@@ -52,12 +68,13 @@ export async function captureNteHTTP({ origin, requests, directory, jsonValues =
         row.expectedRobots = publicRobots(body.toString());
         const main = body.toString().match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1];
         for (const text of wanted.contains ?? []) assert(main?.includes(text), `Edited consumer missing: ${wanted.path}`);
-        pages.push({ index, html: body.toString(), status: response.status });
+        if (response.status === 404) row.exactMissingPagePin = row.sha256;
+        else pages.push({ index, html: body.toString(), status: response.status });
       }
       references[index] = row;
     }, 8);
     pages.sort((a, b) => a.index - b.index);
-    unifiedPageFingerprints(pages, 'streaming-v2').forEach((value, index) => { references[pages[index].index].fingerprint = value; });
+    if (pages.length) unifiedPageFingerprints(pages, 'streaming-v2').forEach((value, index) => { references[pages[index].index].fingerprint = value; });
     const proof = migrationSave(directory, 'references.json', references);
     recheckNteReferences(proof); return { proof, references };
   } catch (error) { migrationSave(directory, 'failure.json', { error: error.message, cloudWrites: false }); throw error; }
@@ -82,7 +99,7 @@ export async function verifyNteHTTP({ origin, references, directory, preview = f
     await sampleReadOnly(references, async (reference, index) => {
       const response = await request(unifiedPreviewPath(reference.path, origin), { method: 'GET', credentials: 'omit', redirect: 'error',
         headers: { 'accept-language': reference.path.match(/^\/(zh|en|ja)(?:\/|$)/)?.[1] ?? 'zh', connection: 'close' }, signal: AbortSignal.timeout(30000) });
-      const body = await boundedBody(response), bodyFile = `${index}.body`;
+      const body = await readBody(response), bodyFile = `${index}.body`;
       writeFileSync(join(directory, bodyFile), body, { flag: 'wx', mode: 0o600 });
       observations[index] = { path: reference.path, status: response.status, headers: Object.fromEntries(response.headers), bytes: body.length, sha256: digest(body), bodyFile };
       validate(response, body, reference, preview);

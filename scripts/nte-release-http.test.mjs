@@ -55,3 +55,23 @@ test('a recomputed cloud receipt cannot hide modified saved HTML', async t => {
   writeFileSync(file, JSON.stringify(value));
   assert.throws(() => recheckNteHTTP({ proof: { path: file, pin: digest(readFileSync(file)) }, origin: 'https://gachia.com', references: refs.references }), /rendered content changed/);
 });
+
+test('historical not-found fragments require exact bytes and noindex while successful pages remain strictly parsed', async t => {
+  const f = fixture(t);
+  const html = '<script src="/_games/nte/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script><meta name="robots" content="noindex"/><title>404: This page could not be found.</title><h1>404</h1><h2>This page could not be found.</h2></body></html>';
+  const request = async () => new Response(html, { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' } });
+  const refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/unknown', status: 404 }], directory: join(f.directory, 'missing'), request });
+  assert.equal(refs.references[0].exactMissingPagePin, digest(html)); assert.equal(refs.references[0].fingerprint, undefined);
+  await verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory: join(f.directory, 'exact'), request });
+  await assert.rejects(verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory: join(f.directory, 'changed'), request: async () => new Response(html.replace('<h1>404', '<h1>Changed'), { status: 404, headers: { 'content-type': 'text/html', 'cache-control': 'no-store' } }) }), /Missing page bytes changed/);
+  await assert.rejects(captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/unknown', status: 200 }], directory: join(f.directory, 'successful-fragment'), request: async () => new Response(html, { headers: { 'content-type': 'text/html' } }) }), /fingerprint parsing failed/);
+  await assert.rejects(captureNteHTTP({ origin: 'http://localhost:8787', requests: [{ path: '/en/nte/items/unknown', status: 404 }], directory: join(f.directory, 'indexable-missing'), request: async () => new Response(html.replace('content="noindex"', 'content="index"'), { status: 404, headers: { 'content-type': 'text/html' } }) }));
+});
+
+test('an empty retired Main route must be an explicit no-store noindex 404', async t => {
+  const f = fixture(t), request = async () => new Response(null, { status: 404, headers: { 'cache-control': 'no-store', 'x-robots-tag': 'noindex, nofollow' } });
+  const requests = [{ path: '/zh/nte/items/tri-key', status: 404 }];
+  const refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests, directory: join(f.directory, 'retired'), request });
+  await verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory: join(f.directory, 'retired-public'), request });
+  await assert.rejects(captureNteHTTP({ origin: 'http://localhost:8787', requests, directory: join(f.directory, 'unsafe-empty'), request: async () => new Response(null, { status: 404 }) }), /Missing response MIME/);
+});

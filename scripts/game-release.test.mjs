@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
@@ -78,6 +78,13 @@ for (const mode of ['preview', 'live', undefined]) {
     const { outputText } = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } });
     const module = { exports: {} };
     const requireFixture = (name) => {
+      if (name === './indexing-policy') {
+        const policy = { exports: {} };
+        const compiled = ts.transpileModule(readFileSync(resolve(root, 'apps/game-nte/lib/indexing-policy.ts'), 'utf8'),
+          { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } });
+        new Function('require', 'module', 'exports', compiled.outputText)(requireFixture, policy, policy.exports);
+        return policy.exports;
+      }
       if (name === './guide-policy') {
         const policy = { exports: {} };
         const compiled = ts.transpileModule(readFileSync(resolve(root, 'apps/game-nte/lib/guide-policy.ts'), 'utf8'),
@@ -86,13 +93,16 @@ for (const mode of ['preview', 'live', undefined]) {
         return policy.exports;
       }
       assert.equal(name, './data');
-      return { guides: [], isNteLocaleIndexable: (locale) => locale !== 'ja', isNteJapanesePathIndexable: () => false };
+      return { guides: [], materials: [{ id: 'tri-key' }], isNteLocaleIndexable: (locale) => locale !== 'ja', isNteJapanesePathIndexable: () => false };
     };
     new Function('require', 'module', 'exports', 'process', outputText)(requireFixture, module, module.exports, { env: { NTE_DEPLOYMENT_MODE: mode } });
     for (const locale of ['zh', 'en', 'ja']) {
       const metadata = module.exports.productionMetadata('Title', 'Description', locale);
       assert.deepEqual(metadata.robots, mode !== 'live' ? { index: false, follow: false } : locale === 'ja' ? { index: false, follow: true } : undefined);
       assert.equal(metadata.alternates.canonical, `https://gachia.com/${locale}/nte`);
+      const material = module.exports.productionMetadata('Tri-Key', 'Material description', locale, '/items/tri-key');
+      assert.deepEqual(material.robots, mode !== 'live' ? { index: false, follow: false } : undefined);
+      assert.equal(material.alternates.languages.ja, 'https://gachia.com/ja/nte/items/tri-key');
     }
   });
 }
@@ -277,15 +287,22 @@ test('dynamic homepages are explicitly deferred to runtime smoke, not silently s
   assert.match(result.status, /runtime_smoke_required/);
 });
 
-test('direct preview assets retain the production Router paths and do not copy game data', (t) => {
+test('direct preview assets retain Router chunk paths and emit only reviewed NTE content exports', (t) => {
   const f = artifactFixture(t, 'staging');
   f.put('.open-next/assets/_next/static/main.js', 'const value = 1;');
   f.put('.open-next/assets/images/hero.webp', 'image');
+  mkdirSync(resolve(f.root, 'packages/core'), { recursive: true });
+  mkdirSync(resolve(f.root, 'packages/data/games'), { recursive: true });
+  cpSync(resolve(root, 'packages/core/nte-content.json'), resolve(f.root, 'packages/core/nte-content.json'));
+  cpSync(resolve(root, 'packages/data/games/nte'), resolve(f.root, 'packages/data/games/nte'), { recursive: true });
   const result = prepareNamespacedAssets(f.plan, f.root);
   assert.equal(result.files, 1);
   const assets = resolve(f.root, f.plan.app, '.open-next/assets');
   assert.equal(readFileSync(resolve(assets, '_next/static/main.js'), 'utf8'), readFileSync(resolve(assets, '_games/nte/_next/static/main.js'), 'utf8'));
   assert.throws(() => readFileSync(resolve(assets, '_games/nte/images/hero.webp')));
+  assert.equal(result.content.prefix, '/_games/nte/content');
+  assert(readFileSync(resolve(assets, '_games/nte/content/data/raw-characters.json')).equals(readFileSync(resolve(root, 'packages/data/games/nte/raw-characters.json'))));
+  assert.throws(() => readFileSync(resolve(assets, '_games/nte/content/data/raw-image-sources.json')));
 });
 
 function fakeWorker(plan, mutate = (value) => value) {

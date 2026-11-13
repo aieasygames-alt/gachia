@@ -10,7 +10,6 @@ import { CharacterPortrait } from '@/components/character-portrait';
 const locales = ['zh', 'en', 'ja'] as const;
 const text = (locale: SupportedLocale, zh: string, en: string, ja: string) => ({ zh, en, ja })[locale];
 const serialize = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
-export const dynamicParams = false;
 export function generateStaticParams() { return locales.flatMap(lang => materials.map(row => ({ lang, id: row.id }))); }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; id: string }> }) {
