@@ -214,7 +214,7 @@ export async function verifyNteReleaseBundle(proof: Proof, depth = 0): Promise<a
       const local = path.join(directory, owner, role), artifact = path.join(local, 'artifact'), sealed = row[role]
       assert.equal(sealed.artifactPin, owner === 'router' ? digest(readFileSync(path.join(artifact, 'worker.js'))) : treePin(artifact))
       assert.equal(digest(readFileSync(path.join(local, 'module/worker.js'))), sealed.moduleSHA256)
-      if (role === 'recovery') assert.equal(sealed.moduleSHA256, old.moduleSHA256)
+      if (role === 'recovery') assert.equal(sealed.moduleSHA256, owner === 'router' ? digest(sources.routerCode) : old.moduleSHA256)
       const config = migrationPinned({ path: path.join(local, 'upload.json'), pin: sealed.configPin }), base = nteRuntimeConfig(workspace, owner, role, migration)
       assert.deepEqual(config, { ...base, main: path.join(local, 'module/worker.js'), ...(owner === 'router' ? {} : { assets: { ...base.assets, directory: path.join(artifact, 'assets') } }), no_bundle: true, minify: false })
       const outbound = await multipartModule(readFileSync(path.join(local, 'seal/exact.multipart'))); assert.equal(outbound.moduleSHA256, sealed.moduleSHA256)
