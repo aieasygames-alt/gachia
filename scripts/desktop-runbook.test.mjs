@@ -64,7 +64,14 @@ test('Payload CI permits only the task branch, remains read-only and has no depl
 
 test('browser CI pins the matching preinstalled image without bypassing browser consumers', () => {
   const workflow = readFileSync(new URL('../.github/workflows/payload-verify.yml', import.meta.url), 'utf8');
-  const version = JSON.parse(readFileSync(new URL('../node_modules/@playwright/test/package.json', import.meta.url), 'utf8')).version;
+  const manifest = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'));
+  const lock = readFileSync(new URL('../pnpm-lock.yaml', import.meta.url), 'utf8');
+  const rootImporter = lock.split('\n  .:\n')[1]?.split(/\n  (?=\S)/)[0];
+  assert(rootImporter, 'The committed root dependency importer must exist');
+  const playwright = rootImporter.match(/^      '@playwright\/test':\n        specifier: (.+)\n        version: (\d+\.\d+\.\d+)\n/m);
+  assert(playwright, 'Playwright must have an exact committed lock version');
+  assert.equal(playwright[1], manifest.devDependencies['@playwright/test']);
+  const version = playwright[2];
   assert.match(workflow, new RegExp(`mcr\\.microsoft\\.com/playwright:v${version.replaceAll('.', '\\.')}\\-noble@sha256:[a-f0-9]{64}`));
   assert.match(workflow, /docker pull "\$PLAYWRIGHT_CI_IMAGE"/);
   assert.match(workflow, /sudo rm -rf -- \/usr\/local\/lib\/android\n/);
