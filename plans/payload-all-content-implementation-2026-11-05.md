@@ -1,14 +1,26 @@
 # Payload 全内容实施队列
 
-<!-- BEGIN R120 CURRENT -->
-## 当前完成状态（2026-11-14 R120）
+<!-- BEGIN R121 CURRENT -->
+## 当前完成状态（2026-11-14 R121）
+
+AdSense 正式恢复与磁盘清理完成。Main 和四个独立游戏的广告基础设施已上线；Chrome 五站均实际观察到 Google filled 广告，默认/拒绝/撤回保持关闭，重新允许可恢复。Router 与 staging 部署保持。本次为五 Worker 基础设施发布，R120 异环日常单 Worker 内容发布资格保留；没有新的 CMS 文本修改。
+
+精确提交 `b92970110fc00e49b142f3d755e464d5b9937bf8` 的完整 CI [43556200927](https://github.com/aieasygames-alt/gachia/actions/runs/43556200927) 成功；10 个云模块/6,290 次预览 HTTP 重新核对、逐 owner 公网及额外前后各 96 项公共合同通过。实际编译提交和应用输入复用证明、五个正式 UUID、正确 Main 恢复身份见 [R121 完成回执](../reports/adsense-restoration-2026-11-14-r121/EXECUTION.md)。
+
+当前完整来源为 `reports/adsense-restoration-2026-11-14-r121/sources-01/source-index.json`，SHA256 `1cf398fc545237a5f2cea5866c4cef0491a7f05f4b3bd9fe45f4374bf2bb4b36`。真实 `readNteSourceIndex` 完整重读通过：115 来源、5 owner、11 层祖先。下一批从 R121 `source-result.json` 接续；R120 仅作父来源，胡桃、娜娜莉文本及五份攻略增量保留，不重放完成日志。
+
+下一优先级为蓝色星原独立 CMS 正式发布，之后绿梦中文 → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。旧缓存真实释放 3.172 GiB，本轮重复临时构建另行归档清除；发布后可用约 14.72 GiB，满足标准 14 GiB 预算，8 GiB 保留线保持。正式来源、运行/恢复包、CMS 备份和用户修改均保留。
+<!-- END R121 CURRENT -->
+
+<!-- BEGIN R120 HISTORY -->
+## 前批完成状态（2026-11-14 R120，历史）
 
 异环单 Worker 真实 CMS 正式更新闭环已完成。57 个材料的 171 个三语详情 URL 迁入异环，公开 JSON、搜索切片和 Main 聚合接通独立读取；一次性 NTE → Router → Main 迁移完成后，常驻 CMS 娜娜莉记录 1327 的英文简介完成草稿、审核、仅 NTE 构建、云预览和正式发布。日常内容发布仅改变 `gachia-game-nte`，最终版本 `963f4629-9b0f-4992-8373-fcb536508c81`。
 
 精确提交 `cc0fdd18638b88d30dd42911055ae56b006b19bd` 的完整 CI [43450568989](https://github.com/aieasygames-alt/gachia/actions/runs/43450568989) 全部通过、无跳过；候选/恢复云预览、完整公网合同、三语桌面/手机六场景、无 JS 材料和最终只读控制面/模块复核通过。其余 2,879 条 CMS 记录保持。恢复已云预览，本批未实际生产回滚；本批仅证明既有角色文本资格。
 
 当前完整来源为 `reports/nte-independent-delivery-2026-11-12-r120/independent-sources-01/source-index.json`，SHA256 `38a0a15fcc02cdc891ccf7339db49183bcb1b5f9e5c9cc45c9032df6bbf4d659`，115 份来源相对 R119 仅异环角色 raw 变化，胡桃修改及五份攻略增量保留。下一批使用 `readNteSourceIndex` 接续此索引，不回退旧来源或重放完成日志。后续顺序：蓝色星原 → 绿梦中文 → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。详细证据见 R120 `EXECUTION.md` 和 `delivery.json`。下方旧轮次均为历史状态。
-<!-- END R120 CURRENT -->
+<!-- END R120 HISTORY -->
 
 用户目标：尽快通过本机 Payload 更新所有游戏的所有内容。不是继续只扩展原神、异环攻略，也不是只放开数据库 CRUD。
 
