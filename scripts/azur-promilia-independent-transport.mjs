@@ -45,7 +45,7 @@ export function azurPromiliaIndependentTransport({ evidence, releaseKey, token, 
     inspect: async args => {
       const { local, sealed, config } = rowFor(evidence, args), output = join(directory, owner + '-' + args.role), form = await multipartModule(readFileSync(join(output, 'uploaded.multipart')));
       assert.equal(form.moduleSHA256, sealed.moduleSHA256); assertUploadMetadata(form.metadata, config); const version = await readVersion(service, args.versionId);
-      assertUploadedVersion(version, args.versionId, unifiedRuntimeConfig(target(evidence)), evidence.baseline.bindings[service]);
+      assertUploadedVersion(version, args.versionId, unifiedRuntimeConfig(target(evidence)), evidence.value.baseline.bindings[service]);
       const versionPin = save(join(output, 'version.json'), version), moduleProof = await captureUnifiedUploadedModule({ service, versionId: args.versionId, moduleSHA256: sealed.moduleSHA256, context: { role: args.role, transportPin, configPin: sealed.configPin }, directory: join(output, 'module'), uploadPath: join(output, 'uploaded.multipart'), uploadLogPath: join(output, 'upload.log'), expectedVersion: version, readVersion, readContent: (name, id) => readUnifiedVersion({ service: name, versionId: id, token, binary: true, request: unifiedProductionRead }) });
       return { versionId: args.versionId, moduleSHA256: sealed.moduleSHA256, moduleProof, versionPin };
     },
@@ -55,7 +55,7 @@ export function azurPromiliaIndependentTransport({ evidence, releaseKey, token, 
       return { ...proof, service, versionId: args.versionId };
     },
     revalidate: async args => {
-      const { sealed } = rowFor(evidence, args), version = await readVersion(service, args.versionId); assertUploadedVersion(version, args.versionId, unifiedRuntimeConfig(target(evidence)), evidence.baseline.bindings[service]);
+      const { sealed } = rowFor(evidence, args), version = await readVersion(service, args.versionId); assertUploadedVersion(version, args.versionId, unifiedRuntimeConfig(target(evidence)), evidence.value.baseline.bindings[service]);
       await revalidateUnifiedUploadedModule({ proof: args.inspected.moduleProof, service, versionId: args.versionId, moduleSHA256: sealed.moduleSHA256, context: { role: args.role, transportPin, configPin: sealed.configPin }, readVersion });
     },
     promote: async args => {
