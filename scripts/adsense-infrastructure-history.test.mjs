@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { assertAdsenseSourceTransition } from './adsense-infrastructure-history.mjs';
+import { assertAdsenseSourceTransition, assertAdsensePreviewMatch } from './adsense-infrastructure-history.mjs';
 import { SERVICES } from './desktop-cloud-release.mjs';
 const uuid = n => '00000000-0000-4000-8000-' + String(n).padStart(12,'0');
 function fixture() {
@@ -25,4 +25,21 @@ for(const fault of ['content','router','staging','binding','missing-owner','ci',
  if(fault==='ci')f.completed.ci.jobs[0].conclusion='skipped';
  if(fault==='parent')f.value.previousSourceIndex={...f.value.previousSourceIndex,pin:'e'.repeat(64)};
  assert.throws(()=>assertAdsenseSourceTransition(f.value,f.previous,f.completed));
+});
+
+function previewFixture() {
+ const html={title:'Page',text:'Protected content',media:[['img',[['src','/rendered.webp'],['alt','Protected image']]]],resources:[['link',[['rel','stylesheet'],['href','/protected.css']]]],links:['/protected']};
+ const expected={path:'/en',status:200,html};
+ const actual=structuredClone(expected);actual.html.resources.unshift(['link',[['rel','preload'],['as','image'],['href','/rendered.webp'],['fetchpriority','high']]]);
+ return {actual,expected};
+}
+test('source preview accepts only existing protected rendered-image preload policy',()=>{const {actual,expected}=previewFixture();assertAdsensePreviewMatch(actual,expected);});
+for(const fault of ['text','image','stylesheet','unrendered-preload','json'])test('source preview still rejects '+fault,()=>{
+ const {actual,expected}=previewFixture();
+ if(fault==='text')actual.html.text='Changed';
+ if(fault==='image')actual.html.media[0][1][1][1]='Changed image';
+ if(fault==='stylesheet')actual.html.resources[1][1][1][1]='/changed.css';
+ if(fault==='unrendered-preload')actual.html.resources[0][1][2][1]='/unrendered.webp';
+ if(fault==='json'){delete actual.html;delete expected.html;actual.sha256='a'.repeat(64);expected.sha256='b'.repeat(64);}
+ assert.throws(()=>assertAdsensePreviewMatch(actual,expected));
 });

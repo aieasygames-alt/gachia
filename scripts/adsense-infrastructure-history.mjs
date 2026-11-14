@@ -6,6 +6,7 @@ import { artifactFiles } from './desktop-publish.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { readUnifiedSourceOwner } from './unified-source-advance.mjs';
 import { readUnifiedUploadedModule } from './unified-version-identity.mjs';
+import { assertMigrationFingerprint, MIGRATION_FINGERPRINT_POLICY } from './genshin-migration-http.mjs';
 import { unifiedPageFingerprints } from './unified-version-preview.mjs';
 
 const OWNERS = ['genshin', 'nte', 'azur-promilia', 'lvmeng', 'main'];
@@ -24,6 +25,11 @@ export function assertAdsenseSourceTransition(value, previous, completed) {
   assert.deepEqual(value.baseline, completed.after);
   assert.equal(completed.ci.headSha, value.sourceCommit); assert.equal(completed.ci.status, 'completed'); assert.equal(completed.ci.conclusion, 'success');
   assert(Number.isSafeInteger(completed.ci.runID) && completed.ci.runID > 0); assert(completed.ci.jobs.length > 0 && completed.ci.jobs.every(j => j.conclusion === 'success'));
+}
+export function assertAdsensePreviewMatch(actual, expected) {
+  assert.equal(actual.path, expected.path); assert.equal(actual.status, expected.status);
+  if (actual.html) { assert(expected.html); assertMigrationFingerprint(actual.html, expected.html, actual.path, MIGRATION_FINGERPRINT_POLICY); }
+  else assert.deepEqual(actual.sha256, expected.sha256, actual.path);
 }
 function recheckReferences(proof) {
   const rows = pinned(proof);
@@ -57,7 +63,7 @@ export async function readAdsenseInfrastructureSource(proof, readPrevious, depth
       await readUnifiedUploadedModule(accepted.moduleProof, {service:row.service,versionId:accepted.versionId,moduleSHA256:accepted.moduleSHA256,context:module.context});
       const actual = recheckReferences(accepted.preview), local = recheckReferences(sealed.owners[owner][role].local);
       assert.deepEqual(actual.map(r=>r.path),local.map(r=>r.path));
-      for(let i=0;i<actual.length;i++) if(actual[i].path !== '/robots.txt') assert.deepEqual(actual[i].html ?? actual[i].sha256,local[i].html ?? local[i].sha256);
+      for(let i=0;i<actual.length;i++) if(actual[i].path !== '/robots.txt') assertAdsensePreviewMatch(actual[i],local[i]);
     }
     recheckReferences(completed.publicReferences[owner]);
   }
