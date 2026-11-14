@@ -54,7 +54,7 @@ function requests(artifact: string, expectation: any, contains: string) {
     { path: '/en/azur-promilia/guides/kibo-battle-and-ecology', status: 200 },
     { path: '/zh/azur-promilia/guides/kibo-battle-and-ecology', status: 200 },
     { path: '/ja/azur-promilia/guides/kibo-battle-and-ecology', status: 200 },
-    { path: '/en/azur-promilia/weapons', status: 200 }, { path: '/en/azur-promilia/tier-list', status: 200 },
+    { path: '/en/azur-promilia/weapons', status: 200 }, { path: '/zh/azur-promilia/tier-list', status: 200 },
   ]
   const existingExpectation = rows.find(row => row.path === expectation.path)
   if (existingExpectation) existingExpectation.contains = [contains]
