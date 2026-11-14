@@ -1,6 +1,16 @@
 # Payload 与 Gachia 多 Worker 项目地图
 
-**当前入口：2026-11-05 R39。** Genshin中文新建攻略已完成一次真实正常发布；NTE仍为既有攻略维护，新建切片尚未验收。公开Genshin32/NTE53，Git原始O为31/53，差异属于CMS叠加。见[R39](../reports/payload-new-guide-launch-2026-11-05-r39/README.md)、[全面审计](../reports/project-audit-2026-11-05/README.md)和[后续计划](../plans/project-next-development-2026-11-05.md)。以下R36/R37的计数、UUID与“新增未接通”均为当时历史状态；新发布必须重读当前来源/控制面，不使用本文历史值授权。请求归属和顺序双owner发布边界没有改变。
+<!-- BEGIN R120 CURRENT -->
+## 当前完成状态（2026-11-14 R120）
+
+异环单 Worker 真实 CMS 正式更新闭环已完成。57 个材料的 171 个三语详情 URL 迁入异环，公开 JSON、搜索切片和 Main 聚合接通独立读取；一次性 NTE → Router → Main 迁移完成后，常驻 CMS 娜娜莉记录 1327 的英文简介完成草稿、审核、仅 NTE 构建、云预览和正式发布。日常内容发布仅改变 `gachia-game-nte`，最终版本 `963f4629-9b0f-4992-8373-fcb536508c81`。
+
+精确提交 `cc0fdd18638b88d30dd42911055ae56b006b19bd` 的完整 CI [43450568989](https://github.com/aieasygames-alt/gachia/actions/runs/43450568989) 全部通过、无跳过；候选/恢复云预览、完整公网合同、三语桌面/手机六场景、无 JS 材料和最终只读控制面/模块复核通过。其余 2,879 条 CMS 记录保持。恢复已云预览，本批未实际生产回滚；本批仅证明既有角色文本资格。
+
+当前完整来源为 `reports/nte-independent-delivery-2026-11-12-r120/independent-sources-01/source-index.json`，SHA256 `38a0a15fcc02cdc891ccf7339db49183bcb1b5f9e5c9cc45c9032df6bbf4d659`，115 份来源相对 R119 仅异环角色 raw 变化，胡桃修改及五份攻略增量保留。下一批使用 `readNteSourceIndex` 接续此索引，不回退旧来源或重放完成日志。后续顺序：蓝色星原 → 绿梦中文 → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。详细证据见 R120 `EXECUTION.md` 和 `delivery.json`。下方旧轮次均为历史状态。
+<!-- END R120 CURRENT -->
+
+**历史入口：2026-11-05 R39。** Genshin中文新建攻略已完成一次真实正常发布；NTE仍为既有攻略维护，新建切片尚未验收。公开Genshin32/NTE53，Git原始O为31/53，差异属于CMS叠加。见[R39](../reports/payload-new-guide-launch-2026-11-05-r39/README.md)、[全面审计](../reports/project-audit-2026-11-05/README.md)和[后续计划](../plans/project-next-development-2026-11-05.md)。以下R36/R37的计数、UUID与“新增未接通”均为当时历史状态；新发布必须重读当前来源/控制面，不使用本文历史值授权。请求归属和顺序双owner发布边界没有改变。
 
 **公众发布基线：2026-11-04 R36。** 由代理规划→认证Payload草稿/批准→本机双owner发布的真实路径已执行，NTE与独立Genshin更新、公网/source-advance、双向共享Main交接均通过，修订后的限定V1运行里程碑完成。架构仍为本机Payload/PG、Cloudflare公众多Worker，无Tunnel/Mac回源。C05b独立key用户暂缓，完整灾备不宣称完成。证据见[R36](../reports/payload-agent-live-publish-2026-11-04-r36/README.md)，操作见[工作流](payload-agent-publishing-workflow.md)与[V1清单](../plans/payload-v1-completion-2026-11-03.md)。
 
