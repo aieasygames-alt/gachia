@@ -18,7 +18,7 @@ import { readUnifiedSourceOwner } from '../../scripts/unified-source-advance.mjs
 import { parseWrangler } from '../../scripts/game-release.mjs';
 import { prepareNteMainCandidate } from '../../scripts/nte-main-candidate.mjs';
 
-const root = import.meta.dirname, repo = path.resolve(root, '../..'), run = path.join(root, 'run-06');
+const root = import.meta.dirname, repo = path.resolve(root, '../..'), run = path.join(root, 'run-07');
 const owners = ['genshin', 'nte', 'azur-promilia', 'lvmeng', 'main'];
 const service = owner => owner === 'main' ? 'gachia' : 'gachia-game-' + owner;
 const transportEnv = owner => owner === 'lvmeng' ? 'production' : '';
@@ -42,7 +42,19 @@ function runtime(owner, source, baseline) { const parsed = parseWrangler(source)
 function localConfig(owner, config, artifact, module) { const c = { name: 'ads-infra-' + owner, main: module, no_bundle: true, find_additional_modules: false, compatibility_date: config.compatibility_date, compatibility_flags: config.compatibility_flags, vars: config.vars, assets: { binding: 'ASSETS', directory: path.join(artifact, 'assets') }, services: (config.services ?? []).map(row => ({ binding: row.binding, service: 'ads-infra-' + (row.service === 'gachia' ? 'main' : row.service.replace('gachia-game-', '')) })) }; if (owner === 'main') Object.assign(c, { d1_databases: [{ binding: 'DB', database_name: 'ads-local', database_id: '00000000-0000-0000-0000-000000000000' }], r2_buckets: [{ binding: 'IMAGES', bucket_name: 'ads-local' }] }); return c; }
 function paths(owner, artifact) { const langs = owner === 'lvmeng' ? ['zh'] : ['zh', 'en', 'ja']; const pages = owner === 'main' ? langs.flatMap(l => [`/${l}`, `/${l}/privacy`, `/${l}/search`]) : langs.flatMap(l => [`/${l}/${owner}`, ...({genshin:['characters/hu-tao','items/silk-flower','guides/banner-schedule-guide'],nte:['characters/nanally','items/tri-key','items','guides'], 'azur-promilia':['characters','characters/abby','weapons','guides'], lvmeng:[]}[owner]).map(p => `/${l}/${owner}/${p}`)]); return [...new Set([...pages, '/robots.txt', '/sitemap.xml', ...(owner === 'main' ? ['/ads.txt'] : []), ...artifactFiles(artifact).filter(r => r.type === 'file' && /^assets\/(?:data\/|data-client\/|data-manifest\/|_games\/[^/]+\/content\/|__content\/)/.test(r.path) && r.path.endsWith('.json')).map(r => '/' + r.path.slice('assets/'.length)), ...unifiedStaticFiles(artifact, owner).map(r => '/' + r.path.slice('assets/'.length).split('/').map(encodeURIComponent).join('/'))])]; }
 function fingerprint(bytes, status, headers) { const type = headers.get('content-type')?.split(';')[0]; return type === 'text/html' ? {type, html: unifiedPageFingerprints([{ html: bytes.toString(), status }], 'streaming-v2')[0]} : {type, sha256: digest(bytes)}; }
-async function capture(origin, requests, directory, references) { mkdirSync(directory, { mode: 0o700 }); const rows = []; for (const [i, url] of requests.entries()) { const response = await get(origin + url), bytes = Buffer.from(await response.arrayBuffer()); const row = { path:url, status:response.status, headers:Object.fromEntries(response.headers), ...fingerprint(bytes,response.status,response.headers), bodyFile:i+'.body' }; assert.equal(row.status,200, `${url} HTTP ${row.status}`); if (references) { const old = references[i]; assert.equal(row.path,old.path); assert.equal(row.status,old.status,url); if (url === '/robots.txt' && origin.endsWith('.workers.dev')) assert.match(bytes.toString(), /Disallow: \//); else assert.deepEqual(row.html ?? row.sha256,old.html ?? old.sha256,url); } writeFileSync(path.join(directory,row.bodyFile),bytes,{flag:'wx',mode:0o600}); rows.push(row); } return save(path.join(directory,'references.json'),rows); }
+async function capture(origin, requests, directory, references) {
+ mkdirSync(directory, { mode: 0o700 }); const rows = new Array(requests.length); let cursor = 0;
+ await Promise.all(Array.from({length: Math.min(4, requests.length)}, async () => {
+  while(cursor < requests.length) {
+   const i = cursor++, url = requests[i], response = await get(origin + url), bytes = Buffer.from(await response.arrayBuffer());
+   const row = { path:url, status:response.status, headers:Object.fromEntries(response.headers), ...fingerprint(bytes,response.status,response.headers), bodyFile:i+'.body' };
+   assert.equal(row.status,200, `${url} HTTP ${row.status}`);
+   if (references) { const old = references[i]; assert.equal(row.path,old.path); assert.equal(row.status,old.status,url); if (url === '/robots.txt' && origin.endsWith('.workers.dev')) assert.match(bytes.toString(), /Disallow: \//); else assert.deepEqual(row.html ?? row.sha256,old.html ?? old.sha256,url); }
+   writeFileSync(path.join(directory,row.bodyFile),bytes,{flag:'wx',mode:0o600}); rows[i] = row;
+  }
+ }));
+ assert.equal(rows.filter(Boolean).length, requests.length); return save(path.join(directory,'references.json'),rows);
+}
 const [action, runID] = process.argv.slice(2); assert(['prepare','build','seal','preview','promote','advance'].includes(action));
 if (action === 'prepare') {
  assert(!existsSync(run)); mkdirSync(run,{mode:0o700}); assert.equal(git(['diff','HEAD','--','apps','packages','scripts','services/content-cms']).length,0);
