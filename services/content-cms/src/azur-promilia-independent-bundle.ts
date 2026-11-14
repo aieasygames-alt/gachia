@@ -136,7 +136,7 @@ export async function verifyAzurPromiliaIndependentBundle(proof: Proof, depth = 
     assert.deepEqual(config, { ...target.config, main: path.join(local, 'module/worker.js'), assets: { ...target.config.assets, directory: path.join(artifact, 'assets') }, no_bundle: true, minify: false })
     const outbound = await multipartModule(readFileSync(path.join(local, 'seal/exact.multipart'))); assert.equal(outbound.moduleSHA256, sealed.moduleSHA256); assertUploadMetadata(outbound.metadata, config)
     const expected = role === 'candidate' ? contract.candidate.expectations[0] : contract.recovery.expectations[0]
-    recheckNteReferences({ proof: { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }, })
+    recheckNteReferences({ path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin })
     const references = migrationPinned({ path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin })
     const edited = references.find((row: any) => row.path === expected.path); assert(edited); assert(readFileSync(path.join(local, 'local-http/responses', edited.bodyFile), 'utf8').includes(expected.contains[0]))
   }
