@@ -38,6 +38,17 @@ test('NTE public references use their own sitemap, Router assets and guide route
   assert.equal(rows.at(-1).headers['cache-control'], 'private, no-cache, no-store, max-age=0, must-revalidate');
 });
 
+test('Azur Promilia public references preserve its full game route surface and Router aliases', () => {
+  const rows = publicReferences('azur-promilia', [
+    { ...reference, path: '/sitemap.xml' }, { ...reference, path: '/robots.txt' },
+    { ...reference, path: '/zh/azur-promilia' }, { ...reference, path: '/en/azur-promilia/characters/abby' },
+    { ...reference, path: '/_next/static/a.js' }, { ...reference, path: '/_games/azur-promilia/_next/static/a.js' },
+  ], 'azur-promilia');
+  assert.deepEqual(rows.map(row => row.path), ['/sitemaps/azur-promilia/index.xml', '/zh/azur-promilia',
+    '/en/azur-promilia/characters/abby', '/_games/azur-promilia/_next/static/a.js']);
+  assert.equal(rows[1].headers['cache-control'], 'private, no-cache, no-store, max-age=0, must-revalidate');
+});
+
 test('NTE Main mirror requires explicit game selection and rejects cross-game data', () => {
   assert.equal(publicReferences('main', [{ ...reference, path: '/data/nte/raw-guides.json' }], 'nte')[0].path, '/data/nte/raw-guides.json');
   assert.throws(() => publicReferences('main', [{ ...reference, path: '/data/nte/raw-guides.json' }]));

@@ -27,6 +27,18 @@ test('saved responses reopen and JSON key order does not change content identity
   recheckNteReferences(refs.proof);
 });
 
+test('Router robots acceptance binds the required Azur sitemap without comparing Worker robots bytes', async t => {
+  const f = fixture(t), body = Buffer.from('User-agent: *\nAllow: /\nSitemap: https://gachia.com/sitemaps/azur-promilia/index.xml\n');
+  const references = [{ path: '/robots.txt', status: 200, headers: { 'content-type': 'text/plain', 'cache-control': 'public, max-age=0' },
+    sha256: digest('User-agent: *\nAllow: /\n'), routerSitemap: 'https://gachia.com/sitemaps/azur-promilia/index.xml' }];
+  const directory = join(f.directory, 'router-robots');
+  const result = await verifyNteHTTP({ origin: 'https://gachia.com', references, directory,
+    request: async () => new Response(body, { status: 200, headers: references[0].headers }) });
+  recheckNteHTTP({ proof: { path: join(directory, 'result.json'), pin: result.evidenceSHA256 }, origin: 'https://gachia.com', references });
+  await assert.rejects(verifyNteHTTP({ origin: 'https://gachia.com', references, directory: join(f.directory, 'router-robots-missing'),
+    request: async () => new Response('User-agent: *\nAllow: /\n', { status: 200, headers: references[0].headers }) }), /missing/);
+});
+
 test('stale source JSON and a missing edited consumer fail local capture', async t => {
   const f = fixture(t);
   await assert.rejects(captureNteHTTP({ origin: 'http://localhost:8787', requests: f.requests, directory: join(f.directory, 'stale'), request: f.request,

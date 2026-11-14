@@ -6,6 +6,7 @@ import { desktopCloudSnapshot } from './desktop-cloud-release.mjs';
 import { assertUploadedVersion, assertUploadMetadata, multipartModule } from './desktop-cloud-transport.mjs';
 import { digest } from './desktop-release-assets.mjs';
 import { isolatedEnvironment } from './desktop-publish.mjs';
+import { publicReferences } from './desktop-public-acceptance.mjs';
 import { unifiedDryRun, unifiedRuntimeConfig, unifiedTransportTarget, unifiedTransportTool, verifyUnifiedTool } from './unified-cloud-module.mjs';
 import { unifiedOwnerDeploymentWriter } from './unified-owner-deployment.mjs';
 import { exactUnifiedPreviewOrigin } from './unified-version-preview.mjs';
@@ -30,6 +31,11 @@ export function azurPromiliaIndependentTransport({ evidence, releaseKey, token, 
   assert(typeof token === 'string' && token.length > 0); const uploads = new Map(), writers = new Map();
   const transportPin = releaseKey;
   const references = role => migrationPinned({ path: join(evidence.directory, owner, role, 'local-http/responses/references.json'), pin: evidence.value.owners[owner][role].referencesPin });
+  const publicReferencesFor = role => {
+    const source = references(role), mapped = publicReferences(owner, source, owner), robots = source.find(row => row.path === '/robots.txt');
+    assert(robots, 'Azur candidate robots reference missing');
+    return [...mapped, { ...robots, routerSitemap: `https://gachia.com/sitemaps/${owner}/index.xml` }];
+  };
   const readVersion = (name, versionId) => readUnifiedVersion({ service: name, versionId, token, request: unifiedProductionRead });
   return {
     snapshot: () => desktopCloudSnapshot(token, unifiedProductionRead, { allowSplit: true }),
@@ -64,7 +70,7 @@ export function azurPromiliaIndependentTransport({ evidence, releaseKey, token, 
       const writer = unifiedOwnerDeploymentWriter({ owner, releaseKey, versionId: args.versionId, token, request: fetch, recordResponse }); writers.set(owner, writer); return writer(args);
     },
     acceptProduction: async ({ deployed }) => {
-      const proof = await verifyNteHTTP({ origin: 'https://gachia.com', references: references('candidate'), directory: join(directory, 'public'), request: publicRequest });
+      const proof = await verifyNteHTTP({ origin: 'https://gachia.com', references: publicReferencesFor('candidate'), directory: join(directory, 'public'), request: publicRequest });
       return { ...proof, versions: { [service]: deployed[owner] } };
     },
   };

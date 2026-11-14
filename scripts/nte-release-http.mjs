@@ -102,7 +102,12 @@ function validate(response, body, reference, preview) {
       assert(/noindex/i.test([...publicRobots(body.toString()), response.headers.get('x-robots-tag') ?? ''].join(' ')));
     } else assert(reference.fingerprint, 'Successful HTML requires a complete rendered-page fingerprint');
   } else if (reference.path === '/robots.txt') {
-    if (preview) assert(/Disallow:\s*\//.test(body.toString()) && /noindex/.test(response.headers.get('x-robots-tag') ?? ''));
+    if (reference.routerSitemap) {
+      assert.equal(mime(response.headers), 'text/plain');
+      assert(!/\bnoindex\b/i.test(response.headers.get('x-robots-tag') ?? ''), 'Public robots must remain indexable');
+      const expected = new RegExp(`^Sitemap:\\s*${reference.routerSitemap.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')}(?:\\s|$)`, 'mi');
+      assert(expected.test(body.toString()), `Public robots is missing ${reference.routerSitemap}`);
+    } else if (preview) assert(/Disallow:\s*\//.test(body.toString()) && /noindex/.test(response.headers.get('x-robots-tag') ?? ''));
     else if (digest(body) !== reference.sha256) validatePublicResponse(response, body, reference);
   } else if (reference.jsonPin) {
     assert.equal(digest(canonical(JSON.parse(body))), reference.jsonPin, `Public owner projection changed: ${reference.path}`);
