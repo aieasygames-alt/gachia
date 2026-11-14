@@ -57,7 +57,9 @@ function requests(artifact: string, expectation: any, contains: string) {
     { path: '/en/azur-promilia/weapons', status: 200 }, { path: '/en/azur-promilia/tier-list', status: 200 },
     { path: '/sitemaps/azur-promilia/index.xml', status: 200 },
   ]
-  rows.push({ path: expectation.path, status: expectation.status, contains: [contains] })
+  const existingExpectation = rows.find(row => row.path === expectation.path)
+  if (existingExpectation) existingExpectation.contains = [contains]
+  else rows.push({ path: expectation.path, status: expectation.status, contains: [contains] })
   for (const file of unifiedStaticFiles(artifact, 'azur-promilia')) {
     const url = '/' + file.path.slice('assets/'.length).split('/').map(encodeURIComponent).join('/')
     if (!rows.some(row => row.path === url)) rows.push({ path: url, status: 200, sha256: file.sha256 })
