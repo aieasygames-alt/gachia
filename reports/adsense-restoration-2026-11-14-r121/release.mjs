@@ -18,7 +18,7 @@ import { readUnifiedSourceOwner } from '../../scripts/unified-source-advance.mjs
 import { parseWrangler } from '../../scripts/game-release.mjs';
 import { prepareNteMainCandidate } from '../../scripts/nte-main-candidate.mjs';
 
-const root = import.meta.dirname, repo = path.resolve(root, '../..'), run = path.join(root, 'run-01');
+const root = import.meta.dirname, repo = path.resolve(root, '../..'), run = path.join(root, 'run-02');
 const owners = ['genshin', 'nte', 'azur-promilia', 'lvmeng', 'main'];
 const service = owner => owner === 'main' ? 'gachia' : 'gachia-game-' + owner;
 const app = owner => owner === 'main' ? 'web' : 'game-' + owner;
@@ -55,7 +55,7 @@ if (action === 'prepare') {
  save(path.join(run,'prepared.json'),{policy:'adsense-five-owner-infrastructure-v1',commit,parent,active:previous.active,workspace,owners,contentChanges:[]}); console.log('Prepared exact source and preserved all 115 published content sources.');
 }
 if(action==='build'){
- const p=verifySource();assertDiskBudget({path:run,operation:'AdSense infrastructure build',estimatedBytes:BUILD_TEMP_BUDGET}); const home=path.join(run,'home');mkdirSync(home);const env={...isolatedEnvironment(home),PATH:path.dirname(buildNode)+path.delimiter+process.env.PATH,NODE_OPTIONS:'--max-old-space-size=4096'};
+ const p=verifySource();assertDiskBudget({path:run,operation:'AdSense infrastructure build',estimatedBytes:BUILD_TEMP_BUDGET}); const home=path.join(run,'home');mkdirSync(home);const env={...isolatedEnvironment(home),PATH:path.dirname(buildNode)+path.delimiter+process.env.PATH,NODE_OPTIONS:'--max-old-space-size=4096',npm_config_manage_package_manager_versions:'false'};
  const store=execFileSync('pnpm',['store','path'],{encoding:'utf8'}).trim();await command('pnpm',['install','--offline','--frozen-lockfile','--ignore-scripts','--prod=false','--store-dir',store],{cwd:p.workspace,env,log:path.join(run,'install.log')});
  for(const owner of owners){console.log('Building '+owner);const cwd=path.join(p.workspace,'apps',app(owner)),buildEnv={...env,...(owner==='main'?{}:{[owner.toUpperCase().replaceAll('-','_')+'_DEPLOYMENT_MODE']:owner==='nte'?'live':'production'})};await command('pnpm',['exec','opennextjs-cloudflare','build','--config','wrangler.jsonc','--env',owner==='lvmeng'?'production':''],{cwd,env:buildEnv,log:path.join(run,owner+'-build.log')});if(owner!=='main')execFileSync(buildNode,[path.join(p.workspace,'scripts/game-release.mjs'),'prepare-assets','--game',owner,'--environment','production'],{cwd:p.workspace,env:buildEnv,stdio:['ignore','pipe','pipe']});const artifact=path.join(run,'built',owner);mkdirSync(path.dirname(artifact),{recursive:true});const sourceArtifact=owner==='main'?(await prepareNteMainCandidate(path.join(run,'main-boundary'),p.workspace)).artifact:path.join(cwd,'.open-next');cpSync(sourceArtifact,artifact,{recursive:true});save(path.join(run,owner+'-built.json'),{artifact,treePin:treePin(artifact)});for(const name of ['.next','.open-next'])rmSync(path.join(cwd,name),{recursive:true});console.log('Built '+owner);}
  save(path.join(run,'built.json'),{status:'built',commit:p.commit,owners});
