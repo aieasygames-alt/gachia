@@ -34,7 +34,10 @@ export function publicReferences(owner, references, game = owner === 'main' ? 'g
       if (path === '/robots.txt') continue; // Main owns the public robots document.
       if (path === '/sitemap.xml') publicPath = `/sitemaps/${game}/index.xml`;
       else if (path.startsWith('/_next/static/')) publicPath = `/_games/${game}` + path;
-      else assert(path.startsWith(`/_games/${game}/_next/static/`) || new RegExp(`^/(zh|en|ja)/${game}(?:/[^?#]*)?$`).test(path), 'Unexpected game public route');
+      else {
+        const route = game === 'azur-promilia' ? new RegExp(`^/(zh|en|ja)/${game}(?:/[^?#]*)?$`) : new RegExp(`^/(zh|en|ja)/${game}/guides(?:/[^/]+)?$`);
+        assert(path.startsWith(`/_games/${game}/_next/static/`) || route.test(path), 'Unexpected game public route');
+      }
     } else {
       const other = game === 'genshin' ? 'nte' : 'genshin';
       const preserved = path === `/data/${other}/raw-guides.json` && /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(reference.preservedMainVersion ?? '');
