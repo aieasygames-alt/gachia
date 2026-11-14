@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { readAdsenseInfrastructureSource } from '../../../scripts/adsense-infrastructure-history.mjs'
 import { cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { artifactFiles } from '../../../scripts/desktop-publish.mjs'
@@ -196,6 +197,7 @@ async function readCompletedNteContinuation(proof: Proof, depth: number): Promis
 }
 export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
+  if (value.kind === 'nte_adsense_infrastructure_source_index') return readAdsenseInfrastructureSource(proof, readNteSourceIndex, depth)
   if (!value.kind.startsWith('nte_')) return readGenshinIndependentSourceIndex(proof, depth + 1)
   assert.equal(proof.path, path.join(directory, 'source-index.json')); assert.equal(value.kind, 'nte_published_source_index')
   assert.equal(value.status, 'published_sources_observed'); assert.equal(value.cloudWrites, false); assert.equal(value.newPublicationAuthorized, false)

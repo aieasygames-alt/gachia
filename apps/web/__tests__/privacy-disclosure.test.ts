@@ -34,7 +34,7 @@ describe('privacy disclosures across supported locales', () => {
       for (const provider of ['Google Analytics', 'Microsoft Clarity', 'Google AdSense', 'Cloudflare']) {
         expect(content).toContain(provider);
       }
-      expect(content).toMatch(/2026年10月23日|October 23, 2026/);
+      expect(content).toMatch(/2026年11月14日|November 14, 2026/);
       expect(content).toMatch(/账号登录、收藏和云端同步目前停用|Account sign-in, favorites and cloud sync are currently disabled|クラウド同期は現在停止中/);
       expect(content).toMatch(/历史账号数据保留|Historical account data is retained|過去のアカウントデータは保持/);
       expect(content).not.toMatch(/使用本网站即表示您同意|By using this website, you agree|同意したものとみなされます/);

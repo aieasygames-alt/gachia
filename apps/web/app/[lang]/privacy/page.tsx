@@ -38,7 +38,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '4. 第三方服务',
-        body: '我们使用以下第三方服务：\n\n• Google Analytics — 网站流量分析\n• Microsoft Clarity — 使用行为分析与会话回放工具\n• Google AdSense — 广告服务\n• Google 登录 — 历史账号认证，当前已停用\n• Google Fonts — 网页字体渲染\n• Cloudflare — 网站托管和 CDN\n\n这些服务可能接收 IP 地址、浏览器和设备信息，并按其配置使用 Cookie 或类似技术。脚本接入本身不说明广告是否个性化、数据保留期限或同意状态；相关处理取决于实际服务配置、浏览器设置及适用要求。请参阅 Google 和 Microsoft 的隐私政策了解详情。',
+        body: '我们使用以下第三方服务：\n\n• Google Analytics — 网站流量分析\n• Microsoft Clarity — 使用行为分析与会话回放工具\n• Google AdSense — 单独选择允许后加载的广告服务（与访问分析分开选择）\n• Google 登录 — 历史账号认证，当前已停用\n• Google Fonts — 网页字体渲染\n• Cloudflare — 网站托管和 CDN\n\n这些服务可能接收 IP 地址、浏览器和设备信息，并按其配置使用 Cookie 或类似技术。脚本接入本身不说明广告是否个性化、数据保留期限或同意状态；相关处理取决于实际服务配置、浏览器设置及适用要求。请参阅 Google 和 Microsoft 的隐私政策了解详情。',
       },
       {
         heading: '5. 数据安全',
@@ -76,7 +76,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '4. Third-Party Services',
-        body: 'We use the following third-party services:\n\n• Google Analytics — website traffic analysis\n• Microsoft Clarity — usage analytics and session replay tools\n• Google AdSense — advertising services\n• Google sign-in — historical account authentication, currently disabled\n• Google Fonts — web font rendering\n• Cloudflare — website hosting and CDN\n\nThese services may receive IP addresses, browser and device information, and use cookies or similar technologies according to their configuration. Script integration alone does not establish ad personalization, retention periods, or consent status; processing depends on actual service configuration, browser settings, and applicable requirements. See Google and Microsoft privacy policies for details.',
+        body: 'We use the following third-party services:\n\n• Google Analytics — website traffic analysis\n• Microsoft Clarity — usage analytics and session replay tools\n• Google AdSense — advertising loaded after a separate opt-in, independent of analytics\n• Google sign-in — historical account authentication, currently disabled\n• Google Fonts — web font rendering\n• Cloudflare — website hosting and CDN\n\nThese services may receive IP addresses, browser and device information, and use cookies or similar technologies according to their configuration. Script integration alone does not establish ad personalization, retention periods, or consent status; processing depends on actual service configuration, browser settings, and applicable requirements. See Google and Microsoft privacy policies for details.',
       },
       {
         heading: '5. Data Security',
@@ -114,7 +114,7 @@ const CONTENT: Record<string, { title: string; sections: { heading: string; body
       },
       {
         heading: '4. サードパーティサービス',
-        body: '当方は以下のサードパーティサービスを利用しています：\n\n• Google Analytics — ウェブサイトトラフィック分析\n• Microsoft Clarity — 利用状況分析・セッション再生ツール\n• Google AdSense — 広告サービス\n• Google ログイン — 過去のアカウント認証（現在停止中）\n• Google Fonts — ウェブフォントレンダリング\n• Cloudflare — ウェブサイトホスティングとCDN\n\nこれらのサービスは IP アドレス、ブラウザ・端末情報を受信し、設定に応じて Cookie 等を使用する場合があります。スクリプトの導入だけでは広告のパーソナライズ、保存期間、同意状況は確定しません。実際の処理はサービス設定、ブラウザ設定、適用要件によって異なります。Google と Microsoft のプライバシーポリシーをご確認ください。',
+        body: '当方は以下のサードパーティサービスを利用しています：\n\n• Google Analytics — ウェブサイトトラフィック分析\n• Microsoft Clarity — 利用状況分析・セッション再生ツール\n• Google AdSense — アクセス分析とは別に許可を選択した後で読み込む広告サービス\n• Google ログイン — 過去のアカウント認証（現在停止中）\n• Google Fonts — ウェブフォントレンダリング\n• Cloudflare — ウェブサイトホスティングとCDN\n\nこれらのサービスは IP アドレス、ブラウザ・端末情報を受信し、設定に応じて Cookie 等を使用する場合があります。スクリプトの導入だけでは広告のパーソナライズ、保存期間、同意状況は確定しません。実際の処理はサービス設定、ブラウザ設定、適用要件によって異なります。Google と Microsoft のプライバシーポリシーをご確認ください。',
       },
       {
         heading: '5. データセキュリティ',
@@ -152,7 +152,7 @@ export default async function PrivacyPage({
       <div className="mx-auto max-w-3xl">
         <h1 className="mb-2 text-3xl font-bold text-game-text">{content.title}</h1>
         <p className="mb-8 text-sm text-game-text-muted">
-          {locale === 'zh' ? '最后更新：2026年10月23日' : locale === 'ja' ? '最終更新：2026年10月23日' : 'Last Updated: October 23, 2026'}
+          {locale === 'zh' ? '最后更新：2026年11月14日' : locale === 'ja' ? '最終更新：2026年11月14日' : 'Last Updated: November 14, 2026'}
         </p>
 
         {content.sections.map((section) => (

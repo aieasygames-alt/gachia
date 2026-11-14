@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { AdsensePreferences } from '../../../packages/ui/adsense';
 import './globals.css';
 
 const isPreview = process.env.GENSHIN_DEPLOYMENT_MODE !== 'production';
@@ -9,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-Hans"><body>{children}</body></html>;
+  return <html lang="zh-Hans"><body><AdsensePreferences />{children}</body></html>;
 }

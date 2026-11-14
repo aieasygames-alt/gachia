@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { AdsensePreferences } from '../../../packages/ui/adsense';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -9,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <html lang="zh-CN"><body>{children}</body></html>;
+  return <html lang="zh-CN"><body><AdsensePreferences />{children}</body></html>;
 }
