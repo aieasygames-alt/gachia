@@ -5,7 +5,8 @@ import { join } from 'node:path';
 import test from 'node:test';
 import { SERVICES } from './desktop-cloud-release.mjs';
 import { executeGenshinIndependentRelease, assertGenshinIndependentIdentity, GENSHIN_INDEPENDENT_POLICY,
-  executeNteIndependentRelease, assertNteIndependentIdentity, NTE_INDEPENDENT_POLICY } from './genshin-independent-release.mjs';
+  executeNteIndependentRelease, assertNteIndependentIdentity, NTE_INDEPENDENT_POLICY,
+  executeAzurPromiliaIndependentRelease, assertAzurPromiliaIndependentIdentity, AZUR_PROMILIA_INDEPENDENT_POLICY } from './genshin-independent-release.mjs';
 const sha = char => char.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`, service = 'gachia-game-genshin';
 function fixture(t, game = 'genshin') {
   const service = `gachia-game-${game}`;
@@ -15,7 +16,7 @@ function fixture(t, game = 'genshin') {
     baseline.services[name] = { id: uuid(i + 1), versions: [{ version_id: uuid(i + 20), percentage: 100 }] };
     baseline.bindings[name] = []; baseline.settings[name] = { bindings: [], tags: [] }; baseline.subdomains[name] = { enabled: true, previews_enabled: true };
   }
-  const value = { policy: game === 'nte' ? NTE_INDEPENDENT_POLICY : GENSHIN_INDEPENDENT_POLICY, releaseKey: sha('a'), bundlePin: sha('b'), reviewPin: sha('c'), sourceCommit: 'd'.repeat(40),
+  const value = { policy: game === 'nte' ? NTE_INDEPENDENT_POLICY : game === 'azur-promilia' ? AZUR_PROMILIA_INDEPENDENT_POLICY : GENSHIN_INDEPENDENT_POLICY, releaseKey: sha('a'), bundlePin: sha('b'), reviewPin: sha('c'), sourceCommit: 'd'.repeat(40),
     executorCI: { commit: 'd'.repeat(40), runID: 1, status: 'full_exact_ci_passed' }, baseline, observedAt: Date.now(),
     owners: { [game]: { service, sourceVersionId: baseline.services[service].versions[0].version_id, sourceIdentityPin: sha('e'),
       ...Object.fromEntries(['candidate', 'recovery'].map(role => [role, { artifactPin: sha('1'), configPin: sha('2'), moduleSHA256: sha('3'), referencesPin: sha('4') }])) } } };
@@ -76,4 +77,11 @@ test('NTE publication refuses any protected deployment change before upload', as
   for (const name of SERVICES.filter(name => name !== 'gachia-game-nte')) {
     const f = fixture(t, 'nte'); f.cloud.services[name].id = uuid(999); await assert.rejects(executeNteIndependentRelease(f)); assert.deepEqual(f.calls, []);
   }
+});
+test('Azur Promilia uses the same single-owner protocol and protects every other deployment', async t => {
+  const f = fixture(t, 'azur-promilia'), result = await executeAzurPromiliaIndependentRelease(f);
+  assert.equal(result.status, 'production_accepted');
+  assert.deepEqual(f.calls, ['upload:azur-promilia:recovery', 'preview:recovery', 'upload:azur-promilia:candidate', 'preview:candidate', 'promote:azur-promilia', 'public']);
+  for (const name of SERVICES.filter(name => name !== 'gachia-game-azur-promilia')) assert.deepEqual(f.cloud.services[name], f.value.baseline.services[name]);
+  assert.doesNotThrow(() => assertAzurPromiliaIndependentIdentity(f.value));
 });

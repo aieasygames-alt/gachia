@@ -46,6 +46,7 @@
     "unified:production": "tsx scripts/unified-production.ts",
     "genshin:migration": "tsx scripts/genshin-production-migration.ts",
     "genshin:production": "tsx scripts/genshin-independent-production.ts",
+    "azur:production": "tsx scripts/azur-promilia-independent-production.ts",
     "review:stage": "tsx scripts/review-stage.ts",
     "local:admin": "tsx scripts/local-admin.ts",
     "generate:types": "payload generate:types",

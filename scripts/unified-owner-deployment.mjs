@@ -9,8 +9,8 @@ const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 
 // Internal fixed adapters select the owner; this module has no CLI or scope authorization.
 export function unifiedOwnerDeploymentWriter({ owner, releaseKey, versionId, token, request, recordResponse }) {
-  assert(['main', 'genshin', 'nte'].includes(owner), 'Unreviewed deployment owner');
-  const service = unifiedService(owner), label = owner === 'main' ? 'Main' : owner === 'nte' ? 'NTE' : 'Genshin', endpoint = `${base}/${service}/deployments`;
+  assert(['main', 'genshin', 'nte', 'azur-promilia'].includes(owner), 'Unreviewed deployment owner');
+  const service = unifiedService(owner), label = owner === 'main' ? 'Main' : owner === 'nte' ? 'NTE' : owner === 'azur-promilia' ? 'Azur Promilia' : 'Genshin', endpoint = `${base}/${service}/deployments`;
   assert(/^[a-f0-9]{64}$/.test(releaseKey)); exactUnifiedPreviewOrigin(service, versionId);
   assert(typeof token === 'string' && token.length > 0); assert.equal(typeof request, 'function');
   assert.equal(typeof recordResponse, 'function');

@@ -9,7 +9,7 @@ import { digest } from '../src/legacy-intake'
 import { projectRoot } from '../src/local-environment'
 import { objectValue } from '../src/unified-content'
 import { exportUnifiedContent } from '../src/unified-export'
-import { genshinProductionOwnerScope, GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope } from '../src/unified-genshin-production-scope'
+import { genshinProductionOwnerScope, AZUR_PROMILIA_PRODUCTION_SCOPE, GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope } from '../src/unified-genshin-production-scope'
 import { unifiedPlan } from '../src/unified-plan'
 import { readUnifiedSources } from '../src/unified-sources'
 import { freezeUnifiedContent, verifyUnifiedFrozenSource } from '../src/unified-build'
@@ -64,6 +64,22 @@ test('formal NTE character scope qualifies one owner and preserves Hu Tao and th
   assert.throws(() => independentProductionOwnerScope('nte', other.manifest, active, other.files.map(row => ({ sourcePath: row.sourcePath, text: row.content, sha256: row.candidateSHA256 }))))
   assert.throws(() => independentProductionOwnerScope('nte', { ...candidate.manifest, preview: true }, active, overlays))
   assert.throws(() => independentProductionOwnerScope('nte', candidate.manifest, active.slice(1), overlays))
+})
+test('formal Azur Promilia guide scope qualifies only the reviewed English content leaf', () => {
+  const source = original.find(row => row.sourcePath === 'apps/game-azur-promilia/lib/data.ts')!
+  const active = structuredClone(original)
+  const record = structuredClone(plan.sources.find(row => row.sourcePath === source.sourcePath)!.records.find(row => row.sourceRecord.locator.identity?.id === 'kibo-battle-and-ecology')!)
+  assert(objectValue(record.structuredValue) && objectValue(record.structuredValue.content))
+  assert(typeof record.structuredValue.content.en === 'string')
+  record.structuredValue.content.en = record.structuredValue.content.en.replace('Kibo connect exploration', 'Kibo connects exploration')
+  record._status = 'published'; record.hold = false
+  const candidate = exportUnifiedContent([record], original, active, false)
+  const files = candidate.files.map(row => ({ sourcePath: row.sourcePath, text: row.content, sha256: row.candidateSHA256 }))
+  const manifest = candidate.manifest
+  assert.deepEqual(independentProductionOwnerScope('azur-promilia', manifest, active, files), {
+    games: ['azur-promilia'], owners: ['azur-promilia'], services: ['gachia-game-azur-promilia'], productionScope: AZUR_PROMILIA_PRODUCTION_SCOPE,
+  })
+  assert.throws(() => independentProductionOwnerScope('azur-promilia', manifest, active, files.map(row => row.sourcePath === source.sourcePath ? { ...row, text: row.text.replace('connects', 'connect'), sha256: digest(row.text.replace('connects', 'connect')) } : row)))
 })
 test('the real compiler independently reopens an explicit formal Genshin-only freeze with complete A', () => {
   const root = realpathSync(mkdtempSync(path.join(tmpdir(), 'genshin-formal-freeze-')))

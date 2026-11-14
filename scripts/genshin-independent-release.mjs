@@ -7,16 +7,18 @@ import { withRunLock } from './desktop-publish.mjs';
 
 export const GENSHIN_INDEPENDENT_POLICY = 'genshin-independent-existing-character-text-production-v1';
 export const NTE_INDEPENDENT_POLICY = 'nte-independent-existing-character-text-production-v1';
+export const AZUR_PROMILIA_INDEPENDENT_POLICY = 'azur-promilia-independent-existing-text-production-v1';
 const SHA = /^[a-f0-9]{64}$/, UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const fresh = at => assert(Number.isSafeInteger(at) && at <= Date.now() && Date.now() - at < 900000, 'Independent release observation expired');
 export function assertGenshinIndependentIdentity(value) {
   return assertIndependentIdentity(value, 'genshin');
 }
 export function assertNteIndependentIdentity(value) { return assertIndependentIdentity(value, 'nte'); }
+export function assertAzurPromiliaIndependentIdentity(value) { return assertIndependentIdentity(value, 'azur-promilia'); }
 function assertIndependentIdentity(value, game) {
-  assert(['genshin', 'nte'].includes(game)); const service = `gachia-game-${game}`;
+  assert(['genshin', 'nte', 'azur-promilia'].includes(game)); const service = `gachia-game-${game}`;
   assert.deepEqual(Object.keys(value).sort(), ['policy', 'releaseKey', 'sourceCommit', 'executorCI', 'bundlePin', 'reviewPin', 'baseline', 'observedAt', 'owners'].sort());
-  assert.equal(value.policy, game === 'genshin' ? GENSHIN_INDEPENDENT_POLICY : NTE_INDEPENDENT_POLICY); fresh(value.observedAt);
+  assert.equal(value.policy, game === 'genshin' ? GENSHIN_INDEPENDENT_POLICY : game === 'nte' ? NTE_INDEPENDENT_POLICY : AZUR_PROMILIA_INDEPENDENT_POLICY); fresh(value.observedAt);
   for (const key of ['releaseKey', 'bundlePin', 'reviewPin']) assert(SHA.test(value[key]));
   assert.equal(value.executorCI.status, 'full_exact_ci_passed'); assert.equal(value.executorCI.commit, value.sourceCommit); assert(/^[a-f0-9]{40}$/.test(value.sourceCommit));
   assert(Number.isSafeInteger(value.executorCI.runID) && value.executorCI.runID > 0);
@@ -36,6 +38,7 @@ export async function executeGenshinIndependentRelease({ run, releaseKey, verify
   return executeIndependentRelease({ run, releaseKey, verify, transport }, 'genshin');
 }
 export async function executeNteIndependentRelease(input) { return executeIndependentRelease(input, 'nte'); }
+export async function executeAzurPromiliaIndependentRelease(input) { return executeIndependentRelease(input, 'azur-promilia'); }
 async function executeIndependentRelease({ run, releaseKey, verify, transport }, game) {
   const service = `gachia-game-${game}`;
   return withRunLock(run, async () => {
