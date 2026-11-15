@@ -72,7 +72,11 @@ async function sealOwner({ workspace, directory, role, artifact, tool }: { works
   const compiled = await multipartModule(readFileSync(path.join(temp, 'compiled.multipart'))); assertUploadMetadata(compiled.metadata, runtime)
   if (role === 'candidate') writeFileSync(modulePath, compiled.code, { flag: 'wx', mode: 0o600 })
   else assert(readFileSync(modulePath).equals(compiled.code), 'Archived Lvmeng recovery was rebundled')
-  const exactConfig = { ...compile, main: modulePath, no_bundle: true, minify: false }, configPath = path.join(local, 'upload.json')
+  // Persist the selected production environment in the exact upload config.
+  // Wrangler merges --env production at upload time, so retaining the
+  // top-level preview vars here would make the sealed config disagree with
+  // the outbound multipart metadata even though the upload is valid.
+  const exactConfig = { ...compile, vars: runtime.vars, main: modulePath, no_bundle: true, minify: false }, configPath = path.join(local, 'upload.json')
   const configPin = migrationSave(local, 'upload.json', exactConfig).pin
   unifiedDryRun(tool, { config: configPath, environment: target.environment, outfile: path.join(temp, 'exact.multipart'), exact: true, cwd: temp, home: path.join(temp, 'home'), log: path.join(temp, 'exact.log') })
   const exact = await multipartModule(readFileSync(path.join(temp, 'exact.multipart'))); assert.equal(exact.moduleSHA256, compiled.moduleSHA256); assertUploadMetadata(exact.metadata, { ...exactConfig, vars: runtime.vars })
@@ -124,8 +128,8 @@ export async function verifyLvmengIndependentBundle(proof: Proof, depth = 0): Pr
   for (const role of ['recovery', 'candidate'] as const) {
     const local = path.join(directory, owner, role), artifact = path.join(local, 'artifact'), sealed = row[role]
     assert.equal(treePin(artifact), sealed.artifactPin); assert.equal(digest(readFileSync(path.join(local, 'module/worker.js'))), sealed.moduleSHA256)
-    const target = unifiedTransportTarget(owner, readFileSync(path.join(workspace, 'apps/game-lvmeng/wrangler.jsonc'), 'utf8')), config = migrationPinned({ path: path.join(local, 'upload.json'), pin: sealed.configPin })
-    assert.deepEqual(config, { ...target.config, main: path.join(local, 'module/worker.js'), assets: { ...unifiedRuntimeConfig(target).assets, directory: path.join(artifact, 'assets') }, no_bundle: true, minify: false })
+    const target = unifiedTransportTarget(owner, readFileSync(path.join(workspace, 'apps/game-lvmeng/wrangler.jsonc'), 'utf8')), runtime = unifiedRuntimeConfig(target), config = migrationPinned({ path: path.join(local, 'upload.json'), pin: sealed.configPin })
+    assert.deepEqual(config, { ...target.config, vars: runtime.vars, main: path.join(local, 'module/worker.js'), assets: { ...runtime.assets, directory: path.join(artifact, 'assets') }, no_bundle: true, minify: false })
     const outbound = await multipartModule(readFileSync(path.join(local, 'seal/exact.multipart'))); assert.equal(outbound.moduleSHA256, sealed.moduleSHA256); assertUploadMetadata(outbound.metadata, config)
     const refs = { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }, references = recheckNteReferences(refs), wanted = requests(artifact, role === 'candidate' ? contract.candidate.expectations : contract.recovery.expectations)
     assert.deepEqual(references.map((ref: any) => ({ path: ref.path, status: ref.status })), wanted.map(row => ({ path: row.path, status: row.status })))
