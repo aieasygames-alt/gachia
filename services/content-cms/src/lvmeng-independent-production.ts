@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import { mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { homedir } from 'node:os'
 import path from 'node:path'
-import { desktopCloudSnapshot, assertTopology } from '../../../scripts/desktop-cloud-release.mjs'
+import { activeVersion, desktopCloudSnapshot, assertTopology } from '../../../scripts/desktop-cloud-release.mjs'
 import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 import { migrationJSON, migrationPinned, migrationSave } from '../../../scripts/genshin-migration-http.mjs'
 import { executeLvmengIndependentRelease } from '../../../scripts/genshin-independent-release.mjs'
@@ -65,14 +65,19 @@ export async function auditLvmengProduction(input: unknown, tokens: { cmsToken?:
   const temporary = mkdtempSync(path.join(evidence.built.directory, '.lvmeng-production-source-check-'))
   try { const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan, records: review.records, activeSources: evidence.sources.sources, preview: false, productionScope: LVMENG_PRODUCTION_SCOPE }); assert.equal(reconstructed.sourceTreeSHA256, evidence.built.frozen.sourceTreeSHA256); assert.deepEqual(reconstructed.candidate, evidence.built.frozen.candidate); rmSync(temporary, { recursive: true }) }
   catch (error) { migrationSave(temporary, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
-  const before: any = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead); assertTopology(evidence.sources.baseline, before); const row: any = (evidence.sources.owners as any).lvmeng; assert.equal(row.versionId, before.services[row.service].versions[0].version_id); await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead }); assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
-  const releaseKey = lvmengReleaseKey(request, executor.executorCI), identity = { policy: LVMENG_INDEPENDENT_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: review.reviewPin, baseline: evidence.sources.baseline, observedAt: Date.now(), owners: evidence.value.owners }
+  const before: any = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)
+  // R121 remains the immutable content source, while R123 advanced Main after
+  // that source index was published. Allow that known Main-only version drift,
+  // but keep every other topology field and service protected by the check.
+  assertTopology(evidence.sources.baseline, before, { gachia: activeVersion(before, 'gachia') })
+  const row: any = (evidence.sources.owners as any).lvmeng; assert.equal(row.versionId, before.services[row.service].versions[0].version_id); await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead }); assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
+  const releaseKey = lvmengReleaseKey(request, executor.executorCI), identity = { policy: LVMENG_INDEPENDENT_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: review.reviewPin, baseline: before, observedAt: Date.now(), owners: evidence.value.owners }
   const verify = async () => { executor.verify(); assert.deepEqual((await verifyLvmengIndependentBundle(request.bundle)).value, evidence.value); assert.equal((await readUnifiedProductionReview(plan, editorial.selected, tokens.cmsToken!)).reviewPin, review.reviewPin); application(editorial.application, repo, executor.executorCommit); return { ...identity, observedAt: Date.now() } }
   return { request, evidence, identity, verify, executor }
 }
 export async function activateLvmengProduction(input: { request: unknown; cmsToken: string; cloudToken: string; directory: string; releaseKey: string }) {
   const audited = await auditLvmengProduction(input.request, input); assert.equal(input.releaseKey, audited.identity.releaseKey); const directory = path.resolve(input.directory); assertDiskBudget({ path: directory, operation: 'Lvmeng cloud evidence', estimatedBytes: 2 * GiB }); mkdirSync(directory, { mode: 0o700 }); migrationSave(directory, 'request.json', audited.request); migrationSave(directory, 'identity.json', audited.identity)
   const publicNetwork = audited.request.publicProxy ? await createGenshinPublicNetwork(audited.request.publicProxy) : undefined; migrationSave(directory, 'public-network.json', publicNetwork?.route ?? { kind: 'direct_public_read' })
-  let result: any; try { result = await executeLvmengIndependentRelease({ run: directory, releaseKey: input.releaseKey, verify: audited.verify, transport: lvmengIndependentTransport({ evidence: audited.evidence, releaseKey: input.releaseKey, token: input.cloudToken, directory, publicRequest: publicNetwork?.request ?? unifiedProductionRead }) }) } finally { await publicNetwork?.close() }
+  let result: any; try { result = await executeLvmengIndependentRelease({ run: directory, releaseKey: input.releaseKey, verify: audited.verify, transport: lvmengIndependentTransport({ evidence: audited.evidence, baseline: audited.identity.baseline, releaseKey: input.releaseKey, token: input.cloudToken, directory, publicRequest: publicNetwork?.request ?? unifiedProductionRead }) }) } finally { await publicNetwork?.close() }
   audited.executor.verify(); const value = { schemaVersion: 1, kind: 'lvmeng_release_completion', request: audited.request, bundle: audited.request.bundle, executorCI: audited.executor.executorCI, releaseKey: input.releaseKey, ...result, journal: { path: path.join(directory, `lvmeng-independent-${input.releaseKey}.jsonl`), pin: result.journalPin } }; return { proof: migrationSave(directory, 'completion.json', value), value }
 }
