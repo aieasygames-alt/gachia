@@ -75,7 +75,7 @@ async function sealOwner({ workspace, directory, role, artifact, tool }: { works
   const exactConfig = { ...compile, main: modulePath, no_bundle: true, minify: false }, configPath = path.join(local, 'upload.json')
   const configPin = migrationSave(local, 'upload.json', exactConfig).pin
   unifiedDryRun(tool, { config: configPath, environment: target.environment, outfile: path.join(temp, 'exact.multipart'), exact: true, cwd: temp, home: path.join(temp, 'home'), log: path.join(temp, 'exact.log') })
-  const exact = await multipartModule(readFileSync(path.join(temp, 'exact.multipart'))); assert.equal(exact.moduleSHA256, compiled.moduleSHA256); assertUploadMetadata(exact.metadata, exactConfig)
+  const exact = await multipartModule(readFileSync(path.join(temp, 'exact.multipart'))); assert.equal(exact.moduleSHA256, compiled.moduleSHA256); assertUploadMetadata(exact.metadata, { ...exactConfig, vars: runtime.vars })
   return { moduleSHA256: compiled.moduleSHA256, configPin, artifactPin: treePin(artifact) }
 }
 
