@@ -49,6 +49,16 @@ test('Azur Promilia public references preserve its full game route surface and R
   assert.equal(rows[1].headers['cache-control'], 'private, no-cache, no-store, max-age=0, must-revalidate');
 });
 
+test('Lvmeng public references preserve its Chinese-only route surface and Router aliases', () => {
+  const rows = publicReferences('lvmeng', [
+    { ...reference, path: '/sitemap.xml' }, { ...reference, path: '/robots.txt' },
+    { ...reference, path: '/zh/lvmeng/characters/he-yulian' },
+    { ...reference, path: '/_next/static/a.js' }, { ...reference, path: '/_games/lvmeng/_next/static/a.js' },
+  ], 'lvmeng');
+  assert.deepEqual(rows.map(row => row.path), ['/sitemaps/lvmeng/index.xml', '/zh/lvmeng/characters/he-yulian', '/_games/lvmeng/_next/static/a.js']);
+  assert.equal(rows[1].headers['cache-control'], 'private, no-cache, no-store, max-age=0, must-revalidate');
+});
+
 test('NTE Main mirror requires explicit game selection and rejects cross-game data', () => {
   assert.equal(publicReferences('main', [{ ...reference, path: '/data/nte/raw-guides.json' }], 'nte')[0].path, '/data/nte/raw-guides.json');
   assert.throws(() => publicReferences('main', [{ ...reference, path: '/data/nte/raw-guides.json' }]));

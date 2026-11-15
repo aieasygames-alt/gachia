@@ -1,11 +1,18 @@
 import { GAME_DEPLOYMENTS, getRouteOwner, isMainSitemapPath } from '@gachia/core';
 import { nteMaterials } from '@gachia/data/games/nte/items';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import sitemap from '../app/sitemaps/main/sitemap';
 import { GET } from '../app/sitemap.xml/route';
 import { getSitemapPaths, MAIN_SITEMAP_PATH } from '../lib/sitemap-index';
 
 describe('sitemap deployment shards', () => {
+  it('does not load migrated NTE detail sources into the Main Worker', () => {
+    const source = readFileSync(fileURLToPath(new URL('../app/sitemaps/main/sitemap.ts', import.meta.url)), 'utf8');
+    expect(source).not.toContain('@gachia/data/games/nte/');
+  });
+
   it('includes each live dedicated Worker sitemap in the root sitemap', async () => {
     const response = GET();
     expect(response.headers.get('content-type')).toBe('application/xml; charset=utf-8');

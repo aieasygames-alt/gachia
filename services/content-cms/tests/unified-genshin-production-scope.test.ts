@@ -9,7 +9,7 @@ import { digest } from '../src/legacy-intake'
 import { projectRoot } from '../src/local-environment'
 import { objectValue } from '../src/unified-content'
 import { exportUnifiedContent } from '../src/unified-export'
-import { genshinProductionOwnerScope, AZUR_PROMILIA_PRODUCTION_SCOPE, GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope } from '../src/unified-genshin-production-scope'
+import { genshinProductionOwnerScope, AZUR_PROMILIA_PRODUCTION_SCOPE, GENSHIN_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope } from '../src/unified-genshin-production-scope'
 import { unifiedPlan } from '../src/unified-plan'
 import { readUnifiedSources } from '../src/unified-sources'
 import { freezeUnifiedContent, verifyUnifiedFrozenSource } from '../src/unified-build'
@@ -80,6 +80,19 @@ test('formal Azur Promilia guide scope qualifies only the reviewed English conte
     games: ['azur-promilia'], owners: ['azur-promilia'], services: ['gachia-game-azur-promilia'], productionScope: AZUR_PROMILIA_PRODUCTION_SCOPE,
   })
   assert.throws(() => independentProductionOwnerScope('azur-promilia', manifest, active, files.map(row => row.sourcePath === source.sourcePath ? { ...row, text: row.text.replace('connects', 'connect'), sha256: digest(row.text.replace('connects', 'connect')) } : row)))
+})
+
+test('formal Lvmeng scope qualifies one existing Chinese character text record', () => {
+  const source = original.find(row => row.sourcePath === 'apps/game-lvmeng/lib/data.ts')!
+  const active = structuredClone(original)
+  const record = structuredClone(plan.sources.find(row => row.sourcePath === source.sourcePath)!.records.find(row => row.sourceRecord.locator.identity?.slug === 'he-yulian')!)
+  assert(objectValue(record.structuredValue)); record.structuredValue.note = '已完成 CMS 复核的角色说明。'; record._status = 'published'; record.hold = false
+  const candidate = exportUnifiedContent([record], original, active, false)
+  const files = candidate.files.map(row => ({ sourcePath: row.sourcePath, text: row.content, sha256: row.candidateSHA256 }))
+  assert.deepEqual(independentProductionOwnerScope('lvmeng', candidate.manifest, active, files), {
+    games: ['lvmeng'], owners: ['lvmeng'], services: ['gachia-game-lvmeng'], productionScope: LVMENG_PRODUCTION_SCOPE,
+  })
+  assert.throws(() => independentProductionOwnerScope('lvmeng', candidate.manifest, active, files.map(row => row.sourcePath === source.sourcePath ? { ...row, text: row.text.replace('已完成 CMS 复核', '未授权修改'), sha256: digest(row.text.replace('已完成 CMS 复核', '未授权修改')) } : row)))
 })
 test('the real compiler independently reopens an explicit formal Genshin-only freeze with complete A', () => {
   const root = realpathSync(mkdtempSync(path.join(tmpdir(), 'genshin-formal-freeze-')))

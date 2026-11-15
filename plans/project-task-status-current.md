@@ -1,6 +1,16 @@
 # 当前审计任务表
 
-<!-- BEGIN R120 CURRENT -->
+<!-- BEGIN R123 CURRENT -->
+## 当前完成状态（2026-11-15 R123）
+
+R122 蓝色星原独立 Worker 发布已完成，来源从 R121 接续。Main sitemap 500 已定位为 Main 构建继续动态加载异环已迁移数据，源码已移除这些读取并通过 Web 测试、Next/OpenNext 构建和本地 XML 验收，线上 Main 发布待执行。
+
+绿梦既有中文角色文本的正式资格合同已接入统一冻结/构建链：仅允许 `apps/game-lvmeng/lib/data.ts` 的一个既有 `playableCharacters` 记录和 `/name`、`/affiliation`、`/note`，显式 Wrangler `production` 环境，候选与恢复版本独立保留，生产推广目标仅为 `gachia-game-lvmeng`。CMS 草稿、审核、真实候选/恢复预览和正式推广仍是下一项未关闭任务。
+
+当前来源入口为 R121 `reports/adsense-restoration-2026-11-14-r121/source-result.json`，完整索引 pin 为 `1cf398fc545237a5f2cea5866c4cef0491a7f05f4b3bd9fe45f4374bf2bb4b36`。正式发布前必须重新读取当前云端版本，确认 Main sitemap 修复只改变 `gachia`，绿梦内容发布只改变 `gachia-game-lvmeng`；Router、其他游戏和 staging 保持不变。
+<!-- END R123 CURRENT -->
+
+<!-- BEGIN R120 HISTORY -->
 ## 当前完成状态（2026-11-14 R120）
 
 异环单 Worker 真实 CMS 正式更新闭环已完成。57 个材料的 171 个三语详情 URL 迁入异环，公开 JSON、搜索切片和 Main 聚合接通独立读取；一次性 NTE → Router → Main 迁移完成后，常驻 CMS 娜娜莉记录 1327 的英文简介完成草稿、审核、仅 NTE 构建、云预览和正式发布。日常内容发布仅改变 `gachia-game-nte`，最终版本 `963f4629-9b0f-4992-8373-fcb536508c81`。
@@ -8,7 +18,7 @@
 精确提交 `cc0fdd18638b88d30dd42911055ae56b006b19bd` 的完整 CI [43450568989](https://github.com/aieasygames-alt/gachia/actions/runs/43450568989) 全部通过、无跳过；候选/恢复云预览、完整公网合同、三语桌面/手机六场景、无 JS 材料和最终只读控制面/模块复核通过。其余 2,879 条 CMS 记录保持。恢复已云预览，本批未实际生产回滚；本批仅证明既有角色文本资格。
 
 当前完整来源为 `reports/nte-independent-delivery-2026-11-12-r120/independent-sources-01/source-index.json`，SHA256 `38a0a15fcc02cdc891ccf7339db49183bcb1b5f9e5c9cc45c9032df6bbf4d659`，115 份来源相对 R119 仅异环角色 raw 变化，胡桃修改及五份攻略增量保留。下一批使用 `readNteSourceIndex` 接续此索引，不回退旧来源或重放完成日志。后续顺序：蓝色星原 → 绿梦中文 → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。详细证据见 R120 `EXECUTION.md` 和 `delivery.json`。下方旧轮次均为历史状态。
-<!-- END R120 CURRENT -->
+<!-- END R120 HISTORY -->
 
 ## 2026-11-12 原神 CMS 单 Worker 生产交付 R119
 

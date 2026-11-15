@@ -8,14 +8,14 @@ import { isRocoPublicPageUnderReview } from '@/lib/roco-public-review';
 const BASE_URL = 'https://gachia.com';
 
 // Games with real content for each category
-const CHAR_GAMES = ['starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'] as const;
-const WEAPON_GAMES = ['starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
-const GUIDE_GAMES = ['starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'] as const;
+const CHAR_GAMES = ['starrail', 'wuwa', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'roco', 'roco-cn', 'aniimo'] as const;
+const WEAPON_GAMES = ['starrail', 'wuwa', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh'] as const;
+const GUIDE_GAMES = ['starrail', 'wuwa', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco', 'roco-cn', 'aniimo'] as const;
 const ARTIFACT_GAMES = ['starrail'] as const;
 const ECHO_GAMES = ['wuwa'] as const;
-const DISK_SET_GAMES = ['nte'] as const;
+const DISK_SET_GAMES = [] as const;
 const DRIVE_DISC_GAMES = ['zzz'] as const;
-const ITEM_GAMES = ['starrail', 'wuwa', 'nte', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco-cn'] as const;
+const ITEM_GAMES = ['starrail', 'wuwa', 'zzz', 'hi3', 'guihuan', 'ananta', 'endfield', 'sea', 'skjh', 'roco-cn'] as const;
 const STATIC_SITE_PAGES = ['about', 'contact', 'privacy', 'terms', 'sitemap', 'calendar', 'tools/pull-planner', 'content-verification', 'update-radar'] as const;
 
 // Category routes that have real content per game
@@ -23,7 +23,6 @@ const REAL_CONTENT_ROUTES: Record<string, string[]> = {
   hi3: ['characters', 'weapons', 'items', 'version', 'guides', 'download'],
   starrail: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'calculator', 'map', 'guides', 'artifacts', 'compare', 'teams'],
   wuwa: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'map', 'guides', 'compare', 'teams'],
-  nte: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'map', 'guides', 'disk-sets', 'redeem-codes', 'gacha', 'anomalies'],
   zzz: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'drive-discs', 'build', 'compare', 'teams', 'redeem-codes'],
   guihuan: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides', 'build', 'compare', 'teams'],
   ananta: ['characters', 'weapons', 'items', 'tier-list', 'version', 'download', 'guides'],
@@ -223,7 +222,6 @@ async function getCharactersForGame(gameId: string): Promise<SitemapItem[]> {
     case 'hi3': return (await import('@gachia/data/games/hi3/characters')).hi3Characters;
     case 'starrail': return (await import('@gachia/data/games/starrail/character-summaries')).starrailCharacterSummaries;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/characters')).wuwaCharacters;
-    case 'nte': return (await import('@gachia/data/games/nte/character-summaries')).nteCharacterSummaries;
     case 'zzz': return (await import('@gachia/data/games/zzz/characters')).zzzCharacters;
     case 'guihuan': return (await import('@gachia/data/games/guihuan/characters')).guihuanCharacters;
     case 'ananta': return (await import('@gachia/data/games/ananta/characters')).anantaCharacters;
@@ -242,7 +240,6 @@ async function getWeaponsForGame(gameId: string): Promise<SitemapItem[]> {
     case 'hi3': return (await import('@gachia/data/games/hi3/weapons')).hi3Weapons;
     case 'starrail': return (await import('@gachia/data/games/starrail/weapons')).starrailLightCones;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/weapons')).wuwaWeapons;
-    case 'nte': return (await import('@gachia/data/games/nte/weapons')).nteWeapons;
     case 'zzz': return (await import('@gachia/data/games/zzz/weapons')).zzzWeapons;
     case 'guihuan': return (await import('@gachia/data/games/guihuan/weapons')).guihuanWeapons;
     case 'ananta': return (await import('@gachia/data/games/ananta/weapons')).anantaWeapons;
@@ -258,7 +255,6 @@ async function getGuidesForGame(gameId: string): Promise<SitemapItem[]> {
     case 'hi3': return (await import('@gachia/data/games/hi3/guides')).hi3Guides;
     case 'starrail': return (await import('@gachia/data/games/starrail/guides')).starrailGuides;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/guides')).wuwaGuides;
-    case 'nte': return (await import('@gachia/data/games/nte/guides')).guides;
     case 'zzz': return (await import('@gachia/data/games/zzz/guides')).zzzGuides;
     case 'guihuan': return (await import('@gachia/data/games/guihuan/guides')).guihuanGuides;
     case 'ananta': return (await import('@gachia/data/games/ananta/guides')).anantaGuides;
@@ -289,7 +285,6 @@ async function getEchoesForGame(gameId: string): Promise<SitemapItem[]> {
 
 async function getDiskSetsForGame(gameId: string): Promise<SitemapItem[]> {
   switch (gameId) {
-    case 'nte': return (await import('@gachia/data/games/nte/extras')).diskSets;
     default: return [];
   }
 }
@@ -306,7 +301,6 @@ async function getItemsForGame(gameId: string): Promise<SitemapItem[]> {
     case 'hi3': return (await import('@gachia/data/games/hi3/items')).hi3Materials;
     case 'starrail': return (await import('@gachia/data/games/starrail/items')).starrailMaterials;
     case 'wuwa': return (await import('@gachia/data/games/wuwa/items')).wuwaMaterials;
-    case 'nte': return (await import('@gachia/data/games/nte/items')).nteMaterials;
     case 'zzz': return (await import('@gachia/data/games/zzz/items')).zzzMaterials;
     case 'guihuan': return (await import('@gachia/data/games/guihuan/items')).guihuanMaterials;
     case 'ananta': return (await import('@gachia/data/games/ananta/items')).anantaMaterials;

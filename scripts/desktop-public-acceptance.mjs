@@ -23,7 +23,7 @@ export function loadPublicReferences(directory, referencesPin) {
 }
 
 export function publicReferences(owner, references, game = owner === 'main' ? 'genshin' : owner) {
-  assert(['genshin', 'nte', 'azur-promilia'].includes(game), 'Unreviewed public game');
+  assert(['genshin', 'nte', 'azur-promilia', 'lvmeng'].includes(game), 'Unreviewed public game');
   assert(owner === game || owner === 'main', 'Public owner/game mismatch');
   const mapped = new Map();
   for (const reference of references) {
@@ -35,7 +35,7 @@ export function publicReferences(owner, references, game = owner === 'main' ? 'g
       if (path === '/sitemap.xml') publicPath = `/sitemaps/${game}/index.xml`;
       else if (path.startsWith('/_next/static/')) publicPath = `/_games/${game}` + path;
       else {
-        const route = game === 'azur-promilia' ? new RegExp(`^/(zh|en|ja)/${game}(?:/[^?#]*)?$`) : new RegExp(`^/(zh|en|ja)/${game}/guides(?:/[^/]+)?$`);
+        const route = game === 'azur-promilia' ? new RegExp(`^/(zh|en|ja)/${game}(?:/[^?#]*)?$`) : game === 'lvmeng' ? /^\/zh\/lvmeng(?:\/[^?#]*)?$/ : new RegExp(`^/(zh|en|ja)/${game}/guides(?:/[^/]+)?$`);
         assert(path.startsWith(`/_games/${game}/_next/static/`) || route.test(path), 'Unexpected game public route');
       }
     } else {

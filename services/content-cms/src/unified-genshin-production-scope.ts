@@ -7,7 +7,8 @@ import { digest } from './legacy-intake'
 export const GENSHIN_PRODUCTION_SCOPE = 'genshin-independent-existing-character-text-v1'
 export const NTE_PRODUCTION_SCOPE = 'nte-independent-existing-character-text-v1'
 export const AZUR_PROMILIA_PRODUCTION_SCOPE = 'azur-promilia-independent-existing-text-v1'
-export type IndependentProductionScope = typeof GENSHIN_PRODUCTION_SCOPE | typeof NTE_PRODUCTION_SCOPE | typeof AZUR_PROMILIA_PRODUCTION_SCOPE
+export const LVMENG_PRODUCTION_SCOPE = 'lvmeng-independent-existing-character-text-v1'
+export type IndependentProductionScope = typeof GENSHIN_PRODUCTION_SCOPE | typeof NTE_PRODUCTION_SCOPE | typeof AZUR_PROMILIA_PRODUCTION_SCOPE | typeof LVMENG_PRODUCTION_SCOPE
 
 // Source/build qualification only. The fixed production entry additionally
 // requires the completed migration, current full A, live CMS review, exact CI,
@@ -16,8 +17,8 @@ export function genshinProductionOwnerScope(manifest: ReturnType<typeof exportUn
   return independentProductionOwnerScope('genshin', manifest, active, overlays)
 }
 
-export function independentProductionOwnerScope(owner: 'genshin' | 'nte' | 'azur-promilia', manifest: ReturnType<typeof exportUnifiedContent>['manifest'], active: SourceBytes[], overlays: SourceBytes[]) {
-  assert(['genshin', 'nte', 'azur-promilia'].includes(owner), 'Unqualified independent owner')
+export function independentProductionOwnerScope(owner: 'genshin' | 'nte' | 'azur-promilia' | 'lvmeng', manifest: ReturnType<typeof exportUnifiedContent>['manifest'], active: SourceBytes[], overlays: SourceBytes[]) {
+  assert(['genshin', 'nte', 'azur-promilia', 'lvmeng'].includes(owner), 'Unqualified independent owner')
   assert.equal(manifest.preview, false, 'Rehearsal content cannot enter independent production')
   assert.equal(manifest.status, 'editorial_candidate'); assert.equal(manifest.changed.length, 1, 'One existing character per independent release')
   assert.equal(active.length, 115, 'Complete registered published A required')
@@ -42,5 +43,5 @@ export function independentProductionOwnerScope(owner: 'genshin' | 'nte' | 'azur
     const pair = dedicatedCharacterTextPairContract(active, edited)
     assert.equal(pair.candidate.changes.length, 1); assert.equal(pair.candidate.changes[0].game, owner)
   }
-  return { games: [owner], owners: [owner], services: [`gachia-game-${owner}`], productionScope: owner === 'genshin' ? GENSHIN_PRODUCTION_SCOPE : owner === 'nte' ? NTE_PRODUCTION_SCOPE : AZUR_PROMILIA_PRODUCTION_SCOPE }
+  return { games: [owner], owners: [owner], services: [`gachia-game-${owner}`], productionScope: owner === 'genshin' ? GENSHIN_PRODUCTION_SCOPE : owner === 'nte' ? NTE_PRODUCTION_SCOPE : owner === 'azur-promilia' ? AZUR_PROMILIA_PRODUCTION_SCOPE : LVMENG_PRODUCTION_SCOPE }
 }

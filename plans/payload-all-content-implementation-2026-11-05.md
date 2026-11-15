@@ -1,6 +1,16 @@
 # Payload 全内容实施队列
 
-<!-- BEGIN R121 CURRENT -->
+<!-- BEGIN R123 CURRENT -->
+## 当前实施状态（2026-11-15 R123）
+
+R122 蓝色星原独立 Worker 的候选、恢复、预览和正式更新已完成；R121 来源继续作为下一批输入。随后定位并修复 Main sitemap 500：Main 构建不再加载已迁入异环 Worker 的角色、武器、攻略、磁盘和材料源，源码回归、Next/OpenNext 构建以及本地 Worker sitemap 验收通过，正式线上发布仍待完成。
+
+绿梦中文既有角色文本的生产合同已补齐：`lvmeng` 仅允许一条既有 `playableCharacters` 记录的 `/name`、`/affiliation` 或 `/note`，固定 slug、顺序和数量，显式使用 Wrangler `production` 环境，并具备候选/恢复双版本与单 owner 推广入口。下一步是从 R121 `source-result.json` 接续真实 CMS 记录，完成一次草稿、审核、候选/恢复预览、绿梦正式推广和公网回执；在回执产生前不宣称绿梦生产闭环已完成。
+
+当前完整来源入口保持 `reports/adsense-restoration-2026-11-14-r121/source-result.json`，完整索引 pin 为 `1cf398fc545237a5f2cea5866c4cef0491a7f05f4b3bd9fe45f4374bf2bb4b36`。不得从 R120 或 R122 重放已完成来源链；正式发布前重新读取所有 Worker 当前版本并确认只改变目标 owner。后续顺序为：绿梦中文单 Worker → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。
+<!-- END R123 CURRENT -->
+
+<!-- BEGIN R121 HISTORY -->
 ## 当前完成状态（2026-11-14 R121）
 
 AdSense 正式恢复与磁盘清理完成。Main 和四个独立游戏的广告基础设施已上线；Chrome 五站均实际观察到 Google filled 广告，默认/拒绝/撤回保持关闭，重新允许可恢复。Router 与 staging 部署保持。本次为五 Worker 基础设施发布，R120 异环日常单 Worker 内容发布资格保留；没有新的 CMS 文本修改。
@@ -10,7 +20,7 @@ AdSense 正式恢复与磁盘清理完成。Main 和四个独立游戏的广告�
 当前完整来源为 `reports/adsense-restoration-2026-11-14-r121/sources-01/source-index.json`，SHA256 `1cf398fc545237a5f2cea5866c4cef0491a7f05f4b3bd9fe45f4374bf2bb4b36`。真实 `readNteSourceIndex` 完整重读通过：115 来源、5 owner、11 层祖先。下一批从 R121 `source-result.json` 接续；R120 仅作父来源，胡桃、娜娜莉文本及五份攻略增量保留，不重放完成日志。
 
 下一优先级为蓝色星原独立 CMS 正式发布，之后绿梦中文 → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。旧缓存真实释放 3.172 GiB，本轮重复临时构建另行归档清除；发布后可用约 14.72 GiB，满足标准 14 GiB 预算，8 GiB 保留线保持。正式来源、运行/恢复包、CMS 备份和用户修改均保留。
-<!-- END R121 CURRENT -->
+<!-- END R121 HISTORY -->
 
 <!-- BEGIN R120 HISTORY -->
 ## 前批完成状态（2026-11-14 R120，历史）
