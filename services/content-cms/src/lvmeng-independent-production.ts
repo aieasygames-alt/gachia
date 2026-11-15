@@ -66,10 +66,14 @@ export async function auditLvmengProduction(input: unknown, tokens: { cmsToken?:
   try { const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan, records: review.records, activeSources: evidence.sources.sources, preview: false, productionScope: LVMENG_PRODUCTION_SCOPE }); assert.equal(reconstructed.sourceTreeSHA256, evidence.built.frozen.sourceTreeSHA256); assert.deepEqual(reconstructed.candidate, evidence.built.frozen.candidate); rmSync(temporary, { recursive: true }) }
   catch (error) { migrationSave(temporary, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
   const before: any = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)
-  // R121 remains the immutable content source, while R123 advanced Main after
-  // that source index was published. Allow that known Main-only version drift,
-  // but keep every other topology field and service protected by the check.
-  assertTopology(evidence.sources.baseline, before, { gachia: activeVersion(before, 'gachia') })
+  // R121 remains the immutable content source, while R122 advanced Azur and
+  // R123 advanced Main after that source index was published. Allow only those
+  // known version drifts, keeping every other topology field and service
+  // protected by the check.
+  assertTopology(evidence.sources.baseline, before, {
+    gachia: activeVersion(before, 'gachia'),
+    'gachia-game-azur-promilia': activeVersion(before, 'gachia-game-azur-promilia'),
+  })
   const row: any = (evidence.sources.owners as any).lvmeng; assert.equal(row.versionId, before.services[row.service].versions[0].version_id); await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead }); assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
   const releaseKey = lvmengReleaseKey(request, executor.executorCI), identity = { policy: LVMENG_INDEPENDENT_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: review.reviewPin, baseline: before, observedAt: Date.now(), owners: evidence.value.owners }
   const verify = async () => { executor.verify(); assert.deepEqual((await verifyLvmengIndependentBundle(request.bundle)).value, evidence.value); assert.equal((await readUnifiedProductionReview(plan, editorial.selected, tokens.cmsToken!)).reviewPin, review.reviewPin); application(editorial.application, repo, executor.executorCommit); return { ...identity, observedAt: Date.now() } }
