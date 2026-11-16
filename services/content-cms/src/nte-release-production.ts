@@ -102,12 +102,14 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
     rmSync(temporary, { recursive: true })
   } catch (error) { migrationSave(temporary, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
   const before = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)
-  // R121 is the immutable content source. Main and Azur were independently
-  // advanced afterward; preserve those known versions while protecting every
-  // other service and topology field from drift during this NTE-only release.
+  // R121 is the immutable content source. Main, Azur, and Lvmeng were
+  // independently advanced afterward; preserve those known versions while
+  // protecting every other service and topology field from drift during this
+  // NTE-only release.
   assertTopology(evidence.sources.baseline, before, {
     gachia: activeVersion(before, 'gachia'),
     'gachia-game-azur-promilia': activeVersion(before, 'gachia-game-azur-promilia'),
+    'gachia-game-lvmeng': activeVersion(before, 'gachia-game-lvmeng'),
   })
   for (const row of Object.values(evidence.sources.owners) as any[]) assertModuleVersionIdentity(row.version, await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead }))
   assertModuleVersionIdentity(evidence.sources.router.version, await readMigrationRouterVersion({ versionId: evidence.sources.router.versionId, token: tokens.cloudToken, request: unifiedProductionRead }))
