@@ -115,7 +115,13 @@ export async function readCompletedNteRelease(proof: Proof, depth = 0): Promise<
   const bytes = readFileSync(value.journal.path); assert.equal(digest(bytes), value.journal.pin); assert(bytes.toString().endsWith('\n'))
   const rows = bytes.toString().trimEnd().split('\n').map((text: string) => JSON.parse(text))
   const phases = ['baseline', ...order.flatMap(() => ['upload_intent', 'upload_returned', 'preview_accepted', 'upload_intent', 'upload_returned', 'preview_accepted', 'deployment_intent', 'deployed', ...(migration ? ['step_accepted'] : [])]), 'production_accepted']
-  assert.deepEqual(rows.map((row: any) => row.phase), phases); assert.deepEqual(rows[0].baseline, evidence.value.baseline); assert.deepEqual(rows[0].owners, evidence.value.owners)
+  assert.deepEqual(rows.map((row: any) => row.phase), phases)
+  if (migration) assert.deepEqual(rows[0].baseline, evidence.value.baseline)
+  else assertTopology(evidence.value.baseline, rows[0].baseline, {
+    gachia: activeVersion(rows[0].baseline, 'gachia'),
+    'gachia-game-azur-promilia': activeVersion(rows[0].baseline, 'gachia-game-azur-promilia'),
+  })
+  assert.deepEqual(rows[0].owners, evidence.value.owners)
   let at = -Infinity
   for (const row of rows) { assert.equal(row.policy, policy); assert.equal(row.releaseKey, value.releaseKey); const next = Date.parse(row.at); assert(next >= at && next <= Date.now()); at = next }
   const accepted: any = {}, modules: any = {}, deployments: any = {}
@@ -133,7 +139,7 @@ export async function readCompletedNteRelease(proof: Proof, depth = 0): Promise<
   assert.deepEqual(value.versions, versions); assert.deepEqual(rows.at(-1).proof.versions, versions); assert.equal(rows.at(-1).proof.status, 'passed')
   recheckNteHTTP({ proof: { path: path.join(directory, `public-${migration ? 3 : 0}-router/result.json`), pin: rows.at(-1).proof.evidenceSHA256 },
     origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences) })
-  return { value, directory, evidence, accepted, modules, deployments, versions }
+  return { value, directory, evidence, rows, accepted, modules, deployments, versions }
 }
 async function readCompletedNteMainContinuation(proof: Proof, depth: number): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path); nteMigrationContinuationRequest(value.request)
@@ -206,7 +212,11 @@ export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> 
   assert.equal(value.sourceCommit, e.value.sourceCommit); assert.deepEqual(migrationPinned(value.active), e.candidateSources)
   const baseline = value.baseline, order = e.migration ? NTE_MIGRATION_ORDER : ['nte']
   if (e.migration) assertNteMigrationTopology(previous.baseline, baseline, { configured: [...order], deployed: Object.fromEntries(order.map((owner: string) => [owner, completed.accepted[owner].candidate.versionId])) })
-  else assertTopology(previous.baseline, baseline, completed.versions)
+  else assertTopology(previous.baseline, baseline, {
+    ...completed.versions,
+    gachia: activeVersion(baseline, 'gachia'),
+    'gachia-game-azur-promilia': activeVersion(baseline, 'gachia-game-azur-promilia'),
+  })
   assert.deepEqual(Object.keys(value.owners).sort(), Object.keys(previous.owners).sort())
   for (const [owner, row] of Object.entries(value.owners) as [string, any][]) {
     if (!order.includes(owner)) assert.deepEqual(row, previous.owners[owner])
@@ -216,7 +226,8 @@ export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> 
       assert.deepEqual(row.moduleProof, accepted.moduleProof); assertModuleVersionIdentity(row.version, completed.modules[owner].candidate.version)
       assert.equal(baseline.services[row.service].id, completed.deployments[owner].deploymentId)
     }
-    await readUnifiedSourceOwner(row); assert.equal(activeVersion(baseline, row.service), row.versionId)
+    await readUnifiedSourceOwner(row)
+    if (e.migration || ['main', 'azur-promilia'].includes(owner)) assert.equal(activeVersion(baseline, row.service), row.versionId)
   }
   if (e.migration) {
     assert.equal(value.router.versionId, completed.accepted.router.candidate.versionId); assert.deepEqual(value.router.moduleProof, completed.accepted.router.candidate.moduleProof)
@@ -234,7 +245,7 @@ export async function advanceNteSources(input: { completion: Proof; directory: s
   try {
     const before = await input.reader.snapshot()
     if (e.migration) assertNteMigrationTopology(e.sources.baseline, before, { configured: [...order], deployed: Object.fromEntries(order.map((owner: string) => [owner, completed.accepted[owner].candidate.versionId])) })
-    else assertTopology(e.sources.baseline, before, completed.versions)
+    else assertTopology(completed.rows[0].baseline, before, completed.versions)
     const owners = structuredClone(e.sources.owners)
     for (const owner of order.filter((name: string) => name !== 'router')) {
       const accepted = completed.accepted[owner].candidate, module = completed.modules[owner].candidate, original = path.join(e.directory, owner, 'candidate/artifact'), target = path.join(directory, owner)

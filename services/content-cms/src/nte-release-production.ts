@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import { mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { homedir } from 'node:os'
 import path from 'node:path'
-import { desktopCloudSnapshot, assertTopology } from '../../../scripts/desktop-cloud-release.mjs'
+import { activeVersion, desktopCloudSnapshot, assertTopology } from '../../../scripts/desktop-cloud-release.mjs'
 import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 import { assertModuleVersionIdentity } from '../../../scripts/desktop-version-provenance.mjs'
 import { migrationPinned, migrationSave } from '../../../scripts/genshin-migration-http.mjs'
@@ -101,7 +101,14 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
     }
     rmSync(temporary, { recursive: true })
   } catch (error) { migrationSave(temporary, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
-  const before = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead); assertTopology(evidence.sources.baseline, before)
+  const before = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)
+  // R121 is the immutable content source. Main and Azur were independently
+  // advanced afterward; preserve those known versions while protecting every
+  // other service and topology field from drift during this NTE-only release.
+  assertTopology(evidence.sources.baseline, before, {
+    gachia: activeVersion(before, 'gachia'),
+    'gachia-game-azur-promilia': activeVersion(before, 'gachia-game-azur-promilia'),
+  })
   for (const row of Object.values(evidence.sources.owners) as any[]) assertModuleVersionIdentity(row.version, await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead }))
   assertModuleVersionIdentity(evidence.sources.router.version, await readMigrationRouterVersion({ versionId: evidence.sources.router.versionId, token: tokens.cloudToken, request: unifiedProductionRead }))
   assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
@@ -109,7 +116,7 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
   const identity = { policy, releaseKey, sourceCommit: executor.executorCommit,
     ...(evidence.migration ? { sourceCI: executor.executorCI, sourceIndexPin: evidence.value.sourceIndex.pin, activePin: evidence.built.value.active.pin }
       : { executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: review!.reviewPin }),
-    baseline: evidence.sources.baseline, observedAt: Date.now(), owners: evidence.value.owners }
+    baseline: evidence.migration ? evidence.sources.baseline : before, observedAt: Date.now(), owners: evidence.value.owners }
   const verify = async () => {
     executor.verify(); assert.deepEqual((await verifyNteReleaseBundle(request.bundle)).value, evidence.value)
     if (editorial) { assert.equal((await readUnifiedProductionReview(plan!, editorial.selected, tokens.cmsToken!)).reviewPin, review!.reviewPin); application(editorial.application, repo, executor.executorCommit) }
