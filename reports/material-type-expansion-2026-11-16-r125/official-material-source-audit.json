@@ -1,0 +1,839 @@
+{
+  "version": "nte-official-material-source-audit-v1",
+  "generatedAt": "2026-11-16T03:32:27.606Z",
+  "game": "nte",
+  "dependencyPlan": {
+    "planKey": "b6a3e46d443585fd7dea2ece71f294ca34cd10f0fd13ef47d4a7ba077564713f",
+    "issueCount": 28,
+    "referenceCount": 442,
+    "executable": false,
+    "publishable": false
+  },
+  "officialResourceCoverage": {
+    "sourcePage": {
+      "url": "https://nte.perfectworld.com/en/main.html?nav=2&role=20",
+      "localFile": "source-evidence/official-main.html",
+      "sha256": "f570e004b5eb9ad3fff9750d5bafa913a7c4c92d62922c0205672f545f4581bc"
+    },
+    "externalURLCount": 23,
+    "http200Count": 23,
+    "failedCount": 0,
+    "captureModeCounts": {
+      "reused-existing-body-after-transient-fetch-failure": 7,
+      "fetched": 16
+    },
+    "scannedFiles": [
+      {
+        "file": "source-evidence/official-main.html",
+        "bytes": 57616,
+        "sha256": "f570e004b5eb9ad3fff9750d5bafa913a7c4c92d62922c0205672f545f4581bc"
+      },
+      {
+        "file": "source-evidence/official-patch-1.5.html",
+        "bytes": 24230,
+        "sha256": "b58203b317f24daa37deef8b9d8cae1290fbfd3f2f8b7c5d46d2334e9552a239"
+      },
+      {
+        "file": "source-evidence/official-resource-16-nte-gameSwiper.js.body",
+        "bytes": 10032,
+        "sha256": "e28ace5d9a2741f304e0799d49a1fe7672c34f84eccb55e5fd62cc458bac2e73"
+      },
+      {
+        "file": "source-evidence/official-resource-17-newsData20260112.js.body",
+        "bytes": 45106,
+        "sha256": "41a3170238a85b653792904656829792bb715df546f076a05030895732bd51a8"
+      },
+      {
+        "file": "source-evidence/official-resource-20-public260819.js.body",
+        "bytes": 8400,
+        "sha256": "8bfe49b9c2712c60928bcce076c63a28d2e5b6ef1e5a94df5fe34eb131f2859a"
+      },
+      {
+        "file": "source-evidence/official-resource-23-main260930.js.body",
+        "bytes": 9867,
+        "sha256": "a3d848bdb9e99bd5f6166002b0f106b4b51d9bac94bacff23f51d5dd5273ed0e"
+      },
+      {
+        "file": "source-evidence/official-inline-01.js",
+        "bytes": 245,
+        "sha256": "305b711686babf47484b2d5e7529158646e29f9e971ff3bb34d36c7878e924f0"
+      }
+    ],
+    "structuredFieldCounts": {
+      "levelingMaterials": 0,
+      "skillMaterials": 0,
+      "ascensionMaterials": 0,
+      "levelRange": 0,
+      "materialId": 0
+    },
+    "conclusion": "The official static resource graph does not contain a character material table or material dependency schema."
+  },
+  "materialIssues": [
+    {
+      "issueKey": "1628335f46a48a93c09d86781cd85738317d20631bc903328ff1cac600d30af3",
+      "missingId": "advanced-hunter-guide",
+      "references": 42,
+      "characters": [
+        "nanally",
+        "sakiri",
+        "fadia",
+        "lacrimosa",
+        "baicang",
+        "zero",
+        "hotori",
+        "daffodil",
+        "jiuyuan",
+        "haniel",
+        "adler",
+        "skia",
+        "edgar",
+        "mint",
+        "nelly",
+        "merula",
+        "alphard",
+        "taygedo",
+        "hathor",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        4,
+        6
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Advanced Hunter Guide",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "eee2d3235e0da0de3f9b530d247323f76f797048d7baf02ce6fa36f3dba02eb1",
+      "missingId": "anima-crystal",
+      "references": 8,
+      "characters": [
+        "nanally",
+        "jiuyuan",
+        "mint",
+        "nelly"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Anima Crystal",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "7d9ec13bf5a7ca8646f974b01030c69beffc8405f2098657ae10d5c5a8bb1a65",
+      "missingId": "anima-fragment",
+      "references": 8,
+      "characters": [
+        "nanally",
+        "jiuyuan",
+        "mint",
+        "nelly"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Anima Fragment",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "bad15de23c5951363f1d8d55bb00b5c27d022b248b735f342223065500e78ce9",
+      "missingId": "basic-hunter-guide",
+      "references": 63,
+      "characters": [
+        "nanally",
+        "sakiri",
+        "fadia",
+        "lacrimosa",
+        "baicang",
+        "zero",
+        "hotori",
+        "daffodil",
+        "jiuyuan",
+        "haniel",
+        "adler",
+        "skia",
+        "edgar",
+        "mint",
+        "nelly",
+        "merula",
+        "alphard",
+        "taygedo",
+        "hathor",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        3,
+        5,
+        15
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Basic Hunter Guide",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "6fe381fe5446f7a7599422759178bf835d242d1a581f24b23e7c3fb057dd506c",
+      "missingId": "boss-anima",
+      "references": 4,
+      "characters": [
+        "nanally",
+        "jiuyuan",
+        "mint",
+        "nelly"
+      ],
+      "quantities": [
+        3
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Boss Anima",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "c7eb471066681c1cdc4c3af45b750cf4fe56b6cbd8806a599891255ad08f47d8",
+      "missingId": "boss-chaos",
+      "references": 2,
+      "characters": [
+        "lacrimosa",
+        "daffodil"
+      ],
+      "quantities": [
+        3
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Boss Chaos",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "83dec6a132fe1d1cdd14866bb59d2ef2f6a3dc31810c0bd3de5ccc448a3a011e",
+      "missingId": "boss-cosmos",
+      "references": 6,
+      "characters": [
+        "zero",
+        "hotori",
+        "edgar",
+        "taygedo",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        3
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Boss Cosmos",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "f24c98f9f2c7fa76b3d803dae7a9e7d4b02b51021bba869c90441e58edd85d1e",
+      "missingId": "boss-incantation",
+      "references": 3,
+      "characters": [
+        "sakiri",
+        "baicang",
+        "adler"
+      ],
+      "quantities": [
+        3
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Boss Incantation",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "d04621ab820e725a07c9e84470bbb656333f2417f779c4d08d3815ee3c039879",
+      "missingId": "boss-lakshana",
+      "references": 4,
+      "characters": [
+        "skia",
+        "merula",
+        "alphard",
+        "hathor"
+      ],
+      "quantities": [
+        3
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Boss Lakshana",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "4bb316ff0fa06ba061c9d10a0970540e98c26dc7d9979bb32501c433e2ff16e7",
+      "missingId": "boss-psyche",
+      "references": 2,
+      "characters": [
+        "fadia",
+        "haniel"
+      ],
+      "quantities": [
+        3
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Boss Psyche",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "eae48eb12e58c1150fed0f7a5dc5a84d6a1bf0ddaad6005a0170a2a9698ec12f",
+      "missingId": "chaos-core",
+      "references": 4,
+      "characters": [
+        "lacrimosa",
+        "daffodil"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Chaos Core",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "a999233b60d575364e192e396e507d4491e0a141eff11afd1696e0d3a4504da0",
+      "missingId": "chaos-essence",
+      "references": 4,
+      "characters": [
+        "lacrimosa",
+        "daffodil"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Chaos Essence",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "66c5ab43660c71885fe233b421435f2ab54612a3bc6010ef326a4dd6d628390b",
+      "missingId": "cosmos-spark",
+      "references": 12,
+      "characters": [
+        "zero",
+        "hotori",
+        "edgar",
+        "taygedo",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Cosmos Spark",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "5c37a6ceb773f73e6ce9c51448a35312654031388df8ecb1c3a8a821ca54273b",
+      "missingId": "cosmos-storm",
+      "references": 12,
+      "characters": [
+        "zero",
+        "hotori",
+        "edgar",
+        "taygedo",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Cosmos Storm",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "ef04dde6301ca115ebc6839cd4853b489aca270c258f822815f8a7efda80204e",
+      "missingId": "credits",
+      "references": 147,
+      "characters": [
+        "nanally",
+        "sakiri",
+        "fadia",
+        "lacrimosa",
+        "baicang",
+        "zero",
+        "hotori",
+        "daffodil",
+        "jiuyuan",
+        "haniel",
+        "adler",
+        "skia",
+        "edgar",
+        "mint",
+        "nelly",
+        "merula",
+        "alphard",
+        "taygedo",
+        "hathor",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        2000,
+        4000,
+        8000,
+        16000,
+        32000,
+        64000,
+        200000
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Credits",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "bb1170cc5a9944d2fd5605959d467bcef3b1a24f08679da5dba82a26f59640d5",
+      "missingId": "expert-permit",
+      "references": 21,
+      "characters": [
+        "nanally",
+        "sakiri",
+        "fadia",
+        "lacrimosa",
+        "baicang",
+        "zero",
+        "hotori",
+        "daffodil",
+        "jiuyuan",
+        "haniel",
+        "adler",
+        "skia",
+        "edgar",
+        "mint",
+        "nelly",
+        "merula",
+        "alphard",
+        "taygedo",
+        "hathor",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        3
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Expert Permit",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "7143c969f400e0d778886cd4110ce34a23ba862ff69b20b9a1c3e8ed73510554",
+      "missingId": "incantation-crystal",
+      "references": 6,
+      "characters": [
+        "sakiri",
+        "baicang",
+        "adler"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Incantation Crystal",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "b24669090c84341e1577372c1231a95b100bbac17066f94bce00a4068235fa4f",
+      "missingId": "incantation-shard",
+      "references": 6,
+      "characters": [
+        "sakiri",
+        "baicang",
+        "adler"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Incantation Shard",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "ed53be425c5735bcc7032c3c8cc8d10979cdde0e5c74d8c61e398bcc25f8a3e3",
+      "missingId": "lakshana-dust",
+      "references": 8,
+      "characters": [
+        "skia",
+        "merula",
+        "alphard",
+        "hathor"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Lakshana Dust",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "e4ff9bb8888f99337f33e579bef02ee43d503892f4b20fa3532f59d6a890bff7",
+      "missingId": "lakshana-signet",
+      "references": 8,
+      "characters": [
+        "skia",
+        "merula",
+        "alphard",
+        "hathor"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Lakshana Signet",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "65efc7e0277b4fe600173e1545bd35b754b10bcb6a502db352ea11ba7c4e1007",
+      "missingId": "manual-attack",
+      "references": 13,
+      "characters": [
+        "nanally",
+        "fadia",
+        "lacrimosa",
+        "zero",
+        "hotori",
+        "haniel",
+        "adler",
+        "skia",
+        "merula",
+        "alphard",
+        "hathor",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        12
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Manual Attack",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "756e9a29bc447a7e4c9a8761699b360c00466cf1b2d9e6272e057d726c5b90a0",
+      "missingId": "manual-defense",
+      "references": 1,
+      "characters": [
+        "baicang"
+      ],
+      "quantities": [
+        12
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Manual Defense",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "97bc71a0e366e077dd0c770046953bee0f03038a8f8a1fef960043130bb7e821",
+      "missingId": "manual-support",
+      "references": 7,
+      "characters": [
+        "sakiri",
+        "daffodil",
+        "jiuyuan",
+        "edgar",
+        "mint",
+        "nelly",
+        "taygedo"
+      ],
+      "quantities": [
+        12
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Manual Support",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "288e7003af8bc786d52ebda461a0bdc1bd0b2d712c9cb57cab0641dd642a9dae",
+      "missingId": "master-permit",
+      "references": 21,
+      "characters": [
+        "nanally",
+        "sakiri",
+        "fadia",
+        "lacrimosa",
+        "baicang",
+        "zero",
+        "hotori",
+        "daffodil",
+        "jiuyuan",
+        "haniel",
+        "adler",
+        "skia",
+        "edgar",
+        "mint",
+        "nelly",
+        "merula",
+        "alphard",
+        "taygedo",
+        "hathor",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        4
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Master Permit",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "10ee08088aecf1de86287b4f61b859c08d24da381c4be6ac5984b9f6d017fc0d",
+      "missingId": "pioneer-permit",
+      "references": 21,
+      "characters": [
+        "nanally",
+        "sakiri",
+        "fadia",
+        "lacrimosa",
+        "baicang",
+        "zero",
+        "hotori",
+        "daffodil",
+        "jiuyuan",
+        "haniel",
+        "adler",
+        "skia",
+        "edgar",
+        "mint",
+        "nelly",
+        "merula",
+        "alphard",
+        "taygedo",
+        "hathor",
+        "chiz",
+        "lilina"
+      ],
+      "quantities": [
+        2
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Pioneer Permit",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "41c07c37c0621fd75dfac443c1c768d9daeb4a6d28b7374842d4862cc685c017",
+      "missingId": "psyche-essence",
+      "references": 4,
+      "characters": [
+        "fadia",
+        "haniel"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Psyche Essence",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    },
+    {
+      "issueKey": "7f83b9b122a90ce28be64e33bb67ae7408db8e9538fc51f46c8f41bcddf8391d",
+      "missingId": "psyche-fragment",
+      "references": 4,
+      "characters": [
+        "fadia",
+        "haniel"
+      ],
+      "quantities": [
+        3,
+        5
+      ],
+      "officialIdHits": [],
+      "officialNamePhrase": "Psyche Fragment",
+      "officialNamePhraseHits": [],
+      "evidence": {
+        "authoritativeIdentityAndVersion": false,
+        "allReferenceQuantitiesAndStages": false,
+        "urlAndConsumerImpact": false,
+        "reason": "Official homepage resources expose role descriptions, news indexes, and promotional links; they do not expose this material ID, a canonical material name/version record, or the referenced stage quantities."
+      }
+    }
+  ],
+  "zeroEvidence": {
+    "missingId": "zero",
+    "dependencyIssueKey": "de87f40b22d9a49bd220a92fea487d9e1654f6950e2e2211aa6d3514ee6bbfe2",
+    "officialCanonicalIdentity": true,
+    "officialDisplayVariants": {
+      "maleTabCount": 1,
+      "femaleTabCount": 1,
+      "sharedRoleNameAsset": 2,
+      "sharedRoleDescriptionClass": 2
+    },
+    "cmsCanonicalRelationSchema": false,
+    "materialDependencyEvidence": false,
+    "decision": "Canonical Zero identity and two display variants are supported by the official role navigator. The CMS relation schema and material dependencies remain unproven; neither variant may be selected automatically."
+  },
+  "decision": {
+    "sourceBoundPlanGenerated": false,
+    "rawDataModified": false,
+    "cmsWritePerformed": false,
+    "buildUploadDeployPerformed": false,
+    "hold": true,
+    "nextEvidenceClass": "client-or-in-game material data with version, identity, all stages, quantities, URLs, and consumer mapping"
+  }
+}

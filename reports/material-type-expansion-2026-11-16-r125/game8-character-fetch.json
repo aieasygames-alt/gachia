@@ -1,0 +1,210 @@
+{
+  "version": "game8-character-material-fetch-v1",
+  "generatedAt": "2026-11-16T01:56:30.970Z",
+  "sourceIndex": {
+    "url": "https://game8.co/games/Neverness-to-Everness/archives/598408",
+    "localFile": "source-evidence/game8-material.html",
+    "sha256": "d07d4d7d0bf07251991d9deaf812d40cb2245706483c9b25350f72a9f3205185"
+  },
+  "rawCharacterIds": [
+    "nanally",
+    "sakiri",
+    "fadia",
+    "lacrimosa",
+    "baicang",
+    "zero",
+    "hotori",
+    "daffodil",
+    "jiuyuan",
+    "haniel",
+    "adler",
+    "skia",
+    "edgar",
+    "mint",
+    "nelly",
+    "merula",
+    "alphard",
+    "taygedo",
+    "hathor",
+    "chiz",
+    "lilina"
+  ],
+  "fetched": [
+    {
+      "characterId": "nanally",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596559",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-nanally.html",
+      "headersPath": "source-evidence/game8-character-nanally-headers.txt",
+      "bytes": 348950,
+      "sha256": "fdea5d52a17f404721aa86bf95bafddc485502d175f50add3e4424358f4ca780"
+    },
+    {
+      "characterId": "sakiri",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596592",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-sakiri.html",
+      "headersPath": "source-evidence/game8-character-sakiri-headers.txt",
+      "bytes": 341866,
+      "sha256": "ddf91233f040ca07712d4693daefffd24eeae16749688f620553946c00b75df1"
+    },
+    {
+      "characterId": "fadia",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596595",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-fadia.html",
+      "headersPath": "source-evidence/game8-character-fadia-headers.txt",
+      "bytes": 340383,
+      "sha256": "82f494f49397a825ca8601693d6400dd4b34dbc729d874a35995863e542db747"
+    },
+    {
+      "characterId": "lacrimosa",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/598465",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-lacrimosa.html",
+      "headersPath": "source-evidence/game8-character-lacrimosa-headers.txt",
+      "bytes": 346657,
+      "sha256": "13e91f89a397c665ad8b39240182cdf99f602ac6c574f977fd6550217780dd38"
+    },
+    {
+      "characterId": "baicang",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596591",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-baicang.html",
+      "headersPath": "source-evidence/game8-character-baicang-headers.txt",
+      "bytes": 340261,
+      "sha256": "a83ca6bd9697328b1a33c868256172c0c99a8da3910d3b83fb7808ecda2b7270"
+    },
+    {
+      "characterId": "zero",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596585",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-zero.html",
+      "headersPath": "source-evidence/game8-character-zero-headers.txt",
+      "bytes": 346541,
+      "sha256": "0f5c6c0334ce35059a48dc120712b2aa00a41b31e9544842d3ca8d6f06aa546d"
+    },
+    {
+      "characterId": "hotori",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596586",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-hotori.html",
+      "headersPath": "source-evidence/game8-character-hotori-headers.txt",
+      "bytes": 344944,
+      "sha256": "20b7665a4f5bd67dd7c09abceb539eb054b29461f4aa0b5fc3e1122c220a4115"
+    },
+    {
+      "characterId": "daffodil",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596590",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-daffodil.html",
+      "headersPath": "source-evidence/game8-character-daffodil-headers.txt",
+      "bytes": 342187,
+      "sha256": "84fdfeee03976159d239a5adf765217fa6e065da525008516f3cb8befcd0169f"
+    },
+    {
+      "characterId": "jiuyuan",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596594",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-jiuyuan.html",
+      "headersPath": "source-evidence/game8-character-jiuyuan-headers.txt",
+      "bytes": 339004,
+      "sha256": "9078a65297cc549a5b5382ce4ade5b1bfd40530ca8619ac36706046c53e53e5d"
+    },
+    {
+      "characterId": "haniel",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596596",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-haniel.html",
+      "headersPath": "source-evidence/game8-character-haniel-headers.txt",
+      "bytes": 336312,
+      "sha256": "83268ad4857a778315be2e0f76305b30a207c88a31f1c8683da63b8c2d0f9b27"
+    },
+    {
+      "characterId": "adler",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596593",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-adler.html",
+      "headersPath": "source-evidence/game8-character-adler-headers.txt",
+      "bytes": 338882,
+      "sha256": "4be20ad3a96f49579dccf034c2c4a4e7cce75f72faacee815f50c11c45b2dbbc"
+    },
+    {
+      "characterId": "skia",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596598",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-skia.html",
+      "headersPath": "source-evidence/game8-character-skia-headers.txt",
+      "bytes": 337178,
+      "sha256": "c503aa7b4d13e983fc558851cad42b148618bdef112c0f124c42a97dbf28550c"
+    },
+    {
+      "characterId": "edgar",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596589",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-edgar.html",
+      "headersPath": "source-evidence/game8-character-edgar-headers.txt",
+      "bytes": 338040,
+      "sha256": "9da0324b21567182f6ec2220162154f45f9018cb23674fa4a26ea48bb81bdc55"
+    },
+    {
+      "characterId": "mint",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596587",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-mint.html",
+      "headersPath": "source-evidence/game8-character-mint-headers.txt",
+      "bytes": 342950,
+      "sha256": "7d8f313451e0cbb75940895adf4f24fe34b36d543dff9dbde56e550252352fe3"
+    },
+    {
+      "characterId": "taygedo",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/598031",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-taygedo.html",
+      "headersPath": "source-evidence/game8-character-taygedo-headers.txt",
+      "bytes": 313240,
+      "sha256": "7cefed553bf21639bc7b695d8d8204306d993268f174d8e35d1a2cfe76705b87"
+    },
+    {
+      "characterId": "hathor",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596597",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-hathor.html",
+      "headersPath": "source-evidence/game8-character-hathor-headers.txt",
+      "bytes": 339225,
+      "sha256": "bd0476cc4efa40b460b0b0c523352f0927efb9c409a28c19966e10cdd251ca13"
+    },
+    {
+      "characterId": "chiz",
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596588",
+      "httpStatus": 200,
+      "htmlPath": "source-evidence/game8-character-chiz.html",
+      "headersPath": "source-evidence/game8-character-chiz-headers.txt",
+      "bytes": 346848,
+      "sha256": "5217b525229e8668cc118544d30a10da8a3e038795643f92bc7ee06df538d24e"
+    }
+  ],
+  "missingFromIndex": [
+    {
+      "characterId": "nelly",
+      "reason": "No character archive URL in the captured Game8 material index."
+    },
+    {
+      "characterId": "merula",
+      "reason": "No character archive URL in the captured Game8 material index."
+    },
+    {
+      "characterId": "alphard",
+      "reason": "No character archive URL in the captured Game8 material index."
+    },
+    {
+      "characterId": "lilina",
+      "reason": "No character archive URL in the captured Game8 material index."
+    }
+  ],
+  "decision": {
+    "authoritySufficient": false,
+    "sourceBoundPlanGenerated": false,
+    "conclusion": "Game8 character pages are third-party consumer observations. They are retained for stage, quantity, and terminology comparison only; they do not approve raw relation edits."
+  }
+}

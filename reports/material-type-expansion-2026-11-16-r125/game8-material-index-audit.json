@@ -1,0 +1,306 @@
+{
+  "version": "game8-material-index-audit-v1",
+  "generatedAt": "2026-11-16T01:43:50.065Z",
+  "source": {
+    "url": "https://game8.co/games/Neverness-to-Everness/archives/598408",
+    "httpStatus": 200,
+    "localFile": "source-evidence/game8-material.html",
+    "sha256": "d07d4d7d0bf07251991d9deaf812d40cb2245706483c9b25350f72a9f3205185",
+    "observedAnchorCount": 91
+  },
+  "rawMaterialCoverage": {
+    "rawMaterialCount": 57,
+    "exactGame8Pages": 43,
+    "rawWithoutExactPage": [
+      {
+        "id": "page-from-delusions-shore",
+        "nameEn": "A Page from Delusion's Shore"
+      },
+      {
+        "id": "the-good-boy",
+        "nameEn": "The Good Boy's Fluff"
+      },
+      {
+        "id": "dandelion",
+        "nameEn": "Dandelion's Pass"
+      },
+      {
+        "id": "crown-called-nobility",
+        "nameEn": "Crown Called Nobility"
+      },
+      {
+        "id": "scepter-called-prestige",
+        "nameEn": "Scepter Called Prestige"
+      },
+      {
+        "id": "collectors-drama-core",
+        "nameEn": "Collector's Drama Core"
+      },
+      {
+        "id": "fabricated-dice",
+        "nameEn": "Fabricated Dice"
+      },
+      {
+        "id": "solid-dice",
+        "nameEn": "Solid Dice"
+      },
+      {
+        "id": "warp-piece",
+        "nameEn": "Warp Piece"
+      },
+      {
+        "id": "lost-piece",
+        "nameEn": "Lost Piece"
+      },
+      {
+        "id": "tri-key",
+        "nameEn": "Tri-Key"
+      },
+      {
+        "id": "fons",
+        "nameEn": "Fons"
+      },
+      {
+        "id": "beetle-coin",
+        "nameEn": "Beetle Coin"
+      },
+      {
+        "id": "annulith",
+        "nameEn": "Annulith"
+      }
+    ],
+    "missingIds": [
+      {
+        "id": "advanced-hunter-guide",
+        "lexicalCandidates": [
+          {
+            "name": "Elite Hunter Guide",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598786"
+          },
+          {
+            "name": "Senior Hunter Guide",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598784"
+          },
+          {
+            "name": "Rising Hunter Guide",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598748"
+          }
+        ]
+      },
+      {
+        "id": "anima-crystal",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "anima-fragment",
+        "lexicalCandidates": [
+          {
+            "name": "Nest Guard Fragment",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598890"
+          }
+        ]
+      },
+      {
+        "id": "basic-hunter-guide",
+        "lexicalCandidates": [
+          {
+            "name": "Elite Hunter Guide",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598786"
+          },
+          {
+            "name": "Senior Hunter Guide",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598784"
+          },
+          {
+            "name": "Rising Hunter Guide",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598748"
+          }
+        ]
+      },
+      {
+        "id": "boss-anima",
+        "lexicalCandidates": [
+          {
+            "name": "Manhole Boss",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599645"
+          }
+        ]
+      },
+      {
+        "id": "boss-chaos",
+        "lexicalCandidates": [
+          {
+            "name": "Chaos Silhouette",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599024"
+          },
+          {
+            "name": "Manhole Boss",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599645"
+          },
+          {
+            "name": "Chaos",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599593"
+          }
+        ]
+      },
+      {
+        "id": "boss-cosmos",
+        "lexicalCandidates": [
+          {
+            "name": "Manhole Boss",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599645"
+          }
+        ]
+      },
+      {
+        "id": "boss-incantation",
+        "lexicalCandidates": [
+          {
+            "name": "Manhole Boss",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599645"
+          }
+        ]
+      },
+      {
+        "id": "boss-lakshana",
+        "lexicalCandidates": [
+          {
+            "name": "Manhole Boss",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599645"
+          }
+        ]
+      },
+      {
+        "id": "boss-psyche",
+        "lexicalCandidates": [
+          {
+            "name": "Manhole Boss",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599645"
+          }
+        ]
+      },
+      {
+        "id": "chaos-core",
+        "lexicalCandidates": [
+          {
+            "name": "Chaos Silhouette",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599024"
+          },
+          {
+            "name": "Expansion Core",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599034"
+          },
+          {
+            "name": "Master Drama Core",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598777"
+          },
+          {
+            "name": "Beginner Drama Core",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599362"
+          },
+          {
+            "name": "Chaos",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599593"
+          }
+        ]
+      },
+      {
+        "id": "chaos-essence",
+        "lexicalCandidates": [
+          {
+            "name": "Chaos Silhouette",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599024"
+          },
+          {
+            "name": "Chaos",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/599593"
+          }
+        ]
+      },
+      {
+        "id": "cosmos-spark",
+        "lexicalCandidates": [
+          {
+            "name": "Charging Knight Spark Plug",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598864"
+          }
+        ]
+      },
+      {
+        "id": "cosmos-storm",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "credits",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "expert-permit",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "incantation-crystal",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "incantation-shard",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "lakshana-dust",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "lakshana-signet",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "manual-attack",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "manual-defense",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "manual-support",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "master-permit",
+        "lexicalCandidates": [
+          {
+            "name": "Master Drama Core",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598777"
+          }
+        ]
+      },
+      {
+        "id": "pioneer-permit",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "psyche-essence",
+        "lexicalCandidates": []
+      },
+      {
+        "id": "psyche-fragment",
+        "lexicalCandidates": [
+          {
+            "name": "Nest Guard Fragment",
+            "url": "https://game8.co/games/Neverness-to-Everness/archives/598890"
+          }
+        ]
+      }
+    ],
+    "missingIdsWithExactGame8Page": 0,
+    "missingIdsWithAnyLexicalCandidate": 14,
+    "missingIdsWithUnambiguousLexicalCandidate": 0
+  },
+  "decision": {
+    "authoritySufficient": false,
+    "sourceBoundPlanGenerated": false,
+    "approvedTargets": [],
+    "conclusion": "The Game8 index provides third-party pages for only a subset of repository names. None of the 27 held IDs has an exact page; 14 have ambiguous lexical matches and 13 have no lexical match. It cannot approve a relation migration or quantity mapping."
+  }
+}

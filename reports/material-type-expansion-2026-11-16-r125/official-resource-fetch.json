@@ -1,0 +1,363 @@
+{
+  "version": "nte-official-resource-fetch-v1",
+  "generatedAt": "2026-11-16T03:31:38.576Z",
+  "sourcePage": {
+    "url": "https://nte.perfectworld.com/en/main.html?nav=2&role=20",
+    "localFile": "source-evidence/official-main.html",
+    "sha256": "f570e004b5eb9ad3fff9750d5bafa913a7c4c92d62922c0205672f545f4581bc"
+  },
+  "scriptTagCount": 24,
+  "externalURLCount": 23,
+  "inlineScriptCount": 1,
+  "external": [
+    {
+      "url": "https://static.pwsdk.com/public/js/browserTip.js",
+      "index": 0,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 5931,
+      "sha256": "e115717242d9802b923c8eaea1526a5686ada446800ea89da59a5068d1ec231c",
+      "bodyFile": "source-evidence/official-resource-01-browserTip.js.body",
+      "headersFile": "source-evidence/official-resource-01-browserTip.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "reused-existing-body-after-transient-fetch-failure",
+      "fetchWarning": "TypeError: fetch failed",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/rem260427.js",
+      "index": 1,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 1049,
+      "sha256": "91eea4e33006b240a4ca8ba4749e421d3546c633c75c366d1963c93bee3c89be",
+      "bodyFile": "source-evidence/official-resource-02-rem260427.js.body",
+      "headersFile": "source-evidence/official-resource-02-rem260427.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://static.pwsdk.com/public/js/language1.2.2.js",
+      "index": 2,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 5172,
+      "sha256": "48480f6057d9fd963abf7d90a22fdaad2322a86aaa31fc0ed983249dc6f0e463",
+      "bodyFile": "source-evidence/official-resource-03-language1.2.2.js.body",
+      "headersFile": "source-evidence/official-resource-03-language1.2.2.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "reused-existing-body-after-transient-fetch-failure",
+      "fetchWarning": "TypeError: fetch failed",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/languageBranch260603.js",
+      "index": 3,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 442,
+      "sha256": "451a11305c5ed2e2a5b992e1b0d5f4a7846ac776ad8552a69d258c4c004e845d",
+      "bodyFile": "source-evidence/official-resource-04-languageBranch260603.js.body",
+      "headersFile": "source-evidence/official-resource-04-languageBranch260603.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/landscape260603.js",
+      "index": 4,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 676,
+      "sha256": "ed2ead0c08460e03aa563a64d7bbb1f3fda58086b5782721e2540a38c2d3b9db",
+      "bodyFile": "source-evidence/official-resource-05-landscape260603.js.body",
+      "headersFile": "source-evidence/official-resource-05-landscape260603.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://static.pwsdk.com/public/js/jq_183.js",
+      "index": 5,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 93636,
+      "sha256": "61c6caebd23921741fb5ffe6603f16634fca9840c2bf56ac8201e9264d6daccf",
+      "bodyFile": "source-evidence/official-resource-06-jq_183.js.body",
+      "headersFile": "source-evidence/official-resource-06-jq_183.js.headers.txt",
+      "termCounts": {
+        "(?:anima|psyche|chaos|cosmos|incantation|lakshana)": 6,
+        "(?:hunter|permit|manual|guide|core|fragment|shard|dust|signet|spark|storm)": 14,
+        "(?:fetch|ajax|\\.json|api\\/|data\\/)": 48
+      },
+      "captureMode": "reused-existing-body-after-transient-fetch-failure",
+      "fetchWarning": "TypeError: fetch failed",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/cookieBanner/js/stat-nte-perfectworld-1.1.2.js",
+      "index": 6,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 4029,
+      "sha256": "a26359028c4d5133b127fe5ac580a23a68bfd1334d9ea4c9d99537418a04d7e8",
+      "bodyFile": "source-evidence/official-resource-07-stat-nte-perfectworld-1.1.2.js.body",
+      "headersFile": "source-evidence/official-resource-07-stat-nte-perfectworld-1.1.2.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/enfooter260427.js",
+      "index": 7,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 4021,
+      "sha256": "3f47e36b6ba55d35cc852f3c091965c01e72f3e014f0175af2382149c42755f0",
+      "bodyFile": "source-evidence/official-resource-08-enfooter260427.js.body",
+      "headersFile": "source-evidence/official-resource-08-enfooter260427.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://static.pwsdk.com/public/js/swiper-bundle.min.js",
+      "index": 8,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 135167,
+      "sha256": "cadd41d57d03baa9fee12da98286e32ffcfc64a05453d4decd672a58aa9a4339",
+      "bodyFile": "source-evidence/official-resource-09-swiper-bundle.min.js.body",
+      "headersFile": "source-evidence/official-resource-09-swiper-bundle.min.js.headers.txt",
+      "termCounts": {
+        "(?:anima|psyche|chaos|cosmos|incantation|lakshana)": 30,
+        "(?:character|role|zero|elyms|mint|nanally|sakiri)": 49
+      },
+      "captureMode": "reused-existing-body-after-transient-fetch-failure",
+      "fetchWarning": "TypeError: fetch failed",
+      "error": null
+    },
+    {
+      "url": "https://static.pwsdk.com/public/js/swiper.animate1.0.3.min.js",
+      "index": 9,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 1690,
+      "sha256": "b9f669821d24d3e496d363fbd96a29334b796a9f50fe4d8d934bc13bb85f873a",
+      "bodyFile": "source-evidence/official-resource-10-swiper.animate1.0.3.min.js.body",
+      "headersFile": "source-evidence/official-resource-10-swiper.animate1.0.3.min.js.headers.txt",
+      "termCounts": {
+        "(?:anima|psyche|chaos|cosmos|incantation|lakshana)": 22
+      },
+      "captureMode": "reused-existing-body-after-transient-fetch-failure",
+      "fetchWarning": "TypeError: fetch failed",
+      "error": null
+    },
+    {
+      "url": "https://static.pwsdk.com/public/js/bgAutoplay.js",
+      "index": 10,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 1516,
+      "sha256": "5ce6f712ddd6c4207202082a53b0215bbd7c1214bb0a957a1cfdd9ccc56b5bc4",
+      "bodyFile": "source-evidence/official-resource-11-bgAutoplay.js.body",
+      "headersFile": "source-evidence/official-resource-11-bgAutoplay.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "reused-existing-body-after-transient-fetch-failure",
+      "fetchWarning": "TypeError: fetch failed",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/bgMusic260603.js",
+      "index": 11,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 605,
+      "sha256": "2844d375829b48a906a1343e7c5f0e6fc64145f274d8f3d35e15890120be43f4",
+      "bodyFile": "source-evidence/official-resource-12-bgMusic260603.js.body",
+      "headersFile": "source-evidence/official-resource-12-bgMusic260603.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/mouseTracking260603.js",
+      "index": 12,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 3166,
+      "sha256": "c086ac8fd58fc41594caca6d5a8caf2ac4a48976ae19f8b0e4e98d78d1c6a0ba",
+      "bodyFile": "source-evidence/official-resource-13-mouseTracking260603.js.body",
+      "headersFile": "source-evidence/official-resource-13-mouseTracking260603.js.headers.txt",
+      "termCounts": {
+        "(?:anima|psyche|chaos|cosmos|incantation|lakshana)": 2
+      },
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/loading260603.js",
+      "index": 13,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 1502,
+      "sha256": "29fd5ab8a235e18905a24ad1d7083cf16d634e6c7186bb1ac8ffb48b1c38ebdc",
+      "bodyFile": "source-evidence/official-resource-14-loading260603.js.body",
+      "headersFile": "source-evidence/official-resource-14-loading260603.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://static.pwsdk.com/public/js/clipboard.min.js",
+      "index": 14,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 10917,
+      "sha256": "0da7fc1ae23678b2872653962d147fcd1cbd0a5a9c8f84d44ae99bc581fd9062",
+      "bodyFile": "source-evidence/official-resource-15-clipboard.min.js.body",
+      "headersFile": "source-evidence/official-resource-15-clipboard.min.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "reused-existing-body-after-transient-fetch-failure",
+      "fetchWarning": "TypeError: fetch failed",
+      "error": null
+    },
+    {
+      "url": "https://www.perfectworld.com/public/commonData/gamesData/gameSwiper/nte-gameSwiper.js",
+      "index": 15,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 10032,
+      "sha256": "e28ace5d9a2741f304e0799d49a1fe7672c34f84eccb55e5fd62cc458bac2e73",
+      "bodyFile": "source-evidence/official-resource-16-nte-gameSwiper.js.body",
+      "headersFile": "source-evidence/official-resource-16-nte-gameSwiper.js.headers.txt",
+      "termCounts": {
+        "nte_data_data": 1
+      },
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/include/newsData20260112.js",
+      "index": 16,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 45106,
+      "sha256": "41a3170238a85b653792904656829792bb715df546f076a05030895732bd51a8",
+      "bodyFile": "source-evidence/official-resource-17-newsData20260112.js.body",
+      "headersFile": "source-evidence/official-resource-17-newsData20260112.js.headers.txt",
+      "termCounts": {
+        "newsdataObj": 1,
+        "(?:character|role|zero|elyms|mint|nanally|sakiri)": 18
+      },
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://www.perfectworld.com/public/commonData/gamesData/gameDownload/nte-gameDownload.js",
+      "index": 17,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 499,
+      "sha256": "234031553eae816c4320dea609f47568815a0c0f6db1e58323e70a9aed2c7baf",
+      "bodyFile": "source-evidence/official-resource-18-nte-gameDownload.js.body",
+      "headersFile": "source-evidence/official-resource-18-nte-gameDownload.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/login/js/nte-login-sdk-stable.min.js",
+      "index": 18,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 89948,
+      "sha256": "aef5fe48d7ec55147c31900ffd417b1fbea01c082f38c9bbb705b60a43df5a1e",
+      "bodyFile": "source-evidence/official-resource-19-nte-login-sdk-stable.min.js.body",
+      "headersFile": "source-evidence/official-resource-19-nte-login-sdk-stable.min.js.headers.txt",
+      "termCounts": {
+        "(?:character|role|zero|elyms|mint|nanally|sakiri)": 1,
+        "(?:fetch|ajax|\\.json|api\\/|data\\/)": 5
+      },
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/public260819.js",
+      "index": 19,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 8400,
+      "sha256": "8bfe49b9c2712c60928bcce076c63a28d2e5b6ef1e5a94df5fe34eb131f2859a",
+      "bodyFile": "source-evidence/official-resource-20-public260819.js.body",
+      "headersFile": "source-evidence/official-resource-20-public260819.js.headers.txt",
+      "termCounts": {
+        "nte_data_data": 1,
+        "(?:fetch|ajax|\\.json|api\\/|data\\/)": 2
+      },
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/onelinkSmartJs260603.js",
+      "index": 20,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 44870,
+      "sha256": "146c5bd0df918ed947fc38924baba76613cc0885b3bb40d7f2b43d7d5c402b2f",
+      "bodyFile": "source-evidence/official-resource-21-onelinkSmartJs260603.js.body",
+      "headersFile": "source-evidence/official-resource-21-onelinkSmartJs260603.js.headers.txt",
+      "termCounts": {
+        "(?:level|upgrade|ascension|growth)": 12
+      },
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/downLoad260819.js",
+      "index": 21,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 11428,
+      "sha256": "b83368d9707827fc563ef2b857e39236c7f5378be09dbc6c99b7a56bfe0fa61e",
+      "bodyFile": "source-evidence/official-resource-22-downLoad260819.js.body",
+      "headersFile": "source-evidence/official-resource-22-downLoad260819.js.headers.txt",
+      "termCounts": {},
+      "captureMode": "fetched",
+      "error": null
+    },
+    {
+      "url": "https://nte.perfectworld.com/public/js/main260930.js",
+      "index": 22,
+      "httpStatus": 200,
+      "contentType": "application/javascript",
+      "bytes": 9867,
+      "sha256": "a3d848bdb9e99bd5f6166002b0f106b4b51d9bac94bacff23f51d5dd5273ed0e",
+      "bodyFile": "source-evidence/official-resource-23-main260930.js.body",
+      "headersFile": "source-evidence/official-resource-23-main260930.js.headers.txt",
+      "termCounts": {
+        "nte_data_data": 1,
+        "newsdataObj": 3,
+        "(?:character|role|zero|elyms|mint|nanally|sakiri)": 11
+      },
+      "captureMode": "fetched",
+      "error": null
+    }
+  ],
+  "inline": [
+    {
+      "index": 0,
+      "bytes": 245,
+      "sha256": "305b711686babf47484b2d5e7529158646e29f9e971ff3bb34d36c7878e924f0",
+      "bodyFile": "source-evidence/official-inline-01.js",
+      "termCounts": {}
+    }
+  ],
+  "decision": {
+    "authority": "official-publisher",
+    "sourceBoundPlanGenerated": false,
+    "cmsWritePerformed": false,
+    "conclusion": "Official page resources were fetched and scanned for material, character, level, and data endpoints. Resource presence alone does not approve raw material relations or quantities."
+  }
+}

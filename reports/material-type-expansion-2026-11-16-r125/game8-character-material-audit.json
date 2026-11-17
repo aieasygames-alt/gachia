@@ -1,0 +1,5244 @@
+{
+  "version": "game8-character-material-audit-v1",
+  "generatedAt": "2026-11-16T02:20:22.719Z",
+  "source": {
+    "index": {
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/598408",
+      "localFile": "source-evidence/game8-material.html",
+      "sha256": "d07d4d7d0bf07251991d9deaf812d40cb2245706483c9b25350f72a9f3205185"
+    },
+    "pageCount": 17,
+    "pageSHA256Verified": true,
+    "thirdParty": true
+  },
+  "coverage": {
+    "rawCharacterCount": 21,
+    "pagesObserved": 17,
+    "pagesUnavailable": [
+      "nelly",
+      "merula",
+      "alphard",
+      "lilina"
+    ],
+    "wrongPageURLs": [
+      "taygedo"
+    ],
+    "validCharacterMaterialPages": 16,
+    "pagesWithStageCountMismatch": [],
+    "pagesWithStageLabelMismatch": [
+      "nanally",
+      "sakiri",
+      "fadia",
+      "lacrimosa",
+      "baicang",
+      "zero",
+      "hotori",
+      "daffodil",
+      "jiuyuan",
+      "haniel",
+      "adler",
+      "skia",
+      "edgar",
+      "mint",
+      "hathor",
+      "chiz"
+    ],
+    "observedMaterialNameCount": 20,
+    "observedNamesWithExactRawMaterialMatch": 20
+  },
+  "observedMaterialCandidates": [
+    {
+      "observedName": "Fading Silhouette",
+      "candidateId": "fading-silhouette",
+      "type": "ascension",
+      "rarity": 1,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Beetle Coin",
+      "candidateId": "beetle-coin",
+      "type": "currency",
+      "rarity": 1,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "A Page from Delusion's Shore",
+      "candidateId": "page-from-delusions-shore",
+      "type": "boss",
+      "rarity": 4,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Blurred Silhouette",
+      "candidateId": "blurred-silhouette",
+      "type": "ascension",
+      "rarity": 2,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Chaos Silhouette",
+      "candidateId": "chaos-silhouette",
+      "type": "ascension",
+      "rarity": 3,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Blurred Numeral",
+      "candidateId": "blurred-numeral",
+      "type": "ascension",
+      "rarity": 1,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Charging Knight Spark Plug",
+      "candidateId": "charging-knight-spark-plug",
+      "type": "boss",
+      "rarity": 4,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Unsolved Numeral",
+      "candidateId": "unsolved-numeral",
+      "type": "ascension",
+      "rarity": 2,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Distorted Numeral",
+      "candidateId": "distorted-numeral",
+      "type": "ascension",
+      "rarity": 3,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Water Moon Pick",
+      "candidateId": "water-moon-pick",
+      "type": "boss",
+      "rarity": 4,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Lost Whispers",
+      "candidateId": "lost-whispers",
+      "type": "ascension",
+      "rarity": 1,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Confessional Flower Seed",
+      "candidateId": "confessional-flower-seed",
+      "type": "boss",
+      "rarity": 4,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Obscure Whispers",
+      "candidateId": "obscure-whispers",
+      "type": "ascension",
+      "rarity": 2,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Paradoxical Whispers",
+      "candidateId": "paradoxical-whispers",
+      "type": "ascension",
+      "rarity": 3,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Nest Guard Fragment",
+      "candidateId": "nest-guard-fragment",
+      "type": "boss",
+      "rarity": 4,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Suspended Delusions",
+      "candidateId": "suspended-delusions",
+      "type": "ascension",
+      "rarity": 1,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Yearning Delusions",
+      "candidateId": "yearning-delusions",
+      "type": "ascension",
+      "rarity": 2,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Transcendent Delusions",
+      "candidateId": "transcendent-delusions",
+      "type": "ascension",
+      "rarity": 3,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Tear of the Sea",
+      "candidateId": "tear-of-the-sea",
+      "type": "boss",
+      "rarity": 4,
+      "approvedTarget": null
+    },
+    {
+      "observedName": "Colorful Ticket Stub",
+      "candidateId": "colorful-ticket-stub",
+      "type": "boss",
+      "rarity": 4,
+      "approvedTarget": null
+    }
+  ],
+  "comparisons": [
+    {
+      "characterId": "nanally",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596559",
+        "title": "Nanally Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "fdea5d52a17f404721aa86bf95bafddc485502d175f50add3e4424358f4ca780",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Fading Silhouette",
+                "quantity": 5
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Fading Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 8
+              },
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 6
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 24
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 6
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 9
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "anima-fragment",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "anima-fragment",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "anima-crystal",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "anima-crystal",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-anima",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Fading Silhouette",
+        "Beetle Coin",
+        "A Page from Delusion's Shore",
+        "Blurred Silhouette",
+        "Chaos Silhouette"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Fading Silhouette",
+          "candidateId": "fading-silhouette",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "A Page from Delusion's Shore",
+          "candidateId": "page-from-delusions-shore",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Blurred Silhouette",
+          "candidateId": "blurred-silhouette",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Chaos Silhouette",
+          "candidateId": "chaos-silhouette",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "anima-fragment",
+        "advanced-hunter-guide",
+        "anima-crystal",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-anima",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "sakiri",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596592",
+        "title": "Sakiri Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "ddf91233f040ca07712d4693daefffd24eeae16749688f620553946c00b75df1",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Blurred Numeral",
+                "quantity": 5
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 5000
+              },
+              {
+                "name": "Blurred Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 8
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 16
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 6
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 24
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 36
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 9
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "incantation-shard",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "incantation-shard",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "incantation-crystal",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "incantation-crystal",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-incantation",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-support",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Blurred Numeral",
+        "Beetle Coin",
+        "Charging Knight Spark Plug",
+        "Unsolved Numeral",
+        "Distorted Numeral"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Blurred Numeral",
+          "candidateId": "blurred-numeral",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Charging Knight Spark Plug",
+          "candidateId": "charging-knight-spark-plug",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Unsolved Numeral",
+          "candidateId": "unsolved-numeral",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Distorted Numeral",
+          "candidateId": "distorted-numeral",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "incantation-shard",
+        "advanced-hunter-guide",
+        "incantation-crystal",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-incantation",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "fadia",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596595",
+        "title": "Fadia Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "82f494f49397a825ca8601693d6400dd4b34dbc729d874a35995863e542db747",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Fading Silhouette",
+                "quantity": 5
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Fading Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Water Moon Pick",
+                "quantity": 8
+              },
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 6
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Water Moon Pick",
+                "quantity": 24
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 6
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 9
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "psyche-essence",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "psyche-essence",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "psyche-fragment",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "psyche-fragment",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-psyche",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Fading Silhouette",
+        "Beetle Coin",
+        "Water Moon Pick",
+        "Blurred Silhouette",
+        "Chaos Silhouette"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Fading Silhouette",
+          "candidateId": "fading-silhouette",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Water Moon Pick",
+          "candidateId": "water-moon-pick",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Blurred Silhouette",
+          "candidateId": "blurred-silhouette",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Chaos Silhouette",
+          "candidateId": "chaos-silhouette",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "psyche-essence",
+        "advanced-hunter-guide",
+        "psyche-fragment",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-psyche",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "lacrimosa",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/598465",
+        "title": "Lacrimosa Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "13e91f89a397c665ad8b39240182cdf99f602ac6c574f977fd6550217780dd38",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Lost Whispers",
+                "quantity": 5
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Lost Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 2
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 8
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Obscure Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 16
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 24
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 9
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 36
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "chaos-essence",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "chaos-essence",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "chaos-core",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "chaos-core",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-chaos",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Lost Whispers",
+        "Beetle Coin",
+        "Confessional Flower Seed",
+        "Obscure Whispers",
+        "Paradoxical Whispers"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Lost Whispers",
+          "candidateId": "lost-whispers",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Confessional Flower Seed",
+          "candidateId": "confessional-flower-seed",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Obscure Whispers",
+          "candidateId": "obscure-whispers",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Paradoxical Whispers",
+          "candidateId": "paradoxical-whispers",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "chaos-essence",
+        "advanced-hunter-guide",
+        "chaos-core",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-chaos",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "baicang",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596591",
+        "title": "Baicang Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "a83ca6bd9697328b1a33c868256172c0c99a8da3910d3b83fb7808ecda2b7270",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Blurred Numeral",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Blurred Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 2
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 8
+              },
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 16
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 6
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 24
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 36
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 9
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "incantation-shard",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "incantation-shard",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "incantation-crystal",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "incantation-crystal",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-incantation",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-defense",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Blurred Numeral",
+        "Nest Guard Fragment",
+        "Unsolved Numeral",
+        "Distorted Numeral"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Blurred Numeral",
+          "candidateId": "blurred-numeral",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Nest Guard Fragment",
+          "candidateId": "nest-guard-fragment",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Unsolved Numeral",
+          "candidateId": "unsolved-numeral",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Distorted Numeral",
+          "candidateId": "distorted-numeral",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "incantation-shard",
+        "advanced-hunter-guide",
+        "incantation-crystal",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-incantation",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "zero",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596585",
+        "title": "Esper Zero Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "0f5c6c0334ce35059a48dc120712b2aa00a41b31e9544842d3ca8d6f06aa546d",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Lost Whispers",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Lost Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 8
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 16
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 12
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 24
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 36
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 9
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-cosmos",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Lost Whispers",
+        "Charging Knight Spark Plug",
+        "Obscure Whispers",
+        "Paradoxical Whispers"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Lost Whispers",
+          "candidateId": "lost-whispers",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Charging Knight Spark Plug",
+          "candidateId": "charging-knight-spark-plug",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Obscure Whispers",
+          "candidateId": "obscure-whispers",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Paradoxical Whispers",
+          "candidateId": "paradoxical-whispers",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "cosmos-spark",
+        "advanced-hunter-guide",
+        "cosmos-storm",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-cosmos",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "hotori",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596586",
+        "title": "Hotori Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "20b7665a4f5bd67dd7c09abceb539eb054b29461f4aa0b5fc3e1122c220a4115",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Lost Whispers",
+                "quantity": 5
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 2
+              },
+              {
+                "name": "Lost Whispers",
+                "quantity": 12
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 8
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 24
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 6
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 9
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-cosmos",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Lost Whispers",
+        "Beetle Coin",
+        "Confessional Flower Seed",
+        "Obscure Whispers",
+        "Paradoxical Whispers"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Lost Whispers",
+          "candidateId": "lost-whispers",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Confessional Flower Seed",
+          "candidateId": "confessional-flower-seed",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Obscure Whispers",
+          "candidateId": "obscure-whispers",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Paradoxical Whispers",
+          "candidateId": "paradoxical-whispers",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "cosmos-spark",
+        "advanced-hunter-guide",
+        "cosmos-storm",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-cosmos",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "daffodil",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596590",
+        "title": "Daffodill Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "84fdfeee03976159d239a5adf765217fa6e065da525008516f3cb8befcd0169f",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Suspended Delusions",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Suspended Delusions",
+                "quantity": 12
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 8
+              },
+              {
+                "name": "Yearning Delusions",
+                "quantity": 6
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Yearning Delusions",
+                "quantity": 12
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 24
+              },
+              {
+                "name": "Transcendent Delusions",
+                "quantity": 6
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Charging Knight Spark Plug",
+                "quantity": 36
+              },
+              {
+                "name": "Transcendent Delusions",
+                "quantity": 9
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "chaos-essence",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "chaos-essence",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "chaos-core",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "chaos-core",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-chaos",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-support",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Suspended Delusions",
+        "Charging Knight Spark Plug",
+        "Yearning Delusions",
+        "Transcendent Delusions"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Suspended Delusions",
+          "candidateId": "suspended-delusions",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Charging Knight Spark Plug",
+          "candidateId": "charging-knight-spark-plug",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Yearning Delusions",
+          "candidateId": "yearning-delusions",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Transcendent Delusions",
+          "candidateId": "transcendent-delusions",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "chaos-essence",
+        "advanced-hunter-guide",
+        "chaos-core",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-chaos",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "jiuyuan",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596594",
+        "title": "Jiuyuan Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "9078a65297cc549a5b5382ce4ade5b1bfd40530ca8619ac36706046c53e53e5d",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Fading Silhouette",
+                "quantity": 5
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Fading Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "Tear of the Sea",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Tear of the Sea",
+                "quantity": 8
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "Tear of the Sea",
+                "quantity": 16
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 6
+              },
+              {
+                "name": "Tear of the Sea",
+                "quantity": 24
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Tear of the Sea",
+                "quantity": 36
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 9
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "anima-fragment",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "anima-fragment",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "anima-crystal",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "anima-crystal",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-anima",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-support",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Fading Silhouette",
+        "Beetle Coin",
+        "Tear of the Sea",
+        "Blurred Silhouette",
+        "Chaos Silhouette"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Fading Silhouette",
+          "candidateId": "fading-silhouette",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Tear of the Sea",
+          "candidateId": "tear-of-the-sea",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Blurred Silhouette",
+          "candidateId": "blurred-silhouette",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Chaos Silhouette",
+          "candidateId": "chaos-silhouette",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "anima-fragment",
+        "advanced-hunter-guide",
+        "anima-crystal",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-anima",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "haniel",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596596",
+        "title": "Haniel Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "83268ad4857a778315be2e0f76305b30a207c88a31f1c8683da63b8c2d0f9b27",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Blurred Numeral",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Blurred Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 8
+              },
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 24
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 9
+              },
+              {
+                "name": "Nest Guard Fragment",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "psyche-essence",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "psyche-essence",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "psyche-fragment",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "psyche-fragment",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-psyche",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Blurred Numeral",
+        "Nest Guard Fragment",
+        "Unsolved Numeral",
+        "Distorted Numeral"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Blurred Numeral",
+          "candidateId": "blurred-numeral",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Nest Guard Fragment",
+          "candidateId": "nest-guard-fragment",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Unsolved Numeral",
+          "candidateId": "unsolved-numeral",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Distorted Numeral",
+          "candidateId": "distorted-numeral",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "psyche-essence",
+        "advanced-hunter-guide",
+        "psyche-fragment",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-psyche",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "adler",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596593",
+        "title": "Adler Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "4be20ad3a96f49579dccf034c2c4a4e7cce75f72faacee815f50c11c45b2dbbc",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Blurred Numeral",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Blurred Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 8
+              },
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Unsolved Numeral",
+                "quantity": 12
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 24
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Distorted Numeral",
+                "quantity": 9
+              },
+              {
+                "name": "Water Moon Pick",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "incantation-shard",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "incantation-shard",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "incantation-crystal",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "incantation-crystal",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-incantation",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Blurred Numeral",
+        "Water Moon Pick",
+        "Unsolved Numeral",
+        "Distorted Numeral"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Blurred Numeral",
+          "candidateId": "blurred-numeral",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Water Moon Pick",
+          "candidateId": "water-moon-pick",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Unsolved Numeral",
+          "candidateId": "unsolved-numeral",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Distorted Numeral",
+          "candidateId": "distorted-numeral",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "incantation-shard",
+        "advanced-hunter-guide",
+        "incantation-crystal",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-incantation",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "skia",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596598",
+        "title": "Skia Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "c503aa7b4d13e983fc558851cad42b148618bdef112c0f124c42a97dbf28550c",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Suspended Delusions",
+                "quantity": 5
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Suspended Delusions",
+                "quantity": 12
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 8
+              },
+              {
+                "name": "Yearning Delusions",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Yearning Delusions",
+                "quantity": 12
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 24
+              },
+              {
+                "name": "Transcendent Delusions",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Transcendent Delusions",
+                "quantity": 9
+              },
+              {
+                "name": "Confessional Flower Seed",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "lakshana-dust",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "lakshana-dust",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "lakshana-signet",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "lakshana-signet",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-lakshana",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Suspended Delusions",
+        "Beetle Coin",
+        "Confessional Flower Seed",
+        "Yearning Delusions",
+        "Transcendent Delusions"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Suspended Delusions",
+          "candidateId": "suspended-delusions",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Confessional Flower Seed",
+          "candidateId": "confessional-flower-seed",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Yearning Delusions",
+          "candidateId": "yearning-delusions",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Transcendent Delusions",
+          "candidateId": "transcendent-delusions",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "lakshana-dust",
+        "advanced-hunter-guide",
+        "lakshana-signet",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-lakshana",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "edgar",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596589",
+        "title": "Edgar Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "9da0324b21567182f6ec2220162154f45f9018cb23674fa4a26ea48bb81bdc55",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Lost Whispers",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Lost Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 6
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 8
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 6
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 24
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 9
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-cosmos",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-support",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Lost Whispers",
+        "Colorful Ticket Stub",
+        "Obscure Whispers",
+        "Paradoxical Whispers"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Lost Whispers",
+          "candidateId": "lost-whispers",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Colorful Ticket Stub",
+          "candidateId": "colorful-ticket-stub",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Obscure Whispers",
+          "candidateId": "obscure-whispers",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Paradoxical Whispers",
+          "candidateId": "paradoxical-whispers",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "cosmos-spark",
+        "advanced-hunter-guide",
+        "cosmos-storm",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-cosmos",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "mint",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596587",
+        "title": "Mint Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "7d8f313451e0cbb75940895adf4f24fe34b36d543dff9dbde56e550252352fe3",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Fading Silhouette",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Fading Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 8
+              },
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Blurred Silhouette",
+                "quantity": 12
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 24
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Chaos Silhouette",
+                "quantity": 9
+              },
+              {
+                "name": "A Page from Delusion's Shore",
+                "quantity": 36
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "anima-fragment",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "anima-fragment",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "anima-crystal",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "anima-crystal",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-anima",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-support",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Fading Silhouette",
+        "A Page from Delusion's Shore",
+        "Blurred Silhouette",
+        "Chaos Silhouette"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Fading Silhouette",
+          "candidateId": "fading-silhouette",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "A Page from Delusion's Shore",
+          "candidateId": "page-from-delusions-shore",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Blurred Silhouette",
+          "candidateId": "blurred-silhouette",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Chaos Silhouette",
+          "candidateId": "chaos-silhouette",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "anima-fragment",
+        "advanced-hunter-guide",
+        "anima-crystal",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-anima",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "nelly",
+      "status": "page-unavailable",
+      "rawStageCount": 6,
+      "rawSkillMaterials": [
+        {
+          "id": "manual-support",
+          "quantity": 12
+        },
+        {
+          "id": "basic-hunter-guide",
+          "quantity": 15
+        },
+        {
+          "id": "credits",
+          "quantity": 200000
+        }
+      ],
+      "differences": [
+        "No matching Game8 character archive was present in the captured material index."
+      ]
+    },
+    {
+      "characterId": "merula",
+      "status": "page-unavailable",
+      "rawStageCount": 6,
+      "rawSkillMaterials": [
+        {
+          "id": "manual-attack",
+          "quantity": 12
+        },
+        {
+          "id": "basic-hunter-guide",
+          "quantity": 15
+        },
+        {
+          "id": "credits",
+          "quantity": 200000
+        }
+      ],
+      "differences": [
+        "No matching Game8 character archive was present in the captured material index."
+      ]
+    },
+    {
+      "characterId": "alphard",
+      "status": "page-unavailable",
+      "rawStageCount": 6,
+      "rawSkillMaterials": [
+        {
+          "id": "manual-attack",
+          "quantity": 12
+        },
+        {
+          "id": "basic-hunter-guide",
+          "quantity": 15
+        },
+        {
+          "id": "credits",
+          "quantity": 200000
+        }
+      ],
+      "differences": [
+        "No matching Game8 character archive was present in the captured material index."
+      ]
+    },
+    {
+      "characterId": "taygedo",
+      "status": "wrong-page",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/598031",
+        "title": "How to Beat Taygedo Boss Guide | Neverness to Everness (NTE)｜Game8",
+        "sha256": "7cefed553bf21639bc7b695d8d8204306d993268f174d8e35d1a2cfe76705b87"
+      },
+      "rawStageCount": 6,
+      "rawSkillMaterials": [
+        {
+          "id": "manual-support",
+          "quantity": 12
+        },
+        {
+          "id": "basic-hunter-guide",
+          "quantity": 15
+        },
+        {
+          "id": "credits",
+          "quantity": 200000
+        }
+      ],
+      "differences": [
+        "The captured Game8 URL is not a character ascension-material page."
+      ]
+    },
+    {
+      "characterId": "hathor",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596597",
+        "title": "Hathor Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "bd0476cc4efa40b460b0b0c523352f0927efb9c409a28c19966e10cdd251ca13",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Suspended Delusions",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Suspended Delusions",
+                "quantity": 12
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 2
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 8
+              },
+              {
+                "name": "Yearning Delusions",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Yearning Delusions",
+                "quantity": 12
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              },
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 16
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 24
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Transcendent Delusions",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Colorful Ticket Stub",
+                "quantity": 36
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              },
+              {
+                "name": "Transcendent Delusions",
+                "quantity": 9
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "lakshana-dust",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "lakshana-dust",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "lakshana-signet",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "lakshana-signet",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-lakshana",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Suspended Delusions",
+        "Colorful Ticket Stub",
+        "Yearning Delusions",
+        "Transcendent Delusions"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Suspended Delusions",
+          "candidateId": "suspended-delusions",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Colorful Ticket Stub",
+          "candidateId": "colorful-ticket-stub",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Yearning Delusions",
+          "candidateId": "yearning-delusions",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Transcendent Delusions",
+          "candidateId": "transcendent-delusions",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "lakshana-dust",
+        "advanced-hunter-guide",
+        "lakshana-signet",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-lakshana",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "chiz",
+      "status": "page-observed",
+      "page": {
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/596588",
+        "title": "Chiz Ascension Materials and Profile | Neverness to Everness (NTE)｜Game8",
+        "sha256": "5217b525229e8668cc118544d30a10da8a3e038795643f92bc7ee06df538d24e",
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "Lv.20→Lv.30",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 25000
+              },
+              {
+                "name": "Lost Whispers",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": "Lv.30→Lv.40",
+            "materials": [
+              {
+                "name": "Lost Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Tear of the Sea",
+                "quantity": 2
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 50000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.40→Lv.50",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 75000
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 6
+              },
+              {
+                "name": "Tear of the Sea",
+                "quantity": 8
+              }
+            ]
+          },
+          {
+            "stage": "Lv.50→Lv.60",
+            "materials": [
+              {
+                "name": "Tear of the Sea",
+                "quantity": 16
+              },
+              {
+                "name": "Obscure Whispers",
+                "quantity": 12
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 100000
+              }
+            ]
+          },
+          {
+            "stage": "Lv.60→Lv.70",
+            "materials": [
+              {
+                "name": "Beetle Coin",
+                "quantity": 125000
+              },
+              {
+                "name": "Tear of the Sea",
+                "quantity": 24
+              },
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "stage": "Lv.70→Lv.80",
+            "materials": [
+              {
+                "name": "Paradoxical Whispers",
+                "quantity": 9
+              },
+              {
+                "name": "Tear of the Sea",
+                "quantity": 36
+              },
+              {
+                "name": "Beetle Coin",
+                "quantity": 150000
+              }
+            ]
+          }
+        ]
+      },
+      "raw": {
+        "stageCount": 6,
+        "stages": [
+          {
+            "stage": "1-10",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 2000
+              }
+            ]
+          },
+          {
+            "stage": "11-20",
+            "materials": [
+              {
+                "id": "basic-hunter-guide",
+                "quantity": 5
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 4000
+              }
+            ]
+          },
+          {
+            "stage": "21-30",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-spark",
+                "quantity": 5
+              },
+              {
+                "id": "credits",
+                "quantity": 8000
+              }
+            ]
+          },
+          {
+            "stage": "31-40",
+            "materials": [
+              {
+                "id": "advanced-hunter-guide",
+                "quantity": 6
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 3
+              },
+              {
+                "id": "pioneer-permit",
+                "quantity": 2
+              },
+              {
+                "id": "credits",
+                "quantity": 16000
+              }
+            ]
+          },
+          {
+            "stage": "41-50",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 4
+              },
+              {
+                "id": "cosmos-storm",
+                "quantity": 5
+              },
+              {
+                "id": "expert-permit",
+                "quantity": 3
+              },
+              {
+                "id": "credits",
+                "quantity": 32000
+              }
+            ]
+          },
+          {
+            "stage": "51-60",
+            "materials": [
+              {
+                "id": "elite-hunter-guide",
+                "quantity": 8
+              },
+              {
+                "id": "boss-cosmos",
+                "quantity": 3
+              },
+              {
+                "id": "master-permit",
+                "quantity": 4
+              },
+              {
+                "id": "credits",
+                "quantity": 64000
+              }
+            ]
+          }
+        ],
+        "skillMaterials": [
+          {
+            "id": "manual-attack",
+            "quantity": 12
+          },
+          {
+            "id": "basic-hunter-guide",
+            "quantity": 15
+          },
+          {
+            "id": "credits",
+            "quantity": 200000
+          }
+        ]
+      },
+      "differences": [
+        "Level stages differ: raw 1-10, 11-20, 21-30, 31-40, 41-50, 51-60, Game8 Lv.20→Lv.30, Lv.30→Lv.40, Lv.40→Lv.50, Lv.50→Lv.60, Lv.60→Lv.70, Lv.70→Lv.80.",
+        "Game8 material names are display names with no safe one-to-one ID mapping to the current raw IDs.",
+        "Game8 character pages expose level-up stages but do not provide the raw skillMaterials field in the captured ascension table."
+      ],
+      "observedMaterialNames": [
+        "Beetle Coin",
+        "Lost Whispers",
+        "Tear of the Sea",
+        "Obscure Whispers",
+        "Paradoxical Whispers"
+      ],
+      "observedMaterialCandidates": [
+        {
+          "observedName": "Beetle Coin",
+          "candidateId": "beetle-coin",
+          "type": "currency",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Lost Whispers",
+          "candidateId": "lost-whispers",
+          "type": "ascension",
+          "rarity": 1,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Tear of the Sea",
+          "candidateId": "tear-of-the-sea",
+          "type": "boss",
+          "rarity": 4,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Obscure Whispers",
+          "candidateId": "obscure-whispers",
+          "type": "ascension",
+          "rarity": 2,
+          "approvedTarget": null
+        },
+        {
+          "observedName": "Paradoxical Whispers",
+          "candidateId": "paradoxical-whispers",
+          "type": "ascension",
+          "rarity": 3,
+          "approvedTarget": null
+        }
+      ],
+      "rawMaterialIds": [
+        "basic-hunter-guide",
+        "credits",
+        "cosmos-spark",
+        "advanced-hunter-guide",
+        "cosmos-storm",
+        "pioneer-permit",
+        "elite-hunter-guide",
+        "expert-permit",
+        "boss-cosmos",
+        "master-permit"
+      ],
+      "normalizedGame8Stages": [
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80"
+      ]
+    },
+    {
+      "characterId": "lilina",
+      "status": "page-unavailable",
+      "rawStageCount": 6,
+      "rawSkillMaterials": [
+        {
+          "id": "manual-attack",
+          "quantity": 12
+        },
+        {
+          "id": "basic-hunter-guide",
+          "quantity": 15
+        },
+        {
+          "id": "credits",
+          "quantity": 200000
+        }
+      ],
+      "differences": [
+        "No matching Game8 character archive was present in the captured material index."
+      ]
+    }
+  ],
+  "decision": {
+    "authoritySufficient": false,
+    "sourceBoundPlanGenerated": false,
+    "rawMutationAllowed": false,
+    "cmsWrites": false,
+    "cloudWrites": false,
+    "conclusion": "The captured Game8 character pages show six Lv.20→Lv.80 progression rows and public names such as Fading Silhouette, A Page from Delusion's Shore, Blurred Silhouette, Chaos Silhouette, and Beetle Coin. The current raw relation uses 1-10…51-60 labels, different placeholder IDs, and skillMaterials not represented in these pages. Four raw characters have no matching archive in the captured index, and the Taygedo URL is a boss guide rather than a material page. These observations prove consumer drift and require authoritative/client evidence; they do not authorize ID or quantity edits."
+  }
+}
