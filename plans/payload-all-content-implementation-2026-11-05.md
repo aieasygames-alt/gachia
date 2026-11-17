@@ -1,6 +1,20 @@
 # Payload 全内容实施队列
 
-<!-- BEGIN R123 CURRENT -->
+<!-- BEGIN R127 CURRENT -->
+## 当前实施状态（2026-11-17 R127）
+
+本批异环（NTE）CMS 正式单 Worker 更新闭环已完成。真实 CMS 记录 1328（咲里 `sakiri`）复用已批准的草稿/审核结果，修正简介中的“桐丸”乱码，经仅异环构建、候选及兼容恢复云预览、正式推广和公网验收上线。正式版本 `6f509611-e4ef-4b6d-b41b-2768721ade2c`，deployment `4e5252be-20f0-4164-8861-235edfdf37c1`；恢复版本 `1e8ac596-0b3a-4a0b-bf2a-61a4f0df1059` 已云预览，本批未实际生产回滚。
+
+精确执行提交 `f85accac7eeb37cffcec12c0bc7b91f5e5d70431` 的完整 CI [44059796226](https://github.com/aieasygames-alt/gachia/actions/runs/44059796226) 全部成功、无跳过。候选/恢复各 843 项云预览、发布后 350 项公网及来源推进时另一轮 350 项公网全部通过；咲里详情与公开 JSON 显示修正文本，三语言搜索和 Main 异环聚合使用新内容版本，原投影字段保持。七个受控服务中本次内容发布仅异环 deployment 改变。Main 先前丢失的两篇攻略增量已在独立的一次性恢复中上线，恢复与本次异环发布分开记账。
+
+**下一批唯一接续入口**：[R127 来源结果](../reports/nte-r127-remediation-2026-11-17/qualification-02/nte-source-result.json) 的 `.proof`，指向 `reports/nte-r127-remediation-2026-11-17/qualification-02/nte-published-sources-01/source-index.json`，pin 为 `60d832f0b70fdf92159ffc7728295bf9ce0694e1b90204e286617363f8e96eb8`。标准读取器完整重读成功；115 来源中仅异环角色 raw 改变，其他 114 份字节哈希保持，胡桃、既有攻略、R122 蓝色星原及 R124 绿梦内联增量保留。缺失 R119 原始 bundle 的事实通过显式只读来源重建检查点继续记录为 `historyComplete:false`，未改写旧 journal 或伪造完整历史。
+
+最终证据见 [R127 完成回执](../reports/nte-r127-remediation-2026-11-17/EXECUTION.md) 和 [delivery.json](../reports/nte-r127-remediation-2026-11-17/delivery.json)。旧第 09 次、自定义历史副本和 CMS 对齐副本仅取证，不作接续入口；不回退 R121 或重放已完成的异环、蓝色星原、绿梦发布。
+
+下一阶段按内容类型扩展所有游戏，再处理页面内联内容及新增、撤回和媒体替换；绿梦仍限现有中文范围。27 个异环缺失材料和未批准的 `zero` relation 保持独立来源审查，不阻塞已完成的既有角色文本资格。发布及来源推进后约 14.26 GiB 可用，标准 14 GiB 构建预算及 8 GiB 保留线保持。下方所有旧轮次均为历史记录，其中“当前来源”和“下一项”不再作为本批入口。
+<!-- END R127 CURRENT -->
+
+<!-- BEGIN R123 HISTORY -->
 ## 当前实施状态（2026-11-15 R123）
 
 R122 蓝色星原独立 Worker 的候选、恢复、预览和正式更新已完成；R121 来源继续作为下一批输入。随后定位并修复 Main sitemap 500：Main 构建不再加载已迁入异环 Worker 的角色、武器、攻略、磁盘和材料源，源码回归、Next/OpenNext 构建以及本地 Worker sitemap 验收通过，正式线上发布仍待完成。
@@ -8,7 +22,7 @@ R122 蓝色星原独立 Worker 的候选、恢复、预览和正式更新已完�
 绿梦中文既有角色文本的生产合同已补齐：`lvmeng` 仅允许一条既有 `playableCharacters` 记录的 `/name`、`/affiliation` 或 `/note`，固定 slug、顺序和数量，显式使用 Wrangler `production` 环境，并具备候选/恢复双版本与单 owner 推广入口。下一步是从 R121 `source-result.json` 接续真实 CMS 记录，完成一次草稿、审核、候选/恢复预览、绿梦正式推广和公网回执；在回执产生前不宣称绿梦生产闭环已完成。
 
 当前完整来源入口保持 `reports/adsense-restoration-2026-11-14-r121/source-result.json`，完整索引 pin 为 `1cf398fc545237a5f2cea5866c4cef0491a7f05f4b3bd9fe45f4374bf2bb4b36`。不得从 R120 或 R122 重放已完成来源链；正式发布前重新读取所有 Worker 当前版本并确认只改变目标 owner。后续顺序为：绿梦中文单 Worker → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。
-<!-- END R123 CURRENT -->
+<!-- END R123 HISTORY -->
 
 <!-- BEGIN R121 HISTORY -->
 ## 当前完成状态（2026-11-14 R121）

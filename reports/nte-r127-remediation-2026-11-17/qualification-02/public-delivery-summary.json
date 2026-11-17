@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "kind": "nte_r127_public_delivery_summary",
+  "at": "2026-11-17T11:06:35.802178+00:00",
+  "status": "passed",
+  "derivedFrom": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-production-01/public-0-router/result.json",
+    "pin": "b397ccf382a15587c660117607261206daa337c82bf6d68b497f8cbf54b89667"
+  },
+  "observationCount": 350,
+  "selectedObservations": [
+    {
+      "path": "/data/nte/raw-characters.json",
+      "status": 200,
+      "bytes": 273229,
+      "sha256": "02dd211b1969f925e088f01a90ddffbcb1bd4b3255816dcfa24594effa8fd670",
+      "bodyFile": "47.body",
+      "contentVersionHeaders": {},
+      "description": "Eibon古董店的冰箱贴条规则制定者。手持名为「桐丸」的异象锤，性格直率而火爆。与古董店成员一同行动。"
+    },
+    {
+      "path": "/data-manifest/search-zh.json",
+      "status": 200,
+      "bytes": 114690,
+      "sha256": "504eca85be3002692df8a792509e8db3fd6b1bc93ec5f56f4f97d453e376d16a",
+      "bodyFile": "100.body",
+      "contentVersionHeaders": {
+        "x-gachia-content-version": "6dc7c56545e587432f2fefc03f0a2e7eb059828448ec1ba2f5c9048ac8f881c1",
+        "x-gachia-nte-content-version": "7cc0d0c6b1ed4c9df46c36a1e13374b6cfd331f065a03e7e9c335146ba20a864"
+      }
+    },
+    {
+      "path": "/data-manifest/search-en.json",
+      "status": 200,
+      "bytes": 114690,
+      "sha256": "8252af493ab65907b54a8897dcdd96927e9870e6db54e0d66eaa174430cc1236",
+      "bodyFile": "101.body",
+      "contentVersionHeaders": {
+        "x-gachia-content-version": "6dc7c56545e587432f2fefc03f0a2e7eb059828448ec1ba2f5c9048ac8f881c1",
+        "x-gachia-nte-content-version": "7cc0d0c6b1ed4c9df46c36a1e13374b6cfd331f065a03e7e9c335146ba20a864"
+      }
+    },
+    {
+      "path": "/data-manifest/search-ja.json",
+      "status": 200,
+      "bytes": 115222,
+      "sha256": "b892b259d3d3e79686f6aaff1a0483c6edadde81bdeb6815c1185a3344b26294",
+      "bodyFile": "102.body",
+      "contentVersionHeaders": {
+        "x-gachia-content-version": "6dc7c56545e587432f2fefc03f0a2e7eb059828448ec1ba2f5c9048ac8f881c1",
+        "x-gachia-nte-content-version": "7cc0d0c6b1ed4c9df46c36a1e13374b6cfd331f065a03e7e9c335146ba20a864"
+      }
+    },
+    {
+      "path": "/data-client/nte-platform.json",
+      "status": 200,
+      "bytes": 39720,
+      "sha256": "3d101a7573bed0a5595ac886f422b339155ae49e934e1f2af8c36797812882a5",
+      "bodyFile": "105.body",
+      "contentVersionHeaders": {
+        "x-gachia-content-version": "7cc0d0c6b1ed4c9df46c36a1e13374b6cfd331f065a03e7e9c335146ba20a864",
+        "x-gachia-nte-content-version": "7cc0d0c6b1ed4c9df46c36a1e13374b6cfd331f065a03e7e9c335146ba20a864"
+      }
+    },
+    {
+      "path": "/zh/nte/characters/sakiri",
+      "status": 200,
+      "bytes": 48039,
+      "sha256": "bd0c49e5e416bc5b6fb803bd4b81d8fd199cbb977536287157df9d4935e5bfd1",
+      "bodyFile": "349.body",
+      "contentVersionHeaders": {},
+      "correctDescriptionPresent": true
+    }
+  ],
+  "projectionBoundary": "Search and Main platform projections retain their existing field sets; description text is verified on the character page and public raw JSON."
+}

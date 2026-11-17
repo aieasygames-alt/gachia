@@ -1,6 +1,20 @@
 # 当前审计任务表
 
-<!-- BEGIN R123 CURRENT -->
+<!-- BEGIN R127 CURRENT -->
+## 当前完成状态（2026-11-17 R127）
+
+本批异环（NTE）CMS 正式单 Worker 更新闭环已完成。真实 CMS 记录 1328（咲里 `sakiri`）复用已批准的草稿/审核结果，修正简介中的“桐丸”乱码，经仅异环构建、候选及兼容恢复云预览、正式推广和公网验收上线。正式版本 `6f509611-e4ef-4b6d-b41b-2768721ade2c`，deployment `4e5252be-20f0-4164-8861-235edfdf37c1`；恢复版本 `1e8ac596-0b3a-4a0b-bf2a-61a4f0df1059` 已云预览，本批未实际生产回滚。
+
+精确执行提交 `f85accac7eeb37cffcec12c0bc7b91f5e5d70431` 的完整 CI [44059796226](https://github.com/aieasygames-alt/gachia/actions/runs/44059796226) 全部成功、无跳过。候选/恢复各 843 项云预览、发布后 350 项公网及来源推进时另一轮 350 项公网全部通过；咲里详情与公开 JSON 显示修正文本，三语言搜索和 Main 异环聚合使用新内容版本，原投影字段保持。七个受控服务中本次内容发布仅异环 deployment 改变。Main 先前丢失的两篇攻略增量已在独立的一次性恢复中上线，恢复与本次异环发布分开记账。
+
+**下一批唯一接续入口**：[R127 来源结果](../reports/nte-r127-remediation-2026-11-17/qualification-02/nte-source-result.json) 的 `.proof`，指向 `reports/nte-r127-remediation-2026-11-17/qualification-02/nte-published-sources-01/source-index.json`，pin 为 `60d832f0b70fdf92159ffc7728295bf9ce0694e1b90204e286617363f8e96eb8`。标准读取器完整重读成功；115 来源中仅异环角色 raw 改变，其他 114 份字节哈希保持，胡桃、既有攻略、R122 蓝色星原及 R124 绿梦内联增量保留。缺失 R119 原始 bundle 的事实通过显式只读来源重建检查点继续记录为 `historyComplete:false`，未改写旧 journal 或伪造完整历史。
+
+最终证据见 [R127 完成回执](../reports/nte-r127-remediation-2026-11-17/EXECUTION.md) 和 [delivery.json](../reports/nte-r127-remediation-2026-11-17/delivery.json)。旧第 09 次、自定义历史副本和 CMS 对齐副本仅取证，不作接续入口；不回退 R121 或重放已完成的异环、蓝色星原、绿梦发布。
+
+下一阶段按内容类型扩展所有游戏，再处理页面内联内容及新增、撤回和媒体替换；绿梦仍限现有中文范围。27 个异环缺失材料和未批准的 `zero` relation 保持独立来源审查，不阻塞已完成的既有角色文本资格。发布及来源推进后约 14.26 GiB 可用，标准 14 GiB 构建预算及 8 GiB 保留线保持。下方所有旧轮次均为历史记录，其中“当前来源”和“下一项”不再作为本批入口。
+<!-- END R127 CURRENT -->
+
+<!-- BEGIN R123 HISTORY -->
 ## 当前完成状态（2026-11-15 R123）
 
 R122 蓝色星原独立 Worker 发布已完成，来源从 R121 接续。Main sitemap 500 已定位为 Main 构建继续动态加载异环已迁移数据，源码已移除这些读取并通过 Web 测试、Next/OpenNext 构建和本地 XML 验收，线上 Main 发布待执行。
@@ -8,7 +22,7 @@ R122 蓝色星原独立 Worker 发布已完成，来源从 R121 接续。Main si
 绿梦既有中文角色文本的正式资格合同已接入统一冻结/构建链：仅允许 `apps/game-lvmeng/lib/data.ts` 的一个既有 `playableCharacters` 记录和 `/name`、`/affiliation`、`/note`，显式 Wrangler `production` 环境，候选与恢复版本独立保留，生产推广目标仅为 `gachia-game-lvmeng`。CMS 草稿、审核、真实候选/恢复预览和正式推广仍是下一项未关闭任务。
 
 当前来源入口为 R121 `reports/adsense-restoration-2026-11-14-r121/source-result.json`，完整索引 pin 为 `1cf398fc545237a5f2cea5866c4cef0491a7f05f4b3bd9fe45f4374bf2bb4b36`。正式发布前必须重新读取当前云端版本，确认 Main sitemap 修复只改变 `gachia`，绿梦内容发布只改变 `gachia-game-lvmeng`；Router、其他游戏和 staging 保持不变。
-<!-- END R123 CURRENT -->
+<!-- END R123 HISTORY -->
 
 <!-- BEGIN R120 HISTORY -->
 ## 当前完成状态（2026-11-14 R120）

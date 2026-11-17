@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-17T10:38:41.524Z",
+  "bundle": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-prepare-01/sealed/bundle.json",
+    "pin": "1ec441f1d16ea6d4bb10688310941955d632809918e1a70a89c1fc9b3fe8384e"
+  },
+  "sourceCommit": "f85accac7eeb37cffcec12c0bc7b91f5e5d70431",
+  "contentVersion": "7cc0d0c6b1ed4c9df46c36a1e13374b6cfd331f065a03e7e9c335146ba20a864",
+  "owners": [
+    "nte"
+  ],
+  "sourceCount": 115,
+  "changedSources": [
+    "packages/data/games/nte/raw-characters.json"
+  ],
+  "fieldChanges": [
+    {
+      "id": "sakiri",
+      "field": "description",
+      "before": "Eibon古董店的冰箱贴条规则制定者。手持名为「�的狼丸」的异象锤，性格直率而火爆。与古董店成员一同行动。",
+      "after": "Eibon古董店的冰箱贴条规则制定者。手持名为「桐丸」的异象锤，性格直率而火爆。与古董店成员一同行动。"
+    }
+  ],
+  "allOther114SourceHashesUnchanged": true,
+  "guideSourceHashesUnchanged": true,
+  "genshinCharacterSourceUnchanged": true,
+  "direct": {
+    "recovery": 843,
+    "candidate": 843
+  },
+  "graph": {
+    "recovery": 350,
+    "candidate": 350
+  }
+}
