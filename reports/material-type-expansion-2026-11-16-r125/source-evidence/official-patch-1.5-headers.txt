@@ -1,0 +1,12 @@
+HTTP/2 200 
+content-type: text/html
+server: nginx
+date: Mon, 16 Nov 2026 01:28:11 GMT
+expires: Mon, 16 Nov 2026 05:28:11 GMT
+cache-control: max-age=14400
+x-cache: Hit from cloudfront
+via: 1.1 d5ec67c1feba1674289bc52224e8ec2a.cloudfront.net (CloudFront)
+x-amz-cf-pop: LAX54-P7
+x-amz-cf-id: ssFv9HNxCNMVyMYvFrJbieryzqDoRgBNKJe0GJxUHU-8ivxGwSy_7g==
+age: 358
+
