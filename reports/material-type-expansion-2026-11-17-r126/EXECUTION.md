@@ -4,7 +4,7 @@
 
 ## 决定
 
-- `zero` 已按官方角色导航证据核准为一个 canonical identity。
+- `zero` 的角色身份与展示关系已按官方角色导航证据核准：canonical identity 为 `zero`，展示变体为 `zero-male` 和 `zero-female`。这项角色关系批准与材料依赖批准分开；材料 ID、阶段和数量仍保持 held。
 - `zero-male` 与 `zero-female` 是两个展示变体，材料关系不能自动选择其中一个。
 - CMS 依赖图把 canonical 关系展开到两个展示 ID；应用材料读取也让两个页面读取同一个 `characterId: "zero"` 关系。
 - 未知变体、缺少任一展示变体或其他游戏的相似字符串不会被模糊匹配。

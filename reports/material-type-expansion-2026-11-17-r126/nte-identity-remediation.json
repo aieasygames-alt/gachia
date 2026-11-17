@@ -9,8 +9,10 @@
       "zero-female"
     ],
     "status": "approved-canonical-identity",
-    "materialRelationApproval": "held",
-    "approvedTarget": null
+    "materialRelationApproval": "held-missing-material-evidence",
+    "approvedTarget": "zero",
+    "characterRelationApproval": "approved-canonical-identity-and-display-variants",
+    "approvalBoundary": "Character identity and display links are approved; material IDs, quantities, stages and publication remain held."
   },
   "evidence": [
     {
