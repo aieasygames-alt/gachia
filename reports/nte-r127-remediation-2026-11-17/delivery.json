@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "kind": "nte_r127_remediation_delivery",
+  "status": "completed",
+  "at": "2026-11-17T11:11:54.451994+00:00",
+  "sourceCommit": "f85accac7eeb37cffcec12c0bc7b91f5e5d70431",
+  "executorCI": {
+    "runID": 44059796226,
+    "commit": "f85accac7eeb37cffcec12c0bc7b91f5e5d70431",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "ciURL": "https://github.com/aieasygames-alt/gachia/actions/runs/44059796226",
+  "cms": {
+    "recordID": 1328,
+    "slug": "sakiri",
+    "stableKey": "unified:nte:685d28eb80f10eedd194d8927446958e49b1f14a1e0e4293e39dd06c22e98aa3",
+    "field": "description",
+    "review": "reused_existing_approved_real_cms_revision",
+    "installedApplicationCommit": "98affe759dae271053a5c13617193abede14cae6"
+  },
+  "mainOneTimeRestoration": {
+    "reason": "restore previously published Ananta and HI3 guide increments lost during the R123 Main build",
+    "completion": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/main-restoration-production-01/completion.json",
+      "pin": "90979e71a52a1bf9698e7031dc1a83d5d37f8cbb4d7907a3af7907612188679c"
+    },
+    "deploymentID": "82ed626a-1006-4c18-aff3-d39b82be9964",
+    "versionID": "a487451e-d54c-454f-8acc-9f7a0e30a73a",
+    "sourceIndex": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/main-restored-sources-01/source-index.json",
+      "pin": "25eaa7bc0d9230714a42766d527dd4b0fba8266fc0644fffb7badfd8acec39d5"
+    },
+    "delta": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/main-local-content-delta.json",
+      "pin": "c316363fbbe8a33a4865ccaba2dfc691024f50c5dca5827292f2ff77a6367f43"
+    },
+    "separateFromNteContentPublication": true
+  },
+  "ntePublication": {
+    "completion": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-production-01/completion.json",
+      "pin": "c9bbbe356506d789a6c101a11c6ecad2792151ccba54523bf7d88bf251862498"
+    },
+    "acceptedAt": "2026-11-17T11:03:20.263Z",
+    "releaseKey": "4f5bde6ba39cfd8fca3621a6890e6c90b99e700188143c7d32befa948b092f4e",
+    "deployment": {
+      "deploymentId": "4e5252be-20f0-4164-8861-235edfdf37c1",
+      "service": "gachia-game-nte",
+      "versionId": "6f509611-e4ef-4b6d-b41b-2768721ade2c",
+      "releaseKey": "4f5bde6ba39cfd8fca3621a6890e6c90b99e700188143c7d32befa948b092f4e",
+      "responses": {
+        "creation": {
+          "status": 200,
+          "sha256": "ef141c92ecfd9d0d7d4b09d12986e8e5db68a7f4ecaa27d741a28418b192b1d5",
+          "bytes": 124
+        },
+        "verification": {
+          "status": 200,
+          "sha256": "bc25c63afbfa5b8583b2ba82ca9547cac144fd5ed1cdc8249bbfe22740fd85d4",
+          "bytes": 469
+        }
+      }
+    },
+    "candidateVersion": "6f509611-e4ef-4b6d-b41b-2768721ade2c",
+    "recoveryVersion": "1e8ac596-0b3a-4a0b-bf2a-61a4f0df1059",
+    "contentVersion": "7cc0d0c6b1ed4c9df46c36a1e13374b6cfd331f065a03e7e9c335146ba20a864",
+    "previewResponseCountPerVersion": 843,
+    "publicResponseCount": 350,
+    "publicSummary": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/public-delivery-summary.json",
+      "pin": "0732b98bd0021faa245991b3479c0c44d3b71f65b8b1f2e73ac1bdabee759be7"
+    },
+    "changedServices": [
+      "gachia-game-nte"
+    ],
+    "controlledServices": {
+      "gachia": {
+        "beforeDeploymentID": "82ed626a-1006-4c18-aff3-d39b82be9964",
+        "afterDeploymentID": "82ed626a-1006-4c18-aff3-d39b82be9964",
+        "beforeVersions": [
+          {
+            "version_id": "a487451e-d54c-454f-8acc-9f7a0e30a73a",
+            "percentage": 100
+          }
+        ],
+        "afterVersions": [
+          {
+            "version_id": "a487451e-d54c-454f-8acc-9f7a0e30a73a",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-staging": {
+        "beforeDeploymentID": "77b45460-05a3-4435-95cd-89077c6750e1",
+        "afterDeploymentID": "77b45460-05a3-4435-95cd-89077c6750e1",
+        "beforeVersions": [
+          {
+            "version_id": "f142070d-ffb0-4b99-a204-49af0c265baa",
+            "percentage": 100
+          }
+        ],
+        "afterVersions": [
+          {
+            "version_id": "f142070d-ffb0-4b99-a204-49af0c265baa",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-router": {
+        "beforeDeploymentID": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+        "afterDeploymentID": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+        "beforeVersions": [
+          {
+            "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+            "percentage": 100
+          }
+        ],
+        "afterVersions": [
+          {
+            "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-game-genshin": {
+        "beforeDeploymentID": "c7d0623d-2a15-45f0-b182-be5721790fbe",
+        "afterDeploymentID": "c7d0623d-2a15-45f0-b182-be5721790fbe",
+        "beforeVersions": [
+          {
+            "version_id": "2fcd8859-5881-4dbc-aa9c-0b9d558ff8bc",
+            "percentage": 100
+          }
+        ],
+        "afterVersions": [
+          {
+            "version_id": "2fcd8859-5881-4dbc-aa9c-0b9d558ff8bc",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-game-nte": {
+        "beforeDeploymentID": "3e19da24-ab8f-4e29-bd7e-e5d206aa353e",
+        "afterDeploymentID": "4e5252be-20f0-4164-8861-235edfdf37c1",
+        "beforeVersions": [
+          {
+            "version_id": "a95ee8e7-83c3-420e-9b48-64ed97dd77a2",
+            "percentage": 100
+          }
+        ],
+        "afterVersions": [
+          {
+            "version_id": "6f509611-e4ef-4b6d-b41b-2768721ade2c",
+            "percentage": 100
+          }
+        ],
+        "unchanged": false
+      },
+      "gachia-game-azur-promilia": {
+        "beforeDeploymentID": "9a9620b0-128e-4ba1-814a-6db6c7453dad",
+        "afterDeploymentID": "9a9620b0-128e-4ba1-814a-6db6c7453dad",
+        "beforeVersions": [
+          {
+            "version_id": "79bf30a2-e519-4366-a0a3-4c25907f76c9",
+            "percentage": 100
+          }
+        ],
+        "afterVersions": [
+          {
+            "version_id": "79bf30a2-e519-4366-a0a3-4c25907f76c9",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      },
+      "gachia-game-lvmeng": {
+        "beforeDeploymentID": "62f5d1d5-ef07-450c-a91f-35b3dffa232a",
+        "afterDeploymentID": "62f5d1d5-ef07-450c-a91f-35b3dffa232a",
+        "beforeVersions": [
+          {
+            "version_id": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+            "percentage": 100
+          }
+        ],
+        "afterVersions": [
+          {
+            "version_id": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+            "percentage": 100
+          }
+        ],
+        "unchanged": true
+      }
+    },
+    "allSettingsUnchanged": true,
+    "rollbackPreviewPassed": true,
+    "productionRollbackPerformed": false
+  },
+  "sourceContinuation": {
+    "completedAt": "2026-11-17T11:10:17.409Z",
+    "sourceAdvanced": true,
+    "proof": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-published-sources-01/source-index.json",
+      "pin": "60d832f0b70fdf92159ffc7728295bf9ce0694e1b90204e286617363f8e96eb8"
+    },
+    "result": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-source-result.json",
+      "pin": "5675453b9f44405da6329589a98a7446b44f66ee711250215ecf8f73bb6e64dc"
+    },
+    "kind": "nte_published_source_index",
+    "status": "published_sources_observed",
+    "sourceCount": 115,
+    "changedSources": [
+      "packages/data/games/nte/raw-characters.json"
+    ],
+    "other114SourceHashesUnchanged": true,
+    "preservedContent": [
+      "Hu Tao approved description",
+      "existing published guide increments",
+      "R122 Azur Promilia inline change",
+      "R124 Lvmeng Chinese inline change"
+    ],
+    "publicResponseCount": 350,
+    "standardReaderCompletedSuccessfully": true,
+    "cloudWrites": false,
+    "historicalBundleGap": {
+      "historyComplete": false,
+      "disclosedByCheckpoint": {
+        "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/source-checkpoint-01/source-index.json",
+        "pin": "ba24a1b4dab6d55de2ca06f08e12fcfb6b2b0cd3ce7a4de16faf31a19bec25f8"
+      },
+      "originalHistoryRewritten": false
+    },
+    "nextBatchSource": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-published-sources-01/source-index.json",
+      "pin": "60d832f0b70fdf92159ffc7728295bf9ce0694e1b90204e286617363f8e96eb8"
+    }
+  },
+  "boundaries": {
+    "materialMissingIDs": 27,
+    "materialsStatus": "held",
+    "zeroRelationApproved": false,
+    "qualifiedScope": "one existing NTE character text record",
+    "searchAndPlatformProjection": "existing projection fields retained; updated NTE content version observed",
+    "oldCustomAttempt09Used": false,
+    "syntheticCmsManifestUsed": false
+  },
+  "storage": {
+    "at": "2026-11-17T11:11:54.451531+00:00",
+    "availableBytes": 15315771392,
+    "availableGiB": 14.264,
+    "standardBuildBudgetBytes": 15032385536,
+    "reserveBytes": 8589934592,
+    "meetsStandardBuildBudget": true,
+    "additionalDeletion": false
+  },
+  "nextPhase": "Expand by content type from this source index; keep missing NTE materials and zero relation in separate source review. Do not replay completed Azur Promilia or Lvmeng releases.",
+  "documentationVerification": {
+    "tests": 45,
+    "passed": 45,
+    "failed": 0,
+    "skipped": 0,
+    "log": "qualification-02/final-documentation-checks.log",
+    "scope": "runbook, release scope and CI scope; documentation follow-up only"
+  }
+}

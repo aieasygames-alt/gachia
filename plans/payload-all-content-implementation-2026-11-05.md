@@ -1,14 +1,14 @@
 # Payload 全内容实施队列
 
-<!-- BEGIN R123 CURRENT -->
-## 当前实施状态（2026-11-15 R123）
+<!-- BEGIN R127 CURRENT -->
+## 当前实施状态（2026-11-17 R127/R126）
 
-R122 蓝色星原独立 Worker 的候选、恢复、预览和正式更新已完成；R121 来源继续作为下一批输入。随后定位并修复 Main sitemap 500：Main 构建不再加载已迁入异环 Worker 的角色、武器、攻略、磁盘和材料源，源码回归、Next/OpenNext 构建以及本地 Worker sitemap 验收通过，正式线上发布仍待完成。
+异环既有角色文本的正式单 Worker 更新闭环已完成。R127 复用 CMS 记录 1328（咲里 `sakiri`）完成草稿、审核、仅异环候选/恢复云预览、正式推广、公网验收和来源推进；正式版本 `6f509611-e4ef-4b6d-b41b-2768721ade2c`，deployment `4e5252be-20f0-4164-8861-235edfdf37c1`。本批正式内容发布只改变 `gachia-game-nte`，Main、Router、原神、蓝色星原、绿梦和 staging 保持；完整回执见 [R127](../reports/nte-r127-remediation-2026-11-17/EXECUTION.md)。
 
-绿梦中文既有角色文本的生产合同已补齐：`lvmeng` 仅允许一条既有 `playableCharacters` 记录的 `/name`、`/affiliation` 或 `/note`，固定 slug、顺序和数量，显式使用 Wrangler `production` 环境，并具备候选/恢复双版本与单 owner 推广入口。下一步是从 R121 `source-result.json` 接续真实 CMS 记录，完成一次草稿、审核、候选/恢复预览、绿梦正式推广和公网回执；在回执产生前不宣称绿梦生产闭环已完成。
+R126 已核准异环 `zero` canonical identity：官方证据确认 `zero` 由 `zero-male`、`zero-female` 两个展示变体组成，关系图和异环页面读取均展开到两个合法页面 ID；未知变体不模糊匹配。全量依赖复核仅发现一个未经批准的悬空角色 ID `iroi`，已从异环攻略关系及镜像删除并验证 dangling character references 为 0。27 个缺失材料继续 `held`，441 个原始引用已进入 [补充台账](../reports/material-type-expansion-2026-11-17-r126/nte-held-material-supplement.json)，`approvedTarget=null`、`publishable=false`、`releaseCompatible=false` 保持；没有猜测写入 `raw-materials.json`。
 
-当前完整来源入口保持 `reports/adsense-restoration-2026-11-14-r121/source-result.json`，完整索引 pin 为 `1cf398fc545237a5f2cea5866c4cef0491a7f05f4b3bd9fe45f4374bf2bb4b36`。不得从 R120 或 R122 重放已完成来源链；正式发布前重新读取所有 Worker 当前版本并确认只改变目标 owner。后续顺序为：绿梦中文单 Worker → 按内容类型扩展所有游戏 → 页面内联内容 → 新增、撤回和媒体替换。
-<!-- END R123 CURRENT -->
+当前来源直接接续 R127 的 `qualification-02/nte-source-result.json`，其来源索引 pin 为 `60d832f0b70fdf92159ffc7728295bf9ce0694e1b90204e286617363f8e96eb8`。下一项按内容类型扩展所有游戏；27 个材料继续等待权威身份、版本、阶段、数量、公开 URL 和消费者证据，证据闭合前不生成可发布材料 DTO、不执行材料 CMS 发布或生产 Worker 更新。蓝色星原、绿梦中文和 R127 异环既有文本已完成，不重放旧来源链。
+<!-- END R127 CURRENT -->
 
 <!-- BEGIN R121 HISTORY -->
 ## 当前完成状态（2026-11-14 R121）

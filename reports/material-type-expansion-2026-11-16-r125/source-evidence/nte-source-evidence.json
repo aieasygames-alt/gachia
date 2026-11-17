@@ -1,0 +1,468 @@
+{
+  "version": "nte-source-evidence-v3",
+  "generatedAt": "2026-11-16T03:32:27Z",
+  "game": "nte",
+  "sourcePaths": {
+    "materials": "packages/data/games/nte/raw-materials.json",
+    "relations": "packages/data/games/nte/raw-character-materials.json",
+    "characters": "packages/data/games/nte/raw-characters.json"
+  },
+  "observations": [
+    {
+      "sourceId": "official-nte-homepage",
+      "authority": "official-publisher",
+      "authoritySufficient": true,
+      "url": "https://nte.perfectworld.com/en/",
+      "httpStatus": 200,
+      "title": "NTE (Neverness to Everness) Official Website -Supernatural Urban Open World",
+      "sha256": "5be03bbe50d71e818af0f3c59835e656555da012cf532439dd0924e9b90e2f37",
+      "claims": [
+        "game-identity",
+        "publisher-identity"
+      ],
+      "limitation": "The public landing page does not expose the 27 missing material identities or their level quantities."
+    },
+    {
+      "sourceId": "official-nte-role-page",
+      "authority": "official-publisher",
+      "authoritySufficient": true,
+      "url": "https://nte.perfectworld.com/en/main.html?nav=2&role=20",
+      "httpStatus": 200,
+      "title": "NTE Official Website character navigator",
+      "sha256": "f570e004b5eb9ad3fff9750d5bafa913a7c4c92d62922c0205672f545f4581bc",
+      "evidenceFiles": [
+        "source-evidence/official-main.html",
+        "source-evidence/official-main-headers.txt"
+      ],
+      "claims": [
+        "canonical-zero-identity",
+        "zero-male-display-variant",
+        "zero-female-display-variant",
+        "shared-zero-role-asset-and-description"
+      ],
+      "observations": {
+        "zeroMaleTabs": 1,
+        "zeroFemaleTabs": 1,
+        "zeroRoleNameAssets": 2,
+        "zeroRoleDescriptions": 2,
+        "sharedRoleAsset": "role-name-zero.png",
+        "sharedRoleDescriptionClass": "role-dec-zero"
+      },
+      "limitation": "The official page establishes one canonical Zero profile with two gender display tabs, but does not expose the CMS relation schema or material quantities."
+    },
+    {
+      "sourceId": "official-nte-patch-1-5",
+      "authority": "official-publisher",
+      "authoritySufficient": true,
+      "url": "https://nte.perfectworld.com/en/article/news/gamenews/20261109/264948.html",
+      "httpStatus": 200,
+      "title": "Version 1.5 [Once Upon a Glitched Call] Patch Notes",
+      "sha256": "b58203b317f24daa37deef8b9d8cae1290fbfd3f2f8b7c5d46d2334e9552a239",
+      "evidenceFiles": [
+        "source-evidence/official-patch-1.5.html",
+        "source-evidence/official-patch-1.5-headers.txt"
+      ],
+      "claims": [
+        "current-version-1.5",
+        "official-existing-material-terminology"
+      ],
+      "observedTerms": [
+        "Elite Hunter Guide",
+        "Elite Hunter Guides",
+        "Anomaly Hunt Material Selection Box",
+        "Anomaly Pilgrimage Material Selection Box",
+        "Manhole Boss",
+        "Expansion Core",
+        "Chaotic Dye",
+        "Annulith",
+        "Fabricated Dice",
+        "Solid Dice",
+        "Fons"
+      ],
+      "limitation": "The patch notes anchor the current version and one existing material term, but do not enumerate the 27 missing IDs, their complete stage quantities, or CMS consumers."
+    },
+    {
+      "sourceId": "official-nte-static-resource-graph",
+      "authority": "official-publisher",
+      "authoritySufficient": true,
+      "url": "https://nte.perfectworld.com/en/main.html?nav=2&role=20",
+      "httpStatus": 200,
+      "evidenceFiles": [
+        "official-resource-fetch.json",
+        "official-material-source-audit.json",
+        "official-material-source-audit.md"
+      ],
+      "claims": [
+        "official-static-resource-graph-audited",
+        "official-material-schema-negative-result",
+        "official-material-id-negative-search"
+      ],
+      "observations": {
+        "externalScriptCount": 23,
+        "externalScriptHttp200Count": 23,
+        "captureModeCounts": {
+          "fetched": 16,
+          "reusedExistingBodyAfterTransientFetchFailure": 7
+        },
+        "structuredFieldCounts": {
+          "levelingMaterials": 0,
+          "skillMaterials": 0,
+          "ascensionMaterials": 0,
+          "levelRange": 0,
+          "materialId": 0
+        },
+        "heldMaterialIdHits": 0,
+        "heldMaterialNamePhraseHits": 0,
+        "nteDataDataRole": "news-carousel-links-only",
+        "newsdataObjRole": "news-index-only"
+      },
+      "limitation": "The official static graph does not expose the 27 missing material identities, versions, stages, quantities, or CMS consumers. This is a negative result for the static site only; client or in-game data remains untested."
+    },
+    {
+      "sourceId": "official-nte-client-manifest",
+      "authority": "official-publisher",
+      "authoritySufficient": true,
+      "url": "https://ntecdn1.perfectworld.com/hd/publish_PC/launcher/Version.ini",
+      "httpStatus": 200,
+      "evidenceFiles": [
+        "nte-client-manifest-audit.json",
+        "nte-client-manifest-audit.md",
+        "audit-nte-client-manifest.mjs",
+        "source-evidence/nte-client-version-primary.body",
+        "source-evidence/nte-client-version-backup.body",
+        "source-evidence/nte-client-all-files.body"
+      ],
+      "claims": [
+        "official-client-version",
+        "official-client-resource-manifest",
+        "material-bearing-resource-paths"
+      ],
+      "observations": {
+        "version": "1.0.8.1102",
+        "build": "b7e5b78c",
+        "productVersion": "1.0.8.1102_4",
+        "buildInfo": "2026-11-06 19:09:18",
+        "fileCount": 684,
+        "resourceZipStatusCounts": {
+          "200": 14
+        },
+        "primaryZipChecksumMatches": 7,
+        "runtimeSourceStatusCounts": {
+          "200": 3
+        },
+        "resourceContainer": "Qt resource container (ResData/3000001.dat)",
+        "materialTableReadable": false,
+        "resourceCandidates": [
+          "/FileList.dat",
+          "/ResData/3000001.dat",
+          "/ResData/Default.dat",
+          "/ResFilesM/3000001/PatcherConfig/InstallConfig.json",
+          "/ResFilesM/3000001/PatcherConfig/PatcherCheckConfig.json",
+          "/ResFilesM/3000001/PatcherConfig/PatcherConfig.json",
+          "/ResFilesM/3000001/PatcherConfig/PatcherPath.json"
+        ],
+        "directProbeStatusCounts": {
+          "403": 34
+        },
+        "updaterConfirmsAllFilesFields": true
+      },
+      "limitation": "The official launcher manifest and .zip objects are readable, and all seven primary CDN ZipChecksum values match. The raw uncompressed paths return AccessDenied, while ResData/3000001.dat is a Qt resource container rather than a directly readable material table. Material identity, version, stage, quantity and CMS consumer ownership remain unproven until that container or an equivalent in-game table is decoded."
+    },
+    {
+      "sourceId": "game8-development-material-index",
+      "authority": "third-party-guide",
+      "authoritySufficient": false,
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/598408",
+      "httpStatus": 200,
+      "title": "List of Development Materials | Neverness to Everness (NTE)｜Game8",
+      "lastUpdated": "November 11, 2026 08:19 AM",
+      "sha256": "d07d4d7d0bf07251991d9deaf812d40cb2245706483c9b25350f72a9f3205185",
+      "claims": [
+        "material-names",
+        "development-material-category",
+        "current-version-banner"
+      ],
+      "observedMaterialCount": 86,
+      "observedMaterialNames": [
+        "Hollowflower Seeds",
+        "Eternal Memory",
+        "Good Boy Stamp",
+        "Dress Sleeves of Vanity",
+        "Heterogeneous Unit",
+        "Special Cold Dessert",
+        "Liquid Dream Can",
+        "Harmony",
+        "Golden Appleseed",
+        "The Second Self",
+        "Heart-Racing Night",
+        "Black Hat",
+        "White Rose",
+        "The Olive Branch",
+        "Tear of the Sea",
+        "Colorful Ticket Stub",
+        "Transcendent Delusions",
+        "Confessional Flower Seed",
+        "Nest Guard Fragment",
+        "Distorted Numeral",
+        "Water Moon Pick",
+        "Chaos Silhouette",
+        "Paradoxical Whispers",
+        "Charging Knight Spark Plug",
+        "Manhole Boss",
+        "Chaotic Dye",
+        "Elite Hunter Guide",
+        "Expansion Core",
+        "Master Drama Core",
+        "Plain Cold Dessert",
+        "Liquid Dream Travel Kit",
+        "Versey",
+        "Silver Appleseed",
+        "Suspended Whispers",
+        "Resonance of Faith",
+        "Known Weariness",
+        "CO",
+        "Manhole Crook",
+        "Yearning Delusions",
+        "Unsolved Numeral",
+        "Blurred Silhouette",
+        "Obscure Whispers",
+        "Colorless Dye",
+        "Senior Hunter Guide",
+        "Beginner Drama Core",
+        "Flavorless Cold Dessert",
+        "Liquid Dream Trial Kit",
+        "Beaty",
+        "Iron Appleseed",
+        "Hesitation of the Waves",
+        "Synchronicity of Thought",
+        "First Expectations",
+        "FNG",
+        "Light Dye",
+        "Rising Hunter Guide",
+        "Suspended Delusions",
+        "Blurred Numeral",
+        "Fading Silhouette",
+        "Lost Whispers",
+        "Manhole Thug",
+        "Exe",
+        "Elyms",
+        "Akane Rin",
+        "Blackbird",
+        "Linko",
+        "Zankou",
+        "Iroi",
+        "Shinku",
+        "Chaos",
+        "Lacrimosa",
+        "Hotori",
+        "Nanally",
+        "Fadia",
+        "Baicang",
+        "Sakiri",
+        "Jiuyuan",
+        "Hathor",
+        "Daffodill",
+        "Chiz",
+        "Skia",
+        "Aurelia",
+        "Edgar",
+        "Haniel",
+        "Adler",
+        "Mint",
+        "Esper Zero"
+      ],
+      "limitation": "Community guide evidence can identify a candidate and current terminology, but cannot approve a production relation by itself."
+    },
+    {
+      "sourceId": "game8-development-material-index-audit",
+      "authority": "third-party-guide",
+      "authoritySufficient": false,
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/598408",
+      "httpStatus": 200,
+      "evidenceFiles": [
+        "game8-material-index-audit.json",
+        "audit-game8-material-index.mjs"
+      ],
+      "claims": [
+        "raw-material-exact-page-coverage",
+        "held-id-negative-search",
+        "ambiguous-lexical-candidate-count"
+      ],
+      "observations": {
+        "rawMaterialCount": 57,
+        "exactGame8Pages": 43,
+        "rawMaterialsWithoutExactPage": 14,
+        "heldIds": 27,
+        "heldIdsWithExactPage": 0,
+        "heldIdsWithAmbiguousLexicalCandidates": 14,
+        "heldIdsWithoutLexicalCandidate": 13
+      },
+      "limitation": "The index has no exact page for any held ID. Lexical matches such as Hunter Guide, Boss, Core, Fragment and Spark are ambiguous and do not establish identity, version, stage, quantity or CMS consumer ownership."
+    },
+    {
+      "sourceId": "game8-appraiser-gender-switch",
+      "authority": "third-party-guide",
+      "authoritySufficient": false,
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/597750",
+      "httpStatus": 200,
+      "title": "How to Switch the Appraiser&#39;s Gender | Neverness to Everness (NTE)｜Game8",
+      "lastUpdated": "May 13, 2026 09:06 PM",
+      "sha256": "c1dbdd99961fa0d05c1e796ac7525fc3ae3c0580f8d314f3f1d4a267fc204759",
+      "claims": [
+        "zero-is-appraiser",
+        "gender-switches-existing-player-character"
+      ],
+      "limitation": "This is semantic evidence for a canonical variant group, not official schema evidence for a CMS ID."
+    },
+    {
+      "sourceId": "game8-character-material-pages",
+      "authority": "third-party-guide",
+      "authoritySufficient": false,
+      "url": "https://game8.co/games/Neverness-to-Everness/archives/596559",
+      "httpStatus": 200,
+      "evidenceFiles": [
+        "game8-character-fetch.json",
+        "fetch-game8-character-materials.mjs",
+        "game8-character-material-audit.json",
+        "audit-game8-character-materials.mjs"
+      ],
+      "claims": [
+        "character-consumer-stage-observations",
+        "character-consumer-quantity-observations",
+        "public-material-display-names"
+      ],
+      "observations": {
+        "rawCharacterCount": 21,
+        "pagesFetched": 17,
+        "validCharacterMaterialPages": 16,
+        "pagesWithoutCapturedArchive": [
+          "nelly",
+          "merula",
+          "alphard",
+          "lilina"
+        ],
+        "wrongPageURLs": [
+          "taygedo"
+        ],
+        "pagesWithStageLabelMismatch": 16,
+        "observedMaterialNameCount": 20,
+        "observedNamesWithExactRawMaterialMatch": 20,
+        "exampleObservedNames": [
+          "Fading Silhouette",
+          "A Page from Delusion's Shore",
+          "Blurred Silhouette",
+          "Chaos Silhouette",
+          "Beetle Coin"
+        ]
+      },
+      "limitation": "The pages are third-party consumer observations. Their six Lv.20→Lv.80 rows and display names do not safely map to the raw 1-10…51-60 IDs, do not expose raw skillMaterials, and cannot prove authoritative identity, version, all quantities or CMS ownership. The evidence keeps the source review held."
+    }
+  ],
+  "materialChecks": {
+    "missingIds": [
+      "advanced-hunter-guide",
+      "anima-crystal",
+      "anima-fragment",
+      "basic-hunter-guide",
+      "boss-anima",
+      "boss-chaos",
+      "boss-cosmos",
+      "boss-incantation",
+      "boss-lakshana",
+      "boss-psyche",
+      "chaos-core",
+      "chaos-essence",
+      "cosmos-spark",
+      "cosmos-storm",
+      "credits",
+      "expert-permit",
+      "incantation-crystal",
+      "incantation-shard",
+      "lakshana-dust",
+      "lakshana-signet",
+      "manual-attack",
+      "manual-defense",
+      "manual-support",
+      "master-permit",
+      "pioneer-permit",
+      "psyche-essence",
+      "psyche-fragment"
+    ],
+    "exactGame8NameMatches": [],
+    "candidateAliases": [
+      {
+        "rawId": "basic-hunter-guide",
+        "observedName": "Rising Hunter Guide",
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/598748",
+        "httpStatus": 200,
+        "sha256": "1207985a2d6ac5bb86b5c86ea2746da973a899f08098d4a57d8e9baa8b3ae4a5",
+        "approvedTarget": null
+      },
+      {
+        "rawId": "advanced-hunter-guide",
+        "observedName": "Senior Hunter Guide",
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/598784",
+        "httpStatus": 200,
+        "sha256": "06e8d64d4bf511725589bae4d103356c1f16ae6569b499a5334ad99d9df398c7",
+        "approvedTarget": null
+      },
+      {
+        "rawId": "elite-hunter-guide",
+        "observedName": "Elite Hunter Guide",
+        "url": "https://game8.co/games/Neverness-to-Everness/archives/598786",
+        "httpStatus": 200,
+        "sha256": "0c93e029103b465b49f0d2c777d9d126fe79c4c50a121894c4eda9f8ad794adc",
+        "approvedTarget": null
+      }
+    ],
+    "game8IndexAudit": {
+      "report": "game8-material-index-audit.json",
+      "exactGame8PagesForHeldIds": 0,
+      "ambiguousLexicalCandidatesForHeldIds": 14,
+      "heldIdsWithoutLexicalCandidate": 13,
+      "rawMaterialsWithExactGame8Page": 43,
+      "rawMaterialsWithoutExactGame8Page": 14
+    },
+    "game8CharacterAudit": {
+      "report": "game8-character-material-audit.json",
+      "pagesFetched": 17,
+      "validCharacterMaterialPages": 16,
+      "pagesWithoutCapturedArchive": [
+        "nelly",
+        "merula",
+        "alphard",
+        "lilina"
+      ],
+      "wrongPageURLs": [
+        "taygedo"
+      ],
+      "pagesWithStageLabelMismatch": 16,
+      "observedNamesWithExactRawMaterialMatch": 20,
+      "rawMutationApproved": false
+    },
+    "result": "third-party-candidates-only"
+  },
+  "zeroCheck": {
+    "rawCharacterId": "zero",
+    "repositoryVariants": [
+      "zero-male",
+      "zero-female"
+    ],
+    "evidenceSourceId": "official-nte-role-page",
+    "supportingSourceIds": [
+      "game8-appraiser-gender-switch"
+    ],
+    "observedMeaning": "The official role navigator presents one Zero identity with separate zero-male and zero-female display tabs that share the same role asset and description.",
+    "canonicalIdentityConfirmed": true,
+    "variantModel": "canonical zero identity plus male/female display variants",
+    "approvedTarget": null,
+    "requiredAction": "Keep raw relations held until a source-bound migration explicitly maps zero to the canonical identity and verifies every variant consumer."
+  },
+  "decision": {
+    "hold": true,
+    "publishable": false,
+    "releaseCompatible": false,
+    "sourceBoundPlanGenerated": false,
+    "reason": "External evidence is useful for review but does not satisfy authoritative identity, version, stage, quantity and consumer proof for all 27 IDs."
+  }
+}
