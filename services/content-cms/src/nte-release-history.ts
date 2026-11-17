@@ -121,6 +121,7 @@ export async function readCompletedNteRelease(proof: Proof, depth = 0): Promise<
   else assertTopology(evidence.value.baseline, rows[0].baseline, {
     gachia: activeVersion(rows[0].baseline, 'gachia'),
     'gachia-game-azur-promilia': activeVersion(rows[0].baseline, 'gachia-game-azur-promilia'),
+    'gachia-game-lvmeng': activeVersion(rows[0].baseline, 'gachia-game-lvmeng'),
   })
   assert.deepEqual(rows[0].owners, evidence.value.owners)
   let at = -Infinity
@@ -218,6 +219,7 @@ export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> 
     ...completed.versions,
     gachia: activeVersion(baseline, 'gachia'),
     'gachia-game-azur-promilia': activeVersion(baseline, 'gachia-game-azur-promilia'),
+    'gachia-game-lvmeng': activeVersion(baseline, 'gachia-game-lvmeng'),
   })
   assert.deepEqual(Object.keys(value.owners).sort(), Object.keys(previous.owners).sort())
   for (const [owner, row] of Object.entries(value.owners) as [string, any][]) {
