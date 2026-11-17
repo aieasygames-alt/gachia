@@ -21,6 +21,7 @@ import { migrationUploadResponse } from '../../../scripts/genshin-migration-tran
 import { unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
 import { readUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
 import { recheckNteFailedHTTP } from '../../../scripts/nte-release-http.mjs'
+import { readNteSourceCheckpoint } from './nte-source-checkpoint'
 
 type Proof = { path: string; pin: string }
 const treePin = (directory: string) => digest(migrationJSON(artifactFiles(directory)))
@@ -203,6 +204,7 @@ async function readCompletedNteContinuation(proof: Proof, depth: number): Promis
 }
 export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
+  if (value.kind === 'nte_reconstructed_source_checkpoint') return readNteSourceCheckpoint(proof)
   if (value.kind === 'nte_adsense_infrastructure_source_index') return readAdsenseInfrastructureSource(proof, readNteSourceIndex, depth)
   if (!value.kind.startsWith('nte_')) return readGenshinIndependentSourceIndex(proof, depth + 1)
   assert.equal(proof.path, path.join(directory, 'source-index.json')); assert.equal(value.kind, 'nte_published_source_index')

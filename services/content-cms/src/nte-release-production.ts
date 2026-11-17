@@ -31,6 +31,7 @@ import { captureUnifiedExecutorSource } from './unified-executor-source'
 import { baselineDirectory } from './inventory-baseline'
 import { unifiedPlan } from './unified-plan'
 import { readUnifiedSources } from './unified-sources'
+import { verifyNteHTTP } from '../../../scripts/nte-release-http.mjs'
 
 type Proof = { path: string; pin: string }
 type Request = { schemaVersion: 1; kind: 'nte_release_request'; bundle: Proof; executorRunID: number; previewProxy?: string; publicProxy?: string }
@@ -105,12 +106,22 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
   // R121 is the immutable content source. Main and Azur were independently
   // advanced afterward; preserve those known versions while protecting every
   // other service and topology field from drift during this NTE-only release.
-  assertTopology(evidence.sources.baseline, before, {
+  assertTopology(evidence.sources.baseline, before, evidence.sources.value.kind === 'nte_reconstructed_source_checkpoint' ? {} : {
     gachia: activeVersion(before, 'gachia'),
     'gachia-game-azur-promilia': activeVersion(before, 'gachia-game-azur-promilia'),
   })
   for (const row of Object.values(evidence.sources.owners) as any[]) assertModuleVersionIdentity(row.version, await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead }))
   assertModuleVersionIdentity(evidence.sources.router.version, await readMigrationRouterVersion({ versionId: evidence.sources.router.versionId, token: tokens.cloudToken, request: unifiedProductionRead }))
+  if (!evidence.migration) {
+    const publicNetwork = request.publicProxy ? await createGenshinPublicNetwork(request.publicProxy) : undefined
+    const preflight = mkdtempSync(path.join(evidence.built.directory, '.nte-public-preflight-'))
+    try {
+      // Capture the current recovery graph before the first upload or traffic
+      // write. A changed protected public file must fail here, not after promote.
+      await verifyNteHTTP({ origin: 'https://gachia.com', references: migrationPinned(evidence.value.recoveryReferences),
+        directory: path.join(preflight, 'public'), request: publicNetwork?.request ?? unifiedProductionRead })
+    } finally { await publicNetwork?.close() }
+  }
   assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
   const releaseKey = nteReleaseKey(request, executor.executorCI, evidence.migration), policy = evidence.migration ? NTE_MIGRATION_POLICY : NTE_INDEPENDENT_POLICY
   const identity = { policy, releaseKey, sourceCommit: executor.executorCommit,

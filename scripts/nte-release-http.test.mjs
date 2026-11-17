@@ -3,7 +3,7 @@ import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from '
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { captureNteHTTP, nteMissingPageIdentity, legacyMainMissingPageMatches, recheckNteFailedHTTP, recheckNteHTTP, recheckNteReferences, verifyNteHTTP } from './nte-release-http.mjs';
+import { captureNteHTTP, nteMissingPageIdentity, legacyMainMissingPageMatches, recheckNteFailedHTTP, recheckNteHTTP, recheckNteReferences, verifyNteHTTP, NTE_HTTP_POLICY } from './nte-release-http.mjs';
 import { digest } from './desktop-release-assets.mjs';
 
 function fixture(t) {
@@ -16,6 +16,20 @@ function fixture(t) {
   const requests = [{ path: '/data/nte/raw-characters.json', status: 200 }, { path: '/en/nte/characters/nanally/', status: 200, contains: ['Approved published text'] }];
   return { directory, values, request, requests, html };
 }
+
+test('HTTP verification exposes progress and bounded cancellation without retrying failed reads', async t => {
+  const f = fixture(t), refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests: f.requests, directory: join(f.directory, 'local'), request: f.request })
+  const directory = join(f.directory, 'bounded'), signals = []; let calls = 0
+  await assert.rejects(verifyNteHTTP({ origin: 'https://gachia.com', references: refs.references, directory, request: async (url, options) => {
+    calls++; signals.push(options.signal); throw Error('network stopped')
+  } }), /network stopped/)
+  assert(calls <= NTE_HTTP_POLICY.concurrency && calls <= refs.references.length)
+  assert(signals.every(signal => signal instanceof AbortSignal))
+  const progress = JSON.parse(readFileSync(join(directory, 'progress.json')))
+  assert.equal(progress.stage, 'failed'); assert.equal(progress.total, refs.references.length); assert.equal(progress.completed, 0)
+  assert.equal(progress.policy.retries, 0); assert.equal(progress.policy.requestTimeoutMS, 30000)
+  assert(progress.policy.batchTimeoutMS < 900000)
+})
 
 test('saved responses reopen and JSON key order does not change content identity', async t => {
   const f = fixture(t), refs = await captureNteHTTP({ origin: 'http://localhost:8787', requests: f.requests, directory: join(f.directory, 'local'), request: f.request,

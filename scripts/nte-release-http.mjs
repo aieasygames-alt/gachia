@@ -13,6 +13,7 @@ const canonical = value => JSON.stringify(Array.isArray(value) ? value.map(row =
 const policy = value => (value ?? '').toLowerCase().split(',').map(part => part.trim()).filter(Boolean).sort();
 const readBody = response => response.status === 404 && response.body === null ? Buffer.alloc(0) : boundedBody(response);
 const MISSING_PAGE_POLICY = 'next-nte-not-found-route-echo-v1';
+export const NTE_HTTP_POLICY = Object.freeze({ concurrency: 8, requestTimeoutMS: 30000, batchTimeoutMS: 480000, retries: 0 });
 const LEGACY_MAIN_MISSING_PATHS = Object.freeze([
   ...['artifacts', 'character-materials', 'characters', 'guides', 'materials', 'redeem-codes', 'regions', 'weapons'].map(name => `/data/genshin/raw-${name}.json`),
   ...['anomalies', 'builds', 'character-materials', 'characters', 'disk-sets', 'gacha-system', 'guides', 'image-sources', 'materials', 'redeem-codes', 'regions', 'weapons'].map(name => `/data/nte/raw-${name}.json`),
@@ -171,16 +172,30 @@ export function recheckNteReferences(proof) {
 
 export async function verifyNteHTTP({ origin, references, directory, preview = false, request = fetch, owner = 'nte' }) {
   mkdirSync(directory, { mode: 0o700 }); const observations = [], pages = [];
+  const startedAt = Date.now(), deadline = AbortSignal.timeout(NTE_HTTP_POLICY.batchTimeoutMS);
+  let completed = 0, lastProgressAt = 0;
+  const progress = stage => {
+    const value = { stage, origin, preview, completed, total: references.length, startedAt, elapsedMS: Date.now() - startedAt, policy: NTE_HTTP_POLICY };
+    writeFileSync(join(directory, 'progress.json'), JSON.stringify(value, null, 2) + '\n', { mode: 0o600 });
+    console.log(JSON.stringify({ kind: 'nte_http_progress', ...value })); lastProgressAt = Date.now();
+  };
+  progress('reading');
   try {
     await sampleReadOnly(references, async (reference, index) => {
+      deadline.throwIfAborted();
       const response = await request(unifiedPreviewPath(reference.path, origin), { method: 'GET', credentials: 'omit', redirect: 'error',
-        headers: { 'accept-language': reference.path.match(/^\/(zh|en|ja)(?:\/|$)/)?.[1] ?? 'zh', connection: 'close' }, signal: AbortSignal.timeout(30000) });
+        headers: { 'accept-language': reference.path.match(/^\/(zh|en|ja)(?:\/|$)/)?.[1] ?? 'zh', connection: 'close' },
+        signal: AbortSignal.any([deadline, AbortSignal.timeout(NTE_HTTP_POLICY.requestTimeoutMS)]) });
       const body = await readBody(response), bodyFile = `${index}.body`;
+      deadline.throwIfAborted();
       writeFileSync(join(directory, bodyFile), body, { flag: 'wx', mode: 0o600 });
       observations[index] = { path: reference.path, status: response.status, headers: Object.fromEntries(response.headers), bytes: body.length, sha256: digest(body), bodyFile };
       validate(response, body, reference, preview);
       if (reference.fingerprint) pages.push({ index, html: body.toString(), status: response.status });
-    }, 8);
+      completed++;
+      if (Date.now() - lastProgressAt >= 10000 || completed === references.length) progress('reading');
+    }, NTE_HTTP_POLICY.concurrency);
+    progress('checking_rendered_pages');
     pages.sort((a, b) => a.index - b.index);
     if (pages.length) unifiedPageFingerprints(pages, 'streaming-v2').forEach((fingerprint, index) => assertMigrationFingerprint(fingerprint,
       references[pages[index].index].fingerprint, `NTE rendered content/metadata/links/media changed: ${references[pages[index].index].path}`, MIGRATION_FINGERPRINT_POLICY));
@@ -188,8 +203,10 @@ export async function verifyNteHTTP({ origin, references, directory, preview = f
       parserPin: unifiedHTMLParserPin('streaming-v2'), fingerprintPolicy: MIGRATION_FINGERPRINT_POLICY, observations };
     const proof = migrationSave(directory, 'result.json', value);
     recheckNteHTTP({ proof, origin, references, preview });
+    assert(Date.now() - startedAt < NTE_HTTP_POLICY.batchTimeoutMS, 'NTE HTTP verification exceeded its total duration budget');
+    progress('passed');
     return { status: 'passed', evidenceSHA256: proof.pin, ...(preview ? { observationMode: 'cloud_exact_version' } : {}) };
-  } catch (error) { migrationSave(directory, 'failure.json', { error: error.message, observations: observations.filter(Boolean), automaticRetry: false }); throw error; }
+  } catch (error) { progress('failed'); migrationSave(directory, 'failure.json', { error: error.message, policy: NTE_HTTP_POLICY, observations: observations.filter(Boolean), automaticRetry: false }); throw error; }
 }
 
 // Reopen every saved response, including its headers and parsed page structure.
