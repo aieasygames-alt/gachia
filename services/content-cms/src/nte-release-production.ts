@@ -105,7 +105,7 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
   const before = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)
   // Reconstructed checkpoints bind every current deployment exactly. Legacy
   // R121 sources retain their separately published Main/Azur/Lvmeng handling.
-  assertTopology(evidence.sources.baseline, before, evidence.sources.value.kind === 'nte_reconstructed_source_checkpoint' ? {} : {
+  assertTopology(evidence.sources.baseline, before, evidence.sources.allOwnersCurrent || evidence.sources.value.kind === 'nte_reconstructed_source_checkpoint' ? {} : {
     gachia: activeVersion(before, 'gachia'),
     'gachia-game-azur-promilia': activeVersion(before, 'gachia-game-azur-promilia'),
     'gachia-game-lvmeng': activeVersion(before, 'gachia-game-lvmeng'),

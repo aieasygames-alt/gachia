@@ -133,7 +133,7 @@ export async function readNteSourceCheckpoint(proof: Proof): Promise<any> {
   assert.deepEqual(migrationPinned(value.observation.before), value.baseline)
   assertTopology(value.baseline, migrationPinned(value.observation.after)); assertCheckpointVersions(value.baseline, value.owners, value.router)
   assert(Number.isSafeInteger(value.observation.observedAt) && value.observation.observedAt <= Date.now())
-  return { value, owners: value.owners, router: value.router, baseline: value.baseline, sources, workspace: value.workspace,
+  return { value, owners: value.owners, router: value.router, baseline: value.baseline, sources, workspace: value.workspace, allOwnersCurrent: true,
     routerCode: opened.routerCode, ancestors: contract.ancestors, originalPublication: contract.originalPublication, originalSourceIndex: contract.originalSourceIndex }
 }
 

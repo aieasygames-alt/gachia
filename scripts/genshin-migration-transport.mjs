@@ -54,7 +54,7 @@ export function migrationRouterDeploymentWriter({ releaseKey, versionId, token, 
 /** @param {{evidence:any, releaseKey:string, token:string, directory:string, previewRequest?:any, publicRequest?:any, knownRouterRecovery?:{versionId:string, releaseKey:string}, knownMainRecovery?:{versionId:string, releaseKey:string}}} input */
 export function genshinMigrationTransport({ evidence, releaseKey, token, directory, previewRequest = unifiedProductionRead, publicRequest = unifiedProductionRead, knownRouterRecovery, knownMainRecovery }) {
   const { value, expected, bases } = evidence, uploads = new Map(), writers = new Map();
-  const nte = ['nte_migration_bundle', 'nte_independent_bundle'].includes(value.kind);
+  const nte = ['nte_migration_bundle', 'nte_independent_bundle', 'nte_main_content_restoration_bundle'].includes(value.kind);
   if (knownRouterRecovery) {
     assert.equal(value.kind, 'nte_migration_bundle');
     assert(/^[a-f0-9]{64}$/.test(knownRouterRecovery.releaseKey));

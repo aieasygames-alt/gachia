@@ -118,7 +118,7 @@ export async function readCompletedNteRelease(proof: Proof, depth = 0): Promise<
   const phases = ['baseline', ...order.flatMap(() => ['upload_intent', 'upload_returned', 'preview_accepted', 'upload_intent', 'upload_returned', 'preview_accepted', 'deployment_intent', 'deployed', ...(migration ? ['step_accepted'] : [])]), 'production_accepted']
   assert.deepEqual(rows.map((row: any) => row.phase), phases)
   if (migration) assert.deepEqual(rows[0].baseline, evidence.value.baseline)
-  else assertTopology(evidence.value.baseline, rows[0].baseline, {
+  else assertTopology(evidence.value.baseline, rows[0].baseline, evidence.sources.allOwnersCurrent ? {} : {
     gachia: activeVersion(rows[0].baseline, 'gachia'),
     'gachia-game-azur-promilia': activeVersion(rows[0].baseline, 'gachia-game-azur-promilia'),
     'gachia-game-lvmeng': activeVersion(rows[0].baseline, 'gachia-game-lvmeng'),
@@ -206,6 +206,7 @@ async function readCompletedNteContinuation(proof: Proof, depth: number): Promis
 export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
   if (value.kind === 'nte_reconstructed_source_checkpoint') return readNteSourceCheckpoint(proof)
+  if (value.kind === 'nte_restored_main_source_index') return (await import('./main-content-restoration')).readRestoredMainSources(proof)
   if (value.kind === 'nte_adsense_infrastructure_source_index') return readAdsenseInfrastructureSource(proof, readNteSourceIndex, depth)
   if (!value.kind.startsWith('nte_')) return readGenshinIndependentSourceIndex(proof, depth + 1)
   assert.equal(proof.path, path.join(directory, 'source-index.json')); assert.equal(value.kind, 'nte_published_source_index')
@@ -215,7 +216,7 @@ export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> 
   assert.equal(value.sourceCommit, e.value.sourceCommit); assert.deepEqual(migrationPinned(value.active), e.candidateSources)
   const baseline = value.baseline, order = e.migration ? NTE_MIGRATION_ORDER : ['nte']
   if (e.migration) assertNteMigrationTopology(previous.baseline, baseline, { configured: [...order], deployed: Object.fromEntries(order.map((owner: string) => [owner, completed.accepted[owner].candidate.versionId])) })
-  else assertTopology(previous.baseline, baseline, {
+  else assertTopology(previous.baseline, baseline, previous.allOwnersCurrent ? completed.versions : {
     ...completed.versions,
     gachia: activeVersion(baseline, 'gachia'),
     'gachia-game-azur-promilia': activeVersion(baseline, 'gachia-game-azur-promilia'),
@@ -231,7 +232,7 @@ export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> 
       assert.equal(baseline.services[row.service].id, completed.deployments[owner].deploymentId)
     }
     await readUnifiedSourceOwner(row)
-    if (e.migration || ['main', 'azur-promilia'].includes(owner)) assert.equal(activeVersion(baseline, row.service), row.versionId)
+    if (previous.allOwnersCurrent || e.migration || ['main', 'azur-promilia'].includes(owner)) assert.equal(activeVersion(baseline, row.service), row.versionId)
   }
   if (e.migration) {
     assert.equal(value.router.versionId, completed.accepted.router.candidate.versionId); assert.deepEqual(value.router.moduleProof, completed.accepted.router.candidate.moduleProof)
@@ -240,6 +241,7 @@ export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> 
   assert.deepEqual(migrationPinned(value.observation.after), baseline); assertTopology(migrationPinned(value.observation.before), baseline)
   recheckNteHTTP({ proof: { path: path.join(directory, 'public/result.json'), pin: value.observation.publicAcceptance.evidenceSHA256 }, origin: 'https://gachia.com', references: migrationPinned(e.value.finalReferences) })
   return { value, owners: value.owners, router: value.router, baseline, sources: e.candidateSources, workspace: e.workspace,
+    allOwnersCurrent: previous.allOwnersCurrent === true,
     routerCode: e.migration ? completed.modules.router.candidate.code : previous.routerCode,
     ancestors: [...previous.ancestors, completed.value.executorCI, ...(completed.value.continuationExecutorCI ? [completed.value.continuationExecutorCI] : []), ...(completed.value.finalizationExecutorCI ? [completed.value.finalizationExecutorCI] : [])], originalPublication: previous.originalPublication, originalSourceIndex: previous.originalSourceIndex }
 }

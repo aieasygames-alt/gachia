@@ -7,17 +7,18 @@ import { SERVICES } from './desktop-cloud-release.mjs';
 import { executeGenshinIndependentRelease, assertGenshinIndependentIdentity, GENSHIN_INDEPENDENT_POLICY,
   executeNteIndependentRelease, assertNteIndependentIdentity, NTE_INDEPENDENT_POLICY,
   executeAzurPromiliaIndependentRelease, assertAzurPromiliaIndependentIdentity, AZUR_PROMILIA_INDEPENDENT_POLICY,
-  executeLvmengIndependentRelease, assertLvmengIndependentIdentity, LVMENG_INDEPENDENT_POLICY } from './genshin-independent-release.mjs';
+  executeLvmengIndependentRelease, assertLvmengIndependentIdentity, LVMENG_INDEPENDENT_POLICY,
+  executeMainContentRestoration, MAIN_CONTENT_RESTORATION_POLICY } from './genshin-independent-release.mjs';
 const sha = char => char.repeat(64), uuid = n => `00000000-0000-4000-8000-${String(n).padStart(12, '0')}`, service = 'gachia-game-genshin';
 function fixture(t, game = 'genshin') {
-  const service = `gachia-game-${game}`;
+  const service = game === 'main' ? 'gachia' : `gachia-game-${game}`;
   const run = mkdtempSync(join(tmpdir(), 'genshin-independent-')); t.after(() => rmSync(run, { recursive: true, force: true }));
   const baseline = { services: {}, bindings: {}, settings: {}, subdomains: {}, scripts: [...SERVICES], routes: [{ pattern: 'gachia.com/*', script: 'gachia-router' }], domains: [] };
   for (const [i, name] of SERVICES.entries()) {
     baseline.services[name] = { id: uuid(i + 1), versions: [{ version_id: uuid(i + 20), percentage: 100 }] };
     baseline.bindings[name] = []; baseline.settings[name] = { bindings: [], tags: [] }; baseline.subdomains[name] = { enabled: true, previews_enabled: true };
   }
-  const value = { policy: game === 'nte' ? NTE_INDEPENDENT_POLICY : game === 'azur-promilia' ? AZUR_PROMILIA_INDEPENDENT_POLICY : game === 'lvmeng' ? LVMENG_INDEPENDENT_POLICY : GENSHIN_INDEPENDENT_POLICY, releaseKey: sha('a'), bundlePin: sha('b'), reviewPin: sha('c'), sourceCommit: 'd'.repeat(40),
+  const value = { policy: game === 'main' ? MAIN_CONTENT_RESTORATION_POLICY : game === 'nte' ? NTE_INDEPENDENT_POLICY : game === 'azur-promilia' ? AZUR_PROMILIA_INDEPENDENT_POLICY : game === 'lvmeng' ? LVMENG_INDEPENDENT_POLICY : GENSHIN_INDEPENDENT_POLICY, releaseKey: sha('a'), bundlePin: sha('b'), reviewPin: sha('c'), sourceCommit: 'd'.repeat(40),
     executorCI: { commit: 'd'.repeat(40), runID: 1, status: 'full_exact_ci_passed' }, baseline, observedAt: Date.now(),
     owners: { [game]: { service, sourceVersionId: baseline.services[service].versions[0].version_id, sourceIdentityPin: sha('e'),
       ...Object.fromEntries(['candidate', 'recovery'].map(role => [role, { artifactPin: sha('1'), configPin: sha('2'), moduleSHA256: sha('3'), referencesPin: sha('4') }])) } } };
@@ -40,6 +41,15 @@ test('only Genshin is uploaded and deployed; Main, Router and all other identiti
   for (const name of SERVICES.filter(name => name !== service)) assert.deepEqual(f.cloud.services[name], f.value.baseline.services[name]);
   await assert.rejects(executeGenshinIndependentRelease(f), /EEXIST/);
 });
+test('preserved-content restoration changes Main alone and retains the same no-retry recovery protocol', async t => {
+  const f = fixture(t, 'main'), result = await executeMainContentRestoration(f)
+  assert.equal(result.status, 'production_accepted'); assert.deepEqual(result.versions, { gachia: uuid(101) })
+  assert.deepEqual(f.calls, ['upload:main:recovery', 'preview:recovery', 'upload:main:candidate', 'preview:candidate', 'promote:main', 'public'])
+  for (const name of SERVICES.filter(name => name !== 'gachia')) assert.deepEqual(f.cloud.services[name], f.value.baseline.services[name])
+  const failed = fixture(t, 'main'); failed.state.fail = 'preview:candidate'
+  await assert.rejects(executeMainContentRestoration(failed), /preview rejected/)
+  assert(!failed.calls.some(call => call.startsWith('promote:')))
+})
 for (const failure of ['upload:recovery', 'upload:candidate', 'preview:recovery', 'preview:candidate', 'promote', 'public']) test(`${failure} stops with no retry or automatic rollback`, async t => {
   const f = fixture(t); f.state.fail = failure; await assert.rejects(executeGenshinIndependentRelease(f));
   assert(f.calls.filter(call => call.startsWith('promote')).length <= 1);
