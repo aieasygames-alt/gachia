@@ -1,1 +1,1 @@
-export const baselineDirectory = 'services/content-cms/inventory/2026-11-15-r129'
+export const baselineDirectory = 'services/content-cms/inventory/2026-11-17-r130'

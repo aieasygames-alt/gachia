@@ -10,6 +10,7 @@ import rawAnomalies from '@gachia/data/games/nte/raw-anomalies.json';
 import rawRegions from '@gachia/data/games/nte/raw-regions.json';
 import rawBuilds from '@gachia/data/games/nte/raw-builds.json';
 import rawCharacterMaterials from '@gachia/data/games/nte/raw-character-materials.json';
+import { nteCharacterMaterialRelationId } from '@gachia/data/games/nte/character-identity';
 import type { SupportedLocale } from '@gachia/core';
 import { isNteGuideLocaleIndexable, type NteGuide } from './guide-policy';
 
@@ -137,7 +138,10 @@ export function characterDescription(character: NteCharacter, locale: SupportedL
 }
 
 export function getCharacterBuilds(id: string) { return characterBuilds.find((entry) => entry.characterId === id)?.builds ?? []; }
-export function getCharacterMaterials(id: string) { return characterMaterials.find((entry) => entry.characterId === id); }
+export function getCharacterMaterials(id: string) {
+  const relationId = nteCharacterMaterialRelationId(id);
+  return characterMaterials.find((entry) => entry.characterId === relationId);
+}
 
 export function getNteWeaponName(weapon: (typeof nteWeapons)[number], locale: SupportedLocale) { return locale === 'zh' ? weapon.name : locale === 'ja' ? weapon.nameJa ?? weapon.nameEn : weapon.nameEn; }
 export function getNteDiskSetName(set: (typeof diskSets)[number], locale: SupportedLocale) { return locale === 'zh' ? set.name : locale === 'ja' ? set.nameJa ?? set.nameEn : set.nameEn; }

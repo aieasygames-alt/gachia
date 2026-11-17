@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-11-17",
+  "version": "nte-identity-remediation-v1",
+  "game": "nte",
+  "decision": {
+    "canonicalId": "zero",
+    "displayVariantIds": [
+      "zero-male",
+      "zero-female"
+    ],
+    "status": "approved-canonical-identity",
+    "materialRelationApproval": "held",
+    "approvedTarget": null
+  },
+  "evidence": [
+    {
+      "sourceId": "zero",
+      "canonicalId": "zero",
+      "displayVariantIds": [
+        "zero-male",
+        "zero-female"
+      ],
+      "resolution": "approved-canonical-identity",
+      "evidence": {
+        "sourcePath": "reports/material-type-expansion-2026-11-16-r125/source-evidence/nte-source-evidence.json",
+        "sourceSha256": "3c1396c5facac9dc1f7c2229b79ebea695a3a17fe4fbc437626d8391bd970992",
+        "sourceId": "official-nte-role-page",
+        "supportingSourceIds": [
+          "game8-appraiser-gender-switch"
+        ],
+        "canonicalIdentityConfirmed": true,
+        "relationSchemaConfirmed": false,
+        "materialDependencyConfirmed": false
+      }
+    }
+  ],
+  "sourceFiles": {
+    "packages/data/games/nte/raw-materials.json": "eb493d5923b34bf20e840b31bfa93d145c6a3397163798b73e1f85a8f0b6328c",
+    "packages/data/games/nte/raw-character-materials.json": "e749d53d5307bd0ce0f5bbdeb0c5b1f81134f5ba2c4d70725da0eb974d6002f3",
+    "packages/data/games/nte/raw-characters.json": "b3693e9cb5d8b6ba29a9ec3bb81dfd3755764b34255af3a2e454ad8c0e3ad938",
+    "packages/data/games/nte/character-identity.ts": "aef40f15060fc8ca44162021d5d25516007ca7885b54bf9411639955caa551bf"
+  },
+  "dependencyPlan": {
+    "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+    "planKey": "6fdf836a6ede5a9ad1dae39ebe81fc1b38979db867b6b171af8a1917af2390fa",
+    "issueCount": 27,
+    "missingMaterialCount": 27,
+    "missingCharacterCount": 0,
+    "publishable": false,
+    "executable": false
+  },
+  "consumerChecks": {
+    "appMaterialLookup": "canonical zero resolves to the shared relation for both display variants",
+    "relationGraph": "canonical relation expands to both display variants",
+    "unknownVariants": "rejected",
+    "otherGames": "unchanged"
+  },
+  "heldMaterialSupplement": "reports/material-type-expansion-2026-11-17-r126/nte-held-material-supplement.json",
+  "dataCleanup": {
+    "removed": [
+      {
+        "sourcePaths": [
+          "packages/data/games/nte/raw-guides.json",
+          "apps/web/public/data/nte/raw-guides.json"
+        ],
+        "recordId": "v1-2-999-nights-guide",
+        "field": "relatedCharacters",
+        "value": "iroi",
+        "reason": "dangling character ID with no repository character record or approved source evidence"
+      }
+    ],
+    "remainingDanglingCharacterReferences": 0
+  }
+}

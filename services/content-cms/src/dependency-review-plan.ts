@@ -38,6 +38,7 @@ export function dependencyReviewPlan(game: string, candidates: Candidate[], rela
     })
   })
   const data = { version: 'dependency-review-plan-v1', game, dependencyKey: graph.previewKey,
+    characterIdentityResolutions: graph.characterIdentityResolutions,
     issues, counts: { issues: issues.length, references: issues.reduce((sum, issue) => sum + issue.references.length, 0),
       noCandidate: issues.filter(i => !i.candidateHints.length).length,
       singleCandidate: issues.filter(i => i.candidateHints.length === 1).length,

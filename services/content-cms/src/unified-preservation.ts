@@ -25,7 +25,7 @@ const SHA = /^[a-f0-9]{64}$/
 export function preservedNteReaderProjection(sourcePath: string, accepted: string, active: string) {
   assert.equal(sourcePath, 'apps/game-nte/lib/data.ts', 'Unreviewed inline reader difference')
   assert.equal(digest(accepted), 'dc7ee8d1ebb0e3fc5770af1701536227b6f4e36e4c5d81c5741d0039a66ce50c', 'Unreviewed historical reader bytes')
-  assert.equal(digest(active), '1622e1d442a651dd137cf03942fbc1cf56f5b50f5f1bd18ef4f7fd60a9948ddb', 'Unreviewed current reader bytes')
+  assert.equal(digest(active), 'e2c049cf024efdd45aef9b9a25d426e22173364e70553e4822d33297cce86eba', 'Unreviewed current reader bytes')
   const projection = (text: string) => {
     const units = sourceUnits(snapshot('nte', sourcePath, 'inline-code', text))
     assert.equal(units.blocked.length, 0, 'Unresolved inline content cannot be omitted')

@@ -1,4 +1,5 @@
 import type { SupportedLocale } from '@gachia/core';
+import { nteCharacterDisplayIds } from '@gachia/data/games/nte/character-identity';
 import { characterMaterials, getNteMaterialName, materials, nteCharacters } from './data';
 
 const typeLabels: Record<string, [string, string, string]> = {
@@ -22,10 +23,10 @@ export function nteMaterialDetail(id: string, locale: SupportedLocale) {
   const type = typeLabels[material.type ?? '']?.[locale === 'zh' ? 0 : locale === 'en' ? 1 : 2] ?? material.type ?? '';
   const ids = new Set(characterMaterials.filter(row => row.levelingMaterials.some(level => level.materials.some(item => item.id === id))
     || row.skillMaterials.some(item => item.id === id)).map(row => row.characterId));
-  const characters = [...ids].flatMap(characterId => {
-    const character = nteCharacters.find(row => row.id === characterId);
+  const characters = [...ids].flatMap(characterId => nteCharacterDisplayIds(characterId).flatMap(displayId => {
+    const character = nteCharacters.find(row => row.id === displayId);
     return character ? [character] : [];
-  });
+  }));
   const game = locale === 'zh' ? '异环' : locale === 'ja' ? '異環' : 'Neverness to Everness';
   const description = locale === 'zh'
     ? `${name}是${game}中的${type}类材料。${source ? `获取方式：${source}。` : ''}${characters.length ? `共有${characters.length}个角色需要此材料用于突破或技能升级。` : '本页整理该材料的用途、掉落来源和获取路径。'}`

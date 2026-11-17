@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { SupportedLocale } from '@gachia/core';
+import { nteCharacterDisplayIds } from '@gachia/data/games/nte/character-identity';
 import { characterBuilds, characterName, getNteWeaponName, nteCharacterSummaries, nteWeapons } from '@/lib/data';
 import { NteNav } from '@/components/nte-nav';
 import { nteMetadata } from '@/lib/metadata';
@@ -28,7 +29,7 @@ export default async function Build({ params }: { params: Promise<{ lang: string
   return <><NteNav locale={locale} /><main id="main-content" tabIndex={-1} className="content"><div className="eyebrow">NTE Builds</div><h1>{text.title}</h1><p className="lead">{text.lead}</p><div className="stat-row"><strong>{entries.length}</strong><span>{text.documented}</span><strong>{nteCharacterSummaries.length}</strong><span>{text.character}</span></div><section className="skill-list">{entries.map(({ characterId, build }) => {
     const character = nteCharacterSummaries.find((item) => item.id === characterId)!;
     const weapons = build.recommendedWeapons.map((id) => nteWeapons.find((weapon) => weapon.id === id)).filter(Boolean);
-    const teammates = build.teamComp.map((id) => nteCharacterSummaries.find((item) => item.id === id)).filter(Boolean);
+    const teammates = build.teamComp.flatMap((id) => nteCharacterDisplayIds(id).map((displayId) => nteCharacterSummaries.find((item) => item.id === displayId))).filter(Boolean);
     const title = locale === 'zh' ? build.name : build.nameEn;
     const description = locale === 'zh' ? build.description : build.descriptionEn;
     const mainStat = locale === 'zh' ? build.mainStat : build.mainStatEn;

@@ -1,0 +1,2731 @@
+{
+  "version": "dependency-review-plan-v1",
+  "game": "nte",
+  "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+  "characterIdentityResolutions": [
+    {
+      "sourceId": "zero",
+      "canonicalId": "zero",
+      "displayVariantIds": [
+        "zero-male",
+        "zero-female"
+      ],
+      "resolution": "approved-canonical-identity",
+      "evidence": {
+        "sourcePath": "reports/material-type-expansion-2026-11-16-r125/source-evidence/nte-source-evidence.json",
+        "sourceSha256": "3c1396c5facac9dc1f7c2229b79ebea695a3a17fe4fbc437626d8391bd970992",
+        "sourceId": "official-nte-role-page",
+        "supportingSourceIds": [
+          "game8-appraiser-gender-switch"
+        ],
+        "canonicalIdentityConfirmed": true,
+        "relationSchemaConfirmed": false,
+        "materialDependencyConfirmed": false
+      }
+    }
+  ],
+  "issues": [
+    {
+      "issueKey": "57cefff22866c6e1d3b538ffeab6236044b34e6b8035c7fb8ba527569cb27838",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "advanced-hunter-guide",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/2/materials/0/id",
+          "characterId": "nanally",
+          "quantity": 4
+        },
+        {
+          "pointer": "/0/levelingMaterials/3/materials/0/id",
+          "characterId": "nanally",
+          "quantity": 6
+        },
+        {
+          "pointer": "/1/levelingMaterials/2/materials/0/id",
+          "characterId": "sakiri",
+          "quantity": 4
+        },
+        {
+          "pointer": "/1/levelingMaterials/3/materials/0/id",
+          "characterId": "sakiri",
+          "quantity": 6
+        },
+        {
+          "pointer": "/2/levelingMaterials/2/materials/0/id",
+          "characterId": "fadia",
+          "quantity": 4
+        },
+        {
+          "pointer": "/2/levelingMaterials/3/materials/0/id",
+          "characterId": "fadia",
+          "quantity": 6
+        },
+        {
+          "pointer": "/3/levelingMaterials/2/materials/0/id",
+          "characterId": "lacrimosa",
+          "quantity": 4
+        },
+        {
+          "pointer": "/3/levelingMaterials/3/materials/0/id",
+          "characterId": "lacrimosa",
+          "quantity": 6
+        },
+        {
+          "pointer": "/4/levelingMaterials/2/materials/0/id",
+          "characterId": "baicang",
+          "quantity": 4
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/0/id",
+          "characterId": "baicang",
+          "quantity": 6
+        },
+        {
+          "pointer": "/5/levelingMaterials/2/materials/0/id",
+          "characterId": "zero",
+          "quantity": 4
+        },
+        {
+          "pointer": "/5/levelingMaterials/3/materials/0/id",
+          "characterId": "zero",
+          "quantity": 6
+        },
+        {
+          "pointer": "/6/levelingMaterials/2/materials/0/id",
+          "characterId": "hotori",
+          "quantity": 4
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/0/id",
+          "characterId": "hotori",
+          "quantity": 6
+        },
+        {
+          "pointer": "/7/levelingMaterials/2/materials/0/id",
+          "characterId": "daffodil",
+          "quantity": 4
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/0/id",
+          "characterId": "daffodil",
+          "quantity": 6
+        },
+        {
+          "pointer": "/8/levelingMaterials/2/materials/0/id",
+          "characterId": "jiuyuan",
+          "quantity": 4
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/0/id",
+          "characterId": "jiuyuan",
+          "quantity": 6
+        },
+        {
+          "pointer": "/9/levelingMaterials/2/materials/0/id",
+          "characterId": "haniel",
+          "quantity": 4
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/0/id",
+          "characterId": "haniel",
+          "quantity": 6
+        },
+        {
+          "pointer": "/10/levelingMaterials/2/materials/0/id",
+          "characterId": "adler",
+          "quantity": 4
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/0/id",
+          "characterId": "adler",
+          "quantity": 6
+        },
+        {
+          "pointer": "/11/levelingMaterials/2/materials/0/id",
+          "characterId": "skia",
+          "quantity": 4
+        },
+        {
+          "pointer": "/11/levelingMaterials/3/materials/0/id",
+          "characterId": "skia",
+          "quantity": 6
+        },
+        {
+          "pointer": "/12/levelingMaterials/2/materials/0/id",
+          "characterId": "edgar",
+          "quantity": 4
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/0/id",
+          "characterId": "edgar",
+          "quantity": 6
+        },
+        {
+          "pointer": "/13/levelingMaterials/2/materials/0/id",
+          "characterId": "mint",
+          "quantity": 4
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/0/id",
+          "characterId": "mint",
+          "quantity": 6
+        },
+        {
+          "pointer": "/14/levelingMaterials/2/materials/0/id",
+          "characterId": "nelly",
+          "quantity": 4
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/0/id",
+          "characterId": "nelly",
+          "quantity": 6
+        },
+        {
+          "pointer": "/15/levelingMaterials/2/materials/0/id",
+          "characterId": "merula",
+          "quantity": 4
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/0/id",
+          "characterId": "merula",
+          "quantity": 6
+        },
+        {
+          "pointer": "/16/levelingMaterials/2/materials/0/id",
+          "characterId": "alphard",
+          "quantity": 4
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/0/id",
+          "characterId": "alphard",
+          "quantity": 6
+        },
+        {
+          "pointer": "/17/levelingMaterials/2/materials/0/id",
+          "characterId": "taygedo",
+          "quantity": 4
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/0/id",
+          "characterId": "taygedo",
+          "quantity": 6
+        },
+        {
+          "pointer": "/18/levelingMaterials/2/materials/0/id",
+          "characterId": "hathor",
+          "quantity": 4
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/0/id",
+          "characterId": "hathor",
+          "quantity": 6
+        },
+        {
+          "pointer": "/19/levelingMaterials/2/materials/0/id",
+          "characterId": "chiz",
+          "quantity": 4
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/0/id",
+          "characterId": "chiz",
+          "quantity": 6
+        },
+        {
+          "pointer": "/20/levelingMaterials/2/materials/0/id",
+          "characterId": "lilina",
+          "quantity": 4
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/0/id",
+          "characterId": "lilina",
+          "quantity": 6
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "1b082a8b71f35f4ed0a38c77b3eb294b15b720a93e39a6e9aacee41457b31c4b",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "anima-crystal",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/3/materials/1/id",
+          "characterId": "nanally",
+          "quantity": 3
+        },
+        {
+          "pointer": "/0/levelingMaterials/4/materials/1/id",
+          "characterId": "nanally",
+          "quantity": 5
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/1/id",
+          "characterId": "jiuyuan",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/4/materials/1/id",
+          "characterId": "jiuyuan",
+          "quantity": 5
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/1/id",
+          "characterId": "mint",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/4/materials/1/id",
+          "characterId": "mint",
+          "quantity": 5
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/1/id",
+          "characterId": "nelly",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/4/materials/1/id",
+          "characterId": "nelly",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "a035a58f10fcefa9fe365da09fd72f075dac8003f0237d30f6a11d8941cce0d3",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "anima-fragment",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/1/materials/1/id",
+          "characterId": "nanally",
+          "quantity": 3
+        },
+        {
+          "pointer": "/0/levelingMaterials/2/materials/1/id",
+          "characterId": "nanally",
+          "quantity": 5
+        },
+        {
+          "pointer": "/8/levelingMaterials/1/materials/1/id",
+          "characterId": "jiuyuan",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/2/materials/1/id",
+          "characterId": "jiuyuan",
+          "quantity": 5
+        },
+        {
+          "pointer": "/13/levelingMaterials/1/materials/1/id",
+          "characterId": "mint",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/2/materials/1/id",
+          "characterId": "mint",
+          "quantity": 5
+        },
+        {
+          "pointer": "/14/levelingMaterials/1/materials/1/id",
+          "characterId": "nelly",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/2/materials/1/id",
+          "characterId": "nelly",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "05928464402551ee5f57f8506b302787ae6c75e7e43f68022c5c98c8a6ee7e89",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "basic-hunter-guide",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/0/materials/0/id",
+          "characterId": "nanally",
+          "quantity": 3
+        },
+        {
+          "pointer": "/0/levelingMaterials/1/materials/0/id",
+          "characterId": "nanally",
+          "quantity": 5
+        },
+        {
+          "pointer": "/0/skillMaterials/1/id",
+          "characterId": "nanally",
+          "quantity": 15
+        },
+        {
+          "pointer": "/1/levelingMaterials/0/materials/0/id",
+          "characterId": "sakiri",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/1/materials/0/id",
+          "characterId": "sakiri",
+          "quantity": 5
+        },
+        {
+          "pointer": "/1/skillMaterials/1/id",
+          "characterId": "sakiri",
+          "quantity": 15
+        },
+        {
+          "pointer": "/2/levelingMaterials/0/materials/0/id",
+          "characterId": "fadia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/1/materials/0/id",
+          "characterId": "fadia",
+          "quantity": 5
+        },
+        {
+          "pointer": "/2/skillMaterials/1/id",
+          "characterId": "fadia",
+          "quantity": 15
+        },
+        {
+          "pointer": "/3/levelingMaterials/0/materials/0/id",
+          "characterId": "lacrimosa",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/1/materials/0/id",
+          "characterId": "lacrimosa",
+          "quantity": 5
+        },
+        {
+          "pointer": "/3/skillMaterials/1/id",
+          "characterId": "lacrimosa",
+          "quantity": 15
+        },
+        {
+          "pointer": "/4/levelingMaterials/0/materials/0/id",
+          "characterId": "baicang",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/1/materials/0/id",
+          "characterId": "baicang",
+          "quantity": 5
+        },
+        {
+          "pointer": "/4/skillMaterials/1/id",
+          "characterId": "baicang",
+          "quantity": 15
+        },
+        {
+          "pointer": "/5/levelingMaterials/0/materials/0/id",
+          "characterId": "zero",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/1/materials/0/id",
+          "characterId": "zero",
+          "quantity": 5
+        },
+        {
+          "pointer": "/5/skillMaterials/1/id",
+          "characterId": "zero",
+          "quantity": 15
+        },
+        {
+          "pointer": "/6/levelingMaterials/0/materials/0/id",
+          "characterId": "hotori",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/1/materials/0/id",
+          "characterId": "hotori",
+          "quantity": 5
+        },
+        {
+          "pointer": "/6/skillMaterials/1/id",
+          "characterId": "hotori",
+          "quantity": 15
+        },
+        {
+          "pointer": "/7/levelingMaterials/0/materials/0/id",
+          "characterId": "daffodil",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/1/materials/0/id",
+          "characterId": "daffodil",
+          "quantity": 5
+        },
+        {
+          "pointer": "/7/skillMaterials/1/id",
+          "characterId": "daffodil",
+          "quantity": 15
+        },
+        {
+          "pointer": "/8/levelingMaterials/0/materials/0/id",
+          "characterId": "jiuyuan",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/1/materials/0/id",
+          "characterId": "jiuyuan",
+          "quantity": 5
+        },
+        {
+          "pointer": "/8/skillMaterials/1/id",
+          "characterId": "jiuyuan",
+          "quantity": 15
+        },
+        {
+          "pointer": "/9/levelingMaterials/0/materials/0/id",
+          "characterId": "haniel",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/1/materials/0/id",
+          "characterId": "haniel",
+          "quantity": 5
+        },
+        {
+          "pointer": "/9/skillMaterials/1/id",
+          "characterId": "haniel",
+          "quantity": 15
+        },
+        {
+          "pointer": "/10/levelingMaterials/0/materials/0/id",
+          "characterId": "adler",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/1/materials/0/id",
+          "characterId": "adler",
+          "quantity": 5
+        },
+        {
+          "pointer": "/10/skillMaterials/1/id",
+          "characterId": "adler",
+          "quantity": 15
+        },
+        {
+          "pointer": "/11/levelingMaterials/0/materials/0/id",
+          "characterId": "skia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/1/materials/0/id",
+          "characterId": "skia",
+          "quantity": 5
+        },
+        {
+          "pointer": "/11/skillMaterials/1/id",
+          "characterId": "skia",
+          "quantity": 15
+        },
+        {
+          "pointer": "/12/levelingMaterials/0/materials/0/id",
+          "characterId": "edgar",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/1/materials/0/id",
+          "characterId": "edgar",
+          "quantity": 5
+        },
+        {
+          "pointer": "/12/skillMaterials/1/id",
+          "characterId": "edgar",
+          "quantity": 15
+        },
+        {
+          "pointer": "/13/levelingMaterials/0/materials/0/id",
+          "characterId": "mint",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/1/materials/0/id",
+          "characterId": "mint",
+          "quantity": 5
+        },
+        {
+          "pointer": "/13/skillMaterials/1/id",
+          "characterId": "mint",
+          "quantity": 15
+        },
+        {
+          "pointer": "/14/levelingMaterials/0/materials/0/id",
+          "characterId": "nelly",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/1/materials/0/id",
+          "characterId": "nelly",
+          "quantity": 5
+        },
+        {
+          "pointer": "/14/skillMaterials/1/id",
+          "characterId": "nelly",
+          "quantity": 15
+        },
+        {
+          "pointer": "/15/levelingMaterials/0/materials/0/id",
+          "characterId": "merula",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/1/materials/0/id",
+          "characterId": "merula",
+          "quantity": 5
+        },
+        {
+          "pointer": "/15/skillMaterials/1/id",
+          "characterId": "merula",
+          "quantity": 15
+        },
+        {
+          "pointer": "/16/levelingMaterials/0/materials/0/id",
+          "characterId": "alphard",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/1/materials/0/id",
+          "characterId": "alphard",
+          "quantity": 5
+        },
+        {
+          "pointer": "/16/skillMaterials/1/id",
+          "characterId": "alphard",
+          "quantity": 15
+        },
+        {
+          "pointer": "/17/levelingMaterials/0/materials/0/id",
+          "characterId": "taygedo",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/1/materials/0/id",
+          "characterId": "taygedo",
+          "quantity": 5
+        },
+        {
+          "pointer": "/17/skillMaterials/1/id",
+          "characterId": "taygedo",
+          "quantity": 15
+        },
+        {
+          "pointer": "/18/levelingMaterials/0/materials/0/id",
+          "characterId": "hathor",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/1/materials/0/id",
+          "characterId": "hathor",
+          "quantity": 5
+        },
+        {
+          "pointer": "/18/skillMaterials/1/id",
+          "characterId": "hathor",
+          "quantity": 15
+        },
+        {
+          "pointer": "/19/levelingMaterials/0/materials/0/id",
+          "characterId": "chiz",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/1/materials/0/id",
+          "characterId": "chiz",
+          "quantity": 5
+        },
+        {
+          "pointer": "/19/skillMaterials/1/id",
+          "characterId": "chiz",
+          "quantity": 15
+        },
+        {
+          "pointer": "/20/levelingMaterials/0/materials/0/id",
+          "characterId": "lilina",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/1/materials/0/id",
+          "characterId": "lilina",
+          "quantity": 5
+        },
+        {
+          "pointer": "/20/skillMaterials/1/id",
+          "characterId": "lilina",
+          "quantity": 15
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "666ab6381b738ac5b9c7369e9174916571a08da4c2f4283f582ca8d6258c4009",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "boss-anima",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/5/materials/1/id",
+          "characterId": "nanally",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/5/materials/1/id",
+          "characterId": "jiuyuan",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/5/materials/1/id",
+          "characterId": "mint",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/5/materials/1/id",
+          "characterId": "nelly",
+          "quantity": 3
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "0bc7317f05375628f80b9e4b9fe884127bf86e97358ae54314640928f0f17d5c",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "boss-chaos",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/3/levelingMaterials/5/materials/1/id",
+          "characterId": "lacrimosa",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/5/materials/1/id",
+          "characterId": "daffodil",
+          "quantity": 3
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "f8e9c0b609742c29e0258007239af305b6912470fae64a3bec2361f9007f672b",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "boss-cosmos",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/5/levelingMaterials/5/materials/1/id",
+          "characterId": "zero",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/5/materials/1/id",
+          "characterId": "hotori",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/5/materials/1/id",
+          "characterId": "edgar",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/5/materials/1/id",
+          "characterId": "taygedo",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/5/materials/1/id",
+          "characterId": "chiz",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/5/materials/1/id",
+          "characterId": "lilina",
+          "quantity": 3
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "9a205237080cd4f82d17b33435bf49ff8df12002448c9ae95db47bf855673e19",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "boss-incantation",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/1/levelingMaterials/5/materials/1/id",
+          "characterId": "sakiri",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/5/materials/1/id",
+          "characterId": "baicang",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/5/materials/1/id",
+          "characterId": "adler",
+          "quantity": 3
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "711270f1609a12838157518bbcabe42995c2b75f240ede7b31d10dc42b7dbf76",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "boss-lakshana",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/11/levelingMaterials/5/materials/1/id",
+          "characterId": "skia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/5/materials/1/id",
+          "characterId": "merula",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/5/materials/1/id",
+          "characterId": "alphard",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/5/materials/1/id",
+          "characterId": "hathor",
+          "quantity": 3
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "a372dda7750044fdd53c622070f3cf4a00d08399d18c37512eebb60410fd6f01",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "boss-psyche",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/2/levelingMaterials/5/materials/1/id",
+          "characterId": "fadia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/5/materials/1/id",
+          "characterId": "haniel",
+          "quantity": 3
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "616a47e67d65db9eaaeda68c207437c1ed53ecdded1d745f317ffe9897cf7f44",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "chaos-core",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/3/levelingMaterials/3/materials/1/id",
+          "characterId": "lacrimosa",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/4/materials/1/id",
+          "characterId": "lacrimosa",
+          "quantity": 5
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/1/id",
+          "characterId": "daffodil",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/4/materials/1/id",
+          "characterId": "daffodil",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "03b0c6986062f43c1cb648aabfacc2fa87b11258110b26542453547e4022ee39",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "chaos-essence",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/3/levelingMaterials/1/materials/1/id",
+          "characterId": "lacrimosa",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/2/materials/1/id",
+          "characterId": "lacrimosa",
+          "quantity": 5
+        },
+        {
+          "pointer": "/7/levelingMaterials/1/materials/1/id",
+          "characterId": "daffodil",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/2/materials/1/id",
+          "characterId": "daffodil",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "412051ead2cec174fb02bd8f857995deb88c93a097eaee1ad8982203e1b9c9e5",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "cosmos-spark",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/5/levelingMaterials/1/materials/1/id",
+          "characterId": "zero",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/2/materials/1/id",
+          "characterId": "zero",
+          "quantity": 5
+        },
+        {
+          "pointer": "/6/levelingMaterials/1/materials/1/id",
+          "characterId": "hotori",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/2/materials/1/id",
+          "characterId": "hotori",
+          "quantity": 5
+        },
+        {
+          "pointer": "/12/levelingMaterials/1/materials/1/id",
+          "characterId": "edgar",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/2/materials/1/id",
+          "characterId": "edgar",
+          "quantity": 5
+        },
+        {
+          "pointer": "/17/levelingMaterials/1/materials/1/id",
+          "characterId": "taygedo",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/2/materials/1/id",
+          "characterId": "taygedo",
+          "quantity": 5
+        },
+        {
+          "pointer": "/19/levelingMaterials/1/materials/1/id",
+          "characterId": "chiz",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/2/materials/1/id",
+          "characterId": "chiz",
+          "quantity": 5
+        },
+        {
+          "pointer": "/20/levelingMaterials/1/materials/1/id",
+          "characterId": "lilina",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/2/materials/1/id",
+          "characterId": "lilina",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "0b56ac70571c35166cfa62d6dfdffe8798403b3d23d731a2199d86e6a2ca75ab",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "cosmos-storm",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/5/levelingMaterials/3/materials/1/id",
+          "characterId": "zero",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/4/materials/1/id",
+          "characterId": "zero",
+          "quantity": 5
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/1/id",
+          "characterId": "hotori",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/4/materials/1/id",
+          "characterId": "hotori",
+          "quantity": 5
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/1/id",
+          "characterId": "edgar",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/4/materials/1/id",
+          "characterId": "edgar",
+          "quantity": 5
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/1/id",
+          "characterId": "taygedo",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/4/materials/1/id",
+          "characterId": "taygedo",
+          "quantity": 5
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/1/id",
+          "characterId": "chiz",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/4/materials/1/id",
+          "characterId": "chiz",
+          "quantity": 5
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/1/id",
+          "characterId": "lilina",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/4/materials/1/id",
+          "characterId": "lilina",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "e8b67f3845738c60d7d88ca25ba6ea5e2f47cb23a24ca16af0d6631c0e007f48",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "credits",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/0/materials/1/id",
+          "characterId": "nanally",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/0/levelingMaterials/1/materials/2/id",
+          "characterId": "nanally",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/0/levelingMaterials/2/materials/2/id",
+          "characterId": "nanally",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/0/levelingMaterials/3/materials/3/id",
+          "characterId": "nanally",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/0/levelingMaterials/4/materials/3/id",
+          "characterId": "nanally",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/0/levelingMaterials/5/materials/3/id",
+          "characterId": "nanally",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/0/skillMaterials/2/id",
+          "characterId": "nanally",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/1/levelingMaterials/0/materials/1/id",
+          "characterId": "sakiri",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/1/levelingMaterials/1/materials/2/id",
+          "characterId": "sakiri",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/1/levelingMaterials/2/materials/2/id",
+          "characterId": "sakiri",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/1/levelingMaterials/3/materials/3/id",
+          "characterId": "sakiri",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/1/levelingMaterials/4/materials/3/id",
+          "characterId": "sakiri",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/1/levelingMaterials/5/materials/3/id",
+          "characterId": "sakiri",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/1/skillMaterials/2/id",
+          "characterId": "sakiri",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/2/levelingMaterials/0/materials/1/id",
+          "characterId": "fadia",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/2/levelingMaterials/1/materials/2/id",
+          "characterId": "fadia",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/2/levelingMaterials/2/materials/2/id",
+          "characterId": "fadia",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/2/levelingMaterials/3/materials/3/id",
+          "characterId": "fadia",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/2/levelingMaterials/4/materials/3/id",
+          "characterId": "fadia",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/2/levelingMaterials/5/materials/3/id",
+          "characterId": "fadia",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/2/skillMaterials/2/id",
+          "characterId": "fadia",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/3/levelingMaterials/0/materials/1/id",
+          "characterId": "lacrimosa",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/3/levelingMaterials/1/materials/2/id",
+          "characterId": "lacrimosa",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/3/levelingMaterials/2/materials/2/id",
+          "characterId": "lacrimosa",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/3/levelingMaterials/3/materials/3/id",
+          "characterId": "lacrimosa",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/3/levelingMaterials/4/materials/3/id",
+          "characterId": "lacrimosa",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/3/levelingMaterials/5/materials/3/id",
+          "characterId": "lacrimosa",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/3/skillMaterials/2/id",
+          "characterId": "lacrimosa",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/4/levelingMaterials/0/materials/1/id",
+          "characterId": "baicang",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/4/levelingMaterials/1/materials/2/id",
+          "characterId": "baicang",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/4/levelingMaterials/2/materials/2/id",
+          "characterId": "baicang",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/3/id",
+          "characterId": "baicang",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/4/levelingMaterials/4/materials/3/id",
+          "characterId": "baicang",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/4/levelingMaterials/5/materials/3/id",
+          "characterId": "baicang",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/4/skillMaterials/2/id",
+          "characterId": "baicang",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/5/levelingMaterials/0/materials/1/id",
+          "characterId": "zero",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/5/levelingMaterials/1/materials/2/id",
+          "characterId": "zero",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/5/levelingMaterials/2/materials/2/id",
+          "characterId": "zero",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/5/levelingMaterials/3/materials/3/id",
+          "characterId": "zero",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/5/levelingMaterials/4/materials/3/id",
+          "characterId": "zero",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/5/levelingMaterials/5/materials/3/id",
+          "characterId": "zero",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/5/skillMaterials/2/id",
+          "characterId": "zero",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/6/levelingMaterials/0/materials/1/id",
+          "characterId": "hotori",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/6/levelingMaterials/1/materials/2/id",
+          "characterId": "hotori",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/6/levelingMaterials/2/materials/2/id",
+          "characterId": "hotori",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/3/id",
+          "characterId": "hotori",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/6/levelingMaterials/4/materials/3/id",
+          "characterId": "hotori",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/6/levelingMaterials/5/materials/3/id",
+          "characterId": "hotori",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/6/skillMaterials/2/id",
+          "characterId": "hotori",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/7/levelingMaterials/0/materials/1/id",
+          "characterId": "daffodil",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/7/levelingMaterials/1/materials/2/id",
+          "characterId": "daffodil",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/7/levelingMaterials/2/materials/2/id",
+          "characterId": "daffodil",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/3/id",
+          "characterId": "daffodil",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/7/levelingMaterials/4/materials/3/id",
+          "characterId": "daffodil",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/7/levelingMaterials/5/materials/3/id",
+          "characterId": "daffodil",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/7/skillMaterials/2/id",
+          "characterId": "daffodil",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/8/levelingMaterials/0/materials/1/id",
+          "characterId": "jiuyuan",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/8/levelingMaterials/1/materials/2/id",
+          "characterId": "jiuyuan",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/8/levelingMaterials/2/materials/2/id",
+          "characterId": "jiuyuan",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/3/id",
+          "characterId": "jiuyuan",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/8/levelingMaterials/4/materials/3/id",
+          "characterId": "jiuyuan",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/8/levelingMaterials/5/materials/3/id",
+          "characterId": "jiuyuan",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/8/skillMaterials/2/id",
+          "characterId": "jiuyuan",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/9/levelingMaterials/0/materials/1/id",
+          "characterId": "haniel",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/9/levelingMaterials/1/materials/2/id",
+          "characterId": "haniel",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/9/levelingMaterials/2/materials/2/id",
+          "characterId": "haniel",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/3/id",
+          "characterId": "haniel",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/9/levelingMaterials/4/materials/3/id",
+          "characterId": "haniel",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/9/levelingMaterials/5/materials/3/id",
+          "characterId": "haniel",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/9/skillMaterials/2/id",
+          "characterId": "haniel",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/10/levelingMaterials/0/materials/1/id",
+          "characterId": "adler",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/10/levelingMaterials/1/materials/2/id",
+          "characterId": "adler",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/10/levelingMaterials/2/materials/2/id",
+          "characterId": "adler",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/3/id",
+          "characterId": "adler",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/10/levelingMaterials/4/materials/3/id",
+          "characterId": "adler",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/10/levelingMaterials/5/materials/3/id",
+          "characterId": "adler",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/10/skillMaterials/2/id",
+          "characterId": "adler",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/11/levelingMaterials/0/materials/1/id",
+          "characterId": "skia",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/11/levelingMaterials/1/materials/2/id",
+          "characterId": "skia",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/11/levelingMaterials/2/materials/2/id",
+          "characterId": "skia",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/11/levelingMaterials/3/materials/3/id",
+          "characterId": "skia",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/11/levelingMaterials/4/materials/3/id",
+          "characterId": "skia",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/11/levelingMaterials/5/materials/3/id",
+          "characterId": "skia",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/11/skillMaterials/2/id",
+          "characterId": "skia",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/12/levelingMaterials/0/materials/1/id",
+          "characterId": "edgar",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/12/levelingMaterials/1/materials/2/id",
+          "characterId": "edgar",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/12/levelingMaterials/2/materials/2/id",
+          "characterId": "edgar",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/3/id",
+          "characterId": "edgar",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/12/levelingMaterials/4/materials/3/id",
+          "characterId": "edgar",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/12/levelingMaterials/5/materials/3/id",
+          "characterId": "edgar",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/12/skillMaterials/2/id",
+          "characterId": "edgar",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/13/levelingMaterials/0/materials/1/id",
+          "characterId": "mint",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/13/levelingMaterials/1/materials/2/id",
+          "characterId": "mint",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/13/levelingMaterials/2/materials/2/id",
+          "characterId": "mint",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/3/id",
+          "characterId": "mint",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/13/levelingMaterials/4/materials/3/id",
+          "characterId": "mint",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/13/levelingMaterials/5/materials/3/id",
+          "characterId": "mint",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/13/skillMaterials/2/id",
+          "characterId": "mint",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/14/levelingMaterials/0/materials/1/id",
+          "characterId": "nelly",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/14/levelingMaterials/1/materials/2/id",
+          "characterId": "nelly",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/14/levelingMaterials/2/materials/2/id",
+          "characterId": "nelly",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/3/id",
+          "characterId": "nelly",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/14/levelingMaterials/4/materials/3/id",
+          "characterId": "nelly",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/14/levelingMaterials/5/materials/3/id",
+          "characterId": "nelly",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/14/skillMaterials/2/id",
+          "characterId": "nelly",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/15/levelingMaterials/0/materials/1/id",
+          "characterId": "merula",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/15/levelingMaterials/1/materials/2/id",
+          "characterId": "merula",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/15/levelingMaterials/2/materials/2/id",
+          "characterId": "merula",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/3/id",
+          "characterId": "merula",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/15/levelingMaterials/4/materials/3/id",
+          "characterId": "merula",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/15/levelingMaterials/5/materials/3/id",
+          "characterId": "merula",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/15/skillMaterials/2/id",
+          "characterId": "merula",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/16/levelingMaterials/0/materials/1/id",
+          "characterId": "alphard",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/16/levelingMaterials/1/materials/2/id",
+          "characterId": "alphard",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/16/levelingMaterials/2/materials/2/id",
+          "characterId": "alphard",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/3/id",
+          "characterId": "alphard",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/16/levelingMaterials/4/materials/3/id",
+          "characterId": "alphard",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/16/levelingMaterials/5/materials/3/id",
+          "characterId": "alphard",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/16/skillMaterials/2/id",
+          "characterId": "alphard",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/17/levelingMaterials/0/materials/1/id",
+          "characterId": "taygedo",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/17/levelingMaterials/1/materials/2/id",
+          "characterId": "taygedo",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/17/levelingMaterials/2/materials/2/id",
+          "characterId": "taygedo",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/3/id",
+          "characterId": "taygedo",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/17/levelingMaterials/4/materials/3/id",
+          "characterId": "taygedo",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/17/levelingMaterials/5/materials/3/id",
+          "characterId": "taygedo",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/17/skillMaterials/2/id",
+          "characterId": "taygedo",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/18/levelingMaterials/0/materials/1/id",
+          "characterId": "hathor",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/18/levelingMaterials/1/materials/2/id",
+          "characterId": "hathor",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/18/levelingMaterials/2/materials/2/id",
+          "characterId": "hathor",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/3/id",
+          "characterId": "hathor",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/18/levelingMaterials/4/materials/3/id",
+          "characterId": "hathor",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/18/levelingMaterials/5/materials/3/id",
+          "characterId": "hathor",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/18/skillMaterials/2/id",
+          "characterId": "hathor",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/19/levelingMaterials/0/materials/1/id",
+          "characterId": "chiz",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/19/levelingMaterials/1/materials/2/id",
+          "characterId": "chiz",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/19/levelingMaterials/2/materials/2/id",
+          "characterId": "chiz",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/3/id",
+          "characterId": "chiz",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/19/levelingMaterials/4/materials/3/id",
+          "characterId": "chiz",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/19/levelingMaterials/5/materials/3/id",
+          "characterId": "chiz",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/19/skillMaterials/2/id",
+          "characterId": "chiz",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/20/levelingMaterials/0/materials/1/id",
+          "characterId": "lilina",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/20/levelingMaterials/1/materials/2/id",
+          "characterId": "lilina",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/20/levelingMaterials/2/materials/2/id",
+          "characterId": "lilina",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/3/id",
+          "characterId": "lilina",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/20/levelingMaterials/4/materials/3/id",
+          "characterId": "lilina",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/20/levelingMaterials/5/materials/3/id",
+          "characterId": "lilina",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/20/skillMaterials/2/id",
+          "characterId": "lilina",
+          "quantity": 200000
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "c31e1aeb00ca5fd854a9b1f657f0950d95615f2d5464cd9769e9ed6874e7ad76",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "expert-permit",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/4/materials/2/id",
+          "characterId": "nanally",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/4/materials/2/id",
+          "characterId": "sakiri",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/4/materials/2/id",
+          "characterId": "fadia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/4/materials/2/id",
+          "characterId": "lacrimosa",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/4/materials/2/id",
+          "characterId": "baicang",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/4/materials/2/id",
+          "characterId": "zero",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/4/materials/2/id",
+          "characterId": "hotori",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/4/materials/2/id",
+          "characterId": "daffodil",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/4/materials/2/id",
+          "characterId": "jiuyuan",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/4/materials/2/id",
+          "characterId": "haniel",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/4/materials/2/id",
+          "characterId": "adler",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/4/materials/2/id",
+          "characterId": "skia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/4/materials/2/id",
+          "characterId": "edgar",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/4/materials/2/id",
+          "characterId": "mint",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/4/materials/2/id",
+          "characterId": "nelly",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/4/materials/2/id",
+          "characterId": "merula",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/4/materials/2/id",
+          "characterId": "alphard",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/4/materials/2/id",
+          "characterId": "taygedo",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/4/materials/2/id",
+          "characterId": "hathor",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/4/materials/2/id",
+          "characterId": "chiz",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/4/materials/2/id",
+          "characterId": "lilina",
+          "quantity": 3
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "c552983830d5689f6a18be5df9f7e9ac3272465ae428dd991f0b80c6ba7c2b73",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "incantation-crystal",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/1/levelingMaterials/3/materials/1/id",
+          "characterId": "sakiri",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/4/materials/1/id",
+          "characterId": "sakiri",
+          "quantity": 5
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/1/id",
+          "characterId": "baicang",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/4/materials/1/id",
+          "characterId": "baicang",
+          "quantity": 5
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/1/id",
+          "characterId": "adler",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/4/materials/1/id",
+          "characterId": "adler",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "df0a52cf085aac17de49708d45523fb6678a40ce4bbc529fb3d84093907dbff8",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "incantation-shard",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/1/levelingMaterials/1/materials/1/id",
+          "characterId": "sakiri",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/2/materials/1/id",
+          "characterId": "sakiri",
+          "quantity": 5
+        },
+        {
+          "pointer": "/4/levelingMaterials/1/materials/1/id",
+          "characterId": "baicang",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/2/materials/1/id",
+          "characterId": "baicang",
+          "quantity": 5
+        },
+        {
+          "pointer": "/10/levelingMaterials/1/materials/1/id",
+          "characterId": "adler",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/2/materials/1/id",
+          "characterId": "adler",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "201ad687d1171b07fe10763cc43ca537c88470d948ff0aa2fc4e66eb19353071",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "lakshana-dust",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/11/levelingMaterials/1/materials/1/id",
+          "characterId": "skia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/2/materials/1/id",
+          "characterId": "skia",
+          "quantity": 5
+        },
+        {
+          "pointer": "/15/levelingMaterials/1/materials/1/id",
+          "characterId": "merula",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/2/materials/1/id",
+          "characterId": "merula",
+          "quantity": 5
+        },
+        {
+          "pointer": "/16/levelingMaterials/1/materials/1/id",
+          "characterId": "alphard",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/2/materials/1/id",
+          "characterId": "alphard",
+          "quantity": 5
+        },
+        {
+          "pointer": "/18/levelingMaterials/1/materials/1/id",
+          "characterId": "hathor",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/2/materials/1/id",
+          "characterId": "hathor",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "1dda5bc726e629f2047a26b4fbdca577677c79b2c1a6885385bb6d095aca931b",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "lakshana-signet",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/11/levelingMaterials/3/materials/1/id",
+          "characterId": "skia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/4/materials/1/id",
+          "characterId": "skia",
+          "quantity": 5
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/1/id",
+          "characterId": "merula",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/4/materials/1/id",
+          "characterId": "merula",
+          "quantity": 5
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/1/id",
+          "characterId": "alphard",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/4/materials/1/id",
+          "characterId": "alphard",
+          "quantity": 5
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/1/id",
+          "characterId": "hathor",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/4/materials/1/id",
+          "characterId": "hathor",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "9e846ed9d238ee2db1d525e8f7dc285a03586c34b6efaf48e335f0388f1d6ff1",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "manual-attack",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/skillMaterials/0/id",
+          "characterId": "nanally",
+          "quantity": 12
+        },
+        {
+          "pointer": "/2/skillMaterials/0/id",
+          "characterId": "fadia",
+          "quantity": 12
+        },
+        {
+          "pointer": "/3/skillMaterials/0/id",
+          "characterId": "lacrimosa",
+          "quantity": 12
+        },
+        {
+          "pointer": "/5/skillMaterials/0/id",
+          "characterId": "zero",
+          "quantity": 12
+        },
+        {
+          "pointer": "/6/skillMaterials/0/id",
+          "characterId": "hotori",
+          "quantity": 12
+        },
+        {
+          "pointer": "/9/skillMaterials/0/id",
+          "characterId": "haniel",
+          "quantity": 12
+        },
+        {
+          "pointer": "/10/skillMaterials/0/id",
+          "characterId": "adler",
+          "quantity": 12
+        },
+        {
+          "pointer": "/11/skillMaterials/0/id",
+          "characterId": "skia",
+          "quantity": 12
+        },
+        {
+          "pointer": "/15/skillMaterials/0/id",
+          "characterId": "merula",
+          "quantity": 12
+        },
+        {
+          "pointer": "/16/skillMaterials/0/id",
+          "characterId": "alphard",
+          "quantity": 12
+        },
+        {
+          "pointer": "/18/skillMaterials/0/id",
+          "characterId": "hathor",
+          "quantity": 12
+        },
+        {
+          "pointer": "/19/skillMaterials/0/id",
+          "characterId": "chiz",
+          "quantity": 12
+        },
+        {
+          "pointer": "/20/skillMaterials/0/id",
+          "characterId": "lilina",
+          "quantity": 12
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "cf2392a6a8ef9bc8be7816445ff76f729100cc2ed757b5da90867f838086ad8b",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "manual-defense",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/4/skillMaterials/0/id",
+          "characterId": "baicang",
+          "quantity": 12
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "9d4e73647953b54456a3448e87bf3c567471f0d00753b1330ea9386f4f327e18",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "manual-support",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/1/skillMaterials/0/id",
+          "characterId": "sakiri",
+          "quantity": 12
+        },
+        {
+          "pointer": "/7/skillMaterials/0/id",
+          "characterId": "daffodil",
+          "quantity": 12
+        },
+        {
+          "pointer": "/8/skillMaterials/0/id",
+          "characterId": "jiuyuan",
+          "quantity": 12
+        },
+        {
+          "pointer": "/12/skillMaterials/0/id",
+          "characterId": "edgar",
+          "quantity": 12
+        },
+        {
+          "pointer": "/13/skillMaterials/0/id",
+          "characterId": "mint",
+          "quantity": 12
+        },
+        {
+          "pointer": "/14/skillMaterials/0/id",
+          "characterId": "nelly",
+          "quantity": 12
+        },
+        {
+          "pointer": "/17/skillMaterials/0/id",
+          "characterId": "taygedo",
+          "quantity": 12
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "19d2332506433904f0702a3c77c8eea4f16602514601bc9dec8fa2c5dbc4f461",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "master-permit",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/5/materials/2/id",
+          "characterId": "nanally",
+          "quantity": 4
+        },
+        {
+          "pointer": "/1/levelingMaterials/5/materials/2/id",
+          "characterId": "sakiri",
+          "quantity": 4
+        },
+        {
+          "pointer": "/2/levelingMaterials/5/materials/2/id",
+          "characterId": "fadia",
+          "quantity": 4
+        },
+        {
+          "pointer": "/3/levelingMaterials/5/materials/2/id",
+          "characterId": "lacrimosa",
+          "quantity": 4
+        },
+        {
+          "pointer": "/4/levelingMaterials/5/materials/2/id",
+          "characterId": "baicang",
+          "quantity": 4
+        },
+        {
+          "pointer": "/5/levelingMaterials/5/materials/2/id",
+          "characterId": "zero",
+          "quantity": 4
+        },
+        {
+          "pointer": "/6/levelingMaterials/5/materials/2/id",
+          "characterId": "hotori",
+          "quantity": 4
+        },
+        {
+          "pointer": "/7/levelingMaterials/5/materials/2/id",
+          "characterId": "daffodil",
+          "quantity": 4
+        },
+        {
+          "pointer": "/8/levelingMaterials/5/materials/2/id",
+          "characterId": "jiuyuan",
+          "quantity": 4
+        },
+        {
+          "pointer": "/9/levelingMaterials/5/materials/2/id",
+          "characterId": "haniel",
+          "quantity": 4
+        },
+        {
+          "pointer": "/10/levelingMaterials/5/materials/2/id",
+          "characterId": "adler",
+          "quantity": 4
+        },
+        {
+          "pointer": "/11/levelingMaterials/5/materials/2/id",
+          "characterId": "skia",
+          "quantity": 4
+        },
+        {
+          "pointer": "/12/levelingMaterials/5/materials/2/id",
+          "characterId": "edgar",
+          "quantity": 4
+        },
+        {
+          "pointer": "/13/levelingMaterials/5/materials/2/id",
+          "characterId": "mint",
+          "quantity": 4
+        },
+        {
+          "pointer": "/14/levelingMaterials/5/materials/2/id",
+          "characterId": "nelly",
+          "quantity": 4
+        },
+        {
+          "pointer": "/15/levelingMaterials/5/materials/2/id",
+          "characterId": "merula",
+          "quantity": 4
+        },
+        {
+          "pointer": "/16/levelingMaterials/5/materials/2/id",
+          "characterId": "alphard",
+          "quantity": 4
+        },
+        {
+          "pointer": "/17/levelingMaterials/5/materials/2/id",
+          "characterId": "taygedo",
+          "quantity": 4
+        },
+        {
+          "pointer": "/18/levelingMaterials/5/materials/2/id",
+          "characterId": "hathor",
+          "quantity": 4
+        },
+        {
+          "pointer": "/19/levelingMaterials/5/materials/2/id",
+          "characterId": "chiz",
+          "quantity": 4
+        },
+        {
+          "pointer": "/20/levelingMaterials/5/materials/2/id",
+          "characterId": "lilina",
+          "quantity": 4
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "1b54f42d630cdf13265ed2c5c8dd7a19af609a433e58d50278dd2093555b3b0e",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "pioneer-permit",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/3/materials/2/id",
+          "characterId": "nanally",
+          "quantity": 2
+        },
+        {
+          "pointer": "/1/levelingMaterials/3/materials/2/id",
+          "characterId": "sakiri",
+          "quantity": 2
+        },
+        {
+          "pointer": "/2/levelingMaterials/3/materials/2/id",
+          "characterId": "fadia",
+          "quantity": 2
+        },
+        {
+          "pointer": "/3/levelingMaterials/3/materials/2/id",
+          "characterId": "lacrimosa",
+          "quantity": 2
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/2/id",
+          "characterId": "baicang",
+          "quantity": 2
+        },
+        {
+          "pointer": "/5/levelingMaterials/3/materials/2/id",
+          "characterId": "zero",
+          "quantity": 2
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/2/id",
+          "characterId": "hotori",
+          "quantity": 2
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/2/id",
+          "characterId": "daffodil",
+          "quantity": 2
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/2/id",
+          "characterId": "jiuyuan",
+          "quantity": 2
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/2/id",
+          "characterId": "haniel",
+          "quantity": 2
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/2/id",
+          "characterId": "adler",
+          "quantity": 2
+        },
+        {
+          "pointer": "/11/levelingMaterials/3/materials/2/id",
+          "characterId": "skia",
+          "quantity": 2
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/2/id",
+          "characterId": "edgar",
+          "quantity": 2
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/2/id",
+          "characterId": "mint",
+          "quantity": 2
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/2/id",
+          "characterId": "nelly",
+          "quantity": 2
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/2/id",
+          "characterId": "merula",
+          "quantity": 2
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/2/id",
+          "characterId": "alphard",
+          "quantity": 2
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/2/id",
+          "characterId": "taygedo",
+          "quantity": 2
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/2/id",
+          "characterId": "hathor",
+          "quantity": 2
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/2/id",
+          "characterId": "chiz",
+          "quantity": 2
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/2/id",
+          "characterId": "lilina",
+          "quantity": 2
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "536dfffa5aa92bf4fa4c225605a4f9d794ef5bc7ff3e35863ad7c7b2200de416",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "psyche-essence",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/2/levelingMaterials/1/materials/1/id",
+          "characterId": "fadia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/2/materials/1/id",
+          "characterId": "fadia",
+          "quantity": 5
+        },
+        {
+          "pointer": "/9/levelingMaterials/1/materials/1/id",
+          "characterId": "haniel",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/2/materials/1/id",
+          "characterId": "haniel",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    },
+    {
+      "issueKey": "bb74793c357cdfce227b0e81ea2ff98928044b34ad4dfd5671136545916aa5b3",
+      "dependencyKey": "b57fb13c7244a221eee6dc398940a73aede77a0ccd4844cb777ec0a2487d122d",
+      "kind": "material",
+      "missingId": "psyche-fragment",
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "references": [
+        {
+          "pointer": "/2/levelingMaterials/3/materials/1/id",
+          "characterId": "fadia",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/4/materials/1/id",
+          "characterId": "fadia",
+          "quantity": 5
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/1/id",
+          "characterId": "haniel",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/4/materials/1/id",
+          "characterId": "haniel",
+          "quantity": 5
+        }
+      ],
+      "candidateHints": [],
+      "classification": "no-lexical-candidate",
+      "status": "needs-source-review",
+      "approvedTarget": null,
+      "requiredEvidence": [
+        "authoritative-identity-and-game-version",
+        "all-reference-quantities-and-stages",
+        "url-and-consumer-impact"
+      ]
+    }
+  ],
+  "counts": {
+    "issues": 27,
+    "references": 441,
+    "noCandidate": 27,
+    "singleCandidate": 0,
+    "ambiguous": 0
+  },
+  "executable": false,
+  "publishable": false,
+  "sourceAuthority": "legacy",
+  "planKey": "6fdf836a6ede5a9ad1dae39ebe81fc1b38979db867b6b171af8a1917af2390fa"
+}
