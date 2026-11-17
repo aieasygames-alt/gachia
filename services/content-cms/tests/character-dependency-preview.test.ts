@@ -4,6 +4,7 @@ import { readFile } from 'node:fs/promises'
 import { snapshot, digest } from '../src/legacy-intake'
 import { canonical, mapBatch } from '../src/record-mapping'
 import { CHARACTER_READER_SOURCES, characterDependencyPreview, verifyCharacterReaderSources } from '../src/character-dependency-preview'
+import { resolveNteCharacterReference } from '../../../packages/data/games/nte/character-identity'
 import routes from '../../../packages/core/route-ownership.json'
 
 function candidates(game: string, raw = [{ id: 'ore', name: 'Ore', type: 'ore', rarity: 1 }]) {
@@ -29,6 +30,16 @@ test('related character summaries preserve names, exact NTE image paths and read
   assert.equal(result.publishable, false)
   assert.equal(result.dependencyClosureComplete, false)
   assert.equal(result.releaseCompatible, false)
+})
+
+test('canonical NTE Zero material relation links both display pages and rejects unknown variants', () => {
+  const raw = [{ id: 'zero-male', name: '零（男）', nameEn: 'Zero (Male)', attribute: 'cosmos' }, { id: 'zero-female', name: '零（女）', nameEn: 'Zero (Female)', attribute: 'cosmos' }]
+  const result = characterDependencyPreview('nte', candidates('nte'), [{ characterId: 'zero', levelingMaterials: [], skillMaterials: [{ id: 'ore', quantity: 1 }] }], raw, CHARACTER_READER_SOURCES)
+  assert.deepEqual(result.missingCharacters, [])
+  assert.deepEqual(result.links[0].characters.map(character => character.id), ['zero-female', 'zero-male'])
+  assert.deepEqual(result.characterIdentityResolutions.map(identity => identity.displayVariantIds), [['zero-male', 'zero-female']])
+  assert.equal(resolveNteCharacterReference('zero-unknown', ['zero-male', 'zero-female']), null)
+  assert.throws(() => resolveNteCharacterReference('zero', ['zero-male']), /missing display variants/)
 })
 test('reader policy drift and malformed public fields fail; source changes invalidate preview', () => {
   const raw = [{ id: 'hero', name: 'Hero', element: 'pyro', status: 'released' }]

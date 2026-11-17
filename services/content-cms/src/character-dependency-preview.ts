@@ -48,6 +48,7 @@ export function characterDependencyPreview(game: string, candidates: Candidate[]
     }) }))
   const data = { version: 'character-dependency-preview-v1', game, dependencyKey: graph.previewKey,
     readerPolicy: digest(canonical(readerHashes)), summaries, links,
+    characterIdentityResolutions: graph.characterIdentityResolutions,
     missingMaterials: graph.missingMaterials, missingCharacters: graph.missingCharacters,
     blockers: ['media-bytes-and-rights-unverified', 'character-detail-content-unverified', 'page-links-and-derived-copy-incomplete',
       'locale-fallback-policy-unapproved', 'collection-order-unmapped', 'content-approval-absent',

@@ -3,6 +3,7 @@ import { previewMaterial } from './material-contract'
 import { canonical, LOCALES, type Candidate } from './record-mapping'
 import { digest } from './legacy-intake'
 import { ROUTE_POLICY } from './shadow-release'
+import { resolveNteCharacterReference, type NteCharacterIdentityResolution } from '../../../packages/data/games/nte/character-identity'
 
 export const MATERIAL_PUBLIC_SCHEMA = 'material-public-preview-v1'
 export const MATERIAL_PILOT_SCOPES = ['starrail', 'genshin', 'nte'] as const
@@ -53,6 +54,12 @@ export function materialDependencyPreview(gameKey: string, candidates: Candidate
   const characters = array(rawCharacters).map(value => { const row = object(value); id(row.id); return row.id })
   if (new Set(characters).size !== characters.length) throw new Error('Duplicate character identity')
   const characterIDs = new Set(characters)
+  const resolveCharacter = (sourceId: string): NteCharacterIdentityResolution | null => {
+    if (gameKey !== 'nte') return characterIDs.has(sourceId)
+      ? { sourceId, canonicalId: sourceId, displayVariantIds: [sourceId], resolution: 'direct-character-id' }
+      : null
+    return resolveNteCharacterReference(sourceId, characterIDs)
+  }
   const edges: { characterId: string; materialId: string; quantity: number; sourcePointer: string }[] = []
   const seen = new Set<string>()
   array(rawRelations).forEach((value, index) => {
@@ -81,13 +88,17 @@ export function materialDependencyPreview(gameKey: string, candidates: Candidate
     })
   })
   const missingMaterials = [...new Set(edges.filter(e => !materialIDs.has(e.materialId)).map(e => e.materialId))].sort()
-  const missingCharacters = [...seen].filter(key => !characterIDs.has(key)).sort()
+  const characterIdentityResolutions = [...seen].sort().map(sourceId => resolveCharacter(sourceId)).filter((resolution): resolution is NteCharacterIdentityResolution => resolution !== null && resolution.resolution !== 'direct-character-id')
+  const missingCharacters = [...seen].filter(key => resolveCharacter(key) === null).sort()
   const related = previews.map(preview => ({ materialId: preview.dto.material.id,
-    characterIds: [...new Set(edges.filter(e => e.materialId === preview.dto.material.id).map(e => e.characterId))].sort() }))
+    characterIds: [...new Set(edges.filter(e => e.materialId === preview.dto.material.id).flatMap(e => {
+      const resolution = resolveCharacter(e.characterId)
+      return resolution?.displayVariantIds ?? [e.characterId]
+    }))].sort() }))
   const data = { schema: 'material-dependency-preview-v1', game: gameKey, routePolicy: ROUTE_POLICY,
     dtoKeys: previews.map(p => p.dtoKey), sourceRevisions: previews.map(p => p.sourceRevision),
     relationDigest: digest(canonical(rawRelations)), characterDigest: digest(canonical(rawCharacters)),
-    edges, related, missingMaterials, missingCharacters,
+    edges, related, characterIdentityResolutions, missingMaterials, missingCharacters,
     blockers: ['character-public-dto-and-media-unverified', 'page-links-and-derived-copy-unmapped', 'locale-fallback-policy-unapproved', 'collection-order-unmapped', 'content-approval-absent',
       ...(missingMaterials.length ? ['missing-material-references'] : []), ...(missingCharacters.length ? ['missing-character-references'] : [])],
     dependencyClosureComplete: false, publishable: false }

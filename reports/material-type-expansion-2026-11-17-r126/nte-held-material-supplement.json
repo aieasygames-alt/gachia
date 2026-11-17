@@ -1,0 +1,3555 @@
+{
+  "version": "nte-held-material-supplement-v1",
+  "generatedAt": "2026-11-17",
+  "game": "nte",
+  "status": "held",
+  "publishable": false,
+  "releaseCompatible": false,
+  "approvedTarget": null,
+  "purpose": "Preserve every unresolved NTE material reference and its source quantities while source-bound identity evidence is pending.",
+  "sourceFiles": {
+    "packages/data/games/nte/raw-materials.json": "eb493d5923b34bf20e840b31bfa93d145c6a3397163798b73e1f85a8f0b6328c",
+    "packages/data/games/nte/raw-character-materials.json": "e749d53d5307bd0ce0f5bbdeb0c5b1f81134f5ba2c4d70725da0eb974d6002f3",
+    "packages/data/games/nte/raw-characters.json": "b3693e9cb5d8b6ba29a9ec3bb81dfd3755764b34255af3a2e454ad8c0e3ad938"
+  },
+  "evidence": {
+    "officialSourceAudit": {
+      "path": "reports/material-type-expansion-2026-11-16-r125/official-material-source-audit.json",
+      "sha256": "8882d0767d1e09f527977fcaea67a9ff4bac4b155aed5f63c95b937487fee853",
+      "status": "no-authoritative-material-identity-or-quantity-found"
+    },
+    "thirdPartyAudit": {
+      "path": "reports/material-type-expansion-2026-11-16-r125/game8-character-material-audit.json",
+      "sha256": "d471033f14f94d1aaadb098d471eaca3dd4fac01cae30ba22180156c43a57c61",
+      "status": "terminology-only-and-stage-mismatch"
+    }
+  },
+  "counts": {
+    "unresolvedMaterialIds": 27,
+    "references": 441,
+    "sourceMaterialCount": 57,
+    "relationCount": 21,
+    "characterCount": 42
+  },
+  "materials": [
+    {
+      "id": "advanced-hunter-guide",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/2/materials/0/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/0/levelingMaterials/3/materials/0/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/1/levelingMaterials/2/materials/0/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/1/levelingMaterials/3/materials/0/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/2/levelingMaterials/2/materials/0/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/2/levelingMaterials/3/materials/0/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/3/levelingMaterials/2/materials/0/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/3/levelingMaterials/3/materials/0/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/4/levelingMaterials/2/materials/0/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/0/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/5/levelingMaterials/2/materials/0/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/5/levelingMaterials/3/materials/0/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/6/levelingMaterials/2/materials/0/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/0/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/7/levelingMaterials/2/materials/0/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/0/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/8/levelingMaterials/2/materials/0/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/0/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/9/levelingMaterials/2/materials/0/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/0/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/10/levelingMaterials/2/materials/0/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/0/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/11/levelingMaterials/2/materials/0/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/11/levelingMaterials/3/materials/0/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/12/levelingMaterials/2/materials/0/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/0/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/13/levelingMaterials/2/materials/0/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/0/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/14/levelingMaterials/2/materials/0/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/0/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/15/levelingMaterials/2/materials/0/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/0/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/16/levelingMaterials/2/materials/0/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/0/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/17/levelingMaterials/2/materials/0/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/0/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/18/levelingMaterials/2/materials/0/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/0/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/19/levelingMaterials/2/materials/0/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/0/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        },
+        {
+          "pointer": "/20/levelingMaterials/2/materials/0/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 4
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/0/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "id": "anima-crystal",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/3/materials/1/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/0/levelingMaterials/4/materials/1/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/1/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/4/materials/1/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/1/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/4/materials/1/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/1/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/4/materials/1/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "anima-fragment",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/1/materials/1/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/0/levelingMaterials/2/materials/1/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/8/levelingMaterials/1/materials/1/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/2/materials/1/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/13/levelingMaterials/1/materials/1/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/2/materials/1/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/14/levelingMaterials/1/materials/1/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/2/materials/1/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "basic-hunter-guide",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/0/materials/0/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/0/levelingMaterials/1/materials/0/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/0/skillMaterials/1/id",
+          "characterId": "nanally",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/1/levelingMaterials/0/materials/0/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/1/materials/0/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/1/skillMaterials/1/id",
+          "characterId": "sakiri",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/2/levelingMaterials/0/materials/0/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/1/materials/0/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/2/skillMaterials/1/id",
+          "characterId": "fadia",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/3/levelingMaterials/0/materials/0/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/1/materials/0/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/3/skillMaterials/1/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/4/levelingMaterials/0/materials/0/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/1/materials/0/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/4/skillMaterials/1/id",
+          "characterId": "baicang",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/5/levelingMaterials/0/materials/0/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/1/materials/0/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/5/skillMaterials/1/id",
+          "characterId": "zero",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/6/levelingMaterials/0/materials/0/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/1/materials/0/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/6/skillMaterials/1/id",
+          "characterId": "hotori",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/7/levelingMaterials/0/materials/0/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/1/materials/0/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/7/skillMaterials/1/id",
+          "characterId": "daffodil",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/8/levelingMaterials/0/materials/0/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/1/materials/0/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/8/skillMaterials/1/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/9/levelingMaterials/0/materials/0/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/1/materials/0/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/9/skillMaterials/1/id",
+          "characterId": "haniel",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/10/levelingMaterials/0/materials/0/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/1/materials/0/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/10/skillMaterials/1/id",
+          "characterId": "adler",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/11/levelingMaterials/0/materials/0/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/1/materials/0/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/11/skillMaterials/1/id",
+          "characterId": "skia",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/12/levelingMaterials/0/materials/0/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/1/materials/0/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/12/skillMaterials/1/id",
+          "characterId": "edgar",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/13/levelingMaterials/0/materials/0/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/1/materials/0/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/13/skillMaterials/1/id",
+          "characterId": "mint",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/14/levelingMaterials/0/materials/0/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/1/materials/0/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/14/skillMaterials/1/id",
+          "characterId": "nelly",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/15/levelingMaterials/0/materials/0/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/1/materials/0/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/15/skillMaterials/1/id",
+          "characterId": "merula",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/16/levelingMaterials/0/materials/0/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/1/materials/0/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/16/skillMaterials/1/id",
+          "characterId": "alphard",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/17/levelingMaterials/0/materials/0/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/1/materials/0/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/17/skillMaterials/1/id",
+          "characterId": "taygedo",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/18/levelingMaterials/0/materials/0/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/1/materials/0/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/18/skillMaterials/1/id",
+          "characterId": "hathor",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/19/levelingMaterials/0/materials/0/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/1/materials/0/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/19/skillMaterials/1/id",
+          "characterId": "chiz",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        },
+        {
+          "pointer": "/20/levelingMaterials/0/materials/0/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/1/materials/0/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 5
+        },
+        {
+          "pointer": "/20/skillMaterials/1/id",
+          "characterId": "lilina",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "id": "boss-anima",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/5/materials/1/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/5/materials/1/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/5/materials/1/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/5/materials/1/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "boss-chaos",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/3/levelingMaterials/5/materials/1/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/5/materials/1/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "boss-cosmos",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/5/levelingMaterials/5/materials/1/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/5/materials/1/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/5/materials/1/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/5/materials/1/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/5/materials/1/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/5/materials/1/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "boss-incantation",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/1/levelingMaterials/5/materials/1/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/5/materials/1/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/5/materials/1/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "boss-lakshana",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/11/levelingMaterials/5/materials/1/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/5/materials/1/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/5/materials/1/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/5/materials/1/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "boss-psyche",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/2/levelingMaterials/5/materials/1/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/5/materials/1/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "chaos-core",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/3/levelingMaterials/3/materials/1/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/4/materials/1/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/1/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/4/materials/1/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "chaos-essence",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/3/levelingMaterials/1/materials/1/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/2/materials/1/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/7/levelingMaterials/1/materials/1/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/2/materials/1/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "cosmos-spark",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/5/levelingMaterials/1/materials/1/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/2/materials/1/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/6/levelingMaterials/1/materials/1/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/2/materials/1/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/12/levelingMaterials/1/materials/1/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/2/materials/1/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/17/levelingMaterials/1/materials/1/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/2/materials/1/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/19/levelingMaterials/1/materials/1/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/2/materials/1/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/20/levelingMaterials/1/materials/1/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/2/materials/1/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "cosmos-storm",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/5/levelingMaterials/3/materials/1/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/4/materials/1/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/1/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/4/materials/1/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/1/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/4/materials/1/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/1/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/4/materials/1/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/1/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/4/materials/1/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/1/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/4/materials/1/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "credits",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/0/materials/1/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/0/levelingMaterials/1/materials/2/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/0/levelingMaterials/2/materials/2/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/0/levelingMaterials/3/materials/3/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/0/levelingMaterials/4/materials/3/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/0/levelingMaterials/5/materials/3/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/0/skillMaterials/2/id",
+          "characterId": "nanally",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/1/levelingMaterials/0/materials/1/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/1/levelingMaterials/1/materials/2/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/1/levelingMaterials/2/materials/2/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/1/levelingMaterials/3/materials/3/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/1/levelingMaterials/4/materials/3/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/1/levelingMaterials/5/materials/3/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/1/skillMaterials/2/id",
+          "characterId": "sakiri",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/2/levelingMaterials/0/materials/1/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/2/levelingMaterials/1/materials/2/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/2/levelingMaterials/2/materials/2/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/2/levelingMaterials/3/materials/3/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/2/levelingMaterials/4/materials/3/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/2/levelingMaterials/5/materials/3/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/2/skillMaterials/2/id",
+          "characterId": "fadia",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/3/levelingMaterials/0/materials/1/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/3/levelingMaterials/1/materials/2/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/3/levelingMaterials/2/materials/2/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/3/levelingMaterials/3/materials/3/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/3/levelingMaterials/4/materials/3/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/3/levelingMaterials/5/materials/3/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/3/skillMaterials/2/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/4/levelingMaterials/0/materials/1/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/4/levelingMaterials/1/materials/2/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/4/levelingMaterials/2/materials/2/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/3/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/4/levelingMaterials/4/materials/3/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/4/levelingMaterials/5/materials/3/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/4/skillMaterials/2/id",
+          "characterId": "baicang",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/5/levelingMaterials/0/materials/1/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/5/levelingMaterials/1/materials/2/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/5/levelingMaterials/2/materials/2/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/5/levelingMaterials/3/materials/3/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/5/levelingMaterials/4/materials/3/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/5/levelingMaterials/5/materials/3/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/5/skillMaterials/2/id",
+          "characterId": "zero",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/6/levelingMaterials/0/materials/1/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/6/levelingMaterials/1/materials/2/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/6/levelingMaterials/2/materials/2/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/3/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/6/levelingMaterials/4/materials/3/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/6/levelingMaterials/5/materials/3/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/6/skillMaterials/2/id",
+          "characterId": "hotori",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/7/levelingMaterials/0/materials/1/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/7/levelingMaterials/1/materials/2/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/7/levelingMaterials/2/materials/2/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/3/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/7/levelingMaterials/4/materials/3/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/7/levelingMaterials/5/materials/3/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/7/skillMaterials/2/id",
+          "characterId": "daffodil",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/8/levelingMaterials/0/materials/1/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/8/levelingMaterials/1/materials/2/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/8/levelingMaterials/2/materials/2/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/3/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/8/levelingMaterials/4/materials/3/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/8/levelingMaterials/5/materials/3/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/8/skillMaterials/2/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/9/levelingMaterials/0/materials/1/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/9/levelingMaterials/1/materials/2/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/9/levelingMaterials/2/materials/2/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/3/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/9/levelingMaterials/4/materials/3/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/9/levelingMaterials/5/materials/3/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/9/skillMaterials/2/id",
+          "characterId": "haniel",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/10/levelingMaterials/0/materials/1/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/10/levelingMaterials/1/materials/2/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/10/levelingMaterials/2/materials/2/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/3/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/10/levelingMaterials/4/materials/3/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/10/levelingMaterials/5/materials/3/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/10/skillMaterials/2/id",
+          "characterId": "adler",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/11/levelingMaterials/0/materials/1/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/11/levelingMaterials/1/materials/2/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/11/levelingMaterials/2/materials/2/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/11/levelingMaterials/3/materials/3/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/11/levelingMaterials/4/materials/3/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/11/levelingMaterials/5/materials/3/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/11/skillMaterials/2/id",
+          "characterId": "skia",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/12/levelingMaterials/0/materials/1/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/12/levelingMaterials/1/materials/2/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/12/levelingMaterials/2/materials/2/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/3/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/12/levelingMaterials/4/materials/3/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/12/levelingMaterials/5/materials/3/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/12/skillMaterials/2/id",
+          "characterId": "edgar",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/13/levelingMaterials/0/materials/1/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/13/levelingMaterials/1/materials/2/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/13/levelingMaterials/2/materials/2/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/3/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/13/levelingMaterials/4/materials/3/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/13/levelingMaterials/5/materials/3/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/13/skillMaterials/2/id",
+          "characterId": "mint",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/14/levelingMaterials/0/materials/1/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/14/levelingMaterials/1/materials/2/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/14/levelingMaterials/2/materials/2/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/3/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/14/levelingMaterials/4/materials/3/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/14/levelingMaterials/5/materials/3/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/14/skillMaterials/2/id",
+          "characterId": "nelly",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/15/levelingMaterials/0/materials/1/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/15/levelingMaterials/1/materials/2/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/15/levelingMaterials/2/materials/2/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/3/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/15/levelingMaterials/4/materials/3/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/15/levelingMaterials/5/materials/3/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/15/skillMaterials/2/id",
+          "characterId": "merula",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/16/levelingMaterials/0/materials/1/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/16/levelingMaterials/1/materials/2/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/16/levelingMaterials/2/materials/2/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/3/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/16/levelingMaterials/4/materials/3/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/16/levelingMaterials/5/materials/3/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/16/skillMaterials/2/id",
+          "characterId": "alphard",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/17/levelingMaterials/0/materials/1/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/17/levelingMaterials/1/materials/2/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/17/levelingMaterials/2/materials/2/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/3/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/17/levelingMaterials/4/materials/3/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/17/levelingMaterials/5/materials/3/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/17/skillMaterials/2/id",
+          "characterId": "taygedo",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/18/levelingMaterials/0/materials/1/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/18/levelingMaterials/1/materials/2/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/18/levelingMaterials/2/materials/2/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/3/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/18/levelingMaterials/4/materials/3/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/18/levelingMaterials/5/materials/3/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/18/skillMaterials/2/id",
+          "characterId": "hathor",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/19/levelingMaterials/0/materials/1/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/19/levelingMaterials/1/materials/2/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/19/levelingMaterials/2/materials/2/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/3/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/19/levelingMaterials/4/materials/3/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/19/levelingMaterials/5/materials/3/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/19/skillMaterials/2/id",
+          "characterId": "chiz",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        },
+        {
+          "pointer": "/20/levelingMaterials/0/materials/1/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "1-10",
+          "quantity": 2000
+        },
+        {
+          "pointer": "/20/levelingMaterials/1/materials/2/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 4000
+        },
+        {
+          "pointer": "/20/levelingMaterials/2/materials/2/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 8000
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/3/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 16000
+        },
+        {
+          "pointer": "/20/levelingMaterials/4/materials/3/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 32000
+        },
+        {
+          "pointer": "/20/levelingMaterials/5/materials/3/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 64000
+        },
+        {
+          "pointer": "/20/skillMaterials/2/id",
+          "characterId": "lilina",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 200000
+        }
+      ]
+    },
+    {
+      "id": "expert-permit",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/4/materials/2/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/4/materials/2/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/4/materials/2/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/3/levelingMaterials/4/materials/2/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/4/materials/2/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/5/levelingMaterials/4/materials/2/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/6/levelingMaterials/4/materials/2/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/7/levelingMaterials/4/materials/2/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/8/levelingMaterials/4/materials/2/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/4/materials/2/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/4/materials/2/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/4/materials/2/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/12/levelingMaterials/4/materials/2/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/13/levelingMaterials/4/materials/2/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/14/levelingMaterials/4/materials/2/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/4/materials/2/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/4/materials/2/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/17/levelingMaterials/4/materials/2/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/4/materials/2/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/19/levelingMaterials/4/materials/2/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        },
+        {
+          "pointer": "/20/levelingMaterials/4/materials/2/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "incantation-crystal",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/1/levelingMaterials/3/materials/1/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/4/materials/1/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/1/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/4/materials/1/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/1/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/4/materials/1/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "incantation-shard",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/1/levelingMaterials/1/materials/1/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/1/levelingMaterials/2/materials/1/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/4/levelingMaterials/1/materials/1/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/4/levelingMaterials/2/materials/1/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/10/levelingMaterials/1/materials/1/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/10/levelingMaterials/2/materials/1/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "lakshana-dust",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/11/levelingMaterials/1/materials/1/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/2/materials/1/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/15/levelingMaterials/1/materials/1/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/2/materials/1/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/16/levelingMaterials/1/materials/1/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/2/materials/1/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/18/levelingMaterials/1/materials/1/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/2/materials/1/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "lakshana-signet",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/11/levelingMaterials/3/materials/1/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/11/levelingMaterials/4/materials/1/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/1/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/15/levelingMaterials/4/materials/1/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/1/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/16/levelingMaterials/4/materials/1/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/1/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/18/levelingMaterials/4/materials/1/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "manual-attack",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/skillMaterials/0/id",
+          "characterId": "nanally",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/2/skillMaterials/0/id",
+          "characterId": "fadia",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/3/skillMaterials/0/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/5/skillMaterials/0/id",
+          "characterId": "zero",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/6/skillMaterials/0/id",
+          "characterId": "hotori",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/9/skillMaterials/0/id",
+          "characterId": "haniel",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/10/skillMaterials/0/id",
+          "characterId": "adler",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/11/skillMaterials/0/id",
+          "characterId": "skia",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/15/skillMaterials/0/id",
+          "characterId": "merula",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/16/skillMaterials/0/id",
+          "characterId": "alphard",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/18/skillMaterials/0/id",
+          "characterId": "hathor",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/19/skillMaterials/0/id",
+          "characterId": "chiz",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/20/skillMaterials/0/id",
+          "characterId": "lilina",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "id": "manual-defense",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/4/skillMaterials/0/id",
+          "characterId": "baicang",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "id": "manual-support",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/1/skillMaterials/0/id",
+          "characterId": "sakiri",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/7/skillMaterials/0/id",
+          "characterId": "daffodil",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/8/skillMaterials/0/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/12/skillMaterials/0/id",
+          "characterId": "edgar",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/13/skillMaterials/0/id",
+          "characterId": "mint",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/14/skillMaterials/0/id",
+          "characterId": "nelly",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        },
+        {
+          "pointer": "/17/skillMaterials/0/id",
+          "characterId": "taygedo",
+          "relationGroup": "skillMaterials",
+          "stage": "skill",
+          "quantity": 12
+        }
+      ]
+    },
+    {
+      "id": "master-permit",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/5/materials/2/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/1/levelingMaterials/5/materials/2/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/2/levelingMaterials/5/materials/2/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/3/levelingMaterials/5/materials/2/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/4/levelingMaterials/5/materials/2/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/5/levelingMaterials/5/materials/2/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/6/levelingMaterials/5/materials/2/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/7/levelingMaterials/5/materials/2/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/8/levelingMaterials/5/materials/2/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/9/levelingMaterials/5/materials/2/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/10/levelingMaterials/5/materials/2/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/11/levelingMaterials/5/materials/2/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/12/levelingMaterials/5/materials/2/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/13/levelingMaterials/5/materials/2/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/14/levelingMaterials/5/materials/2/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/15/levelingMaterials/5/materials/2/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/16/levelingMaterials/5/materials/2/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/17/levelingMaterials/5/materials/2/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/18/levelingMaterials/5/materials/2/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/19/levelingMaterials/5/materials/2/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        },
+        {
+          "pointer": "/20/levelingMaterials/5/materials/2/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "51-60",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "pioneer-permit",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/0/levelingMaterials/3/materials/2/id",
+          "characterId": "nanally",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/1/levelingMaterials/3/materials/2/id",
+          "characterId": "sakiri",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/2/levelingMaterials/3/materials/2/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/3/levelingMaterials/3/materials/2/id",
+          "characterId": "lacrimosa",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/4/levelingMaterials/3/materials/2/id",
+          "characterId": "baicang",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/5/levelingMaterials/3/materials/2/id",
+          "characterId": "zero",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/6/levelingMaterials/3/materials/2/id",
+          "characterId": "hotori",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/7/levelingMaterials/3/materials/2/id",
+          "characterId": "daffodil",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/8/levelingMaterials/3/materials/2/id",
+          "characterId": "jiuyuan",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/2/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/10/levelingMaterials/3/materials/2/id",
+          "characterId": "adler",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/11/levelingMaterials/3/materials/2/id",
+          "characterId": "skia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/12/levelingMaterials/3/materials/2/id",
+          "characterId": "edgar",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/13/levelingMaterials/3/materials/2/id",
+          "characterId": "mint",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/14/levelingMaterials/3/materials/2/id",
+          "characterId": "nelly",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/15/levelingMaterials/3/materials/2/id",
+          "characterId": "merula",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/16/levelingMaterials/3/materials/2/id",
+          "characterId": "alphard",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/17/levelingMaterials/3/materials/2/id",
+          "characterId": "taygedo",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/18/levelingMaterials/3/materials/2/id",
+          "characterId": "hathor",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/19/levelingMaterials/3/materials/2/id",
+          "characterId": "chiz",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        },
+        {
+          "pointer": "/20/levelingMaterials/3/materials/2/id",
+          "characterId": "lilina",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "psyche-essence",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/2/levelingMaterials/1/materials/1/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/2/materials/1/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        },
+        {
+          "pointer": "/9/levelingMaterials/1/materials/1/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "11-20",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/2/materials/1/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "21-30",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "psyche-fragment",
+      "status": "held",
+      "approvedTarget": null,
+      "publishable": false,
+      "releaseCompatible": false,
+      "evidenceStatus": {
+        "identity": "unverified",
+        "gameVersion": "unverified",
+        "stagesAndQuantities": "repository-reference-only",
+        "publicUrl": "unverified",
+        "consumerParity": "blocked-by-material-identity"
+      },
+      "references": [
+        {
+          "pointer": "/2/levelingMaterials/3/materials/1/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/2/levelingMaterials/4/materials/1/id",
+          "characterId": "fadia",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        },
+        {
+          "pointer": "/9/levelingMaterials/3/materials/1/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "31-40",
+          "quantity": 3
+        },
+        {
+          "pointer": "/9/levelingMaterials/4/materials/1/id",
+          "characterId": "haniel",
+          "relationGroup": "levelingMaterials",
+          "stage": "41-50",
+          "quantity": 5
+        }
+      ]
+    }
+  ]
+}

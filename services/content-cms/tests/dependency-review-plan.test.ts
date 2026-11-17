@@ -16,13 +16,10 @@ const characters = [{ id: 'zero-male' }, { id: 'zero-female' }]
 test('review plans retain every source pointer, distinguish ambiguity, and never approve lexical hints', () => {
   const rows = candidates('nte', ['ore'])
   const plan = dependencyReviewPlan('nte', rows, relations, characters)
-  assert.deepEqual(plan.counts, { issues: 3, references: 4, noCandidate: 1, singleCandidate: 1, ambiguous: 1 })
+  assert.deepEqual(plan.counts, { issues: 2, references: 3, noCandidate: 1, singleCandidate: 1, ambiguous: 0 })
   const ore = plan.issues.find(i => i.missingId === 'Ore')!
   assert.deepEqual(ore.candidateHints, [{ targetId: 'ore', reason: 'case-or-separator' }])
   assert.deepEqual(ore.references.map(r => r.quantity), [2, 3])
-  const zero = plan.issues.find(i => i.missingId === 'zero')!
-  assert.equal(zero.candidateHints.length, 2)
-  assert.equal(zero.references[0].pointer, '/0/characterId')
   for (const issue of plan.issues) {
     assert.equal(issue.status, 'needs-source-review')
     assert.equal(issue.approvedTarget, null)
@@ -35,6 +32,24 @@ test('review plans retain every source pointer, distinguish ambiguity, and never
   assert.equal(plan.executable, false)
   assert.equal(plan.publishable, false)
   assert.deepEqual(verifyDependencyReviewPlan(plan, 'nte', rows, relations, characters), plan)
+})
+
+test('approved NTE canonical Zero identity resolves to both display variants without lexical approval', () => {
+  const rows = candidates('nte', ['ore'])
+  const plan = dependencyReviewPlan('nte', rows, relations, characters)
+  assert.deepEqual(plan.issues.map(issue => issue.missingId), ['Ore', 'unknown'])
+  assert.deepEqual(plan.characterIdentityResolutions.map(identity => ({
+    sourceId: identity.sourceId,
+    canonicalId: identity.canonicalId,
+    displayVariantIds: identity.displayVariantIds,
+    resolution: identity.resolution,
+  })), [{
+    sourceId: 'zero',
+    canonicalId: 'zero',
+    displayVariantIds: ['zero-male', 'zero-female'],
+    resolution: 'approved-canonical-identity',
+  }])
+  assert.equal(plan.issues.some(issue => issue.kind === 'character'), false)
 })
 
 test('source changes, hand-edited hints and approvals invalidate saved review plans', () => {
@@ -57,14 +72,15 @@ test('actual source gaps produce reproducible review work, not guessed repairs',
     const raw = await read('raw-materials'), relationRows = await read('raw-character-materials'), characterRows = await read('raw-characters')
     const rows = mapBatch([snapshot(game, `packages/data/games/${game}/raw-materials.json`, 'raw-json', JSON.stringify(raw))], policy).sources[0].records
     const plan = dependencyReviewPlan(game, rows, relationRows, characterRows)
-    assert.equal(plan.issues.length, game === 'starrail' ? 0 : game === 'genshin' ? 78 : 28)
+    assert.equal(plan.issues.length, game === 'starrail' ? 0 : game === 'genshin' ? 78 : 27)
     assert.deepEqual(verifyDependencyReviewPlan(plan, game, rows, relationRows, characterRows), plan)
     if (game === 'genshin') {
       assert.deepEqual(plan.issues.find(i => i.missingId === 'guide-to-freedom')!.candidateHints, [{ targetId: 'guide-of-freedom', reason: 'guide-preposition' }])
       assert.equal(plan.issues.find(i => i.missingId === 'sara')!.candidateHints[0].targetId, 'kujou-sara')
     }
     if (game === 'nte') {
-      assert.equal(plan.issues.find(i => i.missingId === 'zero')!.classification, 'ambiguous-lexical-candidates')
+      assert.equal(plan.issues.some(i => i.missingId === 'zero'), false)
+      assert.deepEqual(plan.characterIdentityResolutions.filter(identity => identity.resolution === 'approved-canonical-identity').map(identity => identity.displayVariantIds), [['zero-male', 'zero-female']])
       assert.deepEqual(plan.issues.find(i => i.missingId === 'basic-hunter-guide')!.candidateHints, [])
     }
   }
