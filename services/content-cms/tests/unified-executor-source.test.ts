@@ -2,7 +2,9 @@ import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
+import { createRequire } from 'node:module'
 import path from 'node:path'
+import { pathToFileURL } from 'node:url'
 import test, { type TestContext } from 'node:test'
 import { assertUnifiedExecutorRuntime, captureUnifiedExecutorSource } from '../src/unified-executor-source'
 
@@ -63,4 +65,14 @@ test('executor rejects Git grafts and unreviewed runtime instrumentation', t => 
     assert.throws(() => assertUnifiedExecutorRuntime({}, args), /preloads|loaders/)
   }
   assertUnifiedExecutorRuntime({}, ['--import', 'tsx'])
+})
+
+test('executor permits the installed tsx CLI file URL loader and rejects other URL preloads', () => {
+  const tsx = path.dirname(createRequire(import.meta.url).resolve('tsx'))
+  const loader = pathToFileURL(path.join(tsx, 'loader.mjs')).href
+  assertUnifiedExecutorRuntime({}, ['--require', path.join(tsx, 'preflight.cjs'), '--import', loader])
+  assertUnifiedExecutorRuntime({}, [`--import=${loader}`])
+  for (const value of [loader + '?patch=1', pathToFileURL(path.join(tsx, 'unverified.mjs')).href, 'https://example.invalid/loader.mjs']) {
+    assert.throws(() => assertUnifiedExecutorRuntime({}, ['--import', value]), /unverified runtime preloads/)
+  }
 })

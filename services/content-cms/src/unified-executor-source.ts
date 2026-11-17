@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto'
 import { existsSync, readFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import path from 'node:path'
+import { pathToFileURL } from 'node:url'
 
 const executorPaths = ['scripts', 'services/content-cms', '.github/workflows', 'pnpm-lock.yaml', 'package.json']
 const digest = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex')
@@ -15,7 +16,8 @@ export function assertUnifiedExecutorRuntime(env: Record<string, string | undefi
     assert(!env[key]?.trim(), `Production executor forbids ${key} overrides`)
   }
   const tsx = path.dirname(require.resolve('tsx'))
-  const allowed = new Set(['tsx', path.join(tsx, 'loader.mjs'), path.join(tsx, 'preflight.cjs')])
+  const tsxFiles = [path.join(tsx, 'loader.mjs'), path.join(tsx, 'preflight.cjs')]
+  const allowed = new Set(['tsx', ...tsxFiles, ...tsxFiles.map(file => pathToFileURL(file).href)])
   for (let index = 0; index < args.length; index++) {
     const match = /^(--import|--require|-r)(?:=(.*))?$/.exec(args[index])
     if (match) assert(allowed.has(match[2] ?? args[++index]), 'Production executor forbids unverified runtime preloads')
