@@ -3,12 +3,14 @@ import { dedicatedCharacterTextPairContract, DEDICATED_CHARACTER_TEXT_SOURCES } 
 import { azurPromiliaGuideContract, AZUR_PROMILIA_GUIDE_SOURCE } from './azur-promilia-independent-text'
 import type { exportUnifiedContent, SourceBytes } from './unified-export'
 import { digest } from './legacy-intake'
+import { NTE_MATERIAL_TEXT_SOURCE, nteMaterialTextPairContract } from './nte-material-text'
 
 export const GENSHIN_PRODUCTION_SCOPE = 'genshin-independent-existing-character-text-v1'
 export const NTE_PRODUCTION_SCOPE = 'nte-independent-existing-character-text-v1'
+export const NTE_MATERIAL_PRODUCTION_SCOPE = 'nte-independent-existing-material-text-v1'
 export const AZUR_PROMILIA_PRODUCTION_SCOPE = 'azur-promilia-independent-existing-text-v1'
 export const LVMENG_PRODUCTION_SCOPE = 'lvmeng-independent-existing-character-text-v1'
-export type IndependentProductionScope = typeof GENSHIN_PRODUCTION_SCOPE | typeof NTE_PRODUCTION_SCOPE | typeof AZUR_PROMILIA_PRODUCTION_SCOPE | typeof LVMENG_PRODUCTION_SCOPE
+export type IndependentProductionScope = typeof GENSHIN_PRODUCTION_SCOPE | typeof NTE_PRODUCTION_SCOPE | typeof NTE_MATERIAL_PRODUCTION_SCOPE | typeof AZUR_PROMILIA_PRODUCTION_SCOPE | typeof LVMENG_PRODUCTION_SCOPE
 
 // Source/build qualification only. The fixed production entry additionally
 // requires the completed migration, current full A, live CMS review, exact CI,
@@ -34,7 +36,11 @@ export function independentProductionOwnerScope(owner: 'genshin' | 'nte' | 'azur
     assert.equal(digest(row.text), row.sha256)
     return row.sha256 !== before.sha256
   })
-  if (owner === 'azur-promilia') {
+  const material = owner === 'nte' && edited.some(row => row.sourcePath === NTE_MATERIAL_TEXT_SOURCE)
+  if (material) {
+    assert.deepEqual(edited.map(row => row.sourcePath), [NTE_MATERIAL_TEXT_SOURCE], 'Other games and non-material sources must stay at published A')
+    nteMaterialTextPairContract(active, edited)
+  } else if (owner === 'azur-promilia') {
     assert.deepEqual(edited.map(row => row.sourcePath), [AZUR_PROMILIA_GUIDE_SOURCE], 'Other games and non-guide sources must stay at published A')
     const pair = azurPromiliaGuideContract(active, edited)
     assert.equal(pair.changes.length, 1); assert.equal(pair.changes[0].game, owner)
@@ -43,5 +49,5 @@ export function independentProductionOwnerScope(owner: 'genshin' | 'nte' | 'azur
     const pair = dedicatedCharacterTextPairContract(active, edited)
     assert.equal(pair.candidate.changes.length, 1); assert.equal(pair.candidate.changes[0].game, owner)
   }
-  return { games: [owner], owners: [owner], services: [`gachia-game-${owner}`], productionScope: owner === 'genshin' ? GENSHIN_PRODUCTION_SCOPE : owner === 'nte' ? NTE_PRODUCTION_SCOPE : owner === 'azur-promilia' ? AZUR_PROMILIA_PRODUCTION_SCOPE : LVMENG_PRODUCTION_SCOPE }
+  return { games: [owner], owners: [owner], services: [`gachia-game-${owner}`], productionScope: material ? NTE_MATERIAL_PRODUCTION_SCOPE : owner === 'genshin' ? GENSHIN_PRODUCTION_SCOPE : owner === 'nte' ? NTE_PRODUCTION_SCOPE : owner === 'azur-promilia' ? AZUR_PROMILIA_PRODUCTION_SCOPE : LVMENG_PRODUCTION_SCOPE }
 }

@@ -26,7 +26,7 @@ import { verifyUnifiedInstalledApplication } from './unified-installed-applicati
 import { projectRoot } from './local-environment'
 import { createUnifiedExecutorVerifier, readUnifiedProductionReview, verifyUnifiedCI } from './unified-production'
 import { verifyUnifiedPublishedSource } from './unified-source-advance'
-import { NTE_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
+import { NTE_MATERIAL_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
 import { captureUnifiedExecutorSource } from './unified-executor-source'
 import { baselineDirectory } from './inventory-baseline'
 import { unifiedPlan } from './unified-plan'
@@ -77,7 +77,7 @@ export async function prepareNteIndependentProduction(input: { sourceIndex: Proo
   assert.equal(selected.length, 1); const review = await readUnifiedProductionReview(plan, selected, input.cmsToken)
   mkdirSync(directory, { mode: 0o700 })
   try {
-    const frozen = freezeUnifiedContent({ repo, commit: executor.commit, directory: path.join(directory, 'build'), plan, records: review.records, activeSources: sources.sources, preview: false, productionScope: NTE_PRODUCTION_SCOPE })
+    const frozen = freezeUnifiedContent({ repo, commit: executor.commit, directory: path.join(directory, 'build'), plan, records: review.records, activeSources: sources.sources, preview: false, productionScope: review.records[0].sourceRecord.sourcePath === 'packages/data/games/nte/raw-materials.json' ? NTE_MATERIAL_PRODUCTION_SCOPE : NTE_PRODUCTION_SCOPE })
     const editorial = migrationSave(directory, 'review.json', { sourceCommit: executor.commit, planSHA256: plan.planSHA256, selected, reviews: review.reviews, reviewPin: review.reviewPin, application: input.application })
     const built = await buildUnifiedOwners(frozen.directory, frozen.manifestPin, [])
     const bundle = await prepareNteReleaseBundle({ build: { path: path.join(built.directory, 'build.json'), pin: built.buildPin }, sourceIndex: input.sourceIndex, review: editorial, directory: path.join(directory, 'sealed'), migration: false })
@@ -115,7 +115,7 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
       const rebuilt = verifyNteDataOnlyBuild(evidence.value.build)
       assert.deepEqual(rebuilt.value.changedPaths, dataReview!.changedPaths)
     } else {
-      const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan: plan!, records: review!.records, activeSources: evidence.sources.sources, preview: false, productionScope: NTE_PRODUCTION_SCOPE })
+      const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan: plan!, records: review!.records, activeSources: evidence.sources.sources, preview: false, productionScope: evidence.built.frozen.productionScope })
       assert.equal(reconstructed.sourceTreeSHA256, evidence.built.frozen.sourceTreeSHA256); assert.deepEqual(reconstructed.candidate, evidence.built.frozen.candidate)
     }
     rmSync(temporary, { recursive: true })

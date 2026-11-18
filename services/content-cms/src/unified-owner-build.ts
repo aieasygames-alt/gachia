@@ -15,6 +15,7 @@ import { verifyUnifiedFrozenSource } from './unified-build'
 import { dedicatedCharacterTextContract, dedicatedCharacterTextPairContract, DEDICATED_CHARACTER_TEXT_SOURCES, mergeCharacterTextExpectations } from './unified-character-text'
 import { GENSHIN_LOCAL_SCOPE } from './unified-genshin-local-scope'
 import { materialConsumerContract, mergeMaterialConsumerExpectations, assertMaterialPageConsumer, type MaterialPageExpectation } from './material-consumer-contract'
+import { nteMaterialTextPairContract } from './nte-material-text'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
@@ -51,6 +52,14 @@ export function frozenCharacterTextContract(directory: string, frozen: ReturnTyp
 export function frozenCharacterTextPairContract(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
   const { active, overlays } = frozenCharacterTextInputs(directory, frozen)
   return dedicatedCharacterTextPairContract(active, overlays)
+}
+
+export function frozenNteMaterialTextPairContract(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
+  const files = JSON.parse(readFileSync(path.join(directory, 'active.json'), 'utf8')) as { sourcePath: string; sha256: string; file: string }[]
+  const active = files.map(row => ({ sourcePath: row.sourcePath, sha256: row.sha256, text: readFileSync(path.join(directory, row.file), 'utf8') }))
+  const overlays = frozen.candidate.files.filter(row => row.activeSHA256 !== row.candidateSHA256).map(row => ({ sourcePath: row.sourcePath,
+    sha256: row.candidateSHA256, text: readFileSync(path.join(directory, 'source', row.sourcePath), 'utf8') }))
+  return nteMaterialTextPairContract(active, overlays)
 }
 
 export function frozenMaterialConsumerContracts(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {

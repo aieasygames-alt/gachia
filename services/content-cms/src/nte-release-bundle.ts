@@ -21,8 +21,8 @@ import { readUnifiedSourceOwner } from '../../../scripts/unified-source-advance.
 import { mainManifests } from '../../../packages/data/scripts/main-manifests.mjs'
 import { verifyNteDataOnlyBuild, verifyNteMigrationBuild } from './nte-migration-build'
 import { readNteSourceIndex } from './nte-release-history'
-import { frozenCharacterTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
-import { NTE_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
+import { frozenNteMaterialTextPairContract, frozenCharacterTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
+import { NTE_MATERIAL_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
 import { nteCharacterDisplayIds } from '../../../packages/data/games/nte/character-identity'
 
 type Proof = { path: string; pin: string }
@@ -65,7 +65,7 @@ async function inputs(build: Proof, sourceIndex: Proof, migration: boolean, dept
   assertBaselineConfiguration(workspace, sources.baseline, migration)
   if (!migration) {
     if (!dataOnly) {
-      assert.equal(build.path, path.join(built.directory, 'build.json')); assert.equal(built.frozen.productionScope, NTE_PRODUCTION_SCOPE)
+      assert.equal(build.path, path.join(built.directory, 'build.json')); assert([NTE_PRODUCTION_SCOPE, NTE_MATERIAL_PRODUCTION_SCOPE].includes(built.frozen.productionScope))
       assert.equal(built.frozen.localScope, undefined); assert.equal(built.receipt.preview, false); assert.deepEqual(built.frozen.owners, ['nte'])
     }
     assert.equal(sources.value.kind.startsWith('nte_'), true, 'NTE editorial release requires the completed one-time migration')
@@ -76,7 +76,7 @@ async function inputs(build: Proof, sourceIndex: Proof, migration: boolean, dept
   const expected = nteContentAssets(workspace), candidateSources = dataOnly ? built.candidateSources.map((row: any) => ({ ...row, text: readFileSync(path.join(path.dirname(build.path), row.file), 'utf8') })) : sources.sources.map((row: any) => {
     const text = readFileSync(path.join(workspace, row.sourcePath), 'utf8'); return { sourcePath: row.sourcePath, text, sha256: digest(text) }
   })
-  const contract = migration || dataOnly ? undefined : frozenCharacterTextPairContract(built.directory, built.frozen)
+  const contract = migration || dataOnly ? undefined : built.frozen.productionScope === NTE_MATERIAL_PRODUCTION_SCOPE ? frozenNteMaterialTextPairContract(built.directory, built.frozen) : frozenCharacterTextPairContract(built.directory, built.frozen)
   if (migration) assert.deepEqual(candidateSources, sources.sources)
   else if (!dataOnly) {
     assert(contract)

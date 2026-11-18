@@ -14,7 +14,7 @@ import { COMMUNITY_PUBLICATION_POLICY } from './unified-baseline'
 import { AZUR_NAME_CONSUMER, projectAzurRawNames } from './unified-consumers'
 import { assertMaterialCandidateDependencies } from './material-release-dependencies'
 import { GENSHIN_LOCAL_SCOPE, genshinLocalOwnerScope } from './unified-genshin-local-scope'
-import { AZUR_PROMILIA_PRODUCTION_SCOPE, GENSHIN_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope, type IndependentProductionScope } from './unified-genshin-production-scope'
+import { AZUR_PROMILIA_PRODUCTION_SCOPE, GENSHIN_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE, NTE_MATERIAL_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope, type IndependentProductionScope } from './unified-genshin-production-scope'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA256 = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
@@ -90,10 +90,11 @@ export function freezeUnifiedContent(input: FreezeInput) {
   assert(input.localScope === undefined || input.localScope === GENSHIN_LOCAL_SCOPE, 'Unknown local scope')
   const local = input.localScope && genshinLocalOwnerScope(candidate.manifest, activeSources,
     candidate.files.map(file => ({ sourcePath: file.sourcePath, text: file.content, sha256: file.candidateSHA256 })))
-  assert(input.productionScope === undefined || [GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, AZUR_PROMILIA_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE].includes(input.productionScope), 'Unknown production source scope')
+  assert(input.productionScope === undefined || [GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, NTE_MATERIAL_PRODUCTION_SCOPE, AZUR_PROMILIA_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE].includes(input.productionScope), 'Unknown production source scope')
   assert(!(input.localScope && input.productionScope), 'Local and production source scopes cannot be combined')
-  const independent = input.productionScope && independentProductionOwnerScope(input.productionScope === NTE_PRODUCTION_SCOPE ? 'nte' : input.productionScope === AZUR_PROMILIA_PRODUCTION_SCOPE ? 'azur-promilia' : input.productionScope === LVMENG_PRODUCTION_SCOPE ? 'lvmeng' : 'genshin', candidate.manifest, activeSources,
+  const independent = input.productionScope && independentProductionOwnerScope([NTE_PRODUCTION_SCOPE, NTE_MATERIAL_PRODUCTION_SCOPE].includes(input.productionScope) ? 'nte' : input.productionScope === AZUR_PROMILIA_PRODUCTION_SCOPE ? 'azur-promilia' : input.productionScope === LVMENG_PRODUCTION_SCOPE ? 'lvmeng' : 'genshin', candidate.manifest, activeSources,
     candidate.files.map(file => ({ sourcePath: file.sourcePath, text: file.content, sha256: file.candidateSHA256 })))
+  if (independent) assert.equal(independent.productionScope, input.productionScope, 'Production content type differs from requested scope')
   assert(directory !== repo && !repo.startsWith(directory + path.sep), 'Output cannot contain the source repository')
   assert.equal(realpathSync(path.dirname(directory)), path.dirname(directory), 'Linked output parent forbidden')
   const tree = git(repo, ['ls-tree', '-rlz', input.commit]).toString().split('\0').filter(Boolean).map(row => {
@@ -236,10 +237,11 @@ export function verifyUnifiedFrozenSource(directory: string, pin: string) {
   const scoped = manifest as Manifest & { localScope?: typeof GENSHIN_LOCAL_SCOPE; productionScope?: IndependentProductionScope }
   assert(!(scoped.localScope && scoped.productionScope), 'Mixed source scopes')
   if (scoped.productionScope !== undefined) {
-    assert([GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, AZUR_PROMILIA_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE].includes(scoped.productionScope), 'Unknown production source scope')
-    const independent = independentProductionOwnerScope(scoped.productionScope === NTE_PRODUCTION_SCOPE ? 'nte' : scoped.productionScope === AZUR_PROMILIA_PRODUCTION_SCOPE ? 'azur-promilia' : scoped.productionScope === LVMENG_PRODUCTION_SCOPE ? 'lvmeng' : 'genshin', manifest.candidate,
+    assert([GENSHIN_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, NTE_MATERIAL_PRODUCTION_SCOPE, AZUR_PROMILIA_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE].includes(scoped.productionScope), 'Unknown production source scope')
+    const independent = independentProductionOwnerScope([NTE_PRODUCTION_SCOPE, NTE_MATERIAL_PRODUCTION_SCOPE].includes(scoped.productionScope) ? 'nte' : scoped.productionScope === AZUR_PROMILIA_PRODUCTION_SCOPE ? 'azur-promilia' : scoped.productionScope === LVMENG_PRODUCTION_SCOPE ? 'lvmeng' : 'genshin', manifest.candidate,
       activeFiles.map(row => ({ ...row, text: readFileSync(regular(root, row.file), 'utf8') })),
       candidate.files.map(row => ({ sourcePath: row.sourcePath, sha256: row.candidateSHA256, text: readFileSync(regular(path.join(root, 'source'), row.sourcePath), 'utf8') })))
+    assert.equal(independent.productionScope, scoped.productionScope, 'Production content type differs from frozen scope')
     for (const key of ['games', 'owners', 'services'] as const) assert.deepEqual(manifest[key], independent[key])
   } else if (scoped.localScope !== undefined) {
     assert.equal(scoped.localScope, GENSHIN_LOCAL_SCOPE, 'Unknown local scope')
