@@ -16,7 +16,7 @@ import { unifiedProductionRead } from '../../../scripts/unified-production-trans
 import { readUnifiedVersion } from '../../../scripts/unified-version-identity.mjs'
 import { createNteMigrationPreviewNetwork, createGenshinPublicNetwork, unifiedPreviewProxy } from '../../../scripts/unified-preview-network.mjs'
 import { prepareNteMigrationSource } from './nte-migration-source'
-import { buildNteMigration } from './nte-migration-build'
+import { buildNteDataOnly, buildNteMigration, verifyNteDataOnlyBuild } from './nte-migration-build'
 import { prepareNteReleaseBundle, verifyNteReleaseBundle } from './nte-release-bundle'
 import { advanceNteSources, nteReleaseKey, readCompletedNteRelease, readNteSourceIndex } from './nte-release-history'
 import { freezeUnifiedContent } from './unified-build'
@@ -58,6 +58,15 @@ export async function prepareNteMigrationProduction(input: { sourceIndex: Proof;
   const bundle = await prepareNteReleaseBundle({ build: built.proof, sourceIndex: input.sourceIndex, directory: path.join(directory, 'sealed'), migration: true })
   executor.verify(); return bundle
 }
+export async function prepareNteDataOnlyProduction(input: { sourceIndex: Proof; directory: string }) {
+  assert.deepEqual(Object.keys(input).sort(), ['directory', 'sourceIndex']); assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS)
+  const repo = path.resolve(projectRoot, '../..'), executor = captureUnifiedExecutorSource(repo), directory = path.resolve(input.directory)
+  const built = await buildNteDataOnly({ repo, commit: executor.commit, sourceIndex: input.sourceIndex, directory: path.join(directory, 'build') })
+  const review = migrationSave(directory, 'data-only-review.json', { schemaVersion: 1, kind: 'nte_data_only_review', sourceCommit: executor.commit,
+    changedPaths: built.value.changedPaths, candidate: built.value.candidate, reviewPin: built.proof.pin, policy: 'nte-material-source-correction-v1' })
+  const bundle = await prepareNteReleaseBundle({ build: built.proof, sourceIndex: input.sourceIndex, review, directory: path.join(directory, 'sealed'), migration: false })
+  verifyNteDataOnlyBuild(built.proof); executor.verify(); return bundle
+}
 export async function prepareNteIndependentProduction(input: { sourceIndex: Proof; selection: Proof; application: Proof; directory: string; cmsToken: string }) {
   assert.deepEqual(Object.keys(input).sort(), ['application', 'cmsToken', 'directory', 'selection', 'sourceIndex'])
   assert(process.platform === 'darwin' && !process.env.CI && !process.env.GITHUB_ACTIONS)
@@ -81,8 +90,14 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
   assert.equal(evidence.value.sourceCommit, executor.executorCommit)
   await verifyUnifiedPublishedSource({ publication: evidence.sources.originalPublication, sourceIndex: evidence.sources.originalSourceIndex, githubToken })
   for (const ancestor of evidence.sources.ancestors) assert.deepEqual(await verifyUnifiedCI(ancestor.runID, ancestor.commit, githubToken), ancestor)
-  const editorial = evidence.migration ? undefined : migrationPinned(evidence.value.review)
+  const dataOnly = evidence.value.kind === 'nte_independent_data_bundle'
+  const editorial = evidence.migration || dataOnly ? undefined : migrationPinned(evidence.value.review)
+  const dataReview = dataOnly ? migrationPinned(evidence.value.review) : undefined
   const plan = editorial ? loadUnifiedDesktopPlan(repo, evidence.built.frozen.planSHA256).plan : undefined
+  if (dataReview) {
+    assert.equal(dataReview.kind, 'nte_data_only_review'); assert.equal(dataReview.sourceCommit, executor.executorCommit)
+    assert.deepEqual(dataReview.changedPaths, ['packages/data/games/nte/raw-character-materials.json'])
+  }
   if (editorial) {
     assert.equal(editorial.sourceCommit, executor.executorCommit); assert.equal(editorial.planSHA256, plan!.planSHA256)
     assert.equal(editorial.selected.length, 1); assert.deepEqual(editorial.selected, evidence.built.frozen.candidate.changed)
@@ -96,6 +111,9 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
     if (evidence.migration) {
       const reconstructed = await prepareNteMigrationSource({ repo, commit: executor.executorCommit, sourceIndex: evidence.value.sourceIndex, directory: path.join(temporary, 'source') })
       assert.deepEqual(migrationPinned(reconstructed.value.files), migrationPinned(evidence.built.source.value.files))
+    } else if (dataOnly) {
+      const rebuilt = verifyNteDataOnlyBuild(evidence.value.build)
+      assert.deepEqual(rebuilt.value.changedPaths, ['packages/data/games/nte/raw-character-materials.json'])
     } else {
       const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan: plan!, records: review!.records, activeSources: evidence.sources.sources, preview: false, productionScope: NTE_PRODUCTION_SCOPE })
       assert.equal(reconstructed.sourceTreeSHA256, evidence.built.frozen.sourceTreeSHA256); assert.deepEqual(reconstructed.candidate, evidence.built.frozen.candidate)
@@ -126,7 +144,7 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
   const releaseKey = nteReleaseKey(request, executor.executorCI, evidence.migration), policy = evidence.migration ? NTE_MIGRATION_POLICY : NTE_INDEPENDENT_POLICY
   const identity = { policy, releaseKey, sourceCommit: executor.executorCommit,
     ...(evidence.migration ? { sourceCI: executor.executorCI, sourceIndexPin: evidence.value.sourceIndex.pin, activePin: evidence.built.value.active.pin }
-      : { executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: review!.reviewPin }),
+      : { executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: dataOnly ? dataReview!.reviewPin : review!.reviewPin }),
     baseline: evidence.migration ? evidence.sources.baseline : before, observedAt: Date.now(), owners: evidence.value.owners }
   const verify = async () => {
     executor.verify(); assert.deepEqual((await verifyNteReleaseBundle(request.bundle)).value, evidence.value)

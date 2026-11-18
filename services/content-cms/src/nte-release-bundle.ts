@@ -19,7 +19,7 @@ import { prepareUnifiedAssetPair, unifiedStaticFiles, verifyUnifiedAssetPair } f
 import { unifiedTransportTool, verifyUnifiedTool } from '../../../scripts/unified-cloud-module.mjs'
 import { readUnifiedSourceOwner } from '../../../scripts/unified-source-advance.mjs'
 import { mainManifests } from '../../../packages/data/scripts/main-manifests.mjs'
-import { verifyNteMigrationBuild } from './nte-migration-build'
+import { verifyNteDataOnlyBuild, verifyNteMigrationBuild } from './nte-migration-build'
 import { readNteSourceIndex } from './nte-release-history'
 import { frozenCharacterTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { NTE_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
@@ -58,28 +58,31 @@ export function nteLocalConfig(config: any, owner: string, artifact: string | un
 }
 async function inputs(build: Proof, sourceIndex: Proof, migration: boolean, depth = 0) {
   const sources = await readNteSourceIndex(sourceIndex, depth + 1)
-  const built: any = migration ? verifyNteMigrationBuild(build) : verifyUnifiedOwnerBuild(path.dirname(build.path), build.pin)
-  const workspace = migration ? built.workspace : path.join(built.directory, 'source')
+  const dataOnly = !migration && migrationPinned(build).kind === 'nte_data_only_build'
+  const built: any = migration ? verifyNteMigrationBuild(build) : dataOnly ? verifyNteDataOnlyBuild(build) : verifyUnifiedOwnerBuild(path.dirname(build.path), build.pin)
+  const workspace = migration ? built.workspace : dataOnly ? built.workspace : path.join(built.directory, 'source')
   assertBaselineConfiguration(workspace, sources.baseline, migration)
   if (!migration) {
-    assert.equal(build.path, path.join(built.directory, 'build.json')); assert.equal(built.frozen.productionScope, NTE_PRODUCTION_SCOPE)
-    assert.equal(built.frozen.localScope, undefined); assert.equal(built.receipt.preview, false); assert.deepEqual(built.frozen.owners, ['nte'])
+    if (!dataOnly) {
+      assert.equal(build.path, path.join(built.directory, 'build.json')); assert.equal(built.frozen.productionScope, NTE_PRODUCTION_SCOPE)
+      assert.equal(built.frozen.localScope, undefined); assert.equal(built.receipt.preview, false); assert.deepEqual(built.frozen.owners, ['nte'])
+    }
     assert.equal(sources.value.kind.startsWith('nte_'), true, 'NTE editorial release requires the completed one-time migration')
   }
-  const active = migrationPinned(migration ? built.value.active : { path: path.join(built.directory, 'active.json'), pin: built.frozen.activePin })
+  const active = migrationPinned(migration ? built.value.active : dataOnly ? built.value.baseline : { path: path.join(built.directory, 'active.json'), pin: built.frozen.activePin })
   assert.deepEqual(active.map((row: any) => ({ sourcePath: row.sourcePath, sha256: row.sha256 })).sort((a: any, b: any) => a.sourcePath.localeCompare(b.sourcePath)),
     sources.sources.map((row: any) => ({ sourcePath: row.sourcePath, sha256: row.sha256 })).sort((a: any, b: any) => a.sourcePath.localeCompare(b.sourcePath)))
-  const expected = nteContentAssets(workspace), candidateSources = sources.sources.map((row: any) => {
+  const expected = nteContentAssets(workspace), candidateSources = dataOnly ? built.candidateSources.map((row: any) => ({ ...row, text: readFileSync(path.join(path.dirname(build.path), row.file), 'utf8') })) : sources.sources.map((row: any) => {
     const text = readFileSync(path.join(workspace, row.sourcePath), 'utf8'); return { sourcePath: row.sourcePath, text, sha256: digest(text) }
   })
-  const contract = migration ? undefined : frozenCharacterTextPairContract(built.directory, built.frozen)
+  const contract = migration || dataOnly ? undefined : frozenCharacterTextPairContract(built.directory, built.frozen)
   if (migration) assert.deepEqual(candidateSources, sources.sources)
-  else {
+  else if (!dataOnly) {
     assert(contract)
     assert.equal(contract.candidate.changes.length, 1); assert.equal(contract.candidate.changes[0].game, 'nte')
     assert.notEqual(expected.manifest.version, nteContentAssets(sources.workspace).manifest.version)
-  }
-  return { sources, built, workspace, expected, candidateSources, contract }
+  } else assert.deepEqual(built.value.changedPaths, ['packages/data/games/nte/raw-character-materials.json'])
+  return { sources, built, workspace, expected, candidateSources, contract, dataOnly }
 }
 export async function nteRequests(workspace: string, owner: string, role: string, artifact: string | undefined, migration: boolean, sources: any[], contract?: any) {
   const requests: any[] = [], values = new Map<string, any>(), add = (url: string, status = 200, value?: any) => {
@@ -176,7 +179,7 @@ export async function prepareNteReleaseBundle(input: { build: Proof; sourceIndex
       if (owner === 'router') { mkdirSync(forward); mkdirSync(recovery); writeFileSync(path.join(recovery, 'worker.js'), sources.routerCode, { flag: 'wx' }) }
       else {
         const old = sources.owners[owner], runtime = (await readUnifiedSourceOwner(old)).code
-        const pair = { owner, source: workspace, previous: old.directory, candidate: input.migration ? built.value.artifacts[owner].directory : path.join(built.directory, 'artifacts', owner), forward, recovery, runtime }
+        const pair = { owner, source: workspace, previous: old.directory, candidate: input.migration || opened.dataOnly ? built.value.artifacts[owner].directory : path.join(built.directory, 'artifacts', owner), forward, recovery, runtime }
         if (input.migration && owner === 'nte') prepareNteMigrationRecovery(pair); else prepareUnifiedAssetPair(pair)
       }
       const old = owner === 'router' ? sources.router : sources.owners[owner]
@@ -186,8 +189,8 @@ export async function prepareNteReleaseBundle(input: { build: Proof; sourceIndex
     for (const owner of order) for (const role of ['recovery', 'candidate']) owners[owner][role].referencesPin = (await captureGraph(opened, directory, owners, owner, role, input.migration)).pin
     const finalReferences = await captureGraph(opened, directory, owners, 'router', 'candidate', input.migration, true)
     const recoveryReferences = input.migration ? undefined : await captureGraph(opened, directory, owners, 'router', 'recovery', false, true, true)
-    const value = { schemaVersion: 1, kind: input.migration ? 'nte_migration_bundle' : 'nte_independent_bundle', build: input.build, sourceIndex: input.sourceIndex,
-      ...(input.review ? { review: input.review } : {}), sourceCommit: input.migration ? built.value.sourceCommit : built.frozen.sourceCommit,
+    const value = { schemaVersion: 1, kind: input.migration ? 'nte_migration_bundle' : opened.dataOnly ? 'nte_independent_data_bundle' : 'nte_independent_bundle', build: input.build, sourceIndex: input.sourceIndex,
+      ...(input.review ? { review: input.review } : {}), sourceCommit: input.migration ? built.value.sourceCommit : opened.dataOnly ? built.value.sourceCommit : built.frozen.sourceCommit,
       baseline: sources.baseline, owners, tool, finalReferences, ...(recoveryReferences ? { recoveryReferences } : {}),
       stepReferences: input.migration ? { path: path.join(directory, 'router/recovery/local-http/responses/references.json'), pin: owners.router.recovery.referencesPin } : finalReferences,
       contentVersion: opened.expected.manifest.version, cloudWrites: false, productionReady: false }
@@ -197,16 +200,16 @@ export async function prepareNteReleaseBundle(input: { build: Proof; sourceIndex
 export async function verifyNteReleaseBundle(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
   assert.equal(proof.path, path.join(directory, 'bundle.json')); assert(!existsSync(path.join(directory, 'failure.json')))
-  assert.equal(value.schemaVersion, 1); assert(['nte_migration_bundle', 'nte_independent_bundle'].includes(value.kind)); assert.equal(value.cloudWrites, false); assert.equal(value.productionReady, false)
-  const migration = value.kind === 'nte_migration_bundle', opened = await inputs(value.build, value.sourceIndex, migration, depth), { sources, workspace, built } = opened
-  assert.equal(value.sourceCommit, migration ? built.value.sourceCommit : built.frozen.sourceCommit); assert.equal(value.contentVersion, opened.expected.manifest.version)
+  assert.equal(value.schemaVersion, 1); assert(['nte_migration_bundle', 'nte_independent_bundle', 'nte_independent_data_bundle'].includes(value.kind)); assert.equal(value.cloudWrites, false); assert.equal(value.productionReady, false)
+  const migration = value.kind === 'nte_migration_bundle', dataOnly = value.kind === 'nte_independent_data_bundle', opened = await inputs(value.build, value.sourceIndex, migration, depth), { sources, workspace, built } = opened
+  assert.equal(value.sourceCommit, migration ? built.value.sourceCommit : dataOnly ? built.value.sourceCommit : built.frozen.sourceCommit); assert.equal(value.contentVersion, opened.expected.manifest.version)
   assert.deepEqual(value.baseline, sources.baseline); assert.deepEqual(Object.keys(value.owners), migration ? NTE_MIGRATION_ORDER : ['nte'])
   verifyUnifiedTool(value.tool); assert.deepEqual(value.tool, unifiedTransportTool(workspace))
   for (const owner of Object.keys(value.owners)) {
     const old = owner === 'router' ? sources.router : sources.owners[owner], row = value.owners[owner]
     assert.equal(row.service, services[owner]); assert.equal(row.sourceVersionId, old.versionId); assert.equal(row.sourceIdentityPin, digest(migrationJSON(old.version)))
     if (owner !== 'router') {
-      const pair = { owner, source: workspace, previous: old.directory, candidate: migration ? built.value.artifacts[owner].directory : path.join(built.directory, 'artifacts', owner),
+      const pair = { owner, source: workspace, previous: old.directory, candidate: migration || dataOnly ? built.value.artifacts[owner].directory : path.join(built.directory, 'artifacts', owner),
         forward: path.join(directory, owner, 'candidate/artifact'), recovery: path.join(directory, owner, 'recovery/artifact'), runtime: (await readUnifiedSourceOwner(old)).code, runtimeSHA256: old.moduleSHA256 }
       if (migration && owner === 'nte') verifyNteMigrationRecovery(pair); else verifyUnifiedAssetPair(pair)
     }

@@ -1,13 +1,15 @@
 # Payload 全内容实施队列
 
 <!-- BEGIN R127 CURRENT -->
-## 当前实施状态（2026-11-17 R127/R126）
+## 当前实施状态（2026-11-17 R128，承接 R127/R126）
 
 异环既有角色文本的正式单 Worker 更新闭环已完成。R127 复用 CMS 记录 1328（咲里 `sakiri`）完成草稿、审核、仅异环候选/恢复云预览、正式推广、公网验收和来源推进；正式版本 `6f509611-e4ef-4b6d-b41b-2768721ade2c`，deployment `4e5252be-20f0-4164-8861-235edfdf37c1`。本批正式内容发布只改变 `gachia-game-nte`，Main、Router、原神、蓝色星原、绿梦和 staging 保持；完整回执见 [R127](../reports/nte-r127-remediation-2026-11-17/EXECUTION.md)。
 
-R126 已核准异环 `zero` canonical identity：官方证据确认 `zero` 由 `zero-male`、`zero-female` 两个展示变体组成，关系图和异环页面读取均展开到两个合法页面 ID；未知变体不模糊匹配。全量依赖复核仅发现一个未经批准的悬空角色 ID `iroi`，已从异环攻略关系及镜像删除并验证 dangling character references 为 0。27 个缺失材料继续 `held`，441 个原始引用已进入 [补充台账](../reports/material-type-expansion-2026-11-17-r126/nte-held-material-supplement.json)，`approvedTarget=null`、`publishable=false`、`releaseCompatible=false` 保持；没有猜测写入 `raw-materials.json`。
+R126 已核准异环 `zero` canonical identity：官方证据确认 `zero` 由 `zero-male`、`zero-female` 两个展示变体组成，关系图和异环页面读取均展开到两个合法页面 ID；未知变体不模糊匹配。全量依赖复核仅发现一个未经批准的悬空角色 ID `iroi`，已从异环攻略关系及镜像删除并验证 dangling character references 为 0。R126 曾将 27 个缺失材料及 441 个原始引用保持 `held` 并写入 [补充台账](../reports/material-type-expansion-2026-11-17-r126/nte-held-material-supplement.json)；R128 按用户授权删除这些公开关系引用，没有猜测写入 `raw-materials.json`。
 
-当前来源直接接续 R127 的 `qualification-02/nte-source-result.json`，其来源索引 pin 为 `60d832f0b70fdf92159ffc7728295bf9ce0694e1b90204e286617363f8e96eb8`。下一项按内容类型扩展所有游戏；27 个材料继续等待权威身份、版本、阶段、数量、公开 URL 和消费者证据，证据闭合前不生成可发布材料 DTO、不执行材料 CMS 发布或生产 Worker 更新。蓝色星原、绿梦中文和 R127 异环既有文本已完成，不重放旧来源链。
+当前来源仍直接接续 R127 的 `qualification-02/nte-source-result.json`，其来源索引 pin 为 `60d832f0b70fdf92159ffc7728295bf9ce0694e1b90204e286617363f8e96eb8`。R128 已按用户授权删除 27 个未获官方证实材料在异环角色材料关系中的全部 441 个 canonical 引用，并同步两份镜像（共 882 个镜像条目）；R126 held 台账和 R125/R127 来源证据保留。删除后异环材料依赖为 0 个缺失材料、0 个悬空角色、42 个已定义公开关系，结果见 [R128](../reports/material-type-expansion-2026-11-17-r128/nte-material-dependency.json) 和 [删除回执](../reports/material-type-expansion-2026-11-17-r128/nte-unverified-material-deletion.json)。
+
+下一项按内容类型扩展所有游戏：先把已验证的材料依赖/公开 JSON/搜索切片/主站聚合对账作为跨游戏门禁，再逐游戏扩展；只有存在完整材料定义和消费者证据的关系才进入可发布集合。R128 的跨游戏审计显示 13 个有材料定义的游戏中 12 个无角色材料悬空引用，原神仍有 74 个角色材料 ID 不在其 `raw-materials.json`，原神材料扩展先保持阻塞并单独核验来源；审计见 [all-games-material-dependency-audit.json](../reports/material-type-expansion-2026-11-17-r128/all-games-material-dependency-audit.json)。蓝色星原、绿梦中文和 R127 异环既有文本已完成，不重放旧来源链。
 <!-- END R127 CURRENT -->
 
 <!-- BEGIN R121 HISTORY -->

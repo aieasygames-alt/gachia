@@ -1,0 +1,106 @@
+{
+  "version": "nte-unverified-material-deletion-v1",
+  "generatedAt": "2026-11-17T15:03:23.305Z",
+  "game": "nte",
+  "status": "executed",
+  "publishable": false,
+  "releaseCompatible": true,
+  "decision": "Delete every unverified material reference from public NTE character-material data.",
+  "reason": "Official source audit did not verify material identity, game-version mapping, public URL, or stages/quantities. These references cannot remain in public relationship data.",
+  "policy": "Only material ids with an authoritative entry in raw-materials.json remain eligible for public consumers; no candidate names or inferred quantities were written.",
+  "sourceEvidence": {
+    "heldSupplement": "reports/material-type-expansion-2026-11-17-r126/nte-held-material-supplement.json",
+    "officialAudit": "reports/material-type-expansion-2026-11-16-r125/official-material-source-audit.json"
+  },
+  "deletedMaterialIds": [
+    "advanced-hunter-guide",
+    "anima-crystal",
+    "anima-fragment",
+    "basic-hunter-guide",
+    "boss-anima",
+    "boss-chaos",
+    "boss-cosmos",
+    "boss-incantation",
+    "boss-lakshana",
+    "boss-psyche",
+    "chaos-core",
+    "chaos-essence",
+    "cosmos-spark",
+    "cosmos-storm",
+    "credits",
+    "expert-permit",
+    "incantation-crystal",
+    "incantation-shard",
+    "lakshana-dust",
+    "lakshana-signet",
+    "manual-attack",
+    "manual-defense",
+    "manual-support",
+    "master-permit",
+    "pioneer-permit",
+    "psyche-essence",
+    "psyche-fragment"
+  ],
+  "deletedReferenceCountPerMirror": 441,
+  "totalMirrorEntriesRemoved": 882,
+  "deletedReferenceCountsById": {
+    "advanced-hunter-guide": 84,
+    "anima-crystal": 16,
+    "anima-fragment": 16,
+    "basic-hunter-guide": 126,
+    "boss-anima": 8,
+    "boss-chaos": 4,
+    "boss-cosmos": 12,
+    "boss-incantation": 6,
+    "boss-lakshana": 8,
+    "boss-psyche": 4,
+    "chaos-core": 8,
+    "chaos-essence": 8,
+    "cosmos-spark": 24,
+    "cosmos-storm": 24,
+    "credits": 294,
+    "expert-permit": 42,
+    "incantation-crystal": 12,
+    "incantation-shard": 12,
+    "lakshana-dust": 16,
+    "lakshana-signet": 16,
+    "manual-attack": 26,
+    "manual-defense": 2,
+    "manual-support": 14,
+    "master-permit": 42,
+    "pioneer-permit": 42,
+    "psyche-essence": 8,
+    "psyche-fragment": 8
+  },
+  "sourceHashes": {
+    "packages/data/games/nte/raw-character-materials.json": "e749d53d5307bd0ce0f5bbdeb0c5b1f81134f5ba2c4d70725da0eb974d6002f3",
+    "apps/web/public/data/nte/raw-character-materials.json": "e749d53d5307bd0ce0f5bbdeb0c5b1f81134f5ba2c4d70725da0eb974d6002f3"
+  },
+  "outputHashes": {
+    "packages/data/games/nte/raw-character-materials.json": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6",
+    "apps/web/public/data/nte/raw-character-materials.json": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6"
+  },
+  "shape": {
+    "perMirror": {
+      "sourceLevelingRows": 126,
+      "remainingLevelingRows": 42,
+      "sourceSkillEntries": 63,
+      "remainingSkillEntries": 0
+    },
+    "totalMirrors": {
+      "sourceLevelingRows": 252,
+      "remainingLevelingRows": 84,
+      "sourceSkillEntries": 126,
+      "remainingSkillEntries": 0
+    },
+    "emptyLevelingRowsRemoved": true,
+    "emptySkillArraysRetained": true
+  },
+  "remainingMissingMaterials": 0,
+  "remainingDanglingCharacters": 0,
+  "synchronizedMirrors": [
+    "packages/data/games/nte/raw-character-materials.json",
+    "apps/web/public/data/nte/raw-character-materials.json"
+  ],
+  "releaseNote": "Data is structurally release-compatible after deletion; no CMS build or Worker deployment was performed by R128."
+}

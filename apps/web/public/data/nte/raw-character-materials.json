@@ -2,337 +2,169 @@
   {
     "characterId": "nanally",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "anima-fragment", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "anima-fragment", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "anima-crystal", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "anima-crystal", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-anima", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "sakiri",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "incantation-shard", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "incantation-shard", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "incantation-crystal", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "incantation-crystal", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-incantation", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-support", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "fadia",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "psyche-essence", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "psyche-essence", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "psyche-fragment", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "psyche-fragment", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-psyche", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "lacrimosa",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "chaos-essence", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "chaos-essence", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "chaos-core", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "chaos-core", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-chaos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "baicang",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "incantation-shard", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "incantation-shard", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "incantation-crystal", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "incantation-crystal", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-incantation", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-defense", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "zero",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "cosmos-spark", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "cosmos-spark", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "cosmos-storm", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "cosmos-storm", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-cosmos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "hotori",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "cosmos-spark", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "cosmos-spark", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "cosmos-storm", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "cosmos-storm", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-cosmos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "daffodil",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "chaos-essence", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "chaos-essence", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "chaos-core", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "chaos-core", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-chaos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-support", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "jiuyuan",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "anima-fragment", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "anima-fragment", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "anima-crystal", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "anima-crystal", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-anima", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-support", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "haniel",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "psyche-essence", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "psyche-essence", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "psyche-fragment", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "psyche-fragment", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-psyche", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "adler",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "incantation-shard", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "incantation-shard", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "incantation-crystal", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "incantation-crystal", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-incantation", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "skia",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "lakshana-dust", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "lakshana-dust", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "lakshana-signet", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "lakshana-signet", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-lakshana", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "edgar",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "cosmos-spark", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "cosmos-spark", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "cosmos-storm", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "cosmos-storm", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-cosmos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-support", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "mint",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "anima-fragment", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "anima-fragment", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "anima-crystal", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "anima-crystal", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-anima", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-support", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "nelly",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "anima-fragment", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "anima-fragment", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "anima-crystal", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "anima-crystal", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-anima", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-support", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "merula",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "lakshana-dust", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "lakshana-dust", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "lakshana-signet", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "lakshana-signet", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-lakshana", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "alphard",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "lakshana-dust", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "lakshana-dust", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "lakshana-signet", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "lakshana-signet", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-lakshana", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "taygedo",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "cosmos-spark", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "cosmos-spark", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "cosmos-storm", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "cosmos-storm", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-cosmos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-support", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "hathor",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "lakshana-dust", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "lakshana-dust", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "lakshana-signet", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "lakshana-signet", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-lakshana", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "chiz",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "cosmos-spark", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "cosmos-spark", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "cosmos-storm", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "cosmos-storm", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-cosmos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   },
   {
     "characterId": "lilina",
     "levelingMaterials": [
-      { "levelRange": "1-10", "materials": [{ "id": "basic-hunter-guide", "quantity": 3 }, { "id": "credits", "quantity": 2000 }] },
-      { "levelRange": "11-20", "materials": [{ "id": "basic-hunter-guide", "quantity": 5 }, { "id": "cosmos-spark", "quantity": 3 }, { "id": "credits", "quantity": 4000 }] },
-      { "levelRange": "21-30", "materials": [{ "id": "advanced-hunter-guide", "quantity": 4 }, { "id": "cosmos-spark", "quantity": 5 }, { "id": "credits", "quantity": 8000 }] },
-      { "levelRange": "31-40", "materials": [{ "id": "advanced-hunter-guide", "quantity": 6 }, { "id": "cosmos-storm", "quantity": 3 }, { "id": "pioneer-permit", "quantity": 2 }, { "id": "credits", "quantity": 16000 }] },
-      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }, { "id": "cosmos-storm", "quantity": 5 }, { "id": "expert-permit", "quantity": 3 }, { "id": "credits", "quantity": 32000 }] },
-      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }, { "id": "boss-cosmos", "quantity": 3 }, { "id": "master-permit", "quantity": 4 }, { "id": "credits", "quantity": 64000 }] }
+      { "levelRange": "41-50", "materials": [{ "id": "elite-hunter-guide", "quantity": 4 }] },
+      { "levelRange": "51-60", "materials": [{ "id": "elite-hunter-guide", "quantity": 8 }] }
     ],
-    "skillMaterials": [
-      { "id": "manual-attack", "quantity": 12 },
-      { "id": "basic-hunter-guide", "quantity": 15 },
-      { "id": "credits", "quantity": 200000 }
-    ]
+    "skillMaterials": []
   }
 ]

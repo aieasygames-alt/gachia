@@ -1830,7 +1830,7 @@
         },
         {
           "path": "packages/data/games/nte/raw-character-materials.json",
-          "sha256": "e749d53d5307bd0ce0f5bbdeb0c5b1f81134f5ba2c4d70725da0eb974d6002f3"
+          "sha256": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6"
         },
         {
           "path": "packages/data/games/nte/raw-character-summaries.json",

@@ -1,0 +1,95 @@
+{
+  "version": "nte-material-dependency-v1",
+  "generatedAt": "2026-11-17T15:17:21.265Z",
+  "owner": "nte",
+  "source": {
+    "rawCharacterMaterials": "packages/data/games/nte/raw-character-materials.json",
+    "rawMaterials": "packages/data/games/nte/raw-materials.json",
+    "rawCharacters": "packages/data/games/nte/raw-characters.json",
+    "sourceSha256": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6",
+    "mirrorSha256": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6",
+    "mirrorEqual": true
+  },
+  "counts": {
+    "characters": 21,
+    "levelingRows": 42,
+    "skillEntries": 0,
+    "materialDefinitions": 57,
+    "materialReferences": 42
+  },
+  "remainingMissingMaterials": [],
+  "remainingDanglingCharacters": [],
+  "approvedCanonicalRelations": {
+    "zero": {
+      "displayVariants": [
+        "zero-male",
+        "zero-female"
+      ],
+      "accepted": true
+    }
+  },
+  "materialUsage": {
+    "elite-hunter-guide": 42
+  },
+  "consumers": {
+    "dedicatedApp": {
+      "files": [
+        "apps/game-nte/lib/data.ts",
+        "apps/game-nte/app/[lang]/nte/items/page.tsx",
+        "apps/game-nte/app/[lang]/nte/items/[id]/page.tsx"
+      ],
+      "routes": [
+        "/zh/nte/items",
+        "/en/nte/items",
+        "/ja/nte/items"
+      ]
+    },
+    "ownerRawJson": [
+      "/data/nte/raw-materials.json",
+      "/data/nte/raw-character-materials.json"
+    ],
+    "searchFragments": [
+      "/data-manifest/search-zh.json",
+      "/data-manifest/search-en.json",
+      "/data-manifest/search-ja.json"
+    ],
+    "mainBoundary": "Main does not read NTE material data; Router merges the NTE owner fragment when NTE_CONTENT_ENABLED is enabled"
+  },
+  "assets": {
+    "version": "f8af4d15e016db4028f287847204841bdc8f2a11cc0bc5e2ca36a92880ed2338",
+    "rawFiles": [
+      "raw-anomalies.json",
+      "raw-builds.json",
+      "raw-character-materials.json",
+      "raw-character-summaries.json",
+      "raw-characters.json",
+      "raw-disk-sets.json",
+      "raw-gacha-system.json",
+      "raw-guides.json",
+      "raw-materials.json",
+      "raw-redeem-codes.json",
+      "raw-regions.json",
+      "raw-weapons.json"
+    ],
+    "searchCounts": {
+      "zh": {
+        "characters": 42,
+        "weapons": 42,
+        "items": 57,
+        "artifacts": 12
+      },
+      "en": {
+        "characters": 42,
+        "weapons": 42,
+        "items": 57,
+        "artifacts": 12
+      },
+      "ja": {
+        "characters": 42,
+        "weapons": 42,
+        "items": 57,
+        "artifacts": 12
+      }
+    }
+  }
+}
