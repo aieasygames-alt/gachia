@@ -122,12 +122,16 @@ test('Main candidate and recovery must not require omitted game asset namespaces
   }
 })
 
-test('only the exact reviewed NTE reader pair preserves all literal content; unrelated code or content bytes stay blocked', () => {
+test('exact historical and current NTE readers preserve the same literals while other bytes stay blocked', () => {
   const file = 'apps/game-nte/lib/data.ts'
   const accepted = execFileSync('git', ['show', `710673f0e7a57c0584cbc42e464b9acff13ce43d:${file}`], { cwd: repo, encoding: 'utf8' })
   const active = readFileSync(path.join(repo, file), 'utf8')
-  assert.match(preservedNteReaderProjection(file, accepted, active), /^[a-f0-9]{64}$/)
+  const historical = execFileSync('git', ['show', `00eaf2c:${file}`], { cwd: repo, encoding: 'utf8' })
+  const currentPin = preservedNteReaderProjection(file, accepted, active)
+  assert.match(currentPin, /^[a-f0-9]{64}$/)
+  assert.equal(preservedNteReaderProjection(file, accepted, historical), currentPin)
   assert.throws(() => preservedNteReaderProjection(file, accepted + '\n', active), /historical reader bytes/)
   assert.throws(() => preservedNteReaderProjection(file, accepted, active + '\n'), /current reader bytes/)
+  assert.throws(() => preservedNteReaderProjection(file, accepted, historical + '\n'), /current reader bytes/)
   assert.throws(() => preservedNteReaderProjection('apps/game-genshin/lib/data.ts', accepted, active), /Unreviewed inline/)
 })

@@ -19,13 +19,17 @@ export type PreservedRuntime = { policy: 'accepted-published-runtime-v1'; servic
 type Scope = ReturnType<typeof unifiedEditorialScope>
 const SHA = /^[a-f0-9]{64}$/
 
-// This exact reviewed pair changes guide locale readers, not content literals.
-// Keep the currently published reader in this pilot; its upgrade belongs to
-// the dedicated NTE phase. Never generalize a code difference into a skip flag.
+// These exact reviewed readers change guide locale policy and canonical Zero
+// lookup, without changing content literals or the named reader inventory.
+// The older hash remains necessary when reopening the published R93/R127
+// ancestry. Never replace historical acceptance with only the current hash.
 export function preservedNteReaderProjection(sourcePath: string, accepted: string, active: string) {
   assert.equal(sourcePath, 'apps/game-nte/lib/data.ts', 'Unreviewed inline reader difference')
   assert.equal(digest(accepted), 'dc7ee8d1ebb0e3fc5770af1701536227b6f4e36e4c5d81c5741d0039a66ce50c', 'Unreviewed historical reader bytes')
-  assert.equal(digest(active), 'e2c049cf024efdd45aef9b9a25d426e22173364e70553e4822d33297cce86eba', 'Unreviewed current reader bytes')
+  assert([
+    '1622e1d442a651dd137cf03942fbc1cf56f5b50f5f1bd18ef4f7fd60a9948ddb',
+    'e2c049cf024efdd45aef9b9a25d426e22173364e70553e4822d33297cce86eba',
+  ].includes(digest(active)), 'Unreviewed current reader bytes')
   const projection = (text: string) => {
     const units = sourceUnits(snapshot('nte', sourcePath, 'inline-code', text))
     assert.equal(units.blocked.length, 0, 'Unresolved inline content cannot be omitted')
