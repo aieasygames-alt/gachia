@@ -31,6 +31,7 @@ mkdirSync(root, { recursive: true, mode: 0o700 })
 console.log(JSON.stringify({ phase: action, at: new Date().toISOString() }))
 let result: any
 if (action === 'prepare') {
+  mkdirSync(path.join(root, 'prepare'), { recursive: true, mode: 0o700 })
   result = await prepareNteDataOnlyProduction({ sourceIndex, directory: path.join(root, 'prepare') })
   save('prepared.json', result)
 } else if (action === 'activate') {

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { execFileSync, spawn } from 'node:child_process'
-import { appendFileSync, cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { appendFileSync, cpSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
 import { artifactFiles, isolatedEnvironment, withRunLock } from '../../../scripts/desktop-publish.mjs'
 import { assertDiskBudget, BUILD_TEMP_BUDGET } from '../../../scripts/desktop-disk-preflight.mjs'
@@ -9,6 +9,7 @@ import { migrationPinned, migrationSave } from '../../../scripts/genshin-migrati
 import { prepareNteMainCandidate, verifyNteMainCandidate } from '../../../scripts/nte-main-candidate.mjs'
 import { nteContentAssets } from '../../../scripts/nte-content-assets.mjs'
 import { verifyNteMigrationSource } from './nte-migration-source'
+import { readNteSourceIndex } from './nte-release-history'
 
 type Proof = { path: string; pin: string }
 export async function buildNteMigration(source: Proof) {
@@ -73,15 +74,20 @@ export function verifyNteMigrationBuild(proof: Proof) {
 export async function buildNteDataOnly(input: { repo: string; commit: string; sourceIndex: Proof; directory: string }) {
   const directory = path.resolve(input.directory)
   assert(!existsSync(directory)); mkdirSync(directory, { mode: 0o700 })
-  const sourceDirectory = path.join(directory, 'source-input')
-  const source = await (await import('./nte-migration-source')).prepareNteMigrationSource({
-    repo: input.repo, commit: input.commit, sourceIndex: input.sourceIndex, directory: sourceDirectory,
-  })
-  const workspace = source.workspace, materialPath = 'packages/data/games/nte/raw-character-materials.json'
-  const baseline = migrationPinned(source.value.active)
+  const current = await readNteSourceIndex(input.sourceIndex), sourceDirectory = path.join(directory, 'source-input'), workspace = path.join(sourceDirectory, 'source')
+  assert.equal(current.sources.length, 115); mkdirSync(sourceDirectory, { mode: 0o700 }); mkdirSync(workspace, { mode: 0o700 })
+  const archive = path.join(sourceDirectory, 'source.tar'), git = (args: string[]) => execFileSync('git', ['--no-replace-objects', ...args], { cwd: input.repo, maxBuffer: 32 * 1024 * 1024 })
+  git(['archive', '--format=tar', `--output=${archive}`, input.commit]); execFileSync('tar', ['-xf', archive, '-C', workspace]); unlinkSync(archive)
+  const ledger = JSON.parse(readFileSync(path.join(workspace, 'packages/data/raw-content-review.json'), 'utf8'))
+  for (const row of current.sources) {
+    writeFileSync(path.join(workspace, row.sourcePath), row.text)
+    const relative = row.sourcePath.slice('packages/data/games/'.length)
+    if (row.sourcePath.startsWith('packages/data/games/') && ledger.pairs.includes(relative)) writeFileSync(path.join(workspace, 'apps/web/public/data', relative), row.text)
+  }
+  const materialPath = 'packages/data/games/nte/raw-character-materials.json'
+  const baseline = current.sources
   const material = baseline.find((row: any) => row.sourcePath === materialPath)
   assert(material, 'R128 material source is not in the published source inventory')
-  const git = (args: string[]) => execFileSync('git', args, { cwd: input.repo, maxBuffer: 32 * 1024 * 1024 })
   const candidateText = git(['show', `${input.commit}:${materialPath}`]).toString('utf8')
   assert.equal(digest(candidateText), digest(git(['show', `${input.commit}:${materialPath}`])), 'Candidate source is not stable')
   writeFileSync(path.join(workspace, materialPath), candidateText)
