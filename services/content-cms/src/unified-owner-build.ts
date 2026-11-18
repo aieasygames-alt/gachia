@@ -14,19 +14,21 @@ import { digest } from './legacy-intake'
 import { verifyUnifiedFrozenSource } from './unified-build'
 import { dedicatedCharacterTextContract, dedicatedCharacterTextPairContract, DEDICATED_CHARACTER_TEXT_SOURCES, mergeCharacterTextExpectations } from './unified-character-text'
 import { GENSHIN_LOCAL_SCOPE } from './unified-genshin-local-scope'
+import { materialConsumerContract, mergeMaterialConsumerExpectations, assertMaterialPageConsumer, type MaterialPageExpectation } from './material-consumer-contract'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
 type CommandOptions = { cwd: string; env: NodeJS.ProcessEnv; log: string }
 type Execute = (file: string, args: string[], options: CommandOptions) => Promise<void>
 type DiskProbe = (directory: string) => { filesystem: string; availableBytes: number }
-export type ConsumerExpectation = { owner: string; path: string; status: number; contains?: string[] }
+export type ConsumerExpectation = { owner: string; path: string; status: number; contains?: string[]; materialPage?: MaterialPageExpectation }
 type PublicFile = { path: string; sha256: string }
 type ResponseReference = { path: string; status: number; headers: Record<string, string>; bytes: number; sha256: string; bodyFile: string }
 type OwnerResult = { status: string; artifactSHA256?: string; responses?: number; referencesPin?: string }
 type BuildReceipt = { schemaVersion: number; kind: string; frozenPin: string; sourceTreeSHA256: string;
   candidateSHA256: string; publicationPolicy: unknown; owners: Record<string, OwnerResult>; expectationsPin: string;
   characterTextContract?: ReturnType<typeof dedicatedCharacterTextContract>;
+  materialConsumers?: ReturnType<typeof materialConsumerContract>[];
   localScope?: typeof GENSHIN_LOCAL_SCOPE;
   dependencyMode?: 'locked-online';
   preview: boolean; productionReady: boolean; cloudWrites: boolean; pending: string[] }
@@ -49,6 +51,17 @@ export function frozenCharacterTextContract(directory: string, frozen: ReturnTyp
 export function frozenCharacterTextPairContract(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
   const { active, overlays } = frozenCharacterTextInputs(directory, frozen)
   return dedicatedCharacterTextPairContract(active, overlays)
+}
+
+export function frozenMaterialConsumerContracts(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
+  const games = frozen.materialDependencies?.games.filter(row => row.mode === 'complete-material-closure').map(row => row.game) ?? []
+  if (!games.length) return []
+  const files = JSON.parse(readFileSync(path.join(directory, 'active.json'), 'utf8')) as { sourcePath: string; sha256: string; file: string }[]
+  const inputs = files.map(row => ({ sourcePath: row.sourcePath, sha256: row.sha256, text: readFileSync(path.join(directory, row.file), 'utf8') }))
+  const candidate = new Map(inputs.map(row => [row.sourcePath, row]))
+  for (const row of frozen.candidate.files) candidate.set(row.sourcePath, { sourcePath: row.sourcePath, sha256: row.candidateSHA256,
+    text: readFileSync(path.join(directory, 'source', row.sourcePath), 'utf8') })
+  return games.map(game => materialConsumerContract(game, [...candidate.values()]))
 }
 
 export function publicFiles(directory: string, owner: string) {
@@ -77,6 +90,7 @@ export function validateUnifiedConsumer(response: { status: number; headers: Hea
   else if (row.path === '/robots.txt') assert.equal(mime, 'text/plain', 'Invalid robots MIME')
   else assert.equal(mime, 'application/json', 'Public data/API must be JSON')
   if (row.sha256) assert.equal(bytesSHA(body), row.sha256, `Served public bytes differ: ${row.path}`)
+  if (row.materialPage) assertMaterialPageConsumer(row.materialPage, response.status, body.toString())
   if (row.path === '/api/auth/get-session') assert.equal(JSON.parse(body.toString()).code, 'ACCOUNT_FEATURES_DISABLED')
 }
 
@@ -125,6 +139,8 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
   assert(!allowNetworkInstall || initial.localScope === GENSHIN_LOCAL_SCOPE, 'Network dependency installation is limited to the explicit Genshin local preview')
   const characterTextContract = frozenCharacterTextContract(directory, initial)
   expectations = mergeCharacterTextExpectations(expectations, characterTextContract)
+  const materialConsumers = frozenMaterialConsumerContracts(directory, initial)
+  expectations = mergeMaterialConsumerExpectations(expectations, materialConsumers)
   validateConsumerExpectations(initial.owners, expectations)
   return withRunLock(directory, async () => {
     const plan = verifyUnifiedFrozenSource(directory, pin), workspace = path.join(directory, 'source')
@@ -196,7 +212,7 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
       state.status = 'all_owners_built_and_locally_accepted'; saveState()
       const receipt = { schemaVersion: 2, kind: 'unified_owner_build', frozenPin: pin, sourceTreeSHA256: plan.sourceTreeSHA256,
         candidateSHA256: plan.candidate.candidateSHA256, publicationPolicy: plan.publicationPolicy, owners: state.owners,
-        characterTextContract,
+        characterTextContract, materialConsumers,
         expectationsPin: bytesSHA(readFileSync(path.join(directory, 'consumer-expectations.json'))), preview: plan.candidate.preview,
         productionReady: false, cloudWrites: false, ...(plan.localScope ? { localScope: plan.localScope } : {}),
         ...(allowNetworkInstall ? { dependencyMode: 'locked-online' as const } : {}),
@@ -250,6 +266,13 @@ export function verifyUnifiedOwnerBuild(directory: string, buildPin: string) {
     assert.deepEqual(receipt.characterTextContract, contract, 'Character text contract changed')
     assert.deepEqual(mergeCharacterTextExpectations(expectations, contract), expectations,
       'Required character consumer acceptance missing')
+  }
+  const materialContracts = frozenMaterialConsumerContracts(root, frozen)
+  if (materialContracts.length || receipt.materialConsumers !== undefined) {
+    const contracts = materialContracts
+    assert.deepEqual(receipt.materialConsumers, contracts, 'Material consumer contract changed')
+    assert.deepEqual(mergeMaterialConsumerExpectations(expectations, contracts), expectations,
+      'Required material consumer acceptance missing')
   }
   for (const owner of frozen.owners) {
     const result = receipt.owners[owner]

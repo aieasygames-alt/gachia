@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "kind": "r129_final_r128_source_recheck",
+  "status": "passed",
+  "observedAt": "2026-11-18T08:26:51.920Z",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/nte-r128-zero-reader-2026-11-18/published-sources/source-index.json",
+    "pin": "e15cb281a184d19eb3711a8c31f44e51003624a2923957b08c3bb8ffae3458fa"
+  },
+  "sources": 115,
+  "owners": [
+    "azur-promilia",
+    "genshin",
+    "lvmeng",
+    "main",
+    "nte"
+  ],
+  "unchangedPublishedSources": 115,
+  "sourceIndexAdvanced": false,
+  "cloudWrites": false,
+  "cmsWrites": false
+}

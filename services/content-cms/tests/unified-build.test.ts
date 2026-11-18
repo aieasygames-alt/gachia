@@ -12,7 +12,7 @@ import { readUnifiedSources, readSourceValue } from '../src/unified-sources'
 import { unifiedPlan } from '../src/unified-plan'
 import { freezeUnifiedContent, unifiedOwnerPlan, unifiedTree, verifyUnifiedFrozenSource } from '../src/unified-build'
 import { objectValue, type JSONValue } from '../src/unified-content'
-import { frozenCharacterTextContract } from '../src/unified-owner-build'
+import { frozenCharacterTextContract, frozenMaterialConsumerContracts } from '../src/unified-owner-build'
 
 const repo = path.resolve(projectRoot, '../..')
 const inventory = JSON.parse(readFileSync(path.join(repo, baselineDirectory, 'inventory.json'), 'utf8'))
@@ -62,6 +62,36 @@ test('freeze rejects no-op, incomplete public A, foreign records, and floating c
     assert.throws(() => freezeUnifiedContent({ ...input, activeSources: input.activeSources.slice(1) }), /Complete public baseline/)
     assert.throws(() => freezeUnifiedContent({ ...input, records: [{ ...record, stableKey: 'foreign' }] }), /outside the pinned plan/)
     assert.equal(existsSync(output), false)
+  } finally { rmSync(directory, { recursive: true, force: true }) }
+})
+
+test('material dependency blockers stop a new CMS source freeze before allocating a workspace', () => {
+  const directory = temporary('gachia-material-freeze-rejected-'), output = path.join(directory, 'frozen')
+  const record = recordAt('packages/data/games/genshin/raw-materials.json')
+  record.structuredValue = updateField(record.structuredValue, 'name', 'Isolated material text')
+  try {
+    assert.throws(() => freezeUnifiedContent({ repo, commit, directory: output, plan,
+      records: [record], activeSources: originalSources(), preview: true }), /Material publication blocked by dependencies: genshin/)
+    assert.equal(existsSync(output), false)
+  } finally { rmSync(directory, { recursive: true, force: true }) }
+})
+
+test('an existing NTE material text freeze carries source-derived assertions for all detail and collection pages', () => {
+  const directory = temporary('gachia-nte-material-freeze-')
+  const record = recordAt('packages/data/games/nte/raw-materials.json')
+  record.structuredValue = updateField(record.structuredValue, 'name', 'Isolated NTE material text')
+  try {
+    const result = freezeUnifiedContent({ repo, commit, directory: path.join(directory, 'frozen'), plan,
+      records: [record], activeSources: originalSources(), preview: true })
+    const frozen = verifyUnifiedFrozenSource(result.directory, result.manifestPin)
+    assert.equal(frozen.materialDependencies.games.length, 1)
+    assert.equal(frozen.materialDependencies.games[0].mode, 'complete-material-closure')
+    const contracts = frozenMaterialConsumerContracts(result.directory, frozen)
+    assert.equal(contracts.length, 1)
+    assert.equal(contracts[0].pages.length, 57 * 3 + 3)
+    assert.equal(contracts[0].pages.find(row => row.id === (record.structuredValue as { id: string }).id && row.locale === 'zh')!.name, 'Isolated NTE material text')
+    assert.equal(contracts[0].productionQualified, false)
+    assert.equal(result.productionReady, false)
   } finally { rmSync(directory, { recursive: true, force: true }) }
 })
 

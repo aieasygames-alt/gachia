@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "kind": "r129_material_gate_delivery",
+  "status": "development_and_source_audit_complete_with_explicit_domain_blockers",
+  "observedAt": "2026-11-18T08:32:15.622901+00:00",
+  "implementationBaseCommit": "7fc3a5648c58d4808b2f840a63a6060723965942",
+  "implementationFiles": [
+    {
+      "path": "services/content-cms/src/material-release-dependencies.ts",
+      "sha256": "3e15e4eb2b19319fa35ebde9d3e368509e7783e9be45c425043f84d4fa2e1759"
+    },
+    {
+      "path": "services/content-cms/src/material-consumer-contract.ts",
+      "sha256": "3a8cd8ae28e2218a77958f14b65ca67d6064e7f1bfc8de4bfdefb59f13e4a069"
+    },
+    {
+      "path": "services/content-cms/src/unified-build.ts",
+      "sha256": "9ce119a9bcd136a72fb8c2295e8b4e808b44dbc2265ca151becd3aa300ef583d"
+    },
+    {
+      "path": "services/content-cms/src/unified-owner-build.ts",
+      "sha256": "176440ff5c32681ea68de3c08ef13669a2c5b3ba09b6603b99a846f8a9ca58a0"
+    },
+    {
+      "path": "services/content-cms/scripts/material-release-audit.ts",
+      "sha256": "4508591aa165576583051948d1e90efcbe7217fb3f5bbc3404601bf24bd91593"
+    },
+    {
+      "path": "services/content-cms/scripts/material-public-audit.ts",
+      "sha256": "540190b590341a6b3cfd3cd45317fc95e31d4cbfe15c9b87de0346d7976ef2a8"
+    },
+    {
+      "path": "services/content-cms/tests/material-release-dependencies.test.ts",
+      "sha256": "90e22b9f12a9ca7bcbeb59cf2182a27107e89810dfa199714bff633df9458504"
+    },
+    {
+      "path": "services/content-cms/tests/material-consumer-contract.test.ts",
+      "sha256": "4591bd55f9aecf22c3610c7edf6b9ecf470e426c8cecdea3fdb2551a59a16999"
+    },
+    {
+      "path": "services/content-cms/tests/unified-build.test.ts",
+      "sha256": "4e5a27181f17bb5cea6f4dc0a65bb9e315af3761067ca2884ca2b548e12fa554"
+    },
+    {
+      "path": "services/content-cms/package.json",
+      "sha256": "13d120f99837753fe50c0c33c4b40897bf549da8f66bb0120f9daf9500134cf8"
+    }
+  ],
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/nte-r128-zero-reader-2026-11-18/published-sources/source-index.json",
+    "pin": "e15cb281a184d19eb3711a8c31f44e51003624a2923957b08c3bb8ffae3458fa"
+  },
+  "sourceCount": 115,
+  "unchangedPublishedSources": 115,
+  "sourceAdvanced": false,
+  "cmsWrites": false,
+  "cloudWrites": false,
+  "newProductionDeployment": false,
+  "productionMaterialQualificationExpanded": false,
+  "fullApplicationBuild": false,
+  "exactRemoteCI": null,
+  "productionNteVersion": "1c4ccf07-2744-443b-b0a0-bcccbb20cdbb",
+  "verification": {
+    "relatedTests": 83,
+    "publicationCompositionTests": 7,
+    "documentationScopeTests": 39,
+    "cmsTypecheck": "passed",
+    "inventoryScopes": 16,
+    "publicHTTPRequests": 138,
+    "publicHTTP200": 138,
+    "publicConsumerGate": "blocked-by-consumer-gaps",
+    "publicFailedAssertions": 6,
+    "publicMissingSearchScopes": 3
+  },
+  "domains": [
+    {
+      "game": "ananta",
+      "materialDefinitions": 20,
+      "materialReferences": 0,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "endfield",
+      "materialDefinitions": 18,
+      "materialReferences": 670,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "genshin",
+      "materialDefinitions": 185,
+      "materialReferences": 5400,
+      "missingMaterialIds": [
+        "alien-life-conjecture",
+        "artificed-spare-clockwork-component",
+        "basalt-pillar",
+        "blazing-ossiphogus-scale",
+        "brilliant-chrysanthemum",
+        "callalily",
+        "cloudseam-scale",
+        "crown-of-insight",
+        "crystalline-bloom",
+        "crystalline-cyst-dust",
+        "empyrean-reflection",
+        "everamber",
+        "evergloom-ring",
+        "famed-handguard",
+        "foundational-order",
+        "fungal-spores",
+        "golden-crown-of-the-primordial-sea",
+        "golden-raven-insignia",
+        "golden-wolf-instructor",
+        "guide-to-admonition",
+        "guide-to-ballad",
+        "guide-to-diligence",
+        "guide-to-elegance",
+        "guide-to-equity",
+        "guide-to-freedom",
+        "guide-to-gold",
+        "guide-to-ingenuity",
+        "guide-to-justice",
+        "guide-to-kindling",
+        "guide-to-light",
+        "guide-to-order",
+        "guide-to-praxis",
+        "guide-to-prosperity",
+        "guide-to-resistance",
+        "guide-to-transience",
+        "henna-berry",
+        "hurricane-seed",
+        "jalid",
+        "juvenile-fang",
+        "juvenile-jade",
+        "light-guiding-tetrahedron",
+        "lumidouce-bell",
+        "majestic-hooked-beak",
+        "marionette-core",
+        "meaning-of-aer-aeons",
+        "nilotpala-lotus",
+        "oni-kabuto",
+        "overripe-flamegranate",
+        "perpetual-caliber",
+        "philosophies-of-kindling",
+        "pseudostamens",
+        "puppet-strings",
+        "quelled-creepers",
+        "riftborn-regalia",
+        "sango-pearl",
+        "sealed-scroll",
+        "seasoned-fang",
+        "silver-raven-insignia",
+        "slime-Condensate",
+        "smoldering-pearl",
+        "sparkling-fruitsand",
+        "sparks-fruit",
+        "spectral-heart",
+        "spectral-husk",
+        "spectral-nucleus",
+        "talisphere",
+        "teachings-of-kindling",
+        "thunderclap-fruitcore",
+        "transoceanic-chunk",
+        "transoceanic-pearl",
+        "treasure-hoarder-insignia",
+        "tyrants-fang",
+        "water-that-does-not-flow",
+        "water-that-failed-to-transcend"
+      ],
+      "missingCharacterIds": [
+        "mualani",
+        "ororon",
+        "sara",
+        "shinobu"
+      ],
+      "anonymousMaterialReferences": 0,
+      "status": "blocked-by-dependencies"
+    },
+    {
+      "game": "guihuan",
+      "materialDefinitions": 20,
+      "materialReferences": 408,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 108,
+      "status": "blocked-by-dependencies"
+    },
+    {
+      "game": "hi3",
+      "materialDefinitions": 4,
+      "materialReferences": 0,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "nte",
+      "materialDefinitions": 57,
+      "materialReferences": 42,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "roco",
+      "materialDefinitions": 0,
+      "materialReferences": 0,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "empty-material-domain"
+    },
+    {
+      "game": "roco-cn",
+      "materialDefinitions": 23,
+      "materialReferences": 0,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "sea",
+      "materialDefinitions": 20,
+      "materialReferences": 0,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "skjh",
+      "materialDefinitions": 43,
+      "materialReferences": 0,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "starrail",
+      "materialDefinitions": 62,
+      "materialReferences": 2700,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "wuwa",
+      "materialDefinitions": 50,
+      "materialReferences": 1050,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    },
+    {
+      "game": "zzz",
+      "materialDefinitions": 35,
+      "materialReferences": 0,
+      "missingMaterialIds": [],
+      "missingCharacterIds": [],
+      "anonymousMaterialReferences": 0,
+      "status": "ready-for-consumer-review"
+    }
+  ],
+  "evidence": {
+    "dependencies": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-type-expansion-2026-11-18-r129/dependency-audit.json",
+      "pin": "eda3feb350fcd9d5a5a5054e7ad3c70278abae81bc110aa9336a887bf5b9d8b6"
+    },
+    "publicConsumers": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-type-expansion-2026-11-18-r129/public-03/result.json",
+      "pin": "87b233c865682de272e47fb6e32fbc6b4a4279e2c2c7db7f6afb13c0b784bf5a"
+    },
+    "sourceRecheck": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-type-expansion-2026-11-18-r129/source-recheck.json",
+      "pin": "33c113c1b91576ac62f5f0d5deca49657f7885ae9686b8095b3e08d5e0a9cdda"
+    },
+    "genshinQueue": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-type-expansion-2026-11-18-r129/genshin-review-queue.json",
+      "pin": "664c659fd5cb957e5ede905495574304c39b1ea153e5ce88728b8bb4d86116d3"
+    },
+    "relatedTests": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r129-final-tests.log",
+      "pin": "745c15aa48260eab283a73b23450808f2a031bf4a2a99d582333e250d67a3010"
+    },
+    "publicationTests": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r129-publication-tests.log",
+      "pin": "e9bac3daddeeff821c1d60d9318592fb8dc864879dfe548cd23f55a83b3421a2"
+    },
+    "typecheck": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r129-typecheck-final.log",
+      "pin": "dfa958271fbc83077605781aff3fe6ac507663bc112367c18c3037d9639c1c58"
+    },
+    "documentationTests": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r129-doc-gates-final.log",
+      "pin": "e7d3f9204e920f1edb6678a4570a20b5cf6e05906b301f587586c93fcfde369e"
+    },
+    "inventory": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r129-inventory.log",
+      "pin": "37bc5678f893d9f6e2b397c385f47e546439b1289fdcfe267dfeeb31bb92f1f2"
+    }
+  },
+  "nextBatch": "Qualify one existing NTE material text through real CMS candidate/recovery and independent Worker publication from final R128; keep unrelated game blockers scoped to their own domains.",
+  "availableGiB": 13.858
+}

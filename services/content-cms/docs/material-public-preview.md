@@ -6,7 +6,7 @@ opening a database. Output is a compact, reproducible dependency report, not a
 release artifact or publication approval.
 
 Pilot scopes are starrail (Main), genshin (dedicated owner), and nte (collection
-owned by NTE, item details owned by Main). These are a shared adapter, not three
+and item details owned by NTE since R120). These are a shared adapter, not three
 CMS collections. Other scopes fail explicitly until route/consumer validation.
 
 `materialPublicPreview` first verifies the existing material candidate integrity,
@@ -34,8 +34,8 @@ only for identity here, not claimed to be a complete typed character model.
   next-step links and game-specific display logic.
 - Dedicated genshin item details use a smaller view and their own metadata/source
   fallback. Reusing Main output would not guarantee equivalence.
-- NTE collection and Main details have different owners and different name/source
-  fallback rules. Explicit locale routes do not mean translated content exists.
+- NTE collection and dedicated details have different name/source fallback
+  rules. Explicit locale routes do not mean translated content exists.
 - Candidate mapping sorts by identity; source collection order is not yet modeled
   for rendering. A test compares source fidelity by ID, not source array position.
 
@@ -48,3 +48,7 @@ fallback decisions, ordering and approvals are still required.
 Do not auto-rename unmatched references or add guessed material records. Review
 the reported source gaps first, then model character/media/link dependencies and
 bind them into a new typed snapshot contract before actual application readers.
+
+R129 adds separate [dependency/build consumer gates](material-release-gates.md)
+across all raw material domains. The typed pilot above retains its existing
+non-publishable boundary; passing a raw dependency audit does not qualify it.

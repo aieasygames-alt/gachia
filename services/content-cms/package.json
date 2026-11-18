@@ -55,6 +55,8 @@
     "contracts:coverage": "tsx scripts/contract-coverage.ts",
     "media:check": "tsx scripts/media-manifest-check.ts",
     "media:runtime": "node ../../scripts/owner-media-runtime-audit.mjs",
+    "materials:release-audit": "tsx scripts/material-release-audit.ts",
+    "materials:public-audit": "tsx scripts/material-public-audit.ts",
     "unified:promotion": "tsx scripts/unified-promotion.ts",
     "unified:history": "tsx scripts/unified-history.ts",
     "unified:recovery": "tsx scripts/unified-recovery.ts",

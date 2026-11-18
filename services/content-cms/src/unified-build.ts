@@ -12,6 +12,7 @@ import { verifyUnifiedPlan, type UnifiedPlan } from './unified-plan'
 import type { UnifiedRecord } from './unified-content'
 import { COMMUNITY_PUBLICATION_POLICY } from './unified-baseline'
 import { AZUR_NAME_CONSUMER, projectAzurRawNames } from './unified-consumers'
+import { assertMaterialCandidateDependencies } from './material-release-dependencies'
 import { GENSHIN_LOCAL_SCOPE, genshinLocalOwnerScope } from './unified-genshin-local-scope'
 import { AZUR_PROMILIA_PRODUCTION_SCOPE, GENSHIN_PRODUCTION_SCOPE, LVMENG_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE, independentProductionOwnerScope, type IndependentProductionScope } from './unified-genshin-production-scope'
 
@@ -84,6 +85,8 @@ export function freezeUnifiedContent(input: FreezeInput) {
   for (const record of records) assert.deepEqual(record.sourceRecord, knownRecords.get(record.stableKey)?.sourceRecord, 'Record is outside the pinned plan')
   const candidate = exportUnifiedContent(records, originals, activeSources, preview)
   assert.equal(candidate.manifest.status, 'editorial_candidate', 'No new editorial changes: do not freeze an unchanged import')
+  const materialDependencies = assertMaterialCandidateDependencies(activeSources,
+    candidate.files.map(file => ({ sourcePath: file.sourcePath, text: file.content, sha256: file.candidateSHA256 })))
   assert(input.localScope === undefined || input.localScope === GENSHIN_LOCAL_SCOPE, 'Unknown local scope')
   const local = input.localScope && genshinLocalOwnerScope(candidate.manifest, activeSources,
     candidate.files.map(file => ({ sourcePath: file.sourcePath, text: file.content, sha256: file.candidateSHA256 })))
@@ -179,7 +182,7 @@ export function freezeUnifiedContent(input: FreezeInput) {
     const activePin = save(path.join(directory, 'active.json'), activeFiles)
     const filesPin = save(path.join(directory, 'files.json'), files)
     const manifest = { schemaVersion: 1, kind: 'unified_frozen_source', sourceCommit: input.commit, planSHA256: plan.planSHA256,
-      candidate: candidate.manifest, ...scope, sourceTreeSHA256: digest(canonical(files)), filesPin, activePin, modified, stages,
+      candidate: candidate.manifest, ...scope, materialDependencies, sourceTreeSHA256: digest(canonical(files)), filesPin, activePin, modified, stages,
       publicationPolicy: COMMUNITY_PUBLICATION_POLICY, sourceAuthentication: 'not_required_by_operator', status: 'generated_source_only', productionReady: false, activationSupported: false,
       cloudWrites: false, websiteChanged: false,
       pending: ['domain and reference validation',
@@ -226,6 +229,10 @@ export function verifyUnifiedFrozenSource(directory: string, pin: string) {
   const files = unifiedTree(path.join(root, 'source'), '', true)
   assert.deepEqual(files, JSON.parse(filesText), 'Frozen source files changed')
   assert.equal(digest(canonical(files)), manifest.sourceTreeSHA256, 'Frozen source tree changed')
+  if (manifest.materialDependencies !== undefined) assert.deepEqual(manifest.materialDependencies, assertMaterialCandidateDependencies(
+    activeFiles.map(row => ({ ...row, text: readFileSync(regular(root, row.file), 'utf8') })),
+    candidate.files.map(row => ({ sourcePath: row.sourcePath, sha256: row.candidateSHA256, text: readFileSync(regular(path.join(root, 'source'), row.sourcePath), 'utf8') }))),
+  'Material dependency gate receipt changed')
   const scoped = manifest as Manifest & { localScope?: typeof GENSHIN_LOCAL_SCOPE; productionScope?: IndependentProductionScope }
   assert(!(scoped.localScope && scoped.productionScope), 'Mixed source scopes')
   if (scoped.productionScope !== undefined) {
