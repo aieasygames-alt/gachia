@@ -86,4 +86,8 @@ test('NTE acceptance covers all 171 material URLs and distinguishes former mirro
   assert.equal(recovery.requests.find(row => row.path === '/data/nte/raw-image-sources.json')?.status, 200)
   assert.equal(recovery.requests.find(row => row.path === '/data-client/nte-platform.json')?.status, 404)
   for (const file of ['games.json', 'search-zh.json', 'search-en.json', 'search-ja.json']) assert(result.values.has('/data-manifest/' + file))
+  for (const lang of ['zh', 'en', 'ja']) for (const id of ['zero-male', 'zero-female']) {
+    const request = result.requests.find(row => row.path === `/${lang}/nte/characters/${id}`)
+    assert(request); assert.deepEqual(request.contains, ['class="material-table"'])
+  }
 })

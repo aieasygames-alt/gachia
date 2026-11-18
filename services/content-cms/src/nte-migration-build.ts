@@ -10,6 +10,7 @@ import { prepareNteMainCandidate, verifyNteMainCandidate } from '../../../script
 import { nteContentAssets } from '../../../scripts/nte-content-assets.mjs'
 import { verifyNteMigrationSource } from './nte-migration-source'
 import { readNteSourceIndex } from './nte-release-history'
+import { assertNteMaterialSourceChanges, correctedNteMaterialReader, nteMaterialReader } from './nte-material-source-correction'
 
 type Proof = { path: string; pin: string }
 export async function buildNteMigration(source: Proof) {
@@ -93,6 +94,12 @@ export async function buildNteDataOnly(input: { repo: string; commit: string; so
   writeFileSync(path.join(workspace, materialPath), candidateText)
   const mirror = path.join(workspace, 'apps/web/public/data/nte/raw-character-materials.json')
   writeFileSync(mirror, candidateText)
+  const publishedReader = baseline.find((row: any) => row.sourcePath === nteMaterialReader)
+  assert(publishedReader, 'Published NTE reader is missing')
+  // Restore published content, then explicitly apply only the reviewed canonical identity reader patch.
+  const readerText = git(['show', `${input.commit}:${nteMaterialReader}`]).toString('utf8')
+  assert.equal(readerText, correctedNteMaterialReader(publishedReader.text), 'Committed NTE reader contains unrelated changes')
+  writeFileSync(path.join(workspace, nteMaterialReader), readerText)
   const runNames = ['generate-character-summaries.mjs', 'generate-manifests.mjs', 'verify-manifests.mjs', 'raw-inventory-contract.mjs']
   const stages: any[] = []
   const env: NodeJS.ProcessEnv = { PATH: process.env.PATH, HOME: directory, LANG: 'en_US.UTF-8', NODE_ENV: 'production', NEXT_TELEMETRY_DISABLED: '1', WRANGLER_SEND_METRICS: 'false', CI: 'true' }
@@ -108,8 +115,7 @@ export async function buildNteDataOnly(input: { repo: string; commit: string; so
     mkdirSync(path.join(directory, 'candidate'), { recursive: true, mode: 0o700 }); writeFileSync(path.join(directory, file), text, { flag: 'wx', mode: 0o600 })
     return { sourcePath: row.sourcePath, sha256: digest(text), file }
   })
-  const changed = candidate.filter((row: any, index: number) => row.sha256 !== baseline[index].sha256).map((row: any) => row.sourcePath)
-  assert.deepEqual(changed, [materialPath], 'R128 data-only build changed an unapproved source')
+  const changed = assertNteMaterialSourceChanges(baseline, candidate.map((row: any) => ({ ...row, text: readFileSync(path.join(directory, row.file), 'utf8') })))
   const store = execFileSync('pnpm', ['store', 'path'], { encoding: 'utf8' }).trim()
   const installLog = path.join(directory, 'install.log')
   execFileSync('pnpm', ['install', '--offline', '--frozen-lockfile', '--ignore-scripts', '--prod=false', '--store-dir', store], { cwd: workspace, env, stdio: ['ignore', 'pipe', 'pipe'] })
@@ -135,12 +141,15 @@ export async function buildNteDataOnly(input: { repo: string; commit: string; so
 export function verifyNteDataOnlyBuild(proof: Proof) {
   const value = migrationPinned(proof), directory = path.dirname(proof.path)
   assert.equal(proof.path, path.join(directory, 'build.json')); assert.equal(value.schemaVersion, 1); assert.equal(value.kind, 'nte_data_only_build')
-  assert.equal(value.cloudWrites, false); assert.equal(value.productionReady, false); assert.deepEqual(value.changedPaths, ['packages/data/games/nte/raw-character-materials.json'])
+  assert.equal(value.cloudWrites, false); assert.equal(value.productionReady, false)
   const baseline = migrationPinned(value.baseline), candidate = migrationPinned(value.candidate)
   assert.equal(candidate.length, baseline.length); assert.equal(candidate.length, 115)
-  const changed = candidate.filter((row: any, index: number) => row.sha256 !== baseline[index].sha256).map((row: any) => row.sourcePath)
+  const changed = assertNteMaterialSourceChanges(baseline, candidate.map((row: any) => ({ ...row, text: readFileSync(path.join(directory, row.file), 'utf8') })))
   assert.deepEqual(changed, value.changedPaths)
-  for (const row of candidate) assert.equal(digest(readFileSync(path.join(directory, row.file), 'utf8')), row.sha256)
+  for (const row of candidate) {
+    assert.equal(digest(readFileSync(path.join(directory, row.file), 'utf8')), row.sha256)
+    assert.equal(digest(readFileSync(path.join(value.workspace, row.sourcePath), 'utf8')), row.sha256, 'Built workspace differs from reviewed NTE sources')
+  }
   assert.equal(value.artifacts.nte.directory, path.join(directory, 'artifacts/nte'))
   assert.deepEqual(artifactFiles(value.artifacts.nte.directory), migrationPinned(value.artifacts.nte.tree))
   const expected = nteContentAssets(value.workspace); assert.equal(value.contentVersion, expected.manifest.version)

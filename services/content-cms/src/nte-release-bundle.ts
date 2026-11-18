@@ -23,6 +23,7 @@ import { verifyNteDataOnlyBuild, verifyNteMigrationBuild } from './nte-migration
 import { readNteSourceIndex } from './nte-release-history'
 import { frozenCharacterTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
 import { NTE_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
+import { nteCharacterDisplayIds } from '../../../packages/data/games/nte/character-identity'
 
 type Proof = { path: string; pin: string }
 const appFor: Record<string, string> = { nte: 'game-nte', router: 'router', main: 'web' }
@@ -81,7 +82,7 @@ async function inputs(build: Proof, sourceIndex: Proof, migration: boolean, dept
     assert(contract)
     assert.equal(contract.candidate.changes.length, 1); assert.equal(contract.candidate.changes[0].game, 'nte')
     assert.notEqual(expected.manifest.version, nteContentAssets(sources.workspace).manifest.version)
-  } else assert.deepEqual(built.value.changedPaths, ['packages/data/games/nte/raw-character-materials.json'])
+  } else assert(built.value.changedPaths.length > 0) // verifyNteDataOnlyBuild enforces the exact source/reader correction.
   return { sources, built, workspace, expected, candidateSources, contract, dataOnly }
 }
 export async function nteRequests(workspace: string, owner: string, role: string, artifact: string | undefined, migration: boolean, sources: any[], contract?: any) {
@@ -123,6 +124,15 @@ export async function nteRequests(workspace: string, owner: string, role: string
       for (const item of materials) add(`/${lang}/nte/items/${item.id}`, migration && owner === 'nte' && role === 'recovery' ? 404 : 200)
       add(`/${lang}/nte/items/nonexistent-material`, 404)
       if (owner === 'router') for (const page of ['characters/hu-tao', 'items/silk-flower', 'guides/banner-schedule-guide']) add(`/${lang}/genshin/${page}`)
+    }
+    // Historical bundles keep their original graph. Corrected readers must prove every
+    // material consumer, including both canonical Zero display variants, before upload.
+    if (readFileSync(path.join(workspace, 'apps/game-nte/lib/data.ts'), 'utf8').includes('const relationId = nteCharacterMaterialRelationId(id);')) {
+      const relations = JSON.parse(nte.files.get('data/raw-character-materials.json')!.toString())
+      for (const row of relations) for (const id of nteCharacterDisplayIds(row.characterId)) for (const lang of ['zh', 'en', 'ja']) {
+        const url = `/${lang}/nte/characters/${id}`; add(url)
+        requests.find(request => request.path === url).contains = ['class="material-table"']
+      }
     }
   } else for (const lang of ['zh', 'en', 'ja']) add(`/${lang}/nte/items/tri-key`, role === 'candidate' ? 404 : 200)
   if (artifact && owner !== 'router') for (const file of unifiedStaticFiles(artifact, owner)) {

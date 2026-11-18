@@ -5,7 +5,7 @@ import { homedir } from 'node:os'
 import path from 'node:path'
 import { migrationSave } from '../scripts/genshin-migration-http.mjs'
 import { digest } from '../scripts/desktop-release-assets.mjs'
-import { desktopCloudSnapshot } from '../scripts/desktop-cloud-release.mjs'
+import { activeVersion, assertTopology, desktopCloudSnapshot } from '../scripts/desktop-cloud-release.mjs'
 import { unifiedProductionRead } from '../scripts/unified-production-transport.mjs'
 import { readUnifiedVersion } from '../scripts/unified-version-identity.mjs'
 import { readMigrationRouterVersion } from '../scripts/genshin-migration-router.mjs'
@@ -44,8 +44,13 @@ if (action === 'prepare') {
   result = await advanceNteProduction({ completion: load('result.json').proof, executorRunID: runID(), directory: path.join(root, 'published-sources'), cloudToken: cloudToken() })
   save('source-result.json', result)
 } else if (action === 'snapshot') {
-  const token = cloudToken()
-  result = { observedAt: new Date().toISOString(), snapshot: await desktopCloudSnapshot(token, unifiedProductionRead), nte: await readUnifiedVersion({ service: 'gachia-game-nte', versionId: (await desktopCloudSnapshot(token, unifiedProductionRead)).services['gachia-game-nte'].versionId, token, request: unifiedProductionRead }), router: await readMigrationRouterVersion({ versionId: (await desktopCloudSnapshot(token, unifiedProductionRead)).services['gachia-router'].versionId, token, request: unifiedProductionRead }) }
+  const token = cloudToken(5)
+  const snapshot = await desktopCloudSnapshot(token, unifiedProductionRead)
+  const nte = await readUnifiedVersion({ service: 'gachia-game-nte', versionId: activeVersion(snapshot, 'gachia-game-nte'), token, request: unifiedProductionRead })
+  const router = await readMigrationRouterVersion({ versionId: activeVersion(snapshot, 'gachia-router'), token, request: unifiedProductionRead })
+  const after = await desktopCloudSnapshot(token, unifiedProductionRead)
+  assertTopology(snapshot, after)
+  result = { observedAt: new Date().toISOString(), snapshot, after, nte, router, cloudWrites: false }
   save('snapshot.json', result)
 } else throw new Error('Expected prepare, activate, advance or snapshot')
 console.log(JSON.stringify({ phase: action, status: 'completed', proof: result?.proof, at: new Date().toISOString() }))

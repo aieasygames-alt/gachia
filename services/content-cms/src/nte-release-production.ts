@@ -96,7 +96,7 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
   const plan = editorial ? loadUnifiedDesktopPlan(repo, evidence.built.frozen.planSHA256).plan : undefined
   if (dataReview) {
     assert.equal(dataReview.kind, 'nte_data_only_review'); assert.equal(dataReview.sourceCommit, executor.executorCommit)
-    assert.deepEqual(dataReview.changedPaths, ['packages/data/games/nte/raw-character-materials.json'])
+    assert.deepEqual(dataReview.changedPaths, evidence.built.value.changedPaths)
   }
   if (editorial) {
     assert.equal(editorial.sourceCommit, executor.executorCommit); assert.equal(editorial.planSHA256, plan!.planSHA256)
@@ -113,7 +113,7 @@ export async function auditNteProduction(input: unknown, tokens: { cmsToken?: st
       assert.deepEqual(migrationPinned(reconstructed.value.files), migrationPinned(evidence.built.source.value.files))
     } else if (dataOnly) {
       const rebuilt = verifyNteDataOnlyBuild(evidence.value.build)
-      assert.deepEqual(rebuilt.value.changedPaths, ['packages/data/games/nte/raw-character-materials.json'])
+      assert.deepEqual(rebuilt.value.changedPaths, dataReview!.changedPaths)
     } else {
       const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan: plan!, records: review!.records, activeSources: evidence.sources.sources, preview: false, productionScope: NTE_PRODUCTION_SCOPE })
       assert.equal(reconstructed.sourceTreeSHA256, evidence.built.frozen.sourceTreeSHA256); assert.deepEqual(reconstructed.candidate, evidence.built.frozen.candidate)
