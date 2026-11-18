@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict'
 import { spawnSync } from 'node:child_process'
-import { readFileSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
 import path from 'node:path'
 import test from 'node:test'
 import { nteProductionRequest } from '../src/nte-release-production'
@@ -8,7 +9,33 @@ import { nteLocalConfig, nteRequests } from '../src/nte-release-bundle'
 import { readUnifiedSources } from '../src/unified-sources'
 import { projectRoot } from '../src/local-environment'
 import { nteMigrationContinuationRequest, nteContinuationKey } from '../src/nte-release-history'
+import { genshinMigrationTransport } from '../../../scripts/genshin-migration-transport.mjs'
+import { captureNteHTTP } from '../../../scripts/nte-release-http.mjs'
+import { migrationSave } from '../../../scripts/genshin-migration-http.mjs'
+import { digest } from '../../../scripts/desktop-release-assets.mjs'
 const valid = () => ({ schemaVersion: 1, kind: 'nte_release_request', bundle: { path: '/sealed/bundle.json', pin: 'a'.repeat(64) }, executorRunID: 1 })
+test('NTE data-only bundles preview their exact NTE version through the NTE HTTP validator', async t => {
+  const directory = realpathSync(mkdtempSync(path.join(tmpdir(), 'nte-data-transport-')))
+  t.after(() => rmSync(directory, { recursive: true, force: true }))
+  const local = path.join(directory, 'nte/candidate'), output = path.join(directory, 'production')
+  mkdirSync(path.join(local, 'module'), { recursive: true }); mkdirSync(path.join(output, 'nte-candidate'), { recursive: true })
+  const code = 'export default { fetch() { return new Response(null) } }'
+  writeFileSync(path.join(local, 'module/worker.js'), code)
+  const config = migrationSave(local, 'upload.json', { name: 'gachia-game-nte' })
+  mkdirSync(path.join(local, 'local-http'))
+  const raw = [{ characterId: 'zero', ascensionMaterials: [] }]
+  const response = () => new Response(JSON.stringify(raw), { headers: { 'content-type': 'application/json', 'cache-control': 'no-store', 'x-gachia-nte-content-version': 'r128' } })
+  const reference = await captureNteHTTP({ origin: 'https://gachia.com', requests: [{ path: '/data/nte/raw-character-materials.json', status: 200 }],
+    jsonValues: new Map([['/data/nte/raw-character-materials.json', raw]]), directory: path.join(local, 'local-http/responses'), request: async () => response() })
+  const sealed = { configPin: config.pin, moduleSHA256: digest(code), referencesPin: reference.proof.pin }, reads: string[] = []
+  const transport = genshinMigrationTransport({ evidence: { directory, value: { kind: 'nte_independent_data_bundle', owners: { nte: { service: 'gachia-game-nte', candidate: sealed } } } },
+    releaseKey: 'a'.repeat(64), token: 'unused', directory: output,
+    previewRequest: async (url: string, init: RequestInit) => { reads.push(String(url)); assert.equal(init.method, 'GET'); return response() } })
+  const versionId = '12345678-1234-1234-1234-123456789abc'
+  const result = await transport.preview({ owner: 'nte', role: 'candidate', service: 'gachia-game-nte', versionId, sealed })
+  assert.equal(result.status, 'passed'); assert.equal(result.observationMode, 'cloud_exact_version')
+  assert.equal(reads.length, 1); assert.match(reads[0], /^https:\/\/12345678-gachia-game-nte\./)
+})
 test('NTE continuation pins the precise stopped request, identity and journal without replay options', () => {
   const proof = { path: '/stopped/proof.json', pin: 'a'.repeat(64) }
   const input = { schemaVersion: 1, kind: 'nte_migration_continuation_request', stopped: { request: proof, identity: proof, journal: proof }, executorRunID: 2 }
