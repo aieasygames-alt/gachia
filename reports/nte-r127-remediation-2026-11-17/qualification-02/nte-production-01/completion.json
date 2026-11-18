@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "kind": "nte_release_completion",
+  "request": {
+    "schemaVersion": 1,
+    "kind": "nte_release_request",
+    "bundle": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-prepare-01/sealed/bundle.json",
+      "pin": "1ec441f1d16ea6d4bb10688310941955d632809918e1a70a89c1fc9b3fe8384e"
+    },
+    "executorRunID": 44059796226,
+    "previewProxy": "http://127.0.0.1:1087",
+    "publicProxy": "http://127.0.0.1:1087"
+  },
+  "bundle": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-prepare-01/sealed/bundle.json",
+    "pin": "1ec441f1d16ea6d4bb10688310941955d632809918e1a70a89c1fc9b3fe8384e"
+  },
+  "executorCI": {
+    "runID": 44059796226,
+    "commit": "f85accac7eeb37cffcec12c0bc7b91f5e5d70431",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "releaseKey": "4f5bde6ba39cfd8fca3621a6890e6c90b99e700188143c7d32befa948b092f4e",
+  "status": "production_accepted",
+  "policy": "nte-independent-existing-character-text-production-v1",
+  "versions": {
+    "gachia-game-nte": "6f509611-e4ef-4b6d-b41b-2768721ade2c"
+  },
+  "deployment": {
+    "deploymentId": "4e5252be-20f0-4164-8861-235edfdf37c1",
+    "service": "gachia-game-nte",
+    "versionId": "6f509611-e4ef-4b6d-b41b-2768721ade2c",
+    "releaseKey": "4f5bde6ba39cfd8fca3621a6890e6c90b99e700188143c7d32befa948b092f4e",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "ef141c92ecfd9d0d7d4b09d12986e8e5db68a7f4ecaa27d741a28418b192b1d5",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "bc25c63afbfa5b8583b2ba82ca9547cac144fd5ed1cdc8249bbfe22740fd85d4",
+        "bytes": 469
+      }
+    }
+  },
+  "accepted": {
+    "recovery": {
+      "versionId": "1e8ac596-0b3a-4a0b-bf2a-61a4f0df1059",
+      "moduleSHA256": "c7bcf848012f733a5874599af4b9a7e4320751cbe4eedfc7039ef42455bf889b",
+      "moduleProof": {
+        "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-production-01/nte-recovery/module/receipt.json",
+        "pin": "9b6c0d1339cd2b1c71afd807de11af7c36e45deb2ba0cc8be1e6295f1a1d6785"
+      },
+      "versionPin": "da70ee68f5319240d8cc4a7cd3108b0ff93b7ece640ade9dbc820f3f8a7743d9",
+      "evidenceSHA256": "ca2bd789795dc23bd629a87e913683de3461f76b42a106ee05351679b69e0485",
+      "acceptedAt": 1794912983853
+    },
+    "candidate": {
+      "versionId": "6f509611-e4ef-4b6d-b41b-2768721ade2c",
+      "moduleSHA256": "29ae4d67a83b0d7069202e5e6723dc0952fe47ec9229a097c0b1e356d6b0910b",
+      "moduleProof": {
+        "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-production-01/nte-candidate/module/receipt.json",
+        "pin": "7a7f4040f335b0304cea0b30d3dd37e67f4bb90d25c48d0c80bb2fd82ecb52b8"
+      },
+      "versionPin": "fa361b8fa5765e4e03f5a5e2aceae7f19f4d45d03f58c9a6c14a5aa48a8996f6",
+      "evidenceSHA256": "98a96570f1065cc833be3236daa4ca5d1536fc248886c7f3441c18a93e1353ce",
+      "acceptedAt": 1794913229713
+    }
+  },
+  "publicEvidencePin": "b397ccf382a15587c660117607261206daa337c82bf6d68b497f8cbf54b89667",
+  "journalPin": "1b453dfbfd66c7f1e6f11c80aa0f759e77698736092b1c9e49c9f10895f2b5c6",
+  "sourceAdvanced": false,
+  "journal": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/nte-production-01/nte-independent-4f5bde6ba39cfd8fca3621a6890e6c90b99e700188143c7d32befa948b092f4e.jsonl",
+    "pin": "1b453dfbfd66c7f1e6f11c80aa0f759e77698736092b1c9e49c9f10895f2b5c6"
+  }
+}

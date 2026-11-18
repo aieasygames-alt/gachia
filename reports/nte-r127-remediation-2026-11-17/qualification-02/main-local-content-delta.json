@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-17T10:03:19.788Z",
+  "bundle": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-r127-remediation-2026-11-17/qualification-02/main-restoration-prepare-01/bundle.json",
+    "pin": "d4b09db10b0d3a1dafab06d8277afeff31cc911cecf2a0424a775a64545c45ac"
+  },
+  "sourceCommit": "f85accac7eeb37cffcec12c0bc7b91f5e5d70431",
+  "protectedJSONDelta": [
+    {
+      "path": "/data/ananta/raw-guides.json",
+      "recoveryJSONPin": "43e794164cba1a0fdfd5761aa9938dea07898e3db9b7a33ef47e1f88cdce224b",
+      "candidateJSONPin": "0a27b79f7242d11b900923819a4abfacb31a58805dfafd10a790731b02b84249"
+    },
+    {
+      "path": "/data/hi3/raw-guides.json",
+      "recoveryJSONPin": "faa2894e10c5e6ca19c6f1c0247e8ca458f275c5a286605051238a75f4d5431e",
+      "candidateJSONPin": "11950319d8fd874d6c69ec6e336eb5fcf63d014ed8d7912924e99d9883f74df6"
+    }
+  ],
+  "otherJSONUnchanged": true,
+  "direct": {
+    "recovery": 1258,
+    "candidate": 1258
+  },
+  "graph": {
+    "recovery": 353,
+    "candidate": 353
+  },
+  "cloudWrites": 0
+}

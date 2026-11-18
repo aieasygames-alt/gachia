@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-17T11:11:54.451531+00:00",
+  "availableBytes": 15315771392,
+  "availableGiB": 14.264,
+  "standardBuildBudgetBytes": 15032385536,
+  "reserveBytes": 8589934592,
+  "meetsStandardBuildBudget": true,
+  "additionalDeletion": false
+}
