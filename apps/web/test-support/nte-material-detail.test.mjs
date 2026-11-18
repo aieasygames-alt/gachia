@@ -35,11 +35,16 @@ describe('NTE material ownership and real page consumers', () => {
       expect(data.source).toBe(locale === 'zh' ? row.source ?? '' : locale === 'ja' ? row.sourceJa ?? row.sourceEn ?? row.source ?? '' : row.sourceEn ?? row.source ?? '');
       const ids = new Set(characterMaterials.filter(cm => cm.levelingMaterials.some(level => level.materials.some(m => m.id === row.id))
         || cm.skillMaterials.some(m => m.id === row.id)).map(cm => cm.characterId));
-      expect(data.characters.map(c => c.id)).toEqual([...ids].filter(id => nteCharacters.some(c => c.id === id)));
+      const pageIds = [...ids].flatMap(id => id === 'zero' ? ['zero-male', 'zero-female'] : [id]);
+      expect(data.characters.map(c => c.id)).toEqual(pageIds.filter(id => nteCharacters.some(c => c.id === id)));
       const html = renderToStaticMarkup(await Detail({ params }));
       const plain = renderToStaticMarkup(createElement('div', null, data.source)).slice(5, -6);
       expect(html).toContain(plain);
       for (const char of data.characters) expect(html).toContain(`href="/${locale}/nte/characters/${char.id}"`);
+      if (ids.has('zero')) {
+        for (const variant of ['zero-male', 'zero-female']) expect(html).toContain(`href="/${locale}/nte/characters/${variant}"`);
+        expect(html).not.toContain(`href="/${locale}/nte/characters/zero"`);
+      }
       const metadata = await generateMetadata({ params });
       expect(metadata.alternates.canonical).toBe(`https://gachia.com/${locale}/nte/items/${row.id}`);
       expect(metadata.alternates.languages.ja).toBe(`https://gachia.com/ja/nte/items/${row.id}`);
