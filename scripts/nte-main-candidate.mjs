@@ -8,7 +8,7 @@ import { digest } from './desktop-release-assets.mjs';
 import { migrationPinned, migrationSave } from './genshin-migration-http.mjs';
 import { genshinContentAssets } from './genshin-content-assets.mjs';
 import { nteContentAssets } from './nte-content-assets.mjs';
-import { mainManifests } from '../packages/data/scripts/main-manifests.mjs';
+import { mainManifestOptions, mainManifests } from '../packages/data/scripts/main-manifests.mjs';
 
 export async function prepareNteMainCandidate(directory, root) {
   directory = resolve(directory); root = realpathSync(root);
@@ -35,7 +35,8 @@ export async function prepareNteMainCandidate(directory, root) {
       removed.push('assets/data-client/tier-list-genshin.json');
     }
   }
-  for (const [file, value] of await mainManifests(pathToFileURL(join(root, 'packages/data/games/')))) {
+  const gamesRoot = pathToFileURL(join(root, 'packages/data/games/'));
+  for (const [file, value] of await mainManifests(gamesRoot, await mainManifestOptions(gamesRoot))) {
     const name = `assets/data-manifest/${file}`; assert.deepEqual(JSON.parse(readFileSync(join(source, name))), value);
     const next = structuredClone(value), data = file === 'games.json' ? next.games : next;
     delete data.genshin; delete data.nte;

@@ -4,13 +4,13 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import test from 'node:test';
-import { mainManifests } from '../packages/data/scripts/main-manifests.mjs';
+import { mainManifestOptions, mainManifests } from '../packages/data/scripts/main-manifests.mjs';
 import { writeGenshinMainBase } from './genshin-main-base.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 
-test('default manifest generation retains exact compatibility bytes for all four existing indexes', async () => {
-  for (const [file, value] of await mainManifests()) {
+test('the current workspace contract reproduces all four committed indexes', async () => {
+  for (const [file, value] of await mainManifests(undefined, await mainManifestOptions())) {
     assert.equal(`${JSON.stringify(value)}\n`, readFileSync(join(ROOT, 'apps/web/public/data-manifest', file), 'utf8'));
   }
 });

@@ -18,7 +18,7 @@ import { captureNteHTTP, recheckNteReferences } from '../../../scripts/nte-relea
 import { prepareUnifiedAssetPair, unifiedStaticFiles, verifyUnifiedAssetPair } from '../../../scripts/unified-release-assets.mjs'
 import { unifiedTransportTool, verifyUnifiedTool } from '../../../scripts/unified-cloud-module.mjs'
 import { readUnifiedSourceOwner } from '../../../scripts/unified-source-advance.mjs'
-import { mainManifests } from '../../../packages/data/scripts/main-manifests.mjs'
+import { mainManifestOptions, mainManifests, publishedMainManifestOptions } from '../../../packages/data/scripts/main-manifests.mjs'
 import { verifyNteDataOnlyBuild, verifyNteMigrationBuild } from './nte-migration-build'
 import { readNteSourceIndex } from './nte-release-history'
 import { frozenNteMaterialTextPairContract, frozenCharacterTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
@@ -85,7 +85,7 @@ async function inputs(build: Proof, sourceIndex: Proof, migration: boolean, dept
   } else assert(built.value.changedPaths.length > 0) // verifyNteDataOnlyBuild enforces the exact source/reader correction.
   return { sources, built, workspace, expected, candidateSources, contract, dataOnly }
 }
-export async function nteRequests(workspace: string, owner: string, role: string, artifact: string | undefined, migration: boolean, sources: any[], contract?: any) {
+export async function nteRequests(workspace: string, owner: string, role: string, artifact: string | undefined, migration: boolean, sources: any[], contract?: any, inheritedMainArtifact?: string) {
   const requests: any[] = [], values = new Map<string, any>(), add = (url: string, status = 200, value?: any) => {
     if (!requests.some(row => row.path === url)) requests.push({ path: url, status })
     if (value !== undefined) values.set(url, value)
@@ -104,7 +104,10 @@ export async function nteRequests(workspace: string, owner: string, role: string
       add('/data/' + pair, absent ? 404 : 200, absent ? undefined : JSON.parse(source.text))
     }
     if (owner === 'router' && (!migration || role === 'candidate')) add('/data/nte/raw-character-summaries.json', 200, JSON.parse(nte.files.get('data/raw-character-summaries.json')))
-    for (const [file, value] of await mainManifests(pathToFileURL(path.join(workspace, 'packages/data/games/')))) {
+    const gamesRoot = pathToFileURL(path.join(workspace, 'packages/data/games/'))
+    const manifestOptions = !migration && inheritedMainArtifact
+      ? await publishedMainManifestOptions(pathToFileURL(inheritedMainArtifact + path.sep)) : await mainManifestOptions(gamesRoot)
+    for (const [file, value] of await mainManifests(gamesRoot, manifestOptions)) {
       const next: any = structuredClone(value), data = file === 'games.json' ? next.games : next
       if (owner === 'main') { delete data.genshin; if (role === 'candidate') delete data.nte }
       add('/data-manifest/' + file, 200, next)
@@ -170,7 +173,7 @@ async function captureGraph(opened: any, directory: string, owners: any, owner: 
   const artifact = owner === 'router' ? undefined : path.join(directory, owner, role, 'artifact')
   const currentWorkspace = !migration && role === 'recovery' ? sources.workspace : workspace
   const currentSources = !migration && role === 'recovery' ? sources.sources : candidateSources
-  const roleContract = contract?.[role], wanted = await nteRequests(currentWorkspace, final ? 'router' : owner, final ? 'candidate' : role, artifact, migration, currentSources, roleContract)
+  const roleContract = contract?.[role], wanted = await nteRequests(currentWorkspace, final ? 'router' : owner, final ? 'candidate' : role, artifact, migration, currentSources, roleContract, sources.owners.main.directory)
   let captured: any
   await withLocalWorker(path.join(workspace, 'apps/web'), configs[final ? 'router' : owner], path.join(http, 'home'), path.join(http, 'worker.log'), async (origin: string) => {
     captured = await captureNteHTTP({ origin, requests: wanted.requests, jsonValues: wanted.values, directory: path.join(http, 'responses') })
@@ -233,7 +236,7 @@ export async function verifyNteReleaseBundle(proof: Proof, depth = 0): Promise<a
       const outbound = await multipartModule(readFileSync(path.join(local, 'seal/exact.multipart'))); assert.equal(outbound.moduleSHA256, sealed.moduleSHA256)
       ;(owner === 'router' ? assertMigrationRouterMetadata : assertUploadMetadata)(outbound.metadata, config)
       const currentWorkspace = !migration && role === 'recovery' ? sources.workspace : workspace, roleContract = opened.contract?.[role]
-      const wanted = await nteRequests(currentWorkspace, owner, role, artifact, migration, !migration && role === 'recovery' ? sources.sources : opened.candidateSources, roleContract)
+      const wanted = await nteRequests(currentWorkspace, owner, role, artifact, migration, !migration && role === 'recovery' ? sources.sources : opened.candidateSources, roleContract, sources.owners.main.directory)
       const refs = { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }, references = recheckNteReferences(refs)
       assert.deepEqual(references.map((ref: any) => ({ path: ref.path, status: ref.status })), wanted.requests.map(row => ({ path: row.path, status: row.status })))
       for (const [index, ref] of references.entries()) {
@@ -247,7 +250,7 @@ export async function verifyNteReleaseBundle(proof: Proof, depth = 0): Promise<a
     const proof = role === 'candidate' ? value.finalReferences : value.recoveryReferences
     assert.equal(proof.path, path.join(directory, role === 'candidate' ? 'final-http/responses/references.json' : 'recovery-http/responses/references.json'))
     const references = recheckNteReferences(proof), wanted = await nteRequests(role === 'recovery' ? sources.workspace : workspace, 'router', 'candidate', undefined, migration,
-      role === 'recovery' ? sources.sources : opened.candidateSources, opened.contract?.[role as 'candidate' | 'recovery'])
+      role === 'recovery' ? sources.sources : opened.candidateSources, opened.contract?.[role as 'candidate' | 'recovery'], sources.owners.main.directory)
     assert.deepEqual(references.map((ref: any) => ({ path: ref.path, status: ref.status })), wanted.requests.map(row => ({ path: row.path, status: row.status })))
     for (const ref of references) if (wanted.values.has(ref.path)) assert.deepEqual(JSON.parse(readFileSync(path.join(path.dirname(proof.path), ref.bodyFile), 'utf8')), wanted.values.get(ref.path))
     assertConsumers(proof, opened.contract?.[role as 'candidate' | 'recovery'])

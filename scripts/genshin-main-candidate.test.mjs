@@ -14,6 +14,7 @@ function fixture(t) {
   const write = (file, text) => { mkdirSync(dirname(join(root, file)), { recursive: true }); writeFileSync(join(root, file), text); };
   const copy = (file, to = file) => { mkdirSync(dirname(join(root, to)), { recursive: true }); cpSync(join(ROOT, file), join(root, to), { recursive: true }); };
   copy('packages/core/genshin-content.json'); copy('packages/data/games/genshin'); copy('packages/data/raw-content-review.json');
+  copy('packages/data/main-manifest-contract.json');
   for (const entry of readdirSync(join(ROOT, 'packages/data/games'), { withFileTypes: true })) {
     if (entry.isDirectory() && entry.name !== 'genshin') symlinkSync(join(ROOT, 'packages/data/games', entry.name), join(root, 'packages/data/games', entry.name));
   }

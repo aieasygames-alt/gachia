@@ -25,12 +25,24 @@ import { captureUnifiedExecutorSource } from './unified-executor-source'
 import { readNteSourceCheckpoint } from './nte-source-checkpoint'
 import { nteLocalConfig, nteRequests, nteRuntimeConfig } from './nte-release-bundle'
 import { projectRoot } from './local-environment'
+import { freezeMainConsumerSource, verifyMainConsumerSource } from './main-consumer-source'
+import { materialConsumerContract, assertMaterialPageConsumer, assertMaterialSearchConsumer } from './material-consumer-contract'
 import { createUnifiedExecutorVerifier, verifyUnifiedCI } from './unified-production'
 import { verifyUnifiedPublishedSource } from './unified-source-advance'
 
 type Proof = { path: string; pin: string }
 const repo = path.resolve(projectRoot, '../..'), service = 'gachia'
 const treePin = (directory: string) => digest(migrationJSON(artifactFiles(directory)))
+const consumerBundle = 'main_material_consumer_migration_bundle_v1'
+const consumerIndex = 'nte_main_material_consumer_source_index_v1'
+const isConsumer = (value: any) => value.kind === consumerBundle
+const previousProof = (value: any) => isConsumer(value) ? value.sourceIndex : value.checkpoint
+async function consumerSources(sourceIndex: Proof, workspace: Proof) {
+  const sources = await (await import('./nte-release-history')).readNteSourceIndex(sourceIndex)
+  assert.equal(sources.allOwnersCurrent, true, 'Main migration requires a complete current owner index')
+  const frozen = verifyMainConsumerSource(repo, workspace, sources.sources)
+  return { ...sources, workspace: frozen.workspace, consumerMigration: true, frozenCommit: frozen.sourceCommit }
+}
 const githubToken = () => execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim()
 
 export function assertRestorationJSON(sources: any[], pairs: string[], references: any[], read: (row: any) => Uint8Array,
@@ -68,7 +80,10 @@ async function graph(sources: any, directory: string, owner: any, role: string, 
   }
   configs.unused = migrationSave(http, 'unused.json', { name: 'nte-release-unused', main: path.join(modules, 'unused.js'), compatibility_date: '2026-07-08' }).path
   const artifact = direct ? path.join(directory, 'main', role, 'artifact') : undefined
-  const wanted = await nteRequests(workspace, direct ? 'main' : 'router', 'candidate', artifact, false, sources.sources)
+  const wanted = await nteRequests(workspace, direct ? 'main' : 'router', 'candidate', artifact, false, sources.sources, undefined, sources.consumerMigration && role === 'recovery' ? sources.owners.main.directory : undefined)
+  if (sources.consumerMigration) for (const contract of materialContracts(sources)) for (const page of contract.pages) {
+    if (!wanted.requests.some((row: any) => row.path === page.path)) wanted.requests.push({ path: page.path, status: 200 })
+  }
   for (const url of ['/ads.txt', '/sitemaps/main/sitemap.xml', '/zh/ananta/guides/download-install-guide', '/zh/hi3/guides/new-returning-captain-route', '/zh/sea/guides/beginner-guide']) {
     if (!wanted.requests.some((row: any) => row.path === url)) wanted.requests.push({ path: url, status: 200 })
   }
@@ -82,15 +97,55 @@ async function graph(sources: any, directory: string, owner: any, role: string, 
   await withLocalWorker(path.join(workspace, 'apps/web'), configs[direct ? 'main' : 'router'], path.join(http, 'home'), path.join(http, 'worker.log'), async (origin: string) => {
     captured = await captureNteHTTP({ origin, requests: wanted.requests, directory: path.join(http, 'responses'), jsonValues: wanted.values })
   }, { wranglerEntrypoint: unifiedTransportTool(workspace).bin, additionalConfigs: Object.entries(configs).filter(([name]) => name !== (direct ? 'main' : 'router')).map(([, file]) => file) })
+  if (sources.consumerMigration && role === 'candidate') assertMaterialReferences(sources, captured.proof)
   if (direct) owner[role].referencesPin = captured.proof.pin
   return captured.proof
 }
 
+const materialContracts = (sources: any) => ['endfield', 'starrail', 'roco-cn'].map(game => materialConsumerContract(game, sources.sources))
+export function assertMaterialReferences(sources: any, proof: Proof) {
+  const refs = recheckNteReferences(proof), directory = path.dirname(proof.path)
+  for (const contract of materialContracts(sources)) {
+    for (const page of contract.pages) {
+      const row = refs.find((row: any) => row.path === page.path); assert(row, `Missing Main material page: ${page.path}`)
+      assertMaterialPageConsumer(page, row.status, readFileSync(path.join(directory, row.bodyFile), 'utf8'))
+    }
+    for (const lang of ['zh', 'en', 'ja'] as const) {
+      const row = refs.find((row: any) => row.path === `/data-manifest/search-${lang}.json`); assert(row)
+      assertMaterialSearchConsumer(contract, lang, JSON.parse(readFileSync(path.join(directory, row.bodyFile), 'utf8')))
+    }
+  }
+}
+async function assertConsumerValues(sources: any, proof: Proof, role: string, direct: boolean) {
+  const refs = recheckNteReferences(proof), directory = path.dirname(proof.path)
+  const wanted = await nteRequests(sources.workspace, direct ? 'main' : 'router', 'candidate', undefined, false, sources.sources,
+    undefined, role === 'recovery' ? sources.owners.main.directory : undefined)
+  for (const [url, original] of wanted.values) {
+    const expected = role === 'recovery' && url.startsWith('/data/') && !/^\/data\/(genshin|nte)\//.test(url)
+      ? JSON.parse(readFileSync(path.join(sources.owners.main.directory, 'assets', url.slice(1)), 'utf8')) : original
+    const row = refs.find((row: any) => row.path === url); assert(row, `Missing Main consumer JSON: ${url}`)
+    assert.deepEqual(JSON.parse(readFileSync(path.join(directory, row.bodyFile), 'utf8')), expected, `Main consumer JSON drift: ${url}`)
+  }
+}
+export async function prepareMainMaterialConsumerMigration(input: { sourceIndex: Proof; directory: string }) {
+  const executor = captureUnifiedExecutorSource(repo), directory = path.resolve(input.directory)
+  assertDiskBudget({ path: directory, operation: 'Main material consumer migration build', estimatedBytes: BUILD_TEMP_BUDGET })
+  const previous = await (await import('./nte-release-history')).readNteSourceIndex(input.sourceIndex)
+  assert.equal(previous.allOwnersCurrent, true)
+  mkdirSync(directory, { mode: 0o700 })
+  const workspace = freezeMainConsumerSource(repo, executor.commit, previous.sources, path.join(directory, 'frozen'))
+  const sources = await consumerSources(input.sourceIndex, workspace)
+  return prepareMainBundle({ sourceIndex: input.sourceIndex, workspace }, directory, sources, executor)
+}
 export async function prepareMainContentRestoration(input: { checkpoint: Proof; directory: string }) {
   const executor = captureUnifiedExecutorSource(repo), sources = await readNteSourceCheckpoint(input.checkpoint), directory = path.resolve(input.directory)
   assert.equal(sources.value.sourceCommit, executor.commit, 'Restoration must build the exact checkpoint executor')
   assertDiskBudget({ path: directory, operation: 'Main preserved content restoration build', estimatedBytes: BUILD_TEMP_BUDGET })
-  mkdirSync(directory, { mode: 0o700 }); mkdirSync(path.join(directory, 'home'))
+  mkdirSync(directory, { mode: 0o700 })
+  return prepareMainBundle({ checkpoint: input.checkpoint }, directory, sources, executor)
+}
+async function prepareMainBundle(parent: any, directory: string, sources: any, executor: ReturnType<typeof captureUnifiedExecutorSource>) {
+  mkdirSync(path.join(directory, 'home'))
   const workspace = sources.workspace
   await command('pnpm', ['install', '--frozen-lockfile'], workspace, path.join(directory, 'home'), path.join(directory, 'install.log'))
   await command('pnpm', ['exec', 'opennextjs-cloudflare', 'build', '--config', 'wrangler.jsonc', '--env', ''], path.join(workspace, 'apps/web'), path.join(directory, 'home'), path.join(directory, 'build.log'))
@@ -108,16 +163,16 @@ export async function prepareMainContentRestoration(input: { checkpoint: Proof; 
     const proof = await graph(sources, directory, owner, role, false)
     if (role === 'candidate') finalReferences = proof; else recoveryReferences = proof
   }
-  const value = { schemaVersion: 1, kind: 'nte_main_content_restoration_bundle', checkpoint: input.checkpoint, sourceCommit: executor.commit,
+  const value = { schemaVersion: 1, kind: sources.consumerMigration ? consumerBundle : 'nte_main_content_restoration_bundle', ...parent, sourceCommit: executor.commit,
     baseline: sources.baseline, boundary: boundary.proof, owners: { main: owner }, tool, finalReferences, recoveryReferences, cloudWrites: false, productionReady: false }
   const proof = migrationSave(directory, 'bundle.json', value); await verifyMainContentRestoration(proof); executor.verify(); return { proof, value }
 }
 
 export async function verifyMainContentRestoration(proof: Proof) {
   const value = migrationPinned(proof), directory = path.dirname(proof.path)
-  assert.equal(proof.path, path.join(directory, 'bundle.json')); assert.equal(value.kind, 'nte_main_content_restoration_bundle')
+  assert.equal(proof.path, path.join(directory, 'bundle.json')); assert([consumerBundle, 'nte_main_content_restoration_bundle'].includes(value.kind))
   assert.equal(value.cloudWrites, false); assert.equal(value.productionReady, false)
-  const sources = await readNteSourceCheckpoint(value.checkpoint); assert.equal(value.sourceCommit, sources.value.sourceCommit); assert.deepEqual(value.baseline, sources.baseline)
+  const sources = isConsumer(value) ? await consumerSources(value.sourceIndex, value.workspace) : await readNteSourceCheckpoint(value.checkpoint); assert.equal(value.sourceCommit, isConsumer(value) ? sources.frozenCommit : sources.value.sourceCommit); assert.deepEqual(value.baseline, sources.baseline)
   assert.deepEqual(Object.keys(value.owners), ['main']); const owner = value.owners.main, old = sources.owners.main
   assert.equal(owner.service, service); assert.equal(owner.sourceVersionId, old.versionId); assert.equal(owner.sourceIdentityPin, digest(migrationJSON(old.version)))
   const boundary = verifyNteMainCandidate(value.boundary); verifyUnifiedTool(value.tool); assert.deepEqual(value.tool, unifiedTransportTool(sources.workspace))
@@ -137,6 +192,14 @@ export async function verifyMainContentRestoration(proof: Proof) {
     const graphDirectory = path.dirname((role === 'candidate' ? value.finalReferences : value.recoveryReferences).path)
     assertRestorationJSON(sources.sources, pairs, graphRefs, row => readFileSync(path.join(graphDirectory, row.bodyFile)),
       url => readFileSync(path.join(old.directory, 'assets', url.slice(1))), role)
+    if (isConsumer(value)) {
+      await assertConsumerValues(sources, { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }, role, true)
+      await assertConsumerValues(sources, role === 'candidate' ? value.finalReferences : value.recoveryReferences, role, false)
+    }
+    if (isConsumer(value) && role === 'candidate') {
+      assertMaterialReferences(sources, { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin })
+      assertMaterialReferences(sources, value.finalReferences)
+    }
     assert(refs.some((row: any) => row.path === '/sitemaps/main/sitemap.xml'))
   }
   return { value, directory, sources }
@@ -154,7 +217,7 @@ export async function activateMainContentRestoration(input: { bundle: Proof; exe
   const preview = await createNteMigrationPreviewNetwork(input.proxy), publicNetwork = await createGenshinPublicNetwork(input.proxy)
   const releaseKey = digest(migrationJSON({ policy: MAIN_CONTENT_RESTORATION_POLICY, bundle: input.bundle, executorCI: executor.executorCI, proxy: input.proxy }))
   const identity = { policy: MAIN_CONTENT_RESTORATION_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI,
-    bundlePin: input.bundle.pin, reviewPin: evidence.sources.value.contract.pin, baseline, observedAt: Date.now(), owners: evidence.value.owners }
+    bundlePin: input.bundle.pin, reviewPin: isConsumer(evidence.value) ? evidence.value.sourceIndex.pin : evidence.sources.value.contract.pin, baseline, observedAt: Date.now(), owners: evidence.value.owners }
   migrationSave(directory, 'identity.json', identity)
   try {
     await verifyNteHTTP({ origin: 'https://gachia.com', references: migrationPinned(evidence.value.recoveryReferences), directory: path.join(directory, 'preflight'), request: publicNetwork.request })
@@ -212,10 +275,11 @@ async function readCompletedRestoration(proof: Proof) {
 
 export async function readRestoredMainSources(proof: Proof): Promise<any> {
   const value = migrationPinned(proof), directory = path.dirname(proof.path)
-  assert.equal(proof.path, path.join(directory, 'source-index.json')); assert.equal(value.kind, 'nte_restored_main_source_index')
+  assert.equal(proof.path, path.join(directory, 'source-index.json')); assert(['nte_restored_main_source_index', consumerIndex].includes(value.kind))
   assert.equal(value.status, 'published_sources_observed'); assert.equal(value.cloudWrites, false); assert.equal(value.newPublicationAuthorized, false)
   const completed = await readCompletedRestoration(value.completion), sources = completed.evidence.sources, accepted = completed.value.accepted.candidate
-  assert.deepEqual(value.previousSourceIndex, completed.evidence.value.checkpoint); assert.deepEqual(value.executorCI, completed.value.executorCI)
+  assert.equal(value.kind, isConsumer(completed.evidence.value) ? consumerIndex : 'nte_restored_main_source_index');
+  assert.deepEqual(value.previousSourceIndex, previousProof(completed.evidence.value)); assert.deepEqual(value.executorCI, completed.value.executorCI)
   assert.deepEqual(value.active, sources.value.active); assert.equal(value.workspace, sources.workspace)
   assert.deepEqual(value.router, sources.router); assert.deepEqual(Object.keys(value.owners).sort(), Object.keys(sources.owners).sort())
   for (const owner of Object.keys(sources.owners)) {
@@ -250,9 +314,9 @@ export async function advanceMainContentRestoration(input: { completion: Proof; 
   try {
     const publicAcceptance = await verifyNteHTTP({ origin: 'https://gachia.com', references: migrationPinned(completed.evidence.value.finalReferences), directory: path.join(directory, 'public'), request: network.request })
     const after = await desktopCloudSnapshot(input.cloudToken, unifiedProductionRead); assertTopology(before, after)
-    const value = { schemaVersion: 1, kind: 'nte_restored_main_source_index', status: 'published_sources_observed', completion: input.completion,
-      previousSourceIndex: completed.evidence.value.checkpoint, executorCI: completed.value.executorCI, active: sources.value.active, workspace: sources.workspace,
-      historyComplete: false, missingOriginalBundle: sources.value.missingOriginalBundle,
+    const value = { schemaVersion: 1, kind: isConsumer(completed.evidence.value) ? consumerIndex : 'nte_restored_main_source_index', status: 'published_sources_observed', completion: input.completion,
+      previousSourceIndex: previousProof(completed.evidence.value), executorCI: completed.value.executorCI, active: sources.value.active, workspace: sources.workspace,
+      historyComplete: false, ...(sources.value.missingOriginalBundle ? { missingOriginalBundle: sources.value.missingOriginalBundle } : {}),
       owners, router: sources.router, baseline: after, observation: { before: migrationSave(directory, 'before.json', before), after: migrationSave(directory, 'after.json', after), publicAcceptance, observedAt: Date.now() }, cloudWrites: false, newPublicationAuthorized: false }
     const proof = migrationSave(directory, 'source-index.json', value); await readRestoredMainSources(proof); executor.verify(); return { proof, value }
   } finally { await network.close() }

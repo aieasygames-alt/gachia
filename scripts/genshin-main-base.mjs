@@ -3,7 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { realpathSync } from 'node:fs';
 import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { mainManifests } from '../packages/data/scripts/main-manifests.mjs';
+import { mainManifestOptions, mainManifests } from '../packages/data/scripts/main-manifests.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 
@@ -13,7 +13,8 @@ export async function writeGenshinMainBase(output, root = ROOT) {
   const directory = resolve(output);
   assert(directory !== root && !root.startsWith(directory + '/'), 'Output cannot contain the repository');
   assert.equal(realpathSync(dirname(directory)), dirname(directory), 'Linked output parent');
-  const files = await mainManifests(pathToFileURL(join(root, 'packages/data/games/')), { genshinWorkerBase: true });
+  const gamesRoot = pathToFileURL(join(root, 'packages/data/games/'));
+  const files = await mainManifests(gamesRoot, { ...await mainManifestOptions(gamesRoot), genshinWorkerBase: true });
   await mkdir(directory);
   for (const [file, value] of files) await writeFile(join(directory, file), `${JSON.stringify(value)}\n`, { flag: 'wx' });
   return { kind: 'genshin_main_base_candidate', directory, files: [...files.keys()], cloudWrites: false, productionReady: false };

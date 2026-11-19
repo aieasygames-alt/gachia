@@ -3,7 +3,7 @@ import { writeSeaGuideOutputs } from './sea-guide-contract.mjs';
 import { writeRawMirrors } from './raw-mirror-contract.mjs';
 import { verifyRawInventory } from './raw-inventory-contract.mjs';
 import { tierListProjection } from './game-public-projections.mjs';
-import { mainManifests } from './main-manifests.mjs';
+import { mainManifestOptions, mainManifests } from './main-manifests.mjs';
 import { genshinContentAssets } from '../../../scripts/genshin-content-assets.mjs';
 import { nteContentAssets } from '../../../scripts/nte-content-assets.mjs';
 
@@ -16,8 +16,10 @@ await verifyRawInventory();
 await writeRawMirrors();
 await mkdir(outputRoot, { recursive: true });
 await mkdir(clientDataRoot, { recursive: true });
-const manifests = await mainManifests(gamesRoot);
+const manifestOptions = await mainManifestOptions(gamesRoot);
+const manifests = await mainManifests(gamesRoot, manifestOptions);
 for (const [file, value] of manifests) await writeFile(new URL(file, outputRoot), `${JSON.stringify(value)}\n`);
+await writeFile(new URL('main-contract.json', outputRoot), `${JSON.stringify(manifestOptions)}\n`);
 await writeFile(new URL('genshin-platform.json', clientDataRoot), genshinContentAssets().files.get('platform.json'));
 await writeFile(new URL('nte-platform.json', clientDataRoot), nteContentAssets().files.get('platform.json'));
 

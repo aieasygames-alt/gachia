@@ -94,6 +94,6 @@ if (action === 'inspect-cms') {
 } else if (action === 'snapshot') {
  const token = cloudToken(5), snapshot = await desktopCloudSnapshot(token, unifiedProductionRead)
  const after = await desktopCloudSnapshot(token, unifiedProductionRead); assertTopology(snapshot, after)
- result = { at: new Date().toISOString(), snapshot, active: Object.fromEntries(Object.keys(snapshot.deployments).map(service => [service, activeVersion(snapshot, service)])) }; save('snapshot.json', result)
+ result = { at: new Date().toISOString(), snapshot, active: Object.fromEntries(Object.keys(snapshot.services).map(service => [service, activeVersion(snapshot, service)])) }; save('snapshot.json', result)
 } else throw Error('Unknown bounded stage')
 console.log(JSON.stringify({ phase: action, completed: true, proof: result?.proof, at: new Date().toISOString() }))

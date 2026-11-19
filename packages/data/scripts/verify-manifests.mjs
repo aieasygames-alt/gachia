@@ -4,6 +4,8 @@ import { verifyRawMirrors } from './raw-mirror-contract.mjs';
 import { verifyRawInventory } from './raw-inventory-contract.mjs';
 import { genshinContentAssets } from '../../../scripts/genshin-content-assets.mjs';
 import { nteContentAssets } from '../../../scripts/nte-content-assets.mjs';
+import { isDeepStrictEqual } from 'node:util';
+import { mainManifestOptions, mainManifests } from './main-manifests.mjs';
 
 await verifySeaGuideContract();
 await verifyRawMirrors();
@@ -24,6 +26,15 @@ for (const file of files) {
   } catch (error) {
     throw new Error(`Invalid or missing data manifest ${file}: ${error.message}`);
   }
+}
+
+const gamesRoot = new URL('../games/', import.meta.url);
+const manifestOptions = await mainManifestOptions(gamesRoot);
+if (!isDeepStrictEqual(JSON.parse(await readFile(new URL('main-contract.json', outputRoot), 'utf8')), manifestOptions)) {
+  throw new Error('Main manifest artifact contract differs from the source selector');
+}
+for (const [file, expected] of await mainManifests(gamesRoot, manifestOptions)) {
+  if (!isDeepStrictEqual(documents.get(file), expected)) throw new Error(`Derived Main manifest differs from its source contract: ${file}`);
 }
 
 const games = documents.get('games.json');

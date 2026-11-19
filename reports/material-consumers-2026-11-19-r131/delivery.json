@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "material_consumer_repair_development_delivery",
+  "status": "development_verified_pending_main_migration",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/nte-material-r130-2026-11-18/published-sources-02/source-index.json",
+    "pin": "6aed8261c80cdddf39739777f724b94eee2a5f72bae114603637ff4b34e5a4a6"
+  },
+  "sourceReadBefore": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-consumers-2026-11-19-r131/source-read-before.json",
+    "pin": "005cc69a091ab24852fda8ab01646ea330cb4ca732bbc8fe6126a126946130a8"
+  },
+  "sourceReadAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-consumers-2026-11-19-r131/source-read-final.json",
+    "pin": "005cc69a091ab24852fda8ab01646ea330cb4ca732bbc8fe6126a126946130a8"
+  },
+  "sourcesPreserved": 115,
+  "changes": {
+    "endfield": {
+      "materialCount": 18,
+      "detailLinksInAllLocales": true
+    },
+    "starrail": {
+      "materialCount": 62,
+      "restoredCategories": {
+        "ascension": 7,
+        "special": 2
+      }
+    },
+    "roco-cn": {
+      "materialCount": 23,
+      "searchCategories": [
+        "items"
+      ]
+    }
+  },
+  "localHTTP": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-consumers-2026-11-19-r131/local-http-02/result.json",
+    "pin": "60bc9c73e2a886c4ce818df87d6d1d8e283ba3afb0c5f0858baa7dc87e9c780f"
+  },
+  "httpChecks": 326,
+  "productionBuild": false,
+  "exactCloudPreview": false,
+  "remoteExactCI": false,
+  "productionQualified": false,
+  "cloudWrites": false,
+  "cmsWrites": false,
+  "sourceAdvanced": false,
+  "tests": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r131-web-final.log",
+      "pin": "d9d1cbe0e46c99878e5591ea04f1b5e38308d219081c17bf96a11c15ecc49ef4"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r131-data-final.log",
+      "pin": "a89f8cbee56362326c52bd802d4dcb885555bd201c6295d9373dc27045d4e8cb"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r131-cms-final.log",
+      "pin": "945550d2fd860f84e463814fab7d27a514f20fb18cd7e15be9e3f8601e47fff0"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r131-candidate-final.log",
+      "pin": "90dabe1be611540e0036645f9f089c90122f7fcbaa768d2c84237f90d78b4bcd"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r131-doc-gates.log",
+      "pin": "0f238f3f8baa7e4af84dc8dcd12ae1e753e21a59f55f18c5e79d6aac61399f65"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r131-inventory-tests.log",
+      "pin": "b9717a34408d630c22614ab032a97e60075852863049f4e7703a517f86ba43ed"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-r131-search-contract-final.log",
+      "pin": "4e8ab31b76a99df8ee3b5b4c897e48e730c8af101e7a4ad753739cf256f1575b"
+    }
+  ],
+  "fullBuildNotStarted": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-consumers-2026-11-19-r131/local-http-02/complete-build-not-started.json",
+    "pin": "c6e0573af4fab3d668ede51825068efb0bbd97b0d0bb03e8e5fb5b7924f877f8"
+  },
+  "dependencyDedup": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-consumers-2026-11-19-r131/dependency-dedup-result.json",
+    "pin": "af67b6bf269668a6884d9cd62e88d6e5b83665bfba7c0bcd39925d79a4ba29ab"
+  },
+  "disk": {
+    "filesystem": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-consumers-2026-11-19-r131",
+    "availableBytes": 13447442432
+  },
+  "standardBuildRequiredBytes": 15032385536,
+  "nextBatchSourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/nte-material-r130-2026-11-18/published-sources-02/source-index.json",
+    "pin": "6aed8261c80cdddf39739777f724b94eee2a5f72bae114603637ff4b34e5a4a6"
+  },
+  "nextDelivery": "A controlled Main-only consumer migration with candidate/recovery build, exact CI, cloud previews, public acceptance and complete source advancement; preserve Router and all four dedicated owners."
+}

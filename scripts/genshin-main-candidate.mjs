@@ -6,7 +6,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { artifactFiles } from './desktop-publish.mjs';
 import { assertDiskBudget, treeBytes } from './desktop-disk-preflight.mjs';
 import { genshinContentAssets } from './genshin-content-assets.mjs';
-import { mainManifests } from '../packages/data/scripts/main-manifests.mjs';
+import { mainManifestOptions, mainManifests } from '../packages/data/scripts/main-manifests.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -26,7 +26,8 @@ export async function prepareGenshinMainCandidate(output, root = ROOT) {
       `Genshin server data copy must be excluded by the Main build: ${path}`);
   }
   const replacements = [];
-  for (const [file, value] of await mainManifests(pathToFileURL(join(root, 'packages/data/games/')))) {
+  const gamesRoot = pathToFileURL(join(root, 'packages/data/games/'));
+  for (const [file, value] of await mainManifests(gamesRoot, await mainManifestOptions(gamesRoot))) {
     const name = `assets/data-manifest/${file}`, bytes = Buffer.from(`${JSON.stringify(value)}\n`);
     assert(readFileSync(join(source, name)).equals(bytes), `Main compatibility index drift: ${file}`);
     const next = structuredClone(value);

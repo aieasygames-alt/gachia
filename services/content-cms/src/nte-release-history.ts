@@ -206,7 +206,7 @@ async function readCompletedNteContinuation(proof: Proof, depth: number): Promis
 export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
   if (value.kind === 'nte_reconstructed_source_checkpoint') return readNteSourceCheckpoint(proof)
-  if (value.kind === 'nte_restored_main_source_index') return (await import('./main-content-restoration')).readRestoredMainSources(proof)
+  if (['nte_restored_main_source_index', 'nte_main_material_consumer_source_index_v1'].includes(value.kind)) return (await import('./main-content-restoration')).readRestoredMainSources(proof)
   if (value.kind === 'nte_adsense_infrastructure_source_index') return readAdsenseInfrastructureSource(proof, readNteSourceIndex, depth)
   if (!value.kind.startsWith('nte_')) return readGenshinIndependentSourceIndex(proof, depth + 1)
   assert.equal(proof.path, path.join(directory, 'source-index.json')); assert.equal(value.kind, 'nte_published_source_index')

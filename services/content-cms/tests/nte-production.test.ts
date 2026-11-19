@@ -91,3 +91,26 @@ test('NTE acceptance covers all 171 material URLs and distinguishes former mirro
     assert(request); assert.deepEqual(request.contains, ['class="material-table"'])
   }
 })
+
+test('independent NTE candidate and recovery inherit deployed Main search instead of requiring a pending Main migration', async t => {
+  const repo = path.resolve(projectRoot, '../..'), sources = readUnifiedSources(repo).sources.map(row => ({ sourcePath: row.sourcePath, text: row.rawText }))
+  const artifact = realpathSync(mkdtempSync(path.join(tmpdir(), 'nte-main-search-')))
+  t.after(() => rmSync(artifact, { recursive: true, force: true }))
+  for (const current of [false, true]) {
+    if (current) {
+      mkdirSync(path.join(artifact, 'assets/data-manifest'), { recursive: true })
+      writeFileSync(path.join(artifact, 'assets/data-manifest/main-contract.json'), JSON.stringify({ searchContract: 'main-search-roco-cn-materials-v2' }))
+    }
+    for (const role of ['candidate', 'recovery']) {
+      const result = await nteRequests(repo, 'router', role, undefined, false, sources, undefined, artifact)
+      for (const locale of ['zh', 'en', 'ja']) {
+        const search = result.values.get(`/data-manifest/search-${locale}.json`)
+        assert.equal(Object.hasOwn(search, 'roco-cn'), current)
+        if (current) assert.deepEqual(Object.keys(search['roco-cn']), ['items'])
+        assert(search.nte.items.length > 0 && search.genshin.characters.length > 0)
+      }
+    }
+  }
+  writeFileSync(path.join(artifact, 'assets/data-manifest/main-contract.json'), JSON.stringify({ searchContract: 'unknown' }))
+  await assert.rejects(nteRequests(repo, 'router', 'candidate', undefined, false, sources, undefined, artifact), /Unknown Main manifest contract/)
+})

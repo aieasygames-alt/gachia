@@ -65,7 +65,7 @@ export function collectInventory(root: string, sourceCommit: string) {
       'apps/web/app/api/map/route.ts', 'apps/web/app/api/map/points/route.ts', 'apps/web/app/api/map/tile/route.ts', 'apps/web/app/api/map/progress/route.ts',
       'apps/web/app/[lang]/page.tsx', 'apps/web/lib/homepage-content.ts', 'apps/web/lib/genshin-platform-content.ts',
       'apps/web/public/data-client/genshin-platform.json', 'packages/core/genshin-content.json', 'packages/core/genshin-platform.ts',
-      'packages/data/scripts/game-public-projections.mjs', 'packages/data/scripts/main-manifests.mjs', 'scripts/genshin-content-assets.mjs',
+      'packages/data/scripts/game-public-projections.mjs', 'packages/data/scripts/main-manifests.mjs', 'packages/data/main-manifest-contract.json', 'scripts/genshin-content-assets.mjs',
       'packages/core/nte-content.json', 'packages/core/nte-platform.ts', 'apps/router/src/nte-content.ts',
       'apps/web/lib/nte-platform-content.ts', 'apps/web/public/data-client/nte-platform.json', 'scripts/nte-content-assets.mjs'].includes(file)
   ))

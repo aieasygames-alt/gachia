@@ -284,17 +284,19 @@ export default async function ItemsPage({
 
 const STARRAIL_TYPE_LABELS: Record<string, Record<string, string>> = {
   'character-ascension': { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
+  ascension: { zh: '角色突破材料', en: 'Character Ascension', ja: 'キャラ突破素材' },
   'trace': { zh: '行迹材料', en: 'Trace Material', ja: '軌跡素材' },
   'boss': { zh: 'Boss掉落', en: 'Boss Drop', ja: 'ボスドロップ' },
   'common': { zh: '普通材料', en: 'Common Material', ja: '一般素材' },
   currency: { zh: '货币', en: 'Currency', ja: '通貨' },
   'exp-material': { zh: '经验材料', en: 'EXP Material', ja: '経験値素材' },
+  special: { zh: '特殊材料', en: 'Special', ja: '特殊素材' },
 };
 
 async function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
   const materials = await getItemListData(gameId as GameId, locale);
   const grouped = groupByType(materials);
-  const typeOrder = ['character-ascension', 'trace', 'boss', 'common', 'exp-material', 'currency'];
+  const typeOrder = ['character-ascension', 'ascension', 'trace', 'boss', 'common', 'exp-material', 'special', 'currency'];
 
   return (
     <div>
@@ -724,7 +726,7 @@ async function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; 
             <h2 className="mb-4 text-lg font-semibold text-game-text">{typeLabel} ({list.length})</h2>
             <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {list.map((mat) => (
-                <div key={mat.id} className="block rounded-lg border border-game-border bg-game-surface p-3">
+                <Link key={mat.id} href={`/${gameId}/items/${mat.id}`} className="block rounded-lg border border-game-border bg-game-surface p-3 transition-colors hover:border-game-primary">
                   <div className="mb-1 flex items-center gap-2">
                     <h3 className="text-sm font-semibold text-game-text">{mat.name}</h3>
                   </div>
@@ -733,7 +735,7 @@ async function EndfieldItemsPage({ locale, gameId }: { locale: SupportedLocale; 
                     <span className="text-xs" style={{ color: RARITY_COLORS[mat.rarity] || '#888' }}>{'★'.repeat(mat.rarity)}</span>
                   </div>
                   <p className="text-xs text-game-text-muted line-clamp-2">{mat.source}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
