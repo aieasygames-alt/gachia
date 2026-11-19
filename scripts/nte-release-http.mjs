@@ -14,6 +14,16 @@ const policy = value => (value ?? '').toLowerCase().split(',').map(part => part.
 const readBody = response => response.status === 404 && response.body === null ? Buffer.alloc(0) : boundedBody(response);
 const MISSING_PAGE_POLICY = 'next-nte-not-found-route-echo-v1';
 export const NTE_HTTP_POLICY = Object.freeze({ concurrency: 8, requestTimeoutMS: 30000, batchTimeoutMS: 480000, retries: 0 });
+// Full material graphs contain deeply nested fingerprints. Compact JSON retains
+// every field while keeping the existing 16 MiB pinned-proof limit unchanged.
+// Historical pretty-printed proofs remain readable by the same pinned reader.
+export function saveNteReferenceProof(directory, references) {
+  const bytes = Buffer.from(JSON.stringify(references) + '\n');
+  assert(bytes.length <= 16 * 1024 * 1024, 'NTE reference proof bounds exceeded');
+  const file = join(directory, 'references.json');
+  writeFileSync(file, bytes, { flag: 'wx', mode: 0o600 });
+  return { path: file, pin: digest(bytes) };
+}
 const LEGACY_MAIN_MISSING_PATHS = Object.freeze([
   ...['artifacts', 'character-materials', 'characters', 'guides', 'materials', 'redeem-codes', 'regions', 'weapons'].map(name => `/data/genshin/raw-${name}.json`),
   ...['anomalies', 'builds', 'character-materials', 'characters', 'disk-sets', 'gacha-system', 'guides', 'image-sources', 'materials', 'redeem-codes', 'regions', 'weapons'].map(name => `/data/nte/raw-${name}.json`),
@@ -152,7 +162,7 @@ export async function captureNteHTTP({ origin, requests, directory, jsonValues =
     }, 8);
     pages.sort((a, b) => a.index - b.index);
     if (pages.length) unifiedPageFingerprints(pages, 'streaming-v2').forEach((value, index) => { references[pages[index].index].fingerprint = value; });
-    const proof = migrationSave(directory, 'references.json', references);
+    const proof = saveNteReferenceProof(directory, references);
     recheckNteReferences(proof); return { proof, references };
   } catch (error) { migrationSave(directory, 'failure.json', { error: error.message, cloudWrites: false }); throw error; }
 }

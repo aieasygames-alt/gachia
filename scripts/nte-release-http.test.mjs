@@ -3,8 +3,19 @@ import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from '
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
-import { captureNteHTTP, nteMissingPageIdentity, legacyMainMissingPageMatches, recheckNteFailedHTTP, recheckNteHTTP, recheckNteReferences, verifyNteHTTP, NTE_HTTP_POLICY } from './nte-release-http.mjs';
+import { captureNteHTTP, saveNteReferenceProof, nteMissingPageIdentity, legacyMainMissingPageMatches, recheckNteFailedHTTP, recheckNteHTTP, recheckNteReferences, verifyNteHTTP, NTE_HTTP_POLICY } from './nte-release-http.mjs';
 import { digest } from './desktop-release-assets.mjs';
+import { migrationPinned } from './genshin-migration-http.mjs';
+
+test('large material fingerprints fit compact proofs without raising the pinned byte limit', t => {
+  const f = fixture(t), rows = Array.from({ length: 150000 }, () => ({ fingerprint: { body: { links: ['/a', '/b'], source: 'x' } } }));
+  assert(Buffer.byteLength(JSON.stringify(rows, null, 2)) > 16 * 1024 * 1024);
+  const proof = saveNteReferenceProof(f.directory, rows);
+  assert(readFileSync(proof.path).length < 16 * 1024 * 1024);
+  assert.deepEqual(migrationPinned(proof), rows);
+  writeFileSync(proof.path, '[]\n'); assert.throws(() => migrationPinned(proof), /evidence changed/);
+  assert.throws(() => saveNteReferenceProof(f.directory, ['x'.repeat(16 * 1024 * 1024)]), /bounds exceeded/);
+});
 
 function fixture(t) {
   const directory = realpathSync(mkdtempSync(join(tmpdir(), 'nte-http-')));
