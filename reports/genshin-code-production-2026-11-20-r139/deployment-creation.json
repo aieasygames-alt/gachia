@@ -1,0 +1,11 @@
+{
+  "status": 200,
+  "body": {
+    "result": {
+      "id": "c8ea00a0-aafa-4ce2-83e9-7402da34610a"
+    },
+    "success": true,
+    "errors": [],
+    "messages": []
+  }
+}

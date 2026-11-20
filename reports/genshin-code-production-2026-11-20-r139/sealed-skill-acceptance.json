@@ -1,0 +1,14 @@
+{
+  "candidate": {
+    "sha256": "8d66adc1f9efbd0c3e1fbed08d3292e9eb974ae5eee81fe152bfac854b4d11eb",
+    "bytes": 9977476,
+    "specialJumpMapping": true,
+    "passive3Mapping": true
+  },
+  "recovery": {
+    "sha256": "d5c54106fd40d026c810805d24ab3a28a063bd22f7aa54db02d10bc7508d8653",
+    "bytes": 9978116,
+    "specialJumpMapping": false,
+    "passive3Mapping": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "failure": "pnpm 10.32.1 package-manager self-management recursively spawned pnpm add; build subprocess tree terminated before Next compilation",
+  "cloudWrites": false,
+  "replacement": "pnpm 10.10.0",
+  "source": "https://registry.npmjs.org/pnpm/-/pnpm-10.10.0.tgz",
+  "sha256": "fa0f513aa8191764d2b6b432420788c270f07b4f999099b65bb2010eec702a30",
+  "sourceCommitUnchanged": true,
+  "logsPreserved": true
+}

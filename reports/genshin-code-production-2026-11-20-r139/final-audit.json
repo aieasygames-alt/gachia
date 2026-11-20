@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-20T14:14:16.789Z",
+  "status": "passed",
+  "sourceProof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "controlplane": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/controlplane-final.json",
+    "pin": "8a086b99e4a08568895decee1d2a3a8ca0b0162833afe2a33fce197ba897734c"
+  },
+  "sourcesPreserved": 115,
+  "onlyChangedService": "gachia-game-genshin",
+  "protectedServicesUnchanged": 9,
+  "services": [
+    {
+      "service": "gachia",
+      "beforeVersion": "8d88bd48-ba83-4470-a855-41048eacfc1a",
+      "afterVersion": "8d88bd48-ba83-4470-a855-41048eacfc1a",
+      "beforeDeployment": "61209ff8-87f8-433f-b1bd-d0665c4827c3",
+      "afterDeployment": "61209ff8-87f8-433f-b1bd-d0665c4827c3"
+    },
+    {
+      "service": "gachia-staging",
+      "beforeVersion": "f142070d-ffb0-4b99-a204-49af0c265baa",
+      "afterVersion": "f142070d-ffb0-4b99-a204-49af0c265baa",
+      "beforeDeployment": "77b45460-05a3-4435-95cd-89077c6750e1",
+      "afterDeployment": "77b45460-05a3-4435-95cd-89077c6750e1"
+    },
+    {
+      "service": "gachia-router",
+      "beforeVersion": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+      "afterVersion": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+      "beforeDeployment": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+      "afterDeployment": "4880a6a2-a351-4dad-8773-d7af6b2a3a66"
+    },
+    {
+      "service": "gachia-game-genshin",
+      "beforeVersion": "2fcd8859-5881-4dbc-aa9c-0b9d558ff8bc",
+      "afterVersion": "882906a4-328a-4a3c-ba3a-5e6130a8ed99",
+      "beforeDeployment": "c7d0623d-2a15-45f0-b182-be5721790fbe",
+      "afterDeployment": "c8ea00a0-aafa-4ce2-83e9-7402da34610a"
+    },
+    {
+      "service": "gachia-game-nte",
+      "beforeVersion": "518d523c-ced8-4b71-85ed-2509806f432e",
+      "afterVersion": "518d523c-ced8-4b71-85ed-2509806f432e",
+      "beforeDeployment": "d7c01702-abe1-4226-b3ae-a5659169e789",
+      "afterDeployment": "d7c01702-abe1-4226-b3ae-a5659169e789"
+    },
+    {
+      "service": "gachia-game-azur-promilia",
+      "beforeVersion": "79bf30a2-e519-4366-a0a3-4c25907f76c9",
+      "afterVersion": "79bf30a2-e519-4366-a0a3-4c25907f76c9",
+      "beforeDeployment": "9a9620b0-128e-4ba1-814a-6db6c7453dad",
+      "afterDeployment": "9a9620b0-128e-4ba1-814a-6db6c7453dad"
+    },
+    {
+      "service": "gachia-game-lvmeng",
+      "beforeVersion": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+      "afterVersion": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+      "beforeDeployment": "62f5d1d5-ef07-450c-a91f-35b3dffa232a",
+      "afterDeployment": "62f5d1d5-ef07-450c-a91f-35b3dffa232a"
+    },
+    {
+      "service": "gachia-game-genshin-staging",
+      "deploymentAndSettingsUnchanged": true
+    },
+    {
+      "service": "gachia-game-azur-promilia-staging",
+      "deploymentAndSettingsUnchanged": true
+    },
+    {
+      "service": "gachia-router-staging",
+      "deploymentAndSettingsUnchanged": true
+    }
+  ],
+  "media": [
+    {
+      "url": "https://img.gachia.com/images/genshin/characters/mualani.webp",
+      "method": "HEAD",
+      "status": 200,
+      "headers": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/final-cdn-mualani-HEAD.headers"
+    },
+    {
+      "url": "https://img.gachia.com/images/genshin/characters/mualani.webp",
+      "method": "GET",
+      "status": 200,
+      "headers": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/final-cdn-mualani-GET.headers",
+      "sha256": "0223fc64236af8efa1d955e9c5728943acde9187110f6e43d7f98d51d49decb1",
+      "bytes": 23674
+    },
+    {
+      "url": "https://img.gachia.com/images/genshin/characters/ororon.webp",
+      "method": "HEAD",
+      "status": 200,
+      "headers": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/final-cdn-ororon-HEAD.headers"
+    },
+    {
+      "url": "https://img.gachia.com/images/genshin/characters/ororon.webp",
+      "method": "GET",
+      "status": 200,
+      "headers": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/final-cdn-ororon-GET.headers",
+      "sha256": "cb2b871be8fbb26fe2942df72252e182ae0f4b02eccec194b343305b61402e84",
+      "bytes": 29784
+    }
+  ],
+  "cloudWrites": false
+}

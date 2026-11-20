@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-20T13:43:56.968Z",
+  "versionId": "7a582287-242c-4b6a-8364-1aa9e311ba89",
+  "status": 200,
+  "runtime": "v25.9.0",
+  "route": "Node built-in --use-env-proxy with explicit localhost HTTP proxy; localhost bypass",
+  "failedContinuationCreatedIntent": false,
+  "newCloudWritesAfterRecoveryUpload": false,
+  "credentialsLogged": false
+}

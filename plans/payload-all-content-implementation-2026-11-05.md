@@ -1,6 +1,16 @@
 # Payload 全内容实施队列
 
-## 当前开发状态（2026-11-20 R138：两个角色媒体 404 修复与通用技能支持完成）
+## 当前生产完成状态（2026-11-20 R139：原神 Worker 代码及图片资源正式发布完成）
+
+原神 Worker 已正式更新为 `882906a4-328a-4a3c-ba3a-5e6130a8ed99`，deployment `c8ea00a0-aafa-4ce2-83e9-7402da34610a`，100% 流量。本批仅一次原神正式部署，其余 9 个生产/staging 服务的部署与设置保持。完整 CI [44739474406](https://github.com/aieasygames-alt/gachia/actions/runs/44739474406) 对应精确执行提交 `a85e5a67a28f9da905ad98702729b9e99a7338d1`；完整构建复用差异证明、候选/兼容恢复封存、云模块身份、正式切流和来源推进均完成。见 [R139 完成回执](../reports/genshin-code-production-2026-11-20-r139/EXECUTION.md)及[交付索引](../reports/genshin-code-production-2026-11-20-r139/delivery.json)。
+
+夜魂 `passive3` 与特殊跳跃 `specialJump` 的通用技能映射已随代码上线；玛拉妮、欧洛伦两张图片已进入原神 owner，规范 CDN 的 HEAD/GET 最终均 200 且字节匹配。候选/恢复云预览 790/788 项及切流前复验通过，两轮真实公网 Router 各 412 项通过。兼容恢复版本 `7a582287-242c-4b6a-8364-1aa9e311ba89` 已云验收，未执行真实回滚。上传后下载超时与创建后首次详情 404 均经只读对账接续，未重复恢复上传或正式部署。
+
+当前完整来源：[R139 最终 source-index.json](../reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json)，pin `59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca`。真实读取器重开通过，`allOwnersCurrent=true`，115 份内容来源相对正式 R134 A 全部保持；胡桃、异环、Zero、27 个未证实材料删除状态和攻略增量保持。此次是代码/图片资源发布，没有新的 CMS 文本编辑，也没有应用 R135–R138 held 的材料、配方和新角色候选。
+
+下一批使用真实 CMS import O / R139 发布 A / R137 完整候选与 R138 图片补丁做三方对账及有界导入，继续数值、关系、新实体的审核/发布/恢复合同。保留 10 份本地与发布来源差异；不用重做 49 项特产、1,350 阶段配方、图片上传或原神本次部署。绿梦保持中文范围。
+
+## 前批开发状态（2026-11-20 R138：两个角色媒体 404 修复与通用技能支持完成）
 
 玛拉妮和欧洛伦的正式 CDN 图片已补传至 `gachia-images` 的两个缺失对象，HEAD/GET 均为 200，公开 SHA256 与原神独立应用资源一致。素材按 R137 数值角色 ID 与资料 API 的 `UI_AvatarIcon_Mualani`、`UI_AvatarIcon_Olorun` 绑定；保留来源、256×256 规格、透明度和可见像素核验。仅新增两个 R2 对象，未部署 Worker。原神 owner 的 public 目录包含两张资源，供后续应用发布；未向 Main 新增重复副本。见 [R138 完成回执](../reports/genshin-media-skills-2026-11-20-r138/EXECUTION.md)与[接续交付](../reports/genshin-media-skills-2026-11-20-r138/delivery.json)。
 
@@ -40,13 +50,13 @@ R135 的配方和定义候选任务已由上方 R136 接续完成；原始 [R135
 
 当前正式来源仍是下方 R134 索引，pin `401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750`；R135 的 candidate 是 held 本地修正，不是发布来源。之后继续其余游戏/内容类型、页面内联内容及新增、撤回、媒体替换。
 
-## 最近生产完成状态（2026-11-19 R134：Main 材料消费者迁移完成）
+## 前批生产完成状态（2026-11-19 R134：Main 材料消费者迁移完成）
 
 终末地 18 条材料三语详情卡片链接、星铁 7 条 ascension 与 2 条 special 材料列表入口、洛克国服 23 条材料三语搜索已正式上线。本批仅 Main 一次正式部署，版本 `8d88bd48-ba83-4470-a855-41048eacfc1a`，deployment `61209ff8-87f8-433f-b1bd-d0665c4827c3`；Router、四个独立游戏与 staging 部署保持。
 
 精确提交 `f463a8177b55dc3c803b93bd3defd013080fcc35` 的[完整 CI 44441932980](https://github.com/aieasygames-alt/gachia/actions/runs/44441932980)通过。三个游戏全部 103 材料三语列表/详情、公开 JSON、搜索、保留内容与静态兼容纳入候选和恢复；候选/恢复精确云预览 1629/1629 项，生产与接续各 734 项公网通过。完整 Next/OpenNext 构建、兼容恢复、正式切流、来源接续与独立重开全部完成。见 [R134 回执](../reports/main-material-migration-2026-11-19-r134/EXECUTION.md)。
 
-当前完整来源：[R134 最终 source-index.json](../reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json)，pin `401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750`。全部 115 内容来源相对最终 R130 保持，本批未修改 CMS 内容；原神胡桃、异环咲里/收藏家剧作核心、Zero 关系及攻略增量保持。后续异环单 Worker 发布继承新 Main 的 v2 搜索合同。下方 R130 与更早轮次为历史来源，不再作为当前入口。
+该批完整来源：[R134 最终 source-index.json](../reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json)，pin `401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750`。全部 115 内容来源相对最终 R130 保持，本批未修改 CMS 内容；原神胡桃、异环咲里/收藏家剧作核心、Zero 关系及攻略增量保持。后续异环单 Worker 发布继承新 Main 的 v2 搜索合同。下方 R130 与更早轮次为历史来源，不再作为当前入口。
 
 R134 接续时的原神 74 个材料 ID、4 个角色 ID 与归环 108 条无 ID 记录已在上方 R135 分项核验；R134 发布来源内的历史缺口原样保留，不能把本地局部修正记作线上修复。
 

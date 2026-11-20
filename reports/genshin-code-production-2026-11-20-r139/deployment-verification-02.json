@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-20T14:02:56.572Z",
+  "status": 200,
+  "body": {
+    "result": {
+      "id": "c8ea00a0-aafa-4ce2-83e9-7402da34610a",
+      "source": "api",
+      "strategy": "percentage",
+      "author_email": "aieasygames@gmail.com",
+      "annotations": {
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "882906a4-328a-4a3c-ba3a-5e6130a8ed99",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-11-20T14:01:57.468728Z"
+    },
+    "success": true,
+    "errors": [],
+    "messages": []
+  },
+  "raw": "{\n  \"result\": {\n    \"id\": \"c8ea00a0-aafa-4ce2-83e9-7402da34610a\",\n    \"source\": \"api\",\n    \"strategy\": \"percentage\",\n    \"author_email\": \"aieasygames@gmail.com\",\n    \"annotations\": {\n      \"workers/triggered_by\": \"deployment\"\n    },\n    \"versions\": [\n      {\n        \"version_id\": \"882906a4-328a-4a3c-ba3a-5e6130a8ed99\",\n        \"percentage\": 100\n      }\n    ],\n    \"created_on\": \"2026-11-20T14:01:57.468728Z\"\n  },\n  \"success\": true,\n  \"errors\": [],\n  \"messages\": []\n}\n",
+  "cloudWrites": false
+}

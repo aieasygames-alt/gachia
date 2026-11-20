@@ -1,0 +1,35 @@
+{
+  "kind": "r139_operator_preparation_evidence",
+  "commit": "a85e5a67a28f9da905ad98702729b9e99a7338d1",
+  "sealed": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/sealed.json",
+    "pin": "ea780b7635b89018ab1d95a8921b604501e330ae2114e356c7a365934e5329db"
+  },
+  "buildReuse": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/build-reuse.json",
+    "pin": "5a52fae1d72a4a5a1d3995d72e10871ae989efa4bd42f563a3bd7849c5754e64"
+  },
+  "finalLocalProcedure": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-r139-final-local.mts",
+    "pin": "d21992ea1f4a41789b48323780dac7cf2240ff961b527f7d3e49b5b75919b3ae"
+  },
+  "localRuntime": {
+    "executor": "Node 22.23.4",
+    "wrangler": "4.148.0",
+    "router": "published module executed in a Node binding bridge; application responses come from actual isolated workerd processes",
+    "routerModule": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/router-binding-bridge.mjs",
+      "pin": "be0c04f5ff5e648e673acb386933de15d591a662d70dab4b8f3728551ec8eede"
+    }
+  },
+  "counts": {
+    "candidate": 790,
+    "recovery": 788
+  },
+  "graphCounts": {
+    "finalReferences": 412,
+    "recoveryReferences": 412
+  },
+  "publicMediaContract": "img.gachia.com canonical CDN URLs; both assets verified on the Genshin Worker; no new Main-relative legacy media aliases",
+  "cloudWrites": false
+}

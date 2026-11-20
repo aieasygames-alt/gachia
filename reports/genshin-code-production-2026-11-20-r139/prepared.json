@@ -1,0 +1,21 @@
+{
+  "commit": "a85e5a67a28f9da905ad98702729b9e99a7338d1",
+  "parent": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "active": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/nte-material-r130-2026-11-18/published-sources-02/active.json",
+    "pin": "f6aad1e27945371a904532752f429a79228da0c0db297cbed04409ec450dcbc9"
+  },
+  "workspaceProof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/frozen-02/workspace.json",
+    "pin": "6d3ee979797dc3c33bd18d7c6e04b12f1ee65c881df757f752419fe682034087"
+  },
+  "workspace": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/frozen-02/source",
+  "contentChanges": [],
+  "previousPreparation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/prepared-5b5ff68.json",
+    "pin": "ddaf2718549c1c1731079007b71a2617774da3fd95d30ffbeda2c325ac5935c0"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "r139_preview_preupload_runtime_stop",
+  "at": "2026-11-20T13:25:03.493146+00:00",
+  "failedRuntime": "/private/tmp/gachia-r139-node-22.23.4/node-v22.23.4-darwin-arm64/bin/node",
+  "historicalRuntime": "/opt/homebrew/Cellar/node/25.9.0_3/bin/node",
+  "reason": "Historical R79 invocation executable equality requires original runtime path",
+  "cloudWrites": false,
+  "cloudDirectoryCreated": false,
+  "nextAction": "Resume same committed preview runner with original historical verifier runtime; retain existing sealed artifacts"
+}

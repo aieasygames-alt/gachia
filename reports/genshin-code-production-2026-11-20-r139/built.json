@@ -1,0 +1,12 @@
+{
+  "commit": "a85e5a67a28f9da905ad98702729b9e99a7338d1",
+  "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/frozen/source/apps/game-genshin/.open-next",
+  "treePin": "d388053a9886087323af21aaf3604bb5b105d62a296a1808c815405c8aa2d401",
+  "node": "v22.22.2",
+  "compiledCommit": "5b5ff681ced58522853f61bfd1f29dbf6a6f0a17",
+  "reusedBuild": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/built-5b5ff68.json",
+    "pin": "36cd096f311f6eeee0730c15f711ecdd51ba960e35356a61849476ad339ba745"
+  },
+  "unchangedWorkerBuildInputs": true
+}

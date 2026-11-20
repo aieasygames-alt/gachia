@@ -1,0 +1,14 @@
+{
+  "status": 404,
+  "body": {
+    "result": null,
+    "success": false,
+    "errors": [
+      {
+        "code": 10336,
+        "message": "This deployment does not exist on your Worker."
+      }
+    ],
+    "messages": []
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "commit": "5b5ff681ced58522853f61bfd1f29dbf6a6f0a17",
+  "file": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/frozen/source/apps/game-genshin/.open-next/server-functions/default/apps/game-genshin/handler.mjs",
+  "sha256": "eeb5f605f3d596602f9b2c2dc07ec2ea2068e57570f9f161df067e6450a0c516",
+  "markers": {
+    "special-jump": true,
+    "passive-3": true
+  },
+  "rawContentChanged": false
+}
