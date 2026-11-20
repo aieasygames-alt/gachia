@@ -27,7 +27,7 @@ import { freezeMainConsumerSource, verifyMainConsumerSource } from '../services/
 import { captureUnifiedExecutorSource } from '../services/content-cms/src/unified-executor-source.ts'
 import { createUnifiedExecutorVerifier, verifyUnifiedCI } from '../services/content-cms/src/unified-production.ts'
 import { verifyUnifiedPublishedSource } from '../services/content-cms/src/unified-source-advance.ts'
-import { nteLocalConfig, nteRequests } from '../services/content-cms/src/nte-release-bundle.ts'
+import { nteLocalConfig, nteRequests, nteRuntimeConfig } from '../services/content-cms/src/nte-release-bundle.ts'
 
 const repo = path.resolve(import.meta.dirname, '..'), root = path.join(repo, 'reports/genshin-code-production-2026-11-20-r139')
 const parent = { path: path.join(repo, 'reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json'), pin: '401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750' }
@@ -63,6 +63,7 @@ async function staging(token: string) {
   return out
 }
 function config(workspace: string, owner = 'genshin') {
+  if (owner === 'main' || owner === 'router') return nteRuntimeConfig(workspace, owner, 'candidate', false)
   const raw = readFileSync(path.join(workspace, owner === 'router' ? 'apps/router/wrangler.jsonc' : owner === 'main' ? 'apps/web/wrangler.jsonc' : `apps/game-${owner}/wrangler.jsonc`), 'utf8')
   const parsed = JSON.parse(raw.replace(/^\s*\/\/.*$/gm, '')); delete parsed.env; parsed.find_additional_modules = false; return parsed
 }
@@ -80,7 +81,7 @@ async function localGraph(sources: any, p: any, sealed: any, role: string, direc
     const module = owner === 'router' ? path.join(root, 'router.js') : owner === 'genshin' ? path.join(root, 'sealed/genshin', role, 'module/worker.js') : path.join(artifact, 'worker.js')
     configs[owner] = migrationSave(directory, owner + '.json', { ...nteLocalConfig(config(p.workspace, owner), owner, artifact, module), find_additional_modules: false }).path
   }
-  configs.unused = migrationSave(directory, 'unused.json', { name: 'nte-release-unused', main: path.join(root, 'unused.js'), compatibility_date: '2026-07-08' }).path
+  configs.unused = migrationSave(directory, 'unused.json', { name: 'nte-release-unused', main: path.join(root, 'unused.js'), compatibility_date: '2026-07-08', find_additional_modules: false }).path
   const row = sealed.roles[role], expected = genshinContentAssets(p.workspace)
   const wanted = direct ? { requests: migrationRequests({ owner: 'genshin', role: 'candidate', artifact: row.artifact, expected }), values: new Map() }
     : await nteRequests(p.workspace, 'router', 'candidate', undefined, false, sources.sources, undefined, sources.owners.main.directory)
@@ -90,7 +91,7 @@ async function localGraph(sources: any, p: any, sealed: any, role: string, direc
   let result: any
   await withLocalWorker(path.join(p.workspace, 'apps/game-genshin'), configs[direct ? 'genshin' : 'router'], path.join(directory, 'home'), path.join(directory, 'worker.log'), async (origin: string) => {
     result = await captureNteHTTP({ origin, requests: wanted.requests, jsonValues: wanted.values, directory: path.join(directory, 'responses') })
-  }, { wranglerEntrypoint: sealed.tool.bin, additionalConfigs: Object.entries(configs).filter(([name]) => name !== (direct ? 'genshin' : 'router')).map(([, file]) => file) })
+  }, { wranglerEntrypoint: sealed.tool.bin, additionalConfigs: direct ? [] : Object.entries(configs).filter(([name]) => name !== 'router').map(([, file]) => file) })
   console.log(JSON.stringify({ stage: 'local', role, direct, requests: wanted.requests.length })); return result.proof
 }
 async function verifySealed() {
