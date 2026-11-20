@@ -1,0 +1,2268 @@
+{
+  "materials": [
+    {
+      "numericId": 202,
+      "referenceKey": "mora",
+      "localId": "mora",
+      "localRecordSHA256": "990f7b37f1c7aa96b9543490a2e39485fd1a766876776f39f3da752784d7a845",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100021,
+      "referenceKey": "wolfhook",
+      "localId": "wolfhook",
+      "localRecordSHA256": "898bdcd6422fedd7e0746a97ae636c44c34e9d0b469e4f4209e096d95f528cc8",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100022,
+      "referenceKey": "valberry",
+      "localId": "valberry",
+      "localRecordSHA256": "0385f6fe3323b581711a642adf46d604b47ff45f0ceb74b9c83966a3ab0cbfa5",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 100023,
+      "referenceKey": "cecilia",
+      "localId": "cecilia",
+      "localRecordSHA256": "6687e3c7d1a3da536d75418b52b056cd6d4b2ee82a7fa4b4bc9f37b71facbca6",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100024,
+      "referenceKey": "windwheelaster",
+      "localId": "windwheel-aster",
+      "localRecordSHA256": "dd4d702f49f3cc4426e2cdfac0e328a39ca9202df0b94f8701ae9a284f412e0d",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100025,
+      "referenceKey": "philanemomushroom",
+      "localId": "philanemo-mushroom",
+      "localRecordSHA256": "28f9c4ce9ce391d5c6f5bc317e0815b07d723211732ff4c7c9f0b624326688ad",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100027,
+      "referenceKey": "jueyunchili",
+      "localId": "jueyun-chili",
+      "localRecordSHA256": "8f92fd658e88f5b6aa09272bd90860e8d9ddff0fa12ed951a3c8a6ffdbe9d6c8",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100028,
+      "referenceKey": "noctilucousjade",
+      "localId": "noctilucous-jade",
+      "localRecordSHA256": "f0f1473d6955b7b77d0907a24eccfc7a2da3c39ac976266a43663c581d614762",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100029,
+      "referenceKey": "silkflower",
+      "localId": "silk-flower",
+      "localRecordSHA256": "1beee1d815221a025376b7fe5a767463ee17abbf3a316ba3c7b4aabb38c3b23e",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100030,
+      "referenceKey": "glazelily",
+      "localId": "glaze-lily",
+      "localRecordSHA256": "15425b3501d237a16d3559b74de8cd70dc7598cfe2aae8d8c0f037b1c70adf87",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100031,
+      "referenceKey": "qingxin",
+      "localId": "qingxin",
+      "localRecordSHA256": "11cc6557adbf2ad877f1ed8ab763544a48a787005697031ade38a1b46452ff65",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100033,
+      "referenceKey": "starconch",
+      "localId": "starconch",
+      "localRecordSHA256": "cd9647276fffd1f110a2a8a088b11f74603d5f683afc459bd0ab8258ff5bfcc4",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100034,
+      "referenceKey": "violetgrass",
+      "localId": "violetgrass",
+      "localRecordSHA256": "dfa34bcc6204852c665a1ccfa1280cffbe4649a4dc938c6981022890bad860c1",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100055,
+      "referenceKey": "smalllampgrass",
+      "localId": "small-lamp-grass",
+      "localRecordSHA256": "f53b4ac60e7e88d9b1a02e474cfe48f1339daf9d696e9480a15e14bf4f471aca",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100056,
+      "referenceKey": "callalily",
+      "localId": "calla-lily",
+      "localRecordSHA256": "3f643f766a09b7bb48cf326ea2196954ee3e25e19dd361c84ec64f91882fe5f7",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100057,
+      "referenceKey": "dandelionseed",
+      "localId": "dandelion-seed",
+      "localRecordSHA256": "42f8eeecfe710dd6a8e55e5fee7b0b11cd06e6fa9e4829ae24e0dd57d6fe4f26",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 100058,
+      "referenceKey": "corlapis",
+      "localId": "cor-lapis",
+      "localRecordSHA256": "4eee2eb7070ae03174c6af7d06268ffeb1fd459061fd0da0647d95de52bc425c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101201,
+      "referenceKey": "onikabuto",
+      "localId": "onikabuto",
+      "localRecordSHA256": "ffc818519e1aa362720c526620ce43e9cc9769aee02a1c4dcfa52997eec5810d",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101202,
+      "referenceKey": "sakurabloom",
+      "localId": "sakura-bloom",
+      "localRecordSHA256": "5328e6d3cb83114831fc889d659add42859c464978f2340082e904038cf22b05",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101203,
+      "referenceKey": "crystalmarrow",
+      "localId": "crystal-marrow",
+      "localRecordSHA256": "240b3020c6476f26c1c8593236344363bf6c0145d96e0e3bd91f1ec0dbca83b8",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101204,
+      "referenceKey": "dendrobium",
+      "localId": "dendrobium",
+      "localRecordSHA256": "d5fea0a0996f100ba7dc4b37b5f5004a1b266f15b704b83d51659ceaeca2ae81",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101205,
+      "referenceKey": "nakuweed",
+      "localId": "naku-weed",
+      "localRecordSHA256": "14deca54088bd116b170750df2fdd746ef940a434c39f63388dee990eb77dfca",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101206,
+      "referenceKey": "seaganoderma",
+      "localId": "sea-ganoderma",
+      "localRecordSHA256": "b6e2c17eba8793ce217358ad0e7b988596efb56c1cefba1b023655a4d480263c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101207,
+      "referenceKey": "sangopearl",
+      "localId": "sango-pearl",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101208,
+      "referenceKey": "amakumofruit",
+      "localId": "amakumo-fruit",
+      "localRecordSHA256": "ddada5c640835ec2ad67e5c5117f3782ae6fe0eb055548de64fde7a5edc324c9",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101209,
+      "referenceKey": "fluorescentfungus",
+      "localId": "fluorescent-fungus",
+      "localRecordSHA256": "b55e15c80c293b5f3cc386894dd306812ee2c1583278682298b1ce705bf4324a",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 101213,
+      "referenceKey": "rukkhashavamushrooms",
+      "localId": "rukkhashava-mushroom",
+      "localRecordSHA256": "aebcf746a9af6d5a88b1c835652c685eb3fa401b02f63f79444b37363083a514",
+      "reason": "Preserve stable local ID; Chinese name agrees. Reference uses the plural English name."
+    },
+    {
+      "numericId": 101214,
+      "referenceKey": "padisarah",
+      "localId": "padisarah",
+      "localRecordSHA256": "43174b742771d597dd89db0a3eac13b1785ad6347e17fa72f7b57df0e791e266",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101215,
+      "referenceKey": "nilotpalalotus",
+      "localId": "nilotpala-lotus",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101217,
+      "referenceKey": "kalpalatalotus",
+      "localId": "kalpalata-lotus",
+      "localRecordSHA256": "0559d38f1e2e4f51da3e2731f979854921a0b69e857972abd941e750f5bbdaca",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101220,
+      "referenceKey": "hennaberry",
+      "localId": "henna-berry",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101222,
+      "referenceKey": "sandgreasepupa",
+      "localId": "sand-grease-pupa",
+      "localRecordSHA256": "59e131d9490b984ec9fe49855c540ea8ecaae6f9a2385fb61bee14f7808dcc69",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101223,
+      "referenceKey": "mourningflower",
+      "localId": "mourning-flower",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101224,
+      "referenceKey": "trishiraite",
+      "localId": "trishiraite",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101225,
+      "referenceKey": "scarab",
+      "localId": "scarab",
+      "localRecordSHA256": "2ab1ec4606508ef13875476fa13d1362d9b84bfe84368a0fa343ecd60cd5c968",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 101232,
+      "referenceKey": "berylconch",
+      "localId": "beryl-conch",
+      "localRecordSHA256": "cae7ec0ce807ff178782741dd16983ebe48918f03afcbd42b312b918cf1466a9",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101233,
+      "referenceKey": "romaritimeflower",
+      "localId": "romaritime-flower",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101235,
+      "referenceKey": "lumidoucebell",
+      "localId": "lumidouce-bell",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101236,
+      "referenceKey": "rainbowrose",
+      "localId": "rainbow-rose",
+      "localRecordSHA256": "112b0e99d2fdbea220fbd475f7c08990d496b9ce1f2d81b2d228e912785d0c5d",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 101237,
+      "referenceKey": "lumitoile",
+      "localId": "lumitoile",
+      "localRecordSHA256": "aa1f9125339a93c2b2956082116eda34a611dde5b7cf582134f5fc3d4908adc5",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 101238,
+      "referenceKey": "lakelightlily",
+      "localId": "lakelight-lily",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101239,
+      "referenceKey": "subdetectionunit",
+      "localId": "subdetection-unit",
+      "localRecordSHA256": "78367adada6f74178efea9bdf98f80678b86b3aadac0b8c8c8cefa441dff1eb1",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 101240,
+      "referenceKey": "springofthefirstdewdrop",
+      "localId": "spring-of-the-first-dewdrop",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101241,
+      "referenceKey": "clearwaterjade",
+      "localId": "clearwater-jade",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101247,
+      "referenceKey": "sprayfeathergill",
+      "localId": "sprayfeather-gill",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101248,
+      "referenceKey": "brilliantchrysanthemum",
+      "localId": "brilliant-chrysanthemum",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101249,
+      "referenceKey": "quenepaberry",
+      "localId": "quenepa-berry",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101250,
+      "referenceKey": "saurianclawsucculent",
+      "localId": "saurian-claw-succulent",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101252,
+      "referenceKey": "glowinghornshroom",
+      "localId": "glowing-hornshroom",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 101253,
+      "referenceKey": "witheringpurpurbloom",
+      "localId": "withering-purpurbloom",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104111,
+      "referenceKey": "agnidusagatesliver",
+      "localId": "agnidus-agate-sliver",
+      "localRecordSHA256": "493a2beec4f258a9afb0f2c161478d6138979337a78f63bfddfce73f6b776eac",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104112,
+      "referenceKey": "agnidusagatefragment",
+      "localId": "agnidus-agate-fragment",
+      "localRecordSHA256": "f1140fc739a2e570bd02fba81bc070850e40cc78cc41e95c5b0521d867b22d6b",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104113,
+      "referenceKey": "agnidusagatechunk",
+      "localId": "agnidus-agate-chunk",
+      "localRecordSHA256": "4e5bdc41a26393fc55754d7465d20c6d81e6c097abab6070b0a18bd1b0b941dd",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104114,
+      "referenceKey": "agnidusagategemstone",
+      "localId": "agnidus-agate-gemstone",
+      "localRecordSHA256": "8bc3694202a9b4e805cd4dd08926cccea6cf4302da56ed62433e2e7480e49074",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 104121,
+      "referenceKey": "varunadalazuritesliver",
+      "localId": "varunada-lazurite-sliver",
+      "localRecordSHA256": "bbb7c9e06c32f7bb4a0e561b1971fa4eea89a3faf42f4a2fcbcdffc24410f458",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104122,
+      "referenceKey": "varunadalazuritefragment",
+      "localId": "varunada-lazurite-fragment",
+      "localRecordSHA256": "9fe2574b7aaa60ae06b478d379a11e5972ac0b41d853f22da817ebe276e51888",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104123,
+      "referenceKey": "varunadalazuritechunk",
+      "localId": "varunada-lazurite-chunk",
+      "localRecordSHA256": "9b7286c5a6167715f9110efdcb8d6ec274da299136a8e4783c8896b22d4fdd8f",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104124,
+      "referenceKey": "varunadalazuritegemstone",
+      "localId": "varunada-lazurite-gemstone",
+      "localRecordSHA256": "0fb784b4dbb6b633eeff97ab54a47c3f6cd6a67968dc7d1dbb0a4168636a1c8e",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 104131,
+      "referenceKey": "nagadusemeraldsliver",
+      "localId": "nagadus-emerald-sliver",
+      "localRecordSHA256": "b678dee9ac380674a104d9814d22c0da42b015035bcc41b466046a399c05e3aa",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104132,
+      "referenceKey": "nagadusemeraldfragment",
+      "localId": "nagadus-emerald-fragment",
+      "localRecordSHA256": "309398cf84c18380fefa865703dc2ef5d0d6e8af9babfd48b1c3ddacb9412346",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104133,
+      "referenceKey": "nagadusemeraldchunk",
+      "localId": "nagadus-emerald-chunk",
+      "localRecordSHA256": "4b30a14d04bc4f4ba92be20cbdb726fce02993d2acd938315003d40e656b8ce9",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104134,
+      "referenceKey": "nagadusemeraldgemstone",
+      "localId": "nagadus-emerald-gemstone",
+      "localRecordSHA256": "19f63a7ea0f743bad889b2b61e0c50a42972505231bd07c232a35479dd27f8b4",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 104141,
+      "referenceKey": "vajradaamethystsliver",
+      "localId": "vajrada-amethyst-sliver",
+      "localRecordSHA256": "459e51ca2987f90f05668999c21eec63ec50d5f6d5eb3f98fe6a567879d9ac42",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104142,
+      "referenceKey": "vajradaamethystfragment",
+      "localId": "vajrada-amethyst-fragment",
+      "localRecordSHA256": "be8eb717e784459ab093946dd1ba18c4793c3a7a40aa0c36e28749661e823466",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104143,
+      "referenceKey": "vajradaamethystchunk",
+      "localId": "vajrada-amethyst-chunk",
+      "localRecordSHA256": "ceed03f4a179bbda5e950758598d67fab236b0b86d9437d426e5e42e0d2a9f94",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104144,
+      "referenceKey": "vajradaamethystgemstone",
+      "localId": "vajrada-amethyst-gemstone",
+      "localRecordSHA256": "8bae38a8cf334b23e6ee2279a8ca0299f78e9aacedb76fdd6069bd0f43472612",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 104151,
+      "referenceKey": "vayudaturquoisesliver",
+      "localId": "vayuda-turquoise-sliver",
+      "localRecordSHA256": "fc3aa2fe85e73b13d6a5cd9da51712ddaf896d5b3b4958198bd1a4b544b3a4fb",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104152,
+      "referenceKey": "vayudaturquoisefragment",
+      "localId": "vayuda-turquoise-fragment",
+      "localRecordSHA256": "653be9a57cfa4f00e2b00968322f3e871dff237fe60a0343b2d01b137470c8e6",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104153,
+      "referenceKey": "vayudaturquoisechunk",
+      "localId": "vayuda-turquoise-chunk",
+      "localRecordSHA256": "c346c766c079bf6955c80042b295646747e202978e9b5fa3515abd8a51fc0c73",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104154,
+      "referenceKey": "vayudaturquoisegemstone",
+      "localId": "vayuda-turquoise-gemstone",
+      "localRecordSHA256": "69a80f39f4b485af9d21c887bccb734998cdba57f090649a55ba701c91e429cb",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 104161,
+      "referenceKey": "shivadajadesliver",
+      "localId": "shivada-jade-sliver",
+      "localRecordSHA256": "fceee01d28f90c11864f79390ecd15b4df6ac8da7c9491606b63a9d3a87ca6fd",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104162,
+      "referenceKey": "shivadajadefragment",
+      "localId": "shivada-jade-fragment",
+      "localRecordSHA256": "03120caf5fb0fe4de33037c9fd11819797dbeb6717712fabb4e54d91102ec9af",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104163,
+      "referenceKey": "shivadajadechunk",
+      "localId": "shivada-jade-chunk",
+      "localRecordSHA256": "7ead53d2066e059a1dd8e56cc019c300ae8cc72c487eb8c97c6d877028685fd0",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104164,
+      "referenceKey": "shivadajadegemstone",
+      "localId": "shivada-jade-gemstone",
+      "localRecordSHA256": "8b629cfd918785b614adb3674c0b542683b4397a552caa9167a2e0400703893f",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 104171,
+      "referenceKey": "prithivatopazsliver",
+      "localId": "prithiva-topaz-sliver",
+      "localRecordSHA256": "182906820bbd6042fb62d3c602c3f06678e226522ffc67218245b4f4605b0182",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104172,
+      "referenceKey": "prithivatopazfragment",
+      "localId": "prithiva-topaz-fragment",
+      "localRecordSHA256": "27cbb4e79f1ca5e5194b6cabb70a241d684690c7a54f710e59af6b1807f6f551",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104173,
+      "referenceKey": "prithivatopazchunk",
+      "localId": "prithiva-topaz-chunk",
+      "localRecordSHA256": "2fe48a2cb6efa5778f07071f99cc020042f839665c61d52477ddcee26359f6ae",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104174,
+      "referenceKey": "prithivatopazgemstone",
+      "localId": "prithiva-topaz-gemstone",
+      "localRecordSHA256": "b5dbdc50eaafaff5fc8ad0043d146fd77f3a13c74ab7fbb2b32374ea16cb0f2d",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 104301,
+      "referenceKey": "teachingsoffreedom",
+      "localId": "teachings-of-freedom",
+      "localRecordSHA256": "cb15107a513bba5fad77b5a4cf58897610082817f1c2c2e9146cd909c0a0cee2",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104302,
+      "referenceKey": "guidetofreedom",
+      "localId": "guide-of-freedom",
+      "localRecordSHA256": "22b2e9bb287b4569c501889ae67e37522ad188bac3a2dec628f5090279ed0860",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104303,
+      "referenceKey": "philosophiesoffreedom",
+      "localId": "philosophies-of-freedom",
+      "localRecordSHA256": "21f596ec6aceeef54cd510dd93d8ee77eb119e1920fa61575286e7d0e04a87a0",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104304,
+      "referenceKey": "teachingsofresistance",
+      "localId": "teachings-of-resistance",
+      "localRecordSHA256": "1b53a73b1a3434b2a4bfd832a8fab30d16515d240c29067517d1bf7cbc770880",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104305,
+      "referenceKey": "guidetoresistance",
+      "localId": "guide-of-resistance",
+      "localRecordSHA256": "3b7f928c1d063036480e1c94dc1f1f11f8d9430ab0ab32098e459f026a5c4fd4",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104306,
+      "referenceKey": "philosophiesofresistance",
+      "localId": "philosophies-of-resistance",
+      "localRecordSHA256": "eefa8b1c91f429ec8de949a22d7f841be9415a205b413587f7ab02ceed1f42b3",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104307,
+      "referenceKey": "teachingsofballad",
+      "localId": "teachings-of-ballad",
+      "localRecordSHA256": "f8b84f45c9f2cbd81d286987d5059b3f5b71fc10577c0fc626121f81edf5676c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104308,
+      "referenceKey": "guidetoballad",
+      "localId": "guide-of-ballad",
+      "localRecordSHA256": "c794d349c03f341be978ee60b25e3302a459427f587cb5733c68a6dc86b1ad38",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104309,
+      "referenceKey": "philosophiesofballad",
+      "localId": "philosophies-of-ballad",
+      "localRecordSHA256": "361026787565913d8285dbffbfb4c2cf6874bab34baf0be49ef7498e79f8d9fc",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104310,
+      "referenceKey": "teachingsofprosperity",
+      "localId": "teachings-of-prosperity",
+      "localRecordSHA256": "4e0571f48506082ae1c81fb02161c45c32b7d0407bc48ba3b34a1b5da27596b6",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104311,
+      "referenceKey": "guidetoprosperity",
+      "localId": "guide-of-prosperity",
+      "localRecordSHA256": "d341ad303417c23ea3aa95df89120ebd39f77c4087560c0d86b818651721fb81",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104312,
+      "referenceKey": "philosophiesofprosperity",
+      "localId": "philosophies-of-prosperity",
+      "localRecordSHA256": "2b4072db9bce45b2884ad928644d3fbf4f62b39eec8c2f3d52cb729958c2844a",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104313,
+      "referenceKey": "teachingsofdiligence",
+      "localId": "teachings-of-diligence",
+      "localRecordSHA256": "9d875fd88aefef63c7a822134774abf9608bf6e3f536c5fb73203063189f6fd8",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104314,
+      "referenceKey": "guidetodiligence",
+      "localId": "guide-of-diligence",
+      "localRecordSHA256": "b51edb7d97c0397fb48072cb91d9a9dd09e124a3ec25b1efa384a055dc970559",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104315,
+      "referenceKey": "philosophiesofdiligence",
+      "localId": "philosophies-of-diligence",
+      "localRecordSHA256": "dc63df9fa8e683406af287f5f604b31ede7ae1a04916b0c806b9a7a18226656d",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104316,
+      "referenceKey": "teachingsofgold",
+      "localId": "teachings-of-gold",
+      "localRecordSHA256": "f1ac18da35e053f56ba11997199098adcabd0fa3292b9cb603a1c98ffb0cd143",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104317,
+      "referenceKey": "guidetogold",
+      "localId": "guide-of-gold",
+      "localRecordSHA256": "fbb4cefefac69c580809a429d07e25aed4d395fcab3893fe680900e69853119e",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104318,
+      "referenceKey": "philosophiesofgold",
+      "localId": "philosophies-of-gold",
+      "localRecordSHA256": "79c28d2ea5f50e3926344013c0458a6630bbfe6cbadff70b68b87d60e40b69e1",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104319,
+      "referenceKey": "crownofinsight",
+      "localId": "crown-of-insight",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104320,
+      "referenceKey": "teachingsoftransience",
+      "localId": "teachings-of-transience",
+      "localRecordSHA256": "64700fb37fa9abcbfd83fdb22987dd7c4122caf7c6c28dad23a07cff16c10c7d",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104321,
+      "referenceKey": "guidetotransience",
+      "localId": "guide-of-transience",
+      "localRecordSHA256": "7df74572330a4c0517700f899ebe6482c75a7f95a80aa36ac9494cf9551462f0",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104322,
+      "referenceKey": "philosophiesoftransience",
+      "localId": "philosophies-of-transience",
+      "localRecordSHA256": "00abdc8e71a85234683686176536a97516823582cecaecbdd010cb42215dcde7",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104323,
+      "referenceKey": "teachingsofelegance",
+      "localId": "teachings-of-elegance",
+      "localRecordSHA256": "85c240f75fca930e792844c3f5b50d4904a81d0a3dc6f19dff6d6e2352de80c0",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104324,
+      "referenceKey": "guidetoelegance",
+      "localId": "guide-of-elegance",
+      "localRecordSHA256": "fed4e3d3a8a1f955802e3ff7c040023564091a381fa2f5441d8cb5e2848b7069",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104325,
+      "referenceKey": "philosophiesofelegance",
+      "localId": "philosophies-of-elegance",
+      "localRecordSHA256": "5f87854549c9ddda8174d0263ed0ebd889c8c4b19bab7f47a4df175482471c4b",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104326,
+      "referenceKey": "teachingsoflight",
+      "localId": "teachings-of-light",
+      "localRecordSHA256": "cad504a72aa3e180839d9bd96dad5f6c2a8da82080f0655c55bfa83ffb0cc3c7",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104327,
+      "referenceKey": "guidetolight",
+      "localId": "guide-of-light",
+      "localRecordSHA256": "22ee790d74fd88326208da3c684681abf68a56363c2c15f5405ce845e2f1e5dd",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104328,
+      "referenceKey": "philosophiesoflight",
+      "localId": "philosophies-of-light",
+      "localRecordSHA256": "fc11e14e4a2ef036525db0c3ebb55b0ef979aec96878cbb990f885d59f50d9c4",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104329,
+      "referenceKey": "teachingsofadmonition",
+      "localId": "teachings-of-admonition",
+      "localRecordSHA256": "570602732c5b0864e07e0ad7d2645b9ea333d7164cca8e597e3bcd39d9165da8",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104330,
+      "referenceKey": "guidetoadmonition",
+      "localId": "guide-of-admonition",
+      "localRecordSHA256": "7fde5c764d2feb078a3fa53afbd6425117dc56c7fca36dabc110c5502f2589a7",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104331,
+      "referenceKey": "philosophiesofadmonition",
+      "localId": "philosophies-of-admonition",
+      "localRecordSHA256": "97bd019929fa93d086b7f18591860a41dfcf9eacf14202d7afc0dc734c89e90f",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104332,
+      "referenceKey": "teachingsofingenuity",
+      "localId": "teachings-of-ingenuity",
+      "localRecordSHA256": "76afb2dd4e1d056e9750cd3715dd097d7d1e4c6e2a71b1f4bd9a18308adc391b",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104333,
+      "referenceKey": "guidetoingenuity",
+      "localId": "guide-of-ingenuity",
+      "localRecordSHA256": "197cf31ca40db6310ecaacaeb2188380fa1116832737c9c390bb6cc15afc44ab",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104334,
+      "referenceKey": "philosophiesofingenuity",
+      "localId": "philosophies-of-ingenuity",
+      "localRecordSHA256": "79bac59f0474ce3f0a6af47d7871a234f56508e8789a24c17f3a3d1335fc983c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104335,
+      "referenceKey": "teachingsofpraxis",
+      "localId": "teachings-of-praxis",
+      "localRecordSHA256": "d3b95b8cf28cac368256097e884fc1fbc0a4416f15f9a7b69b3322b3f77c5e53",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104336,
+      "referenceKey": "guidetopraxis",
+      "localId": "guide-of-praxis",
+      "localRecordSHA256": "18aa0354974ebe1bbe53c3dd753913f1dcc7f288d8cd73555f34a05d6aace757",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104337,
+      "referenceKey": "philosophiesofpraxis",
+      "localId": "philosophies-of-praxis",
+      "localRecordSHA256": "1aa4d6090d7f5c2e426b54572162957a3607d6e7ce73424438ee1bf0bee92c4a",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104338,
+      "referenceKey": "teachingsofequity",
+      "localId": "teachings-of-equity",
+      "localRecordSHA256": "653372d831c2324137a2dd8d102c7a281e422326bd8fedab68ac8582e424caae",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104339,
+      "referenceKey": "guidetoequity",
+      "localId": "guide-of-equity",
+      "localRecordSHA256": "ee488a3108278890717a8a6be111b21b3bbf56da2b69d29d3eb72e4adfba5da6",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104340,
+      "referenceKey": "philosophiesofequity",
+      "localId": "philosophies-of-equity",
+      "localRecordSHA256": "41fab7ef529f9fc6442601fd407a2e1be0b8422606c64f7731766c3abdf17915",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104341,
+      "referenceKey": "teachingsofjustice",
+      "localId": "teachings-of-justice",
+      "localRecordSHA256": "139855a5cfd36faeca5d218c42682e60b9d38c1237ad0c2b6ea5c755a6e14e17",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104342,
+      "referenceKey": "guidetojustice",
+      "localId": "guide-of-justice",
+      "localRecordSHA256": "f42649e98bafb6db2dc2768148a32dff3106fb72a9be46ae0e6c78090d24246c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104343,
+      "referenceKey": "philosophiesofjustice",
+      "localId": "philosophies-of-justice",
+      "localRecordSHA256": "6a025e593f90b0ce56352ae6645d135e3353400c3bd7e215361d273ed61e86c4",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104344,
+      "referenceKey": "teachingsoforder",
+      "localId": "teachings-of-order",
+      "localRecordSHA256": "2429d3a1b7ec9190b5a421d0d6b465836f1ac9badcab9bf6b69e3f40609b9bb5",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104345,
+      "referenceKey": "guidetoorder",
+      "localId": "guide-of-order",
+      "localRecordSHA256": "44f35333c3dcece3cf734a3bbc42b6d7c1fc1f2b211ce90054fa7b353ee1d8fc",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104346,
+      "referenceKey": "philosophiesoforder",
+      "localId": "philosophies-of-order",
+      "localRecordSHA256": "5b0c080198f0e1697daeb596e47eeef7e57017a63024ceedad52e1282172cb76",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 104347,
+      "referenceKey": "teachingsofcontention",
+      "localId": "teachings-of-contention",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104348,
+      "referenceKey": "guidetocontention",
+      "localId": "guide-to-contention",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104349,
+      "referenceKey": "philosophiesofcontention",
+      "localId": "philosophies-of-contention",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104350,
+      "referenceKey": "teachingsofkindling",
+      "localId": "teachings-of-kindling",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104351,
+      "referenceKey": "guidetokindling",
+      "localId": "guide-to-kindling",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104352,
+      "referenceKey": "philosophiesofkindling",
+      "localId": "philosophies-of-kindling",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104353,
+      "referenceKey": "teachingsofconflict",
+      "localId": "teachings-of-conflict",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104354,
+      "referenceKey": "guidetoconflict",
+      "localId": "guide-to-conflict",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 104355,
+      "referenceKey": "philosophiesofconflict",
+      "localId": "philosophies-of-conflict",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112002,
+      "referenceKey": "slimecondensate",
+      "localId": "slime-condensate",
+      "localRecordSHA256": "c76684fe653781353227d684116452088a2e0fd10e9fa4338584e1a18f4846fd",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112003,
+      "referenceKey": "slimesecretions",
+      "localId": "slime-secretions",
+      "localRecordSHA256": "e09858358a4c95f74092c7fc93b588fda63056dd65e882ba5f349ec988b0ad87",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112004,
+      "referenceKey": "slimeconcentrate",
+      "localId": "slime-concentrate",
+      "localRecordSHA256": "f49e4caeba0652a6b68335171fc1676fb06ca28f64665271cd70c89f82076231",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112005,
+      "referenceKey": "damagedmask",
+      "localId": "damaged-mask",
+      "localRecordSHA256": "d00e85fa7bbf7b40ac44126cbceda6d32c71cb037f53d52d41076aaf5ad032a1",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112006,
+      "referenceKey": "stainedmask",
+      "localId": "stained-mask",
+      "localRecordSHA256": "d8a195872e36cacdff6423ec0e846af9ef84ff60b04581bb4ca2886b30f3ad25",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112007,
+      "referenceKey": "ominousmask",
+      "localId": "ominous-mask",
+      "localRecordSHA256": "6c09d1038a074c525a7aba735b671f54061795395468c41a5622f6502ffa23a0",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112008,
+      "referenceKey": "diviningscroll",
+      "localId": "divining-scroll",
+      "localRecordSHA256": "de5ce74cc9baa8c20157359218180519410e6ab9e90f5e80f7d9462aad3a17a2",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112009,
+      "referenceKey": "sealedscroll",
+      "localId": "concealing-scroll",
+      "localRecordSHA256": "25f0e215bcf982bb5f4b290399c186ea68aa010595eb330f9b7ffcf8c891e0bd",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112010,
+      "referenceKey": "forbiddencursescroll",
+      "localId": "forbidden-curse-scroll",
+      "localRecordSHA256": "cbb2131886547ad24c85bc6c854370caed529336ce02c23d578f8bc484d12c16",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112011,
+      "referenceKey": "firmarrowhead",
+      "localId": "firm-arrowhead",
+      "localRecordSHA256": "bd5a1cf52dc1ec48a64fcc0210ae1a8bcd8b6f346ebda29734176d21cb605717",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112012,
+      "referenceKey": "sharparrowhead",
+      "localId": "sharp-arrowhead",
+      "localRecordSHA256": "b524d97bd766387f2a372be60f9e198c414a33a2a2e76d142b366ba67ad1e888",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112013,
+      "referenceKey": "weatheredarrowhead",
+      "localId": "weathered-arrowhead",
+      "localRecordSHA256": "432ea4be48918725b0fb8f77e41859b710dea24118b51b68213bf9b948fb1b3a",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112032,
+      "referenceKey": "recruitsinsignia",
+      "localId": "recruits-insignia",
+      "localRecordSHA256": "ed70048d6700bc9c7eced56ff51fef7946edff56a4a2599c0e1b009c512bca8a",
+      "reason": "Stable local ID and English name identify Fatui insignia. Chinese/source fields incorrectly describe Treasure Hoarders; correct those fields from the bilingual numeric reference. Treasure Hoarder identities receive separate definitions."
+    },
+    {
+      "numericId": 112033,
+      "referenceKey": "sergeantsinsignia",
+      "localId": "sergeants-insignia",
+      "localRecordSHA256": "1ba0f267dff21808ce65dcdaa4ea806d246a967badd585f432d5949f6d37a887",
+      "reason": "Stable local ID and English name identify Fatui insignia. Chinese/source fields incorrectly describe Treasure Hoarders; correct those fields from the bilingual numeric reference. Treasure Hoarder identities receive separate definitions."
+    },
+    {
+      "numericId": 112034,
+      "referenceKey": "lieutenantsinsignia",
+      "localId": "lieutenants-insignia",
+      "localRecordSHA256": "f5edddf29675db9125cd658b63f347b8a760275c658f8dc08f32c37d35fa2998",
+      "reason": "Stable local ID and English name identify Fatui insignia. Chinese/source fields incorrectly describe Treasure Hoarders; correct those fields from the bilingual numeric reference. Treasure Hoarder identities receive separate definitions."
+    },
+    {
+      "numericId": 112035,
+      "referenceKey": "treasurehoarderinsignia",
+      "localId": "treasure-hoarder-insignia",
+      "localRecordSHA256": null,
+      "reason": "Create a separate Treasure Hoarder definition. The Chinese name in a local Fatui record is conflicting evidence, not permission to merge these numeric identities."
+    },
+    {
+      "numericId": 112036,
+      "referenceKey": "silverraveninsignia",
+      "localId": "silver-raven-insignia",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112037,
+      "referenceKey": "goldenraveninsignia",
+      "localId": "golden-raven-insignia",
+      "localRecordSHA256": null,
+      "reason": "Create a separate Treasure Hoarder definition. The Chinese name in a local Fatui record is conflicting evidence, not permission to merge these numeric identities."
+    },
+    {
+      "numericId": 112038,
+      "referenceKey": "whopperflowernectar",
+      "localId": "whopperflower-nectar",
+      "localRecordSHA256": "0407db028e8e082b5dc0b1f4ee0d1f636a6a790415d0292f8654f9a486f98d17",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112039,
+      "referenceKey": "shimmeringnectar",
+      "localId": "shimmering-nectar",
+      "localRecordSHA256": "ae47870a928ae33d8cac682586c00628499e807178f04c193c4688b6436cf37c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112040,
+      "referenceKey": "energynectar",
+      "localId": "energy-nectar",
+      "localRecordSHA256": "4661bff1fde10913d05b15e63865630ede8a3ca87007c5a4335cc734d652dd7f",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112044,
+      "referenceKey": "oldhandguard",
+      "localId": "old-handguard",
+      "localRecordSHA256": "fa4a4b1556343752d0a4b3cfa7e42ab19486927c3b54bdaf7e38db00c7bfc5e1",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112045,
+      "referenceKey": "kageuchihandguard",
+      "localId": "kageuchi-handguard",
+      "localRecordSHA256": "e338bbd9e3edba53c59773a1f7e82ab6d174eee2e4d90bee217bad8929933147",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112046,
+      "referenceKey": "famedhandguard",
+      "localId": "famous-handguard",
+      "localRecordSHA256": "bf77dff850cdf2394de4dab6c2c20c488fafc8911541304209ac9a972851e08a",
+      "reason": "Preserve stable local ID; Chinese name and Nobushi source identify Famed Handguard. Correct English spelling and rarity in the candidate."
+    },
+    {
+      "numericId": 112053,
+      "referenceKey": "spectralhusk",
+      "localId": "floating-core",
+      "localRecordSHA256": "85d649073b423ace5f9c5ee8347f881c653da288a8bf43197d6a904a24c66e92",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112054,
+      "referenceKey": "spectralheart",
+      "localId": "suffused-core",
+      "localRecordSHA256": "d9b788a066dab604f202ea79bb187f7bcb233c0d9a7103bccda4cf545f2124ee",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112055,
+      "referenceKey": "spectralnucleus",
+      "localId": "crystallizing-core",
+      "localRecordSHA256": "4d0cf1362ea9793f204074d92ecd3b278ad359be1134757791b8fdc81e5254de",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 112059,
+      "referenceKey": "fungalspores",
+      "localId": "fungal-spores",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112060,
+      "referenceKey": "luminescentpollen",
+      "localId": "luminescent-pollen",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112061,
+      "referenceKey": "crystallinecystdust",
+      "localId": "crystalline-cyst-dust",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112065,
+      "referenceKey": "fadedredsatin",
+      "localId": "faded-red-satin",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112066,
+      "referenceKey": "trimmedredsilk",
+      "localId": "trimmed-red-silk",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112067,
+      "referenceKey": "richredbrocade",
+      "localId": "rich-red-brocade",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112080,
+      "referenceKey": "transoceanicpearl",
+      "localId": "transoceanic-pearl",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112081,
+      "referenceKey": "transoceanicchunk",
+      "localId": "transoceanic-chunk",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112082,
+      "referenceKey": "xenochromaticcrystal",
+      "localId": "xenochromatic-crystal",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112083,
+      "referenceKey": "meshinggear",
+      "localId": "meshing-gear",
+      "localRecordSHA256": "76bed990a8a5b7ab7fe771cafaf31d064f4c90d42de5f7c85873d4e0249b5c03",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112084,
+      "referenceKey": "mechanicalspurgear",
+      "localId": "mechanical-spur-gear",
+      "localRecordSHA256": "de9c9fb0b3b48187354ef9ace0ddda9b15618010f44aaa48058ab13873e3be12",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112085,
+      "referenceKey": "artificeddynamicgear",
+      "localId": "artificed-dynamic-gear",
+      "localRecordSHA256": "3f932613c811b50bd3c179b4cc42c32955ea3b3e32867d6a5094ec58147d8b50",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 112101,
+      "referenceKey": "juvenilefang",
+      "localId": "juvenile-fang",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112102,
+      "referenceKey": "seasonedfang",
+      "localId": "seasoned-fang",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112103,
+      "referenceKey": "tyrantsfang",
+      "localId": "tyrants-fang",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112104,
+      "referenceKey": "sentryswoodenwhistle",
+      "localId": "sentrys-wooden-whistle",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112105,
+      "referenceKey": "warriorsmetalwhistle",
+      "localId": "warriors-metal-whistle",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 112106,
+      "referenceKey": "sauriancrownedwarriorsgoldenwhistle",
+      "localId": "saurian-crowned-warriors-golden-whistle",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113001,
+      "referenceKey": "hurricaneseed",
+      "localId": "hurricane-seed",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113002,
+      "referenceKey": "lightningprism",
+      "localId": "lightning-prism",
+      "localRecordSHA256": "10a921d03125adb6317cd2c4e787e6024ad0fb3655a09709cf0226ef9e11dff1",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113003,
+      "referenceKey": "dvalinsplume",
+      "localId": "dvalins-plume",
+      "localRecordSHA256": "3ff61cbc292ac1f9489960920ea736e49053042f4f772a284eb6b6d852bcda6f",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113004,
+      "referenceKey": "dvalinsclaw",
+      "localId": "dvalins-claw",
+      "localRecordSHA256": "f77fc49292a237c80a2307d0bfad97d0d4fd8807a83aebd6f067888ade17d0e1",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113005,
+      "referenceKey": "dvalinssigh",
+      "localId": "dvalins-sigh",
+      "localRecordSHA256": "a2be5316108aac9735be957f74731f6710b3c4cb964c2d651598c8a6e59161ce",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 113006,
+      "referenceKey": "tailofboreas",
+      "localId": "tail-of-boreas",
+      "localRecordSHA256": "ae7f99bce8cf46f3d204bf315c19177e22feedcf524997144800e072254d8b35",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 113007,
+      "referenceKey": "ringofboreas",
+      "localId": "ring-of-boreas",
+      "localRecordSHA256": "b5392a7cfff203362a4321387205fcf81665e464941fcecdcdcfd79bb9bb71d7",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 113008,
+      "referenceKey": "spiritlocketofboreas",
+      "localId": "spirit-locket-of-boreas",
+      "localRecordSHA256": "3d26810f9653d87ac88969cc223a1e4cb4aea7ffbb3b5217ab1a11db792ca022",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113009,
+      "referenceKey": "basaltpillar",
+      "localId": "basalt-petrification",
+      "localRecordSHA256": "376f51714397a6ed92b0186789dc6c3a09c9627d3b1a9de97388da7728e67a10",
+      "reason": "Preserve stable local ID; Chinese name and Geo Hypostasis source identify Basalt Pillar. Correct mistranslated English name and rarity in the candidate."
+    },
+    {
+      "numericId": 113010,
+      "referenceKey": "hoarfrostcore",
+      "localId": "hoarfrost-core",
+      "localRecordSHA256": "80d53296c4fa95ce42e0c53e0eb66b0dc8d071ec481ebc960a84b9c8ddf9355c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113011,
+      "referenceKey": "everflameseed",
+      "localId": "everflame-seed",
+      "localRecordSHA256": "b7b35fdb513373e0c090accf897693c3d5be756813dba8ee7599d2c3ee71ec9f",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113012,
+      "referenceKey": "cleansingheart",
+      "localId": "cleansing-heart",
+      "localRecordSHA256": "0e59db915250214ac349221ba469b599e42c0137b99b6bdaaca82d7e8cb997e5",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 113013,
+      "referenceKey": "tuskofmonoceroscaeli",
+      "localId": "tusk-of-monoceros-caeli",
+      "localRecordSHA256": "aa31c8808619c5844829d4379f83ecaf080f2994a9ff3cf4462530f55733ccd2",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113014,
+      "referenceKey": "shardofafoullegacy",
+      "localId": "shard-of-a-foul-legacy",
+      "localRecordSHA256": "b73bb195b6db8ab15414de21f5cb3200f8a38b42d9726c946a6e893352849f76",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113015,
+      "referenceKey": "shadowofthewarrior",
+      "localId": "shadow-of-the-warrior",
+      "localRecordSHA256": "e0dbfaa2630acdd69c3e20d3d986fd6de24ce389a5a110612a229674f810a426",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113016,
+      "referenceKey": "juvenilejade",
+      "localId": "juvenile-jade",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113017,
+      "referenceKey": "dragonlordscrown",
+      "localId": "dragon-lords-crown",
+      "localRecordSHA256": "438e186ec3d7fbcd952f2d00347c71e9815732f23480a6deda14e623e81a3297",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 113018,
+      "referenceKey": "bloodjadebranch",
+      "localId": "bloodjade-branch",
+      "localRecordSHA256": "7890dcf360c8bcfd196035fb9a1e9cfc50f4c984e46119f8a31f37a0fe44552b",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113019,
+      "referenceKey": "gildedscale",
+      "localId": "gilded-scale",
+      "localRecordSHA256": "0355f926b086c2fdbeb999988822fb66abbbdf6f47d958ff69e57675f185a0f4",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113020,
+      "referenceKey": "crystallinebloom",
+      "localId": "crystalline-bloom",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113022,
+      "referenceKey": "marionettecore",
+      "localId": "marionette-core",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113023,
+      "referenceKey": "perpetualheart",
+      "localId": "perpetual-heart",
+      "localRecordSHA256": "c8e43aae0b915cb60a3d762ca0eb241ef7401f2fc59a3446f9cf6e1fc80660cc",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 113024,
+      "referenceKey": "smolderingpearl",
+      "localId": "smoldering-pearl",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113025,
+      "referenceKey": "moltenmoment",
+      "localId": "molten-moment",
+      "localRecordSHA256": "c6bb41457d453fa9da7ad1e9b9fa8cd45ce662921b0ea236d90e135b63742da1",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113026,
+      "referenceKey": "hellfirebutterfly",
+      "localId": "hellfire-butterfly",
+      "localRecordSHA256": "6c88a97ed2177cc5735fb3e06e7adb0747f5cc1869a7caf9910a69c49e27c41c",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113027,
+      "referenceKey": "ashenheart",
+      "localId": "ashen-heart",
+      "localRecordSHA256": "5f8a5dbd7f04e8278c683a07a84d74703dc533e69c3fede9caec80dde5efc3c2",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113028,
+      "referenceKey": "dewofrepudiation",
+      "localId": "dew-of-repudiation",
+      "localRecordSHA256": "9c2e6ef5d2073e4aef557ca6c7abb57fa100597b21276c3b5dcfc97c53d2f48a",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113029,
+      "referenceKey": "stormbeads",
+      "localId": "storm-beads",
+      "localRecordSHA256": "dedc9c6f233221308993f92b59c694f85d41e94fad3ce9fd4c0e36dfe3ebdac9",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113030,
+      "referenceKey": "riftbornregalia",
+      "localId": "riftborn-regalia",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113031,
+      "referenceKey": "dragonheirsfalsefin",
+      "localId": "dragonheirs-false-fin",
+      "localRecordSHA256": "73a94d750144ae19e04d2072195631fa715d63664bf91e095ea8b701ef5d58d0",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113032,
+      "referenceKey": "mudraofthemaleficgeneral",
+      "localId": "mudra-of-the-malefic-general",
+      "localRecordSHA256": "f95813c19bc83047f7bdd5c69ec17d502df42f3f1f78e7860200c54589483633",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113033,
+      "referenceKey": "tearsofthecalamitousgod",
+      "localId": "tears-of-the-calamitous-god",
+      "localRecordSHA256": "a11f5aa9c1e4be8f4d11f51a1d5494b8dbfc3994df82afd1ac4864cd21f0fd0e",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113034,
+      "referenceKey": "themeaningofaeons",
+      "localId": "the-meaning-of-aeons",
+      "localRecordSHA256": "0040c29119a6ecbf41d62bb748d69a997655e40a7d8455700de868a2dd1b6982",
+      "reason": "Existing Chinese and English names agree on this numeric reference identity; retain the stable local ID."
+    },
+    {
+      "numericId": 113035,
+      "referenceKey": "runicfang",
+      "localId": "runic-fang",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113036,
+      "referenceKey": "majestichookedbeak",
+      "localId": "smaragdistite-jade-branch",
+      "localRecordSHA256": "972cdce6967afb5244094144b97cc7ec41732c21d6aca5597cde25c04c9eed2f",
+      "reason": "Preserve the unique stable local ID matching the English reference identity; explicitly correct the conflicting Chinese name from the paired numeric reference."
+    },
+    {
+      "numericId": 113037,
+      "referenceKey": "thunderclapfruitcore",
+      "localId": "thunderclap-fruitcore",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113038,
+      "referenceKey": "perpetualcaliber",
+      "localId": "perpetual-caliber",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113039,
+      "referenceKey": "lightguidingtetrahedron",
+      "localId": "light-guiding-tetrahedron",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113040,
+      "referenceKey": "quelledcreeper",
+      "localId": "quelled-creeper",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113041,
+      "referenceKey": "puppetstrings",
+      "localId": "puppet-strings",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113042,
+      "referenceKey": "mirrorofmushin",
+      "localId": "mirror-of-mushin",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113043,
+      "referenceKey": "dakasbell",
+      "localId": "dakas-bell",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113044,
+      "referenceKey": "pseudostamens",
+      "localId": "pseudo-stamens",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113045,
+      "referenceKey": "evergloomring",
+      "localId": "evergloom-ring",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113046,
+      "referenceKey": "worldspanfern",
+      "localId": "worldspan-fern",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113047,
+      "referenceKey": "primordialgreenbloom",
+      "localId": "primordial-greenbloom",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113048,
+      "referenceKey": "everamber",
+      "localId": "everamber",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113049,
+      "referenceKey": "artificedspareclockworkcomponentcoppelia",
+      "localId": "artificed-spare-clockwork-component-coppelia",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113050,
+      "referenceKey": "artificedspareclockworkcomponentcoppelius",
+      "localId": "artificed-spare-clockwork-component-coppelius",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113051,
+      "referenceKey": "emperorsresolution",
+      "localId": "emperors-resolution",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113052,
+      "referenceKey": "tourbillondevice",
+      "localId": "tourbillon-device",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113053,
+      "referenceKey": "fontemerunihorn",
+      "localId": "fontemer-unihorn",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113054,
+      "referenceKey": "lightlesssilkstring",
+      "localId": "lightless-silk-string",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113055,
+      "referenceKey": "lightlesseyeofthemaelstrom",
+      "localId": "lightless-eye-of-the-maelstrom",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113056,
+      "referenceKey": "lightlessmass",
+      "localId": "lightless-mass",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113057,
+      "referenceKey": "waterthatfailedtotranscend",
+      "localId": "water-that-failed-to-transcend",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113058,
+      "referenceKey": "cloudseamscale",
+      "localId": "cloudseam-scale",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113059,
+      "referenceKey": "fragmentofagoldenmelody",
+      "localId": "fragment-of-a-golden-melody",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113060,
+      "referenceKey": "fadingcandle",
+      "localId": "fading-candle",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113061,
+      "referenceKey": "silkenfeather",
+      "localId": "silken-feather",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113062,
+      "referenceKey": "denialandjudgment",
+      "localId": "denial-and-judgment",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113064,
+      "referenceKey": "markofthebindingblessing",
+      "localId": "mark-of-the-binding-blessing",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113065,
+      "referenceKey": "overripeflamegranate",
+      "localId": "overripe-flamegranate",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113066,
+      "referenceKey": "goldinscribedsecretsourcecore",
+      "localId": "gold-inscribed-secret-source-core",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113067,
+      "referenceKey": "ensnaringgaze",
+      "localId": "ensnaring-gaze",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113068,
+      "referenceKey": "erodedhorn",
+      "localId": "eroded-horn",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113069,
+      "referenceKey": "erodedsunfire",
+      "localId": "eroded-sunfire",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    },
+    {
+      "numericId": 113071,
+      "referenceKey": "talismanoftheenigmaticland",
+      "localId": "talisman-of-the-enigmatic-land",
+      "localRecordSHA256": null,
+      "reason": "No existing bilingual or unique English identity; create a definition candidate using this numeric reference and preserve missing required fields as held."
+    }
+  ],
+  "characters": [
+    {
+      "localId": "jean",
+      "referenceKey": "jean",
+      "numericId": 10000003,
+      "talentRecordId": 301
+    },
+    {
+      "localId": "venti",
+      "referenceKey": "venti",
+      "numericId": 10000022,
+      "talentRecordId": 2201
+    },
+    {
+      "localId": "xiao",
+      "referenceKey": "xiao",
+      "numericId": 10000026,
+      "talentRecordId": 2601
+    },
+    {
+      "localId": "kazuha",
+      "referenceKey": "kaedeharakazuha",
+      "numericId": 10000047,
+      "talentRecordId": 4701
+    },
+    {
+      "localId": "wanderer",
+      "referenceKey": "wanderer",
+      "numericId": 10000075,
+      "talentRecordId": 7501
+    },
+    {
+      "localId": "xianyun",
+      "referenceKey": "xianyun",
+      "numericId": 10000093,
+      "talentRecordId": 9301
+    },
+    {
+      "localId": "chasca",
+      "referenceKey": "chasca",
+      "numericId": 10000104,
+      "talentRecordId": 10401
+    },
+    {
+      "localId": "zhongli",
+      "referenceKey": "zhongli",
+      "numericId": 10000030,
+      "talentRecordId": 3001
+    },
+    {
+      "localId": "albedo",
+      "referenceKey": "albedo",
+      "numericId": 10000038,
+      "talentRecordId": 3801
+    },
+    {
+      "localId": "itto",
+      "referenceKey": "aratakiitto",
+      "numericId": 10000057,
+      "talentRecordId": 5701
+    },
+    {
+      "localId": "navia",
+      "referenceKey": "navia",
+      "numericId": 10000091,
+      "talentRecordId": 9101
+    },
+    {
+      "localId": "chiori",
+      "referenceKey": "chiori",
+      "numericId": 10000094,
+      "talentRecordId": 9401
+    },
+    {
+      "localId": "xilonen",
+      "referenceKey": "xilonen",
+      "numericId": 10000103,
+      "talentRecordId": 10301
+    },
+    {
+      "localId": "keqing",
+      "referenceKey": "keqing",
+      "numericId": 10000042,
+      "talentRecordId": 4201
+    },
+    {
+      "localId": "raiden-shogun",
+      "referenceKey": "raidenshogun",
+      "numericId": 10000052,
+      "talentRecordId": 5201
+    },
+    {
+      "localId": "yae-miko",
+      "referenceKey": "yaemiko",
+      "numericId": 10000058,
+      "talentRecordId": 5801
+    },
+    {
+      "localId": "cyno",
+      "referenceKey": "cyno",
+      "numericId": 10000071,
+      "talentRecordId": 7101
+    },
+    {
+      "localId": "clorinde",
+      "referenceKey": "clorinde",
+      "numericId": 10000098,
+      "talentRecordId": 9801
+    },
+    {
+      "localId": "nahida",
+      "referenceKey": "nahida",
+      "numericId": 10000073,
+      "talentRecordId": 7301
+    },
+    {
+      "localId": "alhaitham",
+      "referenceKey": "alhaitham",
+      "numericId": 10000078,
+      "talentRecordId": 7801
+    },
+    {
+      "localId": "tighnari",
+      "referenceKey": "tighnari",
+      "numericId": 10000069,
+      "talentRecordId": 6901
+    },
+    {
+      "localId": "baizhu",
+      "referenceKey": "baizhu",
+      "numericId": 10000082,
+      "talentRecordId": 8201
+    },
+    {
+      "localId": "emilie",
+      "referenceKey": "emilie",
+      "numericId": 10000099,
+      "talentRecordId": 9901
+    },
+    {
+      "localId": "kinich",
+      "referenceKey": "kinich",
+      "numericId": 10000101,
+      "talentRecordId": 10101
+    },
+    {
+      "localId": "mona",
+      "referenceKey": "mona",
+      "numericId": 10000041,
+      "talentRecordId": 4101
+    },
+    {
+      "localId": "tartaglia",
+      "referenceKey": "tartaglia",
+      "numericId": 10000033,
+      "talentRecordId": 3301
+    },
+    {
+      "localId": "kokomi",
+      "referenceKey": "sangonomiyakokomi",
+      "numericId": 10000054,
+      "talentRecordId": 5401
+    },
+    {
+      "localId": "ayato",
+      "referenceKey": "kamisatoayato",
+      "numericId": 10000066,
+      "talentRecordId": 6601
+    },
+    {
+      "localId": "nilou",
+      "referenceKey": "nilou",
+      "numericId": 10000070,
+      "talentRecordId": 7001
+    },
+    {
+      "localId": "neuvillette",
+      "referenceKey": "neuvillette",
+      "numericId": 10000087,
+      "talentRecordId": 8701
+    },
+    {
+      "localId": "furina",
+      "referenceKey": "furina",
+      "numericId": 10000089,
+      "talentRecordId": 8901
+    },
+    {
+      "localId": "sigewinne",
+      "referenceKey": "sigewinne",
+      "numericId": 10000095,
+      "talentRecordId": 9501
+    },
+    {
+      "localId": "mualani",
+      "referenceKey": "mualani",
+      "numericId": 10000102,
+      "talentRecordId": 10201
+    },
+    {
+      "localId": "diluc",
+      "referenceKey": "diluc",
+      "numericId": 10000016,
+      "talentRecordId": 1601
+    },
+    {
+      "localId": "klee",
+      "referenceKey": "klee",
+      "numericId": 10000029,
+      "talentRecordId": 2901
+    },
+    {
+      "localId": "hu-tao",
+      "referenceKey": "hutao",
+      "numericId": 10000046,
+      "talentRecordId": 4601
+    },
+    {
+      "localId": "yoimiya",
+      "referenceKey": "yoimiya",
+      "numericId": 10000049,
+      "talentRecordId": 4901
+    },
+    {
+      "localId": "lyney",
+      "referenceKey": "lyney",
+      "numericId": 10000084,
+      "talentRecordId": 8401
+    },
+    {
+      "localId": "arlecchino",
+      "referenceKey": "arlecchino",
+      "numericId": 10000096,
+      "talentRecordId": 9601
+    },
+    {
+      "localId": "dehya",
+      "referenceKey": "dehya",
+      "numericId": 10000079,
+      "talentRecordId": 7901
+    },
+    {
+      "localId": "mavuika",
+      "referenceKey": "mavuika",
+      "numericId": 10000106,
+      "talentRecordId": 10601
+    },
+    {
+      "localId": "ganyu",
+      "referenceKey": "ganyu",
+      "numericId": 10000037,
+      "talentRecordId": 3701
+    },
+    {
+      "localId": "ayaka",
+      "referenceKey": "kamisatoayaka",
+      "numericId": 10000002,
+      "talentRecordId": 201
+    },
+    {
+      "localId": "eula",
+      "referenceKey": "eula",
+      "numericId": 10000051,
+      "talentRecordId": 5101
+    },
+    {
+      "localId": "shenhe",
+      "referenceKey": "shenhe",
+      "numericId": 10000063,
+      "talentRecordId": 6301
+    },
+    {
+      "localId": "wriothesley",
+      "referenceKey": "wriothesley",
+      "numericId": 10000086,
+      "talentRecordId": 8601
+    },
+    {
+      "localId": "qiqi",
+      "referenceKey": "qiqi",
+      "numericId": 10000035,
+      "talentRecordId": 3501
+    },
+    {
+      "localId": "amber",
+      "referenceKey": "amber",
+      "numericId": 10000021,
+      "talentRecordId": 2101
+    },
+    {
+      "localId": "xiangling",
+      "referenceKey": "xiangling",
+      "numericId": 10000023,
+      "talentRecordId": 2301
+    },
+    {
+      "localId": "bennett",
+      "referenceKey": "bennett",
+      "numericId": 10000032,
+      "talentRecordId": 3201
+    },
+    {
+      "localId": "xinyan",
+      "referenceKey": "xinyan",
+      "numericId": 10000044,
+      "talentRecordId": 4401
+    },
+    {
+      "localId": "thoma",
+      "referenceKey": "thoma",
+      "numericId": 10000050,
+      "talentRecordId": 5001
+    },
+    {
+      "localId": "chevreuse",
+      "referenceKey": "chevreuse",
+      "numericId": 10000090,
+      "talentRecordId": 9001
+    },
+    {
+      "localId": "gaming",
+      "referenceKey": "gaming",
+      "numericId": 10000092,
+      "talentRecordId": 9201
+    },
+    {
+      "localId": "kachina",
+      "referenceKey": "kachina",
+      "numericId": 10000100,
+      "talentRecordId": 10001
+    },
+    {
+      "localId": "xingqiu",
+      "referenceKey": "xingqiu",
+      "numericId": 10000025,
+      "talentRecordId": 2501
+    },
+    {
+      "localId": "barbara",
+      "referenceKey": "barbara",
+      "numericId": 10000014,
+      "talentRecordId": 1401
+    },
+    {
+      "localId": "candace",
+      "referenceKey": "candace",
+      "numericId": 10000072,
+      "talentRecordId": 7201
+    },
+    {
+      "localId": "chongyun",
+      "referenceKey": "chongyun",
+      "numericId": 10000036,
+      "talentRecordId": 3601
+    },
+    {
+      "localId": "rosaria",
+      "referenceKey": "rosaria",
+      "numericId": 10000045,
+      "talentRecordId": 4501
+    },
+    {
+      "localId": "layla",
+      "referenceKey": "layla",
+      "numericId": 10000074,
+      "talentRecordId": 7401
+    },
+    {
+      "localId": "charlotte",
+      "referenceKey": "charlotte",
+      "numericId": 10000088,
+      "talentRecordId": 8801
+    },
+    {
+      "localId": "diona",
+      "referenceKey": "diona",
+      "numericId": 10000039,
+      "talentRecordId": 3901
+    },
+    {
+      "localId": "freminet",
+      "referenceKey": "freminet",
+      "numericId": 10000085,
+      "talentRecordId": 8501
+    },
+    {
+      "localId": "mika",
+      "referenceKey": "mika",
+      "numericId": 10000080,
+      "talentRecordId": 8001
+    },
+    {
+      "localId": "citlali",
+      "referenceKey": "citlali",
+      "numericId": 10000107,
+      "talentRecordId": 10701
+    },
+    {
+      "localId": "fischl",
+      "referenceKey": "fischl",
+      "numericId": 10000031,
+      "talentRecordId": 3101
+    },
+    {
+      "localId": "beidou",
+      "referenceKey": "beidou",
+      "numericId": 10000024,
+      "talentRecordId": 2401
+    },
+    {
+      "localId": "razor",
+      "referenceKey": "razor",
+      "numericId": 10000020,
+      "talentRecordId": 2001
+    },
+    {
+      "localId": "kuki-shinobu",
+      "referenceKey": "kukishinobu",
+      "numericId": 10000065,
+      "talentRecordId": 6501
+    },
+    {
+      "localId": "dori",
+      "referenceKey": "dori",
+      "numericId": 10000068,
+      "talentRecordId": 6801
+    },
+    {
+      "localId": "kujou-sara",
+      "referenceKey": "kujousara",
+      "numericId": 10000056,
+      "talentRecordId": 5601
+    },
+    {
+      "localId": "sethos",
+      "referenceKey": "sethos",
+      "numericId": 10000097,
+      "talentRecordId": 9701
+    },
+    {
+      "localId": "ororon",
+      "referenceKey": "ororon",
+      "numericId": 10000105,
+      "talentRecordId": 10501
+    },
+    {
+      "localId": "sucrose",
+      "referenceKey": "sucrose",
+      "numericId": 10000043,
+      "talentRecordId": 4301
+    },
+    {
+      "localId": "sayu",
+      "referenceKey": "sayu",
+      "numericId": 10000053,
+      "talentRecordId": 5301
+    },
+    {
+      "localId": "faruzan",
+      "referenceKey": "faruzan",
+      "numericId": 10000076,
+      "talentRecordId": 7601
+    },
+    {
+      "localId": "lynette",
+      "referenceKey": "lynette",
+      "numericId": 10000083,
+      "talentRecordId": 8301
+    },
+    {
+      "localId": "heizou",
+      "referenceKey": "shikanoinheizou",
+      "numericId": 10000059,
+      "talentRecordId": 5901
+    },
+    {
+      "localId": "lan-yan",
+      "referenceKey": "lanyan",
+      "numericId": 10000108,
+      "talentRecordId": 10801
+    },
+    {
+      "localId": "collei",
+      "referenceKey": "collei",
+      "numericId": 10000067,
+      "talentRecordId": 6701
+    },
+    {
+      "localId": "yaoyao",
+      "referenceKey": "yaoyao",
+      "numericId": 10000077,
+      "talentRecordId": 7701
+    },
+    {
+      "localId": "kaveh",
+      "referenceKey": "kaveh",
+      "numericId": 10000081,
+      "talentRecordId": 8101
+    },
+    {
+      "localId": "kirara",
+      "referenceKey": "kirara",
+      "numericId": 10000061,
+      "talentRecordId": 6101
+    },
+    {
+      "localId": "ningguang",
+      "referenceKey": "ningguang",
+      "numericId": 10000027,
+      "talentRecordId": 2701
+    },
+    {
+      "localId": "noelle",
+      "referenceKey": "noelle",
+      "numericId": 10000034,
+      "talentRecordId": 3401
+    },
+    {
+      "localId": "gorou",
+      "referenceKey": "gorou",
+      "numericId": 10000055,
+      "talentRecordId": 5501
+    },
+    {
+      "localId": "yun-jin",
+      "referenceKey": "yunjin",
+      "numericId": 10000064,
+      "talentRecordId": 6401
+    },
+    {
+      "localId": "kaeya",
+      "referenceKey": "kaeya",
+      "numericId": 10000015,
+      "talentRecordId": 1501
+    },
+    {
+      "localId": "lisa",
+      "referenceKey": "lisa",
+      "numericId": 10000006,
+      "talentRecordId": 601
+    }
+  ]
+}

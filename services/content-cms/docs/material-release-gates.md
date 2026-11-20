@@ -95,3 +95,53 @@ if a local mirror predates a published CMS overlay. `localMirrorParity` and
 audit and public audit still use the verified published sources. A verified
 `review-sources.json` capture permits subsequent offline review without repeating
 the full history read or treating a Git mirror as published A.
+
+## R136 recipe and definition candidates
+
+`genshin-recipe-candidates.ts` prepares held overlays from the R135 relation
+candidate and the captured R134 materials/characters. It verifies SHA256 and Git
+blob evidence, explicit numeric-to-local mappings, both material locales, exact
+stage labels and positive safe-integer costs. Character and talent records have
+separate numeric ID namespaces. Talent costs mean **one talent per level**.
+Every changed stage retains its original ingredients and pinned reference path,
+cost key and hash. Existing ingredient display order is retained where possible.
+
+The explicit mapping record is
+`reviews/2026-11-20-genshin-recipe-decisions.json`. Existing local IDs remain
+stable; conflicting Chinese/English names receive explicit corrections rather
+than a runtime alias. Treasure Hoarder and Fatui insignias remain different
+numeric identities. A Chinese match cannot reassign a local record whose English
+name identifies a different numeric material. The original six conflicts have
+individual resolutions in the R136 report.
+
+The candidate covers 90 characters and 1,350 stages, with 1,066 changed stages.
+It proposes 84 new definitions: 68 complete records and 16 specialties whose
+reference files omit rarity. Those 16 drafts retain the missing field and are
+excluded from the material overlay; costs still reference them, so the normal
+dependency gate correctly blocks. It also proposes corrections to 45 existing
+definitions. For 33 existing specialties the old local rarity is retained and
+explicitly marked unverified, never inferred from category or neighboring items.
+New site types are derived from reference type and cost usage; that classification
+does not qualify the site's material consumers. No Japanese translation is made.
+
+The self-contained compressed fixture
+`reviews/2026-11-20-genshin-recipes-r136.json.gz` contains exact source/reference
+texts, Git blobs, mappings, MIT license and expected output pins. Regression
+tests can replay the batch without report caches, network requests or a new
+history audit. The report runner can reproduce outputs in a new directory:
+
+```sh
+./services/content-cms/node_modules/.bin/tsx \
+  reports/genshin-recipe-candidates-2026-11-20-r136/prepare.mts \
+  /absolute/new-candidate-directory
+```
+
+The 14 unresolved legacy material identities retain their original occurrences
+in the held ledger. Their replacement **in the candidate** is justified by the
+specific character/stage reference, not by assigning an alias to an unknown ID.
+Live raw data, mirrors, CMS and production remain unchanged by this batch. The
+candidate still lacks 16 material definitions and the `mualani`/`ororon` character
+records. Neither complete individual drafts nor an overlay's integrity hash
+grant import or publication permission. R134 remains published A; future work
+must reconcile CMS import O and separately qualify numeric, relationship and new
+entity changes, material consumers, candidate/recovery builds and exact CI.
