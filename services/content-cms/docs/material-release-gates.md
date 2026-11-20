@@ -192,3 +192,29 @@ revision, lost skills and source preservation. In-memory server rendering tests
 exercise both characters and all 49 specialty details/collection links in three
 locales. These HTML data tests do not verify media or qualify a new entity for
 production. Raw data, CMS, production scopes and published R134 A stay unchanged.
+
+## R138 technical media repair and generic skill support
+
+The two canonical CDN objects were absent in both public HEAD requests and
+authenticated R2 reads. R138 adds only those objects to `gachia-images` and the
+Genshin owner's `public/images/genshin/characters/` directory. Identity comes
+from the R137 avatar numeric IDs and their API icon names (Ororon uses the asset
+name `Olorun`). Source PNGs, source hashes and conversion receipts are retained.
+The 256×256 WebP files preserve every visible pixel and alpha value; the encoder
+normalizes hidden RGB under fully transparent pixels. Public HEAD/GET return
+200 and fetched hashes equal the owner assets. No Worker was deployed and no
+Main image copy was added. This proves availability, not ownership or licensing.
+
+`GenshinSkillSet` now declares optional `passive3` and `specialJump`. The generic
+adapter emits `passive-3` as `passive` and `special-jump` as the additive shared
+`special` skill type. Both public generic data loaders and JSON/schema round
+trips retain the two candidates' 15 skills without changing the existing
+upcoming-character filter or synthesizing optional skills. Application code is
+local until the next qualified Genshin release.
+
+The R138 candidate-media patch changes only the two R137 candidate `image`
+fields. All 115 previous character definitions, materials and recipes remain
+unchanged. The R137 historical fixture and held decisions are immutable. This
+technical repair does not grant numeric, relationship, new-entity or recovery
+publication qualification and does not advance published R134 A. Continue CMS
+O / published A / candidate reconciliation from the R138 delivery.

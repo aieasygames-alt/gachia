@@ -111,7 +111,7 @@ export interface Skill {
   id: string;
   name: Record<SupportedLocale, string>;
   description: Record<SupportedLocale, string>;
-  type: 'normal' | 'elemental' | 'burst' | 'passive';
+  type: 'normal' | 'elemental' | 'burst' | 'special' | 'passive';
   icon?: string;
 }
 

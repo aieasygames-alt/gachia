@@ -1,0 +1,54 @@
+{
+  "kind": "genshin-character-image-source-r138",
+  "observedAt": "2026-11-20T11:17:46.517768+00:00",
+  "parentDeliveryPin": "8cedaab55d01e33d74b75a942ec5de7f637956bfb53e926d190400a9e078a5b0",
+  "entries": [
+    {
+      "localId": "mualani",
+      "avatarId": 10000102,
+      "nameEn": "Mualani",
+      "sourceIcon": "UI_AvatarIcon_Mualani",
+      "profile": {
+        "sourcePath": "api/avatars/mualani.json",
+        "sha256": "f2290538e05bc3b7425224a4935609a9b604d23ac917f828d03f1f393e0fd602",
+        "url": "https://gi.yatta.moe/api/v2/en/avatar/10000102"
+      },
+      "source": {
+        "url": "https://gi.yatta.moe/assets/UI/UI_AvatarIcon_Mualani.png",
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/source/mualani.png",
+        "sha256": "7312c1d71909fd280ba46ebff8b4dfbe2b00eb048515fda0acd735192321c393",
+        "bytes": 33016,
+        "headers": {
+          "content-type": "image/png",
+          "content-length": "33016",
+          "etag": "\"66d1ba0f-80f8\"",
+          "last-modified": "Fri, 30 Aug 2024 12:24:47 GMT"
+        }
+      }
+    },
+    {
+      "localId": "ororon",
+      "avatarId": 10000105,
+      "nameEn": "Ororon",
+      "sourceIcon": "UI_AvatarIcon_Olorun",
+      "profile": {
+        "sourcePath": "api/avatars/ororon.json",
+        "sha256": "251cd22065ab36243561a427061be7638eef9efc82e12b206545f15f645af075",
+        "url": "https://gi.yatta.moe/api/v2/en/avatar/10000105"
+      },
+      "source": {
+        "url": "https://gi.yatta.moe/assets/UI/UI_AvatarIcon_Olorun.png",
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/source/ororon.png",
+        "sha256": "7dbb8b01985361d762af212d1e428c889548e243ec55748820cb2547c6a13bf0",
+        "bytes": 41980,
+        "headers": {
+          "content-type": "image/png",
+          "content-length": "41980",
+          "etag": "\"673b1576-a3fc\"",
+          "last-modified": "Mon, 18 Nov 2024 10:22:46 GMT"
+        }
+      }
+    }
+  ],
+  "rights": "game artwork reference; no ownership or license certification asserted"
+}

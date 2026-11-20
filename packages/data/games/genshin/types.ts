@@ -18,8 +18,10 @@ export interface GenshinSkillSet {
   normalAttack: GenshinSkillBase;
   elementalSkill: GenshinActiveSkill;
   elementalBurst: GenshinActiveSkill;
+  specialJump?: GenshinSkillBase;
   passive1: GenshinSkillBase;
   passive2: GenshinSkillBase;
+  passive3?: GenshinSkillBase;
   passive4?: GenshinSkillBase;
 }
 

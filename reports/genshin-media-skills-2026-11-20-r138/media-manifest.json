@@ -1,0 +1,95 @@
+{
+  "kind": "genshin-character-media-r138",
+  "parentDeliveryPin": "8cedaab55d01e33d74b75a942ec5de7f637956bfb53e926d190400a9e078a5b0",
+  "entries": [
+    {
+      "localId": "mualani",
+      "avatarId": 10000102,
+      "sourceIcon": "UI_AvatarIcon_Mualani",
+      "profile": {
+        "sourcePath": "api/avatars/mualani.json",
+        "sha256": "f2290538e05bc3b7425224a4935609a9b604d23ac917f828d03f1f393e0fd602",
+        "url": "https://gi.yatta.moe/api/v2/en/avatar/10000102"
+      },
+      "source": {
+        "url": "https://gi.yatta.moe/assets/UI/UI_AvatarIcon_Mualani.png",
+        "path": "source/mualani.png",
+        "sha256": "7312c1d71909fd280ba46ebff8b4dfbe2b00eb048515fda0acd735192321c393",
+        "bytes": 33016,
+        "headers": {
+          "content-type": "image/png",
+          "content-length": "33016",
+          "etag": "\"66d1ba0f-80f8\"",
+          "last-modified": "Fri, 30 Aug 2024 12:24:47 GMT"
+        }
+      },
+      "pathname": "/images/genshin/characters/mualani.webp",
+      "url": "https://img.gachia.com/images/genshin/characters/mualani.webp",
+      "ownerPath": "apps/game-genshin/public/images/genshin/characters/mualani.webp",
+      "object": {
+        "bucket": "gachia-images",
+        "key": "images/genshin/characters/mualani.webp"
+      },
+      "sha256": "0223fc64236af8efa1d955e9c5728943acde9187110f6e43d7f98d51d49decb1",
+      "bytes": 23674,
+      "mime": "image/webp",
+      "width": 256,
+      "height": 256,
+      "transform": {
+        "tool": "sharp",
+        "version": "0.35.5",
+        "lossless": true,
+        "effort": 6,
+        "visiblePixelsAndAlphaIdentical": true,
+        "transparentRGB": "encoder-normalized"
+      },
+      "rights": "game artwork reference; no ownership or license certification asserted"
+    },
+    {
+      "localId": "ororon",
+      "avatarId": 10000105,
+      "sourceIcon": "UI_AvatarIcon_Olorun",
+      "profile": {
+        "sourcePath": "api/avatars/ororon.json",
+        "sha256": "251cd22065ab36243561a427061be7638eef9efc82e12b206545f15f645af075",
+        "url": "https://gi.yatta.moe/api/v2/en/avatar/10000105"
+      },
+      "source": {
+        "url": "https://gi.yatta.moe/assets/UI/UI_AvatarIcon_Olorun.png",
+        "path": "source/ororon.png",
+        "sha256": "7dbb8b01985361d762af212d1e428c889548e243ec55748820cb2547c6a13bf0",
+        "bytes": 41980,
+        "headers": {
+          "content-type": "image/png",
+          "content-length": "41980",
+          "etag": "\"673b1576-a3fc\"",
+          "last-modified": "Mon, 18 Nov 2024 10:22:46 GMT"
+        }
+      },
+      "pathname": "/images/genshin/characters/ororon.webp",
+      "url": "https://img.gachia.com/images/genshin/characters/ororon.webp",
+      "ownerPath": "apps/game-genshin/public/images/genshin/characters/ororon.webp",
+      "object": {
+        "bucket": "gachia-images",
+        "key": "images/genshin/characters/ororon.webp"
+      },
+      "sha256": "cb2b871be8fbb26fe2942df72252e182ae0f4b02eccec194b343305b61402e84",
+      "bytes": 29784,
+      "mime": "image/webp",
+      "width": 256,
+      "height": 256,
+      "transform": {
+        "tool": "sharp",
+        "version": "0.35.5",
+        "lossless": true,
+        "effort": 6,
+        "visiblePixelsAndAlphaIdentical": true,
+        "transparentRGB": "encoder-normalized"
+      },
+      "rights": "game artwork reference; no ownership or license certification asserted"
+    }
+  ],
+  "workerDeploymentRequiredForCDN": false,
+  "cmsWrites": false,
+  "publishable": false
+}

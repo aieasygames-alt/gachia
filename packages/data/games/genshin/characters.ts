@@ -81,6 +81,14 @@ function mapSkills(skills: GenshinCharacter['skills']): Character['skills'] {
       type: 'burst',
     });
   }
+  if (skills.specialJump) {
+    result.push({
+      id: 'special-jump',
+      name: { zh: skills.specialJump.name, en: skills.specialJump.nameEn, ja: skills.specialJump.nameEn },
+      description: { zh: skills.specialJump.description, en: skills.specialJump.descriptionEn, ja: skills.specialJump.descriptionEn },
+      type: 'special',
+    });
+  }
   if (skills.passive1) {
     result.push({
       id: 'passive-1',
@@ -94,6 +102,14 @@ function mapSkills(skills: GenshinCharacter['skills']): Character['skills'] {
       id: 'passive-2',
       name: { zh: skills.passive2.name, en: skills.passive2.nameEn, ja: skills.passive2.nameEn },
       description: { zh: skills.passive2.description, en: skills.passive2.descriptionEn, ja: skills.passive2.descriptionEn },
+      type: 'passive',
+    });
+  }
+  if (skills.passive3) {
+    result.push({
+      id: 'passive-3',
+      name: { zh: skills.passive3.name, en: skills.passive3.nameEn, ja: skills.passive3.nameEn },
+      description: { zh: skills.passive3.description, en: skills.passive3.descriptionEn, ja: skills.passive3.descriptionEn },
       type: 'passive',
     });
   }
