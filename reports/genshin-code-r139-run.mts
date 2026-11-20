@@ -50,8 +50,8 @@ async function command(exe: string, args: string[], cwd: string, env: any, log: 
 }
 async function staging(token: string) {
   const out: any = {}
-  for (const name of ['genshin', 'nte', 'azur-promilia']) {
-    const base = `https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/gachia-game-${name}-staging`
+  for (const name of ['gachia-game-genshin-staging', 'gachia-game-azur-promilia-staging', 'gachia-router-staging']) {
+    const base = `https://api.cloudflare.com/client/v4/accounts/e6472b6c6172a3ac1e1596ef100543ae/workers/scripts/${name}`
     out[name] = {}
     for (const endpoint of ['deployments', 'settings']) {
       const response = await unifiedProductionRead(base + '/' + endpoint, { method: 'GET', headers: { authorization: 'Bearer ' + token }, signal: AbortSignal.timeout(30000) })
