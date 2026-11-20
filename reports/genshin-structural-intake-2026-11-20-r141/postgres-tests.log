@@ -1,0 +1,106 @@
+The files belonging to this database system will be owned by user "robert".
+This user must also own the server process.
+
+
+The database cluster will be initialized with this locale configuration:
+  locale provider:   libc
+  LC_COLLATE:  C
+  LC_CTYPE:    C
+  LC_MESSAGES: en_US.UTF-8
+  LC_MONETARY: C
+  LC_NUMERIC:  C
+  LC_TIME:     C
+The default database encoding has accordingly been set to "SQL_ASCII".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+creating directory /var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/genshin-stage-pg-8Lp8XP/db ... 
+ok
+
+creating subdirectories ... 
+ok
+
+selecting dynamic shared memory implementation ... 
+posix
+selecting default "max_connections" ... 
+100
+selecting default "shared_buffers" ... 
+128MB
+selecting default time zone ... 
+Asia/Shanghai
+creating configuration files ... 
+ok
+running bootstrap script ... 
+ok
+
+performing post-bootstrap initialization ... 
+ok
+syncing data to disk ... 
+ok
+
+Success. You can now start the database server using:
+
+
+    '/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/@embedded-postgres+darwin-arm64@17.6.0-beta.15/node_modules/@embedded-postgres/darwin-arm64/native/bin/pg_ctl' -D /var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/genshin-stage-pg-8Lp8XP/db -l logfile start
+
+
+2026-11-20 23:14:19.544 CST [19595] LOG:  starting PostgreSQL 17.6 on x86_64-apple-darwin23.6.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.6), 64-bit
+
+2026-11-20 23:14:19.544 CST [19595] LOG:  listening on IPv4 address "127.0.0.1", port 53249
+
+2026-11-20 23:14:19.544 CST [19595] LOG:  listening on Unix socket "/var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/genshin-stage-pg-8Lp8XP/.s.PGSQL.53249"
+
+2026-11-20 23:14:19.546 CST [19598] LOG:  database system was shut down at 2026-11-20 23:14:19 CST
+
+2026-11-20 23:14:19.548 CST [19595] LOG:  database system is ready to accept connections
+
+[23:14:21] [32mINFO[39m: [36mReading migration files from /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/src/migrations[39m
+
+[23:14:21] [32mINFO[39m: [36mMigrating: 20261101_074512_editor_initial[39m
+
+[23:14:21] [32mINFO[39m: [36mMigrated:  20261101_074512_editor_initial (76ms)[39m
+
+[23:14:21] [32mINFO[39m: [36mMigrating: 20261105_063243_unified_content[39m
+
+[23:14:21] [32mINFO[39m: [36mMigrated:  20261105_063243_unified_content (5ms)[39m
+
+[23:14:21] [32mINFO[39m: [36mDone.[39m
+
+▶ structural intake uses real database transactions, read-only ACLs and repeat verification
+  ✔ failure after creating all 179 revisions rolls back revisions and manifest together (852.641083ms)
+
+  ✔ stale live CMS blocks staging before any candidate write (678.639875ms)
+
+  ✔ atomic import stages exactly 179 held revisions while skipping 42 saved drafts (938.54825ms)
+
+  ✔ repeated import performs reads without another create or any content update (663.51525ms)
+
+  ✔ staff can inspect stages; anonymous and ordinary administrative writes are denied (2.219334ms)
+
+  ✔ stored revision or manifest corruption is rejected on read and repeat (684.840292ms)
+
+✔ structural intake uses real database transactions, read-only ACLs and repeat verification (7192.490375ms)
+
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7721.663458
+
+2026-11-20 23:14:29.033 CST [19595] LOG:  received fast shutdown request
+
+2026-11-20 23:14:29.034 CST [19595] LOG:  aborting any active transactions
+
+2026-11-20 23:14:29.035 CST [19595] LOG:  background worker "logical replication launcher" (PID 19601) exited with exit code 1
+
+2026-11-20 23:14:29.035 CST [19596] LOG:  shutting down
+
+2026-11-20 23:14:29.035 CST [19596] LOG:  checkpoint starting: shutdown immediate
+
+2026-11-20 23:14:29.097 CST [19596] LOG:  checkpoint complete: wrote 1827 buffers (11.2%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.049 s, sync=0.014 s, total=0.063 s; sync files=659, longest=0.001 s, average=0.001 s; distance=11521 kB, estimate=11521 kB; lsn=0/20486A0, redo lsn=0/20486A0
+
+2026-11-20 23:14:29.100 CST [19595] LOG:  database system is shut down

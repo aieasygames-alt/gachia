@@ -1,0 +1,30 @@
+{
+  "sourceCommit": "30d3ecc2f83ec232d1abed5c325141aa8406fc7b",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261120T151905Z-genshin-stage-r141-30d3ecc2/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261120T151905Z-genshin-stage-r141-30d3ecc2/application-manifest.json",
+    "pin": "fca29fd40b359c52ca2c55f6bf3bc25049078168ca16f95c59b5e2fbd05ffb2e"
+  },
+  "buildID": "XWyTCu4vPkx__D9vS29Wv",
+  "files": 787,
+  "releaseFiles": 354,
+  "databaseMigrationRequired": false,
+  "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261120T152456Z-898be3",
+  "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/genshin-stage-r141-30d3ecc2f83e",
+  "healthy": true,
+  "allDatabaseTablesUnchanged": true,
+  "schemaMigrationRun": false,
+  "previousApplicationPreserved": true,
+  "previousManifest": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/application-manifest-initial.json",
+    "pin": "78ca4080459087a81d47e9b6dc53258d2f018f9f776ef03f9af27239d1dc95cf"
+  },
+  "packagingRepair": {
+    "file": "packages/data/package.json",
+    "pin": "0baaec4954270ec6bde99dea05a800fe1a42e80018347d5e70271737a722d97e",
+    "reason": "ESM boundary required for named TypeScript exports",
+    "databaseOpenedByFailedAttempt": false,
+    "sourceCodeOrBuildChanged": false
+  }
+}

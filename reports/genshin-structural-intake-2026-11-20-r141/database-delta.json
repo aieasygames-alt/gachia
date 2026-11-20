@@ -1,0 +1,30 @@
+{
+  "tables": 42,
+  "unchangedTables": 40,
+  "changed": [
+    {
+      "table": "migration_batches",
+      "before": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "after": {
+        "rows": 1,
+        "sha256": "db2fe4b05ffc9a82dd0f54fd548b70228cfa872d8765b2e698755d88d8009345"
+      }
+    },
+    {
+      "table": "migration_records",
+      "before": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "after": {
+        "rows": 179,
+        "sha256": "410cbd1ea5748e44fc5e1db37d07785b0b99c88a2cc9dba982ad61fdd4e0042c"
+      }
+    }
+  ],
+  "contentAndVersionsUnchanged": true,
+  "schemaMigration": false
+}

@@ -1,0 +1,18 @@
+[⣷] Pulling schema from database...
+[2K[1G[✓] Pulling schema from database...
+▶ structural intake uses real database transactions, read-only ACLs and repeat verification
+  ✔ failure after creating all 179 revisions rolls back revisions and manifest together (750.973333ms)
+  ✔ stale live CMS blocks staging before any candidate write (714.213125ms)
+  ✔ atomic import stages exactly 179 held revisions while skipping 42 saved drafts (910.971292ms)
+  ✔ repeated import performs reads without another create or any content update (712.493041ms)
+  ✔ staff can inspect stages; anonymous and ordinary administrative writes are denied (1.9005ms)
+  ✔ stored revision or manifest corruption is rejected on read and repeat (781.398334ms)
+✔ structural intake uses real database transactions, read-only ACLs and repeat verification (8100.20725ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8645.796875

@@ -1,0 +1,1086 @@
+{
+  "stageKey": "f173c9de5587920b011ab9d9c3a82015634f296c8e569d315c5882860b21c83d",
+  "batchId": 1,
+  "records": [
+    {
+      "key": "character-materials:albedo",
+      "id": 1,
+      "revisionKey": "f15669d40ee9f2b10b381fb2d2c40c0dd523a7af83ff20e862ea0a42f7fbe2c8",
+      "hold": true
+    },
+    {
+      "key": "character-materials:alhaitham",
+      "id": 2,
+      "revisionKey": "57070777cee360a801a7e1624d5ba92d0280f0e678759ac757bc7f9e7cca7c95",
+      "hold": true
+    },
+    {
+      "key": "character-materials:amber",
+      "id": 3,
+      "revisionKey": "65ff199eb997628aa978a78c502515d0d60a7dac78058bce23a81192baaa8279",
+      "hold": true
+    },
+    {
+      "key": "character-materials:arlecchino",
+      "id": 4,
+      "revisionKey": "f51f73a3ca98578ae12d54b5fcdb4f635c89b756317a7d2cf503adbb477a91bf",
+      "hold": true
+    },
+    {
+      "key": "character-materials:ayaka",
+      "id": 5,
+      "revisionKey": "7ada3f637ead55aa215377bbb4b17af1383a5b8eb1dca428d90cb6d5ac5b8258",
+      "hold": true
+    },
+    {
+      "key": "character-materials:ayato",
+      "id": 6,
+      "revisionKey": "aec011943777614d8f4694b94ba10324ea418e4f7918c27b6acb8dfd383ab9b9",
+      "hold": true
+    },
+    {
+      "key": "character-materials:baizhu",
+      "id": 7,
+      "revisionKey": "80d5581a371f4f45938882b6f7882356c7655a7dfd58be532cefc4c58f46166e",
+      "hold": true
+    },
+    {
+      "key": "character-materials:barbara",
+      "id": 8,
+      "revisionKey": "8a6c9c0e873c6b692f3a7794fef5d5674421d3cc069b17651cc167e9816153a7",
+      "hold": true
+    },
+    {
+      "key": "character-materials:beidou",
+      "id": 9,
+      "revisionKey": "6bbd95d3ad02e49121b43717edcd8058b2bb8266ebe0a9ffbc00daea38508630",
+      "hold": true
+    },
+    {
+      "key": "character-materials:bennett",
+      "id": 10,
+      "revisionKey": "5072af0e475ed67baf33a2176876045b8fcf68f41e7933eec5f597d3eec3d630",
+      "hold": true
+    },
+    {
+      "key": "character-materials:candace",
+      "id": 11,
+      "revisionKey": "afe04aaf7c1adf78697baad641594e6555251527d4efbf9ef0aa05005a19eaaa",
+      "hold": true
+    },
+    {
+      "key": "character-materials:charlotte",
+      "id": 12,
+      "revisionKey": "8c8d71449201d5c5043d75b940060495cd95ae1a8604c77fab1669723f83bca1",
+      "hold": true
+    },
+    {
+      "key": "character-materials:chasca",
+      "id": 13,
+      "revisionKey": "18f322dcb249febf7dc394cb2c610cae6f6304ae9a795d83f280861279597375",
+      "hold": true
+    },
+    {
+      "key": "character-materials:chevreuse",
+      "id": 14,
+      "revisionKey": "0fb4e87702ac5a56cb6086835678316f8abf22c1fd9b8a2f680e627ad8083440",
+      "hold": true
+    },
+    {
+      "key": "character-materials:chiori",
+      "id": 15,
+      "revisionKey": "8b73d9bbf617bdfb60adf016076c3f7936deb7e7959a6e836b3316b22fe29075",
+      "hold": true
+    },
+    {
+      "key": "character-materials:chongyun",
+      "id": 16,
+      "revisionKey": "76ff04f3dcf0e08262f92d9e9f80fd220a07ee81668aa08999bfaabbbbd2a39b",
+      "hold": true
+    },
+    {
+      "key": "character-materials:citlali",
+      "id": 17,
+      "revisionKey": "17598f16fe86fd4d0a2014385933a201f25d8ad9c285b363ab309b3694298b73",
+      "hold": true
+    },
+    {
+      "key": "character-materials:clorinde",
+      "id": 18,
+      "revisionKey": "f375e79718e24538aef296bf43342474e8b92d2276db076cb67c6935a910eb5d",
+      "hold": true
+    },
+    {
+      "key": "character-materials:collei",
+      "id": 19,
+      "revisionKey": "0b43254effea94f46c1d6cd98d230cf231aa153a6bf1e635b72634b55f9a1ea0",
+      "hold": true
+    },
+    {
+      "key": "character-materials:cyno",
+      "id": 20,
+      "revisionKey": "8f2dac1a3a7d5712c40d820e47c5633fa6ae43b888d11318a99e5cfe27698a94",
+      "hold": true
+    },
+    {
+      "key": "character-materials:dehya",
+      "id": 21,
+      "revisionKey": "ec4db8d110e4ca42514f1c009782e55d6f36bc4d35ea7df534ef2ec6d76c62b1",
+      "hold": true
+    },
+    {
+      "key": "character-materials:diluc",
+      "id": 22,
+      "revisionKey": "8d8278f5f50056d46ec5733f26cb40bc50734a67c8be6e1149d33fbdc9d8cb7f",
+      "hold": true
+    },
+    {
+      "key": "character-materials:diona",
+      "id": 23,
+      "revisionKey": "4c44c3c38c931b86de677441893f4c626bebaadd9eed0571ae7004984aedc497",
+      "hold": true
+    },
+    {
+      "key": "character-materials:dori",
+      "id": 24,
+      "revisionKey": "8dec43a55ba51270d9747c807a89dec7b5e9c2004d47ec1f920152902d3f3e98",
+      "hold": true
+    },
+    {
+      "key": "character-materials:emilie",
+      "id": 25,
+      "revisionKey": "86bfec6923b9ee5fce8349bd7ec694c1faeb783ba8d803600e5acf9da7f12c98",
+      "hold": true
+    },
+    {
+      "key": "character-materials:eula",
+      "id": 26,
+      "revisionKey": "c3521e5eb1d5e2c7e6e4de48888bdd8d8e79d7b9a6a1712ba63f0840bcfde9fb",
+      "hold": true
+    },
+    {
+      "key": "character-materials:faruzan",
+      "id": 27,
+      "revisionKey": "fe38974d3abedec66008f834de995b2b4a40739ec51a10682affe8147b50ae64",
+      "hold": true
+    },
+    {
+      "key": "character-materials:fischl",
+      "id": 28,
+      "revisionKey": "d353393a8f5b4fe79a7b27d7d5d195e8e71de4198765a5739707c32b82da913a",
+      "hold": true
+    },
+    {
+      "key": "character-materials:freminet",
+      "id": 29,
+      "revisionKey": "c93ae7dd45e62ed22c5aad9e974ffaaffe4c9b72d26adde8d4b920d07a4a7037",
+      "hold": true
+    },
+    {
+      "key": "character-materials:furina",
+      "id": 30,
+      "revisionKey": "d50bae7e9a6e5a57d5184606f7774acf0ecb1f212ee34477d6f230ee17d7ace8",
+      "hold": true
+    },
+    {
+      "key": "character-materials:gaming",
+      "id": 31,
+      "revisionKey": "7d856078b389d85cff020cf04def02f679c0a05a6d40e6b8d04f99f2766a37cf",
+      "hold": true
+    },
+    {
+      "key": "character-materials:ganyu",
+      "id": 32,
+      "revisionKey": "fb680fb1f535d4ef25010f308cc2f836623aa0e4bdab1434f6d76c37e3c109f3",
+      "hold": true
+    },
+    {
+      "key": "character-materials:gorou",
+      "id": 33,
+      "revisionKey": "6e67345fd6acf33940a5a99287f772f201a9a2eccd3d9dc5360b4f330dd31997",
+      "hold": true
+    },
+    {
+      "key": "character-materials:heizou",
+      "id": 34,
+      "revisionKey": "b6567887f103eccc8d9362671951160f75bbadb10b5651b82d16660504233486",
+      "hold": true
+    },
+    {
+      "key": "character-materials:hu-tao",
+      "id": 35,
+      "revisionKey": "4f663f84cfd30790b88f9bc6f3dfb478b636a4df63c5a21c009e74f43fdfe4be",
+      "hold": true
+    },
+    {
+      "key": "character-materials:itto",
+      "id": 36,
+      "revisionKey": "b33c2718dd8265d3c01dd4abe1948cd91e1554fd587bf90cb0caee4ff8fdf981",
+      "hold": true
+    },
+    {
+      "key": "character-materials:jean",
+      "id": 37,
+      "revisionKey": "3dff3d40474933b163939c2768aaa2fce70ab5bec5e68d6233f1aff41e81089a",
+      "hold": true
+    },
+    {
+      "key": "character-materials:kachina",
+      "id": 38,
+      "revisionKey": "8d771e16534f6ee208fa1bd6b8cbe7870d6b9e9f1e53639b8f9a1f4890ea12a1",
+      "hold": true
+    },
+    {
+      "key": "character-materials:kaeya",
+      "id": 39,
+      "revisionKey": "c3b4c58efc8f92aba0bd30677c13a7a6e45975fffae83f1a9818905d2f897804",
+      "hold": true
+    },
+    {
+      "key": "character-materials:kaveh",
+      "id": 40,
+      "revisionKey": "f517e7fd1b9a5cc9b98ae909a0eee73928305456daf8bf05f05cfb9c06e0fe00",
+      "hold": true
+    },
+    {
+      "key": "character-materials:kazuha",
+      "id": 41,
+      "revisionKey": "09dd6e4abb96c6580ac824caf1c2255df82623946a57539fdd16d8465b1617ea",
+      "hold": true
+    },
+    {
+      "key": "character-materials:keqing",
+      "id": 42,
+      "revisionKey": "6c42468c28b5c255f16465e29f132618586880f9031d9afff71bddec389989d3",
+      "hold": true
+    },
+    {
+      "key": "character-materials:kinich",
+      "id": 43,
+      "revisionKey": "4c376b2bf1726d61e066ba96cf133ba4d67c923cf6759dafb72f41e408765956",
+      "hold": true
+    },
+    {
+      "key": "character-materials:kirara",
+      "id": 44,
+      "revisionKey": "a51897818996adaebac470c352a8b8436223386d009b503e41a3f550150a3c13",
+      "hold": true
+    },
+    {
+      "key": "character-materials:klee",
+      "id": 45,
+      "revisionKey": "196cc3efbbd26b9d9b6d384a6d174bc54ec919247748745b21ccdc20579b2c89",
+      "hold": true
+    },
+    {
+      "key": "character-materials:kokomi",
+      "id": 46,
+      "revisionKey": "076c42f164ff44f5b5e504d00d3a4684b9a2a30810a4ecb18289018020db4591",
+      "hold": true
+    },
+    {
+      "key": "character-materials:lan-yan",
+      "id": 47,
+      "revisionKey": "78f62fec957b9fe56f0cdbdbf94b8c637e68c8113cf3a2fe1854b4831b16f935",
+      "hold": true
+    },
+    {
+      "key": "character-materials:layla",
+      "id": 48,
+      "revisionKey": "935aee15164cd6dab578ab487ae087f99cca1dff11093413ae4c887b35704a65",
+      "hold": true
+    },
+    {
+      "key": "character-materials:lisa",
+      "id": 49,
+      "revisionKey": "39bc1ab695e0f5c8654b81fd0cdfb765b400887f813110b4a5a63a783dc3cf98",
+      "hold": true
+    },
+    {
+      "key": "character-materials:lynette",
+      "id": 50,
+      "revisionKey": "3be0a733fb2d52e7442b277d1411653e6e5d11dd50914e7ae79c6422fd4f7e4d",
+      "hold": true
+    },
+    {
+      "key": "character-materials:lyney",
+      "id": 51,
+      "revisionKey": "24473c9f0e421c3e077b55881e598dc51927a33198c1b670cb4f741b24e8a53a",
+      "hold": true
+    },
+    {
+      "key": "character-materials:mavuika",
+      "id": 52,
+      "revisionKey": "c53d2b869dbc2595b15bfc3277375163dd662005bf28e5817a6794a79db0c7f4",
+      "hold": true
+    },
+    {
+      "key": "character-materials:mika",
+      "id": 53,
+      "revisionKey": "5ad51d0b5fbda961277732a372a49141115ce2441dfd7bcc18cbad6dd2f42930",
+      "hold": true
+    },
+    {
+      "key": "character-materials:mona",
+      "id": 54,
+      "revisionKey": "d97904afaa323dfa77b2b57deea7d69d7bb2dc54b162528077a8035f34952cd0",
+      "hold": true
+    },
+    {
+      "key": "character-materials:mualani",
+      "id": 55,
+      "revisionKey": "8f052995d8a257e0821beb43514fe7c55e8344642a57d6b3837207657d3d87b1",
+      "hold": true
+    },
+    {
+      "key": "character-materials:nahida",
+      "id": 56,
+      "revisionKey": "efd8bb507e83d978f8d32c70e42b36ef55b3551695032fa16496ee0490c55ecd",
+      "hold": true
+    },
+    {
+      "key": "character-materials:navia",
+      "id": 57,
+      "revisionKey": "0569057decdb8ece68841c81fd2c4a9780ee48a5a01f6f06c302a2a54e3c441a",
+      "hold": true
+    },
+    {
+      "key": "character-materials:neuvillette",
+      "id": 58,
+      "revisionKey": "888b40970a31d4083418f4a31b9ede2254274bf9ab1741e8bed5640b84fa1b06",
+      "hold": true
+    },
+    {
+      "key": "character-materials:nilou",
+      "id": 59,
+      "revisionKey": "59aca4bf741c7acf46dbc6483bdf7f55a8fcb6b990055e712040036e07738a52",
+      "hold": true
+    },
+    {
+      "key": "character-materials:ningguang",
+      "id": 60,
+      "revisionKey": "2f8a99a361ca1fd2fc7448c946c215a7b083381eac0ba50d47b561fc09c5a947",
+      "hold": true
+    },
+    {
+      "key": "character-materials:noelle",
+      "id": 61,
+      "revisionKey": "a1af0037f7abef20b535ded372e135416108807ec761a0ad3b2868ffac8fed1c",
+      "hold": true
+    },
+    {
+      "key": "character-materials:ororon",
+      "id": 62,
+      "revisionKey": "de197d62c20a34a69086f780b2dce5212259f9838721e0933dc0f701de805f53",
+      "hold": true
+    },
+    {
+      "key": "character-materials:qiqi",
+      "id": 63,
+      "revisionKey": "521f17193b49109aeb15a0ebc58f6401bdd52f10a621022784c145c9ef4d0057",
+      "hold": true
+    },
+    {
+      "key": "character-materials:raiden-shogun",
+      "id": 64,
+      "revisionKey": "fe960617ff856db7f45bd9cd9121e4a9227e2c452388bf308462141d805ecd5c",
+      "hold": true
+    },
+    {
+      "key": "character-materials:razor",
+      "id": 65,
+      "revisionKey": "03d858f145e02b9d0c43fe68ac89278bc3c157ee9001fe60a511572f032cc699",
+      "hold": true
+    },
+    {
+      "key": "character-materials:rosaria",
+      "id": 66,
+      "revisionKey": "f48e129bb87498c01a57856d63b324e089d639edbfca809848a7cd20ac370a56",
+      "hold": true
+    },
+    {
+      "key": "character-materials:sara",
+      "id": 67,
+      "revisionKey": "2035e4a1b720f4bdcf0e501e233a0a716a066839e615f1cc798948fe5bc02049",
+      "hold": true
+    },
+    {
+      "key": "character-materials:sayu",
+      "id": 68,
+      "revisionKey": "831c37c443b669e6042f2774602eb11d13c3ae13afeac9b3bbef844ebb90ae7b",
+      "hold": true
+    },
+    {
+      "key": "character-materials:sethos",
+      "id": 69,
+      "revisionKey": "9e9b371cfc887e9cdb655a5e14e39631b839159a6d1e54aea178b64767c7887d",
+      "hold": true
+    },
+    {
+      "key": "character-materials:shenhe",
+      "id": 70,
+      "revisionKey": "bc87ae043d1d286a795d45322cd5ae3d6b005cf37e59f89d2239ba39da579182",
+      "hold": true
+    },
+    {
+      "key": "character-materials:shinobu",
+      "id": 71,
+      "revisionKey": "84618c81f870caa5a0bc90d8738bddc55212990212f85ccb55367b1aa4a04ed9",
+      "hold": true
+    },
+    {
+      "key": "character-materials:sigewinne",
+      "id": 72,
+      "revisionKey": "523ef23a64ee31d2dab70666c6bfa9c08a7f18833d3777d6071b43b2ddc1d755",
+      "hold": true
+    },
+    {
+      "key": "character-materials:sucrose",
+      "id": 73,
+      "revisionKey": "3dc5ee7d19df52169d196b875c576ae4c224c0d7bc889a6eebc7144dbe360af3",
+      "hold": true
+    },
+    {
+      "key": "character-materials:tartaglia",
+      "id": 74,
+      "revisionKey": "b14dc206236508d0cfb4636c8ca1ac8cd007143a288c13795849a96fef377105",
+      "hold": true
+    },
+    {
+      "key": "character-materials:thoma",
+      "id": 75,
+      "revisionKey": "76dec32491b125bd4f3ea91b30b7d5227254c0844e87f5b4965836fc4a47ebb6",
+      "hold": true
+    },
+    {
+      "key": "character-materials:tighnari",
+      "id": 76,
+      "revisionKey": "5ff7914608f1dfffedd03454b16de2c16969542f9fa7aeabebc63504b833262a",
+      "hold": true
+    },
+    {
+      "key": "character-materials:venti",
+      "id": 77,
+      "revisionKey": "442dcb56553bc321517953369e69f55cb95f4ddfe932e1c367ca69b483693a70",
+      "hold": true
+    },
+    {
+      "key": "character-materials:wanderer",
+      "id": 78,
+      "revisionKey": "2365fc390299d38da2a268cbf4ddb2674ec8474d430ce3570aa33cedb061b840",
+      "hold": true
+    },
+    {
+      "key": "character-materials:wriothesley",
+      "id": 79,
+      "revisionKey": "fc47f82114505984f7b46bcbea4356d53f66238b6011abfeeb44e7d1c8e00db9",
+      "hold": true
+    },
+    {
+      "key": "character-materials:xiangling",
+      "id": 80,
+      "revisionKey": "5fde1c5c9321d7e9bd2bf9a198625c7b1722c48b26cf4f532c2c2caf241bb715",
+      "hold": true
+    },
+    {
+      "key": "character-materials:xianyun",
+      "id": 81,
+      "revisionKey": "aff1301791194235ba1dffe570b0f51215f14bf4755030fea04a7660b206ae82",
+      "hold": true
+    },
+    {
+      "key": "character-materials:xiao",
+      "id": 82,
+      "revisionKey": "952ebd8c5595d2a255e666da58d43160ada5640f54a249f8710bf3effec1df53",
+      "hold": true
+    },
+    {
+      "key": "character-materials:xilonen",
+      "id": 83,
+      "revisionKey": "070337f37ec8281e79a5974b4728041dea52c98e1b3bbfd1fe2872f5e73a3612",
+      "hold": true
+    },
+    {
+      "key": "character-materials:xingqiu",
+      "id": 84,
+      "revisionKey": "a57f3e2785061e2a8f6bda4c9670eba5e5b53bd9445e0b2395bb493edb635514",
+      "hold": true
+    },
+    {
+      "key": "character-materials:xinyan",
+      "id": 85,
+      "revisionKey": "66a5280bd15ad3ccdd1b9f21532995690f2dc9bda06dd0fc5e363c278124a8b3",
+      "hold": true
+    },
+    {
+      "key": "character-materials:yae-miko",
+      "id": 86,
+      "revisionKey": "c9a2eec55d3023af5b01e2d5ad785690f44288d9fd39f196f5be7154252f5770",
+      "hold": true
+    },
+    {
+      "key": "character-materials:yaoyao",
+      "id": 87,
+      "revisionKey": "f7f4923d1e86cb3182a808afad095cdbeca18d9b277392bf3c510b2b13dd9039",
+      "hold": true
+    },
+    {
+      "key": "character-materials:yoimiya",
+      "id": 88,
+      "revisionKey": "94c9dc7c2cf36505781a28dee5d2e19d81badd3080dd83f15606d7851e3194e1",
+      "hold": true
+    },
+    {
+      "key": "character-materials:yun-jin",
+      "id": 89,
+      "revisionKey": "49b70dee84588eab1ad437df9432d64de4a1de7ec116c1e4ad10dbd6144a50b0",
+      "hold": true
+    },
+    {
+      "key": "character-materials:zhongli",
+      "id": 90,
+      "revisionKey": "635412ac67ed6ca2eac87fd03e90c10be519944033c170675a692dedd9d8852b",
+      "hold": true
+    },
+    {
+      "key": "characters:mualani",
+      "id": 91,
+      "revisionKey": "0e997797c62eeefd67528ad0fd0bf7e138fa4206088269423af3d29c9aa1edee",
+      "hold": true
+    },
+    {
+      "key": "characters:ororon",
+      "id": 92,
+      "revisionKey": "98b3a2ec2f19ea3923572c19029254c73ec9c27899ccb1cdb7bc40b7864e2ae4",
+      "hold": true
+    },
+    {
+      "key": "materials:artificed-spare-clockwork-component-coppelia",
+      "id": 93,
+      "revisionKey": "4ff7a26324b48c64e41108509457a62cb74867dfae9bf29c06e465f03fa23a06",
+      "hold": true
+    },
+    {
+      "key": "materials:artificed-spare-clockwork-component-coppelius",
+      "id": 94,
+      "revisionKey": "f107e37486435b85f704fd3b140efc7a3b8c214ce1a70c4bc3412e027a73749d",
+      "hold": true
+    },
+    {
+      "key": "materials:brilliant-chrysanthemum",
+      "id": 95,
+      "revisionKey": "ba7b7ce0c832f2fff3ff9de2877697f29e25ca8ebce6b49f563eec3d636da081",
+      "hold": true
+    },
+    {
+      "key": "materials:clearwater-jade",
+      "id": 96,
+      "revisionKey": "1b71ced4d4e1cfe26aa079ca42c80920c9830aa26ffa7c7a62d7721d6f049572",
+      "hold": true
+    },
+    {
+      "key": "materials:cloudseam-scale",
+      "id": 97,
+      "revisionKey": "1eb62c767c757beddf3e61aa0f585fead5a565ee94d04bdc47baa4e44a81aad5",
+      "hold": true
+    },
+    {
+      "key": "materials:crown-of-insight",
+      "id": 98,
+      "revisionKey": "13a9fb8f523033a7beb2165b953f653324cc007b3f0d4e37b7c7d30fa2d2a771",
+      "hold": true
+    },
+    {
+      "key": "materials:crystalline-bloom",
+      "id": 99,
+      "revisionKey": "19fe7ef545b9be97f78a1b0a9f145abf80cbc8fba78be7854ecb030ee59b9a53",
+      "hold": true
+    },
+    {
+      "key": "materials:crystalline-cyst-dust",
+      "id": 100,
+      "revisionKey": "99ecddb09bc5e91efd20e86969086c9db38a17cc0ae1d5c69e611a931ca9397a",
+      "hold": true
+    },
+    {
+      "key": "materials:dakas-bell",
+      "id": 101,
+      "revisionKey": "13210c3d9bc724265278960e5f20085d25e4aad5132c56d643461c972702dc08",
+      "hold": true
+    },
+    {
+      "key": "materials:denial-and-judgment",
+      "id": 102,
+      "revisionKey": "e70ab2b56e16a34a622564ef5df10e9d4385b4fa975a51d97f23b34a441f5d8e",
+      "hold": true
+    },
+    {
+      "key": "materials:emperors-resolution",
+      "id": 103,
+      "revisionKey": "0096301ad179b03e19b72ec4e7dd7e59219cfad076009752b4e91b5f031e2c8d",
+      "hold": true
+    },
+    {
+      "key": "materials:ensnaring-gaze",
+      "id": 104,
+      "revisionKey": "8b86d70d3eeb43dbaa5537a86c70ab564d3e95fe57b17b36ca54f5544e04677b",
+      "hold": true
+    },
+    {
+      "key": "materials:eroded-horn",
+      "id": 105,
+      "revisionKey": "06ec960a9d832a58f866ddd9a48dc1f93213adf79a6ad3774bae93b7242d1f66",
+      "hold": true
+    },
+    {
+      "key": "materials:eroded-sunfire",
+      "id": 106,
+      "revisionKey": "6fa8975abf234f17f95a24e07d2a8980b0351a429255378e7e6223aff5be9b94",
+      "hold": true
+    },
+    {
+      "key": "materials:everamber",
+      "id": 107,
+      "revisionKey": "0e2879290d114fff2e45edb2b779a9c2d35e60d4adb1d7f4209fd67ef3c1c8d0",
+      "hold": true
+    },
+    {
+      "key": "materials:evergloom-ring",
+      "id": 108,
+      "revisionKey": "a655c03969bfd5a5dfeffb03ddb3f10168a09a96e234adf877253f5b3f1cbb35",
+      "hold": true
+    },
+    {
+      "key": "materials:faded-red-satin",
+      "id": 109,
+      "revisionKey": "000613fc7a3949412c20fb45263c9d4b2032b1e2a01135168ee89817f890667b",
+      "hold": true
+    },
+    {
+      "key": "materials:fading-candle",
+      "id": 110,
+      "revisionKey": "14577699c1f4579a23dace2f2db673842e46d5f6f5dc05c853226a48c1431cb9",
+      "hold": true
+    },
+    {
+      "key": "materials:fontemer-unihorn",
+      "id": 111,
+      "revisionKey": "2d6f7467154da0ca4b0e9ef85e016174040d79278ddddbe5592e284f9b25ec3b",
+      "hold": true
+    },
+    {
+      "key": "materials:fragment-of-a-golden-melody",
+      "id": 112,
+      "revisionKey": "4b3bca1ee776f4fccff15e5a9dacb6feb3567dc57d0ab5f733d87fa77f4c30b9",
+      "hold": true
+    },
+    {
+      "key": "materials:fungal-spores",
+      "id": 113,
+      "revisionKey": "27327a9ac0fcf951a5a1c39ccfe9c06d7a78d32bcbb2f7f6298317f14caf88dd",
+      "hold": true
+    },
+    {
+      "key": "materials:glowing-hornshroom",
+      "id": 114,
+      "revisionKey": "d488071096d08f47309f0cd171fde52f9837a1d617ce455f1fd451ede207d817",
+      "hold": true
+    },
+    {
+      "key": "materials:gold-inscribed-secret-source-core",
+      "id": 115,
+      "revisionKey": "9e3f42a5f4af86d933d670c1f3cd744d6c4ee3b5380a73bec29a3545a02a3ec5",
+      "hold": true
+    },
+    {
+      "key": "materials:golden-raven-insignia",
+      "id": 116,
+      "revisionKey": "b6d31527ec93327cec7b638de00d85268a6d299e116e6edc5106007c15a50b77",
+      "hold": true
+    },
+    {
+      "key": "materials:guide-to-conflict",
+      "id": 117,
+      "revisionKey": "aec1bf76127fcd116f78a601b7886bcf27a3ffbc8cfeeba950f85ab222ed2c61",
+      "hold": true
+    },
+    {
+      "key": "materials:guide-to-contention",
+      "id": 118,
+      "revisionKey": "63eb993394f9e53ad54d6717ed0ba2ef930062c16b61bb4aa1dfe7c9d1910334",
+      "hold": true
+    },
+    {
+      "key": "materials:guide-to-kindling",
+      "id": 119,
+      "revisionKey": "33478f51bb457dbd5286b54ad179293baa6e6f71d43d741c3905ab85bd89b8bc",
+      "hold": true
+    },
+    {
+      "key": "materials:henna-berry",
+      "id": 120,
+      "revisionKey": "67e16febb30183de960e4630be690e00a3149d2da35a1dac1ac8f9ec71cb2b4e",
+      "hold": true
+    },
+    {
+      "key": "materials:hurricane-seed",
+      "id": 121,
+      "revisionKey": "5698596df0012659402f7e140d67a912818a02716ce43d7b47bbf3c44669775f",
+      "hold": true
+    },
+    {
+      "key": "materials:juvenile-fang",
+      "id": 122,
+      "revisionKey": "ed0bff13a7342414f68e814acf41b567ea5242fc9e5c54d3a3abc4c384851b11",
+      "hold": true
+    },
+    {
+      "key": "materials:juvenile-jade",
+      "id": 123,
+      "revisionKey": "396cd4751083a13b99fd669f647e60ebfd4c0dc000d74f83c43da6edff3b58b4",
+      "hold": true
+    },
+    {
+      "key": "materials:lakelight-lily",
+      "id": 124,
+      "revisionKey": "54a0e33d56fca243568d15ac6c2fe06ea2baf53ba1c40ee247a976aec17832fa",
+      "hold": true
+    },
+    {
+      "key": "materials:lieutenants-insignia",
+      "id": 125,
+      "revisionKey": "73d9649982994945881cb7658bdda08bf6e6c2005ac92e0bd45ad92b8317953f",
+      "hold": true
+    },
+    {
+      "key": "materials:light-guiding-tetrahedron",
+      "id": 126,
+      "revisionKey": "d9e1451be3273058af768c3c5b21d3d07ffd94641a19c0c5945d525b22a1957c",
+      "hold": true
+    },
+    {
+      "key": "materials:lightless-eye-of-the-maelstrom",
+      "id": 127,
+      "revisionKey": "08b0bc3df201f080924ad62b444ee836f8a8999ebd869cd2207e73b2ee6a476e",
+      "hold": true
+    },
+    {
+      "key": "materials:lightless-mass",
+      "id": 128,
+      "revisionKey": "e9bfe67fe502dca681986b72b55e5eb5fbcb2fd117549f46128a94568d7ceef3",
+      "hold": true
+    },
+    {
+      "key": "materials:lightless-silk-string",
+      "id": 129,
+      "revisionKey": "ea33946dab0388af68fde36afa3ddd4d5383e172eae8a5dafa2c4f1f813e6c88",
+      "hold": true
+    },
+    {
+      "key": "materials:lumidouce-bell",
+      "id": 130,
+      "revisionKey": "19e4c6a39569739d54fa8a4c37df82ba6afd3499826be5d829a5c2c053dd927f",
+      "hold": true
+    },
+    {
+      "key": "materials:luminescent-pollen",
+      "id": 131,
+      "revisionKey": "519b26a24c616b0d0788f88bdbe1f2fec3fb42cd030879b6a0f6fdf2fb3a8822",
+      "hold": true
+    },
+    {
+      "key": "materials:marionette-core",
+      "id": 132,
+      "revisionKey": "13d572c9a66cf407087693905b6cf34e002fad944e17724cec03363ca9e0ea2d",
+      "hold": true
+    },
+    {
+      "key": "materials:mark-of-the-binding-blessing",
+      "id": 133,
+      "revisionKey": "1cc1074b10dbbce1ab3cfbe3a3dbcd6d02da790b8bcedbe71efb9a3cde2d8d98",
+      "hold": true
+    },
+    {
+      "key": "materials:mirror-of-mushin",
+      "id": 134,
+      "revisionKey": "71d663b6d2e2a62960d5eddf7b352ac6d74190beb5397c3833e3510243adc359",
+      "hold": true
+    },
+    {
+      "key": "materials:mourning-flower",
+      "id": 135,
+      "revisionKey": "53a54b3f44cb67d27c614e16c538c37853b8ad2e2e3aafdf02b82ba5beef42d8",
+      "hold": true
+    },
+    {
+      "key": "materials:nilotpala-lotus",
+      "id": 136,
+      "revisionKey": "b5d1d0652d315df62fa5ee0b1f54a7e4c46530d9def62fc98eafdf8be8d65b17",
+      "hold": true
+    },
+    {
+      "key": "materials:overripe-flamegranate",
+      "id": 137,
+      "revisionKey": "99ed145cfbde78dcb60f7fae6931ea5081d56b7c466ff5d0dbfadbaabc61095d",
+      "hold": true
+    },
+    {
+      "key": "materials:perpetual-caliber",
+      "id": 138,
+      "revisionKey": "d483431e2052b9c00a38621e0a5047f72fce570b6ed33c63daa33f72ca3e9f80",
+      "hold": true
+    },
+    {
+      "key": "materials:philosophies-of-conflict",
+      "id": 139,
+      "revisionKey": "d92219c0c0517e28af5642001afccd00246ff6c76ecb11e94fe2c2eebe6b0cc2",
+      "hold": true
+    },
+    {
+      "key": "materials:philosophies-of-contention",
+      "id": 140,
+      "revisionKey": "e19592ad98ab608261eff6143b2eab72a4467711ed627b60b467f01597e579cc",
+      "hold": true
+    },
+    {
+      "key": "materials:philosophies-of-kindling",
+      "id": 141,
+      "revisionKey": "88b6a8f73ff2d6612286690722c9fc122a68acbc2066deb398d35eac4f96d13f",
+      "hold": true
+    },
+    {
+      "key": "materials:primordial-greenbloom",
+      "id": 142,
+      "revisionKey": "0f61d6e6d5dfacfd259fb87fd6bd6c5c93d39c0eaa329e55e86a4a61bf85a8d9",
+      "hold": true
+    },
+    {
+      "key": "materials:pseudo-stamens",
+      "id": 143,
+      "revisionKey": "6fed434518c1dbaa179e2e9d60ca17fab8acf8d1416066bc1c86c589826ce489",
+      "hold": true
+    },
+    {
+      "key": "materials:puppet-strings",
+      "id": 144,
+      "revisionKey": "7f1e81ae887792c59252f47929729106a3c3c9600a1004c27633ba634158adfe",
+      "hold": true
+    },
+    {
+      "key": "materials:quelled-creeper",
+      "id": 145,
+      "revisionKey": "dcf1f32e7f5a2507c93931fa1ea2d48086a834430284e0c0f0e27865423f4482",
+      "hold": true
+    },
+    {
+      "key": "materials:quenepa-berry",
+      "id": 146,
+      "revisionKey": "547a456ec98b114a07fefa1f6a8017c173768a5c3ec07785dea01ddffa9f74b4",
+      "hold": true
+    },
+    {
+      "key": "materials:recruits-insignia",
+      "id": 147,
+      "revisionKey": "eeb722f3b520d7961ce8827ce0803fe8d916d12d185deff020dd1f3995663902",
+      "hold": true
+    },
+    {
+      "key": "materials:rich-red-brocade",
+      "id": 148,
+      "revisionKey": "640027c9cef3211f4a4bc7738e0a43bb1545b4e28e32d1c77be161ab80248769",
+      "hold": true
+    },
+    {
+      "key": "materials:riftborn-regalia",
+      "id": 149,
+      "revisionKey": "9c47b5340192aabf041a14c1726442bf9cca44ead5234419e0965f0ee432d978",
+      "hold": true
+    },
+    {
+      "key": "materials:romaritime-flower",
+      "id": 150,
+      "revisionKey": "b917bafc8cd475edff7532741721bbd92956b163edb80e28724e404570595205",
+      "hold": true
+    },
+    {
+      "key": "materials:runic-fang",
+      "id": 151,
+      "revisionKey": "a5f92d44b35b55b55a2d34175bc6dbd33361bf84455422a51da07791258ab7b0",
+      "hold": true
+    },
+    {
+      "key": "materials:sango-pearl",
+      "id": 152,
+      "revisionKey": "8df170e22724b9999f47276d344e2d63f81a9f3a6e34b62e7e27a8313181ed16",
+      "hold": true
+    },
+    {
+      "key": "materials:saurian-claw-succulent",
+      "id": 153,
+      "revisionKey": "5171f0775b72203b357bc1271f2b2635df6ecd5e833fc293a87cbc861cf03b5f",
+      "hold": true
+    },
+    {
+      "key": "materials:saurian-crowned-warriors-golden-whistle",
+      "id": 154,
+      "revisionKey": "91edc13faa8621f99e1f1344d58e28e641283af4325814e74e91f0948caffef7",
+      "hold": true
+    },
+    {
+      "key": "materials:seasoned-fang",
+      "id": 155,
+      "revisionKey": "4207eaaecf02e97e30f13606e34666587409e6032acc7258cbdf8b65cdfee9a6",
+      "hold": true
+    },
+    {
+      "key": "materials:sentrys-wooden-whistle",
+      "id": 156,
+      "revisionKey": "1e31ca2a3682f6ff1bf4b24637c4ccd2ca339329f8c1181bb823c235540a780d",
+      "hold": true
+    },
+    {
+      "key": "materials:sergeants-insignia",
+      "id": 157,
+      "revisionKey": "537ccac5f6ff74278c0e0a092f3a2698ad43fea87d9e225487e7ad78350648f2",
+      "hold": true
+    },
+    {
+      "key": "materials:silken-feather",
+      "id": 158,
+      "revisionKey": "f87e841d5d68f506f3bd836db8f34983c840d434e09c67330f0f0f8d0314e5fe",
+      "hold": true
+    },
+    {
+      "key": "materials:silver-raven-insignia",
+      "id": 159,
+      "revisionKey": "9cfb853517813012725929eb544a11104a7db42b9eda599512110ef1d464e91d",
+      "hold": true
+    },
+    {
+      "key": "materials:smoldering-pearl",
+      "id": 160,
+      "revisionKey": "30876e4e83b8037730255eab06c2a1dc1ef180b168b82249a96ccec975b1c021",
+      "hold": true
+    },
+    {
+      "key": "materials:sprayfeather-gill",
+      "id": 161,
+      "revisionKey": "1da9bc50adf4e22a3ad29bc8a2356eeb8e35d45c3679c63a316e5bcfbe0647f7",
+      "hold": true
+    },
+    {
+      "key": "materials:spring-of-the-first-dewdrop",
+      "id": 162,
+      "revisionKey": "291ff6c919315cb66b2f9250b5597ac9f9b4aaea9607cd2ad5645b524706b3a1",
+      "hold": true
+    },
+    {
+      "key": "materials:talisman-of-the-enigmatic-land",
+      "id": 163,
+      "revisionKey": "19f78dcbce7acffdd0bd09c2b2e8fe439fd7d6fd77c2578d08a588f95277e07c",
+      "hold": true
+    },
+    {
+      "key": "materials:teachings-of-conflict",
+      "id": 164,
+      "revisionKey": "fc63a9a479cf354139c95c35819372179be99969f9e3370ce97d32175b579727",
+      "hold": true
+    },
+    {
+      "key": "materials:teachings-of-contention",
+      "id": 165,
+      "revisionKey": "7f205cc98141da8584763562cbfc8fc241503351cbb7657b7bb1840cd56b458c",
+      "hold": true
+    },
+    {
+      "key": "materials:teachings-of-kindling",
+      "id": 166,
+      "revisionKey": "d46f77d947b181c1247f3bd91ebb32ee95c3d954d6b3bad9478330e3f8a36263",
+      "hold": true
+    },
+    {
+      "key": "materials:thunderclap-fruitcore",
+      "id": 167,
+      "revisionKey": "aeed9245d4097d9c214e0fe587e2104cd0305c981bb1a3ca0887e7eb119d0e63",
+      "hold": true
+    },
+    {
+      "key": "materials:tourbillon-device",
+      "id": 168,
+      "revisionKey": "fa9642487e9a4039413c1f4c350ef48cec016bfac480850ce1b632fd8f5b943f",
+      "hold": true
+    },
+    {
+      "key": "materials:transoceanic-chunk",
+      "id": 169,
+      "revisionKey": "66d0f2647a6e1d0b926dfe5cf51577dc7c0a6e5302fd6c9e620ed8b1a74a3ed5",
+      "hold": true
+    },
+    {
+      "key": "materials:transoceanic-pearl",
+      "id": 170,
+      "revisionKey": "6459a6342ec13285729ea48544cca40b6fde5d045b4947f7ba656fcb92122326",
+      "hold": true
+    },
+    {
+      "key": "materials:treasure-hoarder-insignia",
+      "id": 171,
+      "revisionKey": "6d1a3e8a97fb7c357f325f2c5f1422fed0bd89ff603a6aa9f273ef4411a4a92a",
+      "hold": true
+    },
+    {
+      "key": "materials:trimmed-red-silk",
+      "id": 172,
+      "revisionKey": "3093e20a579ac131869cef209f94396f724fd6b78757f6f8a8b9c428d127894b",
+      "hold": true
+    },
+    {
+      "key": "materials:trishiraite",
+      "id": 173,
+      "revisionKey": "d9c9007c8c1640d19fcbf016a421813f059c1a0333cb1b61321f935aaa168f19",
+      "hold": true
+    },
+    {
+      "key": "materials:tyrants-fang",
+      "id": 174,
+      "revisionKey": "8eeefc4671957442e8077ffcbc90e883d7b5cca3f245b7658814c106bf625d52",
+      "hold": true
+    },
+    {
+      "key": "materials:warriors-metal-whistle",
+      "id": 175,
+      "revisionKey": "f0cfc7f5d4651ff3c82d94bb520add8bdcb82a31cd690838e1630813e0cc0014",
+      "hold": true
+    },
+    {
+      "key": "materials:water-that-failed-to-transcend",
+      "id": 176,
+      "revisionKey": "e620c5e34a4e8de5be2664513e56042a3313ccfd4ecdf7cee09369bc2c4580b3",
+      "hold": true
+    },
+    {
+      "key": "materials:withering-purpurbloom",
+      "id": 177,
+      "revisionKey": "9884782c4d14286149a71e23cf381a924f1f52ca57ef7f6bf9099d9fdcc33e86",
+      "hold": true
+    },
+    {
+      "key": "materials:worldspan-fern",
+      "id": 178,
+      "revisionKey": "2860cd4202fb60a4c7869ae835f3c2b92813218cfc8dfc8313c0815447be7f0d",
+      "hold": true
+    },
+    {
+      "key": "materials:xenochromatic-crystal",
+      "id": 179,
+      "revisionKey": "7934a1376192cf174cd27d197ff8ae882dd50b8f078bb6673001462902954bb3",
+      "hold": true
+    }
+  ],
+  "total": 179,
+  "unchangedContentRecords": 2880,
+  "exactR140AfterMatch": true,
+  "anonymousStatus": 403,
+  "observedAt": "2026-11-20T15:30:14.669Z",
+  "writes": 0
+}

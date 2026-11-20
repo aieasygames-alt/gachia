@@ -1,0 +1,72 @@
+{
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "fullSources": 115,
+  "sourcesExactlyPreserved": true,
+  "localDifferences": [
+    {
+      "sourcePath": "apps/game-azur-promilia/lib/data.ts",
+      "publishedSHA256": "55868f2f59c1bdd283ad9e71ffb71b32d8a971f9e6eb7dbd8a34a8f2a0522908",
+      "localSHA256": "c1fa7d8149df7909bec8cc5708b81584585399d7f38d51945268cbaebbd3d16a"
+    },
+    {
+      "sourcePath": "apps/game-lvmeng/lib/data.ts",
+      "publishedSHA256": "1dba7658c4ad97aa2f2aa30aabbf8e537d3e861177c9614d6db58c60d3247264",
+      "localSHA256": "3576b6d10439bf7bbc3a4df19019e1a6aae6c1a02973f7d3897ecfc226ab888b"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-guides.json",
+      "publishedSHA256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d",
+      "localSHA256": "239272401eac2a09a0c0edcafe9e8eb5df37fbc64443e627f0794b5abeb7eaf1"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+      "publishedSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "localSHA256": "33e9bbc11eaab0460077e02c10a74c8b4670389216494307c72ae0956068857a"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-characters.json",
+      "publishedSHA256": "2fedce34a507dc48aca5168186deab0368fd9b6351e23333d25034af747af3b8",
+      "localSHA256": "59f006e360b1576fc1ca691d355a9de8df69b2fa99f42005afc85758fc8554ce"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-guides.json",
+      "publishedSHA256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72",
+      "localSHA256": "8d0c81f541218f4df90fb9766fa13351bd8ca1147f012be36bb694db3accc310"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-guides.json",
+      "publishedSHA256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3",
+      "localSHA256": "565d913c7c58809e28f4a03e1348d69e118a56e3a44f7aaf955ab5932ba24608"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-characters.json",
+      "publishedSHA256": "b4fbe091f17fff4e57e28a123eb3e66aa8792afe86aa5b6eb942e71d800b8335",
+      "localSHA256": "b3693e9cb5d8b6ba29a9ec3bb81dfd3755764b34255af3a2e454ad8c0e3ad938"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-guides.json",
+      "publishedSHA256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6",
+      "localSHA256": "f9b498b73daba4c1748c9027710b9d148de443f377ec88ffedfebfe349da3809"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-materials.json",
+      "publishedSHA256": "657fbf66e9f53688351570f87824acf1706c9f62e2a330f5a4760ad2638e2233",
+      "localSHA256": "eb493d5923b34bf20e840b31bfa93d145c6a3397163798b73e1f85a8f0b6328c"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-guides.json",
+      "publishedSHA256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f",
+      "localSHA256": "b69e519c94ce674d761edacef45689a969948a1d2f9bf53950ce41a3040df041"
+    }
+  ],
+  "unchangedContentRecords": 2880,
+  "alreadyAppliedDrafts": 42,
+  "replayedDraftWrites": 0,
+  "publishedContentPreserved": true,
+  "immutableOriginsPreserved": true,
+  "sourceAdvanced": false,
+  "productionDeployments": 0
+}

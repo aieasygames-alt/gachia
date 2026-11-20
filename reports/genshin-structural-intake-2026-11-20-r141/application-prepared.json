@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "30d3ecc2f83ec232d1abed5c325141aa8406fc7b",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261120T151905Z-genshin-stage-r141-30d3ecc2/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261120T151905Z-genshin-stage-r141-30d3ecc2/application-manifest.json",
+    "pin": "78ca4080459087a81d47e9b6dc53258d2f018f9f776ef03f9af27239d1dc95cf"
+  },
+  "buildID": "XWyTCu4vPkx__D9vS29Wv",
+  "files": 787,
+  "releaseFiles": 353,
+  "databaseMigrationRequired": false
+}

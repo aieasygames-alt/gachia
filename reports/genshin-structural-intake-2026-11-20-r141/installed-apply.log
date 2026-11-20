@@ -1,0 +1,10 @@
+/Users/robert/Library/Application Support/GachiaCMS/releases/20261120T151905Z-genshin-stage-r141-30d3ecc2/services/content-cms/src/material-release-dependencies.ts:2
+import { resolveNteCharacterReference } from '../../../packages/data/games/nte/character-identity'
+         ^
+SyntaxError: The requested module '../../../packages/data/games/nte/character-identity' does not provide an export named 'resolveNteCharacterReference'
+    at #asyncInstantiate (node:internal/modules/esm/module_job:326:21)
+    at async ModuleJob.run (node:internal/modules/esm/module_job:429:5)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:639:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v25.9.0

@@ -1,0 +1,41 @@
+▲ Next.js 16.4.2 (webpack)
+✓ Running next.config.mjs took 14ms
+
+  Creating an optimized production build ...
+  Using tsconfig file: tsconfig.editor.json
+⚠ Your version of Next.js is affected by a known security vulnerability. This command is continuing after the upgrade reminder.
+Reference: https://registry.npmjs.org/-/npm/v1/security/advisories/bulk
+⚠ Compiled with warnings in 11.7s
+
+
+  Running TypeScript ...
+  Finished TypeScript in 3.4s ...
+  Collecting page data using 8 workers ...
+Error: Failed to collect configuration for /api/[...slug]
+    at ignore-listed frames {
+  [cause]: Error: Cannot find module 'libsql'
+  Require stack:
+  - /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/app/(payload)/api/[...slug]/route.js
+  - /Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/server/require.js
+  - /Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/server/load-components.js
+  - /Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/build/utils.js
+  - /Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/build/worker.js
+  - /Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/jest-worker/processChild.js
+      at ignore-listed frames {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      '/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/app/(payload)/api/[...slug]/route.js',
+      '/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/server/require.js',
+      '/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/server/load-components.js',
+      '/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/build/utils.js',
+      '/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/build/worker.js',
+      '/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/next@16.4.2_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/jest-worker/processChild.js'
+    ]
+  }
+}
+
+> Build error occurred
+Error: Failed to collect page data for /api/[...slug]
+    at ignore-listed frames {
+  type: 'Error'
+}

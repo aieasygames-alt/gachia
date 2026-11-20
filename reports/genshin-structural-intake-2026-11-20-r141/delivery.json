@@ -1,0 +1,208 @@
+{
+  "kind": "genshin-structural-intake-delivery-r141",
+  "status": "installed-and-179-held-revisions-staged",
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/delivery.json",
+    "pin": "f612e802132fa7e3a1af36e6076be9c59eccf353c6bb9c4ae650455c7d651892"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "sourceCommit": "30d3ecc2f83ec232d1abed5c325141aa8406fc7b",
+  "stageKey": "f173c9de5587920b011ab9d9c3a82015634f296c8e569d315c5882860b21c83d",
+  "batchId": 1,
+  "execution": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/EXECUTION.md",
+    "pin": "50297f13c26cddcf37d9293b19e502c276433dc4efc5719d529de496a2bdce10"
+  },
+  "contract": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/docs/genshin-structural-stage.md",
+    "pin": "546b6611d369e7c125c7e55f9b35e4bd4ac6d53a97d1b98323fb8996294b2f81"
+  },
+  "preparation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/preparation.json",
+    "pin": "4dda30bcf8aa52212415a113af3ce1203498cb02405fea7f44b02af3ccd2c3d0"
+  },
+  "input": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/intake-input.json",
+    "pin": "0a761dd563bdcd018f8332794cb924d00909bdd2ea92e98805a91fc7bb036d66"
+  },
+  "stage": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/structural-stage.json",
+    "pin": "c254d9a75bb46473db639c79def3a636ba2accfe6da2b93c1d04bece6c19de2c"
+  },
+  "cmsBefore": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-capture.json.gz",
+    "pin": "653f07d55ccfe737304856b428af97ed84da5651b39d07702687ffc2b7e92a11"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-after.json.gz",
+    "pin": "9bfdb058ecc153da45b00badc2985ff28b82f894fdaf3895569f40c5d8ce1189"
+  },
+  "installedApplication": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/application-installed-02.json",
+    "pin": "7932e3ec58a0b719b79eb2a8bb68cff5cf7ec91a6b61f2064342ead8da5dbdf1"
+  },
+  "installedIntake": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-apply-02.json",
+    "pin": "5737eb850d7498682b3b17598b7b7ebbd20e604e9839ddeb8a41b8f246874174"
+  },
+  "independentReadback": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-verify.json",
+    "pin": "90ab68480b8f3237d5727a2a0592f172814f1381162409a36047ef60bebd2c37"
+  },
+  "repeatReadback": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-repeat.json",
+    "pin": "98a71f4881443af4fb2e2bea1c226ca85570ee4fa257c2a7de5878d727387e42"
+  },
+  "restReadback": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/rest-stage-readback.json",
+    "pin": "6b090759ebb5d0f310578910d392ea225751414d52a4d81cebcd1900deeac314"
+  },
+  "tableDelta": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/database-delta.json",
+    "pin": "8b35c076792e9855fd13d1e937f8f6b007c6244e95488888020e4225c57b133c"
+  },
+  "preservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/preservation.json",
+    "pin": "e41b4bbfa7d04a1bb813f6d9b825174f210ad7086f3168664423fc8704893125"
+  },
+  "checks": {
+    "focused": 70,
+    "sqlite": 7,
+    "postgres": 7,
+    "docsAndScope": 41,
+    "types": true,
+    "standardCMSBuild": true,
+    "coldRestore": true,
+    "allInstalledFilePins": true,
+    "independentCLIVerification": true,
+    "independentRESTVerification": true,
+    "skipped": 0
+  },
+  "staged": {
+    "protectedExistingMaterialSources": 3,
+    "newMaterials": 84,
+    "relations": 90,
+    "newCharacters": 2
+  },
+  "stagedRevisions": 179,
+  "createdManifests": 1,
+  "alreadyAppliedDraftsSkipped": 42,
+  "contentRecordWrites": 0,
+  "approvalWrites": 0,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "hold": true,
+  "publishable": false,
+  "freeGiB": 13.920589447021484,
+  "followup": [
+    "Independent bound reviews for source/numeric/classification/relation/identity/new-entity changes",
+    "Complete collection exporter, all consumers and compatible recovery qualification",
+    "Next.js 16.4.2 security advisory remediation"
+  ],
+  "next": "Resume this installed stage and cmsAfter snapshot. Keep the 42 saved drafts and 179 staged revisions; do not replay either intake. R139 remains the published source.",
+  "evidence": {
+    "cms-capture-proof.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-capture-proof.json",
+      "pin": "ce0cb7721938f307df0d63798195d577f88c62b89614c73dad663578791a885d"
+    },
+    "cms-after-proof.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-after-proof.json",
+      "pin": "9aabf42bf8c16c71f41dc57ffc415329a31976262510a578a2c63b678fb08f5f"
+    },
+    "cold-backup.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cold-backup.json",
+      "pin": "c84e818eb4dd8dd5de4b8f6c23507ac9ce2ae605cfa5719080bb268e51f22e7d"
+    },
+    "application-installed.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/application-installed.json",
+      "pin": "a388428fe17442d7114e2c0b013b22bf05b41ac50bd2e7847aa1ae4648d976ed"
+    },
+    "application-manifest-initial.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/application-manifest-initial.json",
+      "pin": "78ca4080459087a81d47e9b6dc53258d2f018f9f776ef03f9af27239d1dc95cf"
+    },
+    "database-before-install.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/database-before-install.json",
+      "pin": "97c2e8a67fd1532b96098973651c2c9f340e8089f9f99a0cecd1fea8f71cb06b"
+    },
+    "database-after-install.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/database-after-install.json",
+      "pin": "97c2e8a67fd1532b96098973651c2c9f340e8089f9f99a0cecd1fea8f71cb06b"
+    },
+    "database-after-stage.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/database-after-stage.json",
+      "pin": "ee765e14c830e660c387aa1d8401b333ef502873aafea910f40d30ee296f3e8a"
+    },
+    "focused-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/focused-tests.log",
+      "pin": "dd072b93b672b3bc7bcbdac5c94a3037810f620348056503b243994383f7aee9"
+    },
+    "sqlite-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/sqlite-tests.log",
+      "pin": "ebd0e1b184c85db4ada170b60cfd2bcd96589b2b440dd66b26f713f16097ce21"
+    },
+    "postgres-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/postgres-tests.log",
+      "pin": "96f0fd7ec8441726b1337d3387dcb7f807d0a16e2fd97cd0f662ee722a6b4fb3"
+    },
+    "docs-scope-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/docs-scope-tests.log",
+      "pin": "2c037d567beb27c152353262bb0895960066b3d2da41551e5c1f7516ba519995"
+    },
+    "types.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/types.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "cms-build.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-build.log",
+      "pin": "c61bfd3a27d961c8ebc664d716a816eb0d82416168da9436a8e577fdcc17d1df"
+    },
+    "cms-build-webpack.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-build-webpack.log",
+      "pin": "a57ce427e506c31087f11386d5d0b34e85ab2bf5b16eec1525c4cac8ed58ff4d"
+    },
+    "cms-build-hermetic.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-build-hermetic.log",
+      "pin": "49a0b7f28e53383afffb40d05c770de2f8f1c785ecbf74f0a93ddd0c1c49eae7"
+    },
+    "cms-build-hermetic-02.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-build-hermetic-02.log",
+      "pin": "92dab4c1f12550e6c45d147cae1b2b624fd5f1ec17e01b216c775ec3dc3554a1"
+    },
+    "application-install.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/application-install.log",
+      "pin": "d4a8f31b23a7ff2a503338cd142913fb5f239b3ae2c3c5bf768c07b28af6159a"
+    },
+    "installed-apply.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-apply.log",
+      "pin": "c4f715197a8db74cd47229747f8e05c9affb38635fdb2b57141d657933058034"
+    },
+    "installed-apply-02.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-apply-02.log",
+      "pin": "2a3f9d70e2bd248a7b262a7d3b0950a0a2d087c775b8b804c63e950c37b0f375"
+    },
+    "installed-apply-02.json.intent.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-apply-02.json.intent.json",
+      "pin": "5516c0184ac16a9fc5080009309fa18caa5679505bdaa76e3a359d7fc5a14ed9"
+    },
+    "installed-repeat.json.intent.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-repeat.json.intent.json",
+      "pin": "408282c5509b46128f4c794f8ba7f99e138e28d0ab4f0ec4a3e113929943a649"
+    },
+    "installed-repeat.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-repeat.log",
+      "pin": "ae93ddb88fde0a35b2873638fa37fb29aaa1216f9e76f98f3a95009cd442b80f"
+    },
+    "installed-verify.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/installed-verify.log",
+      "pin": "f2c76a2abe461a19e79656117a727e528513a6551da77a0830d50ec9f9e6618a"
+    },
+    "build-cleanup.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/build-cleanup.json",
+      "pin": "134f5fb2d866e46b3a9850e3aa8252f725cc3f2ecdef773cb5d54ac4342fa616"
+    }
+  }
+}

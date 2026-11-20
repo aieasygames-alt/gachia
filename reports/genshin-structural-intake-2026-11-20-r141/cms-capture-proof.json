@@ -1,0 +1,20 @@
+{
+  "proof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/cms-capture.json.gz",
+    "pin": "653f07d55ccfe737304856b428af97ed84da5651b39d07702687ffc2b7e92a11"
+  },
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/delivery.json",
+    "pin": "f612e802132fa7e3a1af36e6076be9c59eccf353c6bb9c4ae650455c7d651892"
+  },
+  "parentSnapshot": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-after.json.gz",
+    "pin": "7100b065d9d1da84de5a016c39a6aeff483fafbb06727d4cbbf323412f9bbfde"
+  },
+  "records": 2880,
+  "publishedRead": 2880,
+  "stableDoubleRead": true,
+  "exactR140AfterMatch": true,
+  "draftSetSHA256": "18c51e0e78cf145967c67eccfc3847e254b155cf515a2e0054ea23aeba5b0776",
+  "replayedContentWrites": 0
+}

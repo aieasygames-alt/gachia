@@ -1,0 +1,18 @@
+{
+  "action": "apply",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261120T151905Z-genshin-stage-r141-30d3ecc2/application-manifest.json",
+    "pin": "fca29fd40b359c52ca2c55f6bf3bc25049078168ca16f95c59b5e2fbd05ffb2e"
+  },
+  "sourceCommit": "30d3ecc2f83ec232d1abed5c325141aa8406fc7b",
+  "input": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/intake-input.json",
+    "pin": "0a761dd563bdcd018f8332794cb924d00909bdd2ea92e98805a91fc7bb036d66"
+  },
+  "stageKey": "f173c9de5587920b011ab9d9c3a82015634f296c8e569d315c5882860b21c83d",
+  "structuralRecords": 179,
+  "skippedAppliedDrafts": 42,
+  "contentRecordWrites": 0,
+  "hold": true,
+  "at": "2026-11-20T15:29:08.339Z"
+}
