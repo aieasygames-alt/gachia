@@ -64,3 +64,34 @@ production scope, qualify all material fields, verify game facts/media, prove fu
 detail-page or sitemap parity, or replace a real CMS review, candidate/recovery
 build, exact CI and controlled release. The existing production scopes continue
 to reject material publication until that vertical slice is accepted.
+
+## R135 identity correction and recipe review
+
+`material-identity-review.ts` prepares a source-bound Genshin identity correction.
+Both reference locales must agree on a positive numeric game ID, and the existing
+target must match both names. Material source spelling must also match the English
+reference name; short character IDs require an existing qualified target. Missing,
+conflicting or ambiguous evidence stays held. No runtime aliases are introduced.
+Replay validates source hashes, reference hashes, every pointer and all unchanged
+data; an identity review never attests a recipe, a quantity, or release permission.
+
+The R135 reviewed record is `reviews/2026-11-20-genshin-material-identities.json`.
+Its 46 reference files are from community-maintained `theBowja/genshin-db`, fixed at
+`8e5badd60b5d894284ccc927a56c9683529d2592`, with Git blob and SHA256 evidence.
+This is corroboration, not official certification. The local source and public
+mirror apply 21 material and 2 character identity changes (498 pointers), preserving
+all 5,400 quantities/stage entries. Genshin still has 53 undefined material IDs,
+1,279 dangling material references and 2 absent character records. Recipe review
+found differences in 1,034 of 1,350 stages, including 989 recognized-material
+quantity differences. Material publication remains blocked.
+
+The 108 Guihuan quantity-only records already lacked IDs in their introducing Git
+commit. Keep them held; neither a currency ID nor deletion is established by this
+history. R135 does not modify Guihuan content, CMS records or production.
+
+The read-only release audit now persists a completed published-history audit even
+if a local mirror predates a published CMS overlay. `localMirrorParity` and
+`mirrorDrift` explicitly report that separate condition; the published dependency
+audit and public audit still use the verified published sources. A verified
+`review-sources.json` capture permits subsequent offline review without repeating
+the full history read or treating a Git mirror as published A.

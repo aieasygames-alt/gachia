@@ -72,11 +72,11 @@ test('actual source gaps produce reproducible review work, not guessed repairs',
     const raw = await read('raw-materials'), relationRows = await read('raw-character-materials'), characterRows = await read('raw-characters')
     const rows = mapBatch([snapshot(game, `packages/data/games/${game}/raw-materials.json`, 'raw-json', JSON.stringify(raw))], policy).sources[0].records
     const plan = dependencyReviewPlan(game, rows, relationRows, characterRows)
-    assert.equal(plan.issues.length, game === 'starrail' ? 0 : game === 'genshin' ? 78 : 0)
+    assert.equal(plan.issues.length, game === 'starrail' ? 0 : game === 'genshin' ? 55 : 0)
     assert.deepEqual(verifyDependencyReviewPlan(plan, game, rows, relationRows, characterRows), plan)
     if (game === 'genshin') {
-      assert.deepEqual(plan.issues.find(i => i.missingId === 'guide-to-freedom')!.candidateHints, [{ targetId: 'guide-of-freedom', reason: 'guide-preposition' }])
-      assert.equal(plan.issues.find(i => i.missingId === 'sara')!.candidateHints[0].targetId, 'kujou-sara')
+      assert.equal(plan.issues.some(i => i.missingId === 'guide-to-freedom' || i.missingId === 'sara'), false)
+      assert.equal(plan.issues.find(i => i.missingId === 'mualani')!.status, 'needs-source-review')
     }
     if (game === 'nte') {
       assert.equal(plan.issues.some(i => i.missingId === 'zero'), false)

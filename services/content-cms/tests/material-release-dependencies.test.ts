@@ -77,8 +77,9 @@ test('all thirteen actual material domains retain every reference and expose pre
   })
   assert.equal(reports.length, 13)
   const genshin = reports.find(row => row.game === 'genshin')!
-  assert.equal(genshin.missingMaterialIds.length, 74)
-  assert.deepEqual(genshin.missingCharacterIds, ['mualani', 'ororon', 'sara', 'shinobu'])
+  assert.equal(genshin.missingMaterialIds.length, 53)
+  assert.equal(genshin.issues.filter(row => row.code === 'missing-material-definition').length, 1279)
+  assert.deepEqual(genshin.missingCharacterIds, ['mualani', 'ororon'])
   assert.equal(genshin.materialReferences, 5400)
   const guihuan = reports.find(row => row.game === 'guihuan')!
   assert(guihuan.anonymousMaterialReferences > 0)
