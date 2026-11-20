@@ -145,3 +145,50 @@ records. Neither complete individual drafts nor an overlay's integrity hash
 grant import or publication permission. R134 remains published A; future work
 must reconcile CMS import O and separately qualify numeric, relationship and new
 entity changes, material consumers, candidate/recovery builds and exact CI.
+
+## R137 specialty ranks and missing character definitions
+
+`genshin-candidate-completion.ts` completes only the R136 gaps. It binds the
+parent seal and source hashes, all 49 specialty IDs and exactly the two missing
+character IDs. New overlays hold 269 material definitions, 117 character records
+and the unchanged 5,490-reference R136 recipe file. The identity dependency audit
+and complete-material-closure gate pass with zero missing definitions/characters.
+This gate remains separate from factual and publication qualification.
+
+Each specialty has explicit `gi.yatta.moe` material API evidence: endpoint numeric
+ID, `UI_ItemIcon_ID`, exact English name and `rank=1`. That is the site's
+**community display-rank evidence**. The independently pinned game extraction
+`DimbreathBot/AnimeGameData` commit
+`bd35e243fa436f141f015cf221a6e19d0c34b7ca` omits `rankLevel` on all 49 records.
+Its `rank` field is a sort order such as 313. The code verifies and preserves
+this distinction; it does not claim either that the raw game field equals 1 or
+that the community display rank certifies an official one-star rarity. The
+16 new drafts receive the explicit API display rank; the 33 existing display
+values agree and need no numeric change. A new/mismatched game rankLevel fails
+closed for further review, rather than silently preferring a source.
+
+Mualani and Ororon use the existing pinned genshin-db commit for Chinese,
+English and Japanese character identities, English/Chinese skill text and all
+six constellation records. Numeric avatar IDs and talent/constellation record
+IDs are validated in their distinct namespaces. BWiki revisions 690423 and
+690478 explicitly corroborate release versions 5.0/5.2 and limited/standard
+acquisition; release version is never inferred from an API timestamp. All four
+passives are retained for both characters, including `passive3`; Ororon's
+`combatju` is retained as `specialJump`. The site's generic skill aggregation
+still needs explicit support for these fields before new-entity release.
+
+Character image fields stay empty and unqualified: credential-free HEAD checks
+on the two current canonical `img.gachia.com` paths returned 404. The batch adds
+no image bytes or URL alias. Editorial build/team/tier recommendations and FAQ
+stay empty rather than being invented. Source-backed character definitions can
+close identity dependencies while media, new-entity lifecycle and full consumer
+qualification remain held.
+
+`reviews/2026-11-20-genshin-completion-r137.json.gz` is a self-contained replay
+fixture with the parent candidate, inputs, exact source/API/wiki texts and the
+full hashed/Git-blob-verified game table. New tests cover corrupted and stale
+inputs, endpoint/identity/rarity mismatch, missing evidence, changed wiki
+revision, lost skills and source preservation. In-memory server rendering tests
+exercise both characters and all 49 specialty details/collection links in three
+locales. These HTML data tests do not verify media or qualify a new entity for
+production. Raw data, CMS, production scopes and published R134 A stay unchanged.
