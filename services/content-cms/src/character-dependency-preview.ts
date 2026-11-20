@@ -6,7 +6,8 @@ import { materialDependencyPreview } from './material-public-preview'
 // Reviewed reader code, not authorization. Drift requires explicit adapter review.
 export const CHARACTER_READER_SOURCES = {
   'packages/data/games/starrail/characters.ts': '60a655d636d04a98e7384da02c6413f4f2cdb0c032cac6d4330b73c6c0092f3f',
-  'packages/data/games/genshin/characters.ts': '5d4e03479400957d97b59766eee3f659a882281ac7b7e87c3f4bede248424562',
+  // R139: reviewed R138 specialJump/passive3 aggregation; summary identity and eligibility stay intact.
+  'packages/data/games/genshin/characters.ts': '4d96c8c5d824857a0f64c9a14b93ace26673c04536314ed58041cc3deb7ae30d',
   'packages/data/games/nte/characters.ts': '3ed63bffe5fcdf7d7089de3bf921c3d7b41a2f0a49d4a0377ce45b737f189e29',
   'packages/data/image-base.ts': 'd10531db0ad4a4fd16c98ef1818f6d34a71175687a4ccec23ef34d40fd1a84ac',
 }

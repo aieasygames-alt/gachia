@@ -78,7 +78,7 @@ async function localGraph(sources: any, p: any, sealed: any, role: string, direc
     const row = owner === 'genshin' ? sealed.roles[role] : sources.owners[owner]
     const artifact = owner === 'router' ? undefined : owner === 'genshin' ? row.artifact : row.directory
     const module = owner === 'router' ? path.join(root, 'router.js') : owner === 'genshin' ? path.join(root, 'sealed/genshin', role, 'module/worker.js') : path.join(artifact, 'worker.js')
-    configs[owner] = migrationSave(directory, owner + '.json', nteLocalConfig(config(p.workspace, owner), owner, artifact, module)).path
+    configs[owner] = migrationSave(directory, owner + '.json', { ...nteLocalConfig(config(p.workspace, owner), owner, artifact, module), find_additional_modules: false }).path
   }
   configs.unused = migrationSave(directory, 'unused.json', { name: 'nte-release-unused', main: path.join(root, 'unused.js'), compatibility_date: '2026-07-08' }).path
   const row = sealed.roles[role], expected = genshinContentAssets(p.workspace)
