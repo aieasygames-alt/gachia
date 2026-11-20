@@ -182,6 +182,20 @@ export function verifyGenshinIntake(plan: GenshinIntakePlan, input: GenshinIntak
   return rebuilt
 }
 
+// A proposal still differs from published A after its draft has been saved.
+// Compare against the captured CMS value, not the proposal count, on resume.
+export function resumeGenshinIntake(plan: GenshinIntakePlan, input: GenshinIntakeInput) {
+  verifyGenshinIntake(plan, input)
+  assert(plan.intakeReady, 'Intake conflicts/dependencies unresolved')
+  const applied = plan.entries.filter(row => row.cms && equal(row.cms.structuredValue, row.draft))
+  for (const row of applied) assert(row.cms!.hold === true && row.cms!._status === 'draft', 'Saved intake must remain a held draft')
+  const appliedKeys = new Set(applied.map(row => row.key))
+  const pending = plan.entries.filter(row => !appliedKeys.has(row.key))
+  return { alreadyApplied: applied.map(row => row.key),
+    pendingCompatible: pending.filter(row => row.existingEditorCompatible).map(row => row.key),
+    pendingStructural: pending.filter(row => !row.existingEditorCompatible).map(row => row.key) }
+}
+
 // A selected batch is a transportable, reviewable package. It grants no database
 // or production authority, including when it has no merge conflicts.
 export function prepareGenshinIntakeBatch(plan: GenshinIntakePlan, input: GenshinIntakeInput, selection: { keys: string[] }) {
@@ -209,6 +223,7 @@ export function prepareGenshinExistingMaterialDrafts(plan: GenshinIntakePlan, in
   for (const row of batch.records) {
     assert(row.family === 'materials' && row.action === 'update' && row.existingEditorCompatible && row.cms && row.draft,
       'Installed draft intake only accepts compatible existing material fields')
+    assert(!equal(row.cms.structuredValue, row.draft), 'Draft already applied; resume without repeating the write')
     validateUnifiedRecord({ ...row.cms, structuredValue: row.draft, hold: true, _status: 'draft' }, row.cms as unknown as Record<string, unknown>)
   }
   return batch
