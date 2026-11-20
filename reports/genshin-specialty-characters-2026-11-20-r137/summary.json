@@ -1,0 +1,78 @@
+{
+  "kind": "genshin-specialty-character-completion-delivery-v1",
+  "status": "held-candidate-identity-closure-complete",
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/delivery.json",
+    "pin": "0ca512f50c3031697cd96096062554ad332d21eba9be7d79d616a0d194550c6a"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "candidate": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/completed-candidate.json",
+    "pin": "8fc9b891967a07ff11551a4295816b79303c9f02dae244f23a597f5bec37e0ce"
+  },
+  "specialtyRanks": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/specialty-rarity-review.json",
+    "pin": "51935e63d728b7d292e96ce5d46d2cb6e99769f078bd3f1c5b409e980dc1483d"
+  },
+  "characters": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/character-definition-candidates.json",
+    "pin": "4937f5ec3b27fce389f419c596375ae61ab0f5d43f6d3fa30f43431bdfb909a0"
+  },
+  "candidateOutputs": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/raw-materials.candidate.json",
+      "pin": "2de38449c0cfeacbbdb9ac20a557a33adfdb67cb76cf1378f7cfaecfca81dfd4"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/raw-character-materials.candidate.json",
+      "pin": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/raw-characters.candidate.json",
+      "pin": "57575d447dd251f881d185e2c52a8e367f1b362a1a98845678ca5d1e5e020fb5"
+    }
+  ],
+  "preservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/preservation.json",
+    "pin": "0cc529eb21156a7c5aee8f7ee101fda3ccd5dd2514d2e81371d1a3ea5aeb8f71"
+  },
+  "media": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/media-hold.json",
+    "pin": "96220d892fa860a0860423e364413aa98f26f891fa969c7855a75d34f8c7c04e"
+  },
+  "fixture": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-completion-r137.json.gz",
+    "pin": "7682c018fde90ed5366905c9bf53e0484dc4b796db905bfbfb62f20b336ff43d"
+  },
+  "counts": {
+    "materialDefinitions": 269,
+    "materialReferences": 5490,
+    "characters": 117,
+    "missingMaterialIds": 0,
+    "missingMaterialReferences": 0,
+    "missingCharacterIds": 0,
+    "specialtyRanksReviewed": 49,
+    "newDefinitionsCompleted": 16,
+    "existingSpecialtiesVerified": 33,
+    "characterDefinitionsAdded": 2
+  },
+  "completionKey": "31868e2150aa9f81e715dd41b48b552bd2e6a0d42574101d20bb0fc0b3687995",
+  "recipeChangedThisBatch": false,
+  "existingCharactersChanged": false,
+  "dependencyClosureComplete": true,
+  "rarityMeaning": "API display rank=1 for all 49 specialties; fixed game table omits rankLevel. Not official one-star certification.",
+  "unresolvedLegacyIdentitiesHeld": 14,
+  "guihuanAnonymousHeld": 108,
+  "externalSourceReads": true,
+  "localRawWrites": false,
+  "cmsWrites": false,
+  "cloudControlPlaneCalls": false,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "hold": true,
+  "publishable": false,
+  "newEntityQualified": false
+}

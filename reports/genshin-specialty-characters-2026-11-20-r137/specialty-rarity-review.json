@@ -1,0 +1,1287 @@
+{
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/delivery.json",
+    "pin": "0ca512f50c3031697cd96096062554ad332d21eba9be7d79d616a0d194550c6a"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "classification": "community corroboration; API display rank is not official rarity certification",
+  "reviews": [
+    {
+      "numericId": 100021,
+      "localId": "wolfhook",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/601",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100021.json",
+          "sha256": "d6af85b756b98bcd7d8df7dd25cedcfb52b7676e0f4809a4ff47dbed90304a44",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100021"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100022,
+      "localId": "valberry",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/602",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100022.json",
+          "sha256": "0cc86de596f284467e0fa728b83b8716042237ba33f224e24ba136e3cdd00e49",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100022"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100023,
+      "localId": "cecilia",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/603",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100023.json",
+          "sha256": "99b3bf6bc43957077561b5323687a0f8c54de18f7e12078f85f0d1c0dd526850",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100023"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100024,
+      "localId": "windwheel-aster",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/604",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100024.json",
+          "sha256": "5dabf15bb7a61fa69fe60500ce344df255d035d50d260d3faa6c66c6b6658c9b",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100024"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100025,
+      "localId": "philanemo-mushroom",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/605",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100025.json",
+          "sha256": "7756bb9ca6d055e1bbb9efd1887751e6b3be5724d6c964395aaf2a7184508817",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100025"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100027,
+      "localId": "jueyun-chili",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/607",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100027.json",
+          "sha256": "66d9f30bbf151cfab6ef2701c6d72450ca307b8c5f23f088e9a821bab9422ae6",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100027"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100028,
+      "localId": "noctilucous-jade",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/608",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100028.json",
+          "sha256": "2cdedb527b799a1aa61982dd4121293c9cac0766991a9b5cd3b819bd721c7034",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100028"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100029,
+      "localId": "silk-flower",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/609",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100029.json",
+          "sha256": "abac38fcb20edc66b4c4b2bfcbf0a707666d80938736b7200e34b66343be1c5c",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100029"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100030,
+      "localId": "glaze-lily",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/610",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100030.json",
+          "sha256": "ee9d709a6e936fee0afde4e1a57869c19158e401d9b5a3c3958d483f8b6641c9",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100030"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100031,
+      "localId": "qingxin",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/611",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100031.json",
+          "sha256": "a2d28ed1d162253489c40327e8b98676be81a8d6a8c2d2a225af173b20264300",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100031"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100033,
+      "localId": "starconch",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/613",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100033.json",
+          "sha256": "06fbef0d528700dbb3d49718260f7db108bdcbcd1d005e71ab71c51d42b6c9f2",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100033"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100034,
+      "localId": "violetgrass",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/614",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100034.json",
+          "sha256": "5d1826b15db6a6d3d2890bc949687ab85c625725fcafa9f33259f60a7b138cd5",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100034"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100055,
+      "localId": "small-lamp-grass",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/619",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100055.json",
+          "sha256": "4ca7b67c9a7dbb7d97a9751bc625cdc5f620521c848aec24b01137b492de0b3c",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100055"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100056,
+      "localId": "calla-lily",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/620",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100056.json",
+          "sha256": "2af5982644e419b820ffd266cea4cd02fa34c6c6346915c2a11a40b7505fcf65",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100056"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100057,
+      "localId": "dandelion-seed",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 311,
+      "gamePointer": "/621",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100057.json",
+          "sha256": "f8cda13b961dff3a6486dd1211962f668e0109b6c1577c1e627c8632f4e57c4b",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100057"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 100058,
+      "localId": "cor-lapis",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/622",
+      "sources": [
+        {
+          "sourcePath": "api/materials/100058.json",
+          "sha256": "9a3e658b07cd809ddb7debcc42447113976b0848259a0ce58a4b0dd028de29a0",
+          "url": "https://gi.yatta.moe/api/v2/en/material/100058"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101201,
+      "localId": "onikabuto",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/687",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101201.json",
+          "sha256": "c5f759decb522a82978ce16c6373d381e40c8a2177aee74b4067b1253ed85cce",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101201"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101202,
+      "localId": "sakura-bloom",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/688",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101202.json",
+          "sha256": "16c23511091c5d5ca79369ece728eb27a41d7d87fe359d47838018ae40865d52",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101202"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101203,
+      "localId": "crystal-marrow",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/689",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101203.json",
+          "sha256": "2deebf58334a1259c3a1e773b9be57764df2042074f319ec865d8c0bb01f6c7e",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101203"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101204,
+      "localId": "dendrobium",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/690",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101204.json",
+          "sha256": "fb8a67a29f47b7d9632a4502680aaa676a6ad4bb97ae8407b7c6455bfbf9bd2f",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101204"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101205,
+      "localId": "naku-weed",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/691",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101205.json",
+          "sha256": "4b5d58167e6c41565074c9172dc07f99ae860dbdccf38cf2921062ea57a72a48",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101205"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101206,
+      "localId": "sea-ganoderma",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/692",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101206.json",
+          "sha256": "2ef4159d92781cee547bbf95c093bf1ac71cb8ce306d3d5eb58d76142e92efb9",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101206"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101207,
+      "localId": "sango-pearl",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/693",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101207.json",
+          "sha256": "5e3efe5a92733e38d34886ebb92336a9ac6b306a11b5ef558bc78782392552da",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101207"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101208,
+      "localId": "amakumo-fruit",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/694",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101208.json",
+          "sha256": "bf176a68a31352f6971e0502af233e6293be5c4860fdad3a0d60fa6ef31aa298",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101208"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101209,
+      "localId": "fluorescent-fungus",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 313,
+      "gamePointer": "/695",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101209.json",
+          "sha256": "388ff20ae08302ed7c13e19d07c21b2a8762d1e6f6f7f6096664b0c439cafc20",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101209"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101213,
+      "localId": "rukkhashava-mushroom",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/699",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101213.json",
+          "sha256": "9ecef9c341518163ff754158578f1798a1fe0a413b44f7f25f1b3d8cfb1e31a3",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101213"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101214,
+      "localId": "padisarah",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/700",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101214.json",
+          "sha256": "86c334388b79a16430dc9a98c00d855683267e8697918b9375c5ab3580535713",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101214"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101215,
+      "localId": "nilotpala-lotus",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/701",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101215.json",
+          "sha256": "558be4af8058eb6ebf2b464d63dfc060850723dcba7e5e218efe483bc3a13f92",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101215"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101217,
+      "localId": "kalpalata-lotus",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/703",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101217.json",
+          "sha256": "6d19b407d2dd9b3f6ac2800029dd9c719ee5e9eaaaba421902d409af5a82ee19",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101217"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101220,
+      "localId": "henna-berry",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/706",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101220.json",
+          "sha256": "e58684720af2b96d63a65ceb4e92928cec2bbe0f6fcc1f44f37ea9ea61fa75c2",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101220"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101222,
+      "localId": "sand-grease-pupa",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/708",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101222.json",
+          "sha256": "ab214a75a9810320d8d7533a511215668390327fbf613b2decee434265197c15",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101222"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101223,
+      "localId": "mourning-flower",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/709",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101223.json",
+          "sha256": "206482bf384bab357b8cefd19f5b6c43730f24c5ad60062451200b46dbd7b192",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101223"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101224,
+      "localId": "trishiraite",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/710",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101224.json",
+          "sha256": "b936f31fde92d17aced10034a61e2b187d423b57c72f348e1d1e1cc666007e4d",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101224"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101225,
+      "localId": "scarab",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 314,
+      "gamePointer": "/711",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101225.json",
+          "sha256": "b5628e0628799a4d4bd88877119729cc9b0fb2e3bab08604b4ecb371b9c7835d",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101225"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101232,
+      "localId": "beryl-conch",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/718",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101232.json",
+          "sha256": "92ec4b50c0e8ec19a0e8cb2d0c53ca9823ea4c50e171dc84d3c7f8c91910a0de",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101232"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101233,
+      "localId": "romaritime-flower",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/719",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101233.json",
+          "sha256": "dc0201c738cb1cfcdf3839291e044ed6204c5e1cbb66705076caefab9a97fd4d",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101233"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101235,
+      "localId": "lumidouce-bell",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/721",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101235.json",
+          "sha256": "3f8f8867a0487204e4c4f7cf547126e355bab59c2804c80922dc283346cdf44a",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101235"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101236,
+      "localId": "rainbow-rose",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/722",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101236.json",
+          "sha256": "3dca9857e532ba5a6ec95ff5c738ae3a3d5e63f12c2dde96b032bfec09c7e4d2",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101236"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101237,
+      "localId": "lumitoile",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/723",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101237.json",
+          "sha256": "48294b9583187e3dccb3ab538ff14e922b38b1a98062f49c67a3db4c6f801c81",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101237"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101238,
+      "localId": "lakelight-lily",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/724",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101238.json",
+          "sha256": "684f9777571d8553e27d8b5c8eebb919382b0835c3e151789ea206ccb65f1250",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101238"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101239,
+      "localId": "subdetection-unit",
+      "previousRarity": 1,
+      "action": "existing-display-rank-verified",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/725",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101239.json",
+          "sha256": "9fac1d2412cf2dc5bf4ee6204bbc8eb5f4940d78606fd664744be66efecb7966",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101239"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101240,
+      "localId": "spring-of-the-first-dewdrop",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 315,
+      "gamePointer": "/726",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101240.json",
+          "sha256": "bf4d3d1261333516d319e672a21b81f12bd0122b11fc2fd43a6897ade41459a5",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101240"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101241,
+      "localId": "clearwater-jade",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 312,
+      "gamePointer": "/727",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101241.json",
+          "sha256": "15f5a0086844dfb9fb542c4f665e8deb785c1ea46e15c8a0dad20112b5565abb",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101241"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101247,
+      "localId": "sprayfeather-gill",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 316,
+      "gamePointer": "/733",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101247.json",
+          "sha256": "4adba5a3e9dc4ccc43510fb5e4f0ba82e361e2cbeacc6c6b6c392dc3b4759a5a",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101247"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101248,
+      "localId": "brilliant-chrysanthemum",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 316,
+      "gamePointer": "/734",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101248.json",
+          "sha256": "be43d67368fe2c10ddd4e4faeae6fc9ec4451c31a7cdf1ce523d0a0568fbdc12",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101248"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101249,
+      "localId": "quenepa-berry",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 316,
+      "gamePointer": "/735",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101249.json",
+          "sha256": "c2a4c98acfc20ecd7e36b629a4f02af715937dea21d610f795bbea700d843d52",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101249"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101250,
+      "localId": "saurian-claw-succulent",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 316,
+      "gamePointer": "/736",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101250.json",
+          "sha256": "23f1a65b2427f8c0b9c04f522cc08d187eea97c0958d3b3e0815941aceeb571b",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101250"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101252,
+      "localId": "glowing-hornshroom",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 316,
+      "gamePointer": "/738",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101252.json",
+          "sha256": "59288c7b9e475bb22ef3ff3125581c72bc9e1596a0f1a9cfd3332a451169437c",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101252"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "numericId": 101253,
+      "localId": "withering-purpurbloom",
+      "previousRarity": null,
+      "action": "new-definition-completed",
+      "displayRank": 1,
+      "evidenceMeaning": "community API display rank; game rankLevel absent; not official one-star certification",
+      "gameSortRank": 316,
+      "gamePointer": "/739",
+      "sources": [
+        {
+          "sourcePath": "api/materials/101253.json",
+          "sha256": "e8e85c2b4e5f5d622f4839ab789cd23db11ad6e7cb970b5c32f57d2eddfdfd76",
+          "url": "https://gi.yatta.moe/api/v2/en/material/101253"
+        },
+        {
+          "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+          "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+          "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+          "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962"
+        }
+      ],
+      "officialRarityCertified": false,
+      "hold": true,
+      "publishable": false
+    }
+  ]
+}

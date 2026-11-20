@@ -1,0 +1,2822 @@
+{
+  "kind": "genshin-r137-supplementary-evidence-v1",
+  "classification": "community-maintained API and game-data extraction; not official certification",
+  "observedAt": "2026-11-20T10:40:27.166857+00:00",
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/delivery.json",
+    "pin": "0ca512f50c3031697cd96096062554ad332d21eba9be7d79d616a0d194550c6a"
+  },
+  "databaseCommit": "8e5badd60b5d894284ccc927a56c9683529d2592",
+  "specialtyRanks": [
+    {
+      "numericId": 100021,
+      "localId": "wolfhook",
+      "nameEn": "Wolfhook",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100021",
+      "path": "yatta/materials/100021.json",
+      "sha256": "d6af85b756b98bcd7d8df7dd25cedcfb52b7676e0f4809a4ff47dbed90304a44",
+      "bytes": 1045,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100022,
+      "localId": "valberry",
+      "nameEn": "Valberry",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100022",
+      "path": "yatta/materials/100022.json",
+      "sha256": "0cc86de596f284467e0fa728b83b8716042237ba33f224e24ba136e3cdd00e49",
+      "bytes": 864,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100023,
+      "localId": "cecilia",
+      "nameEn": "Cecilia",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100023",
+      "path": "yatta/materials/100023.json",
+      "sha256": "99b3bf6bc43957077561b5323687a0f8c54de18f7e12078f85f0d1c0dd526850",
+      "bytes": 753,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100024,
+      "localId": "windwheel-aster",
+      "nameEn": "Windwheel Aster",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100024",
+      "path": "yatta/materials/100024.json",
+      "sha256": "5dabf15bb7a61fa69fe60500ce344df255d035d50d260d3faa6c66c6b6658c9b",
+      "bytes": 2015,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100025,
+      "localId": "philanemo-mushroom",
+      "nameEn": "Philanemo Mushroom",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100025",
+      "path": "yatta/materials/100025.json",
+      "sha256": "7756bb9ca6d055e1bbb9efd1887751e6b3be5724d6c964395aaf2a7184508817",
+      "bytes": 721,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100027,
+      "localId": "jueyun-chili",
+      "nameEn": "Jueyun Chili",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100027",
+      "path": "yatta/materials/100027.json",
+      "sha256": "66d9f30bbf151cfab6ef2701c6d72450ca307b8c5f23f088e9a821bab9422ae6",
+      "bytes": 994,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100028,
+      "localId": "noctilucous-jade",
+      "nameEn": "Noctilucous Jade",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100028",
+      "path": "yatta/materials/100028.json",
+      "sha256": "2cdedb527b799a1aa61982dd4121293c9cac0766991a9b5cd3b819bd721c7034",
+      "bytes": 736,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100029,
+      "localId": "silk-flower",
+      "nameEn": "Silk Flower",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100029",
+      "path": "yatta/materials/100029.json",
+      "sha256": "abac38fcb20edc66b4c4b2bfcbf0a707666d80938736b7200e34b66343be1c5c",
+      "bytes": 1088,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100030,
+      "localId": "glaze-lily",
+      "nameEn": "Glaze Lily",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100030",
+      "path": "yatta/materials/100030.json",
+      "sha256": "ee9d709a6e936fee0afde4e1a57869c19158e401d9b5a3c3958d483f8b6641c9",
+      "bytes": 1296,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100031,
+      "localId": "qingxin",
+      "nameEn": "Qingxin",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100031",
+      "path": "yatta/materials/100031.json",
+      "sha256": "a2d28ed1d162253489c40327e8b98676be81a8d6a8c2d2a225af173b20264300",
+      "bytes": 892,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100033,
+      "localId": "starconch",
+      "nameEn": "Starconch",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100033",
+      "path": "yatta/materials/100033.json",
+      "sha256": "06fbef0d528700dbb3d49718260f7db108bdcbcd1d005e71ab71c51d42b6c9f2",
+      "bytes": 716,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100034,
+      "localId": "violetgrass",
+      "nameEn": "Violetgrass",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100034",
+      "path": "yatta/materials/100034.json",
+      "sha256": "5d1826b15db6a6d3d2890bc949687ab85c625725fcafa9f33259f60a7b138cd5",
+      "bytes": 773,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100055,
+      "localId": "small-lamp-grass",
+      "nameEn": "Small Lamp Grass",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100055",
+      "path": "yatta/materials/100055.json",
+      "sha256": "4ca7b67c9a7dbb7d97a9751bc625cdc5f620521c848aec24b01137b492de0b3c",
+      "bytes": 1076,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100056,
+      "localId": "calla-lily",
+      "nameEn": "Calla Lily",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100056",
+      "path": "yatta/materials/100056.json",
+      "sha256": "2af5982644e419b820ffd266cea4cd02fa34c6c6346915c2a11a40b7505fcf65",
+      "bytes": 1064,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100057,
+      "localId": "dandelion-seed",
+      "nameEn": "Dandelion Seed",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100057",
+      "path": "yatta/materials/100057.json",
+      "sha256": "f8cda13b961dff3a6486dd1211962f668e0109b6c1577c1e627c8632f4e57c4b",
+      "bytes": 1064,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 100058,
+      "localId": "cor-lapis",
+      "nameEn": "Cor Lapis",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/100058",
+      "path": "yatta/materials/100058.json",
+      "sha256": "9a3e658b07cd809ddb7debcc42447113976b0848259a0ce58a4b0dd028de29a0",
+      "bytes": 803,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101201,
+      "localId": "onikabuto",
+      "nameEn": "Onikabuto",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101201",
+      "path": "yatta/materials/101201.json",
+      "sha256": "c5f759decb522a82978ce16c6373d381e40c8a2177aee74b4067b1253ed85cce",
+      "bytes": 1431,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101202,
+      "localId": "sakura-bloom",
+      "nameEn": "Sakura Bloom",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101202",
+      "path": "yatta/materials/101202.json",
+      "sha256": "16c23511091c5d5ca79369ece728eb27a41d7d87fe359d47838018ae40865d52",
+      "bytes": 1190,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101203,
+      "localId": "crystal-marrow",
+      "nameEn": "Crystal Marrow",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101203",
+      "path": "yatta/materials/101203.json",
+      "sha256": "2deebf58334a1259c3a1e773b9be57764df2042074f319ec865d8c0bb01f6c7e",
+      "bytes": 1299,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101204,
+      "localId": "dendrobium",
+      "nameEn": "Dendrobium",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101204",
+      "path": "yatta/materials/101204.json",
+      "sha256": "fb8a67a29f47b7d9632a4502680aaa676a6ad4bb97ae8407b7c6455bfbf9bd2f",
+      "bytes": 1624,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101205,
+      "localId": "naku-weed",
+      "nameEn": "Naku Weed",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101205",
+      "path": "yatta/materials/101205.json",
+      "sha256": "4b5d58167e6c41565074c9172dc07f99ae860dbdccf38cf2921062ea57a72a48",
+      "bytes": 1402,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101206,
+      "localId": "sea-ganoderma",
+      "nameEn": "Sea Ganoderma",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101206",
+      "path": "yatta/materials/101206.json",
+      "sha256": "2ef4159d92781cee547bbf95c093bf1ac71cb8ce306d3d5eb58d76142e92efb9",
+      "bytes": 1452,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101207,
+      "localId": "sango-pearl",
+      "nameEn": "Sango Pearl",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101207",
+      "path": "yatta/materials/101207.json",
+      "sha256": "5e3efe5a92733e38d34886ebb92336a9ac6b306a11b5ef558bc78782392552da",
+      "bytes": 1377,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101208,
+      "localId": "amakumo-fruit",
+      "nameEn": "Amakumo Fruit",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101208",
+      "path": "yatta/materials/101208.json",
+      "sha256": "bf176a68a31352f6971e0502af233e6293be5c4860fdad3a0d60fa6ef31aa298",
+      "bytes": 1238,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101209,
+      "localId": "fluorescent-fungus",
+      "nameEn": "Fluorescent Fungus",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101209",
+      "path": "yatta/materials/101209.json",
+      "sha256": "388ff20ae08302ed7c13e19d07c21b2a8762d1e6f6f7f6096664b0c439cafc20",
+      "bytes": 748,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101213,
+      "localId": "rukkhashava-mushroom",
+      "nameEn": "Rukkhashava Mushrooms",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101213",
+      "path": "yatta/materials/101213.json",
+      "sha256": "9ecef9c341518163ff754158578f1798a1fe0a413b44f7f25f1b3d8cfb1e31a3",
+      "bytes": 1363,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101214,
+      "localId": "padisarah",
+      "nameEn": "Padisarah",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101214",
+      "path": "yatta/materials/101214.json",
+      "sha256": "86c334388b79a16430dc9a98c00d855683267e8697918b9375c5ab3580535713",
+      "bytes": 1222,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101215,
+      "localId": "nilotpala-lotus",
+      "nameEn": "Nilotpala Lotus",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101215",
+      "path": "yatta/materials/101215.json",
+      "sha256": "558be4af8058eb6ebf2b464d63dfc060850723dcba7e5e218efe483bc3a13f92",
+      "bytes": 1293,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101217,
+      "localId": "kalpalata-lotus",
+      "nameEn": "Kalpalata Lotus",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101217",
+      "path": "yatta/materials/101217.json",
+      "sha256": "6d19b407d2dd9b3f6ac2800029dd9c719ee5e9eaaaba421902d409af5a82ee19",
+      "bytes": 1364,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101220,
+      "localId": "henna-berry",
+      "nameEn": "Henna Berry",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101220",
+      "path": "yatta/materials/101220.json",
+      "sha256": "e58684720af2b96d63a65ceb4e92928cec2bbe0f6fcc1f44f37ea9ea61fa75c2",
+      "bytes": 1254,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101222,
+      "localId": "sand-grease-pupa",
+      "nameEn": "Sand Grease Pupa",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101222",
+      "path": "yatta/materials/101222.json",
+      "sha256": "ab214a75a9810320d8d7533a511215668390327fbf613b2decee434265197c15",
+      "bytes": 1340,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101223,
+      "localId": "mourning-flower",
+      "nameEn": "Mourning Flower",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101223",
+      "path": "yatta/materials/101223.json",
+      "sha256": "206482bf384bab357b8cefd19f5b6c43730f24c5ad60062451200b46dbd7b192",
+      "bytes": 1358,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101224,
+      "localId": "trishiraite",
+      "nameEn": "Trishiraite",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101224",
+      "path": "yatta/materials/101224.json",
+      "sha256": "b936f31fde92d17aced10034a61e2b187d423b57c72f348e1d1e1cc666007e4d",
+      "bytes": 1225,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101225,
+      "localId": "scarab",
+      "nameEn": "Scarab",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101225",
+      "path": "yatta/materials/101225.json",
+      "sha256": "b5628e0628799a4d4bd88877119729cc9b0fb2e3bab08604b4ecb371b9c7835d",
+      "bytes": 1332,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101232,
+      "localId": "beryl-conch",
+      "nameEn": "Beryl Conch",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101232",
+      "path": "yatta/materials/101232.json",
+      "sha256": "92ec4b50c0e8ec19a0e8cb2d0c53ca9823ea4c50e171dc84d3c7f8c91910a0de",
+      "bytes": 1062,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101233,
+      "localId": "romaritime-flower",
+      "nameEn": "Romaritime Flower",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101233",
+      "path": "yatta/materials/101233.json",
+      "sha256": "dc0201c738cb1cfcdf3839291e044ed6204c5e1cbb66705076caefab9a97fd4d",
+      "bytes": 1263,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101235,
+      "localId": "lumidouce-bell",
+      "nameEn": "Lumidouce Bell",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101235",
+      "path": "yatta/materials/101235.json",
+      "sha256": "3f8f8867a0487204e4c4f7cf547126e355bab59c2804c80922dc283346cdf44a",
+      "bytes": 1312,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101236,
+      "localId": "rainbow-rose",
+      "nameEn": "Rainbow Rose",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101236",
+      "path": "yatta/materials/101236.json",
+      "sha256": "3dca9857e532ba5a6ec95ff5c738ae3a3d5e63f12c2dde96b032bfec09c7e4d2",
+      "bytes": 1185,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101237,
+      "localId": "lumitoile",
+      "nameEn": "Lumitoile",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101237",
+      "path": "yatta/materials/101237.json",
+      "sha256": "48294b9583187e3dccb3ab538ff14e922b38b1a98062f49c67a3db4c6f801c81",
+      "bytes": 1230,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101238,
+      "localId": "lakelight-lily",
+      "nameEn": "Lakelight Lily",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101238",
+      "path": "yatta/materials/101238.json",
+      "sha256": "684f9777571d8553e27d8b5c8eebb919382b0835c3e151789ea206ccb65f1250",
+      "bytes": 1331,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101239,
+      "localId": "subdetection-unit",
+      "nameEn": "Subdetection Unit",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101239",
+      "path": "yatta/materials/101239.json",
+      "sha256": "9fac1d2412cf2dc5bf4ee6204bbc8eb5f4940d78606fd664744be66efecb7966",
+      "bytes": 1489,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101240,
+      "localId": "spring-of-the-first-dewdrop",
+      "nameEn": "Spring of the First Dewdrop",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101240",
+      "path": "yatta/materials/101240.json",
+      "sha256": "bf4d3d1261333516d319e672a21b81f12bd0122b11fc2fd43a6897ade41459a5",
+      "bytes": 1261,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101241,
+      "localId": "clearwater-jade",
+      "nameEn": "Clearwater Jade",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101241",
+      "path": "yatta/materials/101241.json",
+      "sha256": "15f5a0086844dfb9fb542c4f665e8deb785c1ea46e15c8a0dad20112b5565abb",
+      "bytes": 1292,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101247,
+      "localId": "sprayfeather-gill",
+      "nameEn": "Sprayfeather Gill",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101247",
+      "path": "yatta/materials/101247.json",
+      "sha256": "4adba5a3e9dc4ccc43510fb5e4f0ba82e361e2cbeacc6c6b6c392dc3b4759a5a",
+      "bytes": 1026,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101248,
+      "localId": "brilliant-chrysanthemum",
+      "nameEn": "Brilliant Chrysanthemum",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101248",
+      "path": "yatta/materials/101248.json",
+      "sha256": "be43d67368fe2c10ddd4e4faeae6fc9ec4451c31a7cdf1ce523d0a0568fbdc12",
+      "bytes": 1315,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101249,
+      "localId": "quenepa-berry",
+      "nameEn": "Quenepa Berry",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101249",
+      "path": "yatta/materials/101249.json",
+      "sha256": "c2a4c98acfc20ecd7e36b629a4f02af715937dea21d610f795bbea700d843d52",
+      "bytes": 1460,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101250,
+      "localId": "saurian-claw-succulent",
+      "nameEn": "Saurian Claw Succulent",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101250",
+      "path": "yatta/materials/101250.json",
+      "sha256": "23f1a65b2427f8c0b9c04f522cc08d187eea97c0958d3b3e0815941aceeb571b",
+      "bytes": 1111,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101252,
+      "localId": "glowing-hornshroom",
+      "nameEn": "Glowing Hornshroom",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101252",
+      "path": "yatta/materials/101252.json",
+      "sha256": "59288c7b9e475bb22ef3ff3125581c72bc9e1596a0f1a9cfd3332a451169437c",
+      "bytes": 1376,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    },
+    {
+      "numericId": 101253,
+      "localId": "withering-purpurbloom",
+      "nameEn": "Withering Purpurbloom",
+      "rank": 1,
+      "url": "https://gi.yatta.moe/api/v2/en/material/101253",
+      "path": "yatta/materials/101253.json",
+      "sha256": "e8e85c2b4e5f5d622f4839ab789cd23db11ad6e7cb970b5c32f57d2eddfdfd76",
+      "bytes": 1294,
+      "evidenceMeaning": "community API display rank; game rankLevel absent"
+    }
+  ],
+  "characterFiles": [
+    {
+      "sourcePath": "src/data/ChineseSimplified/characters/mualani.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/characters/mualani.json",
+      "gitBlob": "212f1a52ccac438a01756f7eac9cfdbc2b97b942",
+      "path": "reference/src/data/ChineseSimplified/characters/mualani.json",
+      "sha256": "722d995174fb69fba73de4ae9cbd06e4a773d393448c979fcba6ce543f843b83",
+      "bytes": 3065
+    },
+    {
+      "sourcePath": "src/data/Japanese/characters/mualani.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/Japanese/characters/mualani.json",
+      "gitBlob": "e14cae2eccb1449e11734d2c2905247deb846581",
+      "path": "reference/src/data/Japanese/characters/mualani.json",
+      "sha256": "b66572c0b92f5e403eba21e0ae5a9cb035723316ace327c9a26abe3828e8c0f8",
+      "bytes": 3292
+    },
+    {
+      "sourcePath": "src/data/ChineseSimplified/talents/mualani.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/talents/mualani.json",
+      "gitBlob": "5590b5c40d65ddb625e119949bd56aaa0cda9aa2",
+      "path": "reference/src/data/ChineseSimplified/talents/mualani.json",
+      "sha256": "3ab98d72d73bf27d08a40b9f46dd84f0427b8bbf539359cd142778a175a0a97f",
+      "bytes": 11499
+    },
+    {
+      "sourcePath": "src/data/English/constellations/mualani.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/constellations/mualani.json",
+      "gitBlob": "c283ca4871e647b5fe64d526e77393febcc1ab9c",
+      "path": "reference/src/data/English/constellations/mualani.json",
+      "sha256": "a21b5a025938cfc4c0d8c0b8531b71afac4352cd83a0476cbdb6f5b9d023ec95",
+      "bytes": 3297
+    },
+    {
+      "sourcePath": "src/data/ChineseSimplified/constellations/mualani.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/constellations/mualani.json",
+      "gitBlob": "6dd8474a27e553d7451e64a763a37e26fa1e16b3",
+      "path": "reference/src/data/ChineseSimplified/constellations/mualani.json",
+      "sha256": "4834736b93ad40c9e99790d10a3fa85484c4d55d8be7876bf7d50c5b4a85b4ca",
+      "bytes": 2873
+    },
+    {
+      "sourcePath": "src/data/ChineseSimplified/characters/ororon.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/characters/ororon.json",
+      "gitBlob": "46694c36d2bd6c25e450c81b934801a87e82f8a8",
+      "path": "reference/src/data/ChineseSimplified/characters/ororon.json",
+      "sha256": "1ecc08816bbfb9276dae60decfe88f690611dd3418e59c80eced2077ecb4ead7",
+      "bytes": 3028
+    },
+    {
+      "sourcePath": "src/data/Japanese/characters/ororon.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/Japanese/characters/ororon.json",
+      "gitBlob": "b705f5e645385cbc464e0e6d34710850fad65532",
+      "path": "reference/src/data/Japanese/characters/ororon.json",
+      "sha256": "c650d5aacc8b2027e2fe58263262869672a8d2beac6e0060a08ee9b672b463c4",
+      "bytes": 3138
+    },
+    {
+      "sourcePath": "src/data/ChineseSimplified/talents/ororon.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/talents/ororon.json",
+      "gitBlob": "f53ec2fdd49d1e5cf17cd5c6fbc75e45e142cb23",
+      "path": "reference/src/data/ChineseSimplified/talents/ororon.json",
+      "sha256": "f2ba48a3fd5ed62efe4989690bee6d19afae133e062ffb1fbcf87cbb0b3c8138",
+      "bytes": 11694
+    },
+    {
+      "sourcePath": "src/data/English/constellations/ororon.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/constellations/ororon.json",
+      "gitBlob": "254223580ac0cbee90f3fad132c4dbd68e3d76bb",
+      "path": "reference/src/data/English/constellations/ororon.json",
+      "sha256": "0edb6a74ec12d24bd0927691a76969eeb06a46acd70fcceb5a65a0f84eb5464a",
+      "bytes": 4117
+    },
+    {
+      "sourcePath": "src/data/ChineseSimplified/constellations/ororon.json",
+      "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/constellations/ororon.json",
+      "gitBlob": "3674324ab1d85eded9782e0cc6ca271a49944f00",
+      "path": "reference/src/data/ChineseSimplified/constellations/ororon.json",
+      "sha256": "f9784e44d5f60c927a457e856dad60876d1a5a15a8bdb19ef3c8040823b08967",
+      "bytes": 3778
+    }
+  ],
+  "game": {
+    "repository": "https://github.com/DimbreathBot/AnimeGameData",
+    "commit": "bd35e243fa436f141f015cf221a6e19d0c34b7ca",
+    "sourcePath": "ExcelBinOutput/MaterialExcelConfigData.json",
+    "url": "https://raw.githubusercontent.com/DimbreathBot/AnimeGameData/bd35e243fa436f141f015cf221a6e19d0c34b7ca/ExcelBinOutput/MaterialExcelConfigData.json",
+    "gitBlob": "76c128c449bf3ba4d9ea9822f6c64616d3409962",
+    "sha256": "e1cfaeb4c18ce57695748c62e07321456209b62c16fcb00753aefdd6fa912173",
+    "archive": {
+      "path": "game/MaterialExcelConfigData.json.gz",
+      "sha256": "936a1c5f8e2660ca315f244aeaee3df38f89de6edf3afaa65829fc3474f91e43",
+      "bytes": 621107
+    },
+    "selected": [
+      {
+        "pointer": "/601",
+        "record": {
+          "descTextMapHash": 1053197341,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3375270351,
+          "gadgetId": 70540013,
+          "icon": "UI_ItemIcon_100021",
+          "id": 100021,
+          "interactionTitleTextMapHash": 2043986375,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1372081476,
+          "rank": 311,
+          "specialDescTextMapHash": 307813833,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3287959846,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/602",
+        "record": {
+          "descTextMapHash": 1671208045,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1543194767,
+          "gadgetId": 70540011,
+          "icon": "UI_ItemIcon_100022",
+          "id": 100022,
+          "interactionTitleTextMapHash": 224693703,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2722402356,
+          "rank": 311,
+          "specialDescTextMapHash": 342614377,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1457232182,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/603",
+        "record": {
+          "descTextMapHash": 4158848333,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2376387055,
+          "gadgetId": 70540018,
+          "icon": "UI_ItemIcon_100023",
+          "id": 100023,
+          "interactionTitleTextMapHash": 2999707935,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3828726124,
+          "rank": 311,
+          "specialDescTextMapHash": 3538512153,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 860889526,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/604",
+        "record": {
+          "descTextMapHash": 1319275901,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1520620023,
+          "gadgetId": 70540019,
+          "icon": "UI_ItemIcon_100024",
+          "id": 100024,
+          "interactionTitleTextMapHash": 2760552631,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3920833836,
+          "rank": 311,
+          "specialDescTextMapHash": 4044403761,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2350559734,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/605",
+        "record": {
+          "descTextMapHash": 3486342309,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3683066991,
+          "gadgetId": 70540020,
+          "icon": "UI_ItemIcon_100025",
+          "id": 100025,
+          "interactionTitleTextMapHash": 3007511767,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 873400484,
+          "rank": 311,
+          "specialDescTextMapHash": 738911665,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3265785278,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/607",
+        "record": {
+          "descTextMapHash": 856101021,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 4285623,
+          "gadgetId": 70540008,
+          "icon": "UI_ItemIcon_100027",
+          "id": 100027,
+          "interactionTitleTextMapHash": 3567801551,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 22100332,
+          "rank": 312,
+          "specialDescTextMapHash": 1890057593,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1092798494,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/608",
+        "record": {
+          "descTextMapHash": 4076851253,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1318569303,
+          "gadgetId": 70540017,
+          "icon": "UI_ItemIcon_100028",
+          "id": 100028,
+          "interactionTitleTextMapHash": 2359841239,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2726159796,
+          "rank": 312,
+          "specialDescTextMapHash": 4167435577,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3245788478,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/609",
+        "record": {
+          "descTextMapHash": 3275996413,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3680420047,
+          "gadgetId": 70540015,
+          "icon": "UI_ItemIcon_100029",
+          "id": 100029,
+          "interactionTitleTextMapHash": 32792807,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1404683740,
+          "rank": 312,
+          "specialDescTextMapHash": 1349216673,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 394480022,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/610",
+        "record": {
+          "descTextMapHash": 2013988021,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 95926279,
+          "gadgetId": 70540012,
+          "icon": "UI_ItemIcon_100030",
+          "id": 100030,
+          "interactionTitleTextMapHash": 1351829703,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 4012901404,
+          "rank": 312,
+          "specialDescTextMapHash": 3013789785,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2467021310,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/611",
+        "record": {
+          "descTextMapHash": 2358110701,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 706478591,
+          "gadgetId": 70540029,
+          "icon": "UI_ItemIcon_100031",
+          "id": 100031,
+          "interactionTitleTextMapHash": 1681326543,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1573292356,
+          "rank": 312,
+          "specialDescTextMapHash": 2453368049,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3956372614,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/613",
+        "record": {
+          "descTextMapHash": 2199597157,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3338663943,
+          "gadgetId": 70540028,
+          "icon": "UI_ItemIcon_100033",
+          "id": 100033,
+          "interactionTitleTextMapHash": 3367457887,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1463427132,
+          "rank": 312,
+          "specialDescTextMapHash": 3941738833,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2737799422,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/614",
+        "record": {
+          "descTextMapHash": 460335149,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3038071247,
+          "gadgetId": 70540026,
+          "icon": "UI_ItemIcon_100034",
+          "id": 100034,
+          "interactionTitleTextMapHash": 392371335,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2214426996,
+          "rank": 312,
+          "specialDescTextMapHash": 1751467225,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1587507262,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/619",
+        "record": {
+          "descTextMapHash": 2665831589,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2836194335,
+          "gadgetId": 70510004,
+          "icon": "UI_ItemIcon_100055",
+          "id": 100055,
+          "interactionTitleTextMapHash": 3633685743,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 144892988,
+          "rank": 311,
+          "specialDescTextMapHash": 4046937289,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1785668750,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/620",
+        "record": {
+          "descTextMapHash": 4226812373,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1262960751,
+          "gadgetId": 70590013,
+          "icon": "UI_ItemIcon_100056",
+          "id": 100056,
+          "interactionTitleTextMapHash": 1679183239,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 4260602356,
+          "rank": 311,
+          "specialDescTextMapHash": 1274136649,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 427753806,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/621",
+        "record": {
+          "descTextMapHash": 15987125,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1522993599,
+          "gadgetId": 70510009,
+          "icon": "UI_ItemIcon_100057",
+          "id": 100057,
+          "interactionTitleTextMapHash": 2246426095,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2071890124,
+          "rank": 311,
+          "specialDescTextMapHash": 3945088305,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 4261920038,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/622",
+        "record": {
+          "descTextMapHash": 1580467341,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 945273999,
+          "gadgetId": 70510012,
+          "icon": "UI_ItemIcon_100058",
+          "id": 100058,
+          "interactionTitleTextMapHash": 1971864999,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2764520484,
+          "rank": 312,
+          "specialDescTextMapHash": 1862867137,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1127145758,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/687",
+        "record": {
+          "descTextMapHash": 1911169253,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 101654679,
+          "icon": "UI_ItemIcon_101201",
+          "id": 101201,
+          "interactionTitleTextMapHash": 664869135,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 767303132,
+          "rank": 313,
+          "specialDescTextMapHash": 3237594145,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2026871294,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/688",
+        "record": {
+          "descTextMapHash": 4120120765,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2749890775,
+          "icon": "UI_ItemIcon_101202",
+          "id": 101202,
+          "interactionTitleTextMapHash": 567342583,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3896942756,
+          "rank": 313,
+          "specialDescTextMapHash": 1305547913,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2193137966,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/689",
+        "record": {
+          "descTextMapHash": 2917481525,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 727134527,
+          "icon": "UI_ItemIcon_101203",
+          "id": 101203,
+          "interactionTitleTextMapHash": 2856313343,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 307506436,
+          "rank": 313,
+          "specialDescTextMapHash": 980498697,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 84500870,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/690",
+        "record": {
+          "descTextMapHash": 1154953229,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 554619183,
+          "icon": "UI_ItemIcon_101204",
+          "id": 101204,
+          "interactionTitleTextMapHash": 3266414007,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 354894236,
+          "rank": 313,
+          "specialDescTextMapHash": 4217364617,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 4035386726,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/691",
+        "record": {
+          "descTextMapHash": 3834988877,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2998711495,
+          "icon": "UI_ItemIcon_101205",
+          "id": 101205,
+          "interactionTitleTextMapHash": 1942580543,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3623663804,
+          "rank": 313,
+          "specialDescTextMapHash": 448212393,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1774647742,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/692",
+        "record": {
+          "descTextMapHash": 3660134429,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1682331975,
+          "icon": "UI_ItemIcon_101206",
+          "id": 101206,
+          "interactionTitleTextMapHash": 4054904839,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 4094014932,
+          "rank": 313,
+          "specialDescTextMapHash": 3184089561,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1423325262,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/693",
+        "record": {
+          "descTextMapHash": 2067948573,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3821798479,
+          "icon": "UI_ItemIcon_101207",
+          "id": 101207,
+          "interactionTitleTextMapHash": 488921575,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 4091966756,
+          "rank": 313,
+          "specialDescTextMapHash": 1611696417,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 405887038,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/694",
+        "record": {
+          "descTextMapHash": 1880079693,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 604527655,
+          "icon": "UI_ItemIcon_101208",
+          "id": 101208,
+          "interactionTitleTextMapHash": 3962388831,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3862594948,
+          "rank": 313,
+          "specialDescTextMapHash": 1370062857,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 378289254,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/695",
+        "record": {
+          "descTextMapHash": 3804956125,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3593802023,
+          "icon": "UI_ItemIcon_101209",
+          "id": 101209,
+          "interactionTitleTextMapHash": 3643882895,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3996649804,
+          "rank": 313,
+          "specialDescTextMapHash": 2550989953,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 55918070,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/699",
+        "record": {
+          "descTextMapHash": 3334676677,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2184584359,
+          "icon": "UI_ItemIcon_101213",
+          "id": 101213,
+          "interactionTitleTextMapHash": 4283805767,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 225599940,
+          "rank": 314,
+          "specialDescTextMapHash": 3328801945,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1249989110,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/700",
+        "record": {
+          "descTextMapHash": 348913141,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3864793103,
+          "icon": "UI_ItemIcon_101214",
+          "id": 101214,
+          "interactionTitleTextMapHash": 1359688103,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 200162340,
+          "rank": 314,
+          "specialDescTextMapHash": 3073766481,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2431665574,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/701",
+        "record": {
+          "descTextMapHash": 3550396653,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 4247738455,
+          "icon": "UI_ItemIcon_101215",
+          "id": 101215,
+          "interactionTitleTextMapHash": 3203773599,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 774700468,
+          "rank": 314,
+          "specialDescTextMapHash": 309948825,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 340465142,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/703",
+        "record": {
+          "descTextMapHash": 1657727149,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 887390391,
+          "icon": "UI_ItemIcon_101217",
+          "id": 101217,
+          "interactionTitleTextMapHash": 659667215,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1479130340,
+          "rank": 314,
+          "specialDescTextMapHash": 2811960449,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3298312254,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/706",
+        "record": {
+          "descTextMapHash": 749601989,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1057657951,
+          "icon": "UI_ItemIcon_101220",
+          "id": 101220,
+          "interactionTitleTextMapHash": 373301575,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3448878388,
+          "rank": 314,
+          "specialDescTextMapHash": 1689601121,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1327991950,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/708",
+        "record": {
+          "descTextMapHash": 9544813,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3832206799,
+          "icon": "UI_ItemIcon_101222",
+          "id": 101222,
+          "interactionTitleTextMapHash": 4048347255,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3925526556,
+          "rank": 314,
+          "specialDescTextMapHash": 1869907009,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3651398950,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/709",
+        "record": {
+          "descTextMapHash": 599545093,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 4069076175,
+          "icon": "UI_ItemIcon_101223",
+          "id": 101223,
+          "interactionTitleTextMapHash": 1246734735,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1761418508,
+          "rank": 314,
+          "specialDescTextMapHash": 2675206345,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 895486238,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/710",
+        "record": {
+          "descTextMapHash": 1942971517,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2458891607,
+          "gadgetId": 70540050,
+          "icon": "UI_ItemIcon_101224",
+          "id": 101224,
+          "interactionTitleTextMapHash": 3060984247,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 239145148,
+          "rank": 314,
+          "specialDescTextMapHash": 1887939945,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2139250974,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/711",
+        "record": {
+          "descTextMapHash": 860893189,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3604075535,
+          "icon": "UI_ItemIcon_101225",
+          "id": 101225,
+          "interactionTitleTextMapHash": 3242291631,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3811437052,
+          "rank": 314,
+          "specialDescTextMapHash": 1817482457,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 502737014,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/718",
+        "record": {
+          "descTextMapHash": 1378760773,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1631124855,
+          "icon": "UI_ItemIcon_101232",
+          "id": 101232,
+          "interactionTitleTextMapHash": 3290872023,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1859043748,
+          "rank": 315,
+          "specialDescTextMapHash": 695275649,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2468116654,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/719",
+        "record": {
+          "descTextMapHash": 817115277,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2593104055,
+          "icon": "UI_ItemIcon_101233",
+          "id": 101233,
+          "interactionTitleTextMapHash": 2853679439,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 3918052700,
+          "rank": 315,
+          "specialDescTextMapHash": 1542233593,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3509088502,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/721",
+        "record": {
+          "descTextMapHash": 620138541,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1381807327,
+          "icon": "UI_ItemIcon_101235",
+          "id": 101235,
+          "interactionTitleTextMapHash": 3884258463,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 205491460,
+          "rank": 315,
+          "specialDescTextMapHash": 2794129761,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1025843430,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/722",
+        "record": {
+          "descTextMapHash": 1445343549,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 22346183,
+          "icon": "UI_ItemIcon_101236",
+          "id": 101236,
+          "interactionTitleTextMapHash": 1135639,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2386700548,
+          "rank": 315,
+          "specialDescTextMapHash": 4091383145,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2429437022,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/723",
+        "record": {
+          "descTextMapHash": 3388696709,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2885016823,
+          "icon": "UI_ItemIcon_101237",
+          "id": 101237,
+          "interactionTitleTextMapHash": 3329586615,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1497627716,
+          "rank": 315,
+          "specialDescTextMapHash": 31790297,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1114595774,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/724",
+        "record": {
+          "descTextMapHash": 1756039325,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 4053742959,
+          "icon": "UI_ItemIcon_101238",
+          "id": 101238,
+          "interactionTitleTextMapHash": 2235024575,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 47843548,
+          "rank": 315,
+          "specialDescTextMapHash": 1065045025,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 547043718,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/725",
+        "record": {
+          "descTextMapHash": 479318237,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1646703727,
+          "icon": "UI_ItemIcon_101239",
+          "id": 101239,
+          "interactionTitleTextMapHash": 3049215391,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2214795492,
+          "rank": 315,
+          "specialDescTextMapHash": 2139668529,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 726935886,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/726",
+        "record": {
+          "descTextMapHash": 4161581149,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1327200543,
+          "icon": "UI_ItemIcon_101240",
+          "id": 101240,
+          "interactionTitleTextMapHash": 1333799399,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1466037620,
+          "rank": 315,
+          "specialDescTextMapHash": 3897001273,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 308392078,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/727",
+        "record": {
+          "descTextMapHash": 1779518829,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 4177195511,
+          "gadgetId": 70292159,
+          "icon": "UI_ItemIcon_101241",
+          "id": 101241,
+          "interactionTitleTextMapHash": 2966083871,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2720928108,
+          "rank": 312,
+          "specialDescTextMapHash": 4120123569,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2131976478,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/733",
+        "record": {
+          "descTextMapHash": 1987776701,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 415752543,
+          "icon": "UI_ItemIcon_101247",
+          "id": 101247,
+          "interactionTitleTextMapHash": 2641145015,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 4108433756,
+          "rank": 316,
+          "specialDescTextMapHash": 1128926553,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2732235062,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/734",
+        "record": {
+          "descTextMapHash": 1404068245,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 4116241735,
+          "icon": "UI_ItemIcon_101248",
+          "id": 101248,
+          "interactionTitleTextMapHash": 1473183215,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2302571844,
+          "rank": 316,
+          "specialDescTextMapHash": 246992273,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 3900940390,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/735",
+        "record": {
+          "descTextMapHash": 1240419541,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3504212287,
+          "icon": "UI_ItemIcon_101249",
+          "id": 101249,
+          "interactionTitleTextMapHash": 99861855,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 2670149892,
+          "rank": 316,
+          "specialDescTextMapHash": 3302607233,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 346501302,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/736",
+        "record": {
+          "descTextMapHash": 2463050773,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 2015914383,
+          "icon": "UI_ItemIcon_101250",
+          "id": 101250,
+          "interactionTitleTextMapHash": 4147858567,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 19028052,
+          "rank": 316,
+          "specialDescTextMapHash": 2838518833,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 4052492326,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/738",
+        "record": {
+          "descTextMapHash": 2552080669,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 3794647239,
+          "icon": "UI_ItemIcon_101252",
+          "id": 101252,
+          "interactionTitleTextMapHash": 479876415,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1496527260,
+          "rank": 316,
+          "specialDescTextMapHash": 3239651361,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 1667307950,
+          "weight": 1
+        }
+      },
+      {
+        "pointer": "/739",
+        "record": {
+          "descTextMapHash": 3016511525,
+          "destroyRule": "DESTROY_RETURN_MATERIAL",
+          "effectDescTextMapHash": 1156978895,
+          "icon": "UI_ItemIcon_101253",
+          "id": 101253,
+          "interactionTitleTextMapHash": 3412156583,
+          "isSplitDrop": true,
+          "itemType": "ITEM_MATERIAL",
+          "itemUse": [
+            {
+              "useParam": [
+                "",
+                "",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "useParam": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "materialType": "MATERIAL_EXCHANGE",
+          "nameTextMapHash": 1419660612,
+          "rank": 316,
+          "specialDescTextMapHash": 183783745,
+          "stackLimit": 9999,
+          "typeDescTextMapHash": 2522247270,
+          "weight": 1
+        }
+      }
+    ]
+  }
+}

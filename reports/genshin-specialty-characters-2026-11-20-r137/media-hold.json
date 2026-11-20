@@ -1,0 +1,18 @@
+{
+  "decision": "held; character content is defined, new-entity media is not qualified",
+  "observations": [
+    {
+      "method": "HEAD",
+      "url": "https://img.gachia.com/images/genshin/characters/mualani.webp",
+      "status": 404
+    },
+    {
+      "method": "HEAD",
+      "url": "https://img.gachia.com/images/genshin/characters/ororon.webp",
+      "status": 404
+    }
+  ],
+  "candidateImageFields": "empty; no URL or image bytes invented",
+  "mediaWrites": false,
+  "publishable": false
+}

@@ -1,0 +1,451 @@
+{
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/delivery.json",
+    "pin": "0ca512f50c3031697cd96096062554ad332d21eba9be7d79d616a0d194550c6a"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "reviews": [
+    {
+      "localId": "mualani",
+      "numericId": 10000102,
+      "record": {
+        "id": "mualani",
+        "name": "玛拉妮",
+        "nameEn": "Mualani",
+        "nameJa": "ムアラニ",
+        "element": "hydro",
+        "weaponType": "Catalyst",
+        "rarity": 5,
+        "region": "Natlan",
+        "description": "纳塔远近闻名的向导，水上用品商店的经营者，精通各类水上运动的逐浪客。",
+        "descriptionEn": "A well-known guide in Natlan who owns a watersports shop, and expert in all forms of wave-chasing.",
+        "releaseVersion": "5.0",
+        "status": "released",
+        "acquisitionMethod": "limited-banner",
+        "image": "",
+        "skills": {
+          "normalAttack": {
+            "name": "降温处理",
+            "nameEn": "Cooling Treatment",
+            "description": "普通攻击\n进行至多三段攻击，造成水元素伤害。\n\n重击\n消耗一定体力，向空中击出坠落时会造成水元素范围伤害的水豚球。\n\n下落攻击\n凝聚水元素的力量，从空中下坠冲击地面，攻击下落路径上的敌人，并在落地时造成水元素范围伤害。",
+            "descriptionEn": "Normal Attack\nPerforms up to 3 attacks that deal Hydro DMG.\n\nCharged Attack\nConsumes a certain amount of Stamina to smack a Pufferball into the air that deals AoE Hydro DMG upon landing.\n\nPlunging Attack\nGathers the power of Hydro and plunges towards the ground from mid-air, damaging all opponents in her path. Deals AoE Hydro DMG upon impact with the ground."
+          },
+          "elementalSkill": {
+            "name": "踏鲨破浪",
+            "nameEn": "Surfshark Wavebreaker",
+            "description": "以驾驭速度与水潮的心得，随时随地进入冲浪的架势。\n施放后，玛拉妮将获得60点夜魂值并进入夜魂加持状态。\n\n夜魂加持·玛拉妮\n持续消耗夜魂值。夜魂值耗尽时，或是再次施放时，玛拉妮的夜魂加持将会结束。夜魂加持状态具有如下特性：\n·搭乘鲨鲨冲浪板，提升玛拉妮的移动速度与抗打断能力。玛拉妮在这种状态下能在水面与液态燃素上移动，并免疫液态燃素的伤害；\n·进行普通攻击时，将转为进行鲨鲨撕咬，基于玛拉妮的生命值上限造成具有夜魂性质的水元素伤害。鲨鲨撕咬能够在空中进行，造成的伤害被视为普通攻击伤害；\n·在这种状态下接触敌人时，玛拉妮对敌人施加猎物标记，并获得1层浪势充能，浪势充能至多叠加3层，每0.7秒至多通过同一个敌人获得1层。\n\n浪势充能与猎物标记\n进行鲨鲨撕咬时，玛拉妮将依据浪势充能的层数，提高造成的伤害，拥有3层浪势充能时，玛拉妮的鲨鲨撕咬将转为巨浪鲨鲨撕咬，造成的伤害进一步提升，并在命中敌人时清除浪势充能。\n鲨鲨撕咬命中敌人时，将移除其猎物标记，并向附近至多5名处于猎物标记标记状态下的敌人发射鲨鲨飞弹，造成相当于此次鲨鲨撕咬的伤害，并清除这些敌人的猎物标记；此次鲨鲨撕咬与鲨鲨飞弹的目标敌人超过1名时，造成的伤害将会降低，至多在达到3名敌人时造成原本72%的伤害。",
+            "descriptionEn": "Combining her mastery of speed and the waves and water, Mualani can surf anytime, anywhere.\nAfter using this skill, Mualani will gain 60 Nightsoul points and enter the Nightsoul's Blessing state.\n\nNightsoul's Blessing: Mualani\nContinuously consume Nightsoul points. When they are depleted or when the skill is used again, Mualani's Nightsoul's Blessing will end. The state itself has the following traits:\n·Mualani mounts her Sharky Surfboard, increasing Mualani's Movement SPD and interruption resistance. Mualani can move on water and liquid Phlogiston while this state is active, and she will take no DMG from the latter.\n·Normal Attacks will be converted to Sharky's Bites, dealing Nightsoul-aligned Hydro DMG based on Mualani's Max HP. Sharky's Bites can be used in mid-air. DMG dealt this way is considered Normal Attack DMG.\n·When she makes contact with opponents in this state, Mualani applies \"Marked as Prey\" to them and gains 1 Wave Momentum stack. Max 3 stacks. 1 stack can be gained from the same opponent every 0.7s.\n\nWave Momentum and Marked as Prey\nWhen Mualani uses Sharky's Bite, her DMG dealt increases based on Wave Momentum stacks. When she has 3 stacks, Sharky's Bite will be converted to Sharky's Surging Bite, further increasing her DMG and removing all her stacks when hitting an opponent.\nWhen Sharky's Bite hits an opponent Marked as Prey, that mark will be removed, and she will fire Shark Missiles at up to 5 nearby opponents Marked as Prey, dealing DMG to them equal to this Sharky's Bite instance and clearing their Marks. If more than 1 opponent is the target of Sharky's Bite and Shark Missiles, the DMG dealt will decrease, decreasing at most to 72% of the original DMG when 3 opponents are targeted."
+          },
+          "elementalBurst": {
+            "name": "爆瀑飞弹",
+            "nameEn": "Boomsharka-laka",
+            "description": "发射能追踪敌人的特大号鲨鲨导弹，基于玛拉妮的生命值上限造成具有夜魂性质的水元素范围伤害。",
+            "descriptionEn": "Fires a Super Shark Missile that can track opponents, dealing Nightsoul-aligned AoE Hydro DMG based on Mualani's Max HP."
+          },
+          "passive1": {
+            "name": "耐热型淡水豚豚",
+            "nameEn": "Heat-Resistant Freshwater Floater",
+            "description": "巨浪鲨鲨撕咬命中敌人时，将在附近产生一个豚豚球。获得豚豚球时，玛拉妮自己将恢复20点夜魂值。一次夜魂加持期间，至多通过这种方式产生2个豚豚球。",
+            "descriptionEn": "When Sharky's Surging Bite hits an opponent, a Puffer will be generated nearby. Mualani will restore 20 Nightsoul points when she picks up a Puffer. Only 2 such Puffers can be created in this way during a single instance of being in Nightsoul's Blessing."
+          },
+          "passive2": {
+            "name": "纳塔最好的向导",
+            "nameEn": "Natlan's Greatest Guide",
+            "description": "队伍中的附近的角色触发「夜魂迸发」后，玛拉妮将获得一层持续20秒、至多叠加3层的逐浪心得。施放爆瀑飞弹时，玛拉妮将清除所有逐浪心得，并基于清除的层数，基于生命值上限的15%/30%/45%提高本次爆瀑飞弹造成的伤害。",
+            "descriptionEn": "After a nearby party member triggers a Nightsoul Burst, Mualani will gain 1 stack of Wavechaser's Exploits, which lasts for 20s. Max 3 stacks. When she uses Boomsharka-laka, Mualani will clear all Wavechaser's Exploits stacks and increase the DMG of this Boomsharka-laka by 15%/30%/45% of her Max HP based on the number of stacks cleared."
+          },
+          "passive3": {
+            "name": "夜域赐礼·波涛顶底",
+            "nameEn": "Night Realm's Gift: Crests and Troughs",
+            "description": "在夜魂值耗竭后，玛拉妮将会转而消耗燃素来维持夜魂加持。\n在纳塔存在燃素机制的区域时，能够进行夜魂传递·玛拉妮。当前场上角色处于冲刺、游泳或是特定天赋赋予的移动状态下，或是位于一定高度的空中时，切换玛拉妮登场时触发：玛拉妮将进入夜魂加持状态，并获得40点夜魂值。自己的队伍每10秒能触发一次夜魂传递。\n\n此外，玛拉妮在夜魂加持状态下在水面与液态燃素上移动时：在纳塔地区时消耗的夜魂值或燃素降低75%，在纳塔地区外消耗的夜魂值降低35%。",
+            "descriptionEn": "After her Nightsoul points are depleted, Mualani will switch to consuming Phlogiston to maintain her Nightsoul's Blessing.\nWhile in an area with Phlogiston Mechanics within Natlan, she can use Nightsoul Transmission: Mualani. When the active character is currently sprinting, swimming, in a movement mode caused by certain Talents, or at a certain height in the air, the following will trigger when switching to Mualani: Mualani will enter the Nightsoul's Blessing state and gain 40 Nightsoul points. Nightsoul Transmission can be triggered once every 10s by your own team.\n\nAdditionally, Mualani's Nightsoul point or Phlogiston consumption while moving on water and Liquid Phlogiston during Nightsoul's Blessing is decreased by 75% while in Natlan, and her Nightsoul point consumption is decreased by 35% while doing the same outside Natlan."
+          },
+          "passive4": {
+            "name": "要诀是保持笑容！",
+            "nameEn": "The Trick Is to Keep Smiling!",
+            "description": "在纳塔存在燃素机制的区域时，与部分采集物交互能够恢复15点燃素。此外，在小地图上显示周围的纳塔区域特产的位置。",
+            "descriptionEn": "While in an area with Phlogiston Mechanics within Natlan, 15 Phlogiston will be restored when interacting with some harvestable items. Additionally, the location of nearby resources unique to Natlan will appear on your mini-map."
+          }
+        },
+        "constellations": [
+          {
+            "level": 1,
+            "name": "悠闲的「梅兹特利」…",
+            "nameEn": "The Leisurely \"Meztli\"...",
+            "description": "进入夜魂加持状态后的第一次巨浪鲨鲨撕咬及它所触发的鲨鲨飞弹造成的伤害提升，提升值相当于玛拉妮生命值上限的66%。此次伤害提升遵循踏鲨破浪的伤害衰减规则。\n此外，不处于战斗状态下时，玛拉妮的夜魂加持状态消耗的夜魂值与燃素降低30%。",
+            "descriptionEn": "The DMG dealt by the first Sharky's Surging Bite after Mualani enters Nightsoul's Blessing and the Shark Missiles it triggers is increased by 66% of Mualani's Max HP. This instance of increased DMG is subject to the diminishing DMG rules of Surfshark Wavebreaker.\nIn addition, while out of combat, Mualani's Nightsoul's Blessing state consumes 30% less Phlogiston and Nightsoul points."
+          },
+          {
+            "level": 2,
+            "name": "全力以赴玛拉妮！",
+            "nameEn": "Mualani, Going All Out!",
+            "description": "进入夜魂加持状态时，玛拉妮获得2层踏鲨破浪的浪势充能；玛拉妮获得豚豚球时，获得1层浪势充能。\n此外，玛拉妮在一次夜魂加持期间获得2个豚豚球的2秒内，额外恢复12点夜魂值。该效果需要解锁突破天赋「耐热型淡水豚豚」。",
+            "descriptionEn": "Mualani gains 2 of Surfshark Wavebreaker's Wave Momentum stacks when she enters Nightsoul's Blessing state. She will gain 1 stack when obtaining a Puffer.\nIn addition, whenever Mualani obtains 2 Puffers within a single instance of the Nightsoul's Blessing state, she will recover an additional 12 Nightsoul points over 2s. You must first unlock the Ascension Talent \"Heat-Resistant Freshwater Floater.\""
+          },
+          {
+            "level": 3,
+            "name": "在欢乐海上冲浪",
+            "nameEn": "Surfing Atop Joyous Seas",
+            "description": "踏鲨破浪的技能等级提高3级。\n至多提升至15级。",
+            "descriptionEn": "Increases the Level of Surfshark Wavebreaker by 3.\nMaximum upgrade level is 15."
+          },
+          {
+            "level": 4,
+            "name": "鲨鲨主食是豚豚。",
+            "nameEn": "Sharky Eats Puffies",
+            "description": "获得豚豚球时，玛拉妮恢复8点元素能量；该效果需要解锁突破天赋「耐热型淡水豚豚」。\n此外，爆瀑飞弹造成的伤害提升75%。",
+            "descriptionEn": "Mualani regenerates 8 Energy when obtaining a Puffer. You must first unlock the Ascension Talent \"Heat-Resistant Freshwater Floater.\"\nAdditionally, Boomsharka-laka deals 75% increased DMG."
+          },
+          {
+            "level": 5,
+            "name": "同款冲浪板有售！",
+            "nameEn": "Same Style of Surfboard on Sale!",
+            "description": "爆瀑飞弹的技能等级提高3级。\n至多提升至15级。",
+            "descriptionEn": "Increases the Level of Boomsharka-laka by 3.\nMaximum upgrade level is 15."
+          },
+          {
+            "level": 6,
+            "name": "「流泉之众」的精神",
+            "nameEn": "Spirit of the Springs' People",
+            "description": "对命之座「悠闲的「梅兹特利」…」的伤害提升效果，移除原本每次夜魂加持只能触发一次的限制。",
+            "descriptionEn": "The DMG increase from the Constellation \"The Leisurely 'Meztli'...\" is no longer limited to being triggered once every Nightsoul's Blessing."
+          }
+        ],
+        "recommendedBuild": {
+          "bestWeapon": "",
+          "bestWeaponEn": "",
+          "alternativeWeapons": [],
+          "bestArtifactSet": "",
+          "bestArtifactSetEn": "",
+          "mainStats": {},
+          "mainStatsEn": {},
+          "subStatPriority": [],
+          "subStatPriorityEn": []
+        },
+        "teamComps": [],
+        "faq": [],
+        "relatedCharacters": [],
+        "tierRank": "",
+        "tierReason": "",
+        "tierReasonZh": "",
+        "cvZh": "王晓彤",
+        "cvJp": "東山奈央",
+        "cvEn": "Cassandra Lee Morris"
+      },
+      "skillSourceMapping": {
+        "combat1": "normalAttack",
+        "combat2": "elementalSkill",
+        "combat3": "elementalBurst",
+        "passive1": "passive1",
+        "passive2": "passive2",
+        "passive3": "passive3",
+        "passive4": "passive4"
+      },
+      "wikiRevision": {
+        "pageId": 123338,
+        "revisionId": 690423,
+        "timestamp": "2026-10-26T12:53:05Z",
+        "releaseDate": "2024年08月28日"
+      },
+      "sources": [
+        {
+          "sourcePath": "src/data/ChineseSimplified/characters/mualani.json",
+          "sha256": "722d995174fb69fba73de4ae9cbd06e4a773d393448c979fcba6ce543f843b83",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/characters/mualani.json",
+          "gitBlob": "212f1a52ccac438a01756f7eac9cfdbc2b97b942"
+        },
+        {
+          "sourcePath": "src/data/Japanese/characters/mualani.json",
+          "sha256": "b66572c0b92f5e403eba21e0ae5a9cb035723316ace327c9a26abe3828e8c0f8",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/Japanese/characters/mualani.json",
+          "gitBlob": "e14cae2eccb1449e11734d2c2905247deb846581"
+        },
+        {
+          "sourcePath": "src/data/ChineseSimplified/talents/mualani.json",
+          "sha256": "3ab98d72d73bf27d08a40b9f46dd84f0427b8bbf539359cd142778a175a0a97f",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/talents/mualani.json",
+          "gitBlob": "5590b5c40d65ddb625e119949bd56aaa0cda9aa2"
+        },
+        {
+          "sourcePath": "src/data/English/constellations/mualani.json",
+          "sha256": "a21b5a025938cfc4c0d8c0b8531b71afac4352cd83a0476cbdb6f5b9d023ec95",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/constellations/mualani.json",
+          "gitBlob": "c283ca4871e647b5fe64d526e77393febcc1ab9c"
+        },
+        {
+          "sourcePath": "src/data/ChineseSimplified/constellations/mualani.json",
+          "sha256": "4834736b93ad40c9e99790d10a3fa85484c4d55d8be7876bf7d50c5b4a85b4ca",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/constellations/mualani.json",
+          "gitBlob": "6dd8474a27e553d7451e64a763a37e26fa1e16b3"
+        },
+        {
+          "sourcePath": "src/data/English/characters/mualani.json",
+          "sha256": "30703474c21988505bfd3f2615ba04ac198a5dca0ec8098f5b7e4756c97786ff",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/characters/mualani.json",
+          "gitBlob": "53476cd2192211256bc19b0cbcd1465c74488d10"
+        },
+        {
+          "sourcePath": "src/data/English/talents/mualani.json",
+          "sha256": "f8ef660263154f176f7141f6eb8fc14e876d67bc3412b026d2cfdd6f0cfcdbd3",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/talents/mualani.json",
+          "gitBlob": "c507e07df419b8e2878a057d862de4e21607dbfc"
+        },
+        {
+          "sourcePath": "api/avatars/mualani.json",
+          "sha256": "f2290538e05bc3b7425224a4935609a9b604d23ac917f828d03f1f393e0fd602",
+          "url": "https://gi.yatta.moe/api/v2/en/avatar/10000102"
+        },
+        {
+          "sourcePath": "wiki/mualani.json",
+          "sha256": "c91b62a09e2b5b248dcc8744af42f9e07f4a911f63604516d37da41514cb874a",
+          "url": "https://wiki.biligame.com/ys/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&format=json&titles=%E7%8E%9B%E6%8B%89%E5%A6%AE"
+        },
+        {
+          "sourcePath": "wiki/mualani-rendered.json",
+          "sha256": "caaef7692698f826786441f91df2be5a021a0ea17732fb087ef0a33ec13f132a",
+          "url": "https://wiki.biligame.com/ys/api.php?action=parse&oldid=690423&prop=text&format=json"
+        }
+      ],
+      "unreviewedFields": [
+        "image",
+        "recommendedBuild",
+        "teamComps",
+        "faq",
+        "relatedCharacters",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh"
+      ],
+      "mediaQualified": false,
+      "editorialRecommendationsInvented": false,
+      "hold": true,
+      "publishable": false
+    },
+    {
+      "localId": "ororon",
+      "numericId": 10000105,
+      "record": {
+        "id": "ororon",
+        "name": "欧洛伦",
+        "nameEn": "Ororon",
+        "nameJa": "オロルン",
+        "element": "electro",
+        "weaponType": "Bow",
+        "rarity": 4,
+        "region": "Natlan",
+        "description": "来自烟谜主的年轻人，却与万千生灵一起，生活在原野之中。",
+        "descriptionEn": "A young man from the Masters of the Night-Wind who instead lives in the wild alongside all manner of life.",
+        "releaseVersion": "5.2",
+        "status": "released",
+        "acquisitionMethod": "standard",
+        "image": "",
+        "skills": {
+          "normalAttack": {
+            "name": "宿灵闪箭",
+            "nameEn": "Spiritvessel Snapshot",
+            "description": "普通攻击\n进行至多三段的连续弓箭射击。\n\n重击\n进行伤害更高、更为精准的瞄准射击。\n瞄准时，雷元素会凭附在箭矢上。聚满了雷元素的箭矢会造成雷元素伤害。\n\n下落攻击\n从空中射出箭雨，并迅速下坠冲击地面，在落地时造成范围伤害。",
+            "descriptionEn": "Normal Attack\nPerforms up to 3 consecutive shots with a bow.\n\nCharged Attack\nPerforms a more precise Aimed Shot with increased DMG.\nWhile aiming, Electro energy will accumulate on the arrowhead. A fully charged arrow will deal Electro DMG.\n\nPlunging Attack\nFires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+          },
+          "elementalSkill": {
+            "name": "暝色缒索",
+            "nameEn": "Night's Sling",
+            "description": "欧洛伦将烟谜主亘古传承的秘术具现为暝色的宿灵球投向敌人，造成具有夜魂性质的雷元素伤害。\n附近存在其他敌人时，宿灵球将在附近的敌人间弹跳，造成具有夜魂性质的雷元素伤害。每次施放暝色缒索后，每名敌人只能被选为一次目标。\n进行3次弹跳或附近没有可以被选为目标的敌人时，宿灵球将消失。",
+            "descriptionEn": "Ororon manifests an ancient mystical technique from the Masters of the Night-Wind as a Spirit Orb of midnight shade and throws it at his foe, dealing Nightsoul-aligned Electro DMG.\nWhen other opponents are nearby, the Spirit Orb will bounce between them, dealing Nightsoul-aligned Electro DMG. Each time Night's Sling is used, each opponent can only be selected as a target once.\nAfter 3 bounces, or if there are no eligible targets left, the Orb will disappear."
+          },
+          "elementalBurst": {
+            "name": "黯声回响",
+            "nameEn": "Dark Voices Echo",
+            "description": "欧洛伦唤起远古的秘仪，造成具有夜魂性质的雷元素范围伤害，并召唤出「超音灵眼」。\n\n超音灵眼\n·持续嘲讽周围的敌人，吸引敌人攻击；\n·持续旋转并发射音波，对附近的敌人造成具有夜魂性质的雷元素伤害。",
+            "descriptionEn": "Ororon works an ancient ritual, dealing Nightsoul-aligned AoE Electro DMG, summoning forth a Supersonic Oculus.\n\nSupersonic Oculus\n·Continuously taunts nearby opponents and attracts attacks from them.\n·Continuously rotates and fires off sonic waves that deal Nightsoul-aligned Electro DMG."
+          },
+          "specialJump": {
+            "name": "特殊跳跃",
+            "nameEn": "Special Jump",
+            "description": "如果角色在纳塔地区，长按后可以消耗燃素进行二段火箭跳，当燃素耗尽时将转为消耗体力进行二段跳跃。",
+            "descriptionEn": "If this character is in Natlan, Hold to consume Phlogiston and execute a Rocket Double Jump. When Phlogiston is completely depleted, it will consume Stamina to execute the Double Jump instead."
+          },
+          "passive1": {
+            "name": "夜翳的通感",
+            "nameEn": "Nightshade Synesthesia",
+            "description": "队伍中的附近的角色触发「夜魂迸发」后，欧洛伦将获得40点夜魂值。施放元素战技后的15秒内，队伍中其他角色的元素类型为水元素或雷元素的攻击命中敌人时，欧洛伦将获得5点夜魂值，该效果每0.3秒至多触发一次，在持续期间内至多触发10次。\n欧洛伦的夜魂值上限为80点。\n\n此外，附近的敌人受到感电或月感电反应的伤害或队伍中附近的其他角色造成的具有夜魂性质的伤害时，若欧洛伦拥有至少10点夜魂值，欧洛伦将消耗10点夜魂值，进入夜魂加持状态，并触发「显象超感」效果：基于欧洛伦攻击力的160%，对周围至多4名敌人造成具有夜魂性质的雷元素伤害。上述效果每1.8秒至多触发一次。\n\n夜魂加持·欧洛伦\n欧洛伦的夜魂加持状态持续至多6秒。",
+            "descriptionEn": "After a nearby party member triggers Nightsoul Burst, Ororon will gain 40 Nightsoul points. Within 15s after using his Elemental Skill, when other party members' Hydro or Electro attacks hit opponents, Ororon will gain 5 Nightsoul points, an effect that can occur every 0.3s for a maximum of 10 times during this 15s duration.\nOroron can have a maximum of 80 Nightsoul points.\n\nAlso, when nearby opponents take Electro-Charged or Lunar-Charged reaction DMG or Nightsoul-aligned DMG dealt by other nearby characters, Ororon will consume 10 Nightsoul points (provided he has at least that amount), entering the Nightsoul's Blessing state and triggering the Hypersense effect: Deal Nightsoul-aligned Electro DMG based on 160% of Ororon's ATK to at most 4 nearby opponents. The aforementioned effect can trigger once every 1.8s.\n\nNightsoul's Blessing: Ororon\nOroron's Nightsoul's Blessing state lasts 6s."
+          },
+          "passive2": {
+            "name": "灵相的触媒",
+            "nameEn": "Aspect Catalyst",
+            "description": "元素战技暝色缒索中的宿灵球命中敌人后，欧洛伦将获得「灵相之印」效果，持续15秒。\n\n灵相之印\n队伍中附近的当前场上角色普攻、重击或下落攻击命中敌人后，将为该角色恢复3点元素能量；若欧洛伦处于队伍后台，还会为欧洛伦恢复3点元素能量。该效果每1秒至多触发一次，在持续期间内至多触发3次。",
+            "descriptionEn": "After the Elemental Skill Night's Sling's Spirit Orb hits an opponent, Ororon will gain the Aspect Sigil effect for 15s.\n\nAspect Sigil\nWhen a nearby active party member hits an opponent with Normal, Charged, or Plunging Attacks, that character will restore 3 Energy. If Ororon is off-field, Ororon will also restore 3 Energy. This effect can trigger once every 1s, and can trigger 3 times per duration."
+          },
+          "passive3": {
+            "name": "夜域赐礼·流雾跃影",
+            "nameEn": "Night Realm's Gift: Flowing Fog, Spritely Shadows",
+            "description": "在纳塔存在燃素机制的区域时，能够进行夜魂传递·欧洛伦。当前场上角色位于空中时，切换欧洛伦登场时触发：欧洛伦将高高腾跃而起。自己的队伍每10秒可以触发一次夜魂传递。\n\n长按瞄准时，欧洛伦会进入「灵觉」状态，处于这种状态下时，欧洛伦可以与「灵谜涂鸦」和「灵谜纹」交互，提取其中的信息与力量，这些物件的交互规则沿袭暝视龙的交互规则。\n\n此外，长按跳跃时，欧洛伦将消耗75点体力腾跃而起；在纳塔存在燃素机制的区域时，欧洛伦会优先消耗5点燃素，腾跃至更高的高度。\n位于空中时，欧洛伦可以长按普通攻击，消耗燃素或体力进行瞄准。",
+            "descriptionEn": "While in an area with Phlogiston Mechanics within Natlan, he can use Nightsoul Transmission: Ororon. When the active character is currently in the air, the following will trigger when switching to Ororon: Ororon will leap up high. Nightsoul Transmission can be triggered once every 10s by your party.\n\nHolding Aiming Mode will cause Ororon to enter the \"Spiritspeaker\" state, which will allow him to interact with \"Nightspirit Graffiti\" and \"Nightspirit Sigils,\" extracting information and power from them. The rules for interacting with these objects follow the same rules as those governing Iktomisaurus interactions.\n\nAdditionally, holding the jump button will cause Ororon to consume 75 Stamina and leap. In areas within Natlan where Phlogiston mechanics are present, Ororon will prioritize consuming 5 Phlogiston to leap to a height higher still.\nWhen in the air, Ororon can Hold his Normal Attack to consume Phlogiston or Stamina and enter Aiming Mode."
+          },
+          "passive4": {
+            "name": "皮行的巧技",
+            "nameEn": "The Art of Skinchanging",
+            "description": "队伍中自己的角色滑翔时移动速度提高15%。\n无法与效果完全相同的固有天赋叠加。",
+            "descriptionEn": "Increases gliding SPD for your own party members by 15%.\nNot stackable with Passive Talents that provide the exact same effects."
+          }
+        },
+        "constellations": [
+          {
+            "level": 1,
+            "name": "林雾间的行迹",
+            "nameEn": "Trails Amidst the Forest Fog",
+            "description": "元素战技暝色缒索中的宿灵球能额外弹跳2次。\n此外，宿灵球命中敌人后，将为该敌人施加「夜暝」效果，持续12秒；对处于「夜暝」效果的影响下的敌人，突破天赋「夜翳的通感」触发的「显象超感」造成的伤害提升50%，该效果需要解锁突破天赋「夜翳的通感」。",
+            "descriptionEn": "The Elemental Skill Night's Sling's Spirit Orb can bounce 2 additional times.\nAdditionally, after the Spirit Orb hits an opponent, it will apply the Nighttide effect to them for 12s. Opponents affected by Nighttide take 50% increased DMG from Hypersense triggered by the Ascension Talent, \"Nightshade Synesthesia.\" You must first unlock the Ascension Talent \"Nightshade Synesthesia.\""
+          },
+          {
+            "level": 2,
+            "name": "藏蜜酒的王蜂",
+            "nameEn": "King Bee of the Hidden Honeyed Wine",
+            "description": "施放元素爆发黯声回响后，欧洛伦将获得「灵式超感」效果，持续9秒。\n\n灵式超感\n获得8%雷元素伤害加成；\n此外，持续期间，元素爆发黯声回响或超音灵眼每额外命中一名敌人，都将进一步使欧洛伦获得8%雷元素伤害加成，至多通过这种方式获得32%雷元素伤害加成。",
+            "descriptionEn": "After using his Elemental Burst, Dark Voices Echo, Ororon will obtain the Spiritual Supersense effect for 9s.\n\nSpiritual Supersense\nGain 8% Electro DMG Bonus.\nAdditionally, during this time, every additional opponent hit by the Elemental Burst Dark Voices Echo or Supersonic Oculus will grant Ororon a further 8% Electro DMG Bonus. The maximum that can be gained this way is 32% Electro DMG Bonus."
+          },
+          {
+            "level": 3,
+            "name": "栖地蝠的灵笼",
+            "nameEn": "Roosting Bat's Spiritcage",
+            "description": "元素爆发黯声回响的技能等级提高3级。\n至多提升至15级。",
+            "descriptionEn": "Increases the Level of Dark Voices Echo by 3.\nMaximum upgrade level is 15."
+          },
+          {
+            "level": 4,
+            "name": "如夜风的谜烟",
+            "nameEn": "As the Mysteries of the Night Wind",
+            "description": "元素爆发黯声回响召唤的超音灵眼的旋转速度提升25%。\n此外，施放黯声回响后，为欧洛伦自己恢复8点元素能量。",
+            "descriptionEn": "The Supersonic Oculus summoned by the Elemental Burst Dark Voices Echo rotates 25% faster.\nAdditionally, Ororon will restore 8 Energy to himself after using Dark Voices Echo."
+          },
+          {
+            "level": 5,
+            "name": "为心魂的献礼",
+            "nameEn": "A Gift For the Soul",
+            "description": "元素战技暝色缒索的技能等级提高3级。\n至多提升至15级。",
+            "descriptionEn": "Increases the Level of Night's Sling by 3.\nMaximum upgrade level is 15."
+          },
+          {
+            "level": 6,
+            "name": "致深泉的颂赞",
+            "nameEn": "Ode to Deep Springs",
+            "description": "触发突破天赋「夜翳的通感」的「显象超感」后，会使队伍中自己的当前场上角色的攻击力提升10%，持续9秒。该效果至多叠加3层，每层独立计算持续时间。\n此外，施放元素爆发黯声回响时，将触发一次等同于「显象超感」的效果，造成原本200%的伤害。\n该效果需要解锁突破天赋「夜翳的通感」。",
+            "descriptionEn": "After triggering Hypersense through the Ascension Talent, Nightshade Synesthesia, your current active character's ATK is increased by 10% for 9s. Max 3 stacks, each stack is counted independently.\nAdditionally, when you use the Elemental Burst Dark Voices Echo, you will trigger one instance of an effect equivalent to Hypersense, dealing 200% of its original DMG.\nYou must first unlock the Ascension Talent \"Nightshade Synesthesia.\""
+          }
+        ],
+        "recommendedBuild": {
+          "bestWeapon": "",
+          "bestWeaponEn": "",
+          "alternativeWeapons": [],
+          "bestArtifactSet": "",
+          "bestArtifactSetEn": "",
+          "mainStats": {},
+          "mainStatsEn": {},
+          "subStatPriority": [],
+          "subStatPriorityEn": []
+        },
+        "teamComps": [],
+        "faq": [],
+        "relatedCharacters": [],
+        "tierRank": "",
+        "tierReason": "",
+        "tierReasonZh": "",
+        "cvZh": "梁达伟",
+        "cvJp": "近藤隆",
+        "cvEn": "Nathan Nokes"
+      },
+      "skillSourceMapping": {
+        "combat1": "normalAttack",
+        "combat2": "elementalSkill",
+        "combat3": "elementalBurst",
+        "combatju": "specialJump",
+        "passive1": "passive1",
+        "passive2": "passive2",
+        "passive3": "passive3",
+        "passive4": "passive4"
+      },
+      "wikiRevision": {
+        "pageId": 128205,
+        "revisionId": 690478,
+        "timestamp": "2026-10-26T16:09:35Z",
+        "releaseDate": "2024年11月20日"
+      },
+      "sources": [
+        {
+          "sourcePath": "src/data/ChineseSimplified/characters/ororon.json",
+          "sha256": "1ecc08816bbfb9276dae60decfe88f690611dd3418e59c80eced2077ecb4ead7",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/characters/ororon.json",
+          "gitBlob": "46694c36d2bd6c25e450c81b934801a87e82f8a8"
+        },
+        {
+          "sourcePath": "src/data/Japanese/characters/ororon.json",
+          "sha256": "c650d5aacc8b2027e2fe58263262869672a8d2beac6e0060a08ee9b672b463c4",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/Japanese/characters/ororon.json",
+          "gitBlob": "b705f5e645385cbc464e0e6d34710850fad65532"
+        },
+        {
+          "sourcePath": "src/data/ChineseSimplified/talents/ororon.json",
+          "sha256": "f2ba48a3fd5ed62efe4989690bee6d19afae133e062ffb1fbcf87cbb0b3c8138",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/talents/ororon.json",
+          "gitBlob": "f53ec2fdd49d1e5cf17cd5c6fbc75e45e142cb23"
+        },
+        {
+          "sourcePath": "src/data/English/constellations/ororon.json",
+          "sha256": "0edb6a74ec12d24bd0927691a76969eeb06a46acd70fcceb5a65a0f84eb5464a",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/constellations/ororon.json",
+          "gitBlob": "254223580ac0cbee90f3fad132c4dbd68e3d76bb"
+        },
+        {
+          "sourcePath": "src/data/ChineseSimplified/constellations/ororon.json",
+          "sha256": "f9784e44d5f60c927a457e856dad60876d1a5a15a8bdb19ef3c8040823b08967",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/ChineseSimplified/constellations/ororon.json",
+          "gitBlob": "3674324ab1d85eded9782e0cc6ca271a49944f00"
+        },
+        {
+          "sourcePath": "src/data/English/characters/ororon.json",
+          "sha256": "d49ead5970b70e65b862da9187ffb9c5367777ae1833a96e7df8f4aabd4907ad",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/characters/ororon.json",
+          "gitBlob": "141b17a56ede7852fa3043950c0eb64491a2939d"
+        },
+        {
+          "sourcePath": "src/data/English/talents/ororon.json",
+          "sha256": "7c4e22cf8be903f1529e88aa9286bcb5bab96101a47247025d1a1cd3c1e8077b",
+          "url": "https://raw.githubusercontent.com/theBowja/genshin-db/8e5badd60b5d894284ccc927a56c9683529d2592/src/data/English/talents/ororon.json",
+          "gitBlob": "a3040677f1c476c8a1070bea03339a51ea73d9b9"
+        },
+        {
+          "sourcePath": "api/avatars/ororon.json",
+          "sha256": "251cd22065ab36243561a427061be7638eef9efc82e12b206545f15f645af075",
+          "url": "https://gi.yatta.moe/api/v2/en/avatar/10000105"
+        },
+        {
+          "sourcePath": "wiki/ororon.json",
+          "sha256": "a127488c46ec50d2e6765e58ddcc7131b9079b3adeb788a501a724832a856c9e",
+          "url": "https://wiki.biligame.com/ys/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&format=json&titles=%E6%AC%A7%E6%B4%9B%E4%BC%A6"
+        },
+        {
+          "sourcePath": "wiki/ororon-rendered.json",
+          "sha256": "5303837a85d88d2b057d5683cdf70532500287bc1bdb43ef24139e2c6f47a67c",
+          "url": "https://wiki.biligame.com/ys/api.php?action=parse&oldid=690478&prop=text&format=json"
+        }
+      ],
+      "unreviewedFields": [
+        "image",
+        "recommendedBuild",
+        "teamComps",
+        "faq",
+        "relatedCharacters",
+        "tierRank",
+        "tierReason",
+        "tierReasonZh"
+      ],
+      "mediaQualified": false,
+      "editorialRecommendationsInvented": false,
+      "hold": true,
+      "publishable": false
+    }
+  ]
+}
