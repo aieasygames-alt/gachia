@@ -1,0 +1,364 @@
+{
+  "intakeKey": "e6e55a7b762a5a10a60fcced9f660502eca9af1ddfae0300fa7c4b374e044f02",
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "prepared": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/compatible-intake.json",
+    "pin": "05f37ab63f4315b9d6d572f35b3240006ace7274764f450fd55149a37b3452f5"
+  },
+  "selection": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/compatible-selection.json",
+    "pin": "27d0251df4020158d45243594aa615992219fd2f88a0771d3c251b733172c0f9"
+  },
+  "records": [
+    {
+      "key": "materials:agnidus-agate-gemstone",
+      "id": 748,
+      "updatedAt": "2026-11-07T09:24:36.578Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:artificed-dynamic-gear",
+      "id": 914,
+      "updatedAt": "2026-11-07T09:24:36.934Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:basalt-petrification",
+      "id": 840,
+      "updatedAt": "2026-11-07T09:24:36.800Z",
+      "changes": [
+        "/nameEn",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:cleansing-heart",
+      "id": 837,
+      "updatedAt": "2026-11-07T09:24:36.794Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:concealing-scroll",
+      "id": 895,
+      "updatedAt": "2026-11-07T09:24:36.901Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:crystallizing-core",
+      "id": 908,
+      "updatedAt": "2026-11-07T09:24:36.924Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:dew-of-repudiation",
+      "id": 843,
+      "updatedAt": "2026-11-07T09:24:36.806Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:divining-scroll",
+      "id": 894,
+      "updatedAt": "2026-11-07T09:24:36.899Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:dragon-lords-crown",
+      "id": 827,
+      "updatedAt": "2026-11-07T09:24:36.775Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:dragonheirs-false-fin",
+      "id": 844,
+      "updatedAt": "2026-11-07T09:24:36.808Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:dvalins-sigh",
+      "id": 818,
+      "updatedAt": "2026-11-07T09:24:36.758Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:everflame-seed",
+      "id": 836,
+      "updatedAt": "2026-11-07T09:24:36.793Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:famous-handguard",
+      "id": 905,
+      "updatedAt": "2026-11-07T09:24:36.918Z",
+      "changes": [
+        "/nameEn",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:firm-arrowhead",
+      "id": 915,
+      "updatedAt": "2026-11-07T09:24:36.935Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:floating-core",
+      "id": 906,
+      "updatedAt": "2026-11-07T09:24:36.920Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:fluorescent-fungus",
+      "id": 865,
+      "updatedAt": "2026-11-07T09:24:36.848Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:forbidden-curse-scroll",
+      "id": 896,
+      "updatedAt": "2026-11-07T09:24:36.903Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:hoarfrost-core",
+      "id": 839,
+      "updatedAt": "2026-11-07T09:24:36.798Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:kageuchi-handguard",
+      "id": 904,
+      "updatedAt": "2026-11-07T09:24:36.916Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:lightning-prism",
+      "id": 838,
+      "updatedAt": "2026-11-07T09:24:36.796Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:lumitoile",
+      "id": 879,
+      "updatedAt": "2026-11-07T09:24:36.874Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:mechanical-spur-gear",
+      "id": 913,
+      "updatedAt": "2026-11-07T09:24:36.932Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:meshing-gear",
+      "id": 912,
+      "updatedAt": "2026-11-07T09:24:36.931Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:nagadus-emerald-gemstone",
+      "id": 764,
+      "updatedAt": "2026-11-07T09:24:36.627Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:old-handguard",
+      "id": 903,
+      "updatedAt": "2026-11-07T09:24:36.915Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:perpetual-heart",
+      "id": 841,
+      "updatedAt": "2026-11-07T09:24:36.802Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:prithiva-topaz-gemstone",
+      "id": 772,
+      "updatedAt": "2026-11-07T09:24:36.652Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:ring-of-boreas",
+      "id": 822,
+      "updatedAt": "2026-11-07T09:24:36.765Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:rukkhashava-mushroom",
+      "id": 873,
+      "updatedAt": "2026-11-07T09:24:36.863Z",
+      "changes": [
+        "/nameEn"
+      ]
+    },
+    {
+      "key": "materials:scarab",
+      "id": 875,
+      "updatedAt": "2026-11-07T09:24:36.866Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:sharp-arrowhead",
+      "id": 916,
+      "updatedAt": "2026-11-07T09:24:36.936Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:shivada-jade-gemstone",
+      "id": 760,
+      "updatedAt": "2026-11-07T09:24:36.614Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:smaragdistite-jade-branch",
+      "id": 845,
+      "updatedAt": "2026-11-07T09:24:36.810Z",
+      "changes": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:storm-beads",
+      "id": 842,
+      "updatedAt": "2026-11-07T09:24:36.804Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:subdetection-unit",
+      "id": 882,
+      "updatedAt": "2026-11-07T09:24:36.879Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:suffused-core",
+      "id": 907,
+      "updatedAt": "2026-11-07T09:24:36.922Z",
+      "changes": [
+        "/rarity"
+      ]
+    },
+    {
+      "key": "materials:tail-of-boreas",
+      "id": 821,
+      "updatedAt": "2026-11-07T09:24:36.763Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:vajrada-amethyst-gemstone",
+      "id": 756,
+      "updatedAt": "2026-11-07T09:24:36.602Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:valberry",
+      "id": 849,
+      "updatedAt": "2026-11-07T09:24:36.818Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:varunada-lazurite-gemstone",
+      "id": 752,
+      "updatedAt": "2026-11-07T09:24:36.591Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:vayuda-turquoise-gemstone",
+      "id": 768,
+      "updatedAt": "2026-11-07T09:24:36.640Z",
+      "changes": [
+        "/name"
+      ]
+    },
+    {
+      "key": "materials:weathered-arrowhead",
+      "id": 917,
+      "updatedAt": "2026-11-07T09:24:36.937Z",
+      "changes": [
+        "/name"
+      ]
+    }
+  ],
+  "writeContract": "42 compatible existing Genshin material leaf edits; draft=true, hold=true, immutable origin unchanged; no editorial approval or website publication"
+}

@@ -1,0 +1,74 @@
+{
+  "key": "materials:agnidus-agate-gemstone",
+  "id": 748,
+  "before": {
+    "id": 748,
+    "stableKey": "unified:genshin:14c9053d75eb60f9e053e13c7acd5d68f1d0d0102293fd4856c2dbfac7cb850e",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"agnidus-agate-gemstone\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "agnidus-agate-gemstone"
+        }
+      },
+      "original": {
+        "id": "agnidus-agate-gemstone",
+        "name": "燃愿玛瑙宝石",
+        "type": "character-ascension",
+        "nameEn": "Agnidus Agate Gemstone",
+        "rarity": 5,
+        "source": "Boss掉落: Pyro相关Boss",
+        "sourceEn": "Boss Drop: Pyro related bosses"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "8bc3694202a9b4e805cd4dd08926cccea6cf4302da56ed62433e2e7480e49074",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "agnidus-agate-gemstone",
+      "name": "燃愿玛瑙宝石",
+      "type": "character-ascension",
+      "nameEn": "Agnidus Agate Gemstone",
+      "rarity": 5,
+      "source": "Boss掉落: Pyro相关Boss",
+      "sourceEn": "Boss Drop: Pyro related bosses"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.578Z",
+    "createdAt": "2026-11-07T09:24:36.578Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "agnidus-agate-gemstone",
+    "name": "燃愿玛瑙",
+    "nameEn": "Agnidus Agate Gemstone",
+    "type": "character-ascension",
+    "rarity": 5,
+    "source": "Boss掉落: Pyro相关Boss",
+    "sourceEn": "Boss Drop: Pyro related bosses"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:14.504Z"
+}

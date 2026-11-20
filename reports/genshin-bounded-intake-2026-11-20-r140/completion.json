@@ -1,0 +1,97 @@
+{
+  "kind": "genshin-bounded-intake-completion-r140",
+  "status": "reconciled-and-compatible-held-drafts-imported",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "sourceCount": 115,
+  "allOwnersCurrent": true,
+  "counts": {
+    "cmsRecords": 390,
+    "changedRecords": 221,
+    "preservedRecords": 255,
+    "existingUpdates": 133,
+    "newEntities": 86,
+    "identityMigrations": 2,
+    "conflicts": 0
+  },
+  "batches": [
+    {
+      "family": "materials",
+      "records": 129
+    },
+    {
+      "family": "character-materials",
+      "records": 90
+    },
+    {
+      "family": "characters",
+      "records": 2
+    }
+  ],
+  "dependency": {
+    "auditKey": "68dcbf92b7044468f036213490b3208413f64b0b23798500afead88d80eb6e36",
+    "complete": true,
+    "materialDefinitions": 269,
+    "materialReferences": 5490,
+    "issues": []
+  },
+  "installedCMS": {
+    "status": "held-drafts-written-and-read-back",
+    "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+    "records": 42,
+    "unchangedRecords": 2838,
+    "immutableOriginsPreserved": true,
+    "approvedContentPreserved": true,
+    "sourceIndex": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+      "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+    },
+    "before": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-capture.json.gz",
+      "pin": "91be55febfbcdf5fb9e47170d3eb9407673625a8cf388e16c687354f3f24dea3"
+    },
+    "after": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-after.json.gz",
+      "pin": "7100b065d9d1da84de5a016c39a6aeff483fafbb06727d4cbbf323412f9bbfde"
+    },
+    "contentWrites": 42,
+    "approvalWrites": 0,
+    "productionDeployments": 0,
+    "sourceAdvanced": false,
+    "hold": true,
+    "publishable": false,
+    "observedAt": "2026-11-20T14:47:17.145Z"
+  },
+  "readbackDelta": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/readback-delta.json",
+    "pin": "1e9fa05b28b40141c1fa549f10472a1c1a60f4c4222c60348c820b16d90bb41a"
+  },
+  "preExistingCheckoutDifferences": 10,
+  "intentionalR135RelationDifference": 1,
+  "localSourceFilesPreserved": 115,
+  "checks": {
+    "focused": 49,
+    "docsAndScope": 41,
+    "types": true,
+    "cliExactReplay": true,
+    "independentInstalledReadback": true,
+    "failed": 0,
+    "skipped": 0
+  },
+  "disk": {
+    "availableBytes": 15308341248,
+    "requiredFullBuildBytes": 15032385536,
+    "reserveBytes": 8589934592
+  },
+  "contentWrites": 42,
+  "approvalWrites": 0,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "newFullBuild": false,
+  "exactRemoteCI": false,
+  "pushed": false,
+  "hold": true,
+  "publishable": false
+}

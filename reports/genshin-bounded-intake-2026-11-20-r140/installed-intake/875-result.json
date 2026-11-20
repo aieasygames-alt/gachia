@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 875,
+    "stableKey": "unified:genshin:dd8f2c7dad268a4388597c5ab639946eeec358650248ca761d0aafbd4de64b38",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"scarab\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "scarab"
+        }
+      },
+      "original": {
+        "id": "scarab",
+        "name": "圣甲虫",
+        "type": "local-specialty",
+        "nameEn": "Scarab",
+        "rarity": 1,
+        "source": "野外采集: 须弥",
+        "sourceEn": "Field Collection: Sumeru"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "2ab1ec4606508ef13875476fa13d1362d9b84bfe84368a0fa343ecd60cd5c968",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "scarab",
+      "name": "圣金虫",
+      "type": "local-specialty",
+      "nameEn": "Scarab",
+      "rarity": 1,
+      "source": "野外采集: 须弥",
+      "sourceEn": "Field Collection: Sumeru"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.642Z",
+    "createdAt": "2026-11-07T09:24:36.866Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

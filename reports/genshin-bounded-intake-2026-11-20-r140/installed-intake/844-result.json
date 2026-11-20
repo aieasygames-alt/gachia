@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 844,
+    "stableKey": "unified:genshin:6ea875077292bb0be2585ad94bf37316c9bab99a6fe1fa7693a3fd2f7d5c6bcb",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"dragonheirs-false-fin\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "dragonheirs-false-fin"
+        }
+      },
+      "original": {
+        "id": "dragonheirs-false-fin",
+        "name": "龙嗣伪鳍",
+        "type": "boss-drop",
+        "nameEn": "Dragonheir's False Fin",
+        "rarity": 5,
+        "source": "Boss掉落: Bathysmal Vishap Herd",
+        "sourceEn": "Boss Drop: Bathysmal Vishap Herd"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "73a94d750144ae19e04d2072195631fa715d63664bf91e095ea8b701ef5d58d0",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "dragonheirs-false-fin",
+      "name": "龙嗣伪鳍",
+      "type": "boss-drop",
+      "nameEn": "Dragonheir's False Fin",
+      "rarity": 4,
+      "source": "Boss掉落: Bathysmal Vishap Herd",
+      "sourceEn": "Boss Drop: Bathysmal Vishap Herd"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:14.905Z",
+    "createdAt": "2026-11-07T09:24:36.808Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

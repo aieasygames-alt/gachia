@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 760,
+    "stableKey": "unified:genshin:a63c1d7c8e2f69fbf7d4e065d6ae9a25fcf7c25de0eb595744825acad34e43f1",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"shivada-jade-gemstone\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "shivada-jade-gemstone"
+        }
+      },
+      "original": {
+        "id": "shivada-jade-gemstone",
+        "name": "哀叙冰玉宝石",
+        "type": "character-ascension",
+        "nameEn": "Shivada Jade Gemstone",
+        "rarity": 5,
+        "source": "Boss掉落: Cryo相关Boss",
+        "sourceEn": "Boss Drop: Cryo related bosses"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "8b629cfd918785b614adb3674c0b542683b4397a552caa9167a2e0400703893f",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "shivada-jade-gemstone",
+      "name": "哀叙冰玉",
+      "type": "character-ascension",
+      "nameEn": "Shivada Jade Gemstone",
+      "rarity": 5,
+      "source": "Boss掉落: Cryo相关Boss",
+      "sourceEn": "Boss Drop: Cryo related bosses"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.682Z",
+    "createdAt": "2026-11-07T09:24:36.614Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

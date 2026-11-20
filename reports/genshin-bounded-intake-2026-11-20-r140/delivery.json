@@ -1,0 +1,105 @@
+{
+  "kind": "genshin-bounded-intake-delivery-r140",
+  "status": "reconciled-and-compatible-held-drafts-imported",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "completion": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/completion.json",
+    "pin": "140cccd43398d48e000b51c65be2191d57197717ca3e83d447c5176e82ede0f9"
+  },
+  "execution": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/EXECUTION.md",
+    "pin": "cc48122fcae873202eb46fa4bba2b3ce32199d8e2fcd2ddf997b3293ea524a26"
+  },
+  "preparation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/summary.json",
+    "pin": "a7cfba50474654943e3d21e5f0e898857dedd01d903f2e06df6f2cd0725823b5"
+  },
+  "sourceReopen": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/source-reopen.json",
+    "pin": "d2b15544877d281e855fa819728cd93ca71dc05daf23bd8bc0c0db145a94967d"
+  },
+  "cmsCapture": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-capture-proof.json",
+    "pin": "34e5270529e34e4487cc75b900a630bdfee35b05637a83c49856f23005528d02"
+  },
+  "installedIntake": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/installed-intake-result.json",
+    "pin": "9bdb76fe673d6abbeffc47801986fadef7ec0d138d026abf3c9d027c9f75d5bd"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-after.json.gz",
+    "pin": "7100b065d9d1da84de5a016c39a6aeff483fafbb06727d4cbbf323412f9bbfde"
+  },
+  "fixture": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-intake-r140.json.gz",
+    "pin": "f0b5e5741fe57fe104507820d57b576ba7ab5d9a5c15be3442dc62e8a29c9bbb"
+  },
+  "contract": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/docs/genshin-bounded-intake.md",
+    "pin": "62d27228994d38843952b0adf0c8e50baac4d809edb581c25869a818aa35ed68"
+  },
+  "checks": {
+    "focused": 49,
+    "docsAndScope": 41,
+    "types": true,
+    "cliExactReplay": true,
+    "independentInstalledReadback": true,
+    "failed": 0,
+    "skipped": 0
+  },
+  "evidence": {
+    "compatible-intake-intent.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/compatible-intake-intent.json",
+      "pin": "6acbff8c49e9bbf5a36222801138a549ea903c8cef01ca34ec349bc25e3a6ac1"
+    },
+    "readback-delta.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/readback-delta.json",
+      "pin": "1e9fa05b28b40141c1fa549f10472a1c1a60f4c4222c60348c820b16d90bb41a"
+    },
+    "baseline-comparison.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/baseline-comparison.json",
+      "pin": "914f7de32d863e378038baba97cbdb062252776ff3e4959176f8f255c1fb1ee3"
+    },
+    "cli-check.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cli-check.json",
+      "pin": "f50c051d806532f744f13407db1b7767fdfb88a5cb83e6dd71e3eff1e241a7ff"
+    },
+    "intake-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/intake-tests.log",
+      "pin": "8ed57927cbdff06ef7726909351307f8c5c7ae01439d228f49b7875d0afde134"
+    },
+    "docs-scope-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/docs-scope-tests.log",
+      "pin": "852bc8810740099b70f7b09c49b44848f7cc754a458bde151817315e8ed5a90f"
+    },
+    "types.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/types.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "installed-intake.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/installed-intake.log",
+      "pin": "0229fc3e35b47030c82d1d13b80557cc5e210b880b746cc639fccb03362e52e4"
+    },
+    "installed-readonly-verification.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/installed-readonly-verification.log",
+      "pin": "f7d4b9f577b331aec5c3bc4f5a7aab83724a6d247c5ae7890b073c1092aa986a"
+    }
+  },
+  "heldRemainder": {
+    "protectedExistingMaterialSources": 3,
+    "newMaterials": 84,
+    "relations": 90,
+    "newCharacters": 2,
+    "total": 179
+  },
+  "contentWrites": 42,
+  "approvalWrites": 0,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "hold": true,
+  "publishable": false,
+  "next": "Read installed-intake-result and current CMS against cms-after; do not replay the 42 PATCH operations. Continue controlled intake for protected source fields, identity/relation and new entities, then separately qualify reviews, consumers, compatible recovery and single Genshin Worker content publication. Keep R139 as published source."
+}

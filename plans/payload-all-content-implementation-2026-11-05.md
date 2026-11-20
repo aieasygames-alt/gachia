@@ -1,5 +1,13 @@
 # Payload 全内容实施队列
 
+## 当前开发完成状态（2026-11-20 R140：三方对账、有界审核包与 42 条真实 CMS 草稿）
+
+已从 R139 正式索引经真实 `readNteSourceIndex` 重开接续，115 来源、`allOwnersCurrent=true`。真实 CMS 2,880 条记录稳定双读，原神三类内容的 390 条原始导入 O 与正式 A、R137 完整候选/R138 图片补丁对账完成：无合并冲突，221 条变更提案，另保留 255 条既有记录；分包 129 条材料、90 条关系、2 条新角色。候选 269 材料、117 角色、5,490 次材料引用，依赖缺口为零。胡桃保留真实 O 及已发布编辑；两个关系 ID 迁移显式保留旧/新身份和 R135 证据。
+
+42 条通过当前 CMS 字段合同的既有材料修正，已实际写入常驻 CMS 并逐条读回：30 个中文名称、3 个英文名称、22 个稀有度字段，全部 `draft`、`hold=true`，原始 provenance 保持。其余 2,838 条 CMS 记录和所有已审核内容保持；每条写入 intent/result、完整前后快照、独立只读复核与命令行精确重放均完成。其余 179 条提案（3 条受保护来源字段、84 个新材料、90 条关系、2 个新角色）仍在有界审核包，不绕过现有 hooks。见 [R140 完成回执](../reports/genshin-bounded-intake-2026-11-20-r140/EXECUTION.md)、[交付索引](../reports/genshin-bounded-intake-2026-11-20-r140/delivery.json)和[合同说明](../services/content-cms/docs/genshin-bounded-intake.md)。聚焦测试 49/49、文档/范围 41/41、CMS 类型通过，无跳过。
+
+下一批先核对 R140 `installed-intake-result.json` 及 `cms-after.json.gz` 与当前真实 CMS；旧输入/审核包是写入前状态，不能重放 42 次 PATCH。继续受保护来源字段、关系迁移与新实体的安装导入，再接数值/关系/新实体审核、完整消费者和兼容恢复合同。当前本地与 A 的 11 份差异是此前 10 份旧差异加 R135 有意修改的关系源，均保留；不要把 checkout 当作正式 A。正式来源仍是下方 R139，pin 不变，本批 0 次审核发布、0 次 Worker 部署、未推进来源。绿梦保持中文范围。
+
 ## 当前生产完成状态（2026-11-20 R139：原神 Worker 代码及图片资源正式发布完成）
 
 原神 Worker 已正式更新为 `882906a4-328a-4a3c-ba3a-5e6130a8ed99`，deployment `c8ea00a0-aafa-4ce2-83e9-7402da34610a`，100% 流量。本批仅一次原神正式部署，其余 9 个生产/staging 服务的部署与设置保持。完整 CI [44739474406](https://github.com/aieasygames-alt/gachia/actions/runs/44739474406) 对应精确执行提交 `a85e5a67a28f9da905ad98702729b9e99a7338d1`；完整构建复用差异证明、候选/兼容恢复封存、云模块身份、正式切流和来源推进均完成。见 [R139 完成回执](../reports/genshin-code-production-2026-11-20-r139/EXECUTION.md)及[交付索引](../reports/genshin-code-production-2026-11-20-r139/delivery.json)。

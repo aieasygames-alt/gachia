@@ -1,0 +1,74 @@
+{
+  "key": "materials:famous-handguard",
+  "id": 905,
+  "before": {
+    "id": 905,
+    "stableKey": "unified:genshin:a94dc87f97ff9d918fffd707d727d071ad42457f77fd0f229eeb56d87e6e763b",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"famous-handguard\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "famous-handguard"
+        }
+      },
+      "original": {
+        "id": "famous-handguard",
+        "name": "名刀镡",
+        "type": "common-drop",
+        "nameEn": "Famous Handguard",
+        "rarity": 4,
+        "source": "怪物掉落: 野伏",
+        "sourceEn": "Enemy Drop: Nobushi"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "bf77dff850cdf2394de4dab6c2c20c488fafc8911541304209ac9a972851e08a",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "famous-handguard",
+      "name": "名刀镡",
+      "type": "common-drop",
+      "nameEn": "Famous Handguard",
+      "rarity": 4,
+      "source": "怪物掉落: 野伏",
+      "sourceEn": "Enemy Drop: Nobushi"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.918Z",
+    "createdAt": "2026-11-07T09:24:36.918Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "famous-handguard",
+    "name": "名刀镡",
+    "nameEn": "Famed Handguard",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 野伏",
+    "sourceEn": "Enemy Drop: Nobushi"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.023Z"
+}

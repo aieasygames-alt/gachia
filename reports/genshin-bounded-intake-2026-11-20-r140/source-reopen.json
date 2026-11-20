@@ -1,0 +1,14 @@
+{
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "sources": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/active-sources.json",
+    "pin": "f6aad1e27945371a904532752f429a79228da0c0db297cbed04409ec450dcbc9"
+  },
+  "allOwnersCurrent": true,
+  "sourceCount": 115,
+  "observedAt": "2026-11-20T14:35:03.122Z",
+  "cloudWrites": false
+}

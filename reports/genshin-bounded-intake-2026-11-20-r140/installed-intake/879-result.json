@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 879,
+    "stableKey": "unified:genshin:6126d5ec24d2d4b2742de10f8bccdb668bbe985dd7f5a6401399b1c3ad4f6d01",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"lumitoile\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "lumitoile"
+        }
+      },
+      "original": {
+        "id": "lumitoile",
+        "name": "灵光珠",
+        "type": "local-specialty",
+        "nameEn": "Lumitoile",
+        "rarity": 1,
+        "source": "野外采集: 枫丹",
+        "sourceEn": "Field Collection: Fontaine"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "aa1f9125339a93c2b2956082116eda34a611dde5b7cf582134f5fc3d4908adc5",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "lumitoile",
+      "name": "幽光星星",
+      "type": "local-specialty",
+      "nameEn": "Lumitoile",
+      "rarity": 1,
+      "source": "野外采集: 枫丹",
+      "sourceEn": "Field Collection: Fontaine"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.332Z",
+    "createdAt": "2026-11-07T09:24:36.874Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

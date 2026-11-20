@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 836,
+    "stableKey": "unified:genshin:675240d3d0361eef38680355c611a842a79979376a812646c0980345993f1339",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"everflame-seed\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "everflame-seed"
+        }
+      },
+      "original": {
+        "id": "everflame-seed",
+        "name": "常燃火种",
+        "type": "boss-drop",
+        "nameEn": "Everflame Seed",
+        "rarity": 5,
+        "source": "Boss掉落: Pyro Regisvine",
+        "sourceEn": "Boss Drop: Pyro Regisvine"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "b7b35fdb513373e0c090accf897693c3d5be756813dba8ee7599d2c3ee71ec9f",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "everflame-seed",
+      "name": "常燃火种",
+      "type": "boss-drop",
+      "nameEn": "Everflame Seed",
+      "rarity": 4,
+      "source": "Boss掉落: Pyro Regisvine",
+      "sourceEn": "Boss Drop: Pyro Regisvine"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:14.979Z",
+    "createdAt": "2026-11-07T09:24:36.793Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 768,
+    "stableKey": "unified:genshin:7a6d9df84b7411f8c6b7abaadea087de3dc1b94449a09a39126692d18d96a9a4",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"vayuda-turquoise-gemstone\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "vayuda-turquoise-gemstone"
+        }
+      },
+      "original": {
+        "id": "vayuda-turquoise-gemstone",
+        "name": "自在松石宝石",
+        "type": "character-ascension",
+        "nameEn": "Vayuda Turquoise Gemstone",
+        "rarity": 5,
+        "source": "Boss掉落: Anemo相关Boss",
+        "sourceEn": "Boss Drop: Anemo related bosses"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "69a80f39f4b485af9d21c887bccb734998cdba57f090649a55ba701c91e429cb",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "vayuda-turquoise-gemstone",
+      "name": "自在松石",
+      "type": "character-ascension",
+      "nameEn": "Vayuda Turquoise Gemstone",
+      "rarity": 5,
+      "source": "Boss掉落: Anemo相关Boss",
+      "sourceEn": "Boss Drop: Anemo related bosses"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.830Z",
+    "createdAt": "2026-11-07T09:24:36.640Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

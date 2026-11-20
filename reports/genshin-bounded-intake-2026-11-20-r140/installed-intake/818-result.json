@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 818,
+    "stableKey": "unified:genshin:16f495468969e0d8b76a32799a2113fa9a1091390f1556130937d20dd2973252",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"dvalins-sigh\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "dvalins-sigh"
+        }
+      },
+      "original": {
+        "id": "dvalins-sigh",
+        "name": "东风之息",
+        "type": "weekly-boss",
+        "nameEn": "Dvalin's Sigh",
+        "rarity": 5,
+        "source": "周本: Stormterror",
+        "sourceEn": "Weekly Boss: Stormterror"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "a2be5316108aac9735be957f74731f6710b3c4cb964c2d651598c8a6e59161ce",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "dvalins-sigh",
+      "name": "东风的吐息",
+      "type": "weekly-boss",
+      "nameEn": "Dvalin's Sigh",
+      "rarity": 5,
+      "source": "周本: Stormterror",
+      "sourceEn": "Weekly Boss: Stormterror"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:14.939Z",
+    "createdAt": "2026-11-07T09:24:36.758Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

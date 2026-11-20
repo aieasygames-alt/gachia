@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 904,
+    "stableKey": "unified:genshin:9493b571bcf0a782e2933d8d306d993fcf92297084d15b550af032a88d39a681",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"kageuchi-handguard\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "kageuchi-handguard"
+        }
+      },
+      "original": {
+        "id": "kageuchi-handguard",
+        "name": "影打的刀镡",
+        "type": "common-drop",
+        "nameEn": "Kageuchi Handguard",
+        "rarity": 3,
+        "source": "怪物掉落: 野伏",
+        "sourceEn": "Enemy Drop: Nobushi"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "e338bbd9e3edba53c59773a1f7e82ab6d174eee2e4d90bee217bad8929933147",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "kageuchi-handguard",
+      "name": "影打刀镡",
+      "type": "common-drop",
+      "nameEn": "Kageuchi Handguard",
+      "rarity": 2,
+      "source": "怪物掉落: 野伏",
+      "sourceEn": "Enemy Drop: Nobushi"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.263Z",
+    "createdAt": "2026-11-07T09:24:36.916Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

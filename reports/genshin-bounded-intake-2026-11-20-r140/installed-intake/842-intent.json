@@ -1,0 +1,74 @@
+{
+  "key": "materials:storm-beads",
+  "id": 842,
+  "before": {
+    "id": 842,
+    "stableKey": "unified:genshin:d43c8089dc974d464fbb6d28ab84350528ea63db3093d9a82800941b14e0bd71",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"storm-beads\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "storm-beads"
+        }
+      },
+      "original": {
+        "id": "storm-beads",
+        "name": "雷霆数珠",
+        "type": "boss-drop",
+        "nameEn": "Storm Beads",
+        "rarity": 5,
+        "source": "Boss掉落: Thunder Manifestation",
+        "sourceEn": "Boss Drop: Thunder Manifestation"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "dedc9c6f233221308993f92b59c694f85d41e94fad3ce9fd4c0e36dfe3ebdac9",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "storm-beads",
+      "name": "雷霆数珠",
+      "type": "boss-drop",
+      "nameEn": "Storm Beads",
+      "rarity": 5,
+      "source": "Boss掉落: Thunder Manifestation",
+      "sourceEn": "Boss Drop: Thunder Manifestation"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.804Z",
+    "createdAt": "2026-11-07T09:24:36.804Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "storm-beads",
+    "name": "雷霆数珠",
+    "nameEn": "Storm Beads",
+    "type": "boss-drop",
+    "rarity": 4,
+    "source": "Boss掉落: Thunder Manifestation",
+    "sourceEn": "Boss Drop: Thunder Manifestation"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.723Z"
+}

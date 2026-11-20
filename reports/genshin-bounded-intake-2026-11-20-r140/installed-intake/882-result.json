@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 882,
+    "stableKey": "unified:genshin:e8b0872f4588d2362947687464a1ff1e77db0b8a6981871ec36458b836c2bf7a",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"subdetection-unit\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "subdetection-unit"
+        }
+      },
+      "original": {
+        "id": "subdetection-unit",
+        "name": "区域侦测模块",
+        "type": "local-specialty",
+        "nameEn": "Subdetection Unit",
+        "rarity": 1,
+        "source": "野外采集: 枫丹",
+        "sourceEn": "Field Collection: Fontaine"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "78367adada6f74178efea9bdf98f80678b86b3aadac0b8c8c8cefa441dff1eb1",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "subdetection-unit",
+      "name": "子探测单元",
+      "type": "local-specialty",
+      "nameEn": "Subdetection Unit",
+      "rarity": 1,
+      "source": "野外采集: 枫丹",
+      "sourceEn": "Field Collection: Fontaine"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.751Z",
+    "createdAt": "2026-11-07T09:24:36.879Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

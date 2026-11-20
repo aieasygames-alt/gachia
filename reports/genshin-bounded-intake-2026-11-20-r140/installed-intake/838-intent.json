@@ -1,0 +1,74 @@
+{
+  "key": "materials:lightning-prism",
+  "id": 838,
+  "before": {
+    "id": 838,
+    "stableKey": "unified:genshin:830150d1a8a32ad256f72d01156b9d69ce959c578526e261b89dc3a54d4c8418",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"lightning-prism\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "lightning-prism"
+        }
+      },
+      "original": {
+        "id": "lightning-prism",
+        "name": "雷光棱镜",
+        "type": "boss-drop",
+        "nameEn": "Lightning Prism",
+        "rarity": 5,
+        "source": "Boss掉落: Electro Hypostasis",
+        "sourceEn": "Boss Drop: Electro Hypostasis"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "10a921d03125adb6317cd2c4e787e6024ad0fb3655a09709cf0226ef9e11dff1",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "lightning-prism",
+      "name": "雷光棱镜",
+      "type": "boss-drop",
+      "nameEn": "Lightning Prism",
+      "rarity": 5,
+      "source": "Boss掉落: Electro Hypostasis",
+      "sourceEn": "Boss Drop: Electro Hypostasis"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.796Z",
+    "createdAt": "2026-11-07T09:24:36.796Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "lightning-prism",
+    "name": "雷光棱镜",
+    "nameEn": "Lightning Prism",
+    "type": "boss-drop",
+    "rarity": 4,
+    "source": "Boss掉落: Electro Hypostasis",
+    "sourceEn": "Boss Drop: Electro Hypostasis"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.288Z"
+}

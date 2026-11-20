@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 915,
+    "stableKey": "unified:genshin:c13fe4572b089bae336e63492724f23ac8dd742f703d5effe7dc9c6e0eb8cf82",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"firm-arrowhead\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "firm-arrowhead"
+        }
+      },
+      "original": {
+        "id": "firm-arrowhead",
+        "name": "牢固的箭头",
+        "type": "common-drop",
+        "nameEn": "Firm Arrowhead",
+        "rarity": 1,
+        "source": "怪物掉落: 射手丘丘人",
+        "sourceEn": "Enemy Drop: Hilichurl Shooters"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "bd5a1cf52dc1ec48a64fcc0210ae1a8bcd8b6f346ebda29734176d21cb605717",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "firm-arrowhead",
+      "name": "牢固的箭簇",
+      "type": "common-drop",
+      "nameEn": "Firm Arrowhead",
+      "rarity": 1,
+      "source": "怪物掉落: 射手丘丘人",
+      "sourceEn": "Enemy Drop: Hilichurl Shooters"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.096Z",
+    "createdAt": "2026-11-07T09:24:36.935Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

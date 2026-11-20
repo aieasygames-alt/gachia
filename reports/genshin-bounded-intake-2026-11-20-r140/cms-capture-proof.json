@@ -1,0 +1,11 @@
+{
+  "proof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-capture.json.gz",
+    "pin": "91be55febfbcdf5fb9e47170d3eb9407673625a8cf388e16c687354f3f24dea3"
+  },
+  "records": 2880,
+  "publishedRead": 2880,
+  "draftSetSHA256": "0a168d154579cd5a0c39c967567e4f5d326c549c25e92dbfc8c7de9ae27f372e",
+  "stableDoubleRead": true,
+  "contentWrites": false
+}

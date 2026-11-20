@@ -1,0 +1,74 @@
+{
+  "key": "materials:forbidden-curse-scroll",
+  "id": 896,
+  "before": {
+    "id": 896,
+    "stableKey": "unified:genshin:6d99fdc1559875e909be108148c580690d605a71531942d0fd9ad79b1f882a4f",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"forbidden-curse-scroll\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "forbidden-curse-scroll"
+        }
+      },
+      "original": {
+        "id": "forbidden-curse-scroll",
+        "name": "禁咒的绘卷",
+        "type": "common-drop",
+        "nameEn": "Forbidden Curse Scroll",
+        "rarity": 4,
+        "source": "怪物掉落: 萨满",
+        "sourceEn": "Enemy Drop: Samachurls"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "cbb2131886547ad24c85bc6c854370caed529336ce02c23d578f8bc484d12c16",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "forbidden-curse-scroll",
+      "name": "禁咒的绘卷",
+      "type": "common-drop",
+      "nameEn": "Forbidden Curse Scroll",
+      "rarity": 4,
+      "source": "怪物掉落: 萨满",
+      "sourceEn": "Enemy Drop: Samachurls"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.903Z",
+    "createdAt": "2026-11-07T09:24:36.903Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "forbidden-curse-scroll",
+    "name": "禁咒绘卷",
+    "nameEn": "Forbidden Curse Scroll",
+    "type": "common-drop",
+    "rarity": 3,
+    "source": "怪物掉落: 萨满",
+    "sourceEn": "Enemy Drop: Samachurls"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.186Z"
+}

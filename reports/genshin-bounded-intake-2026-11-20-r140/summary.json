@@ -1,0 +1,91 @@
+{
+  "kind": "genshin-bounded-intake-summary-r140",
+  "observedAt": "2026-11-20T14:44:28.722Z",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "input": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/intake-input.json",
+    "pin": "9e9dbc57a2c8b29c9bc758d8ca1a9202e4d08dbda340eec8ee9823f45540077f"
+  },
+  "plan": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/reconciliation.json",
+    "pin": "32dfaa600063896e6378781651bada2be8f5b17b452763eb3203e2f2cb01c746"
+  },
+  "fixture": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-intake-r140.json.gz",
+    "pin": "f0b5e5741fe57fe104507820d57b576ba7ab5d9a5c15be3442dc62e8a29c9bbb"
+  },
+  "counts": {
+    "cmsRecords": 390,
+    "changedRecords": 221,
+    "preservedRecords": 255,
+    "existingUpdates": 133,
+    "newEntities": 86,
+    "identityMigrations": 2,
+    "conflicts": 0
+  },
+  "dependency": {
+    "auditKey": "68dcbf92b7044468f036213490b3208413f64b0b23798500afead88d80eb6e36",
+    "complete": true,
+    "materialDefinitions": 269,
+    "materialReferences": 5490,
+    "issues": []
+  },
+  "batches": [
+    {
+      "family": "materials",
+      "records": 129,
+      "changeClasses": [
+        "classification",
+        "new-entity",
+        "numeric",
+        "source-text",
+        "text"
+      ],
+      "batchKey": "d3c20489036422db9ea8a265fb21ec71960f50bfffed6c5984f4708078b54b6b",
+      "proof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/batch-materials-1.json",
+        "pin": "07d0d5510f10d2de51abbcb40e576064848c83f2148faa7cc621f7ddd683e094"
+      }
+    },
+    {
+      "family": "character-materials",
+      "records": 90,
+      "changeClasses": [
+        "identity-migration",
+        "numeric",
+        "relation"
+      ],
+      "batchKey": "7ec239160c94e13ff1d363d23cf791ae8d957b865f7cfe45f82b2db4cf5b10db",
+      "proof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/batch-character-materials-1.json",
+        "pin": "37921c1825d4ac5c06f6c558a256e11db4edb5130b6f0fdf31fe18dbdbfcc3d9"
+      }
+    },
+    {
+      "family": "characters",
+      "records": 2,
+      "changeClasses": [
+        "media",
+        "new-entity",
+        "numeric",
+        "text"
+      ],
+      "batchKey": "22a049aa6f3b36a3cb0e6c99c24c82e1e6ad1c018849ead1f31a3f48a5df2bf9",
+      "proof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/batch-characters-1.json",
+        "pin": "3e758a84a4ff3b4b6a7b3209f36c228ec07adb91c3dd0408956d2821d44b78da"
+      }
+    }
+  ],
+  "preExistingLocalDifferences": 11,
+  "huTaoPreserved": true,
+  "fullSourceCount": 115,
+  "contentWrites": false,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "hold": true,
+  "publishable": false
+}

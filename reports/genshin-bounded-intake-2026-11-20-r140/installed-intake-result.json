@@ -1,0 +1,27 @@
+{
+  "status": "held-drafts-written-and-read-back",
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "records": 42,
+  "unchangedRecords": 2838,
+  "immutableOriginsPreserved": true,
+  "approvedContentPreserved": true,
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "before": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-capture.json.gz",
+    "pin": "91be55febfbcdf5fb9e47170d3eb9407673625a8cf388e16c687354f3f24dea3"
+  },
+  "after": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cms-after.json.gz",
+    "pin": "7100b065d9d1da84de5a016c39a6aeff483fafbb06727d4cbbf323412f9bbfde"
+  },
+  "contentWrites": 42,
+  "approvalWrites": 0,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "hold": true,
+  "publishable": false,
+  "observedAt": "2026-11-20T14:47:17.145Z"
+}

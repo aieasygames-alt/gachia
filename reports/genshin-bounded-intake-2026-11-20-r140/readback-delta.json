@@ -1,0 +1,401 @@
+{
+  "recordCount": 2880,
+  "changed": 42,
+  "unchanged": 2838,
+  "approvedBefore": 11,
+  "approvedContentPreserved": true,
+  "immutableOriginsPreserved": true,
+  "records": [
+    {
+      "id": 748,
+      "key": "materials:agnidus-agate-gemstone",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.578Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.551Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 752,
+      "key": "materials:varunada-lazurite-gemstone",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.591Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.818Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 756,
+      "key": "materials:vajrada-amethyst-gemstone",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.602Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.793Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 760,
+      "key": "materials:shivada-jade-gemstone",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.614Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.682Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 764,
+      "key": "materials:nagadus-emerald-gemstone",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.627Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.425Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 768,
+      "key": "materials:vayuda-turquoise-gemstone",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.640Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.830Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 772,
+      "key": "materials:prithiva-topaz-gemstone",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.652Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.577Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 818,
+      "key": "materials:dvalins-sigh",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.758Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.939Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 821,
+      "key": "materials:tail-of-boreas",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.763Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.779Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 822,
+      "key": "materials:ring-of-boreas",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.765Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.598Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 827,
+      "key": "materials:dragon-lords-crown",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.775Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.863Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 836,
+      "key": "materials:everflame-seed",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.793Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.979Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 837,
+      "key": "materials:cleansing-heart",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.794Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.683Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 838,
+      "key": "materials:lightning-prism",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.796Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.299Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 839,
+      "key": "materials:hoarfrost-core",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.798Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.232Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 840,
+      "key": "materials:basalt-petrification",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.800Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.653Z",
+      "fields": [
+        "/nameEn",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 841,
+      "key": "materials:perpetual-heart",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.802Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.545Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 842,
+      "key": "materials:storm-beads",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.804Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.732Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 843,
+      "key": "materials:dew-of-repudiation",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.806Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.793Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 844,
+      "key": "materials:dragonheirs-false-fin",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.808Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.905Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 845,
+      "key": "materials:smaragdistite-jade-branch",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.810Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.702Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 849,
+      "key": "materials:valberry",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.818Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.805Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 865,
+      "key": "materials:fluorescent-fungus",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.848Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.165Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 873,
+      "key": "materials:rukkhashava-mushroom",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.863Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.624Z",
+      "fields": [
+        "/nameEn"
+      ]
+    },
+    {
+      "id": 875,
+      "key": "materials:scarab",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.866Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.642Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 879,
+      "key": "materials:lumitoile",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.874Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.332Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 882,
+      "key": "materials:subdetection-unit",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.879Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.751Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 894,
+      "key": "materials:divining-scroll",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.899Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.824Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 895,
+      "key": "materials:concealing-scroll",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.901Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.715Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 896,
+      "key": "materials:forbidden-curse-scroll",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.903Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.198Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 903,
+      "key": "materials:old-handguard",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.915Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.452Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 904,
+      "key": "materials:kageuchi-handguard",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.916Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.263Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 905,
+      "key": "materials:famous-handguard",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.918Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.039Z",
+      "fields": [
+        "/nameEn",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 906,
+      "key": "materials:floating-core",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.920Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.131Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 907,
+      "key": "materials:suffused-core",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.922Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.766Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 908,
+      "key": "materials:crystallizing-core",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.924Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.755Z",
+      "fields": [
+        "/rarity"
+      ]
+    },
+    {
+      "id": 912,
+      "key": "materials:meshing-gear",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.931Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.395Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 913,
+      "key": "materials:mechanical-spur-gear",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.932Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.365Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 914,
+      "key": "materials:artificed-dynamic-gear",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.934Z",
+      "afterUpdatedAt": "2026-11-20T14:47:14.611Z",
+      "fields": [
+        "/name",
+        "/rarity"
+      ]
+    },
+    {
+      "id": 915,
+      "key": "materials:firm-arrowhead",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.935Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.096Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 916,
+      "key": "materials:sharp-arrowhead",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.936Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.661Z",
+      "fields": [
+        "/name"
+      ]
+    },
+    {
+      "id": 917,
+      "key": "materials:weathered-arrowhead",
+      "beforeUpdatedAt": "2026-11-07T09:24:36.937Z",
+      "afterUpdatedAt": "2026-11-20T14:47:15.844Z",
+      "fields": [
+        "/name"
+      ]
+    }
+  ]
+}

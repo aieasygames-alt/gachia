@@ -1,0 +1,74 @@
+{
+  "key": "materials:divining-scroll",
+  "id": 894,
+  "before": {
+    "id": 894,
+    "stableKey": "unified:genshin:84f908ea7807829cac1ce99e38e5bab56887783b359591afb7d94b9aba702789",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"divining-scroll\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "divining-scroll"
+        }
+      },
+      "original": {
+        "id": "divining-scroll",
+        "name": "导能的绘卷",
+        "type": "common-drop",
+        "nameEn": "Divining Scroll",
+        "rarity": 2,
+        "source": "怪物掉落: 萨满",
+        "sourceEn": "Enemy Drop: Samachurls"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "de5ce74cc9baa8c20157359218180519410e6ab9e90f5e80f7d9462aad3a17a2",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "divining-scroll",
+      "name": "导能的绘卷",
+      "type": "common-drop",
+      "nameEn": "Divining Scroll",
+      "rarity": 2,
+      "source": "怪物掉落: 萨满",
+      "sourceEn": "Enemy Drop: Samachurls"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.899Z",
+    "createdAt": "2026-11-07T09:24:36.899Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "divining-scroll",
+    "name": "导能绘卷",
+    "nameEn": "Divining Scroll",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 萨满",
+    "sourceEn": "Enemy Drop: Samachurls"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:14.813Z"
+}

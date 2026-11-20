@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 821,
+    "stableKey": "unified:genshin:dbe9583e0629b5f033f72ddbdb102593706d7df96d1b7fe10108727a77576122",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"tail-of-boreas\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "tail-of-boreas"
+        }
+      },
+      "original": {
+        "id": "tail-of-boreas",
+        "name": "北风的尾羽",
+        "type": "weekly-boss",
+        "nameEn": "Tail of Boreas",
+        "rarity": 5,
+        "source": "周本: Lupus Boreas",
+        "sourceEn": "Weekly Boss: Lupus Boreas"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "ae7f99bce8cf46f3d204bf315c19177e22feedcf524997144800e072254d8b35",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "tail-of-boreas",
+      "name": "北风之尾",
+      "type": "weekly-boss",
+      "nameEn": "Tail of Boreas",
+      "rarity": 5,
+      "source": "周本: Lupus Boreas",
+      "sourceEn": "Weekly Boss: Lupus Boreas"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.779Z",
+    "createdAt": "2026-11-07T09:24:36.763Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

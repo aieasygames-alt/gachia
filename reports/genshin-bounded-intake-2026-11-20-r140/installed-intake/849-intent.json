@@ -1,0 +1,74 @@
+{
+  "key": "materials:valberry",
+  "id": 849,
+  "before": {
+    "id": 849,
+    "stableKey": "unified:genshin:5898e4e83ae6d6aef3eff331f602e0bc4b1b86c8abd128b095cbd764dc11181b",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"valberry\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "valberry"
+        }
+      },
+      "original": {
+        "id": "valberry",
+        "name": "树莓",
+        "type": "local-specialty",
+        "nameEn": "Valberry",
+        "rarity": 1,
+        "source": "野外采集: 蒙德",
+        "sourceEn": "Field Collection: Mondstadt"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "0385f6fe3323b581711a642adf46d604b47ff45f0ceb74b9c83966a3ab0cbfa5",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "valberry",
+      "name": "树莓",
+      "type": "local-specialty",
+      "nameEn": "Valberry",
+      "rarity": 1,
+      "source": "野外采集: 蒙德",
+      "sourceEn": "Field Collection: Mondstadt"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.818Z",
+    "createdAt": "2026-11-07T09:24:36.818Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "valberry",
+    "name": "落落莓",
+    "nameEn": "Valberry",
+    "type": "local-specialty",
+    "rarity": 1,
+    "source": "野外采集: 蒙德",
+    "sourceEn": "Field Collection: Mondstadt"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.802Z"
+}

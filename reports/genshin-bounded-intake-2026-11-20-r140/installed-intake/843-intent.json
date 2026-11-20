@@ -1,0 +1,74 @@
+{
+  "key": "materials:dew-of-repudiation",
+  "id": 843,
+  "before": {
+    "id": 843,
+    "stableKey": "unified:genshin:28f24c50695fab823a2f0c961c036a2cc9676bb6e93f8c9cf4f27883c80cc785",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"dew-of-repudiation\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "dew-of-repudiation"
+        }
+      },
+      "original": {
+        "id": "dew-of-repudiation",
+        "name": "排异之露",
+        "type": "boss-drop",
+        "nameEn": "Dew of Repudiation",
+        "rarity": 5,
+        "source": "Boss掉落: Hydro Hypostasis",
+        "sourceEn": "Boss Drop: Hydro Hypostasis"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "9c2e6ef5d2073e4aef557ca6c7abb57fa100597b21276c3b5dcfc97c53d2f48a",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "dew-of-repudiation",
+      "name": "排异之露",
+      "type": "boss-drop",
+      "nameEn": "Dew of Repudiation",
+      "rarity": 5,
+      "source": "Boss掉落: Hydro Hypostasis",
+      "sourceEn": "Boss Drop: Hydro Hypostasis"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.806Z",
+    "createdAt": "2026-11-07T09:24:36.806Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "dew-of-repudiation",
+    "name": "排异之露",
+    "nameEn": "Dew of Repudiation",
+    "type": "boss-drop",
+    "rarity": 4,
+    "source": "Boss掉落: Hydro Hypostasis",
+    "sourceEn": "Boss Drop: Hydro Hypostasis"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:14.780Z"
+}

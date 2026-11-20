@@ -1,0 +1,74 @@
+{
+  "key": "materials:floating-core",
+  "id": 906,
+  "before": {
+    "id": 906,
+    "stableKey": "unified:genshin:2e22a06b50b8a17a2e530b646199fc058238066cfaec2fff57c63da4ff542cda",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"floating-core\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "floating-core"
+        }
+      },
+      "original": {
+        "id": "floating-core",
+        "name": "浮游干核",
+        "type": "common-drop",
+        "nameEn": "Spectral Husk",
+        "rarity": 2,
+        "source": "怪物掉落: 漂浮灵",
+        "sourceEn": "Enemy Drop: Specters"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "85d649073b423ace5f9c5ee8347f881c653da288a8bf43197d6a904a24c66e92",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "floating-core",
+      "name": "浮游干核",
+      "type": "common-drop",
+      "nameEn": "Spectral Husk",
+      "rarity": 2,
+      "source": "怪物掉落: 漂浮灵",
+      "sourceEn": "Enemy Drop: Specters"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.920Z",
+    "createdAt": "2026-11-07T09:24:36.920Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "floating-core",
+    "name": "浮游干核",
+    "nameEn": "Spectral Husk",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 漂浮灵",
+    "sourceEn": "Enemy Drop: Specters"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.116Z"
+}

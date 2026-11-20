@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 845,
+    "stableKey": "unified:genshin:7f727d654272be3dc327267233ce166dac640e9e3337212bef448b7f40093d3d",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"smaragdistite-jade-branch\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "smaragdistite-jade-branch"
+        }
+      },
+      "original": {
+        "id": "smaragdistite-jade-branch",
+        "name": "翠翎恐蕈之核",
+        "type": "boss-drop",
+        "nameEn": "Majestic Hooked Beak",
+        "rarity": 5,
+        "source": "Boss掉落: Jadeplume Terrorshroom",
+        "sourceEn": "Boss Drop: Jadeplume Terrorshroom"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "972cdce6967afb5244094144b97cc7ec41732c21d6aca5597cde25c04c9eed2f",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "smaragdistite-jade-branch",
+      "name": "蕈王钩喙",
+      "type": "boss-drop",
+      "nameEn": "Majestic Hooked Beak",
+      "rarity": 4,
+      "source": "Boss掉落: Jadeplume Terrorshroom",
+      "sourceEn": "Boss Drop: Jadeplume Terrorshroom"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.702Z",
+    "createdAt": "2026-11-07T09:24:36.810Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

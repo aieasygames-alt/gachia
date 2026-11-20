@@ -1,0 +1,1142 @@
+{
+  "comparisons": [
+    {
+      "key": "character-materials:albedo",
+      "id": 548,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "8ce4e7b4f98491a8d8f379ec31a4377dc1327eb7ff0d14eea7965e0955fa8565",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:alhaitham",
+      "id": 559,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "849c20ec66e0498f8947b03d83253e2db1d413fc3de5bb8a8c5b750bc183f51b",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:amber",
+      "id": 587,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "efd3ffbd76f26801549c2b7b1d9b5dc39f3fcefdc074fa2858c7106edeb3b232",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:arlecchino",
+      "id": 578,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "9af956c67fff5fa02b65f67eb6978d327c4975dcefaf1694d09fb7584f240624",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:ayaka",
+      "id": 582,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "709489c3aaeaf5e4426784b09de365b533344a334813abda79838f98c1dd6ae9",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:ayato",
+      "id": 567,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "9c0280cfeaf6712ca5d69d5b245535d556c6c7eb5fc1fe194127c83699ee4876",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:baizhu",
+      "id": 561,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "8037ccfefb49c64f10b3e9798e14195e1ee11d170a5e661887d21c106dfa0077",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:barbara",
+      "id": 596,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c72f7e0b74e154e49c97df478da86116c7ea686fc87e3e771c8aeedc221b5044",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:beidou",
+      "id": 607,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "9199bb910841035c961b5fd03b8d606e2a6626c5eb3aa998a16e406d21465d0d",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:bennett",
+      "id": 589,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "526f8326a3d487f2393ad7255c41a9fc97f5fae5e8c0c6768ba71766c0b821e7",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:candace",
+      "id": 597,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "9a61a51c1291aae2403323b657692aeefec50a0781cf316ee838b88da834860f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:charlotte",
+      "id": 601,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "e0ad72cff1068352543054a3c6807de188a5d7cbc66a11b8c07bd2eb8f8a20cc",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:chasca",
+      "id": 546,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "9a23cd6030187a25d9678f53babb972c4f33eaa574a3a1a993fe7bb20d4e513f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:chevreuse",
+      "id": 592,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "81b82e994c97c71708a596a4653515969c1ae13d02372d43fdfd529d1dfe127d",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:chiori",
+      "id": 551,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "e553bc204496e68d610f7bee8a20de4c07f78a7884c080fb2223b892686d8b11",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:chongyun",
+      "id": 598,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "2af9589aabf8864183c19287d90a1728ae093cb33d392e9a6c5e68977a129512",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:citlali",
+      "id": 605,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "5d52a409f113afdefeb1b49f36d90d718bdb6bec977d2e20d8f9bc17f5e10c7f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:clorinde",
+      "id": 557,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "d24bd5dc30c6cd69dae39e4fa2dd03cc874518588315a2904c3bcf3e579de0a9",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:collei",
+      "id": 620,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "75dd54091fc4c9cbae41d25af685e8ab0f09c82713671a4d482564aad1066ffc",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:cyno",
+      "id": 556,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "60f8abf8111f03b434c4b3d9559f4ed3c2a40d32b986036404799f78205090af",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:dehya",
+      "id": 579,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "615a40ce2674fe1eeb55bf98eb3e6f6226d76a829215b70bfd8ed84f2ff72294",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:diluc",
+      "id": 573,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c47e0d784466719023328dc4c61c2fa9a6112cb957404dd9bf41558771ad004c",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:diona",
+      "id": 602,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "33cae6992f211d2417233cd8392d92511550312b7051dd5cf3bec3916e7a00e9",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:dori",
+      "id": 610,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "f6e808013b37a54332d9a69c77d768f00260a9030537fe50a47056e24f70c2e7",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:emilie",
+      "id": 562,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "929c196adca9ef52e6fdfbb5859f5e42ac8e88d56759476dff6796155a0e2368",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:eula",
+      "id": 583,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "2e4dab76ee25147c6a296858bd8d80a487d6a405516bd30a5d1959d286e0b08f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:faruzan",
+      "id": 616,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "9b6f2c1054fccc28712de24c7bede3000499552e8535e1678f39b39271225101",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:fischl",
+      "id": 606,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "80829e825bfbf02281d98ca30187cc077350123bc2533ce65eff1131013e9c49",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:freminet",
+      "id": 603,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "f48d1185097bed88c80eb2f9bb69db2fb0068e3ad2e0e84b336cda29fe37ee10",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:furina",
+      "id": 570,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "25e967f5a42a4a37e1a2f79d428c4bafb4a568475bbf991e14ce10f976b5a61d",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:gaming",
+      "id": 593,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "b9a5384cd5e9ea2487f21966bfd1e8ab51eb146c76e52e08c4b194da3b2034f9",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:ganyu",
+      "id": 581,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "77c59fa0a965420b6051375fa478af7eb41475073f683d54133446e8eab95d96",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:gorou",
+      "id": 626,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "242ce3d5c0315cd19d1f47bf309e1ec5f2f5d30a1417e0b94dabb52681857cbe",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:heizou",
+      "id": 618,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "d5f833b5b54bf0481d68b7323e661e6ed8bd0d8e0448772de9656a6b7bb33014",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:hu-tao",
+      "id": 575,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "80fd5efe5d3db6f091a67ca9670b780977e136ac94733439afaac5a84e4092e1",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:itto",
+      "id": 549,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "505f8b14d70fce725c09ff09cf4706b10b38e9857fca16c87a5c3cf5a2b6fe24",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:jean",
+      "id": 540,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "458404fc0b85a085a8a6e5b4255a85f50e5b5ab8750fce4c7d8c99cd16f57999",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:kachina",
+      "id": 594,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "824bc1f489e8662a2ce4509557b071d25d63e262a3092bb31bf359af98323465",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:kaeya",
+      "id": 628,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "314efd3c027b07285f4d79edd46f192b6f0b92ea8238b80984dbb8bb1d160e3d",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:kaveh",
+      "id": 622,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "01ce691727ef133431ad999c978392d653647939768b4bc1906de66f39c53a93",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:kazuha",
+      "id": 543,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "7102f3615d16b86fc76ef62c79c13bc3a08cbad8a487baa53545413c6c5aa14e",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:keqing",
+      "id": 553,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "094f7953535b62dcaf72084f47b74ac19a7b2b57bbf565e21c1e651d8b04d05f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:kinich",
+      "id": 563,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "963d5de23418219cae094e66700ace4d04ac8eb0e6941c851c4eed18c4bcb9ef",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:kirara",
+      "id": 623,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c7ba1436afcb5c852c3af7a3c9c23db4572902a6ba78e2ea236966bf815fa7f2",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:klee",
+      "id": 574,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "2c4e03ded4b017b85ed2aae600f91484d9092c811aff161eb5e7ac86085e7f85",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:kokomi",
+      "id": 566,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "bfa72a63b6559ceb6a0740a2316150df2eed73ce13784b80befe60141cf2cd82",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:lan-yan",
+      "id": 619,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "5b93b1a8823c92f79cfbbadd2f0fef61615ae48d62c50a08d8e104721c739e69",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:layla",
+      "id": 600,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "3f53d9b4a23e71ccdfb1b03dd3d2b39ea1af3dd9f0ff523036c9cc61e84b29a5",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:lisa",
+      "id": 629,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "ec1658c1cea8ee1323e83b3332e3afe40cec8c716fdf355d179b1797e19073d9",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:lynette",
+      "id": 617,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "529f454fe342abba532bfaa4d34b26a8d7b6aa45c4368686879c2f7f312c4347",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:lyney",
+      "id": 577,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "490547c7faea7636d3090fe6bc2d952e872c8dd0ec7f78fd762eb7c5bcb0047b",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:mavuika",
+      "id": 580,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "d70b0213cd7877279139d9da8d8978508d332399f90708a5e06da757723fb692",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:mika",
+      "id": 604,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "3fdaca5c95042f2a48095cadd89a01fd66d52d849e0d13a08af025747061a4ea",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:mona",
+      "id": 564,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "2e5e061b7446051b5338c4fd70ffe6243b636ae74b1d21b01679ef24e07ef815",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:mualani",
+      "id": 572,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c5155528310690ce8ad21710265be6d9e358ac880ca596fc13e1e832dc3ed844",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:nahida",
+      "id": 558,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c9ebd62f1017dde2e0d65e560fee3bc36e79d4fb94eb8bddb2e2bcb6050bc127",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:navia",
+      "id": 550,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "8332c74ed61ea4335ce97f1e841cafc0edcbb1c841cd3cc5eb0ae02a558fd3ed",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:neuvillette",
+      "id": 569,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "d38ae05ef81604969eebbab3ea01579ff171db23470bba3f30172fab1a2f9e8b",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:nilou",
+      "id": 568,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "529733d7b8a749000182bea7a093bc4fe97af955c02078a8c961eb1c754d4ccf",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:ningguang",
+      "id": 624,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "cbfad71aed096d8fe924e398ef9f57e47176459983bcf1f097d481de837698e4",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:noelle",
+      "id": 625,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "975f8597fb8102f6b49ebdf5378695e26218efec9813f052874a2800efd6fd3a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:ororon",
+      "id": 613,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c9be4e0fa02595c3893636236ca7672e76d9465c1cc4590b9980d1a18b05370d",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:qiqi",
+      "id": 586,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "05d32e961fa3a898d2b2fc3f666b821ce9eb5fd83922bb90b29943302c49d4ec",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:raiden-shogun",
+      "id": 554,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c8138b0a6b415511321cb1304dd866a3fc6ad8c45b66332cc5d33a4787d1e5b7",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:razor",
+      "id": 608,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "917f0b27e747fcf6e01e03880a04abdf7a10ea9d3d55cea94a38e048a6990d6c",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:rosaria",
+      "id": 599,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "c6856a3fc1858c685d009d6a49cd09e64873e7e1155e4b2c333060feb6c85633",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:sara",
+      "id": 611,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "165025ee737a71fe4a89a837d4d676991893ac43c1ead31b4e58fc3c694d045f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:sayu",
+      "id": 615,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "8e614e41f584776b7c8b02fd82cc70897438d5e6d1863ccc41c3577f03f13006",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:sethos",
+      "id": 612,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "8ca0e64879c332affd8330dcff35b7fcf5e95645b98b4d45fa99cdc33b5a04ce",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:shenhe",
+      "id": 584,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "ecf68820832d2ebafe790b9f485b6ac9c299825961991b2310ae381716ed150a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:shinobu",
+      "id": 609,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "fd0bc8d2b16d158adc186b5eba5c57e88a1b271888ff9400a6e2fe37c72654d3",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:sigewinne",
+      "id": 571,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "5251e8caf6b68e501bb6e2762d243338fc2a9d1e2b82561ba9ae34fe0b3f968a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:sucrose",
+      "id": 614,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "49ee8ae7170bfbbbe747557629baf075e282864d49d3b3b2ff27256ce7e1d281",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:tartaglia",
+      "id": 565,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "75cd7f8697e2a51b416a36b4d313529158d1297bd4bfcee2768cc6090bf8255d",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:thoma",
+      "id": 591,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "2ebe13c6a770e2928e6d4de12047f45a7b8f4f61e7d68c09fbd0be4f94ee6c97",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:tighnari",
+      "id": 560,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "93485a4df111dccce1ca52b5f2bac593c0a45e612c64370431c2f8d9e3441c4b",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:venti",
+      "id": 541,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "ef1cf1cf9769f53e18f90defe8c05433516ed4ee32772087d1ee1e01615ef7a0",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:wanderer",
+      "id": 544,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "4c5ed47978ea8c7b409f5b5f8381cd28a938cbad479a7158e77dc9ca6f0fee4c",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:wriothesley",
+      "id": 585,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "31d0d903451ea9a990d57eaac21dae36600437dbe58877ce6ac8d8e7073c08a9",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:xiangling",
+      "id": 588,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "610208380c8c564e29000600c0bc175ea3bc4b26360fe71607f2a99508b6881a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:xianyun",
+      "id": 545,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "852f0c6ae872a27210eba1f1b0d3f1df691de28c9afdee07d91a8757398658b4",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:xiao",
+      "id": 542,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "9d6b736b9cb3982ef7e83c2a12d95b8b97e418c36bd4f28220090686726a16f3",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:xilonen",
+      "id": 552,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "abfd40251c8970033d23b2e1b09a4c4b55d20ac16d75c01c3ac2be0d858a35af",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:xingqiu",
+      "id": 595,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "15f25ade088e91b2cc99c21b903de4de090053fc4bc7a2fe809f02d0729bd470",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:xinyan",
+      "id": 590,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "7024bd580d51f280e84e9366649c65f051ce233efb5935e7412d08a22e9000c6",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:yae-miko",
+      "id": 555,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "0f07ecd195f642d6fc914b9c57c132c43b25cbd6d3d73902e58dcdb071956c3b",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:yaoyao",
+      "id": 621,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "1d8891c15ad5e006c3bc2d9e905ff4a63183d1a9a13ca577657bb248b7fd3a53",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:yoimiya",
+      "id": 576,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "2efbe3aa6c7bd2a5385b74a76634ed2c6f7c1f03c32b3658745e2d13175207be",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:yun-jin",
+      "id": 627,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "4ae0b8ad889d8c016fd8f1bd08aee3222bd00423c41d700a381fa6d231179735",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "character-materials:zhongli",
+      "id": 547,
+      "importSourceSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "importRecordSHA256": "6d2c99bbf084663ca46d695fc7d3c6713a8b74fae0f959d3a4421b6b83de77d6",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:agnidus-agate-gemstone",
+      "id": 748,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "8bc3694202a9b4e805cd4dd08926cccea6cf4302da56ed62433e2e7480e49074",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:artificed-dynamic-gear",
+      "id": 914,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "3f932613c811b50bd3c179b4cc42c32955ea3b3e32867d6a5094ec58147d8b50",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:basalt-petrification",
+      "id": 840,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "376f51714397a6ed92b0186789dc6c3a09c9627d3b1a9de97388da7728e67a10",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:cleansing-heart",
+      "id": 837,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "0e59db915250214ac349221ba469b599e42c0137b99b6bdaaca82d7e8cb997e5",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:concealing-scroll",
+      "id": 895,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "25f0e215bcf982bb5f4b290399c186ea68aa010595eb330f9b7ffcf8c891e0bd",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:crystallizing-core",
+      "id": 908,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "4d0cf1362ea9793f204074d92ecd3b278ad359be1134757791b8fdc81e5254de",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:dew-of-repudiation",
+      "id": 843,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "9c2e6ef5d2073e4aef557ca6c7abb57fa100597b21276c3b5dcfc97c53d2f48a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:divining-scroll",
+      "id": 894,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "de5ce74cc9baa8c20157359218180519410e6ab9e90f5e80f7d9462aad3a17a2",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:dragon-lords-crown",
+      "id": 827,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "438e186ec3d7fbcd952f2d00347c71e9815732f23480a6deda14e623e81a3297",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:dragonheirs-false-fin",
+      "id": 844,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "73a94d750144ae19e04d2072195631fa715d63664bf91e095ea8b701ef5d58d0",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:dvalins-sigh",
+      "id": 818,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "a2be5316108aac9735be957f74731f6710b3c4cb964c2d651598c8a6e59161ce",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:everflame-seed",
+      "id": 836,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "b7b35fdb513373e0c090accf897693c3d5be756813dba8ee7599d2c3ee71ec9f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:famous-handguard",
+      "id": 905,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "bf77dff850cdf2394de4dab6c2c20c488fafc8911541304209ac9a972851e08a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:firm-arrowhead",
+      "id": 915,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "bd5a1cf52dc1ec48a64fcc0210ae1a8bcd8b6f346ebda29734176d21cb605717",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:floating-core",
+      "id": 906,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "85d649073b423ace5f9c5ee8347f881c653da288a8bf43197d6a904a24c66e92",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:fluorescent-fungus",
+      "id": 865,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "b55e15c80c293b5f3cc386894dd306812ee2c1583278682298b1ce705bf4324a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:forbidden-curse-scroll",
+      "id": 896,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "cbb2131886547ad24c85bc6c854370caed529336ce02c23d578f8bc484d12c16",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:hoarfrost-core",
+      "id": 839,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "80d53296c4fa95ce42e0c53e0eb66b0dc8d071ec481ebc960a84b9c8ddf9355c",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:kageuchi-handguard",
+      "id": 904,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "e338bbd9e3edba53c59773a1f7e82ab6d174eee2e4d90bee217bad8929933147",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:lieutenants-insignia",
+      "id": 899,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "f5edddf29675db9125cd658b63f347b8a760275c658f8dc08f32c37d35fa2998",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:lightning-prism",
+      "id": 838,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "10a921d03125adb6317cd2c4e787e6024ad0fb3655a09709cf0226ef9e11dff1",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:lumitoile",
+      "id": 879,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "aa1f9125339a93c2b2956082116eda34a611dde5b7cf582134f5fc3d4908adc5",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:mechanical-spur-gear",
+      "id": 913,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "de9c9fb0b3b48187354ef9ace0ddda9b15618010f44aaa48058ab13873e3be12",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:meshing-gear",
+      "id": 912,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "76bed990a8a5b7ab7fe771cafaf31d064f4c90d42de5f7c85873d4e0249b5c03",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:nagadus-emerald-gemstone",
+      "id": 764,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "19f63a7ea0f743bad889b2b61e0c50a42972505231bd07c232a35479dd27f8b4",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:old-handguard",
+      "id": 903,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "fa4a4b1556343752d0a4b3cfa7e42ab19486927c3b54bdaf7e38db00c7bfc5e1",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:perpetual-heart",
+      "id": 841,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "c8e43aae0b915cb60a3d762ca0eb241ef7401f2fc59a3446f9cf6e1fc80660cc",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:prithiva-topaz-gemstone",
+      "id": 772,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "b5dbdc50eaafaff5fc8ad0043d146fd77f3a13c74ab7fbb2b32374ea16cb0f2d",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:recruits-insignia",
+      "id": 897,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "ed70048d6700bc9c7eced56ff51fef7946edff56a4a2599c0e1b009c512bca8a",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:ring-of-boreas",
+      "id": 822,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "b5392a7cfff203362a4321387205fcf81665e464941fcecdcdcfd79bb9bb71d7",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:rukkhashava-mushroom",
+      "id": 873,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "aebcf746a9af6d5a88b1c835652c685eb3fa401b02f63f79444b37363083a514",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:scarab",
+      "id": 875,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "2ab1ec4606508ef13875476fa13d1362d9b84bfe84368a0fa343ecd60cd5c968",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:sergeants-insignia",
+      "id": 898,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "1ba0f267dff21808ce65dcdaa4ea806d246a967badd585f432d5949f6d37a887",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:sharp-arrowhead",
+      "id": 916,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "b524d97bd766387f2a372be60f9e198c414a33a2a2e76d142b366ba67ad1e888",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:shivada-jade-gemstone",
+      "id": 760,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "8b629cfd918785b614adb3674c0b542683b4397a552caa9167a2e0400703893f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:smaragdistite-jade-branch",
+      "id": 845,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "972cdce6967afb5244094144b97cc7ec41732c21d6aca5597cde25c04c9eed2f",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:storm-beads",
+      "id": 842,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "dedc9c6f233221308993f92b59c694f85d41e94fad3ce9fd4c0e36dfe3ebdac9",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:subdetection-unit",
+      "id": 882,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "78367adada6f74178efea9bdf98f80678b86b3aadac0b8c8c8cefa441dff1eb1",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:suffused-core",
+      "id": 907,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "d9b788a066dab604f202ea79bb187f7bcb233c0d9a7103bccda4cf545f2124ee",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:tail-of-boreas",
+      "id": 821,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "ae7f99bce8cf46f3d204bf315c19177e22feedcf524997144800e072254d8b35",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:vajrada-amethyst-gemstone",
+      "id": 756,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "8bae38a8cf334b23e6ee2279a8ca0299f78e9aacedb76fdd6069bd0f43472612",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:valberry",
+      "id": 849,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "0385f6fe3323b581711a642adf46d604b47ff45f0ceb74b9c83966a3ab0cbfa5",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:varunada-lazurite-gemstone",
+      "id": 752,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "0fb784b4dbb6b633eeff97ab54a47c3f6cd6a67968dc7d1dbb0a4168636a1c8e",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:vayuda-turquoise-gemstone",
+      "id": 768,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "69a80f39f4b485af9d21c887bccb734998cdba57f090649a55ba701c91e429cb",
+      "publicChanges": [],
+      "cmsChanges": []
+    },
+    {
+      "key": "materials:weathered-arrowhead",
+      "id": 917,
+      "importSourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "importRecordSHA256": "432ea4be48918725b0fb8f77e41859b710dea24118b51b68213bf9b948fb1b3a",
+      "publicChanges": [],
+      "cmsChanges": []
+    }
+  ],
+  "localDifferences": [
+    {
+      "sourcePath": "apps/game-azur-promilia/lib/data.ts",
+      "publishedSHA256": "55868f2f59c1bdd283ad9e71ffb71b32d8a971f9e6eb7dbd8a34a8f2a0522908",
+      "localSHA256": "c1fa7d8149df7909bec8cc5708b81584585399d7f38d51945268cbaebbd3d16a"
+    },
+    {
+      "sourcePath": "apps/game-lvmeng/lib/data.ts",
+      "publishedSHA256": "1dba7658c4ad97aa2f2aa30aabbf8e537d3e861177c9614d6db58c60d3247264",
+      "localSHA256": "3576b6d10439bf7bbc3a4df19019e1a6aae6c1a02973f7d3897ecfc226ab888b"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-guides.json",
+      "publishedSHA256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d",
+      "localSHA256": "239272401eac2a09a0c0edcafe9e8eb5df37fbc64443e627f0794b5abeb7eaf1"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+      "publishedSHA256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16",
+      "localSHA256": "33e9bbc11eaab0460077e02c10a74c8b4670389216494307c72ae0956068857a"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-characters.json",
+      "publishedSHA256": "2fedce34a507dc48aca5168186deab0368fd9b6351e23333d25034af747af3b8",
+      "localSHA256": "59f006e360b1576fc1ca691d355a9de8df69b2fa99f42005afc85758fc8554ce"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-guides.json",
+      "publishedSHA256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72",
+      "localSHA256": "8d0c81f541218f4df90fb9766fa13351bd8ca1147f012be36bb694db3accc310"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-guides.json",
+      "publishedSHA256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3",
+      "localSHA256": "565d913c7c58809e28f4a03e1348d69e118a56e3a44f7aaf955ab5932ba24608"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-characters.json",
+      "publishedSHA256": "b4fbe091f17fff4e57e28a123eb3e66aa8792afe86aa5b6eb942e71d800b8335",
+      "localSHA256": "b3693e9cb5d8b6ba29a9ec3bb81dfd3755764b34255af3a2e454ad8c0e3ad938"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-guides.json",
+      "publishedSHA256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6",
+      "localSHA256": "f9b498b73daba4c1748c9027710b9d148de443f377ec88ffedfebfe349da3809"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-materials.json",
+      "publishedSHA256": "657fbf66e9f53688351570f87824acf1706c9f62e2a330f5a4760ad2638e2233",
+      "localSHA256": "eb493d5923b34bf20e840b31bfa93d145c6a3397163798b73e1f85a8f0b6328c"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-guides.json",
+      "publishedSHA256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f",
+      "localSHA256": "b69e519c94ce674d761edacef45689a969948a1d2f9bf53950ce41a3040df041"
+    }
+  ],
+  "rawWrites": false
+}

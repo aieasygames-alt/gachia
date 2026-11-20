@@ -1,0 +1,74 @@
+{
+  "key": "materials:meshing-gear",
+  "id": 912,
+  "before": {
+    "id": 912,
+    "stableKey": "unified:genshin:3bd77d950a02398064ec62c43adad810e4cfb99856d9d1991b16a9a0cbfe7ef0",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"meshing-gear\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "meshing-gear"
+        }
+      },
+      "original": {
+        "id": "meshing-gear",
+        "name": "机关齿轮",
+        "type": "common-drop",
+        "nameEn": "Meshing Gear",
+        "rarity": 2,
+        "source": "怪物掉落: 发条机关",
+        "sourceEn": "Enemy Drop: Clockwork Meka"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "76bed990a8a5b7ab7fe771cafaf31d064f4c90d42de5f7c85873d4e0249b5c03",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "meshing-gear",
+      "name": "机关齿轮",
+      "type": "common-drop",
+      "nameEn": "Meshing Gear",
+      "rarity": 2,
+      "source": "怪物掉落: 发条机关",
+      "sourceEn": "Enemy Drop: Clockwork Meka"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.931Z",
+    "createdAt": "2026-11-07T09:24:36.931Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "meshing-gear",
+    "name": "啮合齿轮",
+    "nameEn": "Meshing Gear",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 发条机关",
+    "sourceEn": "Enemy Drop: Clockwork Meka"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.384Z"
+}

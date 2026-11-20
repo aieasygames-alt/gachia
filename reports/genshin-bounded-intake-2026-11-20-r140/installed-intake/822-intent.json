@@ -1,0 +1,74 @@
+{
+  "key": "materials:ring-of-boreas",
+  "id": 822,
+  "before": {
+    "id": 822,
+    "stableKey": "unified:genshin:405d8b6cb9031fb9f673d332cff6a981444f7603703b011371b5ed5203024c0c",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"ring-of-boreas\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "ring-of-boreas"
+        }
+      },
+      "original": {
+        "id": "ring-of-boreas",
+        "name": "北风的戒指",
+        "type": "weekly-boss",
+        "nameEn": "Ring of Boreas",
+        "rarity": 5,
+        "source": "周本: Lupus Boreas",
+        "sourceEn": "Weekly Boss: Lupus Boreas"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "b5392a7cfff203362a4321387205fcf81665e464941fcecdcdcfd79bb9bb71d7",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "ring-of-boreas",
+      "name": "北风的戒指",
+      "type": "weekly-boss",
+      "nameEn": "Ring of Boreas",
+      "rarity": 5,
+      "source": "周本: Lupus Boreas",
+      "sourceEn": "Weekly Boss: Lupus Boreas"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.765Z",
+    "createdAt": "2026-11-07T09:24:36.765Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "ring-of-boreas",
+    "name": "北风之环",
+    "nameEn": "Ring of Boreas",
+    "type": "weekly-boss",
+    "rarity": 5,
+    "source": "周本: Lupus Boreas",
+    "sourceEn": "Weekly Boss: Lupus Boreas"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.590Z"
+}

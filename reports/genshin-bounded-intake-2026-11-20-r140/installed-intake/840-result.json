@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 840,
+    "stableKey": "unified:genshin:560813f68a86fa60864aeb614aa1007d908fd55b14f0c75cfc2c6c247c55efc5",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"basalt-petrification\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "basalt-petrification"
+        }
+      },
+      "original": {
+        "id": "basalt-petrification",
+        "name": "玄岩之塔",
+        "type": "boss-drop",
+        "nameEn": "Basalt Petrification",
+        "rarity": 5,
+        "source": "Boss掉落: Geo Hypostasis",
+        "sourceEn": "Boss Drop: Geo Hypostasis"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "376f51714397a6ed92b0186789dc6c3a09c9627d3b1a9de97388da7728e67a10",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "basalt-petrification",
+      "name": "玄岩之塔",
+      "type": "boss-drop",
+      "nameEn": "Basalt Pillar",
+      "rarity": 4,
+      "source": "Boss掉落: Geo Hypostasis",
+      "sourceEn": "Boss Drop: Geo Hypostasis"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:14.653Z",
+    "createdAt": "2026-11-07T09:24:36.800Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

@@ -1,0 +1,74 @@
+{
+  "key": "materials:mechanical-spur-gear",
+  "id": 913,
+  "before": {
+    "id": 913,
+    "stableKey": "unified:genshin:91343c9bb8f7358bd101b57da867a03230441cf447306c2adf2e4024c75e13a5",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"mechanical-spur-gear\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "mechanical-spur-gear"
+        }
+      },
+      "original": {
+        "id": "mechanical-spur-gear",
+        "name": "机关促动齿轮",
+        "type": "common-drop",
+        "nameEn": "Mechanical Spur Gear",
+        "rarity": 3,
+        "source": "怪物掉落: 发条机关",
+        "sourceEn": "Enemy Drop: Clockwork Meka"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "de9c9fb0b3b48187354ef9ace0ddda9b15618010f44aaa48058ab13873e3be12",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "mechanical-spur-gear",
+      "name": "机关促动齿轮",
+      "type": "common-drop",
+      "nameEn": "Mechanical Spur Gear",
+      "rarity": 3,
+      "source": "怪物掉落: 发条机关",
+      "sourceEn": "Enemy Drop: Clockwork Meka"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.932Z",
+    "createdAt": "2026-11-07T09:24:36.932Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "mechanical-spur-gear",
+    "name": "机关正齿轮",
+    "nameEn": "Mechanical Spur Gear",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 发条机关",
+    "sourceEn": "Enemy Drop: Clockwork Meka"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.354Z"
+}

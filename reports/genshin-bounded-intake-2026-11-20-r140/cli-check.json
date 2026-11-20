@@ -1,0 +1,27 @@
+{
+  "plan": {
+    "action": "plan",
+    "proof": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cli-plan/plan.json",
+      "pin": "32dfaa600063896e6378781651bada2be8f5b17b452763eb3203e2f2cb01c746"
+    },
+    "hold": true,
+    "publishable": false,
+    "cmsWrites": false,
+    "cloudWrites": false
+  },
+  "batch": {
+    "action": "batch",
+    "proof": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-bounded-intake-2026-11-20-r140/cli-batch/batch.json",
+      "pin": "05f37ab63f4315b9d6d572f35b3240006ace7274764f450fd55149a37b3452f5"
+    },
+    "hold": true,
+    "publishable": false,
+    "cmsWrites": false,
+    "cloudWrites": false
+  },
+  "exactReplay": true,
+  "cmsWrites": false,
+  "cloudWrites": false
+}

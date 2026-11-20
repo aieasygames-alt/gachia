@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 841,
+    "stableKey": "unified:genshin:7f27c692a7414becf47c3d823262e703c570289fb0da4e9f4b9239e2e6420a0d",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"perpetual-heart\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "perpetual-heart"
+        }
+      },
+      "original": {
+        "id": "perpetual-heart",
+        "name": "永续机心",
+        "type": "boss-drop",
+        "nameEn": "Perpetual Heart",
+        "rarity": 5,
+        "source": "Boss掉落: Perpetual Mechanical Array",
+        "sourceEn": "Boss Drop: Perpetual Mechanical Array"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "c8e43aae0b915cb60a3d762ca0eb241ef7401f2fc59a3446f9cf6e1fc80660cc",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "perpetual-heart",
+      "name": "恒常机关之心",
+      "type": "boss-drop",
+      "nameEn": "Perpetual Heart",
+      "rarity": 4,
+      "source": "Boss掉落: Perpetual Mechanical Array",
+      "sourceEn": "Boss Drop: Perpetual Mechanical Array"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.545Z",
+    "createdAt": "2026-11-07T09:24:36.802Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

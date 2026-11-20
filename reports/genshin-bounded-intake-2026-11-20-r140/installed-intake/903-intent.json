@@ -1,0 +1,74 @@
+{
+  "key": "materials:old-handguard",
+  "id": 903,
+  "before": {
+    "id": 903,
+    "stableKey": "unified:genshin:82456192c4ffc56c25dee31091429aa06b41e037d9730afe5b7b4461a37641a1",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"old-handguard\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "old-handguard"
+        }
+      },
+      "original": {
+        "id": "old-handguard",
+        "name": "破缺的刀镡",
+        "type": "common-drop",
+        "nameEn": "Old Handguard",
+        "rarity": 2,
+        "source": "怪物掉落: 野伏",
+        "sourceEn": "Enemy Drop: Nobushi"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "fa4a4b1556343752d0a4b3cfa7e42ab19486927c3b54bdaf7e38db00c7bfc5e1",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "old-handguard",
+      "name": "破缺的刀镡",
+      "type": "common-drop",
+      "nameEn": "Old Handguard",
+      "rarity": 2,
+      "source": "怪物掉落: 野伏",
+      "sourceEn": "Enemy Drop: Nobushi"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.915Z",
+    "createdAt": "2026-11-07T09:24:36.915Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "old-handguard",
+    "name": "破旧的刀镡",
+    "nameEn": "Old Handguard",
+    "type": "common-drop",
+    "rarity": 1,
+    "source": "怪物掉落: 野伏",
+    "sourceEn": "Enemy Drop: Nobushi"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:15.444Z"
+}

@@ -1,0 +1,74 @@
+{
+  "key": "materials:cleansing-heart",
+  "id": 837,
+  "before": {
+    "id": 837,
+    "stableKey": "unified:genshin:c8cf3c550e47c99a45fa010466cc1b823820f363df85727f03081f148db150b5",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"cleansing-heart\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "cleansing-heart"
+        }
+      },
+      "original": {
+        "id": "cleansing-heart",
+        "name": "涤净青莲",
+        "type": "boss-drop",
+        "nameEn": "Cleansing Heart",
+        "rarity": 5,
+        "source": "Boss掉落: Rhodeia of Loch",
+        "sourceEn": "Boss Drop: Rhodeia of Loch"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "0e59db915250214ac349221ba469b599e42c0137b99b6bdaaca82d7e8cb997e5",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "cleansing-heart",
+      "name": "涤净青莲",
+      "type": "boss-drop",
+      "nameEn": "Cleansing Heart",
+      "rarity": 5,
+      "source": "Boss掉落: Rhodeia of Loch",
+      "sourceEn": "Boss Drop: Rhodeia of Loch"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.794Z",
+    "createdAt": "2026-11-07T09:24:36.794Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "cleansing-heart",
+    "name": "净水之心",
+    "nameEn": "Cleansing Heart",
+    "type": "boss-drop",
+    "rarity": 4,
+    "source": "Boss掉落: Rhodeia of Loch",
+    "sourceEn": "Boss Drop: Rhodeia of Loch"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:14.672Z"
+}

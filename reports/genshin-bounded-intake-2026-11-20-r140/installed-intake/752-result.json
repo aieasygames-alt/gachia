@@ -1,0 +1,63 @@
+{
+  "row": {
+    "id": 752,
+    "stableKey": "unified:genshin:5282a84a00fb25160a1da23bf7eb32aacab6e0b56d0ca3f80b4219a8ca551935",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"varunada-lazurite-gemstone\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "varunada-lazurite-gemstone"
+        }
+      },
+      "original": {
+        "id": "varunada-lazurite-gemstone",
+        "name": "涤净青金宝石",
+        "type": "character-ascension",
+        "nameEn": "Varunada Lazurite Gemstone",
+        "rarity": 5,
+        "source": "Boss掉落: Hydro相关Boss",
+        "sourceEn": "Boss Drop: Hydro related bosses"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "0fb784b4dbb6b633eeff97ab54a47c3f6cd6a67968dc7d1dbb0a4168636a1c8e",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "varunada-lazurite-gemstone",
+      "name": "涤净青金",
+      "type": "character-ascension",
+      "nameEn": "Varunada Lazurite Gemstone",
+      "rarity": 5,
+      "source": "Boss掉落: Hydro相关Boss",
+      "sourceEn": "Boss Drop: Hydro related bosses"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-20T14:47:15.818Z",
+    "createdAt": "2026-11-07T09:24:36.591Z",
+    "_status": "draft"
+  },
+  "reconciledReadOnly": false,
+  "replayed": false
+}

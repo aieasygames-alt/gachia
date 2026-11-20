@@ -1,0 +1,74 @@
+{
+  "key": "materials:concealing-scroll",
+  "id": 895,
+  "before": {
+    "id": 895,
+    "stableKey": "unified:genshin:cfcaef570f4c9da7977504f86c560c7a869953a759d694c1b25cd21a885da2b0",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"concealing-scroll\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "concealing-scroll"
+        }
+      },
+      "original": {
+        "id": "concealing-scroll",
+        "name": "封魔的绘卷",
+        "type": "common-drop",
+        "nameEn": "Sealed Scroll",
+        "rarity": 3,
+        "source": "怪物掉落: 萨满",
+        "sourceEn": "Enemy Drop: Samachurls"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "25f0e215bcf982bb5f4b290399c186ea68aa010595eb330f9b7ffcf8c891e0bd",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "concealing-scroll",
+      "name": "封魔的绘卷",
+      "type": "common-drop",
+      "nameEn": "Sealed Scroll",
+      "rarity": 3,
+      "source": "怪物掉落: 萨满",
+      "sourceEn": "Enemy Drop: Samachurls"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false
+    },
+    "hold": true,
+    "updatedAt": "2026-11-07T09:24:36.901Z",
+    "createdAt": "2026-11-07T09:24:36.901Z",
+    "_status": "draft"
+  },
+  "draft": {
+    "id": "concealing-scroll",
+    "name": "封魔绘卷",
+    "nameEn": "Sealed Scroll",
+    "type": "common-drop",
+    "rarity": 2,
+    "source": "怪物掉落: 萨满",
+    "sourceEn": "Enemy Drop: Samachurls"
+  },
+  "batchKey": "dc88eca171da595321f86fa0b4438d00e91255d0a22165d8aa0b0256f578e347",
+  "at": "2026-11-20T14:47:14.704Z"
+}
