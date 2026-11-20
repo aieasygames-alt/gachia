@@ -1,0 +1,163 @@
+{
+  "kind": "genshin-recipe-definition-candidate-delivery-v1",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "candidate": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/candidates.json",
+    "pin": "ecfd0225db49c8bc3b4c7b5dfcf142fb87eff4cde8c8c320e355c43d32a4ef72"
+  },
+  "definitions": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/definition-candidates.json",
+    "pin": "48792aa1a118c7b40e86953d272e4e9108d579a0dea4c95712eb2cd7d1be6acb"
+  },
+  "held": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/held-and-resolutions.json",
+    "pin": "d0f9f2cfed919b9af70b8be886f7eda2ab5f8dae8cd60f45dff3602037140e2d"
+  },
+  "preservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/preservation.json",
+    "pin": "4a36550251e8351b55d588b5c370e908c827d99d5fe0bc42a1515a8b30b8753b"
+  },
+  "fixture": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-recipes-r136.json.gz",
+    "pin": "ff3739acc01be5be398e1f0d703fec69a7fc9986587b43b4c0100428c2e60b57"
+  },
+  "decisions": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-recipe-decisions.json",
+    "pin": "d6378245319db2b617d27801d0e69eedd16cf3f5e474714455344606e00e0e06"
+  },
+  "candidateKey": "901beb519d7092811bad588a5ab501ed7531365c03fc6dc4215a571d35e3b6f7",
+  "before": {
+    "materialDefinitions": 185,
+    "materialReferences": 5400,
+    "missingMaterialIds": 53,
+    "missingMaterialReferences": 1279,
+    "missingCharacterIds": [
+      "mualani",
+      "ororon"
+    ],
+    "dependencyClosureComplete": false
+  },
+  "after": {
+    "materialDefinitions": 253,
+    "materialReferences": 5490,
+    "missingMaterialIds": 16,
+    "missingMaterialReferences": 150,
+    "missingCharacterIds": [
+      "mualani",
+      "ororon"
+    ],
+    "dependencyClosureComplete": false
+  },
+  "comparedCharacters": 90,
+  "stages": 1350,
+  "changedStages": 1066,
+  "newDefinitionCandidates": 84,
+  "completeNewDefinitions": 68,
+  "incompleteNewDefinitions": 16,
+  "existingDefinitionCorrections": 45,
+  "missingRarityIds": [
+    "sango-pearl",
+    "nilotpala-lotus",
+    "henna-berry",
+    "mourning-flower",
+    "trishiraite",
+    "romaritime-flower",
+    "lumidouce-bell",
+    "lakelight-lily",
+    "spring-of-the-first-dewdrop",
+    "clearwater-jade",
+    "sprayfeather-gill",
+    "brilliant-chrysanthemum",
+    "quenepa-berry",
+    "saurian-claw-succulent",
+    "glowing-hornshroom",
+    "withering-purpurbloom"
+  ],
+  "retainedLocalUnverifiedRarity": 33,
+  "unresolvedLegacyIdentities": 14,
+  "conflictResolutions": 6,
+  "guihuanAnonymousHeld": 108,
+  "unchangedPublishedSources": 113,
+  "referenceClassification": "community-maintained corroboration; not official approval",
+  "localRawWrites": false,
+  "cmsWrites": false,
+  "cloudCalls": false,
+  "sourceAdvanced": false,
+  "productionDeployments": 0,
+  "hold": true,
+  "publishable": false,
+  "status": "held-recipe-and-definition-candidates-complete",
+  "observedAt": "2026-11-20T10:18:50.550399+00:00",
+  "implementationCommit": "ff8f200ece1095248ae38c5488849a1419e3487e",
+  "summary": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/summary.json",
+    "pin": "db3e78f694590e31afcaf6abae46d3da2772101fbdf63ccde2f5fdecf0e0a8cd"
+  },
+  "execution": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/EXECUTION.md",
+    "pin": "5ee668cf58e31d70ef9b467075136aeceb02b838a53eeb4201531ecb9dbe2357"
+  },
+  "checks": {
+    "cmsFocused": 65,
+    "candidateRegressionsIncluded": 9,
+    "documentation": 39,
+    "cmsTypes": true,
+    "rawMirrorPairs": 90,
+    "inventoryScopes": 16,
+    "generatedManifests": true,
+    "skipped": 0
+  },
+  "candidateOutputs": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/raw-materials.candidate.json",
+      "pin": "92082f032f8e19f0a2f4780a0fc75f9c01a906a9f5bb5b9b0b33032b76c65e5b"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/raw-character-materials.candidate.json",
+      "pin": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88"
+    }
+  ],
+  "logs": {
+    "cms-focused.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/cms-focused.log",
+      "pin": "0674258407a32ffe207c2a4806e38654c5fb15ac034359dd7bc45655ff5ecb49"
+    },
+    "types-final.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/types-final.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "mirror-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/mirror-check.log",
+      "pin": "77ea12b51855e46b31ea4a1b487264e911ea2dc3c12862a03fe203f84a0ce3d8"
+    },
+    "manifest-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/manifest-check.log",
+      "pin": "363931ebf9b664ac6ad6d7b5f3443cf6026c9c9d9038b75b4dee2e51455cf69a"
+    },
+    "raw-inventory-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/raw-inventory-check.log",
+      "pin": "84041773c3498c9a63063b7d38bece5ff5ce55038a501a029b1dc3a033feb4ed"
+    },
+    "inventory-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/inventory-check.log",
+      "pin": "8f43c749903a13db72209b17812912195bd135f46f3bee383fdd4e5bfe555777"
+    },
+    "docs-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/docs-tests.log",
+      "pin": "94949c2db62369bba33d25ebc5ad3bcb06dd3e5f2069d582ee409cb5f7c6df54"
+    }
+  },
+  "disk": {
+    "availableBytes": 11561345024,
+    "requiredFullBuildBytes": 15032385536,
+    "reserveBytes": 8589934592
+  },
+  "newFullAppBuild": false,
+  "exactRemoteCI": false,
+  "pushed": false,
+  "productionQualified": false,
+  "next": "Continue the R136 candidate and fixture. Supply evidenced rarity for the sixteen new specialties, review the retained thirty-three local rarity values, and prepare complete mualani/ororon character definitions. Keep fourteen old identities and Guihuan held. Then reconcile CMS import O with published R134 A and separately qualify numeric/relation/new-entity consumers and release contracts. Do not repeat the full audit or the 1,350-stage comparison."
+}

@@ -1,0 +1,92 @@
+{
+  "kind": "genshin-recipe-definition-candidate-delivery-v1",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "candidate": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/candidates.json",
+    "pin": "ecfd0225db49c8bc3b4c7b5dfcf142fb87eff4cde8c8c320e355c43d32a4ef72"
+  },
+  "definitions": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/definition-candidates.json",
+    "pin": "48792aa1a118c7b40e86953d272e4e9108d579a0dea4c95712eb2cd7d1be6acb"
+  },
+  "held": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/held-and-resolutions.json",
+    "pin": "d0f9f2cfed919b9af70b8be886f7eda2ab5f8dae8cd60f45dff3602037140e2d"
+  },
+  "preservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-recipe-candidates-2026-11-20-r136/preservation.json",
+    "pin": "4a36550251e8351b55d588b5c370e908c827d99d5fe0bc42a1515a8b30b8753b"
+  },
+  "fixture": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-recipes-r136.json.gz",
+    "pin": "ff3739acc01be5be398e1f0d703fec69a7fc9986587b43b4c0100428c2e60b57"
+  },
+  "decisions": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-recipe-decisions.json",
+    "pin": "d6378245319db2b617d27801d0e69eedd16cf3f5e474714455344606e00e0e06"
+  },
+  "candidateKey": "901beb519d7092811bad588a5ab501ed7531365c03fc6dc4215a571d35e3b6f7",
+  "before": {
+    "materialDefinitions": 185,
+    "materialReferences": 5400,
+    "missingMaterialIds": 53,
+    "missingMaterialReferences": 1279,
+    "missingCharacterIds": [
+      "mualani",
+      "ororon"
+    ],
+    "dependencyClosureComplete": false
+  },
+  "after": {
+    "materialDefinitions": 253,
+    "materialReferences": 5490,
+    "missingMaterialIds": 16,
+    "missingMaterialReferences": 150,
+    "missingCharacterIds": [
+      "mualani",
+      "ororon"
+    ],
+    "dependencyClosureComplete": false
+  },
+  "comparedCharacters": 90,
+  "stages": 1350,
+  "changedStages": 1066,
+  "newDefinitionCandidates": 84,
+  "completeNewDefinitions": 68,
+  "incompleteNewDefinitions": 16,
+  "existingDefinitionCorrections": 45,
+  "missingRarityIds": [
+    "sango-pearl",
+    "nilotpala-lotus",
+    "henna-berry",
+    "mourning-flower",
+    "trishiraite",
+    "romaritime-flower",
+    "lumidouce-bell",
+    "lakelight-lily",
+    "spring-of-the-first-dewdrop",
+    "clearwater-jade",
+    "sprayfeather-gill",
+    "brilliant-chrysanthemum",
+    "quenepa-berry",
+    "saurian-claw-succulent",
+    "glowing-hornshroom",
+    "withering-purpurbloom"
+  ],
+  "retainedLocalUnverifiedRarity": 33,
+  "unresolvedLegacyIdentities": 14,
+  "conflictResolutions": 6,
+  "guihuanAnonymousHeld": 108,
+  "unchangedPublishedSources": 113,
+  "referenceClassification": "community-maintained corroboration; not official approval",
+  "localRawWrites": false,
+  "cmsWrites": false,
+  "cloudCalls": false,
+  "sourceAdvanced": false,
+  "productionDeployments": 0,
+  "hold": true,
+  "publishable": false
+}
