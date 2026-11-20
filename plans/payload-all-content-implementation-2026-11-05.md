@@ -1,6 +1,14 @@
 # Payload 全内容实施队列
 
-## 当前开发状态（2026-11-20 R137：原神候选身份依赖闭合）
+## 当前开发状态（2026-11-20 R138：两个角色媒体 404 修复与通用技能支持完成）
+
+玛拉妮和欧洛伦的正式 CDN 图片已补传至 `gachia-images` 的两个缺失对象，HEAD/GET 均为 200，公开 SHA256 与原神独立应用资源一致。素材按 R137 数值角色 ID 与资料 API 的 `UI_AvatarIcon_Mualani`、`UI_AvatarIcon_Olorun` 绑定；保留来源、256×256 规格、透明度和可见像素核验。仅新增两个 R2 对象，未部署 Worker。原神 owner 的 public 目录包含两张资源，供后续应用发布；未向 Main 新增重复副本。见 [R138 完成回执](../reports/genshin-media-skills-2026-11-20-r138/EXECUTION.md)与[接续交付](../reports/genshin-media-skills-2026-11-20-r138/delivery.json)。
+
+通用 `Character` 适配器已支持 `passive3 → passive-3/passive` 和 `specialJump → special-jump/special`，补齐可选类型；两个通用数据入口及序列化均保留新角色全部 15 项技能和完整文本。原有 114 个可展示角色技能保持，桑多涅继续按既有 upcoming 规则过滤（候选仍有 117 条角色定义，通用列表有 116 条）。此代码已本地验证，随后续原神 Worker 发布上线；本批没有应用代码部署。
+
+下一批从 R138 的候选图片补丁和 R137 完整候选接续，进行真实 CMS import O / R134 发布 A / 候选三方对账及有界导入；继续开发数值、关系、新实体的审核、发布与恢复合同。两个图片 404 和通用技能遗漏已解决，不重复取证；原先记录的 10 份本地与发布来源差异仍须在对账中保留线上增量。正式内容来源仍为 R134，未写 raw、真实 CMS 或推进内容来源；绿梦维持中文范围。
+
+## 前批开发状态（2026-11-20 R137：原神候选身份依赖闭合）
 
 R136 的 16 个新材料稀有度缺口、33 个既有特产稀有度复核和 `mualani`/`ororon` 两个角色定义已接续完成。49 个特产逐个取得资料 API 的明确 `rank=1`，作为本站展示稀有度；固定提交游戏表的 `rankLevel` 均未设置，其中 `rank` 是排序编号，不能把它或字段缺省称为官方一星证明。此差异已进入逐项证据、代码断言和回归测试。来源仍分类为社区交叉核对，不新增官方认证前置。见 [R137 完成回执](../reports/genshin-specialty-characters-2026-11-20-r137/EXECUTION.md)与[接续交付](../reports/genshin-specialty-characters-2026-11-20-r137/delivery.json)。
 

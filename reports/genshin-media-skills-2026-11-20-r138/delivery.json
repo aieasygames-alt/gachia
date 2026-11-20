@@ -1,0 +1,202 @@
+{
+  "kind": "genshin-media-and-generic-skills-delivery-r138",
+  "status": "cdn-images-restored-generic-skills-developed",
+  "observedAt": "2026-11-20T11:32:28.777596+00:00",
+  "implementationCommit": "ccfc187ffdfdd93d1b48a1e6a0fd1ad870c2d75c",
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/delivery.json",
+    "pin": "8cedaab55d01e33d74b75a942ec5de7f637956bfb53e926d190400a9e078a5b0"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "parentCompletionKey": "31868e2150aa9f81e715dd41b48b552bd2e6a0d42574101d20bb0fc0b3687995",
+  "execution": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/EXECUTION.md",
+    "pin": "10bdf6d55f098dcfaa6c4cf01775c2a6cbae789da29a74f5fe6285ac55b7be98"
+  },
+  "imageSources": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/image-sources.json",
+    "pin": "393ac77401724e72096f22098ee6bcafec23e373df55fd465038ef0d33d3870c"
+  },
+  "mediaManifest": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/media-manifest.json",
+    "pin": "d6a32f4bc0f18f920da8779b72f5f2d6cdb36de7e80afb8388360e776738941b"
+  },
+  "uploadIntent": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/upload-intent.json",
+    "pin": "ec4ab5fa8810117d4ddab531e92a7a6aa9c33dea032e622a27d58a5ffea20264"
+  },
+  "publicAcceptance": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/public-acceptance.json",
+    "pin": "0fdce54e23f49448d98ce364c1f817aa738ae432e5c87942610d107f0b87e818"
+  },
+  "candidateMediaPatch": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/candidate-media-patch.json",
+    "pin": "fa309150f51e0f954763a48f3cee18393cf5b92c5af9e9349d0022ee82838cae"
+  },
+  "candidateMediaPatchKey": "4f02e550e9361b7941a12cc385009c6bf819a7b437415a7465f961088afce5bf",
+  "characterCandidate": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/raw-characters.media.candidate.json",
+    "pin": "60526cc4d5c040db56d30da306618ff55741048048b0c82be3236ec552f8b5f1"
+  },
+  "image404Resolved": true,
+  "genericSkillSupportDeveloped": true,
+  "applicationCodeDeployed": false,
+  "checks": {
+    "dataFullTests": 177,
+    "finalGenericSkillTests": 4,
+    "mediaAndToolchainTests": 4,
+    "cmsFocusedTests": 13,
+    "serverConsumerTests": 5,
+    "documentationTests": 39,
+    "types": [
+      "core",
+      "data",
+      "cms",
+      "web"
+    ],
+    "rawMirrorPairs": 90,
+    "inventoryScopes": 16,
+    "generatedManifests": true,
+    "skipped": 0,
+    "publicHeadAndGetRequestsPassed": 4,
+    "visiblePixelsAndAlphaPreserved": true,
+    "existingLocalSourceFilesPreserved": 115,
+    "existingCandidateCharacterDefinitionsPreserved": 115,
+    "existingGenericCharacterSkillsPreserved": 114,
+    "upcomingFilterPreserved": [
+      "sandrone"
+    ]
+  },
+  "logs": {
+    "data-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/data-tests.log",
+      "pin": "67543c55a2db4e63ab316956f10d252baefa7329e3285bbc63c243416f0c7649"
+    },
+    "skill-tests-final.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/skill-tests-final.log",
+      "pin": "0956c290d4d3c9eddc8eb6d56b04ddc450ff671582742f4de11d4a4cec30bdf2"
+    },
+    "media-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/media-tests.log",
+      "pin": "af0cba0ceeb7a4f31ed6738b1ebe2078a0d5199bc7e16634ea80ef4672138ac0"
+    },
+    "cms-focused.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/cms-focused.log",
+      "pin": "58a4017d5e523379678ed8579e26ca646224e0a24ba8d1ecf1da6b7daefd2b4e"
+    },
+    "consumer-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/consumer-tests.log",
+      "pin": "9be106be7e65ac4eb9437e1e68c0829625980873152b2b855f222ca900be733a"
+    },
+    "core-types.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/core-types.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "data-types-02.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/data-types-02.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "cms-types.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/cms-types.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "web-types.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/web-types.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "inventory-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/inventory-check.log",
+      "pin": "556f8c4ca5a846c26a05baef67cc80b11280edfa409fa9010e31334f3c392abb"
+    },
+    "mirror-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/mirror-check.log",
+      "pin": "77ea12b51855e46b31ea4a1b487264e911ea2dc3c12862a03fe203f84a0ce3d8"
+    },
+    "raw-inventory-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/raw-inventory-check.log",
+      "pin": "84041773c3498c9a63063b7d38bece5ff5ce55038a501a029b1dc3a033feb4ed"
+    },
+    "manifest-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/manifest-check.log",
+      "pin": "363931ebf9b664ac6ad6d7b5f3443cf6026c9c9d9038b75b4dee2e51455cf69a"
+    },
+    "docs-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/docs-tests.log",
+      "pin": "1ba8764a7fffe6bac04b03b314609f8acbb6ac8da93f84bf9d5e65aeca83fe60"
+    },
+    "upload-mualani.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/upload-mualani.log",
+      "pin": "993491e0f21920a399f43703412028f7a59ae876ea3ee31406553c08501cb036"
+    },
+    "upload-ororon.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/upload-ororon.log",
+      "pin": "126b52cf05544dca6440d1300f6e3a0ceaf9674c760d0e73283794624c02563e"
+    },
+    "whoami.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/whoami.log",
+      "pin": "60c97986f37e8810358ff9180f14e50f1cad2d472b0b77a2faa1feeca43dd571"
+    },
+    "r2-domain.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/r2-domain.log",
+      "pin": "95c94cc451b80aa07b5968761799481802c3f83c53f7c0221515f2b362fe3608"
+    },
+    "r2-before-mualani.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/r2-before-mualani.log",
+      "pin": "34342c39ab822c361990c9496cf52fefebc1260d9e5b14ff9c2109a2782c85b7"
+    },
+    "r2-before-ororon.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/r2-before-ororon.log",
+      "pin": "24776ead46f00eb5b5d9c1d2b3ed8231d1c24a558d2d4b414cc1cfa891bb8f8b"
+    }
+  },
+  "newImages": [
+    {
+      "localId": "mualani",
+      "url": "https://img.gachia.com/images/genshin/characters/mualani.webp",
+      "path": "apps/game-genshin/public/images/genshin/characters/mualani.webp",
+      "sha256": "0223fc64236af8efa1d955e9c5728943acde9187110f6e43d7f98d51d49decb1",
+      "bytes": 23674
+    },
+    {
+      "localId": "ororon",
+      "url": "https://img.gachia.com/images/genshin/characters/ororon.webp",
+      "path": "apps/game-genshin/public/images/genshin/characters/ororon.webp",
+      "sha256": "cb2b871be8fbb26fe2942df72252e182ae0f4b02eccec194b343305b61402e84",
+      "bytes": 29784
+    }
+  ],
+  "remoteTarget": {
+    "accountId": "e6472b6c6172a3ac1e1596ef100543ae",
+    "bucket": "gachia-images",
+    "domain": "img.gachia.com"
+  },
+  "cloudControlPlaneCalls": true,
+  "productionObjectWrites": 2,
+  "existingObjectsReplaced": false,
+  "productionDeployments": 0,
+  "workerVersionUploads": 0,
+  "localRawWrites": false,
+  "cmsWrites": false,
+  "sourceAdvanced": false,
+  "newFullAppBuild": false,
+  "exactRemoteCI": false,
+  "pushed": false,
+  "technicalMediaAvailabilityComplete": true,
+  "mediaRightsAuthenticated": false,
+  "hold": true,
+  "publishable": false,
+  "newEntityQualified": false,
+  "disk": {
+    "availableBytes": 12856193024,
+    "requiredFullBuildBytes": 15032385536,
+    "reserveBytes": 8589934592
+  },
+  "next": "Continue the R137 complete candidate plus the R138 two-image patch. Reconcile real CMS import O / published R134 A / candidate, preserve the ten pre-existing local-versus-published differences and published increments, then qualify bounded numeric, relation and new-entity intake/release/recovery. Generic skill support and owner static assets are included in the next Genshin Worker release; CDN media is already live. Do not repeat image upload, specialty evidence collection, full audit or the 1,350-stage recipe comparison. Keep LvMeng Chinese-only.",
+  "inventoryBaseline": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/inventory/2026-11-20-r138/inventory.json",
+    "pin": "9ac4b2fca557572f93c30cfcf8647476deed569600140183a06c64b98d9b5f97"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "genshin-two-missing-media-upload-intent-r138",
+  "observedAt": "2026-11-20T11:23:33.866108+00:00",
+  "accountId": "e6472b6c6172a3ac1e1596ef100543ae",
+  "bucket": "gachia-images",
+  "domain": "img.gachia.com",
+  "publicBefore": [
+    {
+      "url": "https://img.gachia.com/images/genshin/characters/mualani.webp",
+      "status": 404,
+      "etag": null,
+      "cacheStatus": "DYNAMIC"
+    },
+    {
+      "url": "https://img.gachia.com/images/genshin/characters/ororon.webp",
+      "status": 404,
+      "etag": null,
+      "cacheStatus": "DYNAMIC"
+    }
+  ],
+  "objects": [
+    {
+      "key": "images/genshin/characters/mualani.webp",
+      "file": "apps/game-genshin/public/images/genshin/characters/mualani.webp",
+      "sha256": "0223fc64236af8efa1d955e9c5728943acde9187110f6e43d7f98d51d49decb1",
+      "bytes": 23674
+    },
+    {
+      "key": "images/genshin/characters/ororon.webp",
+      "file": "apps/game-genshin/public/images/genshin/characters/ororon.webp",
+      "sha256": "cb2b871be8fbb26fe2942df72252e182ae0f4b02eccec194b343305b61402e84",
+      "bytes": 29784
+    }
+  ],
+  "existingObjectsReplaced": false,
+  "maximumObjectWrites": 2,
+  "workerDeployments": 0,
+  "cmsWrites": false,
+  "sourceAdvanced": false
+}

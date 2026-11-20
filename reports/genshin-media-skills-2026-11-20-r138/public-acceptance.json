@@ -1,0 +1,62 @@
+{
+  "kind": "genshin-two-media-public-acceptance-r138",
+  "observedAt": "2026-11-20T11:26:28.096370+00:00",
+  "entries": [
+    {
+      "localId": "mualani",
+      "url": "https://img.gachia.com/images/genshin/characters/mualani.webp",
+      "observations": [
+        {
+          "method": "HEAD",
+          "status": 200,
+          "mime": "image/webp",
+          "contentLength": 23674,
+          "etag": "\"9247276561451f307c5f196559fde799\"",
+          "cacheStatus": "DYNAMIC",
+          "cacheControl": "public, max-age=86400"
+        },
+        {
+          "method": "GET",
+          "status": 200,
+          "mime": "image/webp",
+          "contentLength": 23674,
+          "etag": "\"9247276561451f307c5f196559fde799\"",
+          "cacheStatus": "MISS",
+          "cacheControl": "public, max-age=86400",
+          "sha256": "0223fc64236af8efa1d955e9c5728943acde9187110f6e43d7f98d51d49decb1"
+        }
+      ]
+    },
+    {
+      "localId": "ororon",
+      "url": "https://img.gachia.com/images/genshin/characters/ororon.webp",
+      "observations": [
+        {
+          "method": "HEAD",
+          "status": 200,
+          "mime": "image/webp",
+          "contentLength": 29784,
+          "etag": "\"4973d340728e8437d17b2e077a28d521\"",
+          "cacheStatus": "DYNAMIC",
+          "cacheControl": "public, max-age=86400"
+        },
+        {
+          "method": "GET",
+          "status": 200,
+          "mime": "image/webp",
+          "contentLength": 29784,
+          "etag": "\"4973d340728e8437d17b2e077a28d521\"",
+          "cacheStatus": "MISS",
+          "cacheControl": "public, max-age=86400",
+          "sha256": "cb2b871be8fbb26fe2942df72252e182ae0f4b02eccec194b343305b61402e84"
+        }
+      ]
+    }
+  ],
+  "allPublicBytesMatchOwnerAssets": true,
+  "image404Resolved": true,
+  "objectWrites": 2,
+  "workerDeployments": 0,
+  "cmsWrites": false,
+  "sourceAdvanced": false
+}

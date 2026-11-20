@@ -1,0 +1,61 @@
+{
+  "kind": "genshin-candidate-media-patch-r138",
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-specialty-characters-2026-11-20-r137/delivery.json",
+    "pin": "8cedaab55d01e33d74b75a942ec5de7f637956bfb53e926d190400a9e078a5b0"
+  },
+  "parentCompletionKey": "31868e2150aa9f81e715dd41b48b552bd2e6a0d42574101d20bb0fc0b3687995",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "mediaManifest": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/media-manifest.json",
+    "pin": "d6a32f4bc0f18f920da8779b72f5f2d6cdb36de7e80afb8388360e776738941b"
+  },
+  "publicAcceptance": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/public-acceptance.json",
+    "pin": "0fdce54e23f49448d98ce364c1f817aa738ae432e5c87942610d107f0b87e818"
+  },
+  "sourcePath": "packages/data/games/genshin/raw-characters.json",
+  "previousSHA256": "57575d447dd251f881d185e2c52a8e367f1b362a1a98845678ca5d1e5e020fb5",
+  "candidate": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-media-skills-2026-11-20-r138/raw-characters.media.candidate.json",
+    "pin": "60526cc4d5c040db56d30da306618ff55741048048b0c82be3236ec552f8b5f1"
+  },
+  "changes": [
+    {
+      "localId": "mualani",
+      "pointer": "/115/image",
+      "previous": "",
+      "value": "/images/genshin/characters/mualani.webp"
+    },
+    {
+      "localId": "ororon",
+      "pointer": "/116/image",
+      "previous": "",
+      "value": "/images/genshin/characters/ororon.webp"
+    }
+  ],
+  "unchangedR137Overlays": [
+    {
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sha256": "2de38449c0cfeacbbdb9ac20a557a33adfdb67cb76cf1378f7cfaecfca81dfd4"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+      "sha256": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88"
+    }
+  ],
+  "existingCharacterRecordsUnchanged": 115,
+  "technicalMediaAvailabilityComplete": true,
+  "genericSkillsSupported": true,
+  "mediaRightsAuthenticated": false,
+  "localRawWrites": false,
+  "cmsWrites": false,
+  "sourceAdvanced": false,
+  "newEntityQualified": false,
+  "hold": true,
+  "publishable": false,
+  "patchKey": "4f02e550e9361b7941a12cc385009c6bf819a7b437415a7465f961088afce5bf"
+}
