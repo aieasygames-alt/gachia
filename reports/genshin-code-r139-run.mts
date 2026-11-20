@@ -25,7 +25,8 @@ import { GENSHIN_CODE_POLICY } from '../scripts/genshin-code-history.mjs'
 import { readNteSourceIndex } from '../services/content-cms/src/nte-release-history.ts'
 import { freezeMainConsumerSource, verifyMainConsumerSource } from '../services/content-cms/src/main-consumer-source.ts'
 import { captureUnifiedExecutorSource } from '../services/content-cms/src/unified-executor-source.ts'
-import { createUnifiedExecutorVerifier } from '../services/content-cms/src/unified-production.ts'
+import { createUnifiedExecutorVerifier, verifyUnifiedCI } from '../services/content-cms/src/unified-production.ts'
+import { verifyUnifiedPublishedSource } from '../services/content-cms/src/unified-source-advance.ts'
 import { nteLocalConfig, nteRequests } from '../services/content-cms/src/nte-release-bundle.ts'
 
 const repo = path.resolve(import.meta.dirname, '..'), root = path.join(repo, 'reports/genshin-code-production-2026-11-20-r139')
@@ -149,6 +150,8 @@ if (phase === 'baseline') {
 } else if (phase === 'preview') {
   const { p, s, sources, executor } = await verifySealed(), githubToken = execFileSync('gh', ['auth', 'token'], { encoding: 'utf8' }).trim()
   const ci = await createUnifiedExecutorVerifier(Number(process.env.GENSHIN_EXECUTOR_RUN_ID), githubToken); assert.equal(ci.executorCommit, p.commit)
+  await verifyUnifiedPublishedSource({ publication: sources.originalPublication, sourceIndex: sources.originalSourceIndex, githubToken })
+  for (const ancestor of sources.ancestors) assert.deepEqual(await verifyUnifiedCI(ancestor.runID, ancestor.commit, githubToken), ancestor)
   const token = auth(20), before = await desktopCloudSnapshot(token, unifiedProductionRead); assertTopology(sources.baseline, before); assert.deepEqual(await staging(token), load('baseline.json').staging)
   const network = await createUnifiedPreviewNetwork(proxy), accepted: any = {}
   try { for (const role of ['recovery', 'candidate']) {
@@ -169,6 +172,7 @@ if (phase === 'baseline') {
   save('accepted.json', { commit: p.commit, executorCI: ci.executorCI, accepted, before }); ci.verify(); executor.verify()
 } else if (phase === 'promote') {
   const { p, s, executor } = await verifySealed(), a = load('accepted.json'), token = auth(15)
+  const ci = await createUnifiedExecutorVerifier(a.executorCI.runID, execFileSync('gh', ['auth', 'token'], { encoding: 'utf8' }).trim()); assert.equal(ci.executorCommit, p.commit)
   assert.equal(a.commit, p.commit); assertTopology(a.before, await desktopCloudSnapshot(token, unifiedProductionRead)); assert.deepEqual(await staging(token), load('baseline.json').staging)
   const network = await createUnifiedPreviewNetwork(proxy), publicNetwork = await createGenshinPublicNetwork(proxy)
   try { for (const role of ['recovery', 'candidate']) {
