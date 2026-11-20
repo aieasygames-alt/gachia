@@ -1,0 +1,149 @@
+{
+  "kind": "material_source_identity_review_delivery_v1",
+  "status": "local-identity-repair-and-source-review-complete",
+  "observedAt": "2026-11-20T09:26:12.183567+00:00",
+  "implementationCommit": "63e7226b74b6202a5b2bff3bfe7544de4127eb35",
+  "implementationCommits": [
+    "bfef3e7",
+    "63e7226"
+  ],
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "summary": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/summary.json",
+    "pin": "72c706e544dcb5e82ce89179ea7a717faf2b50270312d32c1df89b70bf294f3c"
+  },
+  "identityReview": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/identity-review.json",
+    "pin": "260a64c21df234ded7025731fb481f71cea02529df28cb4a388a75a1590b7223"
+  },
+  "reviewRecord": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/reviews/2026-11-20-genshin-material-identities.json",
+    "pin": "943f5fc3e72819f91e33a6007fa352c2b9e86ed3f4d0281cecfbd573ce041548"
+  },
+  "recipeReview": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/recipe-review.json",
+    "pin": "e6c79926f5f5473c0c407aab48a262d092b89e48840aa455ebc9d5ebdc71d20a"
+  },
+  "remainingQueue": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/remaining-review-queue.json",
+    "pin": "baf5281939493e896aff8ea89a7a670b86d286eeb58b990db27c991fd2cacd24"
+  },
+  "guihuanHeld": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/guihuan-held.json",
+    "pin": "00ce68a30797e3aa51d2b6f0a61bbcd99911a4f36b9014433355ed1479a1bf3f"
+  },
+  "preservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/preservation-check.json",
+    "pin": "2b264dc1e0c3cc0243314f4422d3bfb27a72cf96870e4527cfdda9efedb59f18"
+  },
+  "referenceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/reference-index.json",
+    "pin": "da62a6700ff40ba38d8cdf883d61c5c1e5eec70f48bb52821ac57964893092a8"
+  },
+  "referenceClassification": "community-maintained corroboration; not official approval",
+  "before": {
+    "missingMaterialIds": 74,
+    "missingMaterialReferences": 1775,
+    "missingCharacterIds": 4,
+    "materialReferences": 5400
+  },
+  "after": {
+    "missingMaterialIds": 53,
+    "missingMaterialReferences": 1279,
+    "missingCharacterIds": 2,
+    "materialReferences": 5400
+  },
+  "approvedMaterialIdentities": 21,
+  "approvedCharacterIdentities": 2,
+  "changedPointers": 498,
+  "remainingMaterialClasses": {
+    "reference-identity-unresolved": 14,
+    "existing-definition-name-conflict": 6,
+    "reference-definition-missing": 33
+  },
+  "comparedCharacters": 90,
+  "comparedStages": 1350,
+  "differingStages": 1034,
+  "recognizedMaterialQuantityDifferences": 989,
+  "guihuanAnonymousHeld": 108,
+  "checks": {
+    "cmsFocused": 56,
+    "ntePublishedAPreservation": 4,
+    "data": 173,
+    "genshinConsumers": 3,
+    "genshinServerRenderedPages": 345,
+    "documentation": 39,
+    "cmsTypes": true,
+    "genshinTypes": true,
+    "inventoryScopes": 16,
+    "rawMirrorPairs": 90,
+    "generatedManifests": true,
+    "skipped": 0
+  },
+  "logs": {
+    "cms-tests-final.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/cms-tests-final.log",
+      "pin": "8ebcb339229a6428dbd72bf26d8da641fbdd4cc8e4d58c5cefe8f9e224aa5829"
+    },
+    "nte-preservation-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/nte-preservation-tests.log",
+      "pin": "af9d31ac3f0b1207de002fcc3afeef5a6f5853c30380fe9e452d67928adba77a"
+    },
+    "data-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/data-tests.log",
+      "pin": "ca7bb05ee5698eb9a4840f95200d07ada879d5049aa29ba3e49f8da3aa3d9b38"
+    },
+    "genshin-consumers.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/genshin-consumers.log",
+      "pin": "4571978ab40c710e8cfda9daf2309a3982fe2326eb061673a7db81d872c1c313"
+    },
+    "cms-types-final.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/cms-types-final.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "genshin-types.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/genshin-types.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs-tests.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/docs-tests.log",
+      "pin": "2557da0d16c71cf4a78393a4184d7d8b233ecdf7f503e0d6153433fc83dcdec5"
+    },
+    "manifest-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/manifest-check.log",
+      "pin": "363931ebf9b664ac6ad6d7b5f3443cf6026c9c9d9038b75b4dee2e51455cf69a"
+    },
+    "inventory-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/inventory-check.log",
+      "pin": "8f43c749903a13db72209b17812912195bd135f46f3bee383fdd4e5bfe555777"
+    },
+    "mirror-check.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/mirror-check.log",
+      "pin": "84041773c3498c9a63063b7d38bece5ff5ce55038a501a029b1dc3a033feb4ed"
+    }
+  },
+  "localMirrorDrift": [
+    "apps/web/public/data/nte/raw-materials.json"
+  ],
+  "derivedChanges": [
+    "genshin platform version regenerated",
+    "pre-existing Git NTE platform version digest regenerated; other fields unchanged"
+  ],
+  "disk": {
+    "availableBytes": 11542413312,
+    "requiredFullBuildBytes": 15032385536,
+    "reserveBytes": 8589934592
+  },
+  "cmsWrites": false,
+  "cloudCalls": false,
+  "cloudWrites": false,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "newFullAppBuild": false,
+  "exactRemoteCI": false,
+  "productionQualified": false,
+  "next": "Reuse the captured R134 source and R135 evidence. Prepare source-bound Genshin recipe and missing-definition candidates; resolve six name conflicts. Keep fourteen unresolved identities and Guihuan held. Reconcile CMS import O explicitly before any bounded import or publication; do not treat the R135 candidate as public A."
+}

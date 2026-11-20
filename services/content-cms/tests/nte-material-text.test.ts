@@ -15,6 +15,7 @@ import { exportUnifiedContent } from '../src/unified-export'
 import { independentProductionOwnerScope, NTE_MATERIAL_PRODUCTION_SCOPE, NTE_PRODUCTION_SCOPE } from '../src/unified-genshin-production-scope'
 import { freezeUnifiedContent, verifyUnifiedFrozenSource } from '../src/unified-build'
 import { frozenNteMaterialTextPairContract, frozenMaterialConsumerContracts } from '../src/unified-owner-build'
+import { assertMaterialCandidateDependencies } from '../src/material-release-dependencies'
 
 const repo = path.resolve(projectRoot, '../..')
 const inventory = JSON.parse(readFileSync(path.join(repo, baselineDirectory, 'inventory.json'), 'utf8'))
@@ -63,8 +64,22 @@ test('formal material scope keeps all public increments and qualifies only NTE',
   const published = structuredClone(active), genshin = published.find(row => row.sourcePath.endsWith('/genshin/raw-characters.json'))!
   const characters = JSON.parse(genshin.text); characters.find((row: any) => row.id === 'hu-tao').descriptionEn += ' Preserved public increment'
   genshin.text = JSON.stringify(characters, null, 2) + '\n'; genshin.sha256 = digest(genshin.text)
+  // Git O contains the held R135 identity repair, while published A still has
+  // the R134 relations. An NTE edit must preserve A, not publish that repair.
+  const identityReview = JSON.parse(readFileSync(new URL('../reviews/2026-11-20-genshin-material-identities.json', import.meta.url), 'utf8'))
+  const genshinRelations = published.find(row => row.sourcePath === identityReview.sourcePath)!
+  const oldRelations = JSON.parse(genshinRelations.text)
+  for (const patch of identityReview.patches) {
+    const parts = patch.pointer.slice(1).split('/'), field = parts.pop()!
+    const row = parts.reduce((value: any, key: string) => value[key], oldRelations)
+    assert.equal(row[field], patch.after); row[field] = patch.before
+  }
+  genshinRelations.text = JSON.stringify(oldRelations, null, 2) + '\n'; genshinRelations.sha256 = digest(genshinRelations.text)
+  assert.equal(genshinRelations.sha256, identityReview.sourceSHA256)
   const candidate = exportUnifiedContent([record], active, published, false)
   const overlays = candidate.files.map(row => ({ sourcePath: row.sourcePath, text: row.content, sha256: row.candidateSHA256 }))
+  assert.equal(overlays.find(row => row.sourcePath === genshinRelations.sourcePath)!.sha256, genshinRelations.sha256)
+  assert.deepEqual(assertMaterialCandidateDependencies(published, overlays).games.map(row => row.game), ['nte'])
   assert.deepEqual(independentProductionOwnerScope('nte', candidate.manifest, published, overlays), {
     games: ['nte'], owners: ['nte'], services: ['gachia-game-nte'], productionScope: NTE_MATERIAL_PRODUCTION_SCOPE,
   })

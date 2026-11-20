@@ -1,0 +1,27 @@
+{
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "historyReader": "readNteSourceIndex",
+  "historyAudit": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/baseline/dependency-audit.json",
+    "pin": "ae0b2f5c069c7d3be721952a37cbb75db8bb25d7e90a3dc4cc08f4986b5066b6"
+  },
+  "verifiedPublishedSourceHashes": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/baseline/published-source-hashes.json",
+    "pin": "6dd345c2cce42cb477121f54290b52ce90e45c552f0dbe930b8f38712459a5ce"
+  },
+  "publishedSources": 115,
+  "allMatchFinalR134": true,
+  "sourceIndexBytesUnchanged": true,
+  "nteMaterialDefinitions": 57,
+  "nteMaterialReferences": 42,
+  "nteUnresolvedDependencies": 0,
+  "guihuanIntroducingCommit": "50f82b366d873106e06a9e702e72911ee270efe4",
+  "guihuanIntroducedSHA256": "61104ae86d31d33589b182c45ec52e27af0763d07e0d36545e85e5e34acb6963",
+  "guihuanSourceUnchanged": true,
+  "cmsWrites": false,
+  "cloudCalls": false,
+  "sourceAdvanced": false
+}

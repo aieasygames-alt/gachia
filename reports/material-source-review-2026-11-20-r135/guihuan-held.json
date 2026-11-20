@@ -1,0 +1,769 @@
+{
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "introducingCommit": "50f82b366d873106e06a9e702e72911ee270efe4",
+  "finding": "All 108 anonymous entries were already missing IDs in the introducing commit. No lost ID is recoverable from Git.",
+  "decision": "held; do not infer a currency, invent an ID, or delete quantities",
+  "references": [
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 20000,
+      "sourcePointer": "/0/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 40000,
+      "sourcePointer": "/0/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/0/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 80000,
+      "sourcePointer": "/0/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 120000,
+      "sourcePointer": "/0/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 5000,
+      "sourcePointer": "/0/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/0/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/0/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "chu",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/0/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 20000,
+      "sourcePointer": "/1/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 40000,
+      "sourcePointer": "/1/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/1/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 80000,
+      "sourcePointer": "/1/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 120000,
+      "sourcePointer": "/1/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 5000,
+      "sourcePointer": "/1/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/1/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/1/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "airu",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/1/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 20000,
+      "sourcePointer": "/2/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 40000,
+      "sourcePointer": "/2/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/2/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 80000,
+      "sourcePointer": "/2/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 120000,
+      "sourcePointer": "/2/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 5000,
+      "sourcePointer": "/2/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/2/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/2/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "mingzhe",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/2/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 20000,
+      "sourcePointer": "/3/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 40000,
+      "sourcePointer": "/3/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/3/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 80000,
+      "sourcePointer": "/3/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 120000,
+      "sourcePointer": "/3/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 5000,
+      "sourcePointer": "/3/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/3/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/3/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "heilian",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/3/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 20000,
+      "sourcePointer": "/4/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 40000,
+      "sourcePointer": "/4/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/4/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 80000,
+      "sourcePointer": "/4/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 120000,
+      "sourcePointer": "/4/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 5000,
+      "sourcePointer": "/4/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/4/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/4/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "liro",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/4/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 20000,
+      "sourcePointer": "/5/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 40000,
+      "sourcePointer": "/5/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/5/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 80000,
+      "sourcePointer": "/5/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 120000,
+      "sourcePointer": "/5/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 5000,
+      "sourcePointer": "/5/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/5/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/5/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "yalun",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/5/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/6/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/6/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/6/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/6/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 100000,
+      "sourcePointer": "/6/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 3750,
+      "sourcePointer": "/6/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 12000,
+      "sourcePointer": "/6/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 22500,
+      "sourcePointer": "/6/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "yaqi",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/6/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/7/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/7/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/7/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/7/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 100000,
+      "sourcePointer": "/7/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 3750,
+      "sourcePointer": "/7/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 12000,
+      "sourcePointer": "/7/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 22500,
+      "sourcePointer": "/7/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "zhuque",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/7/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/8/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/8/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/8/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/8/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 100000,
+      "sourcePointer": "/8/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 3750,
+      "sourcePointer": "/8/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 12000,
+      "sourcePointer": "/8/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 22500,
+      "sourcePointer": "/8/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "yelan",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/8/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/9/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/9/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/9/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/9/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 100000,
+      "sourcePointer": "/9/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 3750,
+      "sourcePointer": "/9/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 12000,
+      "sourcePointer": "/9/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 22500,
+      "sourcePointer": "/9/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "suyin",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/9/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/10/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/10/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/10/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/10/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 100000,
+      "sourcePointer": "/10/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 3750,
+      "sourcePointer": "/10/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 12000,
+      "sourcePointer": "/10/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 22500,
+      "sourcePointer": "/10/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "guhan",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/10/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 15000,
+      "sourcePointer": "/11/ascensionMaterials/0/materials/3",
+      "stage": "20-40"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 30000,
+      "sourcePointer": "/11/ascensionMaterials/1/materials/3",
+      "stage": "40-50"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/11/ascensionMaterials/2/materials/3",
+      "stage": "50-60"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 60000,
+      "sourcePointer": "/11/ascensionMaterials/3/materials/3",
+      "stage": "60-70"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 100000,
+      "sourcePointer": "/11/ascensionMaterials/4/materials/4",
+      "stage": "70-80"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 3750,
+      "sourcePointer": "/11/talentMaterials/0/materials/2",
+      "stage": "2-3"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 12000,
+      "sourcePointer": "/11/talentMaterials/1/materials/2",
+      "stage": "4-5"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 22500,
+      "sourcePointer": "/11/talentMaterials/2/materials/2",
+      "stage": "6-7"
+    },
+    {
+      "characterId": "chenxi",
+      "materialId": null,
+      "quantity": 45000,
+      "sourcePointer": "/11/talentMaterials/3/materials/3",
+      "stage": "8-10"
+    }
+  ],
+  "hold": true,
+  "publishable": false
+}

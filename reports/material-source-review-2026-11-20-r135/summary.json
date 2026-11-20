@@ -1,0 +1,680 @@
+{
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/published-sources/source-index.json",
+    "pin": "401834ddb8412bbf45072d9c2c54e4e1176ea03f9bc2b5950fabe53937c16750"
+  },
+  "sourceProof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/baseline/review-sources.json",
+    "pin": "403336d6efd978faba32fdd95b293126e2607b47f3701051b0753e9cc7bf9933"
+  },
+  "identityReview": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/identity-review.json",
+    "pin": "260a64c21df234ded7025731fb481f71cea02529df28cb4a388a75a1590b7223"
+  },
+  "candidate": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/candidate-source.json",
+    "pin": "00a3cd22447bd2d6e50eae3ac8e332ac92cfb2e86b28e65e331c4568dce18d97"
+  },
+  "recipeReview": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/recipe-review.json",
+    "pin": "e6c79926f5f5473c0c407aab48a262d092b89e48840aa455ebc9d5ebdc71d20a"
+  },
+  "guihuanHeld": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/guihuan-held.json",
+    "pin": "00ce68a30797e3aa51d2b6f0a61bbcd99911a4f36b9014433355ed1479a1bf3f"
+  },
+  "identityChanges": [
+    {
+      "kind": "material",
+      "sourceId": "callalily",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "calla-lily",
+        "evidence": {
+          "numericId": 100056,
+          "name": "嘟嘟莲",
+          "nameEn": "Calla Lily",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/callalily.json",
+              "sha256": "f3a1f71c0c64273a87ad102f74bbbdfbe9d0f2f07c68c69d475808b797848cbe"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/callalily.json",
+              "sha256": "085f21df2494253b5cde2c84bb32c7d48ab72deccf2d2f1d3b9e330c35819630"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-admonition",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-admonition",
+        "evidence": {
+          "numericId": 104330,
+          "name": "「诤言」的指引",
+          "nameEn": "Guide to Admonition",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoadmonition.json",
+              "sha256": "8c25053092f88c1de3aa507ac6bef1beae8edb0b709974bdcdc7156a6b1e6efa"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoadmonition.json",
+              "sha256": "e4c9d20735a2bac7d694c88dd5764425a3764436504cb5902575616f89af5965"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-ballad",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-ballad",
+        "evidence": {
+          "numericId": 104308,
+          "name": "「诗文」的指引",
+          "nameEn": "Guide to Ballad",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoballad.json",
+              "sha256": "a2857b1fd0c12d0cda47142586449744d62a148d631d80b7753fe2644c5feae1"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoballad.json",
+              "sha256": "a076a14dee2598f0000e856d1f2490894efc10a32a45df65d12a4290d27d0b75"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-diligence",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-diligence",
+        "evidence": {
+          "numericId": 104314,
+          "name": "「勤劳」的指引",
+          "nameEn": "Guide to Diligence",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetodiligence.json",
+              "sha256": "3aad3d1933356187fce56f11c6561fffc7b6c919f6fc2a5feabb2ff4a7186f62"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetodiligence.json",
+              "sha256": "7a942d3349742222efc33bfb6f3210cd6e882b82e4e9c323b8d72f13c1716d4b"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-elegance",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-elegance",
+        "evidence": {
+          "numericId": 104324,
+          "name": "「风雅」的指引",
+          "nameEn": "Guide to Elegance",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoelegance.json",
+              "sha256": "226a27eea30f1961ff3b9e37db543361db7049d9e33bb9a3dab01300b10347bf"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoelegance.json",
+              "sha256": "2e52528df44fa414a25624040d682860ff712506ddd77e5ae1b20b1ea8e34d78"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-equity",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-equity",
+        "evidence": {
+          "numericId": 104339,
+          "name": "「公平」的指引",
+          "nameEn": "Guide to Equity",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoequity.json",
+              "sha256": "efdd7cf93ee243425f728cffc56c0854b42d67d08e2bb6f9a2ef52bd14a688b1"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoequity.json",
+              "sha256": "7015db4061b4c09320625356c4c078e226f9fa6ecb99abf0febbf45331f048da"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-freedom",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-freedom",
+        "evidence": {
+          "numericId": 104302,
+          "name": "「自由」的指引",
+          "nameEn": "Guide to Freedom",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetofreedom.json",
+              "sha256": "e730719321c80e9f4b996021f6b75734a036222e3583eddf310bba5c663b7c98"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetofreedom.json",
+              "sha256": "6c78398b8f0df464d78c2f4390f5eabddb1989125662ba3e2c75d49565eb8891"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-gold",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-gold",
+        "evidence": {
+          "numericId": 104317,
+          "name": "「黄金」的指引",
+          "nameEn": "Guide to Gold",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetogold.json",
+              "sha256": "4d698401014542b70317cbd5e3f7c9daa165bdacf1e197ce9fb20fb0dad63c60"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetogold.json",
+              "sha256": "d7751387d089fc202b9631ed1c534f16c9089de5e70a0d396f0341fa5275fd09"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-ingenuity",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-ingenuity",
+        "evidence": {
+          "numericId": 104333,
+          "name": "「巧思」的指引",
+          "nameEn": "Guide to Ingenuity",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoingenuity.json",
+              "sha256": "b22dbfecdb0400d0199805b21c8bdbf21a50b2975327f32efc1a6b6f47e2336d"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoingenuity.json",
+              "sha256": "f28621693ba10b0e34d1d106a3a32b931577d180ea4cd79931f0c5a069fbf8e1"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-justice",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-justice",
+        "evidence": {
+          "numericId": 104342,
+          "name": "「正义」的指引",
+          "nameEn": "Guide to Justice",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetojustice.json",
+              "sha256": "e0bce60527b5fd9db6d6e9a9b9eaf16a5f28ec0f044fc825134f28fd29913c39"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetojustice.json",
+              "sha256": "7e68a6661f8f7064ef7fe2086fa6601e0c05a007a114faf12b41a918768d51b8"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-light",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-light",
+        "evidence": {
+          "numericId": 104327,
+          "name": "「天光」的指引",
+          "nameEn": "Guide to Light",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetolight.json",
+              "sha256": "f09f173849bd2b105d2207b20fb05b1bc3268c9242c19b75b88a3878d561d9e9"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetolight.json",
+              "sha256": "57587c106e0beaaea8362e5b529d762eae78391b22403d200d532cc99f4302bc"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-order",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-order",
+        "evidence": {
+          "numericId": 104345,
+          "name": "「秩序」的指引",
+          "nameEn": "Guide to Order",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoorder.json",
+              "sha256": "c045e6b3e235213f11fd6fa52019ef578c08524f1bd569fc32ca7e0bb40adf28"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoorder.json",
+              "sha256": "dd9bbfc38b72a3a8a72b425bc48196e879117e8ea7019fb3d659d96282386385"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-praxis",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-praxis",
+        "evidence": {
+          "numericId": 104336,
+          "name": "「笃行」的指引",
+          "nameEn": "Guide to Praxis",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetopraxis.json",
+              "sha256": "652139bd03ed1dd90b712c4d9dc83eb953b621b4969e1d3da900c1cb26f91fe0"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetopraxis.json",
+              "sha256": "0816156d2f113b7d5f1cfab3abcbea9db843b070bbe6f66802a5147b628469f1"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-prosperity",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-prosperity",
+        "evidence": {
+          "numericId": 104311,
+          "name": "「繁荣」的指引",
+          "nameEn": "Guide to Prosperity",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoprosperity.json",
+              "sha256": "dd85215cad454db46f9daa9b42a9acf6043899280f6eb29fc22a8bea3a2592c7"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoprosperity.json",
+              "sha256": "ee9ee7cc6c00da56eb3bae13d7873c6bbe546ac0041342c5769e317436b833dd"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-resistance",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-resistance",
+        "evidence": {
+          "numericId": 104305,
+          "name": "「抗争」的指引",
+          "nameEn": "Guide to Resistance",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetoresistance.json",
+              "sha256": "0e8cbdde1f2d4703ae3446903e83750b4ee69b9b25fe80644454875cd3de2735"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetoresistance.json",
+              "sha256": "ccfdb56a6b40675fc8921ccc875954f649a16339b4d3e90ee8fef9a4b2da4372"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "guide-to-transience",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "guide-of-transience",
+        "evidence": {
+          "numericId": 104321,
+          "name": "「浮世」的指引",
+          "nameEn": "Guide to Transience",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/guidetotransience.json",
+              "sha256": "2d48923d79e360e6ccec6d82ff7757430ef201d285705afdd347b3bdf23759c6"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/guidetotransience.json",
+              "sha256": "34cc80e9f810066917072defd118d74247441c70fdf4e0489499f242bc6ef5db"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "oni-kabuto",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "onikabuto",
+        "evidence": {
+          "numericId": 101201,
+          "name": "鬼兜虫",
+          "nameEn": "Onikabuto",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/onikabuto.json",
+              "sha256": "f81cf5f9797fd02ad67149ee0a31d3de9cc36a1e052fa3e7fce6df5ca78a8f9e"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/onikabuto.json",
+              "sha256": "2a7bea30be08106212df702110763fe6016b8d488b487d9d3f7f106c3ade0666"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "slime-Condensate",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "slime-condensate",
+        "evidence": {
+          "numericId": 112002,
+          "name": "史莱姆凝液",
+          "nameEn": "Slime Condensate",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/slimecondensate.json",
+              "sha256": "4d16e9192de31d798aea6c1069fac36bc84e6a795b76569cc45a94fb24d5b20a"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/slimecondensate.json",
+              "sha256": "a3c7d879c98e588d8c08bb6f60ffa03a1634a0cabf8c1ff76fb507b27fa1a845"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "spectral-heart",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "suffused-core",
+        "evidence": {
+          "numericId": 112054,
+          "name": "浮游幽核",
+          "nameEn": "Spectral Heart",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/spectralheart.json",
+              "sha256": "f2a9f65c8422afefd615f1b81b2712d9978412d76ab1b3e49ea00657046e9091"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/spectralheart.json",
+              "sha256": "23e91ab2bd50afc713b5680eb63a4ad0aa3c161da1656eb936a82274115d15fb"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "spectral-husk",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "floating-core",
+        "evidence": {
+          "numericId": 112053,
+          "name": "浮游干核",
+          "nameEn": "Spectral Husk",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/spectralhusk.json",
+              "sha256": "f5747bb0387f33fa37a0212d60f550e32fc35a058e9c4b2b9ebab5418e747b6f"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/spectralhusk.json",
+              "sha256": "b68de11882ec3977242f5085a6bf2963c06eb7cb2675956cb92490c972ee4c70"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "material",
+      "sourceId": "spectral-nucleus",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "crystallizing-core",
+        "evidence": {
+          "numericId": 112055,
+          "name": "浮游晶化核",
+          "nameEn": "Spectral Nucleus",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/materials/spectralnucleus.json",
+              "sha256": "37d380dcd077fc9345b09f420e7f878c8f22c9a1cfd2cd2ee82a540847124c9b"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/materials/spectralnucleus.json",
+              "sha256": "1e720a34bdb0fa89c789412756c7ff3b6cf5cfb20015c751f3e3ce77da5b1dde"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "character",
+      "sourceId": "sara",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "kujou-sara",
+        "evidence": {
+          "numericId": 10000056,
+          "name": "九条裟罗",
+          "nameEn": "Kujou Sara",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/characters/kujousara.json",
+              "sha256": "0853cbe367042c3b5fe084de0e8fa738f546080b1132a6cd57ecbababc85d5e1"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/characters/kujousara.json",
+              "sha256": "8eff59d4e41b1d18988980c2d02314cf46426d85d6b31953f2e7a1b64dacb8ef"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    },
+    {
+      "kind": "character",
+      "sourceId": "shinobu",
+      "status": "identity-reviewed",
+      "approved": {
+        "targetId": "kuki-shinobu",
+        "evidence": {
+          "numericId": 10000065,
+          "name": "久岐忍",
+          "nameEn": "Kuki Shinobu",
+          "sources": [
+            {
+              "sourcePath": "src/data/English/characters/kukishinobu.json",
+              "sha256": "9d92d86e4e94bc6c41ee9ab70683cee2ada0d41deafe9f3cd19164c923918013"
+            },
+            {
+              "sourcePath": "src/data/ChineseSimplified/characters/kukishinobu.json",
+              "sha256": "2cc03b3e98168002e3b693ef166ff7439afa4fb1bc4a40c1ff1f016cb755cb12"
+            }
+          ]
+        }
+      },
+      "recipeReviewed": false,
+      "quantityReviewed": false
+    }
+  ],
+  "changedPointers": 498,
+  "before": {
+    "missingMaterialIds": 74,
+    "missingMaterialReferences": 1775,
+    "missingCharacterIds": 4,
+    "materialReferences": 5400
+  },
+  "after": {
+    "missingMaterialIds": 53,
+    "missingMaterialReferences": 1279,
+    "missingCharacterIds": 2,
+    "materialReferences": 5400
+  },
+  "locallyApplied": true,
+  "cmsWrites": false,
+  "cloudWrites": false,
+  "sourceAdvanced": false,
+  "publishable": false,
+  "remainingMaterialIds": [
+    "alien-life-conjecture",
+    "artificed-spare-clockwork-component",
+    "basalt-pillar",
+    "blazing-ossiphogus-scale",
+    "brilliant-chrysanthemum",
+    "cloudseam-scale",
+    "crown-of-insight",
+    "crystalline-bloom",
+    "crystalline-cyst-dust",
+    "empyrean-reflection",
+    "everamber",
+    "evergloom-ring",
+    "famed-handguard",
+    "foundational-order",
+    "fungal-spores",
+    "golden-crown-of-the-primordial-sea",
+    "golden-raven-insignia",
+    "golden-wolf-instructor",
+    "guide-to-kindling",
+    "henna-berry",
+    "hurricane-seed",
+    "jalid",
+    "juvenile-fang",
+    "juvenile-jade",
+    "light-guiding-tetrahedron",
+    "lumidouce-bell",
+    "majestic-hooked-beak",
+    "marionette-core",
+    "meaning-of-aer-aeons",
+    "nilotpala-lotus",
+    "overripe-flamegranate",
+    "perpetual-caliber",
+    "philosophies-of-kindling",
+    "pseudostamens",
+    "puppet-strings",
+    "quelled-creepers",
+    "riftborn-regalia",
+    "sango-pearl",
+    "sealed-scroll",
+    "seasoned-fang",
+    "silver-raven-insignia",
+    "smoldering-pearl",
+    "sparkling-fruitsand",
+    "sparks-fruit",
+    "talisphere",
+    "teachings-of-kindling",
+    "thunderclap-fruitcore",
+    "transoceanic-chunk",
+    "transoceanic-pearl",
+    "treasure-hoarder-insignia",
+    "tyrants-fang",
+    "water-that-does-not-flow",
+    "water-that-failed-to-transcend"
+  ],
+  "remainingCharacterIds": [
+    "mualani",
+    "ororon"
+  ]
+}
