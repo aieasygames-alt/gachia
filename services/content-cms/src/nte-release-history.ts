@@ -206,6 +206,7 @@ async function readCompletedNteContinuation(proof: Proof, depth: number): Promis
 export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
   if (value.kind === 'nte_reconstructed_source_checkpoint') return readNteSourceCheckpoint(proof)
+  if (value.kind === 'nte_genshin_reviewed_collection_source_index_v1') return (await import('./genshin-collection-history')).readGenshinCollectionSource(proof, readNteSourceIndex, depth)
   if (value.kind === 'nte_genshin_preserved_code_source_index_v1') return (await import('../../../scripts/genshin-code-history.mjs')).readGenshinCodeSource(proof, readNteSourceIndex, depth)
   if (['nte_restored_main_source_index', 'nte_main_material_consumer_source_index_v1'].includes(value.kind)) return (await import('./main-content-restoration')).readRestoredMainSources(proof)
   if (value.kind === 'nte_adsense_infrastructure_source_index') return readAdsenseInfrastructureSource(proof, readNteSourceIndex, depth)
