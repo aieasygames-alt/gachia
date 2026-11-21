@@ -3,6 +3,7 @@ import { APIError } from 'payload'
 import path from 'node:path'
 import { MAX_SNAPSHOT_BYTES } from './legacy-intake'
 import { reviewCollections } from './review-collections'
+import { genshinReviewCollections } from './genshin-review-collections'
 import { draftMergeCollections } from './draft-merge-collections'
 import { mergeWorkflowEvents } from './merge-workflow-events'
 import { isDesktopNewGuide, validateDesktopNewGuideIdentity } from './desktop-new-guide'
@@ -19,6 +20,7 @@ const staff: Access = ({ req }) => hasRole(req.user, ['admin', 'editor', 'review
 export function collections(directory: string, options: { secureCookies?: boolean; postgres?: boolean } = {}): CollectionConfig[] {
   return [
     ...reviewCollections(options.postgres),
+    ...genshinReviewCollections(),
     ...draftMergeCollections(),
     mergeWorkflowEvents(),
     {

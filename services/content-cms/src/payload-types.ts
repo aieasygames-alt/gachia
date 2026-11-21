@@ -71,6 +71,7 @@ export interface Config {
     'review-runs': ReviewRun;
     'review-decisions': ReviewDecision;
     'editorial-drafts': EditorialDraft;
+    'genshin-review-decisions': GenshinReviewDecision;
     'draft-merge-proposals': DraftMergeProposal;
     'draft-merge-decisions': DraftMergeDecision;
     'merge-workflow-events': MergeWorkflowEvent;
@@ -105,6 +106,7 @@ export interface Config {
     'review-runs': ReviewRunsSelect<false> | ReviewRunsSelect<true>;
     'review-decisions': ReviewDecisionsSelect<false> | ReviewDecisionsSelect<true>;
     'editorial-drafts': EditorialDraftsSelect<false> | EditorialDraftsSelect<true>;
+    'genshin-review-decisions': GenshinReviewDecisionsSelect<false> | GenshinReviewDecisionsSelect<true>;
     'draft-merge-proposals': DraftMergeProposalsSelect<false> | DraftMergeProposalsSelect<true>;
     'draft-merge-decisions': DraftMergeDecisionsSelect<false> | DraftMergeDecisionsSelect<true>;
     'merge-workflow-events': MergeWorkflowEventsSelect<false> | MergeWorkflowEventsSelect<true>;
@@ -461,6 +463,26 @@ export interface ReviewRun {
   targetBatch: string;
   itemCount: number;
   manifest?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Independent, append-only reviews for the complete Genshin collection. Inspect the genshin-review candidate comparison and choose its runKey. Accept permits a candidate export; it never publishes or clears content holds. Any CMS drift requires a new review.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "genshin-review-decisions".
+ */
+export interface GenshinReviewDecision {
+  id: number;
+  runKey: string;
+  reviewItem: number | MigrationRecord;
+  action: 'accept-export' | 'reject';
+  note: string;
+  decisionKey: string;
+  revisionKey: string;
+  cmsKey: string;
+  actorID: string;
+  actorEmail: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -951,6 +973,23 @@ export interface EditorialDraftsSelect<T extends boolean = true> {
         id?: T;
       };
   editorNote?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "genshin-review-decisions_select".
+ */
+export interface GenshinReviewDecisionsSelect<T extends boolean = true> {
+  runKey?: T;
+  reviewItem?: T;
+  action?: T;
+  note?: T;
+  decisionKey?: T;
+  revisionKey?: T;
+  cmsKey?: T;
+  actorID?: T;
+  actorEmail?: T;
   updatedAt?: T;
   createdAt?: T;
 }
