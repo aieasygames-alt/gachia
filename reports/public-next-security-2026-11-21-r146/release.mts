@@ -35,7 +35,8 @@ import { materialConsumerContract } from '../../services/content-cms/src/materia
 
 const root = import.meta.dirname, repo = path.resolve(root, '../..'), owners = PUBLIC_RUNTIME_OWNERS
 const parent = { path: path.join(repo, 'reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json'), pin: '6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57' }
-const proxy = 'http://127.0.0.1:1087', buildNode = '/opt/homebrew/opt/node@22/bin/node'
+// Task-owned CONNECT forwarder; TLS remains end-to-end and verified.
+const proxy = 'http://127.0.0.1:18646', buildNode = '/opt/homebrew/opt/node@22/bin/node'
 const pnpm = '/opt/homebrew/lib/node_modules/pnpm/bin/pnpm.cjs'
 const app = (owner: string) => owner === 'main' ? 'web' : 'game-' + owner
 const environment = (owner: string) => owner === 'lvmeng' ? 'production' : ''
@@ -158,7 +159,7 @@ async function graph(p: any, sources: any, s: any) {
   const base = path.join(root, 'candidate-graph'), directory = existsSync(base) ? base + '-continued' : base
   mkdirSync(directory); mkdirSync(path.join(directory, 'home'))
   const module = path.join(directory, 'published-router.mjs'); writeFileSync(module, sources.routerCode, { flag: 'wx' })
-  assert.equal(digest(readFileSync(module)), sources.router.moduleSHA256)
+  assert.equal(digest(readFileSync(module)), migrationPinned(sources.router.moduleProof).moduleSHA256)
   const router = (await import(pathToFileURL(module).href)).default, configs: any = {}, origins: any = {}
   for (const owner of owners) {
     const row = s.owners[owner].candidate
