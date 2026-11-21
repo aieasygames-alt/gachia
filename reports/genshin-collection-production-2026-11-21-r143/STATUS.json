@@ -1,0 +1,17 @@
+{
+  "phase": "complete",
+  "productionAccepted": true,
+  "sourceAdvanced": true,
+  "cmsEditingSourceAdvanced": false,
+  "candidateVersion": "c76c9d57-f814-410c-843a-1dcef57412e3",
+  "deploymentId": "8586474e-c106-495a-a4d7-4b2f2b5f4348",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "delivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/delivery.json",
+    "pin": "ca30afc84398fe370c551d63e7c96b747fa413037db4864b1275be166b808e9f"
+  },
+  "observedAt": "2026-11-21T08:18:28.503874+00:00"
+}

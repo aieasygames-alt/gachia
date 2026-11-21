@@ -1,0 +1,22 @@
+{
+  "deployment": {
+    "deploymentId": "8586474e-c106-495a-a4d7-4b2f2b5f4348",
+    "service": "gachia-game-genshin",
+    "versionId": "c76c9d57-f814-410c-843a-1dcef57412e3",
+    "releaseKey": "27e4e718d6e1e60c55eaa6817a34066f9a853aa02e610d13bdbbd9624393f0dc",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "55443a10bb48178486ce2e1fb1f87fe472d1b922f7d91abdaac0395c3b941c25",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "03c3989b5a3582f21f1e0aa4f6c48eed4c8d340f964d5155623f84316ae24645",
+        "bytes": 469
+      }
+    }
+  },
+  "versionId": "c76c9d57-f814-410c-843a-1dcef57412e3",
+  "releaseKey": "27e4e718d6e1e60c55eaa6817a34066f9a853aa02e610d13bdbbd9624393f0dc"
+}

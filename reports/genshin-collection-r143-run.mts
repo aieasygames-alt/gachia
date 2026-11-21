@@ -1,4 +1,4 @@
-// Fixed R139 code/resource publication. Content comes exclusively from published R134 A.
+// R143 publishes the independently reviewed R142 collection with exact R139 recovery.
 import assert from 'node:assert/strict'
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'

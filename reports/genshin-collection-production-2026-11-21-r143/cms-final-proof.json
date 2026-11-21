@@ -1,0 +1,20 @@
+{
+  "proof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/cms-final.json.gz",
+    "pin": "0f2fb671231c3e44c729ab1b0d1d1543e4b8d8a99dc09b17b03d60cdca612db2"
+  },
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/delivery-final.json",
+    "pin": "6e3ae59eb8f2e6d4284ea88d59f20837ca87a2c328e6adbcb7834d4f46276907"
+  },
+  "parentSnapshot": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/cms-final.json.gz",
+    "pin": "908e9fa96d2e654e92ef9edf64f921e4bfc36092c2aa83b512f86f454fbfb830"
+  },
+  "records": 2880,
+  "publishedRead": 2880,
+  "stableDoubleRead": true,
+  "exactR142AfterMatch": true,
+  "draftSetSHA256": "18c51e0e78cf145967c67eccfc3847e254b155cf515a2e0054ea23aeba5b0776",
+  "replayedContentWrites": 0
+}

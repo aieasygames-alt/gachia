@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-21T07:05:09.630Z",
+  "previousExpiry": "2026-11-21T01:37:09.932Z",
+  "expiry": "2026-11-21T08:05:08.613Z",
+  "grant": "refresh_token",
+  "endpoint": "https://dash.cloudflare.com/oauth2/token",
+  "installedWranglerSHA256": "028a1b0d560594692aa44bda69079d700617164bf7d4de93a4ba3aa5b401ff1c",
+  "scopeSetUnchanged": true,
+  "credentialResponseArchived": false,
+  "credentialConfigOnly": true,
+  "authPOSTs": 1,
+  "workerWrites": 0,
+  "retried": false,
+  "expirySpoofed": false
+}

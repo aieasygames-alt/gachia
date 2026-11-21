@@ -1,6 +1,14 @@
 # Payload 全内容实施队列
 
-## 当前开发完成状态（2026-11-21 R142：结构独立审核、完整集合导出及本地全链路验收完成）
+## 当前生产完成状态（2026-11-21 R143：原神审核后完整集合已正式上线）
+
+原神 Worker 已正式更新为 `c76c9d57-f814-410c-843a-1dcef57412e3`，deployment `8586474e-c106-495a-a4d7-4b2f2b5f4348`，100% 流量。精确提交 `5f6151d0a4cc53d21f10e5519d6a78a96370e221` 的[完整 CI 44879215838](https://github.com/aieasygames-alt/gachia/actions/runs/44879215838)通过，复用 R142 完整构建且 Worker 输入不变；候选/恢复 1,995/1,743 项云预览及相同规模切流前复验通过，两轮公网 Router 各 1,960 项通过。仅一次原神正式部署，其余 5 个生产与 4 个 staging 服务的部署和配置保持；兼容恢复 `43f0beb3-59ae-4b36-8c9c-505ab24456eb` 已验证，未实际回滚。
+
+完整导出与 221 条既有独立审核实际用于本次发布，没有重放 42 草稿、179 暂存或决定。上线集合含 269 材料、117 角色、90 关系、5,490 引用；新增 84 材料、玛拉妮/欧洛伦和关系/数值修正，三份编辑源及一份派生角色摘要变化，其余 111 来源保持。Hu Tao、异环、Zero、27 材料及 441 引用删除状态和攻略增量保留。页面、JSON、搜索、Main 聚合与兼容资源正确，83 份其他游戏 JSON 保持。
+
+当前完整来源：[R143 source-index.json](../reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json)，pin `6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57`；真实结构集合读取器重开通过，115 来源、`allOwnersCurrent=true`。见 [完成回执](../reports/genshin-collection-production-2026-11-21-r143/EXECUTION.md)和[接续交付](../reports/genshin-collection-production-2026-11-21-r143/delivery.json)。本批只读 CMS 四次导出均一致，通用 content-records 编辑源、版本、hold 和 provenance 未推进。下一批从此 R143 A 与 `cms-final.json.gz` 接续，独立处理新实体/关系等结构集合的 CMS 编辑源受控推进，不重放草稿、暂存、审核和部署，不把旧 R139 A 或 checkout 当作当前线上。Next.js 16.4.2 安全修复独立待办；绿梦保持中文范围。
+
+## 前批开发完成状态（2026-11-21 R142：结构独立审核、完整集合导出及本地全链路验收完成）
 
 已从 R141 写后快照和既有批次接续，2,880 条内容双读完全匹配，42 草稿、179 结构暂存均没有重放。新 `genshin-collection-review-v1` 合同在真实 CMS 中完成 221 条不可变比较及逐项接受导出决定；reviewer-only、追加式、绑定精确证据/revision/CMS 前态，漂移、越权、伪造和重复决定均拒绝。仅新增一张审核决定表，不放宽通用编辑器；内容、版本、原始来源、旧审核和媒体保持。重复 stage/decide 新增均为 0。最终安装源码 `556a51a` 已标准构建、完整文件校验、冷备实际恢复；审核表单创建时隐藏服务器生成字段，保存后只读展示。
 
@@ -26,7 +34,7 @@
 
 下一批先核对 R140 `installed-intake-result.json` 及 `cms-after.json.gz` 与当前真实 CMS；旧输入/审核包是写入前状态，不能重放 42 次 PATCH。继续受保护来源字段、关系迁移与新实体的安装导入，再接数值/关系/新实体审核、完整消费者和兼容恢复合同。当前本地与 A 的 11 份差异是此前 10 份旧差异加 R135 有意修改的关系源，均保留；不要把 checkout 当作正式 A。正式来源仍是下方 R139，pin 不变，本批 0 次审核发布、0 次 Worker 部署、未推进来源。绿梦保持中文范围。
 
-## 当前生产完成状态（2026-11-20 R139：原神 Worker 代码及图片资源正式发布完成）
+## 前批生产完成状态（2026-11-20 R139：原神 Worker 代码及图片资源正式发布完成）
 
 原神 Worker 已正式更新为 `882906a4-328a-4a3c-ba3a-5e6130a8ed99`，deployment `c8ea00a0-aafa-4ce2-83e9-7402da34610a`，100% 流量。本批仅一次原神正式部署，其余 9 个生产/staging 服务的部署与设置保持。完整 CI [44739474406](https://github.com/aieasygames-alt/gachia/actions/runs/44739474406) 对应精确执行提交 `a85e5a67a28f9da905ad98702729b9e99a7338d1`；完整构建复用差异证明、候选/兼容恢复封存、云模块身份、正式切流和来源推进均完成。见 [R139 完成回执](../reports/genshin-code-production-2026-11-20-r139/EXECUTION.md)及[交付索引](../reports/genshin-code-production-2026-11-20-r139/delivery.json)。
 

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "deliveryPin": "ca30afc84398fe370c551d63e7c96b747fa413037db4864b1275be166b808e9f",
+  "evidencePinsChecked": 22,
+  "closeoutDocChecks": 39,
+  "cmsRecords": 2880,
+  "productionDeployments": 1,
+  "workerUploads": 2,
+  "observedAt": "2026-11-21T08:20:14.545764+00:00"
+}
