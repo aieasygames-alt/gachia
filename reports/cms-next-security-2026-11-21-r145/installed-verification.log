@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Read-only production observation failed
+    at <anonymous> (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T110820Z-cms-next-security-r145-db547bec/services/content-cms/scripts/genshin-editing-sync.ts:32:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async Promise.all (index 4)
+    at async <anonymous> (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T110820Z-cms-next-security-r145-db547bec/services/content-cms/scripts/genshin-editing-sync.ts:38:27) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v25.9.0

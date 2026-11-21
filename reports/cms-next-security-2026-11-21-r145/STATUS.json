@@ -1,0 +1,13 @@
+{
+  "batch": "R145",
+  "status": "complete",
+  "delivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-next-security-2026-11-21-r145/delivery.json",
+    "pin": "071892cdba0b18e5dd0dfb8a6efadac2107bfcc48a8f4af4d315d2da9852ab57"
+  },
+  "sourceCommit": "db547bec533314a22f58aa6dbbe9f5651a820905",
+  "cmsRecords": 2966,
+  "contentWrites": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0
+}

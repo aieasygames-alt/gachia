@@ -1,0 +1,87 @@
+{
+  "observedAt": "2026-11-21T11:15:09.206781+00:00",
+  "adminLoginStatus": 200,
+  "noindexNofollow": true,
+  "poweredByHeaderAbsent": true,
+  "staticAssets": [
+    {
+      "route": "/_next/static/chunks/01ja9mzq2f05g.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/0dju8jnt56a94.css",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/0tu_w0iqxqaxo.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/21gmet8qh03wo.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/21laz-ml0y1ns.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/233f5248h-r55.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/27_wfkzqjoenc.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/3ebvnk7qs9043.css",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/3lykqir-kmp1f.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/3naedwr5im4nr.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/3rs21j5_p3_mo.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/turbopack-077hmtqrhcoji.js",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/media/payload-favicon-dark.0kmli3k-gdxnc.png",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/media/payload-favicon-light.1cq1ouprfvl1v.png",
+      "status": 200
+    }
+  ],
+  "anonymousAccess": [
+    {
+      "route": "/api/content-records",
+      "status": 403
+    },
+    {
+      "route": "/api/content-records/versions",
+      "status": 403
+    },
+    {
+      "route": "/api/media",
+      "status": 403
+    }
+  ],
+  "healthStatus": 200,
+  "health": {
+    "status": "ready"
+  },
+  "writes": 0
+}

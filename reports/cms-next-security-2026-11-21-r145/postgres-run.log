@@ -1,0 +1,11 @@
+Running: exec tsx scripts/unified-migration-check.ts
+Running: exec payload migrate
+Running: exec payload migrate
+Running: exec tsx --test tests/payload.test.ts
+Running: exec tsx --test tests/editorial-lifecycle.test.ts
+Running: exec tsx --test tests/unified-payload.test.ts
+Running: exec payload migrate
+Running: exec tsx scripts/editor-admin.ts
+Running: exec tsx scripts/editor-admin.ts
+Running: exec tsx scripts/unified-http-fixture.ts
+PostgreSQL editor smoke passed (15 groups); temporary services and credentials removed.

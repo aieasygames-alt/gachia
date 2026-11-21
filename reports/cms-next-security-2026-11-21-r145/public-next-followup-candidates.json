@@ -1,0 +1,26 @@
+{
+  "readOnlyPreparation": true,
+  "candidates": [
+    {
+      "version": "15.5.29",
+      "available": true,
+      "engines": {
+        "node": "^18.18.0 || ^19.8.0 || >= 20.0.0"
+      },
+      "integrity": "sha512-93AMszTCdi9Az7fD5VzcWy46SHCdQF45+i53K0LpDc4dDXCwB9P1SxP1wBYZKW6dF3HJnz41jyEni1vmgCluiw=="
+    },
+    {
+      "version": "15.5.30",
+      "available": false,
+      "status": 404
+    },
+    {
+      "version": "15.5.31",
+      "available": false,
+      "status": 404
+    }
+  ],
+  "advisories": {},
+  "sourceChanges": 0,
+  "workerUploads": 0
+}

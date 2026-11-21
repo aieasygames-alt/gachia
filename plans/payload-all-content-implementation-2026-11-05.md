@@ -1,6 +1,14 @@
 # Payload 全内容实施队列
 
-## 当前完成状态（2026-11-21 R144：R143 收尾已推送，CMS 编辑源已同步）
+## 当前完成状态（2026-11-21 R145：本机 CMS Next.js 安全升级完成）
+
+常驻 CMS 已由 Next.js **16.4.2 → 16.4.6**，Payload 3.92.1 / React 19.2.6 保持；精确源码 `db547bec533314a22f58aa6dbbe9f5651a820905`，完整 CI [44897652258](https://github.com/aieasygames-alt/gachia/actions/runs/44897652258)成功。官方目标与完整 CMS 锁文件 359 包公告查询为空，仅 Next 相关依赖改变。标准构建、类型检查、本地 623/623（无跳过）、隔离 PostgreSQL/HTTP 15 组通过。新安装已校验完整文件/依赖，冷备真实恢复及旧/新应用往返切换通过。
+
+升级前后 2,966 条 CMS draft/published 与 R144 完全一致；43 表、序列和媒体完整指纹保持。新封存安装的来源读者及 476 条原神编辑源只读核验通过，六个生产服务 deployment/version 保持。**本批 0 内容/审核写入、0 schema 迁移、0 Worker 上传、0 正式部署。** 初次只读控制面 401 已确认是本机 OAuth 到期，刷新现有登录后复核成功；原失败日志保留。见 [R145 完成回执](../reports/cms-next-security-2026-11-21-r145/EXECUTION.md)和[接续交付](../reports/cms-next-security-2026-11-21-r145/delivery.json)。
+
+下一批优先修复公开站 Next.js **15.5.28 → 已核验的 15.5.29 候选**，保留 deferred-initial patch/OpenNext，独立验收受影响 owner 构建、消费者、兼容恢复和受控发布；本机 CMS 升级不能替代公开 Worker 升级。内容仍从 [R143 正式来源](../reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json)（pin `6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57`）和 [R144 CMS AFTER](../reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz)（pin `b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20`）接续，不重放草稿、暂存、审核、部署或同步；绿梦保持中文。可用约 21.80 GiB，完整游戏构建继续执行 14 GiB 标准/8 GiB 保留线。
+
+## 前批开发完成状态（2026-11-21 R144：R143 收尾已推送，CMS 编辑源已同步）
 
 R143 收尾提交 `95f26d9` 已推送至 `origin/codex/payload-unified-maintenance`，完整 CI 44887084808 成功；CMS 同步实现 `0d0a5d4` 完整 CI 44888535920 成功，安装路径修正版 `dbc87d4` 的[完整 CI 44889727050](https://github.com/aieasygames-alt/gachia/actions/runs/44889727050)也已成功。已安装精确源码、冷备并完成实际恢复；两次安装前后数据库完整表指纹一致，无 schema 迁移。
 

@@ -1,0 +1,18 @@
+{
+  "cms": {
+    "tests": 623,
+    "pass": 623,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "cmsTestDurationMs": 637380.494417,
+  "cmsTypecheckExit": 0,
+  "standardNextBuild": "passed",
+  "nextVersion": "16.4.6",
+  "postgresHTTPGroups": 15,
+  "postgresAllPassed": true,
+  "buildWarning": "Existing legacy-intake dynamic filesystem tracing warning; preserved with full log",
+  "knownNextSecurityWarningAfterBuild": false
+}

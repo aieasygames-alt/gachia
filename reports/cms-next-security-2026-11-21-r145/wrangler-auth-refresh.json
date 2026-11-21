@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "loggedIn": true,
+  "returnedFields": [
+    "loggedIn",
+    "authType",
+    "email",
+    "accounts",
+    "tokenPermissions"
+  ],
+  "command": "project-pinned Wrangler 4.148.0 whoami --json",
+  "workerWrites": 0,
+  "officialDocsFetch": "403; used installed whoami help"
+}

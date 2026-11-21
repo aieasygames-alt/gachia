@@ -1,0 +1,16 @@
+{
+  "publicSource": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "cmsEditingSnapshot": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+    "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+  },
+  "previousApplication": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T092816Z-genshin-editing-sync-r144-dbc87d40/application-manifest.json",
+    "pin": "063cd07982bfcf29cf8f75bba1186629d8f3417f83abd65d483488474f70ddfe"
+  },
+  "previousNextVersion": "16.4.2",
+  "unchangedPublicWorkspacePaths": []
+}

@@ -1,0 +1,14 @@
+{
+  "observedAt": "2026-11-21T11:19:25.510939+00:00",
+  "status": 401,
+  "success": false,
+  "errors": [
+    {
+      "code": 10000,
+      "message": "Authentication error"
+    }
+  ],
+  "oauthExpiration": "\"2026-11-21T10:12:02.088Z\"",
+  "requestMethod": "GET",
+  "cmsWrites": 0
+}
