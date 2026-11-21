@@ -82,10 +82,12 @@ test('independent complete-collection review and export on a real database', asy
         await payload.db.commitTransaction(transactionID)
       } catch (error) { await payload.db.rollbackTransaction(transactionID); throw error }
     })
-    await t.test('complete export preserves 112 published sources and exports all 476 entities', async () => {
+    await t.test('complete export preserves 111 sources, derives character summaries and exports all 476 entities', async () => {
       const result = await exportGenshinCollection(payload, input)
       assert.equal(result.sources.length, 115); assert.equal(result.overlays.length, 3); assert.equal(result.manifest.decisions.length, 221)
-      assert.equal(result.manifest.changedPaths.length, 3)
+      assert.equal(result.manifest.changedPaths.length, 4)
+      const summaries = JSON.parse(result.sources.find(row => row.sourcePath === 'packages/data/games/genshin/raw-character-summaries.json')!.text)
+      assert.equal(summaries.length, 117); assert(summaries.some((row: { id: string }) => row.id === 'mualani'))
       const count = (family: string) => JSON.parse(result.sources.find(row => row.sourcePath === `packages/data/games/genshin/raw-${family}.json`)!.text).length
       assert.equal(count('materials'), 269); assert.equal(count('characters'), 117); assert.equal(count('character-materials'), 90)
       for (const row of result.sources.filter(row => !result.manifest.changedPaths.includes(row.sourcePath))) assert.deepEqual(row, input.active.find(a => a.sourcePath === row.sourcePath))

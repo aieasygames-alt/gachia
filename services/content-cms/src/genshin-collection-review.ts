@@ -5,6 +5,7 @@ import { canonical } from './record-mapping'
 import { GENSHIN_INTAKE_PATHS, reconcileGenshinIntake, resumeGenshinIntake, type GenshinIntakeInput } from './genshin-bounded-intake'
 import { prepareGenshinStructuralStage, readGenshinStructuralStage } from './genshin-structural-stage'
 import { auditMaterialReleaseDependencies } from './material-release-dependencies'
+import { characterSummaries } from '../../../packages/data/scripts/generate-character-summaries.mjs'
 
 export { GENSHIN_COLLECTION_REVIEW, assertGenshinReviewCMS } from './genshin-review-store'
 import { GENSHIN_COLLECTION_REVIEW, assertGenshinReviewCMS, cmsKey } from './genshin-review-store'
@@ -108,15 +109,23 @@ export async function exportGenshinCollection(payload: Payload, input: GenshinIn
     }
     const complete = new Map(input.active.map(row => [row.sourcePath, row]))
     for (const source of review.plan.draftOverlays) complete.set(source.sourcePath, source)
+    // This public source is derived from the reviewed characters. Keeping its
+    // old bytes would hide the two new characters in Main membership and fail
+    // the frozen workspace's independent generator check.
+    const summaryPath = 'packages/data/games/genshin/raw-character-summaries.json'
+    assert(complete.has(summaryPath), 'Published character summary baseline required')
+    const summaryText = JSON.stringify(characterSummaries('genshin', JSON.parse(complete.get(GENSHIN_INTAKE_PATHS[2])!.text)), null, 2) + '\n'
+    complete.set(summaryPath, { sourcePath: summaryPath, text: summaryText, sha256: digest(summaryText) })
     const sources = [...complete.values()].sort((a, b) => a.sourcePath.localeCompare(b.sourcePath))
     const dependency = auditMaterialReleaseDependencies('genshin', sources)
     assert(dependency.dependencyClosureComplete, 'Incomplete collection dependencies')
     const changedPaths = sources.filter(row => input.active.find(a => a.sourcePath === row.sourcePath)!.sha256 !== row.sha256).map(row => row.sourcePath)
-    assert(changedPaths.every(sourcePath => GENSHIN_INTAKE_PATHS.includes(sourcePath)), 'Unbounded collection export')
+    assert(changedPaths.every(sourcePath => GENSHIN_INTAKE_PATHS.includes(sourcePath) || sourcePath === summaryPath), 'Unbounded collection export')
     await assertGenshinReviewCMS(payload, review.manifest.cmsKey, req)
     const manifest = { contract: 'genshin-reviewed-collection-export-v1', runKey: review.runKey, stageKey: review.stage.stageKey,
       inputKey: review.manifest.inputKey, sourceIndex: input.sourceIndex, cmsKey: review.manifest.cmsKey,
       sourcePins: sources.map(({ sourcePath, sha256 }) => ({ sourcePath, sha256 })), changedPaths,
+      derivedSources: [{ sourcePath: summaryPath, derivedFrom: GENSHIN_INTAKE_PATHS[2], generator: 'generate-character-summaries.mjs' }],
       decisions: decisions.map(({ decisionKey, revisionKey, actorID, actorEmail, action, note }) => ({ decisionKey, revisionKey, actorID, actorEmail, action, note })).sort((a, b) => a.revisionKey.localeCompare(b.revisionKey)),
       dependency: { auditKey: dependency.auditKey, materialDefinitions: dependency.materialDefinitions,
         materialReferences: dependency.materialReferences, complete: dependency.dependencyClosureComplete },

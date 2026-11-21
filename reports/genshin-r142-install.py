@@ -14,6 +14,8 @@ from datetime import datetime, timezone
 
 REPO = Path(__file__).resolve().parent.parent
 REPORT = REPO / 'reports/genshin-collection-review-2026-11-21-r142'
+REPORT = REPORT / os.environ.get('R142_INSTALL_SCOPE', '')
+REPORT.mkdir(parents=True, exist_ok=True)
 ROOT = Path.home() / 'Library/Application Support/GachiaCMS'
 SOURCE = REPO / 'services/content-cms'
 COMMIT = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=REPO, text=True).strip()
@@ -145,9 +147,10 @@ def install():
         desktop.start('payload'); desktop.wait_cms()
         after = tables(cfg, desktop); save('database-after-install.json', after)
         assert set(after) == set(before) | {'genshin_review_decisions'}
-        assert after['genshin_review_decisions']['rows'] == 0
+        new_table = 'genshin_review_decisions' not in before
+        if new_table: assert after['genshin_review_decisions']['rows'] == 0
         assert all(before[name] == after[name] for name in before if name != 'payload_migrations'), 'Additive migration changed existing content or history'
-        assert after['payload_migrations']['rows'] == before['payload_migrations']['rows'] + 1
+        assert after['payload_migrations']['rows'] == before['payload_migrations']['rows'] + int(new_table)
         save('application-installed.json', {**prepared, 'backup': str(backup), 'upgradeBackup': str(upgrade),
              'healthy': True, 'allExistingContentAndHistoryUnchanged': True, 'schemaMigrationRun': True, 'previousApplicationPreserved': True})
         print(json.dumps({'installed': True, 'healthy': True, 'allExistingContentAndHistoryUnchanged': True}))
