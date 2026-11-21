@@ -6,7 +6,7 @@ import { verifyNextDeferredPatch } from './verify-next-deferred-patch.mjs';
 
 export const RUNTIME_APPS = Object.freeze(['web', 'game-genshin', 'game-lvmeng', 'game-nte', 'game-azur-promilia']);
 export const APP_RUNTIME = Object.freeze({
-  next: '15.5.28',
+  next: '15.5.29',
   '@opennextjs/cloudflare': '1.20.13',
   wrangler: '4.148.0',
 });

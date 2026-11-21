@@ -5,7 +5,7 @@ import { dirname, join, resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const digest = value => createHash('sha256').update(value).digest('hex');
-const manifests = new Map(['15.5.18', '15.5.28'].map(version => [version,
+const manifests = new Map(['15.5.18', '15.5.28', '15.5.29'].map(version => [version,
   fileURLToPath(new URL(`../patches/next-${version}-deferred-initial.json`, import.meta.url)),
 ]));
 

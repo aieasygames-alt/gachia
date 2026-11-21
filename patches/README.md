@@ -1,25 +1,26 @@
 # Next deferred initial-value candidate
 
-## Current application runtime: Next 15.5.28
+## Current application runtime: Next 15.5.29
 
 All five Next apps (web, Genshin, Lvmeng, NTE and Azur Promilia) use the exact
-Next 15.5.28 / OpenNext 1.20.13 / Wrangler 4.148.0 combination after S1.2 local
-acceptance. Only the 15.5.28 patch is registered. Node 22+ is required.
-Router remains on its separate toolchain; this is not a cloud rollout.
+Next 15.5.29 / OpenNext 1.20.13 / Wrangler 4.148.0 combination.
+Only the 15.5.29 patch is registered. Node 22+ is required.
+Router remains on its separate toolchain. R146 cloud rollout status is recorded
+in `reports/public-next-security-2026-11-21-r146/EXECUTION.md`.
 
-`next-15.5.28-deferred-initial.patch` is a separately verified port of the same
+`next-15.5.29-deferred-initial.patch` is a separately verified port of the same
 four absent-prefetch fallback changes. The patch bytes happen to be identical;
 the distribution source digests are not. Its adjacent JSON manifest records
 the new original and patched digests. Never use a version range to select a
 manifest or reuse the old source hashes. The verifier resolves the app's package
-and accepts only one of the two exact reviewed versions, rejecting partial or
+and accepts only an exact reviewed version, rejecting partial or
 drifted sources. The application build gate additionally checks exact adapter/CLI
 versions and retains the caller's indexing mode.
 
 Local runtime and browser acceptance is documented in
 [S1.2 closeout](../plans/multi-game-s1-runtime-rollout-closeout-2026-10-23.md).
 Run `node scripts/require-app-runtime.mjs --all` to check all five apps.
-This is not cloud acceptance or approval to deploy the patch to production.
+The runtime gate alone does not establish cloud acceptance.
 Original source maps remain unchanged and must not be treated as accurate
 mappings of the four patched source files.
 

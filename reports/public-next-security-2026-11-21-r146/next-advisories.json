@@ -1,0 +1,47 @@
+{
+  "next": [
+    {
+      "id": 1248079,
+      "url": "https://github.com/advisories/GHSA-7qx7-33qx-rqx2",
+      "title": "Next.js: SVG rejection bypass in the image optimization",
+      "severity": "moderate",
+      "vulnerable_versions": ">=15.0.0 <=15.5.28",
+      "cwe": [
+        "CWE-1287"
+      ],
+      "cvss": {
+        "score": 0,
+        "vectorString": null
+      }
+    },
+    {
+      "id": 1248081,
+      "url": "https://github.com/advisories/GHSA-f3mh-rxg3-f5g2",
+      "title": "Next.js: HttpOnly cookie exposure through internal response header on Next.js Edge runtime routes",
+      "severity": "moderate",
+      "vulnerable_versions": ">=15.0.0 <=15.5.28",
+      "cwe": [
+        "CWE-200",
+        "CWE-201"
+      ],
+      "cvss": {
+        "score": 0,
+        "vectorString": null
+      }
+    },
+    {
+      "id": 1248082,
+      "url": "https://github.com/advisories/GHSA-pc58-hwjq-p385",
+      "title": "Next.js: Cross-client response injection and disclosure in self-hosted Next.js applications forwarding fetched responses",
+      "severity": "moderate",
+      "vulnerable_versions": "<=15.5.28",
+      "cwe": [
+        "CWE-444"
+      ],
+      "cvss": {
+        "score": 0,
+        "vectorString": null
+      }
+    }
+  ]
+}

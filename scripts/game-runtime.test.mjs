@@ -30,7 +30,7 @@ for (const game of ['nte', 'azur-promilia']) {
     const result = verifyAppRuntime(resolve(root, `apps/game-${game}`));
     assert.deepEqual(result.versions, APP_RUNTIME);
     assert.equal(result.patch.state, 'patched');
-    assert.equal(result.patch.nextVersion, '15.5.28');
+    assert.equal(result.patch.nextVersion, '15.5.29');
     assert.equal(result.cloudVerification, 'not_performed');
     const pkg = JSON.parse(readFileSync(resolve(root, `apps/game-${game}/package.json`), 'utf8'));
     assert.equal(pkg.scripts.build, 'node ../../scripts/require-app-runtime.mjs && next build');
@@ -40,14 +40,14 @@ for (const game of ['nte', 'azur-promilia']) {
 test('all five Next applications share one reviewed runtime and patch registration', () => {
   for (const app of RUNTIME_APPS) {
     const require = createRequire(resolve(root, `apps/${app}/package.json`));
-    assert.equal(require('next/package.json').version, '15.5.28', app);
+    assert.equal(require('next/package.json').version, '15.5.29', app);
     assert.equal(readResolvedPackage(require, '@opennextjs/cloudflare').version, '1.20.13', app);
     assert.equal(readResolvedPackage(require, 'wrangler').version, '4.148.0', app);
     assert.equal(verifyAppRuntime(resolve(root, `apps/${app}`)).status, 'reviewed_application_runtime');
     assert.equal(verifyNextDeferredPatch(dirname(require.resolve('next/package.json')), { requirePatched: true }).state, 'patched');
   }
   const pkg = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8'));
-  assert.deepEqual(Object.keys(pkg.pnpm.patchedDependencies), ['next@15.5.28']);
+  assert.deepEqual(Object.keys(pkg.pnpm.patchedDependencies), ['next@15.5.29']);
 });
 
 test('runtime inventory CLI reports all apps and rejects unknown flags', () => {
@@ -73,11 +73,11 @@ test('main CI verifies exact runtime before building or restoring an artifact', 
   }
 });
 
-test('Next 15.5.28 distribution patch reverses and reapplies exactly; partial, drift and wrong versions fail', () => {
+test('Next 15.5.29 distribution patch reverses and reapplies exactly; partial, drift and wrong versions fail', () => {
   const require = createRequire(resolve(root, 'apps/game-nte/package.json'));
   const next = dirname(require.resolve('next/package.json'));
-  const directory = mkdtempSync(resolve(tmpdir(), 'next15528-patch-'));
-  const manifest = JSON.parse(readFileSync(resolve(root, 'patches/next-15.5.28-deferred-initial.json'), 'utf8'));
+  const directory = mkdtempSync(resolve(tmpdir(), 'next15529-patch-'));
+  const manifest = JSON.parse(readFileSync(resolve(root, 'patches/next-15.5.29-deferred-initial.json'), 'utf8'));
   const patch = resolve(root, 'patches', manifest.patch);
   try {
     writeFileSync(resolve(directory, 'package.json'), readFileSync(resolve(next, 'package.json')));
@@ -99,15 +99,15 @@ test('Next 15.5.28 distribution patch reverses and reapplies exactly; partial, d
     assert.throws(() => verifyNextDeferredPatch(directory), /Partial patch/);
     writeFileSync(resolve(directory, manifest.files[0].path), 'drift');
     assert.throws(() => verifyNextDeferredPatch(directory), /Source digest/);
-    writeFileSync(resolve(directory, 'package.json'), JSON.stringify({ name: 'next', version: '15.5.29' }));
+    writeFileSync(resolve(directory, 'package.json'), JSON.stringify({ name: 'next', version: '15.5.30' }));
     assert.throws(() => verifyNextDeferredPatch(directory), /Exact Next version/);
   } finally { rmSync(directory, { recursive: true, force: true }); }
 });
 
-test('Next 15.5.28 patch changes only four absent-prefetch fallbacks, retaining actual prefetched values', () => {
+test('Next 15.5.29 patch changes only four absent-prefetch fallbacks, retaining actual prefetched values', () => {
   const require = createRequire(resolve(root, 'apps/game-nte/package.json'));
   const next = dirname(require.resolve('next/package.json'));
-  const manifest = JSON.parse(readFileSync(resolve(root, 'patches/next-15.5.28-deferred-initial.json'), 'utf8'));
+  const manifest = JSON.parse(readFileSync(resolve(root, 'patches/next-15.5.29-deferred-initial.json'), 'utf8'));
   assert.equal(manifest.files.length, 4);
   for (const file of manifest.files) {
     const source = readFileSync(resolve(next, file.path), 'utf8');

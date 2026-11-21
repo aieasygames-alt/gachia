@@ -1,0 +1,135 @@
+{
+  "at": "2026-11-21T12:00:23.738Z",
+  "scope": "public Next 15.5.28 -> 15.5.29; OpenNext and CMS unchanged",
+  "nextAdvisories": [
+    {
+      "id": 1248079,
+      "title": "Next.js: SVG rejection bypass in the image optimization",
+      "severity": "moderate",
+      "vulnerable_versions": ">=15.0.0 <=15.5.28",
+      "url": "https://github.com/advisories/GHSA-7qx7-33qx-rqx2",
+      "oldAffected": true,
+      "targetAffected": false
+    },
+    {
+      "id": 1248081,
+      "title": "Next.js: HttpOnly cookie exposure through internal response header on Next.js Edge runtime routes",
+      "severity": "moderate",
+      "vulnerable_versions": ">=15.0.0 <=15.5.28",
+      "url": "https://github.com/advisories/GHSA-f3mh-rxg3-f5g2",
+      "oldAffected": true,
+      "targetAffected": false
+    },
+    {
+      "id": 1248082,
+      "title": "Next.js: Cross-client response injection and disclosure in self-hosted Next.js applications forwarding fetched responses",
+      "severity": "moderate",
+      "vulnerable_versions": "<=15.5.28",
+      "url": "https://github.com/advisories/GHSA-pc58-hwjq-p385",
+      "oldAffected": true,
+      "targetAffected": false
+    }
+  ],
+  "targetNextAffected": 0,
+  "all": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 3,
+      "moderate": 5,
+      "high": 2,
+      "critical": 1
+    },
+    "dependencies": 953,
+    "devDependencies": 0,
+    "optionalDependencies": 0,
+    "totalDependencies": 953
+  },
+  "production": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 3,
+      "moderate": 0,
+      "high": 2,
+      "critical": 1
+    },
+    "dependencies": 338,
+    "devDependencies": 0,
+    "optionalDependencies": 0,
+    "totalDependencies": 338
+  },
+  "remaining": [
+    {
+      "package": "better-auth",
+      "severity": "high",
+      "title": "better-auth: Device login approval does not show the requesting client or permissions",
+      "vulnerable": ">=1.3.8-beta.3 <1.7.0-rc.3",
+      "patched": ">=1.7.0-rc.3",
+      "url": "https://github.com/advisories/GHSA-q84f-53jg-9ppm"
+    },
+    {
+      "package": "better-auth",
+      "severity": "low",
+      "title": "@better-auth/drizzle-adapter: Concurrent requests can exceed rate limits on PostgreSQL",
+      "vulnerable": ">=1.6.17 <1.7.7",
+      "patched": ">=1.7.7",
+      "url": "https://github.com/advisories/GHSA-44jh-23m7-hpcf"
+    },
+    {
+      "package": "@better-auth/kysely-adapter",
+      "severity": "low",
+      "title": "@better-auth/drizzle-adapter: Concurrent requests can exceed rate limits on PostgreSQL",
+      "vulnerable": ">=1.6.17 <1.7.0",
+      "patched": ">=1.7.0",
+      "url": "https://github.com/advisories/GHSA-44jh-23m7-hpcf"
+    },
+    {
+      "package": "@better-auth/drizzle-adapter",
+      "severity": "low",
+      "title": "@better-auth/drizzle-adapter: Concurrent requests can exceed rate limits on PostgreSQL",
+      "vulnerable": ">=1.6.17 <1.7.7",
+      "patched": ">=1.7.7",
+      "url": "https://github.com/advisories/GHSA-44jh-23m7-hpcf"
+    },
+    {
+      "package": "better-auth",
+      "severity": "high",
+      "title": "better-auth: OAuth Proxy lets an attacker sign in as another user",
+      "vulnerable": ">=1.5.0-beta.12 <1.7.7",
+      "patched": ">=1.7.7",
+      "url": "https://github.com/advisories/GHSA-r4xp-prcw-77qf"
+    },
+    {
+      "package": "better-auth",
+      "severity": "critical",
+      "title": "better-auth: OAuth state can be used as a Magic Link to sign in as another user",
+      "vulnerable": ">=1.4.0-beta.18 <1.7.7",
+      "patched": ">=1.7.7",
+      "url": "https://github.com/advisories/GHSA-965c-763c-88jm"
+    },
+    {
+      "package": "qs",
+      "severity": "moderate",
+      "title": "qs : qs.stringify with arrayFormat 'comma' throws an uncaught TypeError on array elements carrying a non-callable own toString (DoS)",
+      "vulnerable": ">=6.7.0 <=6.16.0",
+      "patched": ">=6.16.1",
+      "url": "https://github.com/advisories/GHSA-6pq8-jhm2-2vcw"
+    },
+    {
+      "package": "glob",
+      "severity": "moderate",
+      "title": "Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal",
+      "vulnerable": ">=9.0.0 <=14.0.1",
+      "patched": ">=14.0.2",
+      "url": "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4"
+    },
+    {
+      "package": "minimatch",
+      "severity": "moderate",
+      "title": "minimatch has potential denial of service via globparts amplification",
+      "vulnerable": ">=7.0.0 <11.0.1",
+      "patched": ">=11.0.1",
+      "url": "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+    }
+  ],
+  "limit": "Registry matches are not an exploit assessment. Account routes remain disabled. Other package upgrades require their own bounded compatibility work."
+}
