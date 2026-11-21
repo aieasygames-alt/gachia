@@ -41,6 +41,8 @@ const app = (owner: string) => owner === 'main' ? 'web' : 'game-' + owner
 const environment = (owner: string) => owner === 'lvmeng' ? 'production' : ''
 const save = (file: string, value: any) => migrationSave(root, file, value)
 const load = (file: string) => JSON.parse(readFileSync(path.join(root, file), 'utf8'))
+const preparedFile = () => existsSync(path.join(root, 'prepared-final.json')) ? 'prepared-final.json' : 'prepared.json'
+const modulesFile = () => existsSync(path.join(root, 'sealed-modules-final.json')) ? 'sealed-modules-final.json' : 'sealed-modules.json'
 const proof = (file: string) => ({ path: path.join(root, file), pin: digest(readFileSync(path.join(root, file))) })
 const treePin = (directory: string) => digest(JSON.stringify(artifactFiles(directory), null, 2) + '\n')
 function auth(minutes = 5) {
@@ -88,7 +90,7 @@ function localConfig(owner: string, config: any, artifact: string, module: strin
   return result
 }
 async function prepared() {
-  const p = load('prepared.json'), executor = captureUnifiedExecutorSource(repo)
+  const p = load(preparedFile()), executor = captureUnifiedExecutorSource(repo)
   assert.equal(executor.commit, p.commit)
   verifyMainConsumerSource(repo, p.workspaceProof, migrationPinned(load('baseline.json').active))
   for (const owner of owners) verifyAppRuntime(path.join(p.workspace, 'apps', app(owner)))
@@ -131,7 +133,15 @@ async function wanted(workspace: string, sources: any, owner: string, artifact: 
   assert(result.requests.length <= 2500); return result
 }
 async function local(p: any, sources: any, sealed: any, owner: string, role: string) {
-  const directory = path.join(root, 'local', owner, role); mkdirSync(directory, { recursive: true }); mkdirSync(path.join(directory, 'home'))
+  const base = path.join(root, 'local', owner, role), prior = path.join(base, 'responses/references.json')
+  if (existsSync(prior)) {
+    const proof = { path: prior, pin: digest(readFileSync(prior)) }, refs = recheckNteReferences(proof)
+    const expected = await wanted(p.workspace, sources, owner, sealed.owners[owner][role].artifact)
+    assert.deepEqual(refs.map((row: any) => [row.path, row.status]), expected.requests.map((row: any) => [row.path, row.status]))
+    console.log(JSON.stringify({ phase: 'local_reopened', owner, role, requests: refs.length })); return proof
+  }
+  const directory = existsSync(base) ? base + '-continued' : base
+  mkdirSync(directory, { recursive: true }); mkdirSync(path.join(directory, 'home'))
   const configs: any = {}, row = sealed.owners[owner][role]
   for (const dependency of owners) {
     const r = dependency === owner ? role : 'candidate', dep = sealed.owners[dependency][r]
@@ -145,7 +155,8 @@ async function local(p: any, sources: any, sealed: any, owner: string, role: str
   console.log(JSON.stringify({ phase: 'local', owner, role, requests: requests.requests.length })); return result.proof
 }
 async function graph(p: any, sources: any, s: any) {
-  const directory = path.join(root, 'candidate-graph'); mkdirSync(directory); mkdirSync(path.join(directory, 'home'))
+  const base = path.join(root, 'candidate-graph'), directory = existsSync(base) ? base + '-continued' : base
+  mkdirSync(directory); mkdirSync(path.join(directory, 'home'))
   const module = path.join(directory, 'published-router.mjs'); writeFileSync(module, sources.routerCode, { flag: 'wx' })
   assert.equal(digest(readFileSync(module)), sources.router.moduleSHA256)
   const router = (await import(pathToFileURL(module).href)).default, configs: any = {}, origins: any = {}
@@ -156,6 +167,9 @@ async function graph(p: any, sources: any, s: any) {
   }
   const requests = await nteRequests(p.workspace, 'router', 'candidate', undefined, false, sources.sources, undefined, sources.owners.main.directory)
   for (const owner of owners) for (const row of recheckNteReferences(s.publicReferences[owner])) {
+    // These paths already have complete per-owner direct/cloud/public checks.
+    // Keep the independent aggregate within its existing 2,500-request budget.
+    if (/^\/(?:_next|_games\/[^/]+\/_next)\//.test(row.path)) continue
     if (!requests.requests.some((wanted: any) => wanted.path === row.path)) requests.requests.push({ path: row.path, status: row.status })
   }
   assert(requests.requests.length <= 2500)
@@ -290,7 +304,7 @@ if (phase === 'baseline') {
   }
   save('sealed-modules.json', sealed); executor.verify()
 } else if (phase === 'local') {
-  const { p, executor } = await prepared(), sources = await readNteSourceIndex(parent), s = load('sealed-modules.json')
+  const { p, executor } = await prepared(), sources = await readNteSourceIndex(parent), s = load(modulesFile())
   const publicReferences: any = {}
   for (const owner of owners) for (const role of ['candidate', 'recovery']) s.owners[owner][role].local = await local(p, sources, s, owner, role)
   // Public paths are validated through the real production Router after every
@@ -298,11 +312,17 @@ if (phase === 'baseline') {
   for (const owner of owners) {
     const refs = recheckNteReferences(s.owners[owner].candidate.local).filter((row: any) => row.path !== '/robots.txt' && row.path !== '/sitemap.xml' &&
       !/^\/_next\//.test(row.path) && !/^\/data(?:-client|-manifest)?\//.test(row.path) && !(owner === 'main' && /^\/[^/]+\/nte\//.test(row.path)))
-    const directory = path.join(root, 'public-reference-' + owner); mkdirSync(directory)
+    const directory = path.join(root, 'public-reference-' + owner)
     // Save fresh, contiguous body indexes so the standard reader can independently reopen them.
     const localDirectory = path.dirname(s.owners[owner].candidate.local.path)
-    const normalized = refs.map((row: any, index: number) => { writeFileSync(path.join(directory, index + '.body'), readFileSync(path.join(localDirectory, row.bodyFile)), { flag: 'wx' }); return { ...row, bodyFile: index + '.body' } })
-    const bytes = Buffer.from(JSON.stringify(normalized) + '\n'); writeFileSync(path.join(directory, 'references.json'), bytes, { flag: 'wx' })
+    const normalized = refs.map((row: any, index: number) => ({ ...row, bodyFile: index + '.body' }))
+    const bytes = Buffer.from(JSON.stringify(normalized) + '\n')
+    if (existsSync(directory)) assert(readFileSync(path.join(directory, 'references.json')).equals(bytes), 'Public reference continuation changed')
+    else {
+      mkdirSync(directory)
+      refs.forEach((row: any, index: number) => writeFileSync(path.join(directory, index + '.body'), readFileSync(path.join(localDirectory, row.bodyFile)), { flag: 'wx' }))
+      writeFileSync(path.join(directory, 'references.json'), bytes, { flag: 'wx' })
+    }
     publicReferences[owner] = { path: path.join(directory, 'references.json'), pin: digest(bytes) }; recheckNteReferences(publicReferences[owner])
   }
   s.publicReferences = publicReferences; s.graph = await graph(p, sources, s); save('sealed.json', s); executor.verify()
@@ -373,7 +393,7 @@ if (phase === 'baseline') {
     save('completion.json', { status: 'production_accepted', policy: PUBLIC_RUNTIME_POLICY, nextVersion: '15.5.29', commit: p.commit, parent, active: p.active,
       executorCI: a.executorCI, accepted: a.accepted, before: a.before, after, promoted, deployments, publicProofs,
       aggregate: { path: path.join(root, 'public-aggregate/result.json'), pin: aggregate.evidenceSHA256 },
-      prepared: proof('prepared.json'), sealed: proof('sealed.json'), journal: proof('production.jsonl') })
+      prepared: proof(preparedFile()), sealed: proof('sealed.json'), journal: proof('production.jsonl') })
     save('aggregate-accepted.json', { path: path.join(root, 'public-aggregate/result.json'), pin: aggregate.evidenceSHA256 })
   }) } finally { await previewNetwork.close(); await publicNetwork.close() }
 } else if (phase === 'advance') {
