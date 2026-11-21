@@ -111,6 +111,10 @@ def prepare():
     for relative in sorted(release_files):
         assert relative in all_tracked, f'Review retired installed dependency before removing: {relative}'
         copy_exact(relative, release / relative)
+    dependency_spec = importlib.util.spec_from_file_location('r144_runtime_dependencies', REPO / 'reports/genshin-r144-runtime-dependencies.py')
+    dependencies = importlib.util.module_from_spec(dependency_spec)
+    dependency_spec.loader.exec_module(dependencies)
+    dependency_proof = save('runtime-dependencies.json', {'packages': dependencies.install_dependencies(release)})
     files = {str(p.relative_to(app)): sha(p) for folder in ['src', 'scripts', '.next'] for p in sorted((app / folder).rglob('*')) if p.is_file()}
     files.update({str(Path(p).relative_to('services/content-cms')): sha(app / Path(p).relative_to('services/content-cms')) for p in cms_files})
     manifest = {'schemaVersion': 1, 'sourceCommit': COMMIT, 'app': str(app), 'previousApp': str(previous),
@@ -120,6 +124,7 @@ def prepare():
     manifest_path.write_text(json.dumps(manifest, indent=2) + '\n'); os.chmod(manifest_path, 0o600)
     save('application-prepared.json', {'sourceCommit': COMMIT, 'app': str(app), 'previousApp': str(previous),
         'application': {'path': str(manifest_path), 'pin': sha(manifest_path)}, 'buildID': manifest['buildID'],
+        'runtimeDependencies': dependency_proof,
         'files': len(files), 'releaseFiles': len(release_files), 'databaseMigrationRequired': False})
     print(json.dumps({'prepared': True, 'app': str(app), 'files': len(files), 'releaseFiles': len(release_files)}))
 

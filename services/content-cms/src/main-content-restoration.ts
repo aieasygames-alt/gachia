@@ -25,6 +25,7 @@ import { captureUnifiedExecutorSource } from './unified-executor-source'
 import { readNteSourceCheckpoint } from './nte-source-checkpoint'
 import { nteLocalConfig, nteRequests, nteRuntimeConfig } from './nte-release-bundle'
 import { projectRoot } from './local-environment'
+import { sourceHistoryRepository } from './source-history-repository'
 import { freezeMainConsumerSource, verifyMainConsumerSource } from './main-consumer-source'
 import { materialConsumerContract, assertMaterialPageConsumer, assertMaterialSearchConsumer } from './material-consumer-contract'
 import { createUnifiedExecutorVerifier, verifyUnifiedCI } from './unified-production'
@@ -40,7 +41,7 @@ const previousProof = (value: any) => isConsumer(value) ? value.sourceIndex : va
 async function consumerSources(sourceIndex: Proof, workspace: Proof) {
   const sources = await (await import('./nte-release-history')).readNteSourceIndex(sourceIndex)
   assert.equal(sources.allOwnersCurrent, true, 'Main migration requires a complete current owner index')
-  const frozen = verifyMainConsumerSource(repo, workspace, sources.sources)
+  const frozen = verifyMainConsumerSource(sourceHistoryRepository(), workspace, sources.sources)
   return { ...sources, workspace: frozen.workspace, consumerMigration: true, frozenCommit: frozen.sourceCommit }
 }
 const githubToken = () => execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim()

@@ -12,6 +12,7 @@ import { readNteSourceIndex } from './nte-release-history'
 import { readGenshinCollectionReview } from './genshin-collection-review'
 import { GENSHIN_INTAKE_PATHS, type GenshinIntakeInput } from './genshin-bounded-intake'
 import { readPinnedUnifiedInput } from './unified-desktop'
+import { withSourceHistoryRepository } from './source-history-repository'
 
 type Proof = { path: string; pin: string }
 const pinned = (p: Proof): any => readPinnedUnifiedInput(p.path, p.pin)
@@ -22,11 +23,13 @@ const zipped = (p: Proof) => {
 export const GENSHIN_EDITING_SYNC = 'genshin-published-editing-sync-v1'
 export const editingRowsKey = (rows: any[]) => digest(canonical([...rows].sort((a, b) => String(a.id).localeCompare(String(b.id)))))
 
-export async function openGenshinEditingSync(deliveryProof: Proof) {
+export async function openGenshinEditingSync(deliveryProof: Proof, repository?: string) {
   const delivery = pinned(deliveryProof)
   assert.equal(delivery.kind, 'genshin-collection-production-delivery-r143')
   assert.equal(delivery.status, 'production_accepted_sources_observed')
-  const sources = await readNteSourceIndex(delivery.sourceIndex)
+  const sources = await (repository
+    ? withSourceHistoryRepository(repository, () => readNteSourceIndex(delivery.sourceIndex))
+    : readNteSourceIndex(delivery.sourceIndex))
   assert(sources.allOwnersCurrent)
   const completion = pinned(delivery.completion), q = pinned(delivery.qualification)
   assert.equal(completion.status, 'production_accepted')

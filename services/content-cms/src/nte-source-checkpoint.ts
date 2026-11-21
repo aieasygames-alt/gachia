@@ -13,15 +13,18 @@ import { migrationRouterModule } from '../../../scripts/genshin-migration-router
 import { readUnifiedSourceOwner } from '../../../scripts/unified-source-advance.mjs'
 import { readUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
 import { UNIFIED_SOURCE_OWNERS } from '../../../scripts/unified-historical-sources.mjs'
+import { sourceHistoryRepository } from './source-history-repository'
 import { projectRoot } from './local-environment'
 import { unifiedTree } from './unified-build'
 import { captureUnifiedExecutorSource } from './unified-executor-source'
 
 type Proof = { path: string; pin: string }
 const repo = path.resolve(projectRoot, '../..')
-const contractPath = path.join(repo, 'services/content-cms/recovery/nte-source-reconstruction-2026-11-17.json')
 const treePin = (directory: string) => digest(migrationJSON(artifactFiles(directory)))
-const contractProof = () => ({ path: contractPath, pin: digest(readFileSync(contractPath)) })
+const contractProof = () => {
+  const contractPath = path.join(sourceHistoryRepository(), 'services/content-cms/recovery/nte-source-reconstruction-2026-11-17.json')
+  return { path: contractPath, pin: digest(readFileSync(contractPath)) }
+}
 
 // This is a new, explicit trust checkpoint with a committed inventory. It never
 // claims that the deleted R119 bundle was read or that an old journal changed.
@@ -75,7 +78,7 @@ async function inputs() {
 
 function verifyWorkspace(value: any, sources: any[]) {
   assert(/^[a-f0-9]{40}$/.test(value.sourceCommit))
-  const tree = execFileSync('git', ['--no-replace-objects', 'ls-tree', '-r', '-z', value.sourceCommit], { cwd: repo, maxBuffer: 8 * 1024 * 1024 })
+  const tree = execFileSync('git', ['--no-replace-objects', 'ls-tree', '-r', '-z', value.sourceCommit], { cwd: sourceHistoryRepository(), maxBuffer: 8 * 1024 * 1024 })
     .toString().split('\0').filter(Boolean).map(line => { const [metadata, file] = line.split('\t'); return { metadata: metadata.split(' '), file } })
   const files = migrationPinned(value.files)
   assert.deepEqual(unifiedTree(value.workspace, '', true), files, 'Checkpoint workspace changed')

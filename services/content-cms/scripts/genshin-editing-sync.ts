@@ -21,7 +21,7 @@ const application = { path: options.get('--application')!, pin: options.get('--a
 verifyUnifiedInstalledApplication(root, options.get('--repo')!, options.get('--commit')!, application)
 const proof = { path: options.get('--delivery')!, pin: options.get('--delivery-pin')! }
 readPinnedUnifiedInput(proof.path, proof.pin)
-const opened = await openGenshinEditingSync(proof), plan = planGenshinEditingSync(opened)
+const opened = await openGenshinEditingSync(proof, options.get('--repo')!), plan = planGenshinEditingSync(opened)
 const cfg = readFileSync(path.join(homedir(), '.wrangler/config/default.toml'), 'utf8')
 const token = JSON.parse(cfg.match(/^oauth_token\s*=\s*("[^"\r\n]*")\s*$/m)![1])
 async function deployments() {

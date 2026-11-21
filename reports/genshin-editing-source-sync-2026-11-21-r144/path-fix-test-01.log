@@ -1,0 +1,40 @@
+[⣷] Pulling schema from database...
+[2K[1G[✓] Pulling schema from database...
+▶ published editing sync preserves real O, review history and unrelated content on a real database
+  ✔ a live editor lock blocks the whole maintenance transaction (1130.049125ms)
+  ✔ late failure rolls back all new entities, relation identities, values and completion marker (2543.849917ms)
+  ✔ ordinary admin and overrideAccess cannot forge a published baseline (35.168916ms)
+  ✔ sync imports 86 real entities and updates 390 records atomically, preserving O and flags (2711.4525ms)
+  ✔ repeat performs no content writes and preserves all record timestamps (1235.459333ms)
+  ✔ canonical relation exports against real A with zero deltas and retains legacy import O (1035.157125ms)
+  ✔ stale repeated sync refuses newer editorial changes (1012.387583ms)
+✔ published editing sync preserves real O, review history and unrelated content on a real database (35070.035ms)
+✔ Main consumer freeze preserves all A and rejects rehashed code/content substitutions (369.4175ms)
+✔ restoration binds approved content even when stale responses are rehashed or omitted (3.478208ms)
+✔ reconstruction retains every pinned source, rejecting omitted, duplicate and rehashed replacement content (4.603209ms)
+✔ a source checkpoint must identify all five currently active owners and the current Router deployment (0.873292ms)
+✔ installed history readers retain their repository across awaits without leaking to concurrent readers (54.521958ms)
+✔ real installed application verification: none (62.375209ms)
+✔ real installed application verification: settings (42.183542ms)
+✔ real installed application verification: linked-settings (42.7795ms)
+✔ real installed application verification: pin (40.7455ms)
+✔ real installed application verification: manifest-path (40.495042ms)
+✔ real installed application verification: commit (42.146459ms)
+✔ real installed application verification: build (41.936333ms)
+✔ real installed application verification: source (58.235041ms)
+✔ real installed application verification: missing-source (53.23ms)
+✔ real installed application verification: application (64.120375ms)
+✔ real installed application verification: release (59.5335ms)
+✔ real installed application verification: empty-release (40.803291ms)
+✔ real installed application verification: array-files (40.906ms)
+✔ real installed application verification: traversal (41.724541ms)
+✔ real installed application verification: digest (41.015375ms)
+✔ real installed application verification: late-change (80.84025ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 40774.093584
