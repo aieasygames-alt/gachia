@@ -1,0 +1,12 @@
+{
+  "status": "uploaded_module_verified_read_only",
+  "at": "2026-11-21T13:21:07.851Z",
+  "service": "gachia-game-lvmeng",
+  "versionId": "50812a8a-012f-428e-bb4b-780530181c09",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/cloud/lvmeng/candidate/reconciled-module/receipt.json",
+    "pin": "7602b70b54fd147d0c641915277404abd55d4e5996df75f9cdd0f1c21f0a0988"
+  },
+  "uploadProcessPID": 49655,
+  "duplicateUpload": false
+}

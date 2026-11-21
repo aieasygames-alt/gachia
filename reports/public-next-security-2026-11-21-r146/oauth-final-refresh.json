@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-21T14:20:11.933Z",
+  "protocol": "pinned Wrangler OAuth refresh_token grant",
+  "endpoint": "https://dash.cloudflare.com/oauth2/token",
+  "cliSHA256": "028a1b0d560594692aa44bda69079d700617164bf7d4de93a4ba3aa5b401ff1c",
+  "oldExpiration": "2026-11-21T14:25:16.588Z",
+  "expiration": "2026-11-21T15:20:10.748Z",
+  "workersWriteScope": true,
+  "scopeChanged": false,
+  "membershipStatus": 200,
+  "accountId": "e6472b6c6172a3ac1e1596ef100543ae",
+  "roles": [
+    "Super Administrator - All Privileges"
+  ],
+  "credentialsEmitted": false,
+  "workerWrites": 0
+}

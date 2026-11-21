@@ -1,0 +1,18 @@
+{
+  "policy": "public-next-15.5.29-preserved-content-v1",
+  "commit": "1c42921d322eab749d6c09bbd06b62c42145656f",
+  "parent": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "active": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/active.json",
+    "pin": "ffaebc908a6da04d6fa23db34cb59aa209a7a7faf19e0521fc1d3af6287918f1"
+  },
+  "workspaceProof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/frozen/workspace.json",
+    "pin": "41effc48b8ec9e519f25b0df6a42981215c3d26ff357c713a4b1897aa7cdaa9a"
+  },
+  "workspace": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/frozen/source",
+  "contentChanges": []
+}

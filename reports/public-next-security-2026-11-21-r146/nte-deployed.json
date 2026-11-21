@@ -1,0 +1,22 @@
+{
+  "deployment": {
+    "deploymentId": "de54d437-fbe2-47b2-98c6-e58e2bd48e5d",
+    "service": "gachia-game-nte",
+    "versionId": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+    "releaseKey": "da8a9fae59e0ac684ac39fca06dbe9686419a90c5087e707dd1d452e2045cf06",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "c2d4bc1e70d43a944442d30ad5901010f23fd3b19c6d99a1b5c8480e8708b86e",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "675aeae630cde93c5da5239146fa1d442f1616ca9f0405c90ac0ad7734cda2b5",
+        "bytes": 469
+      }
+    }
+  },
+  "versionId": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+  "releaseKey": "da8a9fae59e0ac684ac39fca06dbe9686419a90c5087e707dd1d452e2045cf06"
+}

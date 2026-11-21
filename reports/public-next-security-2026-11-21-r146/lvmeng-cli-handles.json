@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-21T13:22:06.337Z",
+  "pid": 49655,
+  "handles": [
+    {
+      "type": "Socket",
+      "destroyed": false
+    },
+    {
+      "type": "Socket",
+      "destroyed": false
+    },
+    {
+      "type": "TCP"
+    }
+  ]
+}

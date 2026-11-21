@@ -1,0 +1,146 @@
+{
+  "commit": "1c42921d322eab749d6c09bbd06b62c42145656f",
+  "parent": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "tool": {
+    "version": "4.148.0",
+    "bin": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/frozen/source/node_modules/.pnpm/wrangler@4.148.0_@cloudflare+workers-types@5.20261006.1_@types+node@25.6.0/node_modules/wrangler/bin/wrangler.js",
+    "cli": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/frozen/source/node_modules/.pnpm/wrangler@4.148.0_@cloudflare+workers-types@5.20261006.1_@types+node@25.6.0/node_modules/wrangler/wrangler-dist/cli.js",
+    "binSHA256": "780661a508810f3b65786895b1ca9aacbc4f55d329ae6b8c1e49ec8433569f77",
+    "cliSHA256": "028a1b0d560594692aa44bda69079d700617164bf7d4de93a4ba3aa5b401ff1c"
+  },
+  "owners": {
+    "genshin": {
+      "compatibility": {
+        "oldStaticPaths": 774,
+        "newStaticPaths": 98,
+        "forwardAdded": 768,
+        "recoveryAdded": 92
+      },
+      "candidate": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/genshin/candidate/upload.json",
+          "pin": "444df3000b658d29ffc9c4345edd1131351df6ea79698a2f3f43467afbacf76b"
+        },
+        "moduleSHA256": "ce3497c1856d50f50d55ad6fc2dea5bfcdac6325a094d79f6afcdc4e152f9686",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/genshin/candidate/artifact",
+        "artifactPin": "b8bf3b4e28324edc6be8f16b495012bd99394ecbf204c3adb83b489f79e3b1ef"
+      },
+      "recovery": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/genshin/recovery/upload.json",
+          "pin": "891f95427de6ba1f20643c771126cc0d3908e2152220705d4bae84d231d66a48"
+        },
+        "moduleSHA256": "2fc73e33a0647f52d675b5342df3c79c92ad94fa2063e2936c4372b10d988662",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/genshin/recovery/artifact",
+        "artifactPin": "edef32d9b2aba10cb51a3816856e8c6d85ec7ae055a54004e75b101ab1d60412"
+      }
+    },
+    "nte": {
+      "compatibility": {
+        "oldStaticPaths": 774,
+        "newStaticPaths": 100,
+        "forwardAdded": 768,
+        "recoveryAdded": 94
+      },
+      "candidate": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/nte/candidate/upload.json",
+          "pin": "aaa8a8f4511e5da82ec34a0c6cc79ad05045048e26f391a58b0e01026761f2e2"
+        },
+        "moduleSHA256": "ed3162e64f55e8ea0b4f01797e260f25165b76f1c7f4e179dc8bbcdb87e28a4e",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/nte/candidate/artifact",
+        "artifactPin": "6a7966882c8770989c71b0c654076334ed1599538f5f05fd477aa73220713b34"
+      },
+      "recovery": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/nte/recovery/upload.json",
+          "pin": "f347777b7c47694c42719c4c2f66ce730543bcf195b29804cb0fbe1442b236ff"
+        },
+        "moduleSHA256": "3d6673f554ce11c1c29ad39a258672c71eee0a52654f35724abce3d4452a6c16",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/nte/recovery/artifact",
+        "artifactPin": "7726b6fa6abd8a79d1d4784e255d79aa7c07b36fe865a28f3f7ba6992640406c"
+      }
+    },
+    "azur-promilia": {
+      "compatibility": {
+        "oldStaticPaths": 228,
+        "newStaticPaths": 70,
+        "forwardAdded": 224,
+        "recoveryAdded": 66
+      },
+      "candidate": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/azur-promilia/candidate/upload.json",
+          "pin": "fbae1dcb0cbc05adaad92ed7238fc5de77dec9cc53bef45bbe399eb1c5494a89"
+        },
+        "moduleSHA256": "ac06a12887d03019d794e03ef28106f1cadc669a7e158268a14479a6ccb50be2",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/azur-promilia/candidate/artifact",
+        "artifactPin": "478fcc995b932569da37fbfe7b8d12578afeb48dfb425c874558e14536429af5"
+      },
+      "recovery": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/azur-promilia/recovery/upload.json",
+          "pin": "0e093c43b3909961124ce553781dd9a3a359de77cd42c6db475899a9b20ec135"
+        },
+        "moduleSHA256": "adfc57d877570d002be865e24ba4904513f2c22a47489292c30ee79f03dee5d5",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/azur-promilia/recovery/artifact",
+        "artifactPin": "96458ab0b5c43720996577d09822ed0b9c22704f9273049ac54f749614b57fb6"
+      }
+    },
+    "lvmeng": {
+      "compatibility": {
+        "oldStaticPaths": 226,
+        "newStaticPaths": 70,
+        "forwardAdded": 222,
+        "recoveryAdded": 66
+      },
+      "candidate": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/lvmeng/candidate/upload.json",
+          "pin": "a8eb5b164c28898e1f03f50bce065abe944e1b32566c0a30217e07600b4b3094"
+        },
+        "moduleSHA256": "1c8ef664642916325241eafe31dfaa1e2c2a27772da2c8d6b4ca8c931e2f0251",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/lvmeng/candidate/artifact",
+        "artifactPin": "015729ff1eebcd7e154daee821e7d3fc6b1e1633ee23d04a6b3b02e8fde44134"
+      },
+      "recovery": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/lvmeng/recovery/upload.json",
+          "pin": "d10223d86f19489ea74e9043854a50ddad60b92c62d0e82cc5e0cced24b85fc6"
+        },
+        "moduleSHA256": "f4927287e1f20e4bcf4a4dd512a2f4370782dda62729b2cfec5804d3e71b2d74",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/lvmeng/recovery/artifact",
+        "artifactPin": "7e65eae18f060abc0eab1276ae194d07789409acb66db11c66af0c9f07fa6890"
+      }
+    },
+    "main": {
+      "compatibility": {
+        "oldStaticPaths": 1199,
+        "newStaticPaths": 132,
+        "forwardAdded": 1194,
+        "recoveryAdded": 127
+      },
+      "candidate": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/main/candidate/upload.json",
+          "pin": "540b7e9bdf33fad95b215b4f95021fc6333ac8d2a5041581927e6e6c14acf6a9"
+        },
+        "moduleSHA256": "fb8fa6a85d15a291e27b1ad3919067dd442d2c1247f1e74e739f7315bea2f743",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/main/candidate/artifact",
+        "artifactPin": "3c33e3e7002aa84399c2800c826b8a70196d6bcf134fb590b828a655a54ce42b"
+      },
+      "recovery": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/main/recovery/upload.json",
+          "pin": "2d7e46b1600176e246e2b612f22f939a4cb425071b189239b18d9de98e80f1e5"
+        },
+        "moduleSHA256": "76965d2fcb5bc09bcc13ebe1e4b1f44b98f78261baf328c7dd00b9e2e2b6db01",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed/main/recovery/artifact",
+        "artifactPin": "fb2af4cba635dfa5b6466c4fbd3f3a96f98b208cbceeba5ab3df248b84fd4ce5"
+      }
+    }
+  }
+}

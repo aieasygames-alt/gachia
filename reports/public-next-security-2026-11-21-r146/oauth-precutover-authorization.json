@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-21T13:26:10.282Z",
+  "status": 200,
+  "accountId": "e6472b6c6172a3ac1e1596ef100543ae",
+  "roles": [
+    "Super Administrator - All Privileges"
+  ],
+  "workersWriteScope": true,
+  "scopeChanged": false,
+  "corrects": "roles diagnostic mapping in oauth-precutover-refresh.json; API returns role strings",
+  "credentialsEmitted": false
+}

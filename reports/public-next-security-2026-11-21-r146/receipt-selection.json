@@ -1,0 +1,468 @@
+{
+  "scope": "explicit top-level R146 receipts, final source index and implementation queue; no recursive reports add",
+  "files": [
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/EXECUTION.md",
+      "bytes": 6634,
+      "sha256": "bbaf3fb61696bcd95786748a93442ade5a8f7c25679cff118505a5dd8b9df0e9"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/STATUS.json",
+      "bytes": 739,
+      "sha256": "4882c15a7943e770868d8ed6ecf067fb3ce162171690e74b342fe6994381edfa"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/accepted.json",
+      "bytes": 57896,
+      "sha256": "ae2475bed8cc408ea1b15347706d1ff605f97d4010e2fd43b1b785fa77e2ff76"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/aggregate-accepted.json",
+      "bytes": 228,
+      "sha256": "b86c88c0ecbcabfc2d80a712334cddfea1952d27c5fb491ce5f091e49d3f235e"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/audit-all.json",
+      "bytes": 48182,
+      "sha256": "25e584840c763a194fdcf06af282acec698429f4df4d71d8f21b249de398b5de"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/audit-prod.json",
+      "bytes": 26336,
+      "sha256": "fc05c8b1bcfe6ef43e8b8136cd88b9cf739d0a6d593ade7bd5ec3dbbad29f678"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/authorization-scope.json",
+      "bytes": 320,
+      "sha256": "81e048721c7f28de3794ea0b90d28fe389b9f1d32998e797cadd209e46060843"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/azur-promilia-built.json",
+      "bytes": 1545,
+      "sha256": "4568ccb594ef398617e64a1662e3d583b584f4a8c5d1103e10f8fe1d58e1d476"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/azur-promilia-deployed.json",
+      "bytes": 758,
+      "sha256": "7d730879296961bfc4a1750a17f543e0840c969525d2f660dafcb7782b01eb70"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/baseline.json",
+      "bytes": 39185,
+      "sha256": "58ca60d2ea381f886db3f0f7d3919d61a4ea75649431c29432f22797de7772cc"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/bind-final.mts",
+      "bytes": 3117,
+      "sha256": "fbe51fe8a237fc73d820c84eecc784ffe529213a2f83d2db58da319002463cbb"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/browser-acceptance.json",
+      "bytes": 25449,
+      "sha256": "674e38715dcaa3d6fd29a4b9ac5756cba42620dd4483264f369e86886c4307ec"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/browser-checks.mjs",
+      "bytes": 3179,
+      "sha256": "e19402aa61b131c740176073ba6fe31134cca2faa5356ccaaf7fd8c9d0b5d795"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/browser-continued.mjs",
+      "bytes": 3537,
+      "sha256": "a636764fd730377e363f6b1989947b42edf95b58d9629c2b46b00db5462fdefc"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/browser-runtime-current.mjs",
+      "bytes": 15010,
+      "sha256": "3b344d6d5d2199c21bce788e8a989bb0791c76c48f2359281c46fc7ae1a93945"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/build-reuse.json",
+      "bytes": 9028,
+      "sha256": "27ea0ba161222fc9a8da1221a1964594f9c09f704cc928ae46888bdd0baf8451"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/ci-executor-current.json",
+      "bytes": 99,
+      "sha256": "c66847e6092728a143d3964e5c95cb708487417aeebff57451d875cb85d0bd38"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/ci-implementation.json",
+      "bytes": 3590,
+      "sha256": "96ad7c551f70f87d1d9ac72e8396f4bf311578cf461da091392def644658df47"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/cleanup.json",
+      "bytes": 312,
+      "sha256": "53832fb8088b39f5661714bab6b21df2359064b70ad6269ce485780f055d51f2"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/closeout.mjs",
+      "bytes": 14389,
+      "sha256": "1d52aa6b41c75c4d1dd14fc4be780bce06034ae2c9847ffcf7f111e881f61818"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/completion.json",
+      "bytes": 88413,
+      "sha256": "53cec36d0780469958293726b573238efa3fbbf93fa8df514cb9580ee82d0dc4"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/continue-promote.mts",
+      "bytes": 24964,
+      "sha256": "71df5d5010d97226109d56d6bcf9a1510eae550c0fbaad0b8120e219d2e2bfde"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/delivery.json",
+      "bytes": 9437,
+      "sha256": "496c4a1aff2aebf3ae2ff1ebb8165c0d15977e75d40804668ca119b3322720fd"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/dependency-diff.json",
+      "bytes": 944,
+      "sha256": "65497208789792cf8727ab220ffec0c4109b28ae92b26379610d3bf9c96c35f5"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-azur-promilia-creation.json",
+      "bytes": 326,
+      "sha256": "d24337cecf1d96edbe2e06acc8f90c370e1d52f7b35c62056186fbe7b326816c"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-azur-promilia-verification.json",
+      "bytes": 1083,
+      "sha256": "f1613dddf35de93b5fb4da6a494bb50311eee9257828685d05259d68e6e0093b"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-genshin-creation.json",
+      "bytes": 326,
+      "sha256": "e554adb1a68d3904b00c639fc6cb51b0f237597bb9131972e0830c846305bbeb"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-genshin-verification.json",
+      "bytes": 1085,
+      "sha256": "a8b9ee55e66517341b62cd30f83ee1ae55680cd673b609d91c3a9959f7a5d0c7"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-lvmeng-creation.json",
+      "bytes": 326,
+      "sha256": "c4c6ff2a62c3f6ebc54daa3918440c03bbf7b32fd48e1a7ea10512e9582c5626"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-lvmeng-verification.json",
+      "bytes": 1085,
+      "sha256": "492f75d51dbb9548b15b9a0d50dde0d2848ee244cff2e25006a29b09c6d98ff8"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-main-creation.json",
+      "bytes": 326,
+      "sha256": "fbe0d278b2181de7fb064bf92fc1fff143c8c93e4044cc625ea04c41c5de1475"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-main-verification.json",
+      "bytes": 1085,
+      "sha256": "ac6a3da31a09cf17794a9bd831cd41ef9d684ad0deea509159b30fefdaf456d9"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-nte-creation.json",
+      "bytes": 326,
+      "sha256": "266770f19148a8db9d3c38b6c2dac904370b0f861e06e36b5cc8c4d8724a2ee3"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/deployment-nte-verification.json",
+      "bytes": 1085,
+      "sha256": "33d5579986680c0504c11a48e95cb13d9d7802cae65cd09be4aa2da4f1835d6c"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/documentation-fetch.json",
+      "bytes": 293,
+      "sha256": "cddaa5f358c7009612153b7d4f4483a65c0ceb336329b560fef14085c8713eef"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/executor-ci.json",
+      "bytes": 215,
+      "sha256": "81e7e8e1c266ce391f80f7cbd3eef023bc520a9cc75feb02c4d1e7fb4a96e376"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/frozen-install.json",
+      "bytes": 170,
+      "sha256": "86e214d1105d705f0f6af6735dd28b8455c5e1403df2b33378a35a8deb486049"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/genshin-built.json",
+      "bytes": 1533,
+      "sha256": "3c438e662c158358b6a24d97b6f4737bf304f3f9783a3519de2e697677bfb225"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/genshin-deployed.json",
+      "bytes": 752,
+      "sha256": "5e928c672ff9e781ee42d4961928c9929908c702a3e2c71466ab02957dc1f51d"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/genshin-public-requalified.json",
+      "bytes": 233,
+      "sha256": "10531cfbb70535e3750836f374300d33e994ca8feed6ea30fd8af8c82fedd360"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/github-direct-preflight.json",
+      "bytes": 186,
+      "sha256": "57d3d928be165fa2b951f821e4dbad1153023c671af4301ec866f128fc70a477"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/installed-source-reader-boundary.json",
+      "bytes": 789,
+      "sha256": "6d82432dde1d2257cfec56001847e64eae9678446ea8f2a04ef1f267fc05fe20"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/json-preservation.json",
+      "bytes": 1351,
+      "sha256": "9033f44a6a0a95cf7f9e70ebcabaf2f1e4772ae88e1ad656bc9092c8301a7e87"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/local-consumers-final.mts",
+      "bytes": 37614,
+      "sha256": "95fdb99554a5332cc26ad578fcc8a7cfb4f3ab7abc85147b6621c33e40bd2e08"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/local-qualification.json",
+      "bytes": 2993,
+      "sha256": "09c084115fc67d4f269ef22102e0cfe19c81d15a150a0593066c4146fc9b4c54"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/locale-boundary-after.json",
+      "bytes": 646,
+      "sha256": "9b8af52b5479429339f9b853010af1a42c6377712282f73417eb1e971173ab0b"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/locale-boundary-before.json",
+      "bytes": 521,
+      "sha256": "2ac12adf566744a677bce6bd8e9647c9f1c76fc1b25f34bfa0bf545e8272d8b8"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/lockfile-scope.json",
+      "bytes": 117,
+      "sha256": "36785f36573d11b9a62d2bc274b4b6e86e9a556b06ff2b4e28520d81198207ff"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/lvmeng-built.json",
+      "bytes": 1531,
+      "sha256": "49d1d9aa72ef1de66b77151da9b1ce315447b486c13b9f635e958ecb8cd1efb9"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/lvmeng-cli-diagnostic-cleanup.json",
+      "bytes": 480,
+      "sha256": "ba6baf72a32d78d2af345681b651fc54d88629562282b415e07143ea77c0e68d"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/lvmeng-cli-handles.json",
+      "bytes": 231,
+      "sha256": "99705656afe7dbc35efdfcbd4aabbcb0c35557c4d7bb8d432a4bf7cb35b3fb4f"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/lvmeng-cli-resources.json",
+      "bytes": 111,
+      "sha256": "64a996e512b65bd622ac06ae22cde163f1154eb414595e161883f8a290736878"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/lvmeng-deployed.json",
+      "bytes": 751,
+      "sha256": "f802521629a81e96845ff437ce572ede716d5e822acf89ae88e06ac62e5121cb"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/lvmeng-upload-reconciliation.json",
+      "bytes": 513,
+      "sha256": "9c85842d75a4a24fc755cd6286241682f339d0b6fcd70118d17689b167df4164"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/main-built.json",
+      "bytes": 1521,
+      "sha256": "cbe69fae38a8acccae951f87b63a584417a7b6dc9adb65475c679682e144e12b"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/main-deployed.json",
+      "bytes": 739,
+      "sha256": "b28548728eb1142371b8f56597bc352c8d9cca6137d2c0adb7282f535421a8aa"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/network-process-reconciliation.json",
+      "bytes": 178,
+      "sha256": "319742fc6d7c2b925a674193a2038114150d2adcd73bf6e3bc3a4ad853ec788c"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/network-reconciled.json",
+      "bytes": 405,
+      "sha256": "6729862b121af28355d843f7f75b6c7b686e2e219d1afd7aa85c892811ab120b"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/network-used.mjs",
+      "bytes": 2507,
+      "sha256": "36f948634eeaed15438139fce233ce9093fdc86510e32c39aa6bea8d4e184d8c"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/network.mjs",
+      "bytes": 1886,
+      "sha256": "aa505a45da27b2f0a2f4c193fa7cdedf848c7a67bd9548ebe17fb023ef3f1761"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/next-advisories.json",
+      "bytes": 1247,
+      "sha256": "9974e8551d2c6a31926ec4c96b7ad3b689090672de64a9ced0cc249198fa9698"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/nte-built.json",
+      "bytes": 1525,
+      "sha256": "60233258b3ec0e4acf1302f550c86a94ed06d4db15dbc97fed3be64cab7aa547"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/nte-deployed.json",
+      "bytes": 748,
+      "sha256": "999d2c3555dd0da96e1b39c1065bda5d7ffeeb8ab4de0853618e7c3387b58a65"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/oauth-final-refresh.json",
+      "bytes": 575,
+      "sha256": "f098c2e71a41104a8fd89f0cf40169de7377e783b1ae35db7f7a601445461ea3"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/oauth-precutover-authorization.json",
+      "bytes": 354,
+      "sha256": "5190501a842eb7e962626ed737d2d991851d44d8696345701aa7048dbf0a10ba"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/oauth-precutover-refresh.json",
+      "bytes": 541,
+      "sha256": "557f6a303df6bd30cb2dff88f20a829f7492f8cecf19a160ef2f20c3cb2a1f64"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/patch-port.json",
+      "bytes": 1899,
+      "sha256": "1e20953290bb8e22111f34b7d39489bc9b7f4d1183e651aab47f1e4b2b9a6005"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/prepared-final.json",
+      "bytes": 1360,
+      "sha256": "9320de7c3a9d7d2231c8b17cebf0251a3179b7367b89b49eb80889e6a9c1503b"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/prepared.json",
+      "bytes": 1045,
+      "sha256": "615a3ccaa8b5ecd07b5d365710832fa802f7568daa3990921dbbca56f12aaf15"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/preview-preflight-reconciliation.json",
+      "bytes": 339,
+      "sha256": "6bc57162078aca46d5516f2bd3fd43f724d934164e4e9dc8ea1eaabd07489251"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/production.jsonl",
+      "bytes": 5470,
+      "sha256": "eb4237a86196d19b8594371642b2267ea47c94a1fdc296f9a33e60b0ae2386c1"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/public-reference-qualification.json",
+      "bytes": 1897,
+      "sha256": "8905e475c5c63f898951b70b6575a20d4e268fae39a85829e1127a3dff3db6c8"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/qualify-local.mts",
+      "bytes": 2767,
+      "sha256": "cb2d9c59812bb0bf9a1b1949150f5e8f72756a954614fc756effca109b5dc3db"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/qualify-public.mts",
+      "bytes": 4055,
+      "sha256": "3d814591e08177915c0a9502ec6387e2e84e11b07495baadbd309396bd01e1e9"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/r145-closeout-ci.json",
+      "bytes": 3590,
+      "sha256": "ef8bc5657917bd15b8695d2c81ce22192d5b677333a0bcb00c663afde580544f"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/refresh-auth-final.mjs",
+      "bytes": 5657,
+      "sha256": "7c8b629a4c1f816fc1b2248816d6f9087bf96384c5b6a6c8682a8ea2c147c2bc"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/refresh-auth.mjs",
+      "bytes": 5513,
+      "sha256": "c6cfbd253231e486f36059a40b46dd97fc4a185be92101b985f985a2008958bb"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/registry-next-15.5.29.json",
+      "bytes": 3862,
+      "sha256": "8af976c7427e2426f098cda66def28cfb5472679004debc0ba85b1d5f9b2ec1d"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/release.mts",
+      "bytes": 37280,
+      "sha256": "f32ffd1ac565d903345232df321ba3b8dc4d0b6c9d8627dce75bf239805e8a41"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/runtime.json",
+      "bytes": 6080,
+      "sha256": "c64860aa1e1a6be98c07205828ead55136fe55527d14b224dfa186ccd56ca469"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/sealed-modules-final.json",
+      "bytes": 8787,
+      "sha256": "767691758df00cf276d0888f8231a6f64a78c1832aff9e83e4d5725d980604dc"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/sealed-modules.json",
+      "bytes": 8484,
+      "sha256": "97fdca42937ee38cd7978ceb6430de6ef0439b44a0a6a3689d2fe8b52fc46779"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/sealed-public.json",
+      "bytes": 13354,
+      "sha256": "505c49d9e8130507e4f2a5b48087cd7dbd3d495135497295e05036b77e7db536"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/sealed-qa.json",
+      "bytes": 13349,
+      "sha256": "382fec4666c038b016a71d52ec8b04e64bdc10eb6799ab560ee3d83d496b1562"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/sealed.json",
+      "bytes": 13349,
+      "sha256": "382fec4666c038b016a71d52ec8b04e64bdc10eb6799ab560ee3d83d496b1562"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/security-assessment.json",
+      "bytes": 4717,
+      "sha256": "b2809379d0197a9fc5baf908daecd396ab3162f98f2f890e9b82d7438f5315c7"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/source-result.json",
+      "bytes": 235,
+      "sha256": "d1fae363f17e7721eb6c9f806e0c00569f31486ddb743e5409e2ee16924437a6"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/verify-boundary.mjs",
+      "bytes": 1470,
+      "sha256": "830e4a845f9221deadde582d9d7787a08285179c47a60db84907958a572c1171"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/verify-genshin-public.mjs",
+      "bytes": 1039,
+      "sha256": "ff1d4a9ffa8f263c19a7cbff88f7daf6e64697e5c9874ca7cf6cc6c67fb41f67"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/verify-json.mjs",
+      "bytes": 1534,
+      "sha256": "b45f255ce79abfa699b6bbc595effa38adc54805c4bf4ad9abab700d67190367"
+    },
+    {
+      "file": "reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+      "bytes": 46418,
+      "sha256": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+    },
+    {
+      "file": "plans/payload-all-content-implementation-2026-11-05.md",
+      "bytes": 100066,
+      "sha256": "8adad6b1e105d4d0ddbbadfb34b0395741e073b9d14649ffb65025d2dd119e13"
+    }
+  ],
+  "totalBytes": 747216,
+  "credentialScan": "passed; values never emitted",
+  "rawArtifactsBodiesAndDependencyTrees": "preserved locally, excluded"
+}

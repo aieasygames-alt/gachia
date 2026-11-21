@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://developers.cloudflare.com/workers/wrangler/commands/versions/index.md",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/index.md",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

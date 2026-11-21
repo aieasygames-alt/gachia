@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-21T12:52:43.650Z",
+  "installedApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T110820Z-cms-next-security-r145-db547bec/services/content-cms",
+  "file": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T110820Z-cms-next-security-r145-db547bec/services/content-cms/src/nte-release-history.ts",
+  "sha256": "cbb2e7a04b01279e286f33a2a28aae1987abc2d42d0dec57a9b2b6bec1665a46",
+  "recognizesR146SourceKind": false,
+  "workingTreeReader": "supports R146 and passed exact CI",
+  "cmsAppChanged": false,
+  "cmsContentWrites": 0,
+  "followUp": "Install the checked R146 source reader in a bounded CMS application upgrade before using the R146 index with the resident CMS release CLI. Do not replay R144 source synchronization."
+}

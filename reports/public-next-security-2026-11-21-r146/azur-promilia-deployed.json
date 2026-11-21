@@ -1,0 +1,22 @@
+{
+  "deployment": {
+    "deploymentId": "44f0710e-b7d7-48c5-a6d2-a9f33f9c76fe",
+    "service": "gachia-game-azur-promilia",
+    "versionId": "78442797-d15e-441e-a00d-2faa6d9aa543",
+    "releaseKey": "0b926bd0b4a887382c638cadae462887a833c85e3db040b3e99b63d39be01294",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "e1c671ed343b1c1814382aa06ccda15760fda55c8d2db1ccdcd9c422d4e486e8",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "c31d3669d07c9cb2e053e0aff471383abf8437ac2e0ccb5ee3373cd9c396ddd2",
+        "bytes": 468
+      }
+    }
+  },
+  "versionId": "78442797-d15e-441e-a00d-2faa6d9aa543",
+  "releaseKey": "0b926bd0b4a887382c638cadae462887a833c85e3db040b3e99b63d39be01294"
+}

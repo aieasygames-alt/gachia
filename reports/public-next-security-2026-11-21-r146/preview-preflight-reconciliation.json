@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-21T12:51:20.318Z",
+  "failure": "GitHub API denied by task-owned CONNECT allowlist before cloud mutation",
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "correction": {
+    "HTTPS_PROXY": "http://127.0.0.1:18646",
+    "NO_PROXY": "127.0.0.1,localhost,api.github.com"
+  },
+  "originalFailureLog": "preview.log"
+}

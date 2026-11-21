@@ -1,0 +1,86 @@
+{
+  "commit": "551a3b51b12399d796fa344dc1523c940e9a7eef",
+  "compiledCommit": "1c42921d322eab749d6c09bbd06b62c42145656f",
+  "sealed": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed.json",
+    "pin": "382fec4666c038b016a71d52ec8b04e64bdc10eb6799ab560ee3d83d496b1562"
+  },
+  "owners": [
+    {
+      "owner": "genshin",
+      "role": "candidate",
+      "requests": 2090
+    },
+    {
+      "owner": "genshin",
+      "role": "recovery",
+      "requests": 2090
+    },
+    {
+      "owner": "nte",
+      "role": "candidate",
+      "requests": 1185
+    },
+    {
+      "owner": "nte",
+      "role": "recovery",
+      "requests": 1185
+    },
+    {
+      "owner": "azur-promilia",
+      "role": "candidate",
+      "requests": 311
+    },
+    {
+      "owner": "azur-promilia",
+      "role": "recovery",
+      "requests": 311
+    },
+    {
+      "owner": "lvmeng",
+      "role": "candidate",
+      "requests": 301
+    },
+    {
+      "owner": "lvmeng",
+      "role": "recovery",
+      "requests": 301
+    },
+    {
+      "owner": "main",
+      "role": "candidate",
+      "requests": 2103
+    },
+    {
+      "owner": "main",
+      "role": "recovery",
+      "requests": 2103
+    }
+  ],
+  "graphRequests": 778,
+  "browser": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/browser-acceptance.json",
+    "pin": "674e38715dcaa3d6fd29a4b9ac5756cba42620dd4483264f369e86886c4307ec"
+  },
+  "json": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/json-preservation.json",
+    "pin": "9033f44a6a0a95cf7f9e70ebcabaf2f1e4772ae88e1ad656bc9092c8301a7e87"
+  },
+  "localeBoundary": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/locale-boundary-before.json",
+    "pin": "2ac12adf566744a677bce6bd8e9647c9f1c76fc1b25f34bfa0bf545e8272d8b8"
+  },
+  "graphProducer": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/local-consumers-final.mts",
+    "pin": "95fdb99554a5332cc26ad578fcc8a7cfb4f3ab7abc85147b6621c33e40bd2e08"
+  },
+  "browserProducer": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/browser-continued.mjs",
+    "pin": "a636764fd730377e363f6b1989947b42edf95b58d9629c2b46b00db5462fdefc"
+  },
+  "browserRuntime": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/browser-runtime-current.mjs",
+    "pin": "3b344d6d5d2199c21bce788e8a989bb0791c76c48f2359281c46fc7ae1a93945"
+  },
+  "limits": "Router runs as its exact published module in Node with HTTP bindings to five real workerd processes. Non-Chinese Lvmeng paths use their existing exact Router 404 boundary, independently of owner HTML 404 references."
+}

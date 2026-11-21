@@ -1,0 +1,9 @@
+{
+  "pid": 49655,
+  "resources": [
+    "PipeWrap",
+    "PipeWrap",
+    "TCPSocketWrap"
+  ],
+  "requests": []
+}

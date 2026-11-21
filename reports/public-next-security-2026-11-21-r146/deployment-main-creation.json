@@ -1,0 +1,12 @@
+{
+  "status": 200,
+  "body": {
+    "result": {
+      "id": "0b9717c9-bdf5-4409-ac91-2935aa226351"
+    },
+    "success": true,
+    "errors": [],
+    "messages": []
+  },
+  "raw": "{\n  \"result\": {\n    \"id\": \"0b9717c9-bdf5-4409-ac91-2935aa226351\"\n  },\n  \"success\": true,\n  \"errors\": [],\n  \"messages\": []\n}\n"
+}

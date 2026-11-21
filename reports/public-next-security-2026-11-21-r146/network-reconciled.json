@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-21T12:25:07.589Z",
+  "existingProxyProcessAccidentallyStopped": 85361,
+  "restoredPID": 86153,
+  "temporaryTaskPID": 85587,
+  "configurationModified": false,
+  "restoredListenerConfirmed": true,
+  "duplicateTemporaryTaskProcessStopped": true,
+  "ownedPreviewHTTP": 200,
+  "ownedForwarder": "http://127.0.0.1:18646",
+  "existingProxy": "http://127.0.0.1:1087",
+  "tlsDecrypted": false
+}

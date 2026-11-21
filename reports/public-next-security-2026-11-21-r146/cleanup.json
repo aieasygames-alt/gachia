@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-21T14:32:47.511Z",
+  "taskOwnedForwarder": {
+    "pid": 85967,
+    "stopped": true,
+    "port": 18646
+  },
+  "existingUserProxy": {
+    "port": 1087,
+    "leftRunning": true,
+    "listenerConfirmed": true
+  },
+  "diskFreeGiB": 15.82,
+  "sourceReopen": "passed",
+  "productionDeployments": 5
+}

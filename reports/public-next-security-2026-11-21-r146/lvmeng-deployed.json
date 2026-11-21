@@ -1,0 +1,22 @@
+{
+  "deployment": {
+    "deploymentId": "646efb01-14d4-4904-b4b8-74e876447bd7",
+    "service": "gachia-game-lvmeng",
+    "versionId": "50812a8a-012f-428e-bb4b-780530181c09",
+    "releaseKey": "e5874e93e646aa1a6bf2a7050ddec32180bc46018963447ccefb012bf807ace3",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "6076000903c38f85d5e373dc6114a18081ec9a622b53f09f04c441775ea83b8c",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "63b1754064801895dd95451985c9eab291408147a2f45282c4b7e29bb2f5ff82",
+        "bytes": 469
+      }
+    }
+  },
+  "versionId": "50812a8a-012f-428e-bb4b-780530181c09",
+  "releaseKey": "e5874e93e646aa1a6bf2a7050ddec32180bc46018963447ccefb012bf807ace3"
+}

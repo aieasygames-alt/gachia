@@ -1,0 +1,25 @@
+{
+  "batch": "R146",
+  "status": "production_complete",
+  "implementationCommit": "1c42921d322eab749d6c09bbd06b62c42145656f",
+  "executorCommit": "551a3b51b12399d796fa344dc1523c940e9a7eef",
+  "ciRunID": 44903901582,
+  "next": "15.5.29",
+  "owners": [
+    "genshin",
+    "nte",
+    "azur-promilia",
+    "lvmeng",
+    "main"
+  ],
+  "routerChanged": false,
+  "contentChanges": 0,
+  "cmsWrites": 0,
+  "workerUploads": 10,
+  "productionDeployments": 5,
+  "sourceIndexAdvanced": true,
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+    "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+  }
+}

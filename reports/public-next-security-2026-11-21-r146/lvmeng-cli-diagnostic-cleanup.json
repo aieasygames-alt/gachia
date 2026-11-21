@@ -1,0 +1,11 @@
+{
+  "recordedAt": "2026-11-21T13:27:00.895Z",
+  "pid": 49655,
+  "scope": "task-owned Wrangler CLI only",
+  "diagnostic": "SIGUSR1 Node inspector; read only handle/resource names, no credentials",
+  "forcedExit": false,
+  "forcedTermination": false,
+  "uploadReplayed": false,
+  "observedCleanup": "ECONNREFUSED 127.0.0.1:9229 after original CLI had exited; original parent accepted actual zero exit and proceeded to standard capture/preview",
+  "parentExecutionContinued": true
+}

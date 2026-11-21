@@ -1,0 +1,210 @@
+{
+  "batch": "R146",
+  "status": "production_complete",
+  "completedAt": "2026-11-21T14:32:12.646Z",
+  "executorCommit": "551a3b51b12399d796fa344dc1523c940e9a7eef",
+  "compiledCommit": "1c42921d322eab749d6c09bbd06b62c42145656f",
+  "executorCI": {
+    "runID": 44903901582,
+    "commit": "551a3b51b12399d796fa344dc1523c940e9a7eef",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "nextVersion": "15.5.29",
+  "owners": [
+    {
+      "owner": "genshin",
+      "service": "gachia-game-genshin",
+      "candidate": "0382cd12-683b-46b0-817d-02bb89f5fd2b",
+      "recovery": "77ec8a6f-1b11-4451-9823-8210c3de8470",
+      "deploymentId": "0c939a32-94be-4a84-b264-55cf4eae1f16",
+      "localCandidate": 2090,
+      "localRecovery": 2090,
+      "cloudCandidate": 2090,
+      "cloudRecovery": 2090,
+      "freshCandidate": 2090,
+      "freshRecovery": 2090,
+      "publicChecks": 1655
+    },
+    {
+      "owner": "nte",
+      "service": "gachia-game-nte",
+      "candidate": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+      "recovery": "75ff75ca-9dc8-43f9-8d28-94cba3599b01",
+      "deploymentId": "de54d437-fbe2-47b2-98c6-e58e2bd48e5d",
+      "localCandidate": 1185,
+      "localRecovery": 1185,
+      "cloudCandidate": 1185,
+      "cloudRecovery": 1185,
+      "freshCandidate": 1185,
+      "freshRecovery": 1185,
+      "publicChecks": 749
+    },
+    {
+      "owner": "azur-promilia",
+      "service": "gachia-game-azur-promilia",
+      "candidate": "78442797-d15e-441e-a00d-2faa6d9aa543",
+      "recovery": "a13dcf18-5df9-4eca-9b1f-242eaf2f87af",
+      "deploymentId": "44f0710e-b7d7-48c5-a6d2-a9f33f9c76fe",
+      "localCandidate": 311,
+      "localRecovery": 311,
+      "cloudCandidate": 311,
+      "cloudRecovery": 311,
+      "freshCandidate": 311,
+      "freshRecovery": 311,
+      "publicChecks": 162
+    },
+    {
+      "owner": "lvmeng",
+      "service": "gachia-game-lvmeng",
+      "candidate": "50812a8a-012f-428e-bb4b-780530181c09",
+      "recovery": "b0d551e0-a6cb-4a00-824f-2a5a5618c3cd",
+      "deploymentId": "646efb01-14d4-4904-b4b8-74e876447bd7",
+      "localCandidate": 301,
+      "localRecovery": 301,
+      "cloudCandidate": 301,
+      "cloudRecovery": 301,
+      "freshCandidate": 301,
+      "freshRecovery": 301,
+      "publicChecks": 151
+    },
+    {
+      "owner": "main",
+      "service": "gachia",
+      "candidate": "9843820e-6676-4c02-a393-d814c8bedbc3",
+      "recovery": "7ea89ac5-40e9-4bcb-b237-82d0b5929f08",
+      "deploymentId": "0b9717c9-bdf5-4409-ac91-2935aa226351",
+      "localCandidate": 2103,
+      "localRecovery": 2103,
+      "cloudCandidate": 2103,
+      "cloudRecovery": 2103,
+      "freshCandidate": 2103,
+      "freshRecovery": 2103,
+      "publicChecks": 334
+    }
+  ],
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+    "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+    "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+  },
+  "contentSources": 115,
+  "publicJSONPreserved": 449,
+  "contentChanges": 0,
+  "cmsWrites": 0,
+  "workerUploads": 10,
+  "productionDeployments": 5,
+  "routerChanged": false,
+  "stagingChanged": false,
+  "lvmengLocales": [
+    "zh"
+  ],
+  "validation": {
+    "directLocal": 11980,
+    "aggregateLocal": 778,
+    "browserScenarios": 66,
+    "aggregatePublic": 778,
+    "localQualification": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/local-qualification.json",
+      "pin": "09c084115fc67d4f269ef22102e0cfe19c81d15a150a0593066c4146fc9b4c54"
+    },
+    "localeBoundary": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/locale-boundary-after.json",
+      "pin": "9b8af52b5479429339f9b853010af1a42c6377712282f73417eb1e971173ab0b"
+    },
+    "completion": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/completion.json",
+      "pin": "53cec36d0780469958293726b573238efa3fbbf93fa8df514cb9580ee82d0dc4"
+    },
+    "buildReuse": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/build-reuse.json",
+      "pin": "27ea0ba161222fc9a8da1221a1964594f9c09f704cc928ae46888bdd0baf8451"
+    },
+    "networkUsed": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/network-used.mjs",
+      "pin": "36f948634eeaed15438139fce233ce9093fdc86510e32c39aa6bea8d4e184d8c"
+    }
+  },
+  "interruptions": {
+    "preUploadGithubRoute": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/preview-preflight-reconciliation.json",
+      "pin": "6bc57162078aca46d5516f2bd3fd43f724d934164e4e9dc8ea1eaabd07489251"
+    },
+    "lvmengUploadReconciliation": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/lvmeng-upload-reconciliation.json",
+      "pin": "9c85842d75a4a24fc755cd6286241682f339d0b6fcd70118d17689b167df4164"
+    },
+    "oauthRefresh": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/oauth-precutover-refresh.json",
+      "pin": "557f6a303df6bd30cb2dff88f20a829f7492f8cecf19a160ef2f20c3cb2a1f64"
+    },
+    "oauthAuthorization": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/oauth-precutover-authorization.json",
+      "pin": "5190501a842eb7e962626ed737d2d991851d44d8696345701aa7048dbf0a10ba"
+    },
+    "finalStageOAuth": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/oauth-final-refresh.json",
+      "pin": "f098c2e71a41104a8fd89f0cf40169de7377e783b1ae35db7f7a601445461ea3"
+    },
+    "publicQualification": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/public-reference-qualification.json",
+      "pin": "8905e475c5c63f898951b70b6575a20d4e268fae39a85829e1127a3dff3db6c8"
+    },
+    "continuation": {
+      "qualification": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/public-reference-qualification.json",
+        "pin": "8905e475c5c63f898951b70b6575a20d4e268fae39a85829e1127a3dff3db6c8"
+      },
+      "producer": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/qualify-public.mts",
+        "pin": "3d814591e08177915c0a9502ec6387e2e84e11b07495baadbd309396bd01e1e9"
+      },
+      "executor": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/continue-promote.mts",
+        "pin": "71df5d5010d97226109d56d6bcf9a1510eae550c0fbaad0b8120e219d2e2bfde"
+      },
+      "originalExecutorCommit": "551a3b51b12399d796fa344dc1523c940e9a7eef",
+      "originalSealed": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed.json",
+        "pin": "382fec4666c038b016a71d52ec8b04e64bdc10eb6799ab560ee3d83d496b1562"
+      },
+      "genshinDeploymentReplayed": false
+    }
+  },
+  "security": {
+    "targetNextAffected": 0,
+    "remainingAdvisories": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/security-assessment.json",
+      "pin": "b2809379d0197a9fc5baf908daecd396ab3162f98f2f890e9b82d7438f5315c7"
+    },
+    "allRepositoryVulnerabilitiesCleared": false
+  },
+  "continuation": {
+    "publicSource": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+      "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+    },
+    "cmsAfter": "R144 AFTER; preserved by R145",
+    "installedCMSReader": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/installed-source-reader-boundary.json",
+      "pin": "6d82432dde1d2257cfec56001847e64eae9678446ea8f2a04ef1f267fc05fe20"
+    },
+    "next": "Install the checked R146 source reader in the resident CMS before using its release CLI with this new source kind, preserving CMS records and R144 sync. Then handle remaining better-auth/adapters, qs, glob and minimatch advisories in bounded compatibility work; account routes remain disabled.",
+    "doNotReplay": [
+      "R140 drafts",
+      "R141 staging",
+      "R142 review",
+      "R143 content deploy",
+      "R144 editing source sync",
+      "R145 CMS install",
+      "R146 Worker upload/deploy"
+    ]
+  },
+  "cleanup": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/cleanup.json",
+    "pin": "53832fb8088b39f5661714bab6b21df2359064b70ad6269ce485780f055d51f2"
+  }
+}

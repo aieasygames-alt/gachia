@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "mode": "exact_published_router_on_archived_real_workerd_html_responses",
+  "originalSealed": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed.json",
+    "pin": "382fec4666c038b016a71d52ec8b04e64bdc10eb6799ab560ee3d83d496b1562"
+  },
+  "qualifiedSealed": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/sealed-public.json",
+    "pin": "505c49d9e8130507e4f2a5b48087cd7dbd3d495135497295e05036b77e7db536"
+  },
+  "routerModule": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/candidate-graph-bounded/published-router.mjs",
+    "pin": "be0c04f5ff5e648e673acb386933de15d591a662d70dab4b8f3728551ec8eede"
+  },
+  "routerSource": {
+    "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-independent-delivery-2026-11-12-r120/migration-continuation-08/router-candidate/module/receipt.json",
+    "pin": "5a60ff6fbf85939a5b3acac0507e75e3a639405401b6932f16b7f02379da93cb"
+  },
+  "counts": [
+    {
+      "owner": "genshin",
+      "requests": 1655,
+      "htmlProjected": 1200,
+      "cacheHeadersChanged": 1164
+    },
+    {
+      "owner": "nte",
+      "requests": 749,
+      "htmlProjected": 294,
+      "cacheHeadersChanged": 294
+    },
+    {
+      "owner": "azur-promilia",
+      "requests": 162,
+      "htmlProjected": 15,
+      "cacheHeadersChanged": 0
+    },
+    {
+      "owner": "lvmeng",
+      "requests": 151,
+      "htmlProjected": 5,
+      "cacheHeadersChanged": 0
+    },
+    {
+      "owner": "main",
+      "requests": 334,
+      "htmlProjected": 331,
+      "cacheHeadersChanged": 0
+    }
+  ],
+  "bodyFingerprintsChanged": false,
+  "validatorChanged": false,
+  "nonHTMLReferencesChanged": false,
+  "cloudWrites": 0
+}

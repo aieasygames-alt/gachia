@@ -1,6 +1,14 @@
 # Payload 全内容实施队列
 
-## 当前完成状态（2026-11-21 R145：本机 CMS Next.js 安全升级完成）
+## 当前完成状态（2026-11-21 R146：五个公开站 Next.js 安全补丁已正式上线）
+
+Main、原神、异环、蓝色星原、绿梦已由 Next.js **15.5.28 → 15.5.29**，各一次正式部署、100% 流量；Router 和四个 staging 部署/配置保持。保留 OpenNext / deferred-initial patch，新旧静态资源双向兼容；5 个恢复版本已验收，未真实回滚。实际编译 `1c42921`，执行 `551a3b5` 的[完整 CI 44903901582](https://github.com/aieasygames-alt/gachia/actions/runs/44903901582)成功，复用构建输入不变。11,980 独立站本机、778 聚合、66 浏览器场景、11980 云预览及同规模切流前复验、3051 逐 owner 公网与 778 最终聚合检查通过。
+
+449 公开 JSON 的值和字节、115 内容来源保持；保留胡桃、异环/Zero/27 材料与 441 引用删除、攻略及 R143 完整集合。**0 CMS 内容/审核写入、0 schema 迁移、10 版本上传、5 正式部署。** 唯一正式接续来源改为 [R146 source-index.json](../reports/public-next-security-2026-11-21-r146/published-sources/source-index.json)，pin `93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3`，真实读取器重开 115 来源、allOwnersCurrent=true；CMS 仍用 R144 AFTER（pin `b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20`），不重放已完成操作。见 [R146 完成回执](../reports/public-next-security-2026-11-21-r146/EXECUTION.md)和[交付索引](../reports/public-next-security-2026-11-21-r146/delivery.json)。
+
+下一批先安装已通过 CI 的 R146 新来源读取器到常驻 CMS；R145 安装版仍不识别该新来源种类，不应继续使用旧 R143 代表当前部署。保持所有 CMS 内容、审核、媒体和 R144 同步状态，无需重发公开内容。随后独立修复 better-auth/adapter、qs、glob、minimatch 剩余公告；本批仅目标 Next 三类公告归零，不能称为全仓无漏洞。账号功能保持关闭，绿梦保持中文。当前可用约 **15.82 GiB**，完整重建继续 14 GiB 标准/8 GiB 保留线；本批临时转发器已停止，用户既有代理保持运行。
+
+## 前批完成状态（2026-11-21 R145：本机 CMS Next.js 安全升级完成）
 
 常驻 CMS 已由 Next.js **16.4.2 → 16.4.6**，Payload 3.92.1 / React 19.2.6 保持；精确源码 `db547bec533314a22f58aa6dbbe9f5651a820905`，完整 CI [44897652258](https://github.com/aieasygames-alt/gachia/actions/runs/44897652258)成功。官方目标与完整 CMS 锁文件 359 包公告查询为空，仅 Next 相关依赖改变。标准构建、类型检查、本地 623/623（无跳过）、隔离 PostgreSQL/HTTP 15 组通过。新安装已校验完整文件/依赖，冷备真实恢复及旧/新应用往返切换通过。
 
