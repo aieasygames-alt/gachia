@@ -1,6 +1,6 @@
 import { APIError, type Access, type CollectionConfig } from 'payload'
 import { digest } from './legacy-intake'
-import { verifiedGenshinCollectionItem } from './genshin-collection-review'
+import { verifiedGenshinCollectionItem } from './genshin-review-store'
 
 const staff: Access = ({ req }) => Boolean(req.user && ['admin', 'reviewer', 'editor'].includes(req.user.role))
 const reviewer: Access = ({ req }) => Boolean(req.user && ['admin', 'reviewer'].includes(req.user.role))
