@@ -1,0 +1,16 @@
+{
+  "commit": "e5811dee3fdd2a7f193368623e7b645d982a7411",
+  "candidate": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/candidate-source/workspace.json",
+    "pin": "aeb4b87c2bef107b0a2abf123ae159fce5e1295f845a8125037bfb94b56627c6"
+  },
+  "recovery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/recovery-source/workspace.json",
+    "pin": "a37d44574dbcad5d80629679620b497a0c64bb91baf8044c8356e054732ee2d9"
+  },
+  "exportKey": "880d20fd5e1bd7f5f2538267044f9bc7a85df260a0195cca2bb0355d413ddeed",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  }
+}

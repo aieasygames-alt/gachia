@@ -1,0 +1,14 @@
+{
+  "action": "verify",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T005643Z-genshin-review-r142-556a51aa/application-manifest.json",
+    "pin": "7894d223f1f260f74caf39a30f5fca642597f47dbf7b4edcddb4428fae46e16c"
+  },
+  "sourceCommit": "556a51aad5708f643cbe4674e1c6c740679cba0d",
+  "result": {
+    "runKey": "87639812dcd5bd1e0855ee11bb5565d318b830f846eec30798417e208cd13532",
+    "items": 221,
+    "contentRecordWrites": 0
+  },
+  "observedAt": "2026-11-21T00:59:43.185Z"
+}

@@ -1,0 +1,101 @@
+{
+  "newTables": [
+    "genshin_review_decisions"
+  ],
+  "changed": [
+    {
+      "name": "genshin_review_decisions",
+      "before": null,
+      "after": {
+        "rows": 221,
+        "sha256": "9fd2b9bf27caffbeb0efe12831819ee025b85e635d59b514a0b452c11664da9f"
+      }
+    },
+    {
+      "name": "migration_batches",
+      "before": {
+        "rows": 1,
+        "sha256": "db2fe4b05ffc9a82dd0f54fd548b70228cfa872d8765b2e698755d88d8009345"
+      },
+      "after": {
+        "rows": 2,
+        "sha256": "95dfec9f58fa12e16871f0821732f8348fff9039aa8d26026c4dab92b00c9819"
+      }
+    },
+    {
+      "name": "migration_records",
+      "before": {
+        "rows": 179,
+        "sha256": "410cbd1ea5748e44fc5e1db37d07785b0b99c88a2cc9dba982ad61fdd4e0042c"
+      },
+      "after": {
+        "rows": 400,
+        "sha256": "2a2ff8838e1a1f37e322aff8651275755a092ccc8868a0df742eab863fd8efaa"
+      }
+    },
+    {
+      "name": "payload_migrations",
+      "before": {
+        "rows": 2,
+        "sha256": "7bb1678a1815ca818d672c7f8976b394a04c06289994e3c3b057a79745787913"
+      },
+      "after": {
+        "rows": 3,
+        "sha256": "582152b9d5bc6dee2f5e039f90ab46999d652d92b764175d006227d7f75ecb87"
+      }
+    },
+    {
+      "name": "users_sessions",
+      "before": {
+        "rows": 1,
+        "sha256": "5a6ac4bd2c52ea604b13198c0ec848f17f398f5b3ab4bde175561d68c5502c5d"
+      },
+      "after": {
+        "rows": 4,
+        "sha256": "837bed146818cea06e34bd7fc0f27fe60ddb355cbd4fcd08e8a6b600ad3920e8"
+      }
+    }
+  ],
+  "unchangedExistingTables": [
+    "_content_records_v",
+    "_content_records_v_locales",
+    "_editorial_drafts_v",
+    "_editorial_drafts_v_version_faqs",
+    "_editorial_drafts_v_version_translations",
+    "_material_cells_v",
+    "_material_cells_v_entries",
+    "content_records",
+    "content_records_locales",
+    "draft_merge_decisions",
+    "draft_merge_decisions_choices",
+    "draft_merge_proposals",
+    "draft_merge_proposals_comparison",
+    "editorial_drafts",
+    "editorial_drafts_faqs",
+    "editorial_drafts_translations",
+    "games",
+    "games_locales",
+    "material_cells",
+    "material_cells_entries",
+    "media",
+    "media_locales",
+    "merge_workflow_events",
+    "migration_records_faqs",
+    "migration_records_translations",
+    "migration_sources",
+    "payload_jobs",
+    "payload_jobs_log",
+    "payload_kv",
+    "payload_locked_documents",
+    "payload_locked_documents_rels",
+    "payload_preferences",
+    "payload_preferences_rels",
+    "review_decisions",
+    "review_items",
+    "review_items_field_changes",
+    "review_runs",
+    "users"
+  ],
+  "contentAndVersionsExactlyPreserved": true,
+  "loginSessionsAdded": 3
+}

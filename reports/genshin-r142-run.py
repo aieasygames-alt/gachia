@@ -7,10 +7,11 @@ import sys
 REPO = Path(__file__).resolve().parent.parent
 REPORT = REPO / 'reports/genshin-collection-review-2026-11-21-r142'
 ROOT = Path.home() / 'Library/Application Support/GachiaCMS'
-assert len(sys.argv) == 2 and sys.argv[1] in ['stage', 'stage-repeat', 'decide', 'decide-repeat', 'verify', 'verify-final', 'export', 'export-reopen', 'export-final', 'export-final-reopen']
+assert len(sys.argv) == 2 and sys.argv[1] in ['stage', 'stage-repeat', 'decide', 'decide-repeat', 'verify', 'verify-final', 'export', 'export-reopen', 'export-final', 'export-final-reopen', 'verify-form', 'export-form', 'export-form-reopen']
 action = sys.argv[1]
 installed_file = REPORT / 'application-refresh-01/application-installed.json'
-installed = json.loads((installed_file if installed_file.exists() else REPORT / 'application-installed.json').read_text())
+form_file = REPORT / 'application-form-02/application-installed.json'
+installed = json.loads((form_file if form_file.exists() else installed_file if installed_file.exists() else REPORT / 'application-installed.json').read_text())
 preparation = json.loads((REPORT / 'preparation.json').read_text())
 cfg = json.loads((ROOT / 'settings.json').read_text()); assert cfg['app'] == installed['app']
 spec = importlib.util.spec_from_file_location('r142_manager', ROOT / 'desktop.py')

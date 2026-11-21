@@ -1,0 +1,14 @@
+{
+  "kind": "published_router_module_binding_bridge_to_real_workerd_http",
+  "routerModuleSHA256": "be0c04f5ff5e648e673acb386933de15d591a662d70dab4b8f3728551ec8eede",
+  "actualWorkerResponses": true,
+  "routerWorkerdClaimed": false,
+  "role": "candidate",
+  "requests": 1960,
+  "materialPages": 810,
+  "otherGameRawResponses": 83,
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  }
+}

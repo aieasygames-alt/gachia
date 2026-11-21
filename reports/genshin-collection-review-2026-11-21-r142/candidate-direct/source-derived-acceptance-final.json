@@ -1,0 +1,10 @@
+{
+  "materialPages": 810,
+  "recipeCheck": {
+    "pages": 270,
+    "references": 16470,
+    "everyMaterialIdAndQuantityMatches": true
+  },
+  "skillsChecked": 45,
+  "knownLegacyRelationPagesMissing": 0
+}

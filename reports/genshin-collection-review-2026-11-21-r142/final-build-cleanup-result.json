@@ -1,0 +1,9 @@
+{
+  "paths": [
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/candidate-source/source/apps/game-genshin/.next"
+  ],
+  "policy": "Only regenerated source build outputs; installed CMS, OpenNext artifacts, sealed candidate and recovery, snapshots and all evidence retained",
+  "freeBeforeGiB": 13.631767272949219,
+  "freeAfterGiB": 14.309307098388672
+}

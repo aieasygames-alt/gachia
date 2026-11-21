@@ -1,0 +1,9 @@
+{
+  "workerBuildSourceCommit": "e5811dee3fdd2a7f193368623e7b645d982a7411",
+  "installedCMSCommit": "556a51aad5708f643cbe4674e1c6c740679cba0d",
+  "changedCommittedPaths": [
+    "services/content-cms/src/genshin-review-collections.ts"
+  ],
+  "workerInputsChanged": false,
+  "reason": "Only CMS admin create-form visibility changed; reviewer hook and collection compiler data remain exact. Frozen Worker build and sealed runtime acceptance are reused."
+}

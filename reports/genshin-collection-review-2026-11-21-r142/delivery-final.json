@@ -1,0 +1,3069 @@
+{
+  "kind": "genshin-collection-review-delivery-r142",
+  "status": "installed-reviewed-complete-export-and-local-consumer-recovery-qualified",
+  "parentDelivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/delivery.json",
+    "pin": "184ba587502a2d6ff96c43385c38a06e6a6fdf34f4b2fe32603a65a3d5cbe9d4"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "sourceCommit": "556a51aad5708f643cbe4674e1c6c740679cba0d",
+  "runKey": "87639812dcd5bd1e0855ee11bb5565d318b830f846eec30798417e208cd13532",
+  "stageKey": "f173c9de5587920b011ab9d9c3a82015634f296c8e569d315c5882860b21c83d",
+  "exportKey": "880d20fd5e1bd7f5f2538267044f9bc7a85df260a0195cca2bb0355d413ddeed",
+  "installedApplication": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/application-form-02/application-installed.json",
+    "pin": "23549008bd03d200c5d9be2c2edcbc341650bb3af64c722e92336376499969f0"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/cms-final.json.gz",
+    "pin": "908e9fa96d2e654e92ef9edf64f921e4bfc36092c2aa83b512f86f454fbfb830"
+  },
+  "input": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/intake-input.json",
+    "pin": "0a761dd563bdcd018f8332794cb924d00909bdd2ea92e98805a91fc7bb036d66"
+  },
+  "completeExport": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/collection-export-final.json.gz",
+    "pin": "40b66510c7271841e8ceec29b7445fddbe1bc46d50d3d1d9c9f25ae40eb7a035"
+  },
+  "exportManifest": {
+    "contract": "genshin-reviewed-collection-export-v1",
+    "runKey": "87639812dcd5bd1e0855ee11bb5565d318b830f846eec30798417e208cd13532",
+    "stageKey": "f173c9de5587920b011ab9d9c3a82015634f296c8e569d315c5882860b21c83d",
+    "inputKey": "777c2ebc1d1dda301fa48524103149fae962db7af3f5242b21c9b4edbd919c0e",
+    "sourceIndex": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+      "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+    },
+    "cmsKey": "f3aa39f8fa592b457f04cb997202680f19b7c519a92df19f5f5de4b0b410c718",
+    "sourcePins": [
+      {
+        "sourcePath": "apps/game-azur-promilia/lib/data.ts",
+        "sha256": "55868f2f59c1bdd283ad9e71ffb71b32d8a971f9e6eb7dbd8a34a8f2a0522908"
+      },
+      {
+        "sourcePath": "apps/game-genshin/lib/data.ts",
+        "sha256": "abb72afec9ef8d19b2cda807c4b407a7cec2eb5d6e600cc7d0e1e508c7ebdcbd"
+      },
+      {
+        "sourcePath": "apps/game-lvmeng/lib/data.ts",
+        "sha256": "1dba7658c4ad97aa2f2aa30aabbf8e537d3e861177c9614d6db58c60d3247264"
+      },
+      {
+        "sourcePath": "apps/game-nte/lib/data.ts",
+        "sha256": "e2c049cf024efdd45aef9b9a25d426e22173364e70553e4822d33297cce86eba"
+      },
+      {
+        "sourcePath": "packages/data/games/ananta/raw-character-materials.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/ananta/raw-characters.json",
+        "sha256": "7d8394e1777c3bef7a7f9f72c6d6adc633fad68977affd087d6aafa8a4ec143b"
+      },
+      {
+        "sourcePath": "packages/data/games/ananta/raw-guides.json",
+        "sha256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d"
+      },
+      {
+        "sourcePath": "packages/data/games/ananta/raw-materials.json",
+        "sha256": "87b9ad367244b3dc62ee5fe3e48604c5153edf2bd21cafcb5145531ca63d6700"
+      },
+      {
+        "sourcePath": "packages/data/games/ananta/raw-weapons.json",
+        "sha256": "af7e4bc6cc6b6def48c4319c4cf0cc9098ecb214cf8d9c24e14d7cf3907b924d"
+      },
+      {
+        "sourcePath": "packages/data/games/ananta/tier-lists.ts",
+        "sha256": "7c04e7f1a7bc80182138acda73c67a04fd9efec94f2b65766e3bc9edc2cc5472"
+      },
+      {
+        "sourcePath": "packages/data/games/aniimo/raw-characters.json",
+        "sha256": "292e096e35fdb5cd98d1188d1d23a9e46998741930e2095f5a1d8ee928094c39"
+      },
+      {
+        "sourcePath": "packages/data/games/aniimo/raw-guides.json",
+        "sha256": "4d31d4fd827512aaabf04b9821810685481e90f6989ae0bba41043eb114e1ba8"
+      },
+      {
+        "sourcePath": "packages/data/games/aniimo/raw-redeem-codes.json",
+        "sha256": "6eafa12c388c59db5a67398b94fd903a82ae70f4ebf36f729312da567e924cef"
+      },
+      {
+        "sourcePath": "packages/data/games/aniimo/raw-regions.json",
+        "sha256": "5d61d30a90b2e75a2484acb147debb2168b3ed79fa96929239f9e6a497c29b12"
+      },
+      {
+        "sourcePath": "packages/data/games/aniimo/tier-lists.ts",
+        "sha256": "81005c424654478e683e3d3e01da6d7a87a602d8826ed659d6b71e6044ede4b8"
+      },
+      {
+        "sourcePath": "packages/data/games/azur-promilia/progression.ts",
+        "sha256": "98a873ac479e7ba03ae22285b5410e106aaa5f85c20c0b0298d6096c75f9621c"
+      },
+      {
+        "sourcePath": "packages/data/games/azur-promilia/raw-characters.json",
+        "sha256": "e4479476d98f53d2a9add1c5dca7158d904897667fd54a320ee82b056aea8866"
+      },
+      {
+        "sourcePath": "packages/data/games/azur-promilia/tier-lists.ts",
+        "sha256": "ebb49ee734f30e4f24a620ced4843874f8d0876b7e36c90a132d1e3489b40c66"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/raw-character-materials.json",
+        "sha256": "3170dc7edb9f022388aa6bb0fec010665f7cdb70c29df01fcc2283790a8dced3"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/raw-characters.json",
+        "sha256": "6d1dc554a8a2772aab0cee23de6b655191c35fb2503403d29ecf043412c64e19"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/raw-gear-sets.json",
+        "sha256": "a56407c714f74032e99f21507fb9ed8a2d6b85838cdfc50871fbae29d2f9568a"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/raw-guides.json",
+        "sha256": "f5d7aafb060a93b2f2d1b0a911079445f85749ce8c303b6f0d0841908cb30efa"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/raw-materials.json",
+        "sha256": "107b4c3f3b78019b6620a9c3df8fa42883e54c34e1b27416e007b0d77758858e"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/raw-regions.json",
+        "sha256": "07936da77a16f69b568a75c1cb56b2821c37723882807ccf0161fb878751f5ab"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/raw-weapons.json",
+        "sha256": "d03e4dab76a5a94309a71582dd3e17521b60366fa16522069dea0379c72d05f1"
+      },
+      {
+        "sourcePath": "packages/data/games/endfield/tier-lists.ts",
+        "sha256": "de4c16ccaf945eb8ab6ed498af725f252c8c0e848774e08972f3292a99715d7b"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-artifacts.json",
+        "sha256": "ab5a90d0ea792560a058f87cf1d5be606f7dd2e1ec5f8191d0075541eac619e6"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+        "sha256": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-character-summaries.json",
+        "sha256": "9a0be82bc9655d4eac291f996f0b988ab8e67e547a14701bec68556813ec940f"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-characters.json",
+        "sha256": "60526cc4d5c040db56d30da306618ff55741048048b0c82be3236ec552f8b5f1"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-guides.json",
+        "sha256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-materials.json",
+        "sha256": "ae16a07aea5650a1ae6d488369bdd154dae6778ff186dc8ed94f109992c584d4"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-redeem-codes.json",
+        "sha256": "859af362400044021a85a1cf353d86ad6da2cfd0b54072e1582dc8564bd7f9d4"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-regions.json",
+        "sha256": "037c917f292e5515e43e5772cd1910878caf9dac0c2d964ac4d4c74d5e33d6d6"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/raw-weapons.json",
+        "sha256": "9154393f32c850d015754d2f793e0d05cdbabdaee285bca2e2f9c8868ca60e4e"
+      },
+      {
+        "sourcePath": "packages/data/games/genshin/tier-lists.ts",
+        "sha256": "6c3bb8cc7f74366f5bacb2adc165b06b1855e3a769ed6a513a4063081f73b231"
+      },
+      {
+        "sourcePath": "packages/data/games/guihuan/raw-character-materials.json",
+        "sha256": "61104ae86d31d33589b182c45ec52e27af0763d07e0d36545e85e5e34acb6963"
+      },
+      {
+        "sourcePath": "packages/data/games/guihuan/raw-characters.json",
+        "sha256": "7150c0c560afba80877cb7d1946f4cdc373fcdae4a9d3c2a74fa4f3ef2aa601c"
+      },
+      {
+        "sourcePath": "packages/data/games/guihuan/raw-guides.json",
+        "sha256": "da7ea0afb0577fe6c59325c815e12c89735ffcdc5a25dda9fe39d25e7cca4265"
+      },
+      {
+        "sourcePath": "packages/data/games/guihuan/raw-materials.json",
+        "sha256": "9c011ad9715c0fdc604f8482f01d0a20319580368a048aa7bd90f9ebb16f6c43"
+      },
+      {
+        "sourcePath": "packages/data/games/guihuan/raw-regions.json",
+        "sha256": "389458b3f0fddf4e1bc42ec27e5f3079d47d537312385135f31ab191a41ab327"
+      },
+      {
+        "sourcePath": "packages/data/games/guihuan/raw-weapons.json",
+        "sha256": "648a1787bd21454dc0ca832621bcf366a12bb17558e6ca515cef25c7a1310c23"
+      },
+      {
+        "sourcePath": "packages/data/games/guihuan/tier-lists.ts",
+        "sha256": "9f16733b7b3f000d4e8059f240f26f7d0c69459e23acf20825b2b2c055b21c45"
+      },
+      {
+        "sourcePath": "packages/data/games/hi3/raw-astral-ops.json",
+        "sha256": "8853f5e88811a5091166b7fa69d2ec36cebc047d97613ee234f478a06947afbb"
+      },
+      {
+        "sourcePath": "packages/data/games/hi3/raw-characters.json",
+        "sha256": "2fefa58de0b12a061717c9a355e2c1f87f3b37752c55c635c91cace21d07061f"
+      },
+      {
+        "sourcePath": "packages/data/games/hi3/raw-guides.json",
+        "sha256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3"
+      },
+      {
+        "sourcePath": "packages/data/games/hi3/raw-materials.json",
+        "sha256": "b3abcff08b66da1b21336fddb95bc2300be0da351de23aa32f032e06d04886ec"
+      },
+      {
+        "sourcePath": "packages/data/games/hi3/raw-stigma-sets.json",
+        "sha256": "f90b36f9e54ce1f667bec08ab5d8893e6cc18081ec875cd4c2b861f6d3fbc528"
+      },
+      {
+        "sourcePath": "packages/data/games/hi3/raw-weapons.json",
+        "sha256": "16b7c3bb461d84d5b28995f0f2b2b8d4bb991fe1903d6d95b6be47e51ef2967a"
+      },
+      {
+        "sourcePath": "packages/data/games/hi3/tier-lists.ts",
+        "sha256": "b41795c4fa7c59c39390f1b85997e4eb043ac8aad16b6c26c4e2db3bb7f63caf"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-anomalies.json",
+        "sha256": "429676a71330490b69718c8fdd65a30f2e7ee7c7d030f132ba5b26ccbc83e903"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-builds.json",
+        "sha256": "de0c7cb8db8615592f6a94917bf387c20421d38049bb56570c99d6687e57c381"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+        "sha256": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-character-summaries.json",
+        "sha256": "8e16cc5e060f3bf2803bb4f36848d56b08c7924961c41c7bca345d7e769f27cc"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-characters.json",
+        "sha256": "b4fbe091f17fff4e57e28a123eb3e66aa8792afe86aa5b6eb942e71d800b8335"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-disk-sets.json",
+        "sha256": "43db37750a46b2b63affc1ff43f3bf43c8e2de03166f2a4d4009c2efc08112f6"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-gacha-system.json",
+        "sha256": "116bf6ec0d9d172fa9f0f19a651fce95362a855e070708ce0492e5a530d44be0"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-guides.json",
+        "sha256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-image-sources.json",
+        "sha256": "e0982edbf354d45e42d8e606d467a46a5089a1f160e6ac72cc5dce2b3c025838"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-materials.json",
+        "sha256": "657fbf66e9f53688351570f87824acf1706c9f62e2a330f5a4760ad2638e2233"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-redeem-codes.json",
+        "sha256": "2d906e1df4b8ed9da52193ce1749426827978f5be532aee83fbd6887f2b22d39"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-regions.json",
+        "sha256": "edbb257de77e51ef540d8f617a155c2eb9a99dfb3d0e29334929cbe06ecff910"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/raw-weapons.json",
+        "sha256": "f46984d25d5c7013e4434dcee1ed0cf0544687b480e845c0e4e3c4b20bf508dc"
+      },
+      {
+        "sourcePath": "packages/data/games/nte/tier-lists.ts",
+        "sha256": "bfd2b39dd3ca422b3f9b9f1b304da452a1f2139f87e1e1787f933aad4cab1267"
+      },
+      {
+        "sourcePath": "packages/data/games/roco-cn/raw-character-summaries.json",
+        "sha256": "6dec9aea8d9f2f52eadc9d8d1f8e56777879f74d5a7d75500fbd89fadeb289e8"
+      },
+      {
+        "sourcePath": "packages/data/games/roco-cn/raw-characters.json",
+        "sha256": "47e0e1fbbd475fd80e63c3b96f0fb3b6ec26b6e6c8756e676793589228a2659a"
+      },
+      {
+        "sourcePath": "packages/data/games/roco-cn/raw-guides.json",
+        "sha256": "7a3a5bb63d114d42d2c3cd6b4214a8174e8d75c3eeb2c2498727025fdcf37df9"
+      },
+      {
+        "sourcePath": "packages/data/games/roco-cn/raw-materials.json",
+        "sha256": "ffea53c1592f82c65a17d6b28d7008832676aa3ea20c48a9a3cc21442b315ed1"
+      },
+      {
+        "sourcePath": "packages/data/games/roco-cn/raw-redeem-codes.json",
+        "sha256": "3cf6cc72eb329a0abb23f3a4ae41e1765012be5c222f39076dc07c3a3ab664f2"
+      },
+      {
+        "sourcePath": "packages/data/games/roco-cn/raw-weapons.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/roco-cn/tier-lists.ts",
+        "sha256": "25300bf3e74af0395b36732811517b3d3779b70fc78411d8df2bf91c3aa66504"
+      },
+      {
+        "sourcePath": "packages/data/games/roco/raw-characters.json",
+        "sha256": "c994d4d179c47e229dff8f1d1dfc528bd49820ce9d86f1229ddbdebc776bc689"
+      },
+      {
+        "sourcePath": "packages/data/games/roco/raw-guides.json",
+        "sha256": "209d7983c1682ce4d31fec5e40274853be451e2b1611fb348276039c10cf9cfb"
+      },
+      {
+        "sourcePath": "packages/data/games/roco/raw-materials.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/roco/raw-redeem-codes.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/roco/raw-weapons.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/roco/tier-lists.ts",
+        "sha256": "3a8fbdadc188d2ab04a927ef0b5386df9d4acd564cd20465942a416239e18071"
+      },
+      {
+        "sourcePath": "packages/data/games/sea/raw-character-materials.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/sea/raw-characters.json",
+        "sha256": "b8dd35af7c7076f8944e37a9677badeb5c373b6fcbb0e161044a85ac8e47a9ab"
+      },
+      {
+        "sourcePath": "packages/data/games/sea/raw-guides.json",
+        "sha256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f"
+      },
+      {
+        "sourcePath": "packages/data/games/sea/raw-materials.json",
+        "sha256": "9cd7dfb2eb3a23f2a594dbfe76f050d1d221f99457808b38e62de07b69f175c6"
+      },
+      {
+        "sourcePath": "packages/data/games/sea/raw-redeem-codes.json",
+        "sha256": "620ffabb94306ccafb456fe1b666d1053dae56f3dcb6c14e05b5e1f4828add19"
+      },
+      {
+        "sourcePath": "packages/data/games/sea/raw-weapons.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/sea/tier-lists.ts",
+        "sha256": "56a48ef34d48d98e3b9654abe3abfcba935a1487e0043ebf55d0094d74c6e0f0"
+      },
+      {
+        "sourcePath": "packages/data/games/skjh/raw-guides.json",
+        "sha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3"
+      },
+      {
+        "sourcePath": "packages/data/games/skjh/raw-materials.json",
+        "sha256": "d4417ce41e46786f35c4b4364bc32278f3fa1419f6480621f3a9ff4300c9a03d"
+      },
+      {
+        "sourcePath": "packages/data/games/skjh/raw-redeem-codes.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      {
+        "sourcePath": "packages/data/games/skjh/raw-weapons.json",
+        "sha256": "c7c4d7dfa74718b066188eee10192dd90af5b78aba1a3de4aa9a0782d94a3ced"
+      },
+      {
+        "sourcePath": "packages/data/games/skjh/tier-lists.ts",
+        "sha256": "d4809110725b8ea96fefc39dc8df5426263718cb158b9443f8ce7a687b7ea414"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-character-materials.json",
+        "sha256": "f80c66941355b2f40f166850551c5b30ff1bfbd14b952d32683406c5a5885641"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-character-summaries.json",
+        "sha256": "7ccb54ff98020190a4d1d4997ec69efcf645fcf0d21b94645d8f635089d19d76"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-characters.json",
+        "sha256": "75d68d458694f46a95e15a94216b7a0fb9da5eadb14e1dfef3f90d56a2480f38"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-guides.json",
+        "sha256": "21f5f702ac56e818e0d8ccdd308e2208d031dc7e2e97ac3a6456ba8a2926f080"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-light-cones.json",
+        "sha256": "3c5b5b3107a3281899f354370a91a475d66c0eeb0f2b7f5778517086aba30ffc"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-materials.json",
+        "sha256": "226e8b8549fcd324d3c2fc06a81cbd4d71b71d07b2e63ea5249e206b5beab901"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-redeem-codes.json",
+        "sha256": "d21cd2bb00612bd0324c728bc2730c9a76e432e17925a9f7b665351992c1cd31"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-regions.json",
+        "sha256": "e7ff83d71e9558fa344d04b64e96fa24cfca40a0a9ed2bbb66162552f6e170a3"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/raw-relics.json",
+        "sha256": "08d7a4eefa45002708c9591c50ca1e4fd67a71370051bc80b213a261867eab92"
+      },
+      {
+        "sourcePath": "packages/data/games/starrail/tier-lists.ts",
+        "sha256": "41dfec02b16a9ce5d591b9e4707f77bb1b395750d5f14afd2b46eb7b17b7554a"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-character-materials.json",
+        "sha256": "09114fa267a69901e11e7da7ac9fe1355c9daa199425abdcfb52d6b71a89db7f"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-characters.json",
+        "sha256": "d0adb35281c040fd593c3f8d3a07c13f1f81ec95b7f221f0dca4bbc3e1391bb2"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-echoes.json",
+        "sha256": "ed7224d05f9353a4bda5f2a049ef3b69de4d719e35c273d3769bbc096123d3fb"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-guides.json",
+        "sha256": "0c0b6aefd18f3fe8e1b3750e750dffadba7d50fd44daaa7a1ac8b6fb2f088603"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-materials.json",
+        "sha256": "36e7e3193b0c2922569ac0b01c95fc8cace1c0819b297a53eba27750a1bd741a"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-redeem-codes.json",
+        "sha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-regions.json",
+        "sha256": "239528d752485917563f8459a47f3eadce09dd14a251886bd374905a47d8edc9"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/raw-weapons.json",
+        "sha256": "82db9f066ae1bc720f44471f37209222db445cd2084dcfa32627470041eed5d9"
+      },
+      {
+        "sourcePath": "packages/data/games/wuwa/tier-lists.ts",
+        "sha256": "80d4042ba520a1e61f0ffd3f2f2234b6cb3baa56b269e69d35d371c0fa528827"
+      },
+      {
+        "sourcePath": "packages/data/games/zzz/raw-characters.json",
+        "sha256": "86f1cc7eab09058cc6e25def488d126927dbfc1a65bcd1a9edabf72662f52e99"
+      },
+      {
+        "sourcePath": "packages/data/games/zzz/raw-drive-discs.json",
+        "sha256": "3a797420263ee6e2405730fe28127226992d76a59c2d7751df254799f8c9783c"
+      },
+      {
+        "sourcePath": "packages/data/games/zzz/raw-guides.json",
+        "sha256": "f7d520157ea36eacf83426b7354f4eb9d8accfa202c713f1b934732ec9d166a8"
+      },
+      {
+        "sourcePath": "packages/data/games/zzz/raw-materials.json",
+        "sha256": "63896b2f68e013f333830fa22b7c22fb63fea2c68b8ce34350513fb03908b0cd"
+      },
+      {
+        "sourcePath": "packages/data/games/zzz/raw-redeem-codes.json",
+        "sha256": "a827f1e443b9777294d89fd7b8cedae96d5c23353864e827ff9188982ce36b70"
+      },
+      {
+        "sourcePath": "packages/data/games/zzz/raw-weapons.json",
+        "sha256": "d20de925010d0e59b6dcc8f1fe518708cc2511666c54693ca4bb511b7809c59f"
+      },
+      {
+        "sourcePath": "packages/data/games/zzz/tier-lists.ts",
+        "sha256": "9e8b4940ca79277537561ad1323fd6d3888257e1dcd332c37ac16e0d23dc95aa"
+      }
+    ],
+    "changedPaths": [
+      "packages/data/games/genshin/raw-character-materials.json",
+      "packages/data/games/genshin/raw-character-summaries.json",
+      "packages/data/games/genshin/raw-characters.json",
+      "packages/data/games/genshin/raw-materials.json"
+    ],
+    "derivedSources": [
+      {
+        "sourcePath": "packages/data/games/genshin/raw-character-summaries.json",
+        "derivedFrom": "packages/data/games/genshin/raw-characters.json",
+        "generator": "generate-character-summaries.mjs"
+      }
+    ],
+    "decisions": [
+      {
+        "decisionKey": "8ab0eae5a4b2a3b0b6f2317453883b2c56ee55028153220dc205c0fa43b7e31d",
+        "revisionKey": "002e20456bf4990c589219fb258857aee8e4c73f89757649f691d5a6899d6941",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:scarab: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "877e9fe64361816605688d07290e5bc26fc53d6fe8f3680ed4afabcfdc462e36",
+        "revisionKey": "018e041443f54ac0b1113b8460d86f7521d8a951bb9caf89e432ed9c1d3bc37c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:evergloom-ring: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e827f1b8d20283d1e4499736541730c6ba9d7c934cc60baddf5042d69b50cde5",
+        "revisionKey": "01bade898962023c5f8aab84b3ea0815b2c58828ce3f4b7a0deb8dfad9b433d6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:wanderer: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "99a053d847c3eaef83a0a004d2c5f6826ce65120bcdb0bc690bc1a6c3dc8014f",
+        "revisionKey": "03f53e9f95c77b11a0c5a084907356efa5fb80e94dbe3533bbf800e5c132035f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:lynette: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "01c9ddc305d9025e743c721264e040c170c528baf8998caa04c85ee29d3cd31e",
+        "revisionKey": "06b013a73e092e2a69ea6bb2318081475a59818c6eef9347fac55a495751ade8",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:weathered-arrowhead: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "63868272c4bb177ccd229f15e2cd47b99bb39bdc0f4d99d947c83d0f9a0c0e75",
+        "revisionKey": "09f0197a3bdf68639f481201a2153045e1f2cfb6c269602d33f7d042224f6df2",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:riftborn-regalia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "572fe061449cc3e937dc55d706ade0713626b5613c2eb7a3e2fcd3413c71617f",
+        "revisionKey": "0a752aecb4acd6e1cb264d11f11d5a2ebaa634befd81bfc60078b3289f1d630a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:kazuha: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c72bf1998dc191bfb3b5140553daf0d26a355a768aa37f8da9c8787576de8764",
+        "revisionKey": "0c7577c16648c341e8be41509aa716064f7e8cc03c745c9c0c335e30332146d2",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:sharp-arrowhead: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6fc31106eef80b54323355991999e918b8a80ff33f44fb6257208ae88ddf926c",
+        "revisionKey": "0ca395b1b8bafd3888c570f22c1caf9b6ddf5e6109b972cf5792a507ff6f1995",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:forbidden-curse-scroll: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f900802442a258f08b17cffbb5ad2b824ca2d116e145846b95fddc75440094da",
+        "revisionKey": "0cc8ae385f5d2e3407dadc799fc0bfb9961b66ac8a27fc6894404e8b0bfdbb81",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:old-handguard: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ba3dc80a52075917dee0ff40788923263857c70ae8b9ae10cc12cc961825fb9c",
+        "revisionKey": "0d2108a355459b4547cf1e89bb50bbe0f0df180353ce506d2508c52b709ad901",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:guide-to-conflict: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "679fcb27d8a9196019cb126d83098011cc42686cfe4afc6c1b5896ad8538199f",
+        "revisionKey": "0fb1417cb48b447719944de7d76d99ea2f36f5b3571cbf412f3605e6288fdb2f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:dehya: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "bb78a4a18f6c5f62ed18abe989e61144d00450baeccc0d316b5e8a3ee6727f92",
+        "revisionKey": "105558d9a2aad626a1e908e165447dda5a474904a52bc97eab319c0e301e3a49",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:recruits-insignia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4b95970e4756f1ecbd2d6b4d33f9249def3feb44fb89c2b3b56f01391ef82fb8",
+        "revisionKey": "111c810f07b0c7747bf597ae9b6a85b57bce80f264c65ec85a6794b23b8a0d0d",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:prithiva-topaz-gemstone: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "cc05b692a3b962749811241e47f44422dbaca77d98487d72dba003fe93530628",
+        "revisionKey": "11ac48073dded4c7802f53f5e33d5c3467c0c6734a117cdfe89d00cc932a8ae6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:fluorescent-fungus: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "9a8786398e95f78ddff56a4f14da901bdc17ac07e7402a2364b261b3c920bd2d",
+        "revisionKey": "12a25cbe5253f8bff56a4a086ebc52729e3c6de5e4464945e0a1429785b4b6bb",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:kokomi: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "bda9ebb4a9b7c3cb84a428b0f029cfe70b6ac07ac9c46628a14098ab8c7fb325",
+        "revisionKey": "12e59a280c146ba0a74706f72366af0a28426ce93095eb7c991b8d0c6239f7eb",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lightless-eye-of-the-maelstrom: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "80b12fedb3a9bd238ac72a5b95efd813d5b6eb6395f7d1191befcce9e49e9c9a",
+        "revisionKey": "1549e0902cb88bd22b6458f4db1ed1d1b4ae21020e7d471ccd932e7015b033ad",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:transoceanic-chunk: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "0c3f27d6909663c75fd501ad913481499eaf12983b43905de26de57f2175c326",
+        "revisionKey": "16de7abef2b29eb2286ac20e17275b3b183236c21f1475f2ba32a6e73698ff9a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:quenepa-berry: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6f1c37be659bd867427e88097fa4d0e48e60ea303d0bf68e14782d15b2cd1c5d",
+        "revisionKey": "17bbff062fb986fe7c8c0db8e1585f958e1cd3bbcf4928351d20091fa39627af",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:freminet: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "585098296557dff8b98e88b85055c9227c60615fc2b05e89108e1471057fa74a",
+        "revisionKey": "184e6ab03e9b7dc5e31c98fdbb33c7fa9752fb4472d7dbe5e3c632ecc9f2cb1a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:eroded-sunfire: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "508ca05f061167059020e7bcbc86687387a5394907c41dd78582166e8166536f",
+        "revisionKey": "187fdff4c261ddc06a1659b77f16f45656684bc72b1ec4345dbf753c480d92d3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:hu-tao: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f4f9cb2f32be55a6aab23a63b42b251c9a12908e7cda4d189865bed072c39058",
+        "revisionKey": "18f6001225dfd2c2bb525591e5d28c42657c2f3960a860b80875e2d4af471313",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:ayato: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "25e324f2241b3262ef1aadc291c58660991cb588c20a64d98c9dae7a0c2ade83",
+        "revisionKey": "1954f0d63b978208f71efabd7e200bcf9e86c420d6d801d6e1ad8d17c26b688e",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:glowing-hornshroom: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "9b54e98c91b7fa10b6f1e14827583e10e3174d81e3f7646c746d4b2d8c2b1b1e",
+        "revisionKey": "1a031b42c8b8bbe7ef2ba17893a82a6c66bd1e7c27e3312849434ed522c20608",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lumidouce-bell: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "5567dcf18823e0866018cbefbd1bbd7e1eb94861be43c1c58e2e7d048e5ed8d5",
+        "revisionKey": "1a326e13f188fab7a5b0e49a8c80218a099b90148c47ccc0d6919adc77415200",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:juvenile-jade: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "a91651fc42a2d4f40133fd520c951d2e0947f3b165542844b7488d2063fb453e",
+        "revisionKey": "1b12816d42c90198df7a64df217b23d8a24580eedf68ff51404c110c84972992",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:noelle: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6aad23712969bf490a901fb21494fc17bb9cc74c853f9b9d155811225b8b29f6",
+        "revisionKey": "1b5ce4e18c9509051520d80fe2692eac635a590417f125ebfe342d9502658f76",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:razor: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "8c2f56c2fd8eb816d798f212a6ea4b4e84e4f0e9fa7e0f8e9619fdbc52c482c5",
+        "revisionKey": "1b6d9f0a8d50729c8e145ef9c26e12d11c283c36a42acf551528e4d71b39977f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:saurian-claw-succulent: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "43b7746d9f76051e34c2358cad222d61d60f3355eeac0c78fb463d152433f035",
+        "revisionKey": "1bbc60c9d4d7397fc1dbb5e9a2ba6b1f4615d04fc4fa68f61e7367339ebdd829",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:trishiraite: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "274497fa2fbed9abb5a858f68121b591428d6e83126b4438cfb76666daba1cc9",
+        "revisionKey": "1d590266bdf0ef8454d267b7a0ed0591e3543b4413bd43c006ad91307f4b2ca9",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:nilotpala-lotus: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "83abc2c7ea996c9d69e14304f089b6c69d3342214e648b73874d63128d53746a",
+        "revisionKey": "1e07ae0cbf5dea33ee667c11f21992664da67f6d79f6458d31cc9661959e6248",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:jean: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3d4a88db4bef7226dffe5e9bff9fb64138a9311f7a1fb8f029ccb1b885e058ad",
+        "revisionKey": "20413b51d7df93e966555d8b587cb0855725c9ae7d58303ace6c8e771ce9bcd2",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:eroded-horn: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "35dae52442b31fd4d4c5e3f58cd76b97d34bcb2709b9e7ddeb85cd0fc984af63",
+        "revisionKey": "20ddac58bc8244ef2d2884b5c183eed770e53ab7718dc331e5f3019d0f7bc23a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:seasoned-fang: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "317e937aeeb15a19a5e60c66f76643a9b5db16e4f7114207b157a065e78b00eb",
+        "revisionKey": "211710effa65fc3328f52d8b623c93abba5f5bb36cf9a15b6d2bd662c91e883c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:keqing: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "82c5000dd585e304d086644c9f9adc35136a8e2c7061a82b1c421229de196123",
+        "revisionKey": "22746ecc456e175c95e83c4901c35752daa9a9cf8bf43ccc870275b4d01a1fb6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:dragonheirs-false-fin: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "89091434ffb217d448a831e0c39a6178b4e783a20c21deabaa7838a3e1e6198d",
+        "revisionKey": "255386afedf9df50c90db3de2b2b58c165e04b37216ff0fc1ddaa79f28806467",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:smoldering-pearl: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7857baa1c9daedf22e40dce78de958931094a8af9fb791d864d19272d08ef5fb",
+        "revisionKey": "25a7df0ad88b4200ca4ccae07b5714e3d88a402114e8129fbb34b819b5417f34",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:tourbillon-device: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "aa247ccd76fc010ce53cbb08f5d4e870375b82641898c3b2db7fa8a0cc6d33e9",
+        "revisionKey": "25ca773f5dcb1f4a6ab7ebb3ff766dbd9a796738bdaa4f0c5d2eb8109941ea74",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:klee: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3cc4a33161c469aaeb55a0b91e374ae00b24a1e5301d11fe0abd9ea4a8f34e63",
+        "revisionKey": "2673d3f8c6f67886b6044c0a4b51ec76dee985e8aac1e6f29f16a7909b48d545",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:raiden-shogun: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1c3ece855b3c659173ca5eb0425c5c8833cb795c5b70c981e83a6273d08fe251",
+        "revisionKey": "27b1dbd79f93e467e5015a8808f96db16783c6ef7b15079b26da47d9b0f1036c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:primordial-greenbloom: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "50a9df458afd31077c45b3d7d72a5b6cc696c497638217fc11af62b23de2f364",
+        "revisionKey": "29cab61512ec61dd8835fb8704de279a5a2be1179c454ff98e6052ddf20b338b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:itto: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "0c35b886cbd923201cdde2218977780a6e22950f7b1976535525de32209e33bc",
+        "revisionKey": "29d061255e059ddb92c5586489f642a0e9b4c55cf5fd659d5768192f0e143867",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:sethos: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e3afa6f26bf3d1706ab052f6dbfc7bc6914bd06197f5ed260e12b182258ff8ee",
+        "revisionKey": "2ac93f53cc20d5358aff2a791272ff1e9b257524549bf2447fc0c9695642713c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:xingqiu: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "2a230085bf65abd39162ffd9f69b026961e55ad7adc52a8c32a9bc5ebac2728e",
+        "revisionKey": "2d18cf4c3639030f2ff2d3e27641c39269e5113479855fa9c09930b99f92584a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:thunderclap-fruitcore: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "63a344655ebf47585b1f82944cf9c9ae844ed1ddada806a4632aa0424a100c6b",
+        "revisionKey": "2e6e7ab4e0bc5b8dd7a48c74c7ba24516b903a32292eebcdbd03dde94ad0f693",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:crown-of-insight: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ba71efe3ae3e9397ca91e73effc328b8a18f927fb41a9e7075809e115a1423c4",
+        "revisionKey": "31cc0a84ee698cc9e3eb0f297b26fadbd41b09b0cff83ac07b6fd60c12b1f98d",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:thoma: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "33746820eefd8524b23be1d8a33ff9e23886c361b75434e06aaded1be9520836",
+        "revisionKey": "321b99c76ccbfadf7d6824e59fbee6f46e946f731163a9c2effeb4847ebd85f6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:citlali: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "46c427f39daaa34c171ac270444656e494c36dc5d5699553b67a086afa2c9280",
+        "revisionKey": "33086a1755d662e539097a769de0d8b067d90f6df3b31827f4e167f6d99ae439",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:silken-feather: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "943327942ddec99f3774014715244b2ecd99134a1311d00e74939d44609592ef",
+        "revisionKey": "341fa605d9774f1d04456819dd14d0793eeb186bab4ae543466a532a10e81cc4",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:mika: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "898fbb590d2d2bd8f3d1b1115acc0bce91bbc01c6796456a44aa35a91f098562",
+        "revisionKey": "34824287ca3d6a3acc1c660d8d6c457e326168169dda4c04312d18a741270490",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:qiqi: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "11fc0946ae455cdd28bbc67d366597e786ef104dfc52f7dbf7b72565a37ed1ce",
+        "revisionKey": "357933e6319dea7d2077f08a2de3a7af0bb97199e5ed6f2b2bb7a2ac06e84570",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:perpetual-caliber: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1634f00df75c7d9abbea6d63970aafc62101572ae6470c8e73fb46e1dfe23d22",
+        "revisionKey": "35e174d1eace662b42abe7fb39d860c7f1a219195b157d8abf01a1a968673bd7",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:basalt-petrification: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "0a41e36a27662a12fed4c9ac9d86a32c78c93670311b08743ca261b7f0d6d559",
+        "revisionKey": "36ff07c1b50a458e1515820027db8b8a4ddf82667c441aebdd13d1626078b00d",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:navia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "5bea733cab66b4f71f9b14beb0dfbbda68ca83d8022618cd16fae654b626a248",
+        "revisionKey": "373429cb59a86acad5e43f27195a8cc7a69760a3c1754dfb0efedbbc98a99f79",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:meshing-gear: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "5eb149c3de0583f65b12e72aa9e82c15f287dfccbe307f5bb48d7b4be9b448e5",
+        "revisionKey": "373571a6be893ed5514b16d5fa44a4556e0f4fac654bca2f05e250af956036e6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:bennett: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "d6d2fc765be67d48b5399883a0cbeeee17d3adf3eca82f2087d21dfd5cc2f44e",
+        "revisionKey": "3796c5125328e67f7dac1d1d2396e5b5cc1266261d9e97d765d99d8a9ce2f44b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:dew-of-repudiation: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f6dba87cd2c4bd9a8cb8798c3947772200ce3dd6f97b6566016e510b824e7d7e",
+        "revisionKey": "393c4d189dec691d624d9e486b79b66ae2c496ae3c0f3edf3dd957a9c77a6729",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:warriors-metal-whistle: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7da205faff491e5c2315bb4f50f8d996b1d462e26fbb87b9a0bb9c9ef29a556c",
+        "revisionKey": "39c6f1fe2049cd93f6b65132c786fba2c8828c04f2fb5892499f8122d355e396",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:shivada-jade-gemstone: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ce8338d6a36fa39e68814c7ef235bae1117b86f698cfb1d94bfbf8eee8a78ad3",
+        "revisionKey": "3b07dcc0a5a1b7f8fd098a48949a8c53d6c0035463aaae16e21f2351251741fe",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:faruzan: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4400b66772d1dafd2dd3ab8f1aeb712542c2698dddc81e066d94d00d107ef107",
+        "revisionKey": "3c568cbad8ead98b6ff35be23ad8d1475de911ee29f71de869185ada61d44ee7",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:ororon: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "b4524ce60a07e84fa150cda086706b7938fd89f41508e54e297598c50014bb08",
+        "revisionKey": "3f108a42e3d547e4320ccf77b4eb128da4791d8436cf5c86ffa3ceaaccc512d5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:henna-berry: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "8a554af1568f374a022f12edd372c2075068702808987457c8e5f0ef685f6f52",
+        "revisionKey": "40c2e2b8a62e14b7af208d9b6bfebd72bcbbc55b5f623207f746313a86783138",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:tartaglia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "401458032185860c2449a80bbb8dff0a8d9b40eb15538e91b143c0ca6fc027bc",
+        "revisionKey": "40c2f4832c57310f043fffe537869e196b7113b6cce6c5978244b86b51b22d67",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:withering-purpurbloom: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4eb7e307f2e8f45319758a8a822c265ab355b9ceed64dd7583dadad7b735c49b",
+        "revisionKey": "43b87e5002ac0716297931bfb55ed555b8d10383eb99820214e457b3e8c66ea4",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:kinich: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3e85f901610b905443f5306772478354da70216004902168f79e25754bb511ca",
+        "revisionKey": "457cd14dfe5a1e0621d20b442269db337f936e0e3152f198ec1003f0b6e3ddeb",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:xianyun: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "da29283992c33d88878119cf4e5d88c8fe2c3de1ef9c875a24655ad826c1ece7",
+        "revisionKey": "46b138aa880c23334ce8c2964d23fe2eede0545dab92e57c0f6689d13f408a82",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:yoimiya: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4b0ec63a501a30c0e51561bc6c5d1544934a3b0e38619118c15f940f388b2b8b",
+        "revisionKey": "4773ab698e1781e58073b91a07e0305039d0f53dc4d01c2764add23b6856e0bd",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:neuvillette: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "b7558fb0f76194b115123b779b5910547efa83984c53a80f1d918bb7838f2fac",
+        "revisionKey": "48109d3ba2836ae321f801e6fecfc2857c586e49fcec06ad2c3c0b3cb80c734c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:candace: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c18101fa9456b0afeb90e32f86a34c5ffa3ac7bc11be522cc5316f10a96c6b32",
+        "revisionKey": "48ed9a0747d18180be124d2b193ed46f44ad877102e9b3a596af77ae8ebab536",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:eula: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "cd5bb6a8e8e0fbdbaffac2187b1cda09ebab5b6e28ce40bc9f6586f4e6512627",
+        "revisionKey": "4a3fc61e4aae16d5816acc7f0d693eee5948e191b5b3b2e59d5732ea3576a579",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:crystallizing-core: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "637116969895107d35c80934d8a4f411dcef2835a21e6dac459c5d9da8cfd6df",
+        "revisionKey": "4a6a5bf96bec6e8f95e26d56f60356da9f7c8ed4a1cb385a48770c0ea8039088",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:floating-core: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "d2e59265ceccbd5067a0ca6c42b8c4e9daff37bccc244abbf9e78a4a6b219fdb",
+        "revisionKey": "4bd15b947034f3f748027d7c097f8f4fdb7c215c92696b4b810394fbe6414f80",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lumitoile: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "745f902dd77a243e4705db378202ebc8dceca47d30b61fd8dcd3d34daf9d82ec",
+        "revisionKey": "4c6e1bd044f9c4f2aabfc1656f2ae801a0dcd292f20bdd3ad8ec4773cbffaa05",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "characters:mualani: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R137 三语角色及双语技能/命座证据核对身份、版本和声优；R138 已补齐规范图片，夜魂及特殊跳跃均保留；配装、配队和评价保持空白。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c16186c29c64927a3fba6c86cd094f39ff269197e3bfd86e7829aa2a8a527d04",
+        "revisionKey": "4cd3051d6fb99614a2db107bf9c1fef1921fb5308dee788b5f92e07491573ef4",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:barbara: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "063999869d161a436fafb3a12f5704f39894c88785ae8487c1dec9cf0bdb38ee",
+        "revisionKey": "4dfdc2f22ec53e7ec589407ddbe8eec5348073e5df381f8a69b1e69061f78f66",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:emperors-resolution: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3d346b613882eecee6391da76ebf99376cf47ac5ac29c7a4f919b09d34068378",
+        "revisionKey": "4dffbe30e10e316f2a13704e9f183f0d5f17937f644e52d77dcb8643004a1f85",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:yaoyao: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6ec8d569103da60b3a388eb356aefe52ebb8b3b7f9eba1fc2b5d1cd962036ac8",
+        "revisionKey": "4e27cc647fc020a0560fc85f43a3f4dde5b5f53a55ad585f440f019ae82dd9f5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:faded-red-satin: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7b0642aec570000915938c44c872254825953b74b66275c02db3223026afea63",
+        "revisionKey": "4fa7663f4ef4cb09f90547e3941b737c109dd334c7e32054aa4fc0e91627ed53",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:everflame-seed: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "615afdc2d7f3104eb88ebc21401627cfea5fec8345da8dbf3f4d8b997abaf0b0",
+        "revisionKey": "528a7377ef76ac15417d381ae8252ce33506c7a8630d4ece0681c2e3f0ff0e83",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:mechanical-spur-gear: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f637bc593735866f12287b4777076b2214043e5b672db0c57bc8ccbd199f98a3",
+        "revisionKey": "52e1c7b2cdc3c499d5de6146e2c1af73feb43a37e43739216488ce8dfd876503",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:kageuchi-handguard: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "15dbced7d1b6a8c416b23257fd116346d51514753e417ee2bff9981ade20d39b",
+        "revisionKey": "530af428cc4fbb058d4a9107c09ce6755b7c1f956081dd4f38de45609b26f959",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:albedo: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c662e4fc28d2399123e4749b5401a88ea23608e6815ae127f3fbcdc4426997c9",
+        "revisionKey": "5313d79d9d2ea04b5f45d60a4ffc3dedd1d4c37c594eb2438a1572eb3482c8de",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:mona: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c8b5facb98e8be92fb0113ec833811c8635f44dfa0daf33125aec10675f215a1",
+        "revisionKey": "5401e057b821abc7927a4219f753c0bdfb58d71fbf61ad9365de27ba444dc632",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:marionette-core: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "cd41f8cca31ec15c40897c82a0c6b48473bb65162c3e368c03edc28ba528ebb5",
+        "revisionKey": "54d498168d58f49cf8f945d3b8d91b35d2c18735b339ca77c08256fd61ea0e6f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:gold-inscribed-secret-source-core: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "478efb663da3ef97554c5500938c0b4eef9ba181bd0a49f7c6ad85fa26981efb",
+        "revisionKey": "573cfd24867dd593ec6e30d711277dcaa21e2a0e1f258afb9cf3ef14b48b2b8f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:ningguang: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "d4e439e6c22b5eaf3c320d6b34d010a4ecc79bddaf0f9f8f06d0d52f97daa03c",
+        "revisionKey": "5ab010ce488cfa75030340ab80f3fa25c2175aeb77eb764768fca31baf56a6f7",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:baizhu: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "54794ecc27f7edfbee774eecebffb1b75b11e422afdd329ba3a7b1478fa9b974",
+        "revisionKey": "5b45e28100bf2e1a7081f24f19f59ad2931e5ae5319da0a631647604cfc590d8",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:brilliant-chrysanthemum: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "2224251a2f0a04d58386e0e0393f31635a421d1b6a48fa3f704032c3f2d9344a",
+        "revisionKey": "5cc4a9450681e7bd71b584565267c6fa57d4fe23322c90ab229b13fa5e348712",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:lisa: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "30774d65427188cb25f822c8918069533c7b1aecbe3506be3d325a9f1f20ca08",
+        "revisionKey": "5d741b99950b2f3ff81a888a56c3b57d678e65e6053de751c391c660196e2a59",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:guide-to-contention: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e4502260db8f3cf8d0912e36fd0ccb8521515f20a23b02a8b2488d93ac32c78a",
+        "revisionKey": "5ead4046da642f705408964742931f748f076b8fffbee7ab902256b18d923300",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:mirror-of-mushin: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e8bf45f733af578de291d3c5a35d4e1606f9f45719bdf17577c3f7fcf9435240",
+        "revisionKey": "5f7d6d43f22d454eedf550017c338d8b0c21ee3b1c9e33daa48e00a8063b218a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:teachings-of-conflict: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "71177e632ecc6dbbfb49088011fcd84b426a952f86e6dbebf4150313a62efb61",
+        "revisionKey": "61fc860904b90a4783d6aaf0b0a68c1740fa7a5336c828c7235de30ba95075fc",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:arlecchino: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3a3bd7f716fc600bcb27146d7055ee43d70e1437ecddf9d299cc0d5ef85bb77e",
+        "revisionKey": "62ed1b682b309e8c3ce2454b1f7c279f6dd47fa63f8893ebcb8c8c72b07c1810",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:artificed-dynamic-gear: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "92e356140413474051d815795e43c9242123a22add7471d9a6f837f1c1ca3791",
+        "revisionKey": "6358736e265d4720fb8d19f5e4be3a307330eaeb50b69e3c3b84e813a09422c3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:sprayfeather-gill: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "b6c9b487963fc34c02e28ef415dc1cc0bfc1ea4a9d8a18d5b4d173086b3af6e9",
+        "revisionKey": "660aca8b033d8ad4fcbf610645b166bb772488015ca3159287623e67e7cb0f74",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:smaragdistite-jade-branch: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "d03676e18cada06d7d9dc84f195c9ea3b858ffc00dd2fd114a1969c98ed7cb0f",
+        "revisionKey": "697dc7a873edc7bb7850bcdd635a9ef9fc3933d02d374db616c532f237a7a414",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:gaming: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f57d7f17e20051ec9dc717d27c695b727e070b71a7fb25a98a4cf2972e83c389",
+        "revisionKey": "6baa905dc095ab6ef3b6ea90c60ee8eb3a527745bc8afb4b4aeda2a3fb4e800b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:golden-raven-insignia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "fefa7b69ceb5f3d65fa18e23b28b050c606874df8c2538b42266d9f89632ced7",
+        "revisionKey": "6c28f255c1095e6e2b4dd77c3489b4cadeab0e67fbeb483afda185cae4366a2f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:chiori: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "cdff8fcdacccefb2a8f6b6b868d0e120163a2b45aa267b284ba6699dac944234",
+        "revisionKey": "6ddd2bc5a938c5eec9aec5a4066973f8e29cf5a990c6a40416eb027c4112e266",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:teachings-of-contention: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "a59822f7f017453d54620ff1bd01f0c1ed46c6d1898666e9ba941c28aa825dba",
+        "revisionKey": "6de656444a53312b73d29f15594f47276352f94a975a0a4b602ab6d2401bd0e5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:clearwater-jade: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "488b63195b003cc5c4cd4679b99c7390e6cdfa9e508f5f30ad99ac098440e740",
+        "revisionKey": "6ebac0cfefebdb9c5e56300fac802731e00e8dcaccb5fe49b09355bd5eb99187",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:firm-arrowhead: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e201ef279706a726c1daf1baf364dd8dd30417b8e7f61682af71f535ab2c9528",
+        "revisionKey": "6fb16d1bf1931ad03d79ae3878a914b5cd74bbeb0377e8f10f2ac507e6655c57",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:rosaria: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "71b49ff310c610d9265022f22839fde3b5552a3a700c0c7f348f62f23d585c9f",
+        "revisionKey": "753f0d803a3056599d8d9d320a6a2ea53e968081b50f38065dfa8e59d6b64701",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:philosophies-of-kindling: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ee0eec12c6377f8faa75e415c8c7fa58f88ef721fdb546594330699c322902f8",
+        "revisionKey": "75b6bbe655c24804ce2a1f8849c21b25564a979225ea64f926b77d6df5c7e146",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:nilou: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e4e2aa0ff245666f725e41d247e4e066c7e6982d595e32b2ecd9e4cabd769edb",
+        "revisionKey": "76a2b8781b859a40b86350b997a38b02347202581f2c509f03ca2b5c29f7cd04",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:sentrys-wooden-whistle: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "94c8e20646ecfb924b50ee2685ab3b7fdd2f6b1f39c325c3bd15efa43ed51613",
+        "revisionKey": "787432cc0c00786efbae7d3fed6f0b08c02aa6b7ae8d244e51cece55deef2a3a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:dori: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1e56e3e34342e4dc682de5b2c50b8e1adaad3610df0189752147587a61ccea42",
+        "revisionKey": "7a57eb24457c32da4d922988ea56a8dc96c401db091c2678585497048bb03735",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:overripe-flamegranate: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "afe1abdb6c2779b607cdff2d38e332784996992f56f67edec0b3716382035cdb",
+        "revisionKey": "7b1bea50a4cb31af8c438c6d03ed35fe0f2eb616c68e38ab8ffc94e2727d6160",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:juvenile-fang: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "45fa0da32595a4f4ae2dd9e42c1c0f0d4c84f15ce6c9413241da65da1ce1f9bc",
+        "revisionKey": "7e955e51f40e74e55ba21a6c5fa250521e613a1425d4c2336b7e1222f503d012",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:dvalins-sigh: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "28fc382fd62d487f50aedbf51c115fe4abd23377efbb5f50d8e26d9db5224b32",
+        "revisionKey": "7f04753d5fcac6b569d67443bbf5e65cee827c1074b568ac7c996ec989b89609",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:vayuda-turquoise-gemstone: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ebcf149b98ed0a4d326a6f3fc654025f14488bc681880b28ce6c14d877095048",
+        "revisionKey": "834a9ee169dc4555fbdb215614154e8082fd448bbaa509cfdfb33b6f9acfd27b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:gorou: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "860a80e4407a1dff57981c5d26122a1b25b332b50fed93b4ea71071b4e9d4858",
+        "revisionKey": "853278860d72535f127c8634f3de92290e187f6fa32fb74fa363273afdc8a7f3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:suffused-core: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "729c0e9c6ee579d32438c6577dff9a52cf03400b4c9facb9bf480f8ec41ee405",
+        "revisionKey": "85676a74ef74f170b8527e577506082e478f6fc1975f0638f8434c49e6904cd3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:zhongli: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c49cdf42d29a0af0f5abffe95f6df510d860e14bcca4937f041241da5450f786",
+        "revisionKey": "85b0686d6454eeefe76abb1e489d7bc6cfb4fedb2cef4751c25c58dacc6ecbd0",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:mavuika: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f435f5293ff1e900a2cd4c270ddfdc9d12685d87452f3a97d9ad2c837467e469",
+        "revisionKey": "8a8a5cb981232c5ffa68af65ff34e469f796d3b216beadbaa16b05e77e36d501",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:nahida: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "465ff1460b03850758700631c5cb860833436286a205e06e3376dc945bb70862",
+        "revisionKey": "8b3dbb47cc96987ea12eb8627007212b14d971fa45a96333c51dc2f4e36f3581",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lightless-mass: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1edff286ea67ba29d381f3c3cc64564a0a7df236d706bf60dc29d3208f70ffd0",
+        "revisionKey": "8b6d2efc2c926abfc22264d0df622873fef7220b6c4012c85cb4da38a60025a5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:artificed-spare-clockwork-component-coppelius: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "47292386fe3ba4c83bd5d2d144b78987d2c9f8e3d50dfd590a4f697bc093c8bd",
+        "revisionKey": "8bc0949ad7526cf13fac485bbc9493eeefb57fbea7391136f48a9063c29bfbb3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:perpetual-heart: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "37007c4a1a07aa19c9d1c4c5705845af557f6d15c2ef55c06d46c842bdb0bb5d",
+        "revisionKey": "8c55b9344d9b61f04df531ff538ab71b32489fef7a6397bee755c230befa9af5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:chasca: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f32822bc4773ad7a11c3cd63dd5042b9b302dbc32ac45a32fc9dc0f374f10fe9",
+        "revisionKey": "8ca07737a0f96be07169daaa3ab3d322af0f800b316dfa2beb82ea9a69e285a3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:sergeants-insignia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "57af67f4172f12e9005893902e480c126cbe3c6c5d9f59613cfba5359beeee7d",
+        "revisionKey": "8d45a40e7e11e28ac5bba96f6a9178ff83e86a95dc5e915ae7df47c4a84c4dc3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:shinobu: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "dee7f9ba39156811fd7b1a5b26abca9fb612cb4211ce5f07497f2e2336bcb1c8",
+        "revisionKey": "8ddfeb62fb1736acc42698b84a885561fe8eba7abc6894ad70af4ec84f70b8f4",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:lyney: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "b0bb8ed3f23baa01d75a0090391ccfb4d8b835bc13895d9b969c74304a443eda",
+        "revisionKey": "8e3cb6a59e408837bb0a20ebf9631fe8c084ec85914336ce6d4e1299b33d90d1",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:nagadus-emerald-gemstone: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "93b931af4acb7affbff09c92872c5bdacb0f6c5bb71e36e072954d6a6a7b79d5",
+        "revisionKey": "8e4846fcf6bcdcdd92671432df31fbecf77749e6184565ddbb28e75e3a7cbae7",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:dragon-lords-crown: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "56a98510ac3c0c4a5023dffbdd0a14985bff1c700f6030668695345dbb537c6d",
+        "revisionKey": "8eea70bfc79dbf6b24e2a8218c194322623fdf715f494322e3b596d4aba95615",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:romaritime-flower: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "14ec62739d160091df7569d9b6ebaeb6e7c2b4d43ec2fb7f7dc67562119c4b98",
+        "revisionKey": "9060a4527c5f0ee2fbd72c7c5bb7586d5f09b4fa3ac1e4d4458007d7111985e6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:hurricane-seed: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "9c462d9bf5275dd4232492301927173c5b6e4f273dad092942f1a36ddd162945",
+        "revisionKey": "90af3037c4eda276b1f11996f98002621bf8a40662e68b772de32184dd94a08a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:light-guiding-tetrahedron: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "a1c4118108cbe7c6204ce645f5ef8c4cb2e0707a1d2c36519be7086d37f6597c",
+        "revisionKey": "9117b97eda4daf673bff514d791d7f018bc8f17934765c89c9b68b7f90973248",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:fragment-of-a-golden-melody: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "9d22b29531408ae01d4c102123b71a8419ca9b9993e5212a7d26fc99bd7b5bc6",
+        "revisionKey": "91f1fa93f4d3387d2f0af904ed0f22ffc5fb3822ba5365672971dd7673627e14",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:alhaitham: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f1aa9856081451b220cd2a3355df081bccf5d07c528893ab379daaef5c499a23",
+        "revisionKey": "91f7d5b30c6f0200b7a943d5ef77856da1b1f5173d32db56142bd7ce2aefb46a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:kaeya: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "d7d3097e7c56f86628c20471bdeb9b5dc2d087beb54238b1c3a4f1fba92170c9",
+        "revisionKey": "93adc0d557afe890c0c0363c5635085d63ffcecb43e8d74ee4c3d4e660ad97a3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:collei: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "bb30b4f1858b5d7b68ac0ce2a45bef3d8dc729b7df96e44aeadc3f6bccaa291b",
+        "revisionKey": "96abe1318c1c29488c8a53671091e6729944999d39b71a98fb01c9f406e9ad5b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:fungal-spores: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "cf3093780e15e8c32e0ef61f2f16dfd63da6118c2c323f2b598b47f8aca8317a",
+        "revisionKey": "971a785aa0e8edc5bad30aaaf4b4b04d2b9dc094a2878918d71718d43f53d5d6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:charlotte: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "977e7f59f8f4b937d1f4dbdc16686237f69fedd70ecb09fbfb03f6274f04ecb7",
+        "revisionKey": "9736b593894cfae0058d0d1dc4fccb1018fef78022ffb80354c444aee5d7fb1a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:sara: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "68541659c10f845cfde14c0b3ba6477cdf73c8e0ce28fd1ffba3538d54a4f467",
+        "revisionKey": "9755314d3803ab0aa366b636c92c9492aab22bda0bdf5f9d6796eb126a48c343",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:pseudo-stamens: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7ae2ee2426366e1c3ae925d999464d5f29e47f423c5bf15110acb105d69b6ff3",
+        "revisionKey": "9e544b87a6d8fb45fa5d395c3f9cc13a3c68d2fdb5483853fcab521351c1f467",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:everamber: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f3a2c3622bd7fbb7a9dc105eca9f2c2a95f5da7c7adf03d1b2b98621deb2890f",
+        "revisionKey": "9e735d627e953daf8b8b3818ac726b8ab5551dfc1c73bb8a1e1d140954eca870",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:puppet-strings: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4563f4bc197bc8187b1dbba9c3cefd8504fc388b7f7cbf24fe528f4d8331253f",
+        "revisionKey": "9efabb8293ef20a2bef3a37c2039ce98532e2f1c14f087de3b1ae93072a704fc",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:sayu: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7f87460ea0b18fc60c736ebf35a19d925b0d3265fd946d8306b339c306415a84",
+        "revisionKey": "9f6caf9f3ad9cbf7b0add54d1194435e2ee0ff3861d42f03c686ddf0641450b2",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:runic-fang: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6d833c06e1591c36f9cd4c2f04d58cb8e34c3c696b6381a70a423693a0fa6943",
+        "revisionKey": "a09af396b0672b15e11fcc71fd9fbfb709b39aee8f50d1cf54b2b31addd99a8e",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:ensnaring-gaze: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "5a87439fe8260e3d4f3b6f86001980e2028bde2576f119fcaaa885d3017ac0ea",
+        "revisionKey": "a0a9d918031733b629127b206005dfcc0d5221f4e3d385f765c79b588e93c70b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:hoarfrost-core: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4ba368eeb14bf5fb72070e0cb00ea74537ea41033df5159e583f6ef2a6b0525c",
+        "revisionKey": "a518453cd33fff51065a16ed179a999e08059357d72a071d50fce19dfa78a238",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:artificed-spare-clockwork-component-coppelia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "fb71c72959977ab19ba4484c2a6cb1c0b8c49a9c55d3e84a41bb256b8af58ed2",
+        "revisionKey": "a5582718b1e5f42b4a930c046049f455fbf787dc652fb3f95db3d22709d2fc38",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:xiao: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e5f62229a994e6752562e6ed830784395d040027334dc684d5706dd7c84b69b4",
+        "revisionKey": "a57e4a567f01b5ac8a38293b32647954508094a0d9207288b48bfe5bc42c0ce2",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:emilie: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "102a04f1def811802ab0171d7034eab85cef40cca2a13207abb77e12b2660b31",
+        "revisionKey": "a8f06be5c51a3fe13681cd375321cb47ef98b29bbc62b6a71d7347d17b8afc8e",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:dakas-bell: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3673f5aee1007817218df10a22320f7f4d50a3b8976470d0b56ad4881312a480",
+        "revisionKey": "a8fc9fe488b57bf88086b7f4fb128a72b92cbcb5edc55afd33a30a103664ecb9",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:teachings-of-kindling: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "400310524cc69a1382a0dedcc5745cb0a9ba7f562ebf3a3221f25b9cbb85b035",
+        "revisionKey": "a9652dcfc2ac95880eada20fe10da18ec901ed49a2ce3b7f7e6a0bc8d4f567c8",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:rukkhashava-mushroom: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "9168dd0a8f08de77762f2bf504861e3b2f9658a8baab475c642ff1714fb5769d",
+        "revisionKey": "ad78961699168e81ebb39e478f62a97aa8d85c2da35730a5b68db26b5898ffa7",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:treasure-hoarder-insignia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c683aa5886781724b86de70c845000b587644d280dcdf19a665a46919b5eed59",
+        "revisionKey": "ae34a3a6a6d4cb4c54a0f9d9905dba1b1907d99462f7a6831f02a506582a39b5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:subdetection-unit: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3d039087d15c593b852a1b81941fb1dd4e8f4ba0d7682ac3cad2d50a67d96f6d",
+        "revisionKey": "afeac963ba8e89624b7ae37d1dd9767a113e7d28ca6a439aa67a51d54bc42d46",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:cleansing-heart: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "aea273fc56f53942880418e1a6fb97d878eb0ee78fd9c4c7f015dff7b74a4167",
+        "revisionKey": "b185f892e5be122937a3d46d9857df57c98b7d3d5744b8efeda55315df231d2e",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:kachina: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "0654f46558ae224a0c5a78824acb0bfd118f894a65be273f62df7151d817e90f",
+        "revisionKey": "b326b2ffb64d71a38bb9ee3f084aa1c8f39d64203105e24643cb9cd2ce6e8791",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:silver-raven-insignia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3c4eb02e7cb6f7ae49e1a6cf9fdb3752c2883a248fba2796e56f2082a4349482",
+        "revisionKey": "b5a91e74647a9f511cc16a8e9395f8a9049de03f82a10697bf3272409cc819ac",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:philosophies-of-contention: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "2459382364fe9953928d08b70ce4962588ac99d44c3551bfdf346a316b5a1d90",
+        "revisionKey": "b768aacd9b5fe09a84a09311065c84229ac2cfbfadb8d5f4fb68b8b1852b8b3d",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:sango-pearl: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "3405dabb1a8e6b1d355ac33c3c89e83e59848b0b4bcee1f07dadb0a404e5085b",
+        "revisionKey": "bba4c6adf95d7f4aed9cd89e9248ee2a8162cb75c2126d8ba3e8cd7899435dc1",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:clorinde: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6f02a9c4559643161d33759f8fe12f0c6b76ec30d0b1550ab82ebe91357034fa",
+        "revisionKey": "bca37f0d3a557d54a61b6f9757e5dbaa4d50b56abbe024a2dfd2b0ccd8bb92ba",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:ganyu: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "751f5ba04ca36900e3f10f0aa17db498875960542db65e157ae557e2ae275fb6",
+        "revisionKey": "bcfc4470c54af02fc6689798317e60159ed7d040df379669efd448325b076af9",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:rich-red-brocade: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "641c82bd7f505b4fd9937e95e4c611750e554a4f258aea65c2c64c88e2fe490f",
+        "revisionKey": "bd17b2c1384faacf8fcaf50f6bc6a1bd123fbbac561d54c926021d9a5d4631c6",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lightless-silk-string: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "86fe6c929b6c6a63164b4c577f122e89fbf9d11e22b0ce4f07828fb0558f203a",
+        "revisionKey": "be7d02c049fd1a91b9eb63531aaf9debfb498166ffa4d0796caf481cc7fe9d0a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:cloudseam-scale: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "04e7ce1dd863c5b0f0a279b6adb91635777d36064873aef343490227b9fd0a82",
+        "revisionKey": "be9f4d8c379238a9039d4cc98ed8f0508ac98a95358cac7d4207247d177ae39b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:venti: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1acbb4a126baf0701c87d9b30f488d49a7a3a8e147baf80812520f6a2457856d",
+        "revisionKey": "bf32f443dccf5f3a03cae2f055a618c5502bfa27664038c98c0a7e634cb250c3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:famous-handguard: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "9452a217a499c297ecf66548456fe0b86b9bd6969971e8822af9bfd08a679b26",
+        "revisionKey": "bf4346e5ee05459c61a07ab6094d4e51411350e69e62a4f254cbed0d1d068c5f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:fading-candle: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "466adbf902749c34311e22391fd1fb3da51c0e0047de82d8289656813db41c19",
+        "revisionKey": "c051410911611a584d35b7aa77b42a1d0140ef7e6f9520e10ce1701e883858db",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:beidou: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "124d946d3de10b5ca53c6bf9939d669c158fd14593e856b75a80ae71f096a484",
+        "revisionKey": "c0677ef688d39ba9358210e7591405b441347e6000437af13126a6739f2e13ce",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:talisman-of-the-enigmatic-land: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "610250a2e270aee92f03e6dd8bc1317eafb365d2a1b7e4604d62032a481f07b3",
+        "revisionKey": "c29ba002f8833f62276d6caea74d9dd1cff6587168e1574cb1622dca35b7a1b9",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:denial-and-judgment: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "8faa282aa1c2b09e07ab5ae5951d79dfd7c900c14ec8b5ae220b663c1fd57818",
+        "revisionKey": "c36da333c4428640011964ca396b82bd3bfea7dd17e38ac91d8ffb939c0ddcaa",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:ayaka: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "172d8ca662005e2efaa1b6bbf4ea71f458df380059c815a7bf8a7c3c5edcfa5d",
+        "revisionKey": "c3740eec656e34e18778aa95e83fdff11548cb9a83b4ce8dd1a6f171403d8bbd",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:mualani: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "480a9c77723dc3216695b40d6ef5a25fcb25730383a9c3477f78265a1a528590",
+        "revisionKey": "c51cb08d38454136628c221ef8b6b4955c66f862c30bffa773c7e2bb686d8d2f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:shenhe: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "f2d9854c3ac260664458adb5d9730b43d4bb8a4e722213c6a21512f70c62b620",
+        "revisionKey": "c73f22e0205344edc40cb06a974f9dd1ce3e20ba414009cdf6deb75399a02b19",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:kirara: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "aabe4f48329f5d42f973b8dfad008c9319f19d1ec446f5330a7d07a94443a000",
+        "revisionKey": "c84c820f4c2bac77b58c6a2310df4d56c6d0c1d9c598dc4ce6b3edbd31f1bd01",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:guide-to-kindling: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "53a7906e9e19295a4af008c947465f36acc603473b99a226e919a34eeaa1f957",
+        "revisionKey": "c85a0fd71578fd459d740f6e1647301981b176c66be744fc56067590070a147a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:trimmed-red-silk: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7f854f33b0b1ce3bdcc970675d57fc7bce9da964a48d142aa756c8913567a792",
+        "revisionKey": "c90c5c12df2716bfbe027830177be797f506fa504a57f186dd41756c567b112f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:layla: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1cb58c624a6ebed8db936e6b122933afc121d19d59e6e2444270df00dd466fcf",
+        "revisionKey": "cc71639fbebef33adc6131ed6fd9c2d872f86dadbac892a9b4aea402d01e8442",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:water-that-failed-to-transcend: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7a6981a3896a5d3442b8e0b7579278343045c78a4cbc79180b0e87d54cf3fd6d",
+        "revisionKey": "ccce59da340293155d3f4cfd5c90e065befbd6aeb772eca503b162b5055a5f7e",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:valberry: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e990428ef57aec3c59955659a507204bb8109c06cce3e69f73caeb25ec1a2a2b",
+        "revisionKey": "d105b741bfaa70773be640b47ec75f28aa0ee573b652b75920ac628546bfb20b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:xinyan: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c3cebbf11d4e509317afa7ae8fbc9c9757b3775a7e73611755a5ac421f94a013",
+        "revisionKey": "d17b56cee5b64b69d659826c7d73b1d70e2e4d0d6be49b2b25b226edf2dd092f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:concealing-scroll: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "d07102f7957665868fb623f3394b00cb174f677e9e29772c678596c08fa8be64",
+        "revisionKey": "d191dc5c1d7690b4643189d75de763c87d2a5389bf522c97a5c135659cf03460",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:sigewinne: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4dd18a7ee5aed0545cee1d64a7d59263f3d62caca2f4fb18491eff7bada2ac15",
+        "revisionKey": "d4382eb1185d7d02bbf7ccb4ebe3b370083c69ce5c4b465f7fa0636308f2ef3c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:mark-of-the-binding-blessing: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c644c17426207d540e194d793c9b1759ef3e848bd8fc1806b85192ced4907427",
+        "revisionKey": "d4565e40c661b410696b715f2256091dd29fc2ab7b7e5e9b50b717f6d04c953d",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:luminescent-pollen: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "e1046e14a2473e120cafbd3ef2d31d72c305f58bfbdcddb138ae41f4ecc21b1b",
+        "revisionKey": "d4a18de3af200a8fcc50d05eaaf0d1090faadb8e4067bdc3e32330ad24f290cc",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:yae-miko: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "aa9f34cd32a91d7b4639243893b9e3620a22434effb4edc678dcc8a416f7d47f",
+        "revisionKey": "d5044dce31a2e8c60686ed7f369eea01285184f3a7b25fa18e9376ffbeded747",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:xilonen: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "b1008c80b10422be991e1bacb11cdcc152d95a41114560ea8fbe097ac418b521",
+        "revisionKey": "d5d2126e74285dc6617b337b11c17566846d26242e20a080366f61498a9492b5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:tighnari: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "52c58c77bb432b565784e0c416000d0d20b1f1ee08fa585b71fdbdb07442492c",
+        "revisionKey": "d602170c13812e2f73ddbfc19cc450aeb2a4df23998c183f86a0cd509e0e29eb",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:furina: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1c3b013a2f7616102c7f515e4163eca0a907f160dcdc1fd74cd4cd66d1495ad2",
+        "revisionKey": "d736b4498160602a65a011021eccfdff1481ba41b26d08bb9c2108ff005c14f7",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:amber: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "64cb86bd92a4d70e86a65dbe2a4059cf87c18bca5b55856a02cd02c5be36014a",
+        "revisionKey": "d754efe2dff15aea7d56756acf5be8e4eacc1fdfb99ba6141bd00580b86701d4",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:fischl: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "13f180e087342be2c05e695edac33608e5974132734666f675b7ff31ea26d73f",
+        "revisionKey": "d99c54efdf56855d0322cb4787bd130e1a8670d7156c1d7bee4392c4eb3f9b42",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:chevreuse: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "cb2b46d20b72e10625fd45772016e84c4d44da7abf558b0c6b0548b64ab0ded5",
+        "revisionKey": "db1d169d03e6fb150cac29de62464bce9c60c1c6e2e4a646eef78d19f8e3602c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "characters:ororon: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R137 三语角色及双语技能/命座证据核对身份、版本和声优；R138 已补齐规范图片，夜魂及特殊跳跃均保留；配装、配队和评价保持空白。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c71f5a7a13577c2b31a22e89e7dbb1f3e09a983543ba8b3bd1138f984469abc4",
+        "revisionKey": "de6c6a9701fbc2030e7920c7a92fa362d3fb2943621f3203c35095e9991960d5",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:tyrants-fang: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "bf5802982f46e2b4ef417b8ade693f47c0904214e950f5d0bfdb9ac7c9df9268",
+        "revisionKey": "dfc0870a261a1a60e3b91bb50dd9cf928fc70cefe7ac6b617fdf739795bd22ba",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:chongyun: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ba9ebba14381f777cba643db042a135f2eed11612e6be75e5da566bd51e234b6",
+        "revisionKey": "e0b93ba47422d91462324495939a039db69a43768e048249f35b4224509a95ab",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lakelight-lily: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "8edec52170c8448006ddfc959a94df114a19ff681af60369fe0439fddcdb2182",
+        "revisionKey": "e1a6c4056f978dda6ff0d344264a64dd1e7753523d1c967730313ab045a12087",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:saurian-crowned-warriors-golden-whistle: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "9f2b968ddace41581eed605858ac629fe14b91f0645add03f816be1e709a042a",
+        "revisionKey": "e256638ba7963727c2d61c38cc1e132546e6188c95a4cc828492a232a22bfa97",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:yun-jin: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "88e17b66784218d0d63750ab9bb2a64828d543f1ea1b968bb8fc6735e4ce43aa",
+        "revisionKey": "e3812aededfd3a1b3a454abfe405e4dfb802b1874983c6bb40e07073223e635f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:wriothesley: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "84f51e833185523dd7c64a4042de2c938672249a58cd7a29e71cfbf6ddb26982",
+        "revisionKey": "e44b25cfc6b5f7939dce68a8e0c156bf3add76dc3e8aa28042ea95964d165759",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:vajrada-amethyst-gemstone: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "5344e3e23569f9d4b8af45987412823e30a717309bd4cfec86c6bc9e30f41f88",
+        "revisionKey": "e4da33d77038dbb7e3a35a5eeaa0827aeb0a93980c6407c354c6c4bed1f8ea8a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:lan-yan: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "2e1a316d5a357c5e524c780cde7d6342de2ff0c43d638480f023be3baffac8ea",
+        "revisionKey": "e51c22479013758ed8677985cf331514cfcbd075cf456e4090bc901bb9a132df",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:transoceanic-pearl: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "23fb20477ae59d7d11653c4a4220431035cde418e72ed42857fab36da4743572",
+        "revisionKey": "e6687078e60f30c629762a54f5df41a3c5a9a5e4ba9ef57f6855eac5ccb8a73b",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:worldspan-fern: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6b00ed76f723aec35d9d03affed8c5f9bde5c232fcf32176aa284b1c43e6d992",
+        "revisionKey": "e6e430c7a4e23d230bf975512f8a3278803c8321ee5e0d3b8206a7738e50afa3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:fontemer-unihorn: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "34ab3accfb3299fdfd48ca5cafc5c6c21bd6d5113ee4e16684c22c1d97c9942b",
+        "revisionKey": "e81780656750a848966389697d8db743ce2bd24b6848e3eccdaeaaca6e25f0e2",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:tail-of-boreas: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "15ee6224034d0ce52731de61a3edd7439339e75112fc8fda5687441d61a07200",
+        "revisionKey": "e8a2be64e57eae8e285949c4e2d2492806c93e019b6ca5e9f392068ff4757327",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:agnidus-agate-gemstone: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ad81d8837beaf92dd6ae35b7d54375c8a2d9d672205de3c2a7ccce437b00343b",
+        "revisionKey": "ea23a819f5bfe1bb0e9ea61a80e0e40c1c0c27fcd8c24819fd572854cd3baa4e",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:crystalline-bloom: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ca1a5ee740ee0de45526f3d1a277c9c92f605c0e33efe8e76237777cce8ed830",
+        "revisionKey": "ea390dbe25191f76d02f620e4e9d29022518ebff0593d5dae627fc5b026d03e0",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:xenochromatic-crystal: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "756611d1d9903d3767c9a8dde59b93163038d9e24db5131002303ca60be6135a",
+        "revisionKey": "ecaff237c58cfaaf7edae5d8d7fc54615b2df8712f2ee0396b507126a3baff12",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:kaveh: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4ac4153c9d00e1a4235f808a5b8ebfbd9e15a5b5fff0c2a256aeb2b4bbb63f59",
+        "revisionKey": "ee092ca6602163449f3426a73aa9e37eb11ea692753dd552087fd688126be981",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:quelled-creeper: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "166dae1c6686bb2f0afbc52cf5b99609e6baeefa5185bf96447405f5c35cb0b4",
+        "revisionKey": "ee3be420e13261f5fc7fef468ccb772ac58e63ec5da3902c636d543df185d2be",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:sucrose: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "aea7d5d9bef959e4f269ba952fe46662ffca68f569d60a57e866e19a0614f4cf",
+        "revisionKey": "ef15f36a147166a7210347f2c266a8eb47482b047de7aaf02d880a8aee76f604",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:xiangling: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "6a245de084f6db2556804e01846b09b292c1e65be37dccba83eb25744ce9dadf",
+        "revisionKey": "f096e1c4ce07859844504221986b5749230839a2a3563f71ff57192d62b4ebed",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:mourning-flower: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "eefb5318c2e0d92efafd082a27ed3f61e90aa2568f0703aa023f659083d0dd8e",
+        "revisionKey": "f2915e8767bc3b02b07c291d162ddef1977f8cc875e567579bc8824f1e53441f",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:cyno: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "c550c0184c4f9887209eaac17b20de63a4e61f6814280379e2c3292afe425df2",
+        "revisionKey": "f4d29d1afffb7ee8daff72950da763b16b3f4f0e78addee6252e75f31d3eeef0",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:crystalline-cyst-dust: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "80de785f4a6165f86e2bff8793e7012cce11de01d7a54379cea5741b87aa3ace",
+        "revisionKey": "f5221ffc3a67f145271a80e482ab65642fe4c43a82f6d5c59c8f84300d3f5142",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:varunada-lazurite-gemstone: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "4fca93858098bebdc553ee07dd5ff82ce97fba36dad3afe1198810e3923c6eed",
+        "revisionKey": "f5f052177b3f4b0d16874489c5385e8dc29acf15bbe6e235bfb4b9eec409ac0a",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lightning-prism: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "872d12b3c91afe1f57623203662700bdc8e13f3b5f750ff3017ba504933ccee9",
+        "revisionKey": "f607e0a03a9047b861bb8d79168e35697c9eb80a36d0ebd378bb397800c54fba",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:divining-scroll: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "34a0eb7c068cddb851445965a9d89d9caa1c56d08e76f639ad42c2ab0228f82a",
+        "revisionKey": "f6d7dcfaba0f2d4dbee16cd87b944ad7953878a37c09eb399b9a5adff617c47d",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:diona: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "1173b31cc9ab77454a6ac41458528b6770cc07539fa3a1e9d3b0bf86e4c95adc",
+        "revisionKey": "f805074ec442e400b638ce9e36550c1e850d5f256042c33d644d96cfa5473bed",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:philosophies-of-conflict: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "28bf17528b811220688494153665f6bda63fa586038881ac49bb96a1bd45f489",
+        "revisionKey": "f9e8fbe75edda6dd4930da4a350a22257848dd5ae98d1477fc2c3c0808713df3",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:spring-of-the-first-dewdrop: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "b2bb44513c50511b5b59ec9baa41a31c3cf2ee03c8e639ba57c17dcda9b6c5c9",
+        "revisionKey": "fcf64e358a121ed72c70e3326043a289f557cea683ddccab91177d0211fc2e74",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:lieutenants-insignia: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "7450e2f60c5b07112fa997099e8e0395215ed71bdfe7ccf521e78faf1947fc43",
+        "revisionKey": "fd1d873f3f6288dd4ebf4f836a539c651ddc8ec844ee9b70a1527c8852b4ff4c",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:ring-of-boreas: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "a3e23336408354c175ede5147a43e2a56a3a66562b46954275673df527a601d3",
+        "revisionKey": "fe7bf9644494a375bc87bf8c022a4d5f162876df78dde295f9d4bbed6cfdb320",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "materials:storm-beads: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 材料数值 ID 与双语名称核对定义及来源；特产沿用 R137 资料 API 展示 rank=1，不称官方一星认证或把游戏表排序 rank 当稀有度。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "450b5c3af6f7adb1b2a909e685e2dba11176f0f10aa88e4c5cf780846ed4f386",
+        "revisionKey": "ff98be418a69a582494666ae68dd0e3986083e39d6b4bbb3c4f5ec4fc549f5e2",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:diluc: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      },
+      {
+        "decisionKey": "ff1e999c212dfd5997fb9af69d261483e1f69f472235282ffa28e99bba5b50b6",
+        "revisionKey": "ffde9bdd70278570d62a7da510287a64b9e8a5e84cf4079e6e39092b0f201acf",
+        "actorID": "1",
+        "actorEmail": "owner@localhost.invalid",
+        "action": "accept-export",
+        "note": "character-materials:heizou: 已逐项核对固定来源、完整 O/A/CMS 差异和合并结果，接受导出候选。 按 R136 固定数值 ID 配方证据核对整组材料数组与数量；两项改名使用 R135 数值角色 ID 显式迁移，不按索引配对材料。 保留 O 与精确发布 A 恢复，不清除 hold，不授予正式发布资格。"
+      }
+    ],
+    "dependency": {
+      "auditKey": "a311ae50e75dddf9d3b8c43b334359f5322ce7bc85e917db43ed3dc1952d1788",
+      "materialDefinitions": 269,
+      "materialReferences": 5490,
+      "complete": true
+    },
+    "recovery": {
+      "sourcePins": [
+        {
+          "sourcePath": "apps/game-azur-promilia/lib/data.ts",
+          "sha256": "55868f2f59c1bdd283ad9e71ffb71b32d8a971f9e6eb7dbd8a34a8f2a0522908"
+        },
+        {
+          "sourcePath": "apps/game-genshin/lib/data.ts",
+          "sha256": "abb72afec9ef8d19b2cda807c4b407a7cec2eb5d6e600cc7d0e1e508c7ebdcbd"
+        },
+        {
+          "sourcePath": "apps/game-lvmeng/lib/data.ts",
+          "sha256": "1dba7658c4ad97aa2f2aa30aabbf8e537d3e861177c9614d6db58c60d3247264"
+        },
+        {
+          "sourcePath": "apps/game-nte/lib/data.ts",
+          "sha256": "e2c049cf024efdd45aef9b9a25d426e22173364e70553e4822d33297cce86eba"
+        },
+        {
+          "sourcePath": "packages/data/games/ananta/raw-character-materials.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/ananta/raw-characters.json",
+          "sha256": "7d8394e1777c3bef7a7f9f72c6d6adc633fad68977affd087d6aafa8a4ec143b"
+        },
+        {
+          "sourcePath": "packages/data/games/ananta/raw-guides.json",
+          "sha256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d"
+        },
+        {
+          "sourcePath": "packages/data/games/ananta/raw-materials.json",
+          "sha256": "87b9ad367244b3dc62ee5fe3e48604c5153edf2bd21cafcb5145531ca63d6700"
+        },
+        {
+          "sourcePath": "packages/data/games/ananta/raw-weapons.json",
+          "sha256": "af7e4bc6cc6b6def48c4319c4cf0cc9098ecb214cf8d9c24e14d7cf3907b924d"
+        },
+        {
+          "sourcePath": "packages/data/games/ananta/tier-lists.ts",
+          "sha256": "7c04e7f1a7bc80182138acda73c67a04fd9efec94f2b65766e3bc9edc2cc5472"
+        },
+        {
+          "sourcePath": "packages/data/games/aniimo/raw-characters.json",
+          "sha256": "292e096e35fdb5cd98d1188d1d23a9e46998741930e2095f5a1d8ee928094c39"
+        },
+        {
+          "sourcePath": "packages/data/games/aniimo/raw-guides.json",
+          "sha256": "4d31d4fd827512aaabf04b9821810685481e90f6989ae0bba41043eb114e1ba8"
+        },
+        {
+          "sourcePath": "packages/data/games/aniimo/raw-redeem-codes.json",
+          "sha256": "6eafa12c388c59db5a67398b94fd903a82ae70f4ebf36f729312da567e924cef"
+        },
+        {
+          "sourcePath": "packages/data/games/aniimo/raw-regions.json",
+          "sha256": "5d61d30a90b2e75a2484acb147debb2168b3ed79fa96929239f9e6a497c29b12"
+        },
+        {
+          "sourcePath": "packages/data/games/aniimo/tier-lists.ts",
+          "sha256": "81005c424654478e683e3d3e01da6d7a87a602d8826ed659d6b71e6044ede4b8"
+        },
+        {
+          "sourcePath": "packages/data/games/azur-promilia/progression.ts",
+          "sha256": "98a873ac479e7ba03ae22285b5410e106aaa5f85c20c0b0298d6096c75f9621c"
+        },
+        {
+          "sourcePath": "packages/data/games/azur-promilia/raw-characters.json",
+          "sha256": "e4479476d98f53d2a9add1c5dca7158d904897667fd54a320ee82b056aea8866"
+        },
+        {
+          "sourcePath": "packages/data/games/azur-promilia/tier-lists.ts",
+          "sha256": "ebb49ee734f30e4f24a620ced4843874f8d0876b7e36c90a132d1e3489b40c66"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/raw-character-materials.json",
+          "sha256": "3170dc7edb9f022388aa6bb0fec010665f7cdb70c29df01fcc2283790a8dced3"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/raw-characters.json",
+          "sha256": "6d1dc554a8a2772aab0cee23de6b655191c35fb2503403d29ecf043412c64e19"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/raw-gear-sets.json",
+          "sha256": "a56407c714f74032e99f21507fb9ed8a2d6b85838cdfc50871fbae29d2f9568a"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/raw-guides.json",
+          "sha256": "f5d7aafb060a93b2f2d1b0a911079445f85749ce8c303b6f0d0841908cb30efa"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/raw-materials.json",
+          "sha256": "107b4c3f3b78019b6620a9c3df8fa42883e54c34e1b27416e007b0d77758858e"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/raw-regions.json",
+          "sha256": "07936da77a16f69b568a75c1cb56b2821c37723882807ccf0161fb878751f5ab"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/raw-weapons.json",
+          "sha256": "d03e4dab76a5a94309a71582dd3e17521b60366fa16522069dea0379c72d05f1"
+        },
+        {
+          "sourcePath": "packages/data/games/endfield/tier-lists.ts",
+          "sha256": "de4c16ccaf945eb8ab6ed498af725f252c8c0e848774e08972f3292a99715d7b"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-artifacts.json",
+          "sha256": "ab5a90d0ea792560a058f87cf1d5be606f7dd2e1ec5f8191d0075541eac619e6"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+          "sha256": "57a642c493127bafc2993d14e2362bf99446af560ab432c57fb56021724dae16"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-character-summaries.json",
+          "sha256": "8588962d427724d5fce89485edfcad1d16b47ed1e8690c46f258925422039b88"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-characters.json",
+          "sha256": "2fedce34a507dc48aca5168186deab0368fd9b6351e23333d25034af747af3b8"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-guides.json",
+          "sha256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-materials.json",
+          "sha256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-redeem-codes.json",
+          "sha256": "859af362400044021a85a1cf353d86ad6da2cfd0b54072e1582dc8564bd7f9d4"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-regions.json",
+          "sha256": "037c917f292e5515e43e5772cd1910878caf9dac0c2d964ac4d4c74d5e33d6d6"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/raw-weapons.json",
+          "sha256": "9154393f32c850d015754d2f793e0d05cdbabdaee285bca2e2f9c8868ca60e4e"
+        },
+        {
+          "sourcePath": "packages/data/games/genshin/tier-lists.ts",
+          "sha256": "6c3bb8cc7f74366f5bacb2adc165b06b1855e3a769ed6a513a4063081f73b231"
+        },
+        {
+          "sourcePath": "packages/data/games/guihuan/raw-character-materials.json",
+          "sha256": "61104ae86d31d33589b182c45ec52e27af0763d07e0d36545e85e5e34acb6963"
+        },
+        {
+          "sourcePath": "packages/data/games/guihuan/raw-characters.json",
+          "sha256": "7150c0c560afba80877cb7d1946f4cdc373fcdae4a9d3c2a74fa4f3ef2aa601c"
+        },
+        {
+          "sourcePath": "packages/data/games/guihuan/raw-guides.json",
+          "sha256": "da7ea0afb0577fe6c59325c815e12c89735ffcdc5a25dda9fe39d25e7cca4265"
+        },
+        {
+          "sourcePath": "packages/data/games/guihuan/raw-materials.json",
+          "sha256": "9c011ad9715c0fdc604f8482f01d0a20319580368a048aa7bd90f9ebb16f6c43"
+        },
+        {
+          "sourcePath": "packages/data/games/guihuan/raw-regions.json",
+          "sha256": "389458b3f0fddf4e1bc42ec27e5f3079d47d537312385135f31ab191a41ab327"
+        },
+        {
+          "sourcePath": "packages/data/games/guihuan/raw-weapons.json",
+          "sha256": "648a1787bd21454dc0ca832621bcf366a12bb17558e6ca515cef25c7a1310c23"
+        },
+        {
+          "sourcePath": "packages/data/games/guihuan/tier-lists.ts",
+          "sha256": "9f16733b7b3f000d4e8059f240f26f7d0c69459e23acf20825b2b2c055b21c45"
+        },
+        {
+          "sourcePath": "packages/data/games/hi3/raw-astral-ops.json",
+          "sha256": "8853f5e88811a5091166b7fa69d2ec36cebc047d97613ee234f478a06947afbb"
+        },
+        {
+          "sourcePath": "packages/data/games/hi3/raw-characters.json",
+          "sha256": "2fefa58de0b12a061717c9a355e2c1f87f3b37752c55c635c91cace21d07061f"
+        },
+        {
+          "sourcePath": "packages/data/games/hi3/raw-guides.json",
+          "sha256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3"
+        },
+        {
+          "sourcePath": "packages/data/games/hi3/raw-materials.json",
+          "sha256": "b3abcff08b66da1b21336fddb95bc2300be0da351de23aa32f032e06d04886ec"
+        },
+        {
+          "sourcePath": "packages/data/games/hi3/raw-stigma-sets.json",
+          "sha256": "f90b36f9e54ce1f667bec08ab5d8893e6cc18081ec875cd4c2b861f6d3fbc528"
+        },
+        {
+          "sourcePath": "packages/data/games/hi3/raw-weapons.json",
+          "sha256": "16b7c3bb461d84d5b28995f0f2b2b8d4bb991fe1903d6d95b6be47e51ef2967a"
+        },
+        {
+          "sourcePath": "packages/data/games/hi3/tier-lists.ts",
+          "sha256": "b41795c4fa7c59c39390f1b85997e4eb043ac8aad16b6c26c4e2db3bb7f63caf"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-anomalies.json",
+          "sha256": "429676a71330490b69718c8fdd65a30f2e7ee7c7d030f132ba5b26ccbc83e903"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-builds.json",
+          "sha256": "de0c7cb8db8615592f6a94917bf387c20421d38049bb56570c99d6687e57c381"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+          "sha256": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-character-summaries.json",
+          "sha256": "8e16cc5e060f3bf2803bb4f36848d56b08c7924961c41c7bca345d7e769f27cc"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-characters.json",
+          "sha256": "b4fbe091f17fff4e57e28a123eb3e66aa8792afe86aa5b6eb942e71d800b8335"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-disk-sets.json",
+          "sha256": "43db37750a46b2b63affc1ff43f3bf43c8e2de03166f2a4d4009c2efc08112f6"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-gacha-system.json",
+          "sha256": "116bf6ec0d9d172fa9f0f19a651fce95362a855e070708ce0492e5a530d44be0"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-guides.json",
+          "sha256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-image-sources.json",
+          "sha256": "e0982edbf354d45e42d8e606d467a46a5089a1f160e6ac72cc5dce2b3c025838"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-materials.json",
+          "sha256": "657fbf66e9f53688351570f87824acf1706c9f62e2a330f5a4760ad2638e2233"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-redeem-codes.json",
+          "sha256": "2d906e1df4b8ed9da52193ce1749426827978f5be532aee83fbd6887f2b22d39"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-regions.json",
+          "sha256": "edbb257de77e51ef540d8f617a155c2eb9a99dfb3d0e29334929cbe06ecff910"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/raw-weapons.json",
+          "sha256": "f46984d25d5c7013e4434dcee1ed0cf0544687b480e845c0e4e3c4b20bf508dc"
+        },
+        {
+          "sourcePath": "packages/data/games/nte/tier-lists.ts",
+          "sha256": "bfd2b39dd3ca422b3f9b9f1b304da452a1f2139f87e1e1787f933aad4cab1267"
+        },
+        {
+          "sourcePath": "packages/data/games/roco-cn/raw-character-summaries.json",
+          "sha256": "6dec9aea8d9f2f52eadc9d8d1f8e56777879f74d5a7d75500fbd89fadeb289e8"
+        },
+        {
+          "sourcePath": "packages/data/games/roco-cn/raw-characters.json",
+          "sha256": "47e0e1fbbd475fd80e63c3b96f0fb3b6ec26b6e6c8756e676793589228a2659a"
+        },
+        {
+          "sourcePath": "packages/data/games/roco-cn/raw-guides.json",
+          "sha256": "7a3a5bb63d114d42d2c3cd6b4214a8174e8d75c3eeb2c2498727025fdcf37df9"
+        },
+        {
+          "sourcePath": "packages/data/games/roco-cn/raw-materials.json",
+          "sha256": "ffea53c1592f82c65a17d6b28d7008832676aa3ea20c48a9a3cc21442b315ed1"
+        },
+        {
+          "sourcePath": "packages/data/games/roco-cn/raw-redeem-codes.json",
+          "sha256": "3cf6cc72eb329a0abb23f3a4ae41e1765012be5c222f39076dc07c3a3ab664f2"
+        },
+        {
+          "sourcePath": "packages/data/games/roco-cn/raw-weapons.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/roco-cn/tier-lists.ts",
+          "sha256": "25300bf3e74af0395b36732811517b3d3779b70fc78411d8df2bf91c3aa66504"
+        },
+        {
+          "sourcePath": "packages/data/games/roco/raw-characters.json",
+          "sha256": "c994d4d179c47e229dff8f1d1dfc528bd49820ce9d86f1229ddbdebc776bc689"
+        },
+        {
+          "sourcePath": "packages/data/games/roco/raw-guides.json",
+          "sha256": "209d7983c1682ce4d31fec5e40274853be451e2b1611fb348276039c10cf9cfb"
+        },
+        {
+          "sourcePath": "packages/data/games/roco/raw-materials.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/roco/raw-redeem-codes.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/roco/raw-weapons.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/roco/tier-lists.ts",
+          "sha256": "3a8fbdadc188d2ab04a927ef0b5386df9d4acd564cd20465942a416239e18071"
+        },
+        {
+          "sourcePath": "packages/data/games/sea/raw-character-materials.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/sea/raw-characters.json",
+          "sha256": "b8dd35af7c7076f8944e37a9677badeb5c373b6fcbb0e161044a85ac8e47a9ab"
+        },
+        {
+          "sourcePath": "packages/data/games/sea/raw-guides.json",
+          "sha256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f"
+        },
+        {
+          "sourcePath": "packages/data/games/sea/raw-materials.json",
+          "sha256": "9cd7dfb2eb3a23f2a594dbfe76f050d1d221f99457808b38e62de07b69f175c6"
+        },
+        {
+          "sourcePath": "packages/data/games/sea/raw-redeem-codes.json",
+          "sha256": "620ffabb94306ccafb456fe1b666d1053dae56f3dcb6c14e05b5e1f4828add19"
+        },
+        {
+          "sourcePath": "packages/data/games/sea/raw-weapons.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/sea/tier-lists.ts",
+          "sha256": "56a48ef34d48d98e3b9654abe3abfcba935a1487e0043ebf55d0094d74c6e0f0"
+        },
+        {
+          "sourcePath": "packages/data/games/skjh/raw-guides.json",
+          "sha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3"
+        },
+        {
+          "sourcePath": "packages/data/games/skjh/raw-materials.json",
+          "sha256": "d4417ce41e46786f35c4b4364bc32278f3fa1419f6480621f3a9ff4300c9a03d"
+        },
+        {
+          "sourcePath": "packages/data/games/skjh/raw-redeem-codes.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "sourcePath": "packages/data/games/skjh/raw-weapons.json",
+          "sha256": "c7c4d7dfa74718b066188eee10192dd90af5b78aba1a3de4aa9a0782d94a3ced"
+        },
+        {
+          "sourcePath": "packages/data/games/skjh/tier-lists.ts",
+          "sha256": "d4809110725b8ea96fefc39dc8df5426263718cb158b9443f8ce7a687b7ea414"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-character-materials.json",
+          "sha256": "f80c66941355b2f40f166850551c5b30ff1bfbd14b952d32683406c5a5885641"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-character-summaries.json",
+          "sha256": "7ccb54ff98020190a4d1d4997ec69efcf645fcf0d21b94645d8f635089d19d76"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-characters.json",
+          "sha256": "75d68d458694f46a95e15a94216b7a0fb9da5eadb14e1dfef3f90d56a2480f38"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-guides.json",
+          "sha256": "21f5f702ac56e818e0d8ccdd308e2208d031dc7e2e97ac3a6456ba8a2926f080"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-light-cones.json",
+          "sha256": "3c5b5b3107a3281899f354370a91a475d66c0eeb0f2b7f5778517086aba30ffc"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-materials.json",
+          "sha256": "226e8b8549fcd324d3c2fc06a81cbd4d71b71d07b2e63ea5249e206b5beab901"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-redeem-codes.json",
+          "sha256": "d21cd2bb00612bd0324c728bc2730c9a76e432e17925a9f7b665351992c1cd31"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-regions.json",
+          "sha256": "e7ff83d71e9558fa344d04b64e96fa24cfca40a0a9ed2bbb66162552f6e170a3"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/raw-relics.json",
+          "sha256": "08d7a4eefa45002708c9591c50ca1e4fd67a71370051bc80b213a261867eab92"
+        },
+        {
+          "sourcePath": "packages/data/games/starrail/tier-lists.ts",
+          "sha256": "41dfec02b16a9ce5d591b9e4707f77bb1b395750d5f14afd2b46eb7b17b7554a"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-character-materials.json",
+          "sha256": "09114fa267a69901e11e7da7ac9fe1355c9daa199425abdcfb52d6b71a89db7f"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-characters.json",
+          "sha256": "d0adb35281c040fd593c3f8d3a07c13f1f81ec95b7f221f0dca4bbc3e1391bb2"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-echoes.json",
+          "sha256": "ed7224d05f9353a4bda5f2a049ef3b69de4d719e35c273d3769bbc096123d3fb"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-guides.json",
+          "sha256": "0c0b6aefd18f3fe8e1b3750e750dffadba7d50fd44daaa7a1ac8b6fb2f088603"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-materials.json",
+          "sha256": "36e7e3193b0c2922569ac0b01c95fc8cace1c0819b297a53eba27750a1bd741a"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-redeem-codes.json",
+          "sha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-regions.json",
+          "sha256": "239528d752485917563f8459a47f3eadce09dd14a251886bd374905a47d8edc9"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/raw-weapons.json",
+          "sha256": "82db9f066ae1bc720f44471f37209222db445cd2084dcfa32627470041eed5d9"
+        },
+        {
+          "sourcePath": "packages/data/games/wuwa/tier-lists.ts",
+          "sha256": "80d4042ba520a1e61f0ffd3f2f2234b6cb3baa56b269e69d35d371c0fa528827"
+        },
+        {
+          "sourcePath": "packages/data/games/zzz/raw-characters.json",
+          "sha256": "86f1cc7eab09058cc6e25def488d126927dbfc1a65bcd1a9edabf72662f52e99"
+        },
+        {
+          "sourcePath": "packages/data/games/zzz/raw-drive-discs.json",
+          "sha256": "3a797420263ee6e2405730fe28127226992d76a59c2d7751df254799f8c9783c"
+        },
+        {
+          "sourcePath": "packages/data/games/zzz/raw-guides.json",
+          "sha256": "f7d520157ea36eacf83426b7354f4eb9d8accfa202c713f1b934732ec9d166a8"
+        },
+        {
+          "sourcePath": "packages/data/games/zzz/raw-materials.json",
+          "sha256": "63896b2f68e013f333830fa22b7c22fb63fea2c68b8ce34350513fb03908b0cd"
+        },
+        {
+          "sourcePath": "packages/data/games/zzz/raw-redeem-codes.json",
+          "sha256": "a827f1e443b9777294d89fd7b8cedae96d5c23353864e827ff9188982ce36b70"
+        },
+        {
+          "sourcePath": "packages/data/games/zzz/raw-weapons.json",
+          "sha256": "d20de925010d0e59b6dcc8f1fe518708cc2511666c54693ca4bb511b7809c59f"
+        },
+        {
+          "sourcePath": "packages/data/games/zzz/tier-lists.ts",
+          "sha256": "9e8b4940ca79277537561ad1323fd6d3888257e1dcd332c37ac16e0d23dc95aa"
+        }
+      ],
+      "policy": "exact-published-A-with-legacy-dependencies",
+      "newEntities": [
+        "characters:mualani",
+        "characters:ororon",
+        "materials:artificed-spare-clockwork-component-coppelia",
+        "materials:artificed-spare-clockwork-component-coppelius",
+        "materials:brilliant-chrysanthemum",
+        "materials:clearwater-jade",
+        "materials:cloudseam-scale",
+        "materials:crown-of-insight",
+        "materials:crystalline-bloom",
+        "materials:crystalline-cyst-dust",
+        "materials:dakas-bell",
+        "materials:denial-and-judgment",
+        "materials:emperors-resolution",
+        "materials:ensnaring-gaze",
+        "materials:eroded-horn",
+        "materials:eroded-sunfire",
+        "materials:everamber",
+        "materials:evergloom-ring",
+        "materials:faded-red-satin",
+        "materials:fading-candle",
+        "materials:fontemer-unihorn",
+        "materials:fragment-of-a-golden-melody",
+        "materials:fungal-spores",
+        "materials:glowing-hornshroom",
+        "materials:gold-inscribed-secret-source-core",
+        "materials:golden-raven-insignia",
+        "materials:guide-to-conflict",
+        "materials:guide-to-contention",
+        "materials:guide-to-kindling",
+        "materials:henna-berry",
+        "materials:hurricane-seed",
+        "materials:juvenile-fang",
+        "materials:juvenile-jade",
+        "materials:lakelight-lily",
+        "materials:light-guiding-tetrahedron",
+        "materials:lightless-eye-of-the-maelstrom",
+        "materials:lightless-mass",
+        "materials:lightless-silk-string",
+        "materials:lumidouce-bell",
+        "materials:luminescent-pollen",
+        "materials:marionette-core",
+        "materials:mark-of-the-binding-blessing",
+        "materials:mirror-of-mushin",
+        "materials:mourning-flower",
+        "materials:nilotpala-lotus",
+        "materials:overripe-flamegranate",
+        "materials:perpetual-caliber",
+        "materials:philosophies-of-conflict",
+        "materials:philosophies-of-contention",
+        "materials:philosophies-of-kindling",
+        "materials:primordial-greenbloom",
+        "materials:pseudo-stamens",
+        "materials:puppet-strings",
+        "materials:quelled-creeper",
+        "materials:quenepa-berry",
+        "materials:rich-red-brocade",
+        "materials:riftborn-regalia",
+        "materials:romaritime-flower",
+        "materials:runic-fang",
+        "materials:sango-pearl",
+        "materials:saurian-claw-succulent",
+        "materials:saurian-crowned-warriors-golden-whistle",
+        "materials:seasoned-fang",
+        "materials:sentrys-wooden-whistle",
+        "materials:silken-feather",
+        "materials:silver-raven-insignia",
+        "materials:smoldering-pearl",
+        "materials:sprayfeather-gill",
+        "materials:spring-of-the-first-dewdrop",
+        "materials:talisman-of-the-enigmatic-land",
+        "materials:teachings-of-conflict",
+        "materials:teachings-of-contention",
+        "materials:teachings-of-kindling",
+        "materials:thunderclap-fruitcore",
+        "materials:tourbillon-device",
+        "materials:transoceanic-chunk",
+        "materials:transoceanic-pearl",
+        "materials:treasure-hoarder-insignia",
+        "materials:trimmed-red-silk",
+        "materials:trishiraite",
+        "materials:tyrants-fang",
+        "materials:warriors-metal-whistle",
+        "materials:water-that-failed-to-transcend",
+        "materials:withering-purpurbloom",
+        "materials:worldspan-fern",
+        "materials:xenochromatic-crystal"
+      ],
+      "renames": [
+        {
+          "from": "sara",
+          "to": "kujou-sara",
+          "evidence": {
+            "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/identity-review.json",
+            "pin": "260a64c21df234ded7025731fb481f71cea02529df28cb4a388a75a1590b7223"
+          }
+        },
+        {
+          "from": "shinobu",
+          "to": "kuki-shinobu",
+          "evidence": {
+            "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/material-source-review-2026-11-20-r135/identity-review.json",
+            "pin": "260a64c21df234ded7025731fb481f71cea02529df28cb4a388a75a1590b7223"
+          }
+        }
+      ]
+    },
+    "contentRecordWrites": 0,
+    "productionReady": false,
+    "activationSupported": false,
+    "exportKey": "880d20fd5e1bd7f5f2538267044f9bc7a85df260a0195cca2bb0355d413ddeed"
+  },
+  "independentReviewDecisions": 221,
+  "stagedStructuralRevisionsReused": 179,
+  "existingSavedDraftsReused": 42,
+  "reviewComparisonsCreated": 221,
+  "contentRecordWrites": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "sourceAdvanced": false,
+  "checks": {
+    "focused": 22,
+    "sqlite": 10,
+    "isolatedPostgres": 10,
+    "docsAndAssets": 81,
+    "types": true,
+    "standardCMSBuild": true,
+    "completeGenshinBuild": true,
+    "localHTTP": 7658,
+    "skipped": 0
+  },
+  "acceptance": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/acceptance.json",
+    "pin": "eaff2701a6a7543d4a9bc6c39de0ad9c32cc0fc44fc849296a27e2955179f67b"
+  },
+  "preservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/preservation.json",
+    "pin": "988c5aabd9d2e8050bc27c9987bb84ef6e266ea83336099f480916c8e3df5818"
+  },
+  "tableDelta": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/database-delta.json",
+    "pin": "811d8c030dd93e025bb33e0f11cd62ed4f289aef3b4213dd77adf6d9725d8218"
+  },
+  "evidence": {
+    "preparation.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/preparation.json",
+      "pin": "05430d6708c44a082c0467804ddf68eb6338648ee8078b07274fdd3225c0a47f"
+    },
+    "cms-capture-proof.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/cms-capture-proof.json",
+      "pin": "b87052e814d71f4594a9b01b6be01a48d65927ac8d764fe4ec65e7cbce4b2df1"
+    },
+    "cms-final-proof.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/cms-final-proof.json",
+      "pin": "ce16534fb779674fb4c8cef495bbb1066fd3c5eecada8308353eb1fb92e02166"
+    },
+    "rest-review-readback.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/rest-review-readback.json",
+      "pin": "bc9eb00982a9bd2eeb128664b438f080f197c062c4df24506fa67e232fbef5d1"
+    },
+    "installed-stage.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-stage.json",
+      "pin": "35bb3f12bf466655dab85a61fc44f6471a7eee93d81a0bed82009b047151e8a5"
+    },
+    "installed-stage-repeat.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-stage-repeat.json",
+      "pin": "07d64e3da1470f26fb2fab7df7c6cbefff9bd45993d599493761a522b1f29051"
+    },
+    "installed-decide.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-decide.json",
+      "pin": "232dc4d6c5983d6a5a3e154bf7b165e705d2613ffe38b3f8d408e7fe9efeb55f"
+    },
+    "installed-decide-repeat.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-decide-repeat.json",
+      "pin": "96a83e834b09b1fcbd8575316bd59331726433a55e1abcb555f812d89674553e"
+    },
+    "installed-verify-final.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-verify-final.json",
+      "pin": "9a0c5c8397af701b96347fc65d0d69bc02936658cd0c21ff51be891932b6572c"
+    },
+    "installed-export-final.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-export-final.json",
+      "pin": "9c3414d4b2a8437ac333f33e4e83fe69bfaf3a60b4f6e302cbb7f3176bbb0cbb"
+    },
+    "installed-export-final-reopen.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-export-final-reopen.json",
+      "pin": "87d38b52b232a57fef2551d1a8c21a76328b1922a14959db7ad8b902eec6e5e4"
+    },
+    "application-installed.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/application-installed.json",
+      "pin": "6e6ee3b251565f200c697f666cf615853a7d6cf0fd9e9c09d53d292c2292f903"
+    },
+    "cold-backup.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/cold-backup.json",
+      "pin": "73fd4600ef5c711e3c00dae60021a07e2271cc30739d95180c6fc5adfbb04958"
+    },
+    "application-refresh-01/application-installed.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/application-refresh-01/application-installed.json",
+      "pin": "7c62bf4b489f7ef1b39aa4d917b3a9ec3400e509a79817afc8262ee5a0788e79"
+    },
+    "application-refresh-01/cold-backup.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/application-refresh-01/cold-backup.json",
+      "pin": "be92694b4f26425ec10b3b28e86902a3b67866e63b50cdde915889a738f7beb9"
+    },
+    "application-form-02/application-installed.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/application-form-02/application-installed.json",
+      "pin": "23549008bd03d200c5d9be2c2edcbc341650bb3af64c722e92336376499969f0"
+    },
+    "application-form-02/cold-backup.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/application-form-02/cold-backup.json",
+      "pin": "08ee6edec00c137462735443f3a68b022d3c98b330445e603bcca09a0aeced98"
+    },
+    "installed-verify-form.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-verify-form.json",
+      "pin": "1abf8cf46c6a6c175348228a7de19c2705493d37e14e19c70c40b6fedf46ea99"
+    },
+    "installed-export-form.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-export-form.json",
+      "pin": "f36b57439149cbecf1f688b4ea44d99ce096a6a14ab14132d98eb742692fd77a"
+    },
+    "installed-export-form-reopen.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/installed-export-form-reopen.json",
+      "pin": "eb67aaef667bce4c5e80417c51ad11ae2fec5d765f6a78db1fa0a87a1ab48d41"
+    },
+    "owner-build-reuse.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/owner-build-reuse.json",
+      "pin": "91a4f3218fe7eaac3fa303366c76f92afb1140019102865299647f9db9516796"
+    },
+    "consumer-prepared.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/consumer-prepared.json",
+      "pin": "a7846b7ccce3a61d37566773c1e52d29a9da3a0ed44c2acdfd438d914aa3bb07"
+    },
+    "consumer-sealed.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/consumer-sealed.json",
+      "pin": "b9044279e5b5f2402ea4239cf87808e94ef34f4e56d7a31d8fe66f9ef21682e3"
+    },
+    "consumer-direct.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/consumer-direct.json",
+      "pin": "e214d54476da1872cbc42aa6e66f1199f80fab0c35c1e1a87d1c9acbbd1b1e9e"
+    },
+    "consumer-graph.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/consumer-graph.json",
+      "pin": "ed69fea3873ffdce1b9cbb2736ac565f3f8ce995fd793a2997f363c464f0ef5a"
+    },
+    "game-build-budget.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/game-build-budget.json",
+      "pin": "97b39d1021712bc8764a614fd66154b0cb18097dd614f8b20f6b49aa5e236573"
+    },
+    "game-build-budget-02.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/game-build-budget-02.json",
+      "pin": "6e431ddf122132ba5f5bac2525f36c3de33276ef525f9ac1d43e316c884fb058"
+    },
+    "game-dependency-reuse.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/game-dependency-reuse.json",
+      "pin": "51ac91b43b3212a63252a30e42f2545e32005a3cbcdd93a7b24762fd16a7e240"
+    },
+    "source-read.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/source-read.json",
+      "pin": "0bb2ed54df84af82f3eff276896bfafdc84b8be2c06040ea75259d6d9c76356b"
+    },
+    "EXECUTION.md": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/EXECUTION.md",
+      "pin": "c135300e3034775b3183b8aecbac055d4fe38619624c7efe83ff917d65ab2cfd"
+    },
+    "../r142-focused-01.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/r142-focused-01.log",
+      "pin": "161efc7843a43bd46f7e64e0247dd61f9c99f82c2d2f933bfadf928951fe98a0"
+    },
+    "../r142-review-sqlite-04.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/r142-review-sqlite-04.log",
+      "pin": "c9ecbb40df3dc7810ef96a82e09534569c6d4f91b1e4b9067c58633f0ea72b63"
+    },
+    "../r142-review-postgres-final.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/r142-review-postgres-final.log",
+      "pin": "7c388729981cee625628e0744210412a11d0b22f87be42d92e8bcf8d3f1a54ca"
+    },
+    "../r142-docs-assets-01.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/r142-docs-assets-01.log",
+      "pin": "1477da567dddeec738419b5c245a1b9820c3f7dbd851c3cff255a756b31bb3cf"
+    },
+    "../r142-types-final.log": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/r142-types-final.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "final-build-cleanup-result.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/final-build-cleanup-result.json",
+      "pin": "d763a79c1d0bd4303714ad190c58974a1445ec2592ff9d5cf4835e96ef9a7b74"
+    },
+    "compression-result-01.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/compression-result-01.json",
+      "pin": "11131e7c55818f855d1540c376aaf0d6465b7cad27dbad570dc7ddd105f15dfb"
+    },
+    "compression-result.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/compression-result.json",
+      "pin": "3b8fe4ad236ae5b48eed787d20d68809e563421d25251c2dd5950bf09d65a6f9"
+    },
+    "source-build-cleanup-result.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/source-build-cleanup-result.json",
+      "pin": "b43878df0b2e6eab9da814e2272c8345c7b15aa2db5227b98151625357ef874d"
+    },
+    "database-final.json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/database-final.json",
+      "pin": "6fae8845f7fb3436f31a93c76dd84fb8db5bdeb6010b53fad78b5b3e494993b0"
+    }
+  },
+  "next": "Resume the existing 221 reviews and this complete export; do not replay the 42 drafts, 179 staged structural revisions or review decisions. Wire this new collection contract into cloud preview and controlled single-Genshin production qualification. R139 remains the published source.",
+  "pending": [
+    "cloud preview and production qualification for the new structural collection contract",
+    "controlled production source/CMS editing-source advance",
+    "Next.js 16.4.2 security advisory remediation"
+  ],
+  "productionReady": false
+}

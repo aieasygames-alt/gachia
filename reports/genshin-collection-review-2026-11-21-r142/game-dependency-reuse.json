@@ -1,0 +1,20 @@
+{
+  "source": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/frozen/source",
+  "workspace": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/candidate-source/source",
+  "copied": [
+    "node_modules",
+    "apps/admin/node_modules",
+    "apps/game-azur-promilia/node_modules",
+    "apps/game-genshin/node_modules",
+    "apps/game-lvmeng/node_modules",
+    "apps/game-nte/node_modules",
+    "apps/router/node_modules",
+    "apps/web/node_modules",
+    "packages/core/node_modules",
+    "packages/data/node_modules",
+    "packages/db/node_modules",
+    "packages/ui/node_modules"
+  ],
+  "lockSHA256": "ebba60a2a72b3074d7e187868963758e30f889ae1a18e43408821f135ec3bba1",
+  "physicalClones": true
+}

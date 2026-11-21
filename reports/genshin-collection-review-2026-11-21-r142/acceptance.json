@@ -1,0 +1,90 @@
+{
+  "checks": {
+    "candidateDirect": {
+      "proof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/candidate-direct/responses/references.json",
+        "pin": "f4c59984a1cd15ffeeeff5c53f9dfb271391c77d9e4ea089743ddcf4d7eee9e2"
+      },
+      "requests": 1995
+    },
+    "recoveryDirect": {
+      "proof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/recovery-direct/responses/references.json",
+        "pin": "d49acf8fcb3c82d5ea6c7e634d45f3fefc362225e5e21504679f6155c8d7ab5c"
+      },
+      "requests": 1743
+    },
+    "candidateGraph": {
+      "proof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/candidate-graph-04/responses/references.json",
+        "pin": "665f1e2dfb57e47bbc3ec5c465d8a948448fdacce78bfbccb9ab9f15bf23cef6"
+      },
+      "requests": 1960
+    },
+    "recoveryGraph": {
+      "proof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/recovery-graph-04/responses/references.json",
+        "pin": "a1f3cddbc455b342c977855bed96efe3f1e9d702b525e19b057fb42708775e64"
+      },
+      "requests": 1960
+    }
+  },
+  "totalRequests": 7658,
+  "candidate": {
+    "materialPages": 810,
+    "recipeCheck": {
+      "pages": 270,
+      "references": 16470,
+      "everyMaterialIdAndQuantityMatches": true
+    },
+    "skillsChecked": 45,
+    "knownLegacyRelationPagesMissing": 0
+  },
+  "recovery": {
+    "materialPages": 558,
+    "recipeCheck": {
+      "pages": 258,
+      "references": 15480,
+      "everyMaterialIdAndQuantityMatches": true
+    },
+    "skillsChecked": 0,
+    "knownLegacyRelationPagesMissing": 12
+  },
+  "routerRuntime": {
+    "kind": "published_router_module_binding_bridge_to_real_workerd_http",
+    "routerModuleSHA256": "be0c04f5ff5e648e673acb386933de15d591a662d70dab4b8f3728551ec8eede",
+    "actualWorkerResponses": true,
+    "routerWorkerdClaimed": false,
+    "role": "candidate",
+    "requests": 1960,
+    "materialPages": 810,
+    "otherGameRawResponses": 83,
+    "sourceIndex": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+      "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+    }
+  },
+  "recoveryRouterRuntime": {
+    "kind": "published_router_module_binding_bridge_to_real_workerd_http",
+    "routerModuleSHA256": "be0c04f5ff5e648e673acb386933de15d591a662d70dab4b8f3728551ec8eede",
+    "actualWorkerResponses": true,
+    "routerWorkerdClaimed": false,
+    "role": "recovery",
+    "requests": 1960,
+    "materialPages": 558,
+    "otherGameRawResponses": 83,
+    "sourceIndex": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+      "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+    }
+  },
+  "completeNextOpenNextBuild": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/game-built.json",
+    "pin": "47f1035554c5e6e1141c8b4ff39f4321a0c9484b028f570c99dd0a63d1616aa2"
+  },
+  "compatibility": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/consumer-sealed.json",
+    "pin": "b9044279e5b5f2402ea4239cf87808e94ef34f4e56d7a31d8fe66f9ef21682e3"
+  },
+  "noProductionDeployment": true
+}

@@ -1,0 +1,27 @@
+{
+  "parent": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/delivery.json",
+    "pin": "184ba587502a2d6ff96c43385c38a06e6a6fdf34f4b2fe32603a65a3d5cbe9d4"
+  },
+  "input": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-structural-intake-2026-11-20-r141/intake-input.json",
+    "pin": "0a761dd563bdcd018f8332794cb924d00909bdd2ea92e98805a91fc7bb036d66"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-code-production-2026-11-20-r139/published-sources/source-index.json",
+    "pin": "59b5831d8547d02b37c4052506e777a11d6d75fbfc1d604a0a3412010cb99fca"
+  },
+  "cmsBefore": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/cms-capture.json.gz",
+    "pin": "727ebcafa995edb68dd8d189e342b22955ec20e35e0cdc395185c75958345eda"
+  },
+  "runKey": "87639812dcd5bd1e0855ee11bb5565d318b830f846eec30798417e208cd13532",
+  "stageKey": "f173c9de5587920b011ab9d9c3a82015634f296c8e569d315c5882860b21c83d",
+  "decisions": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-review-2026-11-21-r142/review-decisions.json",
+    "pin": "e3b9a16009e6a302e1b73989720bc068673f56afeeabb3db63cb0b721b582d68"
+  },
+  "items": 221,
+  "alreadySavedDrafts": 42,
+  "contentRecordWrites": 0
+}

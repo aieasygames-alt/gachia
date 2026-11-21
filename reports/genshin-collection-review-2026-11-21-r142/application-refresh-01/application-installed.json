@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "e5811dee3fdd2a7f193368623e7b645d982a7411",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T003122Z-genshin-review-r142-e5811dee/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T002208Z-genshin-review-r142-8376014c/services/content-cms",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T003122Z-genshin-review-r142-e5811dee/application-manifest.json",
+    "pin": "1a5d130860cc25a27a3debf0d90229a83499ae6b91075405cb46db322c2caf54"
+  },
+  "buildID": "-2v7sqtMvzO9hpAHGf728",
+  "files": 794,
+  "releaseFiles": 354,
+  "databaseMigrationRequired": true,
+  "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261121T003415Z-a8786b",
+  "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/genshin-review-r142-e5811dee3fdd",
+  "healthy": true,
+  "allExistingContentAndHistoryUnchanged": true,
+  "schemaMigrationRun": true,
+  "previousApplicationPreserved": true
+}
