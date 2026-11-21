@@ -11,6 +11,7 @@ export type UnifiedSource = {
 export type UnifiedRecord = {
   stableKey: string; kind: string; legacyId: string; legacyPath: string; sourceRecord: UnifiedSource;
   structuredValue: JSONValue; hold?: boolean | null; _status?: 'draft' | 'published' | null;
+  reviewEvidence?: JSONValue;
 }
 
 export const objectValue = (value: unknown): value is Record<string, JSONValue> =>
@@ -110,17 +111,44 @@ export function assertStructuredEdit(original: JSONValue, edited: unknown, point
 
 export function validateUnifiedRecord(record: Record<string, unknown>, original?: Record<string, unknown>) {
   assertUnifiedSource(record.sourceRecord)
-  const source = record.sourceRecord
+  const source = editingSource(record)
   if (record.stableKey !== unifiedKey(source) || record.kind !== source.family || record.legacyPath !== source.sourcePath
     || record.legacyId !== (source.locator.identity ? canonical(source.locator.identity) : source.locator.symbol ?? source.family)) throw new Error('Unified record identity mismatch')
   if (original) for (const key of ['stableKey', 'kind', 'legacyId', 'legacyPath', 'sourceRecord', 'game', 'bodyFormat']) {
     const id = (value: unknown) => key === 'game' && objectValue(value) ? value.id : value
     if (!isDeepStrictEqual(id(record[key]), id(original[key]))) throw new Error(`Immutable unified identity: ${key}`)
   }
+  if (original && canonical((record.reviewEvidence as any)?.publishedBaseline ?? null) !== canonical((original.reviewEvidence as any)?.publishedBaseline ?? null)) throw new Error('Published editing baseline is maintenance-only')
   const emptyLocalized = (value: unknown) => value == null || objectValue(value)
     && Object.keys(value).every(key => ['zh', 'en', 'ja'].includes(key)) && Object.values(value).every(item => item == null)
   if (record.bodyFormat !== 'plain' || !emptyLocalized(record.title) || !emptyLocalized(record.body)) throw new Error('Unified content must use the structured editor, not localized guide fields')
   assertStructuredEdit(source.original, record.structuredValue)
+}
+
+// Retain the real import O in sourceRecord. A separately controlled, published
+// baseline supplies the canonical editing identity and structural reference A.
+export function editingSource(record: { sourceRecord?: unknown; reviewEvidence?: unknown }): UnifiedSource {
+  assertUnifiedSource(record.sourceRecord)
+  const imported = record.sourceRecord, raw = (record.reviewEvidence as any)?.publishedBaseline
+  if (raw == null) return imported
+  assertJSON(raw)
+  if (!objectValue(raw)) throw new Error('Invalid published editing baseline')
+  const baseline = raw as Record<string, any>
+  if (baseline.kind !== 'genshin-published-editing-baseline-v1' || imported.game !== 'genshin'
+    || !['materials', 'characters', 'character-materials'].includes(imported.family)
+    || imported.sourcePath !== `packages/data/games/genshin/raw-${imported.family}.json`
+    || baseline.importOriginalSHA256 !== imported.originalSHA256
+    || !/^[a-f0-9]{64}$/.test(baseline.syncKey) || !/^[a-f0-9]{64}$/.test(baseline.exportKey)
+    || !/^[a-f0-9]{64}$/.test(baseline.sourceIndex?.pin) || typeof baseline.sourceIndex?.path !== 'string'
+    || !baseline.sourceIndex.path.startsWith('/') || typeof baseline.versionId !== 'string') throw new Error('Invalid published editing baseline')
+  assertUnifiedSource(baseline.source)
+  const source = baseline.source
+  if (source.game !== imported.game || source.family !== imported.family || source.sourcePath !== imported.sourcePath) throw new Error('Published editing scope mismatch')
+  if (!isDeepStrictEqual(source.locator, imported.locator)) {
+    const from = imported.locator.identity?.characterId, to = source.locator.identity?.characterId
+    if (source.family !== 'character-materials' || !((from === 'sara' && to === 'kujou-sara') || (from === 'shinobu' && to === 'kuki-shinobu'))) throw new Error('Unapproved published identity migration')
+  }
+  return source
 }
 
 export function contentUnit(source: Omit<UnifiedSource, 'unifiedContent' | 'originalSHA256'>): UnifiedRecord {

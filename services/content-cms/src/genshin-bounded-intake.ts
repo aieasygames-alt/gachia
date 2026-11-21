@@ -9,7 +9,7 @@ import type { SourceBytes } from './unified-export'
 const prefix = 'packages/data/games/genshin/raw-'
 export const GENSHIN_INTAKE_PATHS = ['materials', 'character-materials', 'characters'].map(family => `${prefix}${family}.json`)
 type Proof = { path: string; pin: string }
-export type IntakeCMSRecord = UnifiedRecord & { id: number | string; updatedAt: string; bodyFormat: string }
+export type IntakeCMSRecord = UnifiedRecord & { id: number | string; updatedAt: string; bodyFormat: string; game?: number | string | { id: number | string } }
 export type GenshinIntakeInput = {
   sourceIndex: Proof; candidateProof: Proof; cmsProof: Proof
   // The candidate's earliest reviewed ancestor, before the R135 identity patch.

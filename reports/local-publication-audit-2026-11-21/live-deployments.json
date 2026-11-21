@@ -1,0 +1,86 @@
+{
+  "kind": "read_only_local_publication_audit",
+  "checkedAt": "2026-11-21T08:25:38.253Z",
+  "cloudWrites": 0,
+  "deploymentWrites": 0,
+  "services": [
+    {
+      "service": "gachia-game-azur-promilia",
+      "version": "79bf30a2-e519-4366-a0a3-4c25907f76c9",
+      "deploymentId": "9a9620b0-128e-4ba1-814a-6db6c7453dad",
+      "createdOn": "2026-11-14T16:15:43.18686Z",
+      "versions": [
+        {
+          "version_id": "79bf30a2-e519-4366-a0a3-4c25907f76c9",
+          "percentage": 100
+        }
+      ],
+      "matches": true
+    },
+    {
+      "service": "gachia-game-genshin",
+      "version": "c76c9d57-f814-410c-843a-1dcef57412e3",
+      "deploymentId": "8586474e-c106-495a-a4d7-4b2f2b5f4348",
+      "createdOn": "2026-11-21T07:58:39.706132Z",
+      "versions": [
+        {
+          "version_id": "c76c9d57-f814-410c-843a-1dcef57412e3",
+          "percentage": 100
+        }
+      ],
+      "matches": true
+    },
+    {
+      "service": "gachia-game-lvmeng",
+      "version": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+      "deploymentId": "62f5d1d5-ef07-450c-a91f-35b3dffa232a",
+      "createdOn": "2026-11-15T18:08:09.01314Z",
+      "versions": [
+        {
+          "version_id": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+          "percentage": 100
+        }
+      ],
+      "matches": true
+    },
+    {
+      "service": "gachia",
+      "version": "8d88bd48-ba83-4470-a855-41048eacfc1a",
+      "deploymentId": "61209ff8-87f8-433f-b1bd-d0665c4827c3",
+      "createdOn": "2026-11-19T02:54:31.456196Z",
+      "versions": [
+        {
+          "version_id": "8d88bd48-ba83-4470-a855-41048eacfc1a",
+          "percentage": 100
+        }
+      ],
+      "matches": true
+    },
+    {
+      "service": "gachia-game-nte",
+      "version": "518d523c-ced8-4b71-85ed-2509806f432e",
+      "deploymentId": "d7c01702-abe1-4226-b3ae-a5659169e789",
+      "createdOn": "2026-11-18T09:29:40.902829Z",
+      "versions": [
+        {
+          "version_id": "518d523c-ced8-4b71-85ed-2509806f432e",
+          "percentage": 100
+        }
+      ],
+      "matches": true
+    },
+    {
+      "service": "gachia-router",
+      "version": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+      "deploymentId": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+      "createdOn": "2026-11-13T14:30:23.133978Z",
+      "versions": [
+        {
+          "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+          "percentage": 100
+        }
+      ],
+      "matches": true
+    }
+  ]
+}

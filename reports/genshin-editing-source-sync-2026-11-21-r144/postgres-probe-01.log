@@ -1,0 +1,111 @@
+The files belonging to this database system will be owned by user "robert".
+This user must also own the server process.
+
+
+The database cluster will be initialized with this locale configuration:
+  locale provider:   libc
+  LC_COLLATE:  C
+  LC_CTYPE:    C
+  LC_MESSAGES: en_US.UTF-8
+  LC_MONETARY: C
+  LC_NUMERIC:  C
+  LC_TIME:     C
+
+The default database encoding has accordingly been set to "SQL_ASCII".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+creating directory /var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/genshin-editing-pg-6MQLUm/db ... 
+ok
+
+creating subdirectories ... 
+ok
+
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 
+100
+selecting default "shared_buffers" ... 
+128MB
+selecting default time zone ... 
+Asia/Shanghai
+creating configuration files ... 
+ok
+running bootstrap script ... 
+ok
+
+performing post-bootstrap initialization ... 
+ok
+syncing data to disk ... 
+ok
+
+Success. You can now start the database server using:
+
+
+    '/Users/robert/Library/Application Support/GachiaCMS/releases/20261114T151836Z-unified-98affe75/services/content-cms/node_modules/.pnpm/@embedded-postgres+darwin-arm64@17.6.0-beta.15/node_modules/@embedded-postgres/darwin-arm64/native/bin/pg_ctl' -D /var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/genshin-editing-pg-6MQLUm/db -l logfile start
+
+
+2026-11-21 17:09:11.857 CST [99008] LOG:  starting PostgreSQL 17.6 on x86_64-apple-darwin23.6.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.6), 64-bit
+
+2026-11-21 17:09:11.857 CST [99008] LOG:  listening on IPv4 address "127.0.0.1", port 56607
+
+2026-11-21 17:09:11.857 CST [99008] LOG:  listening on Unix socket "/var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/genshin-editing-pg-6MQLUm/.s.PGSQL.56607"
+
+2026-11-21 17:09:11.860 CST [99011] LOG:  database system was shut down at 2026-11-21 17:09:11 CST
+
+2026-11-21 17:09:11.864 CST [99008] LOG:  database system is ready to accept connections
+
+[17:09:13] [32mINFO[39m: [36mReading migration files from /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/src/migrations[39m
+
+[17:09:13] [32mINFO[39m: [36mMigrating: 20261101_074512_editor_initial[39m
+
+[17:09:13] [32mINFO[39m: [36mMigrated:  20261101_074512_editor_initial (112ms)[39m
+
+[17:09:13] [32mINFO[39m: [36mMigrating: 20261105_063243_unified_content[39m
+
+[17:09:13] [32mINFO[39m: [36mMigrated:  20261105_063243_unified_content (7ms)[39m
+
+[17:09:13] [32mINFO[39m: [36mMigrating: 20261121_001218_genshin_collection_reviews[39m
+
+[17:09:13] [32mINFO[39m: [36mMigrated:  20261121_001218_genshin_collection_reviews (9ms)[39m
+
+[17:09:13] [32mINFO[39m: [36mDone.[39m
+
+▶ published editing sync preserves real O, review history and unrelated content on a real database
+  ✔ a live editor lock blocks the whole maintenance transaction (1430.044292ms)
+
+  ✔ late failure rolls back all new entities, relation identities, values and completion marker (3939.021833ms)
+
+  ✔ ordinary admin and overrideAccess cannot forge a published baseline (55.637916ms)
+
+  ✔ sync imports 86 real entities and updates 390 records atomically, preserving O and flags (4306.140084ms)
+
+  ✔ repeat performs no content writes and preserves all record timestamps (1546.911916ms)
+
+  ✔ canonical relation exports against real A with zero deltas and retains legacy import O (1021.646958ms)
+
+  ✔ stale repeated sync refuses newer editorial changes (1192.621042ms)
+✔ published editing sync preserves real O, review history and unrelated content on a real database (46489.129958ms)
+
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 48420.684708
+
+2026-11-21 17:10:02.460 CST [99008] LOG:  received fast shutdown request
+
+2026-11-21 17:10:02.460 CST [99008] LOG:  aborting any active transactions
+
+2026-11-21 17:10:02.461 CST [99008] LOG:  background worker "logical replication launcher" (PID 99014) exited with exit code 1
+
+2026-11-21 17:10:02.461 CST [99009] LOG:  shutting down
+
+2026-11-21 17:10:02.462 CST [99009] LOG:  checkpoint starting: shutdown immediate
+
+2026-11-21 17:10:02.586 CST [99009] LOG:  checkpoint complete: wrote 3286 buffers (20.1%); 0 WAL file(s) added, 0 removed, 1 recycled; write=0.105 s, sync=0.019 s, total=0.125 s; sync files=671, longest=0.002 s, average=0.001 s; distance=25581 kB, estimate=25581 kB; lsn=0/2E03730, redo lsn=0/2E03730
+
+2026-11-21 17:10:02.589 CST [99008] LOG:  database system is shut down

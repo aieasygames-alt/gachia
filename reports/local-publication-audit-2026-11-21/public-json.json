@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-11-21T08:28:37.554Z",
+  "method": "GET",
+  "cloudWrites": 0,
+  "results": [
+    {
+      "sourcePath": "packages/data/games/ananta/raw-guides.json",
+      "url": "https://gachia.com/data/ananta/raw-guides.json",
+      "status": 200,
+      "sha256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d",
+      "expectedSHA256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 19
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+      "url": "https://gachia.com/data/genshin/raw-character-materials.json",
+      "status": 200,
+      "sha256": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88",
+      "expectedSHA256": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 90
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-summaries.json",
+      "url": "https://gachia.com/data/genshin/raw-character-summaries.json",
+      "status": 200,
+      "sha256": "9a0be82bc9655d4eac291f996f0b988ab8e67e547a14701bec68556813ec940f",
+      "expectedSHA256": "9a0be82bc9655d4eac291f996f0b988ab8e67e547a14701bec68556813ec940f",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 117
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-characters.json",
+      "url": "https://gachia.com/data/genshin/raw-characters.json",
+      "status": 200,
+      "sha256": "60526cc4d5c040db56d30da306618ff55741048048b0c82be3236ec552f8b5f1",
+      "expectedSHA256": "60526cc4d5c040db56d30da306618ff55741048048b0c82be3236ec552f8b5f1",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 117
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-guides.json",
+      "url": "https://gachia.com/data/genshin/raw-guides.json",
+      "status": 200,
+      "sha256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72",
+      "expectedSHA256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 32
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "url": "https://gachia.com/data/genshin/raw-materials.json",
+      "status": 200,
+      "sha256": "ae16a07aea5650a1ae6d488369bdd154dae6778ff186dc8ed94f109992c584d4",
+      "expectedSHA256": "ae16a07aea5650a1ae6d488369bdd154dae6778ff186dc8ed94f109992c584d4",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 269
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-guides.json",
+      "url": "https://gachia.com/data/hi3/raw-guides.json",
+      "status": 200,
+      "sha256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3",
+      "expectedSHA256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 3
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-characters.json",
+      "url": "https://gachia.com/data/nte/raw-characters.json",
+      "status": 200,
+      "sha256": "02dd211b1969f925e088f01a90ddffbcb1bd4b3255816dcfa24594effa8fd670",
+      "expectedSHA256": "b4fbe091f17fff4e57e28a123eb3e66aa8792afe86aa5b6eb942e71d800b8335",
+      "byteMatch": false,
+      "semanticMatch": true,
+      "entities": 42
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-guides.json",
+      "url": "https://gachia.com/data/nte/raw-guides.json",
+      "status": 200,
+      "sha256": "67b904576537226a02c9a0b9babb8ecd6df941e7246ec42182d76690a5b7e220",
+      "expectedSHA256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6",
+      "byteMatch": false,
+      "semanticMatch": true,
+      "entities": 53
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-materials.json",
+      "url": "https://gachia.com/data/nte/raw-materials.json",
+      "status": 200,
+      "sha256": "3a4dcc63628f39aac6c38e2977cd9c1ff9dbfc0252e6cddf5eb420a15d5e2a53",
+      "expectedSHA256": "657fbf66e9f53688351570f87824acf1706c9f62e2a330f5a4760ad2638e2233",
+      "byteMatch": false,
+      "semanticMatch": true,
+      "entities": 57
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-guides.json",
+      "url": "https://gachia.com/data/sea/raw-guides.json",
+      "status": 200,
+      "sha256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f",
+      "expectedSHA256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f",
+      "byteMatch": true,
+      "semanticMatch": true,
+      "entities": 75
+    }
+  ]
+}

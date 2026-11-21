@@ -10,7 +10,7 @@ import { digest } from './legacy-intake'
 import { canonical } from './record-mapping'
 import { readUnifiedSources } from './unified-sources'
 import { unifiedPlan, verifyUnifiedPlan, type UnifiedPlan } from './unified-plan'
-import { validateUnifiedRecord, type UnifiedRecord } from './unified-content'
+import { editingSource, validateUnifiedRecord, type UnifiedRecord } from './unified-content'
 import type { SourceBytes } from './unified-export'
 
 const SHA = /^[a-f0-9]{64}$/
@@ -113,12 +113,13 @@ export function verifyUnifiedPublishedDocuments(plan: UnifiedPlan, keys: string[
     assert(typeof doc.stableKey === 'string')
     const template = templates.get(doc.stableKey)!
     validateUnifiedRecord(doc as unknown as Record<string, unknown>)
-    assert(isDeepStrictEqual(doc.sourceRecord, template.sourceRecord), 'Published source differs from pinned plan')
+    assert(isDeepStrictEqual(doc.sourceRecord, template.sourceRecord) || isDeepStrictEqual(editingSource(doc), template.sourceRecord), 'Published source differs from pinned plan')
     const gameId = doc.game && typeof doc.game === 'object' ? (doc.game as { id: unknown }).id : doc.game
     assert.equal(gameKeys.get(gameId), template.sourceRecord.game, 'Published record belongs to another game')
     return doc
   })
   const reviews = records.map(doc => ({ id: doc.id, stableKey: doc.stableKey, updatedAt: doc.updatedAt,
-    sourceSHA256: digest(canonical(doc.sourceRecord)), valueSHA256: digest(canonical(doc.structuredValue)) }))
+    sourceSHA256: digest(canonical(doc.sourceRecord)), valueSHA256: digest(canonical(doc.structuredValue)),
+    ...((doc.reviewEvidence as any)?.publishedBaseline ? { editingSourceSHA256: digest(canonical(editingSource(doc))) } : {}) }))
   return { records: records as unknown as UnifiedRecord[], reviews, reviewPin: digest(canonical(reviews)) }
 }

@@ -9,6 +9,7 @@ import { mergeWorkflowEvents } from './merge-workflow-events'
 import { isDesktopNewGuide, validateDesktopNewGuideIdentity } from './desktop-new-guide'
 import { assertJSON, isUnifiedRecord, validateUnifiedRecord } from './unified-content'
 import { isDeepStrictEqual } from 'node:util'
+import { guardPublishedEditingWrite, isPublishedEditingOperation } from './published-editing-guard'
 
 const hasRole = (user: unknown, roles: string[]) => {
   if (!user || typeof user !== 'object' || !('role' in user)) return false
@@ -123,7 +124,9 @@ export function collections(directory: string, options: { secureCookies?: boolea
             if (args.draft !== true && !hasRole(req.user, ['admin', 'reviewer'])) {
               throw new APIError('Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.', 403)
             }
-            return { ...args, overrideLock: false }
+            // The maintenance transaction checks every lock with its own req.
+            // Payload's default check runs outside that transaction on SQLite.
+            return { ...args, overrideLock: isPublishedEditingOperation(req.context) }
           }
           if (operation === 'delete') return { ...args, overrideLock: false }
           if (operation !== 'restoreVersion') return args
@@ -146,15 +149,19 @@ export function collections(directory: string, options: { secureCookies?: boolea
           }
           const next = { ...originalDoc, ...data }
           if (isUnifiedRecord(next) || isUnifiedRecord(originalDoc)) {
-            if (operation === 'create' && req.context.unifiedContentImport !== true) throw new APIError('Unified records must be created by the controlled source importer.', 403)
-            try { validateUnifiedRecord(next, operation === 'create' ? undefined : originalDoc) }
+            let synchronized = false
+            try { synchronized = guardPublishedEditingWrite(next, originalDoc, req.context) }
+            catch (error) { throw new APIError((error as Error).message, 403) }
+            if (synchronized && !hasRole(req.user, ['admin', 'reviewer'])) throw new APIError('Published source synchronization requires a reviewer.', 403)
+            if (operation === 'create' && req.context.unifiedContentImport !== true && !synchronized) throw new APIError('Unified records must be created by the controlled source importer.', 403)
+            try { validateUnifiedRecord(next, operation === 'create' || synchronized ? undefined : originalDoc) }
             catch (error) { throw new APIError(error instanceof Error ? error.message : 'Invalid structured content', 400) }
             const gameId = typeof next.game === 'object' ? next.game?.id : next.game
             const game = await req.payload.findByID({ collection: 'games', id: gameId, depth: 0, req,
               overrideAccess: operation === 'create' && req.context.unifiedContentImport === true && !req.user })
             if (game.key !== next.sourceRecord.game) throw new APIError('Unified content game relationship mismatch.', 400)
             if (data.hold === false && originalDoc?.hold !== false && !hasRole(req.user, ['admin', 'reviewer'])) throw new APIError('Only a reviewer can clear a unified content hold.', 403)
-            if (originalDoc && !isDeepStrictEqual(next.structuredValue, originalDoc.structuredValue) && data._status !== 'published') data.hold = true
+            if (originalDoc && !synchronized && !isDeepStrictEqual(next.structuredValue, originalDoc.structuredValue) && data._status !== 'published') data.hold = true
           } else if (next.structuredValue != null) throw new APIError('Structured content requires immutable source provenance.', 400)
           if (isDesktopNewGuide(next) || (originalDoc && isDesktopNewGuide(originalDoc))) {
             let sourceGame: string

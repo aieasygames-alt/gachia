@@ -1,0 +1,54 @@
+✔ exact reviewed complete export is independently reconstructed (1117.076875ms)
+✔ re-signed partial or rejected decisions cannot qualify (3030.704791ms)
+✔ other game bytes, missing summaries and mixed candidate recovery are rejected (2889.03175ms)
+[⣷] Pulling schema from database...
+[2K[1G[✓] Pulling schema from database...
+▶ published editing sync preserves real O, review history and unrelated content on a real database
+  ✔ a live editor lock blocks the whole maintenance transaction (1226.105ms)
+  ✔ late failure rolls back all new entities, relation identities, values and completion marker (2860.067083ms)
+  ✔ ordinary admin and overrideAccess cannot forge a published baseline (39.695583ms)
+  ✔ sync imports 86 real entities and updates 390 records atomically, preserving O and flags (3075.464625ms)
+  ✔ repeat performs no content writes and preserves all record timestamps (1345.221041ms)
+  ✔ canonical relation exports against real A with zero deltas and retains legacy import O (942.092417ms)
+  ✔ stale repeated sync refuses newer editorial changes (1109.763833ms)
+✔ published editing sync preserves real O, review history and unrelated content on a real database (38935.1135ms)
+✔ unified contract preserves all existing scalar fields, locales, nulls, and empty arrays (1.816666ms)
+✔ unified contract protects id (0.0865ms)
+✔ unified contract protects slug (0.053625ms)
+✔ unified contract protects characterId (0.046875ms)
+✔ unified contract protects code (0.044875ms)
+✔ unified contract protects region (0.042041ms)
+✔ unified contract protects cmsOrigin (0.045833ms)
+✔ unified contract protects source (0.042958ms)
+✔ unified contract protects sourceReview (0.047625ms)
+✔ unified contract protects contentReview (0.078209ms)
+✔ unified contract protects hold (0.067917ms)
+✔ unified contract protects rights (0.037667ms)
+✔ unified contract protects image (0.038417ms)
+✔ unified contract protects imageUrl (0.029417ms)
+✔ unified contract protects icon (0.0295ms)
+✔ unified contract protects url (0.027834ms)
+✔ unified edited text rejects unsafe input "<script>alert(1)</script>" (0.069792ms)
+✔ unified edited text rejects unsafe input "javascript:alert(1)" (0.053959ms)
+✔ unified edited text rejects unsafe input "data:text/html,x" (0.046917ms)
+✔ unified edited text rejects unsafe input "text\u0000" (0.036666ms)
+✔ non-JSON, prototype pollution and nonfinite values are rejected (0.20625ms)
+✔ record identity is source-located, not based on title or row position (1.003167ms)
+✔ immutable provenance and editorial identity cannot be replaced or escaped (0.591459ms)
+✔ public A is preserved, independently edited fields merge, conflicting or missing records stop (0.160792ms)
+✔ raw export merges current public values and preserves public-only rows without reordering (0.463708ms)
+✔ export rejects unapproved, stale, missing, duplicate and conflicting inputs (6.2195ms)
+✔ untouched drafts preserve public values in the frozen build overlay but do not authorize a no-op release (0.179292ms)
+✔ unedited and delegated games carry their entire active content into the candidate overlay (0.225416ms)
+✔ literal exports round-trip Markdown/backticks without executing code, preserving assertions and readers (6.678041ms)
+✔ dynamic exports are explicitly blocked, never executed or claimed as covered (0.277084ms)
+✔ all registered scopes have actual source coverage, existing guides and generated summaries remain delegated (689.85675ms)
+✔ private tier inputs are editable without duplicating derived localized readers (0.626291ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 40381.587583

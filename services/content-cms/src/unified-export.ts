@@ -1,7 +1,7 @@
 import { isDeepStrictEqual } from 'node:util'
 import { digest } from './legacy-intake'
 import { canonical } from './record-mapping'
-import { assertJSON, assertUnifiedSource, validateUnifiedRecord, mergePublishedContent, type UnifiedRecord } from './unified-content'
+import { assertJSON, assertUnifiedSource, editingSource, validateUnifiedRecord, mergePublishedContent, type UnifiedRecord } from './unified-content'
 import { locateValue, readSourceValue, replaceSourceSymbol, replaceValue } from './unified-sources'
 import { COMMUNITY_PUBLICATION_POLICY } from './unified-baseline'
 
@@ -29,7 +29,9 @@ export function exportUnifiedContent(records: UnifiedRecord[], originalSources: 
     assertUnifiedSource(record.sourceRecord)
     validateUnifiedRecord({ ...record, bodyFormat: 'plain' })
     if (!preview && (record._status !== 'published' || record.hold !== false)) throw new Error('Unapproved structured content')
-    const source = record.sourceRecord, o = originals.get(source.sourcePath), a = active.get(source.sourcePath)
+    const source = editingSource(record), a = active.get(source.sourcePath)
+    const original = originals.get(source.sourcePath)
+    const o = (record.reviewEvidence as any)?.publishedBaseline && original?.sha256 !== source.sourceSHA256 ? a : original
     if (!o || !a || o.sha256 !== source.sourceSHA256) throw new Error('Missing or stale source/public baseline')
     const originalRoot = readSourceValue(o.text, source.sourcePath, source.locator)
     if (!isDeepStrictEqual(locateValue(originalRoot, source.locator), source.original)) throw new Error('Editorial original differs from source bytes')

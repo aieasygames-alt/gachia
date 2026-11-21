@@ -126,7 +126,7 @@ export async function exportGenshinCollection(payload: Payload, input: GenshinIn
       inputKey: review.manifest.inputKey, sourceIndex: input.sourceIndex, cmsKey: review.manifest.cmsKey,
       sourcePins: sources.map(({ sourcePath, sha256 }) => ({ sourcePath, sha256 })), changedPaths,
       derivedSources: [{ sourcePath: summaryPath, derivedFrom: GENSHIN_INTAKE_PATHS[2], generator: 'generate-character-summaries.mjs' }],
-      decisions: decisions.map(({ decisionKey, revisionKey, actorID, actorEmail, action, note }) => ({ decisionKey, revisionKey, actorID, actorEmail, action, note })).sort((a, b) => a.revisionKey.localeCompare(b.revisionKey)),
+      decisions: decisions.map(({ decisionKey, revisionKey, actorID, actorEmail, action, note }) => ({ decisionKey, revisionKey, actorID, actorEmail, action, note })).sort((a, b) => String(a.revisionKey).localeCompare(String(b.revisionKey))),
       dependency: { auditKey: dependency.auditKey, materialDefinitions: dependency.materialDefinitions,
         materialReferences: dependency.materialReferences, complete: dependency.dependencyClosureComplete },
       recovery: { sourcePins: review.plan.sourcePins, policy: 'exact-published-A-with-legacy-dependencies', newEntities: review.plan.entries.filter(row => row.action === 'new-entity').map(row => row.key), renames: input.renames },

@@ -478,11 +478,11 @@ export interface GenshinReviewDecision {
   reviewItem: number | MigrationRecord;
   action: 'accept-export' | 'reject';
   note: string;
-  decisionKey: string;
-  revisionKey: string;
-  cmsKey: string;
-  actorID: string;
-  actorEmail: string;
+  decisionKey?: string | null;
+  revisionKey?: string | null;
+  cmsKey?: string | null;
+  actorID?: string | null;
+  actorEmail?: string | null;
   updatedAt: string;
   createdAt: string;
 }

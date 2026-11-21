@@ -1,0 +1,303 @@
+{
+  "kind": "local_vs_published_read_only_audit_v1",
+  "workspace": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia",
+  "head": "95f26d90fac5323ef901c0e648dc149f782e2785",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "trackedWorkingTreeClean": true,
+  "remoteBranch": "codex/payload-unified-maintenance",
+  "remoteHead": "5f6151d0a4cc53d21f10e5519d6a78a96370e221",
+  "localOnlyCommits": [
+    "95f26d90fac5323ef901c0e648dc149f782e2785 docs(cms): record R143 single-Genshin production and complete source handoff"
+  ],
+  "localOnlyCommitChangedPaths": [
+    "plans/payload-all-content-implementation-2026-11-05.md",
+    "reports/genshin-collection-production-2026-11-21-r143/EXECUTION.md",
+    "reports/genshin-collection-production-2026-11-21-r143/STATUS.json",
+    "reports/genshin-collection-production-2026-11-21-r143/accepted.json",
+    "reports/genshin-collection-production-2026-11-21-r143/ci-completed.json",
+    "reports/genshin-collection-production-2026-11-21-r143/cms-final-proof.json",
+    "reports/genshin-collection-production-2026-11-21-r143/cms-final.json.gz",
+    "reports/genshin-collection-production-2026-11-21-r143/completion.json",
+    "reports/genshin-collection-production-2026-11-21-r143/delivery.json",
+    "reports/genshin-collection-production-2026-11-21-r143/deployed.json",
+    "reports/genshin-collection-production-2026-11-21-r143/deployment-creation.json",
+    "reports/genshin-collection-production-2026-11-21-r143/deployment-verification.json",
+    "reports/genshin-collection-production-2026-11-21-r143/executor-ci.json",
+    "reports/genshin-collection-production-2026-11-21-r143/network-preflight.json",
+    "reports/genshin-collection-production-2026-11-21-r143/oauth-refresh-01.json",
+    "reports/genshin-collection-production-2026-11-21-r143/oauth-refresh-02.json",
+    "reports/genshin-collection-production-2026-11-21-r143/post-public-reconciliation.json",
+    "reports/genshin-collection-production-2026-11-21-r143/production.jsonl",
+    "reports/genshin-collection-production-2026-11-21-r143/published-sources/active.json",
+    "reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "reports/genshin-collection-production-2026-11-21-r143/qualification.json",
+    "reports/genshin-collection-production-2026-11-21-r143/source-result.json",
+    "reports/genshin-collection-production-2026-11-21-r143/verification.json",
+    "reports/genshin-collection-r143-auth-refresh-02.mjs",
+    "reports/genshin-collection-r143-closeout.py",
+    "reports/genshin-collection-r143-cms-final.mts",
+    "reports/genshin-collection-r143-post-public.mts",
+    "reports/genshin-collection-r143-run.mts",
+    "reports/r143-closeout-doc-gates.log",
+    "reports/r143-release-regression-01.log"
+  ],
+  "editorialSourceCount": 115,
+  "editorialByteIdentical": 102,
+  "editorialDifferences": [
+    {
+      "sourcePath": "apps/game-azur-promilia/lib/data.ts",
+      "localSHA256": "c1fa7d8149df7909bec8cc5708b81584585399d7f38d51945268cbaebbd3d16a",
+      "publishedSHA256": "55868f2f59c1bdd283ad9e71ffb71b32d8a971f9e6eb7dbd8a34a8f2a0522908",
+      "classification": "local_older_than_published",
+      "note": "线上已有奇波攻略英文语法修正 connect → connects；本地旧文本，另有无关格式/顺序差异。"
+    },
+    {
+      "sourcePath": "apps/game-lvmeng/lib/data.ts",
+      "localSHA256": "3576b6d10439bf7bbc3a4df19019e1a6aae6c1a02973f7d3897ecfc226ab888b",
+      "publishedSHA256": "1dba7658c4ad97aa2f2aa30aabbf8e537d3e861177c9614d6db58c60d3247264",
+      "classification": "local_older_than_published",
+      "note": "线上已有洛夕说明补句；本地旧文本。"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-guides.json",
+      "localSHA256": "239272401eac2a09a0c0edcafe9e8eb5df37fbc64443e627f0794b5abeb7eaf1",
+      "publishedSHA256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d",
+      "classification": "local_older_than_published",
+      "note": "线上已有下载攻略正文增量；本地旧正文。"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+      "localSHA256": "33e9bbc11eaab0460077e02c10a74c8b4670389216494307c72ae0956068857a",
+      "publishedSHA256": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88",
+      "classification": "local_older_than_published",
+      "note": "线上已有 R143 的 90 个角色关系、阶段配方与数量修正；本地仅有较早局部 ID 修正。"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-summaries.json",
+      "localSHA256": "8588962d427724d5fce89485edfcad1d16b47ed1e8690c46f258925422039b88",
+      "publishedSHA256": "9a0be82bc9655d4eac291f996f0b988ab8e67e547a14701bec68556813ec940f",
+      "classification": "local_older_than_published",
+      "note": "线上已有玛拉妮、欧洛伦摘要；本地缺这两条。"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-characters.json",
+      "localSHA256": "59f006e360b1576fc1ca691d355a9de8df69b2fa99f42005afc85758fc8554ce",
+      "publishedSHA256": "60526cc4d5c040db56d30da306618ff55741048048b0c82be3236ec552f8b5f1",
+      "classification": "local_older_than_published",
+      "note": "线上已有胡桃英文介绍、玛拉妮、欧洛伦；本地仍是旧集合。"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-guides.json",
+      "localSHA256": "8d0c81f541218f4df90fb9766fa13351bd8ca1147f012be36bb694db3accc310",
+      "publishedSHA256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72",
+      "classification": "local_older_than_published",
+      "note": "线上已有新手攻略标题/正文更新和回坑清单；本地旧集合。"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "localSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "publishedSHA256": "ae16a07aea5650a1ae6d488369bdd154dae6778ff186dc8ed94f109992c584d4",
+      "classification": "local_older_than_published",
+      "note": "线上已发布 269 个材料及字段/稀有度修正；本地只有 185 个旧定义。"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-guides.json",
+      "localSHA256": "565d913c7c58809e28f4a03e1348d69e118a56e3a44f7aaf955ab5932ba24608",
+      "publishedSHA256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3",
+      "classification": "local_older_than_published",
+      "note": "线上已有 9.0 攻略正文增量；本地旧正文。"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-characters.json",
+      "localSHA256": "b3693e9cb5d8b6ba29a9ec3bb81dfd3755764b34255af3a2e454ad8c0e3ad938",
+      "publishedSHA256": "b4fbe091f17fff4e57e28a123eb3e66aa8792afe86aa5b6eb942e71d800b8335",
+      "classification": "local_older_than_published",
+      "note": "线上已有娜娜莉英文介绍与咲里桐丸文本修复；本地旧介绍。"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-guides.json",
+      "localSHA256": "f9b498b73daba4c1748c9027710b9d148de443f377ec88ffedfebfe349da3809",
+      "publishedSHA256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6",
+      "classification": "local_older_than_published",
+      "note": "线上已有新手攻略标题/正文和关联角色更新；本地旧内容。"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-materials.json",
+      "localSHA256": "eb493d5923b34bf20e840b31bfa93d145c6a3397163798b73e1f85a8f0b6328c",
+      "publishedSHA256": "657fbf66e9f53688351570f87824acf1706c9f62e2a330f5a4760ad2638e2233",
+      "classification": "local_older_than_published",
+      "note": "线上已有收藏家剧作核心 nameEn 排版撇号修正；本地为旧撇号。"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-guides.json",
+      "localSHA256": "b69e519c94ce674d761edacef45689a969948a1d2f9bf53950ce41a3040df041",
+      "publishedSHA256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f",
+      "classification": "format_only",
+      "note": "仅序列化格式/键顺序不同，解析后的 JSON 完全相同。"
+    }
+  ],
+  "applicationCodeComparison": [
+    {
+      "owner": "genshin",
+      "publishedPreparationSourceCommit": "e5811dee3fdd2a7f193368623e7b645d982a7411",
+      "comparedTrackedPaths": [
+        "apps/game-genshin",
+        "packages",
+        "package.json",
+        "pnpm-lock.yaml",
+        "turbo.json"
+      ],
+      "excluded": "raw source and public directories separately checked through official source identities",
+      "changedPaths": [],
+      "interpretation": "相对实际复用的 R142 编译源码，apps/packages/依赖输入没有差异。"
+    },
+    {
+      "owner": "main",
+      "publishedPreparationSourceCommit": "f463a8177b55dc3c803b93bd3defd013080fcc35",
+      "comparedTrackedPaths": [
+        "apps/web",
+        "packages",
+        "package.json",
+        "pnpm-lock.yaml",
+        "turbo.json"
+      ],
+      "excluded": "raw source and public directories separately checked through official source identities",
+      "changedPaths": [
+        "apps/web/test-support/genshin-completion-candidates.test.mjs",
+        "apps/web/vitest.characters.config.ts",
+        "package.json",
+        "packages/core/types/index.ts",
+        "packages/data/__tests__/genshin-skill-aggregation.test.ts",
+        "packages/data/games/genshin/characters.ts",
+        "packages/data/games/genshin/types.ts"
+      ],
+      "interpretation": "无应用代码差异；共享原神技能适配器变更已在原神 owner 上线，其他 owner 读取 owner JSON 或不消费该适配器，剩余为类型、测试或 Main 清单构建合同。"
+    },
+    {
+      "owner": "nte",
+      "publishedPreparationSourceCommit": "2577b03bea323bdce328ac6b99a2b50ebfa229e9",
+      "comparedTrackedPaths": [
+        "apps/game-nte",
+        "packages",
+        "package.json",
+        "pnpm-lock.yaml",
+        "turbo.json"
+      ],
+      "excluded": "raw source and public directories separately checked through official source identities",
+      "changedPaths": [
+        "package.json",
+        "packages/core/types/index.ts",
+        "packages/data/__tests__/genshin-skill-aggregation.test.ts",
+        "packages/data/__tests__/main-manifests.test.mjs",
+        "packages/data/games/genshin/characters.ts",
+        "packages/data/games/genshin/types.ts",
+        "packages/data/main-manifest-contract.json",
+        "packages/data/scripts/generate-manifests.mjs",
+        "packages/data/scripts/main-manifests.mjs",
+        "packages/data/scripts/verify-manifests.mjs"
+      ],
+      "interpretation": "无应用代码差异；共享原神技能适配器变更已在原神 owner 上线，其他 owner 读取 owner JSON 或不消费该适配器，剩余为类型、测试或 Main 清单构建合同。"
+    },
+    {
+      "owner": "azur-promilia",
+      "publishedPreparationSourceCommit": "98affe759dae271053a5c13617193abede14cae6",
+      "comparedTrackedPaths": [
+        "apps/game-azur-promilia",
+        "packages",
+        "package.json",
+        "pnpm-lock.yaml",
+        "turbo.json"
+      ],
+      "excluded": "raw source and public directories separately checked through official source identities",
+      "changedPaths": [
+        "package.json",
+        "packages/core/types/index.ts",
+        "packages/data/__tests__/genshin-skill-aggregation.test.ts",
+        "packages/data/__tests__/main-manifests.test.mjs",
+        "packages/data/__tests__/nte-character-identity.test.ts",
+        "packages/data/games/genshin/characters.ts",
+        "packages/data/games/genshin/types.ts",
+        "packages/data/games/nte/character-identity.ts",
+        "packages/data/main-manifest-contract.json",
+        "packages/data/scripts/generate-manifests.mjs",
+        "packages/data/scripts/main-manifests.mjs",
+        "packages/data/scripts/verify-manifests.mjs"
+      ],
+      "interpretation": "无应用代码差异；共享原神技能适配器变更已在原神 owner 上线，其他 owner 读取 owner JSON 或不消费该适配器，剩余为类型、测试或 Main 清单构建合同。"
+    },
+    {
+      "owner": "lvmeng",
+      "publishedPreparationSourceCommit": "583a172dfeed039c839ab821e54c69d81cb47cca",
+      "comparedTrackedPaths": [
+        "apps/game-lvmeng",
+        "packages",
+        "package.json",
+        "pnpm-lock.yaml",
+        "turbo.json"
+      ],
+      "excluded": "raw source and public directories separately checked through official source identities",
+      "changedPaths": [
+        "package.json",
+        "packages/core/types/index.ts",
+        "packages/data/__tests__/genshin-skill-aggregation.test.ts",
+        "packages/data/__tests__/main-manifests.test.mjs",
+        "packages/data/__tests__/nte-character-identity.test.ts",
+        "packages/data/games/genshin/characters.ts",
+        "packages/data/games/genshin/types.ts",
+        "packages/data/games/nte/character-identity.ts",
+        "packages/data/main-manifest-contract.json",
+        "packages/data/scripts/generate-manifests.mjs",
+        "packages/data/scripts/main-manifests.mjs",
+        "packages/data/scripts/verify-manifests.mjs"
+      ],
+      "interpretation": "无应用代码差异；共享原神技能适配器变更已在原神 owner 上线，其他 owner 读取 owner JSON 或不消费该适配器，剩余为类型、测试或 Main 清单构建合同。"
+    },
+    {
+      "owner": "router",
+      "publishedPreparationSourceCommit": "06b3fd34edbfc12b5762fb4c1357a1507b118554",
+      "comparedTrackedPaths": [
+        "apps/router",
+        "packages",
+        "package.json",
+        "pnpm-lock.yaml",
+        "turbo.json"
+      ],
+      "excluded": "raw source and public directories separately checked through official source identities",
+      "changedPaths": [
+        "package.json",
+        "packages/core/types/index.ts",
+        "packages/data/__tests__/genshin-skill-aggregation.test.ts",
+        "packages/data/__tests__/main-manifests.test.mjs",
+        "packages/data/__tests__/nte-character-identity.test.ts",
+        "packages/data/games/genshin/characters.ts",
+        "packages/data/games/genshin/types.ts",
+        "packages/data/games/nte/character-identity.ts",
+        "packages/data/main-manifest-contract.json",
+        "packages/data/scripts/generate-manifests.mjs",
+        "packages/data/scripts/main-manifests.mjs",
+        "packages/data/scripts/verify-manifests.mjs",
+        "packages/ui/adsense.tsx"
+      ],
+      "interpretation": "无应用代码差异；共享原神技能适配器变更已在原神 owner 上线，其他 owner 读取 owner JSON 或不消费该适配器，剩余为类型、测试或 Main 清单构建合同。"
+    }
+  ],
+  "untracked": {
+    "countAtAudit": 242872,
+    "topLevelCounts": {
+      "reports": 242872
+    },
+    "outsideReports": []
+  },
+  "knownRemainingWork": [
+    "将 R143 正式集合与 CMS 通用编辑源受控对账/推进；已上线内容不需重发。",
+    "将 R143 收尾提交 95f26d9 推送 GitHub；这是回执归档，不是 Worker 内容部署。",
+    "Next.js 16.4.2 安全升级仍是独立开发待办；本地尚无已完成升级等待上线。"
+  ],
+  "cloudWrites": 0,
+  "cmsWrites": 0,
+  "gitPushes": 0,
+  "deletedFiles": 0
+}
