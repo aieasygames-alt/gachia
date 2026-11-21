@@ -1,0 +1,70 @@
+{
+  "kind": "genshin-editing-source-sync-status-r144",
+  "status": "complete_without_republication",
+  "observedAt": "2026-11-21T17:39:55.203186+08:00",
+  "sourceCommit": "dbc87d403207cd75c14931b5c5175735b1f48df4",
+  "gitBranch": "origin/codex/payload-unified-maintenance",
+  "delivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/delivery.json",
+    "pin": "ccf4815b18f7381cea6077b171a7e8e220b7a71f7cdcf1edf5a32689f890b276"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+    "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+  },
+  "counts": {
+    "before": 2880,
+    "after": 2966,
+    "materials": 269,
+    "characters": 117,
+    "character-materials": 90,
+    "updatedExisting": 390,
+    "created": 86,
+    "realImportPreserved": 390,
+    "unrelatedContentsPreserved": 2490,
+    "reusedOnRepeat": 476,
+    "identityMigrations": [
+      {
+        "id": 609,
+        "from": "shinobu",
+        "to": "kuki-shinobu"
+      },
+      {
+        "id": 611,
+        "from": "sara",
+        "to": "kujou-sara"
+      }
+    ]
+  },
+  "noOpExportChanged": 0,
+  "reviewWrites": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "repeat": {
+    "created": 0,
+    "updated": 0,
+    "reused": 476
+  },
+  "databaseChangedTables": [
+    "_content_records_v",
+    "_content_records_v_locales",
+    "content_records",
+    "content_records_locales",
+    "migration_batches"
+  ],
+  "otherDatabaseTablesPreserved": true,
+  "next": "R143 source index + R144 CMS AFTER. Do not replay drafts, staging, reviews, deployment or sync.",
+  "independentPending": [
+    "Next.js 16.4.2 security upgrade"
+  ],
+  "implementationCI": {
+    "runId": 44889727050,
+    "commit": "dbc87d403207cd75c14931b5c5175735b1f48df4",
+    "conclusion": "success",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/44889727050"
+  }
+}

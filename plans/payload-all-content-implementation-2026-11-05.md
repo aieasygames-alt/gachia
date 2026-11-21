@@ -1,12 +1,22 @@
 # Payload 全内容实施队列
 
-## 当前生产完成状态（2026-11-21 R143：原神审核后完整集合已正式上线）
+## 当前完成状态（2026-11-21 R144：R143 收尾已推送，CMS 编辑源已同步）
+
+R143 收尾提交 `95f26d9` 已推送至 `origin/codex/payload-unified-maintenance`，完整 CI 44887084808 成功；CMS 同步实现 `0d0a5d4` 完整 CI 44888535920 成功，安装路径修正版 `dbc87d4` 的[完整 CI 44889727050](https://github.com/aieasygames-alt/gachia/actions/runs/44889727050)也已成功。已安装精确源码、冷备并完成实际恢复；两次安装前后数据库完整表指纹一致，无 schema 迁移。
+
+真实 CMS 在一个事务中更新 390 条既有原神记录、新增 84 个材料和 2 个角色，合计 476 条原神编辑源（269 材料、117 角色、90 关系），全站 CMS 2,880 → 2,966。既有 ID、创建时间、真实导入 O、hold 和状态保持，新实体为 held 草稿；两条已审核关系 `shinobu → kuki-shinobu`、`sara → kujou-sara` 保留原 CMS ID。其余 2,490 内容和 179 暂存、221 独立审核保持；胡桃、异环和攻略增量沿用 R143。
+
+重复执行创建/更新均为 0、复用 476，全量 REST draft/published 和时间戳保持；通用完整导出实际为 0 变更。数据库仅内容相关四表和一个同步批次标记变化，其他所有表保持；六个生产服务的 deployment/version 保持。**本批 0 Worker 上传、0 正式部署、0 审核写入，无需重发 R143 内容。** SQLite 8/8、隔离 PostgreSQL 8/8、最终相关回归 43/43、安装路径修复回归 29/29 和 CMS 类型检查通过；启动前依赖/来源路径失败均已修正并保留日志。
+
+下一批唯一入口：仍用 [R143 正式来源索引](../reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json)（pin `6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57`），CMS 使用 [R144 写后快照](../reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz)（pin `b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20`）。见 [R144 完成回执](../reports/genshin-editing-source-sync-2026-11-21-r144/EXECUTION.md)和[接续交付](../reports/genshin-editing-source-sync-2026-11-21-r144/delivery.json)。不得重放 R140 草稿、R141 暂存、R142 审核、R143 部署或 R144 同步；不要将绑定旧 CMS 前态的 R142 导出器用于当前已同步记录。Next.js 16.4.2 安全升级独立待办，绿梦保持中文范围。
+
+## 前批生产完成状态（2026-11-21 R143：原神审核后完整集合已正式上线）
 
 原神 Worker 已正式更新为 `c76c9d57-f814-410c-843a-1dcef57412e3`，deployment `8586474e-c106-495a-a4d7-4b2f2b5f4348`，100% 流量。精确提交 `5f6151d0a4cc53d21f10e5519d6a78a96370e221` 的[完整 CI 44879215838](https://github.com/aieasygames-alt/gachia/actions/runs/44879215838)通过，复用 R142 完整构建且 Worker 输入不变；候选/恢复 1,995/1,743 项云预览及相同规模切流前复验通过，两轮公网 Router 各 1,960 项通过。仅一次原神正式部署，其余 5 个生产与 4 个 staging 服务的部署和配置保持；兼容恢复 `43f0beb3-59ae-4b36-8c9c-505ab24456eb` 已验证，未实际回滚。
 
 完整导出与 221 条既有独立审核实际用于本次发布，没有重放 42 草稿、179 暂存或决定。上线集合含 269 材料、117 角色、90 关系、5,490 引用；新增 84 材料、玛拉妮/欧洛伦和关系/数值修正，三份编辑源及一份派生角色摘要变化，其余 111 来源保持。Hu Tao、异环、Zero、27 材料及 441 引用删除状态和攻略增量保留。页面、JSON、搜索、Main 聚合与兼容资源正确，83 份其他游戏 JSON 保持。
 
-当前完整来源：[R143 source-index.json](../reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json)，pin `6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57`；真实结构集合读取器重开通过，115 来源、`allOwnersCurrent=true`。见 [完成回执](../reports/genshin-collection-production-2026-11-21-r143/EXECUTION.md)和[接续交付](../reports/genshin-collection-production-2026-11-21-r143/delivery.json)。本批只读 CMS 四次导出均一致，通用 content-records 编辑源、版本、hold 和 provenance 未推进。下一批从此 R143 A 与 `cms-final.json.gz` 接续，独立处理新实体/关系等结构集合的 CMS 编辑源受控推进，不重放草稿、暂存、审核和部署，不把旧 R139 A 或 checkout 当作当前线上。Next.js 16.4.2 安全修复独立待办；绿梦保持中文范围。
+当前完整来源：[R143 source-index.json](../reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json)，pin `6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57`；真实结构集合读取器重开通过，115 来源、`allOwnersCurrent=true`。见 [完成回执](../reports/genshin-collection-production-2026-11-21-r143/EXECUTION.md)和[接续交付](../reports/genshin-collection-production-2026-11-21-r143/delivery.json)。本批只读 CMS 四次导出均一致，通用 content-records 编辑源、版本、hold 和 provenance 未推进。原神 CMS 编辑源已由上方 R144 受控推进；后续使用 R143 A 与 R144 CMS AFTER，不重放草稿、暂存、审核、部署或同步，不把旧 R139 A 或 checkout 当作当前线上。Next.js 16.4.2 安全修复独立待办；绿梦保持中文范围。
 
 ## 前批开发完成状态（2026-11-21 R142：结构独立审核、完整集合导出及本地全链路验收完成）
 

@@ -1,0 +1,13 @@
+{
+  "sourceCommit": "0d0a5d47c4ec5c89c31b0b3d1b1a466fd5990682",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T005643Z-genshin-review-r142-556a51aa/services/content-cms",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/application-manifest.json",
+    "pin": "1e8fc564cad0f70d204d883ff38fda1444645e1a9a3f99de0057eb0ba473da79"
+  },
+  "buildID": "aWK1BvRtkrk6sKCi0MCJ2",
+  "files": 800,
+  "releaseFiles": 354,
+  "databaseMigrationRequired": false
+}

@@ -19,6 +19,9 @@ const pinned = (proof: { path: string; pin: string }, zip = false) => {
 const preparation = load('preparation.json'), d = pinned(preparation.delivery)
 const q = pinned(d.qualification), input = pinned(q.input), exported = pinned(q.export, true).result
 const before = pinned(d.cmsAfter, true), after = pinned(load('cms-final-proof.json'), true)
+const firstAfter = pinned(load('cms-after-proof.json'), true)
+assert.deepEqual(after.draft, firstAfter.draft, 'Repeated sync changed draft content or timestamps')
+assert.deepEqual(after.published, firstAfter.published, 'Repeated sync changed published content or timestamps')
 const plan = planGenshinEditingSync({ delivery: d, input, exported, before })
 assert.equal(plan.syncKey, preparation.syncKey)
 verifyEditingSyncRows(plan, before.draft, after.draft)

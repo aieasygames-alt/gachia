@@ -29,13 +29,15 @@ async function records(draft: boolean) {
   }
   throw Error('CMS capture pagination exceeded')
 }
-const draft = await records(true), published = await records(false), repeat = await records(true)
-assert.equal(canonical(draft), canonical(repeat), 'CMS capture drift')
-if (phase === 'before') {
-  const previous = JSON.parse(gunzipSync(readFileSync(path.join(repo, 'reports/genshin-collection-production-2026-11-21-r143/cms-final.json.gz'))).toString())
-  assert.equal(canonical(draft), canonical(previous.draft)); assert.equal(canonical(published), canonical(previous.published))
-}
-const bytes = gzipSync(Buffer.from(JSON.stringify({ kind: 'genshin-editing-source-cms-capture-v1', phase, observedAt: new Date().toISOString(), draft, published, contentWrites: 0 }) + '\n'))
-writeFileSync(file, bytes, { flag: 'wx', mode: 0o600 })
-writeFileSync(path.join(directory, `cms-${phase}-proof.json`), JSON.stringify({ path: file, pin: createHash('sha256').update(bytes).digest('hex'), records: draft.length, stableDoubleRead: true }, null, 2) + '\n', { flag: 'wx', mode: 0o600 })
-console.log(JSON.stringify({ phase, records: draft.length, stableDoubleRead: true, cmsWrites: 0 }))
+try {
+  const draft = await records(true), published = await records(false), repeat = await records(true)
+  assert.equal(canonical(draft), canonical(repeat), 'CMS capture drift')
+  if (phase === 'before') {
+    const previous = JSON.parse(gunzipSync(readFileSync(path.join(repo, 'reports/genshin-collection-production-2026-11-21-r143/cms-final.json.gz'))).toString())
+    assert.equal(canonical(draft), canonical(previous.draft)); assert.equal(canonical(published), canonical(previous.published))
+  }
+  const bytes = gzipSync(Buffer.from(JSON.stringify({ kind: 'genshin-editing-source-cms-capture-v1', phase, observedAt: new Date().toISOString(), draft, published, contentWrites: 0 }) + '\n'))
+  writeFileSync(file, bytes, { flag: 'wx', mode: 0o600 })
+  writeFileSync(path.join(directory, `cms-${phase}-proof.json`), JSON.stringify({ path: file, pin: createHash('sha256').update(bytes).digest('hex'), records: draft.length, stableDoubleRead: true }, null, 2) + '\n', { flag: 'wx', mode: 0o600 })
+  console.log(JSON.stringify({ phase, records: draft.length, stableDoubleRead: true, cmsWrites: 0 }))
+} finally { await request('/api/users/logout', token, {}) }

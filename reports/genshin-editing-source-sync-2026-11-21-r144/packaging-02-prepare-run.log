@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-r144-install.py", line 167, in <module>
+    if sys.argv[1] == 'prepare': prepare()
+  File "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-r144-install.py", line 94, in prepare
+    run([NODE, SOURCE / 'node_modules/next/dist/bin/next', 'build'], cwd=SOURCE, env=build_env, stdout=log, stderr=log, timeout=600)
+  File "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-r144-install.py", line 25, in run
+    return subprocess.run([str(x) for x in args], check=True, **kw)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/homebrew/Cellar/node/25.9.0_3/bin/node', '/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/next/dist/bin/next', 'build']' returned non-zero exit status 1.

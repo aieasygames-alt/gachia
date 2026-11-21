@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "dbc87d403207cd75c14931b5c5175735b1f48df4",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T092816Z-genshin-editing-sync-r144-dbc87d40/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T092816Z-genshin-editing-sync-r144-dbc87d40/application-manifest.json",
+    "pin": "063cd07982bfcf29cf8f75bba1186629d8f3417f83abd65d483488474f70ddfe"
+  },
+  "buildID": "Z9J7qfheyUSRK_jIFsuJk",
+  "runtimeDependencies": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/packaging-02/runtime-dependencies.json",
+    "pin": "a3a0d7d71dae82f722c0b63d399f454df0a6df360848ba34b8a9de74b34f84bd"
+  },
+  "files": 801,
+  "releaseFiles": 354,
+  "databaseMigrationRequired": false,
+  "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261121T093019Z-e5b1b8",
+  "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/genshin-editing-sync-r144-dbc87d403207",
+  "healthy": true,
+  "allExistingContentAndHistoryUnchanged": true,
+  "schemaMigrationRun": false,
+  "previousApplicationPreserved": true
+}

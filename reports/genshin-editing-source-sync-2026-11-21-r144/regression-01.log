@@ -1,0 +1,97 @@
+✔ exact reviewed complete export is independently reconstructed (1187.571875ms)
+✔ re-signed partial or rejected decisions cannot qualify (3653.847292ms)
+✔ other game bytes, missing summaries and mixed candidate recovery are rejected (3718.30725ms)
+[⣷] Pulling schema from database...
+[2K[1G[✓] Pulling schema from database...
+▶ independent complete-collection review and export on a real database
+  ✔ review comparisons and manifest roll back together after a late failure (1655.170416ms)
+  ✔ complete run includes saved drafts and all structural classes without touching contents (2866.11125ms)
+  ✔ no decisions or partial decisions cannot export (1178.7755ms)
+  ✔ anonymous/editor/override access without a reviewer cannot approve (2.120125ms)
+  ✔ a decision recomputes provenance and attribution, and cannot be overwritten or repeated (1492.210375ms)
+  ✔ wrong run, unrelated revision, incomplete or corrupt display is rejected (50.510625ms)
+  ✔ all remaining decisions are atomic and every item has its own attributed review (21511.581291ms)
+  ✔ complete export preserves 111 sources, derives character summaries and exports all 476 entities (1424.943208ms)
+  ✔ CMS drift invalidates accepted reviews and cannot silently export a new draft (2302.587833ms)
+✔ independent complete-collection review and export on a real database (40392.4345ms)
+✔ unified contract preserves all existing scalar fields, locales, nulls, and empty arrays (1.796625ms)
+✔ unified contract protects id (0.093375ms)
+✔ unified contract protects slug (0.05725ms)
+✔ unified contract protects characterId (0.050125ms)
+✔ unified contract protects code (0.047541ms)
+✔ unified contract protects region (0.04375ms)
+✔ unified contract protects cmsOrigin (0.046875ms)
+✔ unified contract protects source (0.045792ms)
+✔ unified contract protects sourceReview (0.047541ms)
+✔ unified contract protects contentReview (0.080917ms)
+✔ unified contract protects hold (0.059417ms)
+✔ unified contract protects rights (0.038ms)
+✔ unified contract protects image (0.038125ms)
+✔ unified contract protects imageUrl (0.042041ms)
+✔ unified contract protects icon (0.030375ms)
+✔ unified contract protects url (0.033459ms)
+✔ unified edited text rejects unsafe input "<script>alert(1)</script>" (0.056542ms)
+✔ unified edited text rejects unsafe input "javascript:alert(1)" (0.038583ms)
+✔ unified edited text rejects unsafe input "data:text/html,x" (0.037166ms)
+✔ unified edited text rejects unsafe input "text\u0000" (0.03675ms)
+✔ non-JSON, prototype pollution and nonfinite values are rejected (0.193875ms)
+✔ record identity is source-located, not based on title or row position (0.997292ms)
+✔ immutable provenance and editorial identity cannot be replaced or escaped (0.604834ms)
+✔ public A is preserved, independently edited fields merge, conflicting or missing records stop (0.177625ms)
+✔ raw export merges current public values and preserves public-only rows without reordering (0.456542ms)
+✖ export rejects unapproved, stale, missing, duplicate and conflicting inputs (1.597917ms)
+✔ untouched drafts preserve public values in the frozen build overlay but do not authorize a no-op release (0.190958ms)
+✔ unedited and delegated games carry their entire active content into the candidate overlay (8.444459ms)
+✔ literal exports round-trip Markdown/backticks without executing code, preserving assertions and readers (10.0605ms)
+✔ dynamic exports are explicitly blocked, never executed or claimed as covered (0.653042ms)
+✔ all registered scopes have actual source coverage, existing guides and generated summaries remain delegated (781.543916ms)
+✔ private tier inputs are editable without duplicating derived localized readers (1.356125ms)
+✔ desktop actions require complete exact arguments and cannot enable preview or cloud writes (4.258875ms)
+✔ selection supplies only registered identities, never approval or caller-provided records (2.152917ms)
+✔ external pinned editorial inputs reject changed bytes and linked paths (1.36975ms)
+✔ installed reader takes explicit repository input, not the installed application parent (1020.04625ms)
+✔ desktop environment gate rejects local fixtures, editor hosting and CI (1.456625ms)
+✔ desktop database access refuses the source checkout and non-current staged installations (1.540916ms)
+[⣷] Pulling schema from database...
+[2K[1G[✓] Pulling schema from database...
+▶ all-game source import and editorial controls use real Payload transactions and versions
+  ✔ explicit scope import does not import other games, and invalid scopes fail before database access (1300.361833ms)
+  ✔ all actual sources import held drafts without touching the existing guide channel (5025.608ms)
+  ✔ installed selection rejects unapproved records even when a caller selects their correct identity (408.664ms)
+  ✔ anonymous access, uncontrolled creation, identity edits and administrative deletion are denied (22.855625ms)
+  ✔ editor saves structured drafts, reviewer approves, later drafts do not replace the published version (830.503625ms)
+  ✔ active document locks still prevent privileged overwrite attempts (8.847667ms)
+  ✔ repeat import preserves all edits and approvals without duplicate or overwrite (550.057583ms)
+  ✔ source drift rolls an in-progress game import back instead of replacing editorial provenance (120.106542ms)
+  ✔ every editable game/source/family completes draft, review, published selection and batch export (55871.187042ms)
+✔ all-game source import and editorial controls use real Payload transactions and versions (67062.077833ms)
+ℹ Batch verified: 16 scopes, 139 editable source/family rows; no public deployment
+ℹ Scalar string blocks: lvmeng:inline-patchSource, lvmeng:inline-launchSource, lvmeng:inline-rewardsSource, endfield:inline-END-FIELD-TIER-SNAPSHOT-UPDATED-AT, guihuan:inline-updatedAt, zzz:inline-updatedAt
+ℹ tests 61
+ℹ suites 0
+ℹ pass 60
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 80029.909125
+
+✖ failing tests:
+
+test at tests/unified-content.test.ts:1:5564
+✖ export rejects unapproved, stale, missing, duplicate and conflicting inputs (1.597917ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/tests/unified-content.test.ts:83:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /stale/,
+    operator: 'throws',
+    diff: 'simple'
+  }

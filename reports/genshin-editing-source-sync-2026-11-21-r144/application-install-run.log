@@ -1,0 +1,3 @@
+Combined local backup created: /Users/robert/Library/Application Support/GachiaCMS/backups/20261121T091702Z-9655e9
+{"passed": true, "counts": "1|2880|1", "mediaFiles": 1, "backup": "20261121T091702Z-9655e9", "databaseVerificationFormat": "pg-json-rows-v1", "scope": "isolated PostgreSQL restore and media extraction; no live replacement"}
+{"installed": true, "healthy": true, "allExistingContentAndHistoryUnchanged": true}

@@ -1,0 +1,22 @@
+node:fs:556
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open '/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/recovery/nte-source-reconstruction-2026-11-17.json'
+    at Object.openSync (node:fs:556:18)
+    at readFileSync (node:fs:440:35)
+    at contractProof (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/nte-source-checkpoint.ts:24:64)
+    at readNteSourceCheckpoint (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/nte-source-checkpoint.ts:112:80)
+    at verifyMainContentRestoration (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/main-content-restoration.ts:175:105)
+    at readCompletedRestoration (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/main-content-restoration.ts:234:96)
+    at Module.readRestoredMainSources (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/main-content-restoration.ts:280:27)
+    at readNteSourceIndex (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/nte-release-history.ts:211:162)
+    at async inputs (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/nte-release-bundle.ts:61:19)
+    at async verifyNteReleaseBundle (/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/src/nte-release-bundle.ts:217:126) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms/recovery/nte-source-reconstruction-2026-11-17.json'
+}
+
+Node.js v25.9.0

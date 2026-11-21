@@ -1,0 +1,194 @@
+{
+  "kind": "genshin-editing-source-sync-delivery-r144",
+  "status": "cms_editing_sources_synchronized_without_republication",
+  "sourceCommit": "dbc87d403207cd75c14931b5c5175735b1f48df4",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json",
+    "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57"
+  },
+  "publishedVersion": "c76c9d57-f814-410c-843a-1dcef57412e3",
+  "syncKey": "e853cb99187fea52348e6115131ca82a9d2f9893f718d1ebcacf053ff1403231",
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+    "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+  },
+  "application": {
+    "sourceCommit": "dbc87d403207cd75c14931b5c5175735b1f48df4",
+    "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T092816Z-genshin-editing-sync-r144-dbc87d40/services/content-cms",
+    "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T091312Z-genshin-editing-sync-r144-0d0a5d47/services/content-cms",
+    "application": {
+      "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T092816Z-genshin-editing-sync-r144-dbc87d40/application-manifest.json",
+      "pin": "063cd07982bfcf29cf8f75bba1186629d8f3417f83abd65d483488474f70ddfe"
+    },
+    "buildID": "Z9J7qfheyUSRK_jIFsuJk",
+    "runtimeDependencies": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/packaging-02/runtime-dependencies.json",
+      "pin": "a3a0d7d71dae82f722c0b63d399f454df0a6df360848ba34b8a9de74b34f84bd"
+    },
+    "files": 801,
+    "releaseFiles": 354,
+    "databaseMigrationRequired": false,
+    "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261121T093019Z-e5b1b8",
+    "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/genshin-editing-sync-r144-dbc87d403207",
+    "healthy": true,
+    "allExistingContentAndHistoryUnchanged": true,
+    "schemaMigrationRun": false,
+    "previousApplicationPreserved": true
+  },
+  "counts": {
+    "before": 2880,
+    "after": 2966,
+    "materials": 269,
+    "characters": 117,
+    "character-materials": 90,
+    "updatedExisting": 390,
+    "created": 86,
+    "realImportPreserved": 390,
+    "unrelatedContentsPreserved": 2490,
+    "reusedOnRepeat": 476,
+    "identityMigrations": [
+      {
+        "id": 609,
+        "from": "shinobu",
+        "to": "kuki-shinobu"
+      },
+      {
+        "id": 611,
+        "from": "sara",
+        "to": "kujou-sara"
+      }
+    ]
+  },
+  "noOpExport": {
+    "changedRecords": 0,
+    "sourceCandidateSHA256": "6b380d602c0586c45875d5aa1880052bc782be2cbaaf5b8fa0a4944aeb2da836"
+  },
+  "changedTables": [
+    "_content_records_v",
+    "_content_records_v_locales",
+    "content_records",
+    "content_records_locales",
+    "migration_batches"
+  ],
+  "otherDatabaseTablesPreserved": true,
+  "reviewWrites": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "deployments": [
+    {
+      "service": "gachia-game-azur-promilia",
+      "deploymentId": "9a9620b0-128e-4ba1-814a-6db6c7453dad",
+      "versions": [
+        {
+          "version_id": "79bf30a2-e519-4366-a0a3-4c25907f76c9",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "service": "gachia-game-genshin",
+      "deploymentId": "8586474e-c106-495a-a4d7-4b2f2b5f4348",
+      "versions": [
+        {
+          "version_id": "c76c9d57-f814-410c-843a-1dcef57412e3",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "service": "gachia-game-lvmeng",
+      "deploymentId": "62f5d1d5-ef07-450c-a91f-35b3dffa232a",
+      "versions": [
+        {
+          "version_id": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "service": "gachia",
+      "deploymentId": "61209ff8-87f8-433f-b1bd-d0665c4827c3",
+      "versions": [
+        {
+          "version_id": "8d88bd48-ba83-4470-a855-41048eacfc1a",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "service": "gachia-game-nte",
+      "deploymentId": "d7c01702-abe1-4226-b3ae-a5659169e789",
+      "versions": [
+        {
+          "version_id": "518d523c-ced8-4b71-85ed-2509806f432e",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "service": "gachia-router",
+      "deploymentId": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+      "versions": [
+        {
+          "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+          "percentage": 100
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/preparation.json",
+      "pin": "ac11e8d9e6da0da62ed3b1f4176110342971026487a3b1b2e40fac3bc0148d62"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/application-installed-final.json",
+      "pin": "64e7efedc50078baf8a213c5f39bd47ca1bcb14f3d93190e702daa265dce857a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/packaging-02/runtime-dependencies.json",
+      "pin": "a3a0d7d71dae82f722c0b63d399f454df0a6df360848ba34b8a9de74b34f84bd"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/packaging-02/cold-backup.json",
+      "pin": "9b31933602bd972e26d97cc0deaf914fd4526538088ad7252bdf20c759336a90"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/database-before-install.json",
+      "pin": "67dbaf068eda58f168d95d41bb79c6b474a1e52eee222674bdd06523d9d52816"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/database-after-install.json",
+      "pin": "67dbaf068eda58f168d95d41bb79c6b474a1e52eee222674bdd06523d9d52816"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/database-after-stage.json",
+      "pin": "bf328c3627f9d29e61af84daa990ddd515d763f58fe487f0b5fa4bc0efddc01a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/installed-apply.json",
+      "pin": "41e1208b39a5c9cfb55b594f62ad8cd4d5dfc7c25d7a7601957447c32ab9f2dd"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/installed-repeat.json",
+      "pin": "18f877054e85534a524bd1fb12ca013da8ddc09fae93a6fece9354130dc4dabb"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+      "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final-proof.json",
+      "pin": "86018e821dccc06571a235bf1eea5d3c91c516367621bde2a68914e284eab9a9"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/regression-02.log",
+      "pin": "71c894915de17792eecfafb6f0b584b173153e5b5f20604acc6ae1ec71b96c81"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/postgres-probe-01.log",
+      "pin": "4bf2138c67805e70e6e6c087fb5eb3b4b222f29809862f056193c1bf3d8b8c52"
+    }
+  ],
+  "next": "Continue from the unchanged R143 public source index and this CMS AFTER snapshot. Do not replay R140 drafts, R141 staging, R142 decisions, R143 deployment or R144 sync. Existing holds/status and real import O remain; any new editorial change requires its own review."
+}
