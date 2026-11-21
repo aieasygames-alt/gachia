@@ -4,6 +4,9 @@ import { verifiedGenshinCollectionItem } from './genshin-review-store'
 
 const staff: Access = ({ req }) => Boolean(req.user && ['admin', 'reviewer', 'editor'].includes(req.user.role))
 const reviewer: Access = ({ req }) => Boolean(req.user && ['admin', 'reviewer'].includes(req.user.role))
+// These required values are assigned by the server hook. Hide them on create
+// so the admin form does not reject empty read-only fields before the POST.
+const computed = { readOnly: true, condition: (_data: unknown, _siblings: unknown, context: { operation?: string }) => context.operation !== 'create' }
 export function genshinReviewCollections(): CollectionConfig[] {
   return [{
     slug: 'genshin-review-decisions', lockDocuments: false,
@@ -16,8 +19,8 @@ export function genshinReviewCollections(): CollectionConfig[] {
         filterOptions: { family: { contains: 'collection-review/' } } },
       { name: 'action', type: 'select', required: true, options: ['accept-export', 'reject'] },
       { name: 'note', type: 'textarea', required: true, minLength: 10, maxLength: 2000 },
-      { name: 'decisionKey', type: 'text', required: true, unique: true, admin: { readOnly: true } },
-      ...['revisionKey', 'cmsKey', 'actorID', 'actorEmail'].map(name => ({ name, type: 'text' as const, required: true, admin: { readOnly: true } })),
+      { name: 'decisionKey', type: 'text', required: true, unique: true, admin: computed },
+      ...['revisionKey', 'cmsKey', 'actorID', 'actorEmail'].map(name => ({ name, type: 'text' as const, required: true, admin: computed })),
     ],
     hooks: { beforeValidate: [async ({ data, req, operation }) => {
       if (operation !== 'create' || !req.user || !['admin', 'reviewer'].includes(req.user.role)) throw new APIError('Only reviewers may create collection decisions.', 403)
