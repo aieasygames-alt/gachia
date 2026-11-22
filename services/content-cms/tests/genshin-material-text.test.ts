@@ -7,6 +7,7 @@ import { independentProductionOwnerScope, GENSHIN_MATERIAL_PRODUCTION_SCOPE } fr
 import { mergeGenshinMaterialTextExpectations, validateUnifiedConsumer } from '../src/unified-owner-build'
 import { exportUnifiedContent } from '../src/unified-export'
 import { assertStructuredEdit, contentUnit, structuredEditableLeaves, validateUnifiedRecord } from '../src/unified-content'
+import { genshinMaterialLocalConfig } from '../src/genshin-material-delivery'
 
 const source = (sourcePath: string, value: unknown) => {
   const text = JSON.stringify(value, null, 2) + '\n'; return { sourcePath, text, sha256: digest(text) }
@@ -21,6 +22,16 @@ const edit = (mutate: (rows: typeof materials) => void) => {
   const next = structuredClone(materials); mutate(next); return [source(GENSHIN_MATERIAL_TEXT_SOURCE, next)]
 }
 const approved = () => edit(rows => { rows[0].sourceEn = 'Domain: Mondstadt (Monday/Thursday/Sunday)' })
+test('current material graph binds every independent owner from verified deployment settings', () => {
+  const services = ['genshin', 'nte', 'azur-promilia', 'lvmeng'].map(game => ({ name: game.toUpperCase(), type: 'service', service: 'gachia-game-' + game }))
+  const baseline = { settings: { gachia: { compatibility_date: '2026-07-08', compatibility_flags: ['nodejs_compat'],
+    bindings: [...services, { name: 'NTE_CONTENT_ENABLED', type: 'plain_text', text: 'true' }, { name: 'SECRET', type: 'secret_text' }] } } }
+  const config = genshinMaterialLocalConfig(baseline, 'main', '/sealed/main', '/sealed/main/worker.js')
+  assert.deepEqual(config.services.map((row: any) => row.service), ['genshin', 'nte', 'azur-promilia', 'lvmeng'].map(game => 'genshin-material-' + game))
+  assert.deepEqual(config.vars, { NTE_CONTENT_ENABLED: 'true' })
+  assert.equal(config.find_additional_modules, false)
+  assert.throws(() => genshinMaterialLocalConfig({ settings: { gachia: { bindings: [{ type: 'service', name: 'INJECTED', service: 'unknown' }] } } }, 'main', '/artifact', '/module'), /Unqualified/)
+})
 const editingBaseline = (row: ReturnType<typeof contentUnit>) => ({ publishedBaseline: {
   kind: 'genshin-published-editing-baseline-v1', source: row.sourceRecord, importOriginalSHA256: row.sourceRecord.originalSHA256,
   syncKey: 'a'.repeat(64), exportKey: 'b'.repeat(64), sourceIndex: { path: '/fixture/source-index.json', pin: 'c'.repeat(64) }, versionId: 'fixture-version',

@@ -12,6 +12,7 @@ import { migrationJSON, migrationPinned, migrationPreviewOrigin, migrationSave, 
 import { readUnifiedUploadedModule } from '../../../scripts/unified-version-identity.mjs'
 import { readUnifiedSourceOwner } from '../../../scripts/unified-source-advance.mjs'
 import { unifiedProductionRead } from '../../../scripts/unified-production-transport.mjs'
+import { recheckNteHTTP, verifyNteHTTP } from '../../../scripts/nte-release-http.mjs'
 
 type Proof = { path: string; pin: string }
 const service = 'gachia-game-genshin', UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/
@@ -70,7 +71,7 @@ export async function readGenshinIndependentSourceIndex(proof: Proof, depth = 0)
     assert.equal(row.directory, path.join(directory, 'genshin')); assert.equal(row.versionId, accepted.versionId)
     assert.equal(row.moduleSHA256, accepted.moduleSHA256); assert.deepEqual(row.moduleProof, accepted.moduleProof); assertModuleVersionIdentity(row.version, completed.modules.candidate.version)
     assertTopology(e.sources.baseline, value.baseline, { [service]: accepted.versionId }); assert.equal(value.baseline.services[service].id, completed.value.deployment.deploymentId)
-    recheckMigrationHTTP({ directory: path.join(directory, 'public'), pin: value.observation.publicAcceptance.evidenceSHA256, origin: 'https://gachia.com',
+    recheckGenshinHTTP({ material: e.material, directory: path.join(directory, 'public'), pin: value.observation.publicAcceptance.evidenceSHA256, origin: 'https://gachia.com',
       references: migrationPinned(e.value.finalReferences), owner: 'router', role: 'candidate', expected: e.expected, bases: e.bases })
   }
   assert.deepEqual(migrationPinned(value.active), sources, 'Incomplete or substituted active sources')
@@ -112,7 +113,7 @@ export async function readCompletedGenshinIndependentRelease(proof: Proof, depth
     modules[role] = await readUnifiedUploadedModule(accepted.moduleProof, { service, versionId: accepted.versionId, moduleSHA256: sealed.moduleSHA256,
       context: { role, transportPin: value.releaseKey, configPin: sealed.configPin } })
     assertModuleVersionIdentity(modules[role].version, migrationPinned({ path: path.join(directory, `genshin-${role}/version.json`), pin: accepted.versionPin }))
-    recheckMigrationHTTP({ directory: path.join(directory, `genshin-${role}/preview`), pin: accepted.evidenceSHA256, origin: migrationPreviewOrigin(service, accepted.versionId),
+    recheckGenshinHTTP({ material: evidence.material, directory: path.join(directory, `genshin-${role}/preview`), pin: accepted.evidenceSHA256, origin: migrationPreviewOrigin(service, accepted.versionId),
       references: migrationPinned({ path: path.join(evidence.directory, `genshin/${role}/local-http/responses/references.json`), pin: sealed.referencesPin }), owner: 'genshin', role,
       expected: evidence.expected, bases: evidence.bases, preview: true })
     assert(accepted.acceptedAt <= Date.parse(rows[7].at) && Date.parse(rows[7].at) - accepted.acceptedAt < 900000)
@@ -131,7 +132,7 @@ export async function readCompletedGenshinIndependentRelease(proof: Proof, depth
   }
   assert.deepEqual(value.versions, { [service]: value.accepted.candidate.versionId }); assert.deepEqual(rows[9].proof.versions, value.versions)
   assert.equal(rows[9].proof.evidenceSHA256, value.publicEvidencePin); assert.equal(rows[9].proof.status, 'passed')
-  recheckMigrationHTTP({ directory: path.join(directory, 'public-0-router'), pin: value.publicEvidencePin, origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences),
+  recheckGenshinHTTP({ material: evidence.material, directory: path.join(directory, 'public-0-router'), pin: value.publicEvidencePin, origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences),
     owner: 'router', role: 'candidate', expected: evidence.expected, bases: evidence.bases })
   return { value, evidence, modules, directory }
 }
@@ -154,7 +155,7 @@ export async function advanceGenshinIndependentSources(input: { completion: Proo
       versions[owner] = migrationSave(directory, owner + '-version.json', version)
     }
     assertModuleVersionIdentity(evidence.sources.router.version, await input.reader.version('gachia-router', evidence.sources.router.versionId))
-    const publicAcceptance = await verifyMigrationHTTP({ origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences), directory: path.join(directory, 'public'),
+    const publicAcceptance = await (evidence.material ? verifyNteHTTP : verifyMigrationHTTP)({ origin: 'https://gachia.com', references: migrationPinned(evidence.value.finalReferences), directory: path.join(directory, 'public'),
       owner: 'router', role: 'candidate', expected: evidence.expected, bases: evidence.bases, request: input.reader.publicRequest ?? unifiedProductionRead })
     const after = await input.reader.snapshot(); assertTopology(before, after)
     const value = { schemaVersion: 1, kind: 'genshin_independent_editorial_source_index', status: 'published_sources_observed', completion: input.completion,
@@ -164,4 +165,10 @@ export async function advanceGenshinIndependentSources(input: { completion: Proo
       cloudWrites: false, newPublicationAuthorized: false }
     return { proof: migrationSave(directory, 'source-index.json', value), value }
   } catch (error) { migrationSave(directory, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
+}
+
+function recheckGenshinHTTP(input: any) {
+  if (!input.material) return recheckMigrationHTTP(input)
+  return recheckNteHTTP({ proof: { path: path.join(input.directory, 'result.json'), pin: input.pin }, origin: input.origin,
+    references: input.references, preview: input.preview ?? false })
 }

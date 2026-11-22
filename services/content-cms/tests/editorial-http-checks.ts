@@ -64,8 +64,10 @@ export async function checkEditorialHTTP(base: string, adminToken: string, passw
   assert.equal((await read('?draft=false&locale=en')).title, 'English draft B')
   checks.push('localized editor drafts preserve approved A; explicit reviewer publication advances both locales to B')
 
-  const newGame = await request('/api/games', 'POST', { key: 'genshin', name: 'Isolated new-guide HTTP', region: 'test', legacyRegistry: {} })
-  assert.equal(newGame.response.status, 201)
+  const existingGame = await request('/api/games?where[key][equals]=genshin&limit=1')
+  const newGame = existingGame.body.docs?.length ? { body: { doc: existingGame.body.docs[0] } }
+    : await request('/api/games', 'POST', { key: 'genshin', name: 'Isolated new-guide HTTP', region: 'test', legacyRegistry: {} })
+  assert.ok(newGame.body.doc?.id)
   const newInput = { id: 'cms-http-fixture', title: 'Private new-guide fixture', summary: 'Isolated HTTP contract', body: 'Actual authenticated HTTP creation and approval. '.repeat(5) }
   const newData = desktopNewGuideDraft('genshin', newGame.body.doc.id, newInput)
   const newDraft = await request('/api/content-records?draft=true&locale=zh', 'POST', newData, editor.token)

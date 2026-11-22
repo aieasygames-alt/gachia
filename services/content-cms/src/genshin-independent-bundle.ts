@@ -12,6 +12,8 @@ import { prepareUnifiedAssetPair, verifyUnifiedAssetPair } from '../../../script
 import { unifiedTransportTool, verifyUnifiedTool } from '../../../scripts/unified-cloud-module.mjs'
 import { readGenshinIndependentSourceIndex } from './genshin-independent-history'
 import { frozenCharacterTextPairContract, frozenGenshinMaterialTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
+import { captureNteHTTP, recheckNteReferences } from '../../../scripts/nte-release-http.mjs'
+import { genshinMaterialLocalConfig, genshinMaterialDeliveryRequests, assertGenshinMaterialReferences } from './genshin-material-delivery'
 import { GENSHIN_PRODUCTION_SCOPE, GENSHIN_MATERIAL_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
 
 type Proof = { path: string; pin: string }
@@ -54,7 +56,7 @@ async function verifyInputs(build: Proof, sourceIndex: Proof, depth = 0) {
   const candidateSources = sources.sources.map((row: any) => {
     const text = readFileSync(path.join(workspace, row.sourcePath), 'utf8'); return { sourcePath: row.sourcePath, text, sha256: digest(text) }
   })
-  return { built, sources, candidateSources, workspace, expected, previous, contract, bases: migrationAggregateBases(workspace),
+  return { built, sources, candidateSources, workspace, expected, previous, contract, material: built.frozen.productionScope === GENSHIN_MATERIAL_PRODUCTION_SCOPE, bases: migrationAggregateBases(workspace),
     pairs: JSON.parse(readFileSync(path.join(workspace, 'packages/data/raw-content-review.json'), 'utf8')).pairs }
 }
 
@@ -77,6 +79,13 @@ export async function prepareGenshinIndependentBundle(input: { build: Proof; sou
       const local = path.join(directory, 'genshin', role), artifact = path.join(local, 'artifact')
       for (const graph of ['direct', 'router']) {
         const http = graph === 'direct' ? path.join(local, 'local-http') : path.join(directory, `${role}-graph`)
+        if (opened.material) {
+          const captured = await captureMaterialGraph(opened, directory, role as 'candidate' | 'recovery', graph, http, tool)
+          if (graph === 'direct') owner[role].referencesPin = captured.pin
+          else if (role === 'candidate') finalReferences = captured
+          else recoveryReferences = captured
+          continue
+        }
         mkdirSync(http); mkdirSync(path.join(http, 'home'))
         const dependencyModules = writeGenshinLocalDependencyModules(http, sources.routerCode)
         const selected: Record<string, string> = {}
@@ -101,6 +110,7 @@ export async function prepareGenshinIndependentBundle(input: { build: Proof; sou
     }
     const value = { schemaVersion: 1, kind: 'genshin_independent_editorial_bundle', build: input.build, sourceIndex: input.sourceIndex, review: input.review,
       sourceCommit: built.frozen.sourceCommit, baseline: sources.baseline, owners: { genshin: owner }, tool, finalReferences, recoveryReferences,
+      ...(opened.material ? { httpPolicy: 'genshin-material-current-topology-v1' } : {}),
       contentVersion: expected.manifest.version, previousContentVersion: previous.manifest.version, cloudWrites: false, productionReady: false }
     const proof = migrationSave(directory, 'bundle.json', value); await verifyGenshinIndependentBundle(proof); return { proof, value }
   } catch (error) { migrationSave(directory, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
@@ -113,6 +123,7 @@ export async function verifyGenshinIndependentBundle(proof: Proof, depth = 0) {
   assert(!existsSync(path.join(directory, 'failure.json')), 'Failed independent bundle cannot authorize a release')
   assert.equal(value.cloudWrites, false); assert.equal(value.productionReady, false)
   const opened = await verifyInputs(value.build, value.sourceIndex, depth), { built, sources, candidateSources, workspace, expected, previous, contract, bases, pairs } = opened
+  assert.equal(value.httpPolicy, opened.material ? 'genshin-material-current-topology-v1' : undefined)
   assert.equal(value.sourceCommit, built.frozen.sourceCommit); assert.equal(value.contentVersion, expected.manifest.version); assert.equal(value.previousContentVersion, previous.manifest.version)
   assert.deepEqual(value.baseline, sources.baseline); assert.deepEqual(Object.keys(value.owners), ['genshin'])
   const owner = value.owners.genshin, old = sources.owners.genshin
@@ -132,10 +143,32 @@ export async function verifyGenshinIndependentBundle(proof: Proof, depth = 0) {
       const refs = graph === 'direct' ? { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }
         : role === 'candidate' ? value.finalReferences : value.recoveryReferences
       if (graph === 'router') assert.equal(refs.path, path.join(directory, `${role}-graph/responses/references.json`))
-      recheckMigrationReferences({ proof: refs, requests: requests({ owner: graph === 'direct' ? 'genshin' : 'router', role: 'candidate', artifact, expected: current, sources: role === 'candidate' ? candidateSources : sources.sources, pairs }, contract[role]),
+      if (opened.material) {
+        const wanted = await genshinMaterialDeliveryRequests(opened, graph === 'direct' ? 'genshin' : 'router', role, artifact)
+        assertGenshinMaterialReferences(refs, recheckNteReferences(refs), wanted, contract[role])
+      } else recheckMigrationReferences({ proof: refs, requests: requests({ owner: graph === 'direct' ? 'genshin' : 'router', role: 'candidate', artifact, expected: current, sources: role === 'candidate' ? candidateSources : sources.sources, pairs }, contract[role]),
         owner: graph === 'direct' ? 'genshin' : 'router', role: 'candidate', expected: current, bases })
       assertCharacterReferences(refs, contract[role])
     }
   }
   return { directory, value, ...opened }
+}
+
+async function captureMaterialGraph(opened: any, directory: string, role: 'candidate' | 'recovery', graph: string, http: string, tool: any): Promise<Proof> {
+  mkdirSync(http); mkdirSync(path.join(http, 'home'))
+  const modules = writeGenshinLocalDependencyModules(http, opened.sources.routerCode), configs: Record<string, string> = {}
+  for (const dependency of graph === 'direct' ? ['genshin'] : ['genshin', 'nte', 'azur-promilia', 'lvmeng', 'main', 'router']) {
+    const local = path.join(directory, 'genshin', role)
+    const artifact = dependency === 'genshin' ? path.join(local, 'artifact') : dependency === 'router' ? undefined : opened.sources.owners[dependency].directory
+    const module = dependency === 'genshin' ? path.join(local, 'module/worker.js') : dependency === 'router' ? modules.router : path.join(artifact!, 'worker.js')
+    configs[dependency] = migrationSave(http, dependency + '.json', genshinMaterialLocalConfig(opened.sources.baseline, dependency, artifact, module)).path
+  }
+  const owner = graph === 'direct' ? 'genshin' : 'router'
+  const wanted = await genshinMaterialDeliveryRequests(opened, owner, role, path.join(directory, 'genshin', role, 'artifact'))
+  let captured: any
+  await withLocalWorker(path.join(opened.workspace, 'apps/web'), configs[owner], path.join(http, 'home'), path.join(http, 'worker.log'), async (origin: string) => {
+    captured = await captureNteHTTP({ origin, requests: wanted.requests, jsonValues: wanted.values, directory: path.join(http, 'responses') })
+  }, { wranglerEntrypoint: tool.bin, additionalConfigs: Object.entries(configs).filter(([name]) => name !== owner).map(([, file]) => file) })
+  assertGenshinMaterialReferences(captured.proof, recheckNteReferences(captured.proof), wanted, opened.contract[role])
+  assertCharacterReferences(captured.proof, opened.contract[role]); return captured.proof
 }

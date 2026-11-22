@@ -63,7 +63,7 @@ export function genshinMigrationTransport({ evidence, releaseKey, token, directo
   if (knownMainRecovery) { assert.equal(value.kind, 'nte_migration_bundle'); assert(!knownRouterRecovery); assert(/^[a-f0-9]{64}$/.test(knownMainRecovery.releaseKey)); uploads.set('main:recovery', { versionId: knownMainRecovery.versionId }); }
   const transportPin = args => args.role === 'recovery' && args.owner === 'router' && knownRouterRecovery ? knownRouterRecovery.releaseKey
     : args.role === 'recovery' && args.owner === 'main' && knownMainRecovery ? knownMainRecovery.releaseKey : releaseKey;
-  const verifyHTTP = nte ? verifyNteHTTP : verifyMigrationHTTP;
+  const verifyHTTP = nte || value.httpPolicy === 'genshin-material-current-topology-v1' ? verifyNteHTTP : verifyMigrationHTTP;
   const readVersion = (service, versionId) => service === 'gachia-router'
     ? readMigrationRouterVersion({ versionId, token, request: unifiedProductionRead }) : readUnifiedVersion({ service, versionId, token, request: unifiedProductionRead });
   const rowFor = args => {
