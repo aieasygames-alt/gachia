@@ -21,6 +21,12 @@ export async function readGenshinIndependentSourceIndex(proof: Proof, depth = 0)
   const value = migrationPinned(proof), directory = path.dirname(proof.path)
   assert.equal(proof.path, path.join(directory, 'source-index.json')); assert.equal(value.status, 'published_sources_observed')
   assert.equal(value.cloudWrites, false); assert.equal(value.newPublicationAuthorized, false)
+  if (value.kind.startsWith('nte_')) {
+    const sources = await (await import('./nte-release-history')).readNteSourceIndex(proof, depth)
+    assert.equal(sources.allOwnersCurrent, true, 'Full current published owner topology required')
+    const genshin = await readUnifiedSourceOwner(sources.owners.genshin)
+    return { ...sources, genshinCode: genshin.code }
+  }
   let sources: any[], workspace: string, routerCode: Buffer, ancestors: any[], originalPublication: Proof, originalSourceIndex: Proof, baseline: any
   if (value.kind === 'genshin_independent_published_source_index') {
     const completed: any = await readCompletedGenshinMigration(value.completion), e = completed.evidence
@@ -75,7 +81,7 @@ export async function readGenshinIndependentSourceIndex(proof: Proof, depth = 0)
     modules[owner] = await readUnifiedSourceOwner(row); assert.equal(activeVersion(baseline, row.service), row.versionId)
   }
   return { value, owners: value.owners, router: value.router, baseline, sources, workspace, routerCode, genshinCode: modules.genshin.code,
-    ancestors, originalPublication, originalSourceIndex }
+    ancestors, originalPublication, originalSourceIndex, allOwnersCurrent: true }
 }
 
 export async function readCompletedGenshinIndependentRelease(proof: Proof, depth = 0): Promise<any> {

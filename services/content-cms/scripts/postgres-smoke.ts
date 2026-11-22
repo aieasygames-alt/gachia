@@ -148,6 +148,19 @@ try {
   assert.equal(unifiedEdited.response.status, 200)
   assert.deepEqual(unifiedEdited.body.doc.structuredValue, value)
   assert.equal((await request(`${unifiedRoute}?draft=true`, 'PATCH', { structuredValue: { ...value, id: 'changed-id' } }, token)).response.status, 400)
+  const materialRows = await request('/api/content-records?where[and][0][stableKey][like]=unified%3Agenshin%3A&where[and][1][kind][equals]=materials&limit=1', 'GET', undefined, token)
+  const material = materialRows.body.docs[0]
+  assert.ok(material && typeof material.structuredValue.sourceEn === 'string')
+  const materialValue = { ...material.structuredValue, sourceEn: material.structuredValue.sourceEn + ' HTTP wording fixture.' }
+  const materialDraft = await request(`/api/content-records/${material.id}?draft=true`, 'PATCH', { structuredValue: materialValue }, token)
+  assert.equal(materialDraft.response.status, 200)
+  assert.deepEqual(materialDraft.body.doc.sourceRecord, material.sourceRecord)
+  const materialReviewed = await request(`/api/content-records/${material.id}?draft=false`, 'PATCH', { _status: 'published', hold: false }, token)
+  assert.equal(materialReviewed.response.status, 200)
+  assert.deepEqual(materialReviewed.body.doc.structuredValue, materialValue)
+  assert.deepEqual(materialReviewed.body.doc.sourceRecord, material.sourceRecord)
+  assert.equal((await request(`/api/content-records/${material.id}?draft=true`, 'PATCH', { sourceRecord: { ...material.sourceRecord, sourceSHA256: 'a'.repeat(64) } }, token)).response.status, 400)
+  checks.push('Genshin material acquisition text: real HTTP draft/review with immutable import provenance')
   assert.equal((await request('/api/content-records?draft=true', 'POST', { stableKey: unified.stableKey,
     game: typeof unified.game === 'object' ? unified.game.id : unified.game, kind: unified.kind, legacyId: unified.legacyId,
     legacyPath: unified.legacyPath, sourceRecord: unified.sourceRecord, structuredValue: value, bodyFormat: 'plain', hold: true }, token)).response.status, 403)

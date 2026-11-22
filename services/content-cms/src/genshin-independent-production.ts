@@ -22,12 +22,14 @@ import { createUnifiedExecutorVerifier, readUnifiedProductionReview, verifyUnifi
 import { verifyUnifiedPublishedSource } from './unified-source-advance'
 import { prepareGenshinIndependentBundle, verifyGenshinIndependentBundle } from './genshin-independent-bundle'
 import { advanceGenshinIndependentSources, readCompletedGenshinIndependentRelease, readGenshinIndependentSourceIndex } from './genshin-independent-history'
-import { GENSHIN_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
+import { GENSHIN_PRODUCTION_SCOPE, GENSHIN_MATERIAL_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
 import { captureUnifiedExecutorSource } from './unified-executor-source'
 import { baselineDirectory } from './inventory-baseline'
 import { unifiedPlan } from './unified-plan'
 import { readUnifiedSources } from './unified-sources'
 import { buildUnifiedOwners } from './unified-owner-build'
+import { createArtifactVerificationSession } from '../../../scripts/artifact-verification-session.mjs'
+import { GENSHIN_MATERIAL_TEXT_SOURCE } from './genshin-material-text'
 
 type Proof = { path: string; pin: string }
 type Request = { schemaVersion: 1; kind: 'genshin_independent_editorial_request'; bundle: Proof; executorRunID: number; previewProxy?: string; publicProxy?: string }
@@ -59,7 +61,7 @@ export async function prepareGenshinIndependentProduction(input: { sourceIndex: 
   mkdirSync(directory, { mode: 0o700 })
   try {
     const frozen = freezeUnifiedContent({ repo, commit: executor.commit, directory: path.join(directory, 'build'), plan, records: review.records,
-      activeSources: sources.sources, preview: false, productionScope: GENSHIN_PRODUCTION_SCOPE })
+      activeSources: sources.sources, preview: false, productionScope: review.records[0].sourceRecord.sourcePath === GENSHIN_MATERIAL_TEXT_SOURCE ? GENSHIN_MATERIAL_PRODUCTION_SCOPE : GENSHIN_PRODUCTION_SCOPE })
     const editorial = migrationSave(directory, 'review.json', { sourceCommit: executor.commit, planSHA256: plan.planSHA256, selected,
       reviews: review.reviews, reviewPin: review.reviewPin, application: input.application })
     const built = await buildUnifiedOwners(frozen.directory, frozen.manifestPin, [])
@@ -73,7 +75,8 @@ export async function prepareGenshinIndependentProduction(input: { sourceIndex: 
 }
 export async function auditGenshinIndependentProduction(input: unknown, tokens: { cmsToken: string; cloudToken: string }) {
   const request = genshinIndependentRequest(input), githubToken = githubCredential(), executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken)
-  const evidence = await verifyGenshinIndependentBundle(request.bundle), repo = path.resolve(projectRoot, '../..')
+  const inventories = createArtifactVerificationSession()
+  const evidence = await inventories.run(() => verifyGenshinIndependentBundle(request.bundle)), repo = path.resolve(projectRoot, '../..')
   assert.equal(evidence.value.sourceCommit, executor.executorCommit, 'Build and executor require the same full exact CI')
   await verifyUnifiedPublishedSource({ publication: evidence.sources.originalPublication, sourceIndex: evidence.sources.originalSourceIndex, githubToken })
   for (const ancestor of evidence.sources.ancestors) assert.deepEqual(await verifyUnifiedCI(ancestor.runID, ancestor.commit, githubToken), ancestor)
@@ -89,7 +92,7 @@ export async function auditGenshinIndependentProduction(input: unknown, tokens: 
   const temporary = mkdtempSync(path.join(evidence.built.directory, '.production-source-check-'))
   try {
     const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan, records: review.records,
-      activeSources: evidence.sources.sources, preview: false, productionScope: GENSHIN_PRODUCTION_SCOPE })
+      activeSources: evidence.sources.sources, preview: false, productionScope: frozen.productionScope })
     assert.equal(reconstructed.sourceTreeSHA256, frozen.sourceTreeSHA256, 'Frozen code/data differs from exact Git plus approved CMS and complete A')
     assert.deepEqual(reconstructed.candidate, frozen.candidate)
     rmSync(temporary, { recursive: true })
@@ -106,7 +109,7 @@ export async function auditGenshinIndependentProduction(input: unknown, tokens: 
   const identity = { policy: GENSHIN_INDEPENDENT_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI, bundlePin: request.bundle.pin,
     reviewPin: review.reviewPin, baseline: evidence.sources.baseline, observedAt: Date.now(), owners: evidence.value.owners }
   const verify = async () => {
-    executor.verify(); const reopened = await verifyGenshinIndependentBundle(request.bundle); assert.deepEqual(reopened.value, evidence.value)
+    executor.verify(); const reopened = await inventories.run(() => verifyGenshinIndependentBundle(request.bundle)); assert.deepEqual(reopened.value, evidence.value)
     const current = await readUnifiedProductionReview(plan, editorial.selected, tokens.cmsToken); assert.equal(current.reviewPin, review.reviewPin)
     application(editorial.application, repo, executor.executorCommit); executor.verify(); return { ...identity, observedAt: Date.now() }
   }
@@ -137,7 +140,8 @@ export async function activateGenshinIndependentProduction(input: { request: unk
 
 export async function advanceGenshinIndependentProduction(input: { completion: Proof; executorRunID: number; directory: string; cloudToken: string }) {
   const githubToken = githubCredential(), executor = await createUnifiedExecutorVerifier(input.executorRunID, githubToken)
-  const completed = await readCompletedGenshinIndependentRelease(input.completion)
+  const inventories = createArtifactVerificationSession()
+  const completed = await inventories.run(() => readCompletedGenshinIndependentRelease(input.completion))
   assert.deepEqual(await verifyUnifiedCI(completed.value.executorCI.runID, completed.value.executorCI.commit, githubToken), completed.value.executorCI)
   await verifyUnifiedPublishedSource({ publication: completed.evidence.sources.originalPublication, sourceIndex: completed.evidence.sources.originalSourceIndex, githubToken })
   for (const ancestor of completed.evidence.sources.ancestors) assert.deepEqual(await verifyUnifiedCI(ancestor.runID, ancestor.commit, githubToken), ancestor)
@@ -147,7 +151,7 @@ export async function advanceGenshinIndependentProduction(input: { completion: P
       : readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }) }
   const network = completed.value.request.publicProxy ? await createGenshinPublicNetwork(completed.value.request.publicProxy) : undefined
   try {
-    const result = await advanceGenshinIndependentSources({ completion: input.completion, directory: input.directory, reader: { ...reader, ...(network ? { publicRequest: network.request } : {}) } })
+    const result = await inventories.run(() => advanceGenshinIndependentSources({ completion: input.completion, directory: input.directory, reader: { ...reader, ...(network ? { publicRequest: network.request } : {}) } }))
     executor.verify(); return result
   } finally { await network?.close() }
 }

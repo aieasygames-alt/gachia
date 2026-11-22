@@ -11,8 +11,8 @@ import { migrationRuntimeConfig, migrationLocalConfig, sealMigrationOwner } from
 import { prepareUnifiedAssetPair, verifyUnifiedAssetPair } from '../../../scripts/unified-release-assets.mjs'
 import { unifiedTransportTool, verifyUnifiedTool } from '../../../scripts/unified-cloud-module.mjs'
 import { readGenshinIndependentSourceIndex } from './genshin-independent-history'
-import { frozenCharacterTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
-import { GENSHIN_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
+import { frozenCharacterTextPairContract, frozenGenshinMaterialTextPairContract, validateUnifiedConsumer, verifyUnifiedOwnerBuild } from './unified-owner-build'
+import { GENSHIN_PRODUCTION_SCOPE, GENSHIN_MATERIAL_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
 
 type Proof = { path: string; pin: string }
 const treePin = (directory: string) => digest(migrationJSON(artifactFiles(directory)))
@@ -27,7 +27,7 @@ export function writeGenshinLocalDependencyModules(directory: string, routerCode
 }
 function inputs(build: Proof) {
   const built = verifyUnifiedOwnerBuild(path.dirname(build.path), build.pin)
-  assert.equal(build.path, path.join(built.directory, 'build.json')); assert.equal(built.frozen.productionScope, GENSHIN_PRODUCTION_SCOPE)
+  assert.equal(build.path, path.join(built.directory, 'build.json')); assert(built.frozen.productionScope && [GENSHIN_PRODUCTION_SCOPE, GENSHIN_MATERIAL_PRODUCTION_SCOPE].includes(built.frozen.productionScope))
   assert.equal(built.frozen.localScope, undefined); assert.equal(built.receipt.preview, false); assert.deepEqual(built.frozen.owners, ['genshin'])
   return built
 }
@@ -49,7 +49,7 @@ async function verifyInputs(build: Proof, sourceIndex: Proof, depth = 0) {
     sources.sources.map((row: any) => ({ sourcePath: row.sourcePath, sha256: row.sha256 })).sort((a: any, b: any) => a.sourcePath.localeCompare(b.sourcePath)))
   const workspace = path.join(built.directory, 'source'), expected = genshinContentAssets(workspace), previous = genshinContentAssets(sources.workspace)
   assert.notEqual(expected.manifest.version, previous.manifest.version, 'An actual approved content edit is required')
-  const contract = frozenCharacterTextPairContract(built.directory, built.frozen)
+  const contract = built.frozen.productionScope === GENSHIN_MATERIAL_PRODUCTION_SCOPE ? frozenGenshinMaterialTextPairContract(built.directory, built.frozen) : frozenCharacterTextPairContract(built.directory, built.frozen)
   assert.equal(contract.candidate.changes.length, 1); assert.equal(contract.candidate.changes[0].game, 'genshin')
   const candidateSources = sources.sources.map((row: any) => {
     const text = readFileSync(path.join(workspace, row.sourcePath), 'utf8'); return { sourcePath: row.sourcePath, text, sha256: digest(text) }

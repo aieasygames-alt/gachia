@@ -16,6 +16,8 @@ import { dedicatedCharacterTextContract, dedicatedCharacterTextPairContract, DED
 import { GENSHIN_LOCAL_SCOPE } from './unified-genshin-local-scope'
 import { materialConsumerContract, mergeMaterialConsumerExpectations, assertMaterialPageConsumer, type MaterialPageExpectation } from './material-consumer-contract'
 import { nteMaterialTextPairContract } from './nte-material-text'
+import { genshinMaterialTextPairContract } from './genshin-material-text'
+import { GENSHIN_MATERIAL_PRODUCTION_SCOPE } from './unified-genshin-production-scope'
 
 const json = (value: unknown) => JSON.stringify(value, null, 2) + '\n'
 const bytesSHA = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex')
@@ -55,11 +57,32 @@ export function frozenCharacterTextPairContract(directory: string, frozen: Retur
 }
 
 export function frozenNteMaterialTextPairContract(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
+  return frozenMaterialTextPairContract(directory, frozen, nteMaterialTextPairContract)
+}
+
+export function frozenGenshinMaterialTextPairContract(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
+  return frozenMaterialTextPairContract(directory, frozen, genshinMaterialTextPairContract)
+}
+
+function frozenMaterialTextPairContract<T>(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>, contract: (active: any[], overlays: any[]) => T) {
   const files = JSON.parse(readFileSync(path.join(directory, 'active.json'), 'utf8')) as { sourcePath: string; sha256: string; file: string }[]
   const active = files.map(row => ({ sourcePath: row.sourcePath, sha256: row.sha256, text: readFileSync(path.join(directory, row.file), 'utf8') }))
   const overlays = frozen.candidate.files.filter(row => row.activeSHA256 !== row.candidateSHA256).map(row => ({ sourcePath: row.sourcePath,
     sha256: row.candidateSHA256, text: readFileSync(path.join(directory, 'source', row.sourcePath), 'utf8') }))
-  return nteMaterialTextPairContract(active, overlays)
+  return contract(active, overlays)
+}
+
+export function mergeGenshinMaterialTextExpectations(provided: ConsumerExpectation[], required: ConsumerExpectation[]) {
+  const result = structuredClone(provided)
+  for (const row of required) {
+    const existing = result.find(value => value.path === row.path && value.owner === row.owner)
+    if (existing) {
+      assert.equal(existing.status, row.status); assert(existing.contains && row.contains)
+      assert.deepEqual(existing.materialPage, row.materialPage)
+      existing.contains = [...new Set([...existing.contains, ...row.contains])]
+    } else result.push(structuredClone(row))
+  }
+  return result
 }
 
 export function frozenMaterialConsumerContracts(directory: string, frozen: ReturnType<typeof verifyUnifiedFrozenSource>) {
@@ -150,6 +173,7 @@ export async function buildUnifiedOwners(directory: string, pin: string, expecta
   expectations = mergeCharacterTextExpectations(expectations, characterTextContract)
   const materialConsumers = frozenMaterialConsumerContracts(directory, initial)
   expectations = mergeMaterialConsumerExpectations(expectations, materialConsumers)
+  if (initial.productionScope === GENSHIN_MATERIAL_PRODUCTION_SCOPE) expectations = mergeGenshinMaterialTextExpectations(expectations, frozenGenshinMaterialTextPairContract(directory, initial).candidate.expectations)
   validateConsumerExpectations(initial.owners, expectations)
   return withRunLock(directory, async () => {
     const plan = verifyUnifiedFrozenSource(directory, pin), workspace = path.join(directory, 'source')
@@ -283,6 +307,7 @@ export function verifyUnifiedOwnerBuild(directory: string, buildPin: string) {
     assert.deepEqual(mergeMaterialConsumerExpectations(expectations, contracts), expectations,
       'Required material consumer acceptance missing')
   }
+  if (frozen.productionScope === GENSHIN_MATERIAL_PRODUCTION_SCOPE) assert.deepEqual(mergeGenshinMaterialTextExpectations(expectations, frozenGenshinMaterialTextPairContract(root, frozen).candidate.expectations), expectations, 'Required material text acceptance missing')
   for (const owner of frozen.owners) {
     const result = receipt.owners[owner]
     assert.equal(result.status, 'built_and_locally_accepted', 'Owner did not complete local acceptance')

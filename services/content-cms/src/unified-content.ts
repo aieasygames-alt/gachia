@@ -21,16 +21,20 @@ const identityFields = new Set(['id', 'slug', 'code', 'characterId', 'gameId', '
 const protectedField = (key: string) => identityFields.has(key)
   || /^(?:source|contentReview|review|evidence|rights|license|hold|publish|indexable|verified|_comment)/i.test(key)
   || /^(?:image|icon|portrait|splash|thumbnail|avatar|media|asset|logo|url)(?:$|[A-Z_])/.test(key)
+type EditSource = Pick<UnifiedSource, 'game' | 'family' | 'sourcePath'>
+const materialAcquisitionLeaf = (source: EditSource | undefined, pointer: string) => source?.game === 'genshin'
+  && source.family === 'materials' && source.sourcePath === 'packages/data/games/genshin/raw-materials.json'
+  && ['/source', '/sourceEn'].includes(pointer)
 
 // Uses the same field policy as validation; nulls and empty containers need a structural contract.
-export function structuredEditableLeaves(value: JSONValue): { pointer: string; value: string | number | boolean }[] {
+export function structuredEditableLeaves(value: JSONValue, source?: EditSource): { pointer: string; value: string | number | boolean }[] {
   assertJSON(value)
   const leaves: { pointer: string; value: string | number | boolean }[] = []
   const visit = (node: JSONValue, pointer: string) => {
     if (node === null) return
     if (Array.isArray(node)) node.forEach((child, index) => visit(child, `${pointer}/${index}`))
     else if (objectValue(node)) {
-      for (const [key, child] of Object.entries(node)) if (!protectedField(key)) {
+      for (const [key, child] of Object.entries(node)) if (!protectedField(key) || typeof child === 'string' && materialAcquisitionLeaf(source, `${pointer}/${key}`)) {
         visit(child, `${pointer}/${key.replaceAll('~', '~0').replaceAll('/', '~1')}`)
       }
     } else leaves.push({ pointer, value: node })
@@ -87,7 +91,7 @@ export function isUnifiedRecord(value: unknown) {
 }
 
 // This first contract edits existing leaves only. Structural changes and media approvals need explicit contracts.
-export function assertStructuredEdit(original: JSONValue, edited: unknown, pointer = ''): asserts edited is JSONValue {
+export function assertStructuredEdit(original: JSONValue, edited: unknown, pointer = '', source?: EditSource): asserts edited is JSONValue {
   assertJSON(edited)
   const compare = (before: JSONValue, after: JSONValue, path: string) => {
     if (isDeepStrictEqual(before, after)) return
@@ -99,7 +103,8 @@ export function assertStructuredEdit(original: JSONValue, edited: unknown, point
       if (!objectValue(after) || !isDeepStrictEqual(Object.keys(before).sort(), Object.keys(after).sort())) throw new Error(`Content fields changed: ${path}`)
       for (const [key, item] of Object.entries(before)) {
         const next = `${path}/${key.replaceAll('~', '~0').replaceAll('/', '~1')}`
-        if (protectedField(key) && !isDeepStrictEqual(item, after[key])) throw new Error(`Protected source, identity or media field: ${next}`)
+        if (protectedField(key) && !isDeepStrictEqual(item, after[key])
+          && !(typeof item === 'string' && typeof after[key] === 'string' && materialAcquisitionLeaf(source, next))) throw new Error(`Protected source, identity or media field: ${next}`)
         compare(item, after[key], next)
       }
     } else if (typeof after === 'string' && (after.includes('<') || /(?:javascript|vbscript|data)\s*:/i.test(after) || /[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(after))) {
@@ -122,7 +127,9 @@ export function validateUnifiedRecord(record: Record<string, unknown>, original?
   const emptyLocalized = (value: unknown) => value == null || objectValue(value)
     && Object.keys(value).every(key => ['zh', 'en', 'ja'].includes(key)) && Object.values(value).every(item => item == null)
   if (record.bodyFormat !== 'plain' || !emptyLocalized(record.title) || !emptyLocalized(record.body)) throw new Error('Unified content must use the structured editor, not localized guide fields')
-  assertStructuredEdit(source.original, record.structuredValue)
+  // Historical intake/review classifications keep their original protected
+  // source policy. Acquisition editing starts only after the controlled A sync.
+  assertStructuredEdit(source.original, record.structuredValue, '', (record.reviewEvidence as any)?.publishedBaseline ? source : undefined)
 }
 
 // Retain the real import O in sourceRecord. A separately controlled, published

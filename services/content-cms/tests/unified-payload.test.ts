@@ -12,6 +12,7 @@ import { readUnifiedPublishedSelection } from '../src/unified-desktop'
 import { exportUnifiedContent } from '../src/unified-export'
 import { locateValue, readSourceValue } from '../src/unified-sources'
 import { editProbe } from './fixtures/unified-edit-probe'
+import { publishedEditingContext } from '../src/published-editing-guard'
 
 test('all-game source import and editorial controls use real Payload transactions and versions', async t => {
   const postgres = process.env.CMS_MODE === 'postgres-local'
@@ -55,6 +56,33 @@ test('all-game source import and editorial controls use real Payload transaction
     assert.ok(imported)
     const value = imported.structuredValue as Record<string, unknown>
     assert.equal(typeof value.name, 'string')
+    await t.test('Genshin material acquisition text supports real draft/review while preserving immutable provenance', async () => {
+      let material = (await payload.find({ collection: 'content-records', overrideAccess: true, draft: true, depth: 0,
+        where: { and: [{ kind: { equals: 'materials' } }, { stableKey: { like: 'unified:genshin:' } }] }, limit: 1 })).docs[0]
+      const source = material.sourceRecord as any
+      const after = { ...material, reviewEvidence: { publishedBaseline: { kind: 'genshin-published-editing-baseline-v1', source,
+        importOriginalSHA256: source.originalSHA256, syncKey: 'a'.repeat(64), exportKey: 'b'.repeat(64),
+        sourceIndex: { path: '/fixture/source-index.json', pin: 'c'.repeat(64) }, versionId: 'fixture-version' } } }
+      material = await payload.update({ collection: 'content-records', id: material.id, user: admin, overrideAccess: false,
+        draft: true, data: after, context: publishedEditingContext(material, after) })
+      const before = material.structuredValue as Record<string, unknown>
+      assert.equal(typeof before.sourceEn, 'string')
+      const edited = { ...before, sourceEn: before.sourceEn + ' Editorial wording fixture.' }
+      const draft = await payload.update({ collection: 'content-records', id: material.id, user: editor, overrideAccess: false,
+        draft: true, data: { structuredValue: edited } })
+      assert.deepEqual(draft.sourceRecord, material.sourceRecord)
+      assert.deepEqual(draft.structuredValue, edited)
+      await assert.rejects(payload.update({ collection: 'content-records', id: material.id, user: editor, overrideAccess: false,
+        data: { _status: 'published', hold: false } }), /reviewer/)
+      const approved = await payload.update({ collection: 'content-records', id: material.id, user: reviewer, overrideAccess: false,
+        data: { structuredValue: edited, _status: 'published', hold: false } })
+      assert.deepEqual(approved.sourceRecord, material.sourceRecord)
+      assert.deepEqual(approved.structuredValue, edited)
+      await assert.rejects(payload.update({ collection: 'content-records', id: material.id, user: admin, overrideAccess: false,
+        draft: true, data: { sourceRecord: { ...(material.sourceRecord as any), sourceSHA256: 'a'.repeat(64) } } }), /Immutable/)
+      await assert.rejects(payload.update({ collection: 'content-records', id: material.id, user: editor, overrideAccess: false,
+        draft: true, data: { structuredValue: { ...edited, sourceReview: 'untrusted' } } }), /fields/)
+    })
     await t.test('installed selection rejects unapproved records even when a caller selects their correct identity', async () => {
       await assert.rejects(readUnifiedPublishedSelection(payload, plan, [imported.stableKey]), /published and approved/)
     })
