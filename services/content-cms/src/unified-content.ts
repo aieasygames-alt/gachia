@@ -138,7 +138,7 @@ export function editingSource(record: { sourceRecord?: unknown; reviewEvidence?:
     && ['materials', 'characters', 'character-materials'].includes(imported.family)
     && imported.sourcePath === `packages/data/games/genshin/raw-${imported.family}.json`
   const azur = baseline.kind === 'azur-published-guide-editing-baseline-v1' && imported.game === 'azur-promilia'
-    && imported.family === 'guides' && imported.sourcePath === 'apps/game-azur-promilia/lib/data.ts'
+    && imported.family === 'inline-guides' && imported.sourcePath === 'apps/game-azur-promilia/lib/data.ts'
     && imported.locator.symbol === 'guides'
   if ((!genshin && !azur) || baseline.importOriginalSHA256 !== imported.originalSHA256
     || !/^[a-f0-9]{64}$/.test(baseline.syncKey) || !/^[a-f0-9]{64}$/.test(baseline.exportKey)

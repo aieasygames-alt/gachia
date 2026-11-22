@@ -38,7 +38,7 @@ export function planAzurEditingSync(opened: AzurEditingInput) {
   assert(published); assert.equal(canonical(editingProjection(published)), canonical(editingProjection(prior)))
   assert.equal(published.updatedAt, prior.updatedAt); validateUnifiedRecord(published); validateUnifiedRecord(prior)
   const imported = prior.sourceRecord
-  assert.equal(imported.game, 'azur-promilia'); assert.equal(imported.family, 'guides')
+  assert.equal(imported.game, 'azur-promilia'); assert.equal(imported.family, 'inline-guides')
   assert.equal(imported.sourcePath, AZUR_PROMILIA_GUIDE_SOURCE); assert.equal(imported.locator.symbol, 'guides')
   const source = sources.sources.find((row: any) => row.sourcePath === AZUR_PROMILIA_GUIDE_SOURCE)!
   const root = readSourceValue(source.text, source.sourcePath, imported.locator), active = locateValue(root, imported.locator)

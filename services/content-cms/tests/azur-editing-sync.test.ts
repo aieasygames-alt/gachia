@@ -6,8 +6,8 @@ import { rm } from 'node:fs/promises'
 import { cmsEnvironment } from '../src/cms-environment'
 import { canonical } from '../src/record-mapping'
 import { digest } from '../src/legacy-intake'
-import { contentUnit, editingSource } from '../src/unified-content'
-import { readSourceValue, replaceSourceSymbol } from '../src/unified-sources'
+import { editingSource } from '../src/unified-content'
+import { readSourceValue, replaceSourceSymbol, readUnifiedSources, sourceUnits } from '../src/unified-sources'
 import { exportUnifiedContent } from '../src/unified-export'
 import { applyAzurEditingSync, planAzurEditingSync, verifyAzurEditingRows } from '../src/azur-editing-sync'
 import { AZUR_PROMILIA_GUIDE_SOURCE as sourcePath } from '../src/azur-promilia-independent-text'
@@ -18,7 +18,8 @@ test('Azur repeated edit uses explicit published A, preserving reviewed B and or
   const runtime = cmsEnvironment(); assert(['sqlite-local', 'postgres-local'].includes(runtime.mode))
   const text = readFileSync(new URL('../../../apps/game-azur-promilia/lib/data.ts', import.meta.url), 'utf8')
   const guides = readSourceValue(text, sourcePath, { symbol: 'guides' }) as any[], original = structuredClone(guides[0])
-  const unit = contentUnit({ game: 'azur-promilia', family: 'guides', sourcePath, sourceSHA256: digest(text), locator: { symbol: 'guides', identity: { id: original.id } }, original })
+  const unit = sourceUnits(readUnifiedSources().sources.find(row => row.sourcePath === sourcePath)!).records.find(row => row.sourceRecord.locator.identity?.id === original.id)!
+  assert(unit); assert.equal(unit.kind, 'inline-guides'); assert.deepEqual(unit.sourceRecord.original, original)
   guides[0].content.en += ' First published increment.'
   const activeText = replaceSourceSymbol(text, sourcePath, 'guides', guides), active = { sourcePath, text: activeText, sha256: digest(activeText) }
   const edited = structuredClone(guides[0]); edited.content.en += ' Second reviewed increment.'
