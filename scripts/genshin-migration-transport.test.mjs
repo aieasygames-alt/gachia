@@ -29,6 +29,17 @@ test('migration upload accepts one exact UUID and its exact version preview, nev
   assert.equal(migrationPreviewOrigin('gachia-game-nte', versionId), `https://${versionId.slice(0, 8)}-gachia-game-nte.aieasygames.workers.dev`);
   for (const service of ['gachia-staging', 'injected']) assert.throws(() => migrationPreviewOrigin(service, versionId));
 });
+test('shared release-history reader resolves every independent production owner and rejects unapproved hosts', () => {
+  for (const service of ['gachia', 'gachia-router', 'gachia-game-genshin', 'gachia-game-nte', 'gachia-game-azur-promilia', 'gachia-game-lvmeng']) {
+    assert.equal(migrationPreviewOrigin(service, versionId), `https://${versionId.slice(0, 8)}-${service}.aieasygames.workers.dev`);
+    for (const invalid of ['latest', versionId + '.evil', versionId.replaceAll('-', ''), versionId.toUpperCase().replace('00000001', 'ABCDEF01')]) {
+      assert.throws(() => migrationPreviewOrigin(service, invalid));
+    }
+  }
+  for (const service of ['gachia-game-azur-promilia-staging', 'gachia-game-lvmeng-staging', 'gachia-game-other', 'gachia-game-azur-promilia.evil']) {
+    assert.throws(() => migrationPreviewOrigin(service, versionId));
+  }
+});
 test('fixed Router deployment writes once, verifies allocation and records both responses', async () => {
   const requests = [], responses = [];
   const write = migrationRouterDeploymentWriter({ releaseKey, versionId, token: 'test-only', recordResponse: row => responses.push(row), request: async (url, options) => {

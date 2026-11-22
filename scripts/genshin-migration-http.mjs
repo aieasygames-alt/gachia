@@ -22,7 +22,7 @@ export function migrationPinned(proof) {
   const bytes = readFileSync(proof.path); assert.equal(digest(bytes), proof.pin, 'Migration evidence changed'); return JSON.parse(bytes);
 }
 export function migrationPreviewOrigin(service, versionId) {
-  assert(['gachia-game-genshin', 'gachia-game-nte', 'gachia-router', 'gachia'].includes(service));
+  assert(['gachia-game-genshin', 'gachia-game-nte', 'gachia-game-azur-promilia', 'gachia-game-lvmeng', 'gachia-router', 'gachia'].includes(service));
   assert(/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(versionId));
   return `https://${versionId.slice(0, 8)}-${service}.aieasygames.workers.dev`;
 }
