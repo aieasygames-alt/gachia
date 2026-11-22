@@ -1,0 +1,180 @@
+{
+  "tables": {
+    "_content_records_v": {
+      "rows": 3645,
+      "sha256": "ac504973eac7ed3537546d686462b6ba736a884f76a384a123ef19d5b7f2dbe9"
+    },
+    "_content_records_v_locales": {
+      "rows": 10931,
+      "sha256": "138cc8d05c6262f67ba44705e39e099f460824463d2b94f81ba82edc3f4eb8f2"
+    },
+    "_editorial_drafts_v": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "_editorial_drafts_v_version_faqs": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "_editorial_drafts_v_version_translations": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "_material_cells_v": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "_material_cells_v_entries": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "content_records": {
+      "rows": 2966,
+      "sha256": "36af08a63c9dbefb0debe57fd75b9f18a91a481c58286722f918f258beb97ef1"
+    },
+    "content_records_locales": {
+      "rows": 1198,
+      "sha256": "85650acde62335acc16aa21b7ef113782acccc78ac116d995998dd63b14f8ac8"
+    },
+    "draft_merge_decisions": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "draft_merge_decisions_choices": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "draft_merge_proposals": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "draft_merge_proposals_comparison": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "editorial_drafts": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "editorial_drafts_faqs": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "editorial_drafts_translations": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "games": {
+      "rows": 16,
+      "sha256": "67d5bf37178504599485ee25bd3145c6dab382981b69861c9ce6f5ab53fad893"
+    },
+    "games_locales": {
+      "rows": 16,
+      "sha256": "d51ec0fd673a9a515bd6e29feba3fb5b05817661bf627fc31f2aa8601ad4aa14"
+    },
+    "genshin_review_decisions": {
+      "rows": 221,
+      "sha256": "9fd2b9bf27caffbeb0efe12831819ee025b85e635d59b514a0b452c11664da9f"
+    },
+    "material_cells": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "material_cells_entries": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "media": {
+      "rows": 1,
+      "sha256": "3b8836ce46ac9b554d108a4ce2cf87321cb1afef45829f01d52dc256cb4f7ee9"
+    },
+    "media_locales": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "merge_workflow_events": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "migration_batches": {
+      "rows": 3,
+      "sha256": "d5a91c59041c357b17e13627501eb66c4514ed5c080083cab34098a196445773"
+    },
+    "migration_records": {
+      "rows": 400,
+      "sha256": "2a2ff8838e1a1f37e322aff8651275755a092ccc8868a0df742eab863fd8efaa"
+    },
+    "migration_records_faqs": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "migration_records_translations": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "migration_sources": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "payload_jobs": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "payload_jobs_log": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "payload_kv": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "payload_locked_documents": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "payload_locked_documents_rels": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "payload_migrations": {
+      "rows": 3,
+      "sha256": "582152b9d5bc6dee2f5e039f90ab46999d652d92b764175d006227d7f75ecb87"
+    },
+    "payload_preferences": {
+      "rows": 1,
+      "sha256": "b28d14d8ad4e7facfdaf85ffe935d64312d07411cc6e759e005a9c35a1fdd373"
+    },
+    "payload_preferences_rels": {
+      "rows": 1,
+      "sha256": "f7c76268200d844cee45f7541bd97553311829b51810c258273011117a00312a"
+    },
+    "review_decisions": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "review_items": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "review_items_field_changes": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "review_runs": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "users": {
+      "rows": 1,
+      "sha256": "9456eca73ea38a6817f3ac16dad49c844ebca9ffbc8c4072f2bcd80937942834"
+    },
+    "users_sessions": {
+      "rows": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "canonicalDatabaseSHA256": "aeff3fe2e4b67315f4d99ccd3a7b4c9aa0c4476cd366e0b16c11b10afb5ed0a7",
+  "media": {
+    "media/backup-rehearsal.png": "f3ec9e14b9c085b55edc96155f7bd26b6fdeda2462f02af4e0279d8319b365e3"
+  }
+}

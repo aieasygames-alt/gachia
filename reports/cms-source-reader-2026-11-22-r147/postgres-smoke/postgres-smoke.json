@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "engine": "PostgreSQL 17.6",
+  "schemaPush": false,
+  "checks": [
+    "additive unified-content migration: legacy data survives up/down/up without schema push",
+    "non-superuser PostgreSQL role: empty database migrated; repeated migration idempotent; schema push disabled",
+    "real PostgreSQL editorial suite: login, ACL, locale, publish, locks, versions, rollback/commit, private media, immutable intake",
+    "real PostgreSQL lifecycle: reviewer-only unpublish, single/bulk/override rejection, localized draft/export fidelity",
+    "real PostgreSQL unified content: all 16 scopes imported, ACL/identity/hold/versions/locks and idempotent preservation",
+    "concurrent administrator bootstraps create exactly one account; repeat refuses",
+    "built PostgreSQL HTTP unified editor: actual source draft edits, immutable identity, controlled import, withdrawal rejection, published/draft isolation",
+    "built Next + PostgreSQL HTTP: health, admin login HTML, closed registration, anonymous denial, login cookie, single admin, content create/edit, private media bytes, noindex, shadow disabled",
+    "editor single/bulk unpublish denied with absent/false/invalid draft query; approved bytes and versions unchanged",
+    "localized editor drafts preserve approved A; explicit reviewer publication advances both locales to B",
+    "new Genshin guide HTTP: editor draft, unique identity, denied editor approval/identity changes, reviewer publish, formal export, wrong-game denial",
+    "live locks deny reviewer override and restore; editor restore denied; reviewer restore succeeds after lock release",
+    "reviewer hold and explicit unpublish remove formal export eligibility, without any public activation",
+    "logout revokes the editor token; later draft writes are denied",
+    "database outage returns sanitized 503 readiness instead of false healthy"
+  ],
+  "error": null,
+  "productionTouched": false
+}

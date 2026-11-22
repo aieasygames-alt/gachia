@@ -1,0 +1,979 @@
+The files belonging to this database system will be owned by user "robert".
+This user must also own the server process.
+
+
+The database cluster will be initialized with this locale configuration:
+  locale provider:   libc
+  LC_COLLATE:  C
+  LC_CTYPE:    C
+  LC_MESSAGES: en_US.UTF-8
+  LC_MONETARY: C
+  LC_NUMERIC:  C
+  LC_TIME:     C
+The default database encoding has accordingly been set to "SQL_ASCII".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+creating directory /var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/payload-pg-eD2UPH/db ... ok
+creating subdirectories ... 
+ok
+
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 
+100
+selecting default "shared_buffers" ... 
+128MB
+selecting default time zone ... 
+Asia/Shanghai
+creating configuration files ... 
+ok
+running bootstrap script ... 
+ok
+
+performing post-bootstrap initialization ... 
+ok
+syncing data to disk ... 
+ok
+
+Success. You can now start the database server using:
+
+    '/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/@embedded-postgres+darwin-arm64@17.6.0-beta.15/node_modules/@embedded-postgres/darwin-arm64/native/bin/pg_ctl' -D /var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/payload-pg-eD2UPH/db -l logfile start
+
+
+2026-11-22 08:51:09.567 CST [93898] LOG:  starting PostgreSQL 17.6 on x86_64-apple-darwin23.6.0, compiled by Apple clang version 16.0.0 (clang-1600.0.26.6), 64-bit
+
+2026-11-22 08:51:09.567 CST [93898] LOG:  listening on IPv4 address "127.0.0.1", port 60844
+
+2026-11-22 08:51:09.567 CST [93898] LOG:  listening on Unix socket "/var/folders/vn/3l64p2fs0wg99y1tljdyb9p40000gn/T/payload-pg-eD2UPH/.s.PGSQL.60844"
+
+2026-11-22 08:51:09.570 CST [93901] LOG:  database system was shut down at 2026-11-22 08:51:09 CST
+
+2026-11-22 08:51:09.574 CST [93898] LOG:  database system is ready to accept connections
+
+[08:51:12] [32mINFO[39m: [36mMigrating: 20261101_074512_editor_initial[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrated:  20261101_074512_editor_initial (81ms)[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrating: 20261105_063243_unified_content[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrated:  20261105_063243_unified_content (1ms)[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrating: 20261121_001218_genshin_collection_reviews[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrated:  20261121_001218_genshin_collection_reviews (3ms)[39m
+
+[08:51:12] [32mINFO[39m: [36mReading migration files from /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/src/migrations[39m
+
+[08:51:12] [32mINFO[39m: [36mRolling back batch 2 consisting of 3 migration(s).[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrating down: 20261121_001218_genshin_collection_reviews[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrated down:  20261121_001218_genshin_collection_reviews (3ms)[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrating down: 20261105_063243_unified_content[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrated down:  20261105_063243_unified_content (1ms)[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrating: 20261105_063243_unified_content[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrated:  20261105_063243_unified_content (1ms)[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrating: 20261121_001218_genshin_collection_reviews[39m
+
+[08:51:12] [32mINFO[39m: [36mMigrated:  20261121_001218_genshin_collection_reviews (3ms)[39m
+
+2026-11-22 08:51:12.300 CST [93966] ERROR:  Cannot drop structured content or its history; preserve the additive schema when rolling back the application
+2026-11-22 08:51:12.300 CST [93966] CONTEXT:  PL/pgSQL function inline_code_block line 4 at RAISE
+2026-11-22 08:51:12.300 CST [93966] STATEMENT:  
+	   DO $$ BEGIN
+	     IF EXISTS (SELECT 1 FROM "content_records" WHERE "structured_value" IS NOT NULL)
+	       OR EXISTS (SELECT 1 FROM "_content_records_v" WHERE "version_structured_value" IS NOT NULL) THEN
+	       RAISE EXCEPTION 'Cannot drop structured content or its history; preserve the additive schema when rolling back the application';
+	     END IF;
+	   END $$;
+	  ALTER TABLE "content_records" DROP COLUMN "structured_value";
+	  ALTER TABLE "_content_records_v" DROP COLUMN "version_structured_value";
+
+Additive PostgreSQL upgrade, downgrade, and re-upgrade preserve legacy content; schema push disabled.
+
+[08:51:14] [32mINFO[39m: [36mReading migration files from /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/src/migrations[39m
+
+[08:51:14] [32mINFO[39m: [36mDone.[39m
+
+[08:51:15] [32mINFO[39m: [36mReading migration files from /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/src/migrations[39m
+
+[08:51:15] [32mINFO[39m: [36mDone.[39m
+
+▶ real Payload adapter: editorial boundaries and fidelity
+  ✔ login works; bad credentials fail (105.732334ms)
+
+  ✔ anonymous reads and self-escalation are denied (1.61425ms)
+
+2026-11-22 08:51:18.378 CST [94084] ERROR:  duplicate key value violates unique constraint "games_key_idx"
+2026-11-22 08:51:18.378 CST [94084] DETAIL:  Key (key)=(roco-cn) already exists.
+2026-11-22 08:51:18.378 CST [94084] STATEMENT:  insert into "games" ("id", "key", "region", "legacy_registry", "updated_at", "created_at") values (default, $1, $2, $3, $4, $5) returning "id", "key", "region", "legacy_registry", "updated_at", "created_at"
+
+  ✔ stable identity is unique and relationships preserve the region (4.220417ms)
+
+  ✔ missing translations do not silently fall back (16.611583ms)
+
+  ✔ editors cannot publish; reviewers can, without activating any website (7.485791ms)
+
+  ✔ version history is retained (2.057875ms)
+
+  ✔ active edit locks block updates and restores, including explicit override attempts (24.864875ms)
+
+  ✔ explicit multi-record transactions really roll back and commit (3.960125ms)
+
+  ✔ media remains private and persists to the isolated directory (6.609959ms)
+
+  ✔ legacy intake resumes without duplicates, preserves revisions, and denies all editorial writes (9.69925ms)
+
+  ✔ custom first-user registration endpoint precedes the builtin (1.234042ms)
+
+✔ real Payload adapter: editorial boundaries and fidelity (1990.034792ms)
+
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2871.865458
+
+▶ editorial publication lifecycle protects approved revisions
+  ✔ omitted status must not inherit published approval (18.970458ms)
+
+  ✔ hold changes without a draft must not alter approved eligibility (7.477875ms)
+
+  ✔ explicit unpublish also requires a reviewer (8.354625ms)
+
+  ✔ bulk and local-access-override unpublish attempts also require a reviewer (8.045833ms)
+
+  ✔ editors can create drafts but cannot create published records (5.050125ms)
+
+  ✔ a draft flag cannot authorize publication, even with a local access override (18.295ms)
+
+  ✔ saving localized drafts preserves the approved export until a reviewer publishes again (23.504333ms)
+
+  ✔ reviewers can explicitly hold or unpublish without activating a public release (15.005542ms)
+
+  ✔ authenticated editors create new drafts, reviewers approve, identity stays immutable (22.155ms)
+
+2026-11-22 08:51:21.456 CST [94123] ERROR:  duplicate key value violates unique constraint "content_records_stable_key_idx"
+2026-11-22 08:51:21.456 CST [94123] DETAIL:  Key (stable_key)=(nte:guides:cms-nte-lifecycle) already exists.
+2026-11-22 08:51:21.456 CST [94123] STATEMENT:  insert into "content_records" ("id", "stable_key", "game_id", "kind", "legacy_id", "legacy_path", "body_format", "source_record", "structured_value", "review_evidence", "hold", "updated_at", "created_at", "_status") values (default, $1, $2, $3, $4, $5, $6, $7, default, default, $8, $9, $10, $11) returning "id", "stable_key", "game_id", "kind", "legacy_id", "legacy_path", "body_format", "source_record", "structured_value", "review_evidence", "hold", "updated_at", "created_at", "_status"
+
+  ✔ NTE new-guide drafts enforce game binding, uniqueness, live locks and reviewer approval; release stays gated (25.077708ms)
+
+✔ editorial publication lifecycle protects approved revisions (1834.54875ms)
+
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2736.521208
+
+▶ all-game source import and editorial controls use real Payload transactions and versions
+  ✔ explicit scope import does not import other games, and invalid scopes fail before database access (1106.42475ms)
+
+  ✔ all actual sources import held drafts without touching the existing guide channel (6652.346458ms)
+
+  ✔ installed selection rejects unapproved records even when a caller selects their correct identity (371.876792ms)
+
+  ✔ anonymous access, uncontrolled creation, identity edits and administrative deletion are denied (40.381083ms)
+
+  ✔ editor saves structured drafts, reviewer approves, later drafts do not replace the published version (750.121375ms)
+
+  ✔ active document locks still prevent privileged overwrite attempts (7.106666ms)
+
+  ✔ repeat import preserves all edits and approvals without duplicate or overwrite (397.784ms)
+
+  ✔ source drift rolls an in-progress game import back instead of replacing editorial provenance (105.185834ms)
+
+  ✔ every editable game/source/family completes draft, review, published selection and batch export (53086.871292ms)
+
+✔ all-game source import and editorial controls use real Payload transactions and versions (64386.462834ms)
+ℹ Batch verified: 16 scopes, 139 editable source/family rows; no public deployment
+ℹ Scalar string blocks: lvmeng:inline-patchSource, lvmeng:inline-launchSource, lvmeng:inline-rewardsSource, endfield:inline-END-FIELD-TIER-SNAPSHOT-UPDATED-AT, guihuan:inline-updatedAt, zzz:inline-updatedAt
+
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 64905.354709
+
+2026-11-22 08:52:27.496 CST [93899] LOG:  checkpoint starting: immediate force wait
+
+2026-11-22 08:52:27.500 CST [93899] LOG:  checkpoint complete: wrote 22 buffers (0.1%); 0 WAL file(s) added, 0 removed, 2 recycled; write=0.003 s, sync=0.001 s, total=0.004 s; sync files=17, longest=0.001 s, average=0.001 s; distance=36316 kB, estimate=36316 kB; lsn=0/387F468, redo lsn=0/387F410
+
+[08:52:29] [32mINFO[39m: [36mReading migration files from /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/src/migrations[39m
+
+[08:52:29] [32mINFO[39m: [36mMigrating: 20261101_074512_editor_initial[39m
+
+[08:52:29] [32mINFO[39m: [36mMigrated:  20261101_074512_editor_initial (95ms)[39m
+
+[08:52:29] [32mINFO[39m: [36mMigrating: 20261105_063243_unified_content[39m
+
+[08:52:29] [32mINFO[39m: [36mMigrated:  20261105_063243_unified_content (2ms)[39m
+
+[08:52:29] [32mINFO[39m: [36mMigrating: 20261121_001218_genshin_collection_reviews[39m
+
+[08:52:29] [32mINFO[39m: [36mMigrated:  20261121_001218_genshin_collection_reviews (3ms)[39m
+
+[08:52:29] [32mINFO[39m: [36mDone.[39m
+
+CMS administrator created. Credentials are not printed.
+
+/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/scripts/editor-admin.ts:23
+    if (existing.totalDocs !== 0) throw new Error('Bootstrap refused: users already exist. No account was changed.')
+                                        ^
+
+Error: Bootstrap refused: users already exist. No account was changed.
+    at <anonymous> (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/scripts/editor-admin.ts:23:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v25.9.0
+
+{"created":2,"unchanged":0,"total":2,"websiteChanged":false,"productionReady":false,"syntheticDatabaseOnly":true}
+
+▲ Next.js 16.4.6
+
+- Local:         http://127.0.0.1:60845
+
+- Network:       http://127.0.0.1:60845
+
+✓ Ready in 161ms
+
+✓ Running next.config.mjs took 17ms
+
+[08:52:37] [32mINFO[39m: [36mYou are not allowed to perform this action.[39m
+
+[08:52:38] [31mERROR[39m: [36mProtected source, identity or media field: /id[39m
+    err: {
+      "type": "",
+      "message": "Protected source, identity or media field: /id",
+      "stack":
+          APIError: Protected source, identity or media field: /id
+              at hooks.beforeChange (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:95669)
+              at eW (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:78547)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async eK (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:88980)
+              at async handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:162216)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 400,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mUnified records must be created by the controlled source importer.[39m
+    err: {
+      "type": "",
+      "message": "Unified records must be created by the controlled source importer.",
+      "stack":
+          APIError: Unified records must be created by the controlled source importer.
+              at hooks.beforeChange (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:92572)
+              at H (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:39659)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async rc (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:156062)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+              at async X (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:28710)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 403,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mUnified content withdrawal requires an explicit publication contract.[39m
+    err: {
+      "type": "",
+      "message": "Unified content withdrawal requires an explicit publication contract.",
+      "stack":
+          APIError: Unified content withdrawal requires an explicit publication contract.
+              at hooks.beforeDelete (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:90549)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async X (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:52590)
+              at async rd (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:157341)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+              at async X (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:28710)
+              at async r0.handleResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:1:134357)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 409,
+      "name": "APIError"
+    }
+
+[08:52:38] [32mINFO[39m: [36mYou are not allowed to perform this action.[39m
+
+[08:52:38] [31mERROR[39m: [36mOnly a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.[39m
+    err: {
+      "type": "",
+      "message": "Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.",
+      "stack":
+          APIError: Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.
+              at hooks.beforeOperation (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:90768)
+              at l (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:139:64967)
+              at eK (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:87293)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:162216)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 403,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mOnly a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.[39m
+    err: {
+      "type": "",
+      "message": "Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.",
+      "stack":
+          APIError: Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.
+              at hooks.beforeOperation (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:90768)
+              at l (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:139:64967)
+              at eK (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:87293)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:162216)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 403,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mOnly a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.[39m
+    err: {
+      "type": "",
+      "message": "Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.",
+      "stack":
+          APIError: Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.
+              at hooks.beforeOperation (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:90768)
+              at l (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:139:64967)
+              at eK (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:87293)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:162216)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 403,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mOnly a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.[39m
+    err: {
+      "type": "",
+      "message": "Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.",
+      "stack":
+          APIError: Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.
+              at hooks.beforeOperation (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:90768)
+              at l (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:139:64967)
+              at eJ (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:82217)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async rR (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:160706)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 403,
+      "name": "APIError"
+    }
+
+2026-11-22 08:52:38.668 CST [95885] ERROR:  duplicate key value violates unique constraint "content_records_stable_key_idx"
+2026-11-22 08:52:38.668 CST [95885] DETAIL:  Key (stable_key)=(genshin:guides:cms-http-fixture) already exists.
+2026-11-22 08:52:38.668 CST [95885] STATEMENT:  insert into "content_records" ("id", "stable_key", "game_id", "kind", "legacy_id", "legacy_path", "body_format", "source_record", "structured_value", "review_evidence", "hold", "updated_at", "created_at", "_status") values (default, $1, $2, $3, $4, $5, $6, $7, default, default, $8, $9, $10, $11) returning "id", "stable_key", "game_id", "kind", "legacy_id", "legacy_path", "body_format", "source_record", "structured_value", "review_evidence", "hold", "updated_at", "created_at", "_status"
+
+[08:52:38] [32mINFO[39m: [36mThe following field is invalid: stableKey[39m
+
+[08:52:38] [31mERROR[39m: [36mOnly a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.[39m
+    err: {
+      "type": "",
+      "message": "Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.",
+      "stack":
+          APIError: Only a reviewer can update approved content or unpublish it. Save editorial changes with draft=true.
+              at hooks.beforeOperation (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:90768)
+              at l (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:139:64967)
+              at eK (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:87293)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:162216)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 403,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mNew guide identity and source template must match the immutable game contract.[39m
+    err: {
+      "type": "",
+      "message": "New guide identity and source template must match the immutable game contract.",
+      "stack":
+          APIError: New guide identity and source template must match the immutable game contract.
+              at hooks.beforeChange (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:98743)
+              at eW (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:78547)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async eK (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:88980)
+              at async handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:162216)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 400,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mNew guide game relationship mismatch.[39m
+    err: {
+      "type": "",
+      "message": "New guide game relationship mismatch.",
+      "stack":
+          APIError: New guide game relationship mismatch.
+              at hooks.beforeChange (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:98988)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async H (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:39653)
+              at async rc (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:156062)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+              at async X (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:28710)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 400,
+      "name": "APIError"
+    }
+
+[08:52:38] [32mINFO[39m: [36mDocument with ID 4 is currently locked by another user and cannot be updated.[39m
+
+[08:52:38] [31mERROR[39m: [36mContent is locked by another editor.[39m
+    err: {
+      "type": "",
+      "message": "Content is locked by another editor.",
+      "stack":
+          APIError: Content is locked by another editor.
+              at hooks.beforeOperation (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:91610)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async l (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:139:64961)
+              at async eD (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:67834)
+              at async rk (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:160315)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 423,
+      "name": "APIError"
+    }
+
+[08:52:38] [31mERROR[39m: [36mOnly a reviewer can restore editorial versions.[39m
+    err: {
+      "type": "",
+      "message": "Only a reviewer can restore editorial versions.",
+      "stack":
+          APIError: Only a reviewer can restore editorial versions.
+              at hooks.beforeOperation (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:331:91054)
+              at l (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:139:64967)
+              at eD (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:67847)
+              at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+              at async rk (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:160315)
+              at async includes.i.handler (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_0q_u13t4n_j_n._.js:141:113351)
+              at async B (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:16644)
+              at async /Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/server/chunks/_1pw2-1rv7ruvh._.js:1:25022
+              at async r0.renderToResponse (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:14399)
+              at async r0.executeRequest (/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/next@16.4.6_@types+node@22.15.30_react-dom@19.2.6_react@19.2.6__react@19.2.6_sass@1.77.4/node_modules/next/dist/compiled/next-server/app-route-turbo.runtime.prod.js:5:17556)
+      "data": null,
+      "isOperational": true,
+      "isPublic": true,
+      "status": 403,
+      "name": "APIError"
+    }
+
+[08:52:38] [32mINFO[39m: [36mYou are not allowed to perform this action.[39m
+
+2026-11-22 08:52:38.767 CST [93898] LOG:  received fast shutdown request
+
+2026-11-22 08:52:38.767 CST [93898] LOG:  aborting any active transactions
+
+2026-11-22 08:52:38.768 CST [95885] FATAL:  terminating connection due to administrator command
+2026-11-22 08:52:38.768 CST [95891] FATAL:  terminating connection due to administrator command
+
+2026-11-22 08:52:38.768 CST [93898] LOG:  background worker "logical replication launcher" (PID 93904) exited with exit code 1
+
+2026-11-22 08:52:38.770 CST [93899] LOG:  shutting down
+
+2026-11-22 08:52:38.770 CST [93899] LOG:  checkpoint starting: shutdown immediate
+
+error: terminating connection due to administrator command
+    at ignore-listed frames {
+  length: 116,
+  severity: 'FATAL',
+  code: '57P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postgres.c',
+  line: '3317',
+  routine: 'ProcessInterrupts',
+  client: Client {
+    _events: [Object: null prototype] { error: [Function (anonymous)] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    connectionParameters: ConnectionParameters {
+      user: 'cms_app',
+      database: 'cms_probe_74e2ef7fc8413619',
+      port: 60844,
+      host: '127.0.0.1',
+      binary: false,
+      options: undefined,
+      ssl: false,
+      client_encoding: '',
+      replication: undefined,
+      isDomainSocket: false,
+      application_name: undefined,
+      fallback_application_name: undefined,
+      statement_timeout: false,
+      lock_timeout: false,
+      idle_in_transaction_session_timeout: false,
+      query_timeout: false,
+      connect_timeout: 5
+    },
+    user: 'cms_app',
+    database: 'cms_probe_74e2ef7fc8413619',
+    port: 60844,
+    host: '127.0.0.1',
+    replication: undefined,
+    _Promise: [Function: Promise],
+    _types: TypeOverrides { _types: [Object], text: {}, binary: {} },
+    _ending: true,
+    _ended: false,
+    _connecting: false,
+    _connected: true,
+    _connectionError: false,
+    _queryable: false,
+    _activeQuery: null,
+    enableChannelBinding: false,
+    connection: Connection {
+      _events: [Object: null prototype],
+      _eventsCount: 23,
+      _maxListeners: undefined,
+      stream: [Socket],
+      _keepAlive: false,
+      _keepAliveInitialDelayMillis: 0,
+      parsedStatements: {},
+      ssl: false,
+      _ending: true,
+      _emitMessage: false,
+      _connecting: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    _queryQueue: [],
+    binary: false,
+    processID: 95885,
+    secretKey: -1104033214,
+    ssl: false,
+    _connectionTimeoutMillis: 5000,
+    _connectionCallback: null,
+    connectionTimeoutHandle: Timeout {
+      _idleTimeout: -1,
+      _idlePrev: null,
+      _idleNext: null,
+      _idleStart: 1218,
+      _onTimeout: null,
+      _timerArgs: undefined,
+      _repeat: null,
+      _destroyed: true,
+      Symbol(refed): false,
+      Symbol(kHasPrimitive): false,
+      Symbol(asyncId): 78,
+      Symbol(triggerId): 0,
+      Symbol(kAsyncContextFrame): [AsyncContextFrame [Map]]
+    },
+    saslSession: null,
+    release: [Function (anonymous)],
+    readyForQuery: true,
+    hasExecuted: true,
+    _poolUseCount: 150,
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+
+⨯ uncaughtException:  error: terminating connection due to administrator command
+    at ignore-listed frames {
+  length: 116,
+  severity: 'FATAL',
+  code: '57P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postgres.c',
+  line: '3317',
+  routine: 'ProcessInterrupts',
+  client: Client {
+    _events: [Object: null prototype] { error: [Function (anonymous)] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    connectionParameters: ConnectionParameters {
+      user: 'cms_app',
+      database: 'cms_probe_74e2ef7fc8413619',
+      port: 60844,
+      host: '127.0.0.1',
+      binary: false,
+      options: undefined,
+      ssl: false,
+      client_encoding: '',
+      replication: undefined,
+      isDomainSocket: false,
+      application_name: undefined,
+      fallback_application_name: undefined,
+      statement_timeout: false,
+      lock_timeout: false,
+      idle_in_transaction_session_timeout: false,
+      query_timeout: false,
+      connect_timeout: 5
+    },
+    user: 'cms_app',
+    database: 'cms_probe_74e2ef7fc8413619',
+    port: 60844,
+    host: '127.0.0.1',
+    replication: undefined,
+    _Promise: [Function: Promise],
+    _types: TypeOverrides { _types: [Object], text: {}, binary: {} },
+    _ending: true,
+    _ended: false,
+    _connecting: false,
+    _connected: true,
+    _connectionError: false,
+    _queryable: false,
+    _activeQuery: null,
+    enableChannelBinding: false,
+    connection: Connection {
+      _events: [Object: null prototype],
+      _eventsCount: 23,
+      _maxListeners: undefined,
+      stream: [Socket],
+      _keepAlive: false,
+      _keepAliveInitialDelayMillis: 0,
+      parsedStatements: {},
+      ssl: false,
+      _ending: true,
+      _emitMessage: false,
+      _connecting: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    _queryQueue: [],
+    binary: false,
+    processID: 95885,
+    secretKey: -1104033214,
+    ssl: false,
+    _connectionTimeoutMillis: 5000,
+    _connectionCallback: null,
+    connectionTimeoutHandle: Timeout {
+      _idleTimeout: -1,
+      _idlePrev: null,
+      _idleNext: null,
+      _idleStart: 1218,
+      _onTimeout: null,
+      _timerArgs: undefined,
+      _repeat: null,
+      _destroyed: true,
+      Symbol(refed): false,
+      Symbol(kHasPrimitive): false,
+      Symbol(asyncId): 78,
+      Symbol(triggerId): 0,
+      Symbol(kAsyncContextFrame): [AsyncContextFrame [Map]]
+    },
+    saslSession: null,
+    release: [Function (anonymous)],
+    readyForQuery: true,
+    hasExecuted: true,
+    _poolUseCount: 150,
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+
+error: terminating connection due to administrator command
+    at ignore-listed frames {
+  length: 116,
+  severity: 'FATAL',
+  code: '57P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postgres.c',
+  line: '3317',
+  routine: 'ProcessInterrupts',
+  client: Client {
+    _events: [Object: null prototype] { error: [Function (anonymous)] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    connectionParameters: ConnectionParameters {
+      user: 'cms_app',
+      database: 'cms_probe_74e2ef7fc8413619',
+      port: 60844,
+      host: '127.0.0.1',
+      binary: false,
+      options: undefined,
+      ssl: false,
+      client_encoding: '',
+      replication: undefined,
+      isDomainSocket: false,
+      application_name: undefined,
+      fallback_application_name: undefined,
+      statement_timeout: false,
+      lock_timeout: false,
+      idle_in_transaction_session_timeout: false,
+      query_timeout: false,
+      connect_timeout: 5
+    },
+    user: 'cms_app',
+    database: 'cms_probe_74e2ef7fc8413619',
+    port: 60844,
+    host: '127.0.0.1',
+    replication: undefined,
+    _Promise: [Function: Promise],
+    _types: TypeOverrides { _types: [Object], text: {}, binary: {} },
+    _ending: true,
+    _ended: false,
+    _connecting: false,
+    _connected: true,
+    _connectionError: false,
+    _queryable: false,
+    _activeQuery: null,
+    enableChannelBinding: false,
+    connection: Connection {
+      _events: [Object: null prototype],
+      _eventsCount: 23,
+      _maxListeners: undefined,
+      stream: [Socket],
+      _keepAlive: false,
+      _keepAliveInitialDelayMillis: 0,
+      parsedStatements: {},
+      ssl: false,
+      _ending: true,
+      _emitMessage: false,
+      _connecting: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    _queryQueue: [],
+    binary: false,
+    processID: 95891,
+    secretKey: 1714241235,
+    ssl: false,
+    _connectionTimeoutMillis: 5000,
+    _connectionCallback: null,
+    connectionTimeoutHandle: Timeout {
+      _idleTimeout: -1,
+      _idlePrev: null,
+      _idleNext: null,
+      _idleStart: 1345,
+      _onTimeout: null,
+      _timerArgs: undefined,
+      _repeat: null,
+      _destroyed: true,
+      Symbol(refed): false,
+      Symbol(kHasPrimitive): false,
+      Symbol(asyncId): 368,
+      Symbol(triggerId): 0,
+      Symbol(kAsyncContextFrame): [AsyncContextFrame [Map]]
+    },
+    saslSession: null,
+    release: [Function (anonymous)],
+    readyForQuery: true,
+    hasExecuted: true,
+    _poolUseCount: 14,
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+
+⨯ uncaughtException:  error: terminating connection due to administrator command
+    at ignore-listed frames {
+  length: 116,
+  severity: 'FATAL',
+  code: '57P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: 'postgres.c',
+  line: '3317',
+  routine: 'ProcessInterrupts',
+  client: Client {
+    _events: [Object: null prototype] { error: [Function (anonymous)] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    connectionParameters: ConnectionParameters {
+      user: 'cms_app',
+      database: 'cms_probe_74e2ef7fc8413619',
+      port: 60844,
+      host: '127.0.0.1',
+      binary: false,
+      options: undefined,
+      ssl: false,
+      client_encoding: '',
+      replication: undefined,
+      isDomainSocket: false,
+      application_name: undefined,
+      fallback_application_name: undefined,
+      statement_timeout: false,
+      lock_timeout: false,
+      idle_in_transaction_session_timeout: false,
+      query_timeout: false,
+      connect_timeout: 5
+    },
+    user: 'cms_app',
+    database: 'cms_probe_74e2ef7fc8413619',
+    port: 60844,
+    host: '127.0.0.1',
+    replication: undefined,
+    _Promise: [Function: Promise],
+    _types: TypeOverrides { _types: [Object], text: {}, binary: {} },
+    _ending: true,
+    _ended: false,
+    _connecting: false,
+    _connected: true,
+    _connectionError: false,
+    _queryable: false,
+    _activeQuery: null,
+    enableChannelBinding: false,
+    connection: Connection {
+      _events: [Object: null prototype],
+      _eventsCount: 23,
+      _maxListeners: undefined,
+      stream: [Socket],
+      _keepAlive: false,
+      _keepAliveInitialDelayMillis: 0,
+      parsedStatements: {},
+      ssl: false,
+      _ending: true,
+      _emitMessage: false,
+      _connecting: true,
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    _queryQueue: [],
+    binary: false,
+    processID: 95891,
+    secretKey: 1714241235,
+    ssl: false,
+    _connectionTimeoutMillis: 5000,
+    _connectionCallback: null,
+    connectionTimeoutHandle: Timeout {
+      _idleTimeout: -1,
+      _idlePrev: null,
+      _idleNext: null,
+      _idleStart: 1345,
+      _onTimeout: null,
+      _timerArgs: undefined,
+      _repeat: null,
+      _destroyed: true,
+      Symbol(refed): false,
+      Symbol(kHasPrimitive): false,
+      Symbol(asyncId): 368,
+      Symbol(triggerId): 0,
+      Symbol(kAsyncContextFrame): [AsyncContextFrame [Map]]
+    },
+    saslSession: null,
+    release: [Function (anonymous)],
+    readyForQuery: true,
+    hasExecuted: true,
+    _poolUseCount: 14,
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false
+  }
+}
+
+2026-11-22 08:52:38.825 CST [93899] LOG:  checkpoint complete: wrote 1236 buffers (7.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.041 s, sync=0.014 s, total=0.056 s; sync files=660, longest=0.001 s, average=0.001 s; distance=6111 kB, estimate=33296 kB; lsn=0/3E771F0, redo lsn=0/3E771F0
+
+2026-11-22 08:52:38.829 CST [93898] LOG:  database system is shut down

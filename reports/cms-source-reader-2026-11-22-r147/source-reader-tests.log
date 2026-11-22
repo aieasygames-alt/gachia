@@ -1,0 +1,21 @@
+✔ security rollout advances exactly five Next owners while preserving published inputs and Router (2.18925ms)
+✔ security source transition rejects content (1.1775ms)
+✔ security source transition rejects router (0.1575ms)
+✔ security source transition rejects staging (0.444666ms)
+✔ security source transition rejects bindings (0.183333ms)
+✔ security source transition rejects missing-owner (0.111375ms)
+✔ security source transition rejects wrong-runtime (0.122792ms)
+✔ security source transition rejects ci (0.09825ms)
+✔ security source transition rejects parent (0.103209ms)
+✔ security source transition rejects recovery (0.152208ms)
+✔ security source transition rejects allocation (0.118917ms)
+✔ security source transition rejects deployment (0.1095ms)
+✔ security source transition rejects service (0.100125ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 223.504

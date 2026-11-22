@@ -1,0 +1,12 @@
+{
+  "runID": 44914833496,
+  "status": "full_exact_ci_passed",
+  "commit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454",
+  "url": "https://github.com/aieasygames-alt/gachia/actions/runs/44914833496",
+  "requiredChecks": 7,
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+    "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+  },
+  "productionDeployments": 5
+}

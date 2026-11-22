@@ -1,0 +1,190 @@
+{
+  "kind": "cms-source-reader-delivery-r147",
+  "status": "installed_verified_and_recoverable",
+  "sourceCommit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454",
+  "application": {
+    "sourceCommit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454",
+    "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/services/content-cms",
+    "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T110820Z-cms-next-security-r145-db547bec/services/content-cms",
+    "buildID": "07SfxH6yuK4ZjpP-gIUsg",
+    "nextVersion": "16.4.6",
+    "databaseMigrationRequired": false,
+    "application": {
+      "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/application-manifest.json",
+      "pin": "2a50d6561acda0950b20412158f12d556072341c027dbcbb8a6e4a4f75f3c1b6"
+    },
+    "runtimeDependencies": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/runtime-dependencies.json",
+      "pin": "a63ab8b571b2634f7fd0bb22064737bea3e9856551e50ca61dfaa088e527599b"
+    },
+    "files": 801,
+    "releaseFiles": 356,
+    "dependencyFiles": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a",
+      "entries": 43788
+    },
+    "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261122T005537Z-3e6bb1",
+    "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/cms-source-reader-r147-a95cf75170bb",
+    "healthy": true,
+    "allDatabaseAndMediaUnchanged": true,
+    "schemaMigrationRun": false,
+    "previousApplicationRecoveryRehearsed": true,
+    "previousApplicationPreserved": true
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+    "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+    "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+  },
+  "cmsObservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cms-final.json.gz",
+    "pin": "e90a3cb95a8925daf0d96f6f05db7da5fe3e0ff08c5183b16785b4d27a04fded"
+  },
+  "records": 2966,
+  "genshinEditingRecords": 476,
+  "genshinEditingCounts": {
+    "materials": 269,
+    "characters": 117,
+    "character-materials": 90
+  },
+  "sourceCount": 115,
+  "allOwnersCurrent": true,
+  "databaseTablesPreserved": 43,
+  "databaseSequencesAndMediaPreserved": true,
+  "dependenciesChanged": false,
+  "nextVersion": "16.4.6",
+  "payloadVersion": "3.92.1",
+  "reactVersion": "19.2.6",
+  "contentWrites": 0,
+  "reviewWrites": 0,
+  "schemaMigrations": 0,
+  "editingSourceSyncs": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "productionServicesPreserved": 6,
+  "stagingServicesPreserved": 4,
+  "validation": {
+    "standardNextBuild": "passed",
+    "cmsTypecheck": "passed",
+    "sourceContractTests": 13,
+    "sourceContractSkipped": 0,
+    "postgresHTTPGroups": 15,
+    "docsScopeTests": 39,
+    "actualReleaseReaderTraversals": 2,
+    "installedHTTPChecks": 20,
+    "installationSourceCI": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/closeout-ci-final.json",
+      "pin": "3d43a90e7fb427f94c35ecfd12b97cdd6f6e0dffa8880624e217cc6149760a12",
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/44914833496",
+      "commit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454"
+    }
+  },
+  "evidence": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/application-prepared.json",
+      "pin": "6205fba7ef7a88ebe1fa4a671309e9b738c355312bb842cd03f4d21613d61fc8"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/application-installed.json",
+      "pin": "a1170cefe1f48a2b928e68f9c68a904d68b0f3f0a72efe5948d61665b94c5778"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/application-recovery.json",
+      "pin": "b0250d02424624447749784cf8d67abb2f8ef688060a4c8d0c096abb0421f504"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/runtime-dependencies.json",
+      "pin": "a63ab8b571b2634f7fd0bb22064737bea3e9856551e50ca61dfaa088e527599b"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cold-backup.json",
+      "pin": "7b929835e41081d467b8ffeb54d7d595b880588a78871fae204f711a558e08c6"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/database-before.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/database-before-install.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/database-after-install.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/database-final.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/database-after-verification.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cms-before-proof.json",
+      "pin": "2d86666ae03e9c1f4f222dbf3953556b4ec4dc78fbe736693385b01e95d0f01e"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cms-final-proof.json",
+      "pin": "976a359c43df3ae2a8744fe1d049be3eb3ec83512896dbee5b93cf4d06a1ae65"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/prepared-reader.json",
+      "pin": "bc0dedd06329dc4f66d73c7541db840202cebf282633247288a43bc4be960a36"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/installed-reader.json",
+      "pin": "e835353299067b9400f1e3e34b0f3214a86378a7df39f50157ff92d8711c08b7"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cloud-before.json",
+      "pin": "3ae2449a18884a5cac1dbe852d2ecb316b5c4cf97aec5d06e4be94d6a2a5c652"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cloud-after.json",
+      "pin": "e0f95144a8f02e3a67131d407b1f6d8e9cdee9aa14d6fcd65b8983624a32f7b4"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/http.json",
+      "pin": "ede7dd3b5c2a988ff0ca5b67ef95e6d6f183cdc2eee2ea6c57fb685bbd8b1c46"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/postgres-smoke/postgres-smoke.json",
+      "pin": "b2b5c1d2073d079d9721b2a462bdde690304c4a2fc5859776e2261c05d6f3168"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/source-reader-tests.log",
+      "pin": "1fd49f8a45b3b5cd9eb26230da1d641f2f0a71498f92bd8eab4f13e1d9f19388"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/typecheck.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cms-build.log",
+      "pin": "6a556b8aa9c1481e0f86e04256fc8308a488b87e430512b68e8fb762bc837b6e"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/docs-scope.log",
+      "pin": "7ad2ee761d08b5c7a796499b959f2570bd8c655beb2243aac87a3c9b6d9da37e"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/validation.json",
+      "pin": "0db66a27a0445835941524c8e52840958abdd619238d255d12105275b11ce4f8"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/wrangler-auth-refresh.json",
+      "pin": "0a84b3486442a838ec4843fee97018e734779878f762b3f2bb24f6c9d139d9a4"
+    }
+  ],
+  "freeGiB": 15.09,
+  "next": "Independently review and patch remaining better-auth/adapter, qs, glob and minimatch advisories. Account features stay disabled. Continue from R146 source and unchanged R144 CMS AFTER; do not replay completed content, reviews, synchronization or deployments."
+}

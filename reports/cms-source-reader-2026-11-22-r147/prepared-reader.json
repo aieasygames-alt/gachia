@@ -1,0 +1,508 @@
+{
+  "action": "prepared-reader",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/application-manifest.json",
+    "pin": "2a50d6561acda0950b20412158f12d556072341c027dbcbb8a6e4a4f75f3c1b6"
+  },
+  "sourceCommit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454",
+  "observedAt": "2026-11-22T00:55:03.781Z",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+    "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+  },
+  "sourceCount": 115,
+  "allOwnersCurrent": true,
+  "owners": {
+    "genshin": {
+      "service": "gachia-game-genshin",
+      "versionId": "0382cd12-683b-46b0-817d-02bb89f5fd2b"
+    },
+    "nte": {
+      "service": "gachia-game-nte",
+      "versionId": "b690d5ae-1084-4711-96d9-a313182cb5f7"
+    },
+    "azur-promilia": {
+      "service": "gachia-game-azur-promilia",
+      "versionId": "78442797-d15e-441e-a00d-2faa6d9aa543"
+    },
+    "lvmeng": {
+      "service": "gachia-game-lvmeng",
+      "versionId": "50812a8a-012f-428e-bb4b-780530181c09"
+    },
+    "main": {
+      "service": "gachia",
+      "versionId": "9843820e-6676-4c02-a393-d814c8bedbc3"
+    }
+  },
+  "sourceHashes": [
+    {
+      "sourcePath": "apps/game-azur-promilia/lib/data.ts",
+      "sha256": "55868f2f59c1bdd283ad9e71ffb71b32d8a971f9e6eb7dbd8a34a8f2a0522908"
+    },
+    {
+      "sourcePath": "apps/game-genshin/lib/data.ts",
+      "sha256": "abb72afec9ef8d19b2cda807c4b407a7cec2eb5d6e600cc7d0e1e508c7ebdcbd"
+    },
+    {
+      "sourcePath": "apps/game-lvmeng/lib/data.ts",
+      "sha256": "1dba7658c4ad97aa2f2aa30aabbf8e537d3e861177c9614d6db58c60d3247264"
+    },
+    {
+      "sourcePath": "apps/game-nte/lib/data.ts",
+      "sha256": "e2c049cf024efdd45aef9b9a25d426e22173364e70553e4822d33297cce86eba"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-character-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-characters.json",
+      "sha256": "7d8394e1777c3bef7a7f9f72c6d6adc633fad68977affd087d6aafa8a4ec143b"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-guides.json",
+      "sha256": "926f7ba0c92e7e5b5930a137aebd25380244f11a86aa0f2c886a4068d7d1d25d"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-materials.json",
+      "sha256": "87b9ad367244b3dc62ee5fe3e48604c5153edf2bd21cafcb5145531ca63d6700"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/raw-weapons.json",
+      "sha256": "af7e4bc6cc6b6def48c4319c4cf0cc9098ecb214cf8d9c24e14d7cf3907b924d"
+    },
+    {
+      "sourcePath": "packages/data/games/ananta/tier-lists.ts",
+      "sha256": "7c04e7f1a7bc80182138acda73c67a04fd9efec94f2b65766e3bc9edc2cc5472"
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-characters.json",
+      "sha256": "292e096e35fdb5cd98d1188d1d23a9e46998741930e2095f5a1d8ee928094c39"
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-guides.json",
+      "sha256": "4d31d4fd827512aaabf04b9821810685481e90f6989ae0bba41043eb114e1ba8"
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-redeem-codes.json",
+      "sha256": "6eafa12c388c59db5a67398b94fd903a82ae70f4ebf36f729312da567e924cef"
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/raw-regions.json",
+      "sha256": "5d61d30a90b2e75a2484acb147debb2168b3ed79fa96929239f9e6a497c29b12"
+    },
+    {
+      "sourcePath": "packages/data/games/aniimo/tier-lists.ts",
+      "sha256": "81005c424654478e683e3d3e01da6d7a87a602d8826ed659d6b71e6044ede4b8"
+    },
+    {
+      "sourcePath": "packages/data/games/azur-promilia/progression.ts",
+      "sha256": "98a873ac479e7ba03ae22285b5410e106aaa5f85c20c0b0298d6096c75f9621c"
+    },
+    {
+      "sourcePath": "packages/data/games/azur-promilia/raw-characters.json",
+      "sha256": "e4479476d98f53d2a9add1c5dca7158d904897667fd54a320ee82b056aea8866"
+    },
+    {
+      "sourcePath": "packages/data/games/azur-promilia/tier-lists.ts",
+      "sha256": "ebb49ee734f30e4f24a620ced4843874f8d0876b7e36c90a132d1e3489b40c66"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-character-materials.json",
+      "sha256": "3170dc7edb9f022388aa6bb0fec010665f7cdb70c29df01fcc2283790a8dced3"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-characters.json",
+      "sha256": "6d1dc554a8a2772aab0cee23de6b655191c35fb2503403d29ecf043412c64e19"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-gear-sets.json",
+      "sha256": "a56407c714f74032e99f21507fb9ed8a2d6b85838cdfc50871fbae29d2f9568a"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-guides.json",
+      "sha256": "f5d7aafb060a93b2f2d1b0a911079445f85749ce8c303b6f0d0841908cb30efa"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-materials.json",
+      "sha256": "107b4c3f3b78019b6620a9c3df8fa42883e54c34e1b27416e007b0d77758858e"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-regions.json",
+      "sha256": "07936da77a16f69b568a75c1cb56b2821c37723882807ccf0161fb878751f5ab"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/raw-weapons.json",
+      "sha256": "d03e4dab76a5a94309a71582dd3e17521b60366fa16522069dea0379c72d05f1"
+    },
+    {
+      "sourcePath": "packages/data/games/endfield/tier-lists.ts",
+      "sha256": "de4c16ccaf945eb8ab6ed498af725f252c8c0e848774e08972f3292a99715d7b"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-artifacts.json",
+      "sha256": "ab5a90d0ea792560a058f87cf1d5be606f7dd2e1ec5f8191d0075541eac619e6"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-materials.json",
+      "sha256": "3e7a3eb1495612ae1a265e5fe1304c84a36972dba8bc6fbb3d79c829ea7fdb88"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-character-summaries.json",
+      "sha256": "9a0be82bc9655d4eac291f996f0b988ab8e67e547a14701bec68556813ec940f"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-characters.json",
+      "sha256": "60526cc4d5c040db56d30da306618ff55741048048b0c82be3236ec552f8b5f1"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-guides.json",
+      "sha256": "d8070173fa4bf220f7b92249db1fc98a2641a86d805897afefe850f8198e5a72"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sha256": "ae16a07aea5650a1ae6d488369bdd154dae6778ff186dc8ed94f109992c584d4"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-redeem-codes.json",
+      "sha256": "859af362400044021a85a1cf353d86ad6da2cfd0b54072e1582dc8564bd7f9d4"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-regions.json",
+      "sha256": "037c917f292e5515e43e5772cd1910878caf9dac0c2d964ac4d4c74d5e33d6d6"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/raw-weapons.json",
+      "sha256": "9154393f32c850d015754d2f793e0d05cdbabdaee285bca2e2f9c8868ca60e4e"
+    },
+    {
+      "sourcePath": "packages/data/games/genshin/tier-lists.ts",
+      "sha256": "6c3bb8cc7f74366f5bacb2adc165b06b1855e3a769ed6a513a4063081f73b231"
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-character-materials.json",
+      "sha256": "61104ae86d31d33589b182c45ec52e27af0763d07e0d36545e85e5e34acb6963"
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-characters.json",
+      "sha256": "7150c0c560afba80877cb7d1946f4cdc373fcdae4a9d3c2a74fa4f3ef2aa601c"
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-guides.json",
+      "sha256": "da7ea0afb0577fe6c59325c815e12c89735ffcdc5a25dda9fe39d25e7cca4265"
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-materials.json",
+      "sha256": "9c011ad9715c0fdc604f8482f01d0a20319580368a048aa7bd90f9ebb16f6c43"
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-regions.json",
+      "sha256": "389458b3f0fddf4e1bc42ec27e5f3079d47d537312385135f31ab191a41ab327"
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/raw-weapons.json",
+      "sha256": "648a1787bd21454dc0ca832621bcf366a12bb17558e6ca515cef25c7a1310c23"
+    },
+    {
+      "sourcePath": "packages/data/games/guihuan/tier-lists.ts",
+      "sha256": "9f16733b7b3f000d4e8059f240f26f7d0c69459e23acf20825b2b2c055b21c45"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-astral-ops.json",
+      "sha256": "8853f5e88811a5091166b7fa69d2ec36cebc047d97613ee234f478a06947afbb"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-characters.json",
+      "sha256": "2fefa58de0b12a061717c9a355e2c1f87f3b37752c55c635c91cace21d07061f"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-guides.json",
+      "sha256": "c04aa965878b4d1a18e6d3b9db24485822604be9ee155731a47e24df83dc7fe3"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-materials.json",
+      "sha256": "b3abcff08b66da1b21336fddb95bc2300be0da351de23aa32f032e06d04886ec"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-stigma-sets.json",
+      "sha256": "f90b36f9e54ce1f667bec08ab5d8893e6cc18081ec875cd4c2b861f6d3fbc528"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/raw-weapons.json",
+      "sha256": "16b7c3bb461d84d5b28995f0f2b2b8d4bb991fe1903d6d95b6be47e51ef2967a"
+    },
+    {
+      "sourcePath": "packages/data/games/hi3/tier-lists.ts",
+      "sha256": "b41795c4fa7c59c39390f1b85997e4eb043ac8aad16b6c26c4e2db3bb7f63caf"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-anomalies.json",
+      "sha256": "429676a71330490b69718c8fdd65a30f2e7ee7c7d030f132ba5b26ccbc83e903"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-builds.json",
+      "sha256": "de0c7cb8db8615592f6a94917bf387c20421d38049bb56570c99d6687e57c381"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-character-materials.json",
+      "sha256": "e14d3d6a90b6158b8d0c6e3664ff4bb11b1f3ca9d9dcb32ae84f85d3dfc39cb6"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-character-summaries.json",
+      "sha256": "8e16cc5e060f3bf2803bb4f36848d56b08c7924961c41c7bca345d7e769f27cc"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-characters.json",
+      "sha256": "b4fbe091f17fff4e57e28a123eb3e66aa8792afe86aa5b6eb942e71d800b8335"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-disk-sets.json",
+      "sha256": "43db37750a46b2b63affc1ff43f3bf43c8e2de03166f2a4d4009c2efc08112f6"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-gacha-system.json",
+      "sha256": "116bf6ec0d9d172fa9f0f19a651fce95362a855e070708ce0492e5a530d44be0"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-guides.json",
+      "sha256": "76536e016c40e9432f396157bec037c0654936738b75cff8807b2d351e3389a6"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-image-sources.json",
+      "sha256": "e0982edbf354d45e42d8e606d467a46a5089a1f160e6ac72cc5dce2b3c025838"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-materials.json",
+      "sha256": "657fbf66e9f53688351570f87824acf1706c9f62e2a330f5a4760ad2638e2233"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-redeem-codes.json",
+      "sha256": "2d906e1df4b8ed9da52193ce1749426827978f5be532aee83fbd6887f2b22d39"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-regions.json",
+      "sha256": "edbb257de77e51ef540d8f617a155c2eb9a99dfb3d0e29334929cbe06ecff910"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/raw-weapons.json",
+      "sha256": "f46984d25d5c7013e4434dcee1ed0cf0544687b480e845c0e4e3c4b20bf508dc"
+    },
+    {
+      "sourcePath": "packages/data/games/nte/tier-lists.ts",
+      "sha256": "bfd2b39dd3ca422b3f9b9f1b304da452a1f2139f87e1e1787f933aad4cab1267"
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-character-summaries.json",
+      "sha256": "6dec9aea8d9f2f52eadc9d8d1f8e56777879f74d5a7d75500fbd89fadeb289e8"
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-characters.json",
+      "sha256": "47e0e1fbbd475fd80e63c3b96f0fb3b6ec26b6e6c8756e676793589228a2659a"
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-guides.json",
+      "sha256": "7a3a5bb63d114d42d2c3cd6b4214a8174e8d75c3eeb2c2498727025fdcf37df9"
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-materials.json",
+      "sha256": "ffea53c1592f82c65a17d6b28d7008832676aa3ea20c48a9a3cc21442b315ed1"
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-redeem-codes.json",
+      "sha256": "3cf6cc72eb329a0abb23f3a4ae41e1765012be5c222f39076dc07c3a3ab664f2"
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/roco-cn/tier-lists.ts",
+      "sha256": "25300bf3e74af0395b36732811517b3d3779b70fc78411d8df2bf91c3aa66504"
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-characters.json",
+      "sha256": "c994d4d179c47e229dff8f1d1dfc528bd49820ce9d86f1229ddbdebc776bc689"
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-guides.json",
+      "sha256": "209d7983c1682ce4d31fec5e40274853be451e2b1611fb348276039c10cf9cfb"
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-redeem-codes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/roco/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/roco/tier-lists.ts",
+      "sha256": "3a8fbdadc188d2ab04a927ef0b5386df9d4acd564cd20465942a416239e18071"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-character-materials.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-characters.json",
+      "sha256": "b8dd35af7c7076f8944e37a9677badeb5c373b6fcbb0e161044a85ac8e47a9ab"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-guides.json",
+      "sha256": "61346b0d5f1ca3600d58be0464a9e610d7c9a24cdf466cced015b9c8449f939f"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-materials.json",
+      "sha256": "9cd7dfb2eb3a23f2a594dbfe76f050d1d221f99457808b38e62de07b69f175c6"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-redeem-codes.json",
+      "sha256": "620ffabb94306ccafb456fe1b666d1053dae56f3dcb6c14e05b5e1f4828add19"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/raw-weapons.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/sea/tier-lists.ts",
+      "sha256": "56a48ef34d48d98e3b9654abe3abfcba935a1487e0043ebf55d0094d74c6e0f0"
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-guides.json",
+      "sha256": "eb7002cc027a652e89059ec45733e42898d9b8421883a3e7eb32a4372f51a9d3"
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-materials.json",
+      "sha256": "d4417ce41e46786f35c4b4364bc32278f3fa1419f6480621f3a9ff4300c9a03d"
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-redeem-codes.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/raw-weapons.json",
+      "sha256": "c7c4d7dfa74718b066188eee10192dd90af5b78aba1a3de4aa9a0782d94a3ced"
+    },
+    {
+      "sourcePath": "packages/data/games/skjh/tier-lists.ts",
+      "sha256": "d4809110725b8ea96fefc39dc8df5426263718cb158b9443f8ce7a687b7ea414"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-character-materials.json",
+      "sha256": "f80c66941355b2f40f166850551c5b30ff1bfbd14b952d32683406c5a5885641"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-character-summaries.json",
+      "sha256": "7ccb54ff98020190a4d1d4997ec69efcf645fcf0d21b94645d8f635089d19d76"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-characters.json",
+      "sha256": "75d68d458694f46a95e15a94216b7a0fb9da5eadb14e1dfef3f90d56a2480f38"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-guides.json",
+      "sha256": "21f5f702ac56e818e0d8ccdd308e2208d031dc7e2e97ac3a6456ba8a2926f080"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-light-cones.json",
+      "sha256": "3c5b5b3107a3281899f354370a91a475d66c0eeb0f2b7f5778517086aba30ffc"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-materials.json",
+      "sha256": "226e8b8549fcd324d3c2fc06a81cbd4d71b71d07b2e63ea5249e206b5beab901"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-redeem-codes.json",
+      "sha256": "d21cd2bb00612bd0324c728bc2730c9a76e432e17925a9f7b665351992c1cd31"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-regions.json",
+      "sha256": "e7ff83d71e9558fa344d04b64e96fa24cfca40a0a9ed2bbb66162552f6e170a3"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/raw-relics.json",
+      "sha256": "08d7a4eefa45002708c9591c50ca1e4fd67a71370051bc80b213a261867eab92"
+    },
+    {
+      "sourcePath": "packages/data/games/starrail/tier-lists.ts",
+      "sha256": "41dfec02b16a9ce5d591b9e4707f77bb1b395750d5f14afd2b46eb7b17b7554a"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-character-materials.json",
+      "sha256": "09114fa267a69901e11e7da7ac9fe1355c9daa199425abdcfb52d6b71a89db7f"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-characters.json",
+      "sha256": "d0adb35281c040fd593c3f8d3a07c13f1f81ec95b7f221f0dca4bbc3e1391bb2"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-echoes.json",
+      "sha256": "ed7224d05f9353a4bda5f2a049ef3b69de4d719e35c273d3769bbc096123d3fb"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-guides.json",
+      "sha256": "0c0b6aefd18f3fe8e1b3750e750dffadba7d50fd44daaa7a1ac8b6fb2f088603"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-materials.json",
+      "sha256": "36e7e3193b0c2922569ac0b01c95fc8cace1c0819b297a53eba27750a1bd741a"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-redeem-codes.json",
+      "sha256": "5712ba38c2d9da9d5f3a5664d1dd2f0279446b66556bc182c390ec318d0bfce7"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-regions.json",
+      "sha256": "239528d752485917563f8459a47f3eadce09dd14a251886bd374905a47d8edc9"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/raw-weapons.json",
+      "sha256": "82db9f066ae1bc720f44471f37209222db445cd2084dcfa32627470041eed5d9"
+    },
+    {
+      "sourcePath": "packages/data/games/wuwa/tier-lists.ts",
+      "sha256": "80d4042ba520a1e61f0ffd3f2f2234b6cb3baa56b269e69d35d371c0fa528827"
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-characters.json",
+      "sha256": "86f1cc7eab09058cc6e25def488d126927dbfc1a65bcd1a9edabf72662f52e99"
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-drive-discs.json",
+      "sha256": "3a797420263ee6e2405730fe28127226992d76a59c2d7751df254799f8c9783c"
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-guides.json",
+      "sha256": "f7d520157ea36eacf83426b7354f4eb9d8accfa202c713f1b934732ec9d166a8"
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-materials.json",
+      "sha256": "63896b2f68e013f333830fa22b7c22fb63fea2c68b8ce34350513fb03908b0cd"
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-redeem-codes.json",
+      "sha256": "a827f1e443b9777294d89fd7b8cedae96d5c23353864e827ff9188982ce36b70"
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/raw-weapons.json",
+      "sha256": "d20de925010d0e59b6dcc8f1fe518708cc2511666c54693ca4bb511b7809c59f"
+    },
+    {
+      "sourcePath": "packages/data/games/zzz/tier-lists.ts",
+      "sha256": "9e8b4940ca79277537561ad1323fd6d3888257e1dcd332c37ac16e0d23dc95aa"
+    }
+  ],
+  "installedReader": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/services/content-cms/src/nte-release-history.ts",
+  "installedReaderSHA256": "f07225bd72da46295773cff3a2b7b6ce41ebcf84da0637b5e07e33168c9bbadf",
+  "runtimeHistory": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/scripts/public-runtime-history.mjs",
+  "runtimeHistorySHA256": "0eb2092d6a1128c09a4324f717cad94cb62e71e9126e5f21a32a2a388ac3850f",
+  "repositoryUse": "Historical Git objects and pinned absolute evidence only; executable modules imported from sealed release",
+  "applicationVerified": true,
+  "currentApplicationVerified": false,
+  "cmsWrites": 0,
+  "cloudWrites": 0
+}

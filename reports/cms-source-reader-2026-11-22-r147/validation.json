@@ -1,0 +1,16 @@
+{
+  "standardNextBuild": "passed",
+  "cmsTypecheck": "passed",
+  "sourceContractTests": 13,
+  "sourceContractSkipped": 0,
+  "postgresHTTPGroups": 15,
+  "docsScopeTests": 39,
+  "actualReleaseReaderTraversals": 2,
+  "installedHTTPChecks": 20,
+  "installationSourceCI": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/closeout-ci-final.json",
+    "pin": "3d43a90e7fb427f94c35ecfd12b97cdd6f6e0dffa8880624e217cc6149760a12",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/44914833496",
+    "commit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454"
+  }
+}

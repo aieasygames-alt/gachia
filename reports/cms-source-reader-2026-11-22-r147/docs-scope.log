@@ -1,0 +1,47 @@
+✔ runbook command 1 matches the real argument gate (1.09675ms)
+✔ runbook command 2 matches the real argument gate (0.076125ms)
+✔ runbook command 3 matches the real argument gate (0.0835ms)
+✔ runbook command 4 matches the real argument gate (0.04625ms)
+✔ runbook command 5 matches the real argument gate (0.050875ms)
+✔ runbook command 6 matches the real argument gate (0.036083ms)
+✔ runbook command 7 matches the real argument gate (0.066334ms)
+✔ runbook command 8 matches the real argument gate (0.08725ms)
+✔ runbook command 9 matches the real argument gate (0.072792ms)
+✔ runbook command 10 matches the real argument gate (0.090042ms)
+✔ runbook command 11 matches the real argument gate (0.055833ms)
+✔ runbook command 12 matches the real argument gate (0.151917ms)
+✔ runbook command 13 matches the real argument gate (0.043833ms)
+✔ runbook command 14 matches the real argument gate (0.054166ms)
+✔ runbook command 15 matches the real argument gate (0.056416ms)
+✔ runbook command 16 matches the real argument gate (0.049584ms)
+✔ runbook command 17 matches the real argument gate (0.033167ms)
+✔ runbook command 18 matches the real argument gate (0.021ms)
+✔ runbook command 19 matches the real argument gate (0.022ms)
+✔ runbook command 20 matches the real argument gate (0.021667ms)
+✔ runbook command 21 matches the real argument gate (0.020375ms)
+✔ runbook command 22 matches the real argument gate (0.021917ms)
+✔ runbook command 23 matches the real argument gate (0.018666ms)
+✔ runbook command 24 matches the real argument gate (0.020791ms)
+✔ runbook command 25 matches the real argument gate (0.02325ms)
+✔ runbook command 26 matches the real argument gate (0.025584ms)
+✔ runbook command 27 matches the real argument gate (0.025791ms)
+✔ runbook command 28 matches the real argument gate (0.017833ms)
+✔ runbook command 29 matches the real argument gate (0.031458ms)
+✔ runbook command 30 matches the real argument gate (0.082458ms)
+✔ runbook command 31 matches the real argument gate (0.03025ms)
+✔ runbook command 32 matches the real argument gate (0.027833ms)
+✔ runbook command 33 matches the real argument gate (0.035166ms)
+✔ runbook publish actions exist in the installed manager parser (137.080042ms)
+✔ operator handoff makes the remaining manual evidence and cloud gaps explicit (0.264667ms)
+✔ Payload CI permits only the task branch, remains read-only and has no deployment credentials (0.506458ms)
+✔ browser CI pins the matching preinstalled image without bypassing browser consumers (4.030916ms)
+✔ limited V1 stays on this Mac and separates verified local recovery from independent key custody (0.918084ms)
+✔ only bounded documentation changes skip heavy consumer checks; unknown changes fail closed (0.681625ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 250.125083

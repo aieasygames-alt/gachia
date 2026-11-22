@@ -1,0 +1,12 @@
+{
+  "batch": "R147",
+  "status": "complete",
+  "delivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/delivery.json",
+    "pin": "3c4a2cac196f28c7159dba9d719f3b32e21418baa1762a09296bc967a43975f0"
+  },
+  "sourceCommit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454",
+  "records": 2966,
+  "workerUploads": 0,
+  "productionDeployments": 0
+}

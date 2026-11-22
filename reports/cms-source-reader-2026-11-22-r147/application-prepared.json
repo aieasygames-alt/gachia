@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "a95cf75170bbafccdabbfcaaed3bc593fdc97454",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261121T110820Z-cms-next-security-r145-db547bec/services/content-cms",
+  "buildID": "07SfxH6yuK4ZjpP-gIUsg",
+  "nextVersion": "16.4.6",
+  "databaseMigrationRequired": false,
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/application-manifest.json",
+    "pin": "2a50d6561acda0950b20412158f12d556072341c027dbcbb8a6e4a4f75f3c1b6"
+  },
+  "runtimeDependencies": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/runtime-dependencies.json",
+    "pin": "a63ab8b571b2634f7fd0bb22064737bea3e9856551e50ca61dfaa088e527599b"
+  },
+  "files": 801,
+  "releaseFiles": 356,
+  "dependencyFiles": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-source-reader-2026-11-22-r147/cms-dependency-files.json.gz",
+    "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a",
+    "entries": 43788
+  }
+}
