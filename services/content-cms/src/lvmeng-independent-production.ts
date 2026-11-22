@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process'
 import { mkdirSync, mkdtempSync, readFileSync, rmSync } from 'node:fs'
 import { homedir } from 'node:os'
 import path from 'node:path'
-import { activeVersion, desktopCloudSnapshot, assertTopology } from '../../../scripts/desktop-cloud-release.mjs'
+import { desktopCloudSnapshot, assertTopology } from '../../../scripts/desktop-cloud-release.mjs'
 import { assertDiskBudget, GiB } from '../../../scripts/desktop-disk-preflight.mjs'
 import { migrationJSON, migrationPinned, migrationSave } from '../../../scripts/genshin-migration-http.mjs'
 import { executeLvmengIndependentRelease } from '../../../scripts/genshin-independent-release.mjs'
@@ -31,6 +31,10 @@ type Proof = { path: string; pin: string }
 type Request = { schemaVersion: 1; kind: 'lvmeng_release_request'; bundle: Proof; executorRunID: number; previewProxy?: string; publicProxy?: string }
 const githubCredential = () => execFileSync('gh', ['auth', 'token', '--hostname', 'github.com'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'], maxBuffer: 65536 }).trim()
 export const LVMENG_INDEPENDENT_POLICY = 'lvmeng-independent-existing-character-text-production-v1'
+export function assertLvmengProductionBaseline(sources: { allOwnersCurrent: boolean; baseline: unknown }, observed: unknown) {
+  assert.equal(sources.allOwnersCurrent, true, 'Lvmeng publication requires a complete current source index')
+  assertTopology(sources.baseline, observed)
+}
 export const lvmengReleaseKey = (request: Request, executorCI: any) => digest(migrationJSON({ policy: LVMENG_INDEPENDENT_POLICY, bundle: request.bundle, executorCI, ...(request.previewProxy ? { previewProxy: request.previewProxy } : {}), ...(request.publicProxy ? { publicProxy: request.publicProxy } : {}) }))
 
 export function lvmengProductionRequest(value: unknown): Request {
@@ -66,14 +70,7 @@ export async function auditLvmengProduction(input: unknown, tokens: { cmsToken?:
   try { const reconstructed = freezeUnifiedContent({ repo, commit: executor.executorCommit, directory: path.join(temporary, 'freeze'), plan, records: review.records, activeSources: evidence.sources.sources, preview: false, productionScope: LVMENG_PRODUCTION_SCOPE }); assert.equal(reconstructed.sourceTreeSHA256, evidence.built.frozen.sourceTreeSHA256); assert.deepEqual(reconstructed.candidate, evidence.built.frozen.candidate); rmSync(temporary, { recursive: true }) }
   catch (error) { migrationSave(temporary, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
   const before: any = await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)
-  // R121 remains the immutable content source, while R122 advanced Azur and
-  // R123 advanced Main after that source index was published. Allow only those
-  // known version drifts, keeping every other topology field and service
-  // protected by the check.
-  assertTopology(evidence.sources.baseline, before, {
-    gachia: activeVersion(before, 'gachia'),
-    'gachia-game-azur-promilia': activeVersion(before, 'gachia-game-azur-promilia'),
-  })
+  assertLvmengProductionBaseline(evidence.sources, before)
   const row: any = (evidence.sources.owners as any).lvmeng; assert.equal(row.versionId, before.services[row.service].versions[0].version_id); await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead }); assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
   const releaseKey = lvmengReleaseKey(request, executor.executorCI), identity = { policy: LVMENG_INDEPENDENT_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: review.reviewPin, baseline: before, observedAt: Date.now(), owners: evidence.value.owners }
   const verify = async () => { executor.verify(); assert.deepEqual((await verifyLvmengIndependentBundle(request.bundle)).value, evidence.value); assert.equal((await readUnifiedProductionReview(plan, editorial.selected, tokens.cmsToken!)).reviewPin, review.reviewPin); application(editorial.application, repo, executor.executorCommit); return { ...identity, observedAt: Date.now() } }

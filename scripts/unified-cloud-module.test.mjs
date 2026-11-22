@@ -7,7 +7,7 @@ import { digest } from './desktop-release-assets.mjs';
 import { parseWrangler } from './game-release.mjs';
 import { unifiedService, UNIFIED_OWNERS } from './unified-release-assets.mjs';
 import { assertUnifiedOwnerSettings, assertUnifiedUploadMetadata, unifiedConfigSemantics, unifiedDryRun, unifiedRuntimeConfig,
-  unifiedTransportTarget, unifiedTransportTool, unifiedUploadConfig, verifyUnifiedTool } from './unified-cloud-module.mjs';
+  unifiedTransportTarget, unifiedTransportTool, unifiedUploadConfig, verifyUnifiedTool, unifiedRecordedTransportWorkspace } from './unified-cloud-module.mjs';
 
 const repo = resolve(new URL('..', import.meta.url).pathname);
 const configText = owner => readFileSync(join(repo, 'apps', owner === 'main' ? 'web' : `game-${owner}`, 'wrangler.jsonc'), 'utf8');
@@ -15,6 +15,25 @@ function directory(t) {
   const root = realpathSync(mkdtempSync(join(tmpdir(), 'unified-module-')));
   t.after(() => rmSync(root, { recursive: true, force: true })); return root;
 }
+
+test('historical transport resolves its sealed tool workspace and rejects changed tool bytes or mixed paths', t => {
+  const historical = directory(t), current = directory(t);
+  for (const root of [historical, current]) {
+    mkdirSync(join(root, 'apps/web'), { recursive: true });
+    mkdirSync(join(root, 'node_modules/wrangler/bin'), { recursive: true });
+    mkdirSync(join(root, 'node_modules/wrangler/wrangler-dist'), { recursive: true });
+    writeFileSync(join(root, 'apps/web/package.json'), '{}');
+    writeFileSync(join(root, 'node_modules/wrangler/package.json'), JSON.stringify({ version: '4.148.0' }));
+    writeFileSync(join(root, 'node_modules/wrangler/bin/wrangler.js'), 'sealed launcher');
+    writeFileSync(join(root, 'node_modules/wrangler/wrangler-dist/cli.js'), 'sealed implementation');
+    writeFileSync(join(root, 'pnpm-lock.yaml'), root === historical ? 'historical lock' : 'upgraded lock');
+  }
+  const sealed = unifiedTransportTool(historical), other = unifiedTransportTool(current);
+  assert.equal(unifiedRecordedTransportWorkspace(sealed), historical);
+  assert.throws(() => unifiedRecordedTransportWorkspace({ ...sealed, cli: other.cli }), /different transport tool/);
+  writeFileSync(sealed.cli, 'changed implementation');
+  assert.throws(() => unifiedRecordedTransportWorkspace(sealed), /implementation changed/);
+});
 
 for (const owner of UNIFIED_OWNERS) {
   test(`${owner}: exact config and installed Wrangler preserve runtime and grouping`, t => {

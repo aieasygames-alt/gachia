@@ -47,6 +47,19 @@ export function verifyUnifiedTool(tool) {
   assert.equal(digest(readFileSync(tool.cli)), tool.cliSHA256, 'Wrangler implementation changed');
 }
 
+// A pinned historical receipt owns its tool location. Today's checkout may
+// legitimately have a newer lockfile; never substitute it for the sealed tool.
+export function unifiedRecordedTransportWorkspace(tool) {
+  verifyUnifiedTool(tool);
+  const marker = '/node_modules/';
+  const boundary = tool.bin.indexOf(marker);
+  assert(boundary > 0, 'Recorded transport tool must belong to a workspace');
+  const workspace = tool.bin.slice(0, boundary);
+  assert.equal(realpathSync(workspace), workspace);
+  assert.deepEqual(unifiedTransportTool(workspace), tool, 'Recorded workspace resolves a different transport tool');
+  return workspace;
+}
+
 export function unifiedUploadConfig(target, module, assets, exact) {
   return { ...target.config, main: module, assets: { ...target.config.assets, directory: assets },
     ...(exact ? { no_bundle: true, minify: false } : {}) };

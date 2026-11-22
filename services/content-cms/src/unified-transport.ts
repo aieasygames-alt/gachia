@@ -7,7 +7,7 @@ import { digest } from '../../../scripts/desktop-release-assets.mjs'
 import { multipartModule } from '../../../scripts/desktop-cloud-transport.mjs'
 import { boundedBody } from '../../../scripts/desktop-version-preview.mjs'
 import { assertUnifiedUploadMetadata, unifiedConfigSemantics, unifiedDryRun, unifiedRuntimeConfig,
-  unifiedTransportTarget, unifiedTransportTool, unifiedUploadConfig, verifyUnifiedTool } from '../../../scripts/unified-cloud-module.mjs'
+  unifiedTransportTarget, unifiedTransportTool, unifiedUploadConfig, verifyUnifiedTool, unifiedRecordedTransportWorkspace } from '../../../scripts/unified-cloud-module.mjs'
 import { projectRoot } from './local-environment'
 import type { ConsumerExpectation } from './unified-owner-build'
 import { serveUnifiedWorker, unifiedPublicationRequests, validateUnifiedPublicationResponse, verifyUnifiedPublication, type UnifiedPrevious } from './unified-publication'
@@ -62,10 +62,10 @@ function invocation(tool: Receipt['tool'], config: string, environment: string, 
     '--config', config, '--env', environment, '--outfile', outfile], credentials: false, cloudWrites: false }
 }
 
-async function inputEvidence(input: Pick<Input, 'publicationDirectory' | 'publicationPin'>) {
+async function inputEvidence(input: Pick<Input, 'publicationDirectory' | 'publicationPin'>, workspace = path.resolve(projectRoot, '../..')) {
   const publication = await verifyUnifiedPublication(input.publicationDirectory, input.publicationPin)
   assert.equal(publication.receipt.localScope, undefined, 'Genshin-only rehearsal cannot enter the formal transport pipeline')
-  const workspace = path.resolve(projectRoot, '../..'), build = publication.receipt.buildDirectory
+  const build = publication.receipt.buildDirectory
   assert.equal(digest(bytes(path.join(workspace, 'pnpm-lock.yaml'))), digest(bytes(path.join(build, 'source/pnpm-lock.yaml'))), 'Transport tool lock differs from frozen source')
   return { publication, build, workspace, tool: unifiedTransportTool(workspace) }
 }
@@ -155,7 +155,7 @@ export async function verifyUnifiedTransport(directory: string, transportPin: st
   for (const field of ['productionReady', 'activationSupported', 'cloudWrites', 'credentials', 'rawUuidRollbackAuthorized'] as const) assert.equal(receipt[field], false)
   assert.deepEqual(receipt.pending, pending)
   assert.deepEqual(JSON.parse(bytes(path.join(root, 'state.json')).toString()), { status: 'complete', cloudWrites: false }, 'Partial or failed transport')
-  const evidence = await inputEvidence(receipt), publication = evidence.publication.directory
+  const evidence = await inputEvidence(receipt, unifiedRecordedTransportWorkspace(receipt.tool)), publication = evidence.publication.directory
   assert.equal(receipt.preview, evidence.publication.receipt.preview)
   assert.equal(receipt.previousRuntimeVerification, evidence.publication.receipt.previousRuntimeVerification)
   assert.deepEqual(receipt.tool, evidence.tool); verifyUnifiedTool(receipt.tool)
