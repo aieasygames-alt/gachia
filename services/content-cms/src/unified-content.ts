@@ -134,10 +134,13 @@ export function editingSource(record: { sourceRecord?: unknown; reviewEvidence?:
   assertJSON(raw)
   if (!objectValue(raw)) throw new Error('Invalid published editing baseline')
   const baseline = raw as Record<string, any>
-  if (baseline.kind !== 'genshin-published-editing-baseline-v1' || imported.game !== 'genshin'
-    || !['materials', 'characters', 'character-materials'].includes(imported.family)
-    || imported.sourcePath !== `packages/data/games/genshin/raw-${imported.family}.json`
-    || baseline.importOriginalSHA256 !== imported.originalSHA256
+  const genshin = baseline.kind === 'genshin-published-editing-baseline-v1' && imported.game === 'genshin'
+    && ['materials', 'characters', 'character-materials'].includes(imported.family)
+    && imported.sourcePath === `packages/data/games/genshin/raw-${imported.family}.json`
+  const azur = baseline.kind === 'azur-published-guide-editing-baseline-v1' && imported.game === 'azur-promilia'
+    && imported.family === 'guides' && imported.sourcePath === 'apps/game-azur-promilia/lib/data.ts'
+    && imported.locator.symbol === 'guides'
+  if ((!genshin && !azur) || baseline.importOriginalSHA256 !== imported.originalSHA256
     || !/^[a-f0-9]{64}$/.test(baseline.syncKey) || !/^[a-f0-9]{64}$/.test(baseline.exportKey)
     || !/^[a-f0-9]{64}$/.test(baseline.sourceIndex?.pin) || typeof baseline.sourceIndex?.path !== 'string'
     || !baseline.sourceIndex.path.startsWith('/') || typeof baseline.versionId !== 'string') throw new Error('Invalid published editing baseline')
@@ -145,6 +148,7 @@ export function editingSource(record: { sourceRecord?: unknown; reviewEvidence?:
   const source = baseline.source
   if (source.game !== imported.game || source.family !== imported.family || source.sourcePath !== imported.sourcePath) throw new Error('Published editing scope mismatch')
   if (!isDeepStrictEqual(source.locator, imported.locator)) {
+    if (azur) throw new Error('Unapproved published identity migration')
     const from = imported.locator.identity?.characterId, to = source.locator.identity?.characterId
     if (source.family !== 'character-materials' || !((from === 'sara' && to === 'kujou-sara') || (from === 'shinobu' && to === 'kuki-shinobu'))) throw new Error('Unapproved published identity migration')
   }

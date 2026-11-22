@@ -6,6 +6,8 @@
 
 蓝色星原独立文本合同允许一次修改一条既有攻略的 `content.en`，从当前已发布 A 派生候选和精确恢复，不再固定某个攻略 ID 或某句纠错。成员、顺序、身份、其他语言/字段和周围源代码必须保持。完成正式发布后，`azur:production source` 只读重验完整发布日志、候选/恢复模块、预览、公网与五 owner 拓扑，生成 `nte_azur_editorial_source_index_v1`，后续仍由 `readNteSourceIndex` 接续；CMS published 状态或单次上传不能生成完成来源。
 
+同一正文再次编辑时，若首次导入 O 与线上 A 已不同，普通三方合并仍拒绝覆盖。安装版 `scripts/azur-editing-sync.ts` 在重开已发布来源、精确 CMS 前态及单条英文正文合同后，通过事务登记 `azur-published-guide-editing-baseline-v1`；保留真实 O、已审核 B、ID、状态及其他记录，普通编辑请求不能修改该基线。重复同步零写入，锁、前态漂移或未知字段变化均拒绝。
+
 原神既有角色文本字段包含 `skills.passive3`（夜魂天赋）及 `skills.specialJump` 的 `name`、`description` 和对应 `En` 文本，沿用中文/英文/日文回退及精确恢复合同；不授予新增技能、数值、媒体或成员变化的权限。这是合同开发范围，实际安装和生产验证结果以逐批回执为准。
 
 <!-- BEGIN R120 CURRENT -->
