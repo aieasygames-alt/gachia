@@ -1,0 +1,168 @@
+{
+  "kind": "azur-repeat-editorial-delivery-r150",
+  "status": "production_accepted_sources_observed",
+  "sourceCommit": "b17205887b15085cde6514685d975a9991ac74ae",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/published-sources/source-index.json",
+    "pin": "4cb01a5f0b7aa2f7ac0519f00bdb217528cfdd8033fa859016582bfdae2fcbb6"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-after-production.json.gz",
+    "pin": "7ba95de70d2af86323885e9282879fee2fc6803e1d0e0b27d97c88a866b01114"
+  },
+  "completion": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/production/completion.json",
+    "pin": "c0b2f24abc2da030ae140407eccd0a06cbb6f82bbd210f5824c9c0fb01d60e54"
+  },
+  "candidateVersion": "f6fb496a-6127-4a1e-89b8-6ef5148087f8",
+  "recoveryVersion": "12b268e7-ae0f-4c0d-ad7a-5a156c6e5232",
+  "deployment": {
+    "deploymentId": "8af824ba-0fe9-4e8e-a696-0b74b6bbc88d",
+    "service": "gachia-game-azur-promilia",
+    "versionId": "f6fb496a-6127-4a1e-89b8-6ef5148087f8",
+    "releaseKey": "d75f49ef83bf749343bc60f347560724b6d99ada0c6a0e6f58fa6e52a4733f00",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "1669b965aaf38f93e4288365fc08a0cb6f94643dbe0368ee1147bc704f8bf80f",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "3fdafb94cb7878bfe0e4f4f50dc492cf13ad85773b41f8a65f4c0f2b47bd7bbe",
+        "bytes": 469
+      }
+    }
+  },
+  "contentEdit": {
+    "beforeText": "a fast-updatable Kibo record",
+    "afterText": "a Kibo record that is easy to update",
+    "pointer": "/content/en"
+  },
+  "cmsTargetID": 295,
+  "records": 2966,
+  "otherCMSRecordsPreserved": 2965,
+  "changedSources": [
+    "apps/game-azur-promilia/lib/data.ts"
+  ],
+  "preservedSources": 114,
+  "workerUploads": 2,
+  "productionDeployments": 1,
+  "changedDeploymentServices": [
+    "gachia-game-azur-promilia"
+  ],
+  "otherProductionDeploymentsPreserved": 5,
+  "cmsDraftWrites": 1,
+  "cmsReviewWrites": 1,
+  "editingBaselineUpdates": 1,
+  "repeatedSyncWrites": 0,
+  "realImportPreserved": true,
+  "reviewedContentPreserved": true,
+  "actualProductionRollback": false,
+  "aggregateChecks": 778,
+  "browserChecks": 12,
+  "guideBodyPublicJSON": "Not exposed by the existing Azur application; no duplicated JSON introduced",
+  "installedReader": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/installed-reader.json",
+    "pin": "b6c3be6c6d90b7ba1f72605b3d97b5704b203ba33f55bf6685e41aa273dcf16a"
+  },
+  "continuationExecutorCI": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/ci-continuation.json",
+    "pin": "0fe82a415f5511ba8195367de72d5a7f379b4961c68ee1f20cd90c1967dc29dc"
+  },
+  "evidence": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-before.json",
+      "pin": "5ecb5a176d6bb96151c248e13dd3a5e04e118780bd65991a09d32a8c5fb8de64"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-draft-intent.json",
+      "pin": "6b7e4411cc264e038b3abf2f0402ce0ae8120c013d6a9da766c212d9838da1b8"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-draft.json",
+      "pin": "3d92ad93fd71faa02e7f60da24e186b1681d3221c925ca1f84c4343db1509e2b"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-review-intent.json",
+      "pin": "2938e6141953d79a5e742528e48afeaf0f75d66d8940caa10f102e11b1025fa0"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-review.json",
+      "pin": "00e3462d0c422444ca405609b659299f9843c0551742128780ead57ea1febc8c"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-final-proof.json",
+      "pin": "26e82dbec3929ce441fb89f698049eeacd42cd5ff4a450c13489b4a237a509ee"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-after-sync-proof.json",
+      "pin": "69ab712da6635b5e67d10691afdbe244a1fab88f0d21fad3ff981308e16f6877"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/cms-after-production-proof.json",
+      "pin": "436755d5132bcb520193a2026c011b181c934a8be689b2d4da3d293f574bdd55"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/editing-sync-plan.json",
+      "pin": "a2dd930a76ba765991a9a49eb407c09713f66665f295e44bb12948dc0a7a54ca"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/editing-sync-apply.json",
+      "pin": "96b2867a214225c929eeed7afcd63d54a36392d73e1c74d102b932fa815b4e08"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/editing-sync-repeat.json",
+      "pin": "2033f6fc0c08adb75d19520d9e5acbca244f4c3efea12dd5aaa6fde05b5e08c2"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/editing-sync-verify.json",
+      "pin": "11e09f24856ad343ae44c198409589f3948df0503c2c4a3a9863e2f3db5dfffc"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/editing-postgres-04.json",
+      "pin": "4e1cea09e429c44b695f014838895339037cae4828b7fb752f4a4dc04abb21e2"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/prepared-final.json",
+      "pin": "44794b02ca008b065fd921ce79981647ff1c1b70918cc6c5f2c29e8e723d2c41"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/request-final.json",
+      "pin": "4536c17df59b36017fedd43d1b4076ac09649af89cb1f405d4250fed78f77243"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/audit.json",
+      "pin": "a8507b1729a9a2ec3d9b524354de473874a97a4775d138098b889c2695bbeafe"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/result.json",
+      "pin": "83886b6214eba6561a944245186365271153b698947b123ef1018040a1322b60"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/source-result.json",
+      "pin": "66f925617dc9125b507e671c79a014f9eaa4c6de07b57f7341e5f56254d822f3"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/aggregate-acceptance.json",
+      "pin": "37719cdf1a9971808059a66b5a7109096fad21177f23aea066c7a155ebe84ff6"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/browser-acceptance.json",
+      "pin": "934e5ecbcec3b51ab7dafaa14ab8e0c8bd6f697c8ca182a1a91d9ff5e3458e13"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/ci-executor.json",
+      "pin": "e2a6608e94510f4200dd6ae7da278396135c690210deefd11fca351c4e8f20c4"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/ci-continuation.json",
+      "pin": "0fe82a415f5511ba8195367de72d5a7f379b4961c68ee1f20cd90c1967dc29dc"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/completion-reopened.json",
+      "pin": "217464134dd2944816eab8602e9f4ad64a3f4d8a45c6bb04b2d2ec5071b0e3ef"
+    }
+  ],
+  "freeGiB": 16.3
+}

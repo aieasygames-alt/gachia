@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/published-sources/source-index.json",
+    "pin": "4cb01a5f0b7aa2f7ac0519f00bdb217528cfdd8033fa859016582bfdae2fcbb6"
+  },
+  "sourceCount": 115,
+  "changedSources": [
+    "apps/game-azur-promilia/lib/data.ts"
+  ],
+  "unchangedSources": 114,
+  "changedProductionDeployments": [
+    "gachia-game-azur-promilia"
+  ],
+  "routerPreserved": true
+}

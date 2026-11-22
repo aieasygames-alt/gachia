@@ -1,6 +1,16 @@
 # Payload 全内容实施队列
 
-## 当前完成状态（2026-11-22 R149：空间恢复及常驻 CMS 接续 R148）
+## 当前完成状态（2026-11-22 R150–R152：蓝色星原持续编辑正式上线，常驻CMS已接续）
+
+蓝色星原第二次真实CMS更新已上线，版本 `f6fb496a-6127-4a1e-89b8-6ef5148087f8`，100%流量；仅蓝色星原两个版本上传、一次正式部署，其余生产与Router保持。既有英文攻略单字段修文完成草稿、审核、受控编辑基线、候选/恢复、云预览及正式发布。其他2,965条CMS记录与114份来源保持；778项聚合/JSON/搜索和12种浏览器场景通过。详见 [R150回执](../reports/azur-repeat-editorial-2026-11-22-r150/EXECUTION.md)。攻略正文没有独立raw-guides JSON接口，不将元数据保持写成正文JSON已更新。
+
+常驻CMS已安装 `371775298ef3ae9b439bb45a7db30078041ef53f`（[完整CI 45024526539](https://github.com/aieasygames-alt/gachia/actions/runs/45024526539)）。R151补齐原神passive3/specialJump既有文本支持；R152修复历史工具工作目录选择并收紧绿梦发布拓扑。标准构建、15组PostgreSQL/HTTP、冷备实际恢复、新旧往返及安装版重开最终来源通过；无额外内容/审核/schema或Worker写入。见 [R151回执](../reports/cms-editorial-support-2026-11-22-r151/EXECUTION.md)与 [R152回执](../reports/cms-history-topology-2026-11-22-r152/EXECUTION.md)。绿梦保持中文，原神特殊技能本批仅支持开发及安装，未真实改文发布。
+
+下一批从 [R150最终来源](../reports/azur-repeat-editorial-2026-11-22-r150/published-sources/source-index.json)接续，pin `4cb01a5f0b7aa2f7ac0519f00bdb217528cfdd8033fa859016582bfdae2fcbb6`；CMS使用 [R150最终快照](../reports/azur-repeat-editorial-2026-11-22-r150/cms-after-production.json.gz)，pin `7ba95de70d2af86323885e9282879fee2fc6803e1d0e0b27d97c88a866b01114`。R149–R152已完成操作不重放。后续按内容类型推进原神材料日常文本及其他游戏既有攻略/材料/角色，再处理页面内联、新增、撤回与媒体替换；来源归档/保留治理独立交付。
+
+清理已删除3个可再生成叶目录，透明压缩316份multipart与480份HTTP body，路径/逻辑字节/SHA保持。当前可用约 16.3 GiB；完整游戏构建继续14 GiB标准/8 GiB保留线。旧跨工作目录来源仍受当前证据链引用，不能直接删除整个worktree。
+
+## 前批完成状态（2026-11-22 R149：空间恢复及常驻 CMS 接续 R148）
 
 常驻 CMS 已安装精确源码 `f4fe65ec`（完整 CI 44977195776 成功），准备后/安装后真实读取 R148 均为 115 来源、五 owner、allOwnersCurrent=true。标准构建、类型、20 项来源合同、15 组隔离 PostgreSQL/HTTP、20 项常驻 HTTP、冷备真实恢复及新→旧→新往返切换通过。2,966 条内容、43 表/序列和媒体保持，六生产/四 staging 部署与配置保持；没有内容/审核/部署写入。见 [R149 回执](../reports/cms-continuation-2026-11-22-r149/EXECUTION.md)与[交付索引](../reports/cms-continuation-2026-11-22-r149/delivery.json)。
 

@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "references": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/candidate-graph/responses/references.json",
+      "pin": "3471a904b931c1f035355e3cae09fed04787c54426d3e9a1e2be687711b64fcf"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/candidate-graph-bounded/responses/references.json",
+      "pin": "302122b7a9009909b8754682e741e414623afe4079c5b9793c29c3f550639bb4"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/aggregate-candidate-reference/responses/references.json",
+      "pin": "c5edb0d353ef800d0a73d028d4a4b61e5204ac856952c661391e817c93760c2c"
+    }
+  ],
+  "referenceComposition": {
+    "current": 740,
+    "inheritedUnchangedOwners": 23,
+    "sealedCandidateAzur": 15
+  },
+  "result": {
+    "status": "passed",
+    "evidenceSHA256": "43408250a9129df353b104a4dce4aefaa13ec945f97f22cbdeccdf5459cb15dc"
+  },
+  "checks": 778,
+  "publicJSON": 117,
+  "search": [
+    "/data-manifest/search-zh.json",
+    "/data-manifest/search-en.json",
+    "/data-manifest/search-ja.json",
+    "/zh/search",
+    "/en/search",
+    "/ja/search",
+    "/_games/nte/content/search-zh.json",
+    "/_games/nte/content/search-en.json",
+    "/_games/nte/content/search-ja.json"
+  ],
+  "guideBodyPublicJSON": "Not exposed by the existing Azur application; no duplicated JSON introduced",
+  "cloudWrites": false
+}

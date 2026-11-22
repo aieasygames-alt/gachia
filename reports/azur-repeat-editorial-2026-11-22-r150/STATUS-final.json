@@ -1,0 +1,12 @@
+{
+  "batch": "R150",
+  "status": "complete",
+  "delivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/delivery.json",
+    "pin": "f9656ec183bfff02be026a0e0d5e6f5d3953cc2d6667ab722abcb69447232883"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/published-sources/source-index.json",
+    "pin": "4cb01a5f0b7aa2f7ac0519f00bdb217528cfdd8033fa859016582bfdae2fcbb6"
+  }
+}

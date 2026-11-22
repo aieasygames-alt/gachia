@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "width": 1440,
+      "locale": "zh",
+      "javaScript": true,
+      "path": "/zh/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "zh",
+      "javaScript": false,
+      "path": "/zh/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "javaScript": true,
+      "path": "/en/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "javaScript": false,
+      "path": "/en/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "ja",
+      "javaScript": true,
+      "path": "/ja/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "ja",
+      "javaScript": false,
+      "path": "/ja/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "javaScript": true,
+      "path": "/zh/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "javaScript": false,
+      "path": "/zh/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "javaScript": true,
+      "path": "/en/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "javaScript": false,
+      "path": "/en/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "ja",
+      "javaScript": true,
+      "path": "/ja/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "ja",
+      "javaScript": false,
+      "path": "/ja/azur-promilia/guides/kibo-battle-and-ecology",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    }
+  ],
+  "externalRequests": "blocked",
+  "cloudWrites": false
+}

@@ -1,0 +1,161 @@
+{
+  "kind": "cms-editorial-support-delivery-r151",
+  "status": "installed_verified_and_recoverable",
+  "sourceCommit": "a3d4f220f4cac90953a5460195fc4919989dae76",
+  "application": {
+    "sourceCommit": "a3d4f220f4cac90953a5460195fc4919989dae76",
+    "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T045051Z-cms-editorial-support-r151-a3d4f220/services/content-cms",
+    "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T033417Z-cms-source-reader-r149-f4fe65ec/services/content-cms",
+    "buildID": "cdlLzfX1h7UhWZKqYDe1z",
+    "nextVersion": "16.4.6",
+    "databaseMigrationRequired": false,
+    "application": {
+      "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T045051Z-cms-editorial-support-r151-a3d4f220/application-manifest.json",
+      "pin": "ddb05779ca086e2d876b2e53f6fed086fa58a4d719ca2ab5b531b6c7d98a7067"
+    },
+    "runtimeDependencies": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/runtime-dependencies.json",
+      "pin": "7b5e400223c9948fdc08585fdb4be3b4358fc3399d37e2cea6bb5068b5a0e403"
+    },
+    "files": 804,
+    "releaseFiles": 358,
+    "dependencyFiles": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a",
+      "entries": 43788
+    },
+    "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261122T045436Z-c6f95a",
+    "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/cms-editorial-support-r151-a3d4f220f4ca",
+    "healthy": true,
+    "allDatabaseAndMediaUnchanged": true,
+    "schemaMigrationRun": false,
+    "previousApplicationRecoveryRehearsed": true,
+    "previousApplicationPreserved": true
+  },
+  "sourceIndexAtInstallation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/published-sources/source-index.json",
+    "pin": "e364a23c8e9635db8e06344ff11980f25ef6a14fe87a7a6856a58523ea87957b"
+  },
+  "sourceCount": 115,
+  "records": 2966,
+  "cmsObservationAfterInstallation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cms-final.json.gz",
+    "pin": "a38384c648519ed1d3975010dd040658d0ae7c85046c0b54cdf34b79f3530b34"
+  },
+  "genshinSpecialSkillQualification": [
+    {
+      "id": "mualani",
+      "skill": "passive3",
+      "fields": 4,
+      "candidateAndRecoveryPassed": true
+    },
+    {
+      "id": "ororon",
+      "skill": "passive3",
+      "fields": 4,
+      "candidateAndRecoveryPassed": true
+    },
+    {
+      "id": "ororon",
+      "skill": "specialJump",
+      "fields": 4,
+      "candidateAndRecoveryPassed": true
+    }
+  ],
+  "publishedSourcesReadable": true,
+  "standardBuild": true,
+  "postgresHTTPGroups": 15,
+  "residentHTTPChecks": 20,
+  "databaseTablesPreserved": 43,
+  "databaseSequencesAndMediaPreserved": true,
+  "schemaMigrations": 0,
+  "contentWritesDuringInstallation": 0,
+  "reviewWritesDuringInstallation": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "dependenciesChanged": false,
+  "previousApplicationRecoveryRehearsed": true,
+  "separateContentRelease": "R150 owns the reviewed Azur text, controlled editing-baseline update and subsequent single-Worker publication.",
+  "ci": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/ci.json",
+    "pin": "ceacc5c8511cc58809c3a6a9a0306fba8d0788cfe1e6c57895d8e84a84062fbf"
+  },
+  "evidence": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/application-prepared.json",
+      "pin": "45df767e3d1660c4f9819820c2282e924e9c7d935828225687a99042ee1ec8d9"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/application-installed.json",
+      "pin": "d9ec66fa1942c78ff3d103e12278a87b81dca35ba74690369c3c7c4cd1b9aa7b"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/application-recovery.json",
+      "pin": "4b08ac1d88b3da2224f29b63be95264c8721468de36515c9620ad9ef527943c6"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cold-backup.json",
+      "pin": "b522d0ae6c959b0caeb1061f35ab8d6d7fa6894a25168b5c74c616f2a2812677"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/runtime-dependencies.json",
+      "pin": "7b5e400223c9948fdc08585fdb4be3b4358fc3399d37e2cea6bb5068b5a0e403"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/database-before.json",
+      "pin": "203a8493f6d01c39acfba2a3d102a31478effcfa58ab1152c978758f577df647"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/database-before-install.json",
+      "pin": "203a8493f6d01c39acfba2a3d102a31478effcfa58ab1152c978758f577df647"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/database-after-install.json",
+      "pin": "203a8493f6d01c39acfba2a3d102a31478effcfa58ab1152c978758f577df647"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/database-final.json",
+      "pin": "203a8493f6d01c39acfba2a3d102a31478effcfa58ab1152c978758f577df647"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cms-before-proof.json",
+      "pin": "6bd36baa978a2e072ded4f968e75d342b59959e3f6b219fd58b15c321a395d4e"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cms-final-proof.json",
+      "pin": "3f0f77fd708929f579eab9f005ec697bf156331f2643709beb30bf46a3671b6c"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/prepared-reader.json",
+      "pin": "81b781608d6b0c45045a76a3b48d7bb44a6c9ad12adae73f30d76d94ed8c134c"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/installed-reader.json",
+      "pin": "e1b7407a0f5f1d5736d9840113a84338403cc62a8fb30b9ac8b41f3ee0c1c93e"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cloud-before.json",
+      "pin": "b24db655b7822387c3aacd93acccfb0714c45e71383deaf8ca6e0c011926314b"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/cloud-after.json",
+      "pin": "25e5b39a3f43ce0550e9e8aa345f8bfe63c6c600dc10197aa1d78e72fd14cbaf"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/http.json",
+      "pin": "6003b852a2b1aa7b95301712b405dcb34cabd4eb664c40287f13824f51f7c53c"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/postgres-smoke/postgres-smoke.json",
+      "pin": "b2b5c1d2073d079d9721b2a462bdde690304c4a2fc5859776e2261c05d6f3168"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-editorial-support-2026-11-22-r151/standard-build-proof.json",
+      "pin": "004098831f4ffe20c5dd5256f03abfee0c5ebb217ae09edeb6d268b7def22d26"
+    }
+  ]
+}

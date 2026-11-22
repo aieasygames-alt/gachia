@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "completion": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/production/completion.json",
+    "pin": "c0b2f24abc2da030ae140407eccd0a06cbb6f82bbd210f5824c9c0fb01d60e54"
+  },
+  "journalPhases": 10,
+  "versions": {
+    "gachia-game-azur-promilia": "f6fb496a-6127-4a1e-89b8-6ef5148087f8"
+  },
+  "immutablePreviewChecks": {
+    "recovery": 336,
+    "candidate": 336
+  },
+  "exactModulesAndDeploymentReopened": true,
+  "publicEvidenceReopened": true,
+  "cloudWrites": 0,
+  "cmsWrites": 0
+}

@@ -1,0 +1,30 @@
+{
+  "sourceCommit": "371775298ef3ae9b439bb45a7db30078041ef53f",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T130956Z-cms-history-topology-r152-37177529/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T045051Z-cms-editorial-support-r151-a3d4f220/services/content-cms",
+  "buildID": "nuJ7_2bUhWxgaJvH2OVRo",
+  "nextVersion": "16.4.6",
+  "databaseMigrationRequired": false,
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T130956Z-cms-history-topology-r152-37177529/application-manifest.json",
+    "pin": "7d3d5cfc79caf8f704f3c36826ad37024ba263b0b8f0a63968ca29c46c728306"
+  },
+  "runtimeDependencies": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/runtime-dependencies.json",
+    "pin": "6301242ebcd31975f53828364d91ae18db5dcfdb1dabd917479a0e7b5d079c0c"
+  },
+  "files": 804,
+  "releaseFiles": 358,
+  "dependencyFiles": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cms-dependency-files.json.gz",
+    "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a",
+    "entries": 43788
+  },
+  "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261122T132254Z-69c400",
+  "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/cms-history-topology-r152-371775298ef3",
+  "healthy": true,
+  "allDatabaseAndMediaUnchanged": true,
+  "schemaMigrationRun": false,
+  "previousApplicationRecoveryRehearsed": true,
+  "previousApplicationPreserved": true
+}

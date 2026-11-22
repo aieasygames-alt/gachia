@@ -1,0 +1,164 @@
+{
+  "kind": "cms-editorial-support-delivery-r152",
+  "status": "installed_verified_and_recoverable",
+  "sourceCommit": "371775298ef3ae9b439bb45a7db30078041ef53f",
+  "application": {
+    "sourceCommit": "371775298ef3ae9b439bb45a7db30078041ef53f",
+    "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T130956Z-cms-history-topology-r152-37177529/services/content-cms",
+    "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T045051Z-cms-editorial-support-r151-a3d4f220/services/content-cms",
+    "buildID": "nuJ7_2bUhWxgaJvH2OVRo",
+    "nextVersion": "16.4.6",
+    "databaseMigrationRequired": false,
+    "application": {
+      "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T130956Z-cms-history-topology-r152-37177529/application-manifest.json",
+      "pin": "7d3d5cfc79caf8f704f3c36826ad37024ba263b0b8f0a63968ca29c46c728306"
+    },
+    "runtimeDependencies": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/runtime-dependencies.json",
+      "pin": "6301242ebcd31975f53828364d91ae18db5dcfdb1dabd917479a0e7b5d079c0c"
+    },
+    "files": 804,
+    "releaseFiles": 358,
+    "dependencyFiles": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a",
+      "entries": 43788
+    },
+    "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261122T132254Z-69c400",
+    "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/cms-history-topology-r152-371775298ef3",
+    "healthy": true,
+    "allDatabaseAndMediaUnchanged": true,
+    "schemaMigrationRun": false,
+    "previousApplicationRecoveryRehearsed": true,
+    "previousApplicationPreserved": true
+  },
+  "sourceIndexAtInstallation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/published-sources/source-index.json",
+    "pin": "4cb01a5f0b7aa2f7ac0519f00bdb217528cfdd8033fa859016582bfdae2fcbb6"
+  },
+  "sourceCount": 115,
+  "records": 2966,
+  "cmsObservationAfterInstallation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cms-final.json.gz",
+    "pin": "73f8320929dc32bde6c6cd8d1f45fcbbe0cd7af66c66bb608c97b2643181b94a"
+  },
+  "lvmengStrictTopologyVerified": true,
+  "historicalToolWorkspaceVerified": true,
+  "allIndependentPreviewServicesVerified": true,
+  "genshinSpecialSkillQualification": [
+    {
+      "id": "mualani",
+      "skill": "passive3",
+      "fields": 4,
+      "candidateAndRecoveryPassed": true
+    },
+    {
+      "id": "ororon",
+      "skill": "passive3",
+      "fields": 4,
+      "candidateAndRecoveryPassed": true
+    },
+    {
+      "id": "ororon",
+      "skill": "specialJump",
+      "fields": 4,
+      "candidateAndRecoveryPassed": true
+    }
+  ],
+  "publishedSourcesReadable": true,
+  "standardBuild": true,
+  "postgresHTTPGroups": 15,
+  "residentHTTPChecks": 20,
+  "databaseTablesPreserved": 43,
+  "databaseSequencesAndMediaPreserved": true,
+  "schemaMigrations": 0,
+  "contentWritesDuringInstallation": 0,
+  "reviewWritesDuringInstallation": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "dependenciesChanged": false,
+  "previousApplicationRecoveryRehearsed": true,
+  "separateContentRelease": "R150 owns the reviewed Azur text, controlled editing-baseline update and subsequent single-Worker publication.",
+  "ci": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/ci-continuation.json",
+    "pin": "0fe82a415f5511ba8195367de72d5a7f379b4961c68ee1f20cd90c1967dc29dc"
+  },
+  "evidence": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/application-prepared.json",
+      "pin": "a11580c1c4242f573354f1610c9a8d513b7eba46cb2a757d3fa23c4873d937d3"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/application-installed.json",
+      "pin": "afb1e4ea0e6512492ee2199f4c7809bec489ba3c590a3cdb3c3933e86de03103"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/application-recovery.json",
+      "pin": "a619451bdb946c8c4a2f485d4a39aac94412fbbd77dc3ec62d98919431e29194"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cold-backup.json",
+      "pin": "74d39d05ac602d3549e5f045734be121d037c36b7c5856248d8acc1f62b1d635"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/runtime-dependencies.json",
+      "pin": "6301242ebcd31975f53828364d91ae18db5dcfdb1dabd917479a0e7b5d079c0c"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/database-before.json",
+      "pin": "8e4ec5b76958afe941f562bbb8a2dd415a6148d7b796b86e0daee9cc4152f2ae"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/database-before-install.json",
+      "pin": "8e4ec5b76958afe941f562bbb8a2dd415a6148d7b796b86e0daee9cc4152f2ae"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/database-after-install.json",
+      "pin": "8e4ec5b76958afe941f562bbb8a2dd415a6148d7b796b86e0daee9cc4152f2ae"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/database-final.json",
+      "pin": "8e4ec5b76958afe941f562bbb8a2dd415a6148d7b796b86e0daee9cc4152f2ae"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cms-before-proof.json",
+      "pin": "357fb1ddfd29ae08d390e59420f64d8b8de3e81a4556fa7e6a1a78c5b61cb998"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cms-final-proof.json",
+      "pin": "0b47deedc423c8d46d286b91606c60938cd20108953aa9494068178622ae0253"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/prepared-reader.json",
+      "pin": "3f2a6540c7a0b7e7cfd299ec76260d1f91ebff4e16eca5be3e114e9922c9b767"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/installed-reader.json",
+      "pin": "b6c3be6c6d90b7ba1f72605b3d97b5704b203ba33f55bf6685e41aa273dcf16a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cloud-before.json",
+      "pin": "9bd66dce97968b1515d28a946742a615f72637814b8f3be5d372f63771c77bc7"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/cloud-after.json",
+      "pin": "dee32c75fff13ac8573af7b77c09334a69d25a7cf6671ca8d1b17e4c438fa657"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/http.json",
+      "pin": "79e91661ad1f1b54287fb80af2f4c4ecc12b254c3d96f02fe070200ee4d9b810"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/postgres-smoke/postgres-smoke.json",
+      "pin": "b2b5c1d2073d079d9721b2a462bdde690304c4a2fc5859776e2261c05d6f3168"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-history-topology-2026-11-22-r152/attempt-02/standard-build-proof.json",
+      "pin": "95fe6fe1bf7605ae03c4345741e9f3ebbb8bc43817cc6ded5870dcb1ea55cdda"
+    }
+  ]
+}
