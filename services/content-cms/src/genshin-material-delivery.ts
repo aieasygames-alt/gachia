@@ -7,6 +7,12 @@ import { nteRequests } from './nte-release-bundle'
 const services: Record<string, string> = { main: 'gachia', router: 'gachia-router', genshin: 'gachia-game-genshin',
   nte: 'gachia-game-nte', 'azur-promilia': 'gachia-game-azur-promilia', lvmeng: 'gachia-game-lvmeng' }
 
+export function genshinMaterialRoutedRequests<T extends { path: string }>(requests: T[]) {
+  // Raw static aliases belong to the direct game Worker. Router's /_next/static
+  // namespace belongs to Main; game pages use the /_games/genshin alias.
+  return requests.filter(row => !row.path.startsWith('/_next/static/'))
+}
+
 // Read-only local bindings come from the fully verified current deployment, not
 // from the pre-NTE migration's historical Main/Router config transformation.
 export function genshinMaterialLocalConfig(baseline: any, owner: string, artifact: string | undefined, module: string) {
@@ -37,8 +43,8 @@ export async function genshinMaterialDeliveryRequests(opened: any, owner: string
     if (existing) { assert.equal(existing.status, row.status); if (row.sha256) existing.sha256 = row.sha256 }
     else wanted.requests.push(row)
   }
-  // Direct Genshin public assets and pages also serve as Router assertions.
-  for (const row of migrationRequests({ owner: 'genshin', role: 'candidate', artifact, expected, sources: currentSources, pairs: [] })) add(row)
+  const gameRequests = migrationRequests({ owner: 'genshin', role: 'candidate', artifact, expected, sources: currentSources, pairs: [] })
+  for (const row of owner === 'router' ? genshinMaterialRoutedRequests(gameRequests) : gameRequests) add(row)
   for (const row of contract[role].expectations) add({ path: row.path, status: row.status })
   for (const [file, bytes] of expected.files) wanted.values.set(expected.contract.prefix + '/' + file, JSON.parse(bytes))
   assert.equal(new Set(wanted.requests.map((row: any) => row.path)).size, wanted.requests.length)

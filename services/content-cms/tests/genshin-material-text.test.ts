@@ -7,7 +7,7 @@ import { independentProductionOwnerScope, GENSHIN_MATERIAL_PRODUCTION_SCOPE } fr
 import { mergeGenshinMaterialTextExpectations, validateUnifiedConsumer } from '../src/unified-owner-build'
 import { exportUnifiedContent } from '../src/unified-export'
 import { assertStructuredEdit, contentUnit, structuredEditableLeaves, validateUnifiedRecord } from '../src/unified-content'
-import { genshinMaterialLocalConfig } from '../src/genshin-material-delivery'
+import { genshinMaterialLocalConfig, genshinMaterialRoutedRequests } from '../src/genshin-material-delivery'
 
 const source = (sourcePath: string, value: unknown) => {
   const text = JSON.stringify(value, null, 2) + '\n'; return { sourcePath, text, sha256: digest(text) }
@@ -22,6 +22,18 @@ const edit = (mutate: (rows: typeof materials) => void) => {
   const next = structuredClone(materials); mutate(next); return [source(GENSHIN_MATERIAL_TEXT_SOURCE, next)]
 }
 const approved = () => edit(rows => { rows[0].sourceEn = 'Domain: Mondstadt (Monday/Thursday/Sunday)' })
+test('Router verifies namespaced game assets without claiming Main static aliases', () => {
+  const requests = [
+    { path: '/_next/static/old-build/_ssgManifest.js', status: 200, sha256: 'old' },
+    { path: '/_next/static/chunks/current.js', status: 200, sha256: 'new' },
+    { path: '/_games/genshin/_next/static/old-build/_ssgManifest.js', status: 200, sha256: 'old' },
+    { path: '/_games/genshin/_next/static/chunks/current.js', status: 200, sha256: 'new' },
+    { path: '/__content/genshin/data/raw-materials.json', status: 200, sha256: 'data' },
+    ...['zh', 'en', 'ja'].map(locale => ({ path: `/${locale}/genshin/items/teachings-of-freedom`, status: 200 })),
+  ]
+  assert.deepEqual(genshinMaterialRoutedRequests(requests), requests.slice(2))
+  assert.equal(requests.length, 8, 'Direct Worker must retain both static aliases')
+})
 test('current material graph binds every independent owner from verified deployment settings', () => {
   const services = ['genshin', 'nte', 'azur-promilia', 'lvmeng'].map(game => ({ name: game.toUpperCase(), type: 'service', service: 'gachia-game-' + game }))
   const baseline = { settings: { gachia: { compatibility_date: '2026-07-08', compatibility_flags: ['nodejs_compat'],
