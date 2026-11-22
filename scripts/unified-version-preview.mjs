@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { digest } from './desktop-release-assets.mjs';
 import { boundedBody, sampleReadOnly } from './desktop-version-preview.mjs';
 import { UNIFIED_OWNERS, unifiedService } from './unified-release-assets.mjs';
+import { sessionHTMLFingerprints } from './artifact-verification-session.mjs';
 
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const SHA = /^[a-f0-9]{64}$/;
@@ -37,9 +38,14 @@ export function unifiedPreviewPath(path, origin) {
 }
 
 export function unifiedPageFingerprints(rows, parserVersion = 'legacy-v1') {
-  const executable = parserPath(parserVersion);
+  parserPath(parserVersion);
   assert(Array.isArray(rows) && rows.length > 0 && rows.length <= 2500 &&
     rows.every(row => row && typeof row.html === 'string' && Buffer.byteLength(row.html) <= 16 * 1024 * 1024));
+  return sessionHTMLFingerprints(rows, unifiedHTMLParserPin(parserVersion), missing => parsePageFingerprints(missing, parserVersion));
+}
+
+function parsePageFingerprints(rows, parserVersion) {
+  const executable = parserPath(parserVersion);
   const result = [];
   let batch = [], bytes = 2;
   const flush = () => {

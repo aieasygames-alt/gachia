@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import './html-fingerprint-session.test.mjs';
 import fs, { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, statSync, symlinkSync, utimesSync, writeFileSync } from 'node:fs';
 import { syncBuiltinESMExports } from 'node:module';
 import { tmpdir } from 'node:os';
