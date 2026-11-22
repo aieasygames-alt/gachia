@@ -153,3 +153,32 @@ test('recovery restores old empty values and A-relative public increments withou
   assert.deepEqual(pair.recovery.expectations.map(row => row.contains), [['><'], ['><']])
   assert.throws(() => dedicatedCharacterTextPairContract([source(after)], [source(before)]), /nonempty/)
 })
+
+for (const skill of ['passive3', 'specialJump']) test(`Genshin ${skill}: existing bilingual text supports three locales and exact recovery`, () => {
+  const sourcePath = DEDICATED_CHARACTER_TEXT_SOURCES.genshin
+  const before = [{ id: 'ororon', name: '欧洛伦', skills: { [skill]: {
+    name: '既有名称', nameEn: 'Existing name', description: '既有说明', descriptionEn: 'Existing description',
+    cooldown: 10, image: '/preserved.webp',
+  } } }]
+  const source = (rows: unknown[]) => { const text = JSON.stringify(rows); return { sourcePath, text, sha256: digest(text) } }
+  const after = structuredClone(before)
+  Object.assign(after[0].skills[skill], { name: '新名称', nameEn: 'New name', description: '新说明', descriptionEn: 'New description' })
+  const pair = dedicatedCharacterTextPairContract([source(before)], [source(after)])
+  assert.deepEqual(pair.candidate.changes[0].fields.map(field => field.pointer).sort(),
+    ['name', 'nameEn', 'description', 'descriptionEn'].map(field => `/skills/${skill}/${field}`).sort())
+  assert.deepEqual(pair.candidate.expectations.map(row => row.path), ['zh', 'en', 'ja'].map(locale => `/${locale}/genshin/characters/ororon`))
+  assert.deepEqual(pair.candidate.expectations.map(row => row.contains.slice().sort()),
+    [['>新名称<', '>新说明<'].sort(), ['>New name<', '>New description<'].sort(), ['>New name<', '>New description<'].sort()])
+  assert(pair.recovery.expectations[0].contains.includes('>既有说明<'))
+  assert(pair.recovery.expectations[1].contains.includes('>Existing description<'))
+  assert.equal(pair.recovery.changes[0].candidateSHA256, source(before).sha256)
+  for (const mutate of [
+    (row: any) => { row.skills[skill].cooldown = 11 },
+    (row: any) => { row.skills[skill].image = '/other.webp' },
+    (row: any) => { delete row.skills[skill] },
+    (row: any) => { row.skills[skill].extraName = 'New member' },
+  ]) {
+    const invalid = structuredClone(after); mutate(invalid[0])
+    assert.throws(() => dedicatedCharacterTextPairContract([source(before)], [source(invalid)]))
+  }
+})

@@ -1,0 +1,14 @@
+{
+  "standardBuild": true,
+  "sourceContractTests": 20,
+  "postgresHTTPGroups": 15,
+  "residentHTTPChecks": 20,
+  "readerTraversalsAfterEachDeletedLeaf": 3,
+  "releaseReaderTraversals": 2,
+  "sourceCI": {
+    "conclusion": "success",
+    "headSha": "f4fe65ecbf26d6b2820e70a8411c33cb488cb0fc",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/44977195776"
+  }
+}

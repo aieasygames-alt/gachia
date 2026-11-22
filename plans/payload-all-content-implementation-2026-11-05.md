@@ -1,6 +1,12 @@
 # Payload 全内容实施队列
 
-## 当前完成状态（2026-11-22 R148：剩余依赖安全修复及 Main 单 Worker 正式更新）
+## 当前完成状态（2026-11-22 R149：空间恢复及常驻 CMS 接续 R148）
+
+常驻 CMS 已安装精确源码 `f4fe65ec`（完整 CI 44977195776 成功），准备后/安装后真实读取 R148 均为 115 来源、五 owner、allOwnersCurrent=true。标准构建、类型、20 项来源合同、15 组隔离 PostgreSQL/HTTP、20 项常驻 HTTP、冷备真实恢复及新→旧→新往返切换通过。2,966 条内容、43 表/序列和媒体保持，六生产/四 staging 部署与配置保持；没有内容/审核/部署写入。见 [R149 回执](../reports/cms-continuation-2026-11-22-r149/EXECUTION.md)与[交付索引](../reports/cms-continuation-2026-11-22-r149/delivery.json)。
+
+已删除三个可再生成叶目录，并透明压缩 316 个 multipart；全部历史路径与逻辑字节校验保持。最终可用约 14.84 GiB，后续继续执行 14 GiB 标准构建门槛、8 GiB 保留线。正式来源继续 R148，CMS 内容继续 R144 AFTER；下一步依次完成蓝色星原持续编辑和第二次真实单 Worker 发布、原神 passive3/specialJump 文本支持。不要重放已完成操作。
+
+## 前批完成状态（2026-11-22 R148：剩余依赖安全修复及 Main 单 Worker 正式更新）
 
 Better Auth/core/adapter/telemetry **1.7.7**、qs **6.16.1**、glob **14.0.2**、minimatch **11.0.1** 已固定；官方 17 tarball integrity 核验通过，当前全仓/生产依赖与独立 CMS audit 均 0 公告。五应用标准 OpenNext 构建通过，449 公开 JSON 和 115 内容来源逐字节保持。精确源码 `721d159` 的[完整 CI 44972438569](https://github.com/aieasygames-alt/gachia/actions/runs/44972438569)通过，Main 候选/兼容恢复、本机/云预览/公网与 18 浏览器场景通过。
 

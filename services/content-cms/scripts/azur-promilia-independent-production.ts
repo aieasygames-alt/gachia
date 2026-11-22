@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict'
 import { writeFileSync } from 'node:fs'
 import { migrationJSON, migrationPinned } from '../../../scripts/genshin-migration-http.mjs'
-import { activateAzurPromiliaProduction, auditAzurPromiliaProduction, azurPromiliaProductionRequest, prepareAzurPromiliaIndependentProduction } from '../src/azur-promilia-independent-production'
+import { activateAzurPromiliaProduction, advanceAzurPromiliaProduction, auditAzurPromiliaProduction, azurPromiliaProductionRequest, prepareAzurPromiliaIndependentProduction } from '../src/azur-promilia-independent-production'
 
 const [action, ...args] = process.argv.slice(2)
-assert(['prepare', 'audit', 'activate'].includes(action), 'Expected prepare, audit or activate')
+assert(['prepare', 'audit', 'activate', 'source'].includes(action), 'Expected prepare, audit, activate or source')
 const required = action === 'prepare' ? ['--source-index', '--source-pin', '--selection', '--selection-pin', '--application', '--application-pin', '--directory', '--output']
+  : action === 'source' ? ['--completion', '--pin', '--executor-run-id', '--directory', '--output']
   : ['--request', '--pin', '--output', ...(action === 'activate' ? ['--directory', '--release-key'] : [])]
 const options = new Map<string, string>()
 for (let index = 0; index < args.length; index += 2) {
@@ -18,6 +19,7 @@ const proof = (file: string, pin: string) => ({ path: options.get(file)!, pin: o
 const cmsToken = process.env.GACHIA_CMS_REVIEW_TOKEN!, cloudToken = process.env.CLOUDFLARE_API_TOKEN!
 let result: any
 if (action === 'prepare') result = await prepareAzurPromiliaIndependentProduction({ sourceIndex: proof('--source-index', '--source-pin'), selection: proof('--selection', '--selection-pin'), application: proof('--application', '--application-pin'), directory: options.get('--directory')!, cmsToken })
+else if (action === 'source') result = await advanceAzurPromiliaProduction({ completion: proof('--completion', '--pin'), executorRunID: Number(options.get('--executor-run-id')), directory: options.get('--directory')!, cloudToken })
 else {
   const request = azurPromiliaProductionRequest(migrationPinned(proof('--request', '--pin')))
   result = action === 'activate' ? await activateAzurPromiliaProduction({ request, cmsToken, cloudToken, directory: options.get('--directory')!, releaseKey: options.get('--release-key')! })

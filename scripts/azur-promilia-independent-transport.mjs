@@ -27,15 +27,17 @@ const rowFor = (evidence, args) => {
   return { local, sealed, config };
 };
 
+export function azurPromiliaPublicReferences(source) {
+  const mapped = publicReferences(owner, source, owner), robots = source.find(row => row.path === '/robots.txt');
+  assert(robots, 'Azur candidate robots reference missing');
+  return [...mapped, { ...robots, routerSitemap: `https://gachia.com/sitemaps/${owner}/index.xml` }];
+}
+
 export function azurPromiliaIndependentTransport({ evidence, releaseKey, token, directory, previewRequest = unifiedProductionRead, publicRequest = unifiedProductionRead }) {
   assert(typeof token === 'string' && token.length > 0); const uploads = new Map(), writers = new Map();
   const transportPin = releaseKey;
   const references = role => migrationPinned({ path: join(evidence.directory, owner, role, 'local-http/responses/references.json'), pin: evidence.value.owners[owner][role].referencesPin });
-  const publicReferencesFor = role => {
-    const source = references(role), mapped = publicReferences(owner, source, owner), robots = source.find(row => row.path === '/robots.txt');
-    assert(robots, 'Azur candidate robots reference missing');
-    return [...mapped, { ...robots, routerSitemap: `https://gachia.com/sitemaps/${owner}/index.xml` }];
-  };
+  const publicReferencesFor = role => azurPromiliaPublicReferences(references(role));
   const readVersion = (name, versionId) => readUnifiedVersion({ service: name, versionId, token, request: unifiedProductionRead });
   return {
     snapshot: () => desktopCloudSnapshot(token, unifiedProductionRead, { allowSplit: true }),

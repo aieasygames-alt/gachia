@@ -205,6 +205,7 @@ async function readCompletedNteContinuation(proof: Proof, depth: number): Promis
 }
 export async function readNteSourceIndex(proof: Proof, depth = 0): Promise<any> {
   assert(depth < 32); const value = migrationPinned(proof), directory = path.dirname(proof.path)
+  if (value.kind === 'nte_azur_editorial_source_index_v1') return (await import('./azur-promilia-release-history')).readAzurPromiliaSourceIndex(proof, depth + 1)
   if (value.kind === 'nte_public_runtime_source_index_v1') return (await import('../../../scripts/public-runtime-history.mjs')).readPublicRuntimeSource(proof, readNteSourceIndex, depth)
   if (value.kind === 'nte_reconstructed_source_checkpoint') return readNteSourceCheckpoint(proof)
   if (value.kind === 'nte_genshin_reviewed_collection_source_index_v1') return (await import('./genshin-collection-history')).readGenshinCollectionSource(proof, readNteSourceIndex, depth)

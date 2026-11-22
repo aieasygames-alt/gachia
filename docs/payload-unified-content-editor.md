@@ -1,5 +1,13 @@
 # 全游戏现有内容编辑契约
 
+## 2026-11-22 持续编辑合同
+
+当前生产状态以 `plans/payload-all-content-implementation-2026-11-05.md` 和对应回执为准。常驻 CMS 已在 R149 接通 R148 来源；下方 R120 是历史交付记录。
+
+蓝色星原独立文本合同允许一次修改一条既有攻略的 `content.en`，从当前已发布 A 派生候选和精确恢复，不再固定某个攻略 ID 或某句纠错。成员、顺序、身份、其他语言/字段和周围源代码必须保持。完成正式发布后，`azur:production source` 只读重验完整发布日志、候选/恢复模块、预览、公网与五 owner 拓扑，生成 `nte_azur_editorial_source_index_v1`，后续仍由 `readNteSourceIndex` 接续；CMS published 状态或单次上传不能生成完成来源。
+
+原神既有角色文本字段包含 `skills.passive3`（夜魂天赋）及 `skills.specialJump` 的 `name`、`description` 和对应 `En` 文本，沿用中文/英文/日文回退及精确恢复合同；不授予新增技能、数值、媒体或成员变化的权限。这是合同开发范围，实际安装和生产验证结果以逐批回执为准。
+
 <!-- BEGIN R120 CURRENT -->
 ## 当前完成状态（2026-11-14 R120）
 

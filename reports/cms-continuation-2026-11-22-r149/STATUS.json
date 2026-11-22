@@ -1,0 +1,12 @@
+{
+  "batch": "R149",
+  "status": "complete",
+  "delivery": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/delivery.json",
+    "pin": "d55eba1067841d2387f26041c95569a1ab75f8a77036c37ab6680e29064e4f58"
+  },
+  "sourceCommit": "f4fe65ecbf26d6b2820e70a8411c33cb488cb0fc",
+  "records": 2966,
+  "workerUploads": 0,
+  "productionDeployments": 0
+}

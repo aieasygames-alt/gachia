@@ -27,6 +27,9 @@ import { loadUnifiedDesktopPlan, unifiedSelection } from './unified-desktop'
 import { projectRoot } from './local-environment'
 import { freezeUnifiedContent } from './unified-build'
 import { buildUnifiedOwners } from './unified-owner-build'
+import { azurPromiliaGuideContract } from './azur-promilia-independent-text'
+import { createArtifactVerificationSession } from '../../../scripts/artifact-verification-session.mjs'
+import { readMigrationRouterVersion } from '../../../scripts/genshin-migration-router.mjs'
 
 type Proof = { path: string; pin: string }
 type Request = { schemaVersion: 1; kind: 'azur_promilia_release_request'; bundle: Proof; executorRunID: number; previewProxy?: string; publicProxy?: string }
@@ -57,14 +60,18 @@ export async function prepareAzurPromiliaIndependentProduction(input: { sourceIn
   try {
     const frozen = freezeUnifiedContent({ repo, commit: executor.commit, directory: path.join(directory, 'build'), plan, records: review.records, activeSources: sources.sources, preview: false, productionScope: AZUR_PROMILIA_PRODUCTION_SCOPE })
     const editorial = migrationSave(directory, 'review.json', { sourceCommit: executor.commit, planSHA256: plan.planSHA256, selected, reviews: review.reviews, reviewPin: review.reviewPin, application: input.application })
-    const built = await buildUnifiedOwners(frozen.directory, frozen.manifestPin, [{ owner: 'azur-promilia', path: '/en/azur-promilia/guides/kibo-battle-and-ecology', status: 200, contains: ['Kibo connects exploration'] }])
+    const candidateSources = frozen.candidate.files.map(row => ({ sourcePath: row.sourcePath,
+      text: readFileSync(path.join(frozen.workspace, row.sourcePath), 'utf8'), sha256: row.candidateSHA256 }))
+    const expected = azurPromiliaGuideContract(sources.sources, candidateSources).expectations
+    const built = await buildUnifiedOwners(frozen.directory, frozen.manifestPin, expected)
     const bundle = await prepareAzurPromiliaIndependentBundle({ build: { path: path.join(built.directory, 'build.json'), pin: built.buildPin }, sourceIndex: input.sourceIndex, review: editorial, directory: path.join(directory, 'sealed') })
     assert.equal((await readUnifiedProductionReview(plan, selected, input.cmsToken)).reviewPin, review.reviewPin); executor.verify(); return bundle
   } catch (error) { migrationSave(directory, 'failure.json', { error: (error as Error).message, cloudWrites: false }); throw error }
 }
 
 export async function auditAzurPromiliaProduction(input: unknown, tokens: { cmsToken?: string; cloudToken: string }) {
-  const request = azurPromiliaProductionRequest(input), githubToken = githubCredential(), executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken), evidence = await verifyAzurPromiliaIndependentBundle(request.bundle), repo = path.resolve(projectRoot, '../..')
+  const inventories = createArtifactVerificationSession()
+  const request = azurPromiliaProductionRequest(input), githubToken = githubCredential(), executor = await createUnifiedExecutorVerifier(request.executorRunID, githubToken), evidence = await inventories.run(() => verifyAzurPromiliaIndependentBundle(request.bundle)), repo = path.resolve(projectRoot, '../..')
   assert.equal(evidence.value.sourceCommit, executor.executorCommit)
   await verifyUnifiedPublishedSource({ publication: evidence.sources.originalPublication, sourceIndex: evidence.sources.originalSourceIndex, githubToken })
   for (const ancestor of evidence.sources.ancestors) assert.deepEqual(await verifyUnifiedCI(ancestor.runID, ancestor.commit, githubToken), ancestor)
@@ -81,7 +88,7 @@ export async function auditAzurPromiliaProduction(input: unknown, tokens: { cmsT
   const row = (evidence.sources.owners as Record<string, any>)['azur-promilia']; assert.equal(row.versionId, (before as any).services[row.service].versions[0].version_id); assert.equal((await readUnifiedVersion({ service: row.service, versionId: row.versionId, token: tokens.cloudToken, request: unifiedProductionRead })).id, row.versionId)
   assertTopology(before, await desktopCloudSnapshot(tokens.cloudToken, unifiedProductionRead)); executor.verify()
   const releaseKey = azurPromiliaReleaseKey(request, executor.executorCI), identity = { policy: AZUR_PROMILIA_INDEPENDENT_POLICY, releaseKey, sourceCommit: executor.executorCommit, executorCI: executor.executorCI, bundlePin: request.bundle.pin, reviewPin: review.reviewPin, baseline: evidence.sources.baseline, observedAt: Date.now(), owners: evidence.value.owners }
-  const verify = async () => { executor.verify(); assert.deepEqual((await verifyAzurPromiliaIndependentBundle(request.bundle)).value, evidence.value); assert.equal((await readUnifiedProductionReview(plan, editorial.selected, tokens.cmsToken!)).reviewPin, review.reviewPin); application(editorial.application, repo, executor.executorCommit); return { ...identity, observedAt: Date.now() } }
+  const verify = async () => { executor.verify(); assert.deepEqual((await inventories.run(() => verifyAzurPromiliaIndependentBundle(request.bundle))).value, evidence.value); assert.equal((await readUnifiedProductionReview(plan, editorial.selected, tokens.cmsToken!)).reviewPin, review.reviewPin); application(editorial.application, repo, executor.executorCommit); return { ...identity, observedAt: Date.now() } }
   return { request, evidence, identity, verify, executor }
 }
 
@@ -95,5 +102,29 @@ export async function activateAzurPromiliaProduction(input: { request: unknown; 
   finally { await network?.close(); await publicNetwork?.close() }
   audited.executor.verify(); const value = { schemaVersion: 1, kind: 'azur_promilia_release_completion', request: audited.request, bundle: audited.request.bundle, executorCI: audited.executor.executorCI, releaseKey: input.releaseKey, ...result, journal: { path: path.join(directory, `azur-promilia-independent-${input.releaseKey}.jsonl`), pin: result.journalPin } }
   return { proof: migrationSave(directory, 'completion.json', value), value }
+}
+
+export async function advanceAzurPromiliaProduction(input: { completion: Proof; executorRunID: number; directory: string; cloudToken: string }) {
+  assert.deepEqual(Object.keys(input).sort(), ['cloudToken', 'completion', 'directory', 'executorRunID'])
+  const { readCompletedAzurPromiliaRelease, advanceAzurPromiliaSources } = await import('./azur-promilia-release-history')
+  const githubToken = githubCredential(), executor = await createUnifiedExecutorVerifier(input.executorRunID, githubToken)
+  const inventories = createArtifactVerificationSession()
+  const completed = await inventories.run(() => readCompletedAzurPromiliaRelease(input.completion))
+  assert.deepEqual(await verifyUnifiedCI(completed.value.executorCI.runID, completed.value.executorCI.commit, githubToken), completed.value.executorCI)
+  await verifyUnifiedPublishedSource({ publication: completed.evidence.sources.originalPublication, sourceIndex: completed.evidence.sources.originalSourceIndex, githubToken })
+  for (const ancestor of completed.evidence.sources.ancestors) assert.deepEqual(await verifyUnifiedCI(ancestor.runID, ancestor.commit, githubToken), ancestor)
+  assertDiskBudget({ path: input.directory, operation: 'Azur published source continuation', estimatedBytes: GiB })
+  const network = completed.value.request.publicProxy ? await createGenshinPublicNetwork(completed.value.request.publicProxy) : undefined
+  const reader = {
+    snapshot: () => { executor.verify(); return desktopCloudSnapshot(input.cloudToken, unifiedProductionRead) },
+    version: (service: string, versionId: string) => service === 'gachia-router'
+      ? readMigrationRouterVersion({ versionId, token: input.cloudToken, request: unifiedProductionRead })
+      : readUnifiedVersion({ service, versionId, token: input.cloudToken, request: unifiedProductionRead }),
+    publicRequest: network?.request ?? unifiedProductionRead,
+  }
+  try {
+    const result = await inventories.run(() => advanceAzurPromiliaSources({ completion: input.completion, directory: input.directory, reader }))
+    executor.verify(); return result
+  } finally { await network?.close() }
 }
 

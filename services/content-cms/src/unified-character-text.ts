@@ -33,7 +33,7 @@ function fieldLocales(game: CharacterTextGame, pointer: string, row: Record<stri
   if (pointer === '/nameJa') return game === 'nte' ? [] : ['ja']
   if (game === 'azur-promilia') return []
   if (/^\/description(?:En)?$/.test(pointer)) return game === 'nte' ? nteTextLocales(pointer, row) : pointer.endsWith('En') ? ['en', 'ja'] : ['zh']
-  if (game === 'genshin' && /^(?:\/skills\/(?:normalAttack|elementalSkill|elementalBurst|passive[124])|\/constellations\/\d+)\/(?:name|description)(?:En)?$/.test(pointer)) {
+  if (game === 'genshin' && /^(?:\/skills\/(?:normalAttack|elementalSkill|elementalBurst|passive[1234]|specialJump)|\/constellations\/\d+)\/(?:name|description)(?:En)?$/.test(pointer)) {
     return pointer.endsWith('En') ? ['en', 'ja'] : ['zh']
   }
   if (game === 'nte' && /^\/skills\/(?:normalAttack|skill|ultimate|qte|passives\/\d+)\/(?:name|description)(?:En)?$/.test(pointer)) {

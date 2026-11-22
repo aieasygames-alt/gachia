@@ -1,0 +1,197 @@
+{
+  "kind": "cms-continuation-delivery-r149",
+  "status": "installed_verified_and_recoverable",
+  "sourceCommit": "f4fe65ecbf26d6b2820e70a8411c33cb488cb0fc",
+  "application": {
+    "sourceCommit": "f4fe65ecbf26d6b2820e70a8411c33cb488cb0fc",
+    "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T033417Z-cms-source-reader-r149-f4fe65ec/services/content-cms",
+    "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T004826Z-cms-source-reader-r147-a95cf751/services/content-cms",
+    "buildID": "BxrO7r5V45NVNvx01UFh8",
+    "nextVersion": "16.4.6",
+    "databaseMigrationRequired": false,
+    "application": {
+      "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T033417Z-cms-source-reader-r149-f4fe65ec/application-manifest.json",
+      "pin": "83bcac88b65525b1977d9b0fed76ff85a36dd1ddeb2855b4433f519f979a2b87"
+    },
+    "runtimeDependencies": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/runtime-dependencies.json",
+      "pin": "b0b0c7e8da131b94dace8b5a6ab15f657bec3228dbac478664a766556d68434f"
+    },
+    "files": 801,
+    "releaseFiles": 357,
+    "dependencyFiles": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a",
+      "entries": 43788
+    },
+    "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261122T034146Z-ecebc3",
+    "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/cms-source-reader-r149-f4fe65ecbf26",
+    "healthy": true,
+    "allDatabaseAndMediaUnchanged": true,
+    "schemaMigrationRun": false,
+    "previousApplicationRecoveryRehearsed": true,
+    "previousApplicationPreserved": true
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/published-sources/source-index.json",
+    "pin": "e364a23c8e9635db8e06344ff11980f25ef6a14fe87a7a6856a58523ea87957b"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+    "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+  },
+  "cmsObservation": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cms-final.json.gz",
+    "pin": "28a8d7441a40561a46f052912919e1fe37f690b944a77503c80af0b01f438269"
+  },
+  "records": 2966,
+  "sourceCount": 115,
+  "allOwnersCurrent": true,
+  "databaseTablesPreserved": 43,
+  "databaseSequencesAndMediaPreserved": true,
+  "dependenciesChanged": false,
+  "nextVersion": "16.4.6",
+  "payloadVersion": "3.92.1",
+  "reactVersion": "19.2.6",
+  "contentWrites": 0,
+  "reviewWrites": 0,
+  "schemaMigrations": 0,
+  "editingSourceSyncs": 0,
+  "workerUploads": 0,
+  "productionDeployments": 0,
+  "productionServicesPreserved": 6,
+  "stagingServicesPreserved": 4,
+  "generatedDirectoriesDeleted": [
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/frozen-final/source/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/main-material-migration-2026-11-19-r134/prepare/frozen/source/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/.local/r146-next/original"
+  ],
+  "transparentCompressedFiles": 316,
+  "pinnedEvidenceBytesChanged": 0,
+  "validation": {
+    "standardBuild": true,
+    "sourceContractTests": 20,
+    "postgresHTTPGroups": 15,
+    "residentHTTPChecks": 20,
+    "readerTraversalsAfterEachDeletedLeaf": 3,
+    "releaseReaderTraversals": 2,
+    "sourceCI": {
+      "conclusion": "success",
+      "headSha": "f4fe65ecbf26d6b2820e70a8411c33cb488cb0fc",
+      "status": "completed",
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/44977195776"
+    }
+  },
+  "evidence": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/application-prepared.json",
+      "pin": "dce0bf433288b2eaf11dd555369b8c7d5cc035a8f7658bc4cce7814103a6fc87"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/application-installed.json",
+      "pin": "d11dfa0399881e942db365ba432c10f8b2e834cacf06de0d290cc8a282466157"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/application-recovery.json",
+      "pin": "1ea8e23a1f7dbc176af4f8958f9dbfc507775e946f70fa50b59191d47ce7965c"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cms-dependency-files.json.gz",
+      "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/runtime-dependencies.json",
+      "pin": "b0b0c7e8da131b94dace8b5a6ab15f657bec3228dbac478664a766556d68434f"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cold-backup.json",
+      "pin": "78ea835f277178d93f12419614d4d0282029ef9493892ead698ce94a59bc3503"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/database-before.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/database-before-install.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/database-after-install.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/database-final.json",
+      "pin": "e69165459297acb436a4fd7d332a5c4a47ca0264c607ce94d39e09e9f59c9af5"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cms-before-proof.json",
+      "pin": "13703c19eb89020422b4469b9eb910dfccd5cc32f701a00705a66c3c7e55e33b"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cms-final-proof.json",
+      "pin": "e84e791df049c79f4615dd8aaa780088f8dfd48ad87a734a3769ca789beaa01e"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/prepared-reader.json",
+      "pin": "f5a9cf58f5bd4e07ea89f4f6fe6c492c4cfa5e12158f971a1ea7c7ae6fb08be2"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/installed-reader.json",
+      "pin": "a2a23318aaf7be7436d950d5716724b74205ae9fcaa4b7d6bd8e9fa1b187a969"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cloud-before.json",
+      "pin": "7ebaca707ece3b277c341edd471e2d805f17653add35b2416c72efd8ae033677"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cloud-after.json",
+      "pin": "c9405dcdd4584e25400986c7f39d714ac26898e1504bd536e9b482b65757bc58"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/http.json",
+      "pin": "2001f85929d17c14c8ea4b2edb4ae894880573c06ff76cd1a74d0619ef22ba75"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/postgres-smoke/postgres-smoke.json",
+      "pin": "b2b5c1d2073d079d9721b2a462bdde690304c4a2fc5859776e2261c05d6f3168"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/source-reader-tests.log",
+      "pin": "caf1707cd4957c027d7b14a8344219eecf75f91540cb6138321aa785699ed004"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/typecheck.log",
+      "pin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cms-build.log",
+      "pin": "70ac6b9464d2ee139975aa2256c5f49a460fa64cd73e5e75e27960542fa61065"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/source-ci-live.json",
+      "pin": "e8685244bcb7b970cc727af50f3a16be2e714541a3a6eaf752a6c437ed85f079"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cleanup-1.json",
+      "pin": "b81a886b96d9408a8f4f21b77552f35d2efdf0f79a1bf2cec79c8a130fb77a83"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cleanup-2.json",
+      "pin": "940f498c4040638b2340b7f22bfefb588ad23d60ee9727d176fee57d7442ce39"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/cleanup-3.json",
+      "pin": "26a43f4b3e6ff38b5e4628071b05f92be965989f922fc7abc3475fc0030dcba0"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/compression-result.json",
+      "pin": "4ba720123b2db5028937d165e2bc6e6799b0bedf69501da022fea1846154fb1c"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/cms-continuation-2026-11-22-r149/compression-apply-journal.jsonl",
+      "pin": "39ec394d4e95f553707e360a2cf5685330d6e414341dad7445e6fe19b5cf1ecd"
+    }
+  ],
+  "freeGiB": 14.84,
+  "next": "Generalize the Azur existing English guide edit and complete its second CMS single-Worker release; then qualify Genshin passive3/specialJump text."
+}
