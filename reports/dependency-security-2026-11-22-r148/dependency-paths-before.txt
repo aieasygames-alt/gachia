@@ -1,0 +1,118 @@
+better-auth@1.6.22
+└── @gachia/web@0.0.1 (dependencies)
+
+glob@10.5.0
+└─┬ @node-minify/core@9.0.2
+  └─┬ @opennextjs/aws@4.1.12
+    └─┬ @opennextjs/cloudflare@1.20.13
+      ├── @gachia/game-azur-promilia@0.0.1 (devDependencies)
+      ├── @gachia/game-genshin@0.0.1 (devDependencies)
+      ├── @gachia/game-lvmeng@0.0.1 (devDependencies)
+      ├── @gachia/game-nte@0.0.1 (devDependencies)
+      └── @gachia/web@0.0.1 (devDependencies)
+
+glob@13.0.6
+└─┬ @opennextjs/cloudflare@1.20.13
+  ├── @gachia/game-azur-promilia@0.0.1 (devDependencies)
+  ├── @gachia/game-genshin@0.0.1 (devDependencies)
+  ├── @gachia/game-lvmeng@0.0.1 (devDependencies)
+  ├── @gachia/game-nte@0.0.1 (devDependencies)
+  └── @gachia/web@0.0.1 (devDependencies)
+
+minimatch@3.1.5
+├─┬ @eslint/config-array@0.21.2
+│ └─┬ eslint@9.39.5
+│   ├─┬ @eslint-community/eslint-utils@4.9.1
+│   │ ├─┬ @typescript-eslint/utils@8.63.0
+│   │ │ ├─┬ @typescript-eslint/eslint-plugin@8.63.0
+│   │ │ │ └─┬ eslint-config-next@15.5.29
+│   │ │ │   └── @gachia/web@0.0.1 (devDependencies)
+│   │ │ └─┬ @typescript-eslint/type-utils@8.63.0
+│   │ │   └── @typescript-eslint/eslint-plugin@8.63.0 [deduped]
+│   │ └── eslint@9.39.5 [circular]
+│   ├── @gachia/web@0.0.1 (devDependencies)
+│   ├── @typescript-eslint/eslint-plugin@8.63.0 [deduped]
+│   ├─┬ @typescript-eslint/parser@8.63.0
+│   │ ├── @typescript-eslint/eslint-plugin@8.63.0 [deduped]
+│   │ ├── eslint-config-next@15.5.29 [deduped]
+│   │ ├─┬ eslint-module-utils@2.14.0
+│   │ │ └─┬ eslint-plugin-import@2.32.0
+│   │ │   ├── eslint-config-next@15.5.29 [deduped]
+│   │ │   └─┬ eslint-import-resolver-typescript@3.10.1
+│   │ │     ├── eslint-config-next@15.5.29 [deduped]
+│   │ │     └── eslint-module-utils@2.14.0 [circular]
+│   │ └── eslint-plugin-import@2.32.0 [deduped]
+│   ├── @typescript-eslint/type-utils@8.63.0 [deduped]
+│   ├── @typescript-eslint/utils@8.63.0 [deduped]
+│   ├── eslint-config-next@15.5.29 [deduped]
+│   ├── eslint-import-resolver-typescript@3.10.1 [deduped]
+│   ├── eslint-module-utils@2.14.0 [deduped]
+│   ├── eslint-plugin-import@2.32.0 [deduped]
+│   ├─┬ eslint-plugin-jsx-a11y@6.10.2
+│   │ └── eslint-config-next@15.5.29 [deduped]
+│   ├─┬ eslint-plugin-react@7.37.5
+│   │ └── eslint-config-next@15.5.29 [deduped]
+│   └─┬ eslint-plugin-react-hooks@5.2.0
+│     └── eslint-config-next@15.5.29 [deduped]
+├─┬ @eslint/eslintrc@3.3.6
+│ ├── @gachia/web@0.0.1 (devDependencies)
+│ └── eslint@9.39.5 [deduped]
+├── eslint@9.39.5 [deduped]
+├── eslint-plugin-import@2.32.0 [deduped]
+├── eslint-plugin-jsx-a11y@6.10.2 [deduped]
+└── eslint-plugin-react@7.37.5 [deduped]
+
+minimatch@9.0.9
+└─┬ glob@10.5.0
+  └─┬ @node-minify/core@9.0.2
+    └─┬ @opennextjs/aws@4.1.12
+      └─┬ @opennextjs/cloudflare@1.20.13
+        ├── @gachia/game-azur-promilia@0.0.1 (devDependencies)
+        ├── @gachia/game-genshin@0.0.1 (devDependencies)
+        ├── @gachia/game-lvmeng@0.0.1 (devDependencies)
+        ├── @gachia/game-nte@0.0.1 (devDependencies)
+        └── @gachia/web@0.0.1 (devDependencies)
+
+minimatch@10.2.5
+├─┬ @typescript-eslint/typescript-estree@8.63.0
+│ ├─┬ @typescript-eslint/parser@8.63.0
+│ │ ├─┬ @typescript-eslint/eslint-plugin@8.63.0
+│ │ │ └─┬ eslint-config-next@15.5.29
+│ │ │   └── @gachia/web@0.0.1 (devDependencies)
+│ │ ├── eslint-config-next@15.5.29 [deduped]
+│ │ ├─┬ eslint-module-utils@2.14.0
+│ │ │ └─┬ eslint-plugin-import@2.32.0
+│ │ │   ├── eslint-config-next@15.5.29 [deduped]
+│ │ │   └─┬ eslint-import-resolver-typescript@3.10.1
+│ │ │     ├── eslint-config-next@15.5.29 [deduped]
+│ │ │     └── eslint-module-utils@2.14.0 [circular]
+│ │ └── eslint-plugin-import@2.32.0 [deduped]
+│ ├─┬ @typescript-eslint/type-utils@8.63.0
+│ │ └── @typescript-eslint/eslint-plugin@8.63.0 [deduped]
+│ └─┬ @typescript-eslint/utils@8.63.0
+│   ├── @typescript-eslint/eslint-plugin@8.63.0 [deduped]
+│   └── @typescript-eslint/type-utils@8.63.0 [deduped]
+└─┬ glob@13.0.6
+  └─┬ @opennextjs/cloudflare@1.20.13
+    ├── @gachia/game-azur-promilia@0.0.1 (devDependencies)
+    ├── @gachia/game-genshin@0.0.1 (devDependencies)
+    ├── @gachia/game-lvmeng@0.0.1 (devDependencies)
+    ├── @gachia/game-nte@0.0.1 (devDependencies)
+    └── @gachia/web@0.0.1 (devDependencies)
+
+qs@6.16.0
+├─┬ body-parser@2.4.0
+│ └─┬ express@5.2.1
+│   └─┬ @opennextjs/aws@4.1.12
+│     └─┬ @opennextjs/cloudflare@1.20.13
+│       ├── @gachia/game-azur-promilia@0.0.1 (devDependencies)
+│       ├── @gachia/game-genshin@0.0.1 (devDependencies)
+│       ├── @gachia/game-lvmeng@0.0.1 (devDependencies)
+│       ├── @gachia/game-nte@0.0.1 (devDependencies)
+│       └── @gachia/web@0.0.1 (devDependencies)
+└── express@5.2.1 [deduped]
+
+Found 1 version of better-auth
+Found 2 versions of glob
+Found 3 versions of minimatch
+Found 1 version of qs

@@ -1,0 +1,969 @@
+{
+  "GHSA-3g3m-2fjr-6pw4": {
+    "ghsa_id": "GHSA-3g3m-2fjr-6pw4",
+    "cve_id": "CVE-2026-118773",
+    "url": "https://api.github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+    "html_url": "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+    "summary": "Glob: AbortSignal cancellation bypass allows post-timeout filesystem traversal",
+    "description": "### Summary\n\nIn glob 13.0.6, an aborted async walk rejects or emits an error but continues recursively reading directories in the background.\n\nThe root cause is that abort branches in src/walker.ts call cb() without returning. As a result, callers that rely on signal or AbortSignal.timeout() to bound glob traversal cost can still incur filesystem I/O and CPU work after the request has already been rejected.\n\n### Details\n\nThis was reproduced on glob v13.0.6 (commit e80cb38ae60d6cbff9e75f39032a994858994d35).\n\nThe README documents that the signal option cancels the glob walk. However, in src/walker.ts, the following methods call cb() when this.signal?.aborted is true but do not return:\n\n- GlobUtil.walkCB()\n- GlobUtil.walkCB2()\n- GlobUtil.walkCBSync()\n- GlobUtil.walkCB2Sync()\n\nExample vulnerable pattern:\n\nif (this.signal?.aborted) cb()\n\nBecause execution continues after cb(), the walker still reaches processor.processPatterns(), readdirCB(), and recursive walkCB2() calls.\n\nThe issue was directly demonstrated against v13.0.6. A source-history review shows the same missing-return pattern is present in tagged releases from v9.0.0 through v13.0.6.\n\nThe issue affects both glob() and globStream().\n\nRecommended fix:\nChange each abort branch to return immediately:\n\nif (this.signal?.aborted) return cb()\n\n### Proof of concept\n\nEnvironment:\n- Linux x86_64\n- Node.js v22.23.3\n- npm 10.9.9\n- glob 13.0.6\n\nReproduction steps:\n\n1. Install the affected package:\n   npm init -y\n   npm install glob@13.0.6\n\n2. Run the attached PoC:\n   node poc/abort-continues-work.mjs\n\nThe PoC aborts after the first readdir() call, waits briefly, and counts how many more directory reads happen after the promise has already rejected.\n\nObserved output on the vulnerable version:\n\n{\n  \"rejection\": \"Error: probe-abort\",\n  \"readdirCalls\": 1365,\n  \"readdirCallsAtReject\": 5,\n  \"readdirCallsAfterReject\": 1360\n}\n\nExpected behavior:\nreaddirCallsAfterReject should be 0.\n\nA second PoC using AbortSignal.timeout() also reproduces the issue:\n\n{\n  \"rejection\": \"TimeoutError: The operation was aborted due to timeout\",\n  \"readdirCalls\": 133,\n  \"readdirCallsAtReject\": 1,\n  \"readdirCallsAfterReject\": 132\n}\n\nThe same test against a patched build with return cb() in the four abort branches stops immediately:\n\n{\n  \"readdirCalls\": 1,\n  \"readdirCallsAtReject\": 1,\n  \"readdirCallsAfterReject\": 0\n}\n\n### Impact\n\nThis is an availability issue.\n\nApplications that expose globbing over attacker-influenced patterns or attacker-controlled directory trees and use AbortSignal / AbortSignal.timeout() as a traversal budget can still perform significant filesystem I/O and CPU work after a request has already timed out or been canceled.\n\nRepeated timed-out requests can stack background glob walks and degrade worker throughput or service availability.\n\nNo confidentiality or integrity impact was observed.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/isaacs/node-glob/security-advisories/GHSA-3g3m-2fjr-6pw4",
+    "source_code_location": "https://github.com/isaacs/node-glob",
+    "identifiers": [
+      {
+        "value": "GHSA-3g3m-2fjr-6pw4",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-118773",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/isaacs/node-glob/security/advisories/GHSA-3g3m-2fjr-6pw4",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-118773",
+      "https://github.com/isaacs/node-glob/commit/4682e8c9babee1b385202ede36389634e12076d7",
+      "https://github.com/isaacs/node-glob/releases/tag/v14.0.2",
+      "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4"
+    ],
+    "published_at": "2026-10-30T23:09:11Z",
+    "updated_at": "2026-10-30T23:09:15Z",
+    "github_reviewed_at": "2026-10-30T23:09:11Z",
+    "nvd_published_at": "2026-10-29T19:17:19Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "glob"
+        },
+        "vulnerable_version_range": ">= 9.0.0, <= 14.0.1",
+        "first_patched_version": "14.0.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "score": 6.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      }
+    ],
+    "credits": [],
+    "comments": 1,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.00465,
+      "percentile": 0.41037
+    }
+  },
+  "GHSA-44jh-23m7-hpcf": {
+    "ghsa_id": "GHSA-44jh-23m7-hpcf",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-44jh-23m7-hpcf",
+    "html_url": "https://github.com/advisories/GHSA-44jh-23m7-hpcf",
+    "summary": "@better-auth/drizzle-adapter: Concurrent requests can exceed rate limits on PostgreSQL",
+    "description": "## Am I affected?\n\nYou are affected if you use `@better-auth/drizzle-adapter` from 1.6.17 through versions before 1.7.7 (including the 1.7.0 prereleases from beta.6 through rc.6) or `@better-auth/kysely-adapter` 1.6.17 through 1.6.31, and keep rate-limit records in a PostgreSQL database.\n\nAll of these must be true:\n\n- Rate limiting is enabled.\n- Rate-limit records are stored in the database.\n- The database is PostgreSQL, used through one of the adapter versions above.\n\nYou are not affected if you store rate-limit records in memory (the default) or in secondary storage.\n\n## Summary\n\nDatabase-backed rate limiting on PostgreSQL can let a burst of concurrent requests go over the configured maximum. When many requests arrive at the same time, several of them can pass the limit check together. This weakens the rate limit on password sign-in, two-factor verification, one-time codes, password resets, and other rate-limited endpoints.\n\n## Impact\n\nAn attacker who sends many requests at once can make more attempts than the application allows.\n\nThe issue does not bypass password or one-time-code validation. It does not directly compromise an account. The number of extra attempts is limited by the number of concurrent database connections, the number of application instances, and the rate-limit window.\n\n## Patches\n\n`@better-auth/kysely-adapter` is fixed in 1.7.0. Upgrade to 1.7.0 or later.\n\nThe Drizzle fix is merged for the planned `@better-auth/drizzle-adapter` 1.7.7 release. That package is not available yet. Upgrade `better-auth` and the installed Drizzle adapter together when 1.7.7 is available. No database schema or public API migration is required.\n\n## Workarounds\n\n- Store rate-limit records in secondary storage.\n- Use a custom rate-limit storage that checks and increments the counter in one atomic step. An atomic step cannot be interrupted by another request.\n- Enforce the intended limit at an upstream layer, such as a reverse proxy or gateway.\n\nIn-memory storage also avoids this issue. However, each application instance keeps its own counter, so it may not enforce one shared limit in multi-instance or serverless deployments.",
+    "type": "reviewed",
+    "severity": "low",
+    "repository_advisory_url": "https://api.github.com/repos/better-auth/better-auth/security-advisories/GHSA-44jh-23m7-hpcf",
+    "source_code_location": "https://github.com/better-auth/better-auth",
+    "identifiers": [
+      {
+        "value": "GHSA-44jh-23m7-hpcf",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-44jh-23m7-hpcf",
+      "https://github.com/better-auth/better-auth/pull/11331",
+      "https://github.com/better-auth/better-auth/commit/35d7cd389220f99cfc98ac699e6a42b48313a740",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.7",
+      "https://github.com/advisories/GHSA-44jh-23m7-hpcf"
+    ],
+    "published_at": "2026-10-27T15:32:25Z",
+    "updated_at": "2026-10-27T15:32:27Z",
+    "github_reviewed_at": "2026-10-27T15:32:25Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@better-auth/drizzle-adapter"
+        },
+        "vulnerable_version_range": ">= 1.6.17, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@better-auth/kysely-adapter"
+        },
+        "vulnerable_version_range": ">= 1.6.17, < 1.7.0",
+        "first_patched_version": "1.7.0",
+        "vulnerable_functions": []
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.6.17, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "score": 3.7
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-307",
+        "name": "Improper Restriction of Excessive Authentication Attempts"
+      },
+      {
+        "cwe_id": "CWE-362",
+        "name": "Concurrent Execution using Shared Resource with Improper Synchronization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "designorant",
+          "id": 87477,
+          "node_id": "MDQ6VXNlcjg3NDc3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/87477?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/designorant",
+          "html_url": "https://github.com/designorant",
+          "followers_url": "https://api.github.com/users/designorant/followers",
+          "following_url": "https://api.github.com/users/designorant/following{/other_user}",
+          "gists_url": "https://api.github.com/users/designorant/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/designorant/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/designorant/subscriptions",
+          "organizations_url": "https://api.github.com/users/designorant/orgs",
+          "repos_url": "https://api.github.com/users/designorant/repos",
+          "events_url": "https://api.github.com/users/designorant/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/designorant/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "score": 3.7
+    }
+  },
+  "GHSA-6pq8-jhm2-2vcw": {
+    "ghsa_id": "GHSA-6pq8-jhm2-2vcw",
+    "cve_id": "CVE-2026-110816",
+    "url": "https://api.github.com/advisories/GHSA-6pq8-jhm2-2vcw",
+    "html_url": "https://github.com/advisories/GHSA-6pq8-jhm2-2vcw",
+    "summary": "qs : qs.stringify with arrayFormat 'comma' throws an uncaught TypeError on array elements carrying a non-callable own toString (DoS)",
+    "description": "## Summary\n\n`qs.stringify(obj, { arrayFormat: 'comma' })` throws an uncaught `TypeError: Cannot convert object to primitive value` when an array in `obj` contains an element that carries an own, non-callable `toString` property (for example `{ a: [ { toString: 'x' } ] }`). A remote, unauthenticated attacker who can influence an object that the application later re-serializes with the comma array format triggers the throw. In a service that lacks a synchronous error boundary around the serialization call, the uncaught exception crashes the worker process, producing a denial of service.\n\n## Root Cause\n\nWhen `arrayFormat: 'comma'` is selected, the comma branch collapses the whole array into a single value via `Array.prototype.join`, or, under `encodeValuesOnly: true`, maps each element through the value encoder before joining. Both paths perform an implicit string coercion (`ToPrimitive` with hint `\"string\"`) on each element. For an object whose own `toString` is a non-callable value, coercion skips the shadowed non-callable `toString`, falls through to `Object.prototype.valueOf` (which returns the object rather than a primitive), and throws. The comma branch runs this coercion before the per-element null and skip handling in the main loop, so nothing downstream can neutralize the hostile element, and the throw is never caught inside the library.\n\n```text\nlib/stringify.js  (comma-array branch)\n  line 152-154: obj = utils.maybeMap(obj, function (v) { return v == null ? v : encoder(v); });  // encodeValuesOnly path\n  line 156:     objKeys = [{ value: obj.length > 0 ? obj.join(',') || null : void undefined }];   // default comma path\nlib/utils.js\n  line 292:     string = String(str);   // value encoder coercion reached via the encodeValuesOnly path\n```\n\n## Impact\n\nPrerequisites: the application calls `qs.stringify` with `arrayFormat: 'comma'` (a documented, supported option) on an object whose shape can be influenced by attacker input. Attacker-controllable sources include `qs.parse(input, { allowPrototypes: true })`, which retains a `toString` segment (Express 4's default query parser, Express 5's `extended` query parser, and body-parser's `extended` urlencoded parser all set it), `qs.parse(input, { plainObjects: true })`, whose null-prototype elements throw even without a `toString` key (eg, `a[][b]=c`), and `JSON.parse` of a request body, which needs no qs parse option at all. No authentication or user interaction is required. Demonstrated capability: a single request forces an uncaught synchronous `TypeError` in the serialization call. In a naive single-process Node service with no synchronous error boundary, this crashes the process and takes the service offline (availability impact). Under a framework such as Express that traps synchronous handler throws, the plausible outcome is a per-request 500 rather than a full outage; that lower-impact case is noted but not the worst credible supported deployment. There is no confidentiality or integrity impact, no memory unsafety, and no prototype pollution.\n\n## Proof of Concept\n\n`Install qs at the affected version (for example 6.16.0) and run the following script with Node.js. No network setup is required; it demonstrates the throw in isolation.`\n\n```js\nvar qs = require('qs');\n\n// Source A: qs.parse with allowPrototypes retains the hostile toString segment\nqs.stringify(qs.parse('a[0][toString]=x', { allowPrototypes: true }), { arrayFormat: 'comma' });\n\n// Source B: a JSON request body, no qs parse option needed\nqs.stringify(JSON.parse('{\"a\":[{\"toString\":\"x\"}]}'), { arrayFormat: 'comma' });\n\n// Also affected: the encodeValuesOnly sub-path\nqs.stringify(JSON.parse('{\"a\":[{\"toString\":\"x\"}]}'), { arrayFormat: 'comma', encodeValuesOnly: true });\n```\n\n```text\nA default-join (allowPrototypes) => THREW: TypeError: Cannot convert object to primitive value\nB default-join (JSON.parse) => THREW: TypeError: Cannot convert object to primitive value\nC encodeValuesOnly path => THREW: TypeError: Cannot convert object to primitive value\nN2 callable toString => NO THROW; output=\"a=z\"\nN3 isBuffer vector (CVE-2026-82417) => NO THROW; output=\"a%5Bconstructor%5D%5BisBuffer%5D=x\"\nqs version: 6.16.0\n```\n\n## Attack Chain\n\n1. **Exposure:** A remote, unauthenticated request reaches an endpoint whose handler eventually serializes attacker-influenced data with `qs.stringify(obj, { arrayFormat: 'comma' })`.\n2. **Control:** The attacker supplies data that becomes `{ a: [ { toString: <non-callable value> } ] }`, either via `a[0][toString]=x` parsed with `allowPrototypes`, or via a JSON body `{\"a\":[{\"toString\":\"x\"}]}`.\n3. **Path:** In `stringify`, the primitive/buffer guard at `lib/stringify.js:134` is false for an array, so control reaches the comma branch at `lib/stringify.js:149`.\n4. **Guard:** On the `encodeValuesOnly` path, the closure `v == null ? v : encoder(v)` at `lib/stringify.js:152-154` passes only `null`/`undefined` through; a non-null object still reaches the encoder. The default path skips that closure entirely and reaches `obj.join(',')` at `lib/stringify.js:156` with no guard at all.\n5. **Primitive:** The element is coerced to a string (`Array.prototype.join`, or `String(str)` at `lib/utils.js:292`). `ToPrimitive` skips the non-callable own `toString`, `valueOf` returns the object, and a `TypeError` is thrown.\n6. **Result:** The uncaught synchronous exception propagates out of the serialization call, failing the request and, in a service without a synchronous error boundary, crashing the process (denial of service).\n\n## Bypass Evidence\n\nThis is a different element type on the code path CVE-2026-8723 (GHSA-q8mj-m7cp-5q26) patched, plus the default comma path, which that fix never covered. CVE-2026-8723 addressed a `TypeError` crash on `null`/`undefined` entries in the comma plus `encodeValuesOnly` path. Its fix (commit 21f80b3) wraps the encoder in `function (v) { return v == null ? v : encoder(v); }`, so it only passes `null` and `undefined` through. A non-null element with a hostile own `toString` fails the `v == null` test, so the encoder still runs and still throws; the encodeValuesOnly case (case C above) throws on the exact fixed code. The default comma path (`encodeValuesOnly` unset, the library default) never entered that fix at all: `git log -S \"obj.join(','\" -- lib/stringify.js` shows no security fix has ever touched the `obj.join(',')` line, and cases A and B throw with `encodeValuesOnly` unset. The related isBuffer hardening for CVE-2026-82417 (commit e83d321) is a different sink at the `lib/stringify.js:134` guard, which is never entered for the array element; the negative control `{a:{constructor:{isBuffer:'x'}}}` serializes cleanly. Disproof attempts that failed: a `valueOf`-only object does not throw (it serializes to `[object Object]`), confirming the trigger is an element with no callable `toString` (an own non-callable `toString`, or a null-prototype object with no `toString` at all, as `qs.parse` produces under `plainObjects`); nested arrays (`{\"a\":[[{\"toString\":\"x\"}]]}`) throw the same way; a callable `toString` serializes cleanly; and the default (non-comma) array format serializes cleanly, confirming the comma format is required. All positive and negative cases were reproduced on the exact published 6.16.0 artifact.\n\n## Affected Versions\n\n- `Ecosystem: npm`\n- `Package: qs`\n- `Confirmed affected range: >= 6.7.0, <= 6.16.0`\n- `Latest release checked: 6.16.0 (npm latest; git tag v6.16.0)`\n- `Fix status: fixed in 6.16.1 (a952e75)`\n\nThe `arrayFormat: 'comma'` join sink was introduced in qs 6.7.0, so 6.7.0 is the lower boundary; releases before 6.7.0 lack the sink. No released version fixes this vector, and the latest published release (6.16.0) reproduces the throw, so the closed upper bound `<= 6.16.0` covers every affected release. The `encodeValuesOnly` sub-path was added later, but the default comma-join vector already affects 6.7.0, so 6.7.0 governs the lower boundary.\n\n## Suggested Fix\n\nThe comma array serialization must not allow an implicit string coercion of an array element to throw an uncaught exception. Coercion of each comma element should be performed defensively (for example by wrapping the join and per-element encode so that a coercion failure is caught and handled), and this protection must cover both the default `obj.join(',')` path and the `encodeValuesOnly` encoder path, not only the previously patched `null`/`undefined` case. As an interim mitigation without a code change, applications can avoid `arrayFormat: 'comma'` when serializing data derived from untrusted input, sanitize parsed objects (avoid `allowPrototypes`/`plainObjects` on untrusted input and strip unexpected own properties), or wrap `qs.stringify` calls in a synchronous error boundary so a coercion failure cannot crash the process.\n\nReported by zx (GitHub: @manus-pi).\n\n---\n\n## Independent report by @Lucidsec\n\nThe following was reported separately, after this advisory, and is merged here as a duplicate.\n\n### Summary\n\nIn project [qs](https://github.com/ljharb/qs), in versions `>= 6.7.0, <= 6.16.0` (every version that supports `arrayFormat: 'comma'`), `qs.stringify` with `arrayFormat: 'comma'` can throw an uncaught `TypeError: Cannot convert object to primitive value` when an array element has a non-callable own `toString`. It is fixed in 6.16.1. Related: CWE-248 and CWE-704.\n\n### Technical Details\n\n`qs.stringify` with `arrayFormat: 'comma'` joins an array at `lib/stringify.js:156` via `obj.join(',')`. An element whose own `toString` is not callable makes `Array.prototype.join` throw. There is no type check and no catch on that path.\n\nA second path exists with `encodeValuesOnly`: at `lib/stringify.js:151-154`, `maybeMap` only skips `v == null`, then `lib/utils.js:292` does `String(str)` and throws the same `TypeError` (this second site exists since v6.11.1; before that, the same input throws at `join`).\n\nWho can trigger: someone who can shape an array element passed to `stringify`. The host must use non-default `arrayFormat: 'comma'`. Default `arrayFormat` `indices` does not fold arrays and is not affected. A parse-then-stringify path also needs `plainObjects: true` (null-prototype elements from `lib/parse.js:200`) or `allowPrototypes: true` (which Express 4's default query parser, Express 5's `extended` query parser, and body-parser's `extended` urlencoded parser all set). Default `qs.parse('a[0][toString]=x')` returns `{}` because the prototype guard drops `toString`. Direct JSON handed to `stringify` can supply `{\"a\":[{\"toString\":\"x\"}]}`.\n\nCause: the comma fold at `lib/stringify.js:149-156` collapses the array into a single value before the main loop at `lib/stringify.js:172-212`, so `skipNulls` and `strictNullHandling` only ever see the joined value, never individual elements. `isNonNullishPrimitive` / `isBuffer` at `lib/stringify.js:134` inspect the whole value, not each element. A normal object uses `Object.prototype.toString` and becomes `[object Object]`. An own non-callable `toString` is skipped, `valueOf` returns the object, and `join` throws. (The skipped TODO test at `test/stringify.js:684-689` uses a plain `{ b: 1 }` element, which does not throw; it covers the separate question of what comma format should output for object elements, not this crash.) Earlier comma crash fixes did not cover object elements.\n\n### Impact\n\nOne small input makes that serialization path throw a synchronous, catchable `TypeError`. Behind a framework error boundary (eg, a synchronous Express handler), the request fails with a 500 and the process survives. In a host with no error boundary (eg, a bare `http.createServer` handler), the uncaught exception exits the process (the client sees `ECONNRESET`). Availability only.\n\n### Proof of Concept\n\n<details>\n<summary>Show the proof of concept</summary>\n\nChecked on the latest commit that was checked: `07b1d4d82c8f9301c105ea4b94fa2302cfd6e8b4`. Still present. Demonstrated.\n\n- Payload `{\"a\":[{\"toString\":\"x\"}]}` throws at `lib/stringify.js:156`.\n- Baseline `{\"a\":[\"x\",\"y\"]}` returns 200 with body `a=x%2Cy`.\n- A plain object element stringifies to `a=%5Bobject%20Object%5D` and does not throw.\n- `encodeValuesOnly: true` throws via `utils.js:292`.\n- `plainObjects` parse plus comma throws.\n\n</details>\n\n### Suggested Fix\n\nBefore `join`, map elements with the existing primitive check; skip or replace non-primitives so `join` cannot throw. On the `encodeValuesOnly` path, do not send non-primitives into `String()`. Optionally guard `lib/utils.js:292`. Add new regression tests.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/ljharb/qs/security-advisories/GHSA-6pq8-jhm2-2vcw",
+    "source_code_location": "https://github.com/ljharb/qs",
+    "identifiers": [
+      {
+        "value": "GHSA-6pq8-jhm2-2vcw",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-110816",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/ljharb/qs/security/advisories/GHSA-6pq8-jhm2-2vcw",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-110816",
+      "https://github.com/ljharb/qs/commit/a952e7519338ef0cfb25694a2988848f93333727",
+      "https://github.com/ljharb/qs/releases/tag/v6.16.1",
+      "https://github.com/advisories/GHSA-6pq8-jhm2-2vcw"
+    ],
+    "published_at": "2026-10-27T16:10:55Z",
+    "updated_at": "2026-10-29T02:22:33Z",
+    "github_reviewed_at": "2026-10-27T16:10:55Z",
+    "nvd_published_at": "2026-10-14T22:17:23Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "qs"
+        },
+        "vulnerable_version_range": ">= 6.7.0, <= 6.16.0",
+        "first_patched_version": "6.16.1",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 5.3
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "score": 6.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-248",
+        "name": "Uncaught Exception"
+      },
+      {
+        "cwe_id": "CWE-704",
+        "name": "Incorrect Type Conversion or Cast"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "manus-pi",
+          "id": 263165539,
+          "node_id": "U_kgDOD6-WYw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/263165539?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/manus-pi",
+          "html_url": "https://github.com/manus-pi",
+          "followers_url": "https://api.github.com/users/manus-pi/followers",
+          "following_url": "https://api.github.com/users/manus-pi/following{/other_user}",
+          "gists_url": "https://api.github.com/users/manus-pi/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/manus-pi/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/manus-pi/subscriptions",
+          "organizations_url": "https://api.github.com/users/manus-pi/orgs",
+          "repos_url": "https://api.github.com/users/manus-pi/repos",
+          "events_url": "https://api.github.com/users/manus-pi/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/manus-pi/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "Lucidsec",
+          "id": 301666816,
+          "node_id": "U_kgDOEfsSAA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/301666816?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Lucidsec",
+          "html_url": "https://github.com/Lucidsec",
+          "followers_url": "https://api.github.com/users/Lucidsec/followers",
+          "following_url": "https://api.github.com/users/Lucidsec/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Lucidsec/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Lucidsec/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Lucidsec/subscriptions",
+          "organizations_url": "https://api.github.com/users/Lucidsec/orgs",
+          "repos_url": "https://api.github.com/users/Lucidsec/repos",
+          "events_url": "https://api.github.com/users/Lucidsec/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Lucidsec/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "manus-use",
+          "id": 213290975,
+          "node_id": "U_kgDODLaP3w",
+          "avatar_url": "https://avatars.githubusercontent.com/u/213290975?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/manus-use",
+          "html_url": "https://github.com/manus-use",
+          "followers_url": "https://api.github.com/users/manus-use/followers",
+          "following_url": "https://api.github.com/users/manus-use/following{/other_user}",
+          "gists_url": "https://api.github.com/users/manus-use/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/manus-use/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/manus-use/subscriptions",
+          "organizations_url": "https://api.github.com/users/manus-use/orgs",
+          "repos_url": "https://api.github.com/users/manus-use/repos",
+          "events_url": "https://api.github.com/users/manus-use/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/manus-use/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      }
+    ],
+    "comments": 1,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "score": 5.3
+    },
+    "epss": {
+      "percentage": 0.00368,
+      "percentile": 0.30524
+    }
+  },
+  "GHSA-965c-763c-88jm": {
+    "ghsa_id": "GHSA-965c-763c-88jm",
+    "cve_id": "CVE-2026-114607",
+    "url": "https://api.github.com/advisories/GHSA-965c-763c-88jm",
+    "html_url": "https://github.com/advisories/GHSA-965c-763c-88jm",
+    "summary": "better-auth: OAuth state can be used as a Magic Link to sign in as another user",
+    "description": "## Am I affected?\n\nYou may be affected if you use `better-auth` from `1.4.0-beta.18` through versions before `1.7.7` with the Magic Link plugin and social or Generic OAuth sign-in.\n\nYou are affected if **all** of these are true:\n\n- Magic Link is enabled with default `storeToken: \"plain\"`, or with `storeToken: \"hashed\"` and global `verification.storeIdentifier: \"hashed\"` (including a hashed default).\n- At least one built-in social provider or Generic OAuth provider is enabled.\n- OAuth state uses `account.storeStateStrategy: \"database\"`, the default when a database or secondary storage is configured.\n\nCookie-backed state blocks this path, subject to the OAuth Proxy condition below. With custom hashers, confirm the flows cannot resolve to the same stored identifier.\n\n## Summary\n\nBetter Auth accepts an OAuth sign-in state value as a Magic Link token. An attacker can start an OAuth sign-in with any email address and use the returned state value to finish a Magic Link sign-in for that address. They never prove that they can read that email.\n\n## Impact\n\nAn unauthenticated attacker who knows a user's email address can get a normal session for that user, with all of that account's permissions. They need no access to the mailbox, and they do not need to sign in with the OAuth provider or complete an OAuth callback.\n\nIf Magic Link sign-up is enabled and no user has the email address, the attacker can instead create an account that Better Auth wrongly marks as email verified, and is signed in to it. The false verified-email flag can also bypass Better Auth's default unproven-account protections when the mailbox owner later signs in, leaving the attacker's session in that account. Applications that trust verified email addresses or email domains may give this account more access, depending on the application.\n\n## Patches\n\nThe fix is merged for the planned `better-auth` 1.7.7 release. That package is not available yet.\n\nUpgrade `better-auth` and installed Better Auth adapters, plugins, and integrations released alongside it together. Upgrade servers sharing verification storage in the same cutover. Request new Magic Links and restart pending OAuth or SAML sign-ins; links and state created before the upgrade cannot complete. Update custom `verification.storeIdentifier.overrides` rules to match the `magic-link:` and `auth-state:` prefixes. There is no user or account data migration, and public token values and API signatures are unchanged.\n\n## Workarounds\n\nUntil you upgrade to the fixed release, use one of these mitigations:\n\n- Set `account.storeStateStrategy` to `\"cookie\"`. If you also use OAuth Proxy, first configure one dedicated OAuth Proxy `secret` across all participating environments that differs from each environment's global Better Auth secret. Cookie-backed state can expose a separate OAuth Proxy account-takeover path when the proxy shares the global secret and implicit account linking is enabled.\n- Set the Magic Link plugin option `storeToken` to `\"hashed\"` **and** leave global `verification.storeIdentifier` unset or set it to `\"plain\"`. Global identifier hashing does not prevent this issue when Magic Link tokens are also hashed.\n- Turn off Magic Link sign-in, or turn off social and Generic OAuth sign-in.\n\nSetting `disableSignUp: true` on the Magic Link plugin is not enough. It only stops the creation of new verified accounts. It does not stop the takeover of existing accounts.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": "https://api.github.com/repos/better-auth/better-auth/security-advisories/GHSA-965c-763c-88jm",
+    "source_code_location": "https://github.com/better-auth/better-auth",
+    "identifiers": [
+      {
+        "value": "GHSA-965c-763c-88jm",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-114607",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-965c-763c-88jm",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-114607",
+      "https://github.com/better-auth/better-auth/pull/11494",
+      "https://github.com/better-auth/better-auth/commit/ac54bfd67821a7607533af2059858b12bc54e26a",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.7",
+      "https://github.com/advisories/GHSA-965c-763c-88jm"
+    ],
+    "published_at": "2026-10-27T15:32:05Z",
+    "updated_at": "2026-10-27T15:32:09Z",
+    "github_reviewed_at": "2026-10-27T15:32:05Z",
+    "nvd_published_at": "2026-10-22T17:16:58Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.4.0-beta.18, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 9.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-287",
+        "name": "Improper Authentication"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "rick-v12",
+          "id": 291155133,
+          "node_id": "U_kgDOEVqsvQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/291155133?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/rick-v12",
+          "html_url": "https://github.com/rick-v12",
+          "followers_url": "https://api.github.com/users/rick-v12/followers",
+          "following_url": "https://api.github.com/users/rick-v12/following{/other_user}",
+          "gists_url": "https://api.github.com/users/rick-v12/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/rick-v12/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/rick-v12/subscriptions",
+          "organizations_url": "https://api.github.com/users/rick-v12/orgs",
+          "repos_url": "https://api.github.com/users/rick-v12/repos",
+          "events_url": "https://api.github.com/users/rick-v12/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/rick-v12/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "bazumo",
+          "id": 9135566,
+          "node_id": "MDQ6VXNlcjkxMzU1NjY=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/9135566?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/bazumo",
+          "html_url": "https://github.com/bazumo",
+          "followers_url": "https://api.github.com/users/bazumo/followers",
+          "following_url": "https://api.github.com/users/bazumo/following{/other_user}",
+          "gists_url": "https://api.github.com/users/bazumo/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/bazumo/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/bazumo/subscriptions",
+          "organizations_url": "https://api.github.com/users/bazumo/orgs",
+          "repos_url": "https://api.github.com/users/bazumo/repos",
+          "events_url": "https://api.github.com/users/bazumo/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/bazumo/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "comments": 2,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1
+    },
+    "epss": {
+      "percentage": 0.0042,
+      "percentile": 0.36524
+    }
+  },
+  "GHSA-g3hv-75wg-m249": {
+    "ghsa_id": "GHSA-g3hv-75wg-m249",
+    "cve_id": "CVE-2026-118764",
+    "url": "https://api.github.com/advisories/GHSA-g3hv-75wg-m249",
+    "html_url": "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+    "summary": "minimatch has potential denial of service via globparts amplification",
+    "description": "minimatch 10.2.6 contains an attacker-controlled pattern amplification in firstPhasePreProcess() when optimizationLevel >= 2.\n\nresearcher: Reid Downing (b1nv0id)\nfiles: \n\n- src/index.ts: 690-770\n- src/index.ts: 780-796\n\nissue:\ninput-controlled growth of globParts during first-phase preprocessing, followed by quadratic second-phase processing.\n\nthe **/../ transformation clones a globparts entry and appends the clone to the same globparts array:\n```\nparts.splice(gs, 1)\nconst other = parts.slice(0)\nother[gs] = '**'\nglobParts.push(other)\n```\nthis occurs inside a do...while (didSomething) fixpoint loop, allowing generated entries to be processed again.\n\nthe expanded globparts array is subsequently processed by secondPhasePreProcess(), which performs pairwise comparisons:\n```\nfor (let i = 0; i < globParts.length - 1; i++) {\n  for (let j = i + 1; j < globParts.length; j++) {\n    this.partsMatch(...)\n  }\n}\n```\nan attacker who can supply a glob pattern can therefore cause additional pattern entries to be generated during preprocessing, followed by quadratic pairwise processing, resulting in excessive cpu and memory consumption.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/isaacs/minimatch/security-advisories/GHSA-g3hv-75wg-m249",
+    "source_code_location": "https://github.com/isaacs/minimatch",
+    "identifiers": [
+      {
+        "value": "GHSA-g3hv-75wg-m249",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-118764",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/isaacs/minimatch/security/advisories/GHSA-g3hv-75wg-m249",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-118764",
+      "https://github.com/isaacs/minimatch/commit/77a0f5c4b80bdc641c3c930a1d9edf5ad2db57f8",
+      "https://github.com/isaacs/minimatch/releases/tag/v11.0.1",
+      "https://github.com/isaacs/minimatch/commit/297b6c1a01f2410b3ba1ebed14ba222d0c3c1033",
+      "https://github.com/isaacs/minimatch/commit/fd0b3ab9cbc5bf1aff1c99f1f46e413c2b3340da",
+      "https://github.com/advisories/GHSA-g3hv-75wg-m249"
+    ],
+    "published_at": "2026-10-30T23:09:55Z",
+    "updated_at": "2026-11-04T16:50:04Z",
+    "github_reviewed_at": "2026-10-30T23:09:55Z",
+    "nvd_published_at": "2026-10-29T17:18:07Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "minimatch"
+        },
+        "vulnerable_version_range": ">= 7.0.0, < 11.0.1",
+        "first_patched_version": "11.0.1",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "score": 6.9
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-405",
+        "name": "Asymmetric Resource Consumption (Amplification)"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "b1nv0id",
+          "id": 194707351,
+          "node_id": "U_kgDOC5r_lw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/194707351?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/b1nv0id",
+          "html_url": "https://github.com/b1nv0id",
+          "followers_url": "https://api.github.com/users/b1nv0id/followers",
+          "following_url": "https://api.github.com/users/b1nv0id/following{/other_user}",
+          "gists_url": "https://api.github.com/users/b1nv0id/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/b1nv0id/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/b1nv0id/subscriptions",
+          "organizations_url": "https://api.github.com/users/b1nv0id/orgs",
+          "repos_url": "https://api.github.com/users/b1nv0id/repos",
+          "events_url": "https://api.github.com/users/b1nv0id/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/b1nv0id/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "ramonpzg",
+          "id": 40837339,
+          "node_id": "MDQ6VXNlcjQwODM3MzM5",
+          "avatar_url": "https://avatars.githubusercontent.com/u/40837339?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/ramonpzg",
+          "html_url": "https://github.com/ramonpzg",
+          "followers_url": "https://api.github.com/users/ramonpzg/followers",
+          "following_url": "https://api.github.com/users/ramonpzg/following{/other_user}",
+          "gists_url": "https://api.github.com/users/ramonpzg/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/ramonpzg/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/ramonpzg/subscriptions",
+          "organizations_url": "https://api.github.com/users/ramonpzg/orgs",
+          "repos_url": "https://api.github.com/users/ramonpzg/repos",
+          "events_url": "https://api.github.com/users/ramonpzg/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/ramonpzg/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "mgx-systems",
+          "id": 290883849,
+          "node_id": "U_kgDOEVaJCQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/290883849?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/mgx-systems",
+          "html_url": "https://github.com/mgx-systems",
+          "followers_url": "https://api.github.com/users/mgx-systems/followers",
+          "following_url": "https://api.github.com/users/mgx-systems/following{/other_user}",
+          "gists_url": "https://api.github.com/users/mgx-systems/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/mgx-systems/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/mgx-systems/subscriptions",
+          "organizations_url": "https://api.github.com/users/mgx-systems/orgs",
+          "repos_url": "https://api.github.com/users/mgx-systems/repos",
+          "events_url": "https://api.github.com/users/mgx-systems/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/mgx-systems/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "1abcdefggs",
+          "id": 121541219,
+          "node_id": "U_kgDOBz6SYw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/121541219?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/1abcdefggs",
+          "html_url": "https://github.com/1abcdefggs",
+          "followers_url": "https://api.github.com/users/1abcdefggs/followers",
+          "following_url": "https://api.github.com/users/1abcdefggs/following{/other_user}",
+          "gists_url": "https://api.github.com/users/1abcdefggs/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/1abcdefggs/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/1abcdefggs/subscriptions",
+          "organizations_url": "https://api.github.com/users/1abcdefggs/orgs",
+          "repos_url": "https://api.github.com/users/1abcdefggs/repos",
+          "events_url": "https://api.github.com/users/1abcdefggs/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/1abcdefggs/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "khucanhduy9-cloud",
+          "id": 261466627,
+          "node_id": "U_kgDOD5WqAw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261466627?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/khucanhduy9-cloud",
+          "html_url": "https://github.com/khucanhduy9-cloud",
+          "followers_url": "https://api.github.com/users/khucanhduy9-cloud/followers",
+          "following_url": "https://api.github.com/users/khucanhduy9-cloud/following{/other_user}",
+          "gists_url": "https://api.github.com/users/khucanhduy9-cloud/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/khucanhduy9-cloud/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/khucanhduy9-cloud/subscriptions",
+          "organizations_url": "https://api.github.com/users/khucanhduy9-cloud/orgs",
+          "repos_url": "https://api.github.com/users/khucanhduy9-cloud/repos",
+          "events_url": "https://api.github.com/users/khucanhduy9-cloud/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/khucanhduy9-cloud/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "worldwideskier-alpine",
+          "id": 235633743,
+          "node_id": "U_kgDODgt8Tw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/235633743?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/worldwideskier-alpine",
+          "html_url": "https://github.com/worldwideskier-alpine",
+          "followers_url": "https://api.github.com/users/worldwideskier-alpine/followers",
+          "following_url": "https://api.github.com/users/worldwideskier-alpine/following{/other_user}",
+          "gists_url": "https://api.github.com/users/worldwideskier-alpine/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/worldwideskier-alpine/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/worldwideskier-alpine/subscriptions",
+          "organizations_url": "https://api.github.com/users/worldwideskier-alpine/orgs",
+          "repos_url": "https://api.github.com/users/worldwideskier-alpine/repos",
+          "events_url": "https://api.github.com/users/worldwideskier-alpine/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/worldwideskier-alpine/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      },
+      {
+        "user": {
+          "login": "yadinesh1",
+          "id": 192731341,
+          "node_id": "U_kgDOC3zYzQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/192731341?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/yadinesh1",
+          "html_url": "https://github.com/yadinesh1",
+          "followers_url": "https://api.github.com/users/yadinesh1/followers",
+          "following_url": "https://api.github.com/users/yadinesh1/following{/other_user}",
+          "gists_url": "https://api.github.com/users/yadinesh1/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/yadinesh1/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/yadinesh1/subscriptions",
+          "organizations_url": "https://api.github.com/users/yadinesh1/orgs",
+          "repos_url": "https://api.github.com/users/yadinesh1/repos",
+          "events_url": "https://api.github.com/users/yadinesh1/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/yadinesh1/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "analyst"
+      }
+    ],
+    "comments": 2,
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.00409,
+      "percentile": 0.35924
+    }
+  },
+  "GHSA-q84f-53jg-9ppm": {
+    "ghsa_id": "GHSA-q84f-53jg-9ppm",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-q84f-53jg-9ppm",
+    "html_url": "https://github.com/advisories/GHSA-q84f-53jg-9ppm",
+    "summary": "better-auth: Device login approval does not show the requesting client or permissions",
+    "description": "## Am I affected?\n\nYou may be affected if you use `better-auth` from `1.3.8-beta.3` up to, but not including, `1.7.0-rc.3`, and you enable the `deviceAuthorization()` plugin. This range includes all 1.6 releases.\n\nYou are affected only if all of these are also true:\n\n- An attacker can start a device request: `validateClient` is not configured, or the attacker can use a valid public client.\n- Before allowing approval, your approval page does not show, from server-checked data, which client is asking and the exact permissions it requests.\n- Users may approve a code or complete verification link they did not start and cannot compare with a device they have.\n- Your application accepts the session token that the device flow returns, for example through the bearer plugin.\n\nYou are not affected if you do not enable the opt-in `deviceAuthorization()` plugin.\n\n## Summary\n\nThe device authorization plugin lets a user sign in on one device by approving a short code on another. In affected versions, the approval information given to the user leaves out which client asked for access and which permissions it wants. The official approval examples therefore show only a generic request and a code, so users cannot tell their own device from an attacker's request.\n\n## Impact\n\nAn attacker who convinces a signed-in user to approve the attacker's code receives a live Better Auth session token for that user. The attacker can then read or change any data the user's account can access. The attack needs the opt-in device flow, a request the attacker creates, and a user who actively approves it; it is not a sign-in bypass without user action.\n\n## Patches\n\nThe fix first shipped in `1.7.0-rc.3`. Upgrade to `better-auth@1.7.0` or later. No 1.6 release contains the fix.\n\nAfter upgrading, `GET /device` returns the requesting `client_id` and `scope` to the signed-in account that owns the request. If you built your own approval page, update it to show that client and those permissions, and keep approval disabled until they load.\n\n## Workarounds\n\nIf you cannot upgrade yet, do the following:\n\n- Disable `deviceAuthorization()`, or block untrusted access to `/device/code`.\n- Configure a strict `validateClient` allowlist. Do not rely on the allowlist alone: it limits who can start the flow, but it does not give users the missing approval information.\n- Build your own approval endpoint. It should read the pending request from trusted server-side storage and map the checked client identifier to a trusted display name. Show the exact requested permissions and the user code. Keep approval disabled until this information loads.\n- Tell users to reject device requests they did not expect. They should approve only when the same code is visible right now on a device they have.\n\n## Technical details\n\nA device starts the flow by calling `/device/code`. The plugin stores the client identifier and any requested scope with the pending request. Before approval, `GET /device` returns only the user code and its status. This is true even for a signed-in session of the user account that owns the request. An approval page built from that response cannot show which client asked for access or which permissions it wants. After approval, the original device code can be redeemed at `/device/token` for a Better Auth session token.\n\nRFC 8628 describes this remote phishing scenario. It recommends that the server tell users they are authorizing a device and ask them to confirm that the device is in their possession. It also recommends showing device information that helps users detect impersonation. Client allowlisting reduces who can start the flow, but it does not give users the missing approval information. A valid public client can therefore still be affected when its identifier and requested permissions are not shown.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/better-auth/better-auth/security-advisories/GHSA-q84f-53jg-9ppm",
+    "source_code_location": "https://github.com/better-auth/better-auth",
+    "identifiers": [
+      {
+        "value": "GHSA-q84f-53jg-9ppm",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-q84f-53jg-9ppm",
+      "https://github.com/better-auth/better-auth/commit/f68044dcfbd9fb83763249ed9509cfacbcce47be",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.0-rc.3",
+      "https://github.com/advisories/GHSA-q84f-53jg-9ppm"
+    ],
+    "published_at": "2026-10-27T14:49:53Z",
+    "updated_at": "2026-10-27T14:49:54Z",
+    "github_reviewed_at": "2026-10-27T14:49:53Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.3.8-beta.3, < 1.7.0-rc.3",
+        "first_patched_version": "1.7.0-rc.3",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+        "score": 8.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-451",
+        "name": "User Interface (UI) Misrepresentation of Critical Information"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "XlabAITeam",
+          "id": 214060066,
+          "node_id": "U_kgDODMJMIg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/214060066?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/XlabAITeam",
+          "html_url": "https://github.com/XlabAITeam",
+          "followers_url": "https://api.github.com/users/XlabAITeam/followers",
+          "following_url": "https://api.github.com/users/XlabAITeam/following{/other_user}",
+          "gists_url": "https://api.github.com/users/XlabAITeam/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/XlabAITeam/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/XlabAITeam/subscriptions",
+          "organizations_url": "https://api.github.com/users/XlabAITeam/orgs",
+          "repos_url": "https://api.github.com/users/XlabAITeam/repos",
+          "events_url": "https://api.github.com/users/XlabAITeam/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/XlabAITeam/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "keenanwgn",
+          "id": 20946854,
+          "node_id": "MDQ6VXNlcjIwOTQ2ODU0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/20946854?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/keenanwgn",
+          "html_url": "https://github.com/keenanwgn",
+          "followers_url": "https://api.github.com/users/keenanwgn/followers",
+          "following_url": "https://api.github.com/users/keenanwgn/following{/other_user}",
+          "gists_url": "https://api.github.com/users/keenanwgn/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/keenanwgn/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/keenanwgn/subscriptions",
+          "organizations_url": "https://api.github.com/users/keenanwgn/orgs",
+          "repos_url": "https://api.github.com/users/keenanwgn/repos",
+          "events_url": "https://api.github.com/users/keenanwgn/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/keenanwgn/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "liangjs",
+          "id": 10512425,
+          "node_id": "MDQ6VXNlcjEwNTEyNDI1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/10512425?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/liangjs",
+          "html_url": "https://github.com/liangjs",
+          "followers_url": "https://api.github.com/users/liangjs/followers",
+          "following_url": "https://api.github.com/users/liangjs/following{/other_user}",
+          "gists_url": "https://api.github.com/users/liangjs/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/liangjs/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/liangjs/subscriptions",
+          "organizations_url": "https://api.github.com/users/liangjs/orgs",
+          "repos_url": "https://api.github.com/users/liangjs/repos",
+          "events_url": "https://api.github.com/users/liangjs/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/liangjs/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "comments": 2,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "score": 8.1
+    }
+  },
+  "GHSA-r4xp-prcw-77qf": {
+    "ghsa_id": "GHSA-r4xp-prcw-77qf",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-r4xp-prcw-77qf",
+    "html_url": "https://github.com/advisories/GHSA-r4xp-prcw-77qf",
+    "summary": "better-auth: OAuth Proxy lets an attacker sign in as another user",
+    "description": "## Am I affected?\n\nYou may be affected if you use `better-auth` from 1.5.0-beta.12 through versions before 1.7.7 with the OAuth Proxy plugin. You are affected only if **all** of these are also true:\n\n- On a participating environment, the OAuth Proxy plugin has no dedicated `secret`, or its `secret` equals that environment's global Better Auth secret.\n- Sign-in state is stored in a cookie (`account.storeStateStrategy: \"cookie\"`). With a database or secondary storage, this is only the case if you chose it explicitly.\n- Implicit account linking is on (the default).\n\nYou are not affected by this path if every participating environment uses a proxy `secret` distinct from its global Better Auth secret, if sign-in state is stored in the database, or if you use a version before 1.5.0-beta.12.\n\n## Summary\n\nThe OAuth Proxy plugin trusts any user profile it can decrypt. In the affected setup, Better Auth encrypts sign-in state, including data the caller chose, with the same secret and hands it to anyone who starts a social sign-in. An attacker can use this to get a fake profile for another user's email address that the proxy accepts as real.\n\n## Impact\n\nAn attacker without an account who knows a user's verified email address can sign in as that user, with that user's permissions. They can read private data, change the account, and link a provider account of their choice to it. They need no provider sign-in and no action from the victim. No availability impact is established, and a reported open redirect was not confirmed.\n\n## Patches\n\nThe fix is merged for the planned `better-auth` 1.7.7 release. That package is not available yet.\n\nUpgrade all nodes handling the same cookie-backed OAuth or SAML state flow and all OAuth Proxy participants together, including the production coordinator and preview or development deployments. Keep installed Better Auth packages released alongside `better-auth` on the same release version. Restart pending sign-in and account-linking flows; pre-upgrade state cookies and proxy payloads are rejected. Public options and API signatures are unchanged.\n\n## Workarounds\n\nUntil you upgrade to the fixed release, apply one of these:\n\n- Set one strong OAuth Proxy `secret` across every environment that takes part in the proxy flow, and keep it different from each environment's global Better Auth secret.\n- Set `account.storeStateStrategy: \"database\"`. This is already the default when a database or secondary storage is configured. If Magic Link is also enabled, switching can expose a separate cross-purpose verification-record path in affected releases. Ensure the two flows resolve to distinct stored identifiers; with built-in options, use Magic Link `storeToken: \"hashed\"` with global `verification.storeIdentifier` unset or `\"plain\"`, or disable Magic Link or both built-in social and Generic OAuth sign-in.\n- Remove the OAuth Proxy plugin if you do not need it.\n\nSetting `account.accountLinking.disableImplicitLinking: true` stops this path from taking over an existing account. It does not fix the underlying flaw: the callback can still accept attacker-made data as a provider identity. Apply one of the steps above as well.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/better-auth/better-auth/security-advisories/GHSA-r4xp-prcw-77qf",
+    "source_code_location": "https://github.com/better-auth/better-auth",
+    "identifiers": [
+      {
+        "value": "GHSA-r4xp-prcw-77qf",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/better-auth/better-auth/security/advisories/GHSA-r4xp-prcw-77qf",
+      "https://github.com/better-auth/better-auth/pull/11494",
+      "https://github.com/better-auth/better-auth/commit/ac54bfd67821a7607533af2059858b12bc54e26a",
+      "https://github.com/better-auth/better-auth/releases/tag/v1.7.7",
+      "https://github.com/advisories/GHSA-r4xp-prcw-77qf"
+    ],
+    "published_at": "2026-10-27T15:32:16Z",
+    "updated_at": "2026-10-27T15:32:17Z",
+    "github_reviewed_at": "2026-10-27T15:32:16Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "better-auth"
+        },
+        "vulnerable_version_range": ">= 1.5.0-beta.12, < 1.7.7",
+        "first_patched_version": "1.7.7",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 7.4
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-287",
+        "name": "Improper Authentication"
+      },
+      {
+        "cwe_id": "CWE-345",
+        "name": "Insufficient Verification of Data Authenticity"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "iabdullah215",
+          "id": 121729444,
+          "node_id": "U_kgDOB0FxpA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/121729444?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/iabdullah215",
+          "html_url": "https://github.com/iabdullah215",
+          "followers_url": "https://api.github.com/users/iabdullah215/followers",
+          "following_url": "https://api.github.com/users/iabdullah215/following{/other_user}",
+          "gists_url": "https://api.github.com/users/iabdullah215/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/iabdullah215/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/iabdullah215/subscriptions",
+          "organizations_url": "https://api.github.com/users/iabdullah215/orgs",
+          "repos_url": "https://api.github.com/users/iabdullah215/repos",
+          "events_url": "https://api.github.com/users/iabdullah215/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/iabdullah215/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "martinfrancois",
+          "id": 14319020,
+          "node_id": "MDQ6VXNlcjE0MzE5MDIw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/14319020?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/martinfrancois",
+          "html_url": "https://github.com/martinfrancois",
+          "followers_url": "https://api.github.com/users/martinfrancois/followers",
+          "following_url": "https://api.github.com/users/martinfrancois/following{/other_user}",
+          "gists_url": "https://api.github.com/users/martinfrancois/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/martinfrancois/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/martinfrancois/subscriptions",
+          "organizations_url": "https://api.github.com/users/martinfrancois/orgs",
+          "repos_url": "https://api.github.com/users/martinfrancois/repos",
+          "events_url": "https://api.github.com/users/martinfrancois/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/martinfrancois/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "comments": 1,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 7.4
+    }
+  }
+}

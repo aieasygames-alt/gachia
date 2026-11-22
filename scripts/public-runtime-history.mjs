@@ -12,12 +12,22 @@ import { unifiedService } from './unified-release-assets.mjs';
 
 export const PUBLIC_RUNTIME_POLICY = 'public-next-15.5.29-preserved-content-v1';
 export const PUBLIC_RUNTIME_OWNERS = Object.freeze(['genshin', 'nte', 'azur-promilia', 'lvmeng', 'main']);
+export const PUBLIC_DEPENDENCY_POLICY = 'public-main-better-auth-1.7.7-toolchain-security-v1';
+export const PUBLIC_DEPENDENCY_VERSIONS = Object.freeze({ betterAuth: '1.7.7', qs: '6.16.1', glob: '14.0.2', minimatch: '11.0.1' });
+
+export function publicRuntimeChangedOwners(completed) {
+  if (completed.policy === PUBLIC_RUNTIME_POLICY) return PUBLIC_RUNTIME_OWNERS;
+  assert.equal(completed.policy, PUBLIC_DEPENDENCY_POLICY, 'Unknown public runtime policy');
+  assert.deepEqual(completed.dependencyVersions, PUBLIC_DEPENDENCY_VERSIONS);
+  return ['main'];
+}
 
 export function assertPublicRuntimeTransition(value, previous, completed) {
   assert.equal(value.kind, 'nte_public_runtime_source_index_v1');
   assert.equal(value.status, 'published_sources_observed');
   assert.equal(value.cloudWrites, false); assert.equal(value.newPublicationAuthorized, false);
-  assert.equal(completed.policy, PUBLIC_RUNTIME_POLICY); assert.equal(completed.status, 'production_accepted');
+  const changedOwners = publicRuntimeChangedOwners(completed);
+  assert.equal(completed.status, 'production_accepted');
   assert.equal(completed.nextVersion, '15.5.29');
   assert.deepEqual(completed.parent, value.previousSourceIndex);
   assert.deepEqual(value.active, previous.value.active); assert.deepEqual(completed.active, value.active);
@@ -25,12 +35,17 @@ export function assertPublicRuntimeTransition(value, previous, completed) {
   assert.equal(value.sourceCommit, completed.commit); assert.deepEqual(value.executorCI, completed.executorCI);
   assert.equal(completed.executorCI.commit, completed.commit); assert.equal(completed.executorCI.status, 'full_exact_ci_passed');
   assert.deepEqual(Object.keys(value.owners).sort(), [...PUBLIC_RUNTIME_OWNERS].sort());
-  assert.deepEqual(Object.keys(completed.accepted).sort(), [...PUBLIC_RUNTIME_OWNERS].sort());
-  const promoted = Object.fromEntries(PUBLIC_RUNTIME_OWNERS.map(owner => [unifiedService(owner), completed.accepted[owner].candidate.versionId]));
+  assert.deepEqual(Object.keys(completed.accepted).sort(), [...changedOwners].sort());
+  assert.deepEqual(Object.keys(completed.deployments).sort(), [...changedOwners].sort());
+  const promoted = Object.fromEntries(changedOwners.map(owner => [unifiedService(owner), completed.accepted[owner].candidate.versionId]));
   assert.deepEqual(completed.promoted, promoted);
   assertTopology(previous.baseline, completed.before); assertTopology(completed.before, completed.after, promoted);
   assert.deepEqual(value.baseline, completed.after);
   for (const owner of PUBLIC_RUNTIME_OWNERS) {
+    if (!changedOwners.includes(owner)) {
+      assert.deepEqual(value.owners[owner], previous.owners[owner], 'Unchanged owner identity drift');
+      continue;
+    }
     const service = unifiedService(owner), row = value.owners[owner];
     assert.equal(row.service, service); assert.equal(row.versionId, promoted[service]);
     assert.equal(completed.accepted[owner].recovery.moduleSHA256, previous.owners[owner].moduleSHA256);
@@ -40,16 +55,25 @@ export function assertPublicRuntimeTransition(value, previous, completed) {
 
 export async function readPublicRuntimeSource(proof, readPrevious, depth) {
   const value = migrationPinned(proof), completed = migrationPinned(value.completion);
+  const changedOwners = publicRuntimeChangedOwners(completed);
   const previous = await readPrevious(value.previousSourceIndex, depth + 1);
   assertPublicRuntimeTransition(value, previous, completed);
   assert.deepEqual(migrationPinned(value.active), previous.sources);
   const prepared = migrationPinned(completed.prepared), sealed = migrationPinned(completed.sealed);
   assert.equal(prepared.commit, value.sourceCommit); assert.equal(sealed.commit, value.sourceCommit);
   assert.deepEqual(prepared.parent, value.previousSourceIndex); assert.deepEqual(prepared.contentChanges, []);
+  if (completed.policy === PUBLIC_DEPENDENCY_POLICY) {
+    const manifest = JSON.parse(readFileSync(join(prepared.workspace, 'apps/web/package.json')));
+    const root = JSON.parse(readFileSync(join(prepared.workspace, 'package.json')));
+    assert.equal(manifest.dependencies['better-auth'], PUBLIC_DEPENDENCY_VERSIONS.betterAuth);
+    assert.equal(JSON.parse(readFileSync(join(prepared.workspace, 'apps/web/site-features.json'))).accountFeatures, false);
+    const expected = { 'qs@6': '6.16.1', 'glob@10': '14.0.2', 'glob@13': '14.0.2', 'minimatch@10': '11.0.1', 'glob@14.0.2>minimatch': '11.0.1' };
+    for (const [name, version] of Object.entries(expected)) assert.equal(root.pnpm.overrides[name], version);
+  }
   assert.equal(digest(readFileSync(completed.journal.path)), completed.journal.pin);
   const journal = readFileSync(completed.journal.path, 'utf8').trim().split('\n').map(JSON.parse);
-  assert.deepEqual(journal.map(row => row.phase), PUBLIC_RUNTIME_OWNERS.flatMap(() => ['deployment_intent', 'deployed', 'production_accepted']));
-  for (const [index, owner] of PUBLIC_RUNTIME_OWNERS.entries()) {
+  assert.deepEqual(journal.map(row => row.phase), changedOwners.flatMap(() => ['deployment_intent', 'deployed', 'production_accepted']));
+  for (const [index, owner] of changedOwners.entries()) {
     const row = value.owners[owner], candidate = completed.accepted[owner].candidate;
     assert.equal(activeVersion(value.baseline, row.service), row.versionId);
     assert.deepEqual(journal[index * 3 + 1].deployment, completed.deployments[owner]);

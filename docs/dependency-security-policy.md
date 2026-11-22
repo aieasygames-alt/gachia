@@ -1,6 +1,6 @@
 # 依赖安全升级与兼容边界
 
-2026-10-25，本地候选。依赖扫描结果是当日注册表公告匹配，不是永久无漏洞或已上线证明。
+最近升级：2026-11-22 R148。依赖扫描结果是当日注册表公告匹配，不是永久无漏洞或已上线证明。公开站 Next 15.5.29、OpenNext 1.20.13 和 deferred-initial 补丁保持。
 
 ## Zod 4
 
@@ -43,3 +43,13 @@ sharp 升至 0.35.5 是需要额外验证的原生依赖升级。`scripts/image-
 - 生产切换、旧资源保留、实际云端环境与回滚版本仍按既有发布门禁执行，不能由本地成功替代。
 
 本批保持 Next 15.5.28/OpenNext 1.20.13 及 deferred-initial 补丁，不恢复账号功能。仅消除编译类型依赖的 peer 冲突，不修改 Router 的路由行为。
+
+## R148：Better Auth 与共享工具链
+
+Better Auth 从 1.6.22 精确升级至 1.7.7，其 core、adapter 和 telemetry 同步为上游要求的 1.7.7。官方 registry 已发布这些版本，GitHub 四类公告的修复范围均满足；Next/React/Drizzle peer 范围保持兼容。账号开关继续关闭，不运行公网账号或数据库迁移。
+
+qs 6 固定为 6.16.1。glob 10/13 的上游分支没有本次中止绕过修复，定向升级为 14.0.2；glob 14 的 minimatch 边固定 11.0.1，TypeScript ESLint 的 minimatch 10 分支同样升级为 11.0.1。ESLint 原有的 minimatch 3.1.5 不受该公告影响，保持原 CommonJS 接口。所有其他 override 和 Next patch 保留，没有 ignore 或删除审计记录。
+
+`scripts/security-toolchain.test.mjs` 经实际依赖路径验证 OpenNext tracing、node-minify 文件合并、glob promise/stream 中止后不继续读取、qs comma 数组异常输入及普通往返、TypeScript ESLint 匹配与真实解析。测试进入 `pnpm test:release`。根工作区 audit 的 all/prod 和独立 CMS audit 分别保存；R148 修复后的本地结果均为 0 公告，不能据此推定先前发布模块已升级。
+
+Better Auth 只由 Main 直接引用，当前发布模块仍包含旧版本；因此正式更新目标仅为 Main。四个游戏、Router 和 CMS 包定义不变。工具链跨主版本变化需要五应用 OpenNext 构建验收，但不要求重发四个游戏；CMS 不需要重新安装依赖。

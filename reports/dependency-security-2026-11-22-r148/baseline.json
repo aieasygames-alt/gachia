@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-22T01:27:26.456671+00:00",
+  "head": "da3f3db96e52fa87df122cb5a125f70fc8bd8f51",
+  "diskFreeBytes": 17169620992,
+  "files": [
+    {
+      "path": "reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+      "sha256": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+    },
+    {
+      "path": "reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+      "sha256": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+    },
+    {
+      "path": "reports/cms-source-reader-2026-11-22-r147/application-installed.json",
+      "sha256": "a1170cefe1f48a2b928e68f9c68a904d68b0f3f0a72efe5948d61665b94c5778"
+    },
+    {
+      "path": "package.json",
+      "sha256": "52df5952ec7d693ae64e118e8097432ee94f1806bf2280852eb78e2717caed91"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "dd524b12bcd7d75b8bcc4688c32a2dee7b932067ccefd118f85babb4d88fd23f"
+    },
+    {
+      "path": "services/content-cms/package.json",
+      "sha256": "fe62bfdaa1271e4eca3beefb96469d636dc821191cfea4792d70aeac9744912c"
+    },
+    {
+      "path": "services/content-cms/pnpm-lock.yaml",
+      "sha256": "57e87f13ab2be7c136c626f830a07ce9dedb64367cf6656df7b41e71331a210c"
+    }
+  ],
+  "invariants": [
+    "R146 public sources",
+    "R144 AFTER CMS editing source",
+    "R147 installed CMS",
+    "account features disabled",
+    "lvmeng Chinese only"
+  ],
+  "writes": []
+}

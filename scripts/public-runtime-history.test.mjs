@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { assertPublicRuntimeTransition, PUBLIC_RUNTIME_OWNERS, PUBLIC_RUNTIME_POLICY } from './public-runtime-history.mjs';
+import { assertPublicRuntimeTransition, PUBLIC_RUNTIME_OWNERS, PUBLIC_RUNTIME_POLICY, PUBLIC_DEPENDENCY_POLICY, PUBLIC_DEPENDENCY_VERSIONS } from './public-runtime-history.mjs';
 import { SERVICES } from './desktop-cloud-release.mjs';
 import { unifiedService } from './unified-release-assets.mjs';
 const uuid = n => '00000000-0000-4000-8000-' + String(n).padStart(12, '0');
@@ -26,6 +26,33 @@ function fixture() {
   const value = { kind: 'nte_public_runtime_source_index_v1', status: 'published_sources_observed', cloudWrites: false,
     newPublicationAuthorized: false, previousSourceIndex: parent, active, router, sourceCommit: commit, executorCI, owners, baseline: after };
   return { value, previous, completed };
+}
+function dependencyFixture() {
+  const f = fixture();
+  f.completed.policy = PUBLIC_DEPENDENCY_POLICY;
+  f.completed.dependencyVersions = { ...PUBLIC_DEPENDENCY_VERSIONS };
+  for (const owner of PUBLIC_RUNTIME_OWNERS.filter(owner => owner !== 'main')) {
+    delete f.completed.accepted[owner]; delete f.completed.deployments[owner];
+    delete f.completed.promoted[unifiedService(owner)];
+    f.completed.after.services[unifiedService(owner)] = structuredClone(f.previous.baseline.services[unifiedService(owner)]);
+    f.value.owners[owner] = structuredClone(f.previous.owners[owner]);
+  }
+  return f;
+}
+test('dependency security rollout changes only Main and preserves four published game identities', () => {
+  const f = dependencyFixture(); assertPublicRuntimeTransition(f.value, f.previous, f.completed);
+});
+for (const fault of ['unknown-policy', 'wrong-dependency', 'extra-owner', 'game-identity', 'game-deployment', 'recovery']) {
+  test('Main dependency transition rejects ' + fault, () => {
+    const f = dependencyFixture();
+    if (fault === 'unknown-policy') f.completed.policy = 'caller-defined-policy';
+    if (fault === 'wrong-dependency') f.completed.dependencyVersions.betterAuth = '1.6.22';
+    if (fault === 'extra-owner') f.completed.accepted.nte = f.completed.accepted.main;
+    if (fault === 'game-identity') f.value.owners.nte.moduleSHA256 = 'e'.repeat(64);
+    if (fault === 'game-deployment') f.completed.after.services['gachia-game-nte'].id = uuid(999);
+    if (fault === 'recovery') f.completed.accepted.main.recovery.moduleSHA256 = 'e'.repeat(64);
+    assert.throws(() => assertPublicRuntimeTransition(f.value, f.previous, f.completed));
+  });
 }
 test('security rollout advances exactly five Next owners while preserving published inputs and Router', () => {
   const f = fixture(); assertPublicRuntimeTransition(f.value, f.previous, f.completed);
