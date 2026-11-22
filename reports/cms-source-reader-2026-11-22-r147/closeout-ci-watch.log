@@ -1,0 +1,695 @@
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 1 minute ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  * Reclaim unused hosted Android SDK
+  * Install public workspace and isolated CMS dependencies
+  * Prepare pinned browser environment
+  * Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 2 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  * Prepare pinned browser environment
+  * Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 2 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 3 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 3 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 4 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 4 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 5 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 5 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 6 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 6 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 7 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 8 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 8 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 9 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 9 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 10 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 10 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 11 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 11 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 12 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  * Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 12 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  * Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 13 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  ✓ Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 13 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  ✓ Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 14 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  ✓ Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 15 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  ✓ Verify current content inventory and Router contracts
+  * Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 15 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  ✓ Verify current content inventory and Router contracts
+  ✓ Test release tooling without deployment credentials
+  * Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+Refreshing run status every 30 seconds. Press Ctrl+C to quit.
+
+* codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 16 minutes ago
+
+JOBS
+* verify (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  ✓ Verify current content inventory and Router contracts
+  ✓ Test release tooling without deployment credentials
+  ✓ Test public Web and Data consumers
+  * Typecheck public consumers without builds
+  * Test documentation and verification scope gates
+  * Post Run actions/setup-node@v6.4.0
+  * Post Run actions/checkout@v7.0.0
+✓ codex/payload-unified-maintenance Payload Verification Only · 44969470282
+Triggered via push about 16 minutes ago
+
+JOBS
+✓ verify in 16m19s (ID 137045833395)
+  ✓ Set up job
+  ✓ Run actions/checkout@v7.0.0
+  ✓ Run actions/setup-node@v6.4.0
+  ✓ Classify bounded verification scope
+  ✓ Install pinned pnpm
+  ✓ Reclaim unused hosted Android SDK
+  ✓ Install public workspace and isolated CMS dependencies
+  ✓ Prepare pinned browser environment
+  ✓ Verify CMS types without deployment credentials
+  ✓ Test isolated CMS
+  ✓ Verify current content inventory and Router contracts
+  ✓ Test release tooling without deployment credentials
+  ✓ Test public Web and Data consumers
+  ✓ Typecheck public consumers without builds
+  ✓ Test documentation and verification scope gates
+  ✓ Post Run actions/setup-node@v6.4.0
+  ✓ Post Run actions/checkout@v7.0.0
+  ✓ Complete job

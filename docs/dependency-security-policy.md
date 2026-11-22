@@ -42,7 +42,7 @@ sharp 升至 0.35.5 是需要额外验证的原生依赖升级。`scripts/image-
 - 隔离本地 Worker HTTP、桌面/手机、三语言、延迟脚本/无 JavaScript、搜索/内容/SEO 回归；保留各套脚本自己的范围限制。
 - 生产切换、旧资源保留、实际云端环境与回滚版本仍按既有发布门禁执行，不能由本地成功替代。
 
-本批保持 Next 15.5.28/OpenNext 1.20.13 及 deferred-initial 补丁，不恢复账号功能。仅消除编译类型依赖的 peer 冲突，不修改 Router 的路由行为。
+2026-10-25 当批保持 Next 15.5.28/OpenNext 1.20.13 及 deferred-initial 补丁，不恢复账号功能。仅消除编译类型依赖的 peer 冲突，不修改 Router 的路由行为。
 
 ## R148：Better Auth 与共享工具链
 

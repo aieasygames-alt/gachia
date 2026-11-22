@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-22T02:38:54.679Z",
+  "kind": "exact_frozen_source_reopened_after_generated_cache_cleanup",
+  "sourceCommit": "721d1596885244aed46aab869ad4b943cd9f66f7",
+  "sources": 115,
+  "sourceFilesUnchanged": true,
+  "manifestsPassed": true,
+  "workerWrites": 0
+}

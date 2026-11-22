@@ -1,0 +1,101 @@
+{
+  "at": "2026-11-22T01:40:30.657782+00:00",
+  "reports": [
+    {
+      "file": "reports/dependency-security-2026-11-22-r148/auth-tests.log",
+      "pin": "fcdf2153ec3c84eede0401257b82d031faed806c2dab39137948c8c52c660741",
+      "bytes": 255,
+      "testSummary": [
+        " Test Files  4 passed (4)",
+        "      Tests  44 passed (44)",
+        "   Duration  517ms (transform 160ms, setup 0ms, import 820ms, tests 52ms, environment 0ms)"
+      ]
+    },
+    {
+      "file": "reports/dependency-security-2026-11-22-r148/web-tests.log",
+      "pin": "aeee034a97f3dfdef568454bf077e66c4eddf030cbd1e5232a96952f46e2361e",
+      "bytes": 372,
+      "testSummary": [
+        " Test Files  99 passed (99)",
+        "      Tests  600 passed (600)",
+        "   Duration  6.86s (transform 8.84s, setup 0ms, import 21.67s, tests 18.46s, environment 9ms)"
+      ]
+    },
+    {
+      "file": "reports/dependency-security-2026-11-22-r148/typecheck.log",
+      "pin": "435945d3b73e3b20d67267a45621c25d1bdf5ff9ec9d8f085be9f42f43a8012b",
+      "bytes": 774,
+      "testSummary": []
+    },
+    {
+      "file": "reports/dependency-security-2026-11-22-r148/toolchain-tests-02.log",
+      "pin": "22270b6c12e1a1d742c940f26bcfdd9f7e1703afeb82e021bb40c44ba319c38e",
+      "bytes": 1053,
+      "testSummary": [
+        "# tests 4",
+        "# pass 4",
+        "# fail 0"
+      ]
+    },
+    {
+      "file": "reports/dependency-security-2026-11-22-r148/runtime-policy-tests.log",
+      "pin": "ecf443af7d5dcc433c5ad0b73d3b9f981a90daa49840cd41645d4eb13dcafb06",
+      "bytes": 4460,
+      "testSummary": [
+        "# tests 24",
+        "# pass 24",
+        "# fail 0"
+      ]
+    },
+    {
+      "file": "reports/dependency-security-2026-11-22-r148/release-tests.log",
+      "pin": "968a56c4fdad4bd73f3eda91b50dd2098626ba414d91c06902a7fbe83e9b64eb",
+      "bytes": 158979,
+      "testSummary": [
+        "\u2139 tests 604",
+        "\u2139 pass 604",
+        "\u2139 fail 0",
+        "\u2139 tests 1071",
+        "\u2139 pass 1071",
+        "\u2139 fail 0",
+        "\u2139 tests 308",
+        "\u2139 pass 308",
+        "\u2139 fail 0",
+        "Ran 7 tests in 0.002s",
+        "Ran 4 tests in 0.003s",
+        "Ran 14 tests in 0.028s",
+        "Ran 3 tests in 0.009s",
+        "Ran 9 tests in 0.278s",
+        "Ran 11 tests in 0.002s",
+        "Ran 8 tests in 0.006s"
+      ]
+    },
+    {
+      "file": "reports/dependency-security-2026-11-22-r148/frozen-install-02.log",
+      "pin": "24ec8084bbefe0d5924ebbe21c5c891cf691538b0941c03f0329a82ffbcdb182",
+      "bytes": 135,
+      "testSummary": [
+        "Done in 5s using pnpm v10.32.1"
+      ]
+    }
+  ],
+  "releaseExit": 0,
+  "web": {
+    "files": 99,
+    "passed": 600
+  },
+  "auth": {
+    "files": 4,
+    "passed": 44
+  },
+  "toolchain": {
+    "passed": 4
+  },
+  "policy": {
+    "passed": 20
+  },
+  "types": "all public consumers passed",
+  "next": "15.5.29 patched",
+  "openNext": "1.20.13",
+  "wrangler": "4.148.0"
+}

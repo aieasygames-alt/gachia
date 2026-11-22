@@ -1,0 +1,20 @@
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/services/content-cms/src/record-mapping.ts' imported from /Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/cms-capture.mts
+    at finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    at moduleResolve (node:internal/modules/esm/resolve:861:10)
+    at defaultResolve (node:internal/modules/esm/resolve:988:11)
+    at nextResolve (node:internal/modules/esm/hooks:769:28)
+    at resolveBase (file:///Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/tsx@4.20.3/node_modules/tsx/dist/esm/index.mjs?1795312599617:2:3811)
+    at async resolveDirectory (file:///Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/tsx@4.20.3/node_modules/tsx/dist/esm/index.mjs?1795312599617:2:4304)
+    at async resolve (file:///Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/node_modules/.pnpm/tsx@4.20.3/node_modules/tsx/dist/esm/index.mjs?1795312599617:2:5422)
+    at async nextResolve (node:internal/modules/esm/hooks:769:22)
+    at async AsyncLoaderHooksOnLoaderHookWorker.resolve (node:internal/modules/esm/hooks:265:24)
+    at async handleMessage (node:internal/modules/esm/worker:251:18) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/services/content-cms/src/record-mapping.ts'
+}
+
+Node.js v25.9.0

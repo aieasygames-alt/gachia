@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-22T02:38:23.520Z",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/published-sources/source-index.json",
+    "pin": "e364a23c8e9635db8e06344ff11980f25ef6a14fe87a7a6856a58523ea87957b"
+  },
+  "owner": "main",
+  "service": "gachia",
+  "versionId": "906927ee-9d4f-44c4-a464-14939e85c84b",
+  "moduleSHA256": "72c52e9c875d78e904fbd67e4fc6b982a28634c269405ae2d21df03e76bca97f",
+  "uploadTimeArchiveSHA256": "0d946585d1668936256ef5582dd212492ce8d946bd3402cf61e19a4fc8fe47ca",
+  "oldBetterAuthVersionStrings": 0,
+  "newBetterAuthVersionStrings": 3,
+  "contentSourcesPreserved": 115,
+  "gameOwnerIdentitiesPreserved": true,
+  "limit": "Version strings substantiate the exact frozen build and uploaded-module receipts, not an independent exploit proof"
+}

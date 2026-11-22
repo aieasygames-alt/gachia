@@ -1,0 +1,76 @@
+{
+  "origin": "https://342b711e-gachia.aieasygames.workers.dev",
+  "checks": [
+    {
+      "path": "/api/auth/get-session",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-in/social",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/callback/google?code=disabled&state=disabled",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/auth/sign-out",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/favorites",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/user-characters",
+      "method": "DELETE",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "GET",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "POST",
+      "status": 404
+    },
+    {
+      "path": "/api/map/progress",
+      "method": "PUT",
+      "status": 404
+    },
+    {
+      "path": "/api/shared-builds",
+      "method": "POST",
+      "status": 404
+    }
+  ],
+  "accountFeatures": false
+}

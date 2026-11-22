@@ -1,0 +1,37 @@
+[
+  {
+    owner: 'genshin',
+    count: 16,
+    preserved: true,
+    oldTree: '9411089b595f8e85b40d6bf2263a81c1c99aec48d37500c1ef3db3bebc0b3197',
+    candidateTree: '9411089b595f8e85b40d6bf2263a81c1c99aec48d37500c1ef3db3bebc0b3197'
+  },
+  {
+    owner: 'nte',
+    count: 18,
+    preserved: true,
+    oldTree: '29e524e55e6af9b7659d434930b5ef88eb7a6cfc6a0f75374d8c8710d5ccec4b',
+    candidateTree: '29e524e55e6af9b7659d434930b5ef88eb7a6cfc6a0f75374d8c8710d5ccec4b'
+  },
+  {
+    owner: 'azur-promilia',
+    count: 0,
+    preserved: true,
+    oldTree: '4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945',
+    candidateTree: '4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945'
+  },
+  {
+    owner: 'lvmeng',
+    count: 0,
+    preserved: true,
+    oldTree: '4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945',
+    candidateTree: '4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945'
+  },
+  {
+    owner: 'main',
+    count: 415,
+    preserved: true,
+    oldTree: '1213952f631b1f43e5b60c8c4c9810ac53edc1d6be1290b7a24f747edacd7634',
+    candidateTree: '1213952f631b1f43e5b60c8c4c9810ac53edc1d6be1290b7a24f747edacd7634'
+  }
+]

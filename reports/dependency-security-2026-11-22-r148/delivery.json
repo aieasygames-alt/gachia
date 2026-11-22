@@ -1,0 +1,129 @@
+{
+  "batch": "R148",
+  "status": "production_complete",
+  "at": "2026-11-22T02:39:07.891Z",
+  "implementationCommit": "721d1596885244aed46aab869ad4b943cd9f66f7",
+  "executorCI": {
+    "runID": 44972438569,
+    "commit": "721d1596885244aed46aab869ad4b943cd9f66f7",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "ciURL": "https://github.com/aieasygames-alt/gachia/actions/runs/44972438569",
+  "targets": {
+    "betterAuth": "1.7.7",
+    "qs": "6.16.1",
+    "glob": "14.0.2",
+    "minimatch": "11.0.1"
+  },
+  "deployed": {
+    "owner": "main",
+    "service": "gachia",
+    "versionId": "906927ee-9d4f-44c4-a464-14939e85c84b",
+    "deploymentId": "c1a83c34-9431-4c99-8ae9-5e6e9f08ad5e",
+    "moduleSHA256": "72c52e9c875d78e904fbd67e4fc6b982a28634c269405ae2d21df03e76bca97f",
+    "recoveryVersionId": "342b711e-e2b8-471d-bdca-b99046b9f5df"
+  },
+  "counts": {
+    "publicJSONPreserved": 449,
+    "contentSources": 115,
+    "contentChanges": 0,
+    "cmsContentWrites": 0,
+    "schemaMigrations": 0,
+    "workerUploads": 2,
+    "productionDeployments": 1,
+    "toolchainBuilds": 5,
+    "browserScenarios": 18,
+    "candidateLocal": 2155,
+    "recoveryLocal": 2155,
+    "candidateCloud": 2155,
+    "recoveryCloud": 2155,
+    "freshCandidate": 2155,
+    "freshRecovery": 2155,
+    "publicMain": 334,
+    "publicAggregate": 740,
+    "localAggregate": 740
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/published-sources/source-index.json",
+    "pin": "e364a23c8e9635db8e06344ff11980f25ef6a14fe87a7a6856a58523ea87957b"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-editing-source-sync-2026-11-21-r144/cms-final.json.gz",
+    "pin": "b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20"
+  },
+  "cmsObserved": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/cms-final-proof.json",
+    "pin": "ed2c60204c66ba562a49f65ec53de1e50aade82ce6ddcd3a53a28f9da247a5c3"
+  },
+  "installedReader": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/installed-reader-boundary.json",
+    "pin": "1c5eec714679923a2700de11641ec1af92350a2777a856a9558d2a6957f4deee"
+  },
+  "preserved": {
+    "games": {
+      "genshin": "0382cd12-683b-46b0-817d-02bb89f5fd2b",
+      "nte": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+      "azur-promilia": "78442797-d15e-441e-a00d-2faa6d9aa543",
+      "lvmeng": "50812a8a-012f-428e-bb4b-780530181c09"
+    },
+    "router": true,
+    "staging": true,
+    "accountFeatures": false,
+    "lvmengLocales": [
+      "zh"
+    ],
+    "residentCMS": "R147"
+  },
+  "validation": {
+    "local": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/local-validation.json",
+      "pin": "117d657c41d558fbe7807523a24f5baa0c5ecf9410067eaf51bfed880f052881"
+    },
+    "browser": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/browser-acceptance.json",
+      "pin": "078fef197444727aeafdcd1f23f9dcd4b5abed2d9e906045b65432bbe5031a93"
+    },
+    "json": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/json-preservation.json",
+      "pin": "9033f44a6a0a95cf7f9e70ebcabaf2f1e4772ae88e1ad656bc9092c8301a7e87"
+    },
+    "security": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/security-assessment.json",
+      "pin": "8331039c47644848b9149b428c9aa4174437ebc9a7526781d661c58855f2e5e2"
+    },
+    "completed": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/completion.json",
+      "pin": "42a7482808243f946b9b10c0fddd1198292a266699d3a7ad90183aeef2726445"
+    },
+    "currentModule": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/published-runtime-version.json",
+      "pin": "6954678b2509d0ddc78f77baf650bf36d032ba7edf16cdc2bab3a29afd8fc303"
+    },
+    "artifactPortability": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/artifact-portability.json",
+      "pin": "cc0b3b86f4d364ab627ebbf0a9c2c6c453aa4c890efd93425dfa1d78d257cc67"
+    },
+    "generatedCacheCleanup": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/cleanup.json",
+      "pin": "e0cf2d8d9519a5e623e122c543ce3a182425b8bc039954697e0a21c0a6c178dd"
+    },
+    "frozenSourceAfterCleanup": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/cleanup-source-verification.json",
+      "pin": "1505e27b678cf7069266fad5076490713dffd2e3abef00c9c23cfb49034daed5"
+    }
+  },
+  "diskFreeGiB": 13.43,
+  "next": "Install the CI-verified R148 preserved-runtime policy reader in the resident CMS, preserving R144 AFTER and R147 application recovery. No public content or Worker redeploy is needed.",
+  "doNotReplay": [
+    "R140 drafts",
+    "R141 structural staging",
+    "R142 review",
+    "R143 content deploy",
+    "R144 editing source sync",
+    "R145 CMS upgrade",
+    "R146 public runtime rollout",
+    "R147 CMS installation",
+    "R148 Main security deployment"
+  ]
+}

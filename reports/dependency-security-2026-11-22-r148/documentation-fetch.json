@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://developers.cloudflare.com/workers/wrangler/commands/versions/index.md",
+    "retrieved": false,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://developers.cloudflare.com/workers/versions-and-deployments/rollbacks/index.md",
+    "retrieved": false,
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

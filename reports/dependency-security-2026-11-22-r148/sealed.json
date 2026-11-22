@@ -1,0 +1,132 @@
+{
+  "commit": "721d1596885244aed46aab869ad4b943cd9f66f7",
+  "parent": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+    "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+  },
+  "tool": {
+    "version": "4.148.0",
+    "bin": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/node_modules/.pnpm/wrangler@4.148.0_@cloudflare+workers-types@5.20261006.1_@types+node@25.6.0/node_modules/wrangler/bin/wrangler.js",
+    "cli": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/node_modules/.pnpm/wrangler@4.148.0_@cloudflare+workers-types@5.20261006.1_@types+node@25.6.0/node_modules/wrangler/wrangler-dist/cli.js",
+    "binSHA256": "780661a508810f3b65786895b1ca9aacbc4f55d329ae6b8c1e49ec8433569f77",
+    "cliSHA256": "028a1b0d560594692aa44bda69079d700617164bf7d4de93a4ba3aa5b401ff1c"
+  },
+  "owners": {
+    "genshin": {
+      "candidate": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/genshin",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/genshin/candidate/unchanged.json",
+          "pin": "7fa01a551e7935f15c56e24cac646a74e21ee3d787bd21be1a0354f80eaff146"
+        },
+        "moduleSHA256": "ce3497c1856d50f50d55ad6fc2dea5bfcdac6325a094d79f6afcdc4e152f9686"
+      },
+      "recovery": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/genshin",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/genshin/recovery/unchanged.json",
+          "pin": "7fa01a551e7935f15c56e24cac646a74e21ee3d787bd21be1a0354f80eaff146"
+        },
+        "moduleSHA256": "ce3497c1856d50f50d55ad6fc2dea5bfcdac6325a094d79f6afcdc4e152f9686"
+      }
+    },
+    "nte": {
+      "candidate": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/nte",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/nte/candidate/unchanged.json",
+          "pin": "2243f659fdc4905d02440d28da7dac9d28a82c33913a0697bd631fc849ba633f"
+        },
+        "moduleSHA256": "ed3162e64f55e8ea0b4f01797e260f25165b76f1c7f4e179dc8bbcdb87e28a4e"
+      },
+      "recovery": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/nte",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/nte/recovery/unchanged.json",
+          "pin": "2243f659fdc4905d02440d28da7dac9d28a82c33913a0697bd631fc849ba633f"
+        },
+        "moduleSHA256": "ed3162e64f55e8ea0b4f01797e260f25165b76f1c7f4e179dc8bbcdb87e28a4e"
+      }
+    },
+    "azur-promilia": {
+      "candidate": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/azur-promilia",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/azur-promilia/candidate/unchanged.json",
+          "pin": "3988a55d57d1e0cf422b3d491ec8d45548355ffbbe25b457d995f4ef832964fb"
+        },
+        "moduleSHA256": "ac06a12887d03019d794e03ef28106f1cadc669a7e158268a14479a6ccb50be2"
+      },
+      "recovery": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/azur-promilia",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/azur-promilia/recovery/unchanged.json",
+          "pin": "3988a55d57d1e0cf422b3d491ec8d45548355ffbbe25b457d995f4ef832964fb"
+        },
+        "moduleSHA256": "ac06a12887d03019d794e03ef28106f1cadc669a7e158268a14479a6ccb50be2"
+      }
+    },
+    "lvmeng": {
+      "candidate": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/lvmeng",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/lvmeng/candidate/unchanged.json",
+          "pin": "24d09779c68f3ad7f833a1025e589d4bf473a17a2e7513c868239a97a52ccdf8"
+        },
+        "moduleSHA256": "1c8ef664642916325241eafe31dfaa1e2c2a27772da2c8d6b4ca8c931e2f0251"
+      },
+      "recovery": {
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/lvmeng",
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/lvmeng/recovery/unchanged.json",
+          "pin": "24d09779c68f3ad7f833a1025e589d4bf473a17a2e7513c868239a97a52ccdf8"
+        },
+        "moduleSHA256": "1c8ef664642916325241eafe31dfaa1e2c2a27772da2c8d6b4ca8c931e2f0251"
+      }
+    },
+    "main": {
+      "compatibility": {
+        "oldStaticPaths": 1326,
+        "newStaticPaths": 132,
+        "forwardAdded": 1246,
+        "recoveryAdded": 52
+      },
+      "candidate": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/main/candidate/upload.json",
+          "pin": "22cddf4a79ff807b925546093bdc7953fc4bd903585d8a907a0e0bb65b92edf5"
+        },
+        "moduleSHA256": "72c52e9c875d78e904fbd67e4fc6b982a28634c269405ae2d21df03e76bca97f",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/main/candidate/artifact",
+        "artifactPin": "a0cf35453955409d2968a0013dba718a1d9cd9b102b3f74821119868b0b6eaa5",
+        "local": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/local/main/candidate/responses/references.json",
+          "pin": "a5072c1a8aaaf6a19b0aca2044839f906eb2dc3c6e26d3f05b25ecc9b2f1d26f"
+        }
+      },
+      "recovery": {
+        "config": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/main/recovery/upload.json",
+          "pin": "1abd6bc754e9c1434d7a34bf5cdea64662a492b917d16b75883e2a8c391b5ed7"
+        },
+        "moduleSHA256": "fb8fa6a85d15a291e27b1ad3919067dd442d2c1247f1e74e739f7315bea2f743",
+        "artifact": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/sealed/main/recovery/artifact",
+        "artifactPin": "2311c555ebb9dfe6bfce48c5188c97d105d5c852785a423b36edac86039f9332",
+        "local": {
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/local/main/recovery/responses/references.json",
+          "pin": "f66effce8876cff2173a52d33e9977a22517de1492a68abb4e5c29fc733406be"
+        }
+      }
+    }
+  },
+  "publicReferences": {
+    "main": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/public-reference-main/references.json",
+      "pin": "c870631cfe051c84e77c29a8ac11713afe955dac7ebf8c5240c26308a1bd75f3"
+    }
+  },
+  "graph": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/candidate-graph/responses/references.json",
+    "pin": "3471a904b931c1f035355e3cae09fed04787c54426d3e9a1e2be687711b64fcf"
+  }
+}

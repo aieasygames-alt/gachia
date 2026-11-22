@@ -1,0 +1,26 @@
+Scope: all 12 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +22 -32
+++++++++++++++++++++++--------------------------------
+Progress: resolved 22, reused 5, downloaded 2, added 2
+Progress: resolved 22, reused 5, downloaded 17, added 17, done
+
+Done in 3.8s using pnpm v10.32.1
+Scope: all 12 workspace projects
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +722
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 722, reused 721, downloaded 0, added 163
+Progress: resolved 722, reused 722, downloaded 0, added 680
+Progress: resolved 722, reused 722, downloaded 0, added 720
+Progress: resolved 722, reused 722, downloaded 0, added 721
+Progress: resolved 722, reused 722, downloaded 0, added 722, done
+
+devDependencies:
++ @playwright/test 1.63.0
++ turbo 2.10.4
++ typescript 5.9.3
+
+Done in 8.8s using pnpm v10.32.1

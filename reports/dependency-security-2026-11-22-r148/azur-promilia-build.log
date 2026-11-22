@@ -1,0 +1,122 @@
+
+┌─────────────────────────────┐
+│ OpenNext — Cloudflare build │
+└─────────────────────────────┘
+
+Monorepo detected at /Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source
+App directory: /Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/game-azur-promilia
+Next.js version : 15.5.29
+@opennextjs/cloudflare version: 1.20.13
+@opennextjs/aws version: 4.1.12
+workerd compatibility_date: 2026-07-08
+
+┌─────────────────────────────────┐
+│ OpenNext — Building Next.js app │
+└─────────────────────────────────┘
+
+
+> @gachia/game-azur-promilia@0.0.1 build /Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/game-azur-promilia
+> node ../../scripts/require-app-runtime.mjs && next build
+
+{
+  "status": "reviewed_application_runtime",
+  "app": "@gachia/game-azur-promilia",
+  "nodeVersion": "22.22.2",
+  "versions": {
+    "next": "15.5.29",
+    "@opennextjs/cloudflare": "1.20.13",
+    "wrangler": "4.148.0"
+  },
+  "patch": {
+    "nextVersion": "15.5.29",
+    "state": "patched",
+    "files": [
+      {
+        "path": "dist/client/components/layout-router.js",
+        "sha256": "0c1ca06f109657d840d520ca1ddf8a94c605ebe1e16ea3eb7ddcb3078eb6a464",
+        "state": "patched"
+      },
+      {
+        "path": "dist/client/components/app-router.js",
+        "sha256": "85b52001d3faabf563e3fd7b4107047f63f9e391bc652848a1011fef2b537d3e",
+        "state": "patched"
+      },
+      {
+        "path": "dist/esm/client/components/layout-router.js",
+        "sha256": "61d2635e7e869b0414e85ff9bc9cd7a4d9deec1a69426f2d62a271b3ae7359c1",
+        "state": "patched"
+      },
+      {
+        "path": "dist/esm/client/components/app-router.js",
+        "sha256": "6a1cc9777a102a77355ae18caa308dd975c4349fa595b6c3911da0f2d16d9fd4",
+        "state": "patched"
+      }
+    ],
+    "productionEnabled": false
+  },
+  "cloudVerification": "not_performed"
+}
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+   ▲ Next.js 15.5.29
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 3.5s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/6) ...
+   Generating static pages (1/6) 
+   Generating static pages (2/6) 
+   Generating static pages (4/6) 
+ ✓ Generating static pages (6/6)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                   Size  First Load JS
+┌ ○ /                                        146 B         103 kB
+├ ○ /_not-found                              990 B         103 kB
+├ ƒ /[lang]/azur-promilia                    176 B         106 kB
+├ ƒ /[lang]/azur-promilia/characters       3.34 kB         117 kB
+├ ƒ /[lang]/azur-promilia/characters/[id]    176 B         106 kB
+├ ƒ /[lang]/azur-promilia/guides             176 B         106 kB
+├ ƒ /[lang]/azur-promilia/guides/[id]        176 B         106 kB
+├ ƒ /[lang]/azur-promilia/kibo             1.24 kB         112 kB
+├ ƒ /[lang]/azur-promilia/planner          2.69 kB         105 kB
+├ ƒ /[lang]/azur-promilia/redeem-codes       146 B         103 kB
+├ ƒ /[lang]/azur-promilia/systems            146 B         103 kB
+├ ƒ /[lang]/azur-promilia/tier-list          176 B         106 kB
+├ ƒ /[lang]/azur-promilia/travel-trace       176 B         106 kB
+├ ƒ /[lang]/azur-promilia/version            146 B         103 kB
+├ ƒ /[lang]/azur-promilia/weapons            146 B         103 kB
+├ ƒ /[lang]/azur-promilia/weapons/[id]       176 B         106 kB
+├ ƒ /[lang]/azur-promilia/world              146 B         103 kB
+├ ○ /robots.txt                              146 B         103 kB
+└ ○ /sitemap.xml                             146 B         103 kB
++ First Load JS shared by all               102 kB
+  ├ chunks/127-37fa885fe841b7e7.js         46.2 kB
+  ├ chunks/d5075a4a-ccd4396ee430ad4b.js    54.2 kB
+  └ other shared chunks (total)            1.93 kB
+
+
+ƒ Middleware                               33.9 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+┌──────────────────────────────┐
+│ OpenNext — Generating bundle │
+└──────────────────────────────┘
+
+(node:2532) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+Building server function: default...
+Applying code patches: 2.141s
+# copyPackageTemplateFiles
+[35m⚙️ Bundling the OpenNext server...
+[0m
+[35mWorker saved in `.open-next/worker.js` 🚀
+[0m
+OpenNext build complete.

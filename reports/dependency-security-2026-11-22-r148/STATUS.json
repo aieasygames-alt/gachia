@@ -1,8 +1,16 @@
 {
   "batch": "R148",
-  "status": "implementation_and_local_tests",
-  "at": "2026-11-22T01:37:00.324813+00:00",
-  "next": "freeze exact inputs; build five owners for toolchain compatibility; qualify and deploy Main only",
-  "workerUploads": 0,
-  "productionDeployments": 0
+  "status": "production_complete",
+  "implementationCommit": "721d1596885244aed46aab869ad4b943cd9f66f7",
+  "ciRunID": 44972438569,
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/published-sources/source-index.json",
+    "pin": "e364a23c8e9635db8e06344ff11980f25ef6a14fe87a7a6856a58523ea87957b"
+  },
+  "workerUploads": 2,
+  "productionDeployments": 1,
+  "contentChanges": 0,
+  "cmsWrites": 0,
+  "next": "Install the CI-verified R148 preserved-runtime policy reader in the resident CMS, preserving R144 AFTER and R147 application recovery. No public content or Worker redeploy is needed.",
+  "diskFreeGiB": 13.43
 }

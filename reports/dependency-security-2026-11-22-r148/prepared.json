@@ -1,0 +1,24 @@
+{
+  "policy": "public-main-better-auth-1.7.7-toolchain-security-v1",
+  "dependencyVersions": {
+    "betterAuth": "1.7.7",
+    "qs": "6.16.1",
+    "glob": "14.0.2",
+    "minimatch": "11.0.1"
+  },
+  "commit": "721d1596885244aed46aab869ad4b943cd9f66f7",
+  "parent": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/source-index.json",
+    "pin": "93c6bf6fd6095269414856c575e8012409a10f29a774f06ad8eb1c6ac3af06d3"
+  },
+  "active": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/active.json",
+    "pin": "ffaebc908a6da04d6fa23db34cb59aa209a7a7faf19e0521fc1d3af6287918f1"
+  },
+  "workspaceProof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/workspace.json",
+    "pin": "7b1deb2665cb5fda1211e63ef3c608cd6e2caed46a790cb61abe73ffbe053344"
+  },
+  "workspace": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source",
+  "contentChanges": []
+}

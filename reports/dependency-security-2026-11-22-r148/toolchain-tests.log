@@ -1,0 +1,43 @@
+TAP version 13
+# Subtest: OpenNext tracing and node-minify expand the same bounded files after the glob upgrade
+not ok 1 - OpenNext tracing and node-minify expand the same bounded files after the glob upgrade
+  ---
+  duration_ms: 17.517292
+  type: 'test'
+  location: '/Users/robert/.codex/worktrees/nte-source-restoration/gachia/scripts/security-toolchain.test.mjs:17:1'
+  failureType: 'testCodeFailure'
+  error: 'aws(...).minify is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/robert/.codex/worktrees/nte-source-restoration/gachia/scripts/security-toolchain.test.mjs:28:52)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: aborted glob promise and stream stop recursive filesystem reads
+ok 2 - aborted glob promise and stream stop recursive filesystem reads
+  ---
+  duration_ms: 112.451291
+  type: 'test'
+  ...
+# Subtest: Express query serializer handles hostile comma-array elements and ordinary round trips
+ok 3 - Express query serializer handles hostile comma-array elements and ordinary round trips
+  ---
+  duration_ms: 24.395042
+  type: 'test'
+  ...
+# Subtest: TypeScript ESLint keeps glob matching and parses typed source with the upgraded minimatch
+ok 4 - TypeScript ESLint keeps glob matching and parses typed source with the upgraded minimatch
+  ---
+  duration_ms: 328.12675
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 3
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 574.422625

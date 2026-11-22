@@ -1,0 +1,415 @@
+{
+  "status": "passed",
+  "owners": [
+    {
+      "owner": "genshin",
+      "links": [
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+          "target": "../../client-only@0.0.1/node_modules/client-only"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+          "target": "../source-map-support@0.5.21/node_modules/source-map-support"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+          "target": "../../source-map@0.6.1/node_modules/source-map"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+          "target": "../../buffer-from@1.1.2/node_modules/buffer-from"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/styled-jsx",
+          "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/postcss",
+          "target": "../../postcss@8.5.23/node_modules/postcss"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react-dom",
+          "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@swc/helpers",
+          "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@next/env",
+          "target": "../../../@next+env@15.5.29/node_modules/@next/env"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/nanoid",
+          "target": "../../nanoid@3.3.18/node_modules/nanoid"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/picocolors",
+          "target": "../../picocolors@1.1.1/node_modules/picocolors"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/source-map-js",
+          "target": "../../source-map-js@1.2.2/node_modules/source-map-js"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+          "target": "../../detect-libc@2.1.2/node_modules/detect-libc"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+          "target": "../../semver@7.8.5/node_modules/semver"
+        },
+        {
+          "path": "server-functions/default/apps/game-genshin/node_modules/next",
+          "target": "../../../node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/next"
+        },
+        {
+          "path": "server-functions/default/apps/game-genshin/node_modules/react",
+          "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react"
+        }
+      ],
+      "allInternalAndResolved": true
+    },
+    {
+      "owner": "nte",
+      "links": [
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+          "target": "../../client-only@0.0.1/node_modules/client-only"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+          "target": "../source-map-support@0.5.21/node_modules/source-map-support"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+          "target": "../../source-map@0.6.1/node_modules/source-map"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+          "target": "../../buffer-from@1.1.2/node_modules/buffer-from"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/styled-jsx",
+          "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/postcss",
+          "target": "../../postcss@8.5.23/node_modules/postcss"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react-dom",
+          "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@swc/helpers",
+          "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@next/env",
+          "target": "../../../@next+env@15.5.29/node_modules/@next/env"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/nanoid",
+          "target": "../../nanoid@3.3.18/node_modules/nanoid"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/picocolors",
+          "target": "../../picocolors@1.1.1/node_modules/picocolors"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/source-map-js",
+          "target": "../../source-map-js@1.2.2/node_modules/source-map-js"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+          "target": "../../detect-libc@2.1.2/node_modules/detect-libc"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+          "target": "../../semver@7.8.5/node_modules/semver"
+        },
+        {
+          "path": "server-functions/default/apps/game-nte/node_modules/next",
+          "target": "../../../node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/next"
+        },
+        {
+          "path": "server-functions/default/apps/game-nte/node_modules/react",
+          "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react"
+        }
+      ],
+      "allInternalAndResolved": true
+    },
+    {
+      "owner": "azur-promilia",
+      "links": [
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+          "target": "../../client-only@0.0.1/node_modules/client-only"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+          "target": "../source-map-support@0.5.21/node_modules/source-map-support"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+          "target": "../../source-map@0.6.1/node_modules/source-map"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+          "target": "../../buffer-from@1.1.2/node_modules/buffer-from"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/styled-jsx",
+          "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/postcss",
+          "target": "../../postcss@8.5.23/node_modules/postcss"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react-dom",
+          "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@swc/helpers",
+          "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@next/env",
+          "target": "../../../@next+env@15.5.29/node_modules/@next/env"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/nanoid",
+          "target": "../../nanoid@3.3.18/node_modules/nanoid"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/picocolors",
+          "target": "../../picocolors@1.1.1/node_modules/picocolors"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/source-map-js",
+          "target": "../../source-map-js@1.2.2/node_modules/source-map-js"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+          "target": "../../detect-libc@2.1.2/node_modules/detect-libc"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+          "target": "../../semver@7.8.5/node_modules/semver"
+        },
+        {
+          "path": "server-functions/default/apps/game-azur-promilia/node_modules/next",
+          "target": "../../../node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/next"
+        },
+        {
+          "path": "server-functions/default/apps/game-azur-promilia/node_modules/react",
+          "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react"
+        }
+      ],
+      "allInternalAndResolved": true
+    },
+    {
+      "owner": "lvmeng",
+      "links": [
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+          "target": "../../client-only@0.0.1/node_modules/client-only"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+          "target": "../source-map-support@0.5.21/node_modules/source-map-support"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+          "target": "../../source-map@0.6.1/node_modules/source-map"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+          "target": "../../buffer-from@1.1.2/node_modules/buffer-from"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/styled-jsx",
+          "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/postcss",
+          "target": "../../postcss@8.5.23/node_modules/postcss"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react-dom",
+          "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@swc/helpers",
+          "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@next/env",
+          "target": "../../../@next+env@15.5.29/node_modules/@next/env"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/nanoid",
+          "target": "../../nanoid@3.3.18/node_modules/nanoid"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/picocolors",
+          "target": "../../picocolors@1.1.1/node_modules/picocolors"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/source-map-js",
+          "target": "../../source-map-js@1.2.2/node_modules/source-map-js"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+          "target": "../../detect-libc@2.1.2/node_modules/detect-libc"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+          "target": "../../semver@7.8.5/node_modules/semver"
+        },
+        {
+          "path": "server-functions/default/apps/game-lvmeng/node_modules/next",
+          "target": "../../../node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/next"
+        },
+        {
+          "path": "server-functions/default/apps/game-lvmeng/node_modules/react",
+          "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react"
+        }
+      ],
+      "allInternalAndResolved": true
+    },
+    {
+      "owner": "main",
+      "links": [
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/client-only",
+          "target": "../../client-only@0.0.1/node_modules/client-only"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/styled-jsx@5.1.6_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/node_modules/source-map-support",
+          "target": "../source-map-support@0.5.21/node_modules/source-map-support"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/react-dom@19.2.4_react@19.2.4/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/source-map",
+          "target": "../../source-map@0.6.1/node_modules/source-map"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/source-map-support@0.5.21/node_modules/buffer-from",
+          "target": "../../buffer-from@1.1.2/node_modules/buffer-from"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/styled-jsx",
+          "target": "../../styled-jsx@5.1.6_react@19.2.4/node_modules/styled-jsx"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/postcss",
+          "target": "../../postcss@8.5.23/node_modules/postcss"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react-dom",
+          "target": "../../react-dom@19.2.4_react@19.2.4/node_modules/react-dom"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/react",
+          "target": "../../react@19.2.4/node_modules/react"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@swc/helpers",
+          "target": "../../../@swc+helpers@0.5.15/node_modules/@swc/helpers"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/@next/env",
+          "target": "../../../@next+env@15.5.29/node_modules/@next/env"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/nanoid",
+          "target": "../../nanoid@3.3.18/node_modules/nanoid"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/picocolors",
+          "target": "../../picocolors@1.1.1/node_modules/picocolors"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/postcss@8.5.23/node_modules/source-map-js",
+          "target": "../../source-map-js@1.2.2/node_modules/source-map-js"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/detect-libc",
+          "target": "../../detect-libc@2.1.2/node_modules/detect-libc"
+        },
+        {
+          "path": "server-functions/default/node_modules/.pnpm/sharp@0.35.5_@types+node@25.6.0/node_modules/semver",
+          "target": "../../semver@7.8.5/node_modules/semver"
+        },
+        {
+          "path": "server-functions/default/apps/web/node_modules/next",
+          "target": "../../../node_modules/.pnpm/next@15.5.29_patch_hash=08457d983616b4c24ef0259f556ae36c256b78e3ea27f5a152654a4b5945e5c_e1c91df396fc52721b35e6685ae1bb2f/node_modules/next"
+        },
+        {
+          "path": "server-functions/default/apps/web/node_modules/react",
+          "target": "../../../node_modules/.pnpm/react@19.2.4/node_modules/react"
+        }
+      ],
+      "allInternalAndResolved": true
+    }
+  ]
+}

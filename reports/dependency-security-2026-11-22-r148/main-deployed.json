@@ -1,0 +1,22 @@
+{
+  "deployment": {
+    "deploymentId": "c1a83c34-9431-4c99-8ae9-5e6e9f08ad5e",
+    "service": "gachia",
+    "versionId": "906927ee-9d4f-44c4-a464-14939e85c84b",
+    "releaseKey": "09978da9d5e653fc5e904c9e8088233780b6c9afcf4f33752bc907ed62ef7884",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "7626a9e896c52a2d4468f707888ffcd67891a4b8572cc65419eeab3a9439d1e0",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "1b934e7b3f764f94b00745a8c0e4e213b9143251c95c74db4163d645e889c3e0",
+        "bytes": 469
+      }
+    }
+  },
+  "versionId": "906927ee-9d4f-44c4-a464-14939e85c84b",
+  "releaseKey": "09978da9d5e653fc5e904c9e8088233780b6c9afcf4f33752bc907ed62ef7884"
+}

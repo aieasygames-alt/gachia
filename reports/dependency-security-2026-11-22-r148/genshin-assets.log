@@ -1,0 +1,11 @@
+{
+  "status": "local_assets_prepared_not_deployed",
+  "files": 49,
+  "prefix": "/_games/genshin/_next",
+  "originalPathsPreserved": true,
+  "content": {
+    "version": "4c1c97cbf8ec52ee423a4650699e5701ca8ab349549eb1e927069fd353be2fa5",
+    "files": 16,
+    "prefix": "/_games/genshin/content"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "status": "local_assets_prepared_not_deployed",
+  "files": 50,
+  "prefix": "/_games/nte/_next",
+  "originalPathsPreserved": true,
+  "content": {
+    "version": "36ec1c89703422ddef9f9de64ae25ccfd76c6f3570215767a70ba90debf3f7bd",
+    "files": 18,
+    "prefix": "/_games/nte/content"
+  }
+}

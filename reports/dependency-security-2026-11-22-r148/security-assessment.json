@@ -1,0 +1,120 @@
+{
+  "at": "2026-11-22T01:46:35.276692+00:00",
+  "scope": "Root lockfile Better Auth/adapters and qs/glob/minimatch; Main production runtime; CMS dependency domain unchanged",
+  "before": {
+    "all": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 3,
+        "moderate": 5,
+        "high": 2,
+        "critical": 1
+      },
+      "dependencies": 953,
+      "devDependencies": 0,
+      "optionalDependencies": 0,
+      "totalDependencies": 953
+    },
+    "production": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 3,
+        "moderate": 0,
+        "high": 2,
+        "critical": 1
+      },
+      "dependencies": 338,
+      "devDependencies": 0,
+      "optionalDependencies": 0,
+      "totalDependencies": 338
+    }
+  },
+  "after": {
+    "all": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 945,
+      "devDependencies": 0,
+      "optionalDependencies": 0,
+      "totalDependencies": 945
+    },
+    "production": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 339,
+      "devDependencies": 0,
+      "optionalDependencies": 0,
+      "totalDependencies": 339
+    },
+    "independentCMS": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 394,
+      "devDependencies": 0,
+      "optionalDependencies": 0,
+      "totalDependencies": 394
+    }
+  },
+  "targets": {
+    "better-auth": "1.7.7",
+    "adapters": "1.7.7",
+    "qs": "6.16.1",
+    "glob": "14.0.2",
+    "minimatch": "11.0.1",
+    "unaffectedMinimatch3": "3.1.5"
+  },
+  "officialAdvisories": [
+    "https://github.com/advisories/GHSA-3g3m-2fjr-6pw4",
+    "https://github.com/advisories/GHSA-44jh-23m7-hpcf",
+    "https://github.com/advisories/GHSA-6pq8-jhm2-2vcw",
+    "https://github.com/advisories/GHSA-965c-763c-88jm",
+    "https://github.com/advisories/GHSA-g3hv-75wg-m249",
+    "https://github.com/advisories/GHSA-q84f-53jg-9ppm",
+    "https://github.com/advisories/GHSA-r4xp-prcw-77qf"
+  ],
+  "officialTarballsVerified": 17,
+  "accountFeatures": false,
+  "databaseMigrations": 0,
+  "publicRuntimeOwners": [
+    "main"
+  ],
+  "toolchainBuildOwners": [
+    "genshin",
+    "nte",
+    "azur-promilia",
+    "lvmeng",
+    "main"
+  ],
+  "cmsLockSHA256": "57e87f13ab2be7c136c626f830a07ce9dedb64367cf6656df7b41e71331a210c",
+  "limits": [
+    "Audit is a current registry advisory match, not a permanent guarantee",
+    "Local lockfile remediation is not deployed-module proof",
+    "No account activation, provider login, or public auth database migration is authorized by this dependency update"
+  ],
+  "cmsDeepmerge": {
+    "installedVersion": "4.3.1",
+    "advisory": "GHSA-gcqx-w48m-w2h4",
+    "status": "officially_withdrawn_not_a_security_vulnerability",
+    "withdrawnAt": "2026-11-16T18:55:38Z",
+    "dependencyChanged": false,
+    "proof": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/cms-deepmerge-current-advisory.json",
+      "pin": "94808c4ca0d552067230f594a0f029c520768d5b059178fdbc291d273089a0ae"
+    }
+  }
+}

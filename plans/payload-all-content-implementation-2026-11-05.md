@@ -1,6 +1,14 @@
 # Payload 全内容实施队列
 
-## 当前完成状态（2026-11-22 R147：常驻 CMS 已接通 R146 来源读取器）
+## 当前完成状态（2026-11-22 R148：剩余依赖安全修复及 Main 单 Worker 正式更新）
+
+Better Auth/core/adapter/telemetry **1.7.7**、qs **6.16.1**、glob **14.0.2**、minimatch **11.0.1** 已固定；官方 17 tarball integrity 核验通过，当前全仓/生产依赖与独立 CMS audit 均 0 公告。五应用标准 OpenNext 构建通过，449 公开 JSON 和 115 内容来源逐字节保持。精确源码 `721d159` 的[完整 CI 44972438569](https://github.com/aieasygames-alt/gachia/actions/runs/44972438569)通过，Main 候选/兼容恢复、本机/云预览/公网与 18 浏览器场景通过。
+
+Main 正式版本 `906927ee-9d4f-44c4-a464-14939e85c84b`，100%；仅 2 个 Main 版本上传、1 次正式部署，四个游戏、Router、四个 staging 保持。Next/OpenNext/patch 保持，账号关闭、绿梦中文。2,966 CMS draft/published 仍与 R144 AFTER 一致；0 内容/审核/编辑源同步或 schema 写入。见 [R148 完成回执](../reports/dependency-security-2026-11-22-r148/EXECUTION.md)和[交付索引](../reports/dependency-security-2026-11-22-r148/delivery.json)。
+
+正式接续使用 [R148 来源](../reports/dependency-security-2026-11-22-r148/published-sources/source-index.json)，pin `e364a23c8e9635db8e06344ff11980f25ef6a14fe87a7a6856a58523ea87957b`，工作区真实读取器已重开、allOwnersCurrent=true；CMS 仍用 R144 AFTER，pin `b25b29e1fc523c767252e4059cb9ba8d7574be651b08b783002f9096a9cfaf20`。下一批先把已通过 CI 的 R148 新 Main policy 读取合同安装到常驻 CMS：当前 R147 安装版对此 policy 明确拒绝，不能宣称已接通。保持内容/审核/媒体和依赖；无需重发公开内容，不重放 R140–R148 已完成操作。可用约 13.43 GiB，后续完整构建继续 14 GiB 标准/8 GiB 保留线。
+
+## 前批完成状态（2026-11-22 R147：常驻 CMS 已接通 R146 来源读取器）
 
 已标准构建并封存安装精确源码 `a95cf75170bbafccdabbfcaaed3bc593fdc97454`（[完整 CI 44914833496](https://github.com/aieasygames-alt/gachia/actions/runs/44914833496)），Next 16.4.6 / Payload 3.92.1 / React 19.2.6 和锁文件保持。801 应用文件、356 跨目录文件、43,788 项依赖校验通过；新安装中的真实读取器准备后/安装后两次重开 R146 均为 115 来源、五 owner、allOwnersCurrent=true。来源合同 13/13、类型、隔离 PostgreSQL/HTTP 15 组与常驻 20 HTTP 项通过，冷备真实恢复及新→旧→新应用切换通过。
 

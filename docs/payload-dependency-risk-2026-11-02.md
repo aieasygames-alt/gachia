@@ -1,5 +1,13 @@
 # Payload deepmerge 临时风险决定
 
+## 2026-11-22 R148 当前复核：公告已被官方撤回
+
+GitHub 官方 [GHSA-gcqx-w48m-w2h4](https://github.com/advisories/GHSA-gcqx-w48m-w2h4) 于 **2026-11-16 18:55:38 UTC** 撤回，当前说明为 “does not describe a security vulnerability”。本次独立 CMS audit 为 0；deepmerge 仍为 4.3.1，没有包升级、忽略规则或本地补丁。见 [当前官方原始记录](../reports/dependency-security-2026-11-22-r148/cms-deepmerge-current-advisory.json)。
+
+因此下方“公告未撤回”和到期风险接受均为历史记录，不再作为待修复公告沿用；保留原始复现和当时的边界决定。撤回不代表应用依赖已升级，也不构成开放公网/多人 CMS 或不可信 JSON 导入的授权；现有本机单用户运行范围保持。
+
+## 历史决定
+
 初始决定：2026-11-02；最新复核：2026-11-05 R37；复核截止仍为2026-11-16，不顺延。适用当前 **Mac 本机单用户/可信来源**，不适用公网、Tunnel 或多人后台。用户已给予推进上线所需操作默认授权；本记录是限定运行边界下的临时接受，不是漏洞修复或全平台安全批准。
 
 ## 最新复核（R37，已复核但未修复）

@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-22T02:38:37.630686+00:00",
+  "removedGeneratedCaches": [
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/admin/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/game-azur-promilia/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/game-genshin/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/game-lvmeng/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/game-nte/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/router/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/apps/web/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/packages/core/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/packages/data/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/packages/db/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/frozen/source/packages/ui/node_modules",
+    "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/services/content-cms/.next/cache"
+  ],
+  "preserved": [
+    "frozen source files and proofs",
+    "all built validation artifacts",
+    "sealed candidate and recovery",
+    "cloud/local/public response evidence",
+    "published source artifacts",
+    "R147 resident CMS installation and backups",
+    "user proxy"
+  ],
+  "freeBeforeGiB": 13.12,
+  "freeAfterGiB": 13.43,
+  "reserveGiB": 8,
+  "fullGameBuildMinimumGiB": 14,
+  "cmsBuildMinimumGiB": 10,
+  "contentOrWorkerWrites": 0
+}

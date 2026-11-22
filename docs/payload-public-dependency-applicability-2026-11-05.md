@@ -1,6 +1,6 @@
 # Public dependency applicability baseline
 
-2026-11-22 R148 更新：下方为 2026-11-05 的历史适用性记录。官方 registry 现已确认发布 Better Auth / adapter **1.7.7**；本地已精确升级并通过边界测试，all/prod audit 为 0。不能再使用“未证实发布”描述当前候选；线上状态以 [R148 回执](../reports/dependency-security-2026-11-22-r148/EXECUTION.md)为准。账号功能继续关闭。独立 CMS 本次当前扫描也为 0，历史 deepmerge 风险决定不作为当前扫描结果。
+2026-11-22 R148 更新：下方为 2026-11-05 的历史适用性记录。官方 registry 现已确认发布 Better Auth / adapter **1.7.7**；本地已精确升级并通过边界测试，all/prod audit 为 0。不能再使用“未证实发布”描述当前候选；线上状态以 [R148 回执](../reports/dependency-security-2026-11-22-r148/EXECUTION.md)为准。账号功能继续关闭。独立 CMS 本次当前扫描也为 0；历史 deepmerge 公告已于 2026-11-16 被官方撤回（不是依赖升级），详见 [当前复核](payload-dependency-risk-2026-11-02.md)。
 
 核验日期：2026-11-05。公开锁文件 Better Auth 1.6.22；账号开关保持 `accountFeatures:false`。这是逐项适用性分析，不是忽略名单、修复版本证明或生产安全豁免。
 

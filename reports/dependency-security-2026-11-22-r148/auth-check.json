@@ -1,0 +1,49 @@
+{
+  "loggedIn": true,
+  "authType": "OAuth Token",
+  "accounts": [
+    {
+      "id": "e6472b6c6172a3ac1e1596ef100543ae",
+      "type": "standard",
+      "settings": {
+        "enforce_twofactor": false,
+        "api_access_enabled": null,
+        "access_approval_expiry": null,
+        "abuse_contact_email": null,
+        "oauth_app_access_enabled": true
+      },
+      "legacy_flags": {
+        "enterprise_zone_quota": {
+          "maximum": 0,
+          "current": 0,
+          "available": 0
+        }
+      },
+      "created_on": "2026-03-05T03:49:58.696784Z"
+    }
+  ],
+  "tokenPermissions": [
+    "user:read",
+    "offline_access",
+    "account:read",
+    "workers:write",
+    "workers_kv:write",
+    "workers_routes:write",
+    "workers_scripts:write",
+    "workers_tail:read",
+    "d1:write",
+    "pages:write",
+    "zone:read",
+    "ssl_certs:write",
+    "ai:write",
+    "ai-search:write",
+    "ai-search:run",
+    "queues:write",
+    "pipelines:write",
+    "secrets_store:write",
+    "containers:write",
+    "cloudchamber:write",
+    "connectivity:admin"
+  ],
+  "exitCode": 0
+}
