@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "previousSourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/published-sources/source-index.json",
+    "pin": "4cb01a5f0b7aa2f7ac0519f00bdb217528cfdd8033fa859016582bfdae2fcbb6"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/source-index.json",
+    "pin": "cc71a49160ba622a34eaf5d05bfe21006bfa41a0632f208b57afd36e10376340"
+  },
+  "registeredSources": 115,
+  "changedSources": [
+    "packages/data/games/genshin/raw-materials.json"
+  ],
+  "preservedSources": 114,
+  "materials": 269,
+  "unchangedOtherMaterials": 268,
+  "fields": [
+    {
+      "id": "teachings-of-freedom",
+      "pointer": "/sourceEn",
+      "before": "Domain: Mondstadt (周一/四/日)",
+      "after": "Domain: Mondstadt (Monday/Thursday/Sunday)"
+    }
+  ],
+  "changedServices": [
+    "gachia-game-genshin"
+  ],
+  "allProductionSettingsPreserved": true
+}

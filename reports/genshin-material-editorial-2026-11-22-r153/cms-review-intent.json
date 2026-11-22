@@ -1,0 +1,7 @@
+{
+  "id": 773,
+  "beforeText": "Domain: Mondstadt (周一/四/日)",
+  "afterText": "Domain: Mondstadt (Monday/Thursday/Sunday)",
+  "note": "仅将既有英文获取方式中的中文星期译为英文，星期集合保持周一/周四/周日。其余字段及真实导入 O、受控编辑基线、材料成员/关系/稀有度保持。",
+  "at": "2026-11-22T14:33:07.925Z"
+}

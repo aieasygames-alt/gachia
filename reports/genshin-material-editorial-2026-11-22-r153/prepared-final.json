@@ -1,0 +1,24 @@
+{
+  "proof": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/prepare-03/preparation.json",
+    "pin": "80aea6af2d75fefaa00277331f7f94147e5e7dee48887adc81de1bf2cced4364"
+  },
+  "value": {
+    "schemaVersion": 1,
+    "kind": "genshin_independent_editorial_preparation",
+    "bundle": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/prepare-03/sealed/bundle.json",
+      "pin": "db9f28ee6facb5d4d92baee07ee2045507a1f08ac43bfc5d3a483ea41466a76f"
+    },
+    "sourceCommit": "e7773d1aee9228377e0a370670ca3b5d24797303",
+    "review": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/prepare-02/review.json",
+      "pin": "4344635144f12815f9744c52ec8ddc3809f911c0fde0efa749c28fa530163eb2"
+    },
+    "owners": [
+      "genshin"
+    ],
+    "cloudWrites": false,
+    "productionReady": false
+  }
+}

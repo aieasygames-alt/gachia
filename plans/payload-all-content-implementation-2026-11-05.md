@@ -1,6 +1,12 @@
 # Payload 全内容实施队列
 
-## 当前完成状态（2026-11-22 R150–R152：蓝色星原持续编辑正式上线，常驻CMS已接续）
+## 当前完成状态（2026-11-22 R153：原神材料日常文本真实单 Worker 发布完成）
+
+原神“自由的教导”既有获取说明 sourceEn 已通过真实 CMS 草稿、审核、标准构建、候选/兼容恢复、不可变云预览及正式发布更新为英文星期，版本 `0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6`，100% 流量。仅 2 个原神上传、1 次正式部署，其余生产服务和 staging 保持。269 个材料的完整消费者检查、公开 JSON、搜索与 Main 聚合、12 浏览器场景通过；其余 2,965 条 CMS 和 114 份来源保持。常驻 CMS 精确版本安装、冷备实际恢复及最终来源重开通过。见 [R153 回执](../reports/genshin-material-editorial-2026-11-22-r153/EXECUTION.md)。
+
+下一批使用 [R153 最终来源](../reports/genshin-material-editorial-2026-11-22-r153/published-sources/source-index.json)，pin `cc71a49160ba622a34eaf5d05bfe21006bfa41a0632f208b57afd36e10376340`；CMS 从 [R153 最终快照](../reports/genshin-material-editorial-2026-11-22-r153/cms-after-production.json.gz)，pin `25cdf13bc414f8d803e7a36a6a720eb5f1a6f50d8b3b9330df4e899cccbbe732` 接续，不重放本批写入或发布。后续按内容类型扩展其他游戏既有攻略/材料/角色，再处理页面内联、新增、撤回和媒体替换；绿梦保持中文。本批结束可用约 12.21 GiB，下轮完整构建先检查 14 GiB 门槛，8 GiB 保留线不变。
+
+## 前批完成状态（2026-11-22 R150–R152：蓝色星原持续编辑正式上线，常驻CMS已接续）
 
 蓝色星原第二次真实CMS更新已上线，版本 `f6fb496a-6127-4a1e-89b8-6ef5148087f8`，100%流量；仅蓝色星原两个版本上传、一次正式部署，其余生产与Router保持。既有英文攻略单字段修文完成草稿、审核、受控编辑基线、候选/恢复、云预览及正式发布。其他2,965条CMS记录与114份来源保持；778项聚合/JSON/搜索和12种浏览器场景通过。详见 [R150回执](../reports/azur-repeat-editorial-2026-11-22-r150/EXECUTION.md)。攻略正文没有独立raw-guides JSON接口，不将元数据保持写成正文JSON已更新。
 

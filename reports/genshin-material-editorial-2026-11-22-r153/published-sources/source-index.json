@@ -1,0 +1,1571 @@
+{
+  "schemaVersion": 1,
+  "kind": "genshin_independent_editorial_source_index",
+  "status": "published_sources_observed",
+  "completion": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/production/completion.json",
+    "pin": "cdcb6fdcf204925308bf3668003383e7fa90cdc6f169d2ff65fd171099f73dea"
+  },
+  "previousSourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/published-sources/source-index.json",
+    "pin": "4cb01a5f0b7aa2f7ac0519f00bdb217528cfdd8033fa859016582bfdae2fcbb6"
+  },
+  "sourceCommit": "e7773d1aee9228377e0a370670ca3b5d24797303",
+  "executorCI": {
+    "runID": 45034499276,
+    "commit": "e7773d1aee9228377e0a370670ca3b5d24797303",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "owners": {
+    "genshin": {
+      "owner": "genshin",
+      "service": "gachia-game-genshin",
+      "versionId": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+      "directory": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/genshin",
+      "artifactSHA256": "096a756f1af359dcc40aa9596f5d4aff1f7c8a980faa7ef55730b9864ecd728a",
+      "modulePath": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/production/genshin-candidate/module/download.multipart",
+      "archiveSHA256": "0e25e66565d9fa0046477098d1705106662783eb36cdb71796ddd7454febab20",
+      "moduleSHA256": "b1f79bc0b4f2662dd3be3f11f889b687c828ed084d6105c343c87bd7b534cffe",
+      "version": {
+        "id": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+        "number": 77,
+        "metadata": {
+          "created_on": "2026-11-22T15:29:48.616678Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "1df1048829cab0469a89d1485188b24a3c44aa3502d3db9e9acd2c3bb0c36892",
+            "handlers": [
+              "fetch"
+            ],
+            "named_handlers": [
+              {
+                "name": "BucketCachePurge",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOQueueHandler",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOShardedTagCache",
+                "handlers": [
+                  "class"
+                ]
+              }
+            ],
+            "last_deployed_from": "wrangler"
+          },
+          "script_runtime": {
+            "assets": {
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-07-08",
+            "compatibility_flags": [
+              "nodejs_compat"
+            ],
+            "usage_model": "standard"
+          },
+          "bindings": [
+            {
+              "name": "ASSETS",
+              "type": "assets"
+            },
+            {
+              "name": "GENSHIN_DEPLOYMENT_MODE",
+              "text": "production",
+              "type": "plain_text"
+            },
+            {
+              "name": "NEXT_PUBLIC_APP_URL",
+              "text": "https://gachia.com",
+              "type": "plain_text"
+            }
+          ]
+        }
+      },
+      "mode": "unified_upload_time_module_receipt",
+      "moduleProof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/production/genshin-candidate/module/receipt.json",
+        "pin": "462cf983c3f10eea49aaa97cd270e37369b90f52e0d3ccf7f4f3d1074577f95f"
+      },
+      "moduleContext": {
+        "role": "candidate",
+        "transportPin": "561260cd9edf7fbb2e869d6cc1ca475f8188468c07193a2d6d5a8bfc2c71fbac",
+        "configPin": "52540ff325862b39d09da654605ad8d933f0f180d60972f2c239638166e6bc63"
+      }
+    },
+    "nte": {
+      "owner": "nte",
+      "service": "gachia-game-nte",
+      "versionId": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+      "directory": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/nte",
+      "artifactSHA256": "371ea10cbf8f240c763a16bc5bcce74d64ed4e29e40286989620061e800d52c5",
+      "modulePath": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/cloud/nte/candidate/module/download.multipart",
+      "archiveSHA256": "bcc17ef832af9688d18c90c0c504bb704e754d56d7dbf041f962109be3fb95fb",
+      "moduleSHA256": "ed3162e64f55e8ea0b4f01797e260f25165b76f1c7f4e179dc8bbcdb87e28a4e",
+      "version": {
+        "id": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+        "number": 66,
+        "metadata": {
+          "created_on": "2026-11-21T13:07:50.528174Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "b87b33886892178b32c7884e3a3130175410ac01f88774087d44259504451490",
+            "handlers": [
+              "fetch"
+            ],
+            "named_handlers": [
+              {
+                "name": "BucketCachePurge",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOQueueHandler",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOShardedTagCache",
+                "handlers": [
+                  "class"
+                ]
+              }
+            ],
+            "last_deployed_from": "wrangler"
+          },
+          "script_runtime": {
+            "assets": {
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-07-08",
+            "compatibility_flags": [
+              "nodejs_compat"
+            ],
+            "usage_model": "standard"
+          },
+          "bindings": [
+            {
+              "name": "ASSETS",
+              "type": "assets"
+            },
+            {
+              "name": "NEXT_PUBLIC_APP_URL",
+              "text": "https://gachia.com",
+              "type": "plain_text"
+            },
+            {
+              "name": "NTE_DEPLOYMENT_MODE",
+              "text": "live",
+              "type": "plain_text"
+            }
+          ]
+        }
+      },
+      "mode": "unified_upload_time_module_receipt",
+      "moduleProof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/cloud/nte/candidate/module/receipt.json",
+        "pin": "93aef4402aaa70f0750634d31e9bdf3f35ff0c6eed241c9731f4076dd3ee8fac"
+      },
+      "moduleContext": {
+        "role": "candidate",
+        "transportPin": "382fec4666c038b016a71d52ec8b04e64bdc10eb6799ab560ee3d83d496b1562",
+        "configPin": "aaa8a8f4511e5da82ec34a0c6cc79ad05045048e26f391a58b0e01026761f2e2"
+      }
+    },
+    "azur-promilia": {
+      "owner": "azur-promilia",
+      "service": "gachia-game-azur-promilia",
+      "versionId": "f6fb496a-6127-4a1e-89b8-6ef5148087f8",
+      "directory": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/published-sources/azur-promilia",
+      "artifactSHA256": "e4f0b078c33dce6c4be3399a61e1c87316dbee22360080a7ff5a5e05e596a1f4",
+      "modulePath": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/production/azur-promilia-candidate/module/download.multipart",
+      "archiveSHA256": "76fcedba8858c0f7c6d83e3d315b59dba324365c7e3cf06a7af92069af52195e",
+      "moduleSHA256": "ef8293fae04437370bdbeba24583a274fba04b45ac3e3ff79b4905cb5ca19d11",
+      "version": {
+        "id": "f6fb496a-6127-4a1e-89b8-6ef5148087f8",
+        "number": 91,
+        "metadata": {
+          "created_on": "2026-11-22T05:58:43.313015Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "8fdce4f721a8f3164b8d22f634f7968dd7c59fa67cfa516cacc4764afc10114f",
+            "handlers": [
+              "fetch"
+            ],
+            "named_handlers": [
+              {
+                "name": "BucketCachePurge",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOQueueHandler",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOShardedTagCache",
+                "handlers": [
+                  "class"
+                ]
+              }
+            ],
+            "last_deployed_from": "wrangler"
+          },
+          "script_runtime": {
+            "assets": {
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-07-08",
+            "compatibility_flags": [
+              "nodejs_compat"
+            ],
+            "usage_model": "standard"
+          },
+          "bindings": [
+            {
+              "name": "ASSETS",
+              "type": "assets"
+            },
+            {
+              "name": "AZUR_PROMILIA_DEPLOYMENT_MODE",
+              "text": "production",
+              "type": "plain_text"
+            },
+            {
+              "name": "NEXT_PUBLIC_APP_URL",
+              "text": "https://gachia.com",
+              "type": "plain_text"
+            }
+          ]
+        }
+      },
+      "mode": "unified_upload_time_module_receipt",
+      "moduleProof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/azur-repeat-editorial-2026-11-22-r150/production/azur-promilia-candidate/module/receipt.json",
+        "pin": "e638ca9e2b4b84195aa128653d1581412bcc1534df43e2d42d95d4f5cf4fff0c"
+      },
+      "moduleContext": {
+        "role": "candidate",
+        "transportPin": "d75f49ef83bf749343bc60f347560724b6d99ada0c6a0e6f58fa6e52a4733f00",
+        "configPin": "924e5535052df8cad8ab055361c78235714e305eddfe26ec812cabb3d8773c61"
+      }
+    },
+    "lvmeng": {
+      "owner": "lvmeng",
+      "service": "gachia-game-lvmeng",
+      "versionId": "50812a8a-012f-428e-bb4b-780530181c09",
+      "directory": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/published-sources/lvmeng",
+      "artifactSHA256": "3c660ce8416a11146f309a0bc4aef8e89c74a4367b243fcc5c89b90f3abfbd92",
+      "modulePath": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/cloud/lvmeng/candidate/module/download.multipart",
+      "archiveSHA256": "010c50acc98e0bc74c1dff0e4e238208d2525ca908fe7a180d94e467cb6ae194",
+      "moduleSHA256": "1c8ef664642916325241eafe31dfaa1e2c2a27772da2c8d6b4ca8c931e2f0251",
+      "version": {
+        "id": "50812a8a-012f-428e-bb4b-780530181c09",
+        "number": 36,
+        "metadata": {
+          "created_on": "2026-11-21T13:13:57.362373Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "2138eff19ca0f68c73b5a5333a56a42457fe54f1ac8c50625f677015c0a60ca9",
+            "handlers": [
+              "fetch"
+            ],
+            "named_handlers": [
+              {
+                "name": "BucketCachePurge",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOQueueHandler",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOShardedTagCache",
+                "handlers": [
+                  "class"
+                ]
+              }
+            ],
+            "last_deployed_from": "wrangler"
+          },
+          "script_runtime": {
+            "assets": {
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-07-08",
+            "compatibility_flags": [
+              "nodejs_compat"
+            ],
+            "usage_model": "standard"
+          },
+          "bindings": [
+            {
+              "name": "ASSETS",
+              "type": "assets"
+            },
+            {
+              "name": "LVMENG_DEPLOYMENT_MODE",
+              "text": "production",
+              "type": "plain_text"
+            },
+            {
+              "name": "NEXT_PUBLIC_APP_URL",
+              "text": "https://gachia.com",
+              "type": "plain_text"
+            }
+          ]
+        }
+      },
+      "mode": "unified_upload_time_module_receipt",
+      "moduleProof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/public-next-security-2026-11-21-r146/cloud/lvmeng/candidate/module/receipt.json",
+        "pin": "e3d7aa8a97efc73d32afc53cc9a46729e5720ec883a13e9a8f505c63505fbf47"
+      },
+      "moduleContext": {
+        "role": "candidate",
+        "transportPin": "382fec4666c038b016a71d52ec8b04e64bdc10eb6799ab560ee3d83d496b1562",
+        "configPin": "a8eb5b164c28898e1f03f50bce065abe944e1b32566c0a30217e07600b4b3094"
+      }
+    },
+    "main": {
+      "owner": "main",
+      "service": "gachia",
+      "versionId": "906927ee-9d4f-44c4-a464-14939e85c84b",
+      "directory": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/published-sources/main",
+      "artifactSHA256": "975e8bb06eb85738ca286a5ba10c1fdd4d4e8981802dd0811cc4622a9d29777f",
+      "modulePath": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/cloud/main/candidate/module/download.multipart",
+      "archiveSHA256": "0d946585d1668936256ef5582dd212492ce8d946bd3402cf61e19a4fc8fe47ca",
+      "moduleSHA256": "72c52e9c875d78e904fbd67e4fc6b982a28634c269405ae2d21df03e76bca97f",
+      "version": {
+        "id": "906927ee-9d4f-44c4-a464-14939e85c84b",
+        "number": 1020,
+        "metadata": {
+          "created_on": "2026-11-22T02:05:10.047756Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "resources": {
+          "script": {
+            "etag": "80a42b42e6eb821ade4092f57f1eb731d05efc65b4a888fdc44166fdd704e487",
+            "handlers": [
+              "fetch"
+            ],
+            "named_handlers": [
+              {
+                "name": "BucketCachePurge",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOQueueHandler",
+                "handlers": [
+                  "class"
+                ]
+              },
+              {
+                "name": "DOShardedTagCache",
+                "handlers": [
+                  "class"
+                ]
+              }
+            ],
+            "last_deployed_from": "wrangler"
+          },
+          "script_runtime": {
+            "assets": {
+              "headers": {
+                "version": 2,
+                "rules": {
+                  "/_next/static/*": {
+                    "set": {
+                      "cache-control": "public,max-age=31536000,immutable"
+                    },
+                    "unset": []
+                  }
+                }
+              },
+              "raw_headers": "/_next/static/*\n  Cache-Control: public,max-age=31536000,immutable\n",
+              "serve_directly": true,
+              "raw_run_worker_first": false,
+              "base_path": "/"
+            },
+            "compatibility_date": "2026-07-08",
+            "compatibility_flags": [
+              "nodejs_compat"
+            ],
+            "usage_model": "standard"
+          },
+          "bindings": [
+            {
+              "name": "ASSETS",
+              "type": "assets"
+            },
+            {
+              "name": "BETTER_AUTH_SECRET",
+              "type": "secret_text"
+            },
+            {
+              "name": "BETTER_AUTH_URL",
+              "text": "https://gachia.com",
+              "type": "plain_text"
+            },
+            {
+              "database_id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+              "id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+              "name": "DB",
+              "type": "d1"
+            },
+            {
+              "environment": "production",
+              "name": "GENSHIN_CONTENT",
+              "service": "gachia-game-genshin",
+              "type": "service"
+            },
+            {
+              "name": "GENSHIN_CONTENT_ENABLED",
+              "text": "true",
+              "type": "plain_text"
+            },
+            {
+              "name": "GOOGLE_CLIENT_ID",
+              "type": "secret_text"
+            },
+            {
+              "name": "GOOGLE_CLIENT_SECRET",
+              "type": "secret_text"
+            },
+            {
+              "bucket_name": "gachia-images",
+              "name": "IMAGES",
+              "type": "r2_bucket"
+            },
+            {
+              "name": "INDEXNOW_AUTH_TOKEN",
+              "type": "secret_text"
+            },
+            {
+              "name": "NEXT_PUBLIC_APP_URL",
+              "text": "https://gachia.com",
+              "type": "plain_text"
+            },
+            {
+              "environment": "production",
+              "name": "NTE_CONTENT",
+              "service": "gachia-game-nte",
+              "type": "service"
+            },
+            {
+              "name": "NTE_CONTENT_ENABLED",
+              "text": "true",
+              "type": "plain_text"
+            },
+            {
+              "environment": "production",
+              "name": "WORKER_SELF_REFERENCE",
+              "service": "gachia",
+              "type": "service"
+            }
+          ]
+        }
+      },
+      "mode": "unified_upload_time_module_receipt",
+      "moduleProof": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/dependency-security-2026-11-22-r148/cloud/main/candidate/module/receipt.json",
+        "pin": "214356b2b0802a105b20c331ee1d0e4568eab2ac66c4faa7b6038f24f1477412"
+      },
+      "moduleContext": {
+        "role": "candidate",
+        "transportPin": "cf302ddaf444f2366ce90c82ec306a46e10c1315715e39ec300f7cbeaf663783",
+        "configPin": "22cddf4a79ff807b925546093bdc7953fc4bd903585d8a907a0e0bb65b92edf5"
+      }
+    }
+  },
+  "router": {
+    "service": "gachia-router",
+    "versionId": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+    "moduleProof": {
+      "path": "/Users/robert/.codex/worktrees/payload-unified-maintenance/gachia/reports/nte-independent-delivery-2026-11-12-r120/migration-continuation-08/router-candidate/module/receipt.json",
+      "pin": "5a60ff6fbf85939a5b3acac0507e75e3a639405401b6932f16b7f02379da93cb"
+    },
+    "version": {
+      "id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+      "number": 106,
+      "metadata": {
+        "created_on": "2026-11-13T14:24:48.117323Z",
+        "source": "wrangler",
+        "author_id": "3a7c299ef441611896bb25058f41782a",
+        "author_email": "aieasygames@gmail.com",
+        "has_preview": true
+      },
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "resources": {
+        "script": {
+          "etag": "cf14373aa7a8b0783b9eae44b29f20d396aa20da3e52290ad11f569d7b1fe33b",
+          "handlers": [
+            "fetch"
+          ],
+          "last_deployed_from": "wrangler"
+        },
+        "script_runtime": {
+          "compatibility_date": "2026-07-08",
+          "usage_model": "standard"
+        },
+        "bindings": [
+          {
+            "name": "AZUR_PROMILIA_CANARY_COOKIE",
+            "text": "",
+            "type": "plain_text"
+          },
+          {
+            "name": "AZUR_PROMILIA_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "AZUR_PROMILIA_SITE",
+            "service": "gachia-game-azur-promilia",
+            "type": "service"
+          },
+          {
+            "name": "GENSHIN_CANARY_COOKIE",
+            "text": "",
+            "type": "plain_text"
+          },
+          {
+            "name": "GENSHIN_CANARY_TOKEN",
+            "type": "secret_text"
+          },
+          {
+            "name": "GENSHIN_CONTENT_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "name": "GENSHIN_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "name": "GENSHIN_FULL_CUTOVER",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "GENSHIN_SITE",
+            "service": "gachia-game-genshin",
+            "type": "service"
+          },
+          {
+            "name": "LVMENG_CANARY_COOKIE",
+            "text": "enabled",
+            "type": "plain_text"
+          },
+          {
+            "name": "LVMENG_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "LVMENG_SITE",
+            "service": "gachia-game-lvmeng",
+            "type": "service"
+          },
+          {
+            "environment": "production",
+            "name": "MAIN_SITE",
+            "service": "gachia",
+            "type": "service"
+          },
+          {
+            "name": "NTE_CONTENT_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "NTE_SITE",
+            "service": "gachia-game-nte",
+            "type": "service"
+          }
+        ]
+      }
+    },
+    "deploymentId": "4880a6a2-a351-4dad-8773-d7af6b2a3a66"
+  },
+  "active": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/active.json",
+    "pin": "d27915652907639162e8df9d98d80ce130209027e8d139cead75232f264a3a00"
+  },
+  "baseline": {
+    "services": {
+      "gachia": {
+        "id": "c1a83c34-9431-4c99-8ae9-5e6e9f08ad5e",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "906927ee-9d4f-44c4-a464-14939e85c84b",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-22T02:24:02.885893Z"
+      },
+      "gachia-staging": {
+        "id": "77b45460-05a3-4435-95cd-89077c6750e1",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "f142070d-ffb0-4b99-a204-49af0c265baa",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-10-26T15:40:11.857731Z"
+      },
+      "gachia-router": {
+        "id": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-13T14:30:23.133978Z"
+      },
+      "gachia-game-genshin": {
+        "id": "fde1a1e3-fb77-4f7d-b1da-55b2c86ec320",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-22T15:37:43.998897Z"
+      },
+      "gachia-game-nte": {
+        "id": "de54d437-fbe2-47b2-98c6-e58e2bd48e5d",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-21T14:05:05.869895Z"
+      },
+      "gachia-game-azur-promilia": {
+        "id": "8af824ba-0fe9-4e8e-a696-0b74b6bbc88d",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "f6fb496a-6127-4a1e-89b8-6ef5148087f8",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-22T06:03:28.266198Z"
+      },
+      "gachia-game-lvmeng": {
+        "id": "646efb01-14d4-4904-b4b8-74e876447bd7",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "50812a8a-012f-428e-bb4b-780530181c09",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-21T14:10:34.707911Z"
+      }
+    },
+    "settings": {
+      "gachia": {
+        "placement": {},
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard",
+        "tags": [
+          "cf:service=gachia"
+        ],
+        "tail_consumers": [],
+        "logpush": false,
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 0.1,
+          "redact_query_string": false,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 0.1,
+            "persist": true,
+            "invocation_logs": true
+          },
+          "traces": {
+            "enabled": true,
+            "persist": true,
+            "head_sampling_rate": 0.05
+          }
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "bindings": [
+          {
+            "name": "ASSETS",
+            "type": "assets"
+          },
+          {
+            "type": "secret_text",
+            "name": "BETTER_AUTH_SECRET"
+          },
+          {
+            "name": "BETTER_AUTH_URL",
+            "text": "https://gachia.com",
+            "type": "plain_text"
+          },
+          {
+            "database_id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+            "id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+            "name": "DB",
+            "type": "d1"
+          },
+          {
+            "environment": "production",
+            "name": "GENSHIN_CONTENT",
+            "service": "gachia-game-genshin",
+            "type": "service"
+          },
+          {
+            "name": "GENSHIN_CONTENT_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "type": "secret_text",
+            "name": "GOOGLE_CLIENT_ID"
+          },
+          {
+            "type": "secret_text",
+            "name": "GOOGLE_CLIENT_SECRET"
+          },
+          {
+            "bucket_name": "gachia-images",
+            "name": "IMAGES",
+            "type": "r2_bucket"
+          },
+          {
+            "type": "secret_text",
+            "name": "INDEXNOW_AUTH_TOKEN"
+          },
+          {
+            "name": "NEXT_PUBLIC_APP_URL",
+            "text": "https://gachia.com",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "NTE_CONTENT",
+            "service": "gachia-game-nte",
+            "type": "service"
+          },
+          {
+            "name": "NTE_CONTENT_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "WORKER_SELF_REFERENCE",
+            "service": "gachia",
+            "type": "service"
+          }
+        ]
+      },
+      "gachia-staging": {
+        "placement": {},
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard",
+        "tags": [
+          "cf:service=gachia",
+          "cf:environment=staging"
+        ],
+        "tail_consumers": [],
+        "logpush": false,
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 0.1,
+          "redact_query_string": false,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 0.1,
+            "persist": true,
+            "invocation_logs": true
+          },
+          "traces": {
+            "enabled": true,
+            "persist": true,
+            "head_sampling_rate": 0.05
+          }
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "bindings": [
+          {
+            "name": "ASSETS",
+            "type": "assets"
+          },
+          {
+            "type": "secret_text",
+            "name": "BETTER_AUTH_SECRET"
+          },
+          {
+            "name": "BETTER_AUTH_URL",
+            "text": "https://gachia-staging.aieasygames.workers.dev",
+            "type": "plain_text"
+          },
+          {
+            "database_id": "009be406-936c-4df8-b422-8df735c83f83",
+            "id": "009be406-936c-4df8-b422-8df735c83f83",
+            "name": "DB",
+            "type": "d1"
+          },
+          {
+            "bucket_name": "gachia-images-staging",
+            "name": "IMAGES",
+            "type": "r2_bucket"
+          },
+          {
+            "type": "secret_text",
+            "name": "INDEXNOW_AUTH_TOKEN"
+          },
+          {
+            "name": "NEXT_PUBLIC_APP_URL",
+            "text": "https://gachia-staging.aieasygames.workers.dev",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "WORKER_SELF_REFERENCE",
+            "service": "gachia-staging",
+            "type": "service"
+          }
+        ]
+      },
+      "gachia-router": {
+        "placement": {},
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [],
+        "usage_model": "standard",
+        "tags": [
+          "cf:service=gachia-router"
+        ],
+        "tail_consumers": [],
+        "logpush": false,
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "bindings": [
+          {
+            "name": "AZUR_PROMILIA_CANARY_COOKIE",
+            "text": "",
+            "type": "plain_text"
+          },
+          {
+            "name": "AZUR_PROMILIA_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "AZUR_PROMILIA_SITE",
+            "service": "gachia-game-azur-promilia",
+            "type": "service"
+          },
+          {
+            "name": "GENSHIN_CANARY_COOKIE",
+            "text": "",
+            "type": "plain_text"
+          },
+          {
+            "type": "secret_text",
+            "name": "GENSHIN_CANARY_TOKEN"
+          },
+          {
+            "name": "GENSHIN_CONTENT_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "name": "GENSHIN_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "name": "GENSHIN_FULL_CUTOVER",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "GENSHIN_SITE",
+            "service": "gachia-game-genshin",
+            "type": "service"
+          },
+          {
+            "name": "LVMENG_CANARY_COOKIE",
+            "text": "enabled",
+            "type": "plain_text"
+          },
+          {
+            "name": "LVMENG_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "LVMENG_SITE",
+            "service": "gachia-game-lvmeng",
+            "type": "service"
+          },
+          {
+            "environment": "production",
+            "name": "MAIN_SITE",
+            "service": "gachia",
+            "type": "service"
+          },
+          {
+            "name": "NTE_CONTENT_ENABLED",
+            "text": "true",
+            "type": "plain_text"
+          },
+          {
+            "environment": "production",
+            "name": "NTE_SITE",
+            "service": "gachia-game-nte",
+            "type": "service"
+          }
+        ]
+      },
+      "gachia-game-genshin": {
+        "placement": {},
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard",
+        "tags": [],
+        "tail_consumers": [],
+        "logpush": false,
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": false,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": true
+          },
+          "traces": {
+            "enabled": false,
+            "persist": true,
+            "head_sampling_rate": 1
+          }
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "bindings": [
+          {
+            "name": "ASSETS",
+            "type": "assets"
+          },
+          {
+            "name": "GENSHIN_DEPLOYMENT_MODE",
+            "text": "production",
+            "type": "plain_text"
+          },
+          {
+            "name": "NEXT_PUBLIC_APP_URL",
+            "text": "https://gachia.com",
+            "type": "plain_text"
+          }
+        ]
+      },
+      "gachia-game-nte": {
+        "placement": {},
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard",
+        "tags": [],
+        "tail_consumers": [],
+        "logpush": false,
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "bindings": [
+          {
+            "name": "ASSETS",
+            "type": "assets"
+          },
+          {
+            "name": "NEXT_PUBLIC_APP_URL",
+            "text": "https://gachia.com",
+            "type": "plain_text"
+          },
+          {
+            "name": "NTE_DEPLOYMENT_MODE",
+            "text": "live",
+            "type": "plain_text"
+          }
+        ]
+      },
+      "gachia-game-azur-promilia": {
+        "placement": {},
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard",
+        "tags": [
+          "cf:service=gachia-game-azur-promilia"
+        ],
+        "tail_consumers": [],
+        "logpush": false,
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "bindings": [
+          {
+            "name": "ASSETS",
+            "type": "assets"
+          },
+          {
+            "name": "AZUR_PROMILIA_DEPLOYMENT_MODE",
+            "text": "production",
+            "type": "plain_text"
+          },
+          {
+            "name": "NEXT_PUBLIC_APP_URL",
+            "text": "https://gachia.com",
+            "type": "plain_text"
+          }
+        ]
+      },
+      "gachia-game-lvmeng": {
+        "placement": {},
+        "compatibility_date": "2026-07-08",
+        "compatibility_flags": [
+          "nodejs_compat"
+        ],
+        "usage_model": "standard",
+        "tags": [
+          "cf:service=gachia-game-lvmeng",
+          "cf:environment=production"
+        ],
+        "tail_consumers": [],
+        "logpush": false,
+        "observability": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "redact_query_string": false,
+          "logs": {
+            "enabled": true,
+            "head_sampling_rate": 1,
+            "persist": true,
+            "invocation_logs": true
+          },
+          "traces": {
+            "enabled": false,
+            "persist": true,
+            "head_sampling_rate": 1
+          }
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        },
+        "bindings": [
+          {
+            "name": "ASSETS",
+            "type": "assets"
+          },
+          {
+            "name": "LVMENG_DEPLOYMENT_MODE",
+            "text": "production",
+            "type": "plain_text"
+          },
+          {
+            "name": "NEXT_PUBLIC_APP_URL",
+            "text": "https://gachia.com",
+            "type": "plain_text"
+          }
+        ]
+      }
+    },
+    "bindings": {
+      "gachia": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "type": "secret_text",
+          "name": "BETTER_AUTH_SECRET"
+        },
+        {
+          "name": "BETTER_AUTH_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        },
+        {
+          "database_id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+          "id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+          "name": "DB",
+          "type": "d1"
+        },
+        {
+          "environment": "production",
+          "name": "GENSHIN_CONTENT",
+          "service": "gachia-game-genshin",
+          "type": "service"
+        },
+        {
+          "name": "GENSHIN_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "type": "secret_text",
+          "name": "GOOGLE_CLIENT_ID"
+        },
+        {
+          "type": "secret_text",
+          "name": "GOOGLE_CLIENT_SECRET"
+        },
+        {
+          "bucket_name": "gachia-images",
+          "name": "IMAGES",
+          "type": "r2_bucket"
+        },
+        {
+          "type": "secret_text",
+          "name": "INDEXNOW_AUTH_TOKEN"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "NTE_CONTENT",
+          "service": "gachia-game-nte",
+          "type": "service"
+        },
+        {
+          "name": "NTE_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "WORKER_SELF_REFERENCE",
+          "service": "gachia",
+          "type": "service"
+        }
+      ],
+      "gachia-staging": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "type": "secret_text",
+          "name": "BETTER_AUTH_SECRET"
+        },
+        {
+          "name": "BETTER_AUTH_URL",
+          "text": "https://gachia-staging.aieasygames.workers.dev",
+          "type": "plain_text"
+        },
+        {
+          "database_id": "009be406-936c-4df8-b422-8df735c83f83",
+          "id": "009be406-936c-4df8-b422-8df735c83f83",
+          "name": "DB",
+          "type": "d1"
+        },
+        {
+          "bucket_name": "gachia-images-staging",
+          "name": "IMAGES",
+          "type": "r2_bucket"
+        },
+        {
+          "type": "secret_text",
+          "name": "INDEXNOW_AUTH_TOKEN"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia-staging.aieasygames.workers.dev",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "WORKER_SELF_REFERENCE",
+          "service": "gachia-staging",
+          "type": "service"
+        }
+      ],
+      "gachia-router": [
+        {
+          "name": "AZUR_PROMILIA_CANARY_COOKIE",
+          "text": "",
+          "type": "plain_text"
+        },
+        {
+          "name": "AZUR_PROMILIA_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "AZUR_PROMILIA_SITE",
+          "service": "gachia-game-azur-promilia",
+          "type": "service"
+        },
+        {
+          "name": "GENSHIN_CANARY_COOKIE",
+          "text": "",
+          "type": "plain_text"
+        },
+        {
+          "type": "secret_text",
+          "name": "GENSHIN_CANARY_TOKEN"
+        },
+        {
+          "name": "GENSHIN_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "name": "GENSHIN_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "name": "GENSHIN_FULL_CUTOVER",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "GENSHIN_SITE",
+          "service": "gachia-game-genshin",
+          "type": "service"
+        },
+        {
+          "name": "LVMENG_CANARY_COOKIE",
+          "text": "enabled",
+          "type": "plain_text"
+        },
+        {
+          "name": "LVMENG_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "LVMENG_SITE",
+          "service": "gachia-game-lvmeng",
+          "type": "service"
+        },
+        {
+          "environment": "production",
+          "name": "MAIN_SITE",
+          "service": "gachia",
+          "type": "service"
+        },
+        {
+          "name": "NTE_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "NTE_SITE",
+          "service": "gachia-game-nte",
+          "type": "service"
+        }
+      ],
+      "gachia-game-genshin": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "GENSHIN_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ],
+      "gachia-game-nte": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        },
+        {
+          "name": "NTE_DEPLOYMENT_MODE",
+          "text": "live",
+          "type": "plain_text"
+        }
+      ],
+      "gachia-game-azur-promilia": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "AZUR_PROMILIA_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ],
+      "gachia-game-lvmeng": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "LVMENG_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    },
+    "subdomains": {
+      "gachia": {
+        "enabled": true,
+        "previews_enabled": true
+      },
+      "gachia-staging": {
+        "enabled": true,
+        "previews_enabled": true
+      },
+      "gachia-router": {
+        "enabled": true,
+        "previews_enabled": true
+      },
+      "gachia-game-genshin": {
+        "enabled": true,
+        "previews_enabled": true
+      },
+      "gachia-game-nte": {
+        "enabled": true,
+        "previews_enabled": true
+      },
+      "gachia-game-azur-promilia": {
+        "enabled": true,
+        "previews_enabled": true
+      },
+      "gachia-game-lvmeng": {
+        "enabled": true,
+        "previews_enabled": true
+      }
+    },
+    "scripts": [
+      "cfmemos",
+      "citeranks-cron",
+      "gachia",
+      "gachia-game-azur-promilia",
+      "gachia-game-azur-promilia-staging",
+      "gachia-game-genshin",
+      "gachia-game-genshin-staging",
+      "gachia-game-lvmeng",
+      "gachia-game-nte",
+      "gachia-router",
+      "gachia-router-staging",
+      "gachia-staging",
+      "gearlabgaming",
+      "gearlabgaming-production"
+    ],
+    "routes": [
+      {
+        "id": "5d458ae420024634af3334086a387691",
+        "pattern": "www.gachia.com/*",
+        "script": "gachia-router",
+        "request_limit_fail_open": false
+      },
+      {
+        "id": "98176d21d6624341904e5bb0ee26d076",
+        "pattern": "gachia.com/*",
+        "script": "gachia-router",
+        "request_limit_fail_open": false
+      }
+    ],
+    "domains": []
+  },
+  "observation": {
+    "before": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/before.json",
+      "pin": "b51318e25656dc2d0fcbec123208f053b1c21509b3cbdf69bb324d68e1461f66"
+    },
+    "after": {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/after.json",
+      "pin": "b51318e25656dc2d0fcbec123208f053b1c21509b3cbdf69bb324d68e1461f66"
+    },
+    "versions": {
+      "genshin": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/genshin-version.json",
+        "pin": "a86baa10fa6b60634ed23764eea99a2f45611e05dbf14c847ea36b1a4bfbabc4"
+      },
+      "nte": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/nte-version.json",
+        "pin": "c4a3c6c263c5957deb26e9612c9e377f76a80a3da3db4af61e4f44bc100fcd46"
+      },
+      "azur-promilia": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/azur-promilia-version.json",
+        "pin": "64bfba57775d6f80d5e473edcb3374bbbe9bf402738aef1a3689eb5964bdb0f3"
+      },
+      "lvmeng": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/lvmeng-version.json",
+        "pin": "f8e685c030c3bf111368bf811ed6c781c82199a347c2cfb9e0af60bb952d4cd5"
+      },
+      "main": {
+        "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/main-version.json",
+        "pin": "ff59fedc51df0f8a5e033ac7bb283c1bd9a8414e6b87412943fd2d237a7e28ea"
+      }
+    },
+    "publicAcceptance": {
+      "status": "passed",
+      "evidenceSHA256": "df830e4cdbea956c676b016f8ee1510af53b70f65d01b12c33df8fb180890c0a"
+    },
+    "observedAt": 1795362874538
+  },
+  "cloudWrites": false,
+  "newPublicationAuthorized": false
+}

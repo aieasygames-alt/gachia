@@ -1,0 +1,115 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "width": 1440,
+      "locale": "zh",
+      "javaScript": true,
+      "path": "/zh/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "zh",
+      "javaScript": false,
+      "path": "/zh/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "javaScript": true,
+      "path": "/en/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "javaScript": false,
+      "path": "/en/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "ja",
+      "javaScript": true,
+      "path": "/ja/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 1440,
+      "locale": "ja",
+      "javaScript": false,
+      "path": "/ja/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "javaScript": true,
+      "path": "/zh/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "zh",
+      "javaScript": false,
+      "path": "/zh/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "javaScript": true,
+      "path": "/en/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "javaScript": false,
+      "path": "/en/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "ja",
+      "javaScript": true,
+      "path": "/ja/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    },
+    {
+      "width": 390,
+      "locale": "ja",
+      "javaScript": false,
+      "path": "/ja/genshin/items/teachings-of-freedom",
+      "contentMatched": true,
+      "errors": [],
+      "failedAssets": []
+    }
+  ],
+  "externalRequests": "blocked",
+  "cloudWrites": false
+}

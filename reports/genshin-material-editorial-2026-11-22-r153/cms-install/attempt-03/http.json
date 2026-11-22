@@ -1,0 +1,93 @@
+{
+  "action": "http",
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T151550Z-cms-genshin-material-r153-e7773d1a/application-manifest.json",
+    "pin": "5889c77c650fb0e35b4bf25be732a2a88fceaee5a152fa2466b208eafa6dfbf4"
+  },
+  "sourceCommit": "e7773d1aee9228377e0a370670ca3b5d24797303",
+  "observedAt": "2026-11-22T15:57:59.539Z",
+  "healthy": true,
+  "checks": [
+    {
+      "url": "/health",
+      "status": 200
+    },
+    {
+      "url": "/admin/login",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/3ebvnk7qs9043.css",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/0dju8jnt56a94.css",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/27_wfkzqjoenc.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/01ja9mzq2f05g.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/3rs21j5_p3_mo.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/3naedwr5im4nr.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/turbopack-077hmtqrhcoji.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/3lykqir-kmp1f.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/233f5248h-r55.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/21laz-ml0y1ns.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/21gmet8qh03wo.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/0tu_w0iqxqaxo.js",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/media/payload-favicon-dark.0kmli3k-gdxnc.png",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/media/payload-favicon-light.1cq1ouprfvl1v.png",
+      "status": 200
+    },
+    {
+      "url": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "status": 200
+    },
+    {
+      "url": "/api/content-records",
+      "status": 403
+    },
+    {
+      "url": "/api/media",
+      "status": 403
+    },
+    {
+      "url": "/api/genshin-review-decisions",
+      "status": 403
+    }
+  ],
+  "cmsWrites": 0
+}

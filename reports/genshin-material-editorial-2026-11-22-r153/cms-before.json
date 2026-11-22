@@ -1,0 +1,195 @@
+{
+  "row": {
+    "id": 773,
+    "stableKey": "unified:genshin:f514ff9e626b03aa1afae11b6c445b99440b691265c20caac696ca20ec3ecaaa",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"teachings-of-freedom\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "teachings-of-freedom"
+        }
+      },
+      "original": {
+        "id": "teachings-of-freedom",
+        "name": "「自由」的教导",
+        "type": "talent-book",
+        "nameEn": "Teachings of Freedom",
+        "rarity": 2,
+        "source": "秘境: 蒙德 (周一/四/日)",
+        "sourceEn": "Domain: Mondstadt (周一/四/日)"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "cb15107a513bba5fad77b5a4cf58897610082817f1c2c2e9146cd909c0a0cee2",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "teachings-of-freedom",
+      "name": "「自由」的教导",
+      "type": "talent-book",
+      "nameEn": "Teachings of Freedom",
+      "rarity": 2,
+      "source": "秘境: 蒙德 (周一/四/日)",
+      "sourceEn": "Domain: Mondstadt (周一/四/日)"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false,
+      "publishedBaseline": {
+        "kind": "genshin-published-editing-baseline-v1",
+        "source": {
+          "game": "genshin",
+          "family": "materials",
+          "locator": {
+            "identity": {
+              "id": "teachings-of-freedom"
+            }
+          },
+          "original": {
+            "id": "teachings-of-freedom",
+            "name": "「自由」的教导",
+            "type": "talent-book",
+            "nameEn": "Teachings of Freedom",
+            "rarity": 2,
+            "source": "秘境: 蒙德 (周一/四/日)",
+            "sourceEn": "Domain: Mondstadt (周一/四/日)"
+          },
+          "sourcePath": "packages/data/games/genshin/raw-materials.json",
+          "sourceSHA256": "ae16a07aea5650a1ae6d488369bdd154dae6778ff186dc8ed94f109992c584d4",
+          "originalSHA256": "cb15107a513bba5fad77b5a4cf58897610082817f1c2c2e9146cd909c0a0cee2",
+          "unifiedContent": 1
+        },
+        "syncKey": "e853cb99187fea52348e6115131ca82a9d2f9893f718d1ebcacf053ff1403231",
+        "exportKey": "880d20fd5e1bd7f5f2538267044f9bc7a85df260a0195cca2bb0355d413ddeed",
+        "versionId": "c76c9d57-f814-410c-843a-1dcef57412e3",
+        "sourceIndex": {
+          "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57",
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json"
+        },
+        "importOriginalSHA256": "cb15107a513bba5fad77b5a4cf58897610082817f1c2c2e9146cd909c0a0cee2"
+      }
+    },
+    "hold": true,
+    "updatedAt": "2026-11-21T09:33:52.609Z",
+    "createdAt": "2026-11-07T09:24:36.655Z",
+    "_status": "draft"
+  },
+  "published": {
+    "id": 773,
+    "stableKey": "unified:genshin:f514ff9e626b03aa1afae11b6c445b99440b691265c20caac696ca20ec3ecaaa",
+    "game": 1,
+    "kind": "materials",
+    "legacyId": "{\"id\":\"teachings-of-freedom\"}",
+    "legacyPath": "packages/data/games/genshin/raw-materials.json",
+    "title": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "body": {
+      "zh": null,
+      "en": null,
+      "ja": null
+    },
+    "bodyFormat": "plain",
+    "sourceRecord": {
+      "game": "genshin",
+      "family": "materials",
+      "locator": {
+        "identity": {
+          "id": "teachings-of-freedom"
+        }
+      },
+      "original": {
+        "id": "teachings-of-freedom",
+        "name": "「自由」的教导",
+        "type": "talent-book",
+        "nameEn": "Teachings of Freedom",
+        "rarity": 2,
+        "source": "秘境: 蒙德 (周一/四/日)",
+        "sourceEn": "Domain: Mondstadt (周一/四/日)"
+      },
+      "sourcePath": "packages/data/games/genshin/raw-materials.json",
+      "sourceSHA256": "e63bd9dce20b70d6b498149ba97d1e47d2d65e7d21f485d62bd9caa6a61b7867",
+      "originalSHA256": "cb15107a513bba5fad77b5a4cf58897610082817f1c2c2e9146cd909c0a0cee2",
+      "unifiedContent": 1
+    },
+    "structuredValue": {
+      "id": "teachings-of-freedom",
+      "name": "「自由」的教导",
+      "type": "talent-book",
+      "nameEn": "Teachings of Freedom",
+      "rarity": 2,
+      "source": "秘境: 蒙德 (周一/四/日)",
+      "sourceEn": "Domain: Mondstadt (周一/四/日)"
+    },
+    "reviewEvidence": {
+      "planSHA256": "03ad336434e125bad1cbe56ab17319227c9e5e344bfe6344dc29e30451c5cb0d",
+      "editorialOnly": true,
+      "websiteChanged": false,
+      "publishedBaseline": {
+        "kind": "genshin-published-editing-baseline-v1",
+        "source": {
+          "game": "genshin",
+          "family": "materials",
+          "locator": {
+            "identity": {
+              "id": "teachings-of-freedom"
+            }
+          },
+          "original": {
+            "id": "teachings-of-freedom",
+            "name": "「自由」的教导",
+            "type": "talent-book",
+            "nameEn": "Teachings of Freedom",
+            "rarity": 2,
+            "source": "秘境: 蒙德 (周一/四/日)",
+            "sourceEn": "Domain: Mondstadt (周一/四/日)"
+          },
+          "sourcePath": "packages/data/games/genshin/raw-materials.json",
+          "sourceSHA256": "ae16a07aea5650a1ae6d488369bdd154dae6778ff186dc8ed94f109992c584d4",
+          "originalSHA256": "cb15107a513bba5fad77b5a4cf58897610082817f1c2c2e9146cd909c0a0cee2",
+          "unifiedContent": 1
+        },
+        "syncKey": "e853cb99187fea52348e6115131ca82a9d2f9893f718d1ebcacf053ff1403231",
+        "exportKey": "880d20fd5e1bd7f5f2538267044f9bc7a85df260a0195cca2bb0355d413ddeed",
+        "versionId": "c76c9d57-f814-410c-843a-1dcef57412e3",
+        "sourceIndex": {
+          "pin": "6598ff503df109ca57e0df4928ed99a9084f0e7d366401e39e9c2fe06117db57",
+          "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-collection-production-2026-11-21-r143/published-sources/source-index.json"
+        },
+        "importOriginalSHA256": "cb15107a513bba5fad77b5a4cf58897610082817f1c2c2e9146cd909c0a0cee2"
+      }
+    },
+    "hold": true,
+    "updatedAt": "2026-11-21T09:33:52.609Z",
+    "createdAt": "2026-11-07T09:24:36.655Z",
+    "_status": "draft"
+  },
+  "snapshot": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-before-all.json.gz",
+    "pin": "7ba95de70d2af86323885e9282879fee2fc6803e1d0e0b27d97c88a866b01114"
+  },
+  "edit": {
+    "beforeText": "Domain: Mondstadt (周一/四/日)",
+    "afterText": "Domain: Mondstadt (Monday/Thursday/Sunday)",
+    "pointer": "/sourceEn"
+  }
+}

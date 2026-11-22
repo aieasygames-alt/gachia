@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "kind": "genshin_independent_editorial_request",
+  "bundle": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/prepare-03/sealed/bundle.json",
+    "pin": "db9f28ee6facb5d4d92baee07ee2045507a1f08ac43bfc5d3a483ea41466a76f"
+  },
+  "executorRunID": 45034499276,
+  "previewProxy": "http://127.0.0.1:1087",
+  "publicProxy": "http://127.0.0.1:1087"
+}

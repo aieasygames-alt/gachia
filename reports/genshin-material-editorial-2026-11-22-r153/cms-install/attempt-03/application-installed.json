@@ -1,0 +1,30 @@
+{
+  "sourceCommit": "e7773d1aee9228377e0a370670ca3b5d24797303",
+  "app": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T151550Z-cms-genshin-material-r153-e7773d1a/services/content-cms",
+  "previousApp": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T142736Z-cms-genshin-material-r153-07d577d8/services/content-cms",
+  "buildID": "RP15gwIPiOME9hDdIH9a5",
+  "nextVersion": "16.4.6",
+  "databaseMigrationRequired": false,
+  "application": {
+    "path": "/Users/robert/Library/Application Support/GachiaCMS/releases/20261122T151550Z-cms-genshin-material-r153-e7773d1a/application-manifest.json",
+    "pin": "5889c77c650fb0e35b4bf25be732a2a88fceaee5a152fa2466b208eafa6dfbf4"
+  },
+  "runtimeDependencies": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/runtime-dependencies.json",
+    "pin": "e7280a194a02fae1ec3b08b0e9522076a1185d49d1f3749ef5e598496ff42379"
+  },
+  "files": 806,
+  "releaseFiles": 358,
+  "dependencyFiles": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/cms-dependency-files.json.gz",
+    "pin": "6d274928115f00de775ce217dfa16685beccb6573efb60e15c7aad8865a40a5a",
+    "entries": 43788
+  },
+  "backup": "/Users/robert/Library/Application Support/GachiaCMS/backups/20261122T155514Z-aaa91b",
+  "upgradeBackup": "/Users/robert/Library/Application Support/GachiaCMS/application-upgrades/cms-genshin-material-r153-e7773d1aee92",
+  "healthy": true,
+  "allDatabaseAndMediaUnchanged": true,
+  "schemaMigrationRun": false,
+  "previousApplicationRecoveryRehearsed": true,
+  "previousApplicationPreserved": true
+}

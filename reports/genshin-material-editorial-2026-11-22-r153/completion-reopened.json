@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/source-index.json",
+    "pin": "cc71a49160ba622a34eaf5d05bfe21006bfa41a0632f208b57afd36e10376340"
+  },
+  "completion": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/production/completion.json",
+    "pin": "cdcb6fdcf204925308bf3668003383e7fa90cdc6f169d2ff65fd171099f73dea"
+  },
+  "journalPhases": 10,
+  "sourceCount": 115,
+  "allOwnersCurrent": true,
+  "versions": {
+    "gachia-game-genshin": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6"
+  },
+  "exactModulesAndDeploymentReopened": true,
+  "immutablePreviewsReopened": true,
+  "publicEvidenceReopened": true,
+  "cloudWrites": 0,
+  "cmsWrites": 0
+}

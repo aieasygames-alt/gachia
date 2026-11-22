@@ -1,0 +1,180 @@
+{
+  "storage": {
+    "availableGiB": 12.213016510009766,
+    "standardGameBuildGiB": 14,
+    "reserveGiB": 8
+  },
+  "kind": "genshin-material-editorial-delivery-r153",
+  "status": "production_accepted_sources_observed",
+  "sourceCommit": "e7773d1aee9228377e0a370670ca3b5d24797303",
+  "executorCI": {
+    "runID": 45034499276,
+    "commit": "e7773d1aee9228377e0a370670ca3b5d24797303",
+    "runAttempt": 1,
+    "status": "full_exact_ci_passed"
+  },
+  "sourceIndex": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/published-sources/source-index.json",
+    "pin": "cc71a49160ba622a34eaf5d05bfe21006bfa41a0632f208b57afd36e10376340"
+  },
+  "cmsAfter": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-after-production.json.gz",
+    "pin": "25cdf13bc414f8d803e7a36a6a720eb5f1a6f50d8b3b9330df4e899cccbbe732"
+  },
+  "completion": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/production/completion.json",
+    "pin": "cdcb6fdcf204925308bf3668003383e7fa90cdc6f169d2ff65fd171099f73dea"
+  },
+  "candidateVersion": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+  "recoveryVersion": "79194b32-363c-4075-b815-94d371885e29",
+  "deployment": {
+    "deploymentId": "fde1a1e3-fb77-4f7d-b1da-55b2c86ec320",
+    "service": "gachia-game-genshin",
+    "versionId": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+    "releaseKey": "561260cd9edf7fbb2e869d6cc1ca475f8188468c07193a2d6d5a8bfc2c71fbac",
+    "responses": {
+      "creation": {
+        "status": 200,
+        "sha256": "fdb3299f3c101df58b7a585f210d401575d0af9d090fa509b5c3b275da6172f5",
+        "bytes": 124
+      },
+      "verification": {
+        "status": 200,
+        "sha256": "4c231d4a6e0a5cb4728868da5aa73c9167feb2fb1b6b86a3218bc5530b33a169",
+        "bytes": 469
+      }
+    }
+  },
+  "contentEdit": {
+    "beforeText": "Domain: Mondstadt (周一/四/日)",
+    "afterText": "Domain: Mondstadt (Monday/Thursday/Sunday)",
+    "pointer": "/sourceEn"
+  },
+  "cmsTargetID": 773,
+  "records": 2966,
+  "otherCMSRecordsPreserved": 2965,
+  "changedSources": [
+    "packages/data/games/genshin/raw-materials.json"
+  ],
+  "preservedSources": 114,
+  "materials": 269,
+  "workerUploads": 2,
+  "productionDeployments": 1,
+  "changedDeploymentServices": [
+    "gachia-game-genshin"
+  ],
+  "otherProductionDeploymentsPreserved": 5,
+  "cmsDraftWrites": 1,
+  "cmsReviewWrites": 1,
+  "editingBaselineUpdates": 0,
+  "realImportPreserved": true,
+  "actualProductionRollback": false,
+  "localChecks": {
+    "initialBuild": 812,
+    "direct": {
+      "candidate": 1788,
+      "recovery": 1788
+    },
+    "router": {
+      "candidate": 1730,
+      "recovery": 1730
+    }
+  },
+  "browserChecks": 12,
+  "searchProjection": "Material acquisition text is not indexed; names, related search projections and other games unchanged",
+  "aggregateProjection": "Existing Main aggregates checked against current game projections; no duplicate public data or Main deployment",
+  "installedReader": {
+    "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/installed-reader.json",
+    "pin": "f56706e5399d7bbc90f00d2daa0da4e32aa03854f6846a5c37d181660a5729d4"
+  },
+  "evidence": [
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-before.json",
+      "pin": "189d4cf1370515b562489ee6da7dbf5e6c456d114723c98d177a702248dc518f"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-draft-intent.json",
+      "pin": "f16c1e8a8a21456da1c53da3f87d2f7dc9667f8c351fdda9365fbe27bd570183"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-draft.json",
+      "pin": "5ec9e08e01c5cc45c4e2c85b35058717e40f55d9a0938ec35e5029011f9e25cd"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-review-intent.json",
+      "pin": "4c99e46d5a0f14b6810afbf220be3e0b08a85d7ed12996036da543050ad5f26a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-review.json",
+      "pin": "f858ecff4b8789751beb1d3d9e39f75313bdf16df44abda042a1c7aac796223d"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-final-proof.json",
+      "pin": "56fe927912a2e641907a8480d9cdd1bbdfc45608f951034c6afd122ef9de961d"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-after-production-proof.json",
+      "pin": "add19efcaa0bebf94a87450c77fdbf7d15ae0e6567192ffe01521dca34614324"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/prepared-final.json",
+      "pin": "d33d16772851bc5fc9f688efc5680e7112a5e00652f285f6e89e8202da44ba13"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/request-final.json",
+      "pin": "223efe994e1158f268af417a43115a30c245bc92d6c3dbd4ac479549f982ded4"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/audit.json",
+      "pin": "0c4b1fbc30e5c64b2887036e93e516994423ec48c0a39c73ba07b228ae578f97"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/result.json",
+      "pin": "d92510c9182acc986bb65bd794f7ddb68c3f53c3707d11423ffbc200a331bb92"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/source-result.json",
+      "pin": "9b8c10b8c0fdb8ef11ff8a1709ad3c538f79df3a2280ae213e51deac95748c98"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/ci-router-fix.json",
+      "pin": "467f7dfe4f808b9c7dd860daf68242c1fa17db0aca89f6d20e40a6f2b57dba3b"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/browser-acceptance.json",
+      "pin": "05200f58bc5d6d41b1ab17e71dac0690470be9d191042a4cba465da275b3cf61"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/completion-reopened.json",
+      "pin": "7f17e716d328fa500f0269474211d034d31eff4e3ac6cb3ae032ddf4ac06ed48"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/source-delta.json",
+      "pin": "093b5cbb4935fb93d97e27ead9b048376b48b501af94530125705da87db5c26a"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/application-installed.json",
+      "pin": "1296d3baf3ac10463053a81b5d0e0522fe980c0a1c207d1e0e461526cc5306e7"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/installed-reader.json",
+      "pin": "f56706e5399d7bbc90f00d2daa0da4e32aa03854f6846a5c37d181660a5729d4"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/http.json",
+      "pin": "5437d18c41482de58341d061a9b36e28a95831d9c8276b96fa271428092d9f4f"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/cold-backup.json",
+      "pin": "d6b79cbe0e7eafe270b2f01e1d377cd813249186030bdc5ccad36b3bc12d7081"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/application-recovery.json",
+      "pin": "77e89d223086e2bb881a2ce39cdf789ffa29a27c47cf8ab6d3d6a44d51a17839"
+    },
+    {
+      "path": "/Users/robert/.codex/worktrees/nte-source-restoration/gachia/reports/genshin-material-editorial-2026-11-22-r153/cms-install/attempt-03/database-final.json",
+      "pin": "5aef83f2385f42003827c0bfa95b2054d393f4c336e7fbc464b4fdd4565684bb"
+    }
+  ]
+}
