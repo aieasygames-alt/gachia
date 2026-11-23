@@ -9,7 +9,9 @@ import { escapeCharacterText } from './unified-character-text'
 export const AZUR_PROMILIA_GUIDE_SOURCE = 'apps/game-azur-promilia/lib/data.ts'
 export const AZUR_PROMILIA_GUIDE_ID = 'kibo-battle-and-ecology'
 
-type TextField = { pointer: '/content/en'; value: string; locales: ['en'] }
+type Locale = 'zh' | 'en' | 'ja'
+type TextField = { pointer: `/content/${Locale}`; value: string; locales: [Locale] }
+const locales: Locale[] = ['zh', 'en', 'ja']
 type Change = { game: 'azur-promilia'; id: string; sourcePath: string; activeSHA256: string; candidateSHA256: string; fields: TextField[] }
 export type AzurPromiliaTextContract = {
   policy: 'azur-promilia-existing-guide-text-v1'
@@ -24,9 +26,11 @@ function rows(source: SourceBytes) {
   return value
 }
 
-function field(value: JSONValue, pointer: '/content/en') {
-  assert(objectValue(value) && objectValue(value.content) && typeof value.content.en === 'string', 'Azur guide content.en is required')
-  return value.content.en
+function field(value: JSONValue, pointer: TextField['pointer']) {
+  const locale = pointer.slice('/content/'.length) as Locale
+  assert(locales.includes(locale), 'Unsupported Azur guide locale')
+  assert(objectValue(value) && objectValue(value.content) && typeof value.content[locale] === 'string', `Azur guide content.${locale} is required`)
+  return value.content[locale] as string
 }
 
 function contract(changes: Change[]): AzurPromiliaTextContract {
@@ -35,7 +39,7 @@ function contract(changes: Change[]): AzurPromiliaTextContract {
     changes,
     expectations: changes.flatMap(change => change.fields.map(item => ({
       owner: 'azur-promilia' as const,
-      path: `/en/azur-promilia/guides/${change.id}`,
+      path: `/${item.locales[0]}/azur-promilia/guides/${change.id}`,
       status: 200 as const,
       contains: [escapeCharacterText(item.value)],
     }))),
@@ -74,14 +78,19 @@ export function azurPromiliaGuideContract(active: SourceBytes[], overlays: Sourc
     if (isDeepStrictEqual(previousRecord, editedRecord)) continue
     assertStructuredEdit(previousRecord, editedRecord)
     assert(objectValue(previousRecord) && objectValue(editedRecord), 'Azur guide must remain an object')
-    const previous = field(previousRecord, '/content/en'), edited = field(editedRecord, '/content/en')
-    assert(edited.trim() && edited.length <= 32768 && edited !== previous, 'Azur guide requires a bounded nonempty English text edit')
+    assert(objectValue(previousRecord.content) && objectValue(editedRecord.content), 'Azur guide content is required')
+    const previousContent = previousRecord.content, editedContent = editedRecord.content
+    const changedLocales = locales.filter(locale => previousContent[locale] !== editedContent[locale])
+    assert.equal(changedLocales.length, 1, 'One existing Azur guide body locale per release')
+    const locale = changedLocales[0], pointer = `/content/${locale}` as const
+    const previous = field(previousRecord, pointer), edited = field(editedRecord, pointer)
+    assert(edited.trim() && edited.length <= 32768 && edited !== previous, 'Azur guide requires a bounded nonempty text edit')
     const unchanged = structuredClone(editedRecord)
-    assert(objectValue(unchanged.content)); unchanged.content.en = previous
-    assert.deepEqual(unchanged, previousRecord, 'Only Azur guide content.en is production-qualified')
+    assert(objectValue(unchanged.content)); unchanged.content[locale] = previous
+    assert.deepEqual(unchanged, previousRecord, 'Only one existing Azur guide body is production-qualified')
     changes.push({ game: 'azur-promilia', id: oldIds[index], sourcePath,
       activeSHA256: baseline[0].sha256, candidateSHA256: candidate.sha256,
-      fields: [{ pointer: '/content/en', value: edited, locales: ['en'] }] })
+      fields: [{ pointer, value: edited, locales: [locale] }] })
   }
   assert.equal(changes.length, 1, 'One existing Azur guide per release')
   return contract(changes)
@@ -90,9 +99,10 @@ export function azurPromiliaGuideContract(active: SourceBytes[], overlays: Sourc
 export function azurPromiliaGuidePairContract(active: SourceBytes[], overlays: SourceBytes[]) {
   const candidate = azurPromiliaGuideContract(active, overlays)
   const baseline = active.find(row => row.sourcePath === AZUR_PROMILIA_GUIDE_SOURCE)!
-  const old = field(locateValue(readSourceValue(baseline.text, AZUR_PROMILIA_GUIDE_SOURCE, { symbol: 'guides' }), { identity: { id: candidate.changes[0].id } }), '/content/en')
+  const selected = candidate.changes[0].fields[0]
+  const old = field(locateValue(readSourceValue(baseline.text, AZUR_PROMILIA_GUIDE_SOURCE, { symbol: 'guides' }), { identity: { id: candidate.changes[0].id } }), selected.pointer)
   const recovery = contract(candidate.changes.map(change => ({ ...change, activeSHA256: change.candidateSHA256, candidateSHA256: change.activeSHA256,
-    fields: [{ pointer: '/content/en', value: old, locales: ['en'] }] })))
+    fields: [{ pointer: selected.pointer, value: old, locales: selected.locales }] })))
   assert(isDeepStrictEqual(recovery.changes[0].fields[0].value, old))
   return { policy: 'azur-promilia-existing-guide-text-pair-v1' as const, candidate, recovery, productionReady: false as const }
 }

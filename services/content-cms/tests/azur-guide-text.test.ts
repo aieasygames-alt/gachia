@@ -42,7 +42,7 @@ test('another existing guide derives its own English detail expectation and pres
 
 for (const [name, mutate] of Object.entries({
   'second guide': (rows: any[]) => { rows[1].content.en += ' another edit' },
-  'Chinese body': (rows: any[]) => { rows[0].content.zh += ' changed' },
+  'second body locale': (rows: any[]) => { rows[0].content.zh += ' changed' },
   title: (rows: any[]) => { rows[0].title.en += ' changed' },
   summary: (rows: any[]) => { rows[0].summary.en += ' changed' },
   withdrawal: (rows: any[]) => { rows.pop() },
@@ -55,6 +55,25 @@ for (const [name, mutate] of Object.entries({
 })) test(`guide contract rejects ${name}`, () => {
   const candidate = edit(baseline, rows => { rows[0].content.en += ' reviewed change'; mutate(rows) })
   assert.throws(() => azurPromiliaGuidePairContract([baseline], [candidate]))
+})
+
+for (const locale of ['zh', 'ja'] as const) test(`${locale} launch guide uses its own page and exact previous-language recovery`, () => {
+  const id = 'official-information-checklist'
+  const first = edit(baseline, rows => { rows.find(r => r.id === id).content[locale] += '\n\n2026-11-26 公测：官方公告 & "原文"。' })
+  const second = edit(first, rows => { rows.find(r => r.id === id).content[locale] += '\n\n第二次修订。' })
+  for (const [a, b] of [[baseline, first], [first, second]]) {
+    const pair = azurPromiliaGuidePairContract([a], [b])
+    assert.equal(pair.candidate.expectations[0].path, `/${locale}/azur-promilia/guides/${id}`)
+    assert.equal(pair.candidate.changes[0].fields[0].pointer, `/content/${locale}`)
+    assert.deepEqual(pair.candidate.changes[0].fields[0].locales, [locale])
+    assert.equal(pair.recovery.changes[0].fields[0].value, guides(a).find(r => r.id === id).content[locale])
+    const restored = edit(b, rows => { rows.find(r => r.id === id).content[locale] = pair.recovery.changes[0].fields[0].value })
+    assert.deepEqual(guides(restored), guides(a))
+    assert(pair.candidate.expectations[0].contains[0].includes('&amp; &quot;'))
+  }
+  for (const value of ['', 'x'.repeat(32769), '<script>unsafe</script>']) {
+    assert.throws(() => azurPromiliaGuidePairContract([baseline], [edit(baseline, rows => { rows.find(r => r.id === id).content[locale] = value })]))
+  }
 })
 
 test('guide contract rejects source corruption, unrelated executable edits, and unknown overlays', () => {
