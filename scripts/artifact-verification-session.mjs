@@ -3,11 +3,16 @@ import { AsyncLocalStorage } from 'node:async_hooks';
 import { createHash } from 'node:crypto';
 import { lstatSync, readdirSync, readlinkSync, realpathSync } from 'node:fs';
 import { isAbsolute, join, relative as relativePath, resolve } from 'node:path';
+import { parallelArtifactIdentity } from './parallel-artifact-identity.mjs';
 
 const sessions = new AsyncLocalStorage();
 
 function identity(root) {
   assert.equal(realpathSync(root), root, 'Linked artifact ancestor changed');
+  // Preserve the existing permission boundary and serial implementation when
+  // Node's permission model is active. Child errors still take the original
+  // guardedArtifactInventory fallback; no incomplete identity is accepted.
+  if (process.platform === 'darwin' && !process.permission) return parallelArtifactIdentity(root);
   const rows = [];
   const walk = (relative = '') => {
     const file = relative ? join(root, relative) : root, stat = lstatSync(file, { bigint: true });
