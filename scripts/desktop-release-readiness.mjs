@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -13,7 +14,7 @@ const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const serviceFor = owner => owner === 'main' ? 'gachia' : `gachia-game-${owner}`;
 function bytes(path) {
   assert.equal(realpathSync(path), resolve(path), 'Linked release evidence forbidden');
-  const data = readFileSync(path); assert(data.length <= 16 * 1024 * 1024, 'Evidence budget exceeded'); return data;
+  const data = sessionReadFileBytes(path); assert(data.length <= 16 * 1024 * 1024, 'Evidence budget exceeded'); return data;
 }
 
 // Diagnostics may read a torn final line, but such a journal never authorizes

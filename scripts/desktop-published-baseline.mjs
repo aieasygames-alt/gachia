@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { lstatSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -38,8 +39,8 @@ export function verifyPublishedGuideUpdate({ baselinePath, baselinePin, candidat
   const candidate = readFileSync(candidatePath);
   assert.equal(digest(candidate), plan.candidateSHA256, 'Candidate digest mismatch');
   const directory = resolve(baselinePath, '..');
-  return validatePublishedGuideUpdate(readFileSync(join(directory, 'import.body')).toString(),
-    readFileSync(join(directory, 'published.body')).toString(), candidate.toString(), plan.game);
+  return validatePublishedGuideUpdate(sessionReadFileBytes(join(directory, 'import.body')).toString(),
+    sessionReadFileBytes(join(directory, 'published.body')).toString(), candidate.toString(), plan.game);
 }
 
 // Import provenance stays O; recovery follows the currently deployed A, not O.
@@ -102,7 +103,7 @@ export function recoveryGuideStatuses(recovery, verified) {
   if (plan.added?.length) {
     verifyPublishedBaseline(recovery.baselinePath, recovery.baselinePin, plan,
       Object.fromEntries(plan.owners.map(owner => [owner, receipt.owners[owner].previousVersion])));
-    for (const row of JSON.parse(readFileSync(join(resolve(recovery.baselinePath, '..'), 'published.body'), 'utf8'))) ids.add(row.id);
+    for (const row of JSON.parse(sessionReadFileBytes(join(resolve(recovery.baselinePath, '..'), 'published.body')).toString('utf8'))) ids.add(row.id);
   }
   return new Map(plan.changed.flatMap(id => ['zh', 'en', 'ja'].map(locale => [
     `/${locale}/${plan.game}/guides/${id}`, plan.added?.includes(id) && !ids.has(id) ? 404 : 200,

@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -101,7 +102,7 @@ export function reboundSourceInputs(origin, versions) {
     assert.equal(digest(readFileSync(join(directory, `${owner}.multipart`))), row.multipartPin);
     verifySavedPreview(join(directory, `${owner}-http`), { service: assertReleaseScope(context.plan).serviceFor(owner), versionId: versions[owner], evidenceSHA256: row.previewPin }, refs);
     for (const [i, reference] of refs.entries()) {
-      const body = readFileSync(join(directory, `${owner}-http/${i}.body`));
+      const body = sessionReadFileBytes(join(directory, `${owner}-http/${i}.body`));
       if (reference.fingerprint) assert.deepEqual(publicRobots(body.toString()), reference.expectedRobots, 'Target HTML robots changed');
       references.push({ owner, ...reference, body });
     }
@@ -118,7 +119,7 @@ export async function rebindSourceCatalog({ input, root, directory, reader, requ
     const context = inputs(input), { plan, versions } = context, scope = assertReleaseScope(plan);
     const before = await reader.snapshot(); assertTopology(context.donor.manifest.before, before);
     for (const owner of scope.owners) assert.equal(activeVersion(before, scope.serviceFor(owner)), versions[owner]);
-    const baseline = await capturePublishedBaseline({ plan, importBytes: readFileSync(join(dirname(context.target.sources.baselinePath), 'import.body')),
+    const baseline = await capturePublishedBaseline({ plan, importBytes: sessionReadFileBytes(join(dirname(context.target.sources.baselinePath), 'import.body')),
       directory: join(directory, 'baseline'), observe: reader.snapshot, request });
     assert.equal(baseline.contentSHA256, context.target.sources.baseline.contentSHA256, 'Target A changed');
     const owners = {};

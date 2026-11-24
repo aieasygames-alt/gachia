@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -17,7 +18,7 @@ export function publicRobots(html) {
 export function loadPublicReferences(directory, referencesPin) {
   return pinnedJson(join(directory, 'references.json'), referencesPin).map((reference, i) => {
     if (!reference.headers['content-type']?.startsWith('text/html')) return reference;
-    const body = readFileSync(join(directory, `${i}.body`)); assert.equal(digest(body), reference.sha256, 'Public reference HTML changed');
+    const body = sessionReadFileBytes(join(directory, `${i}.body`)); assert.equal(digest(body), reference.sha256, 'Public reference HTML changed');
     return { ...reference, expectedRobots: publicRobots(body.toString()) };
   });
 }

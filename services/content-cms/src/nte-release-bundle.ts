@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -150,7 +151,7 @@ function assertConsumers(proof: Proof, contract: any) {
   const references = recheckNteReferences(proof)
   for (const wanted of contract.expectations) {
     const row = references.find((row: any) => row.path === wanted.path); assert(row)
-    validateUnifiedConsumer({ status: row.status, headers: new Headers(row.headers) }, readFileSync(path.join(path.dirname(proof.path), row.bodyFile)), wanted)
+    validateUnifiedConsumer({ status: row.status, headers: new Headers(row.headers) }, sessionReadFileBytes(path.join(path.dirname(proof.path), row.bodyFile)), wanted)
   }
 }
 async function captureGraph(opened: any, directory: string, owners: any, owner: string, role: string, migration: boolean, final = false, recoveryGraph = false) {
@@ -240,7 +241,7 @@ export async function verifyNteReleaseBundle(proof: Proof, depth = 0): Promise<a
       const refs = { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }, references = recheckNteReferences(refs)
       assert.deepEqual(references.map((ref: any) => ({ path: ref.path, status: ref.status })), wanted.requests.map(row => ({ path: row.path, status: row.status })))
       for (const [index, ref] of references.entries()) {
-        if (wanted.values.has(ref.path)) assert.deepEqual(JSON.parse(readFileSync(path.join(path.dirname(refs.path), ref.bodyFile), 'utf8')), wanted.values.get(ref.path))
+        if (wanted.values.has(ref.path)) assert.deepEqual(JSON.parse(sessionReadFileBytes(path.join(path.dirname(refs.path), ref.bodyFile)).toString('utf8')), wanted.values.get(ref.path))
         if (wanted.requests[index].sha256) assert.equal(ref.sha256, wanted.requests[index].sha256)
       }
       assertConsumers(refs, roleContract)
@@ -252,7 +253,7 @@ export async function verifyNteReleaseBundle(proof: Proof, depth = 0): Promise<a
     const references = recheckNteReferences(proof), wanted = await nteRequests(role === 'recovery' ? sources.workspace : workspace, 'router', 'candidate', undefined, migration,
       role === 'recovery' ? sources.sources : opened.candidateSources, opened.contract?.[role as 'candidate' | 'recovery'], sources.owners.main.directory)
     assert.deepEqual(references.map((ref: any) => ({ path: ref.path, status: ref.status })), wanted.requests.map(row => ({ path: row.path, status: row.status })))
-    for (const ref of references) if (wanted.values.has(ref.path)) assert.deepEqual(JSON.parse(readFileSync(path.join(path.dirname(proof.path), ref.bodyFile), 'utf8')), wanted.values.get(ref.path))
+    for (const ref of references) if (wanted.values.has(ref.path)) assert.deepEqual(JSON.parse(sessionReadFileBytes(path.join(path.dirname(proof.path), ref.bodyFile)).toString('utf8')), wanted.values.get(ref.path))
     assertConsumers(proof, opened.contract?.[role as 'candidate' | 'recovery'])
   }
   assert.deepEqual(value.stepReferences, migration ? { path: path.join(directory, 'router/recovery/local-http/responses/references.json'), pin: value.owners.router.recovery.referencesPin } : value.finalReferences)

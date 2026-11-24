@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { createHash } from 'node:crypto';
-import { lstatSync, readdirSync, readlinkSync, realpathSync } from 'node:fs';
+import { lstatSync, readFileSync, readdirSync, readlinkSync, realpathSync } from 'node:fs';
 import { isAbsolute, join, relative as relativePath, resolve } from 'node:path';
 import { parallelArtifactIdentity } from './parallel-artifact-identity.mjs';
+import { createLocalBodyByteCache } from './local-body-byte-cache.mjs';
 
 const sessions = new AsyncLocalStorage();
 
@@ -30,10 +31,11 @@ function identity(root) {
   return rows;
 }
 
-// A session stores only local artifact inventories. Every hit still walks the
-// complete tree; ctime detects same-size edits even when mtime is restored.
+// A session retains local inventories, guarded body bytes and deterministic
+// parsing, never observations or decisions. Inventory hits walk the complete
+// tree; ctime detects same-size edits even when mtime is restored.
 export function createArtifactVerificationSession() {
-  const state = { entries: new Map(), html: new Map(), htmlBytes: 0, current: undefined, failed: false };
+  const state = { entries: new Map(), html: new Map(), htmlBytes: 0, bodies: createLocalBodyByteCache(), current: undefined, failed: false };
   return {
     async run(read) {
       assert(!state.current && !state.failed, 'Artifact verification session is busy or failed');
@@ -43,7 +45,7 @@ export function createArtifactVerificationSession() {
         assert(!state.failed, 'Artifact verification session failed');
         return result;
       }
-      catch (error) { state.entries.clear(); state.html.clear(); state.htmlBytes = 0; state.failed = true; throw error; }
+      catch (error) { state.entries.clear(); state.html.clear(); state.bodies.clear(); state.htmlBytes = 0; state.failed = true; throw error; }
       finally { state.current = undefined; }
     },
   };
@@ -56,7 +58,17 @@ export async function withArtifactVerificationSession(read) {
   if (!state || state.current !== context.turn) return createArtifactVerificationSession().run(read);
   assert(!state.failed, 'Artifact verification session failed');
   try { return await read(); }
-  catch (error) { state.entries.clear(); state.html.clear(); state.htmlBytes = 0; state.failed = true; throw error; }
+  catch (error) { state.entries.clear(); state.html.clear(); state.bodies.clear(); state.htmlBytes = 0; state.failed = true; throw error; }
+}
+
+// Only stored local response bodies are eligible. Pins, headers and evidence
+// metadata are always read normally. Every eligible hit reopens the canonical
+// original and checks dev/inode/mode/links/uid/gid/size/mtime/ctime before and
+// after returning an independent copy; no observation or decision is cached.
+export function sessionReadFileBytes(file) {
+  const context = sessions.getStore(), state = context?.state;
+  if (typeof file !== 'string' || !file.endsWith('.body') || !state || state.current !== context.turn || state.failed) return readFileSync(file);
+  return state.bodies.read(file);
 }
 
 // Memoize only deterministic HTML parsing, keyed by newly hashed HTML bytes,

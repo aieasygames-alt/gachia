@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -62,7 +63,7 @@ export async function createUnifiedUploadedPairVerifier(input: { request: Unifie
     const root = path.join(evidence.transport.directory, owner, role, 'http')
     const rows = pinned({ path: path.join(root, 'references.json'), pin: evidence.value.owners.main[role].referencesPin })
     return unifiedPreviewReferences(rows, (row: { bodyFile: string }, index: number) => {
-      assert.equal(row.bodyFile, `${index}.body`); return readFileSync(path.join(root, row.bodyFile))
+      assert.equal(row.bodyFile, `${index}.body`); return sessionReadFileBytes(path.join(root, row.bodyFile))
     }, parserVersion)
   }
   const target = unifiedTransportTarget('main', readFileSync(path.join(evidence.build, 'source/apps/web/wrangler.jsonc'), 'utf8'))

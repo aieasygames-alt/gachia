@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -138,7 +139,7 @@ export async function verifyAzurPromiliaIndependentBundle(proof: Proof, depth = 
     const expected = role === 'candidate' ? contract.candidate.expectations[0] : contract.recovery.expectations[0]
     recheckNteReferences({ path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin })
     const references = migrationPinned({ path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin })
-    const edited = references.find((row: any) => row.path === expected.path); assert(edited); assert(readFileSync(path.join(local, 'local-http/responses', edited.bodyFile), 'utf8').includes(expected.contains[0]))
+    const edited = references.find((row: any) => row.path === expected.path); assert(edited); assert(sessionReadFileBytes(path.join(local, 'local-http/responses', edited.bodyFile)).toString('utf8').includes(expected.contains[0]))
   }
   assert.equal(value.contentVersion, digest(sourceText(workspace, AZUR_PROMILIA_GUIDE_SOURCE))); assert.equal(value.previousContentVersion, digest(sourceText(sources.workspace, AZUR_PROMILIA_GUIDE_SOURCE)))
   return { directory, value, ...opened }

@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { digest } from './desktop-release-assets.mjs';
 import { boundedBody, sampleReadOnly } from './desktop-version-preview.mjs';
 import { UNIFIED_OWNERS, unifiedService } from './unified-release-assets.mjs';
-import { sessionHTMLFingerprints } from './artifact-verification-session.mjs';
+import { sessionHTMLFingerprints, sessionReadFileBytes } from './artifact-verification-session.mjs';
 
 const UUID = /^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/;
 const SHA = /^[a-f0-9]{64}$/;
@@ -154,7 +154,7 @@ export function recheckUnifiedPreview(directory, pin, { service, versionId, refe
   const root = resolve(directory); assert.equal(realpathSync(root), root, 'Linked preview evidence forbidden');
   const bytes = file => {
     const p = join(root, file); assert.equal(realpathSync(p), p, 'Linked preview file forbidden');
-    assert(statSync(p).isFile() && statSync(p).size <= 16 * 1024 * 1024); return readFileSync(p);
+    assert(statSync(p).isFile() && statSync(p).size <= 16 * 1024 * 1024); return sessionReadFileBytes(p);
   };
   const raw = bytes('result.json'); assert.equal(digest(raw), pin, 'Preview evidence changed');
   const result = JSON.parse(raw);

@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { randomBytes } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -41,8 +42,8 @@ function selectedIdentity(value) {
 
 function changedFromPublished(run, plan, baselinePath) {
   const candidate = readFileSync(join(run, 'source/packages/data/games', plan.game, 'raw-guides.json'), 'utf8');
-  const published = readFileSync(join(dirname(baselinePath), 'published.body'), 'utf8');
-  const original = readFileSync(join(dirname(baselinePath), 'import.body'), 'utf8');
+  const published = sessionReadFileBytes(join(dirname(baselinePath), 'published.body')).toString('utf8');
+  const original = sessionReadFileBytes(join(dirname(baselinePath), 'import.body')).toString('utf8');
   assert.equal(digest(original), plan.sourceSHA256); assert.equal(digest(candidate), plan.candidateSHA256);
   validatePublishedGuideUpdate(original, published, candidate);
 }
@@ -83,7 +84,7 @@ async function checkLocal(manifest) {
   rows.forEach((row, i) => {
     assert.deepEqual({ owner: row.owner, path: row.path, sha256: row.sha256, bytes: row.bytes }, expected[i]);
     assert.equal(row.status, 200); assert(!row.headers['set-cookie']); assert.equal(row.bodyFile, `${i}.body`);
-    const body = readFileSync(join(dirname(fresh.observationsPath), row.bodyFile));
+    const body = sessionReadFileBytes(join(dirname(fresh.observationsPath), row.bodyFile));
     assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256, 'Fresh static response changed');
   });
   const verified = { ...verifyRetainedCandidate(run, planPin, retention.id, retention.retentionPin), retentionPin: retention.retentionPin };

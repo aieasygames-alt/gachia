@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { cpSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
@@ -74,7 +75,7 @@ export function readPublishedCandidate(input) {
     for (const [i, reference] of references.entries()) {
       const row = saved.observations[i]; assert.equal(row.path, reference.path); assert.equal(row.bodyFile, `${i}.body`);
       const file = join(directory, `${owner}-public`, row.bodyFile); assert.equal(realpathSync(file), file);
-      const body = readFileSync(file); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
+      const body = sessionReadFileBytes(file); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
       validatePublicResponse(new Response(null, { status: row.status, headers: row.headers }), body, reference);
     }
   }
@@ -138,9 +139,9 @@ function completedSourceInputs(origin, versions, recovered) {
     verifySavedPreview(join(dirname(origin.proofPath), `${owner}-http`), { service: record.service, versionId: versions[owner], evidenceSHA256: row.previewPin }, source.references);
     for (const reference of source.references.filter(row => source.dynamic.includes(row.path))) {
       const i = source.references.indexOf(reference);
-      references.push({ owner, ...reference, body: readFileSync(join(candidate.directory, owner, `${i}.body`)) });
+      references.push({ owner, ...reference, body: sessionReadFileBytes(join(candidate.directory, owner, `${i}.body`)) });
     }
-    for (const [i, reference] of source.references.entries()) allReferences.push({ owner, ...reference, body: readFileSync(join(candidate.directory, owner, `${i}.body`)) });
+    for (const [i, reference] of source.references.entries()) allReferences.push({ owner, ...reference, body: sessionReadFileBytes(join(candidate.directory, owner, `${i}.body`)) });
     profile.owners[owner] = { directory, versionId: versions[owner], artifactSHA256: row.artifactSHA256, ...(row.moduleProof ? { moduleProof: row.moduleProof } : {}) };
     evidence.owners[owner] = { runtimeModuleSHA256: row.runtimeModuleSHA256, ...(row.moduleProof ? { moduleProof: row.moduleProof } : {}) };
   }

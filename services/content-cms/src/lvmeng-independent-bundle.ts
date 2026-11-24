@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -133,7 +134,7 @@ export async function verifyLvmengIndependentBundle(proof: Proof, depth = 0): Pr
     const outbound = await multipartModule(readFileSync(path.join(local, 'seal/exact.multipart'))); assert.equal(outbound.moduleSHA256, sealed.moduleSHA256); assertUploadMetadata(outbound.metadata, config)
     const refs = { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }, references = recheckNteReferences(refs), wanted = requests(artifact, role === 'candidate' ? contract.candidate.expectations : contract.recovery.expectations)
     assert.deepEqual(references.map((ref: any) => ({ path: ref.path, status: ref.status })), wanted.map(row => ({ path: row.path, status: row.status })))
-    for (const wantedRow of role === 'candidate' ? contract.candidate.expectations : contract.recovery.expectations) { const ref = references.find((item: any) => item.path === wantedRow.path); assert(ref); validateUnifiedConsumer({ status: ref.status, headers: new Headers(ref.headers) }, readFileSync(path.join(path.dirname(refs.path), ref.bodyFile)), wantedRow) }
+    for (const wantedRow of role === 'candidate' ? contract.candidate.expectations : contract.recovery.expectations) { const ref = references.find((item: any) => item.path === wantedRow.path); assert(ref); validateUnifiedConsumer({ status: ref.status, headers: new Headers(ref.headers) }, sessionReadFileBytes(path.join(path.dirname(refs.path), ref.bodyFile)), wantedRow) }
   }
   assert.equal(value.contentVersion, digest(sourceText(workspace, 'apps/game-lvmeng/lib/data.ts'))); assert.equal(value.previousContentVersion, digest(sourceText(sources.workspace, 'apps/game-lvmeng/lib/data.ts')))
   return { directory, value, ...opened }

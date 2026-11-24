@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -35,7 +36,7 @@ function recheckReferences(proof) {
   const rows = pinned(proof);
   for (const [index, row] of rows.entries()) {
     assert.equal(row.bodyFile, index + '.body'); assert.equal(row.status, 200);
-    const bytes = readFileSync(join(dirname(proof.path), row.bodyFile));
+    const bytes = sessionReadFileBytes(join(dirname(proof.path), row.bodyFile));
     if (row.html) assert.deepEqual(unifiedPageFingerprints([{ html: bytes.toString(), status: row.status }], 'streaming-v2')[0], row.html);
     else assert.equal(digest(bytes), row.sha256);
   }

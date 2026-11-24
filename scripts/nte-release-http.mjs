@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -172,7 +173,7 @@ export function recheckNteReferences(proof) {
   assert(references.length > 0 && references.length <= 2500 && new Set(references.map(row => row.path)).size === references.length);
   for (const [index, row] of references.entries()) {
     unifiedPreviewPath(row.path, 'https://gachia.com'); assert.equal(row.bodyFile, `${index}.body`);
-    const body = readFileSync(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
+    const body = sessionReadFileBytes(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
     validate({ status: row.status, headers: new Headers(row.headers) }, body, row, false);
     if (row.fingerprint) { html.push({ html: body.toString(), status: row.status }); rows.push(row); }
   }
@@ -231,7 +232,7 @@ export function recheckNteHTTP({ proof, origin, references, preview = false }) {
   const pages = [], expected = [];
   for (const [index, reference] of references.entries()) {
     const row = value.observations[index]; assert.equal(row.path, reference.path); assert.equal(row.bodyFile, `${index}.body`);
-    const body = readFileSync(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
+    const body = sessionReadFileBytes(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
     validate({ status: row.status, headers: new Headers(row.headers) }, body, reference, preview);
     if (reference.fingerprint) { pages.push({ html: body.toString(), status: row.status }); expected.push(reference); }
   }
@@ -250,7 +251,7 @@ export function recheckNteFailedHTTP({ proof, references, preview = true }) {
   for (const row of value.observations) {
     assert(/^\d+\.body$/.test(row.bodyFile)); const index = Number(row.bodyFile.slice(0, -5)), reference = references[index];
     assert(reference && !seen.has(index)); seen.add(index); assert.equal(row.path, reference.path);
-    const body = readFileSync(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
+    const body = sessionReadFileBytes(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
     validate({ status: row.status, headers: new Headers(row.headers) }, body, reference, preview);
     if (reference.fingerprint) { pages.push({ html: body.toString(), status: row.status }); expected.push(reference); }
   }

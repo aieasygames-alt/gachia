@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync, realpathSync } from 'node:fs';
 import { join } from 'node:path';
@@ -79,7 +80,7 @@ export function readRecoveredCandidate(input) {
     for (const [i, reference] of references.entries()) {
       const observation = saved.observations[i]; assert.equal(observation.path, reference.path); assert.equal(observation.bodyFile, `${i}.body`);
       const path = join(directory, `${owner}-public`, observation.bodyFile); assert.equal(realpathSync(path), path);
-      const body = readFileSync(path); assert.equal(body.length, observation.bytes); assert.equal(digest(body), observation.sha256);
+      const body = sessionReadFileBytes(path); assert.equal(body.length, observation.bytes); assert.equal(digest(body), observation.sha256);
       validatePublicResponse(new Response(null, { status: observation.status, headers: observation.headers }), body, reference);
     }
   }

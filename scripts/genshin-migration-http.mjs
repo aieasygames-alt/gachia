@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { lstatSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { isAbsolute, join, resolve } from 'node:path';
@@ -113,7 +114,7 @@ export function recheckMigrationReferences({ proof, requests, owner, role, expec
     const wanted = requests[index]; assert.equal(row.path, wanted.path); assert.equal(row.status, wanted.status);
     assert.equal(row.bodyFile, `${index}.body`);
     const file = join(directory, row.bodyFile); assert.equal(realpathSync(file), file); assert(lstatSync(file).isFile());
-    const body = readFileSync(file); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
+    const body = sessionReadFileBytes(file); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
     if (wanted.sha256) assert.equal(row.sha256, wanted.sha256);
     const response = { status: row.status, headers: new Headers(row.headers) }, type = response.headers.get('content-type')?.split(';')[0];
     assert(type); assert(!response.headers.has('set-cookie'));
@@ -212,7 +213,7 @@ export function recheckMigrationObservations({ directory, observations, referenc
   assert.equal(result.observations.length, references.length); const html = [], htmlReferences = [];
   for (const [i, row] of result.observations.entries()) {
     const reference = references[i]; assert.equal(row.path, reference.path); assert.equal(row.bodyFile, `${i}.body`);
-    const body = readFileSync(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
+    const body = sessionReadFileBytes(join(directory, row.bodyFile)); assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
     const response = { status: row.status, headers: new Headers(row.headers) };
     if (retiredData(owner, role, row.path)) validateRetiredData(response, body);
     else if (response.headers.get('content-type')?.split(';')[0] === 'text/html') {

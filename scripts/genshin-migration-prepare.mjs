@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { existsSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -174,7 +175,7 @@ export async function verifyGenshinMigrationBundle(proof) {
     requests: migrationRequests({ owner: 'router', role: 'candidate', expected, sources, pairs }), owner: 'router', role: 'candidate', expected, bases });
   assert(finalReferences.length > 100);
   for (const [i, row] of finalReferences.entries()) {
-    assert.equal(row.bodyFile, `${i}.body`); const body = readFileSync(join(directory, 'final-http/responses', row.bodyFile));
+    assert.equal(row.bodyFile, `${i}.body`); const body = sessionReadFileBytes(join(directory, 'final-http/responses', row.bodyFile));
     assert.equal(body.length, row.bytes); assert.equal(digest(body), row.sha256);
   }
   for (const owner of GENSHIN_MIGRATION_ORDER) {
@@ -200,7 +201,7 @@ export async function verifyGenshinMigrationBundle(proof) {
         requests, owner, role, expected, bases });
       for (const [i, reference] of references.entries()) {
         assert.equal(reference.path, requests[i].path); assert.equal(reference.status, requests[i].status); assert.equal(reference.bodyFile, `${i}.body`);
-        const body = readFileSync(join(local, 'local-http/responses', reference.bodyFile));
+        const body = sessionReadFileBytes(join(local, 'local-http/responses', reference.bodyFile));
         assert.equal(digest(body), reference.sha256); assert.equal(body.length, reference.bytes);
         if (requests[i].sha256) assert.equal(reference.sha256, requests[i].sha256);
       }

@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { randomBytes } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -59,7 +60,7 @@ export async function prepareRecoveryCloud(input) {
           const old = recovery.owners[owner].observations.find(x => x.path === path);
           if (old) {
             assert.equal(row.status, old.status, 'Recovery status differs from original evidence');
-            if (row.fingerprint) assert.deepEqual(row.fingerprint, pageFingerprint(readFileSync(join(recovery.directory, old.bodyFile), 'utf8'), old.status), 'Recovery rendered baseline changed');
+            if (row.fingerprint) assert.deepEqual(row.fingerprint, pageFingerprint(sessionReadFileBytes(join(recovery.directory, old.bodyFile)).toString('utf8'), old.status), 'Recovery rendered baseline changed');
             else assert.equal(row.sha256, old.sha256, 'Recovery response differs from original recovery evidence');
           }
           writeFileSync(join(ownerDir, `${rows.length}.body`), body, { flag: 'wx', mode: 0o600 }); rows.push(row);
@@ -103,7 +104,7 @@ function readRecoveryCloud({ run, pin, recoveryId, recoveryBundlePin }) {
     assert.equal(digest(readFileSync(row.tool.cli)), row.tool.cliSHA256, 'Recovery Wrangler implementation changed');
     assert.equal(config.main, join(directory, owner, 'worker.js')); assert.equal(config.assets.directory, join(verified.recovery.directory, owner, '.open-next/assets'));
     const refs = pinnedJson(join(directory, owner, 'references.json'), row.referencesSHA256); assert.equal(refs.length, row.paths);
-    refs.forEach((ref, i) => assert.equal(digest(readFileSync(join(directory, owner, `${i}.body`))), ref.sha256, 'Recovery network reference changed'));
+    refs.forEach((ref, i) => assert.equal(digest(sessionReadFileBytes(join(directory, owner, `${i}.body`))), ref.sha256, 'Recovery network reference changed'));
     if (owner === 'main' && verified.candidate.plan.preservedGuides) {
       const preserved = pinnedJson(verified.candidate.plan.preservedGuides.path, verified.candidate.plan.preservedGuides.pin);
       const rows = refs.filter(ref => ref.path === `/data/${preserved.otherGame}/raw-guides.json`);

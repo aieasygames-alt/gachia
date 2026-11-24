@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { execFileSync, spawn } from 'node:child_process'
 import { appendFileSync, cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -109,11 +110,11 @@ export function assertMaterialReferences(sources: any, proof: Proof) {
   for (const contract of materialContracts(sources)) {
     for (const page of contract.pages) {
       const row = refs.find((row: any) => row.path === page.path); assert(row, `Missing Main material page: ${page.path}`)
-      assertMaterialPageConsumer(page, row.status, readFileSync(path.join(directory, row.bodyFile), 'utf8'))
+      assertMaterialPageConsumer(page, row.status, sessionReadFileBytes(path.join(directory, row.bodyFile)).toString('utf8'))
     }
     for (const lang of ['zh', 'en', 'ja'] as const) {
       const row = refs.find((row: any) => row.path === `/data-manifest/search-${lang}.json`); assert(row)
-      assertMaterialSearchConsumer(contract, lang, JSON.parse(readFileSync(path.join(directory, row.bodyFile), 'utf8')))
+      assertMaterialSearchConsumer(contract, lang, JSON.parse(sessionReadFileBytes(path.join(directory, row.bodyFile)).toString('utf8')))
     }
   }
 }
@@ -125,7 +126,7 @@ async function assertConsumerValues(sources: any, proof: Proof, role: string, di
     const expected = role === 'recovery' && url.startsWith('/data/') && !/^\/data\/(genshin|nte)\//.test(url)
       ? JSON.parse(readFileSync(path.join(sources.owners.main.directory, 'assets', url.slice(1)), 'utf8')) : original
     const row = refs.find((row: any) => row.path === url); assert(row, `Missing Main consumer JSON: ${url}`)
-    assert.deepEqual(JSON.parse(readFileSync(path.join(directory, row.bodyFile), 'utf8')), expected, `Main consumer JSON drift: ${url}`)
+    assert.deepEqual(JSON.parse(sessionReadFileBytes(path.join(directory, row.bodyFile)).toString('utf8')), expected, `Main consumer JSON drift: ${url}`)
   }
 }
 export async function prepareMainMaterialConsumerMigration(input: { sourceIndex: Proof; directory: string }) {
@@ -191,7 +192,7 @@ export async function verifyMainContentRestoration(proof: Proof) {
     const graphRefs = recheckNteReferences(role === 'candidate' ? value.finalReferences : value.recoveryReferences)
     const pairs = JSON.parse(readFileSync(path.join(sources.workspace, 'packages/data/raw-content-review.json'), 'utf8')).pairs
     const graphDirectory = path.dirname((role === 'candidate' ? value.finalReferences : value.recoveryReferences).path)
-    assertRestorationJSON(sources.sources, pairs, graphRefs, row => readFileSync(path.join(graphDirectory, row.bodyFile)),
+    assertRestorationJSON(sources.sources, pairs, graphRefs, row => sessionReadFileBytes(path.join(graphDirectory, row.bodyFile)),
       url => readFileSync(path.join(old.directory, 'assets', url.slice(1))), role)
     if (isConsumer(value)) {
       await assertConsumerValues(sources, { path: path.join(local, 'local-http/responses/references.json'), pin: sealed.referencesPin }, role, true)

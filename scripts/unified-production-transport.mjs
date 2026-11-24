@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -99,7 +100,7 @@ export function unifiedProductionTransport({ evidence, token, directory, preview
       const { path, sealed } = rowFor(args), http = join(path, 'http');
       const raw = readFileSync(join(http, 'references.json')); assert.equal(digest(raw), sealed.referencesPin);
       const references = unifiedPreviewReferences(JSON.parse(raw), (row, index) => {
-        assert.equal(row.bodyFile, `${index}.body`); return readFileSync(join(http, row.bodyFile));
+        assert.equal(row.bodyFile, `${index}.body`); return sessionReadFileBytes(join(http, row.bodyFile));
       }, parserVersion);
       const output = join(proofDirectory(args.owner, args.role), 'http');
       const proof = await verifyUnifiedVersionPreview({ service: args.service, versionId: args.versionId, references, directory: output, request: previewRequest, parserVersion });

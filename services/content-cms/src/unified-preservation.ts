@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { execFileSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
@@ -55,7 +56,7 @@ export function verifyUnifiedPreservedMainResources(transport: { directory: stri
     assert.equal(digest(raw), transport.receipt.owners.main[role].referencesPin)
     const rows = JSON.parse(raw.toString()).filter((row: any) => row.headers['content-type']?.startsWith('text/html'))
     const html = rows.map((row: any) => {
-      assert(/^[0-9]+\.body$/.test(row.bodyFile)); const body = readFileSync(path.join(root, row.bodyFile))
+      assert(/^[0-9]+\.body$/.test(row.bodyFile)); const body = sessionReadFileBytes(path.join(root, row.bodyFile))
       assert.equal(digest(body), row.sha256); return { html: body.toString(), status: row.status }
     })
     assertUnifiedPreservedMainResources(html, owners)

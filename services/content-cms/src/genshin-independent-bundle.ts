@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import path from 'node:path'
@@ -42,7 +43,7 @@ function assertCharacterReferences(proof: Proof, contract: any) {
   const references = migrationPinned(proof)
   for (const expected of contract.expectations) {
     const row = references.find((row: any) => row.path === expected.path); assert(row, 'Missing actual edited character consumer')
-    validateUnifiedConsumer({ status: row.status, headers: new Headers(row.headers) }, readFileSync(path.join(path.dirname(proof.path), row.bodyFile)), expected)
+    validateUnifiedConsumer({ status: row.status, headers: new Headers(row.headers) }, sessionReadFileBytes(path.join(path.dirname(proof.path), row.bodyFile)), expected)
   }
 }
 async function verifyInputs(build: Proof, sourceIndex: Proof, depth = 0) {

@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, realpathSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -52,7 +53,7 @@ function sourcesFromRecovery(recovery, verified, versions) {
     for (const reference of [...row.observations, ...(row.auxiliary ?? [])]) {
       assert.match(reference.bodyFile, new RegExp(`^${owner}-[0-9]+\\.body$`));
       const path = join(evidence.directory, reference.bodyFile); assert.equal(realpathSync(path), path);
-      const body = readFileSync(path); assert.equal(digest(body), reference.sha256);
+      const body = sessionReadFileBytes(path); assert.equal(digest(body), reference.sha256);
       allReferences.push({ owner, ...reference, body });
     }
   }
@@ -99,7 +100,7 @@ function sourcesFromHistory(origin, versions) {
       const file = join(proof.work, `recovery-${owner}-http`, observation.bodyFile);
       assert.equal(realpathSync(file), file, 'Linked historical HTTP body forbidden');
       assert(statSync(file).isFile() && statSync(file).size <= 16 * 1024 * 1024, 'Historical body budget exceeded');
-      const body = readFileSync(file);
+      const body = sessionReadFileBytes(file);
       assert.equal(body.length, observation.bytes, 'Historical HTTP body changed'); assert.equal(digest(body), observation.sha256, 'Historical HTTP body changed');
       assert(!observation.headers['set-cookie']);
       const auth = owner === 'main' && path === '/api/auth/get-session';
@@ -354,7 +355,7 @@ export function verifyPreservedGuides(preservation, plan) {
   const body = readFileSync(join(source.owners.main.directory, `assets/data/${other}/raw-guides.json`));
   assert.equal(digest(body), proof.sha256, 'Preserved Main source bytes changed');
   privateFile(proof.bodyPath);
-  assert(readFileSync(proof.bodyPath).equals(body), 'Preserved public response changed');
+  assert(sessionReadFileBytes(proof.bodyPath).equals(body), 'Preserved public response changed');
   assert.equal(proof.response.path, `/data/${other}/raw-guides.json`);
   assert.equal(proof.response.status, 200); assert(!proof.response.headers['set-cookie']);
   assert.equal(proof.response.headers['content-type']?.split(';')[0], 'application/json');

@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { randomBytes } from 'node:crypto';
@@ -249,7 +250,7 @@ export function verifyCloudBundle({ run, pin, id, bundlePin }) {
     assertOwnerSettings(owner, config, manifest.snapshot);
     const references = pinnedJson(join(directory, owner, 'references.json'), record.referencesSHA256);
     assert.equal(record.paths, references.length);
-    references.forEach((r, i) => assert.equal(digest(readFileSync(join(directory, owner, `${i}.body`))), r.sha256, 'Local network reference changed'));
+    references.forEach((r, i) => assert.equal(digest(sessionReadFileBytes(join(directory, owner, `${i}.body`))), r.sha256, 'Local network reference changed'));
     if (owner === 'main') for (const [path, sha256] of guideDataHashes(retained.plan)) {
       const rows = references.filter(row => row.path === path);
       assert.equal(rows.length, 1, 'Main guide reference missing or duplicated');

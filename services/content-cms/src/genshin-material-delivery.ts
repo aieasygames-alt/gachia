@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from '../../../scripts/artifact-verification-session.mjs'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
@@ -55,7 +56,7 @@ export function assertGenshinMaterialReferences(proof: { path: string }, referen
   assert.deepEqual(references.map(({ path, status }) => ({ path, status })), wanted.requests.map(({ path, status }: any) => ({ path, status })))
   for (const [index, row] of references.entries()) {
     if (wanted.requests[index].sha256) assert.equal(row.sha256, wanted.requests[index].sha256)
-    if (wanted.values.has(row.path)) assert.deepEqual(JSON.parse(readFileSync(path.join(path.dirname(proof.path), row.bodyFile), 'utf8')), wanted.values.get(row.path))
+    if (wanted.values.has(row.path)) assert.deepEqual(JSON.parse(sessionReadFileBytes(path.join(path.dirname(proof.path), row.bodyFile)).toString('utf8')), wanted.values.get(row.path))
   }
   assert(contract.expectations.every((row: any) => references.some(value => value.path === row.path)), 'Incomplete material consumers')
 }

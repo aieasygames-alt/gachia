@@ -1,3 +1,4 @@
+import { sessionReadFileBytes } from './artifact-verification-session.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -123,7 +124,7 @@ export function recheckUnifiedOwnerPublic(owner, directory, pin, references) {
   assert.equal(result.observations.length, references.length);
   result.observations.forEach((row, index) => {
     assert.equal(row.path, references[index].path); assert.equal(row.bodyFile, `${index}.body`);
-    const bytes = readFileSync(join(directory, row.bodyFile)); assert.equal(bytes.length, row.bytes); assert.equal(digest(bytes), row.sha256);
+    const bytes = sessionReadFileBytes(join(directory, row.bodyFile)); assert.equal(bytes.length, row.bytes); assert.equal(digest(bytes), row.sha256);
     validateUnifiedMainPublic({ status: row.status, headers: new Headers(row.headers) }, bytes, references[index]);
   });
   return result;
