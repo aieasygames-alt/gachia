@@ -1,0 +1,38 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 4,
+      "slug": "v4-7-gifts-and-eidolons",
+      "updatedAt": "2026-11-25T03:49:55.803Z",
+      "versionCount": 8
+    },
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-25T03:49:55.817Z",
+      "versionCount": 5
+    },
+    {
+      "id": 1,
+      "slug": "v4-7-live",
+      "updatedAt": "2026-11-25T03:49:55.824Z",
+      "versionCount": 9
+    },
+    {
+      "id": 11,
+      "slug": "v4-7-cn-resonance-thresholds",
+      "updatedAt": "2026-11-25T03:49:55.833Z",
+      "versionCount": 2
+    },
+    {
+      "id": 12,
+      "slug": "v4-7-cn-code-verification",
+      "updatedAt": "2026-11-25T03:49:55.840Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 12,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

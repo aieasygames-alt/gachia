@@ -1,0 +1,35 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 4,
+      "slug": "v4-7-gifts-and-eidolons",
+      "updatedAt": "2026-11-25T03:46:11.120Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-25T03:46:11.130Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 1,
+      "slug": "v4-7-live",
+      "updatedAt": "2026-11-25T03:46:11.136Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 11,
+      "slug": "v4-7-cn-resonance-thresholds",
+      "updatedAt": "2026-11-25T03:46:11.139Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 12,
+      "slug": "v4-7-cn-code-verification",
+      "updatedAt": "2026-11-25T03:46:11.147Z",
+      "action": "created_draft"
+    }
+  ]
+}

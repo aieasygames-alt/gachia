@@ -1,0 +1,44 @@
+[
+  {
+    "file": "aha-7.png",
+    "url": "https://upload-bbs.miyoushe.com/upload/2026/11/04/288909600/4992ea6ef4b51e3252e9803cf79c67c8_7716204121138037622.png?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,png",
+    "bytes": 1291167,
+    "sha256": "16f3b7c656baf19d44215f6b42c288035fa3a6567714a59afbbf512840717cdd"
+  },
+  {
+    "file": "aha-8.png",
+    "url": "https://upload-bbs.miyoushe.com/upload/2026/11/03/288909600/927cfaf52253afbdaa59fa83a8bbd862_7683344965614803622.png?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,png",
+    "bytes": 1075483,
+    "sha256": "6120d60c3f8fcc6c1d57f458f19e38e733c97a82065bdab913c97e095f1fa5b3"
+  },
+  {
+    "file": "aha-9.png",
+    "url": "https://upload-bbs.miyoushe.com/upload/2026/11/03/288909600/1b9c754de65ba0163942a71d6dc67c6e_8150342066599195032.png?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,png",
+    "bytes": 739383,
+    "sha256": "986c2e7e95fcb4aaaa31f7a289ac93ec278353ce141cece9083c4a9497b1c845"
+  },
+  {
+    "file": "aha-18.png",
+    "url": "https://upload-bbs.miyoushe.com/upload/2026/11/03/288909600/a275ca86e9382c879e2ee3eaa91a80f5_2619377228893314292.png?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,png",
+    "bytes": 898549,
+    "sha256": "be7d6a840ca1e179fd67c015c4aa1a270227d8c8a6b7433560c5e2013e7291a6"
+  },
+  {
+    "file": "recap-4.jpg",
+    "url": "https://upload-bbs.miyoushe.com/upload/2026/10/29/288909600/35cb9bd873b5f401b0970b8bf907796b_7992949342003435138.jpg?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,jpg",
+    "bytes": 982451,
+    "sha256": "ad5ba03d2656bef883ca4867124154e20e5c76b52b217d1a4984b45e7510ac50"
+  },
+  {
+    "file": "recap-5.jpg",
+    "url": "https://upload-bbs.miyoushe.com/upload/2026/10/29/288909600/b7f2bf5f2094769d6a83a2f401f0da49_2920553741985241656.jpg?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,jpg",
+    "bytes": 845895,
+    "sha256": "5e34b3d6d7467d34627d09b984d2a1f5609c78ac3705e37e7f81ecd77f6f83a4"
+  },
+  {
+    "file": "aha-4.png",
+    "sourceArticle": "https://www.miyoushe.com/sr/article/79326259",
+    "bytes": 742539,
+    "sha256": "8a3ae5168f848620ad4be3ab3566321b61ba0072b3a883942c5f747e78e9cf68"
+  }
+]

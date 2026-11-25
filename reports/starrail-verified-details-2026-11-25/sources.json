@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-11-25",
+  "publicationScope": "已核实的累计门槛、货币区别和前瞻码失效；其余项记为有证据范围的未完成核验。",
+  "official": [
+    {
+      "url": "https://www.miyoushe.com/sr/article/79217585",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "published": "2026-10-30",
+      "verified": [
+        "万象和鸣11/11更新后至12/23 03:59",
+        "1600/3200回响各1枚奇缘星魂",
+        "每张星轨专票16回响，每张时装邀请函10回响",
+        "椒丘使用旅伴金灵；那无数个春天使用光锥碎忆；正文未给价格"
+      ]
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79218155",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "verified": [
+        "4.7前瞻兑换码2026/10/31 23:59:59失效",
+        "开发中展示，不代表正式上线版本"
+      ]
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79216492",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "verified": [
+        "同一前瞻码失效时刻"
+      ]
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79326259",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "published": "2026-11-04",
+      "verified": [
+        "人工识读图文：多处伤害、升格、负债用一定比例表达，标注开发中版本，以游戏正式版本为准；不足以核准完整倍率和当前材料数量"
+      ]
+    },
+    {
+      "url": "https://act.mihoyo.com/puzzle/hkrpg/e20261024version_2142940ddd/index.html",
+      "verified": [
+        "异器盈界/位面分裂只写隧洞遗器、位面饰品双倍掉落即将开启；没有独立日期次数"
+      ]
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/home/53?type=1",
+      "usage": "仅作为检索范围证据，非CMS文章引用",
+      "verified": [
+        "11/25所见前20条公告最新双倍公告为11/22位面分裂，未见本期异器盈界独立公告；不据此声称全网不存在"
+      ]
+    },
+    {
+      "url": "https://act.mihoyo.com/sr/event/cultivation-tool/index.html",
+      "verified": [
+        "匿名打开后提示选择角色UID登录或米哈游通行证登录；关闭弹窗再点击材料计算仍要求登录，未取得结果"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "url": "https://bbs.mihoyo.com/sr/wiki/content/8099/detail?bbs_presentation_style=no_header&visit_device=mobile",
+      "reason": "页脚明确游戏爱好者维护，米哈游提供技术支持；不能当官方数值公告。晋阶总表造梦蘸钢15，40/50级明细6与8合计14，相互不一致，缺少正式游戏数据交叉核准。",
+      "quantityConflict": {
+        "summary": 15,
+        "detail": [
+          6,
+          8
+        ],
+        "sum": 14
+      }
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79218257",
+      "reason": "虽在官方版块，作者显示呜呜是个呜呜伯/星穹铁道小哈哈，未见官方账号身份标识。且正文说明前瞻计算仅估算，上线版本为准，不能当已核实的正式数量。"
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79490295",
+      "reason": "作者同上，正文还说明部分建议来自玩家攻略或模型生成，不据此核准技能倍率。"
+    },
+    {
+      "type": "搜索引擎摘要、AI概览与评论区",
+      "reason": "检索结果出现预计日期、不同代码与区服混用，全部未采用为发布依据。"
+    }
+  ],
+  "pending": {
+    "异器盈界": "所查官方专题与当前公告列表缺独立日程及次数，不能用周期规律补写。",
+    "完整技能倍率": "官方前瞻多处省略数值且开发中；尚缺可与技能等级和星魂条件对应的正式资料。",
+    "养成材料数量": "官方计算需登录，玩家共建表存在总分冲突；缺明确目标下的正式总量。",
+    "当前有效兑换码": "只核实本期前瞻码已过期，没有新的国服官方有效码依据，未在账号提交兑换。"
+  }
+}
