@@ -201,7 +201,7 @@ export const VERSION_SNAPSHOTS: Partial<Record<GameId, VersionSnapshot>> = {
       { type: 'banner', href: '/starrail/guides/banner-schedule-guide', label: { zh: '当前/下期跃迁', en: 'Current/next warps', ja: '現在/次回跳躍' } },
       { type: 'codes', href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' } },
       { type: 'characters', href: '/starrail/characters', label: { zh: '角色图鉴', en: 'Characters', ja: 'キャラ' } },
-      { type: 'builds', href: '/starrail/gacha', label: { zh: '抽取预算', en: 'Pull budget', ja: 'ガチャ予算' } },
+      { type: 'builds', href: '/starrail/guides/banner-schedule-guide', label: { zh: '抽取规划', en: 'Pull planning', ja: '跳躍計画' } },
     ],
   },
   nte: {

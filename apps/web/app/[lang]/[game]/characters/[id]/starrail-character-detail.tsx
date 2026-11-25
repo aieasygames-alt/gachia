@@ -28,6 +28,7 @@ import {
 } from '@gachia/data/games/starrail/relics';
 
 import type { StarRailCharacter } from '@gachia/data/games/starrail/types';
+import { getUsableStarRailBuild } from '@gachia/data/games/starrail/build';
 
 import { Link } from '@/lib/i18n/navigation';
 
@@ -35,6 +36,15 @@ import { CharacterAvatar } from '@/components/wiki/character-avatar';
 
 import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
+
+const PLACEHOLDER_SKILLS = new Set([
+  '对敌方单体造成伤害', '释放战技，对敌方造成伤害或提供增益', '释放强大的终结技',
+  '被动天赋，增强战斗能力', '在战斗前使用秘技获得优势',
+]);
+
+function hasSkillContent(skill: { name?: string; description?: string } | undefined) {
+  return !!skill?.name?.trim() && !!skill.description?.trim() && !PLACEHOLDER_SKILLS.has(skill.description);
+}
 
 const FavoriteButton = dynamic(
   () => import('@/components/auth/favorite-button').then((m) => m.FavoriteButton),
@@ -54,10 +64,12 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
   const elementName = STARRAIL_ELEMENT_NAMES[char.element]?.[locale] ?? char.element;
   const pathLabel = STARRAIL_PATH_LABELS[char.path]?.[locale] ?? char.path;
   const charName = getStarRailCharacterName(char, locale);
-  const build = char.recommendedBuild;
-  const hasBuild = !!(build && (build as unknown as Record<string, unknown>).bestLightConeEn);
-  const buildLC = hasBuild ? starrailLightCones.find(lc => lc.nameEn.toLowerCase() === build.bestLightConeEn.toLowerCase() || lc.name === build.bestLightCone) : undefined;
-  const buildRelic = hasBuild ? starrailRelicSets.find(rs => rs.nameEn.toLowerCase() === build.bestRelicSetEn.toLowerCase() || rs.name === build.bestRelicSet) : undefined;
+  const availableSkills = Object.values(char.skills ?? {}).filter(hasSkillContent);
+  const availableEidolons = char.eidolons.filter(e => !!e.description?.trim() && !/^星魂第\d+层效果$/.test(e.description));
+  const build = getUsableStarRailBuild(char.recommendedBuild);
+  const hasBuild = !!build;
+  const buildLC = build ? starrailLightCones.find(lc => lc.nameEn.toLowerCase() === build.bestLightConeEn.toLowerCase() || lc.name === build.bestLightCone) : undefined;
+  const buildRelic = build ? starrailRelicSets.find(rs => rs.nameEn.toLowerCase() === build.bestRelicSetEn.toLowerCase() || rs.name === build.bestRelicSet) : undefined;
   const buildPlanarName = hasBuild ? localeStr(
     (build as unknown as { bestPlanarOrnament?: unknown }).bestPlanarOrnament,
     (build as unknown as { bestPlanarOrnamentEn?: unknown }).bestPlanarOrnamentEn,
@@ -150,7 +162,12 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
       </div>
 
       {/* Skills */}
-      {char.skills && (
+      {availableSkills.length < 5 && (
+        <p role="status" className="rounded-lg border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
+          {locale === 'zh' ? '技能与星魂资料正在核验补充，空白或模板说明暂不展示。配装及强度信息仍需结合其适用版本判断。' : locale === 'ja' ? 'スキル・星魂は確認中です。空欄やテンプレート文は表示していません。装備と評価は対象バージョンも確認してください。' : 'Skills and Eidolons are being checked. Empty and template descriptions are omitted. Check the applicable version of build and tier advice.'}
+        </p>
+      )}
+      {availableSkills.length > 0 && (
         <section>
           <h2 className="mb-4 text-xl font-semibold" style={{ color: gameConfig.theme.primary }}>
             {locale === 'zh' ? '技能' : locale === 'ja' ? 'スキル' : 'Skills'}
@@ -164,7 +181,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
               { key: 'technique', label: locale === 'zh' ? '秘技' : locale === 'ja' ? '秘技' : 'Technique' },
             ].map(({ key, label }) => {
               const skill = (char.skills as unknown as Record<string, { name: string; nameEn: string; description: string; descriptionEn: string }>)[key];
-              if (!skill) return null;
+              if (!skill || !hasSkillContent(skill)) return null;
               return (
                 <div key={key} className="rounded-lg border border-game-border bg-game-surface p-4">
                   <h3 className="mb-2 font-semibold text-game-text">
@@ -181,13 +198,13 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
       )}
 
       {/* Eidolons */}
-      {char.eidolons.length > 0 && (
+      {availableEidolons.length > 0 && (
         <section>
           <h2 className="mb-4 text-xl font-semibold" style={{ color: gameConfig.theme.primary }}>
             {locale === 'zh' ? '星魂' : locale === 'ja' ? '星魂' : 'Eidolons'}
           </h2>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {char.eidolons.map((e) => (
+            {availableEidolons.map((e) => (
               <div key={e.level} className="rounded-lg border border-game-border bg-game-surface p-3">
                 <div className="mb-1 flex items-center gap-2">
                   <span className="text-sm font-bold" style={{ color: gameConfig.theme.accent }}>E{e.level}</span>
@@ -201,7 +218,7 @@ function StarRailCharacterDetail({ char, locale }: { char: StarRailCharacter; lo
       )}
 
       {/* Recommended Build */}
-      {hasBuild && (
+      {build && (
         <section>
           <h2 className="mb-4 text-xl font-semibold" style={{ color: gameConfig.theme.primary }}>
             {locale === 'zh' ? '推荐配装' : locale === 'ja' ? 'おすすめ装備' : 'Recommended Build'}

@@ -1,3 +1,4 @@
+import { StarRailCurrentOverview } from '@/components/wiki/starrail-current-overview';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import { notFound } from 'next/navigation';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
@@ -31,9 +32,9 @@ const HOME_MSG: Record<string, HomeMessages> = {
 // --- Game descriptions (SEO meta + on-page) ---
 const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
   starrail: {
-    zh: '崩坏：星穹铁道角色图鉴、光锥数据库、遗器推荐与配队攻略，覆盖 4.x 版本、4.6正式版本、直播码、下期跃迁、星琼规划与队伍构筑。Gachia 提供完整角色属性、命途、技能、突破材料、光锥适配、遗器词条和版本专题入口，帮助你规划抽卡和养成路线。',
-    en: 'Honkai: Star Rail character guides, light cone database, relic recommendations, and team comps for v4.x, v4.6 lives, livestream codes, next warps, Stellar Jade planning, and team building. Gachia connects character stats, Paths, skills, materials, light cones, relic stats, and version hubs for pull and build planning.',
-    ja: '崩壊：スターレイルのキャラ図鑑、光円錐、遺物、編成攻略。v4.x、v4.6配信中、配信コード、次回跳躍、星玉計画、編成構築を整理します。Gachiaではキャラ性能、運命、スキル、素材、光円錐、遺物、版本特集をつなぎ、抽選と育成計画を支援します。',
+    zh: '崩坏：星穹铁道资料与攻略入口。查看已发布的版本公告、国服及国际服跃迁日程、活动奖励、角色技能与养成资料；各条目保留来源、核验日期及适用范围。角色、光锥、遗器与工具数据持续补充，帮助你规划抽取目标和养成路线。',
+    en: 'Honkai: Star Rail guides for version notices, regional warp schedules, events, characters and progression. Published updates retain their sources, verification dates and scope. Character, light cone, relic and tool data are being expanded.',
+    ja: '崩壊：スターレイルの更新情報、地域別跳躍日程、イベント、キャラと育成資料への入口です。公開情報には出典、確認日、対象範囲を記載し、キャラ・光円錐・遺物とツールのデータを順次整備しています。',
   },
   wuwa: {
     zh: '鸣潮（Wuthering Waves）角色图鉴、武器数据库、声骸系统与配装攻略，当前重点覆盖 3.7「镜锁妄世，心照红尘」实装内容、梦枢天罗、活动、兑换码、地图活动、Xbox/Game Pass 与 Steam 入坑。Gachia 将角色、声骸、武器、地图、兑换码和版本专题串成可执行路线。',
@@ -90,9 +91,9 @@ const GAME_DESCRIPTIONS: Record<string, Record<string, string>> = {
 // SEO-rich about paragraphs per game per locale
 const GAME_ABOUT: Record<string, Record<string, string>> = {
   starrail: {
-    zh: '崩坏：星穹铁道（Honkai: Star Rail）是米哈游开发的回合制策略 RPG，当前版本4.x已开放Planarcadia星球并新增「愉悦」命途。Gachia 提供全86+角色图鉴、光锥数据库、遗器推荐、配队方案与伤害计算器。角色按8条命途（毁灭、存护、巡猎、智识、谐乐、虚无、丰饶、愉悦）分类，包含完整技能与行迹数据。',
-    en: 'Honkai: Star Rail is a turn-based strategy RPG by HoYoverse, currently in v4.x with the new Planarcadia planet and Elation Path. Gachia offers a full 86+ character database, light cone encyclopedia, relic recommendations, team comps, and damage calculator. Characters are organized by 8 Paths (Destruction, Preservation, Hunt, Erudition, Harmony, Nihility, Abundance, Elation) with complete skill and trace data.',
-    ja: '崩壊：スターレイル（Honkai: Star Rail）はHoYoverseのターン制ストラテジーRPG、現在v4.x Planarcadia星球と「愉悦」運命が追加済み。Gachiaでは86+キャラ図鑑、光円錐データベース、遺物おすすめ、パーティ編成、ダメージ計算機を提供。キャラは8つの運命（壊滅、存護、巡狩、知恵、調和、虚無、豊穣、愉悦）別に分類し、スキルと軌跡データを完全網羅。',
+    zh: '崩坏：星穹铁道是米哈游开发的回合制策略 RPG。本站整理版本更新、角色、光锥、遗器和养成资料。版本公告与第三方数值资料分别标注来源及适用范围；部分角色技能、配装和材料仍在核验补充中，请结合条目说明使用。',
+    en: 'Honkai: Star Rail is a turn-based strategy RPG by HoYoverse. This site organizes updates, characters, light cones, relics and progression notes. Official announcements and community data retain separate attribution and scope; some skills, builds and materials are still being verified.',
+    ja: '崩壊：スターレイルはHoYoverseのターン制RPGです。更新情報、キャラ、光円錐、遺物、育成資料を整理しています。公式告知とコミュニティの数値資料は出典と範囲を区別し、一部のスキル・装備・素材は確認中です。',
   },
   wuwa: {
     zh: '鸣潮（Wuthering Waves）是库洛游戏开发的开放世界动作 RPG。当前重点为 3.7「镜锁妄世，心照红尘」实装后的梦枢天罗、心/锁暝、活动与资源路线；Roya Frostlands、Tune Break 战斗系统与探索载具则作为既有内容保留参考。Gachia 提供角色图鉴、武器数据、声骸系统详解、配装推荐与配队方案，并按 Cost 与合鸣套装效果整理声骸选择。',
@@ -227,19 +228,7 @@ type RocoDashboardStats = {
 };
 
 const SPECIAL_HOME_COPY: Partial<Record<GameId, SpecialHubCopy>> = {
-  starrail: {
-    eyebrow: { zh: '4.6正式版本 / 直播码入口', en: 'v4.6 Preview / Codes Hub', ja: 'v4.6配信中 / コード導線' },
-    title: { zh: '星穹铁道 4.6正式版本、直播码与下期跃迁重点入口', en: 'Star Rail v4.6 live, codes, and next-warps hub', ja: 'スターレイル v4.6配信中・コード・次回跳躍導線' },
-    description: { zh: '把 4.6 live update、直播兑换码、下期跃迁、当前版本资源、星琼缺口和队伍规划放到首页第一跳。', en: 'Surface the v4.6 live update, livestream codes, next warps, current-version resources, Jade gaps, and team planning directly on the homepage.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ資源、星玉不足、編成計画をトップで受け止めます。' },
-    chips: { zh: ['4.6正式版本', '直播码', '下期跃迁', '当前版本', '星琼规划', '配队'], en: ['v4.6 live', 'Livestream codes', 'Next warps', 'current-version', 'Jade planning', 'Teams'], ja: ['v4.6配信中', '配信コード', '次回跳躍', 'v4.5まとめ', '星玉計画', '編成'] },
-    cta: { zh: '去 4.6正式版本', en: 'Open v4.6 live', ja: 'v4.6配信中へ' },
-    tracks: {
-      zh: [{ title: '4.6正式版本', description: '先确认直播码、下期跃迁和前瞻节目重点。', links: [{ href: '/starrail/version', label: '4.6正式版本' }, { href: '/starrail/redeem-codes', label: '直播码' }] }, { title: '资源预留', description: '把 当前版本奖励、星琼缺口和保底计划放到同一条路线。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '下期跃迁' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽取规划' }] }, { title: '队伍与养成', description: '抽前看定位，抽后继续看遗器、光锥和配队。', links: [{ href: '/starrail/build', label: '配装推荐' }, { href: '/starrail/teams', label: '配队' }] }],
-      en: [{ title: 'v4.6 live', description: 'Check livestream codes, next warps, and special-program highlights first.', links: [{ href: '/starrail/version', label: 'v4.6 live' }, { href: '/starrail/redeem-codes', label: 'Codes' }] }, { title: 'Resource reserve', description: 'Put current-version rewards, Jade gaps, and pity planning in one path.', links: [{ href: '/starrail/guides/banner-schedule-guide', label: 'Next warps' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: 'Pull plan' }] }, { title: 'Teams and builds', description: 'Check roles before pulling, then continue into relics, light cones, and teams.', links: [{ href: '/starrail/build', label: 'Builds' }, { href: '/starrail/teams', label: 'Teams' }] }],
-      ja: [{ title: 'v4.6配信中', description: '配信コード、次回跳躍、特番要点を先に確認します。', links: [{ href: '/starrail/version', label: 'v4.6配信中' }, { href: '/starrail/redeem-codes', label: 'コード' }] }, { title: '資源温存', description: 'v4.5まとめ報酬、星玉不足、天井計画を一つの導線にします。', links: [{ href: '/starrail/guides/banner-schedule-guide', label: '次回跳躍' }, { href: '/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan', label: '抽選計画' }] }, { title: '編成と育成', description: '引く前に役割を見て、引いた後は遺物、光円錐、編成へ。', links: [{ href: '/starrail/build', label: 'ビルド' }, { href: '/starrail/teams', label: '編成' }] }],
-    },
-    faq: [{ question: { zh: '星铁首页现在先看什么？', en: 'What should I open first now?', ja: '今ホームで最初に見るべきものは？' }, answer: { zh: '先看 4.6正式版本和直播兑换码，再看下期跃迁、星琼缺口和队伍规划。', en: 'Start with the v4.6 live and livestream codes, then check next warps, Jade gaps, and team planning.', ja: 'まずv4.6配信中と配信コード、その後次回跳躍、星玉不足、編成計画へ。' } }],
-  },
+
   nte: {
     eyebrow: { zh: '异环官网 / Wiki 入口', en: 'NTE Official / Wiki Hub', ja: 'NTE公式 / Wiki導線' },
     title: { zh: '异环 Wiki、官网、角色、兑换码与下载入口', en: 'NTE wiki, official site, characters, codes, and download hub', ja: 'NTE Wiki、公式、キャラ、コード、DL導線' },
@@ -609,7 +598,7 @@ async function getCharInfos(gameId: GameId, locale: SupportedLocale): Promise<Ch
 interface GuideInfo { id: string; title: string; summary: string }
 
 const FEATURED_GUIDE_IDS: Record<string, string[]> = {
-  starrail: ['banner-schedule-guide', 'fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan'],
+  starrail: ['banner-schedule-guide'],
   wuwa: ['v3-7-live-route', 'echo-advanced-guide', 'farming-guide'],
   nte: ['999-nights-mode-guide', 'shinku-iroi-pull-plan', 'v1-2-999-nights-guide'],
   zzz: ['banner-schedule-guide', 'anniversary-rewards-codes-plan', 'v3-1-anniversary-xbox-guide'],
@@ -627,7 +616,7 @@ async function getGuideInfos(gameId: GameId, locale: SupportedLocale): Promise<G
   const guideMap = new Map(guides.map((guide) => [guide.id, guide] as const));
   const featured = featuredIds.map((id) => guideMap.get(id)).filter((guide): guide is typeof guides[number] => Boolean(guide));
   const fallback = guides.filter((guide) => !featuredIds.includes(guide.id));
-  return [...featured, ...fallback].slice(0, 3).map((guide) => ({ id: guide.id, title: guide.title, summary: guide.summary }));
+  return (gameId === 'starrail' ? featured : [...featured, ...fallback]).slice(0, 3).map((guide) => ({ id: guide.id, title: guide.title, summary: guide.summary }));
 }
 
 async function getRocoDashboardStats(
@@ -715,7 +704,7 @@ export default async function GameHome({
   const description = ensureMetaLength(GAME_DESCRIPTIONS[gameId]?.[locale] ?? '', locale);
   const about = GAME_ABOUT[gameId]?.[locale] ?? '';
   const t = HOME_MSG[locale] ?? HOME_MSG['zh']!;
-  const specialCopy = SPECIAL_HOME_COPY[gameId];
+  const specialCopy = gameId === 'starrail' ? undefined : SPECIAL_HOME_COPY[gameId];
 
   const [chars, guides] = await Promise.all([
     getCharInfos(gameId, locale),
@@ -761,6 +750,8 @@ export default async function GameHome({
           </p>
         )}
       </div>
+
+      {gameId === 'starrail' && <StarRailCurrentOverview locale={locale} />}
 
       {specialCopy && (
         <section className="mb-10 overflow-hidden rounded-2xl border border-game-border bg-game-surface shadow-lg">

@@ -12,7 +12,7 @@ export function StarRailUpdates({ result, locale }: { result: UpdateResult; loca
   return <section className="my-8 space-y-4" aria-labelledby="starrail-updates-title">
     <h2 id="starrail-updates-title" className="text-xl font-semibold text-game-text">{copy.title}</h2>
     <p className="text-xs text-game-text-muted">{result.source === 'cms' ? copy.cms : copy.snapshot}</p>
-    {result.updates.map(update => <article key={update.slug} className="rounded-xl border border-game-border bg-game-surface p-5">
+    {result.updates.map(update => <article id={update.slug} key={update.slug} className="scroll-mt-20 rounded-xl border border-game-border bg-game-surface p-5">
       <p className="text-xs text-game-text-muted">{update.region} · {copy.checked} <time dateTime={update.checkedAt}>{update.checkedAt}</time></p>
       <h3 className="mt-2 text-lg font-semibold text-game-text">{update.title}</h3>
       <p className="mt-2 text-sm leading-6 text-game-text-muted">{update.summary}</p>

@@ -282,7 +282,11 @@ function routeMiddleware(request: NextRequest) {
   const isApiRoute = pathname.startsWith('/api/');
   const isHomepage = pathname === '/' || Boolean(locale && segments.length === 1);
   const isMarketIntel = locale && secondSegment === 'tools' && thirdSegment === 'market-intel' && segments.length === 3;
-  const isStarRailUpdates = locale && game === 'starrail' && thirdSegment === 'version' && segments.length === 3;
+  const isStarRailUpdates = locale && game === 'starrail' && (
+    segments.length === 2 ||
+    (['version', 'events'].includes(thirdSegment ?? '') && segments.length === 3) ||
+    (thirdSegment === 'guides' && fourthSegment === 'banner-schedule-guide' && segments.length === 4)
+  );
   if (isHomepage || isMarketIntel || isStarRailUpdates || (locale && game && thirdSegment === 'shared')) {
     // Owner-backed pages read per request; public shares can expire.
     response.headers.set('Cache-Control', 'no-store');

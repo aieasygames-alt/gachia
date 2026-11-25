@@ -1,3 +1,4 @@
+import { StarRailBannerGuide } from '@/components/wiki/starrail-banner-guide';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import { CATEGORY_LABELS, GAMES, LOCALES, MAIN_WORKER_GAME_IDS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
@@ -494,6 +495,8 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
   if (!isGameId(gameId)) notFound();
+
+  if (gameId === 'starrail' && slug === 'banner-schedule-guide') return await StarRailBannerGuide({ locale });
 
   const runtime = await getGuideRuntime(gameId);
   const guide = await getGuideBySlug(runtime, gameId, slug);

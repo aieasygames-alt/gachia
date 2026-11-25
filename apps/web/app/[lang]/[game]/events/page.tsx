@@ -1,3 +1,4 @@
+import { StarRailEvents } from '@/components/wiki/starrail-events';
 import { OfficialUpdates } from '@/components/wiki/official-updates';
 import { CATEGORY_LABELS, GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
@@ -206,6 +207,7 @@ export default async function RocoEventsPage({
   const { lang, game } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail') return <StarRailEvents locale={locale} />;
 
   if (gameId === 'zzz') return <><ZzzEventsPage locale={locale} /><OfficialUpdates gameId="zzz" locale={locale} /></>;
   if (gameId === 'endfield') return <EndfieldEventsPage locale={locale} />;

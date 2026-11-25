@@ -223,7 +223,7 @@ function SRAAscensionCalc({ locale }: { locale: SupportedLocale }) {
     return groups;
   }, [selectedChar, currentLevel, targetLevel, traceFrom, traceTo, locale]);
 
-  const typeOrder = ['ascension', 'common', 'boss', 'trace', 'special', 'currency'];
+  const typeOrder = ['ascension', 'common', 'boss', 'trace', 'special', 'currency', 'other'];
   const totalItems = result ? Object.values(result).flat().reduce((s, m) => s + m.quantity, 0) : 0;
   const totalTypes = result ? Object.values(result).flat().length : 0;
   const toggleGroup = (type: string) => setCollapsedGroups((p) => ({ ...p, [type]: !p[type] }));
@@ -292,6 +292,12 @@ function SRAAscensionCalc({ locale }: { locale: SupportedLocale }) {
             <LevelSelector levels={SR_TRACE_LEVELS} from={traceFrom} to={traceTo} onFrom={setTraceFrom} onTo={setTraceTo} locale={locale} />
           </div>
         </div>
+      )}
+
+      {selectedChar && !result && (
+        <p role="status" className="rounded-xl border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
+          {t(locale, '该角色的材料资料尚未补齐，暂时无法计算；这不代表所需材料为零。请选择其他角色，或先查看已发布的培养资料。', 'Material data for this character is incomplete, so a total cannot be calculated. This does not mean zero materials are required. Choose another character or consult the published progression notes.', 'このキャラの素材データは準備中のため計算できません。必要素材がゼロという意味ではありません。別のキャラか、公開済みの育成情報をご確認ください。')}
+        </p>
       )}
 
       {result && (
@@ -438,7 +444,7 @@ function SRMaterialPlanner({ locale }: { locale: SupportedLocale }) {
   };
 
   const result = useMemo(() => {
-    if (selectedChars.length === 0) return null;
+    if (selectedChars.length === 0 || selectedChars.some(char => !getStarRailMaterialsForCharacter(char.id))) return null;
     const aggregated: Record<string, number> = {};
     for (const char of selectedChars) {
       const charMats = getStarRailMaterialsForCharacter(char.id);
@@ -468,7 +474,7 @@ function SRMaterialPlanner({ locale }: { locale: SupportedLocale }) {
     return groups;
   }, [selectedChars, currentLevel, targetLevel, traceFrom, traceTo, locale]);
 
-  const typeOrder = ['ascension', 'common', 'boss', 'trace', 'special', 'currency'];
+  const typeOrder = ['ascension', 'common', 'boss', 'trace', 'special', 'currency', 'other'];
   const totalItems = result ? Object.values(result).flat().reduce((s, m) => s + m.quantity, 0) : 0;
   const totalTypes = result ? Object.values(result).flat().length : 0;
   const toggleGroup = (type: string) => setCollapsedGroups((p) => ({ ...p, [type]: !p[type] }));
@@ -543,6 +549,13 @@ function SRMaterialPlanner({ locale }: { locale: SupportedLocale }) {
             <LevelSelector levels={SR_TRACE_LEVELS} from={traceFrom} to={traceTo} onFrom={setTraceFrom} onTo={setTraceTo} locale={locale} />
           </div>
         </div>
+      )}
+
+      {selectedChars.length > 0 && !result && (
+        <p role="status" className="rounded-xl border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
+          {t(locale, '以下角色缺少材料资料，暂不显示汇总，以免低估需求：', 'Totals are unavailable because material data is missing for: ', '次のキャラの素材データがないため合計を表示できません：')}
+          {selectedChars.filter(char => !getStarRailMaterialsForCharacter(char.id)).map(char => getStarRailCharacterName(char, locale)).join('、')}
+        </p>
       )}
 
       {result && (

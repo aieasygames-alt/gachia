@@ -30,6 +30,7 @@ import {
 import type { StarRailCharacter, StarRailLightCone, StarRailRelicSet } from '@gachia/data/games/starrail/types';
 
 import { CharacterAvatar } from '@/components/wiki/character-avatar';
+import { getUsableStarRailBuild } from '@gachia/data/games/starrail/build';
 import type { SupportedLocale } from '@gachia/core';
 
 
@@ -202,7 +203,7 @@ export function StarRailBuildRecommender({ locale }: { locale: SupportedLocale }
     return chars;
   }, [search, filterElement, filterRarity]);
 
-  const build = selectedChar?.recommendedBuild;
+  const build = getUsableStarRailBuild(selectedChar?.recommendedBuild);
   const lightCone = build ? resolveLightCone(build) : null;
   const relic = build ? resolveRelicSet(build) : null;
   const planar = build ? resolvePlanar(build) : null;
@@ -290,7 +291,13 @@ export function StarRailBuildRecommender({ locale }: { locale: SupportedLocale }
         </div>
       ) : null}
 
-      {build && (
+      {selectedChar && !build && (
+        <p role="status" className="mb-6 rounded-xl border border-game-border bg-game-surface p-4 text-sm text-game-text-muted">
+          {t(locale, '该角色的配装资料尚未补齐，暂不提供光锥、遗器和词条推荐。你可以更换角色或先查看角色资料。', 'Build data for this character is incomplete. Light cone, relic and stat recommendations are pending. Choose another character or browse the character details.', 'このキャラの装備データは準備中です。光円錐・遺物・ステータスの推奨は未掲載です。別のキャラを選ぶか、キャラ詳細をご覧ください。')}
+        </p>
+      )}
+
+      {selectedChar && build && (
         <div className="space-y-4">
           {/* Light Cone */}
           <div className="rounded-xl border border-game-border bg-game-surface p-4">

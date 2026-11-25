@@ -4438,7 +4438,7 @@
   },
   {
     "id": "castorice",
-    "name": "卡芙卡",
+    "name": "遐蝶",
     "nameEn": "Castorice",
     "element": "quantum",
     "path": "remembrance",
@@ -4565,27 +4565,27 @@
     },
     "teamComps": [
       {
-        "name": "通用卡芙卡队伍",
+        "name": "通用遐蝶队伍",
         "nameEn": "General Castorice Team",
         "members": [
           "castorice"
         ],
-        "description": "包含卡芙卡的通用队伍",
+        "description": "包含遐蝶的通用队伍",
         "descriptionEn": "General team with Castorice"
       }
     ],
     "faq": [
       {
         "question": "Is Castorice good in Honkai Star Rail?",
-        "questionZh": "卡芙卡值得培养吗？",
+        "questionZh": "遐蝶值得培养吗？",
         "answer": "Castorice is a character in Honkai: Star Rail. Check our tier list for the latest ranking.",
-        "answerZh": "卡芙卡是崩坏：星穹铁道中的角色，请查看我们的节奏榜获取最新评级。"
+        "answerZh": "遐蝶是崩坏：星穹铁道中的角色，请查看我们的节奏榜获取最新评级。"
       },
       {
         "question": "Best build for Castorice?",
-        "questionZh": "卡芙卡的最佳配装是什么？",
+        "questionZh": "遐蝶的最佳配装是什么？",
         "answer": "Check our recommended build section for Castorice's best light cones, relics, and team compositions.",
-        "answerZh": "请查看卡芙卡的推荐配装部分，了解最佳光锥、遗器和队伍搭配。"
+        "answerZh": "请查看遐蝶的推荐配装部分，了解最佳光锥、遗器和队伍搭配。"
       }
     ],
     "relatedCharacters": [

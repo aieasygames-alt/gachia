@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-11-25",
+  "method": "Production browser AX snapshots and client error logs",
+  "checks": [
+    {
+      "path": "/zh/starrail",
+      "result": "4.6 official-version homepage and v4.4 current-warp featured copy visible"
+    },
+    {
+      "path": "/zh/starrail/events",
+      "result": "No calendar content or H1 after navigation; only shared navigation and footer"
+    },
+    {
+      "path": "/zh/starrail/calculator",
+      "steps": [
+        "Open ascension calculator",
+        "Select Silver Wolf LV.999"
+      ],
+      "result": "Level/trace controls display; no material result or missing-data notice"
+    },
+    {
+      "path": "/zh/starrail/build",
+      "steps": [
+        "Open build selector",
+        "Select Silver Wolf LV.999"
+      ],
+      "result": "Something went wrong; Cannot read properties of undefined (reading toLowerCase)"
+    },
+    {
+      "path": "/zh/starrail/compare",
+      "steps": [
+        "Select Silver Wolf LV.999 as A",
+        "Select Seele as B"
+      ],
+      "result": "Something went wrong"
+    },
+    {
+      "path": "/zh/starrail/tier-list",
+      "result": "81/81 loads successfully after initial 0/0; 2026-06-28 notice and no Elation filter despite listed Elation characters"
+    }
+  ]
+}

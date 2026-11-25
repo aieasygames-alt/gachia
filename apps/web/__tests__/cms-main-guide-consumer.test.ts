@@ -23,6 +23,9 @@ describe('CMS Main existing Chinese guide content consumers', () => {
     const guides = Object.values(mod).find(value => Array.isArray(value)) as Array<{ id: string; content: string }>;
     expect(guides.length).toBeGreaterThan(0);
     for (const guide of guides) {
+      // The warp route now consumes the independent Star Rail publication;
+      // its replacement/withdrawal contract is covered separately.
+      if (game === 'starrail' && guide.id === 'banner-schedule-guide') continue;
       const params = (lang: string) => ({ params: Promise.resolve({ game, slug: guide.id, lang }) });
       const english = isGuideReadable(game, guide.id, 'en') ? renderToStaticMarkup(await GuidePage(params('en'))) : null;
       const previous = guide.content;

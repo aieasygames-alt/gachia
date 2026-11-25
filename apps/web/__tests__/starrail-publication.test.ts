@@ -10,10 +10,12 @@ import middleware from '@/middleware';
 
 describe('Star Rail cloud publication', () => {
   afterEach(() => { vi.unstubAllEnvs(); vi.resetAllMocks(); });
-  it('disables browser and CDN HTML caching for each live Star Rail version page', () => {
+  it('disables browser and CDN HTML caching for all live Star Rail CMS readers', () => {
     for (const locale of ['zh', 'en', 'ja']) {
-      const response = middleware(new NextRequest(`https://gachia.com/${locale}/starrail/version`));
-      expect(response.headers.get('cache-control')).toBe('no-store');
+      for (const route of ['', '/version', '/events', '/guides/banner-schedule-guide']) {
+        const response = middleware(new NextRequest(`https://gachia.com/${locale}/starrail${route}`));
+        expect(response.headers.get('cache-control')).toBe('no-store');
+      }
     }
     expect(middleware(new NextRequest('https://gachia.com/zh/starrail/characters')).headers.get('cache-control')).toContain('public');
     expect(middleware(new NextRequest('https://gachia.com/zh/wuwa/version')).headers.get('cache-control')).toContain('public');

@@ -1,0 +1,3591 @@
+[
+  {
+    "url": "https://gachia.com/starrail/version",
+    "checkedAt": "2026-11-25T05:41:18.208490+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/zh/starrail/version",
+    "cacheControl": "no-store",
+    "sha256": "02b61bfc076a9b39d91d72c982db9fe2203bec583ef62ed5353158f6bcd41849",
+    "title": "崩坏：星穹铁道版本更新：跃迁、活动与星琼规划",
+    "description": "查看崩坏：星穹铁道近期官方版本更新、跃迁窗口、活动奖励与星琼规划，核对适用区服和来源日期。",
+    "canonical": "https://gachia.com/zh/starrail/version",
+    "robots": [
+      "index, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "崩坏：星穹铁道 版本更新 / 跃迁与活动专题"
+      },
+      {
+        "tag": "h2",
+        "text": "星铁近期更新"
+      },
+      {
+        "tag": "h3",
+        "text": "阿哈养成材料数量：晋阶、逐级技能与全行迹"
+      },
+      {
+        "tag": "h3",
+        "text": "阿哈完整技能倍率：逐级数值与星魂加级"
+      },
+      {
+        "tag": "h3",
+        "text": "国服4.7兑换码核验：前瞻直播码已于10月31日失效"
+      },
+      {
+        "tag": "h3",
+        "text": "国服周期挑战：11月30日虚构叙事及后续轮换"
+      },
+      {
+        "tag": "h3",
+        "text": "国服欢闹厨房：限时奖励截止后仍可体验常驻玩法"
+      },
+      {
+        "tag": "h3",
+        "text": "国服位面分裂：11月23日至12月7日双倍掉落"
+      },
+      {
+        "tag": "h3",
+        "text": "国服奇库寻遗：权限卡、暂存替换与保障开箱"
+      },
+      {
+        "tag": "h3",
+        "text": "国服万象和鸣：1600/3200回响与两枚奇缘星魂"
+      },
+      {
+        "tag": "h3",
+        "text": "4.7 国服活动正式日程：欢闹厨房、成名之路与奇库寻遗"
+      },
+      {
+        "tag": "h3",
+        "text": "国服4.7好礼：12月23日05:59截止与自定义遗器"
+      },
+      {
+        "tag": "h3",
+        "text": "国际服周期挑战：11 月 30 日虚构叙事与后续轮换"
+      },
+      {
+        "tag": "h3",
+        "text": "国际服 4.7 活动日程：等级门槛、签到与补偿邮件"
+      },
+      {
+        "tag": "h3",
+        "text": "4.7 已上线：国服版本期限与近期热修（公告更新至11/18）"
+      },
+      {
+        "tag": "h3",
+        "text": "4.7 跃迁：阿哈长窗口与 12 月 2 日复刻切换"
+      },
+      {
+        "tag": "h2",
+        "text": "版本快照"
+      },
+      {
+        "tag": "h3",
+        "text": "What changed"
+      },
+      {
+        "tag": "h3",
+        "text": "先做什么"
+      },
+      {
+        "tag": "h3",
+        "text": "相关行动"
+      },
+      {
+        "tag": "h2",
+        "text": "关键节点"
+      },
+      {
+        "tag": "h2",
+        "text": "高频搜索入口"
+      },
+      {
+        "tag": "h2",
+        "text": "专题推荐"
+      },
+      {
+        "tag": "h3",
+        "text": "崩铁当前卡池、下期与复刻跃迁规划指南"
+      },
+      {
+        "tag": "h2",
+        "text": "相关入口"
+      },
+      {
+        "tag": "h2",
+        "text": "常见问题"
+      },
+      {
+        "tag": "h2",
+        "text": "继续往下看"
+      },
+      {
+        "tag": "h3",
+        "text": "角色图鉴"
+      },
+      {
+        "tag": "h3",
+        "text": "配装推荐"
+      },
+      {
+        "tag": "h3",
+        "text": "攻略专题"
+      },
+      {
+        "tag": "h3",
+        "text": "探索更多游戏"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "1.25",
+      "4.7",
+      "v4.4"
+    ],
+    "textLength": 15363
+  },
+  {
+    "url": "https://gachia.com/starrail/redeem-codes",
+    "checkedAt": "2026-11-25T05:41:18.209527+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/zh/starrail/redeem-codes",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "1d16b3e410682b3a5436c783ab86c917c5ea164b5f82cca48c6726873f49874b",
+    "title": "崩坏：星穹铁道兑换码大全｜最新礼包码与领取方法",
+    "description": "崩坏：星穹铁道兑换码大全，追踪前瞻直播、活动奖励、长期有效码和领取入口，方便你第一时间兑换星琼和养成资源。",
+    "canonical": "https://gachia.com/zh/starrail/redeem-codes",
+    "robots": [
+      "index, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "兑换码"
+      },
+      {
+        "tag": "h2",
+        "text": "有效兑换码 ( 2 )"
+      },
+      {
+        "tag": "h2",
+        "text": "已过期 / 待复核兑换码 ( 6 )"
+      },
+      {
+        "tag": "h3",
+        "text": "探索更多游戏"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 707
+  },
+  {
+    "url": "https://gachia.com/starrail/guides/fate-collab-guide",
+    "checkedAt": "2026-11-25T05:41:18.208999+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/zh/starrail/guides/fate-collab-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "f7be11171d89ba1a9b1143ec66eb28198369af859fd9072d3b6b12ab5543ea81",
+    "title": "崩铁 Fate 联动：Saber、Archer、奖励、复刻风险和抽卡规划",
+    "description": "整理崩铁 Fate 联动、Saber、Archer、奖励、Rin / Gilgamesh 相关信息、复刻风险、兑换码、v4.4 卡池和星琼规划。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+    "canonical": "https://gachia.com/zh/starrail/guides/fate-collab-guide",
+    "robots": [
+      "index, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "崩铁 Fate 联动当前入口：Saber、Archer、奖励、复刻风险和抽卡规划"
+      },
+      {
+        "tag": "h2",
+        "text": "快速结论：Fate 目标要单独留预算"
+      },
+      {
+        "tag": "h2",
+        "text": "历史归档提示"
+      },
+      {
+        "tag": "h2",
+        "text": "2026-08-03 当前联动入口"
+      },
+      {
+        "tag": "h2",
+        "text": "Fate/stay night联动完全攻略"
+      },
+      {
+        "tag": "h3",
+        "text": "一、联动概要"
+      },
+      {
+        "tag": "h3",
+        "text": "二、Saber（5星·毁灭·风）"
+      },
+      {
+        "tag": "h3",
+        "text": "三、Archer（5星·巡猎·量子）"
+      },
+      {
+        "tag": "h3",
+        "text": "四、联动限定光锥汇总"
+      },
+      {
+        "tag": "h3",
+        "text": "五、联动活动玩法"
+      },
+      {
+        "tag": "h3",
+        "text": "六、联动第二弹前瞻"
+      },
+      {
+        "tag": "h3",
+        "text": "七、抽卡建议"
+      },
+      {
+        "tag": "h3",
+        "text": "八、准备清单"
+      },
+      {
+        "tag": "h2",
+        "text": "常见问题"
+      },
+      {
+        "tag": "h2",
+        "text": "下一步去看"
+      },
+      {
+        "tag": "h3",
+        "text": "当前跃迁"
+      },
+      {
+        "tag": "h3",
+        "text": "兑换码"
+      },
+      {
+        "tag": "h2",
+        "text": "相关攻略"
+      },
+      {
+        "tag": "h3",
+        "text": "星铁 Fate 联动奖励 FAQ：Rin/Gilgamesh、Saber/Archer、兑换码和 4.4 后续怎么规划"
+      },
+      {
+        "tag": "h3",
+        "text": "崩坏星穹铁道4.3版本指南 — 千冶·刃与Fate联动第二弹"
+      },
+      {
+        "tag": "h3",
+        "text": "星铁 4.4 Himeko Nova 与 Fate 联动抽卡规划：Rin/Gilgamesh、星琼缺口与兑换码路线"
+      },
+      {
+        "tag": "h3",
+        "text": "崩坏：星穹铁道 4.4「In Ravages Does the Whistle Sound」版本专题"
+      },
+      {
+        "tag": "h3",
+        "text": "探索更多游戏"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "4.3",
+      "4.4",
+      "4.6",
+      "v3.4",
+      "v4.3",
+      "v4.4"
+    ],
+    "textLength": 3494
+  },
+  {
+    "url": "https://gachia.com/starrail/teams",
+    "checkedAt": "2026-11-25T05:41:18.209285+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/zh/starrail/teams",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "e1efbaf3adc85c0b78aa7486ff515b7ca3bd997ec29f1dd0990d616ed2f63d26",
+    "title": "崩坏：星穹铁道 配队模拟器",
+    "description": "崩坏：星穹铁道 角色配队模拟器，查看最佳阵容搭配",
+    "canonical": "https://gachia.com/zh/starrail/teams",
+    "robots": [
+      "index, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h2",
+        "text": "继续往下看"
+      },
+      {
+        "tag": "h3",
+        "text": "看角色图鉴"
+      },
+      {
+        "tag": "h3",
+        "text": "看配装推荐"
+      },
+      {
+        "tag": "h3",
+        "text": "看攻略专题"
+      },
+      {
+        "tag": "h3",
+        "text": "探索更多游戏"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      },
+      {
+        "tag": "h1",
+        "text": "配队模拟器"
+      },
+      {
+        "tag": "h3",
+        "text": "队伍成员"
+      },
+      {
+        "tag": "h3",
+        "text": "快速填充"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 179
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/banner-schedule-guide",
+    "checkedAt": "2026-11-25T05:41:18.209920+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/banner-schedule-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "d3816777b1aee5ac490ae56cf1d87fed63fcfa92ddf198076b186e308d024142",
+    "title": "崩壊スターレイル バナー予定 2026：現在・次回・復刻",
+    "description": "崩壊：スターレイルの現在跳躍、次回、復刻、終了日、星玉計画を確認。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/banner-schedule-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR Banner Schedule: Current Banner, Next Banner, Reruns & Jade Plan"
+      },
+      {
+        "tag": "h2",
+        "text": "跳躍前に天井、星玉、役割不足を確認"
+      },
+      {
+        "tag": "h3",
+        "text": "クイック確認"
+      },
+      {
+        "tag": "h3",
+        "text": "関連入口"
+      },
+      {
+        "tag": "h2",
+        "text": "要点：現在、次回、復刻を先に確認"
+      },
+      {
+        "tag": "h2",
+        "text": "HSR Banner Schedule: Current, Next, Upcoming, and Reruns"
+      },
+      {
+        "tag": "h3",
+        "text": "Data status and decision boundary"
+      },
+      {
+        "tag": "h3",
+        "text": "30-second warp answer"
+      },
+      {
+        "tag": "h2",
+        "text": "HSR Banner Schedule & Pull Planning Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "1. Version Updates & Banner Cycles"
+      },
+      {
+        "tag": "h3",
+        "text": "2. Banner Types Explained"
+      },
+      {
+        "tag": "h3",
+        "text": "3. Pity Mechanics in Detail"
+      },
+      {
+        "tag": "h3",
+        "text": "4. Current Version Banner Schedule (v4.4 Live)"
+      },
+      {
+        "tag": "h3",
+        "text": "5. Stellar Jade Income Estimates"
+      },
+      {
+        "tag": "h3",
+        "text": "6. Pull Planning Tips"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "Fateガチャ計画"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h3",
+        "text": "ガチャ日程"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail 4.x Fate / Gilgamesh / Kafka / Cyrene Evergreen Pull Plan"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Gaps, and Code Route"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4.4 Planning"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.4",
+      "v4.5",
+      "v4.6"
+    ],
+    "textLength": 9196
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan",
+    "checkedAt": "2026-11-25T05:41:18.210520+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "59194cee86df86dffe2c43b5a5078941639dc795607ee86c6bf4055e81035322",
+    "title": "Honkai: Star Rail 4.x Fate / Gilgamesh / Kafka / Cyrene Evergreen Pull",
+    "description": "An evergreen 4.x planner for Fate collab, Gilgamesh, Kafka, Cyrene, codes, banners, and team-building searches.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/4x-fate-gilgamesh-kafka-cyrene-evergreen-plan",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Honkai: Star Rail 4.x Fate / Gilgamesh / Kafka / Cyrene Evergreen Pull Plan"
+      },
+      {
+        "tag": "h2",
+        "text": "Quick answer"
+      },
+      {
+        "tag": "h2",
+        "text": "Boundary"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Banner Schedule: Current Banner, Next Banner, Reruns & Jade Plan"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Gaps, and Code Route"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Building Fundamentals"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 1900
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/fate-rin-gilgamesh-reward-faq",
+    "checkedAt": "2026-11-25T05:41:18.210271+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/fate-rin-gilgamesh-reward-faq",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "065ba293fa38a27636d5366ec68c4939f8bc4bb32618f43740b3e73112654573",
+    "title": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4",
+    "description": "A Fate/stay night collab FAQ covering rewards, Rin/Gilgamesh searches, Saber/Archer context, codes, and Jade planning after v4.4. Archive note: use the v4.6 hub",
+    "canonical": "https://gachia.com/ja/starrail/guides/fate-rin-gilgamesh-reward-faq",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4.4 Planning"
+      },
+      {
+        "tag": "h2",
+        "text": "Archive note"
+      },
+      {
+        "tag": "h2",
+        "text": "Quick answer"
+      },
+      {
+        "tag": "h2",
+        "text": "Fast routing table"
+      },
+      {
+        "tag": "h2",
+        "text": "How to read Rin / Gilgamesh demand"
+      },
+      {
+        "tag": "h2",
+        "text": "Saber / Archer context"
+      },
+      {
+        "tag": "h2",
+        "text": "Rewards and code checklist"
+      },
+      {
+        "tag": "h2",
+        "text": "Low-resource route"
+      },
+      {
+        "tag": "h2",
+        "text": "Next steps"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Gaps, and Code Route"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Fate Collab Guide: Saber, Archer, Rewards, Banners & Pull Plan"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 4993
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/himeko-nova-fate-pull-plan",
+    "checkedAt": "2026-11-25T05:41:18.210727+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/himeko-nova-fate-pull-plan",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "19d472abda2834214654d8fff3c302620add6e67844541f794352300eae57120",
+    "title": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Ga",
+    "description": "A v4.4 pull-planning route that combines Himeko Nova, the Fate collab, Rin/Gilgamesh, Jade gaps, codes, and banner priority for resource-limited players. Archiv",
+    "canonical": "https://gachia.com/ja/starrail/guides/himeko-nova-fate-pull-plan",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Gaps, and Code Route"
+      },
+      {
+        "tag": "h2",
+        "text": "Archive note"
+      },
+      {
+        "tag": "h2",
+        "text": "Quick answer"
+      },
+      {
+        "tag": "h3",
+        "text": "Three-step decision"
+      },
+      {
+        "tag": "h2",
+        "text": "Account-based priority"
+      },
+      {
+        "tag": "h2",
+        "text": "How to judge Himeko Nova"
+      },
+      {
+        "tag": "h2",
+        "text": "Fate collab resource route"
+      },
+      {
+        "tag": "h2",
+        "text": "Codes and Jade checklist"
+      },
+      {
+        "tag": "h2",
+        "text": "One-line route"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4.4 Planning"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail 4.x Fate / Gilgamesh / Kafka / Cyrene Evergreen Pull Plan"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Banner Schedule: Current Banner, Next Banner, Reruns & Jade Plan"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "4.4",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 4789
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/fate-collab-guide",
+    "checkedAt": "2026-11-25T05:41:20.365514+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/fate-collab-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "4e759116bb126a11a7802b8fa0d647ebf87f3e15aaaaac2b30a3b679d213d18e",
+    "title": "HSR Fateコラボ：Saber、Archer、報酬、復刻リスク、ガチャ",
+    "description": "HSR Fateコラボ、Saber、Archer、報酬、Rin/Gilgamesh、復刻リスク、コード、v4.4バナー、星玉計画。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/fate-collab-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR Fate Collab Guide: Saber, Archer, Rewards, Banners & Pull Plan"
+      },
+      {
+        "tag": "h2",
+        "text": "要点：Fate予算は分けて確保"
+      },
+      {
+        "tag": "h2",
+        "text": "Archive note"
+      },
+      {
+        "tag": "h2",
+        "text": "Live Fate Collab Hub for August 3, 2026"
+      },
+      {
+        "tag": "h2",
+        "text": "Fate/stay Night Collab Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "1. Collab Overview"
+      },
+      {
+        "tag": "h3",
+        "text": "2. Saber (5-star · Destruction · Wind)"
+      },
+      {
+        "tag": "h3",
+        "text": "3. Archer (5-star · Hunt · Quantum)"
+      },
+      {
+        "tag": "h3",
+        "text": "4. Collab Light Cone Summary"
+      },
+      {
+        "tag": "h3",
+        "text": "5. Event Content"
+      },
+      {
+        "tag": "h3",
+        "text": "6. Part 2 Outlook"
+      },
+      {
+        "tag": "h3",
+        "text": "7. Pull Recommendations"
+      },
+      {
+        "tag": "h3",
+        "text": "8. Preparation Checklist"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4.4 Planning"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Gaps, and Code Route"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v3.4",
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 7241
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/v4-4-preview-guide",
+    "checkedAt": "2026-11-25T05:41:20.419311+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/v4-4-preview-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "1fd64e22b2a8354a7bd3ec3a86df8b31c46ab733bb1063d6080bfd0c253f1d9f",
+    "title": "スターレイル遺物ガイド：メイン、サブ、役割、周回優先度",
+    "description": "メイン、サブ、役割ごとの閾値、周回順でスターレイル遺物を計画。最適セットを決める前にゲーム内で現行効果、入手先、キャラ要件を確認します。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/v4-4-preview-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Archive note"
+      },
+      {
+        "tag": "h2",
+        "text": "HSR v4.4 Version Hub"
+      },
+      {
+        "tag": "h3",
+        "text": "Freshness and archive status"
+      },
+      {
+        "tag": "h3",
+        "text": "Version Focus"
+      },
+      {
+        "tag": "h3",
+        "text": "Himeko Nova and Pull Planning"
+      },
+      {
+        "tag": "h3",
+        "text": "Fate Collaboration FAQ"
+      },
+      {
+        "tag": "h3",
+        "text": "What to Do After Launch"
+      },
+      {
+        "tag": "h3",
+        "text": "Internal Path"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Gaps, and Code Route"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Banner Schedule: Current Banner, Next Banner, Reruns & Jade Plan"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4.4 Planning"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "4.4",
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 4171
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/v4-3-version-guide",
+    "checkedAt": "2026-11-25T05:41:20.907834+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/v4-3-version-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "2b82be3299d216b0eda67ec0e5325f0fc18405968de1032290c1c4d33d008b97",
+    "title": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2",
+    "description": "HSR v4.3 'Sunken in the Lethe of the Living' complete guide: Mortenax Blade (Fire Nihility DPS), Xilian rerun, Memory system build guide, Differential Universe",
+    "canonical": "https://gachia.com/ja/starrail/guides/v4-3-version-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h2",
+        "text": "v4.3 \"Sunken in the Lethe of the Living\" Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Freshness and archive status"
+      },
+      {
+        "tag": "h3",
+        "text": "1. New Characters"
+      },
+      {
+        "tag": "h3",
+        "text": "2. Banner Schedule"
+      },
+      {
+        "tag": "h3",
+        "text": "3. Memory System Build Priority Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "4. Differential Universe — Standard 4-Nihility DoT Build"
+      },
+      {
+        "tag": "h3",
+        "text": "5. Version Events"
+      },
+      {
+        "tag": "h3",
+        "text": "6. Fate/stay night Collab Part 2"
+      },
+      {
+        "tag": "h3",
+        "text": "7. Pull Recommendations"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR v4.4 Himeko Nova and Fate Collab Pull Plan: Rin/Gilgamesh, Jade Gaps, and Code Route"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Fate Collab Reward FAQ: Rin/Gilgamesh, Saber/Archer, Codes, and v4.4 Planning"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Fate Collab Guide: Saber, Archer, Rewards, Banners & Pull Plan"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 4287
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/quick-start-guide",
+    "checkedAt": "2026-11-25T05:41:21.126434+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/quick-start-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "2eb2c2e0eb3a12c5687a9c40d1669da164562cbbfcdb55771d80794f7e2bbb28",
+    "title": "Honkai: Star Rail Quick Start Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Honkai: Star Rail Quick Start Guideの崩壊：スターレイル攻略ガイド。Tips、戦略、FAQ、版本要点をまとめます。 補足: Get started with Honkai: Star Rail in 30 minutes — from download to your first battle.",
+    "canonical": "https://gachia.com/ja/starrail/guides/quick-start-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Honkai: Star Rail Quick Start Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Quick Start Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "1. Basic Controls"
+      },
+      {
+        "tag": "h3",
+        "text": "2. Character Build Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "3. Daily Routine"
+      },
+      {
+        "tag": "h3",
+        "text": "4. Gacha Tips"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Team Building"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 2206
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/combat-weakness-break",
+    "checkedAt": "2026-11-25T05:41:21.317927+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/combat-weakness-break",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "e0b2b55084490109a32cc60489f308d30b43308886630d665a574255f9c274b2",
+    "title": "Weakness Break Mechanism Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Weakness Break Mechanism Guideの崩壊：スターレイル攻略ガイド。Tips、戦略、FAQ、版本要点をまとめます。 補足: Deep dive into Honkai: Star Rail's Weakness Break system and how to maximize its potential.",
+    "canonical": "https://gachia.com/ja/starrail/guides/combat-weakness-break",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "What is Weakness Break?"
+      },
+      {
+        "tag": "h3",
+        "text": "Element Break Effects"
+      },
+      {
+        "tag": "h3",
+        "text": "Break Team Building"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Team Building"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail Quick Start Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Elation Path Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Remembrance Path Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.0"
+    ],
+    "textLength": 2459
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/elation-path-guide",
+    "checkedAt": "2026-11-25T05:41:21.455552+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/elation-path-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "3c331073a113f2deb67ef9a0638f06cb7b7f24bb1469b68b24b2a60863a1f22b",
+    "title": "Elation Path Complete Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Complete guide to the new Elation path introduced in v4.0 — Punchline mechanics, Yao Guang and Sparxie, team building and path synergies.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/elation-path-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Elation Path Complete Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Elation Path Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Overview"
+      },
+      {
+        "tag": "h3",
+        "text": "Core Mechanic: Punchline System"
+      },
+      {
+        "tag": "h3",
+        "text": "Key Characters"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Building"
+      },
+      {
+        "tag": "h3",
+        "text": "Path Synergies"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Remembrance Path Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Team Building"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.0",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 3030
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/remembrance-path-guide",
+    "checkedAt": "2026-11-25T05:41:21.619298+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/remembrance-path-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "d4c57db38487691f8006d44c622e4b1a5bebec4e615eabf03e248637c92e4cd2",
+    "title": "Remembrance Path Complete Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Complete guide to the Remembrance path — Memosprite mechanics, key characters like Hyacine and Evernight, and how to build effective Remembrance teams.",
+    "canonical": "https://gachia.com/ja/starrail/guides/remembrance-path-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Remembrance Path Complete Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Remembrance Path Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Overview"
+      },
+      {
+        "tag": "h3",
+        "text": "Core Mechanic: Memosprite"
+      },
+      {
+        "tag": "h3",
+        "text": "Key Characters"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Building"
+      },
+      {
+        "tag": "h3",
+        "text": "Key Tips"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Elation Path Complete Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Team Building"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.0",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 3213
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/boss-strategy-guide",
+    "checkedAt": "2026-11-25T05:41:22.748672+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/boss-strategy-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "4b109fbeb5648cd7f9d41fea2b91cf940ce704a012828d6df9dc2c50a88cc722",
+    "title": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Tea",
+    "description": "Complete boss strategy guide for Honkai Star Rail covering all Echo of War bosses, phase transition mechanics, recommended Paths and elements, and optimal team",
+    "canonical": "https://gachia.com/ja/starrail/guides/boss-strategy-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Team Building"
+      },
+      {
+        "tag": "h2",
+        "text": "Honkai Star Rail Boss Strategy Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "1. Echo of War Boss Strategies"
+      },
+      {
+        "tag": "h3",
+        "text": "2. General Boss Tactics"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Building Fundamentals"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Team Reference: Legacy Comps, Roles & Current-Team Checks"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 6142
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/relic-guide",
+    "checkedAt": "2026-11-25T05:41:22.849023+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/relic-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "115b65d911197d5f9ba95c36cca77b1ca662390453f033090d43769e9056a616",
+    "title": "スターレイル遺物ガイド：メイン、サブ、役割、周回優先度",
+    "description": "メイン、サブ、役割ごとの閾値、周回順でスターレイル遺物を計画。最適セットを決める前にゲーム内で現行効果、入手先、キャラ要件を確認します。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/relic-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR Relic Guide: Main Stats, Substats, Roles & Live Set Checks"
+      },
+      {
+        "tag": "h2",
+        "text": "Complete Relic Guide for Honkai: Star Rail"
+      },
+      {
+        "tag": "h2",
+        "text": "Relic Basics"
+      },
+      {
+        "tag": "h3",
+        "text": "Slots"
+      },
+      {
+        "tag": "h3",
+        "text": "Rarity"
+      },
+      {
+        "tag": "h2",
+        "text": "Main Stats by Slot"
+      },
+      {
+        "tag": "h2",
+        "text": "Substats Explained"
+      },
+      {
+        "tag": "h3",
+        "text": "Substat Priority by Role"
+      },
+      {
+        "tag": "h2",
+        "text": "Best Relic Sets by Path"
+      },
+      {
+        "tag": "h3",
+        "text": "Destruction"
+      },
+      {
+        "tag": "h3",
+        "text": "Hunt (Single-target DPS)"
+      },
+      {
+        "tag": "h3",
+        "text": "Erudition (AoE DPS)"
+      },
+      {
+        "tag": "h3",
+        "text": "Harmony (Buffer)"
+      },
+      {
+        "tag": "h3",
+        "text": "Nihility (Debuffer)"
+      },
+      {
+        "tag": "h3",
+        "text": "Preservation (Shielder)"
+      },
+      {
+        "tag": "h3",
+        "text": "Abundance (Healer)"
+      },
+      {
+        "tag": "h2",
+        "text": "Farming Efficiency"
+      },
+      {
+        "tag": "h3",
+        "text": "Where to Farm"
+      },
+      {
+        "tag": "h3",
+        "text": "Tips for Efficient Farming"
+      },
+      {
+        "tag": "h2",
+        "text": "Common Mistakes"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Planar Sphere & Link Rope Selection Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Farming Route Guide: Trailblaze Power, Relics, Traces & Materials"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 5633
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/planar-sphere-guide",
+    "checkedAt": "2026-11-25T05:41:23.080890+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/planar-sphere-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "a99669f22247daf7a7c73754f2f213faa9871933fdf6c1ab5bb1975d0a321100",
+    "title": "Planar Sphere & Link Rope Selection Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Complete guide to choosing planar ornaments — which sets for which characters, main stat priorities, and farming efficiency tips.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/planar-sphere-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Planar Sphere & Link Rope Selection Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Planar Sphere & Link Rope Selection Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Planar Ornament Basics"
+      },
+      {
+        "tag": "h3",
+        "text": "Popular Planar Ornament Sets"
+      },
+      {
+        "tag": "h3",
+        "text": "Planar Sphere Main Stat Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "Link Rope Main Stat Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "Farming Tips"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Relic Guide: Main Stats, Substats, Roles & Live Set Checks"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail Quick Start Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 3308
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/team-building-basics",
+    "checkedAt": "2026-11-25T05:41:23.098374+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/team-building-basics",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "2bf9d7eefdb7f1bf42e0f737d2186ca775cf258171d86777bc4012420326ca2b",
+    "title": "Team Building Fundamentals — 崩壊：スターレイル攻略ガイド",
+    "description": "Team Building Fundamentalsの崩壊：スターレイル攻略ガイド。Tips、戦略、FAQ、版本要点をまとめます。 補足: Learn how to build effective 4-character teams, understand roles and synergies.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/team-building-basics",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Team Building Fundamentals"
+      },
+      {
+        "tag": "h2",
+        "text": "Team Building Fundamentals"
+      },
+      {
+        "tag": "h3",
+        "text": "Character Roles"
+      },
+      {
+        "tag": "h3",
+        "text": "Basic Team Templates"
+      },
+      {
+        "tag": "h3",
+        "text": "Popular Teams"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Team Reference: Legacy Comps, Roles & Current-Team Checks"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Team Building"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 2382
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/meta-teams-guide",
+    "checkedAt": "2026-11-25T05:41:23.265896+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/meta-teams-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "8b9c895310011bd12c57691a5aec527f6e4e49c106ac265a2204c876748458ed",
+    "title": "スターレイル編成参考：役割、過去編成、現行確認",
+    "description": "過去のHSR編成例で役割と流派を理解し、育成やガチャ前に現行エンドコンテンツ、敵編成、所持サポートを確認します。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/meta-teams-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR Team Reference: Legacy Comps, Roles & Current-Team Checks"
+      },
+      {
+        "tag": "h2",
+        "text": "Current Meta Team Recommendations (v4.x)"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Hypercarry"
+      },
+      {
+        "tag": "h3",
+        "text": "Feixiao Follow-up"
+      },
+      {
+        "tag": "h3",
+        "text": "Firefly Break"
+      },
+      {
+        "tag": "h3",
+        "text": "Yunli Counter"
+      },
+      {
+        "tag": "h3",
+        "text": "Elation Teams (v4.0)"
+      },
+      {
+        "tag": "h3",
+        "text": "Remembrance Teams"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Building Fundamentals"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Robin Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.0"
+    ],
+    "textLength": 3334
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/trailblaze-power-guide",
+    "checkedAt": "2026-11-25T05:41:23.448589+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/trailblaze-power-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "8c4977a94e42fbd52b9aab7bd71736978f580fde749500368a2ae42df1bdb2a2",
+    "title": "Trailblaze Power Planning Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Trailblaze Power Planning Guideの崩壊：スターレイル攻略ガイド。Tips、戦略、FAQ、版本要点をまとめます。 補足: How to efficiently use daily Trailblaze Power, with planning tips from early to endgame.",
+    "canonical": "https://gachia.com/ja/starrail/guides/trailblaze-power-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Trailblaze Power Planning Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Trailblaze Power Planning Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Trailblaze Power Basics"
+      },
+      {
+        "tag": "h3",
+        "text": "Early Game Priority (Level 1-50)"
+      },
+      {
+        "tag": "h3",
+        "text": "Mid Game Priority (Level 50-65)"
+      },
+      {
+        "tag": "h3",
+        "text": "Late Game Priority (Level 65+)"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Simulated Universe Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Farming Route Guide: Trailblaze Power, Relics, Traces & Materials"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 2516
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/simulated-universe-guide",
+    "checkedAt": "2026-11-25T05:41:23.475047+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/simulated-universe-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "936a2e9f4a86feb1c14d26e9ba29fab8043bff64faade054b3b2e7db97e209b5",
+    "title": "Simulated Universe Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Complete Simulated Universe guide including Blessing choices, team recommendations, and weekly rewards.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/simulated-universe-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Simulated Universe Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Simulated Universe Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "What is Simulated Universe?"
+      },
+      {
+        "tag": "h3",
+        "text": "Blessing Strategy"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Recommendations"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Trailblaze Power Planning Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 2591
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/endgame-modes-guide",
+    "checkedAt": "2026-11-25T05:41:23.816801+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/endgame-modes-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "7254a705744a9627b1a67116b9a3c417da9a0d3419ac3c19881fc3b6ec0bdff7",
+    "title": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow",
+    "description": "Strategy guide for HSR's two main endgame modes — team requirements, scoring mechanics, and how they differ from Memory of Chaos.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/endgame-modes-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow"
+      },
+      {
+        "tag": "h2",
+        "text": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow"
+      },
+      {
+        "tag": "h3",
+        "text": "Pure Fiction"
+      },
+      {
+        "tag": "h3",
+        "text": "Apocalyptic Shadow"
+      },
+      {
+        "tag": "h3",
+        "text": "Comparison with Memory of Chaos"
+      },
+      {
+        "tag": "h3",
+        "text": "General Strategy"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Endgame Guide: Mode Fundamentals, Team Planning & Live Checks"
+      },
+      {
+        "tag": "h3",
+        "text": "Trailblaze Power Planning Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Simulated Universe Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 3423
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/planarcadia-guide",
+    "checkedAt": "2026-11-25T05:41:25.221750+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/planarcadia-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "6d4050cfe351ce9ef502f38ce3386c554adb88d47b6a552c37c2dc0b2becdebe",
+    "title": "Planarcadia Region Exploration Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Complete exploration guide for the Amphoreus/Planarcadia region — Chrysos Heirs storyline, new mechanics, bosses, and rewards.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/planarcadia-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Planarcadia Region Exploration Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Planarcadia Region Exploration Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Region Overview"
+      },
+      {
+        "tag": "h3",
+        "text": "Main Exploration Content"
+      },
+      {
+        "tag": "h3",
+        "text": "New Exploration Mechanics"
+      },
+      {
+        "tag": "h3",
+        "text": "Bosses and Rewards"
+      },
+      {
+        "tag": "h3",
+        "text": "Exploration Tips"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail Quick Start Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 3102
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/endgame-cycle-guide",
+    "checkedAt": "2026-11-25T05:41:25.306723+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/endgame-cycle-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "c5696a2fd80804ff21e3b2f36ef86bc33c0caed658babe48904c9aa795bd0da5",
+    "title": "スターレイル終盤ガイド：混沌、虚構、末日、編成",
+    "description": "混沌の記憶、虚構叙事、末日の幻影の基本と編成方針を確認。現行ローテーション、敵、報酬はゲーム内で確認してください。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/endgame-cycle-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR Endgame Guide: Mode Fundamentals, Team Planning & Live Checks"
+      },
+      {
+        "tag": "h2",
+        "text": "Memory of Chaos, Pure Fiction & Apocalyptic Shadow Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "1. Memory of Chaos"
+      },
+      {
+        "tag": "h3",
+        "text": "2. Pure Fiction"
+      },
+      {
+        "tag": "h3",
+        "text": "3. Apocalyptic Shadow"
+      },
+      {
+        "tag": "h3",
+        "text": "4. Three Modes Comparison"
+      },
+      {
+        "tag": "h3",
+        "text": "5. Long-term Planning"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail Quick Start Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 6565
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/build-acheron",
+    "checkedAt": "2026-11-25T05:41:25.332693+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/build-acheron",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "bdd26df3e4d7ef03df8fedab78c3a5a8b57d9974461a7a0e636c24ef0c3c0eba",
+    "title": "Acheron Build Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Acheron is one of the strongest Nihility DPS in Honkai: Star Rail. Complete build guide covering Light Cones, Relics, Traces, team comps, and Eidolon milestones",
+    "canonical": "https://gachia.com/ja/starrail/guides/build-acheron",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Light Cones"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Relics"
+      },
+      {
+        "tag": "h3",
+        "text": "Trace Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Compositions"
+      },
+      {
+        "tag": "h3",
+        "text": "Eidolon Milestones"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Robin Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Ruan Mei Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Aventurine Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 3878
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/build-firefly",
+    "checkedAt": "2026-11-25T05:41:25.423982+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/build-firefly",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "92b8aace8bec3be0fd565392e490272b6fbfa0acac6c1da9dca851fbf805c82d",
+    "title": "Firefly Build Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Firefly Break build reference covering Light Cones, Relics, Traces, teams, and Eidolons. Verify current endgame value, team conditions, and alternatives with li",
+    "canonical": "https://gachia.com/ja/starrail/guides/build-firefly",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Light Cones"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Relics"
+      },
+      {
+        "tag": "h3",
+        "text": "Trace Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Compositions"
+      },
+      {
+        "tag": "h3",
+        "text": "Eidolon Milestones"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Ruan Mei Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Robin Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Aventurine Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 4160
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/build-robin",
+    "checkedAt": "2026-11-25T05:41:25.525624+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/build-robin",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "a48c3ecec2e309e14b624080aca5a266d0ffca6f7ceb86a3af102c0a1f788c46",
+    "title": "Robin Build Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Robin is one of the strongest Harmony supports in Honkai: Star Rail. Complete build guide covering Light Cones, Relics, Traces, team comps, and Eidolon mileston",
+    "canonical": "https://gachia.com/ja/starrail/guides/build-robin",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Robin Build Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Robin Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Light Cones"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Relics"
+      },
+      {
+        "tag": "h3",
+        "text": "Trace Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Compositions"
+      },
+      {
+        "tag": "h3",
+        "text": "Eidolon Milestones"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Ruan Mei Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Aventurine Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 3752
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/build-ruan-mei",
+    "checkedAt": "2026-11-25T05:41:25.624057+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/build-ruan-mei",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "ad321bedf6063620764f95a2fea1a7f0717e2c633880210289067a4d356488d8",
+    "title": "Ruan Mei Build Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Ruan Mei is one of the strongest Harmony supports in HSR, known for Break Efficiency buffs and All-Type RES PEN. Complete build guide inside.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/build-ruan-mei",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Ruan Mei Build Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Ruan Mei Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Light Cones"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Relics"
+      },
+      {
+        "tag": "h3",
+        "text": "Trace Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Compositions"
+      },
+      {
+        "tag": "h3",
+        "text": "Eidolon Milestones"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Robin Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Aventurine Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 3952
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/build-aventurine",
+    "checkedAt": "2026-11-25T05:41:25.988266+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/build-aventurine",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "1dc036f1de89a97929d8f654626cd884e3e002cff7e5049fbe08158ea33a697b",
+    "title": "Aventurine Build Guide — 崩壊：スターレイル攻略ガイド",
+    "description": "Aventurine is the strongest Preservation shielder in HSR, known for team-wide shields, follow-up attacks, and Effect RES. Complete build guide inside.",
+    "canonical": "https://gachia.com/ja/starrail/guides/build-aventurine",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Aventurine Build Guide"
+      },
+      {
+        "tag": "h2",
+        "text": "Aventurine Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Light Cones"
+      },
+      {
+        "tag": "h3",
+        "text": "Best Relics"
+      },
+      {
+        "tag": "h3",
+        "text": "Trace Priority"
+      },
+      {
+        "tag": "h3",
+        "text": "Team Compositions"
+      },
+      {
+        "tag": "h3",
+        "text": "Eidolon Milestones"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "交換コード"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Acheron Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Firefly Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Robin Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Ruan Mei Build Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 4173
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/farming-route-guide",
+    "checkedAt": "2026-11-25T05:41:25.999785+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/farming-route-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "794315bf216b517494b14f5a7d3848f2f5541451ed0ebab06337b91b2e20d80e",
+    "title": "HSR Farming Route Guide: Trailblaze Power, Relics & Trace Materials",
+    "description": "Plan HSR Trailblaze Power, relic farming, trace materials, ascension materials, Echo of War, weekly routes, current banners, and team priorities.さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/farming-route-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "HSR Farming Route Guide: Trailblaze Power, Relics, Traces & Materials"
+      },
+      {
+        "tag": "h2",
+        "text": "Honkai: Star Rail Trailblaze Power Planning & Material Farming Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Quality checkpoint (checked 2026-09-12)"
+      },
+      {
+        "tag": "h3",
+        "text": "1. Trailblaze Power System Overview"
+      },
+      {
+        "tag": "h3",
+        "text": "2. Relic Farming (Cavern of Corrosion)"
+      },
+      {
+        "tag": "h3",
+        "text": "3. Trace Material Farming (Calyx)"
+      },
+      {
+        "tag": "h3",
+        "text": "4. Ascension Material Farming (Stagnant Shadow)"
+      },
+      {
+        "tag": "h3",
+        "text": "5. Echo of War (Weekly Boss)"
+      },
+      {
+        "tag": "h3",
+        "text": "6. Efficient TB Power Usage Tips"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "遺物攻略"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR Relic Guide: Main Stats, Substats, Roles & Live Set Checks"
+      },
+      {
+        "tag": "h3",
+        "text": "Trailblaze Power Planning Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 8143
+  },
+  {
+    "url": "https://gachia.com/ja/starrail/guides/cross-game-comparison-guide",
+    "checkedAt": "2026-11-25T05:41:27.331219+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/ja/starrail/guides/cross-game-comparison-guide",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "0d7718b097ede475ea8b4ebe95177c272497dd1c92647427a07526e13a4b2906",
+    "title": "原神 vs HSR vs ZZZ vs WuWa：どれを遊ぶべき？",
+    "description": "原神、HSR、ZZZ、鳴潮を戦闘、探索、周回、無課金、物語、終盤、日課時間で比較。さらにキャラ、武器、攻略、実用ツールへの導線もまとめています。",
+    "canonical": "https://gachia.com/ja/starrail/guides/cross-game-comparison-guide",
+    "robots": [
+      "noindex, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "Genshin vs HSR vs ZZZ vs WuWa: Which Anime Gacha Should You Play?"
+      },
+      {
+        "tag": "h2",
+        "text": "Current-entry note"
+      },
+      {
+        "tag": "h2",
+        "text": "Anime Gacha Games Comparison: Genshin Impact vs Honkai: Star Rail vs ZZZ vs Wuthering Waves"
+      },
+      {
+        "tag": "h3",
+        "text": "1. Basic Information"
+      },
+      {
+        "tag": "h3",
+        "text": "2. Combat System Comparison"
+      },
+      {
+        "tag": "h3",
+        "text": "3. Gacha System Comparison"
+      },
+      {
+        "tag": "h3",
+        "text": "4. Content Volume"
+      },
+      {
+        "tag": "h3",
+        "text": "5. Grind Level and Time Commitment"
+      },
+      {
+        "tag": "h3",
+        "text": "6. F2P Friendliness"
+      },
+      {
+        "tag": "h3",
+        "text": "7. Art Style and Music"
+      },
+      {
+        "tag": "h3",
+        "text": "8. Recommended For"
+      },
+      {
+        "tag": "h3",
+        "text": "Conclusion"
+      },
+      {
+        "tag": "h2",
+        "text": "よくある質問"
+      },
+      {
+        "tag": "h2",
+        "text": "次に見るページ"
+      },
+      {
+        "tag": "h3",
+        "text": "HSR現在跳躍"
+      },
+      {
+        "tag": "h3",
+        "text": "ZZZ編成ツール"
+      },
+      {
+        "tag": "h2",
+        "text": "関連ガイド"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail v4.4 In Ravages Does the Whistle Sound Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai Star Rail v4.3 Guide — Mortenax Blade & Fate Collab Wave 2"
+      },
+      {
+        "tag": "h3",
+        "text": "Honkai: Star Rail Quick Start Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "Weakness Break Mechanism Guide"
+      },
+      {
+        "tag": "h3",
+        "text": "他のゲームを探す"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "v4.3",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 8501
+  },
+  {
+    "url": "https://gachia.com/starrail/guides/himeko-nova-fate-pull-plan",
+    "checkedAt": "2026-11-25T05:41:27.603450+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/zh/starrail/guides/himeko-nova-fate-pull-plan",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "c2a1d85a36d79f1b2d97875cbce09881939512d399a4ed151901110e303b2d6d",
+    "title": "星铁 4.4 Himeko Nova 与 Fate 联动抽卡规划：Rin/Gilgamesh、星琼缺口与兑换码路线",
+    "description": "把 Himeko Nova、Fate 联动、Rin/Gilgamesh、星琼缺口、兑换码和卡池优先级放到同一条规划路线里，适合 4.4 上线后资源不足的玩家。（历史归档：当前抽卡请先看 4.6 入口。），同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+    "canonical": "https://gachia.com/zh/starrail/guides/himeko-nova-fate-pull-plan",
+    "robots": [
+      "index, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "星铁 4.4 Himeko Nova 与 Fate 联动抽卡规划：Rin/Gilgamesh、星琼缺口与兑换码路线"
+      },
+      {
+        "tag": "h2",
+        "text": "历史归档提示"
+      },
+      {
+        "tag": "h2",
+        "text": "先看结论"
+      },
+      {
+        "tag": "h3",
+        "text": "三步决策"
+      },
+      {
+        "tag": "h2",
+        "text": "账号类型怎么选"
+      },
+      {
+        "tag": "h2",
+        "text": "Himeko Nova 怎么判断"
+      },
+      {
+        "tag": "h2",
+        "text": "Fate 联动资源路线"
+      },
+      {
+        "tag": "h2",
+        "text": "兑换码与星琼检查"
+      },
+      {
+        "tag": "h2",
+        "text": "一句话路线"
+      },
+      {
+        "tag": "h2",
+        "text": "常见问题"
+      },
+      {
+        "tag": "h2",
+        "text": "下一步去看"
+      },
+      {
+        "tag": "h3",
+        "text": "当前跃迁"
+      },
+      {
+        "tag": "h3",
+        "text": "兑换码"
+      },
+      {
+        "tag": "h2",
+        "text": "相关攻略"
+      },
+      {
+        "tag": "h3",
+        "text": "星铁 Fate 联动奖励 FAQ：Rin/Gilgamesh、Saber/Archer、兑换码和 4.4 后续怎么规划"
+      },
+      {
+        "tag": "h3",
+        "text": "崩坏：星穹铁道 4.4「In Ravages Does the Whistle Sound」版本专题"
+      },
+      {
+        "tag": "h3",
+        "text": "崩坏：星穹铁道 4.x Fate / Gilgamesh / Kafka / Cyrene 常青抽取规划"
+      },
+      {
+        "tag": "h3",
+        "text": "崩铁当前卡池、下期与复刻跃迁规划指南"
+      },
+      {
+        "tag": "h3",
+        "text": "探索更多游戏"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [
+      "4.4",
+      "4.6",
+      "v4.4",
+      "v4.6"
+    ],
+    "textLength": 2267
+  },
+  {
+    "url": "https://gachia.com/starrail/characters",
+    "checkedAt": "2026-11-25T05:41:27.642861+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/zh/starrail/characters",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "b861eb068d2b1aa4371ba68599eed414a6716145bda88936dcd97b9322767682",
+    "title": "崩坏：星穹铁道角色图鉴 — 全角色Wiki、Build、技能与配队",
+    "description": "按属性、命途、星级快速浏览星穹铁道角色图鉴，适合在配队前先看定位、培养顺序和替代方案。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+    "canonical": "https://gachia.com/zh/starrail/characters",
+    "robots": [
+      "index, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h1",
+        "text": "角色图鉴"
+      },
+      {
+        "tag": "h2",
+        "text": "5★ (59)"
+      },
+      {
+        "tag": "h3",
+        "text": "希儿"
+      },
+      {
+        "tag": "h3",
+        "text": "布洛妮娅"
+      },
+      {
+        "tag": "h3",
+        "text": "克拉拉"
+      },
+      {
+        "tag": "h3",
+        "text": "姬子"
+      },
+      {
+        "tag": "h3",
+        "text": "瓦尔特"
+      },
+      {
+        "tag": "h3",
+        "text": "杰帕德"
+      },
+      {
+        "tag": "h3",
+        "text": "彦卿"
+      },
+      {
+        "tag": "h3",
+        "text": "白露"
+      },
+      {
+        "tag": "h3",
+        "text": "景元"
+      },
+      {
+        "tag": "h3",
+        "text": "卡芙卡"
+      },
+      {
+        "tag": "h3",
+        "text": "刃"
+      },
+      {
+        "tag": "h3",
+        "text": "银狼"
+      },
+      {
+        "tag": "h3",
+        "text": "罗刹"
+      },
+      {
+        "tag": "h3",
+        "text": "镜流"
+      },
+      {
+        "tag": "h3",
+        "text": "托帕"
+      },
+      {
+        "tag": "h3",
+        "text": "藿藿"
+      },
+      {
+        "tag": "h3",
+        "text": "阮·梅"
+      },
+      {
+        "tag": "h3",
+        "text": "真理医生"
+      },
+      {
+        "tag": "h3",
+        "text": "黑天鹅"
+      },
+      {
+        "tag": "h3",
+        "text": "黄泉"
+      },
+      {
+        "tag": "h3",
+        "text": "砂金"
+      },
+      {
+        "tag": "h3",
+        "text": "知更鸟"
+      },
+      {
+        "tag": "h3",
+        "text": "流萤"
+      },
+      {
+        "tag": "h3",
+        "text": "星期日"
+      },
+      {
+        "tag": "h3",
+        "text": "阿格莱雅"
+      },
+      {
+        "tag": "h3",
+        "text": "大黑塔"
+      },
+      {
+        "tag": "h3",
+        "text": "缇宝"
+      },
+      {
+        "tag": "h3",
+        "text": "卡芙卡"
+      },
+      {
+        "tag": "h3",
+        "text": "迈迪"
+      },
+      {
+        "tag": "h3",
+        "text": "丹恒·饮月"
+      },
+      {
+        "tag": "h3",
+        "text": "符玄"
+      },
+      {
+        "tag": "h3",
+        "text": "银枝"
+      },
+      {
+        "tag": "h3",
+        "text": "花火"
+      },
+      {
+        "tag": "h3",
+        "text": "波提欧"
+      },
+      {
+        "tag": "h3",
+        "text": "翡翠"
+      },
+      {
+        "tag": "h3",
+        "text": "云璃"
+      },
+      {
+        "tag": "h3",
+        "text": "飞霄"
+      },
+      {
+        "tag": "h3",
+        "text": "灵砂"
+      },
+      {
+        "tag": "h3",
+        "text": "椒丘"
+      },
+      {
+        "tag": "h3",
+        "text": "乱破"
+      },
+      {
+        "tag": "h3",
+        "text": "忘归人"
+      },
+      {
+        "tag": "h3",
+        "text": "那刻夏"
+      },
+      {
+        "tag": "h3",
+        "text": "风堇"
+      },
+      {
+        "tag": "h3",
+        "text": "赛飞儿"
+      },
+      {
+        "tag": "h3",
+        "text": "白厄"
+      },
+      {
+        "tag": "h3",
+        "text": "Archer"
+      },
+      {
+        "tag": "h3",
+        "text": "Saber"
+      },
+      {
+        "tag": "h3",
+        "text": "刻律德菈"
+      },
+      {
+        "tag": "h3",
+        "text": "海瑟音"
+      },
+      {
+        "tag": "h3",
+        "text": "长夜月"
+      },
+      {
+        "tag": "h3",
+        "text": "丹恒•腾荒"
+      },
+      {
+        "tag": "h3",
+        "text": "昔涟"
+      },
+      {
+        "tag": "h3",
+        "text": "大丽花"
+      },
+      {
+        "tag": "h3",
+        "text": "爻光"
+      },
+      {
+        "tag": "h3",
+        "text": "火花"
+      },
+      {
+        "tag": "h3",
+        "text": "不死途"
+      },
+      {
+        "tag": "h3",
+        "text": "银狼LV.999"
+      },
+      {
+        "tag": "h3",
+        "text": "绯英"
+      },
+      {
+        "tag": "h3",
+        "text": "千冶·刃"
+      },
+      {
+        "tag": "h2",
+        "text": "4★ (22)"
+      },
+      {
+        "tag": "h3",
+        "text": "三月七"
+      },
+      {
+        "tag": "h3",
+        "text": "丹恒"
+      },
+      {
+        "tag": "h3",
+        "text": "黑塔"
+      },
+      {
+        "tag": "h3",
+        "text": "娜塔莎"
+      },
+      {
+        "tag": "h3",
+        "text": "希露瓦"
+      },
+      {
+        "tag": "h3",
+        "text": "佩拉"
+      },
+      {
+        "tag": "h3",
+        "text": "桑博"
+      },
+      {
+        "tag": "h3",
+        "text": "虎克"
+      },
+      {
+        "tag": "h3",
+        "text": "青雀"
+      },
+      {
+        "tag": "h3",
+        "text": "停云"
+      },
+      {
+        "tag": "h3",
+        "text": "艾丝妲"
+      },
+      {
+        "tag": "h3",
+        "text": "寒鸦"
+      },
+      {
+        "tag": "h3",
+        "text": "玲可"
+      },
+      {
+        "tag": "h3",
+        "text": "雪衣"
+      },
+      {
+        "tag": "h3",
+        "text": "米沙"
+      },
+      {
+        "tag": "h3",
+        "text": "加拉赫尔"
+      },
+      {
+        "tag": "h3",
+        "text": "莫泽"
+      },
+      {
+        "tag": "h3",
+        "text": "桂乃芬"
+      },
+      {
+        "tag": "h3",
+        "text": "素裳"
+      },
+      {
+        "tag": "h3",
+        "text": "驭空"
+      },
+      {
+        "tag": "h3",
+        "text": "卢卡"
+      },
+      {
+        "tag": "h3",
+        "text": "阿兰"
+      },
+      {
+        "tag": "h3",
+        "text": "探索更多游戏"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 2022
+  },
+  {
+    "url": "https://gachia.com/starrail/build",
+    "checkedAt": "2026-11-25T05:41:27.645249+00:00",
+    "status": 200,
+    "finalUrl": "https://gachia.com/zh/starrail/build",
+    "cacheControl": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400",
+    "sha256": "7a3df1420ffb1a754c32e75bd9f870012b469e1e41ec2dd6d50afc06272a48c4",
+    "title": "崩坏：星穹铁道 配装推荐",
+    "description": "崩坏：星穹铁道 角色配装推荐、最佳光锥、遗器搭配，整理毕业思路、词条优先级、常见阵容与版本答案，帮助你快速完成养成决策。，同时提供角色、武器、攻略和实用工具入口，方便继续深入浏览与查找。",
+    "canonical": "https://gachia.com/zh/starrail/build",
+    "robots": [
+      "index, follow"
+    ],
+    "headings": [
+      {
+        "tag": "h2",
+        "text": "继续往下看"
+      },
+      {
+        "tag": "h3",
+        "text": "看角色图鉴"
+      },
+      {
+        "tag": "h3",
+        "text": "看武器图鉴"
+      },
+      {
+        "tag": "h3",
+        "text": "看版本更新"
+      },
+      {
+        "tag": "h3",
+        "text": "探索更多游戏"
+      },
+      {
+        "tag": "h3",
+        "text": "Gachia"
+      },
+      {
+        "tag": "h1",
+        "text": "配装推荐"
+      }
+    ],
+    "versionMentions": [],
+    "textLength": 119
+  }
+]

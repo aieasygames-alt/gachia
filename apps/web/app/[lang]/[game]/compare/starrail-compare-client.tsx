@@ -1,4 +1,5 @@
 'use client';
+import { getUsableStarRailBuild } from '@gachia/data/games/starrail/build';
 
 
 
@@ -367,9 +368,15 @@ export function StarRailCompare({ locale }: { locale: SupportedLocale }) {
             <h3 className="mb-3 text-sm font-semibold text-game-primary">{t(locale, '配装对比', 'Build Comparison', 'ビルド比較')}</h3>
             <div className="grid grid-cols-2 gap-4">
               {[charA, charB].map((char, i) => {
-                const build = char.recommendedBuild;
-                const lc = resolveSRLightCone(build);
-                const relic = resolveSRRelic(build);
+                const build = getUsableStarRailBuild(char.recommendedBuild);
+                const lc = build ? resolveSRLightCone(build) : null;
+                const relic = build ? resolveSRRelic(build) : null;
+                if (!build) return (
+                  <div key={char.id} className="rounded-lg bg-game-surface-alt p-3 text-sm text-game-text-muted" role="status">
+                    <p className="mb-2 font-medium text-game-text">{getStarRailCharacterName(char, locale)}</p>
+                    {t(locale, '配装资料尚未补齐，暂不参与配装对比。基本信息仍可对比。', 'Build data is incomplete. Basic information can still be compared.', '装備データは準備中です。基本情報は比較できます。')}
+                  </div>
+                );
                 return (
                   <div key={i} className="space-y-2">
                     <div className="mb-2 flex items-center gap-2">

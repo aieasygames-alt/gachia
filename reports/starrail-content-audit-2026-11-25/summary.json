@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-25",
+  "timezone": "Asia/Shanghai",
+  "method": "Full production HTML inventory + browser interaction sampling + read-only source inspection; no publication writes",
+  "sitemapUrls": 875,
+  "navigationAdditional": 12,
+  "discoveredAdditional": 35,
+  "requestedUrls": 922,
+  "uniqueFinalUrls": 915,
+  "finalStatusCounts": {
+    "200": 922
+  },
+  "uniqueLocaleCounts": {
+    "en": 305,
+    "ja": 305,
+    "zh": 305
+  },
+  "logicalZhPages": 305,
+  "zhPageKinds": {
+    "hubsAndTools": 17,
+    "characters": 81,
+    "lightCones": 85,
+    "materials": 62,
+    "relics": 32,
+    "guides": 28
+  },
+  "publishedCms": {
+    "zh": 14,
+    "en": 0,
+    "ja": 0,
+    "revision": 1795582370912
+  },
+  "emptyEventLocales": [
+    "zh",
+    "en",
+    "ja"
+  ],
+  "observedPlaceholderCharacterPages": 50,
+  "sourceCensus": {
+    "characters": 81,
+    "placeholderCharacters": 50,
+    "withoutEidolons": 31,
+    "missingMaterialRecords": 31,
+    "missingBestLightConeEn": 30,
+    "lightCones": 85,
+    "lightConesWithoutNumericEffectDescription": 82,
+    "guides": 28,
+    "guidesWithoutUpdatedAt": 18,
+    "zhGuidesWithoutExternalArticleLinks": 28
+  },
+  "auditedRepoCommit": "ac616e072a397b0e01740897baa01e0c6d45f05e",
+  "productionSourceCommit": "0c445206ec68dad8f01603dedc40e8ec7631c886",
+  "scopeLimit": "All URLs were fetched and scanned; representative key claims and workflows reviewed. This is not independent numeric verification of every character, light cone or code, and no traffic/ranking data was used."
+}
