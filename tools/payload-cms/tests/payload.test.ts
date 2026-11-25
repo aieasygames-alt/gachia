@@ -8,6 +8,7 @@ import seed from '../../../packages/data/cms/starrail-snapshot.json';
 import { importUpdates } from '../lib/import-updates';
 import { parseStarRailUpdate } from '../../../packages/data/cms/starrail-updates';
 import characterBatch from '../../../reports/starrail-structured-character-2026-11-25/batch.json';
+import materialBatch from '../../../reports/starrail-materials-2026-11-25/batch.json';
 
 test('real Payload + SQLite: draft isolation, publish, restricted writes, history and idempotent imports', async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), 'gachia-payload-test-'));
@@ -57,6 +58,16 @@ test('real Payload + SQLite: draft isolation, publish, restricted writes, histor
     await assert.rejects(payload.update({ collection: 'game-updates', id: savedCharacter.id, data: { characterData: { ...character.characterData, skills: [] } }, draft: false }));
     const characterHistory = await payload.findVersions({ collection: 'game-updates', where: { parent: { equals: savedCharacter.id } } });
     assert.ok(characterHistory.totalDocs >= 2);
+    const material = parseStarRailUpdate(materialBatch.creates[0]);
+    assert.ok(material);
+    const beforeMaterial = (await payload.find({ collection: 'game-updates', overrideAccess: false, draft: false })).totalDocs;
+    const draftMaterial = await payload.create({ collection: 'game-updates', data: { ...material, _status: 'draft' }, draft: true });
+    assert.equal((await payload.find({ collection: 'game-updates', overrideAccess: false, draft: false })).totalDocs, beforeMaterial);
+    const savedMaterial = await payload.update({ collection: 'game-updates', id: draftMaterial.id, data: { _status: 'published' }, draft: false });
+    assert.deepEqual(parseStarRailUpdate(savedMaterial), material);
+    await assert.rejects(payload.update({ collection: 'game-updates', id: draftMaterial.id, data: { slug: 'unreviewed-material' } }));
+    const materialHistory = await payload.findVersions({ collection: 'game-updates', where: { parent: { equals: draftMaterial.id } } });
+    assert.ok(materialHistory.totalDocs >= 2);
   } finally {
     await payload.destroy();
     await rm(directory, { recursive: true, force: true });

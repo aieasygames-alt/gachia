@@ -1,3 +1,5 @@
+import { isStarRailCmsMaterial } from '@gachia/data/cms/starrail-materials';
+import { StarRailCmsMaterialCards } from '@/components/wiki/starrail-cms-materials';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import { notFound } from 'next/navigation';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
@@ -294,7 +296,8 @@ const STARRAIL_TYPE_LABELS: Record<string, Record<string, string>> = {
 };
 
 async function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; gameId: string }) {
-  const materials = await getItemListData(gameId as GameId, locale);
+  const materials = (await getItemListData(gameId as GameId, locale)).filter(m => !isStarRailCmsMaterial(m.id));
+  const verifiedCards = await StarRailCmsMaterialCards({ locale });
   const grouped = groupByType(materials);
   const typeOrder = ['character-ascension', 'ascension', 'trace', 'boss', 'common', 'exp-material', 'special', 'currency'];
 
@@ -304,12 +307,13 @@ async function StarRailItemsPage({ locale, gameId }: { locale: SupportedLocale; 
         {CATEGORY_LABELS.items?.[locale] ?? 'Items'}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {locale === 'zh' ? `共 ${materials.length} 种材料` : locale === 'ja' ? `${materials.length} 種の素材` : `${materials.length} Materials`}
+        {locale === 'zh' ? '先核对材料用途，再查看获取条件与来源。' : locale === 'ja' ? '素材の用途と入手条件を確認できます。' : 'Check material uses, acquisition conditions and sources.'}
       </p>
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
         {getItemIntro('starrail', locale)}
       </p>
 
+      {verifiedCards}
       {typeOrder.map((type) => {
         const list = grouped[type];
         if (!list || list.length === 0) return null;

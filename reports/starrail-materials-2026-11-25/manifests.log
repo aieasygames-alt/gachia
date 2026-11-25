@@ -1,0 +1,5 @@
+
+> @gachia/data@0.0.1 verify:manifests /Users/robert/.codex/worktrees/starrail-cms-release/gachia/packages/data
+> node scripts/verify-manifests.mjs
+
+Data manifests verified.

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "web": {
+    "files": 106,
+    "tests": 629,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 18,
+    "tests": 181,
+    "types": "passed"
+  },
+  "cms": {
+    "tests": 8,
+    "actualEditorTypes": "passed",
+    "actualEditorProductionBuild": "passed",
+    "materialDraftPublicationHistoryIncluded": true
+  },
+  "manifests": "passed",
+  "compatibilityScope": "compatibility-data-acceptance.json",
+  "draftIsolation": "editor-acceptance.json",
+  "knownBuildWarnings": "Existing auth-dialog hooks warning; no new build failures"
+}

@@ -4,6 +4,7 @@ import { STARRAIL_CMS_EQUIPMENT, type StarRailEquipmentCategory } from '@gachia/
 import { isCommunityStarRailSource } from '@gachia/data/cms/starrail-updates';
 import { loadStarRailUpdates } from '@/lib/starrail-publication';
 import { Link } from '@/lib/i18n/navigation';
+import { StarRailEquipmentMaterialLinks } from './starrail-cms-materials';
 
 const copy = {
   zh: { title: '已核验装备资料', pending: '当前语言暂无已发布的装备资料。中文页面会标明来源与适用范围。', checked: '来源核验', scope: '适用范围与待核验项', official: '官方来源', community: '第三方资料', all: '返回图鉴', warps: '跃迁日程' },
@@ -30,6 +31,7 @@ export async function StarRailCmsEquipment({ locale, category, id }: { locale: S
     <h1 className="text-2xl font-bold text-game-primary">{doc?.title ?? c.title}</h1>
     {doc ? <><p className="text-sm leading-7">{doc.summary}</p><p className="text-xs text-game-text-muted">{doc.region} · {c.checked} <time dateTime={doc.checkedAt}>{doc.checkedAt}</time></p>
       {doc.facts.map((f, i) => { const [heading, ...paragraphs] = f.text.split('\n').filter(Boolean); return <section key={i} className="rounded-xl border border-game-border bg-game-surface p-5"><h2 className="font-semibold">{heading}</h2>{paragraphs.map((p, j) => <p key={j} className="mt-3 text-sm leading-7 text-game-text-muted">{p}</p>)}</section>; })}
+      {category === 'weapons' && await StarRailEquipmentMaterialLinks({ locale, equipmentId: id })}
       <section className="border-l-2 border-game-primary pl-4"><h2 className="font-semibold">{c.scope}</h2><p className="mt-2 text-sm leading-7 text-game-text-muted">{doc.boundary}</p></section>
       <div className="flex flex-wrap gap-4">{doc.sources.map((s, i) => <a key={s.url} href={s.url} rel="noreferrer" className="text-sm text-game-primary underline">{isCommunityStarRailSource(s.url) ? c.community : c.official} {i + 1}</a>)}</div>
     </> : <p className="text-sm leading-7">{c.pending} <Link locale="zh" href={`/starrail/${category}/${id}` as '/'} className="text-game-primary underline">中文</Link></p>}

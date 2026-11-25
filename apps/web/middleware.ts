@@ -1,3 +1,4 @@
+import { isStarRailCmsMaterial } from '@gachia/data/cms/starrail-materials';
 import { isStarRailCmsEquipment } from '@gachia/data/cms/starrail-equipment';
 import { NextRequest, NextResponse } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
@@ -288,8 +289,9 @@ function routeMiddleware(request: NextRequest) {
   const isMarketIntel = locale && secondSegment === 'tools' && thirdSegment === 'market-intel' && segments.length === 3;
   const isStarRailUpdates = locale && game === 'starrail' && (
     segments.length === 2 ||
-    (['version', 'events', 'calculator', 'characters', 'weapons', 'artifacts'].includes(thirdSegment ?? '') && segments.length === 3) ||
+    (['version', 'events', 'calculator', 'characters', 'weapons', 'artifacts', 'items'].includes(thirdSegment ?? '') && segments.length === 3) ||
     (isStarRailCmsEquipment(thirdSegment ?? '', fourthSegment ?? '') && segments.length === 4) ||
+    (thirdSegment === 'items' && isStarRailCmsMaterial(fourthSegment ?? '') && segments.length === 4) ||
     (thirdSegment === 'characters' && Object.hasOwn(STARRAIL_CMS_CHARACTERS, fourthSegment ?? '') && segments.length === 4) ||
     (thirdSegment === 'guides' && (fourthSegment === 'banner-schedule-guide' || isStarRailCmsGuide(fourthSegment ?? '')) && segments.length === 4)
   );

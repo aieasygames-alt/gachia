@@ -1,8 +1,9 @@
+import { STARRAIL_CMS_MATERIALS } from './starrail-materials';
 import { STARRAIL_CMS_EQUIPMENT } from './starrail-equipment';
 import { parseStarRailCharacter, STARRAIL_CMS_CHARACTERS, type VerifiedStarRailCharacter } from './starrail-character';
 // A deliberately small contract shared by Payload and the website, without a CMS runtime dependency.
 export type UpdateLocale = 'zh' | 'en' | 'ja';
-export type UpdateKind = 'version' | 'banner' | 'event' | 'character' | 'guide' | 'equipment';
+export type UpdateKind = 'version' | 'banner' | 'event' | 'character' | 'guide' | 'equipment' | 'material';
 export interface StarRailUpdate {
   gameId: 'starrail';
   slug: string;
@@ -40,6 +41,16 @@ export function isOfficialStarRailSource(value: unknown): value is string {
 // Community-maintained references are explicitly labelled in the UI. Keep this
 // list limited to reviewed detail pages; never interpret platform ownership as authorship.
 const communitySources = new Set([
+  'https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%B9%BC%E8%8A%BD',
+  'https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%A4%A9%E5%8D%8E',
+  'https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E8%8D%A3%E6%9E%9D',
+  'https://wiki.biligame.com/sr/%E7%A0%B4%E7%A2%8E%E6%AE%8B%E5%88%83',
+  'https://wiki.biligame.com/sr/%E6%97%A0%E7%94%9F%E6%AE%8B%E5%88%83',
+  'https://wiki.biligame.com/sr/%E5%87%80%E4%B8%96%E6%AE%8B%E5%88%83',
+  'https://wiki.biligame.com/sr/%E7%81%B5%E6%84%9F%E4%B9%8B%E9%92%A5',
+  'https://wiki.biligame.com/sr/%E5%90%AF%E8%BF%AA%E4%B9%8B%E9%92%A5',
+  'https://wiki.biligame.com/sr/%E6%99%BA%E8%AF%86%E4%B9%8B%E9%92%A5',
+
   'https://wiki.biligame.com/sr/%E5%A4%A9%E6%89%8D%E4%BB%AC%E7%9A%84%E4%BC%91%E6%86%A9',
   'https://wiki.biligame.com/sr/%E9%BB%91%E5%A4%9C%E5%A6%82%E5%BD%B1%E9%9A%8F%E8%A1%8C',
   'https://wiki.biligame.com/sr/%E8%A1%8C%E4%BA%8E%E6%B5%81%E9%80%9D%E7%9A%84%E5%B2%B8',
@@ -97,12 +108,13 @@ export function parseStarRailUpdate(input: unknown): StarRailUpdate | null {
   const d = input as Record<string, unknown>;
   const text = (value: unknown, max = 12000): value is string => typeof value === 'string' && value.trim().length > 0 && value.length <= max;
   if (d.gameId !== 'starrail' || d._status !== 'published' || !['zh', 'en', 'ja'].includes(String(d.locale)) ||
-      !['version', 'banner', 'event', 'character', 'guide', 'equipment'].includes(String(d.kind)) || !text(d.slug, 100) || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(d.slug) ||
+      !['version', 'banner', 'event', 'character', 'guide', 'equipment', 'material'].includes(String(d.kind)) || !text(d.slug, 100) || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(d.slug) ||
       !text(d.title, 200) || !text(d.summary, 2000) || !text(d.region, 200) || !text(d.boundary, 2000) || !isContentDate(d.checkedAt)) return null;
   if (!Array.isArray(d.facts) || !d.facts.length || d.facts.length > 20 || !d.facts.every(f => f && text(f.text, 4000))) return null;
   if (!Array.isArray(d.sources) || !d.sources.length || d.sources.length > 10 || !d.sources.every(s => s && isStarRailSource(s.url))) return null;
   if (d.kind === 'version' && (!text(d.currentVersion, 100) || !isContentDate(d.releaseDate))) return null;
   if (d.kind === 'equipment' && !Object.values(STARRAIL_CMS_EQUIPMENT).some(entries => Object.hasOwn(entries, d.slug as string))) return null;
+  if (d.kind === 'material' && !Object.hasOwn(STARRAIL_CMS_MATERIALS, d.slug as string)) return null;
   const characterData = d.characterData == null ? undefined : parseStarRailCharacter(d.characterData);
   if (characterData === null || (characterData && (d.kind !== 'character' || d.slug !== STARRAIL_CMS_CHARACTERS[characterData.id]))) return null;
   // Strip internal CMS fields, relationships and unknown keys before rendering.

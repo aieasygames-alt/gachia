@@ -1,0 +1,59 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 38,
+      "slug": "immortal-scionette",
+      "updatedAt": "2026-11-25T13:32:06.876Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 39,
+      "slug": "immortal-flower",
+      "updatedAt": "2026-11-25T13:32:06.882Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 40,
+      "slug": "immortal-leaf",
+      "updatedAt": "2026-11-25T13:32:06.886Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 41,
+      "slug": "shattered-blade",
+      "updatedAt": "2026-11-25T13:32:06.890Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 42,
+      "slug": "lifeless-blade",
+      "updatedAt": "2026-11-25T13:32:06.893Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 43,
+      "slug": "worldbreaker-blade",
+      "updatedAt": "2026-11-25T13:32:06.897Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 44,
+      "slug": "key-of-inspiration",
+      "updatedAt": "2026-11-25T13:32:06.900Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 45,
+      "slug": "key-of-knowledge",
+      "updatedAt": "2026-11-25T13:32:06.906Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 46,
+      "slug": "key-of-wisdom",
+      "updatedAt": "2026-11-25T13:32:06.911Z",
+      "action": "created_draft"
+    }
+  ]
+}

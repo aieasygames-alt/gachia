@@ -21,6 +21,12 @@ function follow(path: string) {
 }
 
 describe('Main pathname normalization with real next-intl', () => {
+  it.each(['zh', 'en', 'ja'])('keeps CMS material index and registered details uncached in %s', locale => {
+    for (const suffix of ['/items', '/items/immortal-flower', '/items/worldbreaker-blade']) {
+      expect(follow(`/${locale}/starrail${suffix}`).response.headers.get('cache-control')).toBe('no-store');
+    }
+    expect(follow(`/${locale}/starrail/items/stellar-jade`).response.headers.get('cache-control')).not.toBe('no-store');
+  });
   it.each(['%', '%G0', '%E0%A4%A', '%C0%AF', '%ED%A0%80', '%2F', '%5c', '%00', '%1F', '%7F', '%20..%20'])('rejects unsafe segment %s without throwing', segment => {
     const response = middleware(new NextRequest(`${origin}/zh/${segment}`));
     expect(response.status).toBe(400);

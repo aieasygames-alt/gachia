@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "publishedCount": 37,
+  "cloudEqualsPreviousBaseline": true,
+  "comparedExistingFilesWithHEADBeforeCopy": true,
+  "schemaMigrationRequired": false,
+  "backup": "ignored .private/cms-before-drafts.db"
+}

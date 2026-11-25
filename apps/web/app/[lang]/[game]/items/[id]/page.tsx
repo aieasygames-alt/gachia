@@ -1,3 +1,5 @@
+import { STARRAIL_CMS_MATERIALS, isStarRailCmsMaterial } from '@gachia/data/cms/starrail-materials';
+import { StarRailCmsMaterial, starRailMaterialMetadata } from '@/components/wiki/starrail-cms-materials';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
@@ -264,7 +266,7 @@ export async function generateStaticParams() {
     const items = await getItemsForStaticParams(gameId);
     return LOCALES.flatMap((lang) => items.map((item) => ({ lang, game: gameId, id: item.id })));
   }));
-  return params.flat();
+  return [...params.flat().filter(p => p.game !== 'starrail' || !isStarRailCmsMaterial(p.id)), ...LOCALES.flatMap(lang => Object.keys(STARRAIL_CMS_MATERIALS).map(id => ({ lang, game: 'starrail', id })))];
 }
 
 export async function generateMetadata({
@@ -275,6 +277,7 @@ export async function generateMetadata({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail' && isStarRailCmsMaterial(id)) return starRailMaterialMetadata(locale, id);
   const gameName = GAMES[gameId]?.name[locale] ?? '';
 
   const data = await getItemData(gameId, id, locale);
@@ -378,6 +381,7 @@ export default async function ItemDetailPage({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail' && isStarRailCmsMaterial(id)) return await StarRailCmsMaterial({ locale, id });
   const gameConfig = GAMES[gameId];
 
   const data = await getItemData(gameId, id, locale);

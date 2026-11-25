@@ -26,6 +26,8 @@ function loadPage(route: 'items' | 'redeem-codes') {
     '@/lib/roco-public-review': { rocoPublicReviewMetadata },
     '@/lib/jsonld-script': {}, '@/lib/game-data/items': {}, '@/lib/i18n/navigation': { Link: 'a' },
     '@/lib/seo-metadata': seo,
+    '@gachia/data/cms/starrail-materials': {},
+    '@/components/wiki/starrail-cms-materials': {},
   };
   new Function('require', 'exports', compiled)((name: string) => {
     if (!(name in dependencies)) throw new Error(`Unexpected page dependency: ${name}`);

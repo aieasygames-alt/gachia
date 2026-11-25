@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "publishedCount": 37,
+  "preparedDrafts": 9,
+  "publicRecordsExactlyEqualBaselineAfterProductionRebuild": true,
+  "schemaMigrationRequired": false,
+  "existingTextKindColumnUsed": true,
+  "onlyReviewedFilesSynced": [
+    "packages/data/cms/starrail-updates.ts",
+    "packages/data/cms/starrail-materials.ts",
+    "tools/payload-cms/payload.config.ts",
+    "tools/payload-cms/payload-types.ts"
+  ]
+}

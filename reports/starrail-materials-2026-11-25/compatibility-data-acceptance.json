@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "legacyBefore": 62,
+  "compatibilityAfter": 68,
+  "existingStableIdsPreserved": true,
+  "correctedExisting": 3,
+  "reviewedAdditions": 6,
+  "publicMirrorExactlyEqual": true,
+  "otherGamesSearchDataUnchanged": true
+}

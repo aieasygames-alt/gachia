@@ -1,0 +1,74 @@
+[
+  {
+    "name": "永寿幼芽",
+    "url": "https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%B9%BC%E8%8A%BD",
+    "status": 200,
+    "bytes": 496461,
+    "sha256": "2b2b93852a7c04be3559af4cde656af84e3fa56fe800433cc165a090f52c61b0",
+    "transport": "ordinary direct public HTTPS"
+  },
+  {
+    "name": "永寿天华",
+    "url": "https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%A4%A9%E5%8D%8E",
+    "status": 200,
+    "bytes": 496389,
+    "sha256": "231f8a08dd268a2134102fb2f0dfd29d154a0bc49d640883724c60f0b9281f3b",
+    "transport": "ordinary direct public HTTPS"
+  },
+  {
+    "name": "永寿荣枝",
+    "url": "https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E8%8D%A3%E6%9E%9D",
+    "status": 200,
+    "bytes": 494790,
+    "sha256": "ad38b891d0ddb51bb4c8b14cd6b7386d13dfdf3cb41944d59eff55478d95f073",
+    "transport": "ordinary direct public HTTPS"
+  },
+  {
+    "name": "破碎残刃",
+    "url": "https://wiki.biligame.com/sr/%E7%A0%B4%E7%A2%8E%E6%AE%8B%E5%88%83",
+    "status": 200,
+    "bytes": 533326,
+    "sha256": "33d50b1108e7e46dcfdb8cfc228470b336e542b3995d20197ee63ec28b5d0c98",
+    "transport": "ordinary direct public HTTPS"
+  },
+  {
+    "name": "无生残刃",
+    "url": "https://wiki.biligame.com/sr/%E6%97%A0%E7%94%9F%E6%AE%8B%E5%88%83",
+    "status": 200,
+    "bytes": 533434,
+    "sha256": "1ff3aad2f09d3409e3ef9d35784e202c039f99c6b2678d90ec50b484a6d8f676",
+    "transport": "ordinary direct public HTTPS"
+  },
+  {
+    "name": "净世残刃",
+    "url": "https://wiki.biligame.com/sr/%E5%87%80%E4%B8%96%E6%AE%8B%E5%88%83",
+    "status": 200,
+    "bytes": 533490,
+    "sha256": "974ace40c8d404643b9dad163f5fde7d0dd9b87a235029cfef1bfda214964572",
+    "transport": "ordinary HTTPS proxy read after initial direct 567"
+  },
+  {
+    "name": "灵感之钥",
+    "url": "https://wiki.biligame.com/sr/%E7%81%B5%E6%84%9F%E4%B9%8B%E9%92%A5",
+    "status": 200,
+    "bytes": 529740,
+    "sha256": "5be2f402d0d18f58c1949265951cb71d9d39dd5aec95d84e40c2aa26869e7c9a",
+    "transport": "ordinary direct public HTTPS"
+  },
+  {
+    "name": "启迪之钥",
+    "url": "https://wiki.biligame.com/sr/%E5%90%AF%E8%BF%AA%E4%B9%8B%E9%92%A5",
+    "status": 200,
+    "bytes": 530009,
+    "sha256": "7d4fb10c9a688b579cce30ef765555ae992731cc1ff6d8a9ca9a03d9c72df277",
+    "transport": "ordinary direct public HTTPS"
+  },
+  {
+    "name": "智识之钥",
+    "url": "https://wiki.biligame.com/sr/%E6%99%BA%E8%AF%86%E4%B9%8B%E9%92%A5",
+    "status": 200,
+    "bytes": 529931,
+    "sha256": "c160e2164d6aab6bf790540f93714eb21cb617e4432e4e5fd094542496436d1b",
+    "transport": "ordinary direct public HTTPS"
+  }
+]

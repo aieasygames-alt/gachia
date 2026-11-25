@@ -1,0 +1,198 @@
+[
+  {
+    "id": "113001",
+    "slug": "immortal-scionette",
+    "name": "永寿幼芽",
+    "rarity": 2,
+    "bwikiRarity": "2星.png",
+    "bwikiType": "行迹材料、角色晋阶材料",
+    "pinnedRoutes": [
+      "丰饶孽物掉落",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "委托奖励",
+      "余烬兑换",
+      "「万能合成机」- 材料置换",
+      "拟造花萼（金）"
+    ],
+    "bwikiRoutesText": "丰饶孽物掉落 「模拟宇宙」中敌方掉落 「差分宇宙」中敌方掉落 「万能合成机」- 材料置换 委托奖励 余烬兑换 拟造花萼（金） 阿合马铁窗集团",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "阿合马铁窗集团",
+    "relatedPublishedCones": [
+      "before-dawn",
+      "brighter-than-the-sun",
+      "geniuses-repose",
+      "trend-of-the-universal-market"
+    ]
+  },
+  {
+    "id": "113002",
+    "slug": "immortal-flower",
+    "name": "永寿天华",
+    "rarity": 3,
+    "bwikiRarity": "3星.png",
+    "bwikiType": "行迹材料、角色晋阶材料",
+    "pinnedRoutes": [
+      "突破至均衡等级2后，丰饶孽物掉落",
+      "「万能合成机」- 材料合成",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "突破至均衡等级2后，丰饶孽物掉落 「万能合成机」- 材料合成 「模拟宇宙」中敌方掉落 「差分宇宙」中敌方掉落 「万能合成机」- 材料置换 阿合马铁窗集团",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "阿合马铁窗集团",
+    "relatedPublishedCones": [
+      "before-dawn",
+      "brighter-than-the-sun",
+      "geniuses-repose",
+      "trend-of-the-universal-market"
+    ]
+  },
+  {
+    "id": "113003",
+    "slug": "immortal-leaf",
+    "name": "永寿荣枝",
+    "rarity": 4,
+    "bwikiRarity": "4星.png",
+    "bwikiType": "行迹材料、角色晋阶材料",
+    "pinnedRoutes": [
+      "突破至均衡等级4后，丰饶孽物掉落",
+      "「万能合成机」- 材料合成",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "突破至均衡等级4后，丰饶孽物掉落 「万能合成机」- 材料合成 「模拟宇宙」中敌方掉落 「差分宇宙」中敌方掉落 「万能合成机」- 材料置换",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "before-dawn",
+      "brighter-than-the-sun",
+      "geniuses-repose",
+      "trend-of-the-universal-market"
+    ]
+  },
+  {
+    "id": "110111",
+    "slug": "shattered-blade",
+    "name": "破碎残刃",
+    "rarity": 2,
+    "bwikiRarity": "2星.png",
+    "bwikiType": "行迹材料、光锥晋阶材料",
+    "pinnedRoutes": [
+      "拟造花萼【收容舱段】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【收容舱段】 余烬兑换 「万能合成机」- 材料置换",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "brighter-than-the-sun",
+      "shattered-home"
+    ]
+  },
+  {
+    "id": "110112",
+    "slug": "lifeless-blade",
+    "name": "无生残刃",
+    "rarity": 3,
+    "bwikiRarity": "3星.png",
+    "bwikiType": "行迹材料、光锥晋阶材料",
+    "pinnedRoutes": [
+      "拟造花萼【收容舱段】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【收容舱段】 「万能合成机」- 材料合成 余烬兑换 「万能合成机」- 材料置换",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "brighter-than-the-sun",
+      "shattered-home"
+    ]
+  },
+  {
+    "id": "110113",
+    "slug": "worldbreaker-blade",
+    "name": "净世残刃",
+    "rarity": 4,
+    "bwikiRarity": "4星.png",
+    "bwikiType": "行迹材料、光锥晋阶材料",
+    "pinnedRoutes": [
+      "拟造花萼【收容舱段】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【收容舱段】 「万能合成机」- 材料合成 「万能合成机」- 材料置换",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "brighter-than-the-sun",
+      "shattered-home"
+    ]
+  },
+  {
+    "id": "110131",
+    "slug": "key-of-inspiration",
+    "name": "灵感之钥",
+    "rarity": 2,
+    "bwikiRarity": "2星.png",
+    "bwikiType": "行迹材料、光锥晋阶材料",
+    "pinnedRoutes": [
+      "拟造花萼【铆钉镇】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【铆钉镇】 余烬兑换 「万能合成机」- 材料置换",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "before-dawn",
+      "geniuses-repose"
+    ]
+  },
+  {
+    "id": "110132",
+    "slug": "key-of-knowledge",
+    "name": "启迪之钥",
+    "rarity": 3,
+    "bwikiRarity": "3星.png",
+    "bwikiType": "行迹材料、光锥晋阶材料",
+    "pinnedRoutes": [
+      "拟造花萼【铆钉镇】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【铆钉镇】 「万能合成机」- 材料合成 余烬兑换 「万能合成机」- 材料置换",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "before-dawn",
+      "geniuses-repose"
+    ]
+  },
+  {
+    "id": "110133",
+    "slug": "key-of-wisdom",
+    "name": "智识之钥",
+    "rarity": 4,
+    "bwikiRarity": "4星.png",
+    "bwikiType": "行迹材料、光锥晋阶材料",
+    "pinnedRoutes": [
+      "拟造花萼【铆钉镇】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【铆钉镇】 「万能合成机」- 材料合成 「万能合成机」- 材料置换",
+    "allPinnedRoutesAppearInBwiki": true,
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "before-dawn",
+      "geniuses-repose"
+    ]
+  }
+]
