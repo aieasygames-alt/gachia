@@ -20,7 +20,15 @@
 
 ## 发布和验收
 
-执行Payload草稿→兼容Main部署→Payload正式发布→同步主站→完整回读。重建后的4320编辑端公开37条与原基线一致，草稿未泄漏；无数据库迁移。主站106文件629项、数据18文件181项、工作树CMS8项测试及生产构建已通过；其余类型/本地Worker/候选/正式/七服务回执随发布完成补齐。
+执行Payload草稿→兼容Main部署→Payload正式发布→同步主站→完整回读。重建后的4320编辑端公开37条与原基线一致，草稿未泄漏；无数据库迁移。主站106文件629项、数据18文件181项、工作树CMS8项测试通过；主站、数据与已配置编辑器类型检查，OpenNext与编辑器生产构建均通过。CMS真实SQLite测试新增材料草稿隔离、发布、不可变身份与版本历史验证；目录测试同步检验CMS归属与语言隔离，保留其他游戏边界检查。摘要见`checks.json`。
+
+源码提交`bdec941693195d033a6b3f1b45330b301595d0c2`，远端CI [45626027496](https://github.com/aieasygames-alt/gachia/actions/runs/45626027496)通过。Main从`157633b1-f8a9-448b-b27f-2f6274dd19f8`切换至`b0d62b83-ec6f-46b3-a421-1d69feca9b3e`，上传并下载核对模块SHA256 `412d7665ae4dc51812cf0d887409b3b0f2cd8c4f4de7ada1eac7b36586ae5752`。前版1507个不可变静态资源路径全部保留，复制1384个，全部碰撞摘要一致。候选151项路由检查与32个静态资源摘要比对通过，见`preview-acceptance.json`。七服务独立快照确认仅Main版本变化，其余六服务部署及全部七服务routes/subdomain/bindings/settings均未变，见`runtime-protection.json`。
+
+兼容Main上线后先验收原37条及revision完整保留，九个材料详情三语27页均待发布/noindex，目录没有旧卡片回退，见`compatible-main-acceptance.json`。随后经Payload Local API正式发布九条，每条版本历史至少保留草稿和正式两版；公开全体46条与审定批次精确一致。执行`publish:starrail`得到`ok:true`、count46、revision `1795614753638`，完整云端规范记录与Payload审定内容相等，见`local-publication.json`、`sync-receipt.json`、`cloud-after.json`。
+
+隔离本地D1验收46条完整发布、匿名/草稿/错误来源/旧revision/未注册材料拒绝；九种材料的事实、metadata、目录及相关光锥标题可即时修订，材料撤回同时删除目录及光锥入口，装备撤回也删除材料页反链，全部三语均不回退旧正文、旧卡片或FAQ。原17件装备、阿哈/计算器、5篇攻略和历史别名回归通过。测试写入仅发生于隔离本地D1，正式环境只同步审定完整副本，见`local-acceptance.json`。本机4320 CMS继续运行并回读46条，4400测试Worker已停止，4398/4399未动；发布后一致性备份完整性检查通过，见`local-services.json`。
+
+正式站151项路由检查与32个静态资源摘要比对全部通过，46条完整正文与来源、九种材料的三语详情和目录、已核验光锥双向链接及原17件装备/阿哈/攻略回归均通过。九个材料详情及材料目录no-store，缺译详情noindex；每条已发布材料在目录只有一个入口。公共材料镜像、既有光锥镜像及三语搜索清单与构建产物一致；验收结束再次读取revision确认期间没有并发发布变化。详见`production-acceptance.json`。
 
 ## 后续和恢复
 

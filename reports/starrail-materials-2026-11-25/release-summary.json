@@ -1,0 +1,21 @@
+{
+  "status": "published_and_accepted",
+  "date": "2026-11-25",
+  "sourceCommit": "bdec941693195d033a6b3f1b45330b301595d0c2",
+  "mainVersion": "b0d62b83-ec6f-46b3-a421-1d69feca9b3e",
+  "moduleSHA256": "412d7665ae4dc51812cf0d887409b3b0f2cd8c4f4de7ada1eac7b36586ae5752",
+  "revision": 1795614753638,
+  "zhPublishedCount": 46,
+  "publishedMaterials": 9,
+  "equipmentCount": 17,
+  "compatibilityCorrections": 3,
+  "compatibilityAdditions": 6,
+  "productionRoutesChecked": 151,
+  "staticAssetDigestsChecked": 32,
+  "ci": "ci.json",
+  "publicAcceptance": "production-acceptance.json",
+  "scopeProtection": "runtime-protection.json",
+  "remainingMaterials": 25,
+  "nextPriorities": "remaining-priorities.json",
+  "otherGamesChanged": false
+}
