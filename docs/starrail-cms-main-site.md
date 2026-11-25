@@ -2,12 +2,23 @@
 
 本批接入中文版本状态、跃迁窗口、活动奖励三条内容。Payload 编辑端在本机 `http://127.0.0.1:4320/admin`，主站通过已有 D1 保存并读取独立的已发布副本；公众请求不访问站长的 Mac。
 
+2026-11-25 已部署至 [正式星铁版本页](https://gachia.com/zh/starrail/version)。正式 Main 版本为 `3473e29b-788d-4a9a-a847-28ba0d58557f`，接入源码提交为 `32837415799a0d5aa7356e99514d62b87f5f1d15`。内容来源核验日仍为 2026-11-24。此次发布包含版本页 HTML 的 `no-store` 修复，避免原有一小时缓存延迟内容更新。
+
 ## 日常更新
 
 1. 启动本机 Payload，进入「游戏更新」，编辑对应条目。首次使用创建自己的管理员。
 2. 保存草稿用于核对；准备公开时点击 Publish。草稿不会进入公开导出。
 3. 在 `tools/payload-cms` 执行 `npm run publish:starrail`。使用 Node 24.22.3；没有对应系统 Node 时执行 `npx --yes --package=node@24.22.3 -- npm run publish:starrail`。
 4. 命令返回 `ok: true` 和新 `revision` 后，刷新 `https://gachia.com/zh/starrail/version`。这一步无需构建或部署 Worker。
+
+本机已经配置好的编辑与同步目录是原工作区，日常执行：
+
+```sh
+cd /Users/robert/Documents/gachia/tools/payload-cms
+npx --yes --package=node@24.22.3 -- npm run publish:starrail
+```
+
+CMS 未运行时，先在该目录的另一个终端执行 `npx --yes --package=node@24.22.3 -- npm run start`。已有生产构建可直接启动，不需要重新导入数据。
 
 后台 Publish 与同步主站是两个步骤。**本批没有添加后台自动云发布 hook。** 同步命令从匿名可读的 Payload 正式视图导出全体记录，验证后一次性替换云端副本，并从公开接口读回 revision。失败时会报错，修复连接后重新执行；不把本机保存成功当作公网更新成功。
 
@@ -26,6 +37,8 @@
 ## 主站代码维护
 
 接入源码位于 `codex/starrail-cms-release`，基于当前正式 Main 的 `721d159` 实现，并保留 R153 已发布的 115 份内容来源。生产构建采用 Next 15.5.29 / OpenNext 1.20.13 / Wrangler 4.148.0；独立 Payload 依赖不进入主站运行时。
+
+完整发布源码工作区为 `/Users/robert/.codex/worktrees/starrail-cms-release/gachia`，分支已推送至 origin。原工作区保留站长已有未提交工作；其 CMS 发布命令已同步，但原工作区旧的主站 HEAD 不能用于重新部署 Main。
 
 本批发布回执位于 `reports/starrail-cms-deployment-2026-11-25/`，记录原 Main UUID、候选/兼容恢复模块摘要、旧新静态资源并集、staging 与正式验收。以后重建 Main 必须从这一接入源码或包含其提交的后续版本构建，保留新 API、D1 读取器、专用 secret 和原有 Genshin/NTE bindings。不能直接从旧的 `Documents/gachia` HEAD 或旧 Main 发布器源码重建，否则会移除本批接入。
 

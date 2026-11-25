@@ -1,0 +1,84 @@
+{
+  "status": "deployed_and_verified",
+  "verifiedAt": "2026-11-25T01:52:08.920351+00:00",
+  "origin": "https://gachia.com",
+  "page": "https://gachia.com/zh/starrail/version",
+  "source": {
+    "branch": "codex/starrail-cms-release",
+    "runtimeCommit": "32837415799a0d5aa7356e99514d62b87f5f1d15",
+    "baseImplementationCommit": "721d1596885244aed46aab869ad4b943cd9f66f7"
+  },
+  "main": {
+    "versionId": "3473e29b-788d-4a9a-a847-28ba0d58557f",
+    "deploymentId": "94677ef4-d3b7-4f77-9ec1-582d49936793",
+    "trafficPercentage": 100,
+    "originalVersionId": "906927ee-9d4f-44c4-a464-14939e85c84b",
+    "intermediateIntegrationVersionId": "5f5346d0-c5ee-48c6-9527-6b5b5f7c5b72",
+    "moduleSHA256": "6c16cefe81d333a976ac3cd208f32bf9c6cd245466044d78eddb2b4c699254c8"
+  },
+  "compatibleRecovery": {
+    "versionId": "7ddbbbaf-3e16-4d46-bf60-ff6c5775e079",
+    "moduleSHA256": "4c32a7f0105dda42689c838b1720527a26a6efdd8abde407dcb724a5a50fa06b",
+    "note": "Retains CMS integration and current D1 content; predates final HTML no-store fix."
+  },
+  "stagingVersionId": "9b172966-e080-4d26-b8a4-f2513c3c789b",
+  "content": {
+    "locale": "zh",
+    "count": 3,
+    "revision": 1795570899426,
+    "sourceCheckedAt": "2026-11-24",
+    "scope": [
+      "version status",
+      "warp windows",
+      "events and rewards"
+    ]
+  },
+  "architecture": "local Payload 4320 -> explicit publish:starrail -> production D1 -> request-time Main rendering",
+  "protectedProductionVersions": {
+    "gachia-router": [
+      {
+        "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-genshin": [
+      {
+        "version_id": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-nte": [
+      {
+        "version_id": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-azur-promilia": [
+      {
+        "version_id": "cd52e4fe-dc13-417b-9163-ce2972c49b70",
+        "percentage": 100
+      }
+    ],
+    "gachia-game-lvmeng": [
+      {
+        "version_id": "50812a8a-012f-428e-bb4b-780530181c09",
+        "percentage": 100
+      }
+    ]
+  },
+  "ci": {
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45527504606",
+    "conclusion": "success",
+    "runtimeCommit": "32837415799a0d5aa7356e99514d62b87f5f1d15"
+  },
+  "preservedSources": {
+    "count": 115,
+    "indexSHA256": "cc71a49160ba622a34eaf5d05bfe21006bfa41a0632f208b57afd36e10376340",
+    "limitation": "Pinned active files checked; no claim of full recursive history validation."
+  },
+  "limitations": [
+    "Admin Publish and cloud synchronization are separate steps.",
+    "Only the Star Rail version page update area is migrated.",
+    "Existing 3100 CMS Main publisher needs source handoff before another Main build."
+  ]
+}

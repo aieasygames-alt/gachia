@@ -1,0 +1,167 @@
+{
+  "status": "passed",
+  "production": {
+    "routes": [
+      {
+        "path": "/zh/starrail/version",
+        "status": 200,
+        "records": 3
+      },
+      {
+        "path": "/en/starrail/version",
+        "status": 200,
+        "records": 0
+      },
+      {
+        "path": "/ja/starrail/version",
+        "status": 200,
+        "records": 0
+      },
+      {
+        "path": "/zh",
+        "status": 200
+      },
+      {
+        "path": "/en",
+        "status": 200
+      },
+      {
+        "path": "/ja",
+        "status": 200
+      },
+      {
+        "path": "/zh/starrail",
+        "status": 200
+      },
+      {
+        "path": "/zh/starrail/characters",
+        "status": 200
+      },
+      {
+        "path": "/zh/hi3/weapons",
+        "status": 200
+      },
+      {
+        "path": "/zh/privacy",
+        "status": 200
+      },
+      {
+        "path": "/zh/contact",
+        "status": 200
+      },
+      {
+        "path": "/zh/sea/guides/beginner-guide",
+        "status": 200
+      },
+      {
+        "path": "/sitemap.xml",
+        "status": 200
+      },
+      {
+        "path": "/sitemaps/main/sitemap.xml",
+        "status": 200
+      },
+      {
+        "path": "/ads.txt",
+        "status": 200
+      }
+    ],
+    "assetCount": 18,
+    "assetSHA256Matched": true,
+    "anonymousWriteRejected": true,
+    "observedRevision": 1795570899426,
+    "readOnlyAcceptance": {
+      "observedRevision": 1795570899426,
+      "cloudContentWrites": 0
+    }
+  },
+  "cache": [
+    {
+      "path": "/zh/starrail/version",
+      "status": 200,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/en/starrail/version",
+      "status": 200,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/ja/starrail/version",
+      "status": 200,
+      "cacheControl": "no-store"
+    }
+  ],
+  "browser": [
+    {
+      "width": 1365,
+      "status": 200,
+      "records": 3,
+      "pageErrors": [],
+      "failedSameOriginResponses": [],
+      "horizontalOverflow": false,
+      "externalRequests": "blocked_in_this_test"
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "records": 3,
+      "pageErrors": [],
+      "failedSameOriginResponses": [],
+      "horizontalOverflow": false,
+      "externalRequests": "blocked_in_this_test"
+    }
+  ],
+  "localWorker": {
+    "status": "passed",
+    "checks": [
+      "anonymous_write_rejected",
+      "cms_export_saved_in_local_d1",
+      "published_records_rendered",
+      "change_visible_without_rebuild",
+      "stale_publication_rejected",
+      "draft_export_rejected",
+      "locale_isolation",
+      "withdrawal_does_not_resurrect_snapshot",
+      "original_publication_restored"
+    ],
+    "count": 3
+  },
+  "ci": {
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45527504606",
+    "conclusion": "success",
+    "headSha": "32837415799a0d5aa7356e99514d62b87f5f1d15",
+    "jobs": [
+      {
+        "name": "web",
+        "conclusion": "success",
+        "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45527504606/job/138914378324"
+      },
+      {
+        "name": "cms",
+        "conclusion": "success",
+        "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45527504606/job/138914378755"
+      }
+    ]
+  },
+  "protection": {
+    "otherProductionServiceSnapshotsUnchanged": true,
+    "allServiceRoutesUnchanged": true,
+    "existingMainBindingsPreserved": true
+  },
+  "moduleProofs": {
+    "candidateSHA256": "6c16cefe81d333a976ac3cd208f32bf9c6cd245466044d78eddb2b4c699254c8",
+    "recoverySHA256": "4c32a7f0105dda42689c838b1720527a26a6efdd8abde407dcb724a5a50fa06b",
+    "uploadedDownloadedAndVersionMetadataChecked": true
+  },
+  "actualPublisher": {
+    "result": "ok",
+    "count": 3,
+    "revision": 1795570899426,
+    "command": "npm run publish:starrail"
+  },
+  "testLimitations": [
+    "Browser test blocked third-party requests.",
+    "Publication checks used APIs and the real command; no claim of manual Admin click testing."
+  ]
+}
