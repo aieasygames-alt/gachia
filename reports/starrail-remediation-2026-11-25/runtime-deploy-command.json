@@ -1,0 +1,14 @@
+{
+  "returncode": 0,
+  "automaticRetry": false,
+  "command": [
+    "versions",
+    "deploy",
+    "b6e650c0-0dfc-4394-90e8-621fd21b8f4c@100%",
+    "--config",
+    "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-remediation-2026-11-25/module/upload.json",
+    "--env",
+    "",
+    "--yes"
+  ]
+}

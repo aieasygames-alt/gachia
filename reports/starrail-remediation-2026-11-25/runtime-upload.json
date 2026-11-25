@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "versionId": "b6e650c0-0dfc-4394-90e8-621fd21b8f4c",
+  "previewOrigin": "https://b6e650c0-gachia.aieasygames.workers.dev",
+  "moduleSHA256": "d352e1cb4d65a5f3ecae6fa9b1312cbd2720ff3825709c145a24b9f7b7353862",
+  "sourceCommit": "6e91dedb73c9491c342da65eb0640b542f9becd5",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-remediation-2026-11-25/.private/upload/module-proof/receipt.json",
+    "pin": "3b692ba468f5a3773c30e47b15f3b6833074c30b2f8949436196f301aa04631b"
+  },
+  "bindingsPreserved": true,
+  "trafficMutation": false
+}
