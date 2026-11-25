@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "changedServices": [
+    "gachia"
+  ],
+  "otherServicesUnchanged": 6,
+  "routesSubdomainsBindingsAndSettingsUnchanged": true,
+  "newMain": "c4506b7a-d6c6-400b-9dd8-f2b2e2eff8a0"
+}

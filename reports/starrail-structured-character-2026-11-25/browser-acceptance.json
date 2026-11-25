@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "localElation7to10": {
+    "credits": 435000,
+    "collection": 22,
+    "dreamAwl": 12
+  },
+  "production": {
+    "characterPage": true,
+    "multiplier40_625": true,
+    "fullCredits": 3308000,
+    "afterFirstNodeUnchecked": 3303000,
+    "resetCredits": 3308000
+  },
+  "screenshot": "production-calculator.jpg"
+}

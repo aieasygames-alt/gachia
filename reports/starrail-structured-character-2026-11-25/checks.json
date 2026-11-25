@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "web": {
+    "files": 104,
+    "tests": 618,
+    "typecheck": true
+  },
+  "data": {
+    "files": 18,
+    "tests": 181,
+    "typecheck": true
+  },
+  "cms": {
+    "tests": 8,
+    "typecheck": true,
+    "productionBuild": true
+  },
+  "mainProductionBuild": true,
+  "manifests": true,
+  "rawMirrors": true,
+  "rawInventory": true,
+  "ci": "https://github.com/aieasygames-alt/gachia/actions/runs/45569855108"
+}

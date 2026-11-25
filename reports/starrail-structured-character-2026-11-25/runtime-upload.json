@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "versionId": "c4506b7a-d6c6-400b-9dd8-f2b2e2eff8a0",
+  "previewOrigin": "https://c4506b7a-gachia.aieasygames.workers.dev",
+  "moduleSHA256": "d48b4805cc42d78f8d2fa4236a942a34dea09de9bc1e0865b1db9e1de7d6cfae",
+  "sourceCommit": "12b39bffffc394f977328d4b5b007af5460c33e3",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-structured-character-2026-11-25/.private/upload/module-proof/receipt.json",
+    "pin": "95753b38f4deb54b3c40b4106cfd8f57e9f65652ba8e6c75f22a61f446aeb6f8"
+  },
+  "bindingsPreserved": true,
+  "trafficMutation": false
+}

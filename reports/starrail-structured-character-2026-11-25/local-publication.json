@@ -1,0 +1,14 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 20,
+      "slug": "aha-character-data",
+      "updatedAt": "2026-11-25T07:41:01.913Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 20,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

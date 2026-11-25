@@ -1,0 +1,1699 @@
+{
+  "gachia": {
+    "deployments": {
+      "deployments": [
+        {
+          "id": "b1cf1362-350e-4732-9f25-36aa1f53c384",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c4506b7a-d6c6-400b-9dd8-f2b2e2eff8a0",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T07:46:21.026567Z"
+        },
+        {
+          "id": "c7cdd329-b020-4c33-9de4-9103b9939189",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "aa41b4af-c66e-4a8b-9252-5227c3cac844",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T06:33:49.247927Z"
+        },
+        {
+          "id": "7341f9fb-3e79-4cd4-8341-7e3078e8fd94",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "b6e650c0-0dfc-4394-90e8-621fd21b8f4c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T06:11:49.369384Z"
+        },
+        {
+          "id": "aaf7004c-8776-4434-a61b-a0d34fd9ff62",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "615e71d4-62d8-4368-b3a8-716be89f3f67",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T04:50:43.765224Z"
+        },
+        {
+          "id": "250119a4-09be-42a8-8b2b-4c3078eaab1f",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "ca31ee73-9119-4238-95a5-47ae8402c161",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T02:41:15.931931Z"
+        },
+        {
+          "id": "94677ef4-d3b7-4f77-9ec1-582d49936793",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "3473e29b-788d-4a9a-a847-28ba0d58557f",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T01:46:08.930049Z"
+        },
+        {
+          "id": "b6efeac7-59f4-496b-a68b-3e7a932c231d",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "5f5346d0-c5ee-48c6-9527-6b5b5f7c5b72",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T01:33:10.587398Z"
+        },
+        {
+          "id": "c1a83c34-9431-4c99-8ae9-5e6e9f08ad5e",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "906927ee-9d4f-44c4-a464-14939e85c84b",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-22T02:24:02.885893Z"
+        },
+        {
+          "id": "0b9717c9-bdf5-4409-ac91-2935aa226351",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "9843820e-6676-4c02-a393-d814c8bedbc3",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-21T14:19:56.021945Z"
+        },
+        {
+          "id": "61209ff8-87f8-433f-b1bd-d0665c4827c3",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "8d88bd48-ba83-4470-a855-41048eacfc1a",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-19T02:54:31.456196Z"
+        }
+      ]
+    },
+    "settings": {
+      "placement": {},
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "usage_model": "standard",
+      "tags": [
+        "cf:service=gachia"
+      ],
+      "tail_consumers": [],
+      "logpush": false,
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 0.1,
+        "redact_query_string": false,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 0.1,
+          "persist": true,
+          "invocation_logs": true
+        },
+        "traces": {
+          "enabled": true,
+          "persist": true,
+          "head_sampling_rate": 0.05
+        }
+      },
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "BETTER_AUTH_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "name": "BETTER_AUTH_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        },
+        {
+          "database_id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+          "id": "80421efb-73f7-471f-897a-c4929af3bf4d",
+          "name": "DB",
+          "type": "d1"
+        },
+        {
+          "environment": "production",
+          "name": "GENSHIN_CONTENT",
+          "service": "gachia-game-genshin",
+          "type": "service"
+        },
+        {
+          "name": "GENSHIN_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "name": "GOOGLE_CLIENT_ID",
+          "type": "secret_text"
+        },
+        {
+          "name": "GOOGLE_CLIENT_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "bucket_name": "gachia-images",
+          "name": "IMAGES",
+          "type": "r2_bucket"
+        },
+        {
+          "name": "INDEXNOW_AUTH_TOKEN",
+          "type": "secret_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "NTE_CONTENT",
+          "service": "gachia-game-nte",
+          "type": "service"
+        },
+        {
+          "name": "NTE_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "name": "STARRAIL_PUBLISH_TOKEN",
+          "type": "secret_text"
+        },
+        {
+          "environment": "production",
+          "name": "WORKER_SELF_REFERENCE",
+          "service": "gachia",
+          "type": "service"
+        }
+      ]
+    },
+    "routes": [],
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    }
+  },
+  "gachia-router": {
+    "deployments": {
+      "deployments": [
+        {
+          "id": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-13T14:30:23.133978Z"
+        },
+        {
+          "id": "ba2377b9-cfc7-456e-93c0-5ebaa1bb412a",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "6003b8f7-a3b4-4c64-bd92-e9f09b564880",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-11T10:19:20.218477Z"
+        },
+        {
+          "id": "04a74338-c9ba-4e87-9857-0fe414457ff5",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "239bb325-998c-4893-98e5-ddd24d50c99a",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T14:55:23.062535Z"
+        },
+        {
+          "id": "09008c5d-cafd-4c3f-a05b-f3c75c7082b6",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "b6970a74-13e4-4290-8886-07cede55f681",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T14:43:25.463182Z"
+        },
+        {
+          "id": "d380c863-fd93-4dd4-bd6f-9d80d24f8a6f",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "555d7b91-e305-4c34-841f-127d97e26490",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T14:27:46.050926Z"
+        },
+        {
+          "id": "b7274339-e2d3-4430-a22c-3cdcab844613",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c833bc9e-0ab1-41b2-9f3e-b4114cb6999c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T05:02:15.070418Z"
+        },
+        {
+          "id": "552cbd1d-a68e-4e16-87b1-77abb1f1baf4",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "1e0d62a5-e744-4be6-94c2-847763e2c469",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T04:47:59.361796Z"
+        },
+        {
+          "id": "963a6a22-5bd9-4da1-93fd-28143924e96f",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "ab5a32a5-567d-4337-88c9-bc172e452b79",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-08T15:20:51.277485Z"
+        },
+        {
+          "id": "33c7bd70-a7bf-406f-9c63-fbb2eac74579",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "20cd0d28-4fe3-48e6-b9d3-7595decb47fc",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-08T14:44:45.596599Z"
+        },
+        {
+          "id": "0ddda567-2fe7-4fd6-8a8f-381790e271b7",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "215dea3a-2a68-4c67-85ee-4376d3978ba4",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-08T13:51:58.181935Z"
+        }
+      ]
+    },
+    "settings": {
+      "placement": {},
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [],
+      "usage_model": "standard",
+      "tags": [
+        "cf:service=gachia-router"
+      ],
+      "tail_consumers": [],
+      "logpush": false,
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": [
+        {
+          "name": "AZUR_PROMILIA_CANARY_COOKIE",
+          "text": "",
+          "type": "plain_text"
+        },
+        {
+          "name": "AZUR_PROMILIA_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "AZUR_PROMILIA_SITE",
+          "service": "gachia-game-azur-promilia",
+          "type": "service"
+        },
+        {
+          "name": "GENSHIN_CANARY_COOKIE",
+          "text": "",
+          "type": "plain_text"
+        },
+        {
+          "name": "GENSHIN_CANARY_TOKEN",
+          "type": "secret_text"
+        },
+        {
+          "name": "GENSHIN_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "name": "GENSHIN_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "name": "GENSHIN_FULL_CUTOVER",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "GENSHIN_SITE",
+          "service": "gachia-game-genshin",
+          "type": "service"
+        },
+        {
+          "name": "LVMENG_CANARY_COOKIE",
+          "text": "enabled",
+          "type": "plain_text"
+        },
+        {
+          "name": "LVMENG_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "LVMENG_SITE",
+          "service": "gachia-game-lvmeng",
+          "type": "service"
+        },
+        {
+          "environment": "production",
+          "name": "MAIN_SITE",
+          "service": "gachia",
+          "type": "service"
+        },
+        {
+          "name": "NTE_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "NTE_SITE",
+          "service": "gachia-game-nte",
+          "type": "service"
+        }
+      ]
+    },
+    "routes": [
+      {
+        "id": "5d458ae420024634af3334086a387691",
+        "pattern": "www.gachia.com/*",
+        "zone_name": "",
+        "script": "gachia-router"
+      },
+      {
+        "id": "98176d21d6624341904e5bb0ee26d076",
+        "pattern": "gachia.com/*",
+        "zone_name": "",
+        "script": "gachia-router"
+      }
+    ],
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    }
+  },
+  "gachia-game-genshin": {
+    "deployments": {
+      "deployments": [
+        {
+          "id": "3ad09c68-6dfc-46e0-ae7d-b09a361edff6",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS v7.2 bulletin; targeted pages and assets verified",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "345f53db-b6e2-4f50-bec9-7bc816405ff3",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T05:55:15.369362Z"
+        },
+        {
+          "id": "fde1a1e3-fb77-4f7d-b1da-55b2c86ec320",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-22T15:37:43.998897Z"
+        },
+        {
+          "id": "0c939a32-94be-4a84-b264-55cf4eae1f16",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "0382cd12-683b-46b0-817d-02bb89f5fd2b",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-21T13:46:43.195845Z"
+        },
+        {
+          "id": "8586474e-c106-495a-a4d7-4b2f2b5f4348",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c76c9d57-f814-410c-843a-1dcef57412e3",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-21T07:58:39.706132Z"
+        },
+        {
+          "id": "c8ea00a0-aafa-4ce2-83e9-7402da34610a",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "882906a4-328a-4a3c-ba3a-5e6130a8ed99",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-20T14:01:57.468728Z"
+        },
+        {
+          "id": "c7d0623d-2a15-45f0-b182-be5721790fbe",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "2fcd8859-5881-4dbc-aa9c-0b9d558ff8bc",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-14T04:46:59.687198Z"
+        },
+        {
+          "id": "07bc6fc3-0092-4dcc-b8a7-e268e068113c",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "25f9c75b-4f01-4c73-90e6-b85ca93fad4b",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-11T17:27:10.84409Z"
+        },
+        {
+          "id": "e353162d-c765-44e7-a48b-60e8529c1bb9",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "5aae28f8-96c3-4bf9-a955-4548fedc2570",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-11T08:56:00.960365Z"
+        },
+        {
+          "id": "43d626bb-afff-4758-ac23-515adfbaf0fb",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "8c75bec6-f269-4684-9601-5cf9ca441fce",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-05T02:32:56.285529Z"
+        },
+        {
+          "id": "38151b7d-2f22-41af-af99-0d26af92e0fc",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "347eb5c8-36d5-4f9c-b548-bb19c8617304",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T14:48:30.285164Z"
+        }
+      ]
+    },
+    "settings": {
+      "placement": {},
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "usage_model": "standard",
+      "tags": [
+        "cf:service=gachia-game-genshin"
+      ],
+      "tail_consumers": [],
+      "logpush": false,
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "redact_query_string": false,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "persist": true,
+          "invocation_logs": true
+        },
+        "traces": {
+          "enabled": false,
+          "persist": true,
+          "head_sampling_rate": 1
+        }
+      },
+      "annotations": {
+        "workers/alias": "genshin-cn-20261125",
+        "workers/message": "CMS: CN v7.2 wishes and upcoming photo event; expired code cleanup",
+        "workers/tag": "genshin-cn-20261125",
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "GENSHIN_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    },
+    "routes": [],
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    }
+  },
+  "gachia-game-nte": {
+    "deployments": {
+      "deployments": [
+        {
+          "id": "de54d437-fbe2-47b2-98c6-e58e2bd48e5d",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-21T14:05:05.869895Z"
+        },
+        {
+          "id": "d7c01702-abe1-4226-b3ae-a5659169e789",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "518d523c-ced8-4b71-85ed-2509806f432e",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-18T09:29:40.902829Z"
+        },
+        {
+          "id": "6546d807-6a37-4546-b192-39e1d3e10506",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "1c4ccf07-2744-443b-b0a0-bcccbb20cdbb",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-18T04:15:27.936539Z"
+        },
+        {
+          "id": "1679cf13-ff1e-44b1-9804-1b7312bd635d",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c6b29adb-4f92-4aea-94b2-3f5772d1a873",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-18T02:47:27.041788Z"
+        },
+        {
+          "id": "4e5252be-20f0-4164-8861-235edfdf37c1",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "6f509611-e4ef-4b6d-b41b-2768721ade2c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-17T11:01:13.114478Z"
+        },
+        {
+          "id": "3e19da24-ab8f-4e29-bd7e-e5d206aa353e",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "a95ee8e7-83c3-420e-9b48-64ed97dd77a2",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-17T06:08:43.502549Z"
+        },
+        {
+          "id": "2505f239-d0cf-4bcc-ba9d-bdc4faf0c168",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "1cbef8a6-8909-4455-9d37-3f0f64ab9a18",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-17T05:59:27.354785Z"
+        },
+        {
+          "id": "6c0b81b9-c246-40f6-85cf-c989f64378fc",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "a95ee8e7-83c3-420e-9b48-64ed97dd77a2",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-14T04:47:55.560052Z"
+        },
+        {
+          "id": "d72ce606-2b81-4deb-988c-89a85c14bb70",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "963f4629-9b0f-4992-8373-fcb536508c81",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-14T01:09:09.559661Z"
+        },
+        {
+          "id": "5f46dc02-0ef9-4eb0-b201-b967844fc9f2",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "6feb7e28-8b53-4737-a5f8-a05c649e09de",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-13T11:21:01.691387Z"
+        }
+      ]
+    },
+    "settings": {
+      "placement": {},
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "usage_model": "standard",
+      "tags": [],
+      "tail_consumers": [],
+      "logpush": false,
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        },
+        {
+          "name": "NTE_DEPLOYMENT_MODE",
+          "text": "live",
+          "type": "plain_text"
+        }
+      ]
+    },
+    "routes": [],
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    }
+  },
+  "gachia-game-azur-promilia": {
+    "deployments": {
+      "deployments": [
+        {
+          "id": "53cfddec-d9b1-42f7-a9d6-75365d50562e",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "cd52e4fe-dc13-417b-9163-ce2972c49b70",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T14:21:21.98821Z"
+        },
+        {
+          "id": "4ca7f572-bf53-4b27-b5ba-96196e301136",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "3f9f6674-79a5-46af-a6b0-b6f096d34003",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T14:01:11.340495Z"
+        },
+        {
+          "id": "655dee20-b4a5-4ef5-b801-59c6f87eae15",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "fb0f787b-8666-4770-875e-3ca1cf174cb4",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T13:08:38.824021Z"
+        },
+        {
+          "id": "fe7a5125-368f-4947-91ab-e46fddc2d683",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "e18cb9c5-2285-449c-8495-a31b6e77b0cd",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T12:57:47.865605Z"
+        },
+        {
+          "id": "13e1c254-17ed-4cb4-8367-83cc73223cea",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "d8ae43aa-cbe1-4b07-9a6a-7f74d4ff2f11",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T12:53:08.625784Z"
+        },
+        {
+          "id": "60842ea0-b18f-42ca-a009-d9eb3787aa9e",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "a5a242fb-fd64-41c7-81d5-7b88fc0fc4ee",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T12:24:08.029451Z"
+        },
+        {
+          "id": "9db45d63-e495-476b-83e4-47d4ce1dd77a",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "4f0827ab-3d04-419f-9cc9-e5a2d977c7ac",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T10:40:52.968778Z"
+        },
+        {
+          "id": "ac9af7fc-25d8-4304-9955-4635b4592db3",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "24a840b9-7446-410b-9d3d-ce1295f00154",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T10:29:43.381323Z"
+        },
+        {
+          "id": "554b7161-8ef8-49a1-b4f7-e145bf914ebc",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "35926d66-7ec3-4633-9d1b-40f57864974c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T10:19:24.898427Z"
+        },
+        {
+          "id": "76ad8e23-b685-4e35-9b8d-bb6d49e19895",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "CMS reviewed launch content; focused page verification passed",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "5ad16445-2c60-4827-b5e5-e3878f5a811c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-24T10:15:38.794995Z"
+        }
+      ]
+    },
+    "settings": {
+      "placement": {},
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "usage_model": "standard",
+      "tags": [
+        "cf:service=gachia-game-azur-promilia"
+      ],
+      "tail_consumers": [],
+      "logpush": false,
+      "annotations": {
+        "workers/alias": "azur-site-images-20261124",
+        "workers/message": "Publish CMS selected Azur Promilia editorial images",
+        "workers/tag": "azur-site-images-20261124",
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "AZUR_PROMILIA_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    },
+    "routes": [],
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    }
+  },
+  "gachia-game-lvmeng": {
+    "deployments": {
+      "deployments": [
+        {
+          "id": "646efb01-14d4-4904-b4b8-74e876447bd7",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "50812a8a-012f-428e-bb4b-780530181c09",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-21T14:10:34.707911Z"
+        },
+        {
+          "id": "62f5d1d5-ef07-450c-a91f-35b3dffa232a",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "3a75b290-ea71-42a2-b3fc-e4c388956ebb",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-15T18:08:09.01314Z"
+        },
+        {
+          "id": "19c9ea20-378e-40b2-a59f-fd75c7943907",
+          "source": "api",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "6876b36b-c74c-41cb-aeff-1639c3ba0077",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-14T04:49:04.819337Z"
+        },
+        {
+          "id": "f98d0c46-9162-45fb-83fc-3b0a2327098d",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "Security audit accepted lvmeng 590fce5eef122d54",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "7e62c798-d454-48d7-8bee-1bce6660550b",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-25T13:22:17.958551Z"
+        },
+        {
+          "id": "49586e5c-90ee-498b-9882-75e33618df2c",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "S2.22 accepted lvmeng e426504adab6c6a9",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "e6cb7815-64be-48df-890f-fd610a8f05a9",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-25T03:16:33.328843Z"
+        },
+        {
+          "id": "d04a1d7d-d9d0-46d5-8f26-b8985e596f64",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "815be742-10a4-4609-a32a-cfd0cd968487",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-18T11:22:43.202469Z"
+        },
+        {
+          "id": "2dd9a256-d7b3-405b-82f2-ef1e4e449c5c",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "3d27f700-190a-45ae-a032-a41a571a90a0",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-15T09:50:53.711296Z"
+        },
+        {
+          "id": "8d64a02d-9200-4f8f-9eb3-eef7b22ec151",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "1ae32cc6-cb7e-4ffe-993c-42309f523a27",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T14:55:17.284691Z"
+        },
+        {
+          "id": "4219c0f6-175e-478c-8660-a37e287a27a4",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "d1067a66-f910-4474-b3d2-2ef033e73966",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T14:43:20.377501Z"
+        },
+        {
+          "id": "2093f5ed-5898-4260-b23a-1eecdfda1348",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "32af2db8-ad89-4bef-a0e3-8b4d322f7335",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-09T14:27:40.067687Z"
+        }
+      ]
+    },
+    "settings": {
+      "placement": {},
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "usage_model": "standard",
+      "tags": [
+        "cf:service=gachia-game-lvmeng",
+        "cf:environment=production"
+      ],
+      "tail_consumers": [],
+      "logpush": false,
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "redact_query_string": false,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 1,
+          "persist": true,
+          "invocation_logs": true
+        },
+        "traces": {
+          "enabled": false,
+          "persist": true,
+          "head_sampling_rate": 1
+        }
+      },
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "LVMENG_DEPLOYMENT_MODE",
+          "text": "production",
+          "type": "plain_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia.com",
+          "type": "plain_text"
+        }
+      ]
+    },
+    "routes": [],
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    }
+  },
+  "gachia-staging": {
+    "deployments": {
+      "deployments": [
+        {
+          "id": "6718697e-bb90-4aa4-9b51-f7a9c3cf03ed",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "9b172966-e080-4d26-b8a4-f2513c3c789b",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T01:42:17.704393Z"
+        },
+        {
+          "id": "827b8c93-7695-470b-bf18-f68c7bdcdd76",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/message": "",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "7062e4d8-fb33-47ee-9de4-420ddf8ac8f7",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-25T01:25:05.546301Z"
+        },
+        {
+          "id": "77b45460-05a3-4435-95cd-89077c6750e1",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "f142070d-ffb0-4b99-a204-49af0c265baa",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-26T15:40:11.857731Z"
+        },
+        {
+          "id": "161d0654-3703-45f6-a49c-1e872e3ea32c",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "776285a1-72b5-4d75-ae17-274dbae2183c",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-26T11:11:34.04869Z"
+        },
+        {
+          "id": "aa7f1cd3-39d6-40fb-a0aa-1f01524f56e5",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "4f7da764-6a70-474f-9c34-1f26265fd0ff",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-25T10:58:09.64183Z"
+        },
+        {
+          "id": "1f980fe5-1a3d-42d7-ba22-9cae433e048f",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "4e9dd919-c6a7-45b1-b5f7-baeb56592a99",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-25T10:18:30.5396Z"
+        },
+        {
+          "id": "66dc5bd0-c0f3-49ec-8874-06c82f6e88b8",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "0a8c1092-5f73-493c-93c1-796fdf399be4",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-25T04:12:32.599593Z"
+        },
+        {
+          "id": "37fd8892-7455-463d-916a-ebffdbddac0d",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "338d9de9-e536-4921-b870-3e05ca2ac9d8",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-24T19:01:16.646524Z"
+        },
+        {
+          "id": "5598c0c2-3d58-43d9-b958-d80ac03551b2",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "68a5e26c-b3f1-4278-ab22-5fe965a77c6d",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-24T18:17:24.17619Z"
+        },
+        {
+          "id": "065c4336-816c-4af4-8efe-aca03056e18e",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "aieasygames@gmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "0c4a7fef-2eff-4259-b2aa-446be234590e",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-23T14:47:54.850932Z"
+        }
+      ]
+    },
+    "settings": {
+      "placement": {},
+      "compatibility_date": "2026-07-08",
+      "compatibility_flags": [
+        "nodejs_compat"
+      ],
+      "usage_model": "standard",
+      "tags": [],
+      "tail_consumers": [],
+      "logpush": false,
+      "observability": {
+        "enabled": true,
+        "head_sampling_rate": 0.1,
+        "redact_query_string": false,
+        "logs": {
+          "enabled": true,
+          "head_sampling_rate": 0.1,
+          "persist": true,
+          "invocation_logs": true
+        },
+        "traces": {
+          "enabled": true,
+          "persist": true,
+          "head_sampling_rate": 0.05
+        }
+      },
+      "annotations": {
+        "workers/triggered_by": "version_upload"
+      },
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "BETTER_AUTH_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "name": "BETTER_AUTH_URL",
+          "text": "https://gachia-staging.aieasygames.workers.dev",
+          "type": "plain_text"
+        },
+        {
+          "database_id": "009be406-936c-4df8-b422-8df735c83f83",
+          "id": "009be406-936c-4df8-b422-8df735c83f83",
+          "name": "DB",
+          "type": "d1"
+        },
+        {
+          "environment": "production",
+          "name": "GENSHIN_CONTENT",
+          "service": "gachia-game-genshin",
+          "type": "service"
+        },
+        {
+          "name": "GENSHIN_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "bucket_name": "gachia-images-staging",
+          "name": "IMAGES",
+          "type": "r2_bucket"
+        },
+        {
+          "name": "INDEXNOW_AUTH_TOKEN",
+          "type": "secret_text"
+        },
+        {
+          "name": "NEXT_PUBLIC_APP_URL",
+          "text": "https://gachia-staging.aieasygames.workers.dev",
+          "type": "plain_text"
+        },
+        {
+          "environment": "production",
+          "name": "NTE_CONTENT",
+          "service": "gachia-game-nte",
+          "type": "service"
+        },
+        {
+          "name": "NTE_CONTENT_ENABLED",
+          "text": "true",
+          "type": "plain_text"
+        },
+        {
+          "name": "STARRAIL_PUBLISH_TOKEN",
+          "type": "secret_text"
+        },
+        {
+          "environment": "production",
+          "name": "WORKER_SELF_REFERENCE",
+          "service": "gachia-staging",
+          "type": "service"
+        }
+      ]
+    },
+    "routes": [],
+    "subdomain": {
+      "enabled": true,
+      "previews_enabled": true
+    }
+  },
+  "capturedAt": "2026-11-25T07:51:10.117224+00:00"
+}
