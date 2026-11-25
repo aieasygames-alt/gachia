@@ -153,7 +153,7 @@ export interface GameUpdate {
   gameId: 'starrail';
   locale: 'zh' | 'en' | 'ja';
   slug: string;
-  kind: 'version' | 'banner' | 'event';
+  kind: 'version' | 'banner' | 'event' | 'character';
   title: string;
   summary: string;
   region: string;
@@ -167,7 +167,7 @@ export interface GameUpdate {
   boundary: string;
   sources: {
     /**
-     * 米游社仅接受星铁文章链接；发布前须核对官方版块与官方账号或官方客服身份，社区帖子不能作为官方依据。
+     * 官方文章须核对官方作者。已审核的社区详情页会在主站标为第三方资料；正文须写明版本、等级范围和冲突项。
      */
     url: string;
     id?: string | null;

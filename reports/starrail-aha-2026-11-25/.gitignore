@@ -1,0 +1,5 @@
+.private/
+artifact/
+module/
+*.html
+*.log

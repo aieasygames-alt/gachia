@@ -1,5 +1,6 @@
 import type { UpdateResult } from '@gachia/data/cms/starrail-client';
 import type { SupportedLocale } from '@gachia/core';
+import { isCommunityStarRailSource } from '@gachia/data/cms/starrail-updates';
 
 export function StarRailUpdates({ result, locale }: { result: UpdateResult; locale: SupportedLocale }) {
   if (!result.updates.length) return null;
@@ -17,7 +18,7 @@ export function StarRailUpdates({ result, locale }: { result: UpdateResult; loca
       <p className="mt-2 text-sm leading-6 text-game-text-muted">{update.summary}</p>
       <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-game-text-muted">{update.facts.map((fact, i) => <li key={i}>{fact.text}</li>)}</ul>
       <p className="mt-4 border-l-2 border-game-primary pl-3 text-sm leading-6 text-game-text-muted">{copy.boundary}：{update.boundary}</p>
-      <div className="mt-4 flex flex-wrap gap-4">{update.sources.map((source, i) => <a key={source.url} href={source.url} rel="noreferrer" className="text-sm text-game-primary underline">{copy.source} {i + 1}</a>)}</div>
+      <div className="mt-4 flex flex-wrap gap-4">{update.sources.map((source, i) => <a key={source.url} href={source.url} rel="noreferrer" className="text-sm text-game-primary underline">{isCommunityStarRailSource(source.url) ? ({ zh: '第三方资料', en: 'Community reference', ja: 'コミュニティ資料' }[locale]) : copy.source} {i + 1}</a>)}</div>
     </article>)}
   </section>;
 }

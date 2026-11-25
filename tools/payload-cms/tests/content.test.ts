@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import seed from '../../../packages/data/cms/starrail-snapshot.json';
-import { isContentDate, isOfficialStarRailSource, parseStarRailUpdate } from '../../../packages/data/cms/starrail-updates';
+import { isContentDate, isOfficialStarRailSource, isCommunityStarRailSource, isStarRailSource, parseStarRailUpdate } from '../../../packages/data/cms/starrail-updates';
 import { readStarRailUpdates } from '../../../packages/data/cms/starrail-client';
 
 test('source contract rejects drafts, foreign games, unsafe sources and impossible dates', () => {
@@ -48,6 +48,18 @@ test('reader scopes queries to game, locale and published status, bypasses the N
   assert.equal(calls, 1);
   assert.equal(result.source, 'cms');
   assert.equal(result.updates.length, 3);
+});
+
+test('reviewed community references are accepted without being labelled official', () => {
+  for (const url of ['https://bbs.mihoyo.com/sr/wiki/content/8099/detail', 'https://www.prydwen.gg/star-rail/characters/aha', 'https://www.miyoushe.com/sr/article/79485999/']) {
+    assert.equal(isStarRailSource(url), true);
+    assert.equal(isCommunityStarRailSource(url), true);
+    assert.equal(isOfficialStarRailSource(url), false);
+    assert.ok(parseStarRailUpdate({ ...seed[0], kind: 'character', sources: [{ url }] }));
+  }
+  for (const url of ['https://bbs.mihoyo.com/sr/wiki/content/8099/detail?redirect=evil', 'https://www.prydwen.gg/star-rail/characters/aha#comments', 'https://www.prydwen.gg.evil.example/star-rail/characters/aha', 'https://name:pass@www.prydwen.gg/star-rail/characters/aha', 'http://www.prydwen.gg/star-rail/characters/aha', 'https://www.prydwen.gg/star-rail/characters/other']) {
+    assert.equal(isStarRailSource(url), false);
+  }
 });
 
 test('reader rejects mismatched language, drafts and truncated responses', async () => {

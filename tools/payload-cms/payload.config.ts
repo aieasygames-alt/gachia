@@ -2,7 +2,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sqliteAdapter } from '@payloadcms/db-sqlite';
 import { buildConfig, type CollectionConfig, type Access, type Where } from 'payload';
-import { isContentDate, isOfficialStarRailSource, parseStarRailUpdate } from '../../packages/data/cms/starrail-updates';
+import { isContentDate, isStarRailSource, parseStarRailUpdate } from '../../packages/data/cms/starrail-updates';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const authenticated: Access = ({ req }) => Boolean(req.user);
@@ -39,7 +39,7 @@ const Updates: CollectionConfig = {
     }],
     beforeChange: [({ data, originalDoc }) => {
       if ((data._status ?? originalDoc?._status) === 'published' && !parseStarRailUpdate({ ...originalDoc, ...data })) {
-        throw new Error('发布前请补齐官方来源、核验日期、地区、事实和资料边界；版本条目还需版本号和发布日期。');
+        throw new Error('发布前请补齐资料来源、核验日期、地区、事实和资料边界；版本条目还需版本号和发布日期。');
       }
       return data;
     }],
@@ -52,6 +52,7 @@ const Updates: CollectionConfig = {
       validate: (v: unknown) => typeof v === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(v) || '使用小写英文、数字和连字符。' },
     { name: 'kind', label: '更新类型', type: 'select', required: true, options: [
       { label: '版本状态', value: 'version' }, { label: '跃迁', value: 'banner' }, { label: '活动', value: 'event' },
+      { label: '角色资料', value: 'character' },
     ] },
     { name: 'title', label: '标题', type: 'text', required: true, maxLength: 200 },
     { name: 'summary', label: '摘要', type: 'textarea', required: true, maxLength: 2000 },
@@ -63,10 +64,10 @@ const Updates: CollectionConfig = {
     { name: 'facts', label: '已核验事实', type: 'array', required: true, minRows: 1, maxRows: 20,
       fields: [{ name: 'text', label: '事实', type: 'textarea', required: true, maxLength: 4000 }] },
     { name: 'boundary', label: '未核验项 / 时间与地区边界', type: 'textarea', required: true, maxLength: 2000 },
-    { name: 'sources', label: '官方来源', type: 'array', required: true, minRows: 1, maxRows: 10,
+    { name: 'sources', label: '资料来源', type: 'array', required: true, minRows: 1, maxRows: 10,
       fields: [{ name: 'url', label: 'HTTPS 链接', type: 'text', required: true,
-        admin: { description: '米游社仅接受星铁文章链接；发布前须核对官方版块与官方账号或官方客服身份，社区帖子不能作为官方依据。' },
-        validate: (v: unknown) => isOfficialStarRailSource(v) || '请使用星铁官网、官方专题或已核验官方身份的米游社星铁文章 HTTPS 链接。' }] },
+        admin: { description: '官方文章须核对官方作者。已审核的社区详情页会在主站标为第三方资料；正文须写明版本、等级范围和冲突项。' },
+        validate: (v: unknown) => isStarRailSource(v) || '请使用有效星铁官方链接或已审核允许的第三方详情页 HTTPS 链接。' }] },
   ],
 };
 

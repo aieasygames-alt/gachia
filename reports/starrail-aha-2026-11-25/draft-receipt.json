@@ -1,0 +1,23 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 1,
+      "slug": "v4-7-live",
+      "updatedAt": "2026-11-25T04:38:39.757Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 13,
+      "slug": "v4-7-aha-skill-multipliers",
+      "updatedAt": "2026-11-25T04:38:39.764Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 14,
+      "slug": "v4-7-aha-material-quantities",
+      "updatedAt": "2026-11-25T04:38:39.769Z",
+      "action": "created_draft"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-25",
+  "skillsCompared": 5,
+  "regularSkillCostSequencesCompared": 4,
+  "bonusNodesCompared": 3,
+  "ascensionMediumMaterial": "Station + BWIKI 6+9=15; community Wiki detail 6+8 conflicts with total15",
+  "precision": "Station decimal values; community Wiki integer truncation confirmed at all shared levels",
+  "rejected": "Prydwen unresolved placeholders and swapped ascension quantities; BWIKI basic detailed multiplier and generic skill cost differ",
+  "sha256": {
+    "bwiki.html": "0a25a0b841bf83ba37850bef30d2ed0dca4c5684ec290458f513ed91cc6ed34d",
+    "guide.jpg": "e757eba9631fe481167fae929b3fe629cf524eb2a9b47a2427421a7a0c506f4e",
+    "station.json": "26b780d6343a5a1a77ff0d097b1c1baf471aa034023043c20aad58d93560e883",
+    "wiki-api.json": "245e892c14b9ec1884c47f64527203dd99ed95f3a184b1dcb192ab4cdf65a1be",
+    "whoami.json": "a03ed8743c37fe19d4c03b066858c10031607b34b3be697ae4cfa64e9145ef1f",
+    "moyu-2.jpg": "4754ba7294cac860e0bd8446a9fb3ec23ee66080e7adc47c4cdae0c50c0f690e",
+    "moyu-3.jpg": "d5e298462b7cc5cc2ac95b864d363cd84fb34a22bb453241f544afda43140a69",
+    "moyu-1.jpg": "76d97a580f18b8eb2e94e4e394232aeb5c7ca798a3d9babd43b500b35747e795",
+    "station.html": "e11eaa3e1f6cf9ef2777ee708bcb32613ccbf933d9ed976ee6265b3bb9657157",
+    "moyu-4.jpg": "0536e04beb1491b382fea01bcde4c9db236fb35f2e54aac6fb6d8a045ecc849e",
+    "traces.json": "ecad3aa28c0fe2c2d6b5a7fc1986008380a1bf29c4ed2a5b4a445c175167746c",
+    "point-costs.json": "de41d2fd620a09b51fe2853dfd7e63db666523026493e3cc8a16e7edb5eb1049",
+    "guide-2.jpg": "16df76510cc7ac0e6175383aa8a8120e05d644c403a7104eb2b957660a3535a4",
+    "guide-3.jpg": "e65a83917a9d8605117949c5860068470bf110c45e55ed655c6f8a464c998e30",
+    "guide-6.jpg": "3781e6cf664bd3407e06a9911073bebac29f81a333733877e5b99b154a1c3a9e",
+    "guide-4.jpg": "a395ae14f4ef0d2e271e177d00503995cddc79fc8afb00b6393e3ad885d22b1a",
+    "guide-5.jpg": "8afc2364ee1c1854b479541669043c94fae339d9fa7e45cb29bdd4e0ddf47b48"
+  }
+}
