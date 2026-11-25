@@ -1,0 +1,193 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com",
+  "revision": 1795582370912,
+  "checks": [
+    {
+      "path": "/zh/starrail/version",
+      "status": 200,
+      "records": 14,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/en/starrail/version",
+      "status": 200,
+      "records": 0,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/ja/starrail/version",
+      "status": 200,
+      "records": 0,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/zh",
+      "status": 200
+    },
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/ja",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/characters",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "status": 200
+    },
+    {
+      "path": "/zh/privacy",
+      "status": 200
+    },
+    {
+      "path": "/zh/contact",
+      "status": 200
+    },
+    {
+      "path": "/zh/sea/guides/beginner-guide",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/main/sitemap.xml",
+      "status": 200
+    },
+    {
+      "path": "/ads.txt",
+      "status": 200
+    }
+  ],
+  "assets": [
+    {
+      "path": "/_next/static/chunks/145-ae1d48b2b3d8f4f1.js",
+      "status": 200,
+      "sha256": "b9bf39733ccc5afeaddc8d2a4c554f9d7cd3a0644147ac32041e5f15d5f90299"
+    },
+    {
+      "path": "/_next/static/chunks/3432-0d382deab07dd972.js",
+      "status": 200,
+      "sha256": "09ad5bc10642a2457a609de0c932a8ebd24b93ef096a476b57552569b722d269"
+    },
+    {
+      "path": "/_next/static/chunks/4364-0dad0f3d2320c146.js",
+      "status": 200,
+      "sha256": "5c859dbc519f6ece3c0c839d5ff95b7300f899fe09e27dd3e75f34cf8101f897"
+    },
+    {
+      "path": "/_next/static/chunks/4811-d373b855efd08574.js",
+      "status": 200,
+      "sha256": "a88faa9e3ae6c71f31161b8b7e64f42c1ed89b88a5adb3306233d8ad474317a1"
+    },
+    {
+      "path": "/_next/static/chunks/7194-e9414f5beb49c105.js",
+      "status": 200,
+      "sha256": "d3c96c6f3f4c508f83480c77c5494d82d008f8c395593a136396cfe5ffd566e2"
+    },
+    {
+      "path": "/_next/static/chunks/7952-4b01ad1d58692d21.js",
+      "status": 200,
+      "sha256": "093e6dc2a4d25e6e9d34c99c50ddb96d8abdc3c27c496b996aff2447215674d3"
+    },
+    {
+      "path": "/_next/static/chunks/8127-0ede6452c6c7ba6f.js",
+      "status": 200,
+      "sha256": "911e5d54cda73ffe54093d68ebf03be2ebed33f5e212d08c6655e57cd894005c"
+    },
+    {
+      "path": "/_next/static/chunks/9727-25e2b97fd9f3330a.js",
+      "status": 200,
+      "sha256": "14c946eda5df7e24a5a5879991f6883e0dac8c996a6eac4c30592bcf06d58268"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/layout-7f25fc8cf3b9ccb5.js",
+      "status": 200,
+      "sha256": "3827bd5ec45a5dde650cd4cce39f8034bbae189d44cf100952b08ed142cf82e5"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/version/page-a8228b1d020eb060.js",
+      "status": 200,
+      "sha256": "8c6a2ff50b51d2cac33328f754f4b84aca7727c35e861145d3ec014614f468be"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/error-033a07f5a5ce5af0.js",
+      "status": 200,
+      "sha256": "df99008fb66dd06a58ce89d56d831fc14ce881c44b9cd80eda3b4d9e8449cbe9"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-d9768969b367e8c2.js",
+      "status": 200,
+      "sha256": "08c98db2fab696528c08a589519da940d18287ccf06f2344104bcc6ccaab411d"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/not-found-646ff54efd0af9c7.js",
+      "status": 200,
+      "sha256": "ecec3fdf8ea00c484db6a5eeb587483e0a79b15fce60d8795d52ad3723b911f7"
+    },
+    {
+      "path": "/_next/static/chunks/d5075a4a-92cf90d221ee6c05.js",
+      "status": 200,
+      "sha256": "2bcce99b1318221325a31405ce284689b4f4e6bde4cd589b750ccabc5f1223b8"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-57abff75dad64568.js",
+      "status": 200,
+      "sha256": "116d418d15f3c7e17e89e1d7459f6e637f5e5deba0cb3d093f9b42a7671fe7b1"
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+    },
+    {
+      "path": "/_next/static/chunks/webpack-a52d9799661f5ec8.js",
+      "status": 200,
+      "sha256": "9a59ca821fbe9b63de2f209d3ee7d25b48357d37269afac44fdd35f0b49da250"
+    },
+    {
+      "path": "/_next/static/css/f7906af3bab660f0.css",
+      "status": 200,
+      "sha256": "e31e1b2b18472033370acfa65c213b593f14a7512a1a1a0b2848c443c54b000f"
+    }
+  ],
+  "anonymousWriteRejected": true,
+  "cloudContentWrites": 0,
+  "communityLinks": [
+    {
+      "text": "第三方资料 1",
+      "url": "https://starrailstation.com/cn/character/nihilux"
+    },
+    {
+      "text": "第三方资料 2",
+      "url": "https://bbs.mihoyo.com/sr/wiki/content/8099/detail"
+    },
+    {
+      "text": "第三方资料 3",
+      "url": "https://wiki.biligame.com/sr/%E6%98%9F%E7%A5%9E%E2%98%85%E9%98%BF%E5%93%88"
+    },
+    {
+      "text": "第三方资料 1",
+      "url": "https://starrailstation.com/cn/character/nihilux"
+    },
+    {
+      "text": "第三方资料 2",
+      "url": "https://bbs.mihoyo.com/sr/wiki/content/8099/detail"
+    },
+    {
+      "text": "第三方资料 3",
+      "url": "https://www.miyoushe.com/sr/article/79485999"
+    }
+  ]
+}

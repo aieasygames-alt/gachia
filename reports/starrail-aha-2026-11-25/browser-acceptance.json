@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com/zh/starrail/version",
+  "method": "fresh in-app browser AX observation",
+  "checkedAt": "2026-11-25T04:53:30.389484+00:00",
+  "observed": [
+    "both Aha record titles",
+    "skill Lv7 40.625% and Elation Lv7 48.75%",
+    "ascension + all traces 3,308,000 credits",
+    "all traces include Elation skill",
+    "six community links labeled 第三方资料",
+    "official-source labels retained",
+    "XP feeding credit exclusion and source disagreements visible"
+  ]
+}

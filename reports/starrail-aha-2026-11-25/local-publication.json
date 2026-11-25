@@ -1,0 +1,26 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 1,
+      "slug": "v4-7-live",
+      "updatedAt": "2026-11-25T04:52:34.197Z",
+      "versionCount": 11
+    },
+    {
+      "id": 13,
+      "slug": "v4-7-aha-skill-multipliers",
+      "updatedAt": "2026-11-25T04:52:34.209Z",
+      "versionCount": 2
+    },
+    {
+      "id": 14,
+      "slug": "v4-7-aha-material-quantities",
+      "updatedAt": "2026-11-25T04:52:34.216Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 14,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

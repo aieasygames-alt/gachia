@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "servicesChanged": [
+    "gachia"
+  ],
+  "otherDeploymentsUnchanged": [
+    "gachia-router",
+    "gachia-game-genshin",
+    "gachia-game-nte",
+    "gachia-game-azur-promilia",
+    "gachia-game-lvmeng",
+    "gachia-staging"
+  ],
+  "routesSubdomainsBindingsUnchanged": [
+    "gachia",
+    "gachia-router",
+    "gachia-game-genshin",
+    "gachia-game-nte",
+    "gachia-game-azur-promilia",
+    "gachia-game-lvmeng",
+    "gachia-staging"
+  ]
+}

@@ -1,4 +1,4 @@
-import urllib.request,urllib.error,urllib.parse,json,pathlib,sys,re,hashlib,html,concurrent.futures
+import urllib.request,urllib.error,urllib.parse,json,pathlib,sys,re,hashlib,html,concurrent.futures,http.client
 root=pathlib.Path(__file__).resolve().parent
 label=sys.argv[1];assert label in ['preview','production-before-content','production-after-content']
 upload=json.loads((root/'runtime-upload.json').read_text())
@@ -9,9 +9,13 @@ def req(path,body=None):
  headers={'accept-encoding':'identity','User-Agent':'GachiaCMS/1.0'}
  if body is not None:headers['content-type']='application/json'
  q=urllib.request.Request(origin+path,data=json.dumps(body).encode() if body is not None else None,headers=headers,method='PUT' if body is not None else 'GET')
- try:
-  with client.open(q,timeout=45) as r:return r.status,r.read(),r.headers
- except urllib.error.HTTPError as e:return e.code,e.read(),e.headers
+ for attempt in range(3):
+  try:
+   with client.open(q,timeout=45) as r:return r.status,r.read(),r.headers
+  except urllib.error.HTTPError as e:return e.code,e.read(),e.headers
+  except (urllib.error.URLError,http.client.RemoteDisconnected,TimeoutError):
+   if attempt==2:raise
+   print('Retrying transport read',path,flush=True)
 assert req('/api/cms/starrail',{})[0]==401
 checks=[];assets=set();revisions=[]
 for locale in ['zh','en','ja']:

@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "records": 14,
+  "checks": [
+    "anonymous_write_rejected",
+    "all_14_records_accepted_with_cn_sources",
+    "complete_text_rendered_and_three_locales_isolated_no_store",
+    "non_starrail_source_rejected",
+    "noncanonical_source_rejected",
+    "draft_rejected",
+    "stale_revision_rejected"
+  ],
+  "writes": "local D1 only",
+  "productionWrites": 0,
+  "communityLinks": [
+    {
+      "text": "第三方资料 1",
+      "url": "https://starrailstation.com/cn/character/nihilux"
+    },
+    {
+      "text": "第三方资料 2",
+      "url": "https://bbs.mihoyo.com/sr/wiki/content/8099/detail"
+    },
+    {
+      "text": "第三方资料 3",
+      "url": "https://wiki.biligame.com/sr/%E6%98%9F%E7%A5%9E%E2%98%85%E9%98%BF%E5%93%88"
+    },
+    {
+      "text": "第三方资料 1",
+      "url": "https://starrailstation.com/cn/character/nihilux"
+    },
+    {
+      "text": "第三方资料 2",
+      "url": "https://bbs.mihoyo.com/sr/wiki/content/8099/detail"
+    },
+    {
+      "text": "第三方资料 3",
+      "url": "https://www.miyoushe.com/sr/article/79485999"
+    }
+  ]
+}
