@@ -1,0 +1,38 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 1,
+      "slug": "v4-7-live",
+      "updatedAt": "2026-11-25T02:18:55.728Z",
+      "versionCount": 5
+    },
+    {
+      "id": 2,
+      "slug": "v4-7-warp-windows",
+      "updatedAt": "2026-11-25T02:18:55.743Z",
+      "versionCount": 3
+    },
+    {
+      "id": 4,
+      "slug": "v4-7-gifts-and-eidolons",
+      "updatedAt": "2026-11-25T02:18:55.751Z",
+      "versionCount": 2
+    },
+    {
+      "id": 5,
+      "slug": "v4-7-global-event-deadlines",
+      "updatedAt": "2026-11-25T02:18:55.759Z",
+      "versionCount": 2
+    },
+    {
+      "id": 6,
+      "slug": "v4-7-global-endgame-calendar",
+      "updatedAt": "2026-11-25T02:18:55.765Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 6,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

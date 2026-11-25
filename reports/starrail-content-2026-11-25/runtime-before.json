@@ -1,0 +1,65 @@
+{
+  "capturedAt": "2026-11-25T02:19:51.827310+00:00",
+  "services": {
+    "gachia": {
+      "id": "94677ef4-d3b7-4f77-9ec1-582d49936793",
+      "created_on": "2026-11-25T01:46:08.930049Z",
+      "versions": [
+        {
+          "version_id": "3473e29b-788d-4a9a-a847-28ba0d58557f",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-router": {
+      "id": "4880a6a2-a351-4dad-8773-d7af6b2a3a66",
+      "created_on": "2026-11-13T14:30:23.133978Z",
+      "versions": [
+        {
+          "version_id": "00ab8c66-9387-4b12-9c77-c401c2a21e0c",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-genshin": {
+      "id": "fde1a1e3-fb77-4f7d-b1da-55b2c86ec320",
+      "created_on": "2026-11-22T15:37:43.998897Z",
+      "versions": [
+        {
+          "version_id": "0b8a10c8-2fad-4fdf-a8fc-fcab385d6eb6",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-nte": {
+      "id": "de54d437-fbe2-47b2-98c6-e58e2bd48e5d",
+      "created_on": "2026-11-21T14:05:05.869895Z",
+      "versions": [
+        {
+          "version_id": "b690d5ae-1084-4711-96d9-a313182cb5f7",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-azur-promilia": {
+      "id": "53cfddec-d9b1-42f7-a9d6-75365d50562e",
+      "created_on": "2026-11-24T14:21:21.98821Z",
+      "versions": [
+        {
+          "version_id": "cd52e4fe-dc13-417b-9163-ce2972c49b70",
+          "percentage": 100
+        }
+      ]
+    },
+    "gachia-game-lvmeng": {
+      "id": "646efb01-14d4-4904-b4b8-74e876447bd7",
+      "created_on": "2026-11-21T14:10:34.707911Z",
+      "versions": [
+        {
+          "version_id": "50812a8a-012f-428e-bb4b-780530181c09",
+          "percentage": 100
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "reviewed",
+  "changedRecords": 5,
+  "newRecords": 3,
+  "expectedPublished": 6,
+  "checks": [
+    "shared_publication_contract_passed_before_draft_writes",
+    "all_changed_records_have_read_official_sources",
+    "China_and_international_regions_explicit",
+    "UTC+8_and_server_time_separated",
+    "future_windows_not_described_as_open",
+    "conditional_rewards_and_sign_in_not_guaranteed_immediately",
+    "unchanged_event_overview_keeps_2026-11-24_check_date",
+    "no_skill_multiplier_build_or_strength_claims"
+  ],
+  "analyticsUsed": false,
+  "quickEditorialScoresBefore": {
+    "context": 80,
+    "organization": 80,
+    "referenceability": 65,
+    "exclusivity": 40,
+    "experience": 20,
+    "expertise": 60,
+    "authority": 80,
+    "trust": 75
+  },
+  "scoreNote": "Subjective editorial estimates for prioritization, not measured search performance. Main repairs: source detail, time/region clarity, actionable eligibility."
+}

@@ -1,0 +1,10 @@
+{
+  "command": "npx --yes --package=node@24.22.3 -- npm run publish:starrail",
+  "directory": "/Users/robert/Documents/gachia/tools/payload-cms",
+  "origin": "https://gachia.com",
+  "result": {
+    "ok": true,
+    "revision": 1795573247122,
+    "count": 6
+  }
+}
