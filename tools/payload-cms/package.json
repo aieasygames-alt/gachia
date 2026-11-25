@@ -13,7 +13,7 @@
     "seed:starrail": "node --env-file=.env --import tsx scripts/seed-starrail.ts",
     "test": "node --import tsx --test tests/*.test.ts",
     "type-check": "tsc --noEmit",
-    "publish:starrail": "node --env-file=.env --import tsx scripts/publish-starrail.ts"
+    "publish:starrail": "node --use-env-proxy --env-file=.env --import tsx scripts/publish-starrail.ts"
   },
   "dependencies": {
     "@payloadcms/db-sqlite": "3.94.1",
