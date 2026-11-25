@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "publicRecords": 19,
+  "adminStatus": 200,
+  "compiledGuideOptionPresent": true,
+  "publishedRecordsUnchanged": true,
+  "previousBuildPreserved": ".data/next-before-p0-20261125"
+}

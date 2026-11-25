@@ -1,0 +1,310 @@
+
+┌─────────────────────────────┐
+│ OpenNext — Cloudflare build │
+└─────────────────────────────┘
+
+Monorepo detected at /Users/robert/.codex/worktrees/starrail-cms-release/gachia
+App directory: /Users/robert/.codex/worktrees/starrail-cms-release/gachia/apps/web
+Next.js version : 15.5.29
+@opennextjs/cloudflare version: 1.20.13
+@opennextjs/aws version: 4.1.12
+workerd compatibility_date: 2026-07-08
+
+┌─────────────────────────────────┐
+│ OpenNext — Building Next.js app │
+└─────────────────────────────────┘
+
+
+> @gachia/web@0.0.1 build /Users/robert/.codex/worktrees/starrail-cms-release/gachia/apps/web
+> node ../../scripts/require-patched-next.mjs && next build
+
+Next 15.5.29: required patch and application runtime verified
+Sea guides: 75 guides / 77 outputs verified (c4c48f4b7e9ddeccd7531cf96b306be7b6047f1aabc2e816f3768d4f4444f542)
+Managed raw mirrors: 7 pairs verified
+Raw inventory: 90/90 equal; 0 pending; 0 factual holds (not production approval)
+   ▲ Next.js 15.5.29
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 7.2s
+   Linting and checking validity of types ...
+
+./components/auth/auth-dialog.tsx
+25:28  Warning: The ref value 'attempt.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'attempt.current' to a variable inside the effect, and use that variable in the cleanup function.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/5833) ...
+   Generating static pages (1458/5833) 
+   Generating static pages (2916/5833) 
+   Generating static pages (4374/5833) 
+ ✓ Generating static pages (5833/5833)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                                       Size  First Load JS
+┌ ○ /_not-found                                                  995 B         104 kB
+├ ● /[lang]                                                    6.99 kB         145 kB
+├   ├ /zh
+├   ├ /en
+├   └ /ja
+├ ● /[lang]/[game]                                               134 B         142 kB
+├   ├ /zh/starrail
+├   ├ /zh/wuwa
+├   ├ /zh/nte
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/anomalies                                     196 B         103 kB
+├   ├ /zh/starrail/anomalies
+├   ├ /zh/wuwa/anomalies
+├   ├ /zh/nte/anomalies
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/artifacts                                     134 B         142 kB
+├   ├ /zh/starrail/artifacts
+├   ├ /zh/wuwa/artifacts
+├   ├ /zh/nte/artifacts
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/artifacts/[id]                                134 B         142 kB
+├   ├ /zh/starrail/artifacts/band-of-sizzling-thunder
+├   ├ /zh/starrail/artifacts/champion-of-streetwise-boxing
+├   ├ /zh/starrail/artifacts/thief-of-shooting-meteor
+├   └ [+93 more paths]
+├ ● /[lang]/[game]/build                                       3.28 kB         146 kB
+├   ├ /zh/starrail/build
+├   ├ /zh/wuwa/build
+├   ├ /zh/nte/build
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/calculator                                  14.1 kB         149 kB
+├   ├ /zh/starrail/calculator
+├   ├ /zh/wuwa/calculator
+├   ├ /zh/nte/calculator
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/characters                                    134 B         143 kB
+├   ├ /zh/starrail/characters
+├   ├ /zh/wuwa/characters
+├   ├ /zh/nte/characters
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/characters/[id]                             2.66 kB         155 kB
+├   ├ /zh/nte/characters/nanally
+├   ├ /zh/nte/characters/sakiri
+├   ├ /zh/nte/characters/fadia
+├   └ [+1827 more paths]
+├ ● /[lang]/[game]/compare                                     3.34 kB         146 kB
+├   ├ /zh/starrail/compare
+├   ├ /zh/wuwa/compare
+├   ├ /zh/nte/compare
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/disk-sets                                     196 B         103 kB
+├   ├ /zh/starrail/disk-sets
+├   ├ /zh/wuwa/disk-sets
+├   ├ /zh/nte/disk-sets
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/disk-sets/[id]                                134 B         142 kB
+├   ├ /zh/nte/disk-sets/shadow-creed
+├   ├ /zh/nte/disk-sets/diabolos
+├   ├ /zh/nte/disk-sets/lost-radiance
+├   └ [+33 more paths]
+├ ● /[lang]/[game]/download                                      134 B         142 kB
+├   ├ /zh/starrail/download
+├   ├ /zh/wuwa/download
+├   ├ /zh/nte/download
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/drive-discs                                   11 kB         168 kB
+├   ├ /zh/starrail/drive-discs
+├   ├ /zh/wuwa/drive-discs
+├   ├ /zh/nte/drive-discs
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/drive-discs/[id]                              169 B         106 kB
+├   ├ /zh/zzz/drive-discs/chaos-jazz
+├   ├ /zh/zzz/drive-discs/polar-metal
+├   ├ /zh/zzz/drive-discs/fanged-metal
+├   └ [+69 more paths]
+├ ● /[lang]/[game]/echoes/[id]                                   134 B         142 kB
+├   ├ /zh/wuwa/echoes/heart-that-illuminates-dreams
+├   ├ /zh/wuwa/echoes/mirror-shadow-flowing-lightning
+├   ├ /zh/wuwa/echoes/flower-of-crimson-reminiscence
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/eggs                                          134 B         142 kB
+├   ├ /zh/roco/eggs
+├   ├ /zh/roco-cn/eggs
+├   ├ /en/roco/eggs
+├   └ [+3 more paths]
+├ ● /[lang]/[game]/events                                        134 B         142 kB
+├   ├ /zh/roco/events
+├   ├ /zh/roco-cn/events
+├   ├ /zh/wuwa/events
+├   └ [+12 more paths]
+├ ● /[lang]/[game]/gacha                                       10.3 kB         168 kB
+├   ├ /zh/starrail/gacha
+├   ├ /zh/wuwa/gacha
+├   ├ /zh/nte/gacha
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/guides                                        133 B         142 kB
+├   ├ /zh/starrail/guides
+├   ├ /zh/wuwa/guides
+├   ├ /zh/nte/guides
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/guides/[slug]                               5.83 kB         144 kB
+├   ├ /zh/starrail/guides/v4-4-preview-guide
+├   ├ /zh/starrail/guides/v4-3-version-guide
+├   ├ /zh/starrail/guides/quick-start-guide
+├   └ [+932 more paths]
+├ ● /[lang]/[game]/items                                         134 B         142 kB
+├   ├ /zh/starrail/items
+├   ├ /zh/wuwa/items
+├   ├ /zh/nte/items
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/items/[id]                                    134 B         142 kB
+├   ├ /zh/starrail/items/tracks-of-destiny
+├   ├ /zh/starrail/items/lost-echo-of-the-shared-wish
+├   ├ /zh/starrail/items/stagnant-shadow-shape-of-destruction
+├   └ [+882 more paths]
+├ ● /[lang]/[game]/map                                           132 B         142 kB
+├   ├ /zh/starrail/map
+├   ├ /zh/wuwa/map
+├   ├ /zh/nte/map
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/merchant                                      134 B         142 kB
+├   ├ /zh/roco/merchant
+├   ├ /zh/roco-cn/merchant
+├   ├ /en/roco/merchant
+├   └ [+3 more paths]
+├ ● /[lang]/[game]/redeem-codes                                  134 B         142 kB
+├   ├ /zh/starrail/redeem-codes
+├   ├ /zh/wuwa/redeem-codes
+├   ├ /zh/nte/redeem-codes
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/s1-check                                      133 B         142 kB
+├   ├ /zh/starrail/s1-check
+├   ├ /zh/wuwa/s1-check
+├   ├ /zh/nte/s1-check
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/shared/[id]                                   134 B         143 kB
+├ ● /[lang]/[game]/teams                                       6.49 kB         149 kB
+├   ├ /zh/starrail/teams
+├   ├ /zh/wuwa/teams
+├   ├ /zh/nte/teams
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/tier-list                                    9.1 kB         147 kB
+├   ├ /zh/starrail/tier-list
+├   ├ /zh/wuwa/tier-list
+├   ├ /zh/nte/tier-list
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/type-chart                                    134 B         142 kB
+├   ├ /zh/roco/type-chart
+├   ├ /zh/roco-cn/type-chart
+├   ├ /en/roco/type-chart
+├   └ [+3 more paths]
+├ ● /[lang]/[game]/version                                     6.53 kB         144 kB
+├   ├ /zh/starrail/version
+├   ├ /zh/wuwa/version
+├   ├ /zh/nte/version
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/weapons                                     6.22 kB         164 kB
+├   ├ /zh/starrail/weapons
+├   ├ /zh/wuwa/weapons
+├   ├ /zh/nte/weapons
+├   └ [+42 more paths]
+├ ● /[lang]/[game]/weapons/[id]                                  134 B         142 kB
+├   ├ /zh/starrail/weapons/night-on-the-milky-way
+├   ├ /zh/starrail/weapons/something-irreplaceable
+├   ├ /zh/starrail/weapons/in-the-night
+├   └ [+942 more paths]
+├ ● /[lang]/about                                                196 B         103 kB
+├   ├ /zh/about
+├   ├ /en/about
+├   └ /ja/about
+├ ● /[lang]/api                                                  196 B         103 kB
+├   ├ /zh/api
+├   ├ /en/api
+├   └ /ja/api
+├ ● /[lang]/calendar                                            9.4 kB         147 kB
+├   ├ /zh/calendar
+├   ├ /en/calendar
+├   └ /ja/calendar
+├ ● /[lang]/contact                                              196 B         103 kB
+├   ├ /zh/contact
+├   ├ /en/contact
+├   └ /ja/contact
+├ ● /[lang]/content-verification                                 134 B         142 kB
+├   ├ /zh/content-verification
+├   ├ /en/content-verification
+├   └ /ja/content-verification
+├ ● /[lang]/games                                                133 B         142 kB
+├   ├ /zh/games
+├   ├ /en/games
+├   └ /ja/games
+├ ● /[lang]/privacy                                              196 B         103 kB
+├   ├ /zh/privacy
+├   ├ /en/privacy
+├   └ /ja/privacy
+├ ● /[lang]/search                                             3.71 kB         138 kB
+├   ├ /zh/search
+├   ├ /en/search
+├   └ /ja/search
+├ ● /[lang]/sitemap                                              134 B         142 kB
+├   ├ /zh/sitemap
+├   ├ /en/sitemap
+├   └ /ja/sitemap
+├ ● /[lang]/terms                                                196 B         103 kB
+├   ├ /zh/terms
+├   ├ /en/terms
+├   └ /ja/terms
+├ ● /[lang]/tools/market-intel                                   196 B         103 kB
+├   ├ /zh/tools/market-intel
+├   ├ /en/tools/market-intel
+├   └ /ja/tools/market-intel
+├ ● /[lang]/tools/pull-planner                                 5.17 kB         140 kB
+├   ├ /zh/tools/pull-planner
+├   ├ /en/tools/pull-planner
+├   └ /ja/tools/pull-planner
+├ ● /[lang]/update-radar                                         132 B         142 kB
+├   ├ /zh/update-radar
+├   ├ /en/update-radar
+├   └ /ja/update-radar
+├ ƒ /api/auth/[...all]                                           196 B         103 kB
+├ ƒ /api/cms/starrail                                            196 B         103 kB
+├ ƒ /api/favorites                                               196 B         103 kB
+├ ƒ /api/indexnow                                                196 B         103 kB
+├ ƒ /api/map                                                     196 B         103 kB
+├ ƒ /api/map/points                                              196 B         103 kB
+├ ƒ /api/map/progress                                            196 B         103 kB
+├ ƒ /api/map/tile                                                196 B         103 kB
+├ ƒ /api/shared-builds                                           196 B         103 kB
+├ ƒ /api/user-characters                                         196 B         103 kB
+├ ƒ /llms.txt                                                    196 B         103 kB
+├ ○ /robots.txt                                                  196 B         103 kB
+├ ƒ /shadow/[releaseKey]/[...path]                               169 B         106 kB
+├ ƒ /shadow/[releaseKey]/cache                                   196 B         103 kB
+├ ƒ /shadow/[releaseKey]/media/[mediaKey]                        196 B         103 kB
+├ ƒ /shadow/[releaseKey]/sitemap.xml                             196 B         103 kB
+├ ○ /sitemap.xml                                                 196 B         103 kB
+└ ○ /sitemaps/main/sitemap.xml                                   196 B         103 kB
++ First Load JS shared by all                                   103 kB
+  ├ chunks/8127-0ede6452c6c7ba6f.js                            46.2 kB
+  ├ chunks/d5075a4a-92cf90d221ee6c05.js                        54.2 kB
+  └ other shared chunks (total)                                2.48 kB
+
+
+ƒ Middleware                                                   74.6 kB
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+┌──────────────────────────────┐
+│ OpenNext — Generating bundle │
+└──────────────────────────────┘
+
+(node:8435) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+Building server function: default...
+Applying code patches: 2.072s
+# copyPackageTemplateFiles
+[35m⚙️ Bundling the OpenNext server...
+[0m
+[35mWorker saved in `.open-next/worker.js` 🚀
+[0m
+OpenNext build complete.

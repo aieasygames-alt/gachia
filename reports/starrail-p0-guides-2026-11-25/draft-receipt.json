@@ -1,0 +1,35 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 15,
+      "slug": "farming-route-guide",
+      "updatedAt": "2026-11-25T06:24:40.828Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 16,
+      "slug": "boss-strategy-guide",
+      "updatedAt": "2026-11-25T06:24:40.835Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 17,
+      "slug": "planar-sphere-guide",
+      "updatedAt": "2026-11-25T06:24:40.840Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 18,
+      "slug": "endgame-modes-guide",
+      "updatedAt": "2026-11-25T06:24:40.843Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 19,
+      "slug": "endgame-cycle-guide",
+      "updatedAt": "2026-11-25T06:24:40.847Z",
+      "action": "created_draft"
+    }
+  ]
+}

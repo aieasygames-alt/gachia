@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "page": "https://gachia.com/zh/starrail/guides/farming-route-guide",
+  "method": "Visible browser accessibility tree",
+  "observed": [
+    "Current CMS title and summary",
+    "Calyx10,queue6;StagnantShadow30;Cavern40;EchoOfWar30,3sharedweeklyrewards",
+    "Sourcechecked2026-11-25",
+    "Third-partycitation",
+    "Explicituncheckedrestore/reserve/replenishmentfields"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "page": "http://127.0.0.1:4400/zh/starrail/guides/planar-sphere-guide",
+  "observed": [
+    "Correct H1 and summary",
+    "Arena8/70/20effect",
+    "BrokenKeel10/30/10effect",
+    "2026-11-25checkeddate",
+    "Third-party reference link",
+    "Explicit scope and pending checks"
+  ],
+  "method": "Visible browser accessibility tree"
+}

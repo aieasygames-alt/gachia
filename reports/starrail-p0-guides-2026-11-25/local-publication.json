@@ -1,0 +1,38 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 15,
+      "slug": "farming-route-guide",
+      "updatedAt": "2026-11-25T06:25:09.903Z",
+      "versionCount": 2
+    },
+    {
+      "id": 16,
+      "slug": "boss-strategy-guide",
+      "updatedAt": "2026-11-25T06:25:09.913Z",
+      "versionCount": 2
+    },
+    {
+      "id": 17,
+      "slug": "planar-sphere-guide",
+      "updatedAt": "2026-11-25T06:25:09.919Z",
+      "versionCount": 2
+    },
+    {
+      "id": 18,
+      "slug": "endgame-modes-guide",
+      "updatedAt": "2026-11-25T06:25:09.925Z",
+      "versionCount": 2
+    },
+    {
+      "id": 19,
+      "slug": "endgame-cycle-guide",
+      "updatedAt": "2026-11-25T06:25:09.931Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 19,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

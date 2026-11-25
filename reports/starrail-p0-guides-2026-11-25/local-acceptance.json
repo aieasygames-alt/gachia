@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "records": 19,
+  "checks": [
+    "anonymous_write_rejected",
+    "all_19_records_accepted_with_cn_sources",
+    "complete_text_rendered_and_three_locales_isolated_no_store",
+    "non_starrail_source_rejected",
+    "noncanonical_source_rejected",
+    "draft_rejected",
+    "stale_revision_rejected",
+    "home_warps_events_are_live_no_store_without_stale_version_copy",
+    "castorice_name_and_template_cleanup",
+    "five_guide_bodies_and_metadata_replace_immediately",
+    "five_guides_withdraw_without_old_body_faq_or_indexing",
+    "all_five_full_guides_and_three_locales_verified",
+    "all_live_readers_update_and_honor_full_withdrawal"
+  ],
+  "writes": "local D1 only",
+  "productionWrites": 0
+}
