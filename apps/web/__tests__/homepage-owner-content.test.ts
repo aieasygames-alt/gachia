@@ -24,7 +24,7 @@ it('renders current owner character names and guide summaries in the actual home
   expect(b).toContain('Updated owner character');
   expect(b).toContain('Updated owner summary');
   expect(b).not.toContain('Genshin v7.1 Livestream Codes');
-  expect(b).toContain('HSR v4.6 Preview Codes');
+  expect(b).toContain('HSR Code Verification');
 });
 
 it.each(['zh', 'en', 'ja'])('shows a partial outage without old Genshin facts and disables homepage caching for %s', async lang => {

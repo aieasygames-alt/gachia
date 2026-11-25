@@ -49,6 +49,6 @@ it('preserves other hubs and unlocalized redirects without widening the retireme
     expect(redirect.headers.get('location')).toBe(`https://gachia.com/zh/genshin${route}`);
   }
   expect((await homeMetadata({ params: Promise.resolve({ lang: 'en', game: 'starrail' }) })).title).toContain('Star Rail');
-  expect((await versionMetadata({ params: Promise.resolve({ lang: 'en', game: 'starrail' }) })).title).toContain('v4.6');
+  expect((await versionMetadata({ params: Promise.resolve({ lang: 'en', game: 'starrail' }) })).title).toContain('Star Rail Updates');
   expect((await downloadMetadata({ params: Promise.resolve({ lang: 'en', game: 'starrail' }) })).title).toContain('Download');
 });

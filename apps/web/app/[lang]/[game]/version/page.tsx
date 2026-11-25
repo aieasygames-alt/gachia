@@ -11,6 +11,8 @@ import { getGuideListData } from '@/lib/game-data/guides';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 import { getHi3ArchiveMetadata, Hi3VersionArchive } from './hi3-version-archive';
 import { OfficialUpdates } from '@/components/wiki/official-updates';
+import { StarRailUpdates } from '@/components/wiki/starrail-updates';
+import { loadStarRailUpdates } from '@/lib/starrail-publication';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -50,16 +52,16 @@ const VERSION_META_OVERRIDES: Partial<Record<GameId, Partial<Record<SupportedLoc
 }>>>> = {
   starrail: {
     zh: {
-      title: '崩铁 4.6正式版本专题：直播码、卡池与资源规划',
-      description: '追踪崩坏星穹铁道 4.6正式版本、直播兑换码、下期跃迁、当前版本、活动和星琼规划。',
+      title: '崩坏：星穹铁道版本更新：跃迁、活动与星琼规划',
+      description: '查看崩坏：星穹铁道近期官方版本更新、跃迁窗口、活动奖励与星琼规划，核对适用区服和来源日期。',
     },
     en: {
-      title: 'HSR v4.6 Watch: Livestream Codes, Banners & Pull Planning',
-      description: 'Track Honkai: Star Rail v4.6 live update, livestream codes, next warps, current-version, events, and Stellar Jade planning.',
+      title: 'Honkai: Star Rail Updates: Warps, Events & Jade Planning',
+      description: 'Check recent official Honkai: Star Rail updates, warp windows, event rewards and Stellar Jade planning, with region and source dates.',
     },
     ja: {
-      title: 'HSR v4.6 注目：配信コード、バナー、抽選計画',
-      description: 'スターレイル v4.6配信中、配信コード、次回跳躍、v4.5まとめ、イベント、星玉計画を確認できます。',
+      title: 'スターレイル更新情報：跳躍・イベント・星玉計画',
+      description: 'スターレイルの直近の公式更新、跳躍期間、イベント報酬、星玉計画を地域・出典確認日とともに整理します。',
     },
   },
   wuwa: {
@@ -130,8 +132,8 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
     { href: '/aniimo/map', label: { zh: '区域 / 路线', en: 'Regions / Routes', ja: '地域 / ルート' }, description: { zh: '查看 6 个区域、已知 Aniimo 和上线后刷新点核验清单。', en: 'Review 6 regions, known Aniimo, and post-launch spawn checks.', ja: '6地域、既知Aniimo、リリース後の出現確認を整理。' } },
   ],
   starrail: [
-    { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '集中查看 4.6正式版本、直播码、下期跃迁和 当前版本资源。', en: 'Check v4.6 live, livestream codes, next warps, and current-version resources.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ資源を確認。' } },
-    { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '4.6正式版本直播码、版本码和过期状态入口。', en: 'v4.6 live codes, patch codes, and expiry status.', ja: 'v4.6配信中コード、版本コード、期限状態入口。' } },
+    { href: '/starrail/version', label: { zh: '官网 / 版本入口', en: 'Official / Version hub', ja: '公式 / バージョン' }, description: { zh: '查看近期版本、跃迁窗口、活动奖励和核验日期。', en: 'Check recent versions, warp windows, event rewards and source dates.', ja: '直近の更新、跳躍期間、イベント報酬、確認日を確認。' } },
+    { href: '/starrail/redeem-codes', label: { zh: '兑换码', en: 'Redeem codes', ja: '交換コード' }, description: { zh: '逐条检查兑换码有效期，历史节目码不等于当前有效。', en: 'Check each code deadline; historical program codes may have expired.', ja: 'コードごとに期限を確認。過去の番組コードは有効とは限りません。' } },
     { href: '/starrail/guides/banner-schedule-guide', label: { zh: '下期跃迁', en: 'Next warps', ja: '次回跳躍' }, description: { zh: '把下期目标、当前资源、星琼缺口和队伍规划放到同一条路线。', en: 'Plan next targets, current resources, Stellar Jade gaps, and teams in one path.', ja: '次回目標、現在資源、星玉不足、編成計画を一つに整理。' } },
   ],
   wuwa: [
@@ -178,16 +180,16 @@ const INTENT_LINKS: Partial<Record<GameId, IntentLink[]>> = {
 
 const VERSION_COPY: Partial<Record<GameId, HubCopy>> = {
   starrail: {
-    title: { zh: '4.6正式版本 / 直播码专题', en: 'v4.6 Special Program / Codes Hub', ja: 'v4.6配信中 / コード特集' },
-    description: { zh: '聚焦 4.6正式版本、直播兑换码、下期跃迁、当前版本、活动奖励、星琼缺口与队伍规划。', en: 'Track the v4.6 live update, livestream codes, next warps, current-version, event rewards, Stellar Jade gaps, and team planning.', ja: 'v4.6配信中、配信コード、次回跳躍、v4.5まとめ、イベント報酬、星玉不足、編成計画を整理します。' },
-    highlights: { zh: ['4.6正式版本', '直播码', '下期跃迁', '星琼规划'], en: ['v4.6 live', 'Livestream codes', 'Next warps', 'Jade planning'], ja: ['v4.6配信中', '配信コード', '次回跳躍', '星玉計画'] },
-    kicker: { zh: '前瞻兑换码', en: 'Livestream codes', ja: '配信コード' },
-    freshness: { zh: '已从 4.5 当前期切换到 4.6正式版本窗口，优先整理直播码有效期、下一池和资源预留。', en: 'Now shifted from v4.5 live coverage into the v4.6 live window, prioritizing code validity, next warps, and resource reserves.', ja: 'v4.5現在情報からv4.6配信中期間へ切り替え、コード期限、次回跳躍、資源温存を優先整理します。' },
+    title: { zh: '版本更新 / 跃迁与活动专题', en: 'Version Updates / Warps & Events', ja: '更新情報 / 跳躍・イベント特集' },
+    description: { zh: '按官方来源整理版本状态、跃迁窗口、活动奖励与星琼规划；区服、来源核验日和未核验内容逐条注明。', en: 'Officially sourced version status, warp windows, event rewards and Jade planning, with region, check dates and pending details.', ja: '公式出典に基づく更新状況、跳躍期間、イベント報酬、星玉計画。地域、確認日、未確認事項を明示します。' },
+    highlights: { zh: ['版本状态', '跃迁窗口', '活动奖励', '星琼规划'], en: ['Version status', 'Warp windows', 'Event rewards', 'Jade planning'], ja: ['更新状況', '跳躍期間', 'イベント報酬', '星玉計画'] },
+    kicker: { zh: '近期官方更新', en: 'Recent official updates', ja: '直近の公式更新' },
+    freshness: { zh: '优先核对所在服务器的跃迁结束时间和活动领取条件；每条更新保留独立核验日期。', en: 'Check your server’s warp deadlines and reward requirements; each update retains its own source-check date.', ja: '利用サーバーの跳躍期限と受取条件を確認。各更新に出典確認日を記載します。' },
     faq: [
-      { question: { zh: '4.6正式版本先看什么？', en: 'What should I check first for the v4.6 live?', ja: 'v4.6配信中で最初に見るべきものは？' }, answer: { zh: '先确认直播兑换码是否还有效，再看下期跃迁、当前版本资源和星琼缺口。', en: 'Check whether livestream codes are still valid first, then review next warps, current-version rewards, and Stellar Jade gaps.', ja: 'まず配信コードが有効か確認し、次回跳躍、v4.5まとめ報酬、星玉不足を見てください。' } },
-      { question: { zh: '资源不够时怎么规划？', en: 'How should I plan with limited resources?', ja: '資源が少ない場合どう計画する？' }, answer: { zh: '先锁一个 4.6 目标，再用卡池规划页估算保底差距，不要把星琼同时拆给多个目标。', en: 'Lock one v4.6 target first, then use pull-planning pages to estimate pity gaps instead of splitting Jades across multiple goals.', ja: 'まずv4.6目標を一つに絞り、ガチャ計画で天井差を見積もり、複数目標に星玉を分散しすぎないようにします。' } },
+      { question: { zh: '当前版本先看什么？', en: 'What should I check first for the current version?', ja: '現行バージョンで最初に見るべきものは？' }, answer: { zh: '先核对近期官方更新的日期与区服，再看当前跃迁结束时间、活动奖励条件和星琼缺口。兑换码须单独核验有效期。', en: 'Check the date and region of official updates, then warp deadlines, event requirements and Jade gaps. Verify code validity separately.', ja: '公式更新の日付と地域を確認し、跳躍期限、イベント条件、星玉不足を調べます。コード期限は個別に確認してください。' } },
+      { question: { zh: '资源不够时怎么规划？', en: 'How should I plan with limited resources?', ja: '資源が少ない場合どう計画する？' }, answer: { zh: '先锁定一个目标，再用卡池规划页估算保底差距；活动理论奖励不要提前记成已经到账的星琼。', en: 'Choose one target and estimate the pity gap. Do not budget theoretical event rewards as Jade already claimed.', ja: '目標を一つに絞り天井までの不足を見積もります。未受取のイベント報酬を所持星玉として計上しないでください。' } },
     ],
-    guideIds: ['fate-rin-gilgamesh-reward-faq', 'himeko-nova-fate-pull-plan', 'fate-collab-guide'],
+    guideIds: ['banner-schedule-guide'],
   },
   wuwa: {
     title: { zh: '3.7「镜锁妄世，心照红尘」上线专题', en: 'v3.7 "Prism\'s Illusion, Heart\'s Illumination" Live Hub', ja: 'Ver.3.7「鏡に鎖す妄世、心で照らす紅塵」実装特集' },
@@ -1688,7 +1690,24 @@ export default async function VersionHubPage({
   const focusLanes = VERSION_FOCUS_LANES[gameId]?.[locale] ?? [];
   const officialStatusNote = OFFICIAL_STATUS_NOTES[gameId]?.[locale];
   const intentLinks = INTENT_LINKS[gameId] ?? [];
-  const versionSnapshot = getVersionSnapshot(gameId);
+  const starrailUpdates = gameId === 'starrail'
+    ? await loadStarRailUpdates(locale)
+    : undefined;
+  const baseSnapshot = getVersionSnapshot(gameId);
+  const cmsVersion = starrailUpdates?.source === 'cms'
+    ? starrailUpdates.updates.filter(update => update.kind === 'version')
+      .sort((a, b) => b.releaseDate!.localeCompare(a.releaseDate!))[0]
+    : undefined;
+  const versionSnapshot = baseSnapshot && cmsVersion ? {
+    ...baseSnapshot,
+    currentVersion: cmsVersion.currentVersion!,
+    releaseDate: cmsVersion.releaseDate!,
+    dateKind: 'release' as const,
+    lastUpdatedAt: cmsVersion.checkedAt,
+    sourceUrls: cmsVersion.sources.map(source => source.url),
+    summary: { ...baseSnapshot.summary, [locale]: cmsVersion.summary },
+    whatChanged: cmsVersion.facts.map(fact => ({ ...baseSnapshot.summary, [locale]: fact.text })),
+  } : (starrailUpdates?.source === 'cms' ? undefined : baseSnapshot);
 
   return (
     <div>
@@ -1728,6 +1747,7 @@ export default async function VersionHubPage({
       </section>
 
       <OfficialUpdates gameId={gameId} locale={locale} />
+      {starrailUpdates && <StarRailUpdates result={starrailUpdates} locale={locale} />}
       {versionSnapshot && (
         <section className="mb-8 rounded-2xl border border-game-border bg-game-surface p-5">
           <div className="mb-4 flex flex-wrap items-start justify-between gap-4">

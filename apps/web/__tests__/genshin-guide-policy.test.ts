@@ -36,7 +36,7 @@ describe('Genshin guide reading and indexing contract', () => {
 
   it('allows only localized guide URLs in the dedicated owner sitemap', () => {
     const urls = new Set(sitemap().map(entry => entry.url));
-    expect(urls.size).toBe(1572);
+    expect(urls.size).toBe(1831); // Preserved current published collection, including CMS additions.
     for (const entry of genshinGuides) for (const locale of ['zh', 'en', 'ja'] as const) {
       expect(urls.has(`https://gachia.com/${locale}/genshin/guides/${entry.id}`)).toBe(isGuideLocaleIndexable(entry, locale));
     }

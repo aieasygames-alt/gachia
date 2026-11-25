@@ -131,11 +131,11 @@ export const LIVE_VERSION_UPDATES: LiveVersionUpdate[] = [
   },
   {
     gameId: 'starrail',
-    title: {"zh": "星铁4.6已上线：跃迁与活动核验", "en": "HSR v4.6 Live: Warps and Events", "ja": "スターレイルv4.6配信中：跳躍とイベント"},
-    summary: {"zh": "国服官网确认4.6「月升之前，与兽共舞」正式上线。当前跃迁、活动、奖励与截止时间按所在服务器核对。", "en": "The CN official site confirms v4.6 is live. Verify warps, events, rewards and deadlines for your own server.", "ja": "中国公式サイトでv4.6の配信を確認。跳躍、イベント、報酬、期限は利用サーバーで確認してください。"},
+    title: {"zh": "星铁近期更新：跃迁与活动核验", "en": "Recent HSR Updates: Warps and Events", "ja": "スターレイル直近更新：跳躍とイベント"},
+    summary: {"zh": "进入版本页查看近期官方更新、跃迁窗口与活动奖励，逐条核对来源日期和所在区服。", "en": "Open the version hub for recent official updates, warp windows and event rewards, with source dates and region scope.", "ja": "バージョンページで直近の公式更新、跳躍期間、イベント報酬を出典確認日・地域とともに確認できます。"},
     href: '/starrail/version',
     status: 'fresh',
-    updatedAt: '2026-10-15',
+    updatedAt: '2026-11-24',
     priority: 2,
   },
   {
@@ -256,18 +256,18 @@ export const LIVE_CODE_SUMMARIES: LiveCodeSummary[] = [
   {
     gameId: 'starrail',
     title: {
-      zh: '星铁 4.6 前瞻兑换码',
-      en: 'HSR v4.6 Preview Codes',
-      ja: 'スターレイル v4.6前瞻コード',
+      zh: '星铁兑换码核验入口',
+      en: 'HSR Code Verification',
+      ja: 'スターレイルコード確認',
     },
     summary: {
-      zh: '4.6已上线；直播码按官方期限核验，不用旧版本收尾资源估算当前跃迁。',
-      en: 'Check whether v4.6 special-program codes have expired before planning v4.5 wrap-up rewards and next warps.',
-      ja: 'v4.6前瞻コードの期限を先に確認し、v4.5まとめ報酬と次回跳躍を見ます。',
+      zh: '历史兑换码须按官方期限和区服重新核验，不把旧节目码视为当前有效。',
+      en: 'Recheck historical codes against official deadlines and server scope before treating them as active.',
+      ja: '過去のコードは公式期限と地域を再確認し、現在有効とは断定しません。',
     },
     href: '/starrail/redeem-codes',
     status: 'watch',
-    updatedAt: '2026-10-15',
+    updatedAt: '2026-11-24',
     priority: 2,
   },
   {

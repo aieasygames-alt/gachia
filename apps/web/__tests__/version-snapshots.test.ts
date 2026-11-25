@@ -29,7 +29,7 @@ describe('version snapshots', () => {
   it('uses the 2026-10-09 snapshot batch', () => {
     expect(VERSION_SNAPSHOT_UPDATED_AT).toBe('2026-10-09');
     expect(getVersionSnapshot('genshin')).toBeUndefined();
-    expect(getVersionSnapshot('starrail')?.currentVersion).toBe('4.6 月升之前，与兽共舞');
+    expect(getVersionSnapshot('starrail')).toMatchObject({ currentVersion: '4.7 此刻，将群星付之一笑', releaseDate: '2026-11-11', lastUpdatedAt: '2026-11-24' });
     expect(getVersionSnapshot('endfield')?.currentVersion).toBe('CN 丹青渡 / Pioneer Test archive');
     expect(getVersionSnapshot('aniimo')?.currentVersion).toBe('S1 逐风启程');
     expect(getVersionSnapshot('roco')?.currentVersion).toBe('Global test information under review');

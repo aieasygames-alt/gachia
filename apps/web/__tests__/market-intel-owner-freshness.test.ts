@@ -124,9 +124,9 @@ it('rereads owner A/B bodies, applies the unchanged scanner and keeps all other 
 it.each(['zh', 'en', 'ja'])('renders request-time owner updates and an explicit partial failure for %s', async lang => {
   let active = snapshot();
   context.get.mockReturnValue({ env: { GENSHIN_CONTENT_ENABLED: 'true', GENSHIN_CONTENT: { fetch: async () => Response.json(active) } } });
-  expect(await render(lang)).toContain(lang === 'en' ? 'Genshin: 31 guides / 0 rules' : lang === 'zh' ? '原神：31 篇攻略 / 0 条检测规则' : '原神：攻略31件 / 検査ルール0件');
+  expect(await render(lang)).toContain(lang === 'en' ? `Genshin: ${snapshot().length} guides / 0 rules` : lang === 'zh' ? `原神：${snapshot().length} 篇攻略 / 0 条检测规则` : `原神：攻略${snapshot().length}件 / 検査ルール0件`);
   active = [...active, { id: 'owner-b-guide', title: 'Owner B' }];
-  expect(await render(lang)).toContain(lang === 'en' ? 'Genshin: 32 guides / 0 rules' : lang === 'zh' ? '原神：32 篇攻略 / 0 条检测规则' : '原神：攻略32件 / 検査ルール0件');
+  expect(await render(lang)).toContain(lang === 'en' ? `Genshin: ${snapshot().length + 1} guides / 0 rules` : lang === 'zh' ? `原神：${snapshot().length + 1} 篇攻略 / 0 条检测规则` : `原神：攻略${snapshot().length + 1}件 / 検査ルール0件`);
   context.get.mockReturnValue({ env: { GENSHIN_CONTENT_ENABLED: 'true' } });
   const unavailable = await render(lang);
   expect(unavailable).toContain(lang === 'en' ? 'this scan is incomplete' : lang === 'zh' ? '本轮检查未完成' : '今回の検査は未完了');
