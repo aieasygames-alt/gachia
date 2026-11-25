@@ -18,4 +18,16 @@
 
 ## 验收与发布
 
-发布证据完成后补充。当前批次定义见`batch.json`；草稿公开隔离见`draft-receipt.json`。发布顺序：兼容Main读端上线→Payload正式发布→既有`publish:starrail`同步→线上全文、三语、目录、资产及七服务保护验证。
+源码提交`7c6e34f80ed21424b8bfabfd525b3567def335ec`，CI [45576354606](https://github.com/aieasygames-alt/gachia/actions/runs/45576354606)通过。主站105文件622项、数据18文件181项及CMS8项测试通过，各自类型检查、主站OpenNext/CMS生产构建、镜像与清单检查通过。构建仅保留既有auth-dialog hooks警告。摘要见`checks.json`。
+
+Main由`c4506b7a-d6c6-400b-9dd8-f2b2e2eff8a0`切换为`d26fb0dc-4e5b-47e1-8971-fe26b4a26c79`。上传并下载验证模块SHA256 `68c2333353f7f754631bb4172268bbc0ede4227efc0133bc299d706dea9d3bce`。保留前版全部1499个静态资源路径，复制1374个，所有碰撞内容一致。候选与正式各通过66项路由检查、32个静态资源逐字节摘要比对。独立七服务前/后快照确认其余六个服务部署未变，全部七服务routes/subdomain/bindings/settings未变。发布后只读快照曾遇OAuth401，通过项目Wrangler刷新后重读成功，没有重做部署。
+
+3条草稿先验证公开导出仍为20条。兼容Main上线并读回原20条未变后，通过Payload Local API正式发布，检查版本历史，再执行既有`publish:starrail`；回执`ok:true`、count23、revision `1795595746818`。主站23条完整规范记录与审定批次精确一致，其他语言各0条。新增详情/目录、原有5攻略、阿哈角色/计算器、首页/跃迁/活动及三语隔离、no-store、缺译noindex均通过。真实本地Worker验证权限、来源、草稿、过期revision拒绝，以及即时修订与撤回；这些回归写入只发生于隔离本地D1。浏览器读取3个正式详情，见`browser-acceptance.json`与`production-equipment.jpg`。
+
+本机4320 Payload编辑器继续运行，本次4400测试Worker已停止。批次、草稿隔离、版本历史、同步与线上/服务保护证据分别见`batch.json`、`draft-receipt.json`、`local-publication.json`、`sync-receipt.json`、`production-acceptance.json`和`runtime-protection.json`。
+
+## 维护与剩余顺序
+
+这3条内容的文字/数字维护继续走Payload草稿→发布→`publish:starrail`→详情及目录回读，无需再构建Main。新增其他稳定条目或来源仍须审查路由归属与来源白名单。若回退到不支持`equipment`的旧Main，先在Payload撤回这3条并同步完整兼容副本；不能只回退代码使整份发布校验失败。
+
+本批没有将整个旧图鉴标为已核验。下一批继续当前复刻光锥的完整数值、旧库命途/身份错误及重复项，继而补相关材料独立图鉴与获取途径，再进入国服结构化活动日历。光锥第二独立数值源、两套新饰品具体关卡/掉落与配装比较继续列为待核验。

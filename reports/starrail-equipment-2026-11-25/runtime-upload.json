@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "versionId": "d26fb0dc-4e5b-47e1-8971-fe26b4a26c79",
+  "previewOrigin": "https://d26fb0dc-gachia.aieasygames.workers.dev",
+  "moduleSHA256": "68c2333353f7f754631bb4172268bbc0ede4227efc0133bc299d706dea9d3bce",
+  "sourceCommit": "7c6e34f80ed21424b8bfabfd525b3567def335ec",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-equipment-2026-11-25/.private/upload/module-proof/receipt.json",
+    "pin": "f639d1c2053a08c02685f7c7272cf9a5d68c51c528b1cbc9bec552497eefd202"
+  },
+  "bindingsPreserved": true,
+  "trafficMutation": false
+}

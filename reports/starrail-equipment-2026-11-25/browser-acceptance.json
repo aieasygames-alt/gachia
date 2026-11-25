@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com",
+  "paths": [
+    "/zh/starrail/weapons/when-the-first-aha-rang-out",
+    "/zh/starrail/artifacts/gods-momentary-bliss",
+    "/zh/starrail/artifacts/subspace-sanctuary"
+  ],
+  "observations": [
+    "All five superimposition effects, level80 stats, six ascensions and single numeric-source boundary visible",
+    "Elation40% threshold and action advance40% visible",
+    "Speed145 threshold, party BreakEffect18% and nonstacking visible",
+    "Official and community source labels displayed"
+  ],
+  "screenshot": "production-equipment.jpg",
+  "writes": "none; UI readback only"
+}
