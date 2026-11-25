@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json",
+    "status": 200,
+    "sha256": "50af6089b25af6fbec6459517b62570845c3143b8dc86659259a2dbe4eaff5ab",
+    "usage": "CN cross-reference",
+    "reuse": "fixed immutable commit, bytes rehashed against previous 200 receipt"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/en/items.json",
+    "status": 200,
+    "sha256": "74e7bade63ae3aa646686deff53823dd81f36e4a04941726e785fee0b5fc8c63",
+    "usage": "legacy English compatibility names only, no English CMS publication",
+    "reuse": "fixed immutable commit, bytes rehashed against previous 200 receipt"
+  }
+]

@@ -1,0 +1,5 @@
+
+> @gachia/data@0.0.1 generate:manifests /Users/robert/.codex/worktrees/starrail-cms-release/gachia/packages/data
+> node scripts/generate-manifests.mjs
+
+Generated 14 game manifests.

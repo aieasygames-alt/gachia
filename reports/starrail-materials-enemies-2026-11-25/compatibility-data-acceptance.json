@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "recordsBefore": 68,
+  "recordsAfter": 68,
+  "correctedStableIds": [
+    "artifexs-cyberheart",
+    "artifexs-gyreheart",
+    "artifexs-module",
+    "dream-collection-plan",
+    "dream-element",
+    "dream-fire",
+    "extinguished-acorn",
+    "kindled-acorn",
+    "scorched-acorn"
+  ],
+  "unrelatedMaterialsUnchanged": true,
+  "mirrorExact": true,
+  "otherGameManifestsUnchanged": true,
+  "publishedChineseAfter": 55,
+  "compactPublicationUTF8Bytes": 168135,
+  "byteLimit": 524288
+}

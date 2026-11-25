@@ -6,7 +6,9 @@ import { getItemListData } from '@/lib/game-data/items';
 import { buildSearchItems, searchItems } from '@/lib/search-results';
 import { readFileSync } from 'node:fs';
 import { isStarRailCmsMaterial } from '@gachia/data/cms/starrail-materials';
-import materialBatch from '../../../reports/starrail-materials-2026-11-25/batch.json';
+import firstMaterialBatch from '../../../reports/starrail-materials-2026-11-25/batch.json';
+import enemyMaterialBatch from '../../../reports/starrail-materials-enemies-2026-11-25/batch.json';
+const materialBatch = { creates: [...firstMaterialBatch.creates, ...enemyMaterialBatch.creates] };
 
 // Locale prefixing is exercised over HTTP with the real navigation component.
 // This render check runs the actual async page and actual material data loaders.

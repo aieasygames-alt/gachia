@@ -2,11 +2,12 @@ import { timingSafeEqual } from 'node:crypto';
 import { getD1 } from '@/lib/db';
 import { getStarRailPublication } from '@/lib/starrail-publication';
 import { parseStarRailPublication } from '@gachia/data/cms/starrail-publication';
+import { STARRAIL_PUBLICATION_BYTES } from '@gachia/data/cms/starrail-limits';
 
 export const dynamic = 'force-dynamic';
 const headers = { 'cache-control': 'no-store' };
 const reply = (body: unknown, status = 200) => Response.json(body, { status, headers });
-const limit = 512 * 1024;
+const limit = STARRAIL_PUBLICATION_BYTES;
 
 export async function GET(request: Request) {
   const locale = new URL(request.url).searchParams.get('locale') || 'zh';

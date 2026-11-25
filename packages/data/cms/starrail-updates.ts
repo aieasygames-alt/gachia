@@ -41,6 +41,15 @@ export function isOfficialStarRailSource(value: unknown): value is string {
 // Community-maintained references are explicitly labelled in the UI. Keep this
 // list limited to reviewed detail pages; never interpret platform ownership as authorship.
 const communitySources = new Set([
+  'https://wiki.biligame.com/sr/%E7%86%84%E7%81%AD%E5%8E%9F%E6%A0%B8',
+  'https://wiki.biligame.com/sr/%E5%BE%AE%E5%85%89%E5%8E%9F%E6%A0%B8',
+  'https://wiki.biligame.com/sr/%E8%A0%A2%E5%8A%A8%E5%8E%9F%E6%A0%B8',
+  'https://wiki.biligame.com/sr/%E5%B7%A5%E9%80%A0%E6%9C%BA%E6%9D%BC',
+  'https://wiki.biligame.com/sr/%E5%B7%A5%E9%80%A0%E8%BF%B4%E8%BD%AE',
+  'https://wiki.biligame.com/sr/%E5%B7%A5%E9%80%A0%E6%B5%91%E5%BF%83',
+  'https://wiki.biligame.com/sr/%E8%93%84%E6%A2%A6%E5%85%83%E4%BB%B6',
+  'https://wiki.biligame.com/sr/%E6%B5%81%E6%A2%A6%E9%98%80%E9%97%A8',
+  'https://wiki.biligame.com/sr/%E9%80%A0%E6%A2%A6%E9%A9%AC%E8%BE%BE',
   'https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%B9%BC%E8%8A%BD',
   'https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%A4%A9%E5%8D%8E',
   'https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E8%8D%A3%E6%9E%9D',

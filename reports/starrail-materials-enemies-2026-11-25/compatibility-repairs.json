@@ -1,0 +1,200 @@
+[
+  {
+    "id": "extinguished-acorn",
+    "sourceId": "111001",
+    "before": {
+      "id": "extinguished-acorn",
+      "name": "熄灭旧核",
+      "nameEn": "Extinguished Core",
+      "type": "trace",
+      "rarity": 2,
+      "source": "拟造花萼（金）",
+      "sourceEn": "Calyx (Golden)"
+    },
+    "after": {
+      "id": "extinguished-acorn",
+      "name": "熄灭原核",
+      "nameEn": "Extinguished Core",
+      "type": "common",
+      "rarity": 2,
+      "source": "部分裂界造物掉落；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；委托奖励；余烬兑换；「万能合成机」- 材料置换；拟造花萼（金）",
+      "sourceEn": "Certain Fragmentum Monsters; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Assignment rewards; Embers Exchange; Omni-Synthesizer — Material Exchange; Calyx (Golden)"
+    }
+  },
+  {
+    "id": "kindled-acorn",
+    "sourceId": "111002",
+    "before": {
+      "id": "kindled-acorn",
+      "name": "点燃新核",
+      "nameEn": "Glimmering Core",
+      "type": "trace",
+      "rarity": 3,
+      "source": "拟造花萼（金）",
+      "sourceEn": "Calyx (Golden)"
+    },
+    "after": {
+      "id": "kindled-acorn",
+      "name": "微光原核",
+      "nameEn": "Glimmering Core",
+      "type": "common",
+      "rarity": 3,
+      "source": "突破至均衡等级2后，部分裂界造物掉落；「万能合成机」- 材料合成；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；「万能合成机」- 材料置换",
+      "sourceEn": "Certain Fragmentum Monsters at Equilibrium Level 2 or higher; Omni-Synthesizer — Material Synthesis; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Omni-Synthesizer — Material Exchange"
+    }
+  },
+  {
+    "id": "scorched-acorn",
+    "sourceId": "111003",
+    "before": {
+      "id": "scorched-acorn",
+      "name": "燃烧残核",
+      "nameEn": "Squirming Core",
+      "type": "trace",
+      "rarity": 4,
+      "source": "拟造花萼（金）",
+      "sourceEn": "Calyx (Golden)"
+    },
+    "after": {
+      "id": "scorched-acorn",
+      "name": "蠢动原核",
+      "nameEn": "Squirming Core",
+      "type": "common",
+      "rarity": 4,
+      "source": "突破至均衡等级4后，部分裂界造物掉落；「万能合成机」- 材料合成；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；「万能合成机」- 材料置换",
+      "sourceEn": "Certain Fragmentum Monsters at Equilibrium Level 4 or higher; Omni-Synthesizer — Material Synthesis; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Omni-Synthesizer — Material Exchange"
+    }
+  },
+  {
+    "id": "artifexs-module",
+    "sourceId": "113011",
+    "before": {
+      "id": "artifexs-module",
+      "name": "工造机杼",
+      "nameEn": "Artifex's Module",
+      "type": "common",
+      "rarity": 2,
+      "source": "敌人掉落、拟造花萼（赤）",
+      "sourceEn": "Enemy drops, Calyx (Crimson)"
+    },
+    "after": {
+      "id": "artifexs-module",
+      "name": "工造机杼",
+      "nameEn": "Artifex's Module",
+      "type": "common",
+      "rarity": 2,
+      "source": "入魔机巧掉落；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；委托奖励；余烬兑换；「万能合成机」- 材料置换；拟造花萼（金）",
+      "sourceEn": "Entranced Ingenia; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Assignment rewards; Embers Exchange; Omni-Synthesizer — Material Exchange; Calyx (Golden)"
+    }
+  },
+  {
+    "id": "artifexs-cyberheart",
+    "sourceId": "113012",
+    "before": {
+      "id": "artifexs-cyberheart",
+      "name": "工造迥轮",
+      "nameEn": "Artifex's Cyberheart",
+      "type": "common",
+      "rarity": 3,
+      "source": "敌人掉落、拟造花萼（赤）",
+      "sourceEn": "Enemy drops, Calyx (Crimson)"
+    },
+    "after": {
+      "id": "artifexs-cyberheart",
+      "name": "工造迴轮",
+      "nameEn": "Artifex's Cogwheel",
+      "type": "common",
+      "rarity": 3,
+      "source": "突破至均衡等级2后，入魔机巧掉落；「万能合成机」- 材料合成；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；「万能合成机」- 材料置换",
+      "sourceEn": "Entranced Ingenia at Equilibrium Level 2 or higher; Omni-Synthesizer — Material Synthesis; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Omni-Synthesizer — Material Exchange"
+    }
+  },
+  {
+    "id": "artifexs-gyreheart",
+    "sourceId": "113013",
+    "before": {
+      "id": "artifexs-gyreheart",
+      "name": "工造浑心",
+      "nameEn": "Artifex's Gyreheart",
+      "type": "common",
+      "rarity": 4,
+      "source": "敌人掉落、拟造花萼（赤）",
+      "sourceEn": "Enemy drops, Calyx (Crimson)"
+    },
+    "after": {
+      "id": "artifexs-gyreheart",
+      "name": "工造浑心",
+      "nameEn": "Artifex's Gyreheart",
+      "type": "common",
+      "rarity": 4,
+      "source": "突破至均衡等级4后，入魔机巧掉落；「万能合成机」- 材料合成；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；「万能合成机」- 材料置换",
+      "sourceEn": "Entranced Ingenia at Equilibrium Level 4 or higher; Omni-Synthesizer — Material Synthesis; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Omni-Synthesizer — Material Exchange"
+    }
+  },
+  {
+    "id": "dream-collection-plan",
+    "sourceId": "114001",
+    "before": {
+      "id": "dream-collection-plan",
+      "name": "梦境发条",
+      "nameEn": "Dream Collection Plan",
+      "type": "common",
+      "rarity": 2,
+      "source": "敌人掉落、拟造花萼（赤）",
+      "sourceEn": "Enemy drops, Calyx (Crimson)"
+    },
+    "after": {
+      "id": "dream-collection-plan",
+      "name": "蓄梦元件",
+      "nameEn": "Dream Collection Component",
+      "type": "common",
+      "rarity": 2,
+      "source": "惊梦剧团掉落；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；委托奖励；余烬兑换；「万能合成机」- 材料置换；拟造花萼（金）",
+      "sourceEn": "Dreamjolt Troupe; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Assignment rewards; Embers Exchange; Omni-Synthesizer — Material Exchange; Calyx (Golden)"
+    }
+  },
+  {
+    "id": "dream-fire",
+    "sourceId": "114002",
+    "before": {
+      "id": "dream-fire",
+      "name": "梦境炉火",
+      "nameEn": "Dream Fire",
+      "type": "common",
+      "rarity": 3,
+      "source": "敌人掉落、拟造花萼（赤）",
+      "sourceEn": "Enemy drops, Calyx (Crimson)"
+    },
+    "after": {
+      "id": "dream-fire",
+      "name": "流梦阀门",
+      "nameEn": "Dream Flow Valve",
+      "type": "common",
+      "rarity": 3,
+      "source": "突破至均衡等级2后，惊梦剧团掉落；「万能合成机」- 材料合成；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；「万能合成机」- 材料置换",
+      "sourceEn": "Dreamjolt Troupe at Equilibrium Level 2 or higher; Omni-Synthesizer — Material Synthesis; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Omni-Synthesizer — Material Exchange"
+    }
+  },
+  {
+    "id": "dream-element",
+    "sourceId": "114003",
+    "before": {
+      "id": "dream-element",
+      "name": "梦境之晶",
+      "nameEn": "Dream Element",
+      "type": "common",
+      "rarity": 4,
+      "source": "敌人掉落、拟造花萼（赤）",
+      "sourceEn": "Enemy drops, Calyx (Crimson)"
+    },
+    "after": {
+      "id": "dream-element",
+      "name": "造梦马达",
+      "nameEn": "Dream Making Engine",
+      "type": "common",
+      "rarity": 4,
+      "source": "突破至均衡等级4后，惊梦剧团掉落；「万能合成机」- 材料合成；「差分宇宙」中敌方掉落；「模拟宇宙」中敌方掉落；「万能合成机」- 材料置换",
+      "sourceEn": "Dreamjolt Troupe at Equilibrium Level 4 or higher; Omni-Synthesizer — Material Synthesis; Dropped by enemies in Divergent Universe; Simulated Universe enemies; Omni-Synthesizer — Material Exchange"
+    }
+  }
+]

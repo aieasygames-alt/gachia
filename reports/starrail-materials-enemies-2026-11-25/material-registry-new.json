@@ -1,0 +1,74 @@
+{
+  "extinguished-acorn": {
+    "name": "熄灭原核",
+    "sourceId": "111001",
+    "equipment": [
+      "shattered-home",
+      "day-one-of-my-new-life",
+      "fine-fruit"
+    ]
+  },
+  "kindled-acorn": {
+    "name": "微光原核",
+    "sourceId": "111002",
+    "equipment": [
+      "shattered-home",
+      "day-one-of-my-new-life",
+      "fine-fruit"
+    ]
+  },
+  "scorched-acorn": {
+    "name": "蠢动原核",
+    "sourceId": "111003",
+    "equipment": [
+      "shattered-home",
+      "day-one-of-my-new-life",
+      "fine-fruit"
+    ]
+  },
+  "artifexs-module": {
+    "name": "工造机杼",
+    "sourceId": "113011",
+    "equipment": [
+      "shadowed-by-night"
+    ]
+  },
+  "artifexs-cyberheart": {
+    "name": "工造迴轮",
+    "sourceId": "113012",
+    "equipment": [
+      "shadowed-by-night"
+    ]
+  },
+  "artifexs-gyreheart": {
+    "name": "工造浑心",
+    "sourceId": "113013",
+    "equipment": [
+      "shadowed-by-night"
+    ]
+  },
+  "dream-collection-plan": {
+    "name": "蓄梦元件",
+    "sourceId": "114001",
+    "equipment": [
+      "along-the-passing-shore",
+      "indelible-promise"
+    ]
+  },
+  "dream-fire": {
+    "name": "流梦阀门",
+    "sourceId": "114002",
+    "equipment": [
+      "along-the-passing-shore",
+      "indelible-promise"
+    ]
+  },
+  "dream-element": {
+    "name": "造梦马达",
+    "sourceId": "114003",
+    "equipment": [
+      "along-the-passing-shore",
+      "indelible-promise"
+    ]
+  }
+}

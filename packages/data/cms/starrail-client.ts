@@ -1,5 +1,6 @@
 import fallbackData from './starrail-snapshot.json';
 import { parseStarRailUpdate, type StarRailUpdate, type UpdateLocale } from './starrail-updates';
+import { STARRAIL_LOCALE_LIMIT } from './starrail-limits';
 
 export type UpdateResult = { source: 'cms' | 'snapshot'; updates: StarRailUpdate[] };
 
@@ -21,13 +22,13 @@ export async function readStarRailUpdates(
       'where[and][0][gameId][equals]': 'starrail',
       'where[and][1][locale][equals]': locale,
       'where[and][2][_status][equals]': 'published',
-      sort: '-checkedAt,-updatedAt', limit: '50', depth: '0', draft: 'false',
+      sort: '-checkedAt,-updatedAt', limit: String(STARRAIL_LOCALE_LIMIT), depth: '0', draft: 'false',
     }).toString();
     const response = await fetcher(url, { cache: 'no-store', signal: AbortSignal.timeout(3000) });
     if (!response.ok) return fallback();
     const body: unknown = await response.json();
     if (!body || typeof body !== 'object' || !('docs' in body) || !Array.isArray(body.docs) ||
-        ('hasNextPage' in body && body.hasNextPage) || body.docs.length > 50) return fallback();
+        ('hasNextPage' in body && body.hasNextPage) || body.docs.length > STARRAIL_LOCALE_LIMIT) return fallback();
     const updates = body.docs.map(parseStarRailUpdate);
     if (updates.some((d: StarRailUpdate | null) => !d || d.locale !== locale)) return fallback();
     // An empty published collection intentionally hides the local snapshot (e.g. after unpublishing).

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "baselineHEAD": "174d62e3e8af91e70aa9081525e2864f66cb0891",
+  "files": [
+    "packages/data/cms/starrail-materials.ts",
+    "packages/data/cms/starrail-updates.ts",
+    "packages/data/cms/starrail-publication.ts",
+    "packages/data/cms/starrail-client.ts",
+    "tools/payload-cms/scripts/publish-starrail.ts",
+    "packages/data/cms/starrail-limits.ts"
+  ],
+  "preservedEditorReaderImport": "../games/starrail/raw-updates.json",
+  "backupIntegrity": "ok",
+  "publicCountBefore": 46
+}

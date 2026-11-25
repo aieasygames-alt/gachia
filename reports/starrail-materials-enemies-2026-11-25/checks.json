@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "web": {
+    "files": 106,
+    "tests": 629,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 18,
+    "tests": 181,
+    "types": "passed"
+  },
+  "cms": {
+    "tests": 11,
+    "types": "passed",
+    "actualEditorTypes": "passed",
+    "actualEditorProductionBuild": "passed"
+  },
+  "capacityTests": [
+    "per-locale 100 accepted / 101 rejected",
+    "total 300 accepted / 301 rejected",
+    "55 and 100 returned without truncation",
+    "complete publisher 55 and 300 records",
+    "pagination and UTF-8 byte overflow rejected before cloud PUT",
+    "existing chunked 512 KiB rejection retained"
+  ],
+  "manifests": "passed",
+  "draftIsolation": "editor-acceptance.json"
+}

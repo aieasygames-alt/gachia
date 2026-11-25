@@ -1,0 +1,59 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 47,
+      "slug": "extinguished-acorn",
+      "updatedAt": "2026-11-25T14:12:53.020Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 48,
+      "slug": "kindled-acorn",
+      "updatedAt": "2026-11-25T14:12:53.028Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 49,
+      "slug": "scorched-acorn",
+      "updatedAt": "2026-11-25T14:12:53.034Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 50,
+      "slug": "artifexs-module",
+      "updatedAt": "2026-11-25T14:12:53.040Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 51,
+      "slug": "artifexs-cyberheart",
+      "updatedAt": "2026-11-25T14:12:53.046Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 52,
+      "slug": "artifexs-gyreheart",
+      "updatedAt": "2026-11-25T14:12:53.050Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 53,
+      "slug": "dream-collection-plan",
+      "updatedAt": "2026-11-25T14:12:53.057Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 54,
+      "slug": "dream-fire",
+      "updatedAt": "2026-11-25T14:12:53.061Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 55,
+      "slug": "dream-element",
+      "updatedAt": "2026-11-25T14:12:53.065Z",
+      "action": "created_draft"
+    }
+  ]
+}
