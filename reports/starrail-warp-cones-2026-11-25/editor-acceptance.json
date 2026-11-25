@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "origin": "http://127.0.0.1:4320",
+  "publishedCount": 23,
+  "preparedDrafts": 5,
+  "draftsRemainPrivateAfterProductionRebuild": true,
+  "schemaMigrationRequired": false,
+  "operatorConfigBaselineComparedBeforeCopy": true,
+  "onlyReviewedFilesSynced": [
+    "packages/data/cms/starrail-updates.ts",
+    "packages/data/cms/starrail-equipment.ts"
+  ],
+  "backup": "ignored .private/cms-before-publication.db (23 published and 5 drafts)"
+}

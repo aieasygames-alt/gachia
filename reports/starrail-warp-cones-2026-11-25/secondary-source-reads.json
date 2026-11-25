@@ -1,0 +1,26 @@
+[
+  {
+    "name": "light_cones",
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cones.json",
+    "status": 200,
+    "sha256": "c7f49e659cb32a77e7f3a0366a9da1735c24bf653e19147ed5e98bdb8e499e8f"
+  },
+  {
+    "name": "light_cone_ranks",
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_ranks.json",
+    "status": 200,
+    "sha256": "640e2c749a308b0bfb57fb0591f24d5d8fbf6b49250ed882d6a2e4d2dd7c1e28"
+  },
+  {
+    "name": "light_cone_promotions",
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_promotions.json",
+    "status": 200,
+    "sha256": "95c13a3399b800950740d2907cf5f98cfdbb3a5b49f868f258b90c8d77a0465c"
+  },
+  {
+    "name": "items",
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json",
+    "status": 200,
+    "sha256": "50af6089b25af6fbec6459517b62570845c3143b8dc86659259a2dbe4eaff5ab"
+  }
+]

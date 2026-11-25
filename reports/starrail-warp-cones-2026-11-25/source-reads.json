@@ -1,0 +1,32 @@
+[
+  {
+    "name": "欢迎来到银河城",
+    "url": "https://wiki.biligame.com/sr/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E9%93%B6%E6%B2%B3%E5%9F%8E",
+    "status": 200,
+    "sha256": "dddbbe8f1ba667d1c2379fa82da52e200bc1001d4cd97e5974921a7e4b869324"
+  },
+  {
+    "name": "花花世界迷人眼",
+    "url": "https://wiki.biligame.com/sr/%E8%8A%B1%E8%8A%B1%E4%B8%96%E7%95%8C%E8%BF%B7%E4%BA%BA%E7%9C%BC",
+    "status": 200,
+    "sha256": "47eccf14f6ae2d5abc49b2239e2778408b4d8eb8085ea5a2d5372d690fafc08e"
+  },
+  {
+    "name": "当她决定看见",
+    "url": "https://wiki.biligame.com/sr/%E5%BD%93%E5%A5%B9%E5%86%B3%E5%AE%9A%E7%9C%8B%E8%A7%81",
+    "status": 200,
+    "sha256": "ba2faf3a9a1a414a31cbdca0ad0ca5b89c5e298dd9751f5924891e5ad00488b1"
+  },
+  {
+    "name": "宇宙市场趋势",
+    "url": "https://wiki.biligame.com/sr/%E5%AE%87%E5%AE%99%E5%B8%82%E5%9C%BA%E8%B6%8B%E5%8A%BF",
+    "status": 200,
+    "sha256": "f93e2c4197560efc0fbb2816f9fc9f0998bdb15a66dd8233c3d2050cfffe1c8e"
+  },
+  {
+    "name": "她已闭上双眼",
+    "url": "https://wiki.biligame.com/sr/%E5%A5%B9%E5%B7%B2%E9%97%AD%E4%B8%8A%E5%8F%8C%E7%9C%BC",
+    "status": 200,
+    "sha256": "3368b7a13d197ef4bf6b7953eab7ad1d7edf4a94f5390d344ad185821bd34162"
+  }
+]

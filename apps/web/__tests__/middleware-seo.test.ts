@@ -53,7 +53,7 @@ describe('SEO redirect contracts', () => {
   it('does not render empty weapon databases as indexable placeholder pages', () => {
     expect(weaponsPage).toContain("import { notFound } from 'next/navigation';");
     expect(weaponsPage).toContain("if (gameId === 'sea') notFound();");
-    expect(weaponsPage).toContain('if (weapons.length > 0) return');
+    expect(weaponsPage).toContain("if (weapons.length > 0 || gameId === 'starrail') return");
     expect(weaponsPage).toContain('  notFound();');
     expect(weaponsPage).not.toContain('>Coming Soon</div>');
   });

@@ -40,6 +40,16 @@ export function isOfficialStarRailSource(value: unknown): value is string {
 // Community-maintained references are explicitly labelled in the UI. Keep this
 // list limited to reviewed detail pages; never interpret platform ownership as authorship.
 const communitySources = new Set([
+  'https://wiki.biligame.com/sr/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E9%93%B6%E6%B2%B3%E5%9F%8E',
+  'https://wiki.biligame.com/sr/%E8%8A%B1%E8%8A%B1%E4%B8%96%E7%95%8C%E8%BF%B7%E4%BA%BA%E7%9C%BC',
+  'https://wiki.biligame.com/sr/%E5%BD%93%E5%A5%B9%E5%86%B3%E5%AE%9A%E7%9C%8B%E8%A7%81',
+  'https://wiki.biligame.com/sr/%E5%AE%87%E5%AE%99%E5%B8%82%E5%9C%BA%E8%B6%8B%E5%8A%BF',
+  'https://wiki.biligame.com/sr/%E5%A5%B9%E5%B7%B2%E9%97%AD%E4%B8%8A%E5%8F%8C%E7%9C%BC',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cones.json',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_ranks.json',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_promotions.json',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json',
+
   'https://starrailstation.com/cn/relics/329',
   'https://starrailstation.com/cn/relics/330',
   'https://wiki.biligame.com/sr/%E5%BD%93%E7%AC%AC%E4%B8%80%E5%A3%B0%E3%80%8C%E9%98%BF%E5%93%88%E3%80%8D%E5%93%8D%E8%B5%B7',

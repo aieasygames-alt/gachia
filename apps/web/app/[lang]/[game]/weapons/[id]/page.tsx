@@ -189,7 +189,7 @@ export async function generateStaticParams() {
     const weapons = await getWeaponsForStaticParams(gameId);
     return LOCALES.flatMap((lang) => weapons.map((weapon) => ({ lang, game: gameId, id: weapon.id })));
   }));
-  return [...params.flat(), ...LOCALES.flatMap(lang => Object.keys(STARRAIL_CMS_EQUIPMENT.weapons).map(id => ({ lang, game: 'starrail', id })))];
+  return [...params.flat().filter(p => p.game !== 'starrail' || !isStarRailCmsEquipment('weapons', p.id)), ...LOCALES.flatMap(lang => Object.keys(STARRAIL_CMS_EQUIPMENT.weapons).map(id => ({ lang, game: 'starrail', id })))];
 }
 
 const BASE_URL = 'https://gachia.com';

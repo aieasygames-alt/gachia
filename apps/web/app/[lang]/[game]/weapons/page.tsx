@@ -1,4 +1,5 @@
 import { StarRailCmsEquipmentCards } from '@/components/wiki/starrail-cms-equipment';
+import { isStarRailCmsEquipment } from '@gachia/data/cms/starrail-equipment';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getWeaponListData, sortWeaponRanks } from '@/lib/game-data/weapons';
@@ -156,8 +157,8 @@ export default async function WeaponsPage({
 
   if (gameId === 'sea') notFound();
 
-  const weapons = await getWeaponListData(gameId, locale);
-  if (weapons.length > 0) return <><WeaponListPage gameId={gameId} locale={locale} weapons={weapons} />{ldScript}</>;
+  const weapons = (await getWeaponListData(gameId, locale)).filter(weapon => gameId !== 'starrail' || !isStarRailCmsEquipment('weapons', weapon.id));
+  if (weapons.length > 0 || gameId === 'starrail') return <><WeaponListPage gameId={gameId} locale={locale} weapons={weapons} />{ldScript}</>;
 
   notFound();
 }

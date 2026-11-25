@@ -1,0 +1,35 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 24,
+      "slug": "welcome-to-the-galactic-city",
+      "updatedAt": "2026-11-25T11:29:54.314Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 25,
+      "slug": "dazzling-world",
+      "updatedAt": "2026-11-25T11:29:54.320Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 26,
+      "slug": "when-she-decided-to-see",
+      "updatedAt": "2026-11-25T11:29:54.325Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 27,
+      "slug": "trend-of-the-universal-market",
+      "updatedAt": "2026-11-25T11:29:54.329Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 28,
+      "slug": "she-already-shut-her-eyes",
+      "updatedAt": "2026-11-25T11:29:54.333Z",
+      "action": "created_draft"
+    }
+  ]
+}
