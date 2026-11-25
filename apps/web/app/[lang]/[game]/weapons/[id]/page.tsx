@@ -1,3 +1,5 @@
+import { isStarRailCmsEquipment, STARRAIL_CMS_EQUIPMENT } from '@gachia/data/cms/starrail-equipment';
+import { StarRailCmsEquipment, starRailEquipmentMetadata } from '@/components/wiki/starrail-cms-equipment';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { notFound } from 'next/navigation';
@@ -187,7 +189,7 @@ export async function generateStaticParams() {
     const weapons = await getWeaponsForStaticParams(gameId);
     return LOCALES.flatMap((lang) => weapons.map((weapon) => ({ lang, game: gameId, id: weapon.id })));
   }));
-  return params.flat();
+  return [...params.flat(), ...LOCALES.flatMap(lang => Object.keys(STARRAIL_CMS_EQUIPMENT.weapons).map(id => ({ lang, game: 'starrail', id })))];
 }
 
 const BASE_URL = 'https://gachia.com';
@@ -253,6 +255,7 @@ export async function generateMetadata({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail' && isStarRailCmsEquipment('weapons', id)) return starRailEquipmentMetadata(locale, 'weapons', id);
   if (gameId === 'roco') return rocoWeaponReviewMetadata(id, locale) ?? {};
   const gameName = GAMES[gameId]?.name[locale] ?? '';
   const detail = await getWeaponDetailData(gameId, id, locale);
@@ -315,6 +318,7 @@ export default async function WeaponDetailPage({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail' && isStarRailCmsEquipment('weapons', id)) return <StarRailCmsEquipment locale={locale} category="weapons" id={id} />;
 
   if (gameId === 'roco') {
     if (!isRocoLegacyWeaponId(id)) notFound();

@@ -6,6 +6,7 @@ import * as seo from '@/lib/seo-metadata';
 import * as scope from '@/lib/hi3-weapon-scope';
 import * as rocoReview from '@/lib/roco-public-review';
 import * as rocoWeapons from '@gachia/data/games/roco/weapons';
+import * as starRailEquipment from '@gachia/data/cms/starrail-equipment';
 
 type Metadata = {
   title?: string;
@@ -23,6 +24,8 @@ function metadataExport(page: string, detail: unknown) {
   } }).outputText;
   const exports: { generateMetadata?: (input: { params: Promise<Params> }) => Promise<Metadata> } = {};
   const imports: Record<string, unknown> = {
+    '@gachia/data/cms/starrail-equipment': starRailEquipment,
+    '@/components/wiki/starrail-cms-equipment': {},
     '@gachia/core': core,
     '@/lib/seo-metadata': seo,
     '@/lib/hi3-weapon-scope': scope,

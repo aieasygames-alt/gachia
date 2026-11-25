@@ -52,7 +52,7 @@ const Updates: CollectionConfig = {
       validate: (v: unknown) => typeof v === 'string' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(v) || '使用小写英文、数字和连字符。' },
     { name: 'kind', label: '更新类型', type: 'select', required: true, options: [
       { label: '版本状态', value: 'version' }, { label: '跃迁', value: 'banner' }, { label: '活动', value: 'event' },
-      { label: '角色资料', value: 'character' }, { label: '已核验攻略', value: 'guide' },
+      { label: '角色资料', value: 'character' }, { label: '已核验攻略', value: 'guide' }, { label: '光锥与遗器', value: 'equipment' },
     ] },
     { name: 'title', label: '标题', type: 'text', required: true, maxLength: 200 },
     { name: 'summary', label: '摘要', type: 'textarea', required: true, maxLength: 2000 },

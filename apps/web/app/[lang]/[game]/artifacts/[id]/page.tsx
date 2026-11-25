@@ -1,3 +1,5 @@
+import { isStarRailCmsEquipment, STARRAIL_CMS_EQUIPMENT } from '@gachia/data/cms/starrail-equipment';
+import { StarRailCmsEquipment, starRailEquipmentMetadata } from '@/components/wiki/starrail-cms-equipment';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import { GAMES, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
@@ -21,7 +23,7 @@ export async function generateStaticParams() {
     const sets = await getArtifactsForStaticParams(gameId);
     return LOCALES.flatMap((lang) => sets.map((set) => ({ lang, game: gameId, id: set.id })));
   }));
-  return params.flat();
+  return [...params.flat(), ...LOCALES.flatMap(lang => Object.keys(STARRAIL_CMS_EQUIPMENT.artifacts).map(id => ({ lang, game: 'starrail', id })))];
 }
 
 export async function generateMetadata({
@@ -32,6 +34,7 @@ export async function generateMetadata({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail' && isStarRailCmsEquipment('artifacts', id)) return starRailEquipmentMetadata(locale, 'artifacts', id);
   const gameName = GAMES[gameId]?.name[locale] ?? '';
   const data = await getArtifactDetailData(gameId, id, locale);
   if (!data) return {};
@@ -54,6 +57,7 @@ export default async function ArtifactDetailPage({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail' && isStarRailCmsEquipment('artifacts', id)) return <StarRailCmsEquipment locale={locale} category="artifacts" id={id} />;
   const data = await getArtifactDetailData(gameId, id, locale);
 
   if (!data) notFound();

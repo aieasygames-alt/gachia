@@ -1,0 +1,23 @@
+
+> test
+> node --import tsx --test tests/*.test.ts
+
+✔ source contract rejects drafts, foreign games, unsafe sources and impossible dates (2.820667ms)
+✔ MiYouShe citations accept only canonical Star Rail article URLs (0.280833ms)
+✔ reader scopes queries to game, locale and published status, bypasses the Next cache (13.096542ms)
+✔ reviewed community references are accepted without being labelled official (0.392125ms)
+✔ reviewed guide sources retain exact URL and community attribution (0.216542ms)
+✔ reader rejects mismatched language, drafts and truncated responses (0.819458ms)
+✔ outages use the dated snapshot; a valid empty CMS response stays empty (0.638ms)
+[⣷] Pulling schema from database...
+[2K[1G[✓] Pulling schema from database...
+[16:23:14] [33mWARN[39m: [36mNo email adapter provided. Email will be written to console. More info at https://payloadcms.com/docs/email/overview.[39m
+✔ real Payload + SQLite: draft isolation, publish, restricted writes, history and idempotent imports (1043.495208ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2748.839959

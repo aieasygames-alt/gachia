@@ -1,0 +1,23 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 21,
+      "slug": "when-the-first-aha-rang-out",
+      "updatedAt": "2026-11-25T08:23:22.097Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 22,
+      "slug": "gods-momentary-bliss",
+      "updatedAt": "2026-11-25T08:23:22.104Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 23,
+      "slug": "subspace-sanctuary",
+      "updatedAt": "2026-11-25T08:23:22.108Z",
+      "action": "created_draft"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+
+> @gachia/data@0.0.1 check:raw-mirrors /Users/robert/.codex/worktrees/starrail-cms-release/gachia/packages/data
+> node scripts/raw-mirror-contract.mjs
+
+{
+  "contract": "managed-raw-mirrors-v1",
+  "pairs": 7,
+  "entries": 111
+}

@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-25",
+  "sources": [
+    {
+      "url": "https://starrailstation.com/cn/relics/329",
+      "status": 200,
+      "bytes": 64817,
+      "sha256": "9100dbee5a2b8c5c4637f48dde8201ab0f07aea845683bea55febbd6071ca481"
+    },
+    {
+      "url": "https://starrailstation.com/cn/relics/330",
+      "status": 200,
+      "bytes": 66053,
+      "sha256": "2978916f69e20ddcb84144e76ac8e89ab98094f2dde70a8ed4ba197bac96fabf"
+    },
+    {
+      "url": "https://wiki.biligame.com/sr/%E5%BD%93%E7%AC%AC%E4%B8%80%E5%A3%B0%E3%80%8C%E9%98%BF%E5%93%88%E3%80%8D%E5%93%8D%E8%B5%B7",
+      "status": 200,
+      "bytes": 489085,
+      "sha256": "24294cb8b7fb6555b77137eef2a1e960bc5ee09dde2c01f46b42933596e65def"
+    },
+    {
+      "url": "https://wiki.biligame.com/sr/%E7%A5%9E%E7%9A%84%E7%9E%AC%E6%81%AF%E6%AC%A2%E6%84%89",
+      "status": 200,
+      "bytes": 463625,
+      "sha256": "41554671d606c50c70f941cab9c917ee0bcf3e8797c8f25a266e442cca105c3c"
+    },
+    {
+      "url": "https://wiki.biligame.com/sr/%E4%BA%9A%E7%A9%BA%E5%BC%82%E5%AE%B9%E6%89%80",
+      "status": 200,
+      "bytes": 463938,
+      "sha256": "b8274a0177db5ebf2fc02c6f01f3f6d0217a4853f32677947aeb2c34984bbcac"
+    }
+  ],
+  "agreement": [
+    "两套位面饰品效果、门槛与部件名称一致"
+  ],
+  "limitations": [
+    "光锥数值与晋阶仅BWIKI单一数值源，前台明确披露；官方仅核对身份与窗口",
+    "不使用攻略正文、故事或竞品图片",
+    "具体差分宇宙关卡标题与掉落未核验"
+  ]
+}

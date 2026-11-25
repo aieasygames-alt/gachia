@@ -1,3 +1,4 @@
+import { StarRailCmsEquipmentCards } from '@/components/wiki/starrail-cms-equipment';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { getWeaponListData, sortWeaponRanks } from '@/lib/game-data/weapons';
@@ -283,7 +284,7 @@ function getWeaponNextSteps(gameId: GameId) {
   return undefined;
 }
 
-function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: SupportedLocale; weapons: WeaponCardEntry[] }) {
+async function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: SupportedLocale; weapons: WeaponCardEntry[] }) {
   const gameConfig = GAMES[gameId];
   const sections = getWeaponSections(gameId, weapons);
 
@@ -294,7 +295,7 @@ function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: S
         {weaponDisplayName(gameId, locale)}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {weaponCountLabel(gameId, weapons.length, locale)}
+        {gameId === 'starrail' && locale === 'zh' ? `既有资料 ${weapons.length} 件；新增核验条目见下方` : weaponCountLabel(gameId, weapons.length, locale)}
       </p>
       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-game-text-muted">
         {getWeaponIntro(gameId, locale)}
@@ -302,6 +303,7 @@ function WeaponListPage({ gameId, locale, weapons }: { gameId: GameId; locale: S
 
       {gameId === 'endfield' && <div className="mb-6 rounded-md border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-xs leading-relaxed text-game-text-muted"><strong className="mr-1 text-game-text">{locale === 'zh' ? '资料状态' : locale === 'ja' ? 'データ状態' : 'Data status'}:</strong>{locale === 'zh' ? '本页武器属性、效果与来源来自 Pioneer Test 资料快照；未来测试与正式版的数值、配方、获取方式仅以官方公告为准。' : locale === 'ja' ? '本ページの武器性能、効果、入手先は Pioneer Test 資料のスナップショットです。今後のテストと正式版の数値、レシピ、入手方法は公式発表のみを基準にしてください。' : 'Weapon stats, effects, and sources on this page are Pioneer Test snapshots. Use official announcements only for future-test and release values, recipes, and availability.'}</div>}
 
+      {gameId === 'starrail' && <StarRailCmsEquipmentCards locale={locale} category="weapons" />}
       {gameId === 'zzz' && <ZzzQueuedWeapons locale={locale} />}
 
       {sections.map(({ key, entries }) => {

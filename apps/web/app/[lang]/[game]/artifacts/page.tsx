@@ -1,3 +1,4 @@
+import { StarRailCmsEquipmentCards } from '@/components/wiki/starrail-cms-equipment';
 import { GAMES, CATEGORY_LABELS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { Link } from '@/lib/i18n/navigation';
@@ -104,8 +105,10 @@ export default async function ArtifactsPage({
         {label}
       </h1>
       <p className="mb-6 text-sm text-game-text-muted">
-        {getCountLabel(gameId, data.total, locale)}
+        {gameId === 'starrail' && locale === 'zh' ? `既有资料 ${data.total} 套；新增核验条目见下方` : getCountLabel(gameId, data.total, locale)}
       </p>
+
+      {gameId === 'starrail' && <StarRailCmsEquipmentCards locale={locale} category="artifacts" />}
 
       {data.sections.map((section) => (
         <section key={section.id} className="mb-8">

@@ -1,0 +1,13 @@
+
+> @gachia/data@0.0.1 test /Users/robert/.codex/worktrees/starrail-cms-release/gachia/packages/data
+> vitest run
+
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/starrail-cms-release/gachia/packages/data
+
+
+ Test Files  18 passed (18)
+      Tests  181 passed (181)
+   Start at  16:23:11
+   Duration  1.88s (transform 2.91s, setup 0ms, import 4.52s, tests 3.26s, environment 1ms)
+
