@@ -1,0 +1,62 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 47,
+      "slug": "extinguished-acorn",
+      "updatedAt": "2026-11-25T14:26:30.638Z",
+      "versionCount": 2
+    },
+    {
+      "id": 48,
+      "slug": "kindled-acorn",
+      "updatedAt": "2026-11-25T14:26:30.647Z",
+      "versionCount": 2
+    },
+    {
+      "id": 49,
+      "slug": "scorched-acorn",
+      "updatedAt": "2026-11-25T14:26:30.653Z",
+      "versionCount": 2
+    },
+    {
+      "id": 50,
+      "slug": "artifexs-module",
+      "updatedAt": "2026-11-25T14:26:30.659Z",
+      "versionCount": 2
+    },
+    {
+      "id": 51,
+      "slug": "artifexs-cyberheart",
+      "updatedAt": "2026-11-25T14:26:30.665Z",
+      "versionCount": 2
+    },
+    {
+      "id": 52,
+      "slug": "artifexs-gyreheart",
+      "updatedAt": "2026-11-25T14:26:30.670Z",
+      "versionCount": 2
+    },
+    {
+      "id": 53,
+      "slug": "dream-collection-plan",
+      "updatedAt": "2026-11-25T14:26:30.676Z",
+      "versionCount": 2
+    },
+    {
+      "id": 54,
+      "slug": "dream-fire",
+      "updatedAt": "2026-11-25T14:26:30.682Z",
+      "versionCount": 2
+    },
+    {
+      "id": 55,
+      "slug": "dream-element",
+      "updatedAt": "2026-11-25T14:26:30.687Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 55,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

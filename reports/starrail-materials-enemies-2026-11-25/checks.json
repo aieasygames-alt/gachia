@@ -23,8 +23,26 @@
     "55 and 100 returned without truncation",
     "complete publisher 55 and 300 records",
     "pagination and UTF-8 byte overflow rejected before cloud PUT",
-    "existing chunked 512 KiB rejection retained"
+    "existing chunked 512 KiB rejection retained",
+    "Local HTTP: 100/300 ->200, 101/301 ->400, >512KiB ->413; restore 55"
   ],
   "manifests": "passed",
-  "draftIsolation": "editor-acceptance.json"
+  "draftIsolation": "editor-acceptance.json",
+  "CI": {
+    "conclusion": "success",
+    "databaseId": 45632116244,
+    "headSha": "729a9abdd2e7c2dcf9dd56f5611bde10231e1152",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45632116244"
+  },
+  "localWorker": "local-acceptance.json",
+  "localHttpCapacity": "capacity-local-acceptance.json",
+  "runtimePreview": "preview-acceptance.json",
+  "runtimeProduction": "production-acceptance.json",
+  "runtimeProtection": "runtime-protection.json",
+  "published": {
+    "count": 55,
+    "revision": 1795616809786,
+    "materials": 18
+  }
 }

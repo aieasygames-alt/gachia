@@ -1,6 +1,7 @@
 import json,pathlib,hashlib,urllib.parse,re
 from bs4 import BeautifulSoup
 root=pathlib.Path(__file__).resolve().parent;repo=root.parent.parent
+assert not (root/'batch.json').exists(), 'Reviewed batch already exists; preserve receipts and prepare a new batch instead.'
 read=lambda p:json.loads(p.read_text())
 def write(n,x):(root/n).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')
 items=read(root/'.private/cn-items.json');en=read(root/'.private/en-items.json');before=read(root/'cloud-before.json')['docs']

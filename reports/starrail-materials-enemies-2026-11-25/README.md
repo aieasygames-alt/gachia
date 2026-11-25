@@ -10,6 +10,24 @@
 
 实际编辑器同步前核对基线，一致性SQLite备份在忽略`.private/`。编辑器reader保留其原有`raw-updates.json`导入，仅同步容量逻辑。Payload Local API保存九条草稿并核对原46条公开内容不变；重建4320编辑器后再验草稿隔离，无数据库迁移。复用全部18种材料双向关联、撤回不回退旧内容、缺译noindex/no-store边界。
 
-源码阶段验证：主站106文件629项、数据18文件181项、CMS11项测试通过；主站/数据/两端CMS类型检查，OpenNext及实际CMS生产构建通过。发布流程仍为草稿→兼容Main→Payload正式发布→`publish:starrail`→线上完整回读。后续回执将在本批验收后补充。
+源码阶段验证：主站106文件629项、数据18文件181项、CMS11项测试通过；主站/数据/两端CMS类型检查，OpenNext及实际CMS生产构建通过。发布流程仍为草稿→兼容Main→Payload正式发布→`publish:starrail`→线上完整回读。完整发布回执见下文。
 
 剩余优先级：其余16种关联材料及获取来源→国服结构化活动日历→其他角色、国服有效码、地图与独立翻译。异器盈界独立日程与有效国服码仍须独立证据，不补写未核实内容。
+
+## 发布与正式验收
+
+源码`729a9abdd2e7c2dcf9dd56f5611bde10231e1152`，远端CI [45632116244](https://github.com/aieasygames-alt/gachia/actions/runs/45632116244)成功。Main由`b0d62b83-ec6f-46b3-a421-1d69feca9b3e`切换至`b4460f8c-7de7-488e-8c51-804a3d1e2e2e`，实际上传及下载模块SHA256 `4fc5ffe7a86bd064479dffaa5ea40a045ca57ee44390eeaee492f6de1943a1bc`。旧1511个不可变资源路径全部保留，复制1387个，碰撞摘要一致。候选183项路由及32个静态资源摘要比对通过。七服务独立快照确认仅Main版本变化，其他六个部署及七服务全部routes/subdomain/bindings/settings不变，见`runtime-protection.json`。
+
+兼容Main上线后先确认原46条和revision原样保留，新增九种材料的27个三语详情均待发布/noindex、目录无旧卡片，见`compatible-main-acceptance.json`。随后Payload Local API正式发布九条，每条至少保留草稿和正式两版；匿名公开导出与审定55条精确相同。`publish:starrail`返回`ok:true`、count55、revision `1795616809786`，云端规范正文、来源和所有字段与审定副本相等。详见`local-publication.json`、`sync-receipt.json`、`cloud-after.json`。
+
+隔离D1验收完整55条、认证/来源/草稿/旧revision保护；18种材料的正文、metadata、目录和光锥入口可即时修订，材料撤回移除正文/索引/光锥入口，装备撤回也移除材料页反链，不回退旧模板、旧卡片或FAQ。阿哈/计算器、5篇攻略及17件装备全部回归。另通过真实本地HTTP验证100/300条200、101/301条400、多字节超512KiB为413，并恢复审定55条。测试写入仅在隔离本地D1，见`local-acceptance.json`及`capacity-local-acceptance.json`。
+
+正式站183项路由和32个静态资源摘要比对通过，完整55条事实/来源/边界、全部18种材料三语详情与唯一目录入口、关联光锥双向入口、旧角色/攻略/装备/别名回归均通过；缺译noindex，CMS路由no-store。公共镜像及三语搜索清单与构建产物相同。验收结束再次读取revision确认没有并发发布变化，见`production-acceptance.json`。
+
+本机4320编辑器继续运行，匿名55条与Payload正式记录一致；发布前后SQLite一致性备份均通过integrity_check，原文和备份均放在忽略`.private/`。4400隔离Worker已停止，4398/4399未动，见`local-services.json`。
+
+## 恢复与后续边界
+
+回退至前一Main `b0d62b83-ec6f-46b3-a421-1d69feca9b3e`之前，必须先经Payload撤回本批九条并同步、验收完整46条副本；该旧版既不接受新材料身份/来源，也有每语言50条上限，不能读取当前55条完整副本。更早不支持material的Main须先撤回全部18条材料。优先使用Payload版本历史恢复单条正文。
+
+`prepare-batch.py`已加重跑保护，避免覆盖来源及before/after回执。`apply-batch.mjs`两种模式均在写入前核对公开副本/草稿时间戳；不能直接改批次JSON后跳过草稿重审。现有18种材料日常文字/数值修订继续Payload发布及同步，新材料身份/关系/未审核来源须先兼容读端。

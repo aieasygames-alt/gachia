@@ -169,7 +169,7 @@ for d in materials:
   assert len(page.select('a[href="'+path+'"]'))==(1 if locale=='zh' else 0),(path,'index')
  for eid in registry[d['slug']]['equipment']:
   body=req('/zh/starrail/weapons/'+eid)[1];assert '/zh/starrail/items/'+d['slug'] in body,(d['slug'],eid)
-checks.append('nine_full_materials_and_verified_cone_relationships_render_in_same_locale_once')
+checks.append('eighteen_full_materials_and_verified_cone_relationships_render_in_same_locale_once')
 changed=json.loads(json.dumps(docs))
 for d in changed:
  if d['kind']=='material':d['title']='材料动态修订'+d['slug'];d['facts']=[{'text':'材料条件\n获取条件已即时修订'}]
@@ -189,7 +189,7 @@ for locale in ['zh','en','ja']:
   assert not page.select('a[href="'+path+'"]'),(path,'legacy fallback')
   for eid in registry[d['slug']]['equipment']:
    cone=req('/'+locale+'/starrail/weapons/'+eid)[1];assert path not in cone,(path,eid,'withdrawn material link')
-checks.append('material_withdrawal_removes_nine_bodies_indices_and_cone_links_without_raw_fallback_or_FAQ')
+checks.append('material_withdrawal_removes_eighteen_bodies_indices_and_cone_links_without_raw_fallback_or_FAQ')
 assert req('/api/cms/starrail',{'revision':rev+12,'docs':[d for d in docs if d['kind']!='equipment']})[0]==200
 for d in materials:
  body=req('/zh/starrail/items/'+d['slug'])[1];assert 'data-starrail-material-equipment' not in body

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "locale100": 200,
+  "locale101": 400,
+  "total300": 200,
+  "total301": 400,
+  "utf8Over512KiB": 413,
+  "complete55Restored": true,
+  "productionWrites": 0
+}
