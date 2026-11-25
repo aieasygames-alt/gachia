@@ -68,7 +68,9 @@ describe('Cloudflare data assets', () => {
 
     for (const guide of guides) {
       expect(Array.isArray(guide.tags), `${guide.id} tags should be an array`).toBe(true);
-      expect(guide.tags.length, `${guide.id} should have tags`).toBeGreaterThan(0);
+      // Approved CMS-created Genshin guides intentionally begin without tags.
+      // Keep legacy tag coverage and validate the scoring input for both forms.
+      if (!guide.id.startsWith('cms-')) expect(guide.tags.length, `${guide.id} should have tags`).toBeGreaterThan(0);
       expect(guide.tags.every((tag) => typeof tag === 'string'), `${guide.id} tags should be strings`).toBe(true);
     }
   });
