@@ -1,0 +1,20 @@
+
+> test
+> node --import tsx --test tests/*.test.ts
+
+✔ source contract rejects drafts, foreign games, unsafe sources and impossible dates (1.924916ms)
+✔ reader scopes queries to game, locale and published status, bypasses the Next cache (9.413125ms)
+✔ reader rejects mismatched language, drafts and truncated responses (0.619458ms)
+✔ outages use the dated snapshot; a valid empty CMS response stays empty (0.975583ms)
+[⣷] Pulling schema from database...
+[2K[1G[✓] Pulling schema from database...
+[20:21:37] [33mWARN[39m: [36mNo email adapter provided. Email will be written to console. More info at https://payloadcms.com/docs/email/overview.[39m
+✔ real Payload + SQLite: draft isolation, publish, restricted writes, history and idempotent imports (858.61675ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3020.460834

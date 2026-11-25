@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "legacyRecords": 85,
+  "changedOnlyReviewedNine": [
+    "along-the-passing-shore",
+    "brighter-than-the-sun",
+    "day-one-of-my-new-life",
+    "fine-fruit",
+    "indelible-promise",
+    "shattered-home",
+    "she-already-shut-her-eyes",
+    "trend-of-the-universal-market",
+    "welcome-to-the-cosmic-city"
+  ],
+  "publicMirrorExactlyEqual": true,
+  "searchChangesByLocale": {
+    "zh": [
+      "starrail"
+    ],
+    "en": [
+      "starrail"
+    ],
+    "ja": [
+      "starrail"
+    ]
+  },
+  "otherGamesUnchanged": true
+}

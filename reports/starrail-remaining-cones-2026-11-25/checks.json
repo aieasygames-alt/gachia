@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "web": {
+    "files": 105,
+    "tests": 622,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 18,
+    "tests": 181,
+    "types": "passed"
+  },
+  "cms": {
+    "tests": 8,
+    "actualEditorTypes": "passed",
+    "actualEditorProductionBuild": "passed",
+    "actualEditorExistingTests": 5
+  },
+  "manifests": "passed",
+  "sourceMirrorAndOnlyReviewedRecords": "compatibility-data-acceptance.json",
+  "localWorker": "local-acceptance.json",
+  "CI": {
+    "conclusion": "success",
+    "databaseId": 45611815692,
+    "headSha": "e300dc6537fc0094f27eb321d9534c8dceef0c34",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45611815692"
+  },
+  "knownBuildWarnings": "Existing auth-dialog hooks warnings; no new build failure"
+}

@@ -1,0 +1,534 @@
+{
+  "status": "next_batch_research_scope_only",
+  "publication": false,
+  "sourceCommit": "03907e798b46f9eb109a1f882055cdf49ce3d374",
+  "boundary": "材料名称及晋阶使用关系已在本批交叉核对；以下获取途径仅来自固定StarRailRes，不应当作已完成第二来源核验或当前商店库存确认，尚未发布材料独立页。",
+  "materials": [
+    {
+      "id": "110111",
+      "name": "破碎残刃",
+      "candidateObtainingRoutes": [
+        "拟造花萼【收容舱段】",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "乐圮",
+        "比阳光更明亮的"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110112",
+      "name": "无生残刃",
+      "candidateObtainingRoutes": [
+        "拟造花萼【收容舱段】",
+        "「万能合成机」- 材料合成",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "乐圮",
+        "比阳光更明亮的"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110113",
+      "name": "净世残刃",
+      "candidateObtainingRoutes": [
+        "拟造花萼【收容舱段】",
+        "「万能合成机」- 材料合成",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "乐圮",
+        "比阳光更明亮的"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110131",
+      "name": "灵感之钥",
+      "candidateObtainingRoutes": [
+        "拟造花萼【铆钉镇】",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "天才们的休憩",
+        "拂晓之前"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110132",
+      "name": "启迪之钥",
+      "candidateObtainingRoutes": [
+        "拟造花萼【铆钉镇】",
+        "「万能合成机」- 材料合成",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "天才们的休憩",
+        "拂晓之前"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110133",
+      "name": "智识之钥",
+      "candidateObtainingRoutes": [
+        "拟造花萼【铆钉镇】",
+        "「万能合成机」- 材料合成",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "天才们的休憩",
+        "拂晓之前"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110141",
+      "name": "青铜的执着",
+      "candidateObtainingRoutes": [
+        "拟造花萼【支援舱段】",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "余生的第一天"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110142",
+      "name": "寒铁的誓言",
+      "candidateObtainingRoutes": [
+        "拟造花萼【支援舱段】",
+        "「万能合成机」- 材料合成",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "余生的第一天"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110143",
+      "name": "琥珀的坚守",
+      "candidateObtainingRoutes": [
+        "拟造花萼【支援舱段】",
+        "「万能合成机」- 材料合成",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "余生的第一天"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110171",
+      "name": "丰饶之种",
+      "candidateObtainingRoutes": [
+        "拟造花萼【边缘通路】",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "嘉果"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110172",
+      "name": "生命之芽",
+      "candidateObtainingRoutes": [
+        "拟造花萼【边缘通路】",
+        "「万能合成机」- 材料合成",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "嘉果"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110173",
+      "name": "永恒之花",
+      "candidateObtainingRoutes": [
+        "拟造花萼【边缘通路】",
+        "「万能合成机」- 材料合成",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "嘉果"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110181",
+      "name": "步离犬牙",
+      "candidateObtainingRoutes": [
+        "拟造花萼【鳞渊境】",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "铭记于心的约定"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110182",
+      "name": "狼毒锯牙",
+      "candidateObtainingRoutes": [
+        "拟造花萼【鳞渊境】",
+        "「万能合成机」- 材料合成",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "铭记于心的约定"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110183",
+      "name": "月狂獠牙",
+      "candidateObtainingRoutes": [
+        "拟造花萼【鳞渊境】",
+        "「万能合成机」- 材料合成",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "铭记于心的约定"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110191",
+      "name": "陨铁弹丸",
+      "candidateObtainingRoutes": [
+        "拟造花萼【苏乐达™热砂海选会场】",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "黑夜如影随行"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110192",
+      "name": "命定死因",
+      "candidateObtainingRoutes": [
+        "拟造花萼【苏乐达™热砂海选会场】",
+        "「万能合成机」- 材料合成",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "黑夜如影随行"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110193",
+      "name": "逆时一击",
+      "candidateObtainingRoutes": [
+        "拟造花萼【苏乐达™热砂海选会场】",
+        "「万能合成机」- 材料合成",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "黑夜如影随行"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110221",
+      "name": "炽情之灵",
+      "candidateObtainingRoutes": [
+        "拟造花萼【丹鼎司】",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "行于流逝的岸"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110222",
+      "name": "星火之精",
+      "candidateObtainingRoutes": [
+        "拟造花萼【丹鼎司】",
+        "「万能合成机」- 材料合成",
+        "余烬兑换",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "行于流逝的岸"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "110223",
+      "name": "焚天之魔",
+      "candidateObtainingRoutes": [
+        "拟造花萼【丹鼎司】",
+        "「万能合成机」- 材料合成",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "行于流逝的岸"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "111001",
+      "name": "熄灭原核",
+      "candidateObtainingRoutes": [
+        "部分裂界造物掉落",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "委托奖励",
+        "余烬兑换",
+        "「万能合成机」- 材料置换",
+        "拟造花萼（金）"
+      ],
+      "usedBy": [
+        "乐圮",
+        "余生的第一天",
+        "嘉果"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "111002",
+      "name": "微光原核",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级2后，部分裂界造物掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "乐圮",
+        "余生的第一天",
+        "嘉果"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "111003",
+      "name": "蠢动原核",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级4后，部分裂界造物掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "乐圮",
+        "余生的第一天",
+        "嘉果"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "113001",
+      "name": "永寿幼芽",
+      "candidateObtainingRoutes": [
+        "丰饶孽物掉落",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "委托奖励",
+        "余烬兑换",
+        "「万能合成机」- 材料置换",
+        "拟造花萼（金）"
+      ],
+      "usedBy": [
+        "天才们的休憩",
+        "拂晓之前",
+        "比阳光更明亮的"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "113002",
+      "name": "永寿天华",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级2后，丰饶孽物掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "天才们的休憩",
+        "拂晓之前",
+        "比阳光更明亮的"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "113003",
+      "name": "永寿荣枝",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级4后，丰饶孽物掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "天才们的休憩",
+        "拂晓之前",
+        "比阳光更明亮的"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "113011",
+      "name": "工造机杼",
+      "candidateObtainingRoutes": [
+        "入魔机巧掉落",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "委托奖励",
+        "余烬兑换",
+        "「万能合成机」- 材料置换",
+        "拟造花萼（金）"
+      ],
+      "usedBy": [
+        "黑夜如影随行"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "113012",
+      "name": "工造迴轮",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级2后，入魔机巧掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "黑夜如影随行"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "113013",
+      "name": "工造浑心",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级4后，入魔机巧掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "黑夜如影随行"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "114001",
+      "name": "蓄梦元件",
+      "candidateObtainingRoutes": [
+        "惊梦剧团掉落",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "委托奖励",
+        "余烬兑换",
+        "「万能合成机」- 材料置换",
+        "拟造花萼（金）"
+      ],
+      "usedBy": [
+        "行于流逝的岸",
+        "铭记于心的约定"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "114002",
+      "name": "流梦阀门",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级2后，惊梦剧团掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "行于流逝的岸",
+        "铭记于心的约定"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "114003",
+      "name": "造梦马达",
+      "candidateObtainingRoutes": [
+        "突破至均衡等级4后，惊梦剧团掉落",
+        "「万能合成机」- 材料合成",
+        "「差分宇宙」中敌方掉落",
+        "「模拟宇宙」中敌方掉落",
+        "「万能合成机」- 材料置换"
+      ],
+      "usedBy": [
+        "行于流逝的岸",
+        "铭记于心的约定"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    },
+    {
+      "id": "2",
+      "name": "信用点",
+      "candidateObtainingRoutes": [
+        "拟造花萼【大矿区】",
+        "拟造花萼【工造司】",
+        "拟造花萼【「白日梦」酒店-梦境】",
+        "拟造花萼【「呓语密林」神悟树庭】",
+        "拟造花萼【鸽川区】",
+        "任务奖励",
+        "委托奖励",
+        "余烬兑换"
+      ],
+      "usedBy": [
+        "乐圮",
+        "余生的第一天",
+        "嘉果",
+        "天才们的休憩",
+        "拂晓之前",
+        "比阳光更明亮的",
+        "行于流逝的岸",
+        "铭记于心的约定",
+        "黑夜如影随行"
+      ],
+      "obtainingRoutesVerification": "needs_independent_public_source"
+    }
+  ],
+  "remainingPriorities": [
+    "关联材料独立图鉴与获取途径核验，先旧库错项及高复用材料",
+    "国服结构化活动日历，已核实窗口与时间口径独立保存",
+    "其余角色数值与机制、有效国服兑换码、异器盈界独立日程、地图与翻译按独立证据推进"
+  ],
+  "implementationConstraints": {
+    "currentZhCount": 37,
+    "currentPerLocaleLimit": 50,
+    "candidateMaterialCount": 34,
+    "nextAction": "先按复用度和错项选小批；建立材料独立读端前评估集合与发布上限，不直接把34项全部追加到当前公告集合。"
+  }
+}

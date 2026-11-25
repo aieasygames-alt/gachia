@@ -1,0 +1,9 @@
+{
+  "cms4320Running": true,
+  "publicPublishedCount": 37,
+  "exportMatchesPayloadPublication": true,
+  "local4400Stopped": true,
+  "unrelated4398And4399Preserved": true,
+  "backupAfterPublicationIntegrity": "ok",
+  "backupFile": "ignored .private/cms-after-publication.db"
+}

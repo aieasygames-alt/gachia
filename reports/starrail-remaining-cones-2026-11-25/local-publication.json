@@ -1,0 +1,62 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 29,
+      "slug": "geniuses-repose",
+      "updatedAt": "2026-11-25T12:25:00.880Z",
+      "versionCount": 2
+    },
+    {
+      "id": 30,
+      "slug": "shadowed-by-night",
+      "updatedAt": "2026-11-25T12:25:00.893Z",
+      "versionCount": 2
+    },
+    {
+      "id": 31,
+      "slug": "along-the-passing-shore",
+      "updatedAt": "2026-11-25T12:25:00.900Z",
+      "versionCount": 2
+    },
+    {
+      "id": 32,
+      "slug": "brighter-than-the-sun",
+      "updatedAt": "2026-11-25T12:25:00.907Z",
+      "versionCount": 2
+    },
+    {
+      "id": 33,
+      "slug": "before-dawn",
+      "updatedAt": "2026-11-25T12:25:00.913Z",
+      "versionCount": 2
+    },
+    {
+      "id": 34,
+      "slug": "indelible-promise",
+      "updatedAt": "2026-11-25T12:25:00.920Z",
+      "versionCount": 2
+    },
+    {
+      "id": 35,
+      "slug": "shattered-home",
+      "updatedAt": "2026-11-25T12:25:00.926Z",
+      "versionCount": 2
+    },
+    {
+      "id": 36,
+      "slug": "fine-fruit",
+      "updatedAt": "2026-11-25T12:25:00.932Z",
+      "versionCount": 2
+    },
+    {
+      "id": 37,
+      "slug": "day-one-of-my-new-life",
+      "updatedAt": "2026-11-25T12:25:00.938Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 37,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}
