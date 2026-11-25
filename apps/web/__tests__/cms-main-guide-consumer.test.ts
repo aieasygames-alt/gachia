@@ -1,6 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it, vi } from 'vitest';
+import { isStarRailCmsGuide } from '@gachia/data/cms/starrail-guides';
 import { UNIFIED_MAIN_GUIDE_GAMES } from '../../../services/content-cms/src/unified-guide-contract';
 
 vi.mock('@/lib/i18n/navigation', () => ({ Link: ({ children }: { children: React.ReactNode }) => createElement('span', null, children) }));
@@ -25,7 +26,7 @@ describe('CMS Main existing Chinese guide content consumers', () => {
     for (const guide of guides) {
       // The warp route now consumes the independent Star Rail publication;
       // its replacement/withdrawal contract is covered separately.
-      if (game === 'starrail' && guide.id === 'banner-schedule-guide') continue;
+      if (game === 'starrail' && (guide.id === 'banner-schedule-guide' || isStarRailCmsGuide(guide.id))) continue;
       const params = (lang: string) => ({ params: Promise.resolve({ game, slug: guide.id, lang }) });
       const english = isGuideReadable(game, guide.id, 'en') ? renderToStaticMarkup(await GuidePage(params('en'))) : null;
       const previous = guide.content;

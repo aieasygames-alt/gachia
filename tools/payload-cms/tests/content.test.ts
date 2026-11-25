@@ -62,6 +62,16 @@ test('reviewed community references are accepted without being labelled official
   }
 });
 
+test('reviewed guide sources retain exact URL and community attribution', () => {
+  const url = 'https://www.prydwen.gg/star-rail/guides/relic-sets';
+  assert.ok(parseStarRailUpdate({ ...seed[0], kind: 'guide', sources: [{ url }] }));
+  assert.equal(isCommunityStarRailSource(url), true);
+  assert.equal(isOfficialStarRailSource(url), false);
+  for (const unsafe of [url + '?source=unreviewed', url + '#comments', 'https://www.prydwen.gg/star-rail/guides/other']) {
+    assert.equal(isStarRailSource(unsafe), false);
+  }
+});
+
 test('reader rejects mismatched language, drafts and truncated responses', async () => {
   for (const body of [
     { docs: [{ ...seed[0], locale: 'en' }] },

@@ -153,7 +153,7 @@ export interface GameUpdate {
   gameId: 'starrail';
   locale: 'zh' | 'en' | 'ja';
   slug: string;
-  kind: 'version' | 'banner' | 'event' | 'character';
+  kind: 'version' | 'banner' | 'event' | 'character' | 'guide';
   title: string;
   summary: string;
   region: string;

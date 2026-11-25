@@ -473,15 +473,15 @@
   },
   {
     "id": "planar-sphere-guide",
-    "title": "位面球与连结绳选择指南",
+    "title": "位面饰品选择：繁星竞技场与折断的龙骨",
     "titleEn": "Planar Sphere & Link Rope Selection Guide",
     "category": "equipment",
     "categoryZh": "装备攻略",
     "categoryEn": "Equipment",
-    "summary": "位面饰品选择全攻略：不同角色适合什么套装、主词条优先级、高效刷取建议。",
-    "summaryEn": "Complete guide to choosing planar ornaments — which sets for which characters, main stat priorities, and farming efficiency tips.",
-    "content": "## 位面球与连结绳选择指南\n\n### 位面饰品基础\n- 位面饰品为2件套，由位面球和连结绳组成\n- 主要通过模拟宇宙获取，也可使用沉浸器刷取\n- 2件套效果通常提供强力团队或个人增益\n\n### 热门位面饰品套装\n| 套装名 | 效果 | 适合角色 |\n|--------|------|----------|\n| 太空封印站 | 攻击力+12%，速度≥120时再+12%攻击 | 主C输出角色 |\n| 旭日竞技场 | 暴击率+8%，暴击≥70%时再+12%攻击 | 暴击型主C |\n| 不老的仙舟 | 生命+12%，速度≥120时+8%攻击（全队） | 辅助/治疗 |\n| 碎裂的龙骨 | 效果抵抗+10%，抵抗≥30%时+8%暴击伤害（全队） | 辅助/治疗 |\n| 盗贼公国 | 击破特攻+16%，击破时回复能量 | 击破流角色 |\n| 泛银河商业 | 效果命中+10%，命中提升攻击力 | 虚无命途角色 |\n\n### 位面球主词条选择\n- **输出角色**: 对应属性伤害加成（最优）> 攻击力%\n- **辅助角色**: 生命% 或 防御% 确保生存\n- **击破角色**: 攻击力% 配合击破词条\n\n### 连结绳主词条选择\n- **需要充能的角色**: 能量回复效率（如布洛妮娅、停云）\n- **击破流角色**: 击破特攻%\n- **其他角色**: 攻击力% 或 生命%\n\n### 刷取优先级\n1. 先确定角色需要的套装效果\n2. 主词条正确比副词条重要\n3. 副词条以速度和暴击为优\n4. 模拟宇宙每周免费沉浸器优先使用",
-    "contentEn": "## Planar Sphere & Link Rope Selection Guide\n\n### Planar Ornament Basics\nPlanar Ornaments are 2-piece sets composed of a Planar Sphere and a Link Rope. They are primarily obtained from Simulated Universe and can also be farmed using Immersifiers.\n\n### Popular Planar Ornament Sets\n| Set | Effect | Best For |\n|-----|--------|----------|\n| Space Sealing Station | ATK +12%; SPD >= 120 grants another +12% ATK | DPS characters |\n| Rutilant Arena | CRIT Rate +8%; CRIT >= 70% grants +12% ATK | Crit-based DPS |\n| Fleet of the Ageless | HP +12%; SPD >= 120 grants +8% ATK to team | Supports / Healers |\n| Broken Keel | Effect RES +10%; RES >= 30% grants +8% CRIT DMG to team | Supports / Healers |\n| Thief of Shooting Meteor | Break Effect +16%; Breaks regenerate Energy | Break teams |\n| Pan-Cosmic Commercial | Effect Hit Rate +10%; Hit Rate boosts ATK | Nihility characters |\n\n### Planar Sphere Main Stat Priority\n- **DPS**: Matching elemental DMG bonus (best) > ATK%\n- **Supports**: HP% or DEF% for survivability\n- **Break characters**: ATK% to supplement Break damage\n\n### Link Rope Main Stat Priority\n- **Energy-hungry characters**: Energy Regeneration% (e.g., Bronya, Tingyun)\n- **Break characters**: Break Effect%\n- **Others**: ATK% or HP%\n\n### Farming Tips\n1. Decide which set effect the character needs first\n2. Correct main stat matters more than substats\n3. Prioritize SPD and CRIT substats when possible\n4. Use your free weekly Immersifiers before spending Trailblaze Power",
+    "summary": "核对繁星竞技场和折断的龙骨的两件套效果、触发门槛与适用思路，再结合角色主要伤害来源选择。",
+    "summaryEn": "A verified English edition is pending. The Chinese guide states the checked facts, sources and remaining limitations.",
+    "content": "## 繁星竞技场：8% 暴击率，70% 门槛\n两件套使装备者暴击率提高 8%。当装备者当前暴击率达到或超过 70% 时，普攻和战技造成的伤害提高 20%。此处提高的是普攻、战技伤害，不是攻击力。\n\n## 繁星竞技场的使用检查\n先确认角色主要伤害是否来自普攻或战技，再核对战斗中能否满足暴击率门槛。不能仅凭“输出角色”标签直接套用，也不要把此套效果计入终结技等其他伤害类型。\n\n## 折断的龙骨：10% 效果抵抗，30% 门槛\n两件套使装备者效果抵抗提高 10%。当装备者效果抵抗达到或超过 30% 时，我方全体暴击伤害提高 10%。此前页面写成全队 8% 暴击伤害，现更正为 10%。\n\n## 折断的龙骨的使用检查\n核对装备者效果抵抗能否达到门槛，并判断队伍是否能利用暴击伤害增益。培养建议应结合角色与队伍伤害机制，不能把同一辅助饰品列为所有队伍的统一答案。\n\n## 位面球与连结绳如何选择\n套装效果与主词条分开检查：先依据角色的伤害、治疗、护盾或辅助机制确定所需属性，再比较现有装备。本文不把攻击球、属性球、充能绳或其他主词条写成所有角色通用的固定最优选。\n\n## 适用范围与待核验项\n本页精确核验范围为繁星竞技场与折断的龙骨两件套。尚未完成全部位面饰品、4.7新增饰品中文名与效果、刷取入口和各角色主词条收益计算；其他套装请查对应详情及游戏内说明。\n\n## 第三方来源\nhttps://www.prydwen.gg/star-rail/guides/relic-sets",
+    "contentEn": "## Verification pending\n\nA verified English edition is pending. Please consult the Chinese guide for checked facts, sources and limitations.",
     "tags": [
       "位面球",
       "连结绳",
@@ -490,38 +490,22 @@
       "Link Rope",
       "Planar Ornaments"
     ],
-    "faq": [
-      {
-        "question": "Which planar ornament set is best for DPS characters?",
-        "questionZh": "输出角色用什么位面饰品最好？",
-        "answer": "Rutilant Arena is the general best-in-slot for crit-based DPS. Space Sealing Station is a strong alternative, especially if your SPD is at least 120.",
-        "answerZh": "旭日竞技场是暴击型输出的最佳选择。太空封印站是强力替代，尤其速度达到120时。"
-      },
-      {
-        "question": "Should I use Energy Regeneration% or ATK% on Link Rope?",
-        "questionZh": "连结绳用能量回复还是攻击力？",
-        "answer": "Energy Regeneration% is essential for supports who need frequent Ultimates (Bronya, Tingyun). For most DPS characters, ATK% is preferred since their damage scaling benefits more from raw ATK.",
-        "answerZh": "需要频繁放大的辅助（布洛妮娅、停云）必用能量回复。大多数输出角色用攻击力%，因为伤害倍率更吃攻击力。"
-      },
-      {
-        "question": "How do I efficiently farm planar ornaments?",
-        "questionZh": "怎么高效刷位面饰品？",
-        "answer": "Use your free weekly Immersifiers first, then spend excess Trailblaze Power on Simulated Universe. Focus on getting the correct main stat before worrying about substats.",
-        "answerZh": "先用完每周免费沉浸器，多余的开拓力再投入模拟宇宙。优先确保主词条正确，再追求副词条。"
-      }
-    ]
+    "faq": [],
+    "updatedAt": "2026-11-25",
+    "summaryJa": "確認済み日本語版は準備中です。中国語ガイドに確認済みの内容、出典と未確認事項を明記しています。",
+    "contentJa": "## 確認中\n\n確認済み日本語版は準備中です。中国語ガイドで確認済みの内容、出典と未確認事項を確認してください。"
   },
   {
     "id": "endgame-modes-guide",
-    "title": "终局玩法攻略：虚构叙事与末日幻影",
+    "title": "虚构叙事与末日幻影：计分逻辑与队伍准备",
     "titleEn": "Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow",
     "category": "progression",
     "categoryZh": "进阶攻略",
     "categoryEn": "Progression",
-    "summary": "两大终局玩法攻略：虚构叙事与末日幻影的队伍需求、计分机制和策略差异。",
-    "summaryEn": "Strategy guide for HSR's two main endgame modes — team requirements, scoring mechanics, and how they differ from Memory of Chaos.",
-    "content": "## 终局玩法攻略：虚构叙事与末日幻影\n\n### 虚构叙事（Pure Fiction）\n- 以波次为核心的战斗模式，敌人分波次出现\n- 计分基于清波速度和伤害输出\n- 每期有特定增益效果，合理利用可大幅提升分数\n\n#### 虚构叙事要点\n- 需要强力的AOE输出角色（智识命途优势大）\n- 每期buff不同，根据buff调整队伍\n- 两路队伍都需要独立作战能力\n- 速度和能量回复是关键属性\n\n### 末日幻影（Apocalyptic Shadow）\n- Boss战为核心的终局模式\n- 每期有不同Boss和对应增益效果\n- 更考验单体输出和生存能力\n\n#### 末日幻影要点\n- 需要高单体DPS角色（巡猎/毁灭命途）\n- Boss机制各不相同，需针对性配队\n- 生存压力较大，治疗/护盾角色不可或缺\n- 注意Boss的弱点和阶段变化\n\n### 与混沌回忆的区别\n| 对比项 | 混沌回忆 | 虚构叙事 | 末日幻影 |\n|--------|----------|----------|----------|\n| 核心机制 | 两路精英战 | 波次清场 | Boss战 |\n| 推荐命途 | 毁灭/巡猎 | 智识/毁灭 | 巡猎/毁灭 |\n| 生存需求 | 中等 | 较低 | 较高 |\n| 速度要求 | 中等 | 高 | 中等 |\n\n### 通用策略\n- 提前了解当期增益效果并据此配队\n- 两路队伍保持均衡，不要一路过强另一路过弱\n- 每期轮换不同属性增益，需要培养多种属性角色",
-    "contentEn": "## Endgame Modes Guide: Pure Fiction & Apocalyptic Shadow\n\n### Pure Fiction\nPure Fiction is a wave-based combat mode where enemies arrive in successive waves. Your score is based on how quickly you clear waves and how much damage you deal. Each cycle features specific buffs that can dramatically boost your performance.\n\n#### Key Points\n- Strong AoE damage dealers are essential (Erudition path excels here)\n- Adjust your teams based on the current cycle's buff\n- Both sides of the stage need self-sufficient teams\n- SPD and Energy Regeneration are crucial stats\n\n### Apocalyptic Shadow\nApocalyptic Shadow is a boss-focused endgame mode. Each cycle features different bosses with unique mechanics and corresponding buffs. It tests your single-target damage output and sustain capabilities.\n\n#### Key Points\n- High single-target DPS characters are needed (Hunt / Destruction paths)\n- Each boss has unique mechanics — tailor your teams accordingly\n- Sustain pressure is heavy — healers and shielders are mandatory\n- Pay attention to boss weaknesses and phase transitions\n\n### Comparison with Memory of Chaos\n| Aspect | Memory of Chaos | Pure Fiction | Apocalyptic Shadow |\n|--------|----------------|-------------|-------------------|\n| Core Mechanic | Two-way elite fights | Wave clearing | Boss fights |\n| Best Paths | Destruction / Hunt | Erudition / Destruction | Hunt / Destruction |\n| Sustain Need | Medium | Lower | High |\n| SPD Requirement | Medium | High | Medium |\n\n### General Strategy\n- Study the current cycle's buffs and build teams around them\n- Keep both sides balanced — one overwhelmingly strong side won't compensate for a weak one\n- Each cycle rotates elemental buffs, so build a diverse roster across all elements",
+    "summary": "区分清理多波敌人的计分目标与首领战行动值计分，按当期关卡和增益准备队伍。",
+    "summaryEn": "A verified English edition is pending. The Chinese guide states the checked facts, sources and remaining limitations.",
+    "content": "## 虚构叙事：围绕多波敌人与分数安排输出\n第三方模式指南将虚构叙事描述为在限定轮次中对多波敌人造成伤害并击败敌人来获得分数的挑战。队伍准备要同时考虑清杂效率、转波和当期增益，不能只看单体首领伤害。\n\n## 末日幻影：关注首领机制与行动值\n末日幻影通过击败首领以及完成战斗的效率计分，行动值消耗会影响最终分数。应先阅读当期首领特性和可选增益，再判断削韧、输出与生存的安排；不能照搬混沌回忆的轮次目标。\n\n## 准备队伍时先看当期规则\n逐个查看游戏内各节点的敌人、弱点与增益，再分配角色。队伍数量、可重复使用角色的限制和增益选择规则以当前挑战界面为准，不把早期攻略的两队结构直接当作所有当前挑战的完整规则。\n\n## 领取奖励前核对任务条件\n挑战通关、得分和星级奖励分别按客户端显示判断。本文不再使用“两个模式都只有 3 关、9 星”的错误表格，也不据此估算当期星琼。\n\n## 适用范围与待核验项\n2026-11-25核验时，Prydwen虚构叙事指南标注最后更新2025-01-21，而2026-11-18统计页已出现Node 1/2/3，旧指南不能单独证明当前队伍结构。当前完整关卡数、总星数、分数门槛、重置日期及奖励总量仍待国服正式资料核验。\n\n## 第三方来源\nhttps://www.prydwen.gg/star-rail/guides/pure-fiction\nhttps://www.prydwen.gg/star-rail/guides/apocalyptic-shadow\nhttps://www.prydwen.gg/star-rail/pure-fiction",
+    "contentEn": "## Verification pending\n\nA verified English edition is pending. Please consult the Chinese guide for checked facts, sources and limitations.",
     "tags": [
       "终局",
       "虚构叙事",
@@ -530,26 +514,10 @@
       "Pure Fiction",
       "Apocalyptic Shadow"
     ],
-    "faq": [
-      {
-        "question": "What is the difference between Pure Fiction and Apocalyptic Shadow?",
-        "questionZh": "虚构叙事和末日幻影有什么区别？",
-        "answer": "Pure Fiction is wave-based and favors AoE damage dealers. Apocalyptic Shadow is boss-focused and rewards single-target DPS and sustain. They rotate on different schedules.",
-        "answerZh": "虚构叙事是波次制，适合AOE输出角色。末日幻影以Boss战为主，更考验单体输出和生存能力。两者交替开放。"
-      },
-      {
-        "question": "How many stars can I earn per cycle?",
-        "questionZh": "每期最多能拿多少星？",
-        "answer": "Each endgame mode has 3 stages with 3 stars each, for a total of 9 stars per mode. Stars award Stellar Jade and other resources. Reaching 6+ stars per mode is a good milestone.",
-        "answerZh": "每个终局模式有3个关卡，每关3星，共9星。星数奖励星琼和其他资源。每模式拿6星以上是不错的成绩。"
-      },
-      {
-        "question": "Can I clear endgame with 4-star characters?",
-        "questionZh": "4星角色能打终局吗？",
-        "answer": "Yes, but it requires strong builds and good team synergy. Focus on maxing traces, relics, and Light Cones. Some 4-stars like Herta and Serval are top picks for Pure Fiction.",
-        "answerZh": "可以，但需要好的练度和配队。重点拉满行迹、遗器和光锥。黑塔和希露瓦等4星是虚构叙事的强力选择。"
-      }
-    ]
+    "faq": [],
+    "updatedAt": "2026-11-25",
+    "summaryJa": "確認済み日本語版は準備中です。中国語ガイドに確認済みの内容、出典と未確認事項を明記しています。",
+    "contentJa": "## 確認中\n\n確認済み日本語版は準備中です。中国語ガイドで確認済みの内容、出典と未確認事項を確認してください。"
   },
   {
     "id": "meta-teams-guide",
@@ -699,44 +667,16 @@
   },
   {
     "id": "endgame-cycle-guide",
-    "title": "混沌回忆·虚构叙事·末日幻影攻略",
+    "title": "终局挑战周期规划：混沌回忆、虚构叙事与末日幻影",
     "titleEn": "HSR Endgame Guide: Mode Fundamentals, Team Planning & Live Checks",
     "category": "endgame",
     "categoryZh": "终局攻略",
     "categoryEn": "Endgame",
-    "summary": "崩铁三大终局模式全面攻略：混沌回忆、虚构叙事、末日幻影的机制解析、配队建议与周期规划。",
-    "summaryEn": "HSR endgame fundamentals for Memory of Chaos, Pure Fiction, and Apocalyptic Shadow. Use the framework to plan teams, then verify current schedules, buffs, enemies, and rewards in-game.",
-    "content": "## 混沌回忆·虚构叙事·末日幻影攻略\n\n崩坏：星穹铁道的终局内容包含三大核心模式，每种模式考验不同的队伍构建思路。掌握三大模式的差异是高效获取星琼的关键。\n\n### 一、混沌回忆(Memory of Chaos)\n\n#### 核心机制\n- 两路同时作战，每路4名角色，两路角色不可重复\n- 共10个节点，逐步提升难度\n- 每期有不同的「记忆紊流」增益效果\n- 计分基于通关行动次数，行动越少星数越高\n- 每6周更新一次敌人配置和增益\n\n#### 配队策略\n- **需要2支完全独立的队伍**，覆盖不同元素和输出模式\n- 优先安排最强队伍应对更高难度的下半\n- 关注当期增益（如追加攻击增伤、战技增伤等）并据此选择队伍\n- **速度调轴**至关重要：确保辅助在主C之前行动以提供增益\n\n#### 推荐队伍模板\n| 队伍类型 | 核心组成 | 适用场景 |\n|----------|----------|----------|\n| 单核超载队 | 黄泉+花火+虚无+生存 | 通用高难 |\n| 追击队 | 飞霄+知更鸟+停云+生存 | 增伤增益期 |\n| 击破队 | 流萤+阮梅+同谐主+生存 | 弱点匹配期 |\n| 反击队 | 云璃+知更鸟+停云+生存 | 高攻击频率敌人 |\n\n### 二、虚构叙事(Pure Fiction)\n\n#### 核心机制\n- **波次制**战斗，敌人分波次出现\n- 计分基于清波速度和总伤害输出\n- 每期有特定虚构增益，合理利用可大幅提升分数\n- 同样需要两路独立队伍\n\n#### 与混沌回忆的关键区别\n- **需要强力AOE输出**（智识命途角色优势明显）\n- 清波速度比单体伤害更重要\n- 每波敌人数量多，群攻和扩散伤害效率高\n- 生存压力相对较低，可考虑双输出阵容\n\n#### 虚构叙事推荐角色\n- **智识AOE输出**：景元、银枝、黑塔（免费）、希露瓦\n- **通用副C**：黄泉、卡芙卡\n- **关键辅助**：知更鸟、阮梅、布洛妮娅\n\n### 三、末日幻影(Apocalyptic Shadow)\n\n#### 核心机制\n- **Boss战为核心**的终局模式\n- 每期有不同Boss和对应的专属增益\n- Boss拥有多阶段机制和大量血量\n- 生存压力最大，治疗/护盾角色不可或缺\n\n#### 末日幻影要点\n- **高单体DPS角色**（巡猎/毁灭命途）是核心\n- Boss机制各不相同，需针对性配队和策略\n- 注意Boss的**弱点和阶段变化**，某些阶段会改变弱点\n- 携带对应元素的角色可以快速击破Boss韧性条\n\n#### 通用策略\n1. **先了解Boss机制**：查看Boss的攻击模式和阶段转换条件\n2. **弱点匹配**：优先使用Boss弱点属性的角色\n3. **生存保障**：至少一个治疗或护盾角色\n4. **爆发窗口**：在Boss进入虚弱状态时全力输出\n\n### 四、三大模式对比\n\n| 对比项 | 混沌回忆 | 虚构叙事 | 末日幻影 |\n|--------|----------|----------|----------|\n| 核心机制 | 两路精英战 | 波次清场 | Boss战 |\n| 推荐命途 | 毁灭/巡猎 | 智识/毁灭 | 巡猎/毁灭 |\n| 生存需求 | 中等 | 较低 | 最高 |\n| 速度要求 | 高（调轴） | 高（清波） | 中等 |\n| 刷新周期 | 6周 | 6周 | 6周 |\n| 最大星数 | 30星 | 30星 | 30星 |\n\n### 五、长期规划\n\n1. **培养3-4支队伍**：覆盖不同元素和流派\n2. **关注版本预告**：提前了解下期增益和敌人\n3. **资源分配**：优先保证2支核心队伍毕业\n4. **灵活调整**：每期根据增益效果调整配队\n5. **角色box广度**：多培养不同属性的4星角色作为后备",
-    "contentEn": "## Memory of Chaos, Pure Fiction & Apocalyptic Shadow Guide\n\nHonkai: Star Rail features three core endgame modes, each testing different aspects of your roster. Understanding the differences between them is key to efficiently earning Stellar Jade each cycle.\n\n### 1. Memory of Chaos\n\n#### Core Mechanics\n- Two simultaneous lanes, each with 4 characters; no character overlap allowed\n- 10 nodes total with escalating difficulty\n- Each cycle features a different \"Memory Turbulence\" buff effect\n- Scoring is based on cycles taken — fewer cycles = more stars\n- Enemy lineups and buffs refresh every 6 weeks\n\n#### Team Strategy\n- **Two completely independent teams** are required, covering different elements and DPS styles\n- Assign your strongest team to the harder second half\n- Study the current cycle's buff (e.g., Follow-up ATK DMG boost, Skill DMG boost) and choose teams accordingly\n- **Speed tuning** is critical: ensure supports act before your DPS to apply buffs\n\n#### Recommended Team Templates\n| Team Type | Core Composition | Best Scenario |\n|-----------|-----------------|---------------|\n| Hypercarry | Acheron + Sparkle + Nihility + Sustain | Universal hard content |\n| Follow-up | Feixiao + Robin + Tingyun + Sustain | DMG buff cycles |\n| Break | Firefly + Ruan Mei + Harmony MC + Sustain | Weakness-matched cycles |\n| Counter | Yunli + Robin + Tingyun + Sustain | High ATK frequency enemies |\n\n### 2. Pure Fiction\n\n#### Core Mechanics\n- **Wave-based** combat with enemies arriving in successive waves\n- Scoring is based on wave-clear speed and total damage output\n- Each cycle features specific Pure Fiction buffs that can dramatically boost performance\n- Also requires two independent teams\n\n#### Key Differences from Memory of Chaos\n- **Strong AoE damage dealers are essential** (Erudition path characters excel here)\n- Wave-clear speed matters more than single-target damage\n- Each wave has many enemies — AoE and spread damage are highly efficient\n- Survival pressure is relatively lower, allowing double-DPS compositions\n\n#### Recommended Characters for Pure Fiction\n- **Erudition AoE DPS**: Jing Yuan, Argenti, Herta (free), Serval\n- **Universal Sub-DPS**: Acheron, Kafka\n- **Key Supports**: Robin, Ruan Mei, Bronya\n\n### 3. Apocalyptic Shadow\n\n#### Core Mechanics\n- **Boss-focused** endgame mode\n- Each cycle features different bosses with unique buffs\n- Bosses have multi-phase mechanics and massive HP pools\n- Highest survival pressure — healers and shielders are mandatory\n\n#### Key Points\n- **High single-target DPS characters** (Hunt / Destruction paths) are core\n- Each boss has unique mechanics — tailor teams and strategies accordingly\n- Watch for boss **weaknesses and phase changes** — some phases alter weaknesses\n- Bring matching-element characters to quickly break the boss's Toughness bar\n\n#### General Strategy\n1. **Learn boss mechanics first**: Study attack patterns and phase transition conditions\n2. **Match weaknesses**: Prioritize characters matching the boss's weakness elements\n3. **Bring sustain**: At least one healer or shielder is non-negotiable\n4. **Burst windows**: Unload everything during the boss's vulnerable phases\n\n### 4. Three Modes Comparison\n\n| Aspect | Memory of Chaos | Pure Fiction | Apocalyptic Shadow |\n|--------|----------------|-------------|-------------------|\n| Core Mechanic | Two-way elite fights | Wave clearing | Boss fights |\n| Best Paths | Destruction / Hunt | Erudition / Destruction | Hunt / Destruction |\n| Sustain Need | Medium | Lower | Highest |\n| SPD Requirement | High (tuning) | High (wave clear) | Medium |\n| Refresh Cycle | 6 weeks | 6 weeks | 6 weeks |\n| Max Stars | 30 stars | 30 stars | 30 stars |\n\n### 5. Long-term Planning\n\n1. **Build 3-4 teams**: Cover different elements and playstyles\n2. **Follow version previews**: Learn upcoming buffs and enemies in advance\n3. **Resource allocation**: Prioritize fully investing in 2 core teams first\n4. **Stay flexible**: Adjust compositions each cycle based on buff effects\n5. **Roster breadth**: Invest in 4-star characters across different elements as reserves",
-    "updatedAt": "2026-09-20",
-    "currentVersion": "HSR endgame fundamentals; verify live rotations, rewards, and enemies",
-    "serpTitle": {
-      "en": "HSR Endgame Guide: MoC, Pure Fiction, Apocalyptic Shadow & Teams",
-      "zh": "崩坏：星穹铁道终局指南：混沌、虚构、末日与配队",
-      "ja": "スターレイル終盤ガイド：混沌、虚構、末日、編成"
-    },
-    "serpDescription": {
-      "en": "Learn HSR endgame mode fundamentals and team-planning principles for Memory of Chaos, Pure Fiction, and Apocalyptic Shadow. Verify live rotations and rewards in-game.",
-      "zh": "了解崩铁混沌回忆、虚构叙事与末日幻影的基础机制和配队思路；当前轮换、敌人与奖励请以游戏内为准。",
-      "ja": "混沌の記憶、虚構叙事、末日の幻影の基本と編成方針を確認。現行ローテーション、敵、報酬はゲーム内で確認してください。"
-    },
-    "quickFacts": {
-      "en": [
-        "Use this page for mode fundamentals, not a forecast of the current rotation.",
-        "Build two independent teams around the current enemy lineup and blessing.",
-        "Check live reset dates, rewards, and enemy weaknesses in the client before planning resources."
-      ],
-      "zh": [
-        "本页讲解模式基础，不预测当前轮换。",
-        "围绕当前敌人阵容和增益，准备两支独立队伍。",
-        "安排资源前，请在游戏内核对实时重置、奖励和敌人弱点。"
-      ],
-      "ja": [
-        "本ページはモードの基本用で、現行ローテーションの予測ではありません。",
-        "現在の敵編成と祝福に合わせ、独立した2編成を準備します。",
-        "資源計画前にゲーム内でリセット、報酬、弱点を確認してください。"
-      ]
-    },
+    "summary": "按模式分别记录挑战目标、剩余时间、已领与未领奖励，避免把历史规则合并成固定收益预算。",
+    "summaryEn": "A verified English edition is pending. The Chinese guide states the checked facts, sources and remaining limitations.",
+    "content": "## 混沌回忆：先确认当期关卡与目标\n混沌回忆的队伍安排要围绕敌人弱点、记忆紊流和挑战目标展开。2026-11-18更新的第三方统计页明确采集第12层数据，因此原文写“共10层”已失去可靠依据；统计页不是国服当期完整奖励规则，本文不据此推导总星数。\n\n## 虚构叙事：优先解决清杂和转波\n虚构叙事以分数表现衡量挑战结果，队伍应围绕多波敌人、有效伤害和当期增益安排。统计中的角色使用率受到敌人与环境影响，不能直接当成抽取价值或所有账号的配队结论。\n\n## 末日幻影：围绕首领机制控制行动值消耗\n末日幻影的首领特性、增益与行动值计分共同影响挑战结果。先理解当期机制，再比较队伍，不把混沌回忆的轮次指标直接换算成末日幻影分数。\n\n## 周期清单：每个模式单独记录\n在游戏内分别记录模式名称、当期结束时间、已完成目标和剩余奖励，再安排挑战顺序。本文建议先完成临近结束且现有队伍能稳定达成的目标；不以旧的统一周期表预测当前重置日。\n\n## 预算只计入可确认的资源\n已领取资源可以计入当前余额；尚未达成的挑战奖励单独列为待完成项。旧文“所有模式均30星、每期各600星琼”的统一口径已撤下，当前各模式奖励总量未完成核验前不计入确定抽取预算。\n\n## 适用范围与待核验项\n本页核验模式差异并撤下互相冲突的星数、层数和固定收益表。第三方统计页用于识别旧文失效，不作为完整官方规则；当前总星数、队伍限制、奖励门槛、重置时刻以及新增终局模式的完整规则仍待国服正式资料核验。\n\n## 第三方来源\nhttps://www.prydwen.gg/star-rail/memory-of-chaos\nhttps://www.prydwen.gg/star-rail/pure-fiction\nhttps://www.prydwen.gg/star-rail/guides/apocalyptic-shadow",
+    "contentEn": "## Verification pending\n\nA verified English edition is pending. Please consult the Chinese guide for checked facts, sources and limitations.",
+    "updatedAt": "2026-11-25",
     "tags": [
       "终局",
       "混沌回忆",
@@ -747,32 +687,9 @@
       "Pure Fiction",
       "Apocalyptic Shadow"
     ],
-    "faq": [
-      {
-        "question": "What are the three endgame modes in Honkai: Star Rail?",
-        "questionZh": "崩铁有哪三个终局模式？",
-        "answer": "The three endgame modes are Memory of Chaos (two-way elite combat), Pure Fiction (wave-based AoE clearing), and Apocalyptic Shadow (boss-focused fights). They rotate every 6 weeks with different enemies and buffs.",
-        "answerZh": "三大终局模式分别是混沌回忆（两路精英战）、虚构叙事（波次AOE清场）和末日幻影（Boss战）。每6周轮换一次敌人配置和增益效果。"
-      },
-      {
-        "question": "How many teams do I need for all endgame modes?",
-        "questionZh": "所有终局模式需要几支队伍？",
-        "answer": "Each mode requires 2 independent teams. Across all three modes, you need at least 3-4 well-built teams covering different elements and playstyles. Memory of Chaos favors single-target DPS, Pure Fiction favors AoE, and Apocalyptic Shadow favors burst DPS with heavy sustain.",
-        "answerZh": "每个模式需要2支独立队伍。三个模式总计需要3-4支成型队伍，覆盖不同属性和流派。混沌回忆偏单体输出，虚构叙事偏AOE，末日幻影偏爆发+重生存。"
-      },
-      {
-        "question": "How often do endgame cycles reset?",
-        "questionZh": "终局模式多久刷新一次？",
-        "answer": "Each mode resets every 6 weeks on a staggered schedule, so a different mode updates roughly every 2 weeks. This gives you time to adjust your teams between resets. Total Stellar Jade from all three modes per full cycle is approximately 1800 (600 per mode at max stars).",
-        "answerZh": "每个模式每6周刷新一次，三个模式交替更新，大约每2周有一个模式更新。这给你留了调整配队的时间。三个模式满星共约1800星琼（每模式600）。"
-      },
-      {
-        "question": "Can I clear endgame with only 4-star characters?",
-        "questionZh": "只用4星角色能打终局吗？",
-        "answer": "It is possible but challenging. Characters like Herta and Serval excel in Pure Fiction. Dan Heng and Sushang work in Memory of Chaos with proper investment. However, having at least 2-3 limited 5-star DPS characters makes endgame significantly more comfortable.",
-        "answerZh": "可以但有难度。黑塔和希露瓦在虚构叙事中表现出色，丹恒和素裳在混沌回忆中投入足够也能用。不过拥有2-3个限定5星输出角色会让终局轻松很多。"
-      }
-    ]
+    "faq": [],
+    "summaryJa": "確認済み日本語版は準備中です。中国語ガイドに確認済みの内容、出典と未確認事項を明記しています。",
+    "contentJa": "## 確認中\n\n確認済み日本語版は準備中です。中国語ガイドで確認済みの内容、出典と未確認事項を確認してください。"
   },
   {
     "id": "build-acheron",
@@ -1082,15 +999,15 @@
   },
   {
     "id": "boss-strategy-guide",
-    "title": "崩坏：星穹铁道BOSS攻略大全：历战余响BOSS机制与队伍搭配",
+    "title": "历战余响：每周奖励次数与材料选择",
     "titleEn": "Honkai Star Rail Boss Strategy Guide: Echo of War Boss Mechanics & Team Building",
     "category": "combat",
     "categoryZh": "战斗攻略",
     "categoryEn": "Combat Guide",
-    "summary": "详解星穹铁道所有历战余响BOSS的机制、阶段转换、推荐命途和元素，以及针对每个BOSS的最佳队伍搭配方案。",
-    "summaryEn": "Complete boss strategy guide for Honkai Star Rail covering all Echo of War bosses, phase transition mechanics, recommended Paths and elements, and optimal team compositions for each boss fight.",
-    "content": "## 崩坏：星穹铁道BOSS攻略大全\n\n### 一、历战余响BOSS攻略\n\n#### 1. 末日兽（Doomsday Beast）\n- **推荐命途**：毁灭、巡猎、丰饶\n- **推荐元素**：物理、冰、雷\n- **核心机制**：末日兽有两个手臂（右边是虚数属性，左边是量子属性），需要先击破手臂才能对本体造成有效伤害\n- **阶段转换**：击破两只手臂后本体暴露，进入虚弱状态。随后会释放大范围末日攻击\n- **关键技巧**：优先击破单侧手臂以减少BOSS行动频率。带丰饶或存护角色保证生存\n- **掉落材料**：毁灭者的末路、守护者的牺牲、超越者的远行\n\n#### 2. 幻胧（Phantylia）\n- **推荐命途**：毁灭、巡猎、虚无\n- **推荐元素**：冰、雷、风（避免使用火元素）\n- **核心机制**：幻胧会召唤炎花造物，需要在限定回合内击破所有造物\n- **阶段转换**：一阶段为单体+AOE混合攻击。二阶段召唤多个造物并增强攻击。三阶段进入狂暴状态\n- **关键技巧**：带虚无角色（如银狼、佩拉）给BOSS上减益效果。击破造物后BOSS进入虚弱状态\n- **掉落材料**：毁灭者的末路、守护者的牺牲、超越者的远行\n\n#### 3. 星啸（Conqueror）\n- **推荐命途**：毁灭、巡猎、智识\n- **推荐元素**：火、冰、物理\n- **核心机制**：BOSS会周期性获得增益效果，需要利用弱点击破来清除增益\n- **关键技巧**：在BOSS蓄力大招前必须打出弱点击破，否则会造成全队大量伤害。保留大招用于打断蓄力\n\n#### 4. 史瓦罗（Svarog）\n- **推荐命途**：巡猎、虚无、丰饶\n- **推荐元素**：雷、风、物理\n- **核心机制**：史瓦罗会操控机械臂抓取我方角色，被抓角色无法行动\n- **关键技巧**：集中火力攻击机械臂以解救被抓队友。优先击破弱点以防止抓取。带解控角色如布洛妮娅\n- **掉落材料**：毁灭者的末路等\n\n#### 5. 可可利亚（Cocolia）\n- **推荐命途**：毁灭、巡猎、存护\n- **推荐元素**：物理、雷、风\n- **核心机制**：可可利亚会创建冰柱形成护盾，需要先击破冰柱\n- **关键技巧**：在可可利亚蓄力大招「创世之举」前击破她的弱点。集中AOE伤害清理冰柱\n\n### 二、BOSS通用战术\n\n#### 队伍构建原则\n1. **核心输出**：选择能打击BOSS弱点的命途角色（巡猎/毁灭/智识）\n2. **生存位**：至少带1名丰饶（治疗）或存护（护盾）角色\n3. **辅助位**：虚无角色提供减益，同谐角色提供增益\n4. **弱点对应**：优先选择与BOSS弱点元素匹配的角色以触发弱点击破\n\n#### 弱点击破机制\n- 每次攻击BOSS的弱点元素会削减其韧性条\n- 韧性条归零时触发弱点击破，BOSS跳过回合并受到额外伤害\n- 弱点击破后BOSS进入一段时间的虚弱状态\n- 合理规划大招时机以在关键时刻触发击破\n\n#### 命途选择策略\n- **毁灭**：平衡输出和生存，适合新手\n- **巡猎**：高单体输出，适合速杀BOSS\n- **智识**：AOE伤害，适合有召唤物的BOSS\n- **虚无**：持续减益和DOT，长线作战强势\n- **存护/丰饶**：保证生存，高难度BOSS必带",
-    "contentEn": "## Honkai Star Rail Boss Strategy Guide\n\n### 1. Echo of War Boss Strategies\n\n#### Doomsday Beast\n- **Recommended Paths**: Destruction, Hunt, Abundance\n- **Recommended Elements**: Physical, Ice, Lightning\n- **Core Mechanics**: The Doomsday Beast has two arms (right arm is Imaginary, left arm is Quantum). You must break both arms before dealing effective damage to the main body\n- **Phase Transition**: After breaking both arms, the main body is exposed and enters a weak state. It then charges a massive AoE doomsday attack\n- **Key Tips**: Prioritize breaking one arm to reduce the boss action frequency. Bring an Abundance or Preservation character for survivability\n- **Drops**: Destroyer's Final Road, Guardian's Lament, Conqueror's Will\n\n#### Phantylia the Undying\n- **Recommended Paths**: Destruction, Hunt, Nihility\n- **Recommended Elements**: Ice, Lightning, Wind (avoid Fire)\n- **Core Mechanics**: Phantylia summons Flame creations that must be destroyed within a turn limit\n- **Phase Transition**: Phase 1 uses mixed single-target and AoE attacks. Phase 2 summons multiple creations with enhanced attacks. Phase 3 enters berserk state\n- **Key Tips**: Bring Nihility characters (Silver Wolf, Pela) to apply debuffs. Breaking creations puts the boss into a weakened state\n- **Drops**: Destroyer's Final Road, Guardian's Lament, Conqueror's Will\n\n#### Conqueror\n- **Recommended Paths**: Destruction, Hunt, Erudition\n- **Recommended Elements**: Fire, Ice, Physical\n- **Core Mechanics**: The boss periodically gains buffs that must be removed through Weakness Break\n- **Key Tips**: You must trigger a Weakness Break before the boss charges its ultimate attack, or it deals massive team-wide damage. Save ultimates to interrupt charging phases\n\n#### Svarog\n- **Recommended Paths**: Hunt, Nihility, Abundance\n- **Recommended Elements**: Lightning, Wind, Physical\n- **Core Mechanics**: Svarog controls mechanical arms that grab party members, making them unable to act\n- **Key Tips**: Focus fire on the mechanical arms to free grabbed teammates. Prioritize breaking weaknesses to prevent grabs. Bring cleanse characters like Bronya\n- **Drops**: Destroyer's Final Road, etc.\n\n#### Cocolia (Mother of Deception)\n- **Recommended Paths**: Destruction, Hunt, Preservation\n- **Recommended Elements**: Physical, Lightning, Wind\n- **Core Mechanics**: Cocolia creates ice pillars that form shields. You must destroy the pillars first\n- **Key Tips**: Break Cocolia's weakness before she charges her ultimate attack. Use concentrated AoE damage to clear ice pillars\n\n### 2. General Boss Tactics\n\n#### Team Building Principles\n1. **Core DPS**: Choose a Path character that hits the boss weakness (Hunt/Destruction/Erudition)\n2. **Survival Slot**: Bring at least 1 Abundance (healer) or Preservation (shielder)\n3. **Support Slot**: Nihility for debuffs, Harmony for buffs\n4. **Weakness Matching**: Prioritize characters whose elements match the boss weaknesses to trigger Weakness Break\n\n#### Weakness Break Mechanics\n- Attacking with the boss weakness element depletes its Toughness bar\n- When Toughness reaches zero, a Weakness Break triggers, the boss skips a turn and takes extra damage\n- After Weakness Break, the boss enters a temporary weakened state\n- Plan ultimate timing to trigger breaks at critical moments\n\n#### Path Selection Strategy\n- **Destruction**: Balanced offense and defense, great for beginners\n- **Hunt**: High single-target damage, ideal for fast boss kills\n- **Erudition**: AoE damage, effective against bosses with summons\n- **Nihility**: Sustained debuffs and DOT, strong in extended fights\n- **Preservation/Abundance**: Ensures survival, essential for high-difficulty bosses",
+    "summary": "先核对每周共享奖励次数与角色所需材料，再选择历战余响首领；本页说明通用准备流程。",
+    "summaryEn": "A verified English edition is pending. The Chinese guide states the checked facts, sources and remaining limitations.",
+    "content": "## 消耗与奖励次数\n领取一次历战余响奖励消耗 30 点开拓力，每周共有 3 次奖励领取机会，由所有历战余响关卡共享。同一首领可以重复领取奖励；这不是“每个首领各有 3 次”。\n\n## 按行迹材料选择首领\n先在角色行迹界面确认需要的周本材料，再从材料详情进入对应历战余响。不要仅按角色的属性、命途或所属地区选择首领。\n\n## 进入战斗前检查\n确认已解锁的难度、敌方弱点与关卡机制，再决定输出、生存和辅助配置。本文建议在生存稳定后再提高输出，不把某一套角色组合写成所有账号通用的最佳队伍。\n\n## 奖励与战斗规划分开记录\n周本奖励次数用于材料规划，战斗失败与挑战用时用于调整队伍。每次领取前核对客户端显示的剩余奖励次数，避免把共享额度误当作单个首领的额度。\n\n## 适用范围与待核验项\n本页替换了原先未逐项核验的“所有首领机制与最佳配队”正文，只确认通用消耗、次数及材料选择流程。各首领当前阶段机制、抗性、精确伤害和推荐阵容仍待独立核验，本文不提供未经核验的数值。\n\n## 第三方来源\nhttps://www.prydwen.gg/star-rail/guides/game-modes",
+    "contentEn": "## Verification pending\n\nA verified English edition is pending. Please consult the Chinese guide for checked facts, sources and limitations.",
     "tags": [
       "BOSS攻略",
       "历战余响",
@@ -1103,44 +1020,22 @@
       "Team Building",
       "Path Guide"
     ],
-    "faq": [
-      {
-        "question": "How many times can I challenge Echo of War per week?",
-        "questionZh": "每周可以挑战几次历战余响？",
-        "answer": "You can claim Echo of War rewards up to 3 times per week across all Echo of War bosses combined. The first 3 claims cost 30 Trailblaze Power each. You can fight the bosses unlimited times but only claim rewards 3 times. Weekly reset happens every Monday at 4:00 AM server time.",
-        "answerZh": "每周所有历战余响BOSS合计可领取3次奖励，每次消耗30开拓力。你可以无限次挑战BOSS但只能领取3次奖励。每周一凌晨4点服务器时间重置。"
-      },
-      {
-        "question": "What is the best general-purpose team for Echo of War bosses?",
-        "questionZh": "历战余响最通用的阵容是什么？",
-        "answer": "A solid general team is: 1 main DPS matching boss weakness (Hunt or Destruction), 1 Harmony buffer (Tingyun or Asta), 1 Nihility debuffer or second Harmony, and 1 Abundance healer (Natasha or Bailu) or Preservation shielder (March 7th or Gepard). Adapt based on the boss weakness elements.",
-        "answerZh": "一套可靠的通用阵容是：1名匹配BOSS弱点的主C（巡猎或毁灭）、1名同谐增伤辅助（停云或艾丝妲）、1名虚无减益或第二同谐、1名丰饶奶妈（娜塔莎或白露）或存护盾辅（三月七或杰帕德）。根据BOSS弱点元素灵活调整。"
-      },
-      {
-        "question": "How do I deal with bosses that have no weakness matching my characters?",
-        "questionZh": "BOSS弱点没有对应元素角色怎么办？",
-        "answer": "Silver Wolf can implant a weakness matching one of your team elements, making her extremely valuable for mismatched fights. Alternatively, focus on high raw damage through buffs and debuffs rather than Weakness Break. Harmony characters like Bronya and Tingyun can boost any DPS regardless of element.",
-        "answerZh": "银狼可以植入与你队伍元素匹配的弱点，使她在元素不匹配的战斗中极为重要。另外，可以通过增减益效果打直伤而非依赖弱点击破。布洛妮娅和停云等同谐角色可以增强任何属性的输出角色。"
-      },
-      {
-        "question": "Should I use Trailblaze Power on Echo of War or other activities?",
-        "questionZh": "开拓力应该优先刷历战余响还是其他内容？",
-        "answer": "Echo of War is the only source for certain Trace materials needed by 5-star characters and some 4-stars. Prioritize the 3 weekly discounted claims (30 Power each) before spending on other activities. After the 3 weekly claims, spend remaining Trailblaze Power on Calyxes and Relic domains based on your current gearing needs.",
-        "answerZh": "历战余响是部分5星角色和部分4星角色行迹材料的唯一来源。每周优先使用3次打折领取（每次30开拓力），然后再投入其他内容。完成3次周常后，根据当前装备需求将剩余开拓力用于拟造花萼和遗器副本。"
-      }
-    ]
+    "faq": [],
+    "updatedAt": "2026-11-25",
+    "summaryJa": "確認済み日本語版は準備中です。中国語ガイドに確認済みの内容、出典と未確認事項を明記しています。",
+    "contentJa": "## 確認中\n\n確認済み日本語版は準備中です。中国語ガイドで確認済みの内容、出典と未確認事項を確認してください。"
   },
   {
     "id": "farming-route-guide",
-    "title": "崩坏：星穹铁道体力规划与素材刷取攻略",
+    "title": "开拓力与材料刷取规划：先查缺口，再选副本",
     "titleEn": "HSR Farming Route Guide: Trailblaze Power, Relics, Traces & Materials",
     "category": "farming",
     "categoryZh": "刷取攻略",
     "categoryEn": "Farming Guide",
-    "summary": "详解星穹铁道开拓力系统、遗器刷取（侵蚀隧洞）、行迹材料（模拟宇宙/花萼）、角色突破材料（凝滞虚影）及历战余响日程安排，帮你高效管理每一分开拓力。",
-    "summaryEn": "Decision-first Honkai: Star Rail farming route guide for Trailblaze Power, relics, trace materials, ascension materials, Echo of War, weekly scheduling, current banners, and team priorities.",
-    "content": "## 崩坏：星穹铁道体力规划与素材刷取攻略\n\n### 1. 开拓力系统详解\n\n开拓力（Trailblaze Power）是星穹铁道最重要的资源，上限为240点，每6分钟恢复1点，每天自然恢复240点。\n\n**开拓力恢复方式：**\n- 自然恢复：每6分钟1点，每天240点\n- 燃料（Fuel）：储存备用，建议留到均衡等级60级后刷遗器\n- 星琼购买：每天可用50星琼购买60开拓力（前6次）\n- 后备开拓力：溢出的开拓力会以50%效率存入后备，最多储存2400点\n\n**开拓力消耗优先级：**\n1. 历战余响（每周）— 限时折扣\n2. 角色突破材料（凝滞虚影）— 解锁等级上限\n3. 行迹材料（花萼）— 提升角色强度\n4. 遗器（侵蚀隧洞）— 提升角色装备\n5. 光锥突破材料（幻想真境）— 提升武器等级\n\n### 2. 遗器刷取（侵蚀隧洞）\n\n遗器是星穹铁道角色强度提升的核心。均衡等级6级后解锁最高难度侵蚀隧洞，每把消耗40开拓力，掉落高品质遗器。\n\n**高优先级侵蚀隧洞：**\n\n| 隧洞名称 | 掉落套装 | 适用角色 |\n|---------|---------|----------|\n| 疗愈之壶·侵蚀隧洞 | 停转的萨尔索图 / 穿越黑夜的骇兽 | 暴击/攻击型角色 |\n| 霜风之径·侵蚀隧洞 | 激奏的冰霜 / 铁卫的逆城 | 冰系/防御型角色 |\n| 睿治之径·侵蚀隧洞 | 云无留迹的过客 / 庄严的宗室 | 通用辅助/治疗 |\n| 野穗之径·侵蚀隧洞 | 街头出身的拳王 / 穿过荒原的猎手 | 物理系角色 |\n| 漂泊之径·侵蚀隧洞 | 流星追迹的怪盗 / 盗贼公国塔利亚 | 击破/速度型角色 |\n\n**遗器刷取策略：**\n- 先为主C刷一套主词条正确的遗器\n- 辅助角色可以用散件凑合，优先保证速度鞋和能量绳\n- 利用遗器定分功能筛选有潜力的遗器\n- 每月遗器清洗活动可以获得定向遗器\n\n### 3. 行迹材料刷取（花萼）\n\n行迹材料分为花萼（金）和花萼（赤）两种：\n\n**花萼（金）— 角色经验、光锥经验：**\n- 消耗10/20/30开拓力（按难度）\n- 前期大量需要，后期需求减少\n- 建议在活动期间双倍掉落时集中刷取\n\n**花萼（赤）— 行迹升级材料：**\n- 消耗10/20/30开拓力\n- 不同类型角色需要不同材料：\n  - 毁灭/存护/丰饶材料（路线1）\n  - 巡猎/智识/同谐材料（路线2）\n  - 虚无一派材料（路线3）\n- 行迹材料需求量极大，建议持续刷取\n\n### 4. 角色突破材料（凝滞虚影）\n\n凝滞虚影是获取角色突破材料的主要途径，每把消耗30开拓力。\n\n**按角色属性分类：**\n- 物理角色：古代零件/古代轴承（拟造花萼）\n- 火系角色：燃烧之芯/熔岩之核（熄灭的原核）\n- 冰系角色：永恒之冰/寒潮之核\n- 雷系角色：感应之芯/电磁之核\n- 风系角色：随风之羽/风暴之核\n- 量子角色：虚数/量子核心\n- 虚数角色：虚数/虚数核心\n\n**突破材料刷取建议：**\n- 按照当前培养角色的需求选择对应Boss\n- 每个角色的突破需要专属Boss材料+通用材料+特供材料\n- 等级突破解锁更高的行迹节点，优先级最高\n\n### 5. 历战余响（周本）\n\n历战余响每周可挑战3次（首次30开拓力，后续60开拓力），是获取高级行迹材料和光锥突破材料的唯一途径。\n\n**每周历战余响规划：**\n- 优先挑战掉落你当前培养角色所需材料的Boss\n- 历战余响材料用于行迹10→12级升级\n- 每周至少打满3次折扣次数\n- 历战余响材料可以在合成台用其他材料合成转化\n\n### 6. 高效开拓力使用建议\n\n1. **前期（均衡1-3）**：优先刷角色突破材料和行迹材料，不要大量刷遗器\n2. **中期（均衡4-5）**：开始刷主C遗器，保证速度靴和能量绳\n3. **后期（均衡6+）**：优化遗器副词条，培养多支队伍\n4. **每日检查开拓力**，确保不溢出浪费\n5. **活动期间优先刷活动关卡**，活动商店的性价比通常高于常驻关卡\n6. **双倍掉落活动时集中使用燃料**，可以获得额外收益",
-    "contentEn": "## Honkai: Star Rail Trailblaze Power Planning & Material Farming Guide\n\n### Quality checkpoint (checked 2026-09-12)\n\nThis route is aligned to the HSR v4.4 content review. Confirm the live phase, weekly reset, and target mode before spending Trailblaze Power; banner timing and future reruns are not guaranteed.\n\n**Priority order:** make one functional team, level the character and Light Cone, unlock traces, then farm relics. Do not chase perfect substats before trace and ascension breakpoints are covered.\n### 1. Trailblaze Power System Overview\n\nTrailblaze Power (TB Power) is the most important resource in Honkai: Star Rail. The cap is 240 points, recovering 1 point every 6 minutes for a daily total of 240 points.\n\n**TB Power Recovery Methods:**\n- Natural recovery: 1 point per 6 minutes, 240 per day\n- Fuel: Save for Equilibrium Level 60+ relic farming\n- Stellar Jade purchase: 50 Stellar Jade for 60 TB Power (up to 6 times daily)\n- Reserve Power: Overflow TB Power is stored at 50% efficiency, up to 2400 points\n\n**TB Power Spending Priority:**\n1. Echo of War (Weekly) — discounted runs\n2. Character Ascension Materials (Stagnant Shadow) — unlocks level cap\n3. Trace Materials (Calyx) — boosts character power\n4. Relics (Cavern of Corrosion) — upgrades equipment\n5. Light Cone Ascension (Simulated domain) — upgrades weapons\n\n### 2. Relic Farming (Cavern of Corrosion)\n\nRelics are the core of character power in Star Rail. At Equilibrium Level 6, you unlock the highest difficulty Caverns, costing 40 TB Power per run with high-quality relic drops.\n\n**High-Priority Caverns:**\n\n| Cavern Name | Relic Sets | Best For |\n|-------------|-----------|----------|\n| Cavern of Corrosion: Path of Gelid Wind | Hunter of Glacial Forest / Knight of Purity Palace | Ice DPS / DEF scaling |\n| Cavern of Corrosion: Path of Drifting | Musketeer of Wild Wheat / Wastelander of Banditry Desert | Universal / DoT builds |\n| Cavern of Corrosion: Path of Holy Hymn | Passerby of Wandering Cloud / Guard of Wuthering Snow | Healers / DEF supports |\n| Cavern of Corrosion: Path of Providence | Champion of Streetwise Boxing / Scout of Arrow Bandit | Physical DPS |\n| Cavern of Corrosion: Path of Dark Shadows | Thief of Shooting Meteor / Iron Cavalry Against the Scourge | Break Effect builds |\n\n**Relic Farming Strategy:**\n- First, farm a set with correct main stats for your main DPS\n- Support characters can use off-set pieces; prioritize Speed boots and Energy ropes\n- Use the Relic Scoring feature to filter promising relics\n- Monthly Relic Remembrance events provide targeted relics\n\n### 3. Trace Material Farming (Calyx)\n\nTrace materials come in two types: Calyx (Golden) and Calyx (Crimson):\n\n**Calyx (Golden) — Character/Light Cone EXP:**\n- Costs 10/20/30 TB Power by difficulty\n- Heavily needed early game, demand drops later\n- Farm during double-drop events for best value\n\n**Calyx (Crimson) — Trace Upgrade Materials:**\n- Costs 10/20/30 TB Power\n- Different character paths need different materials:\n  - Destruction / Preservation / Abundance (Route 1)\n  - Hunt / Erudition / Harmony (Route 2)\n  - Nihility (Route 3)\n- Trace material demand is very high; farm consistently\n\n### 4. Ascension Material Farming (Stagnant Shadow)\n\nStagnant Shadow is the primary source for character ascension materials, costing 30 TB Power per run.\n\n**By Character Element:**\n- Physical: Mechanical parts series\n- Fire: Endotherm Chitin / Smoldering Core series\n- Ice: Silvermane Badge / Everwinter Shadestone series\n- Lightning: Ancient Part / Lightning Crown series\n- Wind: Windbreaker series\n- Quantum: Quantum-related cores\n- Imaginary: Imaginary-related cores\n\n**Ascension Material Tips:**\n- Choose the boss that drops materials for the character you are currently building\n- Each character needs boss-specific materials plus universal materials plus specialty materials\n- Level ascension unlocks higher trace nodes — highest priority\n\n### 5. Echo of War (Weekly Boss)\n\nEcho of War can be challenged 3 times per week (first run 30 TB Power, subsequent runs 60 TB Power). It is the only source of high-level trace materials and Light Cone ascension materials.\n\n**Weekly Echo of War Planning:**\n- Prioritize the boss that drops materials for your current build target\n- Echo of War materials are needed for trace levels 10-12\n- Run at least 3 discounted runs per week\n- Materials can be synthesized at the Omni-Synthesizer using other Echo materials\n\n### 6. Efficient TB Power Usage Tips\n\n1. **Early Game (EQ1-3)**: Prioritize character ascension and trace materials; do not heavily farm relics\n2. **Mid Game (EQ4-5)**: Start farming relics for your main DPS; ensure Speed boots and Energy ropes\n3. **Late Game (EQ6+)**: Optimize relic substats, build multiple teams\n4. **Check TB Power daily** to ensure it does not overflow\n5. **Prioritize event stages during events** — event shops are usually more efficient than permanent stages\n6. **Save Fuel for double-drop events** for maximum value",
+    "summary": "按培养目标区分拟造花萼、凝滞虚影、侵蚀隧洞与历战余响，核对每次领取所需开拓力，避免刷错材料。",
+    "summaryEn": "A verified English edition is pending. The Chinese guide states the checked facts, sources and remaining limitations.",
+    "content": "## 先列缺口，再决定刷取顺序\n先在角色培养界面核对等级、突破、光锥与各项行迹的目标等级和背包库存，再从材料详情跳转到对应副本。本文建议先补当前队伍能立即使用的确定提升，再投入随机词条遗器；这是资源安排建议，不代表固定收益最优解。\n\n## 拟造花萼：单次 10 点开拓力\n拟造花萼（金）用于角色经验、光锥经验和信用点等资源；拟造花萼（赤）用于行迹与光锥晋阶相关材料。一次可排队进行最多 6 轮，每轮消耗 10 点，6 轮合计 60 点。实际材料名称和掉落档位要核对具体关卡。\n\n## 凝滞虚影：单次 30 点开拓力\n凝滞虚影提供角色晋阶所需的特定材料。不同角色需求不同，刷取前从目标角色的晋阶界面确认材料，不要只按属性或命途猜测。\n\n## 侵蚀隧洞：单次 40 点开拓力\n侵蚀隧洞用于刷取对应的遗器套装。规划时同时考虑同一副本的两套遗器能否被队伍使用；主词条、副词条与套装效果应结合角色机制判断。位面饰品要另行核对对应获取入口。\n\n## 历战余响：单次 30 点，每周共享 3 次奖励\n历战余响的每周奖励次数由不同首领共享，同一首领可以重复领取奖励。按当前角色需要的周本材料分配次数；不要按“第一次 30 点、之后 60 点”的旧错误说明预留体力。\n\n## 每周安排建议\n先查看历战余响剩余奖励次数，再处理确定的晋阶与行迹缺口，最后安排遗器。双倍掉落活动须同时核对活动日期、适用副本及剩余双倍次数；不要把普通掉落估算当作活动实得。\n\n## 适用范围与待核验项\n本页核验副本用途、基础开拓力消耗及历战余响奖励次数。未核验开拓力恢复、上限、后备开拓力转换和补充价格，因此不提供相关数字；不同难度的掉落数量、具体角色材料和行迹上限也须独立核验。\n\n## 第三方来源\nhttps://www.prydwen.gg/star-rail/guides/game-modes",
+    "contentEn": "## Verification pending\n\nA verified English edition is pending. Please consult the Chinese guide for checked facts, sources and limitations.",
     "tags": [
       "刷取",
       "开拓力",
@@ -1153,47 +1048,10 @@
       "Traces",
       "Materials"
     ],
-    "faq": [
-      {
-        "question": "When should I start farming relics seriously?",
-        "questionZh": "什么时候开始认真刷遗器？",
-        "answer": "Begin serious relic farming at Equilibrium Level 5-6. Before that, use whatever relics you obtain from the story and chests, and spend TB Power on character ascension materials and trace materials. At EQ5+, Caverns drop 5-star relics more consistently, and at EQ6 you get the best rates.",
-        "answerZh": "建议在均衡等级5-6级开始认真刷遗器。之前使用剧情和宝箱获得的遗器即可，开拓力优先用于角色突破材料和行迹材料。均衡5级后侵蚀隧洞掉落5星遗器的概率更高，6级时收益最佳。"
-      },
-      {
-        "question": "Which relic sets should I farm first?",
-        "questionZh": "应该先刷哪些遗器套装？",
-        "answer": "Start with your main DPS character's best-in-slot set. For most players, Musketeer of Wild Wheat is a strong universal set that works on many characters. After your main DPS is built, farm for your support characters, prioritizing Speed boots and Energy recharge ropes. The most efficient approach is to farm Caverns that drop two useful sets simultaneously.",
-        "answerZh": "先为主C刷毕业套装。对大多数玩家来说，快枪手四件套是非常通用的选择，很多角色都能用。主C成型后再刷辅助角色的遗器，优先保证速度靴和能量恢复绳。最高效的方式是刷同时掉落两个有用套装的侵蚀隧洞。"
-      },
-      {
-        "question": "How do I manage Trailblaze Power efficiently?",
-        "questionZh": "如何高效管理开拓力？",
-        "answer": "Log in at least twice daily to spend TB Power and prevent overflow. Your daily spending priority should be: weekly Echo of War (if available), Stagnant Shadow for ascension, Calyx for traces, then Cavern of Corrosion for relics. During double-drop events, redirect all TB Power to the event stages. Reserve Fuel for double-drop events or when you urgently need materials.",
-        "answerZh": "每天至少登录两次消耗开拓力，防止溢出。日常消耗优先级：周本历战余响（如有）> 凝滞虚影突破材料 > 花萼行迹材料 > 侵蚀隧洞遗器。双倍掉落活动期间，把所有开拓力投入活动关卡。燃料留到双倍活动或急需材料时使用。"
-      },
-      {
-        "question": "What is the Reserve Trailblaze Power system?",
-        "questionZh": "后备开拓力系统是什么？",
-        "answer": "When your Trailblaze Power reaches the 240 cap, any additional natural recovery goes into Reserve Power at 50% efficiency. You can store up to 2400 Reserve Power. This means you will not completely lose TB Power if you miss a day, but you lose half the value. It is still better to spend TB Power before it caps to maximize your total resources.",
-        "answerZh": "当开拓力达到240上限后，自然恢复的开拓力会以50%效率存入后备开拓力，最多储存2400点。这意味着即使你偶尔忘记上线，也不会完全损失开拓力，但会损失一半。最好还是在开拓力满之前消耗掉，以最大化资源总量。"
-      }
-    ],
-    "serpTitle": {
-      "en": "HSR Farming Route Guide: Trailblaze Power, Relics & Trace Materials"
-    },
-    "serpDescription": {
-      "en": "Plan HSR Trailblaze Power, relic farming, trace materials, ascension materials, Echo of War, weekly routes, current banners, and team priorities."
-    },
-    "quickFacts": {
-      "en": [
-        "Checked through 2026-09-12 for the Honkai: Star Rail HSR v4.4 content cycle; use the route as a decision aid and verify live costs and schedules before farming.",
-        "Spend Trailblaze Power on the bottleneck for current banner or core team upgrades first.",
-        "Read with current banners, relic guide, team guide, and boss strategy before farming."
-      ]
-    },
-    "updatedAt": "2026-09-12",
-    "currentVersion": "HSR v4.4 content review"
+    "faq": [],
+    "updatedAt": "2026-11-25",
+    "summaryJa": "確認済み日本語版は準備中です。中国語ガイドに確認済みの内容、出典と未確認事項を明記しています。",
+    "contentJa": "## 確認中\n\n確認済み日本語版は準備中です。中国語ガイドで確認済みの内容、出典と未確認事項を確認してください。"
   },
   {
     "id": "cross-game-comparison-guide",

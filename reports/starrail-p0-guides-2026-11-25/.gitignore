@@ -1,0 +1,4 @@
+.private/
+artifact/
+module/
+*.html

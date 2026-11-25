@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-25",
+  "method": "Visible browser pages; third-party attribution retained",
+  "verified": {
+    "game-modes": [
+      "Calyx10powerperrun,queue6",
+      "StagnantShadow30",
+      "Cavern40",
+      "EchoofWar30,3weeklyrewardruns,samebossallowed"
+    ],
+    "relic-sets": [
+      "ArenaCRITRate8%;currentCRITRate>=70%;BasicATKandSkillDMG20%",
+      "BrokenKeelEffectRES10%;EffectRES>=30%;allalliesCRITDMG10%"
+    ]
+  },
+  "conflicts": [
+    {
+      "page": "guides/pure-fiction",
+      "lastUpdated": "2025-01-21",
+      "scope": "Historical overview only; current team/star/reward counts not asserted"
+    },
+    {
+      "page": "pure-fiction",
+      "lastUpdated": "2026-11-18",
+      "observed": "PFstage4; Node1/2/3; usage rates not pull values"
+    },
+    {
+      "page": "memory-of-chaos",
+      "lastUpdated": "2026-11-18",
+      "observed": "stage12; Node1/2/3; do not derive total stars or rewards"
+    }
+  ]
+}

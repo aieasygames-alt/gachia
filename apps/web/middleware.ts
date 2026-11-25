@@ -6,6 +6,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { isWorkerPreviewOrigin } from './lib/preview-origin';
 import { isRetiredPage } from './lib/retired-pages';
 import { shadowLocalEnabled } from '../../packages/core/shadow-local-gate';
+import { isStarRailCmsGuide } from '@gachia/data/cms/starrail-guides';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -285,7 +286,7 @@ function routeMiddleware(request: NextRequest) {
   const isStarRailUpdates = locale && game === 'starrail' && (
     segments.length === 2 ||
     (['version', 'events'].includes(thirdSegment ?? '') && segments.length === 3) ||
-    (thirdSegment === 'guides' && fourthSegment === 'banner-schedule-guide' && segments.length === 4)
+    (thirdSegment === 'guides' && (fourthSegment === 'banner-schedule-guide' || isStarRailCmsGuide(fourthSegment ?? '')) && segments.length === 4)
   );
   if (isHomepage || isMarketIntel || isStarRailUpdates || (locale && game && thirdSegment === 'shared')) {
     // Owner-backed pages read per request; public shares can expire.

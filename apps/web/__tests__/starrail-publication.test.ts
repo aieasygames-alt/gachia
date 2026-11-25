@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import { STARRAIL_CMS_GUIDES } from '@gachia/data/cms/starrail-guides';
 import seed from '@gachia/data/cms/starrail-snapshot.json';
 import { parseStarRailPublication } from '@gachia/data/cms/starrail-publication';
 
@@ -12,7 +13,7 @@ describe('Star Rail cloud publication', () => {
   afterEach(() => { vi.unstubAllEnvs(); vi.resetAllMocks(); });
   it('disables browser and CDN HTML caching for all live Star Rail CMS readers', () => {
     for (const locale of ['zh', 'en', 'ja']) {
-      for (const route of ['', '/version', '/events', '/guides/banner-schedule-guide']) {
+      for (const route of ['', '/version', '/events', '/guides/banner-schedule-guide', ...Object.keys(STARRAIL_CMS_GUIDES).map(slug => `/guides/${slug}`)]) {
         const response = middleware(new NextRequest(`https://gachia.com/${locale}/starrail${route}`));
         expect(response.headers.get('cache-control')).toBe('no-store');
       }

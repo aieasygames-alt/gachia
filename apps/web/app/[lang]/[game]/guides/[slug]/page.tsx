@@ -1,4 +1,6 @@
 import { StarRailBannerGuide } from '@/components/wiki/starrail-banner-guide';
+import { StarRailCmsGuide, starRailGuideMetadata } from '@/components/wiki/starrail-cms-guide';
+import { isStarRailCmsGuide } from '@gachia/data/cms/starrail-guides';
 import { serializeJsonLd } from '@/lib/jsonld-script';
 import { CATEGORY_LABELS, GAMES, LOCALES, MAIN_WORKER_GAME_IDS } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
@@ -467,6 +469,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const gameId = game as GameId;
   if (!isGameId(gameId)) return {};
 
+  if (gameId === 'starrail' && isStarRailCmsGuide(slug)) return starRailGuideMetadata(locale, slug);
+
   const runtime = await getGuideRuntime(gameId);
   const guide = await getGuideBySlug(runtime, gameId, slug);
   if (!guide || !isGuideReadable(gameId, slug, locale)) return {};
@@ -497,6 +501,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ la
   if (!isGameId(gameId)) notFound();
 
   if (gameId === 'starrail' && slug === 'banner-schedule-guide') return await StarRailBannerGuide({ locale });
+  if (gameId === 'starrail' && isStarRailCmsGuide(slug)) return await StarRailCmsGuide({ locale, slug });
 
   const runtime = await getGuideRuntime(gameId);
   const guide = await getGuideBySlug(runtime, gameId, slug);
