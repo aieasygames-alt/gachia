@@ -1,0 +1,59 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 29,
+      "slug": "geniuses-repose",
+      "updatedAt": "2026-11-25T12:07:45.133Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 30,
+      "slug": "shadowed-by-night",
+      "updatedAt": "2026-11-25T12:07:45.139Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 31,
+      "slug": "along-the-passing-shore",
+      "updatedAt": "2026-11-25T12:07:45.145Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 32,
+      "slug": "brighter-than-the-sun",
+      "updatedAt": "2026-11-25T12:07:45.148Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 33,
+      "slug": "before-dawn",
+      "updatedAt": "2026-11-25T12:07:45.152Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 34,
+      "slug": "indelible-promise",
+      "updatedAt": "2026-11-25T12:07:45.155Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 35,
+      "slug": "shattered-home",
+      "updatedAt": "2026-11-25T12:07:45.159Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 36,
+      "slug": "fine-fruit",
+      "updatedAt": "2026-11-25T12:07:45.163Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 37,
+      "slug": "day-one-of-my-new-life",
+      "updatedAt": "2026-11-25T12:07:45.166Z",
+      "action": "created_draft"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+.private/
+artifact/
+module/
+*.html
+
+__pycache__/

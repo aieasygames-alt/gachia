@@ -1,0 +1,60 @@
+[
+  {
+    "name": "天才们的休憩",
+    "url": "https://wiki.biligame.com/sr/%E5%A4%A9%E6%89%8D%E4%BB%AC%E7%9A%84%E4%BC%91%E6%86%A9",
+    "status": 200,
+    "sha256": "726d6dd1af297bb62b3d83e55ac5820fdd16851c7ddae104b0a1d3bda737c374"
+  },
+  {
+    "name": "黑夜如影随行",
+    "url": "https://wiki.biligame.com/sr/%E9%BB%91%E5%A4%9C%E5%A6%82%E5%BD%B1%E9%9A%8F%E8%A1%8C",
+    "status": 200,
+    "sha256": "f8777e418d08793be207a1bf2b3010009f4d0b4c00e50cdfd262ef19f95d8352"
+  },
+  {
+    "name": "行于流逝的岸",
+    "url": "https://wiki.biligame.com/sr/%E8%A1%8C%E4%BA%8E%E6%B5%81%E9%80%9D%E7%9A%84%E5%B2%B8",
+    "status": 200,
+    "sha256": "a9b2045c7628f1fe3650bb8dbf2a9386ffd6523d56acae9d74df95af2d424a16"
+  },
+  {
+    "name": "比阳光更明亮的",
+    "url": "https://wiki.biligame.com/sr/%E6%AF%94%E9%98%B3%E5%85%89%E6%9B%B4%E6%98%8E%E4%BA%AE%E7%9A%84",
+    "status": 200,
+    "sha256": "26142b7009433576188a0b29f0bbcbb17a79178bf36df3b36575b10fe87e2391"
+  },
+  {
+    "name": "拂晓之前",
+    "url": "https://wiki.biligame.com/sr/%E6%8B%82%E6%99%93%E4%B9%8B%E5%89%8D",
+    "status": 200,
+    "sha256": "57eb086b7d36680fb29dad24d22e4c48cdde7b221a72b768c323076865e9996b"
+  },
+  {
+    "name": "铭记于心的约定",
+    "url": "https://wiki.biligame.com/sr/%E9%93%AD%E8%AE%B0%E4%BA%8E%E5%BF%83%E7%9A%84%E7%BA%A6%E5%AE%9A",
+    "status": 200,
+    "sha256": "80a0e6f78f6506fa42b1636034b96fcd09b25b8189128ade8a5156260ce0d34e",
+    "transport": "direct public read (proxy returned 567)"
+  },
+  {
+    "name": "乐圮",
+    "url": "https://wiki.biligame.com/sr/%E4%B9%90%E5%9C%AE",
+    "status": 200,
+    "sha256": "ad50a153f609b1f9b37bb11b8e0b0eb85ce89ffea13a31cfd83fa97c1f1036fc",
+    "transport": "direct public read (proxy returned 567)"
+  },
+  {
+    "name": "嘉果",
+    "url": "https://wiki.biligame.com/sr/%E5%98%89%E6%9E%9C",
+    "status": 200,
+    "sha256": "63571f7c6c8caf40b3d5ad1ea82752f3f589fad7261ce9eacaae6c91b0f88cc6",
+    "transport": "direct public read (proxy returned 567)"
+  },
+  {
+    "name": "余生的第一天",
+    "url": "https://wiki.biligame.com/sr/%E4%BD%99%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A4%A9",
+    "status": 200,
+    "sha256": "a4f3030fd1dcab704b20eb9fe08c968acd3c4a0a633c7b12d8931cb389e097cb",
+    "transport": "direct public read (proxy returned 567)"
+  }
+]

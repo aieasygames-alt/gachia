@@ -1,0 +1,16 @@
+[
+  {
+    "name": "en-light_cones",
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/en/light_cones.json",
+    "status": 200,
+    "sha256": "0e5998f2d95dfec3ea1fe0a1ef2e00f6205d44b234711b836426523dc3cba3dc",
+    "purpose": "legacy compatibility snapshot; not English CMS publication"
+  },
+  {
+    "name": "en-light_cone_ranks",
+    "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/en/light_cone_ranks.json",
+    "status": 200,
+    "sha256": "1539e308f38cb03491859ddb48ba79e856d47f1e477d7ad1801b2611506e9b33",
+    "purpose": "legacy compatibility snapshot; not English CMS publication"
+  }
+]

@@ -3,17 +3,22 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import batch from '../../../reports/starrail-equipment-2026-11-25/batch.json';
 import reruns from '../../../reports/starrail-warp-cones-2026-11-25/batch.json';
-import { isStarRailCmsEquipment } from '@gachia/data/cms/starrail-equipment';
+import remaining from '../../../reports/starrail-remaining-cones-2026-11-25/batch.json';
+import { isStarRailCmsEquipment, starRailCmsEquipmentCanonicalId } from '@gachia/data/cms/starrail-equipment';
 import { parseStarRailUpdate, isCommunityStarRailSource } from '@gachia/data/cms/starrail-updates';
 const { load } = vi.hoisted(() => ({ load: vi.fn() }));
 vi.mock('@/lib/starrail-publication', () => ({ loadStarRailUpdates: load }));
 vi.mock('@/lib/i18n/navigation', () => ({ Link: ({ children, href }: { children: React.ReactNode; href: string }) => createElement('a', { href }, children) }));
 import { StarRailCmsEquipment, StarRailCmsEquipmentCards, starRailEquipmentMetadata } from '@/components/wiki/starrail-cms-equipment';
-const docs = [...batch.creates, ...reruns.creates].map(d => parseStarRailUpdate(d)!);
+const docs = [...batch.creates, ...reruns.creates, ...remaining.creates].map(d => parseStarRailUpdate(d)!);
 describe('independent CMS equipment publication', () => {
   beforeEach(() => load.mockImplementation(async (locale: string) => ({ source: 'cms', updates: locale === 'zh' ? docs : [] })));
   it('validates route ownership and specific reviewed sources', () => {
     expect(docs.every(Boolean)).toBe(true);
+    expect(starRailCmsEquipmentCanonicalId('weapons', 'welcome-to-the-cosmic-city')).toBe('welcome-to-the-galactic-city');
+    expect(isStarRailCmsEquipment('weapons', 'welcome-to-the-cosmic-city')).toBe(true);
+    expect(starRailCmsEquipmentCanonicalId('artifacts', 'welcome-to-the-cosmic-city')).toBeUndefined();
+    expect(parseStarRailUpdate({ ...batch.creates[0], slug: 'welcome-to-the-cosmic-city' })).toBeNull();
     expect(parseStarRailUpdate({ ...batch.creates[0], slug: 'unknown-equipment' })).toBeNull();
     expect(parseStarRailUpdate({ ...batch.creates[0], sources: [{ url: 'https://starrailstation.com/cn/relics/331' }] })).toBeNull();
     expect(isCommunityStarRailSource(batch.creates[0]!.sources[0]!.url)).toBe(true);
