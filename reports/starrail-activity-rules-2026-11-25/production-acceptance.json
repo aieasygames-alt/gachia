@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com",
+  "previousRevision": 1795574539627,
+  "revision": 1795576626357,
+  "locales": [
+    {
+      "locale": "zh",
+      "status": 200,
+      "revision": 1795576626357,
+      "records": 10,
+      "cacheControl": "no-store",
+      "allReviewedTextRendered": true
+    },
+    {
+      "locale": "en",
+      "status": 200,
+      "revision": 1795576626357,
+      "records": 0,
+      "cacheControl": "no-store",
+      "allReviewedTextRendered": true
+    },
+    {
+      "locale": "ja",
+      "status": 200,
+      "revision": 1795576626357,
+      "records": 0,
+      "cacheControl": "no-store",
+      "allReviewedTextRendered": true
+    }
+  ],
+  "smoke": [
+    {
+      "path": "/zh",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/characters",
+      "status": 200
+    }
+  ],
+  "contentWrites": 0,
+  "workerDeployments": 0
+}

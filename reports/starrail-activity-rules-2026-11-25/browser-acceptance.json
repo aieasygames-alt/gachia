@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "url": "https://gachia.com/zh/starrail/version",
+  "method": "CUA loaded production page and read accessibility text",
+  "observed": [
+    "已发布更新",
+    "国服4.7好礼：12月23日05:59截止与自定义遗器",
+    "国服奇库寻遗：权限卡、暂存替换与保障开箱",
+    "国服欢闹厨房：限时奖励截止后仍可体验常驻玩法",
+    "三条对应正文、适用范围、2026-11-25来源核验日期与官方来源链接均已展示"
+  ],
+  "workerDeployment": "ca31ee73-9119-4238-95a5-47ae8402c161",
+  "followUp": [
+    "专题推荐中的旧跃迁攻略摘要仍显示v4.4；不属于当前game-updates集合，后续需沿攻略独立更新链路核验替换。"
+  ]
+}

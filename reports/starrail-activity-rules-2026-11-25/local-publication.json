@@ -1,0 +1,26 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 4,
+      "slug": "v4-7-gifts-and-eidolons",
+      "updatedAt": "2026-11-25T03:16:52.975Z",
+      "versionCount": 6
+    },
+    {
+      "id": 9,
+      "slug": "v4-7-cn-relic-vault-rules",
+      "updatedAt": "2026-11-25T03:16:52.985Z",
+      "versionCount": 2
+    },
+    {
+      "id": 10,
+      "slug": "v4-7-cn-kitchen-reward-rules",
+      "updatedAt": "2026-11-25T03:16:52.992Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 10,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}
