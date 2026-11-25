@@ -7,6 +7,7 @@ import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import { notFound } from 'next/navigation';
 import { ROCO_LIST_REVIEW } from '@/lib/roco-public-review';
+import { StarRailCmsCharacterCard } from '@/components/wiki/starrail-cms-character';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -250,7 +251,7 @@ export default async function CharactersPage({
   const chars = await getCharacterListData(gameId, locale);
 
   if (chars.length > 0) {
-    return <><CharacterListPage chars={chars} locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
+    return <>{gameId === 'starrail' && <StarRailCmsCharacterCard locale={locale} />}<CharacterListPage chars={chars} locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;
   }
 
   notFound();

@@ -7,6 +7,7 @@ import { getPayload } from 'payload';
 import seed from '../../../packages/data/cms/starrail-snapshot.json';
 import { importUpdates } from '../lib/import-updates';
 import { parseStarRailUpdate } from '../../../packages/data/cms/starrail-updates';
+import characterBatch from '../../../reports/starrail-structured-character-2026-11-25/batch.json';
 
 test('real Payload + SQLite: draft isolation, publish, restricted writes, history and idempotent imports', async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), 'gachia-payload-test-'));
@@ -47,6 +48,15 @@ test('real Payload + SQLite: draft isolation, publish, restricted writes, histor
     await payload.update({ collection: 'game-updates', id: draft.id, data: { _status: 'draft' }, draft: false });
     const unpublished = await payload.find({ collection: 'game-updates', overrideAccess: false, draft: false });
     assert.equal(unpublished.totalDocs, 0);
+    const character = parseStarRailUpdate(characterBatch.creates[0]);
+    assert.ok(character?.characterData);
+    const draftCharacter = await payload.create({ collection: 'game-updates', data: { ...character, _status: 'draft' }, draft: true });
+    assert.equal((await payload.find({ collection: 'game-updates', overrideAccess: false, draft: false })).totalDocs, 0);
+    const savedCharacter = await payload.update({ collection: 'game-updates', id: draftCharacter.id, data: { _status: 'published' }, draft: false });
+    assert.deepEqual(parseStarRailUpdate(savedCharacter)?.characterData, character.characterData);
+    await assert.rejects(payload.update({ collection: 'game-updates', id: savedCharacter.id, data: { characterData: { ...character.characterData, skills: [] } }, draft: false }));
+    const characterHistory = await payload.findVersions({ collection: 'game-updates', where: { parent: { equals: savedCharacter.id } } });
+    assert.ok(characterHistory.totalDocs >= 2);
   } finally {
     await payload.destroy();
     await rm(directory, { recursive: true, force: true });

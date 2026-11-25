@@ -160,6 +160,18 @@ export interface GameUpdate {
   checkedAt: string;
   currentVersion?: string | null;
   releaseDate?: string | null;
+  /**
+   * 独立角色页与材料计算器共用。完整五项技能、六次晋阶和十三个节点须通过发布校验；无数据的角色资料可留空。
+   */
+  characterData?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   facts: {
     text: string;
     id?: string | null;
@@ -289,6 +301,7 @@ export interface GameUpdatesSelect<T extends boolean = true> {
   checkedAt?: T;
   currentVersion?: T;
   releaseDate?: T;
+  characterData?: T;
   facts?:
     | T
     | {

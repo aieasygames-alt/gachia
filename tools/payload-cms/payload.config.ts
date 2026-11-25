@@ -61,6 +61,7 @@ const Updates: CollectionConfig = {
       validate: (v: unknown) => isContentDate(v) || '请输入有效的 YYYY-MM-DD 日期。' },
     { name: 'currentVersion', label: '版本号 / 名称', type: 'text', maxLength: 100, admin: { condition: d => d.kind === 'version' } },
     { name: 'releaseDate', label: '官方发布日期（YYYY-MM-DD）', type: 'text', admin: { condition: d => d.kind === 'version' } },
+    { name: 'characterData', label: '角色倍率与材料数据', type: 'json', admin: { condition: d => d.kind === 'character', description: '独立角色页与材料计算器共用。完整五项技能、六次晋阶和十三个节点须通过发布校验；无数据的角色资料可留空。' } },
     { name: 'facts', label: '已核验事实', type: 'array', required: true, minRows: 1, maxRows: 20,
       fields: [{ name: 'text', label: '事实', type: 'textarea', required: true, maxLength: 4000 }] },
     { name: 'boundary', label: '未核验项 / 时间与地区边界', type: 'textarea', required: true, maxLength: 2000 },
@@ -76,6 +77,6 @@ export default buildConfig({
   serverURL: process.env.CMS_SERVER_URL || 'http://127.0.0.1:4320',
   admin: { user: 'users', importMap: { baseDir: directory }, meta: { titleSuffix: '· Gachia 内容管理' } },
   collections: [Users, Updates],
-  db: sqliteAdapter({ client: { url: process.env.DATABASE_URL || 'file:./.data/payload.db' }, push: process.env.NODE_ENV !== 'production' }),
+  db: sqliteAdapter({ client: { url: process.env.DATABASE_URL || 'file:./.data/payload.db' }, migrationDir: path.join(directory, 'migrations'), push: process.env.NODE_ENV !== 'production' }),
   typescript: { outputFile: path.join(directory, 'payload-types.ts') },
 });

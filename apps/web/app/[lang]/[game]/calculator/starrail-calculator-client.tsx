@@ -9,6 +9,9 @@ import { starrailCharacters, getStarRailCharacterImage, getStarRailCharacterName
 import { getStarRailMaterialById } from '@gachia/data/games/starrail/items';
 import { getMaterialsForCharacter as getStarRailMaterialsForCharacter } from '@gachia/data/games/starrail/extras';
 import type { StarRailCharacter } from '@gachia/data/games/starrail/types';
+import type { VerifiedStarRailCharacter } from '@gachia/data/cms/starrail-character';
+import { StarRailVerifiedMaterials } from '@/components/wiki/starrail-verified-materials';
+import { Link } from '@/lib/i18n/navigation';
 
 const STARRAIL_ELEMENTS = ['fire', 'ice', 'lightning', 'wind', 'physical', 'quantum', 'imaginary'] as const;
 const STARRAIL_ELEMENT_COLORS: Record<string, string> = {
@@ -46,7 +49,7 @@ function t(locale: SupportedLocale, zh: string, en: string, ja?: string) {
   return locale === 'zh' ? zh : locale === 'ja' ? (ja ?? en) : en;
 }
 
-type Tab = 'ascension' | 'damage' | 'planner';
+type Tab = 'ascension' | 'damage' | 'planner' | 'verified';
 
 function LevelSelector({ levels, from, to, onFrom, onTo, locale }: {
   levels: number[];
@@ -122,8 +125,8 @@ function ResultCard({ label, value, color }: { label: string; value: string; col
 }
 
 
-export function StarRailCalculator({ locale }: { locale: SupportedLocale }) {
-  const [tab, setTab] = useState<Tab>('ascension');
+export function StarRailCalculator({ locale, verifiedCharacter, checkedAt }: { locale: SupportedLocale; verifiedCharacter?: VerifiedStarRailCharacter; checkedAt?: string }) {
+  const [tab, setTab] = useState<Tab>(verifiedCharacter ? 'verified' : 'ascension');
   const gameConfig = GAMES.starrail;
 
   return (
@@ -132,8 +135,8 @@ export function StarRailCalculator({ locale }: { locale: SupportedLocale }) {
         {t(locale, '计算器', 'Calculator', '計算機')}
       </h1>
 
-      <div className="mb-6 flex gap-1 rounded-lg bg-game-surface p-1">
-        {(['ascension', 'damage', 'planner'] as Tab[]).map((tb) => (
+      <div className="mb-6 flex flex-wrap gap-1 rounded-lg bg-game-surface p-1">
+        {([...(verifiedCharacter ? ['verified'] : []), 'ascension', 'damage', 'planner'] as Tab[]).map((tb) => (
           <button
             key={tb}
             onClick={() => setTab(tb)}
@@ -143,7 +146,7 @@ export function StarRailCalculator({ locale }: { locale: SupportedLocale }) {
                 : 'text-game-text-muted hover:text-game-text'
             }`}
           >
-            {tb === 'ascension'
+            {tb === 'verified' ? `${verifiedCharacter?.name}材料` : tb === 'ascension'
               ? t(locale, '养成材料计算', 'Ascension Calculator', '育成素材計算')
               : tb === 'damage'
                 ? t(locale, '伤害计算', 'Damage Calculator', 'ダメージ計算')
@@ -152,7 +155,7 @@ export function StarRailCalculator({ locale }: { locale: SupportedLocale }) {
         ))}
       </div>
 
-      {tab === 'ascension' ? <SRAAscensionCalc locale={locale} /> : tab === 'damage' ? <SRDamageCalc locale={locale} /> : <SRMaterialPlanner locale={locale} />}
+      {tab === 'verified' && verifiedCharacter ? <><p className="mb-4 text-sm text-game-text-muted">来源核验 {checkedAt} · <Link className="text-game-primary underline" href="/starrail/characters/aha">角色倍率与来源</Link></p><StarRailVerifiedMaterials character={verifiedCharacter} /></> : tab === 'ascension' ? <SRAAscensionCalc locale={locale} /> : tab === 'damage' ? <SRDamageCalc locale={locale} /> : <SRMaterialPlanner locale={locale} />}
     </div>
   );
 }

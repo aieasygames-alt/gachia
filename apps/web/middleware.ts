@@ -7,6 +7,7 @@ import { isWorkerPreviewOrigin } from './lib/preview-origin';
 import { isRetiredPage } from './lib/retired-pages';
 import { shadowLocalEnabled } from '../../packages/core/shadow-local-gate';
 import { isStarRailCmsGuide } from '@gachia/data/cms/starrail-guides';
+import { STARRAIL_CMS_CHARACTERS } from '@gachia/data/cms/starrail-character';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -285,7 +286,8 @@ function routeMiddleware(request: NextRequest) {
   const isMarketIntel = locale && secondSegment === 'tools' && thirdSegment === 'market-intel' && segments.length === 3;
   const isStarRailUpdates = locale && game === 'starrail' && (
     segments.length === 2 ||
-    (['version', 'events'].includes(thirdSegment ?? '') && segments.length === 3) ||
+    (['version', 'events', 'calculator', 'characters'].includes(thirdSegment ?? '') && segments.length === 3) ||
+    (thirdSegment === 'characters' && Object.hasOwn(STARRAIL_CMS_CHARACTERS, fourthSegment ?? '') && segments.length === 4) ||
     (thirdSegment === 'guides' && (fourthSegment === 'banner-schedule-guide' || isStarRailCmsGuide(fourthSegment ?? '')) && segments.length === 4)
   );
   if (isHomepage || isMarketIntel || isStarRailUpdates || (locale && game && thirdSegment === 'shared')) {

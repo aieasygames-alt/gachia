@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "adminStatus": 200,
+  "publishedRecords": 19,
+  "newCharacterDataFieldCompiled": true,
+  "draftIsolated": true,
+  "previousBuildPreserved": ".data/next-before-structured-character-20261125"
+}

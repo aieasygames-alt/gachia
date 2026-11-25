@@ -13,12 +13,12 @@ describe('Star Rail cloud publication', () => {
   afterEach(() => { vi.unstubAllEnvs(); vi.resetAllMocks(); });
   it('disables browser and CDN HTML caching for all live Star Rail CMS readers', () => {
     for (const locale of ['zh', 'en', 'ja']) {
-      for (const route of ['', '/version', '/events', '/guides/banner-schedule-guide', ...Object.keys(STARRAIL_CMS_GUIDES).map(slug => `/guides/${slug}`)]) {
+      for (const route of ['', '/version', '/events', '/characters', '/characters/aha', '/calculator', '/guides/banner-schedule-guide', ...Object.keys(STARRAIL_CMS_GUIDES).map(slug => `/guides/${slug}`)]) {
         const response = middleware(new NextRequest(`https://gachia.com/${locale}/starrail${route}`));
         expect(response.headers.get('cache-control')).toBe('no-store');
       }
     }
-    expect(middleware(new NextRequest('https://gachia.com/zh/starrail/characters')).headers.get('cache-control')).toContain('public');
+    expect(middleware(new NextRequest('https://gachia.com/zh/starrail/characters/seele')).headers.get('cache-control')).toContain('public');
     expect(middleware(new NextRequest('https://gachia.com/zh/wuwa/version')).headers.get('cache-control')).toContain('public');
   });
   it('accepts a complete empty withdrawal but rejects drafts, duplicate identities and other games', () => {

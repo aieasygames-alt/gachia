@@ -1,3 +1,4 @@
+import { parseStarRailCharacter, STARRAIL_CMS_CHARACTERS, type VerifiedStarRailCharacter } from './starrail-character';
 // A deliberately small contract shared by Payload and the website, without a CMS runtime dependency.
 export type UpdateLocale = 'zh' | 'en' | 'ja';
 export type UpdateKind = 'version' | 'banner' | 'event' | 'character' | 'guide';
@@ -15,6 +16,7 @@ export interface StarRailUpdate {
   sources: { url: string }[];
   currentVersion?: string;
   releaseDate?: string;
+  characterData?: VerifiedStarRailCharacter;
   _status: 'published';
 }
 
@@ -73,12 +75,15 @@ export function parseStarRailUpdate(input: unknown): StarRailUpdate | null {
   if (!Array.isArray(d.facts) || !d.facts.length || d.facts.length > 20 || !d.facts.every(f => f && text(f.text, 4000))) return null;
   if (!Array.isArray(d.sources) || !d.sources.length || d.sources.length > 10 || !d.sources.every(s => s && isStarRailSource(s.url))) return null;
   if (d.kind === 'version' && (!text(d.currentVersion, 100) || !isContentDate(d.releaseDate))) return null;
+  const characterData = d.characterData == null ? undefined : parseStarRailCharacter(d.characterData);
+  if (characterData === null || (characterData && (d.kind !== 'character' || d.slug !== STARRAIL_CMS_CHARACTERS[characterData.id]))) return null;
   // Strip internal CMS fields, relationships and unknown keys before rendering.
   return {
     gameId: 'starrail', slug: d.slug, locale: d.locale as UpdateLocale, kind: d.kind as UpdateKind,
     title: d.title, summary: d.summary, region: d.region, boundary: d.boundary, checkedAt: d.checkedAt,
     facts: d.facts.map(f => ({ text: f.text })), sources: d.sources.map(s => ({ url: s.url })),
     ...(d.kind === 'version' ? { currentVersion: d.currentVersion as string, releaseDate: d.releaseDate as string } : {}),
+    ...(characterData ? { characterData } : {}),
     _status: 'published',
   };
 }

@@ -17,6 +17,8 @@ import { CharacterAvatar } from '@/components/wiki/character-avatar';
 import { CHARACTER_META_OVERRIDES } from './character-detail-shared';
 import { ensureMetaLength, isAniimoCharacterIndexable, isContentUnderReview } from '@/lib/seo-metadata';
 import { getAniimoCharacterById } from '@gachia/data/games/aniimo/characters';
+import { STARRAIL_CMS_CHARACTERS } from '@gachia/data/cms/starrail-character';
+import { StarRailCmsCharacter, starRailCharacterMetadata } from '@/components/wiki/starrail-cms-character';
 
 export const dynamicParams = false;
 
@@ -44,9 +46,9 @@ export async function generateStaticParams() {
     })),
   );
 
-  return entries.flatMap(({ gameId, characters }) =>
+  return [...LOCALES.flatMap(lang => Object.keys(STARRAIL_CMS_CHARACTERS).map(id => ({ lang, game: 'starrail', id }))), ...entries.flatMap(({ gameId, characters }) =>
     LOCALES.flatMap((lang) => characters.map((char) => ({ lang, game: gameId, id: char.id }))),
-  );
+  )];
 }
 
 export async function generateMetadata({
@@ -57,6 +59,7 @@ export async function generateMetadata({
   const { lang, game, id } = await params;
   const locale = lang as SupportedLocale;
   const gameId = game as GameId;
+  if (gameId === 'starrail' && Object.hasOwn(STARRAIL_CMS_CHARACTERS, id)) return starRailCharacterMetadata(locale, id as keyof typeof STARRAIL_CMS_CHARACTERS);
   const meta = await getCharacterMetaData(gameId, id, locale);
   if (!meta) return {};
 
@@ -120,6 +123,7 @@ export default async function CharacterDetailPage({ params }: Props) {
 
   switch (gameId) {
     case 'starrail': {
+      if (Object.hasOwn(STARRAIL_CMS_CHARACTERS, id)) return <StarRailCmsCharacter id={id as keyof typeof STARRAIL_CMS_CHARACTERS} locale={locale} />;
       const mod = await import('./starrail-character-detail');
       return <mod.StarRailCharacterDetailPage id={id} locale={locale} />;
     }

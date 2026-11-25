@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { GAMES, CATEGORY_LABELS, LOCALES } from '@gachia/core';
 import type { GameId, SupportedLocale } from '@gachia/core';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
+import { loadStarRailCharacterPublication } from '@/components/wiki/starrail-cms-character';
+import { StarRailCalculator } from './starrail-calculator-client';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -60,5 +62,9 @@ export default async function CalculatorPage({
   const gameId = game as GameId;
 
   if (gameId === 'genshin') notFound();
+  if (gameId === 'starrail') {
+    const doc = await loadStarRailCharacterPublication(locale, 'aha');
+    return <StarRailCalculator locale={locale} verifiedCharacter={doc?.characterData} checkedAt={doc?.checkedAt} />;
+  }
   return <CalculatorClient gameId={gameId} locale={locale} />;
 }

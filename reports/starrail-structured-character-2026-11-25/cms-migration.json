@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "method": "Payload additive migration",
+  "nullableColumns": [
+    "game_updates.character_data",
+    "_game_updates_v.version_character_data"
+  ],
+  "probeRecordsUnchanged": 19,
+  "actualPublicRecordsUnchanged": 19,
+  "backup": ".private/payload-before.db"
+}

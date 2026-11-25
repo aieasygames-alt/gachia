@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { NextRequest } from 'next/server';
-import { expect, it } from 'vitest';
+import { expect, it, vi } from 'vitest';
+vi.mock('@/lib/starrail-publication', () => ({ loadStarRailUpdates: async () => ({ source: 'cms', updates: [] }) }));
 import CalculatorPage from '../app/[lang]/[game]/calculator/page';
 import middleware from '../middleware';
 
