@@ -5,9 +5,19 @@ import { parseStarRailPublication } from '@gachia/data/cms/starrail-publication'
 const { prepare, first, run } = vi.hoisted(() => ({ prepare: vi.fn(), first: vi.fn(), run: vi.fn() }));
 vi.mock('@/lib/db', () => ({ getD1: () => ({ prepare }) }));
 import { GET, PUT } from '@/app/api/cms/starrail/route';
+import { NextRequest } from 'next/server';
+import middleware from '@/middleware';
 
 describe('Star Rail cloud publication', () => {
   afterEach(() => { vi.unstubAllEnvs(); vi.resetAllMocks(); });
+  it('disables browser and CDN HTML caching for each live Star Rail version page', () => {
+    for (const locale of ['zh', 'en', 'ja']) {
+      const response = middleware(new NextRequest(`https://gachia.com/${locale}/starrail/version`));
+      expect(response.headers.get('cache-control')).toBe('no-store');
+    }
+    expect(middleware(new NextRequest('https://gachia.com/zh/starrail/characters')).headers.get('cache-control')).toContain('public');
+    expect(middleware(new NextRequest('https://gachia.com/zh/wuwa/version')).headers.get('cache-control')).toContain('public');
+  });
   it('accepts a complete empty withdrawal but rejects drafts, duplicate identities and other games', () => {
     expect(parseStarRailPublication({ revision: 1, docs: [] })).toEqual({ revision: 1, docs: [] });
     for (const docs of [[{ ...seed[0], _status: 'draft' }], [seed[0], seed[0]], [{ ...seed[0], gameId: 'genshin' }]]) {
