@@ -77,15 +77,32 @@
   },
   {
     "id": "download-install-guide",
-    "title": "无限大下载与配置指南：PS5、PC、Android、iOS、预下载和安装准备",
-    "titleEn": "Ananta Download and Specs Guide: PS5, PC, Android, iOS, Preload and Install Prep",
-    "category": "beginner",
-    "categoryZh": "新手指南",
-    "categoryEn": "Beginner",
-    "summary": "围绕无限大 2027年1月15日全球上线，整理 PS5、PC、Android、iOS 下载、预下载、配置、容量和安全安装入口。",
-    "summaryEn": "Download preparation for Ananta global launch on January 15, 2027, covering PS5, PC, Android, iOS, preload, specs, storage, and safe install routes.",
-    "content": "## 无限大下载与配置准备\n\n信息更新：2026-08-26。无限大 / Ananta 计划于 2027年1月15日全球上线，平台为 PlayStation 5、PC、Android 和 iOS。\n\n### 下载方式\n\n上线前请优先关注这些入口：\n\n1. **PC**：官网启动器、官方下载页、预下载公告。\n2. **Android**：官方站、Google Play 或官方确认的商店入口。\n3. **iOS**：App Store 预约和下载页面。\n4. **PS5**：PlayStation Store 页面、预载和地区开放状态。\n\n### 配置与容量\n\n官方最终 PC 配置、移动端机型要求、PS5 包体和资源包大小仍需以后续公告为准。开放世界动作游戏通常需要较大存储空间，建议提前预留 SSD/手机空间，但不要把社区猜测写成最低配置。\n\n### 安全安装原则\n\n- 只从官网、官方商店或官方测试资格入口下载。\n- 不安装第三方网盘、提前流出的 APK 或未知启动器。\n- 预下载开放后再确认包体、服务器、账号和地区。\n- 切换平台前先确认跨平台存档和账号绑定规则。",
-    "contentEn": "## Ananta Download and Specs Prep\n\nUpdated on 2026-08-26. Ananta is planned for global release on January 15, 2027, on PlayStation 5, PC, Android, and iOS.\n\n### Download routes\n\nBefore launch, prioritize these entries:\n\n1. **PC**: official launcher, official download page, and preload notices.\n2. **Android**: official site, Google Play, or officially confirmed store routes.\n3. **iOS**: App Store reservation and download page.\n4. **PS5**: PlayStation Store page, preload, and regional access.\n\n### Specs and storage\n\nFinal PC specs, mobile device requirements, PS5 package size, and resource downloads still need official confirmation. Prepare storage for an open-world action game, but do not publish community guesses as minimum requirements.\n\n### Safe install rules\n\n- Download only from the official site, official stores, or official test access.\n- Avoid third-party file shares, leaked APKs, and unknown launchers.\n- After preload opens, confirm package size, servers, accounts, and region.\n- Before switching platforms, confirm cross-save and account-linking rules.",
+    "faq": [
+      {
+        "answer": "Ananta is planned for global release on January 15, 2027. Preload and final download timing should follow the official site and platform stores.",
+        "answerZh": "无限大计划于 2027年1月15日全球上线。预下载和正式下载时间请以官网和平台商店为准。",
+        "question": "When can I download Ananta?",
+        "questionZh": "无限大什么时候可以下载？"
+      },
+      {
+        "answer": "The currently listed platforms are PS5, PC, Android, and iOS. Treat other platforms as unconfirmed until official updates.",
+        "answerZh": "当前列出的平台为 PS5、PC、Android 和 iOS；其他平台需等待官方后续确认。",
+        "question": "Which platforms support Ananta?",
+        "questionZh": "无限大支持哪些平台？"
+      },
+      {
+        "answer": "Final PC requirements have not been confirmed in this content set. Check the official download page before installing.",
+        "answerZh": "当前内容集不确认最终 PC 配置，请在安装前查看官方下载页。",
+        "question": "What are the PC requirements for Ananta?",
+        "questionZh": "无限大PC配置要求是什么？"
+      },
+      {
+        "answer": "The final install size and preload package size should follow official store or launcher information.",
+        "answerZh": "最终安装容量和预下载包体大小应以官方商店或启动器信息为准。",
+        "question": "How much storage does Ananta need?",
+        "questionZh": "无限大需要多少存储空间？"
+      }
+    ],
     "tags": [
       "下载",
       "安装",
@@ -94,32 +111,15 @@
       "Install",
       "新手"
     ],
-    "faq": [
-      {
-        "question": "When can I download Ananta?",
-        "questionZh": "无限大什么时候可以下载？",
-        "answer": "Ananta is planned for global release on January 15, 2027. Preload and final download timing should follow the official site and platform stores.",
-        "answerZh": "无限大计划于 2027年1月15日全球上线。预下载和正式下载时间请以官网和平台商店为准。"
-      },
-      {
-        "question": "Which platforms support Ananta?",
-        "questionZh": "无限大支持哪些平台？",
-        "answer": "The currently listed platforms are PS5, PC, Android, and iOS. Treat other platforms as unconfirmed until official updates.",
-        "answerZh": "当前列出的平台为 PS5、PC、Android 和 iOS；其他平台需等待官方后续确认。"
-      },
-      {
-        "question": "What are the PC requirements for Ananta?",
-        "questionZh": "无限大PC配置要求是什么？",
-        "answer": "Final PC requirements have not been confirmed in this content set. Check the official download page before installing.",
-        "answerZh": "当前内容集不确认最终 PC 配置，请在安装前查看官方下载页。"
-      },
-      {
-        "question": "How much storage does Ananta need?",
-        "questionZh": "无限大需要多少存储空间？",
-        "answer": "The final install size and preload package size should follow official store or launcher information.",
-        "answerZh": "最终安装容量和预下载包体大小应以官方商店或启动器信息为准。"
-      }
-    ]
+    "title": "无限大下载与配置指南：PS5、PC、Android、iOS、预下载和安装准备",
+    "content": "## 无限大下载与配置准备\n\n信息更新：2026-08-26。无限大 / Ananta 计划于 2027年1月15日全球上线，平台为 PlayStation 5、PC、Android 和 iOS。\n\n### 下载方式\n\n上线前请优先关注这些入口：\n\n1. **PC**：官网启动器、官方下载页、预下载公告。\n2. **Android**：官方站、Google Play 或官方确认的商店入口。\n3. **iOS**：App Store 预约和下载页面。\n4. **PS5**：PlayStation Store 页面、预载和地区开放状态。\n\n### 配置与容量\n\n官方最终 PC 配置、移动端机型要求、PS5 包体和资源包大小仍需以后续公告为准。开放世界动作游戏通常需要较大存储空间，建议提前预留 SSD/手机空间，但不要把社区猜测写成最低配置。\n\n### 安全安装原则\n\n- 只从官网、官方商店或官方测试资格入口下载。\n- 不安装第三方网盘、提前流出的 APK 或未知启动器。\n- 预下载开放后再确认包体、服务器、账号和地区。\n- 切换平台前先确认跨平台存档和账号绑定规则。\n\n### 安装前检查清单\n\n开始下载前，可以先完成以下检查，减少安装中断后反复排查的时间：\n\n1. 确认下载页面的游戏名称、发行方和所选平台，避免把预约、测试报名或社区帖子当成正式安装入口。\n2. 查看设备可用存储空间，并在下载页或启动器给出容量要求后再次核对；不要只按下载包大小判断安装空间是否足够。\n3. 确认网络连接和设备供电稳定，再开始较大的资源下载。使用移动网络前，先检查自己的流量安排。\n4. 如需登录或绑定账号，先阅读当前平台的账号说明，记录自己选择的登录方式；不要把验证码或密码交给代下载服务。\n5. 遇到下载失败或校验错误时，先记录报错信息，再查看启动器或商店的修复说明；不要为了绕过提示而关闭设备安全防护。\n\n完成这些检查后，再按对应平台的下载说明操作。尚未公布的开放时间、配置、容量和账号互通规则继续以当前下载页及游戏内说明为准。",
+    "summary": "围绕无限大 2027年1月15日全球上线，整理 PS5、PC、Android、iOS 下载、预下载、配置、容量和安全安装入口。",
+    "titleEn": "Ananta Download and Specs Guide: PS5, PC, Android, iOS, Preload and Install Prep",
+    "category": "beginner",
+    "contentEn": "## Ananta Download and Specs Prep\n\nUpdated on 2026-08-26. Ananta is planned for global release on January 15, 2027, on PlayStation 5, PC, Android, and iOS.\n\n### Download routes\n\nBefore launch, prioritize these entries:\n\n1. **PC**: official launcher, official download page, and preload notices.\n2. **Android**: official site, Google Play, or officially confirmed store routes.\n3. **iOS**: App Store reservation and download page.\n4. **PS5**: PlayStation Store page, preload, and regional access.\n\n### Specs and storage\n\nFinal PC specs, mobile device requirements, PS5 package size, and resource downloads still need official confirmation. Prepare storage for an open-world action game, but do not publish community guesses as minimum requirements.\n\n### Safe install rules\n\n- Download only from the official site, official stores, or official test access.\n- Avoid third-party file shares, leaked APKs, and unknown launchers.\n- After preload opens, confirm package size, servers, accounts, and region.\n- Before switching platforms, confirm cross-save and account-linking rules.",
+    "summaryEn": "Download preparation for Ananta global launch on January 15, 2027, covering PS5, PC, Android, iOS, preload, specs, storage, and safe install routes.",
+    "categoryEn": "Beginner",
+    "categoryZh": "新手指南"
   },
   {
     "id": "combat-system-guide",

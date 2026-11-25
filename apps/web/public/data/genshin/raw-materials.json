@@ -28,9 +28,9 @@
   },
   {
     "id": "agnidus-agate-gemstone",
-    "name": "燃愿玛瑙宝石",
-    "nameEn": "Agnidus Agate Gemstone",
+    "name": "燃愿玛瑙",
     "type": "character-ascension",
+    "nameEn": "Agnidus Agate Gemstone",
     "rarity": 5,
     "source": "Boss掉落: Pyro相关Boss",
     "sourceEn": "Boss Drop: Pyro related bosses"
@@ -64,9 +64,9 @@
   },
   {
     "id": "varunada-lazurite-gemstone",
-    "name": "涤净青金宝石",
-    "nameEn": "Varunada Lazurite Gemstone",
+    "name": "涤净青金",
     "type": "character-ascension",
+    "nameEn": "Varunada Lazurite Gemstone",
     "rarity": 5,
     "source": "Boss掉落: Hydro相关Boss",
     "sourceEn": "Boss Drop: Hydro related bosses"
@@ -100,9 +100,9 @@
   },
   {
     "id": "vajrada-amethyst-gemstone",
-    "name": "最胜紫晶宝石",
-    "nameEn": "Vajrada Amethyst Gemstone",
+    "name": "最胜紫晶",
     "type": "character-ascension",
+    "nameEn": "Vajrada Amethyst Gemstone",
     "rarity": 5,
     "source": "Boss掉落: Electro相关Boss",
     "sourceEn": "Boss Drop: Electro related bosses"
@@ -136,9 +136,9 @@
   },
   {
     "id": "shivada-jade-gemstone",
-    "name": "哀叙冰玉宝石",
-    "nameEn": "Shivada Jade Gemstone",
+    "name": "哀叙冰玉",
     "type": "character-ascension",
+    "nameEn": "Shivada Jade Gemstone",
     "rarity": 5,
     "source": "Boss掉落: Cryo相关Boss",
     "sourceEn": "Boss Drop: Cryo related bosses"
@@ -172,9 +172,9 @@
   },
   {
     "id": "nagadus-emerald-gemstone",
-    "name": "生长碧翡宝石",
-    "nameEn": "Nagadus Emerald Gemstone",
+    "name": "生长碧翡",
     "type": "character-ascension",
+    "nameEn": "Nagadus Emerald Gemstone",
     "rarity": 5,
     "source": "Boss掉落: Dendro相关Boss",
     "sourceEn": "Boss Drop: Dendro related bosses"
@@ -208,9 +208,9 @@
   },
   {
     "id": "vayuda-turquoise-gemstone",
-    "name": "自在松石宝石",
-    "nameEn": "Vayuda Turquoise Gemstone",
+    "name": "自在松石",
     "type": "character-ascension",
+    "nameEn": "Vayuda Turquoise Gemstone",
     "rarity": 5,
     "source": "Boss掉落: Anemo相关Boss",
     "sourceEn": "Boss Drop: Anemo related bosses"
@@ -244,9 +244,9 @@
   },
   {
     "id": "prithiva-topaz-gemstone",
-    "name": "坚牢黄玉宝石",
-    "nameEn": "Prithiva Topaz Gemstone",
+    "name": "坚牢黄玉",
     "type": "character-ascension",
+    "nameEn": "Prithiva Topaz Gemstone",
     "rarity": 5,
     "source": "Boss掉落: Geo相关Boss",
     "sourceEn": "Boss Drop: Geo related bosses"
@@ -254,11 +254,11 @@
   {
     "id": "teachings-of-freedom",
     "name": "「自由」的教导",
-    "nameEn": "Teachings of Freedom",
     "type": "talent-book",
+    "nameEn": "Teachings of Freedom",
     "rarity": 2,
     "source": "秘境: 蒙德 (周一/四/日)",
-    "sourceEn": "Domain: Mondstadt (周一/四/日)"
+    "sourceEn": "Domain: Mondstadt (Monday/Thursday/Sunday)"
   },
   {
     "id": "guide-of-freedom",
@@ -658,9 +658,9 @@
   },
   {
     "id": "dvalins-sigh",
-    "name": "东风之息",
-    "nameEn": "Dvalin's Sigh",
+    "name": "东风的吐息",
     "type": "weekly-boss",
+    "nameEn": "Dvalin's Sigh",
     "rarity": 5,
     "source": "周本: Stormterror",
     "sourceEn": "Weekly Boss: Stormterror"
@@ -685,18 +685,18 @@
   },
   {
     "id": "tail-of-boreas",
-    "name": "北风的尾羽",
-    "nameEn": "Tail of Boreas",
+    "name": "北风之尾",
     "type": "weekly-boss",
+    "nameEn": "Tail of Boreas",
     "rarity": 5,
     "source": "周本: Lupus Boreas",
     "sourceEn": "Weekly Boss: Lupus Boreas"
   },
   {
     "id": "ring-of-boreas",
-    "name": "北风的戒指",
-    "nameEn": "Ring of Boreas",
+    "name": "北风之环",
     "type": "weekly-boss",
+    "nameEn": "Ring of Boreas",
     "rarity": 5,
     "source": "周本: Lupus Boreas",
     "sourceEn": "Weekly Boss: Lupus Boreas"
@@ -739,9 +739,9 @@
   },
   {
     "id": "dragon-lords-crown",
-    "name": "龙之王冠",
-    "nameEn": "Dragon Lord's Crown",
+    "name": "龙王之冕",
     "type": "weekly-boss",
+    "nameEn": "Dragon Lord's Crown",
     "rarity": 5,
     "source": "周本: Azhdaha",
     "sourceEn": "Weekly Boss: Azhdaha"
@@ -821,90 +821,90 @@
   {
     "id": "everflame-seed",
     "name": "常燃火种",
-    "nameEn": "Everflame Seed",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Everflame Seed",
+    "rarity": 4,
     "source": "Boss掉落: Pyro Regisvine",
     "sourceEn": "Boss Drop: Pyro Regisvine"
   },
   {
     "id": "cleansing-heart",
-    "name": "涤净青莲",
-    "nameEn": "Cleansing Heart",
+    "name": "净水之心",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Cleansing Heart",
+    "rarity": 4,
     "source": "Boss掉落: Rhodeia of Loch",
     "sourceEn": "Boss Drop: Rhodeia of Loch"
   },
   {
     "id": "lightning-prism",
     "name": "雷光棱镜",
-    "nameEn": "Lightning Prism",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Lightning Prism",
+    "rarity": 4,
     "source": "Boss掉落: Electro Hypostasis",
     "sourceEn": "Boss Drop: Electro Hypostasis"
   },
   {
     "id": "hoarfrost-core",
     "name": "极寒之核",
-    "nameEn": "Hoarfrost Core",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Hoarfrost Core",
+    "rarity": 4,
     "source": "Boss掉落: Cryo Regisvine",
     "sourceEn": "Boss Drop: Cryo Regisvine"
   },
   {
     "id": "basalt-petrification",
     "name": "玄岩之塔",
-    "nameEn": "Basalt Petrification",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Basalt Pillar",
+    "rarity": 4,
     "source": "Boss掉落: Geo Hypostasis",
     "sourceEn": "Boss Drop: Geo Hypostasis"
   },
   {
     "id": "perpetual-heart",
-    "name": "永续机心",
-    "nameEn": "Perpetual Heart",
+    "name": "恒常机关之心",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Perpetual Heart",
+    "rarity": 4,
     "source": "Boss掉落: Perpetual Mechanical Array",
     "sourceEn": "Boss Drop: Perpetual Mechanical Array"
   },
   {
     "id": "storm-beads",
     "name": "雷霆数珠",
-    "nameEn": "Storm Beads",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Storm Beads",
+    "rarity": 4,
     "source": "Boss掉落: Thunder Manifestation",
     "sourceEn": "Boss Drop: Thunder Manifestation"
   },
   {
     "id": "dew-of-repudiation",
     "name": "排异之露",
-    "nameEn": "Dew of Repudiation",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Dew of Repudiation",
+    "rarity": 4,
     "source": "Boss掉落: Hydro Hypostasis",
     "sourceEn": "Boss Drop: Hydro Hypostasis"
   },
   {
     "id": "dragonheirs-false-fin",
     "name": "龙嗣伪鳍",
-    "nameEn": "Dragonheir's False Fin",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Dragonheir's False Fin",
+    "rarity": 4,
     "source": "Boss掉落: Bathysmal Vishap Herd",
     "sourceEn": "Boss Drop: Bathysmal Vishap Herd"
   },
   {
     "id": "smaragdistite-jade-branch",
-    "name": "翠翎恐蕈之核",
-    "nameEn": "Majestic Hooked Beak",
+    "name": "蕈王钩喙",
     "type": "boss-drop",
-    "rarity": 5,
+    "nameEn": "Majestic Hooked Beak",
+    "rarity": 4,
     "source": "Boss掉落: Jadeplume Terrorshroom",
     "sourceEn": "Boss Drop: Jadeplume Terrorshroom"
   },
@@ -937,9 +937,9 @@
   },
   {
     "id": "valberry",
-    "name": "树莓",
-    "nameEn": "Valberry",
+    "name": "落落莓",
     "type": "local-specialty",
+    "nameEn": "Valberry",
     "rarity": 1,
     "source": "野外采集: 蒙德",
     "sourceEn": "Field Collection: Mondstadt"
@@ -1081,9 +1081,9 @@
   },
   {
     "id": "fluorescent-fungus",
-    "name": "荧光粉",
-    "nameEn": "Fluorescent Fungus",
+    "name": "幽灯蕈",
     "type": "local-specialty",
+    "nameEn": "Fluorescent Fungus",
     "rarity": 1,
     "source": "野外采集: 稻妻",
     "sourceEn": "Field Collection: Inazuma"
@@ -1154,8 +1154,8 @@
   {
     "id": "rukkhashava-mushroom",
     "name": "树王圣体菇",
-    "nameEn": "Rukkhashava Mushroom",
     "type": "local-specialty",
+    "nameEn": "Rukkhashava Mushrooms",
     "rarity": 1,
     "source": "野外采集: 须弥",
     "sourceEn": "Field Collection: Sumeru"
@@ -1171,9 +1171,9 @@
   },
   {
     "id": "scarab",
-    "name": "圣甲虫",
-    "nameEn": "Scarab",
+    "name": "圣金虫",
     "type": "local-specialty",
+    "nameEn": "Scarab",
     "rarity": 1,
     "source": "野外采集: 须弥",
     "sourceEn": "Field Collection: Sumeru"
@@ -1207,9 +1207,9 @@
   },
   {
     "id": "lumitoile",
-    "name": "灵光珠",
-    "nameEn": "Lumitoile",
+    "name": "幽光星星",
     "type": "local-specialty",
+    "nameEn": "Lumitoile",
     "rarity": 1,
     "source": "野外采集: 枫丹",
     "sourceEn": "Field Collection: Fontaine"
@@ -1234,9 +1234,9 @@
   },
   {
     "id": "subdetection-unit",
-    "name": "区域侦测模块",
-    "nameEn": "Subdetection Unit",
+    "name": "子探测单元",
     "type": "local-specialty",
+    "nameEn": "Subdetection Unit",
     "rarity": 1,
     "source": "野外采集: 枫丹",
     "sourceEn": "Field Collection: Fontaine"
@@ -1342,57 +1342,57 @@
   },
   {
     "id": "divining-scroll",
-    "name": "导能的绘卷",
-    "nameEn": "Divining Scroll",
+    "name": "导能绘卷",
     "type": "common-drop",
-    "rarity": 2,
+    "nameEn": "Divining Scroll",
+    "rarity": 1,
     "source": "怪物掉落: 萨满",
     "sourceEn": "Enemy Drop: Samachurls"
   },
   {
     "id": "concealing-scroll",
-    "name": "封魔的绘卷",
-    "nameEn": "Sealed Scroll",
+    "name": "封魔绘卷",
     "type": "common-drop",
-    "rarity": 3,
+    "nameEn": "Sealed Scroll",
+    "rarity": 2,
     "source": "怪物掉落: 萨满",
     "sourceEn": "Enemy Drop: Samachurls"
   },
   {
     "id": "forbidden-curse-scroll",
-    "name": "禁咒的绘卷",
-    "nameEn": "Forbidden Curse Scroll",
+    "name": "禁咒绘卷",
     "type": "common-drop",
-    "rarity": 4,
+    "nameEn": "Forbidden Curse Scroll",
+    "rarity": 3,
     "source": "怪物掉落: 萨满",
     "sourceEn": "Enemy Drop: Samachurls"
   },
   {
     "id": "recruits-insignia",
-    "name": "寻宝鸦印",
+    "name": "新兵的徽记",
     "nameEn": "Recruit's Insignia",
     "type": "common-drop",
     "rarity": 1,
-    "source": "怪物掉落: 盗宝团",
-    "sourceEn": "Enemy Drop: Treasure Hoarders"
+    "source": "愚人众·先遣队掉落\n愚人众·债务处理人少量掉落\n愚人众·萤术士少量掉落\n星尘兑换",
+    "sourceEn": "Dropped by Fatui Skirmishers\nDropped by some Fatui Agents\nDropped uncommonly by Fatui Cicin Mages\nStardust Exchange"
   },
   {
     "id": "sergeants-insignia",
-    "name": "藏宝鸦印",
+    "name": "士官的徽记",
     "nameEn": "Sergeant's Insignia",
     "type": "common-drop",
     "rarity": 2,
-    "source": "怪物掉落: 盗宝团",
-    "sourceEn": "Enemy Drop: Treasure Hoarders"
+    "source": "40级以上愚人众·先遣队掉落\n40级以上愚人众·债务处理人少量掉落\n40级以上愚人众·萤术士少量掉落\n星尘兑换\n占位-可合成数量:{0}",
+    "sourceEn": "Dropped by Lv. 40+ Fatui Skirmishers\nDropped uncommonly by Lv. 40+ Fatui Agents\nDropped uncommonly by Lv. 40+ Fatui Cicin Mages\nStardust Exchange\nPlaceholder - Craftable Amount: {0}"
   },
   {
     "id": "lieutenants-insignia",
-    "name": "攫金鸦印",
+    "name": "尉官的徽记",
     "nameEn": "Lieutenant's Insignia",
     "type": "common-drop",
     "rarity": 3,
-    "source": "怪物掉落: 盗宝团",
-    "sourceEn": "Enemy Drop: Treasure Hoarders"
+    "source": "60级以上愚人众·先遣队掉落\n60级以上愚人众·债务处理人少量掉落\n60级以上愚人众·萤术士少量掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}",
+    "sourceEn": "Dropped by Lv. 60+ Fatui Skirmishers\nDropped uncommonly by Lv. 60+ Fatui Agents\nDropped uncommonly by Lv. 60+ Fatui Cicin Mages\nStardust Exchange: Craft after exchanging\nPlaceholder - Craftable Amount: {0}"
   },
   {
     "id": "hunters-sacrificial-knife",
@@ -1423,55 +1423,55 @@
   },
   {
     "id": "old-handguard",
-    "name": "破缺的刀镡",
-    "nameEn": "Old Handguard",
+    "name": "破旧的刀镡",
     "type": "common-drop",
-    "rarity": 2,
+    "nameEn": "Old Handguard",
+    "rarity": 1,
     "source": "怪物掉落: 野伏",
     "sourceEn": "Enemy Drop: Nobushi"
   },
   {
     "id": "kageuchi-handguard",
-    "name": "影打的刀镡",
-    "nameEn": "Kageuchi Handguard",
+    "name": "影打刀镡",
     "type": "common-drop",
-    "rarity": 3,
+    "nameEn": "Kageuchi Handguard",
+    "rarity": 2,
     "source": "怪物掉落: 野伏",
     "sourceEn": "Enemy Drop: Nobushi"
   },
   {
     "id": "famous-handguard",
     "name": "名刀镡",
-    "nameEn": "Famous Handguard",
     "type": "common-drop",
-    "rarity": 4,
+    "nameEn": "Famed Handguard",
+    "rarity": 3,
     "source": "怪物掉落: 野伏",
     "sourceEn": "Enemy Drop: Nobushi"
   },
   {
     "id": "floating-core",
     "name": "浮游干核",
-    "nameEn": "Spectral Husk",
     "type": "common-drop",
-    "rarity": 2,
+    "nameEn": "Spectral Husk",
+    "rarity": 1,
     "source": "怪物掉落: 漂浮灵",
     "sourceEn": "Enemy Drop: Specters"
   },
   {
     "id": "suffused-core",
     "name": "浮游幽核",
-    "nameEn": "Spectral Heart",
     "type": "common-drop",
-    "rarity": 3,
+    "nameEn": "Spectral Heart",
+    "rarity": 2,
     "source": "怪物掉落: 漂浮灵",
     "sourceEn": "Enemy Drop: Specters"
   },
   {
     "id": "crystallizing-core",
     "name": "浮游晶化核",
-    "nameEn": "Spectral Nucleus",
     "type": "common-drop",
-    "rarity": 4,
+    "nameEn": "Spectral Nucleus",
+    "rarity": 3,
     "source": "怪物掉落: 漂浮灵",
     "sourceEn": "Enemy Drop: Specters"
   },
@@ -1504,54 +1504,54 @@
   },
   {
     "id": "meshing-gear",
-    "name": "机关齿轮",
-    "nameEn": "Meshing Gear",
+    "name": "啮合齿轮",
     "type": "common-drop",
-    "rarity": 2,
+    "nameEn": "Meshing Gear",
+    "rarity": 1,
     "source": "怪物掉落: 发条机关",
     "sourceEn": "Enemy Drop: Clockwork Meka"
   },
   {
     "id": "mechanical-spur-gear",
-    "name": "机关促动齿轮",
-    "nameEn": "Mechanical Spur Gear",
+    "name": "机关正齿轮",
     "type": "common-drop",
-    "rarity": 3,
+    "nameEn": "Mechanical Spur Gear",
+    "rarity": 2,
     "source": "怪物掉落: 发条机关",
     "sourceEn": "Enemy Drop: Clockwork Meka"
   },
   {
     "id": "artificed-dynamic-gear",
-    "name": "奇特动力齿轮",
-    "nameEn": "Artificed Dynamic Gear",
+    "name": "奇械机芯齿轮",
     "type": "common-drop",
-    "rarity": 4,
+    "nameEn": "Artificed Dynamic Gear",
+    "rarity": 3,
     "source": "怪物掉落: 发条机关",
     "sourceEn": "Enemy Drop: Clockwork Meka"
   },
   {
     "id": "firm-arrowhead",
-    "name": "牢固的箭头",
-    "nameEn": "Firm Arrowhead",
+    "name": "牢固的箭簇",
     "type": "common-drop",
+    "nameEn": "Firm Arrowhead",
     "rarity": 1,
     "source": "怪物掉落: 射手丘丘人",
     "sourceEn": "Enemy Drop: Hilichurl Shooters"
   },
   {
     "id": "sharp-arrowhead",
-    "name": "锐利的箭头",
-    "nameEn": "Sharp Arrowhead",
+    "name": "锐利的箭簇",
     "type": "common-drop",
+    "nameEn": "Sharp Arrowhead",
     "rarity": 2,
     "source": "怪物掉落: 射手丘丘人",
     "sourceEn": "Enemy Drop: Hilichurl Shooters"
   },
   {
     "id": "weathered-arrowhead",
-    "name": "历战的箭头",
-    "nameEn": "Weathered Arrowhead",
+    "name": "历战的箭簇",
     "type": "common-drop",
+    "nameEn": "Weathered Arrowhead",
     "rarity": 3,
     "source": "怪物掉落: 射手丘丘人",
     "sourceEn": "Enemy Drop: Hilichurl Shooters"
@@ -1663,5 +1663,1693 @@
     "rarity": 4,
     "source": "活动奖励、宝箱、任务",
     "sourceEn": "Events, Chests, Quests"
+  },
+  {
+    "id": "crown-of-insight",
+    "name": "智识之冕",
+    "nameEn": "Crown of Insight",
+    "rarity": 5,
+    "type": "talent-material",
+    "typeZh": "角色天赋素材",
+    "description": "提升天赋所需的珍贵素材。\n远古时期，承载与传授智识所用的仪式器具。尽管如今，智慧居于言语及典籍中，但「智识之冕」中残存的力量与智慧仍能给如今的人们带来伟大的突破吧。",
+    "acquisition": [
+      "限时活动奖励"
+    ],
+    "source": "限时活动奖励",
+    "descriptionEn": "A precious Talent Level-Up material.\nOnce a medium for the storage and transfer of wisdom in ancient times. Now, wisdom is found in ancient texts and in profound speech. Nevertheless, this Crown of Insight must still be able to impart some transcendent power and wisdom to its bearer.",
+    "acquisitionEn": [
+      "Limited-Duration Event Reward"
+    ],
+    "sourceEn": "Limited-Duration Event Reward"
+  },
+  {
+    "id": "teachings-of-contention",
+    "name": "「角逐」的教导",
+    "nameEn": "Teachings of Contention",
+    "rarity": 2,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的原则是角逐。\n何为强大者，何为弱小者？唯有胜败彰示着一切，角逐的结果，比任何话语更有说服力。",
+    "acquisition": [
+      "礼包商城兑换",
+      "精通秘境：转竟"
+    ],
+    "source": "礼包商城兑换\n精通秘境：转竟",
+    "descriptionEn": "Talent Level-Up material.\nContention is the principle by which all is weighed in the Nation of Pyro.\nWhat defines strength, and what weakness? Only victory and defeat. The results of a contest are more convincing than any words.",
+    "acquisitionEn": [
+      "Exchanged in the Gift Shop",
+      "Domain of Mastery: Sublime Turning"
+    ],
+    "sourceEn": "Exchanged in the Gift Shop\nDomain of Mastery: Sublime Turning"
+  },
+  {
+    "id": "guide-to-contention",
+    "name": "「角逐」的指引",
+    "nameEn": "Guide to Contention",
+    "rarity": 3,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的原则是角逐。\n人无法与有翼的兽比较飞行的速度，无法与史莱姆比较身躯的柔软，但人自有卓然之处。有时，为何要进行角逐，如何进行角逐，正是认清自己的关键。",
+    "acquisition": [
+      "占位-可合成数量:{0}",
+      "精通秘境：转竟"
+    ],
+    "source": "占位-可合成数量:{0}\n精通秘境：转竟",
+    "descriptionEn": "Talent Level-Up material.\nContention is the principle by which all is weighed in the Nation of Pyro.\nThough humans cannot fly at the speed of winged beasts, nor match the flexibility of slimes, yet still, they have their own unique strengths. Sometimes, understanding both why and how to compete is the key to knowing oneself.",
+    "acquisitionEn": [
+      "Placeholder - Craftable Amount: {0}",
+      "Domain of Mastery: Sublime Turning"
+    ],
+    "sourceEn": "Placeholder - Craftable Amount: {0}\nDomain of Mastery: Sublime Turning"
+  },
+  {
+    "id": "philosophies-of-contention",
+    "name": "「角逐」的哲学",
+    "nameEn": "Philosophies of Contention",
+    "rarity": 4,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的原则是角逐。\n角逐是为了让自身更加强大，在一场角逐的胜负落定之后，胜利者从中获得确立自己方向的自信，失败者获得如何变得强大的启示。在胜负之外，这是角逐真正的意义。",
+    "acquisition": [
+      "占位-可合成数量:{0}",
+      "精通秘境：转竟"
+    ],
+    "source": "占位-可合成数量:{0}\n精通秘境：转竟",
+    "descriptionEn": "Talent Level-Up material.\nContention is the principle by which all is weighed in the Nation of Pyro.\nIts purpose is to make yourself stronger. After the outcome of a competition has been decided, the victor gains the confidence to be sure of their direction, while the loser gains insights on how they must become stronger. Beyond winning or losing, this is the true meaning of contention.",
+    "acquisitionEn": [
+      "Placeholder - Craftable Amount: {0}",
+      "Domain of Mastery: Sublime Turning"
+    ],
+    "sourceEn": "Placeholder - Craftable Amount: {0}\nDomain of Mastery: Sublime Turning"
+  },
+  {
+    "id": "teachings-of-kindling",
+    "name": "「焚燔」的教导",
+    "nameEn": "Teachings of Kindling",
+    "rarity": 2,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的成规是焚燔。\n有所取，即要有所予。想要得到，首先要付出相应的代价，正如应在焚燔中献上的祭品。",
+    "acquisition": [
+      "礼包商城兑换",
+      "精通秘境：空华"
+    ],
+    "source": "礼包商城兑换\n精通秘境：空华",
+    "descriptionEn": "Talent Level-Up material.\nOffering up kindling is the established rule of the Nation of Pyro.\nFor something gained, something must be given. If you wish to obtain something, you must first pay the corresponding price, just like the offerings that should be made as kindling in the process of incineration.",
+    "acquisitionEn": [
+      "Exchanged in the Gift Shop",
+      "Domain of Mastery: Myriad Illusions"
+    ],
+    "sourceEn": "Exchanged in the Gift Shop\nDomain of Mastery: Myriad Illusions"
+  },
+  {
+    "id": "guide-to-kindling",
+    "name": "「焚燔」的指引",
+    "nameEn": "Guide to Kindling",
+    "rarity": 3,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的成规是焚燔。\n想要取得多少的东西，就要付出相应量级的代价。有时为了得到而付出太多，有时却付出的不足而无法得到。能够认识如何正确的付出与得到，也是焚燔的意义之一。",
+    "acquisition": [
+      "占位-可合成数量:{0}",
+      "精通秘境：空华"
+    ],
+    "source": "占位-可合成数量:{0}\n精通秘境：空华",
+    "descriptionEn": "Talent Level-Up material.\nOffering up kindling is the established rule of the Nation of Pyro.\nTo acquire a certain amount of something, one must first pay the corresponding price. Sometimes, you may end up paying too much to obtain something; while other times, you may pay too little, and lose it as a result. Understanding how to strike this balance between giving and receiving is one of the meanings of offering kindling.",
+    "acquisitionEn": [
+      "Placeholder - Craftable Amount: {0}",
+      "Domain of Mastery: Myriad Illusions"
+    ],
+    "sourceEn": "Placeholder - Craftable Amount: {0}\nDomain of Mastery: Myriad Illusions"
+  },
+  {
+    "id": "philosophies-of-kindling",
+    "name": "「焚燔」的哲学",
+    "nameEn": "Philosophies of Kindling",
+    "rarity": 4,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的成规是焚燔。\n所谓的焚燔，是在得到之前，先献出代价，但往往并非一定会有回应与回报。不求回报地付出代价，才是焚燔的真意，因为取得成果的日子终究会到来。",
+    "acquisition": [
+      "占位-可合成数量:{0}",
+      "精通秘境：空华"
+    ],
+    "source": "占位-可合成数量:{0}\n精通秘境：空华",
+    "descriptionEn": "Talent Level-Up material.\nOffering up kindling is the established rule of the Nation of Pyro.\nWhat is meant by offering kindling is to offer up a sacrifice before one obtains something, though it does not always guarantee a response or return. Its true meaning lies in paying a price without expecting a reward — for in the end, the day when the fruits will be reaped is sure to come.",
+    "acquisitionEn": [
+      "Placeholder - Craftable Amount: {0}",
+      "Domain of Mastery: Myriad Illusions"
+    ],
+    "sourceEn": "Placeholder - Craftable Amount: {0}\nDomain of Mastery: Myriad Illusions"
+  },
+  {
+    "id": "teachings-of-conflict",
+    "name": "「纷争」的教导",
+    "nameEn": "Teachings of Conflict",
+    "rarity": 2,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的事理是纷争。\n不去避让矛盾，而是直面冲突，在纷争的结果彰显后，根据此结果决定将行的道路。",
+    "acquisition": [
+      "礼包商城兑换",
+      "精通秘境：旋复"
+    ],
+    "source": "礼包商城兑换\n精通秘境：旋复",
+    "descriptionEn": "Talent Level-Up material.\nConflict is considered reason in the Nation of Pyro.\nRather than avoiding conflict, one should face confrontations head-on. Once the outcome has been made manifest, the path forward should be determined accordingly.",
+    "acquisitionEn": [
+      "Exchanged in the Gift Shop",
+      "Domain of Mastery: Return"
+    ],
+    "sourceEn": "Exchanged in the Gift Shop\nDomain of Mastery: Return"
+  },
+  {
+    "id": "guide-to-conflict",
+    "name": "「纷争」的指引",
+    "nameEn": "Guide to Conflict",
+    "rarity": 3,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的事理是纷争。\n纷争永远能够被更高层面的力量介入并解决，而非不可收拾，这让一切都得以进入可控的境地。纷争亦是一种局限，禁止不计成本地推诿下去，而是要求参与方更干净利落地得出结果。",
+    "acquisition": [
+      "占位-可合成数量:{0}",
+      "精通秘境：旋复"
+    ],
+    "source": "占位-可合成数量:{0}\n精通秘境：旋复",
+    "descriptionEn": "Talent Level-Up material.\nConflict is considered reason in the Nation of Pyro.\nConflicts can always be resolved by greater powers. This fact means that they can always be managed, as opposed to developing into something uncontrollable. Conflict is also a kind of limitation, preventing people from endless shirking of responsibilities without weighing the costs. It demands that participants settle their scores decisively and efficiently.",
+    "acquisitionEn": [
+      "Placeholder - Craftable Amount: {0}",
+      "Domain of Mastery: Return"
+    ],
+    "sourceEn": "Placeholder - Craftable Amount: {0}\nDomain of Mastery: Return"
+  },
+  {
+    "id": "philosophies-of-conflict",
+    "name": "「纷争」的哲学",
+    "nameEn": "Philosophies of Conflict",
+    "rarity": 4,
+    "type": "talent-book",
+    "typeZh": "角色天赋素材",
+    "description": "天赋培养素材。\n火之国土的事理是纷争。\n纷争的前提是，参与争端的人都会真诚地面对自己的欲望，面对欲望，然后在争辩或战斗之中，才不会忘记自己想要取得的东西，也不会偏离原本的目的。",
+    "acquisition": [
+      "占位-可合成数量:{0}",
+      "精通秘境：旋复"
+    ],
+    "source": "占位-可合成数量:{0}\n精通秘境：旋复",
+    "descriptionEn": "Talent Level-Up material.\nConflict is considered reason in the Nation of Pyro.\nThe premise of conflict is that all parties involved must confront their own desires with the utmost sincerity. Only then, amid the fight or debate, can they remain mindful of what they wish to achieve and stay true to their original objectives.",
+    "acquisitionEn": [
+      "Placeholder - Craftable Amount: {0}",
+      "Domain of Mastery: Return"
+    ],
+    "sourceEn": "Placeholder - Craftable Amount: {0}\nDomain of Mastery: Return"
+  },
+  {
+    "id": "treasure-hoarder-insignia",
+    "name": "寻宝鸦印",
+    "nameEn": "Treasure Hoarder Insignia",
+    "rarity": 1,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "骄傲地标识着盗宝团身份的印记，描绘着他们对宝藏永无止境的追求。话虽如此，盗贼的身份真的需要骄傲地展示吗…？",
+    "acquisition": [
+      "盗宝团掉落",
+      "星尘兑换"
+    ],
+    "source": "盗宝团掉落\n星尘兑换",
+    "descriptionEn": "A signet that proudly represents its owner's position as member of the Treasure Hoarders. The pursuit of treasure knows no bounds. That said... Is being a thief something to be proud of?",
+    "acquisitionEn": [
+      "Dropped by Treasure Hoarders",
+      "Stardust Exchange"
+    ],
+    "sourceEn": "Dropped by Treasure Hoarders\nStardust Exchange"
+  },
+  {
+    "id": "silver-raven-insignia",
+    "name": "藏银鸦印",
+    "nameEn": "Silver Raven Insignia",
+    "rarity": 2,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "盗宝团的成员用于相互辨识的乌鸦纹章。盗宝团不问出身，无论何者，只要怀着贪求宝藏的心，有铤而走险的胆识，都可以成为「优秀」的成员。",
+    "acquisition": [
+      "40级以上盗宝团掉落",
+      "星尘兑换",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "40级以上盗宝团掉落\n星尘兑换\n占位-可合成数量:{0}",
+    "descriptionEn": "A raven insignia used by members of the Treasure Hoarders to identify each other. The Treasure Hoarders ask for no resume. Anyone who has an insatiable desire for treasure and is backed up by an equal amount of courage can become a worthy member.",
+    "acquisitionEn": [
+      "Dropped by Lv. 40+ Treasure Hoarders",
+      "Stardust Exchange",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 40+ Treasure Hoarders\nStardust Exchange\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "golden-raven-insignia",
+    "name": "攫金鸦印",
+    "nameEn": "Golden Raven Insignia",
+    "rarity": 3,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "象征着盗宝团唯一的原则与傲骨的徽印。只要广袤的大地上、幽邃的深渊里、未知的海洋中仍有待发掘的秘宝，那么手段不论地征服宝藏的盗宝之魂，就永远不会熄灭。",
+    "acquisition": [
+      "60级以上盗宝团掉落",
+      "星尘兑换：兑换后合成",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "60级以上盗宝团掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}",
+    "descriptionEn": "A raven insignia that symbolizes the pride and the guiding principle of the Treasure Hoarders. Whether it's hidden amidst the vastness of the land or in the depths of the seas, as long as there are treasures to be hunted down, the spirit of Treasure Hoarders, who will stop at nothing to acquire them, will never die.",
+    "acquisitionEn": [
+      "Dropped by Lv. 60+ Treasure Hoarders",
+      "Stardust Exchange: Craft after exchanging",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 60+ Treasure Hoarders\nStardust Exchange: Craft after exchanging\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "fungal-spores",
+    "name": "蕈兽孢子",
+    "nameEn": "Fungal Spores",
+    "rarity": 1,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "蕈兽留下的零星孢子粉末，闪烁着点点微光。仿佛只需一个喷嚏，便会被吹散得无影无踪。",
+    "acquisition": [
+      "蕈兽掉落",
+      "活化状态下蕈兽少量掉落",
+      "枯焦状态下蕈兽少量掉落",
+      "星尘兑换"
+    ],
+    "source": "蕈兽掉落\n活化状态下蕈兽少量掉落\n枯焦状态下蕈兽少量掉落\n星尘兑换",
+    "descriptionEn": "A small amount of glittering spore powder left behind by Floating Fungi. Seems that a sneeze is all it takes for this powder to vanish without a trace.",
+    "acquisitionEn": [
+      "Dropped by Fungi",
+      "Dropped uncommonly by Fungi (activated)",
+      "Dropped uncommonly by Fungi (scorched)",
+      "Stardust Exchange"
+    ],
+    "sourceEn": "Dropped by Fungi\nDropped uncommonly by Fungi (activated)\nDropped uncommonly by Fungi (scorched)\nStardust Exchange"
+  },
+  {
+    "id": "luminescent-pollen",
+    "name": "荧光孢粉",
+    "nameEn": "Luminescent Pollen",
+    "rarity": 2,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "小小一包散发着荧光的蕈兽孢子粉末，在雨林之国是一剂常见的药材，往往被商人用纸包封装起来贩售。",
+    "acquisition": [
+      "40级以上蕈兽掉落",
+      "40级以上活化状态下蕈兽少量掉落",
+      "40级以上枯焦状态下蕈兽少量掉落",
+      "星尘兑换",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "40级以上蕈兽掉落\n40级以上活化状态下蕈兽少量掉落\n40级以上枯焦状态下蕈兽少量掉落\n星尘兑换\n占位-可合成数量:{0}",
+    "descriptionEn": "A small parcel of luminescent Fungal Spore powder, a common medical ingredient in the land of rainforests. Merchants usually sell them in paper packets.",
+    "acquisitionEn": [
+      "Dropped by Lv. 40+ Fungi",
+      "Dropped uncommonly by Lv. 40+ Fungi (activated)",
+      "Dropped uncommonly by Lv. 40+ Fungi (scorched)",
+      "Stardust Exchange",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 40+ Fungi\nDropped uncommonly by Lv. 40+ Fungi (activated)\nDropped uncommonly by Lv. 40+ Fungi (scorched)\nStardust Exchange\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "crystalline-cyst-dust",
+    "name": "孢囊晶尘",
+    "nameEn": "Crystalline Cyst Dust",
+    "rarity": 3,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "从完整的孢子囊中精心收集的大团孢子粉末，想必在合适的环境条件下，将会孕育出一个颇有规模的蕈兽群落吧…",
+    "acquisition": [
+      "60级以上蕈兽掉落",
+      "60级以上活化状态下蕈兽少量掉落",
+      "60级以上枯焦状态下蕈兽少量掉落",
+      "星尘兑换：兑换后合成",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "60级以上蕈兽掉落\n60级以上活化状态下蕈兽少量掉落\n60级以上枯焦状态下蕈兽少量掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}",
+    "descriptionEn": "A huge lump of spore powder collected from a structurally complete spore cyst. Put it in an appropriate environment, and the area might be filled with a thriving aggregation of Floating Fungi later...",
+    "acquisitionEn": [
+      "Dropped by Lv. 60+ Fungi",
+      "Dropped uncommonly by Lv. 60+ Fungi (activated)",
+      "Dropped uncommonly by Lv. 60+ Fungi (scorched)",
+      "Stardust Exchange: Craft after exchanging",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 60+ Fungi\nDropped uncommonly by Lv. 60+ Fungi (activated)\nDropped uncommonly by Lv. 60+ Fungi (scorched)\nStardust Exchange: Craft after exchanging\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "faded-red-satin",
+    "name": "褪色红绸",
+    "nameEn": "Faded Red Satin",
+    "rarity": 1,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "用以遮盖眼睛的红色绸缎，略有残破。\n镀金旅团当中常有人以织物遮蔽双眼，而这种举动的肇始早已失落在时之沙海中。",
+    "acquisition": [
+      "镀金旅团掉落",
+      "星尘兑换"
+    ],
+    "source": "镀金旅团掉落\n星尘兑换",
+    "descriptionEn": "A piece of red satin used to cover the eyes. The fabric is slightly torn.\nMany Eremites tend to cover their eyes with textiles, but the original intention of this practice has long been lost to the sands of time.",
+    "acquisitionEn": [
+      "Dropped by The Eremites",
+      "Stardust Exchange"
+    ],
+    "sourceEn": "Dropped by The Eremites\nStardust Exchange"
+  },
+  {
+    "id": "trimmed-red-silk",
+    "name": "镶边红绸",
+    "nameEn": "Trimmed Red Silk",
+    "rarity": 2,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "镶有简单装饰的红色绸缎。\n老练的战士能够从对手眼神中的破绽，找到先机。镀金旅团早已失去了可效忠的主，能够相信的只有自己。据说，他们坚信万物皆会背叛，连自己的双眼也不例外。",
+    "acquisition": [
+      "40级以上镀金旅团掉落",
+      "星尘兑换",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "40级以上镀金旅团掉落\n星尘兑换\n占位-可合成数量:{0}",
+    "descriptionEn": "A piece of red silk trimmed with simple decorations.\nA seasoned warrior can detect weaknesses from their foe's eyes and thus take advantage. The Eremites have long since lost a master to serve, and now they have no one to trust but themselves. Word has it that they are more than convinced that all things betray, even their own eyes.",
+    "acquisitionEn": [
+      "Dropped by Lv. 40+ Eremites",
+      "Stardust Exchange",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 40+ Eremites\nStardust Exchange\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "rich-red-brocade",
+    "name": "织金红绸",
+    "nameEn": "Rich Red Brocade",
+    "rarity": 3,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "以金丝织成纹路的红色绸缎。\n在日光之下如同镀金的沙漠当中出生的遗民，偶尔会唱起含义已被遗忘的歌谣，赞美平等照耀大地的烈日，痛惜黄昏之末的余晖。在歌谣的终章反复出现的陌生词汇，据说是古老神明的名讳。据说，沙漠之王尚在时，子民们不敢直视太阳般的光辉，因而遮住了自己的双目。",
+    "acquisition": [
+      "60级以上镀金旅团掉落",
+      "星尘兑换：兑换后合成",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "60级以上镀金旅团掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}",
+    "descriptionEn": "A piece of red brocade woven with golden thread.\nThose born in the gilded desert under the sun occasionally sing a song, of which the meaning has been forgotten. They would praise the scorching sun that illuminates the earth as equally as ever and bewail the afterglow at the end of the dusk. Some unfamiliar words recur at the end of the song, which are said to be the names of ancient gods. Legend has it that when the King of the Desert was still alive, his people chose to cover their eyes as they dared not look upon him, whose brilliance was beyond that of the sun.",
+    "acquisitionEn": [
+      "Dropped by Lv. 60+ Eremites",
+      "Stardust Exchange: Craft after exchanging",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 60+ Eremites\nStardust Exchange: Craft after exchanging\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "transoceanic-pearl",
+    "name": "异海凝珠",
+    "nameEn": "Transoceanic Pearl",
+    "rarity": 1,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "击败原海异种后，从其体内取得的细小晶体。\n原海异种依托枫丹的「海」而生，推测是因为水中奇异的能量而形成独特形态的生命体。",
+    "acquisition": [
+      "原海异种掉落",
+      "星尘兑换"
+    ],
+    "source": "原海异种掉落\n星尘兑换",
+    "descriptionEn": "A small crystal obtained from a defeated Fontemer Aberrant.\nFontemer Aberrants arise from Fontaine's sea. They are believed to be a unique life form born from the mysterious energy in the water.",
+    "acquisitionEn": [
+      "Dropped by Fontemer Aberrants",
+      "Stardust Exchange"
+    ],
+    "sourceEn": "Dropped by Fontemer Aberrants\nStardust Exchange"
+  },
+  {
+    "id": "transoceanic-chunk",
+    "name": "异海之块",
+    "nameEn": "Transoceanic Chunk",
+    "rarity": 2,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "击败原海异种后，从其体内取得的结晶体。\n散发着些微神秘的能量。\n尽管传说在航道与人迹所不及的远海中存在着伟大的生命，但寻常的海洋不过乏善可陈，生命力远远不及枫丹的「海」。",
+    "acquisition": [
+      "40级以上原海异种掉落",
+      "星尘兑换",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "40级以上原海异种掉落\n星尘兑换\n占位-可合成数量:{0}",
+    "descriptionEn": "A crystal obtained from a defeated Fontemer Aberrant.\nIt gives off a somewhat mysterious energy.\nAlthough many legends speak of great life forms residing in remote seas beyond human reach, ordinary oceans can hardly compare to the vibrant seas of Fontaine.",
+    "acquisitionEn": [
+      "Dropped by Lv. 40+ Fontemer Aberrants",
+      "Stardust Exchange",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 40+ Fontemer Aberrants\nStardust Exchange\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "xenochromatic-crystal",
+    "name": "异色结晶石",
+    "nameEn": "Xenochromatic Crystal",
+    "rarity": 3,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "击败原海异种后，从其体内取得的大颗结晶。\n其中蕴含着神秘的能量。\n尽管是万水之源，但枫丹之水流向异国之后却失去了其独特的性质。",
+    "acquisition": [
+      "60级以上原海异种掉落",
+      "星尘兑换：兑换后合成",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "60级以上原海异种掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}",
+    "descriptionEn": "A large crystal obtained from a defeated Fontemer Aberrant.\nIt contains a mysterious energy.\nAll rivers and seas originate in Fontaine, but the water loses all its unique properties once it flows outside Fontaine's borders.",
+    "acquisitionEn": [
+      "Dropped by Lv. 60+ Fontemer Aberrants",
+      "Stardust Exchange: Craft after exchanging",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 60+ Fontemer Aberrants\nStardust Exchange: Craft after exchanging\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "juvenile-fang",
+    "name": "稚嫩的尖齿",
+    "nameEn": "Juvenile Fang",
+    "rarity": 1,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "纳塔龙众脱落的牙。\n尚显稚嫩的牙齿，如果有从牙齿判断主人年龄的方式的话，或许就能看出这枚牙齿的主人并未在世上经历太久的岁月。",
+    "acquisition": [
+      "纳塔龙众掉落",
+      "星尘兑换"
+    ],
+    "source": "纳塔龙众掉落\n星尘兑换",
+    "descriptionEn": "A tooth that fell from a Natlan Saurian.\nIt looks like it belonged to a juvenile creature. If there was a way to determine the age of its previous owner, perhaps it would show that they had not yet roamed the world for long.",
+    "acquisitionEn": [
+      "Dropped by Natlan Saurians",
+      "Stardust Exchange"
+    ],
+    "sourceEn": "Dropped by Natlan Saurians\nStardust Exchange"
+  },
+  {
+    "id": "seasoned-fang",
+    "name": "老练的坚齿",
+    "nameEn": "Seasoned Fang",
+    "rarity": 2,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "纳塔龙众脱落的坚牙。\n其上的磨损见证了其主人曾经历的生活与战斗，拥有这等牙齿的龙，想必在纳塔的诸多龙众中，也能被称为了不起的战士吧。",
+    "acquisition": [
+      "40级以上纳塔龙众掉落",
+      "星尘兑换",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "40级以上纳塔龙众掉落\n星尘兑换\n占位-可合成数量:{0}",
+    "descriptionEn": "A sturdy tooth that fell from a Natlan Saurian.\nWear and tear bear witness to the experiences and battles of its previous owner. Among the many Saurians of Natlan, one with such a tooth must have been considered a formidable warrior indeed.",
+    "acquisitionEn": [
+      "Dropped by Lv. 40+ Natlan Saurians",
+      "Stardust Exchange",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 40+ Natlan Saurians\nStardust Exchange\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "tyrants-fang",
+    "name": "横行霸者的利齿",
+    "nameEn": "Tyrant's Fang",
+    "rarity": 3,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "纳塔的强龙脱落的尖锐利齿。\n旁生的锯状结构与其狰狞的形态，可窥见其主人在战斗中的蛮勇。拥有这等牙齿的龙，想必在纳塔诸多龙众中，可称得上是横行无忌的霸者了吧。",
+    "acquisition": [
+      "60级以上纳塔龙众掉落",
+      "星尘兑换：兑换后合成",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "60级以上纳塔龙众掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}",
+    "descriptionEn": "A sharp tooth that fell from a mighty Natlan Saurian.\nIts serrated edge and fearsome shape attest to the ferocity of its owner in battle. Among the many Saurians of Natlan, one with such a tooth must have been a ruthless tyrant indeed.",
+    "acquisitionEn": [
+      "Dropped by Lv. 60+ Natlan Saurians",
+      "Stardust Exchange: Craft after exchanging",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 60+ Natlan Saurians\nStardust Exchange: Craft after exchanging\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "sentrys-wooden-whistle",
+    "name": "卫从的木哨",
+    "nameEn": "Sentry's Wooden Whistle",
+    "rarity": 1,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "纳塔部族卫从的象征。\n战士并非一开始就是战士，得先跟从真正的战士们学习战斗的技巧，这就是部族中「卫从」这一见习职位的由来。",
+    "acquisition": [
+      "部族龙形武士掉落",
+      "星尘兑换"
+    ],
+    "source": "部族龙形武士掉落\n星尘兑换",
+    "descriptionEn": "The symbol of a Natlan tribal sentry.\nWarriors are not born as warriors. They must first acquire the skills of combat by learning under the tutelage of those who have already done so. This is the origin of the trainee position of sentry.",
+    "acquisitionEn": [
+      "Dropped by Sauroform Tribal Warriors",
+      "Stardust Exchange"
+    ],
+    "sourceEn": "Dropped by Sauroform Tribal Warriors\nStardust Exchange"
+  },
+  {
+    "id": "warriors-metal-whistle",
+    "name": "战士的铁哨",
+    "nameEn": "Warrior's Metal Whistle",
+    "rarity": 2,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "纳塔部族战士的象征。\n正式成为部族战士后能够拥有的铁哨。在部族周围巡游，一旦出现危险就用哨声互相通知呼应。这就是部族中「战士」需要履行的职责。",
+    "acquisition": [
+      "40级以上部族龙形武士掉落",
+      "星尘兑换",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "40级以上部族龙形武士掉落\n星尘兑换\n占位-可合成数量:{0}",
+    "descriptionEn": "The symbol of a Natlan tribal warrior.\nA metal whistle that is given to individuals who have been officially recognized as tribal warriors. It is used to communicate and alert others to danger by those that patrol the tribe's vicinity. This is a duty that falls upon the warriors of the tribe.",
+    "acquisitionEn": [
+      "Dropped by Lv. 40+ Sauroform Tribal Warriors",
+      "Stardust Exchange",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 40+ Sauroform Tribal Warriors\nStardust Exchange\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "saurian-crowned-warriors-golden-whistle",
+    "name": "龙冠武士的金哨",
+    "nameEn": "Saurian-Crowned Warrior's Golden Whistle",
+    "rarity": 3,
+    "type": "common-drop",
+    "typeZh": "角色与武器培养素材",
+    "description": "纳塔部族中，获授龙冠的强大武士的象征。\n只有为部族争取到了足够的荣誉，其勇武得到承认之后，才会得到的金哨。但此时其装饰的意义已经高过实际使用的意义，因为头戴龙冠的武士可以独自解决大部分的危机。",
+    "acquisition": [
+      "60级以上部族龙形武士掉落",
+      "星尘兑换：兑换后合成",
+      "占位-可合成数量:{0}"
+    ],
+    "source": "60级以上部族龙形武士掉落\n星尘兑换：兑换后合成\n占位-可合成数量:{0}",
+    "descriptionEn": "Among Natlan's tribes, this is the symbol of a mighty, Saurian-Crowned warrior.\nA golden whistle that is bestowed only upon those who have won great honor for the tribe and shown valor of the highest order. Its symbolic significance now outweighs its practical use, for a Saurian-Crowned warrior is able to handle most crises alone.",
+    "acquisitionEn": [
+      "Dropped by Lv. 60+ Sauroform Tribal Warriors",
+      "Stardust Exchange: Craft after exchanging",
+      "Placeholder - Craftable Amount: {0}"
+    ],
+    "sourceEn": "Dropped by Lv. 60+ Sauroform Tribal Warriors\nStardust Exchange: Craft after exchanging\nPlaceholder - Craftable Amount: {0}"
+  },
+  {
+    "id": "hurricane-seed",
+    "name": "飓风之种",
+    "nameEn": "Hurricane Seed",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "无相之风被击败后，所坍缩成的形态。其中蕴含着至纯的风之力。\n传说在纤细脆弱的蝴蝶体内，也藏有引发飓风的力量。这由纯粹的风构成的蝴蝶，无疑在等待着再次召来暴风的那一天吧。",
+    "acquisition": [
+      "30级以上无相之风掉落"
+    ],
+    "source": "30级以上无相之风掉落",
+    "descriptionEn": "The imploded form of an Anemo Hypostasis upon its defeat.\nContains the essence of Anemo energy.\nIt is said that the power to create hurricanes resides within its seemingly fragile body. This butterfly of pure Anemo energy must surely be waiting for the day when it can conjure up storms once again.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Anemo Hypostases"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Anemo Hypostases"
+  },
+  {
+    "id": "juvenile-jade",
+    "name": "未熟之玉",
+    "nameEn": "Juvenile Jade",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "从古岩龙蜥处取来的结晶物质，蕴含着成为龙的可能性。\n沉眠在山岳中的龙蜥体内，会析出这种黯淡的晶石。璃月有坊间传说认为，力量随着年月积聚，而这种晶石最终会取代原本的心脏，而龙蜥也会成为真正的龙，撼动山岳、撕裂大地。",
+    "acquisition": [
+      "30级以上古岩龙蜥掉落"
+    ],
+    "source": "30级以上古岩龙蜥掉落",
+    "descriptionEn": "A crystalline substance taken from a Primo Geovishap. Within it is contained the potential to become a dragon.\nThese dull crystals are precipitated within the bodies of vishaps sleeping in the mountains. Liyue folklore holds that they will gather power over many years, after which this crystal will, at last, replace their original heart, and the vishap will become a true dragon — one that can shake the mountains and split the earth.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Primo Geovishaps"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Primo Geovishaps"
+  },
+  {
+    "id": "crystalline-bloom",
+    "name": "晶凝之华",
+    "nameEn": "Crystalline Bloom",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "无相之冰绽开的极寒瞬间，凝结而出的至纯冰晶。\n冰霜的结晶永远依凭着冰冷的定则生长、盛放，最终开出冻结一切的凛冬之花。或许滞顿的时间，无法解冻的幽怀，才应当是永存不灭之花的真谛。",
+    "acquisition": [
+      "30级以上无相之冰掉落"
+    ],
+    "source": "30级以上无相之冰掉落",
+    "descriptionEn": "An ice crystal of exceeding purity that is created in the frigid blooming of a Cryo Hypostasis.\nThese frosty crystals will continue to grow according to their own cold, rigid laws, till one day a flower of winter shall bloom and freeze everything. Perhaps it is stagnant time, that never-thawing bosom, that is the essence of this undying flower.",
+    "acquisitionEn": [
+      "Dropped by Lv.30+ Cryo Hypostases"
+    ],
+    "sourceEn": "Dropped by Lv.30+ Cryo Hypostases"
+  },
+  {
+    "id": "marionette-core",
+    "name": "魔偶机心",
+    "nameEn": "Marionette Core",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "能够驱动无机质的机关魔偶剑鬼，使它如同生者一般挥舞刀剑的核心。\n无论是如何精湛的武艺、多么美丽的记忆，也会随着肉体的衰败而凋零。\n恐怕只有将自己的四肢、躯体都换成牢固的机关，最终将心脏换成精密的「机心」，才能比凡骨肉胎更加接近永恒吧…",
+    "acquisition": [
+      "30级以上魔偶剑鬼掉落"
+    ],
+    "source": "30级以上魔偶剑鬼掉落",
+    "descriptionEn": "This core can power the inorganic Maguu Kenki and cause it to wield a blade like a living being.\nFlesh decays, and with it decay all martial arts mastery and all poignant memories.\nPerhaps only by converting one's four limbs and body into sturdy mechanical parts, and by at last sacrificing one's very own heart for a sophisticated mechanical one, can one transcend the impermanence of the fleshly form...",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Maguu Kenki"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Maguu Kenki"
+  },
+  {
+    "id": "smoldering-pearl",
+    "name": "阴燃之珠",
+    "nameEn": "Smoldering Pearl",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "无相之火坍缩成的结晶，不断散发着热量。\n炽热的火焰终有一天会冷却，而熄灭的柴薪也会随着意志而再度熊熊燃烧。无相之火不断的冷却与复燃、消散与凝聚也是这个世界意志的一部分吧，就如同宇宙万物的生生不息。直到漆黑的命运终有一日降临，将森罗万象归于空无为止。",
+    "acquisition": [
+      "30级以上无相之火掉落"
+    ],
+    "source": "30级以上无相之火掉落",
+    "descriptionEn": "A crystallization of a Pyro Hypostasis that constantly emits heat.\nEven the burning flames shall one day grow cold, and even the ashen firewood can will itself back into a raging blaze. It must then be the will of the world that Pyro Hypostases should constantly cool down and heat up, much like the universe teems with endless life... until the fated darkness shall one day descend and bring it all to naught.",
+    "acquisitionEn": [
+      "Dropped by Lv.30+ Pyro Hypostases"
+    ],
+    "sourceEn": "Dropped by Lv.30+ Pyro Hypostases"
+  },
+  {
+    "id": "riftborn-regalia",
+    "name": "兽境王器",
+    "nameEn": "Riftborn Regalia",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "战胜王兽后，得到的折断犄角。在它遭到驱逐后，不应残留在此世才对。\n即使在兽境群狼中贵为王兽，在魔兽的系谱中也不及其兄长们的万分之一吧。\n「黄金」将无数兽境的群狼如同将弃置的画纸一般压缩后而意外产生的畸形魔兽，而寄寓在其犄角中的是足以号令黑色的狼群为它溶解空间的权威。",
+    "acquisition": [
+      "30级以上黄金王兽掉落"
+    ],
+    "source": "30级以上黄金王兽掉落",
+    "descriptionEn": "A broken horn that you obtained from defeating the Wolflord. That said, it should not have left anything behind after your hunt.\nEven a lord among the Riftwolves is nothing before monsters of a higher pedigree.\n\"Gold\" mass-produced these malformed wolf packs almost as if by accident, like shrunken drawings on discarded sheets of paper, and the horns on this one represent its authority to command its dark brood to dissolve space itself.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Golden Wolflords"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Golden Wolflords"
+  },
+  {
+    "id": "runic-fang",
+    "name": "符纹之齿",
+    "nameEn": "Runic Fang",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "神秘的蛇状古代机械用于掘削山壁的「齿」，其上篆刻着无解的不祥符文。\n相传在大地的深黑裂缝中潜藏着庞大的虺类，它们永远怀着对地上世界的憎恨与恶意，抱着不可知的险恶目的，发掘着宏大的隧道…",
+    "acquisition": [
+      "30级以上遗迹巨蛇掉落"
+    ],
+    "source": "30级以上遗迹巨蛇掉落",
+    "descriptionEn": "A \"fang\" with which the mysterious, snakelike machine of old dug into mountains' depths. There are many ominous runes carved on it.\nIt is said that giant serpents lurk in the dark fissures deep beneath the ground. Burning with eternal resentment and malice toward the world above, they throw themselves into digging great tunnels, yet none know what their malicious purposes are...",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Ruin Serpents"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Ruin Serpents"
+  },
+  {
+    "id": "thunderclap-fruitcore",
+    "name": "藏雷野实",
+    "nameEn": "Thunderclap Fruitcore",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "被锋锐树叶包裹着的掣电树核心，肆意向周身散发雷元素。\n大地深处咆哮的能量急切地想要倾泻暴怒，于是不幸的藤蔓也沾染了狂躁的气息，挥舞着扭曲的枝条哀号，不知是想要让他人品尝雷火穿身的苦痛，还是挣扎着期待必至的末日。",
+    "acquisition": [
+      "30级以上掣电树掉落"
+    ],
+    "source": "30级以上掣电树掉落",
+    "descriptionEn": "The core of an Electro Regisvine, wrapped in razor-sharp leaves, wantonly emits Electro energy.\nThe roaring energy rampaging deep within the earth is eager to pour out its rage, thus even tainting these unfortunate vines with its mania, causing them to wail and flail their branches frantically. One can hardly tell whether it longs for others to taste the pain of being continuously electrocuted and charred or if it is struggling, looking forward to its inevitable doom.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Electro Regisvines"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Electro Regisvines"
+  },
+  {
+    "id": "perpetual-caliber",
+    "name": "永续机芯",
+    "nameEn": "Perpetual Caliber",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "从神秘的遗迹机械上取来的动力机关。\n即使它所驱动的机体已经被摧毁，仍在持续运转着。\n地上理应不存在无限持续的能源，关于「永动」的研究成果发表也大多被证伪。然而从这枚机芯可以看出，如今已经覆灭的文明曾经一度触及人所不能抵达的领域。",
+    "acquisition": [
+      "30级以上兆载永劫龙兽掉落"
+    ],
+    "source": "30级以上兆载永劫龙兽掉落",
+    "descriptionEn": "A motive device obtained from a mysterious ruin machine.\nThe machine it once powered may have been destroyed, but it continues to rotate all the same.\nThere should be no such thing as an energy source that can sustain itself forever in this world, and most research results obtained in the field of \"perpetual motion\" have been eventually proved false. Yet, this device is proof that a now-destroyed civilization once reached heights that present-day nations could not hope to match...",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Aeonblight Drakes"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Aeonblight Drakes"
+  },
+  {
+    "id": "light-guiding-tetrahedron",
+    "name": "导光四面体",
+    "nameEn": "Light Guiding Tetrahedron",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "击败神秘的机关组合后，获得的核心部件。\n即使到今日，古老的机械也从未遗忘主人的梦与自己的职责：构筑一千座宫殿、统辖三千台机械、种下一万朵如今已经不再开放的花，为地上一切有灵者重现埋没在沙海中的「乐园」。\n即使荒漠的王者已经不再，梦想也因为深罪的低语而腐败；即使所有魔柱都完全折断、倒塌，原本受王青睐的巨兽隐入热砂的风暴中。",
+    "acquisition": [
+      "30级以上半永恒统辖矩阵掉落"
+    ],
+    "source": "30级以上半永恒统辖矩阵掉落",
+    "descriptionEn": "A core component obtained via defeating a mysterious ruin machine.\nTo this day, these ancient devices have not forgotten the dreams of their masters or their own duties: to build a thousand palaces, to administrate three thousand machines, to sow ten thousand flowers that shall never bloom again, and to recreate a paradise now buried beneath the desert sands for the sake of all who live in this world.\nThough the lord of the desert no longer lives, and those dreams have long been corrupted by sinful whispers, and though all the magical pillars have been broken and have collapsed, the great beast once favored by the king hides still within the great searing storm.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Semi-Intransient Matrices"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Semi-Intransient Matrices"
+  },
+  {
+    "id": "quelled-creeper",
+    "name": "灭诤草蔓",
+    "nameEn": "Quelled Creeper",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "无相之草最终凝聚成的形姿，坚硬的藤蔓包围之下的纯净元素方晶。\n最与常理相悖、又最适宜生命的草元素，与距离一切生命的形态最遥远的无相元素原本不应当相结合出现在大地上吧。一说认为无相元素有「学习」的智性，所以了解到了森林中的多彩与梦。在超越千年的晕染中，也变成了如此的形态。",
+    "acquisition": [
+      "30级以上无相之草掉落"
+    ],
+    "source": "30级以上无相之草掉落",
+    "descriptionEn": "The final coalesced form of the Dendro Hypostasis. The tough vines protect a pure cubic elemental crystal.\nDendro defies any common logic yet exists in perfect harmony with life. Elemental Hypostases, on the contrary, are most distant in appearance to all living beings. The combination of these two should probably never have appeared in this world. It is said that such elemental hypostases have the intelligence to \"learn\" and have thus understood the colors and dreams of the forest, a process that has transformed them into this shape over thousands of years.",
+    "acquisitionEn": [
+      "Dropped by Lv.30+ Dendro Hypostases"
+    ],
+    "sourceEn": "Dropped by Lv.30+ Dendro Hypostases"
+  },
+  {
+    "id": "puppet-strings",
+    "name": "傀儡的悬丝",
+    "nameEn": "Puppet Strings",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "插入机心人偶背部的导管。流淌其中的色彩时而晦暗时而明艳，矛盾到令人恐惧。\n为机心人偶提供能量，同时也如悬挂木偶的丝线一般控制束缚着人偶。\n失去导管支撑，人偶将羸弱得堪比新生幼儿，寸步难行。",
+    "acquisition": [
+      "70级以上「正机之神」挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上「正机之神」挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "Tubes that were inserted into the mechanical puppet's back. The colors that flow within them are sometimes dull, and at others, vibrant. The contrast is so great as to be fearful.\nThey provided power to the mechanical puppet, and at the same time served as its strings, controlling it and binding it.\nOnce the support of these tubes is lost, the puppet becomes as weak as a newborn infant, barely able to even move.",
+    "acquisitionEn": [
+      "Lv. 70+ Shouki no Kami, the Prodigal Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Shouki no Kami, the Prodigal Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "mirror-of-mushin",
+    "name": "无心的渊镜",
+    "nameEn": "Mirror of Mushin",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "正机之主胸前用于隔断外界的镜面。特意绘上了三重巴纹以宣告其身份与威严。\n此纹样并非向雷之主人宣告臣服，\n而是刺往世间既有之威能的利刃；\n此镜面并非隔绝世人批判之目光，\n而是断却俗世一切之污脏的宫墙。\n于此大殿中施舍惩戒，洗净蒙昧，\n颠倒梦想、剜去心因，重书定业。",
+    "acquisition": [
+      "70级以上「正机之神」挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上「正机之神」挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "The mirror that was set in Shouki no Kami's chest to separate him from the outside world. The mitsudomoe symbol is emblazoned on it as a deliberate show of status and might.\nThis symbol, however, is no show of obeisance to the master of lightning, but is instead a blade pointed at the existing powers that be in this world. Nor is the mirror a means to shut out the looks of judgment from onlooking people, but is rather a bulwark against this base and sullied world. Within this great temple shall punishment be meted out and ignorance be cleansed.\nDreams shall be overturned, desires shall be cut away, and karma shall be reset.",
+    "acquisitionEn": [
+      "Lv. 70+ Shouki no Kami, the Prodigal Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Shouki no Kami, the Prodigal Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "dakas-bell",
+    "name": "空行的虚铃",
+    "nameEn": "Daka's Bell",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "状似铃铛，用来连接机体臂部的球形关节部件。看起来精致小巧，却能负荷远超想象的能量。\n链接手臂，自己的双臂就会失去知觉；\n链接腿部，自己的双腿几乎无法使力；\n而链接这颗机械之颅…\n憎恨与痛苦，疯狂与自傲，都不会被洗去。\n万幸。",
+    "acquisition": [
+      "70级以上「正机之神」挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上「正机之神」挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "This ball joint, used to connect mechanical limbs together, is shaped almost like a bell. Though it may seem dainty, it can be used to carry an unimaginably large amount of energy.\nIf connected to one's arms, then one will lose all feeling in them.\nAnd all strength in one's legs will dissipate if such joints are connected to them.\nConnect this joint to one's skull...\nAh, hatred, pain, madness, pride — none of these will be washed away.\nMost fortunate.",
+    "acquisitionEn": [
+      "Lv. 70+ Shouki no Kami, the Prodigal Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Shouki no Kami, the Prodigal Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "pseudo-stamens",
+    "name": "苍砾蕊羽",
+    "nameEn": "Pseudo-Stamens",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "沙虫隐于尾中的苍色鞘翼，仿若绽露的花蕊般纤薄。\n传说在时间开始之前的过去，它们曾在草甸与巨木之下的湿润土地中穿行，如空中飞鸟、水中游鱼。一般认为，花的拟态是为了引诱沙暴中迷途的猎物，但也有说法认为，那盛绽的浮花之形，仿拓的是归于黄沙的，在无数纪元之前的，芳草遍布、繁花依旧盛开的时代。",
+    "acquisition": [
+      "30级以上风蚀沙虫掉落"
+    ],
+    "source": "30级以上风蚀沙虫掉落",
+    "descriptionEn": "The pale wing-sheathes hiding in a Wenut's tail are as thin as the blooming stamens of a flower.\nIt is said that in the past, even before the beginning of time, they used to travel through the moist land under meadows and forests, similar to birds flying across the sky and fish swimming in the water. It is generally believed that their mimicry of flowers is to lure lost prey caught by sandstorms. There is also a theory, however, that their imitation of a blooming flower was inspired by the splendid blossoms countless epochs ago, which have long gone the way of the desert winds.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Setekh Wenut"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Setekh Wenut"
+  },
+  {
+    "id": "evergloom-ring",
+    "name": "常暗圆环",
+    "nameEn": "Evergloom Ring",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "击败呢喃着至暗福音的四臂使者后，得到的环形法器。\n圆环即是通道的造型。是故能产生各种神秘效力的法阵常常以圆环构成。这种环形法器或许便是导引宇宙的门路。",
+    "acquisition": [
+      "30级以上深罪浸礼者掉落"
+    ],
+    "source": "30级以上深罪浸礼者掉落",
+    "descriptionEn": "A mystical weapon obtained after defeating the Four-Armed Envoy of dark tidings.\nRings are shaped like passageways, which is why arcane formations that are meant to produce some mystical effect are often ring-shaped. Such rings are perhaps gateways intended to guide the universe itself.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Iniquitous Baptists"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Iniquitous Baptists"
+  },
+  {
+    "id": "worldspan-fern",
+    "name": "生长天地之蕨草",
+    "nameEn": "Worldspan Fern",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "从阿佩普体内的绿洲中取来的一支蕨草。\n在时间开始之前，世界曾经由龙管辖。而在阿佩普的宫阙灵囿里、草木生长之天地中，首先抽芽的便是蕨草。\n在随后的漫长年月当中，蕨草将变为树木、藤蔓、根茎与草叶，遍布大地。但阿佩普还记得最初的一支蕨草由蜷曲的姿态，向无拘无束的天空伸展开时，发出的细不可闻的声响。",
+    "acquisition": [
+      "70级以上阿佩普的绿洲守望者挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上阿佩普的绿洲守望者挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A fern taken from the oasis within Apep's body.\nAt the dawn of time, the world belonged to the dragons. There, the ferns were the first to sprout in the lush verdant world of Apep's court.\nIn the ages after, these ferns would become trees, vines, roots, and leaves, blanketing the world with their touch. But Apep still remembers the first frond as it stretched freely toward the sky, making a sound so delicate as to go unheard.",
+    "acquisitionEn": [
+      "Lv. 70+ Guardian of Apep's Oasis Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Guardian of Apep's Oasis Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "primordial-greenbloom",
+    "name": "原初绿洲之初绽",
+    "nameEn": "Primordial Greenbloom",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "从阿佩普体内的绿洲中取来的保有古老原始形态的花朵。\n在随后的漫长年月当中，花取得了无穷多的色彩与芬芳，也获得了如夜空中繁星的数量一般多的名字。\n但这朵最初绽放的花始终没有名字。对古老的龙而言，即便玫瑰失去了它的名字，也不会失去它的芳香。定义不过是狭隘短寿的物种用于认识世界的工具；生命是不会为字词所限，永远变化着的。",
+    "acquisition": [
+      "70级以上阿佩普的绿洲守望者挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上阿佩普的绿洲守望者挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A primordial flower procured from the oasis within Apep.\nWith the passing of eons, flowers grew in fragrance and volume, and they gained a collection of titles as numerous as the stars in the night sky.\nHowever, this first flower to bloom never bore any name. For the dragons of old, even if a rose lost its name, it would not lose its scent. Naming things is but how lesser, ephemeral beings understand the world. Life is not constrained by words, and will always grow and evolve.",
+    "acquisitionEn": [
+      "Lv. 70+ Guardian of Apep's Oasis Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Guardian of Apep's Oasis Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "everamber",
+    "name": "亘古树海之一瞬",
+    "nameEn": "Everamber",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "从阿佩普体内的绿洲中取来的一枚琥珀。其中禁锢着细小的，如今已经绝迹的飞虫。\n包裹着细小生命的琥珀对于树木而言是偶然，对其中的存在而言则是命运。\n随着从天而降的灾厄，树木、藤蔓、根茎与花草纷纷枯干，化作尘埃，许多的生命也消失了。\n但静止在琥珀当中，又被珍藏于这一不存在于地上的绿洲里的无名飞虫，也因此得以前往同族无缘抵达的未来。",
+    "acquisition": [
+      "70级以上阿佩普的绿洲守望者挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上阿佩普的绿洲守望者挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A piece of amber taken from the oasis within Apep. Inside the amber, a small, long-extinct insect remains frozen in time.\nTo the tree, it was circumstance that led this little life to be wreathed within its amber. But for said life, this was fate.\nFollowing the heaven-sent disaster, wood, vines, roots, and all manner of flora withered and turned to dust. A great many life forms disappeared.\nBut in the stillness of amber, a nameless insect endures in this otherworldly oasis, reaching a future that no others of its kind could.",
+    "acquisitionEn": [
+      "Lv. 70+ Guardian of Apep's Oasis Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Guardian of Apep's Oasis Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "artificed-spare-clockwork-component-coppelia",
+    "name": "奇械发条备件·歌裴莉娅",
+    "nameEn": "Artificed Spare Clockwork Component — Coppelia",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "属于歌裴莉娅的奇械发条备件，能够为奇械舞者提供能源。\n在制造者的构想中，有着纤细关节的奇械舞者的故事停留在欢快的一瞬。歌裴莉娅将会以超凡的战斗能力为任何试图搅扰此刻的不速之客送去厄运的篇章。",
+    "acquisition": [
+      "30级以上「冰风组曲」掉落"
+    ],
+    "source": "30级以上「冰风组曲」掉落",
+    "descriptionEn": "An artificed spare clockwork component belonging to Coppelia. It powers this artificed dancer.\nAccording to its creator's design, the story of the artificed dancer with delicate joints ends at a merry moment. Coppelia will send whoever attempts to disturb that moment to a chapter of misfortune with her superb combat skills.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ \"Icewind Suite\""
+    ],
+    "sourceEn": "Dropped by Lv. 30+ \"Icewind Suite\""
+  },
+  {
+    "id": "artificed-spare-clockwork-component-coppelius",
+    "name": "奇械发条备件·科培琉司",
+    "nameEn": "Artificed Spare Clockwork Component — Coppelius",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "属于科培琉司的奇械发条备件，能够为奇械舞者提供能源。\n奇械舞者踏着白金的音节，不知昼夜地为观众献上冰风的轮舞。科培琉司不会停下舞步，直至丧钟敲响。",
+    "acquisition": [
+      "30级以上「冰风组曲」掉落"
+    ],
+    "source": "30级以上「冰风组曲」掉落",
+    "descriptionEn": "An artificed spare clockwork component belonging to Coppelius. It powers this artificed dancer.\nThe artificed dancer whirls to a platinum tune, performing an unending waltz of icewind. Coppelius's dance will not stop. He will continue whirling till the bell tolls.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ \"Icewind Suite\""
+    ],
+    "sourceEn": "Dropped by Lv. 30+ \"Icewind Suite\""
+  },
+  {
+    "id": "emperors-resolution",
+    "name": "帝皇的决断",
+    "nameEn": "Emperor's Resolution",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "铁甲熔火帝皇的战锤。\n无论是其他的原海异种，还是发条机关或是一时兴起的讨伐者，它用这只巨钳粉碎了无数觐见者。\n与人不同：在原海异种当中，不存在贵族，也不存在富人之子，谁也无法生来就高于别的同类。能够克服一切逆境、战胜一切天敌的原海异种在漫长的岁月中能够随着捕猎与进食，无限地积累力量成长，最终被充满畏惧地称为霸王。",
+    "acquisition": [
+      "30级以上铁甲熔火帝皇掉落"
+    ],
+    "source": "30级以上铁甲熔火帝皇掉落",
+    "descriptionEn": "The war hammer of the Emperor of Fire and Iron.\nThe mighty crab has crushed countless foes with this giant claw. Be they clockwork meka, other Fontemer Aberrants, or hunters with ill-placed curiosity — all have yielded under its power.\nFontemer Aberrants are different from human beings in that the concepts of aristocracy or inheritance are entirely foreign to them. None of them are born superior. One that survives deadly predators and adversities can accumulate infinite power as it keeps hunting and feeding over centuries. Such a creature is often referred to as an overlord for the fear it inspires.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Emperor of Fire and Iron"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Emperor of Fire and Iron"
+  },
+  {
+    "id": "tourbillon-device",
+    "name": "「图比昂装置」",
+    "nameEn": "\"Tourbillon Device\"",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "实验性场力发生装置的核心部件。\n能够在肉眼几乎无法捕获的高速旋转中，抵消重力影响的精密加工机械件。\n在长久的历史中，枫丹动能工程科学研究院一直在以曾经洗去无数生命，又总有一天会再度遮天蔽日的洪水为敌，寻找着生存的途径。\n而蕴含着庞大能量，能够粉碎大地桎梏的始基矿则一度被认为是开启救赎大门的钥匙。",
+    "acquisition": [
+      "30级以上实验性场力发生装置掉落"
+    ],
+    "source": "30级以上实验性场力发生装置掉落",
+    "descriptionEn": "The core component of the Experimental Field Generator.\nA precision-machined mechanical component that counteracts the effects of gravity via high-speed rotation. The revolution speed is so fast that it is almost impossible to capture with the naked eye.\nThroughout its long history, the Fontaine Research Institute of Kinetic Energy Engineering has always warred against a flood that once washed countless lives away, and may yet cover the earth and sky one day far in the future, searching for a means to survive.\nArkhium, with its immense energetic potential and power to shatter the shackles of the earth, was once considered the key to the gate of salvation.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Experimental Field Generators"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Experimental Field Generators"
+  },
+  {
+    "id": "fontemer-unihorn",
+    "name": "原海麟角",
+    "nameEn": "Fontemer Unihorn",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "千年珍珠骏麟的放电器官，也是象征它的伟大超越的王器。已经在与挑战者的战斗中折断了。\n作为自泡泡海马成长而来的顶尖掠食者，千年珍珠骏麟的进化之旅与别的原海异种截然不同：并不是基于原本的物种结构而进化得更大、更强壮，而是生出了泡泡海马所不具备的肢体、犄角，甚至连同骨骼、肌肉都发生了变化。比起原本应有的形态，它的身姿更像古老传说中的幻兽。在诗人与剧作家的幻想中，即使是海马也会有骐骥在大地上驰骋、跃动的姿态。",
+    "acquisition": [
+      "30级以上千年珍珠骏麟掉落"
+    ],
+    "source": "30级以上千年珍珠骏麟掉落",
+    "descriptionEn": "The electricity-emitting section of the Millennial Pearl Seahorse, and its regalia, the symbol of its surpassing might — now snapped off amidst a clash against a mighty challenger.\nAs the greatest predator that can arise from seahorses, this being's evolutionary journey is not the same as that experienced by other Fontemer Aberrants. It did not start from a base form before growing larger and stronger, but instead grew limbs and a horn that have no place on an ordinary seahorse. Even its musculature and skeleton have changed. It really seems to resemble a fantastical beast from legends of yore more than its original shape. In the imaginations of poets and authors, even seahorses can frolick upon the earth.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Millennial Pearl Seahorses"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Millennial Pearl Seahorses"
+  },
+  {
+    "id": "lightless-silk-string",
+    "name": "无光丝线",
+    "nameEn": "Lightless Silk String",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "与吞星之鲸战斗时，不知不觉缠绕在武器上的细丝。\n在古代的枫丹，曾有人认为主宰万物现象的「法图纳」是由无比细微的「纤维」编制而成，就如同组成竖琴的弦丝。与宏伟的乐声共振的丝线将会带来普世的幸福，正如不谐音会破坏宇宙的肌理。",
+    "acquisition": [
+      "70级以上吞星之鲸挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上吞星之鲸挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A slender strand that somehow ended up entangled on your weapon while fighting the All-Devouring Narwhal.\nIn ancient Fontaine, some thought that Fortuna, which ruled the world, was woven from countless fibers, like the strings of a harp. Strings that resonate with the majestic music would bring happiness to all, while discord would destroy the fabric of the universe.",
+    "acquisitionEn": [
+      "Lv. 70+ All-Devouring Narwhal Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ All-Devouring Narwhal Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "lightless-eye-of-the-maelstrom",
+    "name": "无光涡眼",
+    "nameEn": "Lightless Eye of the Maelstrom",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "从吞星之鲸的战斗中取得的奇异「物质」，实际质量远比从尺寸看上去的重。\n一切都聚集在命定沉重的事物旁，正如黄金比之黑铁、大地比之轻风。正如光线无法从黑暗的涡眼当中逃脱，因缘也会汇聚在沉重的命运上，或许这也是不可逆转的规则吧。",
+    "acquisition": [
+      "70级以上吞星之鲸挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上吞星之鲸挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A strange \"substance\" obtained from fighting against the All-Devouring Narwhal. Its actual weight far exceeds what would be expected given its size.\nEverything gathers around heavy objects, just as gold attracts more than iron, or the ground more than in the breeze blowing above. Just as light cannot escape from the vortex of darkness, cause and effect is attached to fate, perhaps irreversibly so.",
+    "acquisitionEn": [
+      "Lv. 70+ All-Devouring Narwhal Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ All-Devouring Narwhal Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "lightless-mass",
+    "name": "无光质块",
+    "nameEn": "Lightless Mass",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "在与吞星之鲸的激烈战斗中，产生的碎屑。\n宇宙是黑暗而冰冷的地方。\n但仔细看吧。其中总有无比细微的亮光，如同半掩沙中的珍珠、撒在沥青上的碎钻、雾夜中视界尽头的灯光，以及点燃枯草原的火星。",
+    "acquisition": [
+      "70级以上吞星之鲸挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上吞星之鲸挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A fragment produced from the intense battle against the All-Devouring Narwhal.\nThe universe is a dark and cold place.\nBut look carefully. Inside are always faint glimmers of light, like pearls gleaming from within the sand, splinters of diamond sprinkled over asphalt, lights lancing through the fog on a misty night, and sparks that ignite the brightest blazes.",
+    "acquisitionEn": [
+      "Lv. 70+ All-Devouring Narwhal Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ All-Devouring Narwhal Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "water-that-failed-to-transcend",
+    "name": "未能达成超越之水",
+    "nameEn": "Water That Failed To Transcend",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "水形幻人崩溃逸散后留下的唯一痕迹。\n与原海异种体内取出的晶体有非常相近的性质，但当中蕴含了许多细碎的浊物，就如同凝固在拙劣工匠的玻璃制品中的微小气泡。",
+    "acquisition": [
+      "30级以上水形幻人掉落"
+    ],
+    "source": "30级以上水形幻人掉落",
+    "descriptionEn": "The only remnants of Hydro Tulpas after their parts are dispersed.\nThis substance is very similar to the crystals extracted from the bodies of Fontemer Aberrants, but they contain a lot of tiny impurities, like the bubbles in glass crafted by clumsy craftsmen.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Hydro Tulpas"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Hydro Tulpas"
+  },
+  {
+    "id": "cloudseam-scale",
+    "name": "凝云鳞甲",
+    "nameEn": "Cloudseam Scale",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "隐山猊兽的甲鳞，质地冰冷而坚硬。纵然剥离脱落，其上依然萦绕着纯净的仙力，普通的武器难以损之分毫。\n普通的野兽有时也会被逸散的仙力影响，变得比往常更为强大，但猊兽的不同之处在于，萦绕其身的仙力并非源于环境，而是源于它们自身——这也是其首领的地位往往被认为与仙人等同的原因。",
+    "acquisition": [
+      "30级以上隐山猊兽掉落"
+    ],
+    "source": "30级以上隐山猊兽掉落",
+    "descriptionEn": "Cold and solid scales from a Solitary Suanni. They retain pure adeptal energy even after falling off and cannot be damaged by ordinary weapons.\nOrdinary beasts can sometimes be affected by errant adeptal energy and become more powerful than usual. However, a suanni's adeptal energy originates from within themselves, which is why their leader is often regarded as equal to adepti.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Solitary Suanni"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Solitary Suanni"
+  },
+  {
+    "id": "fragment-of-a-golden-melody",
+    "name": "金色旋律的断章",
+    "nameEn": "Fragment of a Golden Melody",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "半人马魔像胸前掉落的金色别章。与之连缀的碎石上所镌刻着的曲调，似乎是某部宏大乐剧的断章。\n曾有人认为，永恒幸福的谐和音律将会响彻寰宇，直至一切命运的尽头，但谐律亦会变奏。最终，当叛逆的神王跌落王座，不朽的王都化为丘墟，失去了军团的统帅手中的琴又要为谁人奏响呢。",
+    "acquisition": [
+      "30级以上魔像督军掉落"
+    ],
+    "source": "30级以上魔像督军掉落",
+    "descriptionEn": "A golden fragment that fell from the centaur golem's chest. Putting the tune inscribed upon the shattered rubble back together, it appears to be a small sliver of a grander musical movement.\nPeople once believed that the song of eternal happiness and harmony would resound throughout the world till the end of all destinies. But harmonies can be changed. When the rebellious God King fell from his throne, the imperishable capital was reduced to refuse and rubble — for whom, then, shall the lyre in the hands of a legion-less commander play?",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Legatus Golems"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Legatus Golems"
+  },
+  {
+    "id": "fading-candle",
+    "name": "残火灯烛",
+    "nameEn": "Fading Candle",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "完成与「仆人」的决斗后，在废墟中拾起的灯烛。\n相传当烛火摇曳于罪人的手中，光亮即可化作阴影，掩盖脚步声与杀意。\n不知用何种材料制成，燃烧后没有蜡泪，只有黑色的灰烬散入风中，飘向未知的远方。",
+    "acquisition": [
+      "70级以上「仆人」挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上「仆人」挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A candle that you picked up in the ruins after completing the duel against The Knave.\nLegends passed down claim that when the candle's flame flickers in the hands of sinners, the light may become shadows, making footsteps faint and masking fatal intent.\nYou cannot tell what material this is made of, and it weeps no wax after burning, releasing only black ash that scatters into the wind, drifting towards the distant unknown.",
+    "acquisitionEn": [
+      "Lv. 70+ The Knave Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ The Knave Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "silken-feather",
+    "name": "丝织之羽",
+    "nameEn": "Silken Feather",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "完成与「仆人」的决斗后，在废墟中拾起的晶片。\n已经冷却的血与火依旧维持着羽毛的形状，周围缭绕着凝固的黑色细线。\n心智尚未成熟之时，稚童们总是依赖父母的精心照料，如同雏鸟需要羽翼的庇护。\n为了满足这份愿望，「父亲」将危险的蛛丝织成羽毛，模仿成鸟的翅膀，为家中带去些许温暖。",
+    "acquisition": [
+      "70级以上「仆人」挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上「仆人」挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "A crystal that you picked up in the ruins after completing the duel against The Knave.\nThe already-cooled blood and fire still maintain the shape of a feather, that is framed with solidified sleek black threads.\nBefore their thoughts have matured, young children are reliant on the meticulous care of their parents, just as fledglings need the aegis of an adult wing.\nIt is to fulfill such wishes that \"Father\" wove dangerous spider-silk into a facsimile of feathers, that she might grant her family some warmth.",
+    "acquisitionEn": [
+      "Lv. 70+ The Knave Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ The Knave Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "denial-and-judgment",
+    "name": "否定裁断",
+    "nameEn": "Denial and Judgment",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "完成与「仆人」的决斗后，在废墟中拾起的耳钉。\n红色的符号如同她眼中的图案，既是申敕也是否决。\n失怙失恃的孩子们自幼就蒙受诸般苦难，这些她都记在心底。\n命运审视人间，亦将有人审视命运。",
+    "acquisition": [
+      "70级以上「仆人」挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上「仆人」挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "An earring that you picked up in the ruins after completing the duel against The Knave.\nThe red symbol upon it resembles the image in her eyes, a declaration and a rejection alike.\nThe orphaned live lives filled with suffering from childhood — this she sees and keeps in her heart.\nAs fate casts an examining eye on humanity, so too will humans cast judgment upon fate.",
+    "acquisitionEn": [
+      "Lv. 70+ The Knave Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ The Knave Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "mark-of-the-binding-blessing",
+    "name": "受祝所缚之印",
+    "nameEn": "Mark of the Binding Blessing",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "击败金焰绒翼龙暴君后，获得的角的残片。\n其上能够看到蔓延于角上的奇怪印记，这印记被称为「焰主之祝」，拥有此印的龙众将获得远古的伟力。不过，远古的伟力自然不是现在龙众的身躯所能承担，也是诸多祸事的来由。许多的悲剧，其源头正是不可自控的力量。",
+    "acquisition": [
+      "30级以上金焰绒翼龙暴君掉落"
+    ],
+    "source": "30级以上金焰绒翼龙暴君掉落",
+    "descriptionEn": "A horn fragment obtained after defeating the Goldflame Qucusaur Tyrant.\nA strange mark known as the \"Flamelord's Blessing\" extends out across its surface. Saurians that bear this mark are said to wield an ancient power of terrible potency. Yet given their slighter statures, this power is too great a burden for the Saurians of the present day to bear. As such, it has been the cause of much calamity, and many tragedies have stemmed from the uncontrollable power it has unleashed.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Goldflame Qucusaur Tyrant"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Goldflame Qucusaur Tyrant"
+  },
+  {
+    "id": "overripe-flamegranate",
+    "name": "过熟的火榴果",
+    "nameEn": "Overripe Flamegranate",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "击败贪食匿叶龙山王后，获得的奇特火榴果。\n一般来说，成熟的火榴果如果再继续生长，就会跌入泥中腐烂。但是从山王的鬃毛之中落下的果子，或由于其奇特体温保护着的缘故，呈现出非常难得的「过熟」状态。这种状态下的火榴果稳定，富含燃素，果色厚重，别具一番风味。",
+    "acquisition": [
+      "30级以上贪食匿叶龙山王掉落"
+    ],
+    "source": "30级以上贪食匿叶龙山王掉落",
+    "descriptionEn": "A strange Flamegranate obtained after defeating the Gluttonous Yumkasaur Mountain King.\nNormally, Flamegranates that keep growing once they have already ripened simply fall into the mud and rot. But Flamegranates that have fallen from the Mountain King's mane, perhaps owing to the unique internal temperature conditions, exhibit a rarely-seen \"Overripe\" state. Flamegranates in this state are stable, phlogiston-packed, brightly colored, and possess a rich and highly distinctive flavor.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Gluttonous Yumkasaur Mountain King"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Gluttonous Yumkasaur Mountain King"
+  },
+  {
+    "id": "gold-inscribed-secret-source-core",
+    "name": "秘刻金纹的源核",
+    "nameEn": "Gold-Inscribed Secret Source Core",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "在击败秘源机兵·构型械后，从其失去动力而解离的躯体中寻找到的核心构件。\n据说驱使所有现在被称为秘源机兵的造物的核心都是同一种，只是不同核心携带的信息并不一样，其上金色纹路图案的差别或许也可以说明这一点。起初只是为了让工具能够自如运转而在回路之中加入了诸多命令，或许正是这种命令的重重叠加，最后造就了人造智慧的雏形吧。",
+    "acquisition": [
+      "30级以上秘源机兵·构型械掉落"
+    ],
+    "source": "30级以上秘源机兵·构型械掉落",
+    "descriptionEn": "This is a core component that separated from the body of a Secret Source Automaton: Configuration Device that lost its ability to move after being defeated.\nSome say that the cores that power all the Secret Source Automatons are the same type, and that they simply carry different information, as attested by the fact that the golden patterns on them are different. At first, the many commands were only added to the circuits to aid their smooth running, but it seems that all the superimposition and layering of orders onto one another has wound up creating a rudimentary artificial intelligence.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Secret Source Automaton: Configuration Device"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Secret Source Automaton: Configuration Device"
+  },
+  {
+    "id": "ensnaring-gaze",
+    "name": "深邃纠缠的凝视",
+    "nameEn": "Ensnaring Gaze",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "击败名为深邃摹结株的魔物后，获得的犹如果实却并非果实的事物。\n那聚集一处的能量所形成的「眼」，其后似乎有仿佛来自遥远而黑暗的彼端的视线。",
+    "acquisition": [
+      "30级以上深邃摹结株掉落"
+    ],
+    "source": "30级以上深邃摹结株掉落",
+    "descriptionEn": "An object obtained after defeating the monster known as the Tenebrous Papilla. It may look like a piece of fruit, but it is not.\nFormed from energy that has condensed in a single spot, its \"eye\" seems to gaze out from a distant, dark otherworld.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Tenebrous Papilla"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Tenebrous Papilla"
+  },
+  {
+    "id": "eroded-horn",
+    "name": "蚀灭的灵犀",
+    "nameEn": "Eroded Horn",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "在与蚀灭的源焰之主战斗后，斩下的魔龙的焰角。\n传说最初的源火是一切光明与智慧诞生之处，而火龙之角犹如光炬一般照亮蛮荒凄凉的世界。\n在焰角底座已受腐蚀的情况下，一度点亮世界的光辉也并未染上丝毫的污浊。",
+    "acquisition": [
+      "70级以上蚀灭的源焰之主挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上蚀灭的源焰之主挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "The Lord of Eroded Primal Fire's blazing horn, cut off in the heat of battle.\nLegend has it that the original primal flame was the birthplace of light and wisdom, and the horn of the Pyro Dragon shone like a pillar of fire, illuminating the savage, desolate world.\nAnd though the base of the flaming horn has been corroded, the light that once illuminated the world remains without blemish.",
+    "acquisitionEn": [
+      "Lv. 70+ Lord of Eroded Primal Fire Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Lord of Eroded Primal Fire Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "eroded-sunfire",
+    "name": "蚀灭的阳焰",
+    "nameEn": "Eroded Sunfire",
+    "rarity": 5,
+    "type": "weekly-boss",
+    "typeZh": "角色培养素材",
+    "description": "在与蚀灭的源焰之主战斗后，仍在不息燃烧的环状火焰。\n最初，在最深邃的夜晚里，执掌火焰的主人仿照太阳，以此取代星空的光芒。\n一半的火焰已受侵蚀的焰芒之辉，似乎还能看出映照旧日世界的光采。",
+    "acquisition": [
+      "70级以上蚀灭的源焰之主挑战奖励",
+      "合成台-转化页签：转化获取"
+    ],
+    "source": "70级以上蚀灭的源焰之主挑战奖励\n合成台-转化页签：转化获取",
+    "descriptionEn": "Though the battle with the Lord of Eroded Primal Fire has ended, this ring-shaped flame yet burns.\nIn the beginning, in the deepest, darkest of nights, the master of flame emulated the sun, thus supplanting the light of the starry skies.\nThough the flame's glow has been halfway corroded, it still reflects the world of old in its glory.",
+    "acquisitionEn": [
+      "Lv. 70+ Lord of Eroded Primal Fire Challenge Reward",
+      "Obtained from the Crafting Bench Conversion Tab"
+    ],
+    "sourceEn": "Lv. 70+ Lord of Eroded Primal Fire Challenge Reward\nObtained from the Crafting Bench Conversion Tab"
+  },
+  {
+    "id": "talisman-of-the-enigmatic-land",
+    "name": "谜土的护符",
+    "nameEn": "Talisman of the Enigmatic Land",
+    "rarity": 4,
+    "type": "boss-drop",
+    "typeZh": "角色培养素材",
+    "description": "通过灵觉隐修的迷者的考验后，不知何时出现在背包中的护符。\n在「烟谜主」部族中的一些记载中，「灵觉」强大的祭司甚至能够通过冥想，令意识穿越黑曜石反射的光影，进入唯有亡者才能进入的地下谜土。只是这一举动相当危险，能够做到此举的祭司往往需要佩戴类似的护符，避免灵魂迷失在谜土之中。不过，这护符的象征意义远大于实际意义，隐修的祭司将之留给通过考验的勇士，也许只是为了留下简单的祝福。",
+    "acquisition": [
+      "30级以上灵觉隐修的迷者掉落"
+    ],
+    "source": "30级以上灵觉隐修的迷者掉落",
+    "descriptionEn": "A talisman that somehow appeared in your inventory after you passed the Wayward Hermetic Spiritspeaker's test.\nIn some records kept by the Masters of the Night-Wind, priests masterful in Spiritspeaking can use meditation to pass their consciousness through the light and shadow that reflects off obsidian, thus reaching the enigmatic underground realm that only the dead may enter. This deed is, however, perilous, and priests who perform it must often wear such talismans to guard their souls from being lost in that mysterious land. However, this talisman's symbolic value far outstrips its real effects. Perhaps the hermit-priest who grants this to a warrior who passes the test only does so as a simple blessing.",
+    "acquisitionEn": [
+      "Dropped by Lv. 30+ Wayward Hermetic Spiritspeakers"
+    ],
+    "sourceEn": "Dropped by Lv. 30+ Wayward Hermetic Spiritspeakers"
+  },
+  {
+    "id": "sango-pearl",
+    "name": "珊瑚真珠",
+    "nameEn": "Sango Pearl",
+    "type": "local-specialty",
+    "typeZh": "稻妻区域特产",
+    "description": "与海祇的珊瑚相伴而生的宝珠，散发着月光般的丝丝凉意。",
+    "acquisition": [
+      "推荐：海祇岛采集",
+      "前往采集"
+    ],
+    "source": "推荐：海祇岛采集\n前往采集",
+    "descriptionEn": "A precious pearl that grows in the coral of Watatsumi. Gives off a cool sheen like that of the moonlight.",
+    "acquisitionEn": [
+      "Recommendation: Found on Watatsumi Island",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found on Watatsumi Island\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "nilotpala-lotus",
+    "name": "月莲",
+    "nameEn": "Nilotpala Lotus",
+    "type": "local-specialty",
+    "typeZh": "须弥区域特产",
+    "description": "生长于林中湿地，散发着同月亮一般皎洁光芒的花卉。只有在夜晚才会绽放。",
+    "acquisition": [
+      "须弥水域采集",
+      "前往采集"
+    ],
+    "source": "须弥水域采集\n前往采集",
+    "descriptionEn": "Growing in the forest wetlands, these plants only bloom at night with flowers as bright as the moon.",
+    "acquisitionEn": [
+      "Found at water bodies in Sumeru",
+      "Go to collect"
+    ],
+    "sourceEn": "Found at water bodies in Sumeru\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "henna-berry",
+    "name": "赤念果",
+    "nameEn": "Henna Berry",
+    "type": "local-specialty",
+    "typeZh": "须弥区域特产",
+    "description": "在恶劣的沙漠环境中也能存活的植物所结的果子，赤红的果实在黄沙映衬下显得格外动人。",
+    "acquisition": [
+      "须弥沙漠采集",
+      "前往采集"
+    ],
+    "source": "须弥沙漠采集\n前往采集",
+    "descriptionEn": "A fruit that grows even in the most hostile of desert environments. Its vibrant crimson fruits are made even more lovely against a backdrop of yellow sand.",
+    "acquisitionEn": [
+      "Found in the deserts of Sumeru",
+      "Go to collect"
+    ],
+    "sourceEn": "Found in the deserts of Sumeru\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "mourning-flower",
+    "name": "悼灵花",
+    "nameEn": "Mourning Flower",
+    "type": "local-specialty",
+    "typeZh": "须弥区域特产",
+    "description": "绽放在古老战场上的鲜红之花，即便在荒漠中也能顽强生长。低垂的花朵似乎是在哀悼曾在此牺牲的英灵。",
+    "acquisition": [
+      "须弥沙漠采集",
+      "推荐：锋刃林泽采集",
+      "前往采集"
+    ],
+    "source": "须弥沙漠采集\n推荐：锋刃林泽采集\n前往采集",
+    "descriptionEn": "Crimson flowers that bloom on ancient battlefields. They can even flourish in the depths of the desert. Their drooping flowers seem to be in mourning for heroes long past.",
+    "acquisitionEn": [
+      "Found in the deserts of Sumeru",
+      "Recommendation: Found in the Asipattravana Swamp",
+      "Go to collect"
+    ],
+    "sourceEn": "Found in the deserts of Sumeru\nRecommendation: Found in the Asipattravana Swamp\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "trishiraite",
+    "name": "万相石",
+    "nameEn": "Trishiraite",
+    "type": "local-specialty",
+    "typeZh": "须弥区域特产",
+    "description": "分布在荒原群山的深处，散发着异彩的特殊辉石，似乎是由混化的元素能量凝结而成的。",
+    "acquisition": [
+      "须弥沙漠采集",
+      "推荐：铁穆山采集",
+      "前往采集"
+    ],
+    "source": "须弥沙漠采集\n推荐：铁穆山采集\n前往采集",
+    "descriptionEn": "A splendorous stone that can be found in the depths of desolate mountains, seemingly formed from congealed elemental energy.",
+    "acquisitionEn": [
+      "Found in the deserts of Sumeru",
+      "Recommendation: Found in Temir Mountains",
+      "Go to collect"
+    ],
+    "sourceEn": "Found in the deserts of Sumeru\nRecommendation: Found in Temir Mountains\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "romaritime-flower",
+    "name": "海露花",
+    "nameEn": "Romaritime Flower",
+    "type": "local-specialty",
+    "typeZh": "枫丹区域特产",
+    "description": "幽淡而高贵的蓝色花卉。柔软的花蕊具备良好的吸水性和弹性，是诸多日用品的原材料。",
+    "acquisition": [
+      "推荐：塞洛海原采集",
+      "前往采集"
+    ],
+    "source": "推荐：塞洛海原采集\n前往采集",
+    "descriptionEn": "An ethereal and elegant blue flower. Its tender petals are elastic and water-absorbent, making it the ideal raw material for various daily necessities.",
+    "acquisitionEn": [
+      "Recommendation: Found in Salacia Plain",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found in Salacia Plain\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "lumidouce-bell",
+    "name": "柔灯铃",
+    "nameEn": "Lumidouce Bell",
+    "type": "local-specialty",
+    "typeZh": "枫丹区域特产",
+    "description": "静雅而清美的紫色花卉。其香清淡悠长、细腻柔和，因此常被用来制作名贵的香水。",
+    "acquisition": [
+      "枫丹廷北部采集",
+      "尘歌壶种植",
+      "前往采集"
+    ],
+    "source": "枫丹廷北部采集\n尘歌壶种植\n前往采集",
+    "descriptionEn": "A serene and tranquil violet flower. It has a light, soft, and lasting scent and is often used for making luxurious perfumes.",
+    "acquisitionEn": [
+      "Found in the north of the Court of Fontaine",
+      "Grown in the Serenitea Pot",
+      "Go to collect"
+    ],
+    "sourceEn": "Found in the north of the Court of Fontaine\nGrown in the Serenitea Pot\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "lakelight-lily",
+    "name": "湖光铃兰",
+    "nameEn": "Lakelight Lily",
+    "type": "local-specialty",
+    "typeZh": "枫丹区域特产",
+    "description": "明澈而澄净的苍色花卉。生于水脉汇聚之处，其香清冷淡雅，辛凉柔婉。",
+    "acquisition": [
+      "推荐：伊黎耶林区采集",
+      "前往采集"
+    ],
+    "source": "推荐：伊黎耶林区采集\n前往采集",
+    "descriptionEn": "A clear and clean azure flower, it is born where Water Veins come together. It has a simple, cool, and elegant fragrance, pungent and refreshing yet gentle.",
+    "acquisitionEn": [
+      "Recommendation: Found in Erinnyes Forest",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found in Erinnyes Forest\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "spring-of-the-first-dewdrop",
+    "name": "初露之源",
+    "nameEn": "Spring of the First Dewdrop",
+    "type": "local-specialty",
+    "typeZh": "枫丹区域特产",
+    "description": "悬浮于莫尔泰区水体深处的清澈露滴，与常见的纯水造物不同，似乎凝聚着更为原始而纯粹的元素能量。",
+    "acquisition": [
+      "推荐：莫尔泰区水下采集",
+      "前往采集"
+    ],
+    "source": "推荐：莫尔泰区水下采集\n前往采集",
+    "descriptionEn": "A limpid drop of dew floating amidst the waters of Morte Region. It is different from other pure water bodies, as though it is a conglomeration of even more pure and primordial Elemental Energy.",
+    "acquisitionEn": [
+      "Recommendation: Found underwater in Morte Region",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found underwater in Morte Region\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "clearwater-jade",
+    "name": "清水玉",
+    "nameEn": "Clearwater Jade",
+    "type": "local-specialty",
+    "typeZh": "璃月区域特产",
+    "description": "出产于沉玉谷的玉石。触感凉如清水，因此而得名。",
+    "acquisition": [
+      "野外采集",
+      "推荐：沉玉谷·南陵采集",
+      "前往采集"
+    ],
+    "source": "野外采集\n推荐：沉玉谷·南陵采集\n前往采集",
+    "descriptionEn": "Jade from Chenyu Vale. Named for its cool, refreshing touch, that is much like clear water.",
+    "acquisitionEn": [
+      "Found in the wild",
+      "Recommendation: Found in Chenyu Vale: Southern Mountain",
+      "Go to collect"
+    ],
+    "sourceEn": "Found in the wild\nRecommendation: Found in Chenyu Vale: Southern Mountain\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "sprayfeather-gill",
+    "name": "浪沫羽鳃",
+    "nameEn": "Sprayfeather Gill",
+    "type": "local-specialty",
+    "typeZh": "纳塔区域特产",
+    "description": "生长在海边如羽状的特殊物种，看似是水草般的植物，实际上是形态特殊的水栖软体珊瑚。",
+    "acquisition": [
+      "推荐：涌流地采集",
+      "推荐：「流泉之众」周边采集",
+      "尘歌壶种植",
+      "前往采集"
+    ],
+    "source": "推荐：涌流地采集\n推荐：「流泉之众」周边采集\n尘歌壶种植\n前往采集",
+    "descriptionEn": "A special feather-shaped species that grows by the seaside. It looks kind of like a seagrass but is in truth a soft-bodied aquatic coral with a unique shape.",
+    "acquisitionEn": [
+      "Recommendation: Found in Toyac Springs",
+      "Recommendation: Found near the \"People of the Springs\"",
+      "Grown in the Serenitea Pot",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found in Toyac Springs\nRecommendation: Found near the \"People of the Springs\"\nGrown in the Serenitea Pot\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "brilliant-chrysanthemum",
+    "name": "灼灼彩菊",
+    "nameEn": "Brilliant Chrysanthemum",
+    "type": "local-specialty",
+    "typeZh": "纳塔区域特产",
+    "description": "形如飘然羽翼的花，花瓣的姿态在风中无比悠然。",
+    "acquisition": [
+      "推荐：柴薪之丘采集",
+      "推荐：圣火竞技场周边采集",
+      "尘歌壶种植",
+      "前往采集"
+    ],
+    "source": "推荐：柴薪之丘采集\n推荐：圣火竞技场周边采集\n尘歌壶种植\n前往采集",
+    "descriptionEn": "A flower with a shape like floating wings. Its petals sway in an unbelievably relaxed, serene manner as they are caressed by the wind.",
+    "acquisitionEn": [
+      "Recommendation: Found on Huitztli Hill",
+      "Recommendation: Found near the Stadium of the Sacred Flame",
+      "Grown in the Serenitea Pot",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found on Huitztli Hill\nRecommendation: Found near the Stadium of the Sacred Flame\nGrown in the Serenitea Pot\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "quenepa-berry",
+    "name": "青蜜莓",
+    "nameEn": "Quenepa Berry",
+    "type": "local-specialty",
+    "typeZh": "纳塔区域特产",
+    "description": "青蓝色的，汁液丰富的莓果。其果树大片生长在「悬木人」部族附近，是形态与火榴果相近的植物。",
+    "acquisition": [
+      "推荐：踞石山采集",
+      "推荐：「悬木人」下方采集",
+      "尘歌壶种植",
+      "前往采集"
+    ],
+    "source": "推荐：踞石山采集\n推荐：「悬木人」下方采集\n尘歌壶种植\n前往采集",
+    "descriptionEn": "Bluish, juicy berries that grow in large amounts near the Scions of the Canopy. Their shape is similar to that of Flamegranates.",
+    "acquisitionEn": [
+      "Recommendation: Found on Coatepec Mountain",
+      "Recommendation: Found below the \"Scions of the Canopy\"",
+      "Grown in the Serenitea Pot",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found on Coatepec Mountain\nRecommendation: Found below the \"Scions of the Canopy\"\nGrown in the Serenitea Pot\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "saurian-claw-succulent",
+    "name": "肉龙掌",
+    "nameEn": "Saurian Claw Succulent",
+    "type": "local-specialty",
+    "typeZh": "纳塔区域特产",
+    "description": "形如巨大动物爪掌的多肉植物。",
+    "acquisition": [
+      "推荐：硫晶支脉采集",
+      "尘歌壶种植",
+      "前往采集"
+    ],
+    "source": "推荐：硫晶支脉采集\n尘歌壶种植\n前往采集",
+    "descriptionEn": "A succulent shaped like the paw of a great animal.",
+    "acquisitionEn": [
+      "Recommendation: Found in the Sulfurous Veins",
+      "Grown in the Serenitea Pot",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found in the Sulfurous Veins\nGrown in the Serenitea Pot\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "glowing-hornshroom",
+    "name": "微光角菌",
+    "nameEn": "Glowing Hornshroom",
+    "type": "local-specialty",
+    "typeZh": "纳塔区域特产",
+    "description": "在黑暗中微微发出光芒的菌类，因为形似暝视龙的角冠而被称为角菌。",
+    "acquisition": [
+      "推荐：镜璧山采集",
+      "推荐：「烟谜主」周边采集",
+      "尘歌壶种植",
+      "前往采集"
+    ],
+    "source": "推荐：镜璧山采集\n推荐：「烟谜主」周边采集\n尘歌壶种植\n前往采集",
+    "descriptionEn": "A fungus that emits a faint light in the darkness. It is so named because its shape resembles the horny crest of an Iktomisaurus.",
+    "acquisitionEn": [
+      "Recommendation: Found on Tezcatepetonco Range",
+      "Recommendation: Found near the \"Masters of the Night-Wind\"",
+      "Grown in the Serenitea Pot",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found on Tezcatepetonco Range\nRecommendation: Found near the \"Masters of the Night-Wind\"\nGrown in the Serenitea Pot\nGo to collect",
+    "rarity": 1
+  },
+  {
+    "id": "withering-purpurbloom",
+    "name": "枯叶紫英",
+    "nameEn": "Withering Purpurbloom",
+    "type": "local-specialty",
+    "typeZh": "纳塔区域特产",
+    "description": "叶片与花瓣呈现枯焦之态的花朵，常常能在流灰弥漫之处看到它。",
+    "acquisition": [
+      "推荐：奥奇卡纳塔采集",
+      "前往采集"
+    ],
+    "source": "推荐：奥奇卡纳塔采集\n前往采集",
+    "descriptionEn": "A flower, the leaves and petals of which look scorched and withered, that can often be seen in places where ash abounds.",
+    "acquisitionEn": [
+      "Recommendation: Found in Ochkanatlan",
+      "Go to collect"
+    ],
+    "sourceEn": "Recommendation: Found in Ochkanatlan\nGo to collect",
+    "rarity": 1
   }
 ]

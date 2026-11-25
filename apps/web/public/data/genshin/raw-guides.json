@@ -213,14 +213,14 @@
   },
   {
     "id": "quick-start-guide",
-    "title": "原神快速上手指南",
+    "title": "原神快速上手指南：基础操作、元素反应与资源规划",
     "titleEn": "Genshin Impact Quick Start Guide",
     "category": "beginner",
     "categoryZh": "新手入门",
     "categoryEn": "Beginner",
     "summary": "从下载安装到30分钟内快速上手原神，了解基础操作、界面、抽卡系统。",
     "summaryEn": "Get started with Genshin Impact in 30 minutes. Learn basic controls, UI, and the gacha system.",
-    "content": "## 原神快速上手指南\n\n### 1. 基础操作\n- **移动**: WASD/摇杆移动，空格跳跃\n- **攻击**: 鼠标左键/攻击键普攻连段\n- **元素战技**: E键释放，有冷却时间\n- **元素爆发**: Q键释放，需要元素能量\n\n### 2. 元素反应\n原神核心战斗机制是元素反应：\n- **蒸发** (水+火): 2倍伤害加成\n- **融化** (冰+火): 2倍伤害加成\n- **超导** (雷+冰): 降低物理抗性\n- **感电** (雷+水): 持续雷伤\n- **冻结** (冰+水): 冻住敌人\n\n### 3. 树脂系统\n- 原粹树脂每8分钟恢复1点\n- 用于挑战秘境、Boss获取材料\n- 优先消耗树脂在角色突破材料上\n\n### 4. 祈愿(抽卡)系统\n- 4星保底: 10抽必出4星\n- 5星硬保底: 90抽必出5星\n- 软保底: 约75抽后概率大幅提升\n- 大保底: 如果歪了非UP角色，下次必出UP",
+    "content": "## 原神入门路线\n\n第一次进入提瓦特，可以按“熟悉基础操作 → 理解元素反应 → 规划树脂使用 → 了解祈愿机制”的顺序阅读。先在实战中练习移动、闪避与技能切换，再结合当前队伍决定养成方向；需要查阅具体操作或系统说明时，可以直接跳到下方对应章节。\n\n### 1. 基础操作\n- **移动**: WASD/摇杆移动，空格跳跃\n- **攻击**: 鼠标左键/攻击键普攻连段\n- **元素战技**: E键释放，有冷却时间\n- **元素爆发**: Q键释放，需要元素能量\n\n### 2. 元素反应\n原神核心战斗机制是元素反应：\n- **蒸发** (水+火): 2倍伤害加成\n- **融化** (冰+火): 2倍伤害加成\n- **超导** (雷+冰): 降低物理抗性\n- **感电** (雷+水): 持续雷伤\n- **冻结** (冰+水): 冻住敌人\n\n### 3. 树脂系统\n- 原粹树脂每8分钟恢复1点\n- 用于挑战秘境、Boss获取材料\n- 优先消耗树脂在角色突破材料上\n\n### 4. 祈愿(抽卡)系统\n- 4星保底: 10抽必出4星\n- 5星硬保底: 90抽必出5星\n- 软保底: 约75抽后概率大幅提升\n- 大保底: 如果歪了非UP角色，下次必出UP",
     "contentEn": "## Quick Start Guide\n\n### 1. Basic Controls\n- **Movement**: WASD/Left stick, Space to jump\n- **Attack**: Left click/Attack button for normal attacks\n- **Elemental Skill**: Press E, has a cooldown\n- **Elemental Burst**: Press Q, requires energy\n\n### 2. Elemental Reactions\nThe core combat system:\n- **Vaporize** (Hydro+Pyro): 2x DMG multiplier\n- **Melt** (Cryo+Pyro): 2x DMG multiplier\n- **Superconduct** (Electro+Cryo): Reduces Physical RES\n- **Electro-Charged** (Electro+Hydro): Continuous Electro DMG\n- **Freeze** (Cryo+Hydro): Freezes enemies\n\n### 3. Resin System\n- Original Resin recovers 1 point every 8 minutes\n- Used for Domains, Bosses to get materials\n- Prioritize spending resin on character ascension materials\n\n### 4. Wish (Gacha) System\n- 4-star pity: Guaranteed 4-star every 10 pulls\n- 5-star hard pity: Guaranteed 5-star at 90 pulls\n- Soft pity: Rates increase significantly around 75 pulls\n- Guarantee: If you lose 50/50, next 5-star is guaranteed featured",
     "tags": [
       "新手",
@@ -1415,5 +1415,24 @@
       }
     ],
     "date": "2026-08-31"
+  },
+  {
+    "id": "cms-returning-player-checklist",
+    "faq": [],
+    "tags": [],
+    "title": "原神回坑整理清单：先确认进度，再安排养成与探索",
+    "content": "## 回坑先做整理，不必一次追完进度\n\n隔了一段时间再进入原神，任务、地图和角色养成都可能同时出现新的选择。先给自己设定一个小目标，比把所有提示逐项清空更容易恢复节奏。这份清单帮助你整理现状和安排下一次游玩，不提供当前版本卡池、限时奖励或角色强度结论；具体开放条件和活动时间以游戏内说明为准。\n\n## 第一步：确认自己停在哪里\n\n- 打开任务列表，分清正在推进的主线、角色相关任务和探索支线。先阅读任务提示，再决定今天继续哪一条。\n- 查看地图上的已解锁区域和传送点，选一个熟悉的位置重新练习移动、战斗与交互，不必立即跨区域清图。\n- 查看活动页面，记录自己真正想参与的内容及其结束时间。遇到尚未开放的入口，先核对游戏内前置条件，不为了清提示打乱整次游玩安排。\n\n可以用一句话记录当前目标，例如“继续上次的主线”或“让常用队伍打材料更顺手”。今天只推进其中一个方向，其他事项留在清单里即可。\n\n## 第二步：先恢复一支熟悉的队伍\n\n回坑初期可以先沿用自己熟悉的角色，确认技能、武器、圣遗物和队伍位置是否仍符合原来的使用方式。先在低压力战斗中练习切人和技能衔接，再判断到底是操作生疏、材料不足，还是需要调整队伍。\n\n不要因为仓库里出现了新装备，就把整队的配置一次全部替换。每次只调整一项，观察实战是否更顺手，也方便发现问题来自哪里。需要补基础时，可以先读[快速上手指南](/zh/genshin/guides/quick-start-guide)和[元素反应攻略](/zh/genshin/guides/elemental-reaction-guide)。\n\n## 第三步：按材料缺口安排养成\n\n先选定当前常用的角色或武器，再打开培养界面查看下一阶段真正缺少的材料。把缺口分成两类：需要消耗树脂获取的内容，以及可以通过采集、探索或已有库存解决的内容。\n\n- 先确认材料用途，再安排挑战；不要只因为某个副本熟悉就重复刷取。\n- 涉及开放日期或前置条件的材料，以游戏内提示为准，能做的先做，暂时不能做的写进后续清单。\n- 在准备投入大量资源前，先检查目标是否仍是自己接下来会使用的角色或武器。\n\n更详细的日常安排可以参考[树脂规划指南](/zh/genshin/guides/resin-planning-guide)；需要集中收集时，再查[素材刷取与路线规划](/zh/genshin/guides/farming-route-guide)。\n\n## 第四步：把探索拆成一个小区域\n\n选定一个区域或一个任务附近的路线，顺路解锁传送点、完成沿途交互并收集当前需要的素材。遇到暂时无法处理的机关或入口，可以在地图上做标记，不必为一个障碍打断整条路线。\n\n如果今天主要想看剧情，就以任务为主；如果主要想放松探索，就把收集目标控制在一条路线内。不同目标可以分开安排，不需要每次上线都兼顾所有系统。\n\n## 第五步：结束前留下下一次的入口\n\n退出游戏前，简单记下三件事：今天完成了什么、下一次从哪里继续、还有什么材料需要确认。下一次上线时先看这几条记录，再决定是否加入新的活动或养成目标。\n\n回坑不是补作业。先恢复一条自己愿意持续玩的路线，再逐步扩展队伍和探索范围，比在第一天做完所有规划更重要。\n",
+    "summary": "给回到提瓦特的旅行者一份轻量整理路线：确认任务与队伍现状，选定当前目标，再按材料缺口和可用时间安排养成、探索与活动。",
+    "titleEn": "",
+    "titleJa": "",
+    "category": "general",
+    "cmsOrigin": "desktop-guide-v1",
+    "contentEn": "",
+    "contentJa": "",
+    "summaryEn": "",
+    "summaryJa": "",
+    "categoryEn": "General guides",
+    "categoryJa": "総合ガイド",
+    "categoryZh": "综合指南"
   }
 ]

@@ -1033,5 +1033,25 @@
     "weaponType": "",
     "rarity": 5,
     "status": "upcoming"
+  },
+  {
+    "id": "mualani",
+    "name": "玛拉妮",
+    "nameEn": "Mualani",
+    "nameJa": "ムアラニ",
+    "element": "hydro",
+    "weaponType": "Catalyst",
+    "rarity": 5,
+    "status": "released"
+  },
+  {
+    "id": "ororon",
+    "name": "欧洛伦",
+    "nameEn": "Ororon",
+    "nameJa": "オロルン",
+    "element": "electro",
+    "weaponType": "Bow",
+    "rarity": 4,
+    "status": "released"
   }
 ]

@@ -19,19 +19,84 @@ export const officialSources = [
 ] as const;
 
 export const playableCharacters = [
-  { slug: 'he-yulian', name: '何雨莲（强袭·回声）', affiliation: '官方启程活动已公开', note: '官方启程活动确认：完成序章后参与奥城欢迎签到，累计登录第2天获得。技能、属性与养成材料待正式客户端核验。' },
-  { slug: 'luoxi', name: '洛夕', affiliation: '侵蚀管理局', note: '官方角色页公开角色；以探索欲与高速冲锋的战斗形象登场。' },
-  { slug: 'lita', name: '莉塔', affiliation: '官方角色页已公开', note: '官方角色页公开角色；正式版本的技能、属性和获取方式待客户端确认。' },
-  { slug: 'shilin', name: '诗凛', affiliation: '官方角色页已公开', note: '官方角色页公开角色；测试期机制不作为正式服养成结论。' },
-  { slug: 'pannaxiya', name: '潘娜西娅', affiliation: '官方角色页已公开', note: '官方角色页公开角色；上线后补充正式角色资料。' },
-  { slug: 'take', name: '塔可', affiliation: '官方角色页已公开', note: '官方角色页公开角色；官方社区账号亦使用“塔可TaCo”名称。' },
-  { slug: 'ameng', name: '阿萌', affiliation: '官方角色页已公开', note: '官方角色页公开角色；不预设首发强度或装备方案。' },
-  { slug: 'beiyi', name: '贝伊', affiliation: '官方角色页已公开', note: '官方角色页公开角色；具体定位以公测内说明为准。' },
-  { slug: 'aiti', name: '艾提', affiliation: '官方角色页已公开', note: '官方角色页公开角色；技能、养成和获取方式待公测客户端确认。' },
-  { slug: 'mata', name: '玛塔', affiliation: '官方角色页已公开', note: '官方角色页公开角色；不根据测试期资料预设队伍定位。' },
-  { slug: 'fulizi', name: '弗莉兹', affiliation: '官方角色档案已公开', note: '官方8月20日公开档案。修复公告中另有「弗利兹」写法，别名对应待核验；不据档案公开推定当前卡池可获得性。' },
-  { slug: 'lilang', name: '璃琅', affiliation: '官方角色档案已公开', note: '官方8月6日公开档案；正式客户端可获得性、技能与养成材料仍待核验。' },
-  { slug: 'daliya', name: '达里娅', affiliation: '官方角色档案已公开', note: '官方7月30日公开档案；正式客户端可获得性、技能与养成材料仍待核验。' },
+  {
+    "slug": "he-yulian",
+    "name": "何雨莲（强袭·回声）",
+    "affiliation": "官方启程活动已公开",
+    "note": "官方启程活动确认：完成序章后参与奥城欢迎签到，累计登录第2天获得。技能、属性与养成材料待正式客户端核验。"
+  },
+  {
+    "name": "洛夕",
+    "note": "官方角色页公开角色；以探索欲与高速冲锋的战斗形象登场。正式客户端的技能、属性和获取方式仍待核验。",
+    "slug": "luoxi",
+    "affiliation": "侵蚀管理局"
+  },
+  {
+    "slug": "lita",
+    "name": "莉塔",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；正式版本的技能、属性和获取方式待客户端确认。"
+  },
+  {
+    "slug": "shilin",
+    "name": "诗凛",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；测试期机制不作为正式服养成结论。"
+  },
+  {
+    "slug": "pannaxiya",
+    "name": "潘娜西娅",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；上线后补充正式角色资料。"
+  },
+  {
+    "slug": "take",
+    "name": "塔可",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；官方社区账号亦使用“塔可TaCo”名称。"
+  },
+  {
+    "slug": "ameng",
+    "name": "阿萌",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；不预设首发强度或装备方案。"
+  },
+  {
+    "slug": "beiyi",
+    "name": "贝伊",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；具体定位以公测内说明为准。"
+  },
+  {
+    "slug": "aiti",
+    "name": "艾提",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；技能、养成和获取方式待公测客户端确认。"
+  },
+  {
+    "slug": "mata",
+    "name": "玛塔",
+    "affiliation": "官方角色页已公开",
+    "note": "官方角色页公开角色；不根据测试期资料预设队伍定位。"
+  },
+  {
+    "slug": "fulizi",
+    "name": "弗莉兹",
+    "affiliation": "官方角色档案已公开",
+    "note": "官方8月20日公开档案。修复公告中另有「弗利兹」写法，别名对应待核验；不据档案公开推定当前卡池可获得性。"
+  },
+  {
+    "slug": "lilang",
+    "name": "璃琅",
+    "affiliation": "官方角色档案已公开",
+    "note": "官方8月6日公开档案；正式客户端可获得性、技能与养成材料仍待核验。"
+  },
+  {
+    "slug": "daliya",
+    "name": "达里娅",
+    "affiliation": "官方角色档案已公开",
+    "note": "官方7月30日公开档案；正式客户端可获得性、技能与养成材料仍待核验。"
+  }
 ] as const;
 
 export const characterSources: Record<string, { url: string; publishedAt: string; note: string }> = {

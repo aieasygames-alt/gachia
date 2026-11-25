@@ -1,54 +1,74 @@
 [
   {
     "id": "v9-0-official-update-guide",
+    "faq": [
+      {
+        "answer": "The global official announcement lists v9.0 from August 20 to October 22, 2026. Check the client for current availability after the period.",
+        "answerJa": "グローバル公式告知ではVer.9.0は2026年8月20日から10月22日です。期間後の現在の開放状態はクライアントで確認してください。",
+        "answerZh": "全球服官方公告写明 9.0 周期为 2026 年 8 月 20 日至 10 月 22 日；周期结束后的当前开放状态请以客户端为准。",
+        "question": "What is the official v9.0 period?",
+        "questionJa": "崩壊3rd Ver.9.0の公式告知期間は？",
+        "questionZh": "崩坏3 9.0 官方公告的版本周期是什么？"
+      },
+      {
+        "answer": "No. Confirm supply dates and rules, then compare the new target with your real roster, pity, Crystals, and existing usable equipment.",
+        "answerJa": "新しいだけでは引きません。補給期間・ルールを確認し、所持編成の不足、天井、水晶、既存装備と比較してください。",
+        "answerZh": "不应该只因为新品就抽。先确认补给期限与规则，再对照自己的队伍缺口、保底、水晶和现有可用装备。",
+        "question": "Should I pull just because v9.0 adds new gear?",
+        "questionJa": "Ver.9.0で新装備が出たら引くべきですか？",
+        "questionZh": "9.0 有新装备就应该抽吗？"
+      }
+    ],
+    "tags": [
+      "9.0",
+      "曙梦向明",
+      "主线 Part 2",
+      "浮生·渡尘",
+      "瑟莉姆",
+      "朱华",
+      "Astral Ring"
+    ],
     "title": "崩坏3 9.0「曙梦向明」版本总览：主线终章、人偶、活动与装备",
+    "content": "## 资料边界\n\n本页根据《崩坏3》全球服官方 9.0 更新公告整理。公告给出的版本周期为 **2026-08-20 至 2026-10-22**。页面用于回顾该周期的已公布内容；当前补给、活动开放状态和游戏内数值请以客户端与最新官方公告为准。\n\n## 9.0 的四条主线\n\n1. **主线 Part 2 终章**：新章节「未来所拥抱的未来」上线，先完成对应主线前置，再按游戏内开放条件领取章节奖励。\n2. **战斗与养成**：S 级女武神「浮生·渡尘」使用拳套、造成火焰元素伤害；装备 9.0 新增神之键「朱华」或其超限形态后，可激活「命运之轮」天命之环。她不是 9.0 新女武神。\n3. **队伍辅助**：新人偶「瑟莉姆」面向命运之轮队伍；其协同攻击与增伤条件应以游戏内技能描述为准。\n4. **装备更新**：新拳套「朱华」、PRI-ARM「朱华·全燃」与「忧郁哲人」圣痕套装加入 Hyperion Arsenal。\n\n## 活动与资源：按时效处理\n\n- **舰长的许愿树秘辛**：活动奖励包含服装、晶体、源晶与崩坏结晶等，先看活动开放条件与结束时间。\n- **飞往欧夏的邀请赛**：9.0 复刻活动；回归舰长应先判断奖励是否仍与自己的资源缺口相关。\n- **初光之愿**：登录活动包含补给卡与纪念奖励。登录天数、服务器与领取窗口必须在游戏内核对。\n- **星际菜圃**：版本活动提供圣痕、拟似结晶与其他奖励；不要把活动期奖励当作永久来源。\n\n## 新手与回归舰长的决策顺序\n\n1. 先进入客户端确认版本、服务器、活动页与补给结束时间。\n2. 优先清理限时登录、主线和活动任务，不在未确认结束时间前把体力投向长期材料。\n3. 盘点已有火伤、命运之轮和天命之环相关角色；不要只因“新装备”就替换可用的旧套装。\n4. 在考虑补给前记录水晶、保底、目标角色和装备缺口。\n5. 再用官方公告与游戏内详情确认补给池、概率、阶段与兑换规则。\n\n## 首批资料库覆盖\n\n当前图鉴先收录 9.0 官方公告中可直接核验的「浮生·渡尘」、「朱华 / 朱华·全燃」与相关材料说明。完整历史女武神、武器、圣痕和强度排行需要逐项补充出处后再扩展，避免把旧版本经验写成当前结论。",
+    "summary": "基于官方 9.0 更新公告整理主线 Part 2 终章、浮生·渡尘、瑟莉姆、版本活动、登录奖励、新拳套与圣痕；只收录已公开内容，不推断后续补给与活动数值。",
     "titleEn": "Honkai Impact 3rd v9.0 The Light at Dream's End: Official Update Overview",
     "titleJa": "崩壊3rd Ver.9.0「曙夢向明」：メイン終章・人偶・イベント・装備",
     "category": "version",
-    "categoryZh": "版本攻略",
-    "categoryEn": "Version Guide",
-    "categoryJa": "バージョンガイド",
-    "summary": "基于官方 9.0 更新公告整理主线 Part 2 终章、浮生·渡尘、瑟莉姆、版本活动、登录奖励、新拳套与圣痕；只收录已公开内容，不推断后续补给与活动数值。",
-    "summaryEn": "An official-source overview of v9.0: the Part 2 finale, Fenghuang of Vicissitude, Senadina, version events, login rewards, new fists, and stigmata. It records announced content only and does not infer later supplies or event values.",
-    "summaryJa": "公式Ver.9.0告知を基に、Part 2終章、浮生・渡塵、セナディナ、イベント、ログイン報酬、新拳套、聖痕を整理。公開済み内容のみを扱い、後続補給や数値は推測しません。",
-    "content": "## 资料边界\n\n本页根据《崩坏3》全球服官方 9.0 更新公告整理。公告给出的版本周期为 **2026-08-20 至 2026-10-22**。页面用于回顾该周期的已公布内容；当前补给、活动开放状态和游戏内数值请以客户端与最新官方公告为准。\n\n## 9.0 的四条主线\n\n1. **主线 Part 2 终章**：新章节「未来所拥抱的未来」上线，先完成对应主线前置，再按游戏内开放条件领取章节奖励。\n2. **战斗与养成**：S 级女武神「浮生·渡尘」使用拳套、造成火焰元素伤害，；装备 9.0 新增神之键「朱华」或其超限形态后，可激活「命运之轮」天命之环。她不是 9.0 新女武神。\n3. **队伍辅助**：新人偶「瑟莉姆」面向命运之轮队伍；其协同攻击与增伤条件应以游戏内技能描述为准。\n4. **装备更新**：新拳套「朱华」、PRI-ARM「朱华·全燃」与「忧郁哲人」圣痕套装加入 Hyperion Arsenal。\n\n## 活动与资源：按时效处理\n\n- **舰长的许愿树秘辛**：活动奖励包含服装、晶体、源晶与崩坏结晶等，先看活动开放条件与结束时间。\n- **飞往欧夏的邀请赛**：9.0 复刻活动；回归舰长应先判断奖励是否仍与自己的资源缺口相关。\n- **初光之愿**：登录活动包含补给卡与纪念奖励。登录天数、服务器与领取窗口必须在游戏内核对。\n- **星际菜圃**：版本活动提供圣痕、拟似结晶与其他奖励；不要把活动期奖励当作永久来源。\n\n## 新手与回归舰长的决策顺序\n\n1. 先进入客户端确认版本、服务器、活动页与补给结束时间。\n2. 优先清理限时登录、主线和活动任务，不在未确认结束时间前把体力投向长期材料。\n3. 盘点已有火伤、命运之轮和天命之环相关角色；不要只因“新装备”就替换可用的旧套装。\n4. 在考虑补给前记录水晶、保底、目标角色和装备缺口。\n5. 再用官方公告与游戏内详情确认补给池、概率、阶段与兑换规则。\n\n## 首批资料库覆盖\n\n当前图鉴先收录 9.0 官方公告中可直接核验的「浮生·渡尘」、「朱华 / 朱华·全燃」与相关材料说明。完整历史女武神、武器、圣痕和强度排行需要逐项补充出处后再扩展，避免把旧版本经验写成当前结论。",
     "contentEn": "## Scope\n\nThis page is based on the global official v9.0 update announcement. The announcement lists the patch period as **August 20 to October 22, 2026**. Use it as a record of announced content; confirm live supplies, event availability, and in-game values in the client and the latest official notices.\n\n## Four v9.0 lanes\n\n1. **Part 2 finale**: The new chapter, The Future We Embrace, arrived. Complete its in-game prerequisites before planning chapter rewards.\n2. **Combat and progression**: S-rank Fenghuang of Vicissitude uses fists, deals Fire DMG, and activates Wheel of Destiny when equipped with the new Divine Key Vermillion Liuli or its PRI-ARM. She is not a new v9.0 battlesuit.\n3. **Team support**: The new AstralOp Senadina is recommended for Wheel of Destiny teams. Use in-game skill text for her synergy and amplification conditions.\n4. **Gear**: Hyperion Arsenal adds Vermillion Liuli, its PRI-ARM Vermillion Liuli: Full Burn, and the Weeping Philosopher stigma set.\n\n## Events and resources: treat them as time-bound\n\n- **Captain's Wishing Tree Secrets**: Rewards include an outfit, Crystals, Source Prisms, and Honkai Shards. Check participation conditions and end time first.\n- **Flying to Oxia Invitation Contest**: A v9.0 rerun. Returning Captains should first decide whether the remaining rewards address their actual resource gaps.\n- **Wish of First Light**: A login event with Supply Cards and commemorative rewards. Check login days, server, and claim window in-game.\n- **Interstellar Cabbage Patch**: A version event with stigma, Imaginons, and other rewards. Do not treat event rewards as permanent sources.\n\n## New and returning Captain order\n\n1. Open the client and confirm patch, server, event tab, and supply end times.\n2. Clear limited login, story, and event tasks first; do not commit stamina to long-term farming before verifying deadlines.\n3. Audit existing Fire, Wheel of Destiny, and Astral Ring units. Do not replace usable equipment solely because a new item exists.\n4. Before considering supplies, record Crystals, pity, the target unit, and gear gaps.\n5. Use official notices and in-game details to verify supply pools, rates, phases, and exchange rules.\n\n## First database slice\n\nThe current index begins with directly verifiable v9.0 entries: Fenghuang of Vicissitude, Vermillion Liuli / Vermillion Liuli: Full Burn, and relevant material notes. Historical battlesuits, weapons, stigmata, and rankings will expand only with source-by-source validation, so older patch experience is not presented as current advice.",
     "contentJa": "## 情報の範囲\n\n本ページはグローバル版公式Ver.9.0更新告知を基にしています。告知上の期間は **2026年8月20日から10月22日** です。公開済み内容の記録として使い、現在の補給、イベント状況、ゲーム内数値はクライアントと最新公式告知で確認してください。\n\n## Ver.9.0の4つの軸\n\n1. **Part 2終章**：新章「未来が抱く未来」が実装。章報酬を計画する前にゲーム内の前提条件を確認します。\n2. **戦闘・育成**：S級「浮生・渡塵」は拳套を使う炎ダメージの戦乙女で、新神の鍵「朱華」または超限形態の装備で運命の輪を有効化します。Ver.9.0の新戦乙女ではありません。\n3. **編成補助**：新人偶「セナディナ」は運命の輪編成向けです。連携攻撃と増幅条件はゲーム内スキル表記を確認してください。\n4. **装備**：Hyperion Arsenalに「朱華」、「朱華・全燃」と「憂鬱な哲人」聖痕セットが追加されます。\n\n## イベントと資源は期限付きとして扱う\n\n- **艦長の願いの木の秘密**：衣装、水晶、源晶、崩壊結晶など。参加条件と終了時刻を先に確認します。\n- **オクシア招待大会へ飛ぼう**：Ver.9.0復刻。復帰艦長は残り報酬が実際の不足を埋めるか確認します。\n- **初光の願い**：補給カードと記念報酬のログインイベント。日数、サーバー、受取期間はゲーム内で確認。\n- **星間キャベツ畑**：聖痕や擬似結晶などのイベント報酬。恒常入手先とは扱いません。\n\n## 初心者・復帰艦長の順番\n\n1. クライアントでバージョン、サーバー、イベント、補給終了時刻を確認。\n2. 期限付きログイン、ストーリー、イベントを優先。期限確認前に長期周回へスタミナを固定しません。\n3. 所持する炎、運命の輪、アストラルリング関係の戦乙女を確認。新装備だけを理由に使える装備を替えません。\n4. 補給を考える前に水晶、天井、目標、装備不足を記録。\n5. 公式告知とゲーム内で補給内容、確率、段階、交換ルールを確認します。\n\n## 初回データベース範囲\n\n現在はVer.9.0で直接確認できる「浮生・渡塵」、「朱華 / 朱華・全燃」と関連素材から開始します。歴代戦乙女、武器、聖痕、ランキングは出典ごとに確認してから追加し、古い環境の経験を現在の結論として扱いません。",
-    "tags": ["9.0", "曙梦向明", "主线 Part 2", "浮生·渡尘", "瑟莉姆", "朱华", "Astral Ring"],
-    "faq": [
-      {
-        "question": "What is the official v9.0 period?",
-        "questionZh": "崩坏3 9.0 官方公告的版本周期是什么？",
-        "questionJa": "崩壊3rd Ver.9.0の公式告知期間は？",
-        "answer": "The global official announcement lists v9.0 from August 20 to October 22, 2026. Check the client for current availability after the period.",
-        "answerZh": "全球服官方公告写明 9.0 周期为 2026 年 8 月 20 日至 10 月 22 日；周期结束后的当前开放状态请以客户端为准。",
-        "answerJa": "グローバル公式告知ではVer.9.0は2026年8月20日から10月22日です。期間後の現在の開放状態はクライアントで確認してください。"
-      },
-      {
-        "question": "Should I pull just because v9.0 adds new gear?",
-        "questionZh": "9.0 有新装备就应该抽吗？",
-        "questionJa": "Ver.9.0で新装備が出たら引くべきですか？",
-        "answer": "No. Confirm supply dates and rules, then compare the new target with your real roster, pity, Crystals, and existing usable equipment.",
-        "answerZh": "不应该只因为新品就抽。先确认补给期限与规则，再对照自己的队伍缺口、保底、水晶和现有可用装备。",
-        "answerJa": "新しいだけでは引きません。補給期間・ルールを確認し、所持編成の不足、天井、水晶、既存装備と比較してください。"
-      }
-    ],
-    "updatedAt": "2026-10-09",
-    "currentVersion": "Honkai Impact 3rd v9.0 official update announcement (2026-08-20 to 2026-10-22)",
     "serpTitle": {
-      "zh": "崩坏3 9.0 曙梦向明：主线终章、人偶与装备总览",
       "en": "HI3 v9.0 The Light at Dream's End: Official Update Overview",
-      "ja": "崩壊3rd Ver.9.0：メイン終章・人偶・装備"
+      "ja": "崩壊3rd Ver.9.0：メイン終章・人偶・装備",
+      "zh": "崩坏3 9.0 曙梦向明：主线终章、人偶与装备总览"
     },
-    "serpDescription": {
-      "zh": "基于崩坏3官方 9.0 更新公告，整理主线 Part 2 终章、浮生·渡尘、瑟莉姆、版本活动、登录奖励与朱华装备；当前内容以客户端和官方公告为准。",
-      "en": "Official-source HI3 v9.0 overview: Part 2 finale, Fenghuang of Vicissitude, Senadina, events, login rewards, and Vermillion Liuli gear. Confirm current content in-game.",
-      "ja": "崩壊3rd公式Ver.9.0告知を基に、Part 2終章、浮生・渡塵、セナディナ、イベント、ログイン報酬、朱華装備を整理。現在の内容はゲーム内で確認。"
-    },
+    "summaryEn": "An official-source overview of v9.0: the Part 2 finale, Fenghuang of Vicissitude, Senadina, version events, login rewards, new fists, and stigmata. It records announced content only and does not infer later supplies or event values.",
+    "summaryJa": "公式Ver.9.0告知を基に、Part 2終章、浮生・渡塵、セナディナ、イベント、ログイン報酬、新拳套、聖痕を整理。公開済み内容のみを扱い、後続補給や数値は推測しません。",
+    "updatedAt": "2026-10-09",
+    "categoryEn": "Version Guide",
+    "categoryJa": "バージョンガイド",
+    "categoryZh": "版本攻略",
     "quickFacts": {
-      "zh": ["官方 9.0 公告周期：2026 年 8 月 20 日至 10 月 22 日。", "首批资料只收录可由官方公告直接核验的 9.0 内容。", "补给、活动、数值和奖励以客户端与最新官方公告为准。"],
-      "en": ["Official v9.0 period: August 20 to October 22, 2026.", "The first database slice contains only v9.0 information directly verifiable in official notices.", "Confirm supplies, events, values, and rewards in the client and latest official notices."],
-      "ja": ["公式Ver.9.0期間：2026年8月20日から10月22日。", "初回データは公式告知で直接確認できるVer.9.0情報のみ。", "補給、イベント、数値、報酬はゲーム内と最新公式告知を確認。"]
+      "en": [
+        "Official v9.0 period: August 20 to October 22, 2026.",
+        "The first database slice contains only v9.0 information directly verifiable in official notices.",
+        "Confirm supplies, events, values, and rewards in the client and latest official notices."
+      ],
+      "ja": [
+        "公式Ver.9.0期間：2026年8月20日から10月22日。",
+        "初回データは公式告知で直接確認できるVer.9.0情報のみ。",
+        "補給、イベント、数値、報酬はゲーム内と最新公式告知を確認。"
+      ],
+      "zh": [
+        "官方 9.0 公告周期：2026 年 8 月 20 日至 10 月 22 日。",
+        "首批资料只收录可由官方公告直接核验的 9.0 内容。",
+        "补给、活动、数值和奖励以客户端与最新官方公告为准。"
+      ]
+    },
+    "currentVersion": "Honkai Impact 3rd v9.0 official update announcement (2026-08-20 to 2026-10-22)",
+    "serpDescription": {
+      "en": "Official-source HI3 v9.0 overview: Part 2 finale, Fenghuang of Vicissitude, Senadina, events, login rewards, and Vermillion Liuli gear. Confirm current content in-game.",
+      "ja": "崩壊3rd公式Ver.9.0告知を基に、Part 2終章、浮生・渡塵、セナディナ、イベント、ログイン報酬、朱華装備を整理。現在の内容はゲーム内で確認。",
+      "zh": "基于崩坏3官方 9.0 更新公告，整理主线 Part 2 终章、浮生·渡尘、瑟莉姆、版本活动、登录奖励与朱华装备；当前内容以客户端和官方公告为准。"
     }
   },
   {
@@ -66,7 +86,15 @@
     "content": "## 先确定你看到的是不是当前内容\n\n崩坏3的补给、活动、回归奖励与商店会随版本和服务器变化。任何“现在必抽”“固定兑换”或“永久奖励”的说法，在你打开客户端确认前都不应视作结论。\n\n## 第一次登录或回归的 30 分钟\n\n1. 确认登录账号、服务器和角色，避免把奖励领取到错误进度。\n2. 打开公告与活动页，记录版本号、活动结束时间、补给结束时间和维护邮件。\n3. 完成仍在开放的登录任务与活动前置；有体力上限时再处理日常消耗。\n4. 查看主线 Part 2 的前置与章节奖励，先决定剧情推进而不是盲目刷材料。\n5. 记录水晶、补给卡、保底状态和已有装备，再比较任何新目标。\n\n## 培养与补给的判断框架\n\n- **先看队伍缺口**：已有队伍是否缺输出、生存、辅助或对应天命之环协同。\n- **再看装备闭环**：新角色或新装备通常不是独立判断，应一起看可用武器、圣痕和升级材料。\n- **最后看期限**：限时补给必须在最后期限、保底与资源下判断，不把攻略页的历史周期当作当前时间表。\n\n## 9.0 资料从哪里开始\n\n- 看版本总览了解已官宣的 Part 2 终章、浮生·渡尘、瑟莉姆、活动和装备。\n- 再看首批角色、武器与材料资料页，确认这只是官方可核验切片。\n- 版本外或未收录的角色、装备与数值，直接以游戏内图鉴和官方公告为准。",
     "contentEn": "## First verify that the information is current\n\nHI3 supplies, events, returnee rewards, and shops can vary by patch and server. Treat no claim such as “must pull now,” “fixed exchange,” or “permanent reward” as a conclusion before opening your client.\n\n## The first 30 minutes\n\n1. Confirm the account, server, and character before rewards go to the wrong progress.\n2. Open notices and the event tab; record patch number, event deadlines, supply deadlines, and maintenance mail.\n3. Clear login tasks and event prerequisites that remain open; spend stamina only after handling caps and deadlines.\n4. Check Part 2 story prerequisites and chapter rewards, then plan story progress before blind material farming.\n5. Record Crystals, Supply Cards, pity state, and equipment before comparing any new target.\n\n## A progression and supply framework\n\n- **Start with roster gaps**: identify missing damage, survival, support, or compatible Astral Ring synergy.\n- **Then check the gear loop**: a new battlesuit or weapon is rarely a standalone choice; include usable weapons, stigmata, and upgrade materials.\n- **End with deadlines**: evaluate limited supplies by their final time, pity, and your resources. Never use a historical guide period as a live timetable.\n\n## Where v9.0 information begins\n\n- Open the version overview for officially announced Part 2 finale, Fenghuang of Vicissitude, Senadina, events, and gear.\n- Then use the first characters, weapons, and materials pages with the understanding that they are an official-verifiable slice.\n- For out-of-scope or missing units, equipment, and values, use the in-game index and official notices directly.",
     "contentJa": "## まず情報が現行か確認\n\n崩壊3rdの補給、イベント、復帰報酬、ショップはバージョンとサーバーで変化します。「今引くべき」「固定交換」「恒常報酬」は、クライアント確認前には結論にしません。\n\n## 初回または復帰後の30分\n\n1. アカウント、サーバー、キャラクターを確認し、誤った進行に報酬が入らないようにします。\n2. 告知とイベントを開き、バージョン、終了時刻、補給終了、メンテメールを記録。\n3. 開催中のログイン任務とイベント前提を優先し、上限・期限を処理してからスタミナを使います。\n4. Part 2の前提と章報酬を確認してからストーリーを計画し、闇雲な素材周回を避けます。\n5. 水晶、補給カード、天井、所持装備を記録してから新目標を比較。\n\n## 育成・補給の判断枠\n\n- **所持編成の不足から**：火力、生存、補助、対応アストラルリング連携を確認。\n- **次に装備の循環**：新戦乙女・武器だけで判断せず、使える武器、聖痕、育成素材を含めます。\n- **最後に期限**：限定補給は終了時刻、天井、資源で判断。過去ガイドの期間を現行日程として使いません。\n\n## Ver.9.0情報の入口\n\n- バージョン総覧で公式発表済みのPart 2終章、浮生・渡塵、セナディナ、イベント、装備を確認。\n- 次に初回のキャラ、武器、素材ページを開き、公式確認可能な切片であることを理解します。\n- 範囲外・未収録の戦乙女、装備、数値はゲーム内図鑑と公式告知を直接確認してください。",
-    "tags": ["新手", "回归", "资源规划", "补给", "9.0", "Captain", "Returnee"],
+    "tags": [
+      "新手",
+      "回归",
+      "资源规划",
+      "补给",
+      "9.0",
+      "Captain",
+      "Returnee"
+    ],
     "faq": [
       {
         "question": "What should a returning Captain do first?",
@@ -88,9 +116,21 @@
     "updatedAt": "2026-10-09",
     "currentVersion": "Honkai Impact 3rd v9.0 official update announcement; use client for live supply and event status",
     "quickFacts": {
-      "zh": ["先确认账号、服务器、活动和补给结束时间。", "先处理限时任务与主线前置，再安排材料。", "任何当前补给、概率和活动状态都以客户端与官方公告为准。"],
-      "en": ["Confirm account, server, events, and supply deadlines first.", "Handle limited tasks and story prerequisites before material farming.", "Use the client and official notices for every live supply, rate, and event state."],
-      "ja": ["最初にアカウント、サーバー、イベント、補給終了時刻を確認。", "期限付き任務とストーリー前提を先に処理してから素材周回。", "現在の補給、確率、イベント状況はクライアントと公式告知を確認。"]
+      "zh": [
+        "先确认账号、服务器、活动和补给结束时间。",
+        "先处理限时任务与主线前置，再安排材料。",
+        "任何当前补给、概率和活动状态都以客户端与官方公告为准。"
+      ],
+      "en": [
+        "Confirm account, server, events, and supply deadlines first.",
+        "Handle limited tasks and story prerequisites before material farming.",
+        "Use the client and official notices for every live supply, rate, and event state."
+      ],
+      "ja": [
+        "最初にアカウント、サーバー、イベント、補給終了時刻を確認。",
+        "期限付き任務とストーリー前提を先に処理してから素材周回。",
+        "現在の補給、確率、イベント状況はクライアントと公式告知を確認。"
+      ]
     }
   },
   {
@@ -108,7 +148,15 @@
     "content": "## 先分清：公告记录不等于当前可领取\n\n9.0 官方公告记录了装备补给、登录活动、人偶补给和回归支援，但其公告周期为 2026 年 8 月 20 日至 10 月 22 日。当前是否仍可领取、补给池是否替换、回归资格是否满足，均须打开客户端确认。\n\n## 资源核对顺序\n\n1. 在背包确认 **源晶** 与 **以太燃素** 的现有数量，不依据旧截图或攻略估算。\n2. 若目标是「忧郁哲人」圣痕，确认已有部位、当前可选/可锻造部位和自己的装备缺口。公告中的锻造参考为每件源晶 2、以太燃素 600。\n3. 再检查登录活动和活动商店是否仍显示「忧郁哲人圣痕自选箱」或其他时限奖励。\n4. 若考虑瑟莉姆，先确认当前人偶补给池、结束时间、保底说明与自己命运之轮队伍是否具备实际协同价值。\n5. 最后检查回归支援页面。9.0 公告列出「跃动火花」驱动核心与「无可替代的导演」圣痕套装，但回归资格、选择范围和领取状态以客户端为准。\n\n## 两种常见错误\n\n- **把锻造参考当成当前成本或开放状态**：成本与配方都可能随版本调整，应从客户端锻造页复核。\n- **把回归清单当成常驻自选**：公告列出的目标只说明当期回归支援调整，不能替代当前回归页面的资格和规则。\n\n## 适合什么玩家先处理\n\n- 已有「浮生·渡尘」或命运之轮队伍：先确认装备/人偶是否补足实际缺口。\n- 缺少完整火伤队：不要仅因装备或人偶名称就跳过角色、队伍与资源核对。\n- 回归舰长：先看资格与限时任务，再决定是否把材料投入旧装备或当前目标。",
     "contentEn": "## First separate an announcement record from a live claim\n\nThe official v9.0 announcement records Equipment Supply, login events, AstralOp Supply, and returnee support, but its announced period was August 20 to October 22, 2026. Open the client to verify whether rewards remain claimable, pools have rotated, or returnee eligibility is met.\n\n## Resource check order\n\n1. Check current **Source Prism** and **Ether Fuel** inventory in your bag; do not estimate from an old screenshot or guide.\n2. If Weeping Philosopher is the target, check owned pieces, currently selectable or craftable pieces, and the actual gear gap. The announcement's crafting reference is 2 Source Prisms and 600 Ether Fuel per piece.\n3. Then check whether the login event or event shop still shows the Weeping Philosopher Stigma Option or any other time-limited reward.\n4. If considering Senadina, verify the live AstralOp pool, end time, pity text, and whether a Wheel of Destiny team gains a real synergy.\n5. Finally open returnee support. The v9.0 announcement lists Volatile Sparkler and Inimitable Stage Director, but client eligibility, choices, and claim state are authoritative.\n\n## Two common mistakes\n\n- **Treating a crafting reference as live cost or availability**: both costs and recipes can change; verify in the in-game Foundry.\n- **Treating a returnee list as a permanent selector**: an announcement describes that period's adjustment, not your current eligibility and rules.\n\n## Who should act first\n\n- Captains with Fenghuang of Vicissitude or Wheel of Destiny teams: check whether an AstralOp or gear fills a real gap.\n- Captains without a complete Fire team: do not skip roster, team, and resource checks just because an item or AstralOp is named.\n- Returnees: verify eligibility and timed missions before assigning materials to old equipment or a current target.",
     "contentJa": "## まず告知記録と現在受取を分ける\n\nVer.9.0公式告知には装備補給、ログインイベント、人偶補給、復帰支援が記載されていますが、告知期間は2026年8月20日から10月22日でした。現在受取可能か、補給が入れ替わったか、復帰資格を満たすかはクライアントで確認してください。\n\n## 資源確認の順番\n\n1. バッグで **源晶** と **エーテル燃料** の現在数を確認。古いスクリーンショットや攻略で推定しません。\n2. 「憂鬱な哲人」が目標なら、所持部位、現在選択・鍛造可能な部位、実際の装備不足を確認。告知上の鍛造参考は1部位につき源晶2、エーテル燃料600です。\n3. 次にログインイベント・イベントショップに選択箱など期限付き報酬が残るか確認。\n4. セナディナを考えるなら、現在の人偶補給、終了時刻、天井表記、運命の輪編成への実際の相乗効果を確認。\n5. 最後に復帰支援を開きます。Ver.9.0告知の「ヴォラタイル・スパークラー」と「唯一無二の舞台監督」は、資格・選択・受取状態をクライアントで判断します。\n\n## よくある誤り\n\n- **鍛造参考を現在のコスト・開放状態と扱う**：コストとレシピは変更され得るため、ゲーム内の鍛造で確認。\n- **復帰一覧を恒常選択と扱う**：告知は当期調整であり、現在の資格とルールを代替しません。\n\n## 先に処理すべき艦長\n\n- 浮生・渡塵または運命の輪編成を持つ艦長：人偶・装備が実際の不足を埋めるか確認。\n- 完全な炎編成がない艦長：装備・人偶名だけで編成、資源確認を飛ばさない。\n- 復帰艦長：古い装備や現在目標に素材を入れる前に、資格と期限付き任務を確認。",
-    "tags": ["资源规划", "回归支援", "忧郁哲人", "源晶", "以太燃素", "瑟莉姆", "9.0"],
+    "tags": [
+      "资源规划",
+      "回归支援",
+      "忧郁哲人",
+      "源晶",
+      "以太燃素",
+      "瑟莉姆",
+      "9.0"
+    ],
     "faq": [
       {
         "question": "What was the v9.0 crafting reference for Weeping Philosopher?",
@@ -130,9 +178,21 @@
     "updatedAt": "2026-10-09",
     "currentVersion": "Honkai Impact 3rd v9.0 historical official reference; verify live resources, supplies, and returnee status in client",
     "quickFacts": {
-      "zh": ["忧郁哲人锻造公告参考：每件源晶 2、以太燃素 600。", "人偶补给与回归支援均须在客户端确认当前资格、池子与结束时间。", "公告周期结束后，不把历史奖励写成当前可领取。"],
-      "en": ["Weeping Philosopher announcement crafting reference: 2 Source Prisms and 600 Ether Fuel per piece.", "Verify live eligibility, pool, and end time for AstralOp Supply and returnee support in the client.", "After the announcement period ends, do not present historical rewards as currently claimable."],
-      "ja": ["憂鬱な哲人の告知上の鍛造参考：1部位につき源晶2、エーテル燃料600。", "人偶補給・復帰支援の資格、補給、終了時刻はクライアントで確認。", "告知期間後は過去報酬を現在受取可能と扱わない。"]
+      "zh": [
+        "忧郁哲人锻造公告参考：每件源晶 2、以太燃素 600。",
+        "人偶补给与回归支援均须在客户端确认当前资格、池子与结束时间。",
+        "公告周期结束后，不把历史奖励写成当前可领取。"
+      ],
+      "en": [
+        "Weeping Philosopher announcement crafting reference: 2 Source Prisms and 600 Ether Fuel per piece.",
+        "Verify live eligibility, pool, and end time for AstralOp Supply and returnee support in the client.",
+        "After the announcement period ends, do not present historical rewards as currently claimable."
+      ],
+      "ja": [
+        "憂鬱な哲人の告知上の鍛造参考：1部位につき源晶2、エーテル燃料600。",
+        "人偶補給・復帰支援の資格、補給、終了時刻はクライアントで確認。",
+        "告知期間後は過去報酬を現在受取可能と扱わない。"
+      ]
     }
   }
 ]

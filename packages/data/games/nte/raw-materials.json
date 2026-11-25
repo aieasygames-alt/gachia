@@ -431,8 +431,8 @@
   {
     "id": "collectors-drama-core",
     "name": "收藏家剧作核心",
-    "nameEn": "Collector's Drama Core",
     "type": "arc",
+    "nameEn": "Collector’s Drama Core",
     "rarity": 3,
     "source": "气泡罐工厂、猎手交易所、合成",
     "typeZh": "原弧材料"

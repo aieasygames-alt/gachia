@@ -1,77 +1,63 @@
 [
   {
     "id": "nanally",
-    "name": "娜娜莉",
-    "nameEn": "Nanally",
-    "attribute": "anima",
-    "rank": "S",
-    "weapon": "等离子",
-    "weaponEn": "Plasma",
-    "role": "进攻",
-    "roleEn": "Attack",
-    "faction": "Eibon Antique Shop",
-    "description": "Eibon古董店的明星店员，Coluccis家族的未来一代目。开朗大方、慷慨善良，参与了多次重大异象收容行动。",
     "faq": [
       {
-        "question": "Is Nanally good in Neverness to Everness?",
-        "questionZh": "娜娜莉值得培养吗？",
         "answer": "Nanally is a S-rank Attack character in Neverness to Everness. As a anima element Attack, Nanally offers unique combat capabilities. Check our tier list for the latest ranking.",
-        "answerZh": "娜娜莉是异环中的S级进攻角色。Coluccis 家族一代目，Eibon 古董店的招牌异能者。猫族异能者，以利爪进行高速近身格斗，拥有强大的反重力能力。"
+        "answerZh": "娜娜莉是异环中的S级进攻角色。Coluccis 家族一代目，Eibon 古董店的招牌异能者。猫族异能者，以利爪进行高速近身格斗，拥有强大的反重力能力。",
+        "question": "Is Nanally good in Neverness to Everness?",
+        "questionZh": "娜娜莉值得培养吗？"
       },
       {
-        "question": "What is the best build for Nanally?",
-        "questionZh": "娜娜莉最佳配装是什么？",
         "answer": "The best build for Nanally in Neverness to Everness focuses on maximizing their Attack potential. As a S-rank anima character, prioritize ATK% and CRIT stats. Use our Build Calculator for detailed recommendations.",
-        "answerZh": "娜娜莉的最佳配装侧重于最大化其进攻潜力。作为S级anima属性角色，优先堆叠攻击力和暴击属性。使用我们的配装计算器查看详细推荐。"
+        "answerZh": "娜娜莉的最佳配装侧重于最大化其进攻潜力。作为S级anima属性角色，优先堆叠攻击力和暴击属性。使用我们的配装计算器查看详细推荐。",
+        "question": "What is the best build for Nanally?",
+        "questionZh": "娜娜莉最佳配装是什么？"
       },
       {
-        "question": "How to get Nanally in Neverness to Everness?",
-        "questionZh": "如何获得娜娜莉？",
         "answer": "Nanally can be obtained through the gacha system in Neverness to Everness. As an S-rank character, they have a lower drop rate but can be guaranteed through the pity system. Check our gacha simulator to test your luck!",
-        "answerZh": "娜娜莉可以通过异环的祈愿系统获得。作为S级角色，掉落率较低，但可以通过保底系统确保获取。使用我们的抽卡模拟器测试运气！"
+        "answerZh": "娜娜莉可以通过异环的祈愿系统获得。作为S级角色，掉落率较低，但可以通过保底系统确保获取。使用我们的抽卡模拟器测试运气！",
+        "question": "How to get Nanally in Neverness to Everness?",
+        "questionZh": "如何获得娜娜莉？"
       },
       {
-        "question": "What is the best team for Nanally?",
-        "questionZh": "娜娜莉最佳配队是什么？",
         "answer": "The best team for Nanally in Neverness to Everness depends on the content. As a anima Attack, pair them with characters that can trigger elemental reactions and provide synergy. Check our team building guide for detailed recommendations.",
-        "answerZh": "娜娜莉的最佳配队取决于具体内容。作为anima属性进攻，建议搭配能触发元素反应和提供协同效果的角色。查看我们的配队指南获取详细推荐。"
+        "answerZh": "娜娜莉的最佳配队取决于具体内容。作为anima属性进攻，建议搭配能触发元素反应和提供协同效果的角色。查看我们的配队指南获取详细推荐。",
+        "question": "What is the best team for Nanally?",
+        "questionZh": "娜娜莉最佳配队是什么？"
       },
       {
-        "question": "What is the best weapon for Nanally?",
-        "questionZh": "娜娜莉最佳武器是什么？",
         "answer": "The best weapon for Nanally depends on your playstyle and available options. They use Fangs and Claws type weapons. Check our weapon tier list for the best options for Nanally.",
-        "answerZh": "娜娜莉的最佳武器取决于你的玩法和可用选项。他们使用格斗类型武器。查看我们的武器排行榜了解娜娜莉的最佳选择。"
+        "answerZh": "娜娜莉的最佳武器取决于你的玩法和可用选项。他们使用格斗类型武器。查看我们的武器排行榜了解娜娜莉的最佳选择。",
+        "question": "What is the best weapon for Nanally?",
+        "questionZh": "娜娜莉最佳武器是什么？"
       }
     ],
-    "relatedCharacters": [
-      "jiuyuan",
-      "mint",
-      "nelly"
-    ],
-    "tierRank": "SS",
-    "tierReason": "Launch best limited S-rank DPS, unmatched numbers, won't be powercrept soon",
-    "tierReasonZh": "开服最强限S主C，数值独一档，短期不会退役",
+    "cvEn": "Brittany Lauda",
+    "cvJp": "竹達彩奈",
+    "cvZh": "宋媛媛",
+    "name": "娜娜莉",
+    "rank": "S",
+    "role": "进攻",
+    "image": "/images/characters/nanally.webp",
+    "cvJpEn": "Ayana Taketatsu",
+    "nameEn": "Nanally",
+    "nameTw": "娜娜莉",
+    "roleEn": "Attack",
     "skills": {
-      "normalAttack": {
-        "name": "柯林斯秘传技法",
-        "nameEn": "Collins Secret Technique",
-        "description": "娜娜莉使用巨型拳套进行连续攻击，造成灵系属性伤害。包含地面连击与空中连击。",
-        "descriptionEn": "Nanally performs consecutive attacks with giant fists, dealing Anima damage. Includes ground and air combos."
+      "qte": {
+        "name": "天降正义",
+        "nameEn": "Justice From Above",
+        "description": "旋转飞踢，造成1次远程灵系伤害",
+        "descriptionEn": "Spinning kick dealing 1 instance of ranged Anima DMG"
       },
       "skill": {
+        "cost": "40 能量",
         "name": "柯林斯·嗷呜术",
         "nameEn": "Collins Howl Art",
-        "description": "发射灵系属性弹幕，造成5次远程灵系伤害，并进入「一代目的权柄」状态，提升暴击伤害。",
-        "descriptionEn": "Fires Anima projectiles dealing 5 instances of ranged Anima DMG, entering Dominator state for increased Crit DMG.",
         "cooldown": "10s",
-        "cost": "40 能量"
-      },
-      "ultimate": {
-        "name": "柯林斯·终极术",
-        "nameEn": "Collins Ultimate Art",
-        "description": "召唤副手发动终极攻击，造成7次远程灵系属性伤害。",
-        "descriptionEn": "Summons sidekick for ultimate attack, dealing 7 instances of ranged Anima DMG.",
-        "cost": "80 能量"
+        "description": "发射灵系属性弹幕，造成5次远程灵系伤害，并进入「一代目的权柄」状态，提升暴击伤害。",
+        "descriptionEn": "Fires Anima projectiles dealing 5 instances of ranged Anima DMG, entering Dominator state for increased Crit DMG."
       },
       "passives": [
         {
@@ -87,12 +73,45 @@
           "descriptionEn": "..."
         }
       ],
-      "qte": {
-        "name": "天降正义",
-        "nameEn": "Justice From Above",
-        "description": "旋转飞踢，造成1次远程灵系伤害",
-        "descriptionEn": "Spinning kick dealing 1 instance of ranged Anima DMG"
+      "ultimate": {
+        "cost": "80 能量",
+        "name": "柯林斯·终极术",
+        "nameEn": "Collins Ultimate Art",
+        "description": "召唤副手发动终极攻击，造成7次远程灵系属性伤害。",
+        "descriptionEn": "Summons sidekick for ultimate attack, dealing 7 instances of ranged Anima DMG."
       },
+      "awakening": [
+        {
+          "name": "帮派初建成",
+          "level": 1,
+          "nameEn": "Gang First Established"
+        },
+        {
+          "name": "第二位成员",
+          "level": 2,
+          "nameEn": "Second Member"
+        },
+        {
+          "name": "要叫大姐头",
+          "level": 3,
+          "nameEn": "Call Me Boss"
+        },
+        {
+          "name": "不是闯祸精",
+          "level": 4,
+          "nameEn": "Not a Troublemaker"
+        },
+        {
+          "name": "小弟遍天下",
+          "level": 5,
+          "nameEn": "Followers Everywhere"
+        },
+        {
+          "name": "因为是家人",
+          "level": 6,
+          "nameEn": "Because We're Family"
+        }
+      ],
       "resonance": [
         {
           "name": "柯林斯秘辛·上",
@@ -105,68 +124,20 @@
           "awakenReq": 6
         }
       ],
-      "awakening": [
-        {
-          "name": "帮派初建成",
-          "nameEn": "Gang First Established",
-          "level": 1
-        },
-        {
-          "name": "第二位成员",
-          "nameEn": "Second Member",
-          "level": 2
-        },
-        {
-          "name": "要叫大姐头",
-          "nameEn": "Call Me Boss",
-          "level": 3
-        },
-        {
-          "name": "不是闯祸精",
-          "nameEn": "Not a Troublemaker",
-          "level": 4
-        },
-        {
-          "name": "小弟遍天下",
-          "nameEn": "Followers Everywhere",
-          "level": 5
-        },
-        {
-          "name": "因为是家人",
-          "nameEn": "Because We're Family",
-          "level": 6
-        }
-      ]
+      "normalAttack": {
+        "name": "柯林斯秘传技法",
+        "nameEn": "Collins Secret Technique",
+        "description": "娜娜莉使用巨型拳套进行连续攻击，造成灵系属性伤害。包含地面连击与空中连击。",
+        "descriptionEn": "Nanally performs consecutive attacks with giant fists, dealing Anima damage. Includes ground and air combos."
+      }
     },
-    "recommendedBuild": {
-      "bestWeapon": "预备备",
-      "bestWeaponEn": "Ready-Ready",
-      "alternativeWeapons": [],
-      "bestDiskSet": "森林萤火之心",
-      "bestDiskSetEn": "Fireflies and the Forest",
-      "mainStats": {
-        "沙漏": "攻击力%",
-        "杯子": "灵属性伤害加成",
-        "头冠": "暴击率"
-      },
-      "mainStatsEn": {
-        "Sands": "ATK%",
-        "Goblet": "Anima DMG Bonus",
-        "Circlet": "CRIT Rate"
-      },
-      "subStatPriority": [
-        "暴击率",
-        "暴击伤害",
-        "攻击力%",
-        "元素精通"
-      ],
-      "subStatPriorityEn": [
-        "CRIT Rate",
-        "CRIT DMG",
-        "ATK%",
-        "Elemental Mastery"
-      ]
-    },
+    "status": "available",
+    "weapon": "等离子",
+    "arcType": "plasma",
+    "faction": "Eibon Antique Shop",
+    "tierRank": "SS",
+    "weaponEn": "Plasma",
+    "attribute": "anima",
     "teamComps": [
       {
         "name": "娜娜莉最佳配队",
@@ -193,99 +164,102 @@
         "descriptionEn": "A team of Eibon Antique Shop members, leveraging faction bonuses and character synergies."
       }
     ],
-    "image": "/images/characters/nanally.webp",
-    "availableAtLaunch": true,
+    "tierReason": "Launch best limited S-rank DPS, unmatched numbers, won't be powercrept soon",
+    "description": "Eibon古董店的明星店员，Coluccis家族的未来一代目。开朗大方、慷慨善良，参与了多次重大异象收容行动。",
+    "signatureArc": "ready-ready",
+    "tierReasonZh": "开服最强限S主C，数值独一档，短期不会退役",
+    "descriptionEn": "The star attraction of the Eibon Antique Shop and future head of the Coluccis family, Nanally is cheerful, generous, and kind. She has taken part in numerous major Anomaly containment operations.",
+    "recommendedBuild": {
+      "mainStats": {
+        "头冠": "暴击率",
+        "杯子": "灵属性伤害加成",
+        "沙漏": "攻击力%"
+      },
+      "bestWeapon": "预备备",
+      "bestDiskSet": "森林萤火之心",
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "Anima DMG Bonus",
+        "Circlet": "CRIT Rate"
+      },
+      "bestWeaponEn": "Ready-Ready",
+      "bestDiskSetEn": "Fireflies and the Forest",
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%",
+        "元素精通"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery"
+      ],
+      "alternativeWeapons": []
+    },
     "acquisitionMethod": "limited-banner",
-    "descriptionEn": "The star attraction of the Eibon Antique Shop and the future head of the Coluccis family. Cheerful, generous, and kind, she has participated in numerous major Anomaly containment operations.",
-    "status": "available",
-    "nameTw": "娜娜莉",
-    "cvZh": "宋媛媛",
-    "cvJp": "竹達彩奈",
-    "cvJpEn": "Ayana Taketatsu",
-    "cvEn": "Brittany Lauda",
-    "arcType": "plasma",
-    "signatureArc": "ready-ready"
+    "availableAtLaunch": true,
+    "relatedCharacters": [
+      "jiuyuan",
+      "mint",
+      "nelly"
+    ]
   },
   {
     "id": "sakiri",
-    "name": "咲里",
-    "nameEn": "Sakiri",
-    "attribute": "incantation",
-    "rank": "S",
-    "weapon": "气体",
-    "weaponEn": "Gas",
-    "role": "支援",
-    "roleEn": "Support",
-    "faction": "Eibon Antique Shop",
-    "description": "Eibon古董店的冰箱贴条规则制定者。手持名为「�的狼丸」的异象锤，性格直率而火爆。与古董店成员一同行动。",
     "faq": [
       {
-        "question": "Is Sakiri good in Neverness to Everness?",
-        "questionZh": "咲里值得培养吗？",
         "answer": "Sakiri is a S-rank Support character in Neverness to Everness. As a incantation element Support, Sakiri offers unique combat capabilities. Check our tier list for the latest ranking.",
-        "answerZh": "咲里是异环中的S级支援角色。Eibon 古董店的角族异能者，与贪吃的异常伴生体桐丸一起战斗。咒术属性支援角色，擅长为队友提供增益。"
+        "answerZh": "咲里是异环中的S级支援角色。Eibon 古董店的角族异能者，与贪吃的异常伴生体桐丸一起战斗。咒术属性支援角色，擅长为队友提供增益。",
+        "question": "Is Sakiri good in Neverness to Everness?",
+        "questionZh": "咲里值得培养吗？"
       },
       {
-        "question": "What is the best build for Sakiri?",
-        "questionZh": "咲里最佳配装是什么？",
         "answer": "The best build for Sakiri in Neverness to Everness focuses on maximizing their Support potential. As a S-rank incantation character, prioritize Energy Recharge and support stats. Use our Build Calculator for detailed recommendations.",
-        "answerZh": "咲里的最佳配装侧重于最大化其支援潜力。作为S级incantation属性角色，优先能量回复和辅助属性。使用我们的配装计算器查看详细推荐。"
+        "answerZh": "咲里的最佳配装侧重于最大化其支援潜力。作为S级incantation属性角色，优先能量回复和辅助属性。使用我们的配装计算器查看详细推荐。",
+        "question": "What is the best build for Sakiri?",
+        "questionZh": "咲里最佳配装是什么？"
       },
       {
-        "question": "How to get Sakiri in Neverness to Everness?",
-        "questionZh": "如何获得咲里？",
         "answer": "Sakiri can be obtained through the gacha system in Neverness to Everness. As an S-rank character, they have a lower drop rate but can be guaranteed through the pity system. Check our gacha simulator to test your luck!",
-        "answerZh": "咲里可以通过异环的祈愿系统获得。作为S级角色，掉落率较低，但可以通过保底系统确保获取。使用我们的抽卡模拟器测试运气！"
+        "answerZh": "咲里可以通过异环的祈愿系统获得。作为S级角色，掉落率较低，但可以通过保底系统确保获取。使用我们的抽卡模拟器测试运气！",
+        "question": "How to get Sakiri in Neverness to Everness?",
+        "questionZh": "如何获得咲里？"
       },
       {
-        "question": "What is the best team for Sakiri?",
-        "questionZh": "咲里最佳配队是什么？",
         "answer": "The best team for Sakiri in Neverness to Everness depends on the content. As a incantation Support, pair them with characters that can trigger elemental reactions and provide synergy. Check our team building guide for detailed recommendations.",
-        "answerZh": "咲里的最佳配队取决于具体内容。作为incantation属性支援，建议搭配能触发元素反应和提供协同效果的角色。查看我们的配队指南获取详细推荐。"
+        "answerZh": "咲里的最佳配队取决于具体内容。作为incantation属性支援，建议搭配能触发元素反应和提供协同效果的角色。查看我们的配队指南获取详细推荐。",
+        "question": "What is the best team for Sakiri?",
+        "questionZh": "咲里最佳配队是什么？"
       },
       {
-        "question": "What is the best weapon for Sakiri?",
-        "questionZh": "咲里最佳武器是什么？",
         "answer": "The best weapon for Sakiri depends on your playstyle and available options. They use Kiroumaru type weapons. Check our weapon tier list for the best options for Sakiri.",
-        "answerZh": "咲里的最佳武器取决于你的玩法和可用选项。他们使用桐丸类型武器。查看我们的武器排行榜了解咲里的最佳选择。"
+        "answerZh": "咲里的最佳武器取决于你的玩法和可用选项。他们使用桐丸类型武器。查看我们的武器排行榜了解咲里的最佳选择。",
+        "question": "What is the best weapon for Sakiri?",
+        "questionZh": "咲里最佳武器是什么？"
       }
     ],
-    "relatedCharacters": [
-      "baicang",
-      "adler",
-      "lingko"
-    ],
-    "tierRank": "A+",
-    "tierReason": "Core buff support, pairs well with any DPS",
-    "tierReasonZh": "核心增益辅助，搭配任意输出角色均可",
+    "cvEn": "Brianna Knickerbocker",
+    "cvJp": "伊藤美来",
+    "name": "咲里",
+    "rank": "S",
+    "role": "支援",
+    "image": "/images/characters/sakiri.webp",
+    "cvJpEn": "Miku Ito",
+    "nameEn": "Sakiri",
+    "nameTw": "咲里",
+    "roleEn": "Support",
     "skills": {
-      "normalAttack": {
-        "name": "咲里咒文打击",
-        "nameEn": "Sakiri's Spell Strike",
-        "description": "咲里使用桐丸进行连续攻击，最多可进行4段攻击。攻击时附带轻微的属性效果。",
-        "descriptionEn": "Sakiri performs consecutive attacks with their Kiroumaru, up to 4 hits. Attacks apply a minor elemental effect.",
-        "scaling": "一段: 60% ATK\n二段: 55% ATK\n三段: 70% ATK\n四段: 90% ATK",
-        "scalingEn": "Hit 1: 60% ATK\nHit 2: 55% ATK\nHit 3: 70% ATK\nHit 4: 90% ATK"
-      },
       "skill": {
+        "cost": "50 能量",
         "name": "言灵之力",
         "nameEn": "Power of Words",
-        "description": "为全体队友提供增益效果，提升攻击力和元素精通。同时为队伍中血量最低的角色恢复生命值。",
-        "descriptionEn": "Provides buffs to all party members, boosting ATK and Elemental Mastery. Also heals the party member with the lowest HP.",
         "scaling": "攻击力提升: 20%\n元素精通提升: 50\n治疗量: 120% ATK",
-        "scalingEn": "ATK Boost: 20%\nEM Boost: 50\nHealing: 120% ATK",
         "cooldown": "12s",
-        "cost": "50 能量"
-      },
-      "ultimate": {
-        "name": "咒阵爆发",
-        "nameEn": "Incantation Burst",
-        "description": "咲里的终结技，为全队提供强大的增益效果，恢复大量生命值并提升全属性抗性。增益持续12秒。",
-        "descriptionEn": "Sakiri's ultimate provides powerful buffs to the entire party, healing a large amount of HP and boosting all elemental resistances. Buffs last 12 seconds.",
-        "scaling": "治疗量: 200% ATK\n抗性提升: 30%\n持续时间: 12s",
-        "scalingEn": "Healing: 200% ATK\nRES Boost: 30%\nDuration: 12s",
-        "cooldown": "60s",
-        "cost": "80 能量 / 80 Energy"
+        "scalingEn": "ATK Boost: 20%\nEM Boost: 50\nHealing: 120% ATK",
+        "description": "为全体队友提供增益效果，提升攻击力和元素精通。同时为队伍中血量最低的角色恢复生命值。",
+        "descriptionEn": "Provides buffs to all party members, boosting ATK and Elemental Mastery. Also heals the party member with the lowest HP."
       },
       "passives": [
         {
@@ -300,43 +274,33 @@
           "description": "队伍中每有一个不同属性的角色，咲里的能量回复速度提升5%。",
           "descriptionEn": "For each different element in the party, Sakiri's Energy Recharge increases by 5%."
         }
-      ]
-    },
-    "recommendedBuild": {
-      "bestWeapon": "好狗狗走四方",
-      "bestWeaponEn": "Good Boy's Grand Adventure",
-      "alternativeWeapons": [
-        {
-          "id": "contemplative-cat",
-          "name": "思考喵",
-          "nameEn": "Contemplative Cat"
-        }
       ],
-      "bestDiskSet": "音速蓝刺猬",
-      "bestDiskSetEn": "Speedy Hedgehog",
-      "mainStats": {
-        "沙漏": "攻击力%",
-        "杯子": "攻击力%",
-        "头冠": "暴击率"
+      "ultimate": {
+        "cost": "80 能量 / 80 Energy",
+        "name": "咒阵爆发",
+        "nameEn": "Incantation Burst",
+        "scaling": "治疗量: 200% ATK\n抗性提升: 30%\n持续时间: 12s",
+        "cooldown": "60s",
+        "scalingEn": "Healing: 200% ATK\nRES Boost: 30%\nDuration: 12s",
+        "description": "咲里的终结技，为全队提供强大的增益效果，恢复大量生命值并提升全属性抗性。增益持续12秒。",
+        "descriptionEn": "Sakiri's ultimate provides powerful buffs to the entire party, healing a large amount of HP and boosting all elemental resistances. Buffs last 12 seconds."
       },
-      "mainStatsEn": {
-        "Sands": "ATK%",
-        "Goblet": "ATK%",
-        "Circlet": "CRIT Rate"
-      },
-      "subStatPriority": [
-        "暴击率",
-        "暴击伤害",
-        "攻击力%",
-        "元素精通"
-      ],
-      "subStatPriorityEn": [
-        "CRIT Rate",
-        "CRIT DMG",
-        "ATK%",
-        "Elemental Mastery"
-      ]
+      "normalAttack": {
+        "name": "咲里咒文打击",
+        "nameEn": "Sakiri's Spell Strike",
+        "scaling": "一段: 60% ATK\n二段: 55% ATK\n三段: 70% ATK\n四段: 90% ATK",
+        "scalingEn": "Hit 1: 60% ATK\nHit 2: 55% ATK\nHit 3: 70% ATK\nHit 4: 90% ATK",
+        "description": "咲里使用桐丸进行连续攻击，最多可进行4段攻击。攻击时附带轻微的属性效果。",
+        "descriptionEn": "Sakiri performs consecutive attacks with their Kiroumaru, up to 4 hits. Attacks apply a minor elemental effect."
+      }
     },
+    "status": "available",
+    "weapon": "气体",
+    "arcType": "gas",
+    "faction": "Eibon Antique Shop",
+    "tierRank": "A+",
+    "weaponEn": "Gas",
+    "attribute": "incantation",
     "teamComps": [
       {
         "name": "咲里最佳配队",
@@ -363,17 +327,53 @@
         "descriptionEn": "A team of Eibon Antique Shop members, leveraging faction bonuses and character synergies."
       }
     ],
-    "image": "/images/characters/sakiri.webp",
-    "availableAtLaunch": true,
-    "acquisitionMethod": "beginner-selector",
+    "tierReason": "Core buff support, pairs well with any DPS",
+    "description": "Eibon古董店的冰箱贴条规则制定者。手持名为「桐丸」的异象锤，性格直率而火爆。与古董店成员一同行动。",
+    "signatureArc": "",
+    "tierReasonZh": "核心增益辅助，搭配任意输出角色均可",
     "descriptionEn": "The rule maker for the fridge sticky notes at the Eibon Antique Shop. Wields an Anomaly hammer named Kiroumaru. Known for her straightforward and fiery personality.",
-    "status": "available",
-    "nameTw": "咲里",
-    "cvJp": "伊藤美来",
-    "cvJpEn": "Miku Ito",
-    "cvEn": "Brianna Knickerbocker",
-    "arcType": "gas",
-    "signatureArc": ""
+    "recommendedBuild": {
+      "mainStats": {
+        "头冠": "暴击率",
+        "杯子": "攻击力%",
+        "沙漏": "攻击力%"
+      },
+      "bestWeapon": "好狗狗走四方",
+      "bestDiskSet": "音速蓝刺猬",
+      "mainStatsEn": {
+        "Sands": "ATK%",
+        "Goblet": "ATK%",
+        "Circlet": "CRIT Rate"
+      },
+      "bestWeaponEn": "Good Boy's Grand Adventure",
+      "bestDiskSetEn": "Speedy Hedgehog",
+      "subStatPriority": [
+        "暴击率",
+        "暴击伤害",
+        "攻击力%",
+        "元素精通"
+      ],
+      "subStatPriorityEn": [
+        "CRIT Rate",
+        "CRIT DMG",
+        "ATK%",
+        "Elemental Mastery"
+      ],
+      "alternativeWeapons": [
+        {
+          "id": "contemplative-cat",
+          "name": "思考喵",
+          "nameEn": "Contemplative Cat"
+        }
+      ]
+    },
+    "acquisitionMethod": "beginner-selector",
+    "availableAtLaunch": true,
+    "relatedCharacters": [
+      "baicang",
+      "adler",
+      "lingko"
+    ]
   },
   {
     "id": "fadia",
@@ -7303,13 +7303,48 @@
     "tierReason": "S-rank Lakshana character from v1.1 Phase 2 banner with strong combat capabilities",
     "tierReasonZh": "v1.1下半卡池S级相属性角色，战斗能力出色",
     "skills": {
-      "normalAttack": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "dodge": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "assist": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "special": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "ultimate": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "chain": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" },
-      "corePassive": { "name": "", "nameEn": "", "description": "", "descriptionEn": "" }
+      "normalAttack": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "dodge": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "assist": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "special": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "ultimate": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "chain": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      },
+      "corePassive": {
+        "name": "",
+        "nameEn": "",
+        "description": "",
+        "descriptionEn": ""
+      }
     },
     "recommendedBuild": {
       "bestWeapon": "",
