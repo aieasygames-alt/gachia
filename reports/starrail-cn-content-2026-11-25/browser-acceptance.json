@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com/zh/starrail/version",
+  "method": "in-app browser accessibility state",
+  "publishedRecordsObserved": 8,
+  "cnEventDatesObserved": true,
+  "cnPlanarWindowObserved": true,
+  "cnEndgameCalendarObserved": true,
+  "hotfixesAndOutstandingIssuesSeparated": true,
+  "officialArticleLinksObserved": true,
+  "browserWrites": 0
+}

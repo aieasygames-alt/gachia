@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { ProxyAgent,setGlobalDispatcher } from '../../node_modules/.pnpm/node_modules/undici/index.js';
+import { unifiedUploadArguments,unifiedUploadResponse } from '../../scripts/unified-production-transport.mjs';
+import { multipartModule,assertUploadMetadata,assertUploadedVersion } from '../../scripts/desktop-cloud-transport.mjs';
+import { isolatedEnvironment } from '../../scripts/desktop-publish.mjs';
+import { captureUnifiedUploadedModule,readUnifiedVersion } from '../../scripts/unified-version-identity.mjs';
+const root=import.meta.dirname,hash=p=>createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const read=n=>JSON.parse(fs.readFileSync(path.join(root,n)));
+assert.equal(read('local-acceptance.json').status,'passed');
+const prepared=read('runtime-prepared.json'),configPath=path.join(root,'module/upload.json'),config=read('module/upload.json');
+assert.equal(hash(configPath),prepared.configSHA256);assert.equal(hash(config.main),prepared.moduleSHA256);
+assertUploadMetadata(read('module/metadata.json'),config);
+const state=read('runtime-before.json');
+const compiled=read('module/metadata.json').bindings;
+const plain=state.gachia.settings.bindings.filter(b=>b.type==='plain_text');
+assert.deepEqual(Object.fromEntries(plain.map(b=>[b.name,b.text])),config.vars);
+const outputDir=path.join(root,'.private/upload');assert(!fs.existsSync(outputDir),'Do not retry cloud writes');fs.mkdirSync(outputDir,{mode:0o700});
+const home=path.join(outputDir,'home');fs.mkdirSync(home,{mode:0o700});
+const token=JSON.parse(fs.readFileSync(path.join(os.homedir(),'.wrangler/config/default.toml'),'utf8').match(/^oauth_token\s*=\s*("[^"\r\n]*")/m)[1]);
+const outfile=path.join(outputDir,'uploaded.multipart'),log=path.join(outputDir,'upload.log');
+const command=unifiedUploadArguments(configPath,'',outfile);
+try {
+ const out=execFileSync(process.execPath,[prepared.tool.bin,...command],{cwd:outputDir,env:isolatedEnvironment(home,{CLOUDFLARE_API_TOKEN:token,CLOUDFLARE_ACCOUNT_ID:'e6472b6c6172a3ac1e1596ef100543ae',HTTPS_PROXY:'http://127.0.0.1:1087',HTTP_PROXY:'http://127.0.0.1:1087',WRANGLER_HIDE_BANNER:'true',WRANGLER_SEND_ERROR_REPORTS:'false'}),timeout:300000,maxBuffer:16*1024*1024,stdio:['ignore','pipe','pipe']});
+ fs.writeFileSync(log,out,{flag:'wx',mode:0o600});
+} catch(error){fs.writeFileSync(log,Buffer.concat([error.stdout??Buffer.alloc(0),error.stderr??Buffer.alloc(0)]),{flag:'wx',mode:0o600});throw Error('Upload stopped; reconcile live state before retrying.');}
+const {versionId}=unifiedUploadResponse(fs.readFileSync(log,'utf8'),'gachia');
+setGlobalDispatcher(new ProxyAgent('http://127.0.0.1:1087'));
+const version=await readUnifiedVersion({service:'gachia',versionId,token});
+assertUploadedVersion(version,versionId,config,state.gachia.settings.bindings);
+const form=await multipartModule(fs.readFileSync(outfile));assert.equal(form.moduleSHA256,prepared.moduleSHA256);assertUploadMetadata(form.metadata,config);
+const proof=await captureUnifiedUploadedModule({service:'gachia',versionId,moduleSHA256:prepared.moduleSHA256,context:{role:'candidate',transportPin:hash(path.join(root,'runtime-prepared.json')),configPin:hash(configPath)},directory:path.join(outputDir,'module-proof'),uploadPath:outfile,uploadLogPath:log,expectedVersion:version,readVersion:(service,versionId)=>readUnifiedVersion({service,versionId,token}),readContent:(service,versionId)=>readUnifiedVersion({service,versionId,token,binary:true})});
+const receipt={status:'passed',versionId,previewOrigin:`https://${versionId.slice(0,8)}-gachia.aieasygames.workers.dev`,moduleSHA256:prepared.moduleSHA256,sourceCommit:'38b9f6cb4c824e45e9d3ee837df0710800347092',moduleProof:proof,bindingsPreserved:true,trafficMutation:false};
+fs.writeFileSync(path.join(root,'runtime-upload.json'),JSON.stringify(receipt,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify(receipt));

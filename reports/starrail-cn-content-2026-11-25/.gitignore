@@ -1,0 +1,6 @@
+.private/
+*.html
+*.log
+artifact/
+module/
+recovery/

@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-11-25",
+  "method": "MiYouShe visible official announcement pages and author profile labels; no community comments used",
+  "sources": [
+    {
+      "url": "https://www.miyoushe.com/sr/article/79482327",
+      "title": "4.7版本「此刻，将群星付之一笑」版本更新说明",
+      "published": "2026-11-11",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "supports": [
+        "国服版本期限",
+        "限时活动时间及门槛",
+        "好礼与签到",
+        "周期挑战日程",
+        "版本补偿邮件"
+      ]
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79504324",
+      "title": "4.7版本游戏优化及已知问题说明（11/18更新）",
+      "published": "2026-11-11",
+      "lastEdited": "2026-11-18",
+      "author": "车站问询处1号客服",
+      "identity": "《崩坏：星穹铁道》官方客服",
+      "section": "官方",
+      "supports": [
+        "11/11、11/12、11/13、11/18修复",
+        "两项仍在已知问题内的事项"
+      ],
+      "limitation": "Does not prove the absence of later hotfixes."
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79712872",
+      "title": "「位面分裂」活动：位面饰品限时双倍掉落",
+      "published": "2026-11-22",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "supports": [
+        "11/23 04:00至12/07 03:59",
+        "解锁位面饰品",
+        "双倍次数有限且活动期间不重置"
+      ]
+    }
+  ]
+}

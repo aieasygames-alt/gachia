@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "revision": 1795574539627,
+  "count": 8,
+  "command": "npm run publish:starrail",
+  "cms": "http://127.0.0.1:4320",
+  "origin": "https://gachia.com",
+  "workerBuildsForContentSync": 0
+}

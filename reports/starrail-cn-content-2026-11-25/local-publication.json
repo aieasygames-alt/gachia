@@ -1,0 +1,38 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-25T02:42:17.076Z",
+      "versionCount": 3
+    },
+    {
+      "id": 4,
+      "slug": "v4-7-gifts-and-eidolons",
+      "updatedAt": "2026-11-25T02:42:17.087Z",
+      "versionCount": 4
+    },
+    {
+      "id": 1,
+      "slug": "v4-7-live",
+      "updatedAt": "2026-11-25T02:42:17.094Z",
+      "versionCount": 7
+    },
+    {
+      "id": 7,
+      "slug": "v4-7-cn-endgame-calendar",
+      "updatedAt": "2026-11-25T02:42:17.101Z",
+      "versionCount": 2
+    },
+    {
+      "id": 8,
+      "slug": "v4-7-cn-planar-fissure",
+      "updatedAt": "2026-11-25T02:42:17.108Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 8,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

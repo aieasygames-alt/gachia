@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "38b9f6c",
+  "previousVersion": "3473e29b-788d-4a9a-a847-28ba0d58557f",
+  "previousModuleSHA256": "6c16cefe81d333a976ac3cd208f32bf9c6cd245466044d78eddb2b4c699254c8",
+  "moduleSHA256": "6b623ba13ade21e811ffcfd7fa4ed9b5abc2fa98fc4aafacb4a3b80520ac5650",
+  "configSHA256": "6a2a97d9047c55c78f925c1405a26f91d734a6304e839155cd46b930078fa381",
+  "staticRetention": {
+    "previous": 1459,
+    "copied": 1328,
+    "allCollisionsIdentical": true
+  },
+  "tool": {
+    "version": "4.148.0",
+    "bin": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/node_modules/.pnpm/wrangler@4.148.0_@cloudflare+workers-types@5.20261006.1_@types+node@25.6.0/node_modules/wrangler/bin/wrangler.js",
+    "cli": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/node_modules/.pnpm/wrangler@4.148.0_@cloudflare+workers-types@5.20261006.1_@types+node@25.6.0/node_modules/wrangler/wrangler-dist/cli.js",
+    "binSHA256": "780661a508810f3b65786895b1ca9aacbc4f55d329ae6b8c1e49ec8433569f77",
+    "cliSHA256": "028a1b0d560594692aa44bda69079d700617164bf7d4de93a4ba3aa5b401ff1c"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "locale": "zh",
+      "status": 200,
+      "revision": 1795573247122,
+      "cacheControl": "no-store"
+    },
+    {
+      "locale": "en",
+      "status": 200,
+      "revision": 1795573247122,
+      "cacheControl": "no-store"
+    },
+    {
+      "locale": "ja",
+      "status": 200,
+      "revision": 1795573247122,
+      "cacheControl": "no-store"
+    }
+  ]
+}

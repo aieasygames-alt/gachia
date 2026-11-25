@@ -166,6 +166,9 @@ export interface GameUpdate {
   }[];
   boundary: string;
   sources: {
+    /**
+     * 米游社仅接受星铁文章链接；发布前须核对官方版块与官方账号或官方客服身份，社区帖子不能作为官方依据。
+     */
     url: string;
     id?: string | null;
   }[];

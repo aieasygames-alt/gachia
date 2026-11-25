@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "records": 8,
+  "checks": [
+    "anonymous_write_rejected",
+    "all_8_records_accepted_with_cn_sources",
+    "complete_text_rendered_and_three_locales_isolated_no_store",
+    "non_starrail_source_rejected",
+    "noncanonical_source_rejected",
+    "draft_rejected",
+    "stale_revision_rejected"
+  ],
+  "writes": "local D1 only",
+  "productionWrites": 0
+}
