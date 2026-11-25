@@ -117,7 +117,7 @@ for d in equipment:
    for fact in d['facts']:assert all(line in body for line in fact['text'].split('\n')),path
    assert d['title'] in html.unescape(req('/'+locale+'/starrail/'+category)[1]),path
   else:assert d['summary'] not in body and 'noindex' in body,path
-checks.append('three_equipment_details_indices_full_effects_sources_and_locale_isolation')
+checks.append('eight_equipment_details_indices_full_effects_sources_and_locale_isolation')
 changed=json.loads(json.dumps(docs))
 for d in changed:
  if d['kind']=='equipment':d['title']='装备动态修订'+d['slug'];d['facts']=[{'text':'修订效果\n动态数值13点'}]

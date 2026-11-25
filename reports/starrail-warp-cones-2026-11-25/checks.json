@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "web": {
+    "typeCheck": true,
+    "testFiles": 105,
+    "tests": 622,
+    "openNextBuild": true
+  },
+  "data": {
+    "typeCheck": true,
+    "testFiles": 18,
+    "tests": 181,
+    "rawMirrors": true,
+    "manifests": true
+  },
+  "cms": {
+    "worktreeTests": 8,
+    "configuredEditorExistingTests": 5,
+    "configuredEditorTypeCheck": true,
+    "productionBuild": true,
+    "schemaMigrationRequired": false
+  },
+  "localWorker": "local-acceptance.json",
+  "sources": "source-comparison.json",
+  "warnings": [
+    "Existing unrelated auth-dialog react-hooks warning in build"
+  ]
+}

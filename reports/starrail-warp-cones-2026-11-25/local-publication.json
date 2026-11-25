@@ -1,0 +1,38 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 24,
+      "slug": "welcome-to-the-galactic-city",
+      "updatedAt": "2026-11-25T11:44:15.350Z",
+      "versionCount": 2
+    },
+    {
+      "id": 25,
+      "slug": "dazzling-world",
+      "updatedAt": "2026-11-25T11:44:15.363Z",
+      "versionCount": 2
+    },
+    {
+      "id": 26,
+      "slug": "when-she-decided-to-see",
+      "updatedAt": "2026-11-25T11:44:15.370Z",
+      "versionCount": 2
+    },
+    {
+      "id": 27,
+      "slug": "trend-of-the-universal-market",
+      "updatedAt": "2026-11-25T11:44:15.377Z",
+      "versionCount": 2
+    },
+    {
+      "id": 28,
+      "slug": "she-already-shut-her-eyes",
+      "updatedAt": "2026-11-25T11:44:15.384Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 28,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

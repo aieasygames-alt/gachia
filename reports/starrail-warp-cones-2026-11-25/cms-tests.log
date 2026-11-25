@@ -7,8 +7,8 @@
 ✔ reader rejects mismatched language, drafts and truncated responses (1.455334ms)
 ✔ outages use the dated snapshot; a valid empty CMS response stays empty (1.006833ms)
 [⣷] Pulling schema from database...
-[2K[1G[✓] Pulling schema from database...
-[19:32:42] [33mWARN[39m: [36mNo email adapter provided. Email will be written to console. More info at https://payloadcms.com/docs/email/overview.[39m
+[✓] Pulling schema from database...
+[19:32:42] WARN: No email adapter provided. Email will be written to console. More info at https://payloadcms.com/docs/email/overview.
 ✔ real Payload + SQLite: draft isolation, publish, restricted writes, history and idempotent imports (823.130042ms)
 ℹ tests 5
 ℹ suites 0
