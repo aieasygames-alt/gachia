@@ -16,6 +16,23 @@ test('source contract rejects drafts, foreign games, unsafe sources and impossib
   }
 });
 
+test('MiYouShe citations accept only canonical Star Rail article URLs', () => {
+  for (const url of ['https://www.miyoushe.com/sr/article/79482327', 'https://www.miyoushe.com/sr/article/79504324/']) {
+    assert.equal(isOfficialStarRailSource(url), true);
+    assert.ok(parseStarRailUpdate({ ...seed[0], sources: [{ url }] }));
+  }
+  for (const url of [
+    'https://www.miyoushe.com/sr/home/53', 'https://www.miyoushe.com/ys/article/79482327',
+    'https://www.miyoushe.com/sr/article/no-id', 'https://www.miyoushe.com/sr/article/0',
+    'https://www.miyoushe.com/sr/article/79482327?redirect=example.com',
+    'https://www.miyoushe.com/sr/article/79482327#comment',
+    'https://www.miyoushe.com.evil.example/sr/article/79482327',
+    'http://www.miyoushe.com/sr/article/79482327',
+    'https://name:pass@www.miyoushe.com/sr/article/79482327',
+    'https://www.miyoushe.com:444/sr/article/79482327',
+  ]) assert.equal(isOfficialStarRailSource(url), false);
+});
+
 test('reader scopes queries to game, locale and published status, bypasses the Next cache', async () => {
   let calls = 0;
   const result = await readStarRailUpdates('zh', 'http://127.0.0.1:4320', (async (url, init) => {

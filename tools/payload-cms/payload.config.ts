@@ -65,7 +65,8 @@ const Updates: CollectionConfig = {
     { name: 'boundary', label: '未核验项 / 时间与地区边界', type: 'textarea', required: true, maxLength: 2000 },
     { name: 'sources', label: '官方来源', type: 'array', required: true, minRows: 1, maxRows: 10,
       fields: [{ name: 'url', label: 'HTTPS 链接', type: 'text', required: true,
-        validate: (v: unknown) => isOfficialStarRailSource(v) || '请使用星铁官网或官方版本专题的 HTTPS 链接。' }] },
+        admin: { description: '米游社仅接受星铁文章链接；发布前须核对官方版块与官方账号或官方客服身份，社区帖子不能作为官方依据。' },
+        validate: (v: unknown) => isOfficialStarRailSource(v) || '请使用星铁官网、官方专题或已核验官方身份的米游社星铁文章 HTTPS 链接。' }] },
   ],
 };
 

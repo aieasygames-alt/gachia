@@ -23,7 +23,13 @@ export function isOfficialStarRailSource(value: unknown): value is string {
   if (typeof value !== 'string') return false;
   try {
     const url = new URL(value);
-    return url.protocol === 'https:' && officialHosts.has(url.hostname) && !url.username && !url.password && !url.port;
+    if (url.protocol !== 'https:' || url.username || url.password || url.port) return false;
+    // MiYouShe also hosts community posts: editors must verify the official author
+    // and announcement section. Only Star Rail article URLs are valid citations.
+    if (url.hostname === 'www.miyoushe.com') {
+      return /^\/sr\/article\/[1-9]\d*\/?$/.test(url.pathname) && !url.search && !url.hash;
+    }
+    return officialHosts.has(url.hostname);
   } catch { return false; }
 }
 
