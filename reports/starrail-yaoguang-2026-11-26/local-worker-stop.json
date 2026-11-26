@@ -1,0 +1,9 @@
+{
+  "status": "stopped_owned_dev_trees",
+  "roots": [
+    1103,
+    2920
+  ],
+  "processCount": 14,
+  "reason": "Finish local acceptance; prevent development watcher from restarting workerd"
+}

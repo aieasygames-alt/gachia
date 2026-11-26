@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "publicCount": 75,
+  "newDraftsRemainPrivate": 1,
+  "actualProductionBuild": "passed",
+  "schemaMigrationRequired": false,
+  "synchronizedSharedParsers": 2,
+  "previousBuild": "ignored .private/editor-build-before",
+  "aliasMetadataSynchronizedAfterBuild": "Unused by Payload; no validation or storage behavior change"
+}

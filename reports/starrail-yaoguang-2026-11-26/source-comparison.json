@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "stationAdjacentSkillRanges": 41,
+  "stationNodes": 13,
+  "bwikiAscensions": 6,
+  "bwikiMultiplierValuesMatched": 73,
+  "multiplierConflictResolved": [
+    {
+      "skill": "elation",
+      "level": 7,
+      "bwiki": "81.125%",
+      "adopted": "81.25%"
+    }
+  ],
+  "costResolution": "Station quantities match pinned data at every range and node; Bwiki generic costs rejected. Displayed third-party sources may share upstream; not independent official evidence."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "servicesChanged": [
+    "gachia"
+  ],
+  "previousVersion": "edfdcdde-bbe3-4202-9749-488deaa415ed",
+  "versionId": "f59ceafa-b7e8-47a8-86da-bf3cedb53ec8",
+  "otherSixDeploymentsUnchanged": true,
+  "allSevenRoutesSubdomainsBindingsSettingsUnchanged": true,
+  "method": "independent Cloudflare API before/after snapshots"
+}

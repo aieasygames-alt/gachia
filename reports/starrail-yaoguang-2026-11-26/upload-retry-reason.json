@@ -1,0 +1,8 @@
+{
+  "failure": "Cloudflare invalid access token at initial service lookup",
+  "refresh": "Existing Wrangler OAuth session refreshed with whoami",
+  "reconciled": "upload-reconciliation.json",
+  "newCandidateVersionCreatedByFailedAttempt": false,
+  "productionTrafficUnchanged": true,
+  "retryAuthorizedWithinExistingRelease": true
+}

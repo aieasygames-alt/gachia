@@ -1,0 +1,14 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 76,
+      "slug": "yaoguang-character-data",
+      "updatedAt": "2026-11-26T07:35:18.144Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 76,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

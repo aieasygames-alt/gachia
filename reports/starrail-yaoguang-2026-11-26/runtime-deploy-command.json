@@ -1,0 +1,14 @@
+{
+  "returncode": 0,
+  "automaticRetry": false,
+  "command": [
+    "versions",
+    "deploy",
+    "f59ceafa-b7e8-47a8-86da-bf3cedb53ec8@100%",
+    "--config",
+    "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-yaoguang-2026-11-26/module/upload.json",
+    "--env",
+    "",
+    "--yes"
+  ]
+}

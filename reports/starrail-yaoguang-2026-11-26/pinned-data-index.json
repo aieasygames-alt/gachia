@@ -1,0 +1,386 @@
+[
+  {
+    "name": "achievements.json",
+    "path": "index_new/cn/achievements.json",
+    "sha": "d1b33a7b9ce65eaab7deb361b04c133d98debc4e",
+    "size": 493792,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/achievements.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/achievements.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/d1b33a7b9ce65eaab7deb361b04c133d98debc4e",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/achievements.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/achievements.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/d1b33a7b9ce65eaab7deb361b04c133d98debc4e",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/achievements.json"
+    }
+  },
+  {
+    "name": "avatars.json",
+    "path": "index_new/cn/avatars.json",
+    "sha": "7c7b08aa4db4d50883d741ad64c9939b50b0b706",
+    "size": 64068,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/avatars.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/avatars.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/7c7b08aa4db4d50883d741ad64c9939b50b0b706",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/avatars.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/avatars.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/7c7b08aa4db4d50883d741ad64c9939b50b0b706",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/avatars.json"
+    }
+  },
+  {
+    "name": "character_promotions.json",
+    "path": "index_new/cn/character_promotions.json",
+    "sha": "3b19f1c2ced7db0cf663ba5f8cef7ee6b91c7af2",
+    "size": 388948,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_promotions.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3b19f1c2ced7db0cf663ba5f8cef7ee6b91c7af2",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_promotions.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3b19f1c2ced7db0cf663ba5f8cef7ee6b91c7af2",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json"
+    }
+  },
+  {
+    "name": "character_ranks.json",
+    "path": "index_new/cn/character_ranks.json",
+    "sha": "08246350f033bb545087e5de5c2320ecab4158e6",
+    "size": 282206,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_ranks.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_ranks.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/08246350f033bb545087e5de5c2320ecab4158e6",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_ranks.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_ranks.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/08246350f033bb545087e5de5c2320ecab4158e6",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_ranks.json"
+    }
+  },
+  {
+    "name": "character_skill_trees.json",
+    "path": "index_new/cn/character_skill_trees.json",
+    "sha": "d41a6927d6175348803bfbf2a34a34830a2cd3df",
+    "size": 2542989,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_skill_trees.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/d41a6927d6175348803bfbf2a34a34830a2cd3df",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_skill_trees.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/d41a6927d6175348803bfbf2a34a34830a2cd3df",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json"
+    }
+  },
+  {
+    "name": "character_skills.json",
+    "path": "index_new/cn/character_skills.json",
+    "sha": "5078b98270b60a97bbe9237446b089f16367a75f",
+    "size": 824960,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_skills.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/5078b98270b60a97bbe9237446b089f16367a75f",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/character_skills.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/5078b98270b60a97bbe9237446b089f16367a75f",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json"
+    }
+  },
+  {
+    "name": "characters.json",
+    "path": "index_new/cn/characters.json",
+    "sha": "da8ba0e4f1b21b8bd7cf535606c871d0e45ff406",
+    "size": 106604,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/characters.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/da8ba0e4f1b21b8bd7cf535606c871d0e45ff406",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/characters.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/da8ba0e4f1b21b8bd7cf535606c871d0e45ff406",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json"
+    }
+  },
+  {
+    "name": "descriptions.json",
+    "path": "index_new/cn/descriptions.json",
+    "sha": "3f8437a343550efcb21e7cd8b63b5a84f5cededd",
+    "size": 100404,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/descriptions.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/descriptions.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3f8437a343550efcb21e7cd8b63b5a84f5cededd",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/descriptions.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/descriptions.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3f8437a343550efcb21e7cd8b63b5a84f5cededd",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/descriptions.json"
+    }
+  },
+  {
+    "name": "elements.json",
+    "path": "index_new/cn/elements.json",
+    "sha": "1c2f12205ce9dd44340e0b5af8212186be4b3e2f",
+    "size": 2223,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/elements.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/elements.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/1c2f12205ce9dd44340e0b5af8212186be4b3e2f",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/elements.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/elements.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/1c2f12205ce9dd44340e0b5af8212186be4b3e2f",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/elements.json"
+    }
+  },
+  {
+    "name": "items.json",
+    "path": "index_new/cn/items.json",
+    "sha": "147db51eec68ae06e386d01457b9acb8dc345ea4",
+    "size": 1008636,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/items.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/147db51eec68ae06e386d01457b9acb8dc345ea4",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/items.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/147db51eec68ae06e386d01457b9acb8dc345ea4",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json"
+    }
+  },
+  {
+    "name": "light_cone_promotions.json",
+    "path": "index_new/cn/light_cone_promotions.json",
+    "sha": "63a68bc21f1259502cd591a0a9e0b59fb99c25a6",
+    "size": 415915,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/light_cone_promotions.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_promotions.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/63a68bc21f1259502cd591a0a9e0b59fb99c25a6",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_promotions.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/light_cone_promotions.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/63a68bc21f1259502cd591a0a9e0b59fb99c25a6",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_promotions.json"
+    }
+  },
+  {
+    "name": "light_cone_ranks.json",
+    "path": "index_new/cn/light_cone_ranks.json",
+    "sha": "48bbfefece7c2592250d95829c485bee7c1ec1db",
+    "size": 149166,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/light_cone_ranks.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_ranks.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/48bbfefece7c2592250d95829c485bee7c1ec1db",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_ranks.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/light_cone_ranks.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/48bbfefece7c2592250d95829c485bee7c1ec1db",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cone_ranks.json"
+    }
+  },
+  {
+    "name": "light_cones.json",
+    "path": "index_new/cn/light_cones.json",
+    "sha": "06ebef30e9d163979f5aaec650fc922f9da5866c",
+    "size": 129911,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/light_cones.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cones.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/06ebef30e9d163979f5aaec650fc922f9da5866c",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cones.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/light_cones.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/06ebef30e9d163979f5aaec650fc922f9da5866c",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/light_cones.json"
+    }
+  },
+  {
+    "name": "nickname.json",
+    "path": "index_new/cn/nickname.json",
+    "sha": "3fe46ceaaeba49d0af05ce8855b377580d2ad478",
+    "size": 16622,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/nickname.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/nickname.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3fe46ceaaeba49d0af05ce8855b377580d2ad478",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/nickname.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/nickname.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3fe46ceaaeba49d0af05ce8855b377580d2ad478",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/nickname.json"
+    }
+  },
+  {
+    "name": "paths.json",
+    "path": "index_new/cn/paths.json",
+    "sha": "3c7840eff65a3f9d777333f866b3043dd606f6b3",
+    "size": 3066,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/paths.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/paths.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3c7840eff65a3f9d777333f866b3043dd606f6b3",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/paths.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/paths.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/3c7840eff65a3f9d777333f866b3043dd606f6b3",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/paths.json"
+    }
+  },
+  {
+    "name": "properties.json",
+    "path": "index_new/cn/properties.json",
+    "sha": "4f925ef70d827751e6b8d61cf77a1fd90c6dd22c",
+    "size": 15901,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/properties.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/properties.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/4f925ef70d827751e6b8d61cf77a1fd90c6dd22c",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/properties.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/properties.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/4f925ef70d827751e6b8d61cf77a1fd90c6dd22c",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/properties.json"
+    }
+  },
+  {
+    "name": "relic_main_affixes.json",
+    "path": "index_new/cn/relic_main_affixes.json",
+    "sha": "85afcacfa4b109e10616fec24ed8849e738aeb97",
+    "size": 20398,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relic_main_affixes.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_main_affixes.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/85afcacfa4b109e10616fec24ed8849e738aeb97",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_main_affixes.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relic_main_affixes.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/85afcacfa4b109e10616fec24ed8849e738aeb97",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_main_affixes.json"
+    }
+  },
+  {
+    "name": "relic_sets.json",
+    "path": "index_new/cn/relic_sets.json",
+    "sha": "fc3deeb82e833b422dfb60c55a89689361052e62",
+    "size": 27897,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relic_sets.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_sets.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/fc3deeb82e833b422dfb60c55a89689361052e62",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_sets.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relic_sets.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/fc3deeb82e833b422dfb60c55a89689361052e62",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_sets.json"
+    }
+  },
+  {
+    "name": "relic_sub_affixes.json",
+    "path": "index_new/cn/relic_sub_affixes.json",
+    "sha": "75aa9f13ff8c93f20017ed108bcf799c9319006b",
+    "size": 10208,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relic_sub_affixes.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_sub_affixes.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/75aa9f13ff8c93f20017ed108bcf799c9319006b",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_sub_affixes.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relic_sub_affixes.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/75aa9f13ff8c93f20017ed108bcf799c9319006b",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relic_sub_affixes.json"
+    }
+  },
+  {
+    "name": "relics.json",
+    "path": "index_new/cn/relics.json",
+    "sha": "75699dbbedae0034ec0259539b1c907975864446",
+    "size": 222427,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relics.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relics.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/75699dbbedae0034ec0259539b1c907975864446",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relics.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/relics.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/75699dbbedae0034ec0259539b1c907975864446",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/relics.json"
+    }
+  },
+  {
+    "name": "simulated_blessings.json",
+    "path": "index_new/cn/simulated_blessings.json",
+    "sha": "ae8849dedf24aa59793c61e4f5702589b1119087",
+    "size": 377326,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_blessings.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_blessings.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/ae8849dedf24aa59793c61e4f5702589b1119087",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_blessings.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_blessings.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/ae8849dedf24aa59793c61e4f5702589b1119087",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_blessings.json"
+    }
+  },
+  {
+    "name": "simulated_blocks.json",
+    "path": "index_new/cn/simulated_blocks.json",
+    "sha": "bbb3ffffb50ddbfff8ff7dfd4aa1c422ac298949",
+    "size": 4840,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_blocks.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_blocks.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/bbb3ffffb50ddbfff8ff7dfd4aa1c422ac298949",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_blocks.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_blocks.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/bbb3ffffb50ddbfff8ff7dfd4aa1c422ac298949",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_blocks.json"
+    }
+  },
+  {
+    "name": "simulated_curios.json",
+    "path": "index_new/cn/simulated_curios.json",
+    "sha": "a8cd03060b590216942d231a8e343664b30b9369",
+    "size": 157793,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_curios.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_curios.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/a8cd03060b590216942d231a8e343664b30b9369",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_curios.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_curios.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/a8cd03060b590216942d231a8e343664b30b9369",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_curios.json"
+    }
+  },
+  {
+    "name": "simulated_events.json",
+    "path": "index_new/cn/simulated_events.json",
+    "sha": "8fda12e74ade04fb7af8103bfe67f8bd1f62567c",
+    "size": 93182,
+    "url": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_events.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+    "html_url": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_events.json",
+    "git_url": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/8fda12e74ade04fb7af8103bfe67f8bd1f62567c",
+    "download_url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_events.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Mar-7th/StarRailRes/contents/index_new/cn/simulated_events.json?ref=03907e798b46f9eb109a1f882055cdf49ce3d374",
+      "git": "https://api.github.com/repos/Mar-7th/StarRailRes/git/blobs/8fda12e74ade04fb7af8103bfe67f8bd1f62567c",
+      "html": "https://github.com/Mar-7th/StarRailRes/blob/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/simulated_events.json"
+    }
+  }
+]

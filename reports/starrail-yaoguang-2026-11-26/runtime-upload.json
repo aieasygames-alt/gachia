@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "versionId": "f59ceafa-b7e8-47a8-86da-bf3cedb53ec8",
+  "previewOrigin": "https://f59ceafa-gachia.aieasygames.workers.dev",
+  "moduleSHA256": "3803a6d853e3580780b8da4e8865ead3f25d32cfb28b5a581df199d30b7cea12",
+  "sourceCommit": "3ea13bc4123efc85f9b7bf69dbc590f288ec40d7",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-yaoguang-2026-11-26/.private/upload/module-proof/receipt.json",
+    "pin": "ac180415fb4ab8c491e34070f49cb2612941899ab8ef1d4afaf1ed07d19d8afa"
+  },
+  "bindingsPreserved": true,
+  "trafficMutation": false
+}

@@ -1,0 +1,321 @@
+{
+  "versions": {
+    "items": [
+      {
+        "id": "62f4be38-d3eb-4b2e-862f-092b44a742df",
+        "number": 1038,
+        "metadata": {
+          "created_on": "2026-11-26T07:13:50.974171Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "edfdcdde-bbe3-4202-9749-488deaa415ed",
+        "number": 1037,
+        "metadata": {
+          "created_on": "2026-11-26T01:58:50.978195Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "ff1d61b0-0877-4127-9ef9-0f2691f55b4b",
+        "number": 1036,
+        "metadata": {
+          "created_on": "2026-11-26T01:13:05.817301Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "b4460f8c-7de7-488e-8c51-804a3d1e2e2e",
+        "number": 1035,
+        "metadata": {
+          "created_on": "2026-11-25T14:17:32.843355Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "b0d62b83-ec6f-46b3-a421-1d69feca9b3e",
+        "number": 1034,
+        "metadata": {
+          "created_on": "2026-11-25T13:42:38.368885Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "157633b1-f8a9-448b-b27f-2f6274dd19f8",
+        "number": 1033,
+        "metadata": {
+          "created_on": "2026-11-25T12:15:58.726056Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "ec6a2e3e-80d2-4e1b-8239-9169fc02055e",
+        "number": 1032,
+        "metadata": {
+          "created_on": "2026-11-25T11:36:41.665276Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "d26fb0dc-4e5b-47e1-8971-fe26b4a26c79",
+        "number": 1031,
+        "metadata": {
+          "created_on": "2026-11-25T08:28:27.207185Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "c4506b7a-d6c6-400b-9dd8-f2b2e2eff8a0",
+        "number": 1030,
+        "metadata": {
+          "created_on": "2026-11-25T07:42:23.743881Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      },
+      {
+        "id": "aa41b4af-c66e-4a8b-9252-5227c3cac844",
+        "number": 1029,
+        "metadata": {
+          "created_on": "2026-11-25T06:29:16.169021Z",
+          "source": "wrangler",
+          "author_id": "3a7c299ef441611896bb25058f41782a",
+          "author_email": "aieasygames@gmail.com",
+          "has_preview": true
+        },
+        "annotations": {
+          "workers/triggered_by": "version_upload"
+        }
+      }
+    ]
+  },
+  "deployments": {
+    "deployments": [
+      {
+        "id": "47ca3d16-f58f-468e-a2a7-f12c378f24da",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "edfdcdde-bbe3-4202-9749-488deaa415ed",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-26T02:05:49.943281Z"
+      },
+      {
+        "id": "06f197eb-1467-4192-9147-5659bcc13987",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "ff1d61b0-0877-4127-9ef9-0f2691f55b4b",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-26T01:20:50.067465Z"
+      },
+      {
+        "id": "bd629dc0-a7de-4037-b47c-d6286798a99d",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "b4460f8c-7de7-488e-8c51-804a3d1e2e2e",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T14:23:57.051282Z"
+      },
+      {
+        "id": "a3d7c71a-4a65-488f-aaf0-1d747b9d1484",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "b0d62b83-ec6f-46b3-a421-1d69feca9b3e",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T13:48:44.999115Z"
+      },
+      {
+        "id": "1bb69813-1a76-4ad4-9aaf-4341f6349f52",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "157633b1-f8a9-448b-b27f-2f6274dd19f8",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T12:23:20.605456Z"
+      },
+      {
+        "id": "01c38a64-1e0a-41d3-ba50-25e80e90a3f2",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "ec6a2e3e-80d2-4e1b-8239-9169fc02055e",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T11:41:59.600801Z"
+      },
+      {
+        "id": "df7dd190-717b-4e9c-8230-d262696862cb",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "d26fb0dc-4e5b-47e1-8971-fe26b4a26c79",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T08:33:55.374023Z"
+      },
+      {
+        "id": "b1cf1362-350e-4732-9f25-36aa1f53c384",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "c4506b7a-d6c6-400b-9dd8-f2b2e2eff8a0",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T07:46:21.026567Z"
+      },
+      {
+        "id": "c7cdd329-b020-4c33-9de4-9103b9939189",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "aa41b4af-c66e-4a8b-9252-5227c3cac844",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T06:33:49.247927Z"
+      },
+      {
+        "id": "7341f9fb-3e79-4cd4-8341-7e3078e8fd94",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "aieasygames@gmail.com",
+        "annotations": {
+          "workers/message": "",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "b6e650c0-0dfc-4394-90e8-621fd21b8f4c",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-11-25T06:11:49.369384Z"
+      }
+    ]
+  },
+  "capturedAt": "2026-11-26T07:20:52.583522+00:00"
+}

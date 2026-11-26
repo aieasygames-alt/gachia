@@ -1,0 +1,9 @@
+{
+  "files": [
+    "packages/data/cms/starrail-character.ts",
+    "packages/data/cms/starrail-updates.ts"
+  ],
+  "oldServerPID": 37473,
+  "publicRecords": 75,
+  "migrationRequired": false
+}

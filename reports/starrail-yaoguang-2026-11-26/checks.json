@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "sourceComparison": "source-comparison.json",
+  "web": {
+    "files": 107,
+    "tests": 634,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 20,
+    "tests": 196,
+    "types": "passed"
+  },
+  "cms": {
+    "repositoryTests": 11,
+    "actualEditorTests": 5,
+    "actualTypes": "passed",
+    "actualProductionBuild": "passed",
+    "schemaMigrationRequired": false
+  },
+  "rawMirrors": "passed",
+  "manifests": "passed",
+  "CI": {
+    "conclusion": "success",
+    "databaseId": 45774192752,
+    "headSha": "3ea13bc4123efc85f9b7bf69dbc590f288ec40d7",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45774192752"
+  },
+  "localWorker": "local-acceptance.json",
+  "preview": "preview-acceptance.json",
+  "production": "production-acceptance.json",
+  "runtimeProtection": "runtime-protection.json",
+  "publication": {
+    "count": 76,
+    "revision": 1795678538998,
+    "created": 1,
+    "calendarEntries": 15,
+    "canonicalUTF8Bytes": 248709
+  },
+  "localServices": {
+    "editor4320Running": true,
+    "test4400Stopped": true,
+    "unrelated4398And4399Preserved": true
+  }
+}
