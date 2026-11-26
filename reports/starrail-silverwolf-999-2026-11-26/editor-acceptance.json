@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "publicCount": 76,
+  "draftIsolated": true,
+  "repositoryTests": 11,
+  "actualEditorTests": 5,
+  "actualTypes": "passed",
+  "actualProductionBuild": "passed",
+  "schemaMigrationRequired": false
+}

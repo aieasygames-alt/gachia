@@ -45,6 +45,8 @@ export function isOfficialStarRailSource(value: unknown): value is string {
 const communitySources = new Set([
   'https://wiki.biligame.com/sr/%E7%88%BB%E5%85%89',
   'https://starrailstation.com/cn/character/yaoguang',
+  'https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BCLV.999',
+  'https://starrailstation.com/cn/character/silverwolflv999',
   'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json',
   'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json',
   'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json',

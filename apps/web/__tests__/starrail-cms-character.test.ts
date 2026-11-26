@@ -1,6 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import swBatch from '../../../reports/starrail-silverwolf-999-2026-11-26/batch.json';
 import yaoBatch from '../../../reports/starrail-yaoguang-2026-11-26/batch.json';
 import batch from '../../../reports/starrail-structured-character-2026-11-25/batch.json';
 import { parseStarRailUpdate } from '@gachia/data/cms/starrail-updates';
@@ -64,6 +65,18 @@ describe('CMS character page, index entry and material calculator', () => {
       expect(pending).toContain('/starrail/characters/yaoguang');
       expect(await starRailCharacterMetadata(locale, 'yaoguang')).toMatchObject({ robots: { index: false } });
     }
+  });
+
+  it('renders enhanced Silver Wolf values and withdraws its canonical reader independently', async () => {
+    const sw = parseStarRailUpdate(swBatch.creates[0])!;
+    load.mockResolvedValue({ source: 'cms', updates: [doc, sw] });
+    const detail = renderToStaticMarkup(await StarRailCmsCharacter({ locale: 'zh', id: 'silver-wolf-lv999' }));
+    for (const value of ['240%', '73.125%', '32.5%', '纷争先兆', '3,308,000']) expect(detail).toContain(value);
+    const cards = renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }));
+    expect(cards).toContain('/starrail/characters/silver-wolf-lv999');
+    load.mockResolvedValue({ source: 'cms', updates: [doc] });
+    expect(renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }))).not.toContain('/starrail/characters/silver-wolf-lv999');
+    expect(await starRailCharacterMetadata('zh', 'silver-wolf-lv999')).toMatchObject({ robots: { index: false } });
   });
 
 });

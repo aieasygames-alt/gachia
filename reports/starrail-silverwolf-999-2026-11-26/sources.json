@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-11-26",
+  "pin": "03907e798b46f9eb109a1f882055cdf49ce3d374",
+  "urls": [
+    {
+      "url": "https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BCLV.999"
+    },
+    {
+      "url": "https://starrailstation.com/cn/character/silverwolflv999"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json"
+    }
+  ],
+  "sourceSHA256": {
+    "characters": "f81e6f0257c08adbe43b84cb4a59b9c9756de652b938453bae2dce8ca2b70e3c",
+    "character_skills": "7ae6bf73a9be60e3f38e247d8e39ddf2e22f35b65c4b25321624c639612bbf5f",
+    "character_skill_trees": "0cb9ada8b37e426e36de6c116f4e5ccc33e15152c9b9cdcbe103fbfeb8dad656",
+    "character_promotions": "af02a02d849a887ac59c5fadcd84d1c52d7d0a4779f912c5e726a36a825392f5",
+    "items": "50af6089b25af6fbec6459517b62570845c3143b8dc86659259a2dbe4eaff5ab"
+  },
+  "thirdParty": true,
+  "comparison": {
+    "status": "passed",
+    "stationAdjacentSkillRanges": 41,
+    "stationNodes": 13,
+    "bwikiAscensions": 6,
+    "stationMultiplierCells": 93,
+    "bwikiMultiplierValuesMatched": 91,
+    "multiplierConflictsResolved": [
+      {
+        "skill": "talent",
+        "level": 7,
+        "bwiki": "32%",
+        "adopted": "32.5%"
+      },
+      {
+        "skill": "talent",
+        "level": 9,
+        "bwiki": "37%",
+        "adopted": "37.5%"
+      }
+    ],
+    "costResolution": "Station adjacent ranges and nodes match pinned data. Bwiki generic cost templates and extra ability costs rejected.",
+    "precisionResolution": {
+      "ultimateAndElationLv7": {
+        "bwiki": "73.125%",
+        "station": "73.13%",
+        "pinned": "73.12%",
+        "adopted": "73.125%"
+      },
+      "ultimateAndElationLv9": {
+        "bwiki": "84.375%",
+        "station": "84.38%",
+        "pinned": "84.38%",
+        "adopted": "84.375%"
+      }
+    },
+    "independence": "Third-party displays and extracted game data may share upstream; no independent official confirmation claim."
+  }
+}
