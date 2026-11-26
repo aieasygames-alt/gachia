@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com",
+  "characterPath": "/zh/starrail/characters/silver-wolf-lv999",
+  "calculatorPath": "/zh/starrail/calculator",
+  "checks": [
+    "enhanced skill multipliers and reviewed precision",
+    "full budget 3308000 credits",
+    "single node subtraction 140000 credits",
+    "elation 7 to 10: 435000 credits and no weekly material/tracks",
+    "switch resets target and nodes"
+  ],
+  "screenshot": "production-calculator.jpg",
+  "detail": "browser-production-detail.txt",
+  "evidence": "browser-production-evidence.json"
+}

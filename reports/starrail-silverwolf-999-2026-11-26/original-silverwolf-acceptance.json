@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "path": "/zh/starrail/characters/silver-wolf",
+      "status": 200,
+      "originalCharacterPreserved": true
+    },
+    {
+      "path": "/en/starrail/characters/silver-wolf",
+      "status": 200,
+      "originalCharacterPreserved": true
+    },
+    {
+      "path": "/ja/starrail/characters/silver-wolf",
+      "status": 200,
+      "originalCharacterPreserved": true
+    }
+  ]
+}

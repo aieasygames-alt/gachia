@@ -1,0 +1,656 @@
+- banner:
+  - link "Gachia Gachia":
+    - /url: /zh
+    - img "Gachia"
+    - generic: Gachia
+  - navigation "Game navigation":
+    - link "绿梦：时空之声":
+      - /url: /zh/lvmeng
+    - link "原神":
+      - /url: /zh/genshin
+    - link "鸣潮":
+      - /url: /zh/wuwa
+    - link "绝区零":
+      - /url: /zh/zzz
+    - link "洛克王国：世界（国际服）":
+      - /url: /zh/roco
+    - link "更多游戏":
+      - /url: /zh/games
+  - button "搜索准备中" [disabled]:
+    - generic: 搜索准备中
+    - generic: ⌘K
+  - link "中文":
+    - /url: /zh/starrail/characters/silver-wolf-lv999
+  - link "English":
+    - /url: /en/starrail/characters/silver-wolf-lv999
+  - link "日本語":
+    - /url: /ja/starrail/characters/silver-wolf-lv999
+- main:
+  - navigation:
+    - link "角色图鉴":
+      - /url: /zh/starrail/characters
+    - link "武器":
+      - /url: /zh/starrail/weapons
+    - link "材料道具":
+      - /url: /zh/starrail/items
+    - link "节奏榜":
+      - /url: /zh/starrail/tier-list
+    - link "计算器":
+      - /url: /zh/starrail/calculator
+    - link "地图":
+      - /url: /zh/starrail/map
+    - link "版本专题":
+      - /url: /zh/starrail/version
+    - link "下载配置":
+      - /url: /zh/starrail/download
+    - link "攻略百科":
+      - /url: /zh/starrail/guides
+    - link "圣遗物":
+      - /url: /zh/starrail/artifacts
+    - link "配装":
+      - /url: /zh/starrail/build
+    - link "对比":
+      - /url: /zh/starrail/compare
+    - link "配队":
+      - /url: /zh/starrail/teams
+    - link "兑换码":
+      - /url: /zh/starrail/redeem-codes
+    - link "活动日历":
+      - /url: /zh/starrail/events
+  - navigation "Breadcrumb":
+    - list:
+      - link "中文":
+        - /url: /zh
+      - link "崩坏：星穹铁道":
+        - /url: /zh/starrail
+  - article:
+    - heading "银狼LV.999技能倍率、行迹与养成材料" [level=1]
+    - paragraph: 虚数·欢愉银狼LV.999的普通与强化技能逐级倍率、六次晋阶、十三个行迹节点和分段材料计算。区分隐藏分机制、盲盒效果及星魂加级，保留第三方数据差异说明。
+    - paragraph:
+      - text: 5星 · 虚数 · 欢愉 · 星核猎手 · 国服（中文资料；第三方数据核验） · 来源核验
+      - time: 2026-11-26
+    - navigation:
+      - link "逐级倍率":
+        - /url: "#skills"
+      - link "材料计算":
+        - /url: "#materials"
+      - link "角色目录":
+        - /url: /zh/starrail/characters
+      - link "养成计算器":
+        - /url: /zh/starrail/calculator
+    - heading "技能倍率" [level=2]
+    - heading "普攻 · 拳头硬了！" [level=3]
+    - paragraph: 普通普攻对指定单体造成攻击力倍率伤害。强化普攻「奖励关：狼尊时刻」的弹射总倍率均分为100段，期间触发3次头号补给盲盒，最后一击按单独倍率由全敌均分。强化普攻不恢复战技点；每60隐藏分使其期间伤害提高原伤害15%，最多2层。持有好活当赏时强化普攻的技能伤害改为相同倍率的欢愉伤害。三列分别列出普通普攻、强化弹射总量、强化最后一击；强化形态共用普攻等级，不重复收取培养材料。
+    - table "拳头硬了！逐级倍率；培养上限6级":
+      - caption: 拳头硬了！逐级倍率；培养上限6级
+      - rowgroup:
+        - row "等级 普通单体攻击力倍率 强化弹射总倍率 强化最后一击倍率":
+          - columnheader "等级"
+          - columnheader "普通单体攻击力倍率"
+          - columnheader "强化弹射总倍率"
+          - columnheader "强化最后一击倍率"
+      - rowgroup:
+        - row "Lv1 50% 120% 50%":
+          - rowheader "Lv1"
+          - cell "50%"
+          - cell "120%"
+          - cell "50%"
+        - row "Lv2 60% 144% 60%":
+          - rowheader "Lv2"
+          - cell "60%"
+          - cell "144%"
+          - cell "60%"
+        - row "Lv3 70% 168% 70%":
+          - rowheader "Lv3"
+          - cell "70%"
+          - cell "168%"
+          - cell "70%"
+        - row "Lv4 80% 192% 80%":
+          - rowheader "Lv4"
+          - cell "80%"
+          - cell "192%"
+          - cell "80%"
+        - row "Lv5 90% 216% 90%":
+          - rowheader "Lv5"
+          - cell "90%"
+          - cell "216%"
+          - cell "90%"
+        - row "Lv6 100% 240% 100%":
+          - rowheader "Lv6"
+          - cell "100%"
+          - cell "240%"
+          - cell "100%"
+        - row "Lv7（星魂加级） 110% 264% 110%":
+          - rowheader "Lv7（星魂加级）"
+          - cell "110%"
+          - cell "264%"
+          - cell "110%"
+    - heading "战技 · Shoot属性大爆发" [level=3]
+    - paragraph: 获得5笑点，对敌方全体造成表内攻击力倍率的虚数伤害。
+    - table "Shoot属性大爆发逐级倍率；培养上限10级":
+      - caption: Shoot属性大爆发逐级倍率；培养上限10级
+      - rowgroup:
+        - row "等级 群体攻击力倍率":
+          - columnheader "等级"
+          - columnheader "群体攻击力倍率"
+      - rowgroup:
+        - row "Lv1 80%":
+          - rowheader "Lv1"
+          - cell "80%"
+        - row "Lv2 88%":
+          - rowheader "Lv2"
+          - cell "88%"
+        - row "Lv3 96%":
+          - rowheader "Lv3"
+          - cell "96%"
+        - row "Lv4 104%":
+          - rowheader "Lv4"
+          - cell "104%"
+        - row "Lv5 112%":
+          - rowheader "Lv5"
+          - cell "112%"
+        - row "Lv6 120%":
+          - rowheader "Lv6"
+          - cell "120%"
+        - row "Lv7 130%":
+          - rowheader "Lv7"
+          - cell "130%"
+        - row "Lv8 140%":
+          - rowheader "Lv8"
+          - cell "140%"
+        - row "Lv9 150%":
+          - rowheader "Lv9"
+          - cell "150%"
+        - row "Lv10 160%":
+          - rowheader "Lv10"
+          - cell "160%"
+        - row "Lv11（星魂加级） 168%":
+          - rowheader "Lv11（星魂加级）"
+          - cell "168%"
+        - row "Lv12（星魂加级） 176%":
+          - rowheader "Lv12（星魂加级）"
+          - cell "176%"
+    - heading "终结技 · 无敌玩家，启动！" [level=3]
+    - paragraph: 进入无敌玩家状态并行动提前100%，展开结界。持有好活当赏时，我方目标每消耗1战技点有概率触发头号补给盲盒：表内欢愉伤害由全敌均分，并随机触发大剑（对生命值最高敌人额外造成总伤害20%的真实伤害）、炸蛋（恢复2战技点）或怪味豆（获得3笑点）。触发初始固定概率100%，成功后降至当前概率20%；这不是每次减20个百分点。终结技由60隐藏分激活，不按普通回能循环估算。
+    - table "无敌玩家，启动！逐级倍率；培养上限10级":
+      - caption: 无敌玩家，启动！逐级倍率；培养上限10级
+      - rowgroup:
+        - row "等级 盲盒均分欢愉倍率":
+          - columnheader "等级"
+          - columnheader "盲盒均分欢愉倍率"
+      - rowgroup:
+        - row "Lv1 45%":
+          - rowheader "Lv1"
+          - cell "45%"
+        - row "Lv2 49.5%":
+          - rowheader "Lv2"
+          - cell "49.5%"
+        - row "Lv3 54%":
+          - rowheader "Lv3"
+          - cell "54%"
+        - row "Lv4 58.5%":
+          - rowheader "Lv4"
+          - cell "58.5%"
+        - row "Lv5 63%":
+          - rowheader "Lv5"
+          - cell "63%"
+        - row "Lv6 67.5%":
+          - rowheader "Lv6"
+          - cell "67.5%"
+        - row "Lv7 73.125%":
+          - rowheader "Lv7"
+          - cell "73.125%"
+        - row "Lv8 78.75%":
+          - rowheader "Lv8"
+          - cell "78.75%"
+        - row "Lv9 84.375%":
+          - rowheader "Lv9"
+          - cell "84.375%"
+        - row "Lv10 90%":
+          - rowheader "Lv10"
+          - cell "90%"
+        - row "Lv11（星魂加级） 94.5%":
+          - rowheader "Lv11（星魂加级）"
+          - cell "94.5%"
+        - row "Lv12（星魂加级） 99%":
+          - rowheader "Lv12（星魂加级）"
+          - cell "99%"
+    - heading "天赋 · 有我在，把把都是顺风局" [level=3]
+    - paragraph: 60隐藏分激活终结技，达到上限后还可溢出240点；获得笑点时获得等量隐藏分。每点隐藏分提供表中暴击率，达到100%暴击率后的其余隐藏分改为提供表中暴击伤害。无敌玩家期间免疫控制、不能施放终结技，完整施放3次强化普攻后退出并清空隐藏分。持有好活当赏时，普攻和战技额外造成表内欢愉倍率，强化普攻则转换伤害类型。Lv7/Lv9欢愉倍率采用32.5%/37.5%，未采用BWIKI的32%/37%。
+    - table "有我在，把把都是顺风局逐级倍率；培养上限10级":
+      - caption: 有我在，把把都是顺风局逐级倍率；培养上限10级
+      - rowgroup:
+        - row "等级 每点隐藏分暴击率 每点隐藏分暴击伤害 普攻战技附加欢愉倍率":
+          - columnheader "等级"
+          - columnheader "每点隐藏分暴击率"
+          - columnheader "每点隐藏分暴击伤害"
+          - columnheader "普攻战技附加欢愉倍率"
+      - rowgroup:
+        - row "Lv1 0.2% 0.4% 20%":
+          - rowheader "Lv1"
+          - cell "0.2%"
+          - cell "0.4%"
+          - cell "20%"
+        - row "Lv2 0.22% 0.44% 22%":
+          - rowheader "Lv2"
+          - cell "0.22%"
+          - cell "0.44%"
+          - cell "22%"
+        - row "Lv3 0.24% 0.48% 24%":
+          - rowheader "Lv3"
+          - cell "0.24%"
+          - cell "0.48%"
+          - cell "24%"
+        - row "Lv4 0.26% 0.52% 26%":
+          - rowheader "Lv4"
+          - cell "0.26%"
+          - cell "0.52%"
+          - cell "26%"
+        - row "Lv5 0.28% 0.56% 28%":
+          - rowheader "Lv5"
+          - cell "0.28%"
+          - cell "0.56%"
+          - cell "28%"
+        - row "Lv6 0.3% 0.6% 30%":
+          - rowheader "Lv6"
+          - cell "0.3%"
+          - cell "0.6%"
+          - cell "30%"
+        - row "Lv7 0.33% 0.65% 32.5%":
+          - rowheader "Lv7"
+          - cell "0.33%"
+          - cell "0.65%"
+          - cell "32.5%"
+        - row "Lv8 0.35% 0.7% 35%":
+          - rowheader "Lv8"
+          - cell "0.35%"
+          - cell "0.7%"
+          - cell "35%"
+        - row "Lv9 0.38% 0.75% 37.5%":
+          - rowheader "Lv9"
+          - cell "0.38%"
+          - cell "0.75%"
+          - cell "37.5%"
+        - row "Lv10 0.4% 0.8% 40%":
+          - rowheader "Lv10"
+          - cell "0.4%"
+          - cell "0.8%"
+          - cell "40%"
+        - row "Lv11（星魂加级） 0.42% 0.84% 42%":
+          - rowheader "Lv11（星魂加级）"
+          - cell "0.42%"
+          - cell "0.84%"
+          - cell "42%"
+        - row "Lv12（星魂加级） 0.44% 0.88% 44%":
+          - rowheader "Lv12（星魂加级）"
+          - cell "0.44%"
+          - cell "0.88%"
+          - cell "44%"
+    - heading "欢愉技 · 殿堂级操作回放 / 崩坏级伤害演示" [level=3]
+    - paragraph: 普通欢愉技「殿堂级操作回放」固定获得15隐藏分。无敌玩家期间强化为「崩坏级伤害演示」：随机单体弹射6次，每次造成表内虚数欢愉伤害，并将头号补给盲盒触发概率重置为初始值。两形态共用欢愉技等级和培养材料。
+    - table "殿堂级操作回放 / 崩坏级伤害演示逐级倍率；培养上限10级":
+      - caption: 殿堂级操作回放 / 崩坏级伤害演示逐级倍率；培养上限10级
+      - rowgroup:
+        - row "等级 强化弹射每次欢愉倍率":
+          - columnheader "等级"
+          - columnheader "强化弹射每次欢愉倍率"
+      - rowgroup:
+        - row "Lv1 45%":
+          - rowheader "Lv1"
+          - cell "45%"
+        - row "Lv2 49.5%":
+          - rowheader "Lv2"
+          - cell "49.5%"
+        - row "Lv3 54%":
+          - rowheader "Lv3"
+          - cell "54%"
+        - row "Lv4 58.5%":
+          - rowheader "Lv4"
+          - cell "58.5%"
+        - row "Lv5 63%":
+          - rowheader "Lv5"
+          - cell "63%"
+        - row "Lv6 67.5%":
+          - rowheader "Lv6"
+          - cell "67.5%"
+        - row "Lv7 73.125%":
+          - rowheader "Lv7"
+          - cell "73.125%"
+        - row "Lv8 78.75%":
+          - rowheader "Lv8"
+          - cell "78.75%"
+        - row "Lv9 84.375%":
+          - rowheader "Lv9"
+          - cell "84.375%"
+        - row "Lv10 90%":
+          - rowheader "Lv10"
+          - cell "90%"
+        - row "Lv11（星魂加级） 94.5%":
+          - rowheader "Lv11（星魂加级）"
+          - cell "94.5%"
+        - row "Lv12（星魂加级） 99%":
+          - rowheader "Lv12（星魂加级）"
+          - cell "99%"
+    - heading "机制与等级边界" [level=2]
+    - paragraph: 等级口径：普攻及强化普攻列出1—7级，其余四项列出1—12级，覆盖本体与星魂加级可达范围；材料计算上限6/10/10/10/10。普通与强化形态共享对应技能等级，升级只计算一次。表格未叠加星魂和命途升格效果。
+    - paragraph: 秘技「朋友，这才是T0级秘技」召唤怪怪怪味豆；召唤不消耗秘技点，自动消灭普通敌人时消耗1点，0点时解除且无法使用。随从在场时，每波战斗开始触发1次怪味豆盲盒，欢愉伤害固定计入99点好活当赏。
+    - paragraph: 专属效果「999安全卫士」：获取角色后或当前队伍存在角色时，战斗中敌方施加控制类负面状态后，我方全体获得1回合防火墙、免疫敌方施加的控制类负面状态；每波最多触发1次。
+    - paragraph: 额外能力「假结局速通攻略」：速度≥160时欢愉度提高50%，之后每超出1点速度再提高2%，最多计入100点超出速度。
+    - paragraph: 额外能力「真结局解锁条件」：欢愉技计入笑点≥20时额外获得20隐藏分；≥40时再额外获得20隐藏分。
+    - paragraph: 额外能力「隐藏关卡全成就」：进入无敌玩家后获得20隐藏分。十个属性节点合计暴击率18.7%、速度9、欢愉度10%。
+    - paragraph: 1魂：结界中敌人受到伤害提高20%；退出无敌玩家时改为保留20%隐藏分。
+    - paragraph: 2魂：进入无敌玩家后自身增益效果延长1回合；本次状态每使隐藏分提高120点（含初始隐藏分），获得1额外回合并恢复1次强化普攻次数。
+    - paragraph: 3魂：战技+2、普攻+1、欢愉技+1；星魂加级不额外计费。
+    - paragraph: 4魂：崩坏级伤害演示造成的欢愉伤害额外计入5倍笑点；不改写基础技能倍率。
+    - paragraph: 5魂：终结技+2、天赋+2、欢愉技+1，与3魂合计欢愉技+2。
+    - paragraph: 6魂：强化普攻期间欢愉伤害增笑50%；入场敌人被植入禁限弱点，具有全属性弱点且全属性基础抗性降至0；原基础抗性为0的属性改为对应抗性降低20%。
+    - paragraph: 六次晋阶合计：信用点308,000、纷争先兆65、童真蜡笔15、造梦蘸钢15、梦现管锥15。
+    - paragraph: 材料采用逐档记录：普攻1→2为信用点4,000、手绘分镜稿2、童真蜡笔5；战技1→2为信用点2,000、童真蜡笔2。Station逐档与固定数据一致；BWIKI通用模板及部分额外能力材料有冲突，未沿用模板。
+    - paragraph: 欢愉技7→10独立合计：信用点435,000、《绒绒号》典藏版合集22、梦现管锥12，不需要灭流绝溢的缄默或命运的足迹。战技、终结技、天赋各自7→10另需缄默3、足迹2。
+    - paragraph: 精度口径：终结技与强化欢愉技7级、9级采用BWIKI的73.125%、84.375%，Station分别显示四舍五入后的73.13%、84.38%；固定数据在这些格中仅保留四位小数，未将其截断值当作更高精度依据。
+    - paragraph: 天赋倍率差异：7级、9级普攻战技附加欢愉倍率采用Station及固定参数支持的32.5%、37.5%；BWIKI表格分别显示32%、37%。
+    - paragraph: 命途升格附加效果「欢愉万相★全息幻象」的固定数据存在两档隐藏分溢出与转化参数；本次未独立核准两档切换条件，未并入基础倍率与材料计算。
+    - paragraph: 默认完整目标材料合计：信用点3,308,000、童真蜡笔56、造梦蘸钢71、纷争先兆65、梦现管锥73、《绒绒号》手绘分镜稿18、灭流绝溢的缄默12、《绒绒号》连载纪念刊69、命运的足迹8、《绒绒号》典藏版合集139。不含经验喂养信用点。
+    - heading "银狼LV.999材料计算器" [level=2]
+    - paragraph: 默认目标为六次晋阶、普攻6级、战技/终结技/天赋/欢愉技各10级、三个额外能力和十个属性节点。仅计算尚未完成的目标；不含角色经验书及喂经验信用点、光锥、遗器或星魂获取成本。星魂加级不消耗升级材料。需解锁的前置节点请一并选入，本计算不替代游戏内解锁条件判断。
+    - group "角色晋阶":
+      - generic: 角色晋阶
+      - text: 当前
+      - combobox "角色晋阶当前":
+        - option "0次晋阶（未突破）" [selected]
+        - option "1次晋阶（20级已突破）"
+        - option "2次晋阶（30级已突破）"
+        - option "3次晋阶（40级已突破）"
+        - option "4次晋阶（50级已突破）"
+        - option "5次晋阶（60级已突破）"
+        - option "6次晋阶（70级已突破）"
+      - generic: →
+      - text: 目标
+      - combobox "角色晋阶目标":
+        - option "0次晋阶（未突破）"
+        - option "1次晋阶（20级已突破）"
+        - option "2次晋阶（30级已突破）"
+        - option "3次晋阶（40级已突破）"
+        - option "4次晋阶（50级已突破）"
+        - option "5次晋阶（60级已突破）"
+        - option "6次晋阶（70级已突破）" [selected]
+    - group "普攻 · 拳头硬了！":
+      - generic: 普攻 · 拳头硬了！
+      - text: 当前
+      - combobox "普攻 · 拳头硬了！当前":
+        - option "Lv1" [selected]
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+      - generic: →
+      - text: 目标
+      - combobox "普攻 · 拳头硬了！目标":
+        - option "Lv1"
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6" [selected]
+    - group "战技 · Shoot属性大爆发":
+      - generic: 战技 · Shoot属性大爆发
+      - text: 当前
+      - combobox "战技 · Shoot属性大爆发当前":
+        - option "Lv1" [selected]
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10"
+      - generic: →
+      - text: 目标
+      - combobox "战技 · Shoot属性大爆发目标":
+        - option "Lv1"
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10" [selected]
+    - group "终结技 · 无敌玩家，启动！":
+      - generic: 终结技 · 无敌玩家，启动！
+      - text: 当前
+      - combobox "终结技 · 无敌玩家，启动！当前":
+        - option "Lv1" [selected]
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10"
+      - generic: →
+      - text: 目标
+      - combobox "终结技 · 无敌玩家，启动！目标":
+        - option "Lv1"
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10" [selected]
+    - group "天赋 · 有我在，把把都是顺风局":
+      - generic: 天赋 · 有我在，把把都是顺风局
+      - text: 当前
+      - combobox "天赋 · 有我在，把把都是顺风局当前":
+        - option "Lv1" [selected]
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10"
+      - generic: →
+      - text: 目标
+      - combobox "天赋 · 有我在，把把都是顺风局目标":
+        - option "Lv1"
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10" [selected]
+    - group "欢愉技 · 殿堂级操作回放 / 崩坏级伤害演示":
+      - generic: 欢愉技 · 殿堂级操作回放 / 崩坏级伤害演示
+      - text: 当前
+      - combobox "欢愉技 · 殿堂级操作回放 / 崩坏级伤害演示当前":
+        - option "Lv1" [selected]
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10"
+      - generic: →
+      - text: 目标
+      - combobox "欢愉技 · 殿堂级操作回放 / 崩坏级伤害演示目标":
+        - option "Lv1"
+        - option "Lv2"
+        - option "Lv3"
+        - option "Lv4"
+        - option "Lv5"
+        - option "Lv6"
+        - option "Lv7"
+        - option "Lv8"
+        - option "Lv9"
+        - option "Lv10" [selected]
+    - group "本次需要解锁的额外能力与属性节点":
+      - generic: 本次需要解锁的额外能力与属性节点
+      - checkbox "假结局速通攻略（晋阶2）" [checked]
+      - generic: 假结局速通攻略（晋阶2）
+      - checkbox "真结局解锁条件（晋阶4）" [checked]
+      - generic: 真结局解锁条件（晋阶4）
+      - checkbox "隐藏关卡全成就（晋阶6）" [checked]
+      - generic: 隐藏关卡全成就（晋阶6）
+      - checkbox "暴击率强化 +2.7%（等级1）" [checked]
+      - generic: 暴击率强化 +2.7%（等级1）
+      - checkbox "速度强化 +2（晋阶2）" [checked]
+      - generic: 速度强化 +2（晋阶2）
+      - checkbox "暴击率强化 +2.7%（晋阶3）" [checked]
+      - generic: 暴击率强化 +2.7%（晋阶3）
+      - checkbox "欢愉度强化 +4%（晋阶3）" [checked]
+      - generic: 欢愉度强化 +4%（晋阶3）
+      - checkbox "暴击率强化 +4%（晋阶4）" [checked]
+      - generic: 暴击率强化 +4%（晋阶4）
+      - checkbox "速度强化 +3（晋阶5）" [checked]
+      - generic: 速度强化 +3（晋阶5）
+      - checkbox "暴击率强化 +4%（晋阶5）" [checked]
+      - generic: 暴击率强化 +4%（晋阶5）
+      - checkbox "欢愉度强化 +6%（晋阶6）" [checked]
+      - generic: 欢愉度强化 +6%（晋阶6）
+      - checkbox "速度强化 +4（等级75）" [checked]
+      - generic: 速度强化 +4（等级75）
+      - checkbox "暴击率强化 +5.3%（等级80）" [checked]
+      - generic: 暴击率强化 +5.3%（等级80）
+    - button "恢复晋阶与全行迹目标"
+    - button "清空节点选择"
+    - heading "所选目标材料合计（不含经验书喂养信用点）" [level=3]
+    - term: 信用点
+    - definition: 3,308,000
+    - term: 童真蜡笔
+    - definition: "56"
+    - term: 造梦蘸钢
+    - definition: "71"
+    - term: 纷争先兆
+    - definition: "65"
+    - term: 梦现管锥
+    - definition: "73"
+    - term: 《绒绒号》手绘分镜稿
+    - definition: "18"
+    - term: 《绒绒号》连载纪念刊
+    - definition: "69"
+    - term: 《绒绒号》典藏版合集
+    - definition: "139"
+    - term: 灭流绝溢的缄默
+    - definition: "12"
+    - term: 命运的足迹
+    - definition: "8"
+    - generic "逐项材料：晋阶、技能升级与节点"
+    - heading "适用范围与待核验项" [level=2]
+    - paragraph: 适用于截至2026-11-26的中文角色资料核验。BWIKI、Star Rail Station及固定版本StarRailRes均为第三方资料；Station与结构化数据可能共享游戏数据上游，本文不把它们算作两份独立官方证据。BWIKI部分倍率及材料表存在冲突，已在说明中记录取舍。未核准命途升格附加效果两档切换条件；不提供未经核验的配装排行或通用攻击力模型欢愉伤害结果。实际以游戏内当前显示为准。
+    - link "第三方资料 1":
+      - /url: https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BCLV.999
+    - link "第三方资料 2":
+      - /url: https://starrailstation.com/cn/character/silverwolflv999
+    - link "第三方资料 3":
+      - /url: https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json
+    - link "第三方资料 4":
+      - /url: https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json
+    - link "第三方资料 5":
+      - /url: https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json
+    - link "第三方资料 6":
+      - /url: https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json
+    - link "第三方资料 7":
+      - /url: https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json
+  - heading "探索更多游戏" [level=3]
+  - link "原神":
+    - /url: /zh/genshin
+  - link "鸣潮":
+    - /url: /zh/wuwa
+  - link "异环":
+    - /url: /zh/nte
+  - link "绝区零":
+    - /url: /zh/zzz
+  - link "崩坏3":
+    - /url: /zh/hi3
+  - link "归环":
+    - /url: /zh/guihuan
+  - link "无限大":
+    - /url: /zh/ananta
+  - link "明日方舟：终末地":
+    - /url: /zh/endfield
+  - link "遗忘之海":
+    - /url: /zh/sea
+  - link "失控进化":
+    - /url: /zh/skjh
+  - link "洛克王国：世界（国际服）":
+    - /url: /zh/roco
+  - link "洛克王国：世界":
+    - /url: /zh/roco-cn
+  - link "伊莫":
+    - /url: /zh/aniimo
+  - link "蓝色星原：旅谣":
+    - /url: /zh/azur-promilia
+  - link "绿梦：时空之声":
+    - /url: /zh/lvmeng
+- contentinfo:
+  - heading "Gachia" [level=3]
+  - paragraph: Gachia 是非官方资料站。内容来源、适用版本与核验状态需逐页核对；未核实内容不代表官方确认。素材权利归各自权利人所有。
+  - heading "Games" [level=4]
+  - list:
+    - link "原神":
+      - /url: /zh/genshin
+    - link "崩坏：星穹铁道":
+      - /url: /zh/starrail
+    - link "鸣潮":
+      - /url: /zh/wuwa
+    - link "异环":
+      - /url: /zh/nte
+    - link "绝区零":
+      - /url: /zh/zzz
+    - link "崩坏3":
+      - /url: /zh/hi3
+    - link "归环":
+      - /url: /zh/guihuan
+    - link "无限大":
+      - /url: /zh/ananta
+    - link "明日方舟：终末地":
+      - /url: /zh/endfield
+    - link "遗忘之海":
+      - /url: /zh/sea
+    - link "失控进化":
+      - /url: /zh/skjh
+    - link "洛克王国：世界（国际服）":
+      - /url: /zh/roco
+    - link "洛克王国：世界":
+      - /url: /zh/roco-cn
+    - link "伊莫":
+      - /url: /zh/aniimo
+    - link "蓝色星原：旅谣":
+      - /url: /zh/azur-promilia
+    - link "绿梦：时空之声":
+      - /url: /zh/lvmeng
+  - heading "资源" [level=4]
+  - list:
+    - link "关于 Gachia":
+      - /url: /zh/about
+    - link "网站地图":
+      - /url: /zh/sitemap
+    - link "API":
+      - /url: /zh/api
+  - heading "Legal" [level=4]
+  - list:
+    - link "隐私政策":
+      - /url: /zh/privacy
+    - link "服务条款":
+      - /url: /zh/terms
+    - link "联系我们":
+      - /url: /zh/contact
+  - generic: © 2026 Gachia. All rights reserved.

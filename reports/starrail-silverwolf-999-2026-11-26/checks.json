@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "sources": {
+    "status": "passed",
+    "stationAdjacentSkillRanges": 41,
+    "stationNodes": 13,
+    "bwikiAscensions": 6,
+    "stationMultiplierCells": 93,
+    "bwikiMultiplierValuesMatched": 91,
+    "multiplierConflictsResolved": [
+      {
+        "skill": "talent",
+        "level": 7,
+        "bwiki": "32%",
+        "adopted": "32.5%"
+      },
+      {
+        "skill": "talent",
+        "level": 9,
+        "bwiki": "37%",
+        "adopted": "37.5%"
+      }
+    ],
+    "costResolution": "Station adjacent ranges and nodes match pinned data. Bwiki generic cost templates and extra ability costs rejected.",
+    "precisionResolution": {
+      "ultimateAndElationLv7": {
+        "bwiki": "73.125%",
+        "station": "73.13%",
+        "pinned": "73.12%",
+        "adopted": "73.125%"
+      },
+      "ultimateAndElationLv9": {
+        "bwiki": "84.375%",
+        "station": "84.38%",
+        "pinned": "84.38%",
+        "adopted": "84.375%"
+      }
+    },
+    "independence": "Third-party displays and extracted game data may share upstream; no independent official confirmation claim."
+  },
+  "web": {
+    "files": 107,
+    "tests": 635,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 21,
+    "tests": 199,
+    "types": "passed"
+  },
+  "cms": {
+    "status": "passed",
+    "publicCount": 76,
+    "draftIsolated": true,
+    "repositoryTests": 11,
+    "actualEditorTests": 5,
+    "actualTypes": "passed",
+    "actualProductionBuild": "passed",
+    "schemaMigrationRequired": false
+  },
+  "rawMirrors": "passed",
+  "manifests": "passed",
+  "CI": {
+    "databaseId": 45779846679,
+    "headSha": "aa60b31ee893d6a0902a35b7e5e33c84ba03dac7",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45779846679"
+  },
+  "localWorker": "local-acceptance.json",
+  "preview": "preview-acceptance.json",
+  "production": "production-acceptance.json",
+  "runtimeProtection": "runtime-protection.json",
+  "browser": "browser-acceptance.json",
+  "originalSilverWolf": "original-silverwolf-acceptance.json",
+  "publication": {
+    "count": 77,
+    "revision": 1795680841081,
+    "created": 1,
+    "calendarEntries": 15,
+    "canonicalUTF8Bytes": 269743
+  },
+  "localServices": {
+    "editor4320Running": true,
+    "test4400Stopped": true,
+    "unrelatedListenersPreserved": true
+  },
+  "backup": {
+    "before": {
+      "status": "passed",
+      "records": 76,
+      "consistentSQLiteBackup": true,
+      "integrity": "ok",
+      "privateBackupMode": "0600",
+      "unrelatedListenersUnchanged": true,
+      "editorRunning": true
+    },
+    "after": {
+      "status": "passed",
+      "records": 77,
+      "consistentSQLiteBackup": true,
+      "integrity": "ok",
+      "privateBackupMode": "0600",
+      "unrelatedListenersUnchanged": true,
+      "editorRunning": true
+    }
+  }
+}

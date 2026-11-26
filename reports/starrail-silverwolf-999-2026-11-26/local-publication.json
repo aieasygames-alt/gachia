@@ -1,0 +1,14 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 77,
+      "slug": "silver-wolf-lv999-character-data",
+      "updatedAt": "2026-11-26T08:13:36.472Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 77,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}
