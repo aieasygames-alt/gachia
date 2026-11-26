@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-26",
+  "method": "Read rendered Miyoushe notice lists, one focused search result and the independent Nameless Honor article in the browser. Article identity checked against the official board, author and account label. Search snippets and comments were not used for published event facts.",
+  "sources": [
+    {
+      "url": "https://www.miyoushe.com/sr/article/79401975",
+      "title": "4.7版本「无名勋礼」更新",
+      "publishedLabel": "11-07",
+      "board": "官方",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "excerpts": [
+        "2026/11/11 4.7版本更新后 - 2026/12/21 03:59",
+        "开拓等级≥12级，且完成开拓任务「雅利洛-Ⅵ」-「她等待刀尖已经太久」",
+        "「无名客的赠礼」将自动解锁；完成本周任务、本期任务获得经验、提升勋礼等级；等级上限为70级。",
+        "本周任务将在每周一04:00（服务器时间）刷新。",
+        "解锁荣勋后可立即获得星琼*680，提升勋礼等级可额外获得光锥碎忆*1、星轨专票*4、自选4星光锥、变量骰子*1、自塑尘脂*2、遗器残骸、梦之珠泪等奖励。",
+        "解锁奖章，除以上奖励外将立即提升10级勋礼等级，还可获得虚照•巡游、星神★阿哈•巡游头像、光锥碎忆*1、星琼*200、燃料奖励。",
+        "已解锁荣勋的开拓者可通过购买荣勋授章升级至奖章。",
+        "到达等级上限后将不能通过任务获取经验。",
+        "特殊重复购买荣勋或奖章时无名客的经验无法累加，直接返还对应古老梦华*750或*1410；特殊重复购买荣勋授章返还古老梦华*860。",
+        "2026/12/21 02:59 将关闭本次活动中「无名客的荣勋」「无名客的奖章」「荣勋授章」的购买，购买关闭后开拓者仍可完成勋礼任务并领取奖励。"
+      ],
+      "boundary": "No per-level reward table, selectable cone list, fuel quantity, personal eligibility state or current purchase prices were inferred."
+    }
+  ],
+  "relicDoubleDropInspection": {
+    "listUrl": "https://www.miyoushe.com/sr/home/53?type=1",
+    "announcementListObserved": "Latest visible double-drop article was 11/22 位面分裂; 20 visible notices through 10/30 did not include an independent 4.7 异器盈界 notice. Known-issues title remained 11/18更新; the hotfix body was not re-audited this batch.",
+    "activityCategoryObserved": "Activity category contained community contests, drawings and point-exchange events; no independent 4.7 异器盈界 window was present in the inspected initial list.",
+    "focusedSearch": "异器盈界 4.7 2026 官方",
+    "searchObserved": "Initial Bing results led to the known 4.7 update notes, topic and third-party previews; no independently titled current relic-double-drop notice was shown.",
+    "boundary": "This is bounded to the inspected lists and initial search results. It does not establish that no announcement exists elsewhere. No dates or counts for 异器盈界 were published."
+  }
+}
