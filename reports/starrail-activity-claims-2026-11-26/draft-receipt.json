@@ -1,0 +1,23 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-26T04:14:15.364Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 72,
+      "slug": "v4-7-cn-fame-reward-rules",
+      "updatedAt": "2026-11-26T04:14:15.371Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 73,
+      "slug": "v4-7-cn-compensation-mail",
+      "updatedAt": "2026-11-26T04:14:15.375Z",
+      "action": "created_draft"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "services": [
+    "gachia",
+    "gachia-router",
+    "gachia-game-genshin",
+    "gachia-game-nte",
+    "gachia-game-azur-promilia",
+    "gachia-game-lvmeng",
+    "gachia-staging"
+  ],
+  "deploymentsUnchanged": true,
+  "routesSubdomainsBindingsSettingsUnchanged": true,
+  "workerDeployments": 0,
+  "runtimeCodeChanges": 0,
+  "mainVersion": "edfdcdde-bbe3-4202-9749-488deaa415ed"
+}

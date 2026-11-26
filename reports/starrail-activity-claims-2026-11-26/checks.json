@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "records": 73,
+  "calendarEntries": 13,
+  "calendarParentRecords": 5,
+  "canonicalPublicationBytes": 215750,
+  "payloadDraftIsolation": true,
+  "cloudDraftIsolation": true,
+  "payloadPublishedVersionHistory": true,
+  "fullCanonicalCloudMatch": true,
+  "eventAndVersionTextVerified": true,
+  "calendarDatesSourcesAnchorsVerified": true,
+  "threeLocaleIsolation": true,
+  "consistentBackupsBeforeAfter": true,
+  "schemaChanges": 0,
+  "mainBuilds": 0,
+  "workerDeployments": 0
+}

@@ -1,0 +1,257 @@
+{
+  "creates": [
+    {
+      "gameId": "starrail",
+      "slug": "v4-7-cn-fame-reward-rules",
+      "locale": "zh",
+      "kind": "event",
+      "title": "国服成名之路：5关挑战、SS评级与秀场明星奖章",
+      "summary": "12月23日03:59前参与；逐日开放5关，预热破盾积攒热度并将增益带入决赛。全部关卡均达成SS评级后，可领取「秀场明星」奖章。",
+      "region": "国服；时刻按国服正式公告原文",
+      "boundary": "依据国服独立活动公告；保留原文时刻，不外推其他区服。公告正文未列各关具体开放时刻、各评级数值阈值或奖励总量，本条不推算；限时奖励图示中的数量未在本批独立核验。",
+      "checkedAt": "2026-11-26",
+      "facts": [
+        {
+          "text": "活动窗口与参与条件\n2026/11/11 4.7版本更新后至2026/12/23 03:59，开拓等级≥21级。该期限是本活动窗口，不能套用好礼或补偿邮件的截止时间。"
+        },
+        {
+          "text": "关卡开放与两个阶段\n活动开启后逐日开放新挑战关卡，共5关。每个挑战关分为「预热阶段」和「决赛阶段」；本条不把逐日开放推算为固定每日04:00解锁。"
+        },
+        {
+          "text": "预热阶段：破盾积攒热度\n破除敌方护盾可积攒热度，热度可激活增益效果。这些增益在预热阶段生效，也可带入决赛阶段。"
+        },
+        {
+          "text": "决赛阶段与评级奖励\n进入决赛阶段后，尽可能多地击穿强敌生命值即可获得对应的「评级奖励」。各关具体评级数值要求按活动界面核对。"
+        },
+        {
+          "text": "试用角色与临时强化\n可使用指定试用角色，或更换已有相同角色出战。拥有角色的等级、行迹、遗器、星魂及光锥等级未达养成标准时，系统将自动强化；该强化仅在活动中生效。"
+        },
+        {
+          "text": "指定挑战目标：限时奖励\n活动期间，在关卡内达成指定挑战目标后，可以在「限时奖励」中领取命运的足迹等奖励。具体目标、奖励数量与领取状态请查看活动界面。"
+        },
+        {
+          "text": "全部关卡SS：纪念奖章\n活动期间，全部关卡均达成SS评级后，可以在「纪念奖章」中领取收藏展柜道具「秀场明星」奖章。全部关卡SS是奖章的条件，不应写成参与活动或领取全部其他奖励的统一门槛。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.miyoushe.com/sr/article/79469420"
+        }
+      ],
+      "eventSchedule": {
+        "region": "cn",
+        "clock": "announcement",
+        "entries": [
+          {
+            "id": "v4-7-cn-fame",
+            "title": "星际和平盛典：成名之路",
+            "category": "limited",
+            "start": {
+              "kind": "after-update",
+              "date": "2026-11-11",
+              "version": "4.7"
+            },
+            "end": {
+              "kind": "at",
+              "value": "2026-12-23T03:59"
+            },
+            "eligibility": "开拓等级≥21级",
+            "note": "共5关，逐日开放；活动期间全部关卡均达成SS评级后，在「纪念奖章」领取「秀场明星」奖章。指定挑战目标的奖励在「限时奖励」领取。",
+            "sourceUrl": "https://www.miyoushe.com/sr/article/79469420"
+          }
+        ]
+      },
+      "_status": "published"
+    },
+    {
+      "gameId": "starrail",
+      "slug": "v4-7-cn-compensation-mail",
+      "locale": "zh",
+      "kind": "event",
+      "title": "国服4.7补偿邮件：12月11日收信与版本结束前领取",
+      "summary": "停服更新补偿和问题修复补偿各为星琼300，资格相同、期限不同：前者在4.7版本结束前领取，后者需于12月11日23:59前上线收取邮件。",
+      "region": "国服；时刻按国服正式公告原文",
+      "boundary": "依据国服4.7正式更新说明，不外推其他区服。12月11日23:59是问题修复补偿的上线收信要求，公告未在此处明确该邮件入箱后的有效期；不得据此推断邮件过期或领取按钮截止。公告时刻不转换为倒计时。",
+      "checkedAt": "2026-11-26",
+      "facts": [
+        {
+          "text": "两项补偿的共同资格\n停服更新补偿与问题修复补偿的对象均为2026/11/11 06:00前，开拓等级≥4级的开拓者。更新后才达到4级不等同于满足公告资格。"
+        },
+        {
+          "text": "停服更新补偿：星琼300\n领取时间截至4.7版本结束前。国服版本更新说明给出的4.7版本持续时间为2026/11/11更新后至2026/12/23 06:00；请在版本结束前领取，不把活动的12月23日03:59截止套用于此。"
+        },
+        {
+          "text": "问题修复补偿：星琼300\n请于2026/12/11 23:59前上线收取邮件。这是上线收取邮件的要求，不是本批已核验的入箱后邮件有效期或领取按钮截止；具体邮件状态与有效期需查看游戏内邮件。"
+        },
+        {
+          "text": "发放方式与时间范围\n以上补偿将在更新完成后的5小时内，以游戏内邮件形式发放。公告未给实际更新完成的精确时刻；维护预计5小时不应转写成固定11:00发放或所有账号同一时刻收到。"
+        },
+        {
+          "text": "领取前核对\n分别检查两封邮件、公告资格和对应期限，及时领取。本站未读取个人游戏账号或邮件，不能保证某个账号仍有未领取补偿。"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.miyoushe.com/sr/article/79482327"
+        }
+      ],
+      "eventSchedule": {
+        "region": "cn",
+        "clock": "announcement",
+        "entries": [
+          {
+            "id": "v4-7-cn-maintenance-compensation",
+            "title": "停服更新补偿：版本结束前领取",
+            "category": "gift",
+            "start": {
+              "kind": "after-update",
+              "date": "2026-11-11",
+              "version": "4.7"
+            },
+            "end": {
+              "kind": "version-end",
+              "version": "4.7"
+            },
+            "eligibility": "2026/11/11 06:00前开拓等级≥4级",
+            "note": "星琼300；更新完成后的5小时内通过游戏邮件发放，领取截至4.7版本结束前。日历起点表示更新后发放，不代表精确到账时刻。",
+            "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+          },
+          {
+            "id": "v4-7-cn-fix-compensation-mail",
+            "title": "问题修复补偿：上线收信期限",
+            "category": "gift",
+            "start": {
+              "kind": "after-update",
+              "date": "2026-11-11",
+              "version": "4.7"
+            },
+            "end": {
+              "kind": "at",
+              "value": "2026-12-11T23:59"
+            },
+            "eligibility": "2026/11/11 06:00前开拓等级≥4级",
+            "note": "星琼300；须在所列截止前上线收取邮件。更新完成后的5小时内发放；此截止不是已核验的入箱后有效期或领取按钮期限，具体以游戏内邮件为准。",
+            "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+          }
+        ]
+      },
+      "_status": "published"
+    }
+  ],
+  "updates": [
+    {
+      "slug": "v4-7-events-and-rewards",
+      "data": {
+        "summary": "已按国服正式公告整理活动与赛季窗口；成名之路的独立日历及奖励条件见专条，补偿邮件的两种期限另列。异器盈界仍待独立公告核验。",
+        "checkedAt": "2026-11-26",
+        "eventSchedule": {
+          "region": "cn",
+          "clock": "announcement",
+          "entries": [
+            {
+              "id": "v4-7-cn-gifts",
+              "title": "开场好礼先抱走",
+              "category": "gift",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "version-end",
+                "version": "4.7"
+              },
+              "eligibility": "开拓等级≥4级",
+              "note": "公告范围为4.7版本持续期间；各好礼需按对应入口与签到进度领取，不能把累计签到20张专票写成登录即领。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-kitchen",
+              "title": "剧场版绒绒号：欢闹厨房",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "开拓等级≥21级；支持「终末视界」提前体验",
+              "note": "此处截止为限时活动窗口；限时奖励与收录「常时传略」后的常驻奖励分开核对。建议完成「二相乐园」—「此刻，将群星付之一笑」后体验，建议剧情不是额外强制门槛。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-relic-vault",
+              "title": "奇库寻遗",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "开拓等级≥21级",
+              "note": "按活动任务取得权限卡，开箱与暂存规则见下方已核验条目；6个部位不等于只有6次开箱。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-fashion",
+              "title": "寰宇美学·幻乐秀场",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "开拓等级≥4级",
+              "note": "使用时装邀请函抽取；不把时装抽取活动写成免费登录领取，也不推算未核验的总抽取成本。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-resonance",
+              "title": "万象和鸣",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "公告未另列等级门槛；按活动入口和累计回响规则核对",
+              "note": "累计消耗活动跃迁专票或时装邀请函获取回响；两档奖励按累计1600、3200分别领取，不能视为登录即领。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-currency-war",
+              "title": "货币战争·入画奇航",
+              "category": "season",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "not-announced"
+              },
+              "eligibility": "开拓等级≥21级；支持「终末视界」提前体验",
+              "note": "这是新赛季更新时间；所查更新说明未公告独立结束时刻，不套用12月23日03:59。建议完成「匹诺康尼」—「异乡异客」后体验。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

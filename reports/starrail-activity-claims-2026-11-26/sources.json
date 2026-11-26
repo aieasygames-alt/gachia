@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-26",
+  "method": "Read rendered Miyoushe article bodies through the browser; official board and official account identity verified. No search summaries or user comments used as evidence.",
+  "sources": [
+    {
+      "url": "https://www.miyoushe.com/sr/article/79482327",
+      "title": "4.7版本「此刻，将群星付之一笑」版本更新说明",
+      "publishedLabel": "11-11",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "excerpts": [
+        "4.7版本的持续时间为 2026/11/11 4.7版本更新后 - 2026/12/23 06:00。",
+        "停服更新补偿：星琼*300；补偿对象：2026/11/11 06:00前，开拓等级≥4级的开拓者；领取时间截至4.7版本结束前。",
+        "问题修复补偿：星琼*300；补偿对象：2026/11/11 06:00前，开拓等级≥4级的开拓者；请开拓者于 2026/12/11 23:59 前上线收取邮件。",
+        "以上补偿列车组将在更新完成后的5小时内，以游戏内邮件的形式为开拓者发放，请及时领取补偿。"
+      ],
+      "boundary": "Do not infer exact update completion, delivery minute, or post-delivery expiry of the issue-fix compensation mail."
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79469420",
+      "title": "「星际和平盛典：成名之路」：击败强敌，获取命运的足迹等奖励！",
+      "publishedLabel": "11-10",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "excerpts": [
+        "2026/11/11 4.7版本更新后 - 2026/12/23 03:59；开拓等级≥21级。",
+        "活动开启后，将会逐日开启新挑战关卡，共计5关。每一个挑战关分为「预热阶段」和「决赛阶段」。",
+        "挑战关卡中，开拓者可使用指定试用角色参与挑战，或更换已有相同角色出战。",
+        "每个关卡中，开拓者可在「预热阶段」通过破除敌方护盾来积攒热度。热度可以激活增益效果，这些增益不仅在「预热阶段」生效，更可以带入「决赛阶段」。",
+        "进入「决赛阶段」后，尽可能多地击穿强敌生命值即可获得对应的「评级奖励」。",
+        "若拥有的角色（等级、行迹、遗器、星魂）及光锥等级未达养成标准时，将被系统自动强化，该强化仅在活动中生效。",
+        "活动期间，在关卡内达成指定挑战目标后，可以在「限时奖励」中领取奖励。",
+        "活动期间，全部关卡均达成SS评级后，可以在「纪念奖章」中领取收藏展柜道具「秀场明星」奖章。"
+      ],
+      "boundary": "Exact per-stage release times, numerical rating thresholds and reward-image quantities were not verified; no invented values published."
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79469418",
+      "title": "「星际和平盛典：成名之路」活动介绍",
+      "publishedLabel": "11-10",
+      "use": "Read introduction only. Its image contents were not transcribed or used for additional numerical claims."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com",
+  "previousRevision": 1795658825450,
+  "revision": 1795666541361,
+  "locales": [
+    {
+      "locale": "zh",
+      "status": 200,
+      "revision": 1795666541361,
+      "records": 73,
+      "calendarEntries": 13,
+      "cacheControl": "no-store",
+      "allReviewedTextRendered": true,
+      "calendarFieldsSourcesAndAnchorsVerified": true
+    },
+    {
+      "locale": "en",
+      "status": 200,
+      "revision": 1795666541361,
+      "records": 0,
+      "calendarEntries": 0,
+      "cacheControl": "no-store",
+      "allReviewedTextRendered": true,
+      "calendarFieldsSourcesAndAnchorsVerified": true
+    },
+    {
+      "locale": "ja",
+      "status": 200,
+      "revision": 1795666541361,
+      "records": 0,
+      "calendarEntries": 0,
+      "cacheControl": "no-store",
+      "allReviewedTextRendered": true,
+      "calendarFieldsSourcesAndAnchorsVerified": true
+    }
+  ],
+  "smoke": [
+    {
+      "path": "/zh",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/characters",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/characters/aha",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/calculator",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/weapons",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/artifacts",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/items",
+      "status": 200
+    }
+  ],
+  "contentWrites": 0,
+  "workerDeployments": 0
+}

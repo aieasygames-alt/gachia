@@ -1,0 +1,26 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-26T04:15:12.991Z",
+      "versionCount": 9
+    },
+    {
+      "id": 72,
+      "slug": "v4-7-cn-fame-reward-rules",
+      "updatedAt": "2026-11-26T04:15:13.001Z",
+      "versionCount": 2
+    },
+    {
+      "id": 73,
+      "slug": "v4-7-cn-compensation-mail",
+      "updatedAt": "2026-11-26T04:15:13.008Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 73,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}
