@@ -1,0 +1,19 @@
+{
+  "status": "resolved",
+  "notes": [
+    {
+      "issue": "Read-only initial export lacked established User-Agent; Cloudflare returned403.",
+      "resolution": "Repeated read with existing GachiaCMS/1.0 identity and compared canonical CMS/cloud77 baseline."
+    },
+    {
+      "issue": "Existing Wrangler OAuth token expired during initial read-only snapshot.",
+      "resolution": "Refreshed existing session with project-local whoami, then captured full seven-service baseline; no authentication material recorded in public evidence."
+    },
+    {
+      "issue": "First candidate verification stopped after120 successful reader/equipment checks because local report material-registry.json was missing.",
+      "resolution": "Copied unchanged baseline fixture, checked exact equality with STARRAIL_CMS_MATERIALS, and reran complete candidate verification before promotion."
+    }
+  ],
+  "failedCloudMutations": 0,
+  "automaticCloudMutationRetries": 0
+}

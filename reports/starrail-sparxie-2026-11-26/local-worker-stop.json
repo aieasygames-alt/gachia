@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "ownedRoot": 21937,
+  "ownedProcessTree": [
+    21937,
+    21938,
+    21939,
+    21945,
+    21946,
+    21948,
+    21950
+  ],
+  "port4400Stopped": true,
+  "editor4320Preserved": true
+}

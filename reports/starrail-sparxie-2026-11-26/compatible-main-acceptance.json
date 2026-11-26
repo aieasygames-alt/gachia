@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "recordsPreserved": 77,
+  "revisionPreserved": 1795680841081,
+  "newCharacterNotPublished": true,
+  "checks": [
+    {
+      "locale": "zh",
+      "records": 77,
+      "calendarEntries": 15
+    },
+    {
+      "locale": "en",
+      "records": 0,
+      "calendarEntries": 0
+    },
+    {
+      "locale": "ja",
+      "records": 0,
+      "calendarEntries": 0
+    }
+  ],
+  "cloudContentWrites": 0
+}

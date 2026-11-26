@@ -1,0 +1,249 @@
+{
+  "status": "passed",
+  "sources": {
+    "status": "passed",
+    "stationAdjacentSkillRanges": 41,
+    "stationNodes": 13,
+    "bwikiAscensions": 6,
+    "stationMultiplierCells": 129,
+    "bwikiMultiplierValuesMatched": 112,
+    "multiplierDifferencesRecorded": [
+      {
+        "skill": "skill",
+        "column": 0,
+        "level": 7,
+        "bwiki": "16.2%",
+        "adopted": "16.25%"
+      },
+      {
+        "skill": "skill",
+        "column": 1,
+        "level": 7,
+        "bwiki": "8.1%",
+        "adopted": "8.13%"
+      },
+      {
+        "skill": "skill",
+        "column": 1,
+        "level": 8,
+        "bwiki": "8.8%",
+        "adopted": "8.75%"
+      },
+      {
+        "skill": "skill",
+        "column": 0,
+        "level": 9,
+        "bwiki": "18.8%",
+        "adopted": "18.75%"
+      },
+      {
+        "skill": "skill",
+        "column": 1,
+        "level": 9,
+        "bwiki": "9.4%",
+        "adopted": "9.38%"
+      },
+      {
+        "skill": "talent",
+        "column": 3,
+        "level": 2,
+        "bwiki": "26%",
+        "adopted": "26.4%"
+      },
+      {
+        "skill": "talent",
+        "column": 3,
+        "level": 3,
+        "bwiki": "29%",
+        "adopted": "28.8%"
+      },
+      {
+        "skill": "talent",
+        "column": 3,
+        "level": 4,
+        "bwiki": "31%",
+        "adopted": "31.2%"
+      },
+      {
+        "skill": "talent",
+        "column": 3,
+        "level": 5,
+        "bwiki": "34%",
+        "adopted": "33.6%"
+      },
+      {
+        "skill": "talent",
+        "column": 0,
+        "level": 7,
+        "bwiki": "32%",
+        "adopted": "32.5%"
+      },
+      {
+        "skill": "talent",
+        "column": 1,
+        "level": 7,
+        "bwiki": "16.2%",
+        "adopted": "16.25%"
+      },
+      {
+        "skill": "talent",
+        "column": 2,
+        "level": 7,
+        "bwiki": "16.2%",
+        "adopted": "16.25%"
+      },
+      {
+        "skill": "talent",
+        "column": 0,
+        "level": 9,
+        "bwiki": "38%",
+        "adopted": "37.5%"
+      },
+      {
+        "skill": "talent",
+        "column": 1,
+        "level": 9,
+        "bwiki": "18.8%",
+        "adopted": "18.75%"
+      },
+      {
+        "skill": "talent",
+        "column": 2,
+        "level": 9,
+        "bwiki": "18.8%",
+        "adopted": "18.75%"
+      },
+      {
+        "skill": "talent",
+        "column": 3,
+        "level": 11,
+        "bwiki": "50%",
+        "adopted": "50.4%"
+      },
+      {
+        "skill": "talent",
+        "column": 3,
+        "level": 12,
+        "bwiki": "53%",
+        "adopted": "52.8%"
+      }
+    ],
+    "higherPrecisionFromBwiki": [
+      {
+        "skill": "elation",
+        "level": 7,
+        "column": 0,
+        "adopted": "40.625%",
+        "station": "40.63%"
+      },
+      {
+        "skill": "elation",
+        "level": 7,
+        "column": 1,
+        "adopted": "20.3125%",
+        "station": "20.31%"
+      },
+      {
+        "skill": "elation",
+        "level": 8,
+        "column": 1,
+        "adopted": "21.875%",
+        "station": "21.88%"
+      },
+      {
+        "skill": "elation",
+        "level": 9,
+        "column": 0,
+        "adopted": "46.875%",
+        "station": "46.88%"
+      },
+      {
+        "skill": "elation",
+        "level": 9,
+        "column": 1,
+        "adopted": "23.4375%",
+        "station": "23.44%"
+      }
+    ],
+    "costResolution": "Station adjacent ranges and all 13 nodes match pinned data. BWIKI generic costs and differing node templates not used.",
+    "precisionResolution": "Use recorded Station/pinned precision for skill/talent; BWIKI explicit longer decimals for elation. Fixed JSON keeps four decimal places; no inferred extra skill precision.",
+    "independence": "Third-party displays and extracted data may share upstream; no independent official confirmation claim."
+  },
+  "web": {
+    "files": 107,
+    "tests": 636,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 22,
+    "tests": 202,
+    "types": "passed"
+  },
+  "cms": {
+    "status": "passed",
+    "actualEditorTests": 5,
+    "repoCmsTests": 11,
+    "types": "passed",
+    "productionBuild": "passed",
+    "sharedParsersSynchronized": 2,
+    "publicRecords": 77,
+    "draftIsolated": true,
+    "SQLiteMigration": false
+  },
+  "rawMirrors": "passed",
+  "manifests": "passed",
+  "CI": {
+    "conclusion": "success",
+    "databaseId": 45784228488,
+    "headSha": "44850a1b0d64ba61cc8084a7461b0b047adcc789",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45784228488"
+  },
+  "releaseGates": [
+    "source-comparison.json",
+    "editor-acceptance.json",
+    "local-acceptance.json",
+    "preview-acceptance.json",
+    "production-acceptance.json",
+    "runtime-protection.json",
+    "compatible-main-acceptance.json",
+    "browser-acceptance.json",
+    "browser-local-acceptance.json",
+    "local-worker-stop.json",
+    "original-sparkle-acceptance.json"
+  ],
+  "publication": {
+    "count": 78,
+    "revision": 1795682990397,
+    "created": 1,
+    "calendarEntries": 15,
+    "canonicalUTF8Bytes": 290970
+  },
+  "localServices": {
+    "editor4320Running": true,
+    "test4400Stopped": true,
+    "unrelatedListenersPreserved": true
+  },
+  "backup": {
+    "before": {
+      "status": "passed",
+      "records": 77,
+      "consistentSQLiteBackup": true,
+      "integrity": "ok",
+      "privateBackupMode": "0600",
+      "unrelatedListenersUnchanged": true,
+      "editorRunning": true,
+      "backupCreatedBeforePortSnapshot": true
+    },
+    "after": {
+      "status": "passed",
+      "records": 78,
+      "consistentSQLiteBackup": true,
+      "integrity": "ok",
+      "privateBackupMode": "0600",
+      "unrelatedListenersUnchanged": true,
+      "editorRunning": true
+    }
+  }
+}

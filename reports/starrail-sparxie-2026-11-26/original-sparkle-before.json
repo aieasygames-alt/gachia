@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "locale": "zh",
+      "path": "/zh/starrail/characters/sparkle",
+      "h1": "花火",
+      "mainTextSHA256": "2e3268a3a95efd4703b2f22f1b940314a782d76228839dade1595ab6d52320f0"
+    },
+    {
+      "locale": "en",
+      "path": "/en/starrail/characters/sparkle",
+      "h1": "Sparkle",
+      "mainTextSHA256": "0272b345c258e99a02e9b7206f22f84c8c048c31db8d2f6ccc5c3b8f0d7f27ef"
+    },
+    {
+      "locale": "ja",
+      "path": "/ja/starrail/characters/sparkle",
+      "h1": "Sparkle",
+      "mainTextSHA256": "c27f37e67d2826f5bc3c16625a5e4068c25f72f0fdf8371583711cade1edf3fc"
+    }
+  ],
+  "distinctCharacterPreserved": true
+}

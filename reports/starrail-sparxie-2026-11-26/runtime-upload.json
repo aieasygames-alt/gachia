@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "versionId": "f5a9c7b9-c330-40a8-aaee-c7c6dd20fbaf",
+  "previewOrigin": "https://f5a9c7b9-gachia.aieasygames.workers.dev",
+  "moduleSHA256": "3b0c98323dce639258b7edbf2d8bbec5faf72ada97694f420632efbf17a26b7f",
+  "sourceCommit": "44850a1b0d64ba61cc8084a7461b0b047adcc789",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-sparxie-2026-11-26/.private/upload/module-proof/receipt.json",
+    "pin": "af47138db4fa0f619dcb3914f7c9ac9e2f318fb65366d97f5d4972b9b773f0e3"
+  },
+  "bindingsPreserved": true,
+  "trafficMutation": false
+}

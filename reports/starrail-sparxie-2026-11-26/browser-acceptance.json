@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "origin": "https://gachia.com",
+  "checks": [
+    "full_budget3308000",
+    "node_subtraction3168000",
+    "elation7to10_435000_22_12_without_weekly_or_tracks",
+    "switch_character_resets_targets",
+    "five_skill_tables129_cells_equal_reviewed_CMS_data",
+    "live_source_boundary_present"
+  ],
+  "evidence": "browser-production-evidence.json",
+  "screenshot": "production-character.jpg"
+}

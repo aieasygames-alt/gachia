@@ -1,0 +1,14 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 78,
+      "slug": "sparxie-character-data",
+      "updatedAt": "2026-11-26T08:49:32.895Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 78,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}
