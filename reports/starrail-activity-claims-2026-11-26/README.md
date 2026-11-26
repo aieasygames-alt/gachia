@@ -32,7 +32,9 @@
 - 七个服务的部署、settings/bindings、routes和subdomain快照完全一致。Main仍为`edfdcdde-bbe3-4202-9749-488deaa415ed`，没有重建或部署任何Worker。Wrangler读取凭据过期后通过既有CLI刷新，再完成前后快照。
 - 发布后匿名本地导出与Payload正式结果一致，再次保存一致性备份。4320编辑器和其余4398/4399/4400监听状态与开始时相同。
 
-回执见`draft-cloud-isolation.json`、`local-publication.json`、`sync-receipt.json`、`production-acceptance.json`、`runtime-protection.json`及`checks.json`。本批只有内容和报告修改，验证聚焦真实Payload发布、线上全文和部署保护；未重跑主站构建及代码单元测试，不将前批836项测试算作本批新运行。
+回执见`draft-cloud-isolation.json`、`local-publication.json`、`sync-receipt.json`、`production-acceptance.json`、`runtime-protection.json`及`checks.json`。本批只有内容和报告修改，本机验证聚焦真实Payload发布、线上全文和部署保护，未在本机重跑主站构建及代码单元测试。推送另自动触发仓库集成检查，包含代码测试、构建及Wrangler dry-run；该工作流不部署Worker，结果见本批CI回执。
+
+提交`bd8ab6ba7b780089785f79f1599da99ccf6d01d6`的[自动集成检查45754488036](https://github.com/aieasygames-alt/gachia/actions/runs/45754488036)已通过：CMS类型与测试、数据层/主站类型与测试、manifest校验、OpenNext构建及Wrangler dry-run均成功，详见`ci.json`。最终回执提交只补充CI结果并澄清本机与CI构建范围，不改变运行时代码或已发布内容；使用`[skip ci]`避免为回执再次触发相同工作流。
 
 ## 后续与恢复
 

@@ -31,7 +31,7 @@ for name, value in [
                         payloadPublishedVersionHistory=True, fullCanonicalCloudMatch=True,
                         eventAndVersionTextVerified=True, calendarDatesSourcesAnchorsVerified=True,
                         threeLocaleIsolation=True, consistentBackupsBeforeAfter=True,
-                        schemaChanges=0, mainBuilds=0, workerDeployments=0)),
+                        schemaChanges=0, localMainBuilds=0, workerDeployments=0)),
     ('remaining-priorities.json', {
         'currentBatch': {'creates': 2, 'updates': 1, 'totalPublication': 73, 'calendarEntries': 13},
         'completed': ['成名之路独立日程、5关流程、试用/临时强化与SS奖章条件', '国服两项补偿的不同期限、共同资格、邮件发放范围'],

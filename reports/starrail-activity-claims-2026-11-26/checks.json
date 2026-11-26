@@ -13,6 +13,6 @@
   "threeLocaleIsolation": true,
   "consistentBackupsBeforeAfter": true,
   "schemaChanges": 0,
-  "mainBuilds": 0,
+  "localMainBuilds": 0,
   "workerDeployments": 0
 }
