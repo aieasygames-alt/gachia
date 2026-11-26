@@ -1,0 +1,146 @@
+{
+  "110261": {
+    "id": "110261",
+    "name": "《绒绒号》手绘分镜稿",
+    "type": "Material",
+    "sub_type": "TracePath",
+    "rarity": 2,
+    "icon": "icon/item/110261.png",
+    "come_from": [
+      "拟造花萼【「世界尽头」酒馆】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110262": {
+    "id": "110262",
+    "name": "《绒绒号》连载纪念刊",
+    "type": "Material",
+    "sub_type": "TracePath",
+    "rarity": 3,
+    "icon": "icon/item/110262.png",
+    "come_from": [
+      "拟造花萼【「世界尽头」酒馆】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110263": {
+    "id": "110263",
+    "name": "《绒绒号》典藏版合集",
+    "type": "Material",
+    "sub_type": "TracePath",
+    "rarity": 4,
+    "icon": "icon/item/110263.png",
+    "come_from": [
+      "拟造花萼【「世界尽头」酒馆】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110432": {
+    "id": "110432",
+    "name": "明辉日珥",
+    "type": "Material",
+    "sub_type": "AvatarRank",
+    "rarity": 4,
+    "icon": "icon/item/110432.png",
+    "come_from": [
+      "凝滞虚影【「神谕圣地」雅努萨波利斯】",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110508": {
+    "id": "110508",
+    "name": "灭流绝溢的缄默",
+    "type": "Material",
+    "sub_type": "WeeklyMonsterDrop",
+    "rarity": 4,
+    "icon": "icon/item/110508.png",
+    "come_from": [
+      "历战余响【「葬忆彼岸」时光归墟】"
+    ]
+  },
+  "116001": {
+    "id": "116001",
+    "name": "童真蜡笔",
+    "type": "Material",
+    "sub_type": "CommonMonsterDrop",
+    "rarity": 2,
+    "icon": "icon/item/116001.png",
+    "come_from": [
+      "幻造生物掉落",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "委托奖励",
+      "余烬兑换",
+      "「万能合成机」- 材料置换",
+      "拟造花萼（金）"
+    ]
+  },
+  "116002": {
+    "id": "116002",
+    "name": "造梦蘸钢",
+    "type": "Material",
+    "sub_type": "CommonMonsterDrop",
+    "rarity": 3,
+    "icon": "icon/item/116002.png",
+    "come_from": [
+      "突破至均衡等级2后，幻造生物掉落",
+      "「万能合成机」- 材料合成",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "116003": {
+    "id": "116003",
+    "name": "梦现管锥",
+    "type": "Material",
+    "sub_type": "CommonMonsterDrop",
+    "rarity": 4,
+    "icon": "icon/item/116003.png",
+    "come_from": [
+      "突破至均衡等级4后，幻造生物掉落",
+      "「万能合成机」- 材料合成",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "2": {
+    "id": "2",
+    "name": "信用点",
+    "type": "Virtual",
+    "sub_type": "Virtual",
+    "rarity": 3,
+    "icon": "icon/item/2.png",
+    "come_from": [
+      "拟造花萼【大矿区】",
+      "拟造花萼【工造司】",
+      "拟造花萼【「白日梦」酒店-梦境】",
+      "拟造花萼【「呓语密林」神悟树庭】",
+      "拟造花萼【鸽川区】",
+      "任务奖励",
+      "委托奖励",
+      "余烬兑换"
+    ]
+  },
+  "241": {
+    "id": "241",
+    "name": "命运的足迹",
+    "type": "Material",
+    "sub_type": "WeeklyMonsterDrop",
+    "rarity": 5,
+    "icon": "icon/item/241.png",
+    "come_from": [
+      "「货币战争」积分奖励",
+      "「模拟宇宙」积分奖励",
+      "无名勋礼",
+      "余烬兑换",
+      "星芒兑换",
+      "限时活动奖励"
+    ]
+  }
+}

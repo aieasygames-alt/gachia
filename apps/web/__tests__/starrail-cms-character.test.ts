@@ -1,6 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import spBatch from '../../../reports/starrail-sparxie-2026-11-26/batch.json';
 import swBatch from '../../../reports/starrail-silverwolf-999-2026-11-26/batch.json';
 import yaoBatch from '../../../reports/starrail-yaoguang-2026-11-26/batch.json';
 import batch from '../../../reports/starrail-structured-character-2026-11-25/batch.json';
@@ -77,6 +78,21 @@ describe('CMS character page, index entry and material calculator', () => {
     load.mockResolvedValue({ source: 'cms', updates: [doc] });
     expect(renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }))).not.toContain('/starrail/characters/silver-wolf-lv999');
     expect(await starRailCharacterMetadata('zh', 'silver-wolf-lv999')).toMatchObject({ robots: { index: false } });
+  });
+
+  it('renders Sparxie enhanced forms and isolates its withdrawn or untranslated data', async () => {
+    const sp = parseStarRailUpdate(spBatch.creates[0])!;
+    load.mockResolvedValue({ source: 'cms', updates: [doc, sp] });
+    const detail = renderToStaticMarkup(await StarRailCmsCharacter({ locale: 'zh', id: 'sparxie' }));
+    for (const value of ['40.625%', '20.3125%', '8.13%', '明辉日珥', '互动陷阱', '3,308,000']) expect(detail).toContain(value);
+    expect(renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }))).toContain('/starrail/characters/sparxie');
+    for (const locale of ['en', 'ja'] as const) {
+      expect(renderToStaticMarkup(await StarRailCmsCharacter({ locale, id: 'sparxie' }))).not.toContain(sp.summary);
+      expect(await starRailCharacterMetadata(locale, 'sparxie')).toMatchObject({ robots: { index: false } });
+    }
+    load.mockResolvedValue({ source: 'cms', updates: [doc] });
+    expect(renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }))).not.toContain('/starrail/characters/sparxie');
+    expect(await starRailCharacterMetadata('zh', 'sparxie')).toMatchObject({ robots: { index: false } });
   });
 
 });

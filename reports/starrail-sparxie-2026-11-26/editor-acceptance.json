@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "actualEditorTests": 5,
+  "repoCmsTests": 11,
+  "types": "passed",
+  "productionBuild": "passed",
+  "sharedParsersSynchronized": 2,
+  "publicRecords": 77,
+  "draftIsolated": true,
+  "SQLiteMigration": false
+}

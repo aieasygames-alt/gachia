@@ -47,6 +47,8 @@ const communitySources = new Set([
   'https://starrailstation.com/cn/character/yaoguang',
   'https://wiki.biligame.com/sr/%E9%93%B6%E7%8B%BCLV.999',
   'https://starrailstation.com/cn/character/silverwolflv999',
+  'https://wiki.biligame.com/sr/%E7%81%AB%E8%8A%B1',
+  'https://starrailstation.com/cn/character/sparxie',
   'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json',
   'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json',
   'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json',

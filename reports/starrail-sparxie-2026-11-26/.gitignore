@@ -1,0 +1,7 @@
+.private/
+artifact/
+*.html
+__pycache__/
+module/
+*.log
+data-*.json

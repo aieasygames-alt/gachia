@@ -1,0 +1,169 @@
+{
+  "status": "passed",
+  "stationAdjacentSkillRanges": 41,
+  "stationNodes": 13,
+  "bwikiAscensions": 6,
+  "stationMultiplierCells": 129,
+  "bwikiMultiplierValuesMatched": 112,
+  "multiplierDifferencesRecorded": [
+    {
+      "skill": "skill",
+      "column": 0,
+      "level": 7,
+      "bwiki": "16.2%",
+      "adopted": "16.25%"
+    },
+    {
+      "skill": "skill",
+      "column": 1,
+      "level": 7,
+      "bwiki": "8.1%",
+      "adopted": "8.13%"
+    },
+    {
+      "skill": "skill",
+      "column": 1,
+      "level": 8,
+      "bwiki": "8.8%",
+      "adopted": "8.75%"
+    },
+    {
+      "skill": "skill",
+      "column": 0,
+      "level": 9,
+      "bwiki": "18.8%",
+      "adopted": "18.75%"
+    },
+    {
+      "skill": "skill",
+      "column": 1,
+      "level": 9,
+      "bwiki": "9.4%",
+      "adopted": "9.38%"
+    },
+    {
+      "skill": "talent",
+      "column": 3,
+      "level": 2,
+      "bwiki": "26%",
+      "adopted": "26.4%"
+    },
+    {
+      "skill": "talent",
+      "column": 3,
+      "level": 3,
+      "bwiki": "29%",
+      "adopted": "28.8%"
+    },
+    {
+      "skill": "talent",
+      "column": 3,
+      "level": 4,
+      "bwiki": "31%",
+      "adopted": "31.2%"
+    },
+    {
+      "skill": "talent",
+      "column": 3,
+      "level": 5,
+      "bwiki": "34%",
+      "adopted": "33.6%"
+    },
+    {
+      "skill": "talent",
+      "column": 0,
+      "level": 7,
+      "bwiki": "32%",
+      "adopted": "32.5%"
+    },
+    {
+      "skill": "talent",
+      "column": 1,
+      "level": 7,
+      "bwiki": "16.2%",
+      "adopted": "16.25%"
+    },
+    {
+      "skill": "talent",
+      "column": 2,
+      "level": 7,
+      "bwiki": "16.2%",
+      "adopted": "16.25%"
+    },
+    {
+      "skill": "talent",
+      "column": 0,
+      "level": 9,
+      "bwiki": "38%",
+      "adopted": "37.5%"
+    },
+    {
+      "skill": "talent",
+      "column": 1,
+      "level": 9,
+      "bwiki": "18.8%",
+      "adopted": "18.75%"
+    },
+    {
+      "skill": "talent",
+      "column": 2,
+      "level": 9,
+      "bwiki": "18.8%",
+      "adopted": "18.75%"
+    },
+    {
+      "skill": "talent",
+      "column": 3,
+      "level": 11,
+      "bwiki": "50%",
+      "adopted": "50.4%"
+    },
+    {
+      "skill": "talent",
+      "column": 3,
+      "level": 12,
+      "bwiki": "53%",
+      "adopted": "52.8%"
+    }
+  ],
+  "higherPrecisionFromBwiki": [
+    {
+      "skill": "elation",
+      "level": 7,
+      "column": 0,
+      "adopted": "40.625%",
+      "station": "40.63%"
+    },
+    {
+      "skill": "elation",
+      "level": 7,
+      "column": 1,
+      "adopted": "20.3125%",
+      "station": "20.31%"
+    },
+    {
+      "skill": "elation",
+      "level": 8,
+      "column": 1,
+      "adopted": "21.875%",
+      "station": "21.88%"
+    },
+    {
+      "skill": "elation",
+      "level": 9,
+      "column": 0,
+      "adopted": "46.875%",
+      "station": "46.88%"
+    },
+    {
+      "skill": "elation",
+      "level": 9,
+      "column": 1,
+      "adopted": "23.4375%",
+      "station": "23.44%"
+    }
+  ],
+  "costResolution": "Station adjacent ranges and all 13 nodes match pinned data. BWIKI generic costs and differing node templates not used.",
+  "precisionResolution": "Use recorded Station/pinned precision for skill/talent; BWIKI explicit longer decimals for elation. Fixed JSON keeps four decimal places; no inferred extra skill precision.",
+  "independence": "Third-party displays and extracted data may share upstream; no independent official confirmation claim."
+}
