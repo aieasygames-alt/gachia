@@ -1,0 +1,17 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-26T04:32:07.769Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 74,
+      "slug": "v4-7-cn-currency-war-rules",
+      "updatedAt": "2026-11-26T04:32:07.775Z",
+      "action": "created_draft"
+    }
+  ]
+}

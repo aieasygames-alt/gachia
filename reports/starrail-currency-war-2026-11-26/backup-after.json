@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "records": 74,
+  "consistentSQLiteBackup": true,
+  "integrity": "ok",
+  "privateBackupMode": "0600",
+  "listenersUnchanged": true
+}

@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-26",
+  "method": "Read rendered Miyoushe article body and official author identity in the browser. Reward image contents, user comments, search summaries and third-party guides were not used for additional numerical claims.",
+  "sources": [
+    {
+      "url": "https://www.miyoushe.com/sr/article/79258376",
+      "title": "「货币战争•入画奇航」全新赛季说明",
+      "publishedLabel": "11-01",
+      "board": "官方",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "verifiedFacts": [
+        "2026/11/11 4.7版本更新后；开拓等级≥21级；支持终末视界提前体验；建议完成匹诺康尼—异乡异客后体验。",
+        "游玩可获得星琼*4000、变量骰子*2、自塑尘脂*2、命运的足迹*3等奖励。",
+        "对局开始随机揭晓奇遇伙伴，伙伴随机带来一种本场增益；倾向包括装备、经济补给与节点变化。",
+        "一、二位面的首领战前选择一名场上员工成为本场主角，赋予主角光环。",
+        "60位员工、29个羁绊；员工角色赋能、费用、羁绊、前后台定位均重新制作。",
+        "投资环境、策略、竞争对手与敌人词缀更新；部分简易装备合成结果变化。",
+        "赛季优势布局进度重置，收集幻乐晶球激活；常驻优势布局完整保留。"
+      ],
+      "rewardSectionVerbatim": [
+        "「货币战争」结算时，可根据本次挑战进度获得周期积分，并获得周期积分奖励。该奖励会在每周的周一04:00（服务器时间）重置。",
+        "完成「货币战争」对局，获得晋升点提升晋升等级，可获得晋升等级奖励。",
+        "以不同的羁绊阵容通关对局，可获得羁绊链路挑战奖励。",
+        "首次晋升对应职级，可获得职级奖励。",
+        "收集「货币战争」的奇遇伙伴、主角光环、投资环境、投资策略图鉴可获得收集奖励。",
+        "每周首次通关「标准博弈」或「超频博弈」，可获得额外的晋升点奖励。",
+        "通过完成「创业指南」与「预期收益」中指定的目标，可获得对应奖励。"
+      ],
+      "boundary": "No independently announced season end, numerical point thresholds, per-tier reward amounts, or separate first-clear counters for the two modes were inferred. The 7 reward categories follow the 7 bullets of the official reward explanation."
+    }
+  ]
+}
