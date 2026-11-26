@@ -1,0 +1,104 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 56,
+      "slug": "endurance-of-bronze",
+      "updatedAt": "2026-11-26T01:21:47.373Z",
+      "versionCount": 2
+    },
+    {
+      "id": 57,
+      "slug": "oath-of-steel",
+      "updatedAt": "2026-11-26T01:21:47.383Z",
+      "versionCount": 2
+    },
+    {
+      "id": 58,
+      "slug": "safeguard-of-amber",
+      "updatedAt": "2026-11-26T01:21:47.389Z",
+      "versionCount": 2
+    },
+    {
+      "id": 59,
+      "slug": "seed-of-abundance",
+      "updatedAt": "2026-11-26T01:21:47.394Z",
+      "versionCount": 2
+    },
+    {
+      "id": 60,
+      "slug": "sprout-of-life",
+      "updatedAt": "2026-11-26T01:21:47.400Z",
+      "versionCount": 2
+    },
+    {
+      "id": 61,
+      "slug": "flower-of-eternity",
+      "updatedAt": "2026-11-26T01:21:47.405Z",
+      "versionCount": 2
+    },
+    {
+      "id": 62,
+      "slug": "borisin-teeth",
+      "updatedAt": "2026-11-26T01:21:47.410Z",
+      "versionCount": 2
+    },
+    {
+      "id": 63,
+      "slug": "lupitoxin-sawteeth",
+      "updatedAt": "2026-11-26T01:21:47.416Z",
+      "versionCount": 2
+    },
+    {
+      "id": 64,
+      "slug": "moon-rage-fang",
+      "updatedAt": "2026-11-26T01:21:47.421Z",
+      "versionCount": 2
+    },
+    {
+      "id": 65,
+      "slug": "meteoric-bullet",
+      "updatedAt": "2026-11-26T01:21:47.426Z",
+      "versionCount": 2
+    },
+    {
+      "id": 66,
+      "slug": "destined-expiration",
+      "updatedAt": "2026-11-26T01:21:47.432Z",
+      "versionCount": 2
+    },
+    {
+      "id": 67,
+      "slug": "countertemporal-shot",
+      "updatedAt": "2026-11-26T01:21:47.437Z",
+      "versionCount": 2
+    },
+    {
+      "id": 68,
+      "slug": "fiery-spirit",
+      "updatedAt": "2026-11-26T01:21:47.441Z",
+      "versionCount": 2
+    },
+    {
+      "id": 69,
+      "slug": "starfire-essence",
+      "updatedAt": "2026-11-26T01:21:47.447Z",
+      "versionCount": 2
+    },
+    {
+      "id": 70,
+      "slug": "heaven-incinerator",
+      "updatedAt": "2026-11-26T01:21:47.452Z",
+      "versionCount": 2
+    },
+    {
+      "id": 71,
+      "slug": "credit",
+      "updatedAt": "2026-11-26T01:21:47.457Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 71,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

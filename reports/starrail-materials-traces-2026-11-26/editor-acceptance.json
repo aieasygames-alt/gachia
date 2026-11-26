@@ -4,5 +4,6 @@
   "exactBaselineContent": true,
   "draftsRemainPrivate": 16,
   "productionBuild": "passed",
-  "noSchemaMigration": true
+  "noSchemaMigration": true,
+  "previousEditorBuild": "ignored .private/editor-build-before"
 }

@@ -20,5 +20,21 @@
   "capacityContract": "unchanged 100 per locale / 300 total / 512KiB; existing boundary tests retained",
   "manifests": "passed",
   "draftIsolation": "editor-acceptance.json",
-  "dataScope": "compatibility-data-acceptance.json"
+  "dataScope": "compatibility-data-acceptance.json",
+  "localWorker": "local-acceptance.json",
+  "runtimePreview": "preview-acceptance.json",
+  "CI": {
+    "conclusion": "success",
+    "databaseId": 45733965835,
+    "headSha": "2426dcf143a9e99c440598b954605bf545bb152f",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45733965835"
+  },
+  "runtimeProduction": "production-acceptance.json",
+  "runtimeProtection": "runtime-protection.json",
+  "published": {
+    "count": 71,
+    "revision": 1795656122294,
+    "materialsAndCredit": 34
+  }
 }

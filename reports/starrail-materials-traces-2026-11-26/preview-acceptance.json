@@ -1,0 +1,1515 @@
+{
+  "status": "passed",
+  "origin": "https://ff1d61b0-gachia.aieasygames.workers.dev",
+  "revision": 1795616809786,
+  "checks": [
+    {
+      "path": "/zh/starrail/version",
+      "status": 200,
+      "records": 55,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/en/starrail/version",
+      "status": 200,
+      "records": 0,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/ja/starrail/version",
+      "status": 200,
+      "records": 0,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/zh",
+      "status": 200
+    },
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/ja",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail/characters",
+      "status": 200
+    },
+    {
+      "path": "/zh/hi3/weapons",
+      "status": 200
+    },
+    {
+      "path": "/zh/privacy",
+      "status": 200
+    },
+    {
+      "path": "/zh/contact",
+      "status": 200
+    },
+    {
+      "path": "/zh/sea/guides/beginner-guide",
+      "status": 200
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200
+    },
+    {
+      "path": "/sitemaps/main/sitemap.xml",
+      "status": 200
+    },
+    {
+      "path": "/ads.txt",
+      "status": 200
+    },
+    {
+      "path": "/zh/starrail",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/zh/starrail/guides/banner-schedule-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/zh/starrail/events",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/en/starrail",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/en/starrail/guides/banner-schedule-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/en/starrail/events",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/ja/starrail",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/ja/starrail/guides/banner-schedule-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/ja/starrail/events",
+      "status": 200,
+      "cacheControl": "no-store",
+      "cmsReader": true
+    },
+    {
+      "path": "/zh/starrail/guides/farming-route-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": true
+    },
+    {
+      "path": "/en/starrail/guides/farming-route-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/ja/starrail/guides/farming-route-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/zh/starrail/guides/boss-strategy-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": true
+    },
+    {
+      "path": "/en/starrail/guides/boss-strategy-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/ja/starrail/guides/boss-strategy-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/zh/starrail/guides/planar-sphere-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": true
+    },
+    {
+      "path": "/en/starrail/guides/planar-sphere-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/ja/starrail/guides/planar-sphere-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/zh/starrail/guides/endgame-modes-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": true
+    },
+    {
+      "path": "/en/starrail/guides/endgame-modes-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/ja/starrail/guides/endgame-modes-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/zh/starrail/guides/endgame-cycle-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": true
+    },
+    {
+      "path": "/en/starrail/guides/endgame-cycle-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/ja/starrail/guides/endgame-cycle-guide",
+      "status": 200,
+      "cacheControl": "no-store",
+      "guidePublished": false
+    },
+    {
+      "path": "/zh/starrail/characters/aha",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": true
+    },
+    {
+      "path": "/zh/starrail/characters",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": true
+    },
+    {
+      "path": "/zh/starrail/calculator",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": true
+    },
+    {
+      "path": "/en/starrail/characters/aha",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": false
+    },
+    {
+      "path": "/en/starrail/characters",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": false
+    },
+    {
+      "path": "/en/starrail/calculator",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": false
+    },
+    {
+      "path": "/ja/starrail/characters/aha",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": false
+    },
+    {
+      "path": "/ja/starrail/characters",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": false
+    },
+    {
+      "path": "/ja/starrail/calculator",
+      "status": 200,
+      "cacheControl": "no-store",
+      "characterPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentIndex": true
+    },
+    {
+      "path": "/ja/starrail/weapons",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentIndex": true
+    },
+    {
+      "path": "/zh/starrail/weapons",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentIndex": true
+    },
+    {
+      "path": "/ja/starrail/artifacts",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentIndex": true
+    },
+    {
+      "path": "/en/starrail/artifacts",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentIndex": true
+    },
+    {
+      "path": "/zh/starrail/artifacts",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentIndex": true
+    },
+    {
+      "path": "/en/starrail/weapons/when-the-first-aha-rang-out",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/ja/starrail/weapons/when-the-first-aha-rang-out",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/when-the-first-aha-rang-out",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/en/starrail/artifacts/gods-momentary-bliss",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/ja/starrail/artifacts/gods-momentary-bliss",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/artifacts/gods-momentary-bliss",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/artifacts/subspace-sanctuary",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/artifacts/subspace-sanctuary",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/artifacts/subspace-sanctuary",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/welcome-to-the-galactic-city",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/welcome-to-the-galactic-city",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/ja/starrail/weapons/dazzling-world",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/dazzling-world",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/welcome-to-the-galactic-city",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/when-she-decided-to-see",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/when-she-decided-to-see",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/dazzling-world",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/en/starrail/weapons/trend-of-the-universal-market",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/ja/starrail/weapons/trend-of-the-universal-market",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/when-she-decided-to-see",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/she-already-shut-her-eyes",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/she-already-shut-her-eyes",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/trend-of-the-universal-market",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/geniuses-repose",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/geniuses-repose",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/she-already-shut-her-eyes",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/shadowed-by-night",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/shadowed-by-night",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/geniuses-repose",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/along-the-passing-shore",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/along-the-passing-shore",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/ja/starrail/weapons/brighter-than-the-sun",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/shadowed-by-night",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/en/starrail/weapons/brighter-than-the-sun",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/ja/starrail/weapons/before-dawn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/along-the-passing-shore",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/en/starrail/weapons/before-dawn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/ja/starrail/weapons/indelible-promise",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/indelible-promise",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/brighter-than-the-sun",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/shattered-home",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/shattered-home",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/before-dawn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/fine-fruit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/fine-fruit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/indelible-promise",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/ja/starrail/weapons/day-one-of-my-new-life",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/en/starrail/weapons/day-one-of-my-new-life",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": false
+    },
+    {
+      "path": "/zh/starrail/weapons/shattered-home",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/zh/starrail/weapons/fine-fruit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/zh/starrail/weapons/day-one-of-my-new-life",
+      "status": 200,
+      "cacheControl": "no-store",
+      "equipmentPublished": true
+    },
+    {
+      "path": "/zh/starrail/characters/castorice",
+      "status": 200,
+      "placeholderRemoved": true
+    },
+    {
+      "path": "/zh/starrail/characters/seele",
+      "status": 200,
+      "placeholderRemoved": true
+    },
+    {
+      "path": "/zh/starrail/characters/yao-guang",
+      "status": 200,
+      "placeholderRemoved": true
+    },
+    {
+      "path": "/ja/starrail/items",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialIndex": true
+    },
+    {
+      "path": "/zh/starrail/items",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialIndex": true
+    },
+    {
+      "path": "/en/starrail/items",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialIndex": true
+    },
+    {
+      "path": "/ja/starrail/items/artifexs-cyberheart",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/artifexs-cyberheart",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/artifexs-cyberheart",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/ja/starrail/items/artifexs-gyreheart",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/artifexs-gyreheart",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/artifexs-gyreheart",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/ja/starrail/items/artifexs-module",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/artifexs-module",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/artifexs-module",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/ja/starrail/items/borisin-teeth",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/borisin-teeth",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/borisin-teeth",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/countertemporal-shot",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/countertemporal-shot",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/countertemporal-shot",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/credit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/credit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/credit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/destined-expiration",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/destined-expiration",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/destined-expiration",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/dream-collection-plan",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/dream-collection-plan",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/dream-collection-plan",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/ja/starrail/items/dream-element",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/dream-element",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/dream-element",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/ja/starrail/items/dream-fire",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/dream-fire",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/endurance-of-bronze",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/dream-fire",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/endurance-of-bronze",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/endurance-of-bronze",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/extinguished-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/extinguished-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/extinguished-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/ja/starrail/items/fiery-spirit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/fiery-spirit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/fiery-spirit",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/flower-of-eternity",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/flower-of-eternity",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/flower-of-eternity",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/heaven-incinerator",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/heaven-incinerator",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/heaven-incinerator",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/immortal-flower",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/immortal-flower",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/immortal-flower",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/immortal-leaf",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/immortal-leaf",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/immortal-leaf",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/immortal-scionette",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/immortal-scionette",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/key-of-inspiration",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/key-of-inspiration",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/immortal-scionette",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/key-of-knowledge",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/key-of-knowledge",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/key-of-inspiration",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/key-of-wisdom",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/key-of-wisdom",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/key-of-knowledge",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/kindled-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/kindled-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/key-of-wisdom",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/lifeless-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/lifeless-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/kindled-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/lupitoxin-sawteeth",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/lupitoxin-sawteeth",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/lifeless-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/meteoric-bullet",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/meteoric-bullet",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/lupitoxin-sawteeth",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/moon-rage-fang",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/moon-rage-fang",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/meteoric-bullet",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/oath-of-steel",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/oath-of-steel",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/moon-rage-fang",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/safeguard-of-amber",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/safeguard-of-amber",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/oath-of-steel",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/scorched-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/scorched-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/safeguard-of-amber",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/seed-of-abundance",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/seed-of-abundance",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/scorched-acorn",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/shattered-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/shattered-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/seed-of-abundance",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/sprout-of-life",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/sprout-of-life",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/shattered-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/en/starrail/items/starfire-essence",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/starfire-essence",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/sprout-of-life",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/en/starrail/items/worldbreaker-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/ja/starrail/items/worldbreaker-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/starfire-essence",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": false
+    },
+    {
+      "path": "/zh/starrail/items/worldbreaker-blade",
+      "status": 200,
+      "cacheControl": "no-store",
+      "materialPublished": true
+    },
+    {
+      "path": "/zh/starrail/weapons/along-the-passing-shore",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/before-dawn",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/brighter-than-the-sun",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/day-one-of-my-new-life",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/fine-fruit",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/geniuses-repose",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/indelible-promise",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/shadowed-by-night",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/shattered-home",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/trend-of-the-universal-market",
+      "status": 200,
+      "materialLinksMatchPublication": true
+    },
+    {
+      "path": "/zh/starrail/weapons/welcome-to-the-cosmic-city",
+      "status": 308,
+      "canonicalSameLocale": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/en/starrail/weapons/welcome-to-the-cosmic-city",
+      "status": 308,
+      "canonicalSameLocale": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/ja/starrail/weapons/welcome-to-the-cosmic-city",
+      "status": 308,
+      "canonicalSameLocale": true,
+      "cacheControl": "no-store"
+    },
+    {
+      "path": "/data/starrail/raw-materials.json",
+      "status": 200,
+      "compatibilitySnapshotMatches": true
+    },
+    {
+      "path": "/data/starrail/raw-light-cones.json",
+      "status": 200,
+      "compatibilitySnapshotMatches": true
+    },
+    {
+      "path": "/data-manifest/search-zh.json",
+      "status": 200,
+      "compatibilitySnapshotMatches": true
+    },
+    {
+      "path": "/data-manifest/search-en.json",
+      "status": 200,
+      "compatibilitySnapshotMatches": true
+    },
+    {
+      "path": "/data-manifest/search-ja.json",
+      "status": 200,
+      "compatibilitySnapshotMatches": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "/_next/static/chunks/1421-a897b8941dfcad0e.js",
+      "status": 200,
+      "sha256": "206e20ee023c61cf095e268c71e20111f8ea930c19b446bddeabd1dbdc93b299"
+    },
+    {
+      "path": "/_next/static/chunks/145-ae1d48b2b3d8f4f1.js",
+      "status": 200,
+      "sha256": "b9bf39733ccc5afeaddc8d2a4c554f9d7cd3a0644147ac32041e5f15d5f90299"
+    },
+    {
+      "path": "/_next/static/chunks/3424-46bc4f9fe841964e.js",
+      "status": 200,
+      "sha256": "ec652db52788660e4ae44dbbb02cf84154315d1eb66cd0989f1c50fd4d7a81d8"
+    },
+    {
+      "path": "/_next/static/chunks/4364-0dad0f3d2320c146.js",
+      "status": 200,
+      "sha256": "5c859dbc519f6ece3c0c839d5ff95b7300f899fe09e27dd3e75f34cf8101f897"
+    },
+    {
+      "path": "/_next/static/chunks/4811-d373b855efd08574.js",
+      "status": 200,
+      "sha256": "a88faa9e3ae6c71f31161b8b7e64f42c1ed89b88a5adb3306233d8ad474317a1"
+    },
+    {
+      "path": "/_next/static/chunks/668-7ef68ae0cc563e97.js",
+      "status": 200,
+      "sha256": "7f06559344e68c70d2532e51486afef047fa94db5eea15eb84e6620a0321375c"
+    },
+    {
+      "path": "/_next/static/chunks/7194-e9414f5beb49c105.js",
+      "status": 200,
+      "sha256": "d3c96c6f3f4c508f83480c77c5494d82d008f8c395593a136396cfe5ffd566e2"
+    },
+    {
+      "path": "/_next/static/chunks/794-c2319e9cc03acecd.js",
+      "status": 200,
+      "sha256": "b697365a6e427d4496782106a5eba583722f42c9009b3c2974e453a7b0b86676"
+    },
+    {
+      "path": "/_next/static/chunks/8127-0ede6452c6c7ba6f.js",
+      "status": 200,
+      "sha256": "911e5d54cda73ffe54093d68ebf03be2ebed33f5e212d08c6655e57cd894005c"
+    },
+    {
+      "path": "/_next/static/chunks/8441-780ec82c66d2409d.js",
+      "status": 200,
+      "sha256": "70ba6ae26a2546e97a0acfac3b3582fe7902cebf79fa4281772e0da867fa25c6"
+    },
+    {
+      "path": "/_next/static/chunks/8800-cb8034774c59bab5.js",
+      "status": 200,
+      "sha256": "dfcbc912c06c8707ff024b749b6d1db9160c34ba1406ed6bbf9611ee3398d8b0"
+    },
+    {
+      "path": "/_next/static/chunks/9727-25e2b97fd9f3330a.js",
+      "status": 200,
+      "sha256": "14c946eda5df7e24a5a5879991f6883e0dac8c996a6eac4c30592bcf06d58268"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/artifacts/%5Bid%5D/page-12a0a0918edecae5.js",
+      "status": 200,
+      "sha256": "d2233db9e62b4aa524828db25d3999dd2739b07faa3de7088d658d5a3de386ac"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/artifacts/page-a8d85d20428023c0.js",
+      "status": 200,
+      "sha256": "d84c4ec57fa5e0ce407d1e689609fd3d835f5cf72ff74753fb1fcd7677523cb8"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/calculator/page-559eca3cfc62dd95.js",
+      "status": 200,
+      "sha256": "4202bd8ac5f8b28af5d93c5cc402c32ce1dbe850d3ff88146be0379fb8db032d"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/characters/%5Bid%5D/page-41a2c2896162e00d.js",
+      "status": 200,
+      "sha256": "541c6bd0983896a600ca114452e822833743aef60bc9266818d4d955cb0fbbef"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/characters/page-6ad4cda4d60b7e55.js",
+      "status": 200,
+      "sha256": "45209e226197e7195dad21ef20df2095e543c9115567d4ea0154bb93f00d39d2"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/events/page-697f69992d629ab4.js",
+      "status": 200,
+      "sha256": "23adda5e7aad6c90b8869c49f64b4f77f039be8326030dc6652e6ade16126b7a"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/guides/%5Bslug%5D/page-991b2bc3666458b9.js",
+      "status": 200,
+      "sha256": "13307e55f7d7cf82e79b1ac4a2a4ed89e32bda6df73bce85822e946ce8142407"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/layout-7f25fc8cf3b9ccb5.js",
+      "status": 200,
+      "sha256": "3827bd5ec45a5dde650cd4cce39f8034bbae189d44cf100952b08ed142cf82e5"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/page-bb4ae1e5ac61ffc3.js",
+      "status": 200,
+      "sha256": "2040146acaa093a6ed9633f8be2915f053c65145db4fef16eb1d430fb4ad6778"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/version/page-a8228b1d020eb060.js",
+      "status": 200,
+      "sha256": "8c6a2ff50b51d2cac33328f754f4b84aca7727c35e861145d3ec014614f468be"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/weapons/%5Bid%5D/page-36ec5099d4fd2e1a.js",
+      "status": 200,
+      "sha256": "b297054421114e3c6eba96df8daceeca157512bbcdeb5cd06eae2b6450f0cd51"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/%5Bgame%5D/weapons/page-bbd1ef3f5d90474f.js",
+      "status": 200,
+      "sha256": "bc3263bbd9747690f09cadea43d3c78c04f051d80467d43f4de86c9dc6d2df0d"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/error-033a07f5a5ce5af0.js",
+      "status": 200,
+      "sha256": "df99008fb66dd06a58ce89d56d831fc14ce881c44b9cd80eda3b4d9e8449cbe9"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/layout-ded714bd1f9a356b.js",
+      "status": 200,
+      "sha256": "fca4573c7c31e5e3d490a9d1e5659dbdb454b2fdc959d5d40ea33bd833b15b61"
+    },
+    {
+      "path": "/_next/static/chunks/app/%5Blang%5D/not-found-646ff54efd0af9c7.js",
+      "status": 200,
+      "sha256": "ecec3fdf8ea00c484db6a5eeb587483e0a79b15fce60d8795d52ad3723b911f7"
+    },
+    {
+      "path": "/_next/static/chunks/d5075a4a-92cf90d221ee6c05.js",
+      "status": 200,
+      "sha256": "2bcce99b1318221325a31405ce284689b4f4e6bde4cd589b750ccabc5f1223b8"
+    },
+    {
+      "path": "/_next/static/chunks/main-app-57abff75dad64568.js",
+      "status": 200,
+      "sha256": "116d418d15f3c7e17e89e1d7459f6e637f5e5deba0cb3d093f9b42a7671fe7b1"
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+      "status": 200,
+      "sha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683"
+    },
+    {
+      "path": "/_next/static/chunks/webpack-dbb744dd7d47c3d2.js",
+      "status": 200,
+      "sha256": "edd2db33bd1d08c37d05bd41b4601f1dc96e2905924f5e5ff1133bfcf04d40b4"
+    },
+    {
+      "path": "/_next/static/css/9bb734b13ff4e6a5.css",
+      "status": 200,
+      "sha256": "0b6cf8f7ce20996b25a39ffa6faf61f5f7575d51935b1d1bdfe58c2166c0eb58"
+    }
+  ],
+  "anonymousWriteRejected": true,
+  "cloudContentWrites": 0
+}

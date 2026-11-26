@@ -20,7 +20,7 @@
 
 实际编辑器同步前确认两个共享源码与HEAD基线一致、容量契约未变，匿名公开55条与云端基线相同；SQLite一致性备份integrity_check通过。仅同步材料注册和来源白名单，不触碰其他站长改动或`services/content-cms`旧迁移库。Payload Local API保存16条草稿并再次确认公开55条不变；重建编辑器后草稿仍隔离。见`editor-sync.json`、`draft-receipt.json`及`editor-acceptance.json`。
 
-主站106文件629项、数据18文件181项、CMS11项测试通过。主站/数据/工作树CMS/实际CMS类型检查、OpenNext及实际编辑端生产构建通过，搜索清单校验通过。容量保持每语言100、总计300、请求体512KiB；发布后71条规范副本约205KiB，沿用全部容量边界测试。流程仍为Payload草稿→兼容Main→Payload正式发布→`publish:starrail`→正式全文与路由回读；完成回执随后补充。
+主站106文件629项、数据18文件181项、CMS11项测试通过。主站/数据/工作树CMS/实际CMS类型检查、OpenNext及实际编辑端生产构建通过，搜索清单校验通过。容量保持每语言100、总计300、请求体512KiB；发布后71条规范副本约200KiB（204906字节），沿用全部容量边界测试。流程仍为Payload草稿→兼容Main→Payload正式发布→`publish:starrail`→正式全文与路由回读；完整回执见下文。
 
 ## 后续与恢复
 
@@ -29,3 +29,15 @@
 回退本批前Main必须先通过Payload撤回本批16条并同步、验收原55条完整兼容副本；旧版不认识新增身份/来源，不能只回退代码。更早每语言50条版本需先满足旧容量及身份契约。日常恢复单条文字优先使用Payload版本历史。
 
 `prepare-batch.py`已有重跑保护，不能覆盖审定batch与before/after回执。草稿或来源变更应通过Payload重新审定并刷新回执，不能修改批次JSON后跳过草稿核对直接发布。
+
+## 正式发布与验收
+
+源码`2426dcf143a9e99c440598b954605bf545bb152f`，远端CI [45733965835](https://github.com/aieasygames-alt/gachia/actions/runs/45733965835)通过。Main由`b4460f8c-7de7-488e-8c51-804a3d1e2e2e`切换至`ff1d61b0-0877-4127-9ef9-0f2691f55b4b`，实际上传与下载模块SHA256 `331b6b0e03d51c699922ccf38d764fb22e3f2b63593e4eda781ea29805fe31e4`。前版1514个不可变静态资源路径全部保留，复制1390个，碰撞摘要一致；候选231项路由与32个静态资源摘要比对通过。
+
+兼容Main上线后先确认原55条及revision保留，新增16种材料/信用点的48个三语详情均待发布/noindex，目录无旧卡片回退。随后经Payload Local API正式发布16条，各保留草稿及正式版本；匿名导出71条与审定内容相同。`publish:starrail`返回`ok:true`、count71、revision `1795656122294`，云端完整规范字段与审定副本精确一致。见`compatible-main-acceptance.json`、`local-publication.json`、`sync-receipt.json`和`cloud-after.json`。
+
+隔离本地D1验收完整71条、匿名/草稿/来源/旧revision保护，全部34种材料的修订、撤回、缺译和双向链接；撤回不恢复旧正文/卡片/FAQ。阿哈/计算器、5篇攻略、17件装备及历史别名回归通过。测试只写隔离D1，见`local-acceptance.json`。
+
+正式站231项路由与32个静态资源摘要比对通过。71条完整正文/来源/边界、34种材料三语详情、目录唯一入口及光锥双向关系均通过；缺译noindex、CMS路由no-store，公共镜像与三语清单和构建产物一致。验收结束再次读取revision，确认没有并发发布变化。见`production-acceptance.json`。
+
+七服务独立快照确认仅Main版本变化，其他六个部署及全部七服务routes/subdomain/bindings/settings均未变，见`runtime-protection.json`。本机4320编辑器继续运行并回读71条；发布前后一致性SQLite备份integrity_check通过，原文、数据库备份及前版编辑器构建均保存在忽略`.private/`。4400测试Worker已停止，4398/4399保持本轮开始时未运行状态，未操作其他任务进程，见`local-services.json`。
