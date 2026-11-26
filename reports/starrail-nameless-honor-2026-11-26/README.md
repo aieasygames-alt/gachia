@@ -39,6 +39,8 @@
 
 回执见`draft-cloud-isolation.json`、`local-publication.json`、`sync-receipt.json`、`production-acceptance.json`、`runtime-protection.json`和`checks.json`。本机验证聚焦内容与实际发布链，未重建Main；推送自动触发的仓库集成检查另包含测试、构建及Wrangler dry-run，不部署Worker。
 
+提交`eef6d0a0104ba37f1e298201a456eaaa454880e7`的[自动集成检查45767580314](https://github.com/aieasygames-alt/gachia/actions/runs/45767580314)已通过，CMS及数据层/主站类型检查、测试、manifest校验、OpenNext构建和Wrangler dry-run全部成功，详见`ci.json`。最终回执提交仅补充此结果，不改变运行时代码或已发布内容，使用`[skip ci]`避免为回执重复触发相同工作流。
+
 ## 后续与恢复
 
 下一顺位为信用点鸽川区、阿合马铁窗集团等材料额外来源差异。异器盈界、自选光锥名单、勋礼各级奖励及其他数值仍按独立证据推进，详见`remaining-priorities.json`。

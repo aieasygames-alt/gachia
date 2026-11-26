@@ -1,0 +1,239 @@
+{
+  "conclusion": "success",
+  "databaseId": 45767580314,
+  "headSha": "eef6d0a0104ba37f1e298201a456eaaa454880e7",
+  "jobs": [
+    {
+      "completedAt": "2026-11-26T06:21:26Z",
+      "conclusion": "success",
+      "databaseId": 139732113426,
+      "name": "cms",
+      "startedAt": "2026-11-26T06:21:05Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-26T06:21:06Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-26T06:21:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:10Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.0",
+          "number": 2,
+          "startedAt": "2026-11-26T06:21:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:12Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6.4.0",
+          "number": 3,
+          "startedAt": "2026-11-26T06:21:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:19Z",
+          "conclusion": "success",
+          "name": "Run npm ci --legacy-peer-deps",
+          "number": 4,
+          "startedAt": "2026-11-26T06:21:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:21Z",
+          "conclusion": "success",
+          "name": "Run npm run type-check",
+          "number": 5,
+          "startedAt": "2026-11-26T06:21:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:24Z",
+          "conclusion": "success",
+          "name": "Run npm test",
+          "number": 6,
+          "startedAt": "2026-11-26T06:21:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6.4.0",
+          "number": 11,
+          "startedAt": "2026-11-26T06:21:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.0",
+          "number": 12,
+          "startedAt": "2026-11-26T06:21:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 13,
+          "startedAt": "2026-11-26T06:21:24Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45767580314/job/139732113426"
+    },
+    {
+      "completedAt": "2026-11-26T06:23:27Z",
+      "conclusion": "success",
+      "databaseId": 139732113774,
+      "name": "web",
+      "startedAt": "2026-11-26T06:21:06Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-26T06:21:09Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-26T06:21:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:16Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v7.0.0",
+          "number": 2,
+          "startedAt": "2026-11-26T06:21:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:23Z",
+          "conclusion": "success",
+          "name": "Run pnpm/action-setup@v6.0.9",
+          "number": 3,
+          "startedAt": "2026-11-26T06:21:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:33Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v6.4.0",
+          "number": 4,
+          "startedAt": "2026-11-26T06:21:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:41Z",
+          "conclusion": "success",
+          "name": "Run pnpm install --frozen-lockfile",
+          "number": 5,
+          "startedAt": "2026-11-26T06:21:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:41Z",
+          "conclusion": "success",
+          "name": "Run node scripts/verify-next-deferred-patch.mjs --require-patched",
+          "number": 6,
+          "startedAt": "2026-11-26T06:21:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:44Z",
+          "conclusion": "success",
+          "name": "Run pnpm --filter @gachia/data type-check",
+          "number": 7,
+          "startedAt": "2026-11-26T06:21:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:21:47Z",
+          "conclusion": "success",
+          "name": "Run pnpm --filter @gachia/data test",
+          "number": 8,
+          "startedAt": "2026-11-26T06:21:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:22:01Z",
+          "conclusion": "success",
+          "name": "Run pnpm --filter @gachia/web type-check",
+          "number": 9,
+          "startedAt": "2026-11-26T06:21:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:22:18Z",
+          "conclusion": "success",
+          "name": "Run pnpm --filter @gachia/web test",
+          "number": 10,
+          "startedAt": "2026-11-26T06:22:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:22:19Z",
+          "conclusion": "success",
+          "name": "Run pnpm --filter @gachia/data verify:manifests",
+          "number": 11,
+          "startedAt": "2026-11-26T06:22:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:23:21Z",
+          "conclusion": "success",
+          "name": "Run pnpm --filter @gachia/web exec opennextjs-cloudflare build",
+          "number": 12,
+          "startedAt": "2026-11-26T06:22:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:23:24Z",
+          "conclusion": "success",
+          "name": "Run pnpm --filter @gachia/web exec wrangler deploy --dry-run --env \"\"",
+          "number": 13,
+          "startedAt": "2026-11-26T06:23:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:23:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v6.4.0",
+          "number": 24,
+          "startedAt": "2026-11-26T06:23:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:23:24Z",
+          "conclusion": "success",
+          "name": "Post Run pnpm/action-setup@v6.0.9",
+          "number": 25,
+          "startedAt": "2026-11-26T06:23:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:23:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v7.0.0",
+          "number": 26,
+          "startedAt": "2026-11-26T06:23:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T06:23:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 27,
+          "startedAt": "2026-11-26T06:23:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45767580314/job/139732113774"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45767580314"
+}
