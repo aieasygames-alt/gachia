@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-11-26T02:07:34.715327+00:00",
+  "cms4320Running": true,
+  "publicPublishedCount": 71,
+  "exportMatchesPayloadPublication": true,
+  "local4400Stopped": true,
+  "unrelated4398And4399Preserved": true,
+  "listeners": {
+    "4320": "COMMAND   PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nnode    37473 robert   12u  IPv4 0x8aacc1a431d9ef49      0t0  TCP 127.0.0.1:4320 (LISTEN)",
+    "4398": "",
+    "4399": "",
+    "4400": ""
+  },
+  "backupAfterPublicationIntegrity": "ok",
+  "backupFile": "ignored .private/cms-after-publication.db"
+}

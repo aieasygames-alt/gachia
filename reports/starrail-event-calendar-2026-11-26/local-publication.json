@@ -1,0 +1,26 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-26T02:06:41.540Z",
+      "versionCount": 7
+    },
+    {
+      "id": 7,
+      "slug": "v4-7-cn-endgame-calendar",
+      "updatedAt": "2026-11-26T02:06:41.551Z",
+      "versionCount": 4
+    },
+    {
+      "id": 8,
+      "slug": "v4-7-cn-planar-fissure",
+      "updatedAt": "2026-11-26T02:06:41.558Z",
+      "versionCount": 4
+    }
+  ],
+  "totalPublished": 71,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

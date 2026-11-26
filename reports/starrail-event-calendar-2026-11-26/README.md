@@ -14,12 +14,24 @@
 
 共享`eventSchedule`可选JSON字段，限国服`event`条目；每项包含唯一id、标题、类别、开放、截止、参与条件、说明及本条已核验国服官方来源。支持明确时刻、某日版本更新后、版本结束前和未公告独立截止，拒绝无效日期、倒置窗口、时区混入和跨记录活动ID冲突。旧记录无此字段仍可读取，现有每语言100/全体300/512KiB容量保持。
 
-独立编辑器只增加`game_updates.event_schedule`与`_game_updates_v.version_event_schedule`两列可空文本。先一致性备份并在隔离副本验证，再用Payload事务执行唯一审定增量迁移并登记历史；保留原开发schema-push记录，不运行reset/fresh或删除旧表。71条公开内容与最新记录时间戳保持不变。实际编辑器同步七个审定文件，不接触旧统一CMS或其他站长文件，前版构建保存在忽略`.private/`。
+独立编辑器只增加`game_updates.event_schedule`与`_game_updates_v.version_event_schedule`两列可空文本。先一致性备份并在隔离副本验证，再使用Payload适配器执行唯一审定的幂等增量迁移，并通过Local API登记历史；保留原开发schema-push记录，不运行reset/fresh或删除旧表。71条公开内容与最新记录时间戳保持不变。实际编辑器同步七个审定文件，不接触旧统一CMS或其他站长文件，前版构建保存在忽略`.private/`。
 
 站长在原活动记录的「国服结构化活动日历」中修改对应项，`start.kind=at`与`end.kind=at`的`value`格式为`YYYY-MM-DDTHH:mm`，保留公告时刻且不带偏移；`after-update`填写`date`和`version`；`version-end`填写`version`；`not-announced`不填推测时间。来源链接必须同时存在于该条sources。修改日历也要核对同一记录的facts、summary和boundary，避免正文与卡片矛盾；经草稿审定后正式发布并执行`publish:starrail`，核对活动页。单条撤回会移除其日历项，不从旧数据恢复卡片；英日缺译不借用中文。
 
 ## 发布链路与恢复
 
-链路为：来源核验→隔离迁移和测试→实际编辑器备份/增量迁移→三条草稿→兼容Main候选与正式部署→Payload正式发布→完整同步→主站全文及日历回读。正式回执在实际完成后补充。
+链路为：来源核验→隔离迁移和测试→实际编辑器备份/增量迁移→三条草稿→兼容Main候选与正式部署→Payload正式发布→完整同步→主站全文及日历回读。完整回执见下文。
 
 回退至前Main `ff1d61b0-0877-4127-9ef9-0f2691f55b4b`前，优先经Payload版本历史恢复本批三条原记录并同步、验收原71条副本，再回退代码；不删除新增可空列及历史版本。保留本批材料、角色和装备的先前恢复约束。日常文字或日历修订优先Payload版本历史，不必回退Main。
+
+## 正式发布与验收
+
+源码`5c8af65894e7134f2bb2b2d5a7edc7e88f49eb0b`，CI [45739091722](https://github.com/aieasygames-alt/gachia/actions/runs/45739091722)通过。主站由`ff1d61b0-0877-4127-9ef9-0f2691f55b4b`切换至`edfdcdde-bbe3-4202-9749-488deaa415ed`，实际模块SHA256 `28f250cd08982800bb08c9b5d5eb68f1dd17d51cb19fb1fb50c16c3b0c834e55`；前版1517个不可变静态资源路径保留，复制1393个，碰撞摘要一致。候选234项路由和32个静态资源摘要检查通过；候选阶段未发布日历。
+
+兼容Main正式上线后确认原71条全文、revision及三语隔离保留，日历仍未公开。随后通过Payload Local API发布3条已审定草稿，版本历史保留；`publish:starrail`返回ok:true、count71、revision `1795658825450`，云端完整规范字段与审定副本精确一致，含11项日历。正式234项路由和32个静态资源摘要检查通过，验收结束再次确认revision未变化，见`production-acceptance.json`。
+
+主站107文件632项、数据19文件193项、CMS11项测试通过，类型检查及主站/实际CMS生产构建通过。隔离本地D1验证全部71条、11项日历即时日期修改、非法日期/时区/重复ID拒绝、部分及全部撤回、三语隔离，同时回归角色/计算器、5篇攻略、17项装备、34种材料及历史别名。测试数据只写隔离D1，见`local-acceptance.json`。
+
+一致性备份与隔离迁移逐表比较确认全部原始列、原始行和版本历史保留，仅增加两列可空字段及一条迁移元数据，见`migration-data-acceptance.json`；实际迁移保留71条公开记录与原最新时间戳。最终4320编辑器运行并匿名回读71条，发布后一致性备份integrity_check通过，4400测试Worker已停，4398/4399保持开始时未运行状态，见`local-services.json`。
+
+七服务独立快照确认只变更Main版本，其他六个部署与全部七服务routes/subdomain/bindings/settings均未变化，见`runtime-protection.json`。新日历字段接入后，日常时间/条件/正文修订继续只需Payload发布和同步，无需重建Main。

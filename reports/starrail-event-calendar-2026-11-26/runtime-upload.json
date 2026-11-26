@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "versionId": "edfdcdde-bbe3-4202-9749-488deaa415ed",
+  "previewOrigin": "https://edfdcdde-gachia.aieasygames.workers.dev",
+  "moduleSHA256": "28f250cd08982800bb08c9b5d5eb68f1dd17d51cb19fb1fb50c16c3b0c834e55",
+  "sourceCommit": "5c8af65894e7134f2bb2b2d5a7edc7e88f49eb0b",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-event-calendar-2026-11-26/.private/upload/module-proof/receipt.json",
+    "pin": "52dcd386f6dad281e1483cbcf370aa5c42a41bfd0fa39fc0a23ba89be95efeef"
+  },
+  "bindingsPreserved": true,
+  "trafficMutation": false
+}

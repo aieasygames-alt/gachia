@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "originalTablesAndHistoryPreserved": true,
+  "onlyMigrationMetadataRowAdded": true,
+  "integrity": "ok",
+  "tables": [
+    {
+      "table": "_game_updates_v",
+      "originalRowsPreserved": 161,
+      "addedNullableColumns": [
+        "version_event_schedule"
+      ]
+    },
+    {
+      "table": "_game_updates_v_version_facts",
+      "originalRowsPreserved": 1205,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "_game_updates_v_version_sources",
+      "originalRowsPreserved": 440,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "game_updates",
+      "originalRowsPreserved": 71,
+      "addedNullableColumns": [
+        "event_schedule"
+      ]
+    },
+    {
+      "table": "game_updates_facts",
+      "originalRowsPreserved": 543,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "game_updates_sources",
+      "originalRowsPreserved": 196,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "payload_kv",
+      "originalRowsPreserved": 0,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "payload_locked_documents",
+      "originalRowsPreserved": 0,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "payload_locked_documents_rels",
+      "originalRowsPreserved": 0,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "payload_migrations",
+      "originalRowsPreserved": 2,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "payload_preferences",
+      "originalRowsPreserved": 0,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "payload_preferences_rels",
+      "originalRowsPreserved": 0,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "users",
+      "originalRowsPreserved": 0,
+      "addedNullableColumns": []
+    },
+    {
+      "table": "users_sessions",
+      "originalRowsPreserved": 0,
+      "addedNullableColumns": []
+    }
+  ]
+}

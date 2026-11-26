@@ -18,8 +18,8 @@ const config=(await import(pathToFileURL(path.join(cms,'payload.config.ts')).hre
 const {migrations}=await import(pathToFileURL(path.join(cms,'migrations/index.ts')).href);
 const payload=await getPayload({config});
 try {
- // Execute only the reviewed additive migration in a Payload transaction. The
- // generic runner warns for every database with a historic dev schema-push row;
+ // Execute only the reviewed idempotent additive migration through Payload. The
+ // native transaction helpers honor adapter support. The generic runner warns for every database with a historic dev schema-push row;
  // do not run a fresh/reset operation or remove that historic migration row.
  const migration=migrations.find(m=>m.name==='20261126_event_schedule');assert(migration);
  const history=await payload.find({collection:'payload-migrations',limit:100});

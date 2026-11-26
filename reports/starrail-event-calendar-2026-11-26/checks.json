@@ -19,5 +19,23 @@
   },
   "migrationProbe": "probe-migration.json",
   "actualMigration": "actual-migration.json",
-  "draftIsolation": "editor-acceptance.json"
+  "draftIsolation": "editor-acceptance.json",
+  "CI": {
+    "conclusion": "success",
+    "databaseId": 45739091722,
+    "headSha": "5c8af65894e7134f2bb2b2d5a7edc7e88f49eb0b",
+    "status": "completed",
+    "url": "https://github.com/aieasygames-alt/gachia/actions/runs/45739091722"
+  },
+  "localWorker": "local-acceptance.json",
+  "runtimePreview": "preview-acceptance.json",
+  "runtimeProduction": "production-acceptance.json",
+  "runtimeProtection": "runtime-protection.json",
+  "migrationDataPreservation": "migration-data-acceptance.json",
+  "published": {
+    "count": 71,
+    "revision": 1795658825450,
+    "recordsUpdated": 3,
+    "calendarEntries": 11
+  }
 }
