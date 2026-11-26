@@ -1,0 +1,1578 @@
+{
+  "updates": [],
+  "creates": [
+    {
+      "gameId": "starrail",
+      "slug": "yaoguang-character-data",
+      "locale": "zh",
+      "kind": "character",
+      "title": "爻光技能倍率、行迹与养成材料",
+      "summary": "物理·欢愉角色爻光的五项技能逐级倍率、六次晋阶、十三个行迹节点与分段材料计算。按2026-11-26第三方资料核验，区分基础效果、星魂加级及命途升格附加效果。",
+      "facts": [
+        {
+          "text": "等级口径：普攻列出1—7级，其余四项列出1—12级，覆盖本体培养和星魂加级可达范围；材料计算上限为6/10/10/10/10。倍率表按未计入星魂与命途升格的基础技能记录，增益按各技能说明计算。"
+        },
+        {
+          "text": "秘技「浮光过隙，百无禁忌」：下次战斗开始自动触发1次战技，不消耗战技点；爻光在队伍时，击碎可破坏物可获得红包，每个地球周最多8个。秘技不作为可升级技能计费。"
+        },
+        {
+          "text": "额外能力「开屏有礼」：速度≥120时欢愉度提高30%，之后每超过1点速度，欢愉度再提高1%，最多计入200点超出速度。"
+        },
+        {
+          "text": "额外能力「神闲意满」：自身暴击伤害提高60%，施放欢愉技后为我方恢复1个战技点。"
+        },
+        {
+          "text": "额外能力「鸿运鳞集」：爻光获得【好活当赏】时，使其持续时间增加1回合。十个属性节点合计暴击率18.7%、速度9、欢愉度10%。"
+        },
+        {
+          "text": "1魂：终结技触发的阿哈额外回合固定笑点改为40；我方全体造成的欢愉伤害无视目标20%防御力。"
+        },
+        {
+          "text": "2魂：结界内我方全体速度提高12%，欢愉度额外提高16%。"
+        },
+        {
+          "text": "3魂：战技等级+2、普攻等级+1、欢愉技等级+1；这些等级增加不额外计入养成材料。"
+        },
+        {
+          "text": "4魂：终结技触发的阿哈额外回合中，我方全体欢愉技造成的伤害为原伤害的150%。"
+        },
+        {
+          "text": "5魂：终结技等级+2、天赋等级+2、欢愉技等级+1；与3魂合计使欢愉技最多+2级。"
+        },
+        {
+          "text": "6魂：我方全体欢愉伤害增笑25%，爻光欢愉技伤害倍率提高原倍率的100%；不直接改写本页基础倍率表。"
+        },
+        {
+          "text": "六次晋阶合计：信用点308,000、侵略凝块65、童真蜡笔15、造梦蘸钢15、梦现管锥15。"
+        },
+        {
+          "text": "材料冲突取舍：普攻1→2采用信用点4,000、《绒绒号》手绘分镜稿2、童真蜡笔5；战技1→2采用信用点2,000、童真蜡笔2。Station逐档与固定版本数据一致，未套用BWIKI的通用晋阶材料模板。"
+        },
+        {
+          "text": "欢愉技7→10独立合计：信用点435,000、《绒绒号》典藏版合集22、梦现管锥12，不需要灭流绝溢的缄默或命运的足迹；战技、终结技、天赋各自7→10另需缄默3、足迹2。"
+        },
+        {
+          "text": "命途升格附加效果「欢愉万相★心灵感应」单独处理：固定数据给出大吉大利原倍率的20%/40%增幅、终结技后固定恢复12/30能量与10爽点，但本次未独立核准两档切换条件，因此不并入基础倍率或材料计算。"
+        },
+        {
+          "text": "默认完整目标材料合计：信用点3,308,000、童真蜡笔56、造梦蘸钢71、侵略凝块65、梦现管锥73、《绒绒号》手绘分镜稿18、灭流绝溢的缄默12、《绒绒号》连载纪念刊69、命运的足迹8、《绒绒号》典藏版合集139。不含经验喂养信用点。"
+        }
+      ],
+      "boundary": "适用于截至2026-11-26的中文角色资料核验。BWIKI、Star Rail Station及固定版本StarRailRes均为第三方资料；Station与结构化数据可能共享游戏数据上游，本文不把它们算作两份独立官方证据。BWIKI部分倍率及材料表存在冲突，已在说明中记录取舍。未核准命途升格附加效果两档切换条件；不提供未经核验的配装排行或通用攻击力模型欢愉伤害结果。实际以游戏内当前显示为准。",
+      "region": "国服（中文资料；第三方数据核验）",
+      "checkedAt": "2026-11-26",
+      "sources": [
+        {
+          "url": "https://wiki.biligame.com/sr/%E7%88%BB%E5%85%89"
+        },
+        {
+          "url": "https://starrailstation.com/cn/character/yaoguang"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json"
+        }
+      ],
+      "characterData": {
+        "id": "yaoguang",
+        "name": "爻光",
+        "identity": "5星 · 物理 · 欢愉 · 仙舟「玉阙」",
+        "materialNote": "默认目标为六次晋阶、普攻6级、战技/终结技/天赋/欢愉技各10级、三个额外能力和十个属性节点。仅计算尚未完成的目标；不含角色经验书及喂经验信用点、光锥、遗器或星魂获取成本。星魂加级不消耗升级材料。需解锁的前置节点请一并选入，本计算不替代游戏内解锁条件判断。",
+        "skills": [
+          {
+            "key": "basic",
+            "label": "普攻",
+            "name": "雀翎鸣镝，过招有喜",
+            "trainableMax": 6,
+            "note": "对指定单体与相邻目标造成攻击力倍率的物理伤害；普攻恢复能量提高至30点。",
+            "columns": [
+              "单体攻击力倍率",
+              "相邻攻击力倍率"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "45%",
+                  "15%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "54%",
+                  "18%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "63%",
+                  "21%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "72%",
+                  "24%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "81%",
+                  "27%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "90%",
+                  "30%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "99%",
+                  "33%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "《绒绒号》手绘分镜稿",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 8000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 16000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 32000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 120000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "skill",
+            "label": "战技",
+            "name": "十方光映，万法皆明",
+            "trainableMax": 10,
+            "note": "展开3回合结界，自身每回合开始时持续回合数减1；全队欢愉度提高爻光欢愉度×表内倍率。结界期间爻光普攻、战技后获得3笑点。",
+            "columns": [
+              "爻光欢愉度折算比例"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "10%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "11%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "12%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "13%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "14%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "15%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "16.25%"
+                ]
+              },
+              {
+                "level": 8,
+                "values": [
+                  "17.5%"
+                ]
+              },
+              {
+                "level": 9,
+                "values": [
+                  "18.75%"
+                ]
+              },
+              {
+                "level": 10,
+                "values": [
+                  "20%"
+                ]
+              },
+              {
+                "level": 11,
+                "values": [
+                  "21%"
+                ]
+              },
+              {
+                "level": 12,
+                "values": [
+                  "22%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 2000
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "《绒绒号》手绘分镜稿",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 8000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 15000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 24000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 7,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 32000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 8,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 65000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 9,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 120000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "toLevel": 10,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 250000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 12
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "ultimate",
+            "label": "终结技",
+            "name": "霓裳铁羽，六爻皆吉",
+            "trainableMax": 10,
+            "note": "需要180能量；获得5笑点，使阿哈立即获得固定计入20笑点的额外回合且不消耗笑点；全队全属性抗性穿透提高表内数值，持续3回合。表格为未计入星魂的基础效果。",
+            "columns": [
+              "全属性抗性穿透"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "10%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "11%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "12%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "13%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "14%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "15%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "16.25%"
+                ]
+              },
+              {
+                "level": 8,
+                "values": [
+                  "17.5%"
+                ]
+              },
+              {
+                "level": 9,
+                "values": [
+                  "18.75%"
+                ]
+              },
+              {
+                "level": 10,
+                "values": [
+                  "20%"
+                ]
+              },
+              {
+                "level": 11,
+                "values": [
+                  "21%"
+                ]
+              },
+              {
+                "level": 12,
+                "values": [
+                  "22%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 2000
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "《绒绒号》手绘分镜稿",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 8000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 15000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 24000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 7,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 32000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 8,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 65000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 9,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 120000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "toLevel": 10,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 250000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 12
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "talent",
+            "label": "天赋",
+            "name": "屏开千光，遍观自在",
+            "trainableMax": 10,
+            "note": "爻光持有【好活当赏】时，我方攻击后触发【大吉大利】，对随机1个命中目标额外造成对应属性欢愉伤害；该攻击若消耗战技点则额外触发1次。攻击者欢愉度低于爻光时使用爻光欢愉度；该效果不视为1次攻击。",
+            "columns": [
+              "大吉大利欢愉伤害倍率"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "10%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "11%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "12%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "13%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "14%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "15%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "16.25%"
+                ]
+              },
+              {
+                "level": 8,
+                "values": [
+                  "17.5%"
+                ]
+              },
+              {
+                "level": 9,
+                "values": [
+                  "18.75%"
+                ]
+              },
+              {
+                "level": 10,
+                "values": [
+                  "20%"
+                ]
+              },
+              {
+                "level": 11,
+                "values": [
+                  "21%"
+                ]
+              },
+              {
+                "level": 12,
+                "values": [
+                  "22%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 2000
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "《绒绒号》手绘分镜稿",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 8000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 15000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 24000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 7,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 32000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 8,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 65000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 9,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 120000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "toLevel": 10,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 250000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 12
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "灭流绝溢的缄默",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "elation",
+            "label": "欢愉技",
+            "name": "赠君一卦，火树银花",
+            "trainableMax": 10,
+            "note": "使全敌陷入【凶星低语】3回合，受到的伤害提高16%；造成一次群体物理欢愉伤害，再随机单体造成5次物理欢愉伤害。表中单次随机伤害不能直接按群攻目标数累加。Lv7群攻81.25%采用固定参数0.8125与Station展示，未采用BWIKI的81.125%。",
+            "columns": [
+              "群体欢愉伤害倍率",
+              "随机单次欢愉伤害倍率"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "50%",
+                  "10%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "55%",
+                  "11%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "60%",
+                  "12%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "65%",
+                  "13%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "70%",
+                  "14%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "75%",
+                  "15%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "81.25%",
+                  "16.25%"
+                ]
+              },
+              {
+                "level": 8,
+                "values": [
+                  "87.5%",
+                  "17.5%"
+                ]
+              },
+              {
+                "level": 9,
+                "values": [
+                  "93.75%",
+                  "18.75%"
+                ]
+              },
+              {
+                "level": 10,
+                "values": [
+                  "100%",
+                  "20%"
+                ]
+              },
+              {
+                "level": 11,
+                "values": [
+                  "105%",
+                  "21%"
+                ]
+              },
+              {
+                "level": 12,
+                "values": [
+                  "110%",
+                  "22%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 2000
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 4000
+                  },
+                  {
+                    "name": "《绒绒号》手绘分镜稿",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "童真蜡笔",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 8000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 15000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 24000
+                  },
+                  {
+                    "name": "《绒绒号》连载纪念刊",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "造梦蘸钢",
+                    "quantity": 5
+                  }
+                ]
+              },
+              {
+                "toLevel": 7,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 32000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 2
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 2
+                  }
+                ]
+              },
+              {
+                "toLevel": 8,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 65000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 4
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 9,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 120000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 6
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 10,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 250000
+                  },
+                  {
+                    "name": "《绒绒号》典藏版合集",
+                    "quantity": 12
+                  },
+                  {
+                    "name": "梦现管锥",
+                    "quantity": 4
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ascensions": [
+          {
+            "stage": 1,
+            "atLevel": 20,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 4000
+              },
+              {
+                "name": "童真蜡笔",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": 2,
+            "atLevel": 30,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 8000
+              },
+              {
+                "name": "童真蜡笔",
+                "quantity": 10
+              }
+            ]
+          },
+          {
+            "stage": 3,
+            "atLevel": 40,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 16000
+              },
+              {
+                "name": "造梦蘸钢",
+                "quantity": 6
+              },
+              {
+                "name": "侵略凝块",
+                "quantity": 3
+              }
+            ]
+          },
+          {
+            "stage": 4,
+            "atLevel": 50,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 40000
+              },
+              {
+                "name": "造梦蘸钢",
+                "quantity": 9
+              },
+              {
+                "name": "侵略凝块",
+                "quantity": 7
+              }
+            ]
+          },
+          {
+            "stage": 5,
+            "atLevel": 60,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 80000
+              },
+              {
+                "name": "梦现管锥",
+                "quantity": 6
+              },
+              {
+                "name": "侵略凝块",
+                "quantity": 20
+              }
+            ]
+          },
+          {
+            "stage": 6,
+            "atLevel": 70,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "梦现管锥",
+                "quantity": 9
+              },
+              {
+                "name": "侵略凝块",
+                "quantity": 35
+              }
+            ]
+          }
+        ],
+        "nodes": [
+          {
+            "id": "1502101",
+            "name": "开屏有礼（晋阶2）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 5000
+              },
+              {
+                "name": "《绒绒号》手绘分镜稿",
+                "quantity": 2
+              },
+              {
+                "name": "灭流绝溢的缄默",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "id": "1502102",
+            "name": "神闲意满（晋阶4）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 20000
+              },
+              {
+                "name": "《绒绒号》连载纪念刊",
+                "quantity": 4
+              },
+              {
+                "name": "命运的足迹",
+                "quantity": 1
+              },
+              {
+                "name": "灭流绝溢的缄默",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "id": "1502103",
+            "name": "鸿运鳞集（晋阶6）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 140000
+              },
+              {
+                "name": "《绒绒号》典藏版合集",
+                "quantity": 8
+              },
+              {
+                "name": "命运的足迹",
+                "quantity": 1
+              },
+              {
+                "name": "灭流绝溢的缄默",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "id": "1502201",
+            "name": "暴击率强化 +2.7%（等级1）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 2000
+              },
+              {
+                "name": "童真蜡笔",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "1502202",
+            "name": "速度强化 +2（晋阶2）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 5000
+              },
+              {
+                "name": "《绒绒号》手绘分镜稿",
+                "quantity": 2
+              },
+              {
+                "name": "童真蜡笔",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "id": "1502203",
+            "name": "暴击率强化 +2.7%（晋阶3）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 10000
+              },
+              {
+                "name": "《绒绒号》连载纪念刊",
+                "quantity": 4
+              },
+              {
+                "name": "造梦蘸钢",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "1502204",
+            "name": "欢愉度强化 +4%（晋阶3）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 10000
+              },
+              {
+                "name": "《绒绒号》连载纪念刊",
+                "quantity": 4
+              },
+              {
+                "name": "造梦蘸钢",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "1502205",
+            "name": "暴击率强化 +4%（晋阶4）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 18000
+              },
+              {
+                "name": "《绒绒号》连载纪念刊",
+                "quantity": 4
+              },
+              {
+                "name": "造梦蘸钢",
+                "quantity": 3
+              }
+            ]
+          },
+          {
+            "id": "1502206",
+            "name": "速度强化 +3（晋阶5）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 45000
+              },
+              {
+                "name": "《绒绒号》典藏版合集",
+                "quantity": 3
+              },
+              {
+                "name": "梦现管锥",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "1502207",
+            "name": "暴击率强化 +4%（晋阶5）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 45000
+              },
+              {
+                "name": "《绒绒号》典藏版合集",
+                "quantity": 3
+              },
+              {
+                "name": "梦现管锥",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "1502208",
+            "name": "欢愉度强化 +6%（晋阶6）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 120000
+              },
+              {
+                "name": "《绒绒号》典藏版合集",
+                "quantity": 5
+              },
+              {
+                "name": "梦现管锥",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "1502209",
+            "name": "速度强化 +4（等级75）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "《绒绒号》典藏版合集",
+                "quantity": 8
+              },
+              {
+                "name": "梦现管锥",
+                "quantity": 8
+              }
+            ]
+          },
+          {
+            "id": "1502210",
+            "name": "暴击率强化 +5.3%（等级80）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "《绒绒号》典藏版合集",
+                "quantity": 8
+              },
+              {
+                "name": "梦现管锥",
+                "quantity": 8
+              }
+            ]
+          }
+        ]
+      },
+      "_status": "published"
+    }
+  ]
+}

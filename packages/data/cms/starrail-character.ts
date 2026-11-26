@@ -1,5 +1,6 @@
 // Structured character publications are independent of the legacy build/tier database.
-export const STARRAIL_CMS_CHARACTERS = { aha: 'aha-character-data' } as const;
+export const STARRAIL_CMS_CHARACTERS = { aha: 'aha-character-data', yaoguang: 'yaoguang-character-data' } as const;
+export const STARRAIL_CMS_CHARACTER_NAMES = { aha: { zh: '阿哈', en: 'Aha', ja: 'Aha' }, yaoguang: { zh: '爻光', en: 'Yao Guang', ja: 'Yao Guang' } } as const;
 export type MaterialCost = { name: string; quantity: number }[];
 export type VerifiedStarRailCharacter = {
   id: keyof typeof STARRAIL_CMS_CHARACTERS;
@@ -26,7 +27,7 @@ function costs(v: unknown): v is MaterialCost {
 const cleanCost = (v: MaterialCost): MaterialCost => v.map(({ name, quantity }) => ({ name, quantity }));
 
 export function parseStarRailCharacter(input: unknown): VerifiedStarRailCharacter | null {
-  if (!object(input) || input.id !== 'aha' || !text(input.name, 100) || !text(input.identity, 200) || !text(input.materialNote)) return null;
+  if (!object(input) || typeof input.id !== 'string' || !Object.hasOwn(STARRAIL_CMS_CHARACTERS, input.id) || !text(input.name, 100) || !text(input.identity, 200) || !text(input.materialNote)) return null;
   if (!Array.isArray(input.skills) || input.skills.length !== 5 || !unique(input.skills.map(s => object(s) ? s.key : null))) return null;
   const expected = { basic: [6, 7], skill: [10, 12], ultimate: [10, 12], talent: [10, 12], elation: [10, 12] } as const;
   for (const s of input.skills) {

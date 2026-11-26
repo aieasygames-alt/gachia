@@ -43,6 +43,13 @@ export function isOfficialStarRailSource(value: unknown): value is string {
 // Community-maintained references are explicitly labelled in the UI. Keep this
 // list limited to reviewed detail pages; never interpret platform ownership as authorship.
 const communitySources = new Set([
+  'https://wiki.biligame.com/sr/%E7%88%BB%E5%85%89',
+  'https://starrailstation.com/cn/character/yaoguang',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json',
+  'https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json',
+
   'https://wiki.biligame.com/sr/%E9%9D%92%E9%93%9C%E7%9A%84%E6%89%A7%E7%9D%80',
   'https://wiki.biligame.com/sr/%E5%AF%92%E9%93%81%E7%9A%84%E8%AA%93%E8%A8%80',
   'https://wiki.biligame.com/sr/%E7%90%A5%E7%8F%80%E7%9A%84%E5%9D%9A%E5%AE%88',

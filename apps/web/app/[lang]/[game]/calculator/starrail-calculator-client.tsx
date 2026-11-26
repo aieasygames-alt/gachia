@@ -125,7 +125,10 @@ function ResultCard({ label, value, color }: { label: string; value: string; col
 }
 
 
-export function StarRailCalculator({ locale, verifiedCharacter, checkedAt }: { locale: SupportedLocale; verifiedCharacter?: VerifiedStarRailCharacter; checkedAt?: string }) {
+export function StarRailCalculator({ locale, verifiedCharacters = [] }: { locale: SupportedLocale; verifiedCharacters?: { character: VerifiedStarRailCharacter; checkedAt: string }[] }) {
+  const [selectedVerifiedId, setSelectedVerifiedId] = useState(verifiedCharacters[0]?.character.id);
+  const selectedVerified = verifiedCharacters.find(doc => doc.character.id === selectedVerifiedId) ?? verifiedCharacters[0];
+  const verifiedCharacter = selectedVerified?.character;
   const [tab, setTab] = useState<Tab>(verifiedCharacter ? 'verified' : 'ascension');
   const gameConfig = GAMES.starrail;
 
@@ -146,7 +149,7 @@ export function StarRailCalculator({ locale, verifiedCharacter, checkedAt }: { l
                 : 'text-game-text-muted hover:text-game-text'
             }`}
           >
-            {tb === 'verified' ? `${verifiedCharacter?.name}材料` : tb === 'ascension'
+            {tb === 'verified' ? '已核验角色材料' : tb === 'ascension'
               ? t(locale, '养成材料计算', 'Ascension Calculator', '育成素材計算')
               : tb === 'damage'
                 ? t(locale, '伤害计算', 'Damage Calculator', 'ダメージ計算')
@@ -155,7 +158,7 @@ export function StarRailCalculator({ locale, verifiedCharacter, checkedAt }: { l
         ))}
       </div>
 
-      {tab === 'verified' && verifiedCharacter ? <><p className="mb-4 text-sm text-game-text-muted">来源核验 {checkedAt} · <Link className="text-game-primary underline" href="/starrail/characters/aha">角色倍率与来源</Link></p><StarRailVerifiedMaterials character={verifiedCharacter} /></> : tab === 'ascension' ? <SRAAscensionCalc locale={locale} /> : tab === 'damage' ? <SRDamageCalc locale={locale} /> : <SRMaterialPlanner locale={locale} />}
+      {tab === 'verified' && verifiedCharacter ? <><label className="mb-4 flex items-center gap-3 text-sm">已核验角色<select className="rounded border border-game-border bg-game-surface p-2" value={verifiedCharacter.id} onChange={event => setSelectedVerifiedId(event.target.value as VerifiedStarRailCharacter['id'])}>{verifiedCharacters.map(doc => <option key={doc.character.id} value={doc.character.id}>{doc.character.name}</option>)}</select></label><p className="mb-4 text-sm text-game-text-muted">来源核验 {selectedVerified?.checkedAt} · <Link className="text-game-primary underline" href={`/starrail/characters/${verifiedCharacter.id}`}>角色倍率与来源</Link></p><StarRailVerifiedMaterials key={verifiedCharacter.id} character={verifiedCharacter} /></> : tab === 'ascension' ? <SRAAscensionCalc locale={locale} /> : tab === 'damage' ? <SRDamageCalc locale={locale} /> : <SRMaterialPlanner locale={locale} />}
     </div>
   );
 }

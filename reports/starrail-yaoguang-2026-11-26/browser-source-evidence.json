@@ -1,0 +1,775 @@
+{
+  "checkedAt": "2026-11-26",
+  "stationURL": "https://starrailstation.com/cn/character/yaoguang#eidolon",
+  "stationSkillCosts": [
+    {
+      "skill": 0,
+      "from": 1,
+      "to": 2,
+      "buttons": "\n  - option \"Lv2 ▼\" [selected]\n  - option \"Lv3\"\n  - option \"Lv4\"\n  - option \"Lv5\"\n  - option \"Lv6\"\n- button \"4,000\":\n  - generic: 4,000\n- button \"2\":\n  - generic: \"2\"\n- button \"5\":\n  - generic: \"5\"\n"
+    },
+    {
+      "skill": 0,
+      "from": 2,
+      "to": 3,
+      "buttons": "\n  - option \"Lv3 ▼\" [selected]\n  - option \"Lv4\"\n  - option \"Lv5\"\n  - option \"Lv6\"\n- button \"8,000\":\n  - generic: 8,000\n- button \"2\":\n  - generic: \"2\"\n- button \"2\":\n  - generic: \"2\"\n"
+    },
+    {
+      "skill": 0,
+      "from": 3,
+      "to": 4,
+      "buttons": "\n  - option \"Lv4 ▼\" [selected]\n  - option \"Lv5\"\n  - option \"Lv6\"\n- button \"16,000\":\n  - generic: 16,000\n- button \"3\":\n  - generic: \"3\"\n- button \"3\":\n  - generic: \"3\"\n"
+    },
+    {
+      "skill": 0,
+      "from": 4,
+      "to": 5,
+      "buttons": "\n  - option \"Lv5 ▼\" [selected]\n  - option \"Lv6\"\n- button \"32,000\":\n  - generic: 32,000\n- button \"3\":\n  - generic: \"3\"\n- button \"2\":\n  - generic: \"2\"\n"
+    },
+    {
+      "skill": 0,
+      "from": 5,
+      "to": 6,
+      "buttons": "\n  - option \"Lv6 ▼\" [selected]\n- button \"120,000\":\n  - generic: 120,000\n- button \"5\":\n  - generic: \"5\"\n- button \"2\":\n  - generic: \"2\"\n"
+    },
+    {
+      "skill": 1,
+      "from": 1,
+      "to": 2,
+      "quantities": [
+        2000,
+        2
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 2,
+      "to": 3,
+      "quantities": [
+        4000,
+        5,
+        3
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 3,
+      "to": 4,
+      "quantities": [
+        8000,
+        2,
+        3
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 4,
+      "to": 5,
+      "quantities": [
+        15000,
+        4,
+        3
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 5,
+      "to": 6,
+      "quantities": [
+        24000,
+        6,
+        5
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 6,
+      "to": 7,
+      "quantities": [
+        32000,
+        2,
+        2
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 7,
+      "to": 8,
+      "quantities": [
+        65000,
+        4,
+        4,
+        1
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 8,
+      "to": 9,
+      "quantities": [
+        120000,
+        6,
+        1,
+        1
+      ]
+    },
+    {
+      "skill": 1,
+      "from": 9,
+      "to": 10,
+      "quantities": [
+        250000,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 1,
+      "to": 2,
+      "quantities": [
+        2000,
+        2
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 2,
+      "to": 3,
+      "quantities": [
+        4000,
+        5,
+        3
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 3,
+      "to": 4,
+      "quantities": [
+        8000,
+        2,
+        3
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 4,
+      "to": 5,
+      "quantities": [
+        15000,
+        4,
+        3
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 5,
+      "to": 6,
+      "quantities": [
+        24000,
+        6,
+        5
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 6,
+      "to": 7,
+      "quantities": [
+        32000,
+        2,
+        2
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 7,
+      "to": 8,
+      "quantities": [
+        65000,
+        4,
+        4,
+        1
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 8,
+      "to": 9,
+      "quantities": [
+        120000,
+        6,
+        1,
+        1
+      ]
+    },
+    {
+      "skill": 2,
+      "from": 9,
+      "to": 10,
+      "quantities": [
+        250000,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 1,
+      "to": 2,
+      "quantities": [
+        2000,
+        2
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 2,
+      "to": 3,
+      "quantities": [
+        4000,
+        5,
+        3
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 3,
+      "to": 4,
+      "quantities": [
+        8000,
+        2,
+        3
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 4,
+      "to": 5,
+      "quantities": [
+        15000,
+        4,
+        3
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 5,
+      "to": 6,
+      "quantities": [
+        24000,
+        6,
+        5
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 6,
+      "to": 7,
+      "quantities": [
+        32000,
+        2,
+        2
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 7,
+      "to": 8,
+      "quantities": [
+        65000,
+        4,
+        4,
+        1
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 8,
+      "to": 9,
+      "quantities": [
+        120000,
+        6,
+        1,
+        1
+      ]
+    },
+    {
+      "skill": 3,
+      "from": 9,
+      "to": 10,
+      "quantities": [
+        250000,
+        12,
+        1,
+        1
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 1,
+      "to": 2,
+      "quantities": [
+        2000,
+        2
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 2,
+      "to": 3,
+      "quantities": [
+        4000,
+        5,
+        3
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 3,
+      "to": 4,
+      "quantities": [
+        8000,
+        2,
+        3
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 4,
+      "to": 5,
+      "quantities": [
+        15000,
+        4,
+        3
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 5,
+      "to": 6,
+      "quantities": [
+        24000,
+        6,
+        5
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 6,
+      "to": 7,
+      "quantities": [
+        32000,
+        2,
+        2
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 7,
+      "to": 8,
+      "quantities": [
+        65000,
+        4,
+        4
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 8,
+      "to": 9,
+      "quantities": [
+        120000,
+        6,
+        4
+      ]
+    },
+    {
+      "skill": 4,
+      "from": 9,
+      "to": 10,
+      "quantities": [
+        250000,
+        12,
+        4
+      ]
+    }
+  ],
+  "stationNodes": [
+    {
+      "index": 0,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"5,000\":\n  - button \"5,000\":\n    - generic: 5,000\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- button \"1\":\n  - button \"1\":\n    - generic: \"1\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 1,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"10,000\":\n  - button \"10,000\":\n    - generic: 10,000\n- button \"4\":\n  - button \"4\":\n    - generic: \"4\"\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 2,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"10,000\":\n  - button \"10,000\":\n    - generic: 10,000\n- button \"4\":\n  - button \"4\":\n    - generic: \"4\"\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 3,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"20,000\":\n  - button \"20,000\":\n    - generic: 20,000\n- button \"4\":\n  - button \"4\":\n    - generic: \"4\"\n- button \"1\":\n  - button \"1\":\n    - generic: \"1\"\n- button \"1\":\n  - button \"1\":\n    - generic: \"1\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 4,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"18,000\":\n  - button \"18,000\":\n    - generic: 18,000\n- button \"4\":\n  - button \"4\":\n    - generic: \"4\"\n- button \"3\":\n  - button \"3\":\n    - generic: \"3\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 5,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"45,000\":\n  - button \"45,000\":\n    - generic: 45,000\n- button \"3\":\n  - button \"3\":\n    - generic: \"3\"\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 6,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"45,000\":\n  - button \"45,000\":\n    - generic: 45,000\n- button \"3\":\n  - button \"3\":\n    - generic: \"3\"\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 7,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"140,000\":\n  - button \"140,000\":\n    - generic: 140,000\n- button \"8\":\n  - button \"8\":\n    - generic: \"8\"\n- button \"1\":\n  - button \"1\":\n    - generic: \"1\"\n- button \"1\":\n  - button \"1\":\n    - generic: \"1\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 8,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"120,000\":\n  - button \"120,000\":\n    - generic: 120,000\n- button \"5\":\n  - button \"5\":\n    - generic: \"5\"\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 9,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"160,000\":\n  - button \"160,000\":\n    - generic: 160,000\n- button \"8\":\n  - button \"8\":\n    - generic: \"8\"\n- button \"8\":\n  - button \"8\":\n    - generic: \"8\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 10,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"160,000\":\n  - button \"160,000\":\n    - generic: 160,000\n- button \"8\":\n  - button \"8\":\n    - generic: \"8\"\n- button \"8\":\n  - button \"8\":\n    - generic: \"8\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 11,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"2,000\":\n  - button \"2,000\":\n    - generic: 2,000\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    },
+    {
+      "index": 12,
+      "modal": "\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- generic: 通用货币\n- generic: 信用点\n- button \"Close\":\n  - img \"Close\"\n- button \"5,000\":\n  - button \"5,000\":\n    - generic: 5,000\n- button \"2\":\n  - button \"2\":\n    - generic: \"2\"\n- button \"6\":\n  - button \"6\":\n    - generic: \"6\"\n- generic: 星际和平公司与客户结算时使用的货币，如今已成为太空旅行的硬通货。\n- generic: 来源\n- generic: • 拟造花萼【大矿区】\n- generic: • 拟造花萼【工造司】\n- generic: • 拟造花萼【「白日梦」酒店-梦境】\n- generic: • 拟造花萼【「呓语密林」神悟树庭】\n- generic: \"• 拟造花萼【{TextID#FloorName_20503001}】\"\n- generic: • 任务奖励\n- generic: • 委托奖励\n- generic: • 余烬兑换\n- link \"查看详情\":\n  - /url: /cn/material/29328\n- iframe"
+    }
+  ],
+  "stationEidolons": "- navigation:\n  - link \"Star Rail Station\":\n    - /url: /cn\n    - img \"Star Rail Station\"\n  - link \"角色 角色\":\n    - /url: /cn/characters\n    - img \"角色\"\n    - generic: 角色\n  - img \"智库\"\n  - generic: 智库\n  - link \"跃迁记录 跃迁记录\":\n    - /url: /cn/warp#char_event\n    - img \"跃迁记录\"\n    - generic: 跃迁记录\n  - link \"养成计算 养成计算\":\n    - /url: /cn/planner\n    - img \"养成计算\"\n    - generic: 养成计算\n  - link \"成就 成就\":\n    - /url: /cn/achievements\n    - img \"成就\"\n    - generic: 成就\n  - img \"简体中文\"\n  - generic: 简体中文\n- generic: 神秘，大胆，激进，求变之举令人瞠目结舌。 以巡猎之「眼」遍观吉凶，明知天意难违，「戎韬将军」仍旧孤身涉险。 这一支下下签，如何能够改运换天？\n- heading \"爻光\" [level=1]\n- img \"欢愉\"\n- generic: 欢愉\n- img \"物理\"\n- generic: 物理\n- button\n- button\n- button\n- button \"星魂\" [active]:\n  - generic: 星魂\n- button\n- iframe\n- generic: 1何处落玉，盈盈笑语\n- text: 终结技触发的阿哈的额外回合固定计入笑点数提高至\n- generic: \"40\"\n- text: 个。我方全体目标造成欢愉伤害时无视目标\n- generic: 20%\n- text: 防御力。\n- generic: 2飞箭无目，青翎为瞳\n- text: 结界持续期间，我方全体目标速度提高\n- generic: 12%\n- text: ，欢愉度额外提高\n- generic: 16%\n- text: 。\n- generic: 3十方世界，光映符中\n- generic: 战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级；欢愉技等级+1，最多不超过15级。\n- generic: 4命若素绡，拈羽点彩\n- text: 爻光终结技触发的阿哈的额外回合中，我方全体角色欢愉技造成的伤害为原伤害的\n- generic: 150%\n- text: 。\n- generic: 5璎珞严饰，身如琉璃\n- generic: 终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级；欢愉技等级+1，最多不超过15级。\n- generic: 6牵丝渡引，天星垂虹\n- text: 我方全体目标的欢愉伤害增笑\n- generic: 25%\n- text: 。爻光欢愉技的伤害倍率提高原倍率的\n- generic: 100%\n- text: 。\n- contentinfo:\n  - link \"Privacy\":\n    - /url: /cn/privacy\n  - text: •\n  - link \"Settings\":\n    - /url: /cn/settings\n  - text: •\n  - link \"Credits\":\n    - /url: /attribution\n  - link \"Discord\":\n    - /url: https://discord.gg/srs\n    - img \"Discord\"\n  - link \"Twitter\":\n    - /url: https://twitter.com/starrailstation\n    - img \"Twitter\"\n  - link \"Crowdin\":\n    - /url: https://crowdin.com/project/star-rail-station-web\n    - img \"Crowdin\"\n- iframe",
+  "bwikiURL": "https://wiki.biligame.com/sr/%E7%88%BB%E5%85%89",
+  "bwikiPanels": [
+    {
+      "tables": [
+        [
+          [
+            "详细属性",
+            "LV1",
+            "LV2",
+            "LV3",
+            "LV4",
+            "LV5",
+            "LV6",
+            "LV7",
+            "LV8",
+            "LV9",
+            "LV10"
+          ],
+          [
+            "单体伤害",
+            "45.0%",
+            "54.0%",
+            "63.0%",
+            "72.0%",
+            "81.0%",
+            "90.0%",
+            "99.0%",
+            "108.0%",
+            "117.0%",
+            "126.0%"
+          ],
+          [
+            "扩散伤害",
+            "15.0%",
+            "18.0%",
+            "21.0%",
+            "24.0%",
+            "27.0%",
+            "30.0%",
+            "33.0%",
+            "36.0%",
+            "39.0%",
+            "42.0%"
+          ]
+        ]
+      ],
+      "text": "普攻\n\t\t详细属性\t\t\n\t雀翎鸣镝，过招有喜\n\t\n\t\t[扩散]\n\t\t能量恢复：30\n\t\n\t\t恢复战技点\n\t\t✦\n\t\n\t\t削韧值\n\t\t10+5*2\n\t\n\t对指定敌方单体造成等同于爻光45%/90%攻击力的物理属性伤害，同时对其相邻目标造成等同于爻光15%/30%攻击力的物理属性伤害。普攻恢复的能量提高至30点。\n\t\n\n\t点击查看技能预览\n\t\n\t\t\t普攻 - 雀翎鸣镝，过招有喜\n\t\t\t\n\t\t\t\t详细属性LV1LV2LV3LV4LV5LV6LV7LV8LV9LV10\n\t\t\t\t单体伤害45.0%54.0%63.0%72.0%81.0%90.0%99.0%108.0%117.0%126.0%扩散伤害15.0%18.0%21.0%24.0%27.0%30.0%33.0%36.0%39.0%42.0%",
+      "type": "pugong"
+    },
+    {
+      "tables": [
+        [
+          [
+            "详细属性",
+            "LV1",
+            "LV2",
+            "LV3",
+            "LV4",
+            "LV5",
+            "LV6",
+            "LV7",
+            "LV8",
+            "LV9",
+            "LV10",
+            "LV11",
+            "LV12",
+            "LV13",
+            "LV14",
+            "LV15"
+          ],
+          [
+            "欢愉度提高",
+            "10.0%",
+            "11.0%",
+            "12.0%",
+            "13.0%",
+            "14.0%",
+            "15.0%",
+            "16.25%",
+            "17.5%",
+            "18.75%",
+            "20.0%",
+            "21.0%",
+            "22.0%",
+            "23.0%",
+            "24.0%",
+            "25.0%"
+          ]
+        ]
+      ],
+      "text": "战技\n\t\t详细属性\t\t\n\t十方光映，万法皆明\n\t\n\t\t[辅助]\n\t\t能量恢复：30\n\t\n\t\t消耗战技点\n\t\t✦\n\t\n\t展开结界，持续三回合，自身每回合开始时结界回合持续回合数减1。结界持续期间，我方全体目标欢愉度提高，提高数值等同于爻光欢愉度的10%/20%，且爻光释放普攻、战技后获得3个笑点笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。。\n\t\n\n\t点击查看技能预览\n\t\n\t\t\t战技 - 十方光映，万法皆明\n\t\t\t\n\t\t\t\t详细属性LV1LV2LV3LV4LV5LV6LV7LV8LV9LV10LV11LV12LV13LV14LV15\n\t\t\t\t欢愉度提高10.0%11.0%12.0%13.0%14.0%15.0%16.25%17.5%18.75%20.0%21.0%22.0%23.0%24.0%25.0%\n\t\t\t\n\t\t\n\t\n\n  飞箭无目，青翎为瞳  效果加成[星魂2]\n描述结界持续期间，我方全体目标速度提高12%，欢愉度额外提高16%。",
+      "type": "zhanji"
+    },
+    {
+      "tables": [
+        [
+          [
+            "详细属性",
+            "LV1",
+            "LV2",
+            "LV3",
+            "LV4",
+            "LV5",
+            "LV6",
+            "LV7",
+            "LV8",
+            "LV9",
+            "LV10",
+            "LV11",
+            "LV12",
+            "LV13",
+            "LV14",
+            "LV15"
+          ],
+          [
+            "抗性穿透提高",
+            "10.0%",
+            "11.0%",
+            "12.0%",
+            "13.0%",
+            "14.0%",
+            "15.0%",
+            "16.25%",
+            "17.5%",
+            "18.75%",
+            "20.0%",
+            "21.0%",
+            "22.0%",
+            "23.0%",
+            "24.0%",
+            "25.0%"
+          ]
+        ]
+      ],
+      "text": "终结技\n\t\t详细属性\t\t\n\t霓裳铁羽，六爻皆吉\n\t\n\t\t[辅助]\n\t\t消耗能量：180能量恢复：5\n\t\n\t获得5个笑点笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。。使阿哈行动时，发动阿哈时刻，并使可施放欢愉技的单位各自施放1次欢愉技。若阿哈行动时不存在可施放欢愉技的单位，则阿哈施放【要有笑声】。阿哈时刻持续至本次最后一个欢愉技施放结束。阿哈时刻结束时，使参演的角色获得本次计入笑点的【好活当赏】状态，持续2回合。阿哈行动后会消耗全部笑点。立即获得1个固定计入20笑点笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。的额外回合获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。，该回合不消耗笑点笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。，并使我方全体目标全属性抗性穿透当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。提高10%/20%，持续3回合。\n\t\n\n\t点击查看技能预览\n\t\n\t\t\t终结技 - 霓裳铁羽，六爻皆吉\n\t\t\t\n\t\t\t\t详细属性LV1LV2LV3LV4LV5LV6LV7LV8LV9LV10LV11LV12LV13LV14LV15\n\t\t\t\t抗性穿透提高10.0%11.0%12.0%13.0%14.0%15.0%16.25%17.5%18.75%20.0%21.0%22.0%23.0%24.0%25.0%\n\t\t\t\n\t\t\n\t\n\n  何处落玉，盈盈笑语  效果加成[星魂1]\n描述终结技触发的悬浮框阿哈行动时，发动阿哈时刻，并使可施放欢愉技的单位各自施放1次欢愉技。若阿哈行动时不存在可施放欢愉技的单位，则阿哈施放【要有笑声】。阿哈时刻持续至本次最后一个欢愉技施放结束。阿哈时刻结束时，使参演的角色获得本次计入笑点的【好活当赏】状态，持续2回合。阿哈行动后会消耗全部笑点。的额外回合获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。固定计入笑点笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。数提高至40个。我方全体目标造成欢愉伤害计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。欢愉伤害不受伤害提高类效果所影响。时无视目标20%防御力。\n\n  命若素绡，拈羽点彩  效果加成[星魂4]\n描述爻光终结技触发的阿哈行动时，发动阿哈时刻，并使可施放欢愉技的单位各自施放1次欢愉技。若阿哈行动时不存在可施放欢愉技的单位，则阿哈施放【要有笑声】。阿哈时刻持续至本次最后一个欢愉技施放结束。阿哈时刻结束时，使参演的角色获得本次计入笑点的【好活当赏】状态，持续2回合。阿哈行动后会消耗全部笑点。的额外回合获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。中，我方全体角色欢愉技造成的伤害为原伤害的150%。",
+      "type": "zhongjieji"
+    },
+    {
+      "tables": [],
+      "text": "秘技\t\t\n\t浮光过隙，百无禁忌\n\t\n\t\t[辅助]\n\t\t\n\t\n\t使用秘技后，使下一次战斗开始时自动触发1次战技，此次触发不消耗战技点。爻光在队伍中时，击碎可破坏物时立刻获得「红包」，每个地球周内最多获得8个。\n\t\n\n\t点击查看技能预览",
+      "type": "miji"
+    },
+    {
+      "tables": [
+        [
+          [
+            "详细属性",
+            "LV1",
+            "LV2",
+            "LV3",
+            "LV4",
+            "LV5",
+            "LV6",
+            "LV7",
+            "LV8",
+            "LV9",
+            "LV10",
+            "LV11",
+            "LV12",
+            "LV13",
+            "LV14",
+            "LV15"
+          ],
+          [
+            "单体伤害",
+            "10.0%",
+            "11.0%",
+            "12.0%",
+            "13.0%",
+            "14.0%",
+            "15.0%",
+            "16.25%",
+            "17.5%",
+            "18.75%",
+            "20.0%",
+            "21.0%",
+            "22.0%",
+            "23.0%",
+            "24.0%",
+            "25.0%"
+          ]
+        ]
+      ],
+      "text": "天赋\n\t\t详细属性\n\t\t\n\t屏开千光，遍观自在\n\t\n\t\t[辅助]\n\t\t\n\t\n\t爻光持有【好活当赏使参演阿哈时刻的角色获得【好活当赏】状态，并将本次阿哈时刻的笑点计入该状态，持续2回合。【好活当赏】状态产生的技能效果和欢愉伤害以【好活当赏】计入的笑点数计算。多个【好活当赏】计入的笑点数合并计算。各个【好活当赏】的持续时间各自独立计算。】时:使我方目标施放攻击后触发【大吉大利】效果，对随机1个击中的目标额外造成1次10%/20%的对应属性欢愉伤害计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。欢愉伤害不受伤害提高类效果所影响。，本次攻击若消耗战技点，则额外触发1次【大吉大利】效果。触发【大吉大利】效果时若攻击者欢愉度低于爻光，则该次欢愉伤害计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。欢愉伤害不受伤害提高类效果所影响。使用爻光欢愉度来计算。\n\t\n\n\t\n\t\n\t\t\t天赋 - 屏开千光，遍观自在\n\t\t\t\n\t\t\t\t详细属性LV1LV2LV3LV4LV5LV6LV7LV8LV9LV10LV11LV12LV13LV14LV15\n\t\t\t\t单体伤害10.0%11.0%12.0%13.0%14.0%15.0%16.25%17.5%18.75%20.0%21.0%22.0%23.0%24.0%25.0%",
+      "type": "tianfu"
+    },
+    {
+      "tables": [
+        [
+          [
+            "详细属性",
+            "LV1",
+            "LV2",
+            "LV3",
+            "LV4",
+            "LV5",
+            "LV6",
+            "LV7",
+            "LV8",
+            "LV9",
+            "LV10",
+            "LV11",
+            "LV12",
+            "LV13",
+            "LV14",
+            "LV15"
+          ],
+          [
+            "群体伤害",
+            "50%",
+            "55%",
+            "60%",
+            "65%",
+            "70%",
+            "75%",
+            "81.125%",
+            "87.5%",
+            "93.75%",
+            "100%",
+            "105%",
+            "110%",
+            "115%",
+            "120%",
+            "125%"
+          ],
+          [
+            "单体伤害",
+            "10%",
+            "11%",
+            "12%",
+            "13%",
+            "14%",
+            "15%",
+            "16.25%",
+            "17.5%",
+            "18.75%",
+            "20%",
+            "21%",
+            "22%",
+            "23%",
+            "24%",
+            "25%"
+          ]
+        ]
+      ],
+      "text": "欢愉技\n\t\t详细属性\t\t\n\t赠君一卦，火树银花\n\t\n\t\t[群攻]\n\t\t能量恢复：5\n\t\n\t\t削韧值\n\t\t5*5+20\n\t\n\t\t参演编号参演编号影响该欢愉技在阿哈时刻中施放的先后顺序，参演编号越小，施放欢愉技的顺序越靠前。\n\t\t116\n\t\n\t使敌方全体陷入【凶星低语】状态，持续3回合。【凶星低语】状态下的敌方目标受到的伤害提高16%。对敌方全体造成50%/100%的物理属性欢愉伤害计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。欢愉伤害不受伤害提高类效果所影响。，随后对敌方随机单体造成5次10%/20%的物理属性欢愉伤害计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。欢愉伤害不受伤害提高类效果所影响。。\n\t\n\n\t点击查看技能预览\n\t\n\t\t\t欢愉技 - 赠君一卦，火树银花\n\t\t\t\n\t\t\t\t详细属性LV1LV2LV3LV4LV5LV6LV7LV8LV9LV10LV11LV12LV13LV14LV15\n\t\t\t\t群体伤害50%55%60%65%70%75%81.125%87.5%93.75%100%105%110%115%120%125%单体伤害10%11%12%13%14%15%16.25%17.5%18.75%20%21%22%23%24%25%\n\t\t\t\n\t\t\n\t\n\n  何处落玉，盈盈笑语  效果加成[星魂1]\n描述终结技触发的悬浮框阿哈行动时，发动阿哈时刻，并使可施放欢愉技的单位各自施放1次欢愉技。若阿哈行动时不存在可施放欢愉技的单位，则阿哈施放【要有笑声】。阿哈时刻持续至本次最后一个欢愉技施放结束。阿哈时刻结束时，使参演的角色获得本次计入笑点的【好活当赏】状态，持续2回合。阿哈行动后会消耗全部笑点。的额外回合获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。固定计入笑点笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。数提高至40个。我方全体目标造成欢愉伤害计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。欢愉伤害不受伤害提高类效果所影响。时无视目标20%防御力。\n\n  命若素绡，拈羽点彩  效果加成[星魂4]\n描述爻光终结技触发的阿哈行动时，发动阿哈时刻，并使可施放欢愉技的单位各自施放1次欢愉技。若阿哈行动时不存在可施放欢愉技的单位，则阿哈施放【要有笑声】。阿哈时刻持续至本次最后一个欢愉技施放结束。阿哈时刻结束时，使参演的角色获得本次计入笑点的【好活当赏】状态，持续2回合。阿哈行动后会消耗全部笑点。的额外回合获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。中，我方全体角色欢愉技造成的伤害为原伤害的150%。\n\n  牵丝渡引，天星垂虹  效果加成[星魂6]\n描述我方全体目标的欢愉伤害计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。欢愉伤害不受伤害提高类效果所影响。增笑影响欢愉伤害的特殊效果，可额外提高造成的欢愉伤害。25%。爻光欢愉技的伤害倍率提高原倍率的100%。\n\n  神闲意满  效果加成[额外能力2]\n描述自身暴击伤害提高60%，释放欢愉技后，为我方恢复一个战技点。",
+      "type": "huanyuji"
+    },
+    {
+      "tables": [],
+      "text": "固有行迹\n\t\t欢愉万相★心灵感应\n\t\t当「欢愉」命途升格星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。时，【大吉大利】效果的伤害倍率提高，提高数值等同于原伤害倍率的20%/40%。爻光施放终结技后固定恢复12/30点能量并获得10爽点获得爽点时视为获得笑点，爽点会在阿哈时刻结束时，重新获得消耗值的一部分。。",
+      "type": "guyouxingji"
+    },
+    {
+      "tables": [],
+      "text": "额外能力\n\t\t开屏有礼\n\t\t爻光的速度大于等于120时，使自身欢愉度提高30%，之后每超过1点速度使自身欢愉度提高1%，最多记入200点超出的速度。\n\t\t解锁材料\n\t\t需要角色晋阶21灭流绝溢的缄默3《绒绒号》手绘分镜稿5000信用点",
+      "type": "ewai1"
+    },
+    {
+      "tables": [],
+      "text": "额外能力\n\t\t神闲意满\n\t\t自身暴击伤害提高60%，释放欢愉技后，为我方恢复一个战技点。\n\t\t解锁材料\n\t\t需要角色晋阶41命运的足迹1灭流绝溢的缄默5《绒绒号》连载纪念刊20000信用点",
+      "type": "ewai2"
+    },
+    {
+      "tables": [],
+      "text": "额外能力\n\t\t鸿运鳞集\n\t\t爻光获得【好活当赏使参演阿哈时刻的角色获得【好活当赏】状态，并将本次阿哈时刻的笑点计入该状态，持续2回合。【好活当赏】状态产生的技能效果和欢愉伤害以【好活当赏】计入的笑点数计算。多个【好活当赏】计入的笑点数合并计算。各个【好活当赏】的持续时间各自独立计算。】时，使其持续时间增加一回合。\n\t\t解锁材料\n\t\t需要角色晋阶61命运的足迹1灭流绝溢的缄默8《绒绒号》典藏版合集160000信用点",
+      "type": "ewai3"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t暴击率强化\n\t\t暴击率提高2.7%\n\t\t解锁材料\n\t\t2童真蜡笔2500信用点",
+      "type": "shuxing1"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t速度强化\n\t\t速度提高2\n\t\t解锁材料\n\t\t需要角色晋阶23《绒绒号》手绘分镜稿6童真蜡笔5000信用点",
+      "type": "shuxing2"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t暴击率强化\n\t\t暴击率提高2.7%\n\t\t解锁材料\n\t\t需要角色晋阶33《绒绒号》连载纪念刊3造梦蘸钢10000信用点",
+      "type": "shuxing3"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t欢愉度强化\n\t\t欢愉度提高4.0%\n\t\t解锁材料\n\t\t需要角色晋阶33《绒绒号》连载纪念刊3造梦蘸钢10000信用点",
+      "type": "shuxing4"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t暴击率强化\n\t\t暴击率提高4.0%\n\t\t解锁材料\n\t\t需要角色晋阶45《绒绒号》连载纪念刊4造梦蘸钢20000信用点",
+      "type": "shuxing5"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t速度强化\n\t\t速度提高3\n\t\t解锁材料\n\t\t需要角色晋阶53《绒绒号》典藏版合集3梦现管锥45000信用点",
+      "type": "shuxing6"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t暴击率强化\n\t\t暴击率提高4.0%\n\t\t解锁材料\n\t\t需要角色晋阶53《绒绒号》典藏版合集3梦现管锥45000信用点",
+      "type": "shuxing7"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t欢愉度强化\n\t\t欢愉度提高6.0%\n\t\t解锁材料\n\t\t需要角色晋阶68《绒绒号》典藏版合集8梦现管锥160000信用点",
+      "type": "shuxing8"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t速度强化\n\t\t速度提高4\n\t\t解锁材料\n\t\t需要角色等级758《绒绒号》典藏版合集8梦现管锥160000信用点",
+      "type": "shuxing9"
+    },
+    {
+      "tables": [],
+      "text": "属性加成\n\t\t暴击率强化\n\t\t暴击率提高5.3%\n\t\t解锁材料\n\t\t需要角色等级808《绒绒号》典藏版合集8梦现管锥160000信用点",
+      "type": "shuxing10"
+    }
+  ]
+}

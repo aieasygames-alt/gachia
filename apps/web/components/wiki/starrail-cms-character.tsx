@@ -1,6 +1,6 @@
 import { cache } from 'react';
 import type { SupportedLocale } from '@gachia/core';
-import { STARRAIL_CMS_CHARACTERS } from '@gachia/data/cms/starrail-character';
+import { STARRAIL_CMS_CHARACTERS, STARRAIL_CMS_CHARACTER_NAMES } from '@gachia/data/cms/starrail-character';
 import { isCommunityStarRailSource } from '@gachia/data/cms/starrail-updates';
 import { loadStarRailUpdates } from '@/lib/starrail-publication';
 import { Link } from '@/lib/i18n/navigation';
@@ -10,23 +10,24 @@ export const loadStarRailCharacterPublication = cache(async (locale: SupportedLo
   const result = await loadStarRailUpdates(locale);
   return result.updates.find(d => d.locale === locale && d.kind === 'character' && d.slug === STARRAIL_CMS_CHARACTERS[id] && d.characterData?.id === id) ?? null;
 });
-const pending = { zh: '阿哈资料暂未发布，请稍后查看。', en: 'A verified character page is not yet published in this language. See the Chinese page for its sources and scope.', ja: 'この言語の確認済みキャラクター資料は未公開です。中国語ページで出典と対象範囲を確認してください。' };
+const pending = { zh: '该角色的已核验资料暂未发布，请稍后查看。', en: 'A verified character page is not yet published in this language. See the Chinese page for its sources and scope.', ja: 'この言語の確認済みキャラクター資料は未公開です。中国語ページで出典と対象範囲を確認してください。' };
 
 export async function starRailCharacterMetadata(locale: SupportedLocale, id: keyof typeof STARRAIL_CMS_CHARACTERS) {
   const doc = await loadStarRailCharacterPublication(locale, id);
-  return { title: doc?.title ?? { zh: '阿哈资料待发布', en: 'Aha — Publication Pending', ja: 'Aha — 資料準備中' }[locale], description: doc?.summary ?? pending[locale], robots: { index: Boolean(doc), follow: true }, alternates: { canonical: `https://gachia.com/${locale}/starrail/characters/${id}` } };
+  const name = STARRAIL_CMS_CHARACTER_NAMES[id][locale];
+  return { title: doc?.title ?? { zh: `${name}资料待发布`, en: `${name} — Publication Pending`, ja: `${name} — 資料準備中` }[locale], description: doc?.summary ?? pending[locale], robots: { index: Boolean(doc), follow: true }, alternates: { canonical: `https://gachia.com/${locale}/starrail/characters/${id}` } };
 }
 
 export async function StarRailCmsCharacterCard({ locale }: { locale: SupportedLocale }) {
-  const doc = await loadStarRailCharacterPublication(locale, 'aha');
-  if (!doc?.characterData) return null;
-  return <section className="mb-6 rounded-xl border border-game-primary/40 bg-game-surface p-5"><Link href="/starrail/characters/aha" className="text-lg font-semibold text-game-primary">{doc.title}</Link><p className="mt-2 text-sm text-game-text-muted">{doc.summary}</p><p className="mt-2 text-xs text-game-text-muted">{doc.region} · {doc.checkedAt}</p></section>;
+  const docs = (await Promise.all((Object.keys(STARRAIL_CMS_CHARACTERS) as (keyof typeof STARRAIL_CMS_CHARACTERS)[]).map(id => loadStarRailCharacterPublication(locale, id)))).filter(doc => doc?.characterData);
+  if (!docs.length) return null;
+  return <>{docs.map(doc => doc && <section key={doc.slug} className="mb-6 rounded-xl border border-game-primary/40 bg-game-surface p-5"><Link href={`/starrail/characters/${doc.characterData!.id}`} className="text-lg font-semibold text-game-primary">{doc.title}</Link><p className="mt-2 text-sm text-game-text-muted">{doc.summary}</p><p className="mt-2 text-xs text-game-text-muted">{doc.region} · {doc.checkedAt}</p></section>)}</>;
 }
 
 export async function StarRailCmsCharacter({ locale, id }: { locale: SupportedLocale; id: keyof typeof STARRAIL_CMS_CHARACTERS }) {
   const doc = await loadStarRailCharacterPublication(locale, id);
   const p = doc?.characterData;
-  if (!doc || !p) return <article className="space-y-5"><h1 className="text-2xl font-bold">{locale === 'zh' ? '阿哈资料待发布' : 'Aha'}</h1><p>{pending[locale]}</p><Link locale="zh" href="/starrail/characters/aha" className="text-game-primary underline">中文</Link></article>;
+  if (!doc || !p) return <article className="space-y-5"><h1 className="text-2xl font-bold">{STARRAIL_CMS_CHARACTER_NAMES[id][locale]}{locale === 'zh' ? '资料待发布' : ''}</h1><p>{pending[locale]}</p><Link locale="zh" href={`/starrail/characters/${id}`} className="text-game-primary underline">中文</Link></article>;
   return <article className="space-y-6">
     <h1 className="text-2xl font-bold text-game-primary">{doc.title}</h1><p className="text-sm leading-7">{doc.summary}</p><p className="text-sm text-game-text-muted">{p.identity} · {doc.region} · 来源核验 <time dateTime={doc.checkedAt}>{doc.checkedAt}</time></p>
     <nav className="flex flex-wrap gap-4 text-sm text-game-primary"><a href="#skills">逐级倍率</a><a href="#materials">材料计算</a><Link href="/starrail/characters">角色目录</Link><Link href="/starrail/calculator">养成计算器</Link></nav>

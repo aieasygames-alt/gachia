@@ -1,6 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import yaoBatch from '../../../reports/starrail-yaoguang-2026-11-26/batch.json';
 import batch from '../../../reports/starrail-structured-character-2026-11-25/batch.json';
 import { parseStarRailUpdate } from '@gachia/data/cms/starrail-updates';
 const { load } = vi.hoisted(() => ({ load: vi.fn() }));
@@ -44,4 +45,25 @@ describe('CMS character page, index entry and material calculator', () => {
     load.mockResolvedValue({ source: 'cms', updates: [doc] });
     expect(renderToStaticMarkup(await StarRailCmsCharacter({ locale: 'en', id: 'aha' }))).not.toContain(doc.summary);
   });
+  it('lists multiple published characters and withdraws only the removed character', async () => {
+    const yao = parseStarRailUpdate(yaoBatch.creates[0])!;
+    load.mockResolvedValue({ source: 'cms', updates: [doc, yao] });
+    let html = renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }));
+    expect(html).toContain('/starrail/characters/aha');
+    expect(html).toContain('/starrail/characters/yaoguang');
+    const detail = renderToStaticMarkup(await StarRailCmsCharacter({ locale: 'zh', id: 'yaoguang' }));
+    expect(detail).toContain('81.25%');expect(detail).toContain('侵略凝块');
+    load.mockResolvedValue({ source: 'cms', updates: [doc] });
+    html = renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }));
+    expect(html).toContain('/starrail/characters/aha');expect(html).not.toContain('/starrail/characters/yaoguang');
+    expect(await starRailCharacterMetadata('zh', 'yaoguang')).toMatchObject({ title: '爻光资料待发布', robots: { index: false } });
+    for (const locale of ['en', 'ja'] as const) {
+      load.mockResolvedValue({ source: 'cms', updates: [yao] });
+      const pending = renderToStaticMarkup(await StarRailCmsCharacter({ locale, id: 'yaoguang' }));
+      expect(pending).not.toContain('81.25%');expect(pending).not.toContain('阿哈');
+      expect(pending).toContain('/starrail/characters/yaoguang');
+      expect(await starRailCharacterMetadata(locale, 'yaoguang')).toMatchObject({ robots: { index: false } });
+    }
+  });
+
 });

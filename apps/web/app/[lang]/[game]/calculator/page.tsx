@@ -5,6 +5,7 @@ import type { GameId, SupportedLocale } from '@gachia/core';
 import { buildLocalizedAlternates } from '@/lib/seo-metadata';
 import { loadStarRailCharacterPublication } from '@/components/wiki/starrail-cms-character';
 import { StarRailCalculator } from './starrail-calculator-client';
+import { STARRAIL_CMS_CHARACTERS } from '@gachia/data/cms/starrail-character';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -63,8 +64,8 @@ export default async function CalculatorPage({
 
   if (gameId === 'genshin') notFound();
   if (gameId === 'starrail') {
-    const doc = await loadStarRailCharacterPublication(locale, 'aha');
-    return <StarRailCalculator locale={locale} verifiedCharacter={doc?.characterData} checkedAt={doc?.checkedAt} />;
+    const docs = await Promise.all((Object.keys(STARRAIL_CMS_CHARACTERS) as (keyof typeof STARRAIL_CMS_CHARACTERS)[]).map(id => loadStarRailCharacterPublication(locale, id)));
+    return <StarRailCalculator locale={locale} verifiedCharacters={docs.flatMap(doc => doc?.characterData ? [{ character: doc.characterData, checkedAt: doc.checkedAt }] : [])} />;
   }
   return <CalculatorClient gameId={gameId} locale={locale} />;
 }
