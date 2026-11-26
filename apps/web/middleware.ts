@@ -9,7 +9,7 @@ import { isWorkerPreviewOrigin } from './lib/preview-origin';
 import { isRetiredPage } from './lib/retired-pages';
 import { shadowLocalEnabled } from '../../packages/core/shadow-local-gate';
 import { isStarRailCmsGuide } from '@gachia/data/cms/starrail-guides';
-import { STARRAIL_CMS_CHARACTERS } from '@gachia/data/cms/starrail-character';
+import { STARRAIL_CMS_CHARACTERS, STARRAIL_CMS_CHARACTER_ALIASES } from '@gachia/data/cms/starrail-character';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -278,6 +278,15 @@ function routeMiddleware(request: NextRequest) {
       status: 404,
       headers: { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' },
     });
+  }
+
+  if (locale && game === 'starrail' && thirdSegment === 'characters' && segments.length === 4 && Object.hasOwn(STARRAIL_CMS_CHARACTER_ALIASES, fourthSegment ?? '')) {
+    const canonical = STARRAIL_CMS_CHARACTER_ALIASES[fourthSegment as keyof typeof STARRAIL_CMS_CHARACTER_ALIASES];
+    const target = new URL(request.nextUrl.href);
+    target.pathname = `/${locale}/starrail/characters/${canonical}`;
+    const response = NextResponse.redirect(target, 308);
+    response.headers.set('Cache-Control', 'no-store');
+    return response;
   }
 
   const response = intlMiddleware(request);

@@ -28,6 +28,14 @@ describe('Star Rail cloud publication', () => {
     }
     expect(parseStarRailPublication({ revision: 1, docs: seed })?.docs).toHaveLength(3);
   });
+  it('redirects the legacy Yao Guang detail to the CMS page in the same language', () => {
+    for (const locale of ['zh', 'en', 'ja']) {
+      const response = middleware(new NextRequest(`https://gachia.com/${locale}/starrail/characters/yao-guang`));
+      expect(response.status).toBe(308);
+      expect(response.headers.get('location')).toBe(`https://gachia.com/${locale}/starrail/characters/yaoguang`);
+      expect(response.headers.get('cache-control')).toBe('no-store');
+    }
+  });
   it('denies anonymous writes before reading the body or accessing storage', async () => {
     const response = await PUT(new Request('https://gachia.com/api/cms/starrail', { method: 'PUT', body: '{}' }));
     expect(response.status).toBe(401); expect(prepare).not.toHaveBeenCalled();

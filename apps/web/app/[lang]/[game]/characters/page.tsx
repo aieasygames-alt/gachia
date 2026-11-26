@@ -8,6 +8,7 @@ import { buildLocalizedAlternates, ensureMetaLength } from '@/lib/seo-metadata';
 import { notFound } from 'next/navigation';
 import { ROCO_LIST_REVIEW } from '@/lib/roco-public-review';
 import { StarRailCmsCharacterCard } from '@/components/wiki/starrail-cms-character';
+import { STARRAIL_CMS_CHARACTER_ALIASES } from '@gachia/data/cms/starrail-character';
 
 const BASE_URL = 'https://gachia.com';
 
@@ -248,7 +249,8 @@ export default async function CharactersPage({
     ],
   };
   const ldScript = <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }} />;
-  const chars = await getCharacterListData(gameId, locale);
+  const characters = await getCharacterListData(gameId, locale);
+  const chars = gameId === 'starrail' ? characters.filter(char => !Object.hasOwn(STARRAIL_CMS_CHARACTER_ALIASES, char.id)) : characters;
 
   if (chars.length > 0) {
     return <>{gameId === 'starrail' && <StarRailCmsCharacterCard locale={locale} />}<CharacterListPage chars={chars} locale={locale} gameId={gameId} gameConfig={gameConfig} />{ldScript}</>;

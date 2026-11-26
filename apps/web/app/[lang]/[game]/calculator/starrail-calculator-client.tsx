@@ -10,6 +10,7 @@ import { getStarRailMaterialById } from '@gachia/data/games/starrail/items';
 import { getMaterialsForCharacter as getStarRailMaterialsForCharacter } from '@gachia/data/games/starrail/extras';
 import type { StarRailCharacter } from '@gachia/data/games/starrail/types';
 import type { VerifiedStarRailCharacter } from '@gachia/data/cms/starrail-character';
+import { STARRAIL_CMS_CHARACTER_ALIASES } from '@gachia/data/cms/starrail-character';
 import { StarRailVerifiedMaterials } from '@/components/wiki/starrail-verified-materials';
 import { Link } from '@/lib/i18n/navigation';
 
@@ -189,7 +190,7 @@ function SRAAscensionCalc({ locale }: { locale: SupportedLocale }) {
   };
 
   const filtered = useMemo(() => {
-    let chars = starrailCharacters;
+    let chars = starrailCharacters.filter(char => !Object.hasOwn(STARRAIL_CMS_CHARACTER_ALIASES, char.id));
     if (filterElement !== 'all') chars = chars.filter((c) => c.element === filterElement);
     if (search.trim()) {
       const q = search.toLowerCase();
@@ -436,7 +437,7 @@ function SRMaterialPlanner({ locale }: { locale: SupportedLocale }) {
   };
 
   const filtered = useMemo(() => {
-    let chars = starrailCharacters;
+    let chars = starrailCharacters.filter(char => !Object.hasOwn(STARRAIL_CMS_CHARACTER_ALIASES, char.id));
     if (filterElement !== 'all') chars = chars.filter((c) => c.element === filterElement);
     if (search.trim()) {
       const q = search.toLowerCase();

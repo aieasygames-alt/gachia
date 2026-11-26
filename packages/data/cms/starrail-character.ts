@@ -1,5 +1,6 @@
 // Structured character publications are independent of the legacy build/tier database.
 export const STARRAIL_CMS_CHARACTERS = { aha: 'aha-character-data', yaoguang: 'yaoguang-character-data' } as const;
+export const STARRAIL_CMS_CHARACTER_ALIASES = { 'yao-guang': 'yaoguang' } as const;
 export const STARRAIL_CMS_CHARACTER_NAMES = { aha: { zh: '阿哈', en: 'Aha', ja: 'Aha' }, yaoguang: { zh: '爻光', en: 'Yao Guang', ja: 'Yao Guang' } } as const;
 export type MaterialCost = { name: string; quantity: number }[];
 export type VerifiedStarRailCharacter = {
