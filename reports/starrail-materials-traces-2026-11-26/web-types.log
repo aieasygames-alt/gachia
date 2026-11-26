@@ -1,0 +1,3 @@
+
+> @gachia/web@0.0.1 type-check /Users/robert/.codex/worktrees/starrail-cms-release/gachia/apps/web
+> tsc --noEmit

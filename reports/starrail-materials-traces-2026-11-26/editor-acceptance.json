@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "publicRecordsAfterRebuild": 55,
+  "exactBaselineContent": true,
+  "draftsRemainPrivate": 16,
+  "productionBuild": "passed",
+  "noSchemaMigration": true
+}

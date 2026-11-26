@@ -1,0 +1,14 @@
+
+> @gachia/web@0.0.1 test /Users/robert/.codex/worktrees/starrail-cms-release/gachia/apps/web
+> vitest run
+
+
+ RUN  v4.1.12 /Users/robert/.codex/worktrees/starrail-cms-release/gachia/apps/web
+
+(node:23424) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  106 passed (106)
+      Tests  629 passed (629)
+   Start at  09:03:14
+   Duration  7.78s (transform 10.54s, setup 0ms, import 30.18s, tests 17.23s, environment 7ms)

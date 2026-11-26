@@ -1,0 +1,101 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 56,
+      "slug": "endurance-of-bronze",
+      "updatedAt": "2026-11-26T01:05:30.830Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 57,
+      "slug": "oath-of-steel",
+      "updatedAt": "2026-11-26T01:05:30.835Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 58,
+      "slug": "safeguard-of-amber",
+      "updatedAt": "2026-11-26T01:05:30.839Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 59,
+      "slug": "seed-of-abundance",
+      "updatedAt": "2026-11-26T01:05:30.842Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 60,
+      "slug": "sprout-of-life",
+      "updatedAt": "2026-11-26T01:05:30.846Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 61,
+      "slug": "flower-of-eternity",
+      "updatedAt": "2026-11-26T01:05:30.849Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 62,
+      "slug": "borisin-teeth",
+      "updatedAt": "2026-11-26T01:05:30.852Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 63,
+      "slug": "lupitoxin-sawteeth",
+      "updatedAt": "2026-11-26T01:05:30.855Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 64,
+      "slug": "moon-rage-fang",
+      "updatedAt": "2026-11-26T01:05:30.858Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 65,
+      "slug": "meteoric-bullet",
+      "updatedAt": "2026-11-26T01:05:30.861Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 66,
+      "slug": "destined-expiration",
+      "updatedAt": "2026-11-26T01:05:30.864Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 67,
+      "slug": "countertemporal-shot",
+      "updatedAt": "2026-11-26T01:05:30.867Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 68,
+      "slug": "fiery-spirit",
+      "updatedAt": "2026-11-26T01:05:30.869Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 69,
+      "slug": "starfire-essence",
+      "updatedAt": "2026-11-26T01:05:30.873Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 70,
+      "slug": "heaven-incinerator",
+      "updatedAt": "2026-11-26T01:05:30.876Z",
+      "action": "created_draft"
+    },
+    {
+      "id": 71,
+      "slug": "credit",
+      "updatedAt": "2026-11-26T01:05:30.878Z",
+      "action": "created_draft"
+    }
+  ]
+}

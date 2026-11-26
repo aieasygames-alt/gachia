@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "web": {
+    "files": 106,
+    "tests": 629,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 18,
+    "tests": 181,
+    "types": "passed"
+  },
+  "cms": {
+    "tests": 11,
+    "types": "passed",
+    "actualEditorTypes": "passed",
+    "actualEditorProductionBuild": "passed"
+  },
+  "capacityContract": "unchanged 100 per locale / 300 total / 512KiB; existing boundary tests retained",
+  "manifests": "passed",
+  "draftIsolation": "editor-acceptance.json",
+  "dataScope": "compatibility-data-acceptance.json"
+}

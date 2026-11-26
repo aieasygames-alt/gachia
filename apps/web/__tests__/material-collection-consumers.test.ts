@@ -8,7 +8,8 @@ import { readFileSync } from 'node:fs';
 import { isStarRailCmsMaterial } from '@gachia/data/cms/starrail-materials';
 import firstMaterialBatch from '../../../reports/starrail-materials-2026-11-25/batch.json';
 import enemyMaterialBatch from '../../../reports/starrail-materials-enemies-2026-11-25/batch.json';
-const materialBatch = { creates: [...firstMaterialBatch.creates, ...enemyMaterialBatch.creates] };
+import traceMaterialBatch from '../../../reports/starrail-materials-traces-2026-11-26/batch.json';
+const materialBatch = { creates: [...firstMaterialBatch.creates, ...enemyMaterialBatch.creates, ...traceMaterialBatch.creates] };
 
 // Locale prefixing is exercised over HTTP with the real navigation component.
 // This render check runs the actual async page and actual material data loaders.

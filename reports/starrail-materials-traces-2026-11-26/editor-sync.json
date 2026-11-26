@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "baselineHEAD": "cc3d3f57662a11271b4bdb836704e9c5fda199c5",
+  "files": [
+    "packages/data/cms/starrail-materials.ts",
+    "packages/data/cms/starrail-updates.ts"
+  ],
+  "capacityContractUnchanged": true,
+  "backupIntegrity": "ok",
+  "publicCountBefore": 55
+}

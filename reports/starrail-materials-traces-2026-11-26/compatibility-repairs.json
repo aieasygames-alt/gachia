@@ -1,0 +1,250 @@
+[
+  {
+    "id": "endurance-of-bronze",
+    "sourceId": "110141",
+    "before": null,
+    "after": {
+      "id": "endurance-of-bronze",
+      "name": "青铜的执着",
+      "nameEn": "Endurance of Bronze",
+      "type": "trace",
+      "rarity": 2,
+      "source": "拟造花萼【支援舱段】；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Supply Zone); Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "oath-of-steel",
+    "sourceId": "110142",
+    "before": null,
+    "after": {
+      "id": "oath-of-steel",
+      "name": "寒铁的誓言",
+      "nameEn": "Oath of Steel",
+      "type": "trace",
+      "rarity": 3,
+      "source": "拟造花萼【支援舱段】；「万能合成机」- 材料合成；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Supply Zone); Omni-Synthesizer — Material Synthesis; Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "safeguard-of-amber",
+    "sourceId": "110143",
+    "before": null,
+    "after": {
+      "id": "safeguard-of-amber",
+      "name": "琥珀的坚守",
+      "nameEn": "Safeguard of Amber",
+      "type": "trace",
+      "rarity": 4,
+      "source": "拟造花萼【支援舱段】；「万能合成机」- 材料合成；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Supply Zone); Omni-Synthesizer — Material Synthesis; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "seed-of-abundance",
+    "sourceId": "110171",
+    "before": null,
+    "after": {
+      "id": "seed-of-abundance",
+      "name": "丰饶之种",
+      "nameEn": "Seed of Abundance",
+      "type": "trace",
+      "rarity": 2,
+      "source": "拟造花萼【边缘通路】；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Backwater Pass); Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "sprout-of-life",
+    "sourceId": "110172",
+    "before": null,
+    "after": {
+      "id": "sprout-of-life",
+      "name": "生命之芽",
+      "nameEn": "Sprout of Life",
+      "type": "trace",
+      "rarity": 3,
+      "source": "拟造花萼【边缘通路】；「万能合成机」- 材料合成；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Backwater Pass); Omni-Synthesizer — Material Synthesis; Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "flower-of-eternity",
+    "sourceId": "110173",
+    "before": null,
+    "after": {
+      "id": "flower-of-eternity",
+      "name": "永恒之花",
+      "nameEn": "Flower of Eternity",
+      "type": "trace",
+      "rarity": 4,
+      "source": "拟造花萼【边缘通路】；「万能合成机」- 材料合成；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Backwater Pass); Omni-Synthesizer — Material Synthesis; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "borisin-teeth",
+    "sourceId": "110181",
+    "before": null,
+    "after": {
+      "id": "borisin-teeth",
+      "name": "步离犬牙",
+      "nameEn": "Borisin Teeth",
+      "type": "trace",
+      "rarity": 2,
+      "source": "拟造花萼【鳞渊境】；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Scalegorge Waterscape); Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "lupitoxin-sawteeth",
+    "sourceId": "110182",
+    "before": null,
+    "after": {
+      "id": "lupitoxin-sawteeth",
+      "name": "狼毒锯牙",
+      "nameEn": "Lupitoxin Sawteeth",
+      "type": "trace",
+      "rarity": 3,
+      "source": "拟造花萼【鳞渊境】；「万能合成机」- 材料合成；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Scalegorge Waterscape); Omni-Synthesizer — Material Synthesis; Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "moon-rage-fang",
+    "sourceId": "110183",
+    "before": null,
+    "after": {
+      "id": "moon-rage-fang",
+      "name": "月狂獠牙",
+      "nameEn": "Moon Rage Fang",
+      "type": "trace",
+      "rarity": 4,
+      "source": "拟造花萼【鳞渊境】；「万能合成机」- 材料合成；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Scalegorge Waterscape); Omni-Synthesizer — Material Synthesis; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "meteoric-bullet",
+    "sourceId": "110191",
+    "before": null,
+    "after": {
+      "id": "meteoric-bullet",
+      "name": "陨铁弹丸",
+      "nameEn": "Meteoric Bullet",
+      "type": "trace",
+      "rarity": 2,
+      "source": "拟造花萼【苏乐达™热砂海选会场】；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx: SoulGlad™ Scorchsand Audition Venue; Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "destined-expiration",
+    "sourceId": "110192",
+    "before": null,
+    "after": {
+      "id": "destined-expiration",
+      "name": "命定死因",
+      "nameEn": "Destined Expiration",
+      "type": "trace",
+      "rarity": 3,
+      "source": "拟造花萼【苏乐达™热砂海选会场】；「万能合成机」- 材料合成；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx: SoulGlad™ Scorchsand Audition Venue; Omni-Synthesizer — Material Synthesis; Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "countertemporal-shot",
+    "sourceId": "110193",
+    "before": null,
+    "after": {
+      "id": "countertemporal-shot",
+      "name": "逆时一击",
+      "nameEn": "Countertemporal Shot",
+      "type": "trace",
+      "rarity": 4,
+      "source": "拟造花萼【苏乐达™热砂海选会场】；「万能合成机」- 材料合成；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx: SoulGlad™ Scorchsand Audition Venue; Omni-Synthesizer — Material Synthesis; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "fiery-spirit",
+    "sourceId": "110221",
+    "before": null,
+    "after": {
+      "id": "fiery-spirit",
+      "name": "炽情之灵",
+      "nameEn": "Fiery Spirit",
+      "type": "trace",
+      "rarity": 2,
+      "source": "拟造花萼【丹鼎司】；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Alchemy Commission); Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "starfire-essence",
+    "sourceId": "110222",
+    "before": null,
+    "after": {
+      "id": "starfire-essence",
+      "name": "星火之精",
+      "nameEn": "Starfire Essence",
+      "type": "trace",
+      "rarity": 3,
+      "source": "拟造花萼【丹鼎司】；「万能合成机」- 材料合成；余烬兑换；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Alchemy Commission); Omni-Synthesizer — Material Synthesis; Embers Exchange; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "heaven-incinerator",
+    "sourceId": "110223",
+    "before": null,
+    "after": {
+      "id": "heaven-incinerator",
+      "name": "焚天之魔",
+      "nameEn": "Heaven Incinerator",
+      "type": "trace",
+      "rarity": 4,
+      "source": "拟造花萼【丹鼎司】；「万能合成机」- 材料合成；「万能合成机」- 材料置换",
+      "sourceEn": "Calyx (Alchemy Commission); Omni-Synthesizer — Material Synthesis; Omni-Synthesizer — Material Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  },
+  {
+    "id": "credit",
+    "sourceId": "2",
+    "before": {
+      "id": "credit",
+      "name": "信用点",
+      "nameEn": "Credit",
+      "type": "currency",
+      "rarity": 3,
+      "source": "日常任务、拟造花萼、活动奖励",
+      "sourceEn": "Daily missions, Calyx, event rewards"
+    },
+    "after": {
+      "id": "credit",
+      "name": "信用点",
+      "nameEn": "Credit",
+      "type": "currency",
+      "rarity": 3,
+      "source": "拟造花萼【大矿区】；拟造花萼【工造司】；拟造花萼【「白日梦」酒店-梦境】；拟造花萼【「呓语密林」神悟树庭】；任务奖励；委托奖励；余烬兑换",
+      "sourceEn": "Calyx: Great Mine; Calyx: Artisanship Commission; Calyx: The Reverie (Dreamscape); Calyx: \"Murmuring Woods\" Grove of Epiphany; Mission rewards; Assignment rewards; Embers Exchange"
+    },
+    "sourceScope": "only cross-verified routes; EN follows matched CN route indexes"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "recordsBefore": 68,
+  "recordsAfter": 83,
+  "correctedStableIds": [
+    "credit"
+  ],
+  "addedIds": [
+    "borisin-teeth",
+    "countertemporal-shot",
+    "destined-expiration",
+    "endurance-of-bronze",
+    "fiery-spirit",
+    "flower-of-eternity",
+    "heaven-incinerator",
+    "lupitoxin-sawteeth",
+    "meteoric-bullet",
+    "moon-rage-fang",
+    "oath-of-steel",
+    "safeguard-of-amber",
+    "seed-of-abundance",
+    "sprout-of-life",
+    "starfire-essence"
+  ],
+  "currencyTypePreserved": true,
+  "unrelatedMaterialsUnchanged": true,
+  "mirrorExact": true,
+  "otherGameManifestsUnchanged": true,
+  "publishedChineseAfter": 71,
+  "compactPublicationUTF8Bytes": 204906,
+  "byteLimit": 524288
+}

@@ -1,0 +1,431 @@
+[
+  {
+    "id": "110141",
+    "slug": "endurance-of-bronze",
+    "name": "青铜的执着",
+    "rarity": 2,
+    "bwikiHeading": "青铜的执着",
+    "bwikiRarity": "2星.png",
+    "pinnedRoutes": [
+      "拟造花萼【支援舱段】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【支援舱段】 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【支援舱段】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "day-one-of-my-new-life"
+    ]
+  },
+  {
+    "id": "110142",
+    "slug": "oath-of-steel",
+    "name": "寒铁的誓言",
+    "rarity": 3,
+    "bwikiHeading": "寒铁的誓言",
+    "bwikiRarity": "3星.png",
+    "pinnedRoutes": [
+      "拟造花萼【支援舱段】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【支援舱段】 「万能合成机」- 材料合成 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【支援舱段】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "day-one-of-my-new-life"
+    ]
+  },
+  {
+    "id": "110143",
+    "slug": "safeguard-of-amber",
+    "name": "琥珀的坚守",
+    "rarity": 4,
+    "bwikiHeading": "琥珀的坚守",
+    "bwikiRarity": "4星.png",
+    "pinnedRoutes": [
+      "拟造花萼【支援舱段】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【支援舱段】 「万能合成机」- 材料合成 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【支援舱段】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "day-one-of-my-new-life"
+    ]
+  },
+  {
+    "id": "110171",
+    "slug": "seed-of-abundance",
+    "name": "丰饶之种",
+    "rarity": 2,
+    "bwikiHeading": "丰饶之种",
+    "bwikiRarity": "2星.png",
+    "pinnedRoutes": [
+      "拟造花萼【边缘通路】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【边缘通路】 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【边缘通路】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "fine-fruit"
+    ]
+  },
+  {
+    "id": "110172",
+    "slug": "sprout-of-life",
+    "name": "生命之芽",
+    "rarity": 3,
+    "bwikiHeading": "生命之芽",
+    "bwikiRarity": "3星.png",
+    "pinnedRoutes": [
+      "拟造花萼【边缘通路】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【边缘通路】 「万能合成机」- 材料合成 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【边缘通路】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "fine-fruit"
+    ]
+  },
+  {
+    "id": "110173",
+    "slug": "flower-of-eternity",
+    "name": "永恒之花",
+    "rarity": 4,
+    "bwikiHeading": "永恒之花",
+    "bwikiRarity": "4星.png",
+    "pinnedRoutes": [
+      "拟造花萼【边缘通路】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【边缘通路】 「万能合成机」- 材料合成 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【边缘通路】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "fine-fruit"
+    ]
+  },
+  {
+    "id": "110181",
+    "slug": "borisin-teeth",
+    "name": "步离犬牙",
+    "rarity": 2,
+    "bwikiHeading": "步离犬牙",
+    "bwikiRarity": "2星.png",
+    "pinnedRoutes": [
+      "拟造花萼【鳞渊境】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【鳞渊境】 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【鳞渊境】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "indelible-promise"
+    ]
+  },
+  {
+    "id": "110182",
+    "slug": "lupitoxin-sawteeth",
+    "name": "狼毒锯牙",
+    "rarity": 3,
+    "bwikiHeading": "狼毒锯牙",
+    "bwikiRarity": "3星.png",
+    "pinnedRoutes": [
+      "拟造花萼【鳞渊境】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【鳞渊境】 「万能合成机」- 材料合成 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【鳞渊境】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "indelible-promise"
+    ]
+  },
+  {
+    "id": "110183",
+    "slug": "moon-rage-fang",
+    "name": "月狂獠牙",
+    "rarity": 4,
+    "bwikiHeading": "月狂獠牙",
+    "bwikiRarity": "4星.png",
+    "pinnedRoutes": [
+      "拟造花萼【鳞渊境】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【鳞渊境】 「万能合成机」- 材料合成 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【鳞渊境】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "indelible-promise"
+    ]
+  },
+  {
+    "id": "110191",
+    "slug": "meteoric-bullet",
+    "name": "陨铁弹丸",
+    "rarity": 2,
+    "bwikiHeading": "陨铁弹丸",
+    "bwikiRarity": "2星.png",
+    "pinnedRoutes": [
+      "拟造花萼【苏乐达™热砂海选会场】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【苏乐达™热砂海选会场】 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【苏乐达™热砂海选会场】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "shadowed-by-night"
+    ]
+  },
+  {
+    "id": "110192",
+    "slug": "destined-expiration",
+    "name": "命定死因",
+    "rarity": 3,
+    "bwikiHeading": "命定死因",
+    "bwikiRarity": "3星.png",
+    "pinnedRoutes": [
+      "拟造花萼【苏乐达™热砂海选会场】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【苏乐达™热砂海选会场】 「万能合成机」- 材料合成 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【苏乐达™热砂海选会场】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "shadowed-by-night"
+    ]
+  },
+  {
+    "id": "110193",
+    "slug": "countertemporal-shot",
+    "name": "逆时一击",
+    "rarity": 4,
+    "bwikiHeading": "逆时一击",
+    "bwikiRarity": "4星.png",
+    "pinnedRoutes": [
+      "拟造花萼【苏乐达™热砂海选会场】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【苏乐达™热砂海选会场】 「万能合成机」- 材料合成 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【苏乐达™热砂海选会场】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "shadowed-by-night"
+    ]
+  },
+  {
+    "id": "110221",
+    "slug": "fiery-spirit",
+    "name": "炽情之灵",
+    "rarity": 2,
+    "bwikiHeading": "炽情之灵",
+    "bwikiRarity": "2星.png",
+    "pinnedRoutes": [
+      "拟造花萼【丹鼎司】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【丹鼎司】 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【丹鼎司】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "along-the-passing-shore"
+    ]
+  },
+  {
+    "id": "110222",
+    "slug": "starfire-essence",
+    "name": "星火之精",
+    "rarity": 3,
+    "bwikiHeading": "星火之精",
+    "bwikiRarity": "3星.png",
+    "pinnedRoutes": [
+      "拟造花萼【丹鼎司】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【丹鼎司】 「万能合成机」- 材料合成 余烬兑换 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【丹鼎司】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "along-the-passing-shore"
+    ]
+  },
+  {
+    "id": "110223",
+    "slug": "heaven-incinerator",
+    "name": "焚天之魔",
+    "rarity": 4,
+    "bwikiHeading": "焚天之魔",
+    "bwikiRarity": "4星.png",
+    "pinnedRoutes": [
+      "拟造花萼【丹鼎司】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "bwikiRoutesText": "拟造花萼【丹鼎司】 「万能合成机」- 材料合成 「万能合成机」- 材料置换",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【丹鼎司】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ],
+    "pinnedNotCrossVerified": [],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "along-the-passing-shore"
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "credit",
+    "name": "信用点",
+    "rarity": 3,
+    "bwikiHeading": "信用点",
+    "bwikiRarity": "3星.png",
+    "pinnedRoutes": [
+      "拟造花萼【大矿区】",
+      "拟造花萼【工造司】",
+      "拟造花萼【「白日梦」酒店-梦境】",
+      "拟造花萼【「呓语密林」神悟树庭】",
+      "拟造花萼【鸽川区】",
+      "任务奖励",
+      "委托奖励",
+      "余烬兑换"
+    ],
+    "bwikiRoutesText": "拟造花萼 【大矿区】 拟造花萼 【工造司】 拟造花萼 【「白日梦」酒店-梦境】 拟造花萼 【「呓语密林」神悟树庭】 委托奖励 余烬兑换 任务奖励",
+    "matchingNormalization": "whitespace only",
+    "verifiedRoutes": [
+      "拟造花萼【大矿区】",
+      "拟造花萼【工造司】",
+      "拟造花萼【「白日梦」酒店-梦境】",
+      "拟造花萼【「呓语密林」神悟树庭】",
+      "任务奖励",
+      "委托奖励",
+      "余烬兑换"
+    ],
+    "pinnedNotCrossVerified": [
+      "拟造花萼【鸽川区】"
+    ],
+    "bwikiAdditionalNotCrossVerified": "",
+    "relatedPublishedCones": [
+      "shattered-home",
+      "day-one-of-my-new-life",
+      "fine-fruit",
+      "geniuses-repose",
+      "before-dawn",
+      "brighter-than-the-sun",
+      "along-the-passing-shore",
+      "indelible-promise",
+      "shadowed-by-night"
+    ]
+  }
+]

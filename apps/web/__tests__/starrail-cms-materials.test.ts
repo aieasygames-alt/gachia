@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import batch from '../../../reports/starrail-materials-2026-11-25/batch.json';
 import previous from '../../../reports/starrail-remaining-cones-2026-11-25/cloud-after.json';
 import enemyBatch from '../../../reports/starrail-materials-enemies-2026-11-25/batch.json';
+import traceBatch from '../../../reports/starrail-materials-traces-2026-11-26/batch.json';
 import { STARRAIL_CMS_MATERIALS } from '@gachia/data/cms/starrail-materials';
 import { isCommunityStarRailSource, parseStarRailUpdate } from '@gachia/data/cms/starrail-updates';
 const { load } = vi.hoisted(() => ({ load: vi.fn() }));
@@ -11,7 +12,7 @@ vi.mock('@/lib/starrail-publication', () => ({ loadStarRailUpdates: load }));
 vi.mock('@/lib/i18n/navigation', () => ({ Link: ({ children, href }: { children: React.ReactNode; href: string }) => createElement('a', { href }, children) }));
 import { StarRailCmsMaterial, StarRailCmsMaterialCards, StarRailEquipmentMaterialLinks, starRailMaterialMetadata } from '@/components/wiki/starrail-cms-materials';
 import { StarRailCmsEquipment } from '@/components/wiki/starrail-cms-equipment';
-const docs = [...batch.creates, ...enemyBatch.creates].map(d => parseStarRailUpdate(d)!);
+const docs = [...batch.creates, ...enemyBatch.creates, ...traceBatch.creates].map(d => parseStarRailUpdate(d)!);
 const old = previous.docs.map(d => parseStarRailUpdate(d)!);
 describe('independent material publication and related light-cone links', () => {
   beforeEach(() => load.mockImplementation(async (locale: string) => ({ source: 'cms', updates: locale === 'zh' ? [...old, ...docs] : [] })));
