@@ -1,0 +1,14 @@
+{
+  "files": [
+    "packages/data/cms/starrail-events.ts",
+    "packages/data/cms/starrail-updates.ts",
+    "packages/data/cms/starrail-publication.ts",
+    "tools/payload-cms/payload.config.ts",
+    "tools/payload-cms/payload-types.ts",
+    "tools/payload-cms/migrations/index.ts",
+    "tools/payload-cms/migrations/20261126_event_schedule.ts"
+  ],
+  "oldServerPID": 25322,
+  "publicRecords": 71,
+  "onlyReviewedAdditiveMigration": true
+}

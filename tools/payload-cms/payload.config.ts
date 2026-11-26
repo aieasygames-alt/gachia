@@ -62,6 +62,7 @@ const Updates: CollectionConfig = {
     { name: 'currentVersion', label: '版本号 / 名称', type: 'text', maxLength: 100, admin: { condition: d => d.kind === 'version' } },
     { name: 'releaseDate', label: '官方发布日期（YYYY-MM-DD）', type: 'text', admin: { condition: d => d.kind === 'version' } },
     { name: 'characterData', label: '角色倍率与材料数据', type: 'json', admin: { condition: d => d.kind === 'character', description: '独立角色页与材料计算器共用。完整五项技能、六次晋阶和十三个节点须通过发布校验；无数据的角色资料可留空。' } },
+    { name: 'eventSchedule', label: '国服结构化活动日历', type: 'json', admin: { condition: d => d.kind === 'event', description: '日历与正文一起发布。按国服公告填写日期、条件和来源；更新后开放、版本期间和未公告截止分别记录，不猜测维护完成时间或时区。留空的条目只显示正文。' } },
     { name: 'facts', label: '已核验事实', type: 'array', required: true, minRows: 1, maxRows: 20,
       fields: [{ name: 'text', label: '事实', type: 'textarea', required: true, maxLength: 4000 }] },
     { name: 'boundary', label: '未核验项 / 时间与地区边界', type: 'textarea', required: true, maxLength: 2000 },

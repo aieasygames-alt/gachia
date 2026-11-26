@@ -172,6 +172,18 @@ export interface GameUpdate {
     | number
     | boolean
     | null;
+  /**
+   * 日历与正文一起发布。按国服公告填写日期、条件和来源；更新后开放、版本期间和未公告截止分别记录，不猜测维护完成时间或时区。留空的条目只显示正文。
+   */
+  eventSchedule?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   facts: {
     text: string;
     id?: string | null;
@@ -302,6 +314,7 @@ export interface GameUpdatesSelect<T extends boolean = true> {
   currentVersion?: T;
   releaseDate?: T;
   characterData?: T;
+  eventSchedule?: T;
   facts?:
     | T
     | {

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "web": {
+    "files": 107,
+    "tests": 632,
+    "types": "passed",
+    "productionBuild": "passed"
+  },
+  "data": {
+    "files": 19,
+    "tests": 193,
+    "types": "passed"
+  },
+  "cms": {
+    "tests": 11,
+    "types": "passed",
+    "actualTypes": "passed",
+    "actualProductionBuild": "passed"
+  },
+  "migrationProbe": "probe-migration.json",
+  "actualMigration": "actual-migration.json",
+  "draftIsolation": "editor-acceptance.json"
+}

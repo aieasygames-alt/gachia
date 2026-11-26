@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "method": "Payload additive migration",
+  "columns": [
+    "game_updates.event_schedule",
+    "_game_updates_v.version_event_schedule"
+  ],
+  "publicRecordsPreserved": 71,
+  "latestRecordsAndTimestampsPreserved": true
+}

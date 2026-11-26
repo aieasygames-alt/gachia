@@ -2,6 +2,7 @@ import { Link } from '@/lib/i18n/navigation';
 import type { SupportedLocale } from '@gachia/core';
 import { loadStarRailUpdates } from '@/lib/starrail-publication';
 import { StarRailUpdates } from './starrail-updates';
+import { StarRailEventCalendar } from './starrail-event-calendar';
 
 export async function StarRailEvents({ locale }: { locale: SupportedLocale }) {
   const result = await loadStarRailUpdates(locale);
@@ -12,6 +13,7 @@ export async function StarRailEvents({ locale }: { locale: SupportedLocale }) {
     ja: { title: 'スターレイルのイベントと報酬日程', intro: '中国版・グローバル版の対象範囲と受取条件を区別しています。イベント終了、報酬受取期限、メンテナンスはそれぞれ確認してください。', empty: 'この言語のイベント資料は準備中です。中国語の資料には対象地域と時刻を記載しています。' },
   }[locale];
   return <div><h1 className="mb-4 text-2xl font-bold text-game-primary">{copy.title}</h1><p className="text-sm leading-7 text-game-text-muted">{copy.intro}</p>
+    <StarRailEventCalendar result={events} locale={locale} />
     {events.updates.length ? <StarRailUpdates result={events} locale={locale} /> : <p className="mt-6 text-game-text-muted">{copy.empty} <Link className="text-game-primary underline" href="/starrail/events" locale="zh">中文</Link></p>}
   </div>;
 }

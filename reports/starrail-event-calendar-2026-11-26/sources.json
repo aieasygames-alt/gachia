@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-11-26",
+  "method": "Read rendered official MiYouShe article body, official author identity and official announcement list through the browser. HTML-only requests returned a loading shell and were not treated as evidence.",
+  "sources": [
+    {
+      "url": "https://www.miyoushe.com/sr/article/79482327",
+      "title": "4.7版本「此刻，将群星付之一笑」版本更新说明",
+      "published": "2026-11-11",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "supports": ["五项限时活动至2026/12/23 03:59", "好礼为4.7版本持续期间且等级≥4", "厨房、成名之路和奇库等级≥21；幻乐秀场≥4", "货币战争只有赛季更新时间，没有独立结束时刻", "三个周期挑战各自的跨版本窗口"],
+      "timeBoundary": "The CN article prints civil times without an explicit offset. Preserve announcement wording; do not infer UTC+8, viewer-local conversion, or a precise update-completion time from the estimated maintenance duration."
+    },
+    {
+      "url": "https://www.miyoushe.com/sr/article/79712872",
+      "title": "「位面分裂」活动：位面饰品限时双倍掉落",
+      "published": "2026-11-22",
+      "author": "崩坏星穹铁道",
+      "identity": "崩坏：星穹铁道官方账号",
+      "section": "官方",
+      "supports": ["2026/11/23 04:00 - 2026/12/07 03:59", "解锁位面饰品", "双倍次数有限，以活动界面为准且期间不重置"]
+    }
+  ],
+  "discoveryOnly": {
+    "url": "https://www.miyoushe.com/sr/home/53?type=1",
+    "observedLatestAnnouncement": "11月22日位面分裂公告",
+    "knownIssueTitle": "4.7版本游戏优化及已知问题说明（11/18更新）",
+    "boundary": "The displayed announcement list did not provide an independent relic double-drop window for 异器盈界. This is bounded to the inspected list; it does not prove that no later notice exists anywhere. No new hotfix verification is claimed."
+  },
+  "notClaimed": ["No new有效国服兑换码", "No独立异器盈界日期", "No新增角色倍率或材料数量", "No inferred challenge unlock levels or total reward amounts"]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 3,
+      "slug": "v4-7-events-and-rewards",
+      "updatedAt": "2026-11-26T01:54:59.346Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 7,
+      "slug": "v4-7-cn-endgame-calendar",
+      "updatedAt": "2026-11-26T01:54:59.353Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 8,
+      "slug": "v4-7-cn-planar-fissure",
+      "updatedAt": "2026-11-26T01:54:59.360Z",
+      "action": "updated_draft"
+    }
+  ]
+}

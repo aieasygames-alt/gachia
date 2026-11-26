@@ -1,4 +1,5 @@
 import { STARRAIL_CMS_MATERIALS } from './starrail-materials';
+import { parseStarRailEventSchedule, type StarRailEventSchedule } from './starrail-events';
 import { STARRAIL_CMS_EQUIPMENT } from './starrail-equipment';
 import { parseStarRailCharacter, STARRAIL_CMS_CHARACTERS, type VerifiedStarRailCharacter } from './starrail-character';
 // A deliberately small contract shared by Payload and the website, without a CMS runtime dependency.
@@ -19,6 +20,7 @@ export interface StarRailUpdate {
   currentVersion?: string;
   releaseDate?: string;
   characterData?: VerifiedStarRailCharacter;
+  eventSchedule?: StarRailEventSchedule;
   _status: 'published';
 }
 
@@ -142,6 +144,9 @@ export function parseStarRailUpdate(input: unknown): StarRailUpdate | null {
   if (d.kind === 'material' && !Object.hasOwn(STARRAIL_CMS_MATERIALS, d.slug as string)) return null;
   const characterData = d.characterData == null ? undefined : parseStarRailCharacter(d.characterData);
   if (characterData === null || (characterData && (d.kind !== 'character' || d.slug !== STARRAIL_CMS_CHARACTERS[characterData.id]))) return null;
+  const cnSources = d.sources.map(s => s.url).filter((url: string) => isOfficialStarRailSource(url) && ['www.miyoushe.com', 'sr.mihoyo.com', 'act.mihoyo.com'].includes(new URL(url).hostname));
+  const eventSchedule = d.eventSchedule == null ? undefined : parseStarRailEventSchedule(d.eventSchedule, cnSources);
+  if (eventSchedule === null || (eventSchedule && (d.kind !== 'event' || !d.region.includes('国服') || d.region.includes('国际服')))) return null;
   // Strip internal CMS fields, relationships and unknown keys before rendering.
   return {
     gameId: 'starrail', slug: d.slug, locale: d.locale as UpdateLocale, kind: d.kind as UpdateKind,
@@ -149,6 +154,7 @@ export function parseStarRailUpdate(input: unknown): StarRailUpdate | null {
     facts: d.facts.map(f => ({ text: f.text })), sources: d.sources.map(s => ({ url: s.url })),
     ...(d.kind === 'version' ? { currentVersion: d.currentVersion as string, releaseDate: d.releaseDate as string } : {}),
     ...(characterData ? { characterData } : {}),
+    ...(eventSchedule ? { eventSchedule } : {}),
     _status: 'published',
   };
 }

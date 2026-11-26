@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "publicCount": 71,
+  "draftCalendarsRemainPrivate": 3,
+  "actualProductionBuild": "passed",
+  "additiveMigration": "actual-migration.json",
+  "sevenReviewedFilesOnly": true,
+  "previousBuild": "ignored .private/editor-build-before",
+  "publicExportComparison": "All pre-existing fields unchanged; newly added eventSchedule is null in anonymous export"
+}

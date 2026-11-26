@@ -1,0 +1,277 @@
+{
+  "creates": [],
+  "updates": [
+    {
+      "slug": "v4-7-events-and-rewards",
+      "data": {
+        "checkedAt": "2026-11-26",
+        "eventSchedule": {
+          "region": "cn",
+          "clock": "announcement",
+          "entries": [
+            {
+              "id": "v4-7-cn-gifts",
+              "title": "开场好礼先抱走",
+              "category": "gift",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "version-end",
+                "version": "4.7"
+              },
+              "eligibility": "开拓等级≥4级",
+              "note": "公告范围为4.7版本持续期间；各好礼需按对应入口与签到进度领取，不能把累计签到20张专票写成登录即领。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-kitchen",
+              "title": "剧场版绒绒号：欢闹厨房",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "开拓等级≥21级；支持「终末视界」提前体验",
+              "note": "此处截止为限时活动窗口；限时奖励与收录「常时传略」后的常驻奖励分开核对。建议完成「二相乐园」—「此刻，将群星付之一笑」后体验，建议剧情不是额外强制门槛。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-fame",
+              "title": "星际和平盛典：成名之路",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "开拓等级≥21级",
+              "note": "按国服版本更新说明列示活动窗口与等级要求；关卡开放、任务进度及奖励领取状态以游戏内为准。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-relic-vault",
+              "title": "奇库寻遗",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "开拓等级≥21级",
+              "note": "按活动任务取得权限卡，开箱与暂存规则见下方已核验条目；6个部位不等于只有6次开箱。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-fashion",
+              "title": "寰宇美学·幻乐秀场",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "开拓等级≥4级",
+              "note": "使用时装邀请函抽取；不把时装抽取活动写成免费登录领取，也不推算未核验的总抽取成本。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-resonance",
+              "title": "万象和鸣",
+              "category": "limited",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-23T03:59"
+              },
+              "eligibility": "公告未另列等级门槛；按活动入口和累计回响规则核对",
+              "note": "累计消耗活动跃迁专票或时装邀请函获取回响；两档奖励按累计1600、3200分别领取，不能视为登录即领。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-currency-war",
+              "title": "货币战争·入画奇航",
+              "category": "season",
+              "start": {
+                "kind": "after-update",
+                "date": "2026-11-11",
+                "version": "4.7"
+              },
+              "end": {
+                "kind": "not-announced"
+              },
+              "eligibility": "开拓等级≥21级；支持「终末视界」提前体验",
+              "note": "这是新赛季更新时间；所查更新说明未公告独立结束时刻，不套用12月23日03:59。建议完成「匹诺康尼」—「异乡异客」后体验。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "text": "「剧场版绒绒号：欢闹厨房」「星际和平盛典：成名之路」「奇库寻遗」均在 4.7 更新后开放，至 2026/12/23 03:59 结束；参与条件均为开拓等级≥21级。"
+          },
+          {
+            "text": "「欢闹厨房」支持通过「终末视界」提前体验；官方建议完成开拓任务「二相乐园」—「此刻，将群星付之一笑」后体验。建议剧情顺序与强制等级要求应分别核对。"
+          },
+          {
+            "text": "「寰宇美学·幻乐秀场」的窗口同为 4.7 更新后至 2026/12/23 03:59，参与条件为开拓等级≥4级；阿哈时装「群星乐透」通过时装抽取获取。"
+          },
+          {
+            "text": "「万象和鸣」窗口为4.7更新后至2026/12/23 03:59：任意活动跃迁每消耗星轨专票×1计16回响，「幻乐秀场」每消耗时装邀请函×1计10回响；累计回响达到1600、3200各可领取奇缘星魂×1。常驻跃迁不在该专票累计范围内。"
+          },
+          {
+            "text": "「货币战争·入画奇航」在 4.7 更新后上线，参与条件为开拓等级≥21级，支持「终末视界」提前体验；建议完成「匹诺康尼」—「异乡异客」后体验。正式更新说明未为该赛季另列与上述限时活动相同的结束时刻。"
+          },
+          {
+            "text": "国服专题列出「货币战争·入画奇航」游玩奖励：星琼×4000、变量骰子×2、自塑尘脂×2、命运的足迹×3等；「奇库寻遗」最多可获取6件不同部位、初始副属性为4条的+15五星遗器。奖励需要参与对应玩法，不能理解为登录一次全部领取。"
+          },
+          {
+            "text": "4.7国服专题把「异器盈界/位面分裂」列为双倍掉落预告，只写隧洞遗器、位面饰品双倍掉落即将开启，未给「异器盈界」独立窗口和次数。11月26日本批另查官方公告列表，所见最新双倍公告为11月22日「位面分裂」；不能据此推算「异器盈界」在12月14日或其他日期开启。"
+          }
+        ],
+        "summary": "已按国服正式更新说明整理7项活动与赛季窗口；版本好礼、限时活动和未公告独立截止的赛季分开显示。异器盈界仍待独立公告核验。"
+      }
+    },
+    {
+      "slug": "v4-7-cn-endgame-calendar",
+      "data": {
+        "checkedAt": "2026-11-26",
+        "eventSchedule": {
+          "region": "cn",
+          "clock": "announcement",
+          "entries": [
+            {
+              "id": "v4-7-cn-apocalyptic-shadow",
+              "title": "末日幻影·领航冥茫",
+              "category": "challenge",
+              "start": {
+                "kind": "at",
+                "value": "2026-11-16T04:00"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-28T03:59"
+              },
+              "eligibility": "按游戏内「末日幻影」入口及当前账号解锁状态核对",
+              "note": "每轮保留自己的公告截止时间，不统一截断到4.7版本结束；本条不新增未核验的解锁等级或敌人配置。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-pure-fiction",
+              "title": "虚构叙事·虚事成理",
+              "category": "challenge",
+              "start": {
+                "kind": "at",
+                "value": "2026-11-30T04:00"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2027-01-11T03:59"
+              },
+              "eligibility": "按游戏内「虚构叙事」入口及当前账号解锁状态核对",
+              "note": "2026年11月26日核验时尚未开启；此轮持续至2027年，不能省略年份或套用版本结束日。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            },
+            {
+              "id": "v4-7-cn-memory-of-chaos",
+              "title": "混沌回忆·漆黑残响",
+              "category": "challenge",
+              "start": {
+                "kind": "at",
+                "value": "2026-12-14T04:00"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2027-01-25T03:59"
+              },
+              "eligibility": "按游戏内「忘却之庭·混沌回忆」入口及当前账号解锁状态核对",
+              "note": "2026年11月26日核验时尚未开启；关卡与奖励需按对应轮次另行核验。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79482327"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "text": "末日幻影「领航冥茫」：2026/11/16 04:00 至2026/12/28 03:59。"
+          },
+          {
+            "text": "虚构叙事「虚事成理」：2026/11/30 04:00 至2027/01/11 03:59；本站11月26日核验时尚未到该轮开启日。"
+          },
+          {
+            "text": "混沌回忆「漆黑残响」：2026/12/14 04:00 至2027/01/25 03:59；本站11月26日核验时尚未开启。"
+          },
+          {
+            "text": "三类常驻玩法交替更新。每一轮按自己的公告窗口结束，不统一截断到4.7版本结束日；已开放与待开放轮次应分别安排。"
+          }
+        ],
+        "summary": "已用国服正式更新说明独立核对末日幻影、虚构叙事和混沌回忆日程；挑战窗口可跨越4.7版本。"
+      }
+    },
+    {
+      "slug": "v4-7-cn-planar-fissure",
+      "data": {
+        "checkedAt": "2026-11-26",
+        "eventSchedule": {
+          "region": "cn",
+          "clock": "announcement",
+          "entries": [
+            {
+              "id": "v4-7-cn-planar-fissure",
+              "title": "位面分裂",
+              "category": "limited",
+              "start": {
+                "kind": "at",
+                "value": "2026-11-23T04:00"
+              },
+              "end": {
+                "kind": "at",
+                "value": "2026-12-07T03:59"
+              },
+              "eligibility": "解锁「位面饰品」",
+              "note": "双倍次数在活动期间不会重置；具体次数上限和个人剩余次数以活动界面为准，不沿用往期数字。",
+              "sourceUrl": "https://www.miyoushe.com/sr/article/79712872"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "text": "活动时间：2026/11/23 04:00 至2026/12/07 03:59；参与条件为解锁「位面饰品」。"
+          },
+          {
+            "text": "活动期间，在「模拟宇宙」获取沉浸奖励或进行「饰品提取」时，消耗活动双倍奖励次数与沉浸器（或开拓力），可在原有奖励之外额外获得一次奖励。"
+          },
+          {
+            "text": "双倍奖励次数有限，剩余次数与次数上限以「位面分裂」活动界面显示为准。正式公告未公布统一的具体次数，本条不写猜测数值。"
+          },
+          {
+            "text": "双倍奖励次数在活动期间不会重置，请在截止前按游戏内剩余次数安排；双倍掉落不保证获得指定主属性或副属性。"
+          }
+        ],
+        "summary": "11月22日国服正式公告已公布位面饰品双倍活动窗口；11月26日处于该公告窗口内，双倍次数在活动期间不会重置。"
+      }
+    }
+  ]
+}

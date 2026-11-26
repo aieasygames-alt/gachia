@@ -15,6 +15,8 @@ export function parseStarRailPublication(input: unknown): StarRailPublication | 
   if (docs.some(doc => !doc)) return null;
   const valid = docs as StarRailUpdate[];
   if (new Set(valid.map(doc => `${doc.locale}:${doc.slug}`)).size !== valid.length) return null;
+  const eventKeys = valid.flatMap(doc => (doc.eventSchedule?.entries ?? []).map(entry => `${doc.locale}:${entry.id}`));
+  if (new Set(eventKeys).size !== eventKeys.length) return null;
   if (['zh', 'en', 'ja'].some(locale => valid.filter(doc => doc.locale === locale).length > STARRAIL_LOCALE_LIMIT)) return null;
   return { revision: Number(value.revision), docs: valid };
 }

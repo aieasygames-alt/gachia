@@ -9,6 +9,7 @@ import { importUpdates } from '../lib/import-updates';
 import { parseStarRailUpdate } from '../../../packages/data/cms/starrail-updates';
 import characterBatch from '../../../reports/starrail-structured-character-2026-11-25/batch.json';
 import materialBatch from '../../../reports/starrail-materials-2026-11-25/batch.json';
+import calendarPublication from '../../../reports/starrail-event-calendar-2026-11-26/expected-publication.json';
 
 test('real Payload + SQLite: draft isolation, publish, restricted writes, history and idempotent imports', async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), 'gachia-payload-test-'));
@@ -68,6 +69,18 @@ test('real Payload + SQLite: draft isolation, publish, restricted writes, histor
     await assert.rejects(payload.update({ collection: 'game-updates', id: draftMaterial.id, data: { slug: 'unreviewed-material' } }));
     const materialHistory = await payload.findVersions({ collection: 'game-updates', where: { parent: { equals: draftMaterial.id } } });
     assert.ok(materialHistory.totalDocs >= 2);
+    const calendar = parseStarRailUpdate(calendarPublication.docs.find(row => row.eventSchedule));
+    assert.ok(calendar?.eventSchedule);
+    const draftCalendar = await payload.create({ collection: 'game-updates', data: { ...calendar, _status: 'draft' }, draft: true });
+    const beforeCalendar = await payload.find({ collection: 'game-updates', overrideAccess: false, draft: false });
+    assert.ok(beforeCalendar.docs.every(row => row.id !== draftCalendar.id));
+    const savedCalendar = await payload.update({ collection: 'game-updates', id: draftCalendar.id, data: { _status: 'published' }, draft: false });
+    assert.deepEqual(parseStarRailUpdate(savedCalendar)?.eventSchedule, calendar.eventSchedule);
+    await assert.rejects(payload.update({ collection: 'game-updates', id: draftCalendar.id, data: { eventSchedule: { ...calendar.eventSchedule, clock: 'UTC+8' } }, draft: false }));
+    const calendarHistory = await payload.findVersions({ collection: 'game-updates', where: { parent: { equals: draftCalendar.id } } });
+    assert.ok(calendarHistory.totalDocs >= 2);
+    await payload.update({ collection: 'game-updates', id: draftCalendar.id, data: { _status: 'draft' }, draft: false });
+    assert.ok((await payload.find({ collection: 'game-updates', overrideAccess: false, draft: false })).docs.every(row => row.id !== draftCalendar.id));
   } finally {
     await payload.destroy();
     await rm(directory, { recursive: true, force: true });

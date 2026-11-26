@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "consistentSQLiteBackup": true,
+  "integrity": "ok",
+  "publicCount": 71,
+  "path": "ignored .private/cms-before-migration.db"
+}
