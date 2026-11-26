@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-26",
+  "method": "CUA rendered DOM/body text; followed hyperlinks from approved detail pages",
+  "materials": [
+    {
+      "slug": "immortal-scionette",
+      "url": "https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%B9%BC%E8%8A%BD",
+      "visibleRoute": "阿合马铁窗集团",
+      "linkTarget": "https://wiki.biligame.com/sr/NPC%E5%95%86%E5%BA%97#%E9%98%BF%E5%90%88%E9%A9%AC%E9%93%81%E7%AA%97%E9%9B%86%E5%9B%A2"
+    },
+    {
+      "slug": "immortal-flower",
+      "url": "https://wiki.biligame.com/sr/%E6%B0%B8%E5%AF%BF%E5%A4%A9%E5%8D%8E",
+      "visibleRoute": "阿合马铁窗集团",
+      "linkTarget": "https://wiki.biligame.com/sr/NPC%E5%95%86%E5%BA%97#%E9%98%BF%E5%90%88%E9%A9%AC%E9%93%81%E7%AA%97%E9%9B%86%E5%9B%A2"
+    },
+    {
+      "slug": "artifexs-module",
+      "url": "https://wiki.biligame.com/sr/%E5%B7%A5%E9%80%A0%E6%9C%BA%E6%9D%BC",
+      "visibleRoute": "阿合马铁窗集团",
+      "linkTarget": "https://wiki.biligame.com/sr/NPC%E5%95%86%E5%BA%97#%E9%98%BF%E5%90%88%E9%A9%AC%E9%93%81%E7%AA%97%E9%9B%86%E5%9B%A2"
+    },
+    {
+      "slug": "artifexs-cyberheart",
+      "url": "https://wiki.biligame.com/sr/%E5%B7%A5%E9%80%A0%E8%BF%B4%E8%BD%AE",
+      "visibleRoute": "阿合马铁窗集团",
+      "linkTarget": "https://wiki.biligame.com/sr/NPC%E5%95%86%E5%BA%97#%E9%98%BF%E5%90%88%E9%A9%AC%E9%93%81%E7%AA%97%E9%9B%86%E5%9B%A2"
+    }
+  ],
+  "shop": {
+    "url": "https://wiki.biligame.com/sr/NPC%E5%95%86%E5%BA%97#%E9%98%BF%E5%90%88%E9%A9%AC%E9%93%81%E7%AA%97%E9%9B%86%E5%9B%A2",
+    "pageUpdatedAt": "2026-08-30",
+    "heading": "阿合马铁窗集团",
+    "location": "幽囚狱",
+    "vendor": "阿合马",
+    "currency": "奇巧零食",
+    "visibleRows": [
+      [
+        "永寿幼芽",
+        "奇巧零食×1",
+        "每日15"
+      ],
+      [
+        "工造机杼",
+        "奇巧零食×1",
+        "每日15"
+      ],
+      [
+        "永寿天华",
+        "奇巧零食×3",
+        "每日5"
+      ],
+      [
+        "工造迴轮",
+        "奇巧零食×3",
+        "每日5"
+      ]
+    ],
+    "publicationBoundary": "Only source-labelled shop route, location, vendor and currency published. Numeric prices and limits excluded without second independent verification."
+  },
+  "credit": {
+    "url": "https://wiki.biligame.com/sr/%E4%BF%A1%E7%94%A8%E7%82%B9",
+    "linkedTable": "https://wiki.biligame.com/sr/%E6%8B%9F%E9%80%A0%E8%8A%B1%E8%90%BC",
+    "tableUpdatedAt": "2026-02-25",
+    "visibleClassification": {
+      "鸽川区": [
+        "回忆之蕾",
+        "以太之蕾"
+      ],
+      "绘世学院": [
+        "藏珍之蕾"
+      ]
+    },
+    "visibleRule": "共同奖励中的信用点仅限以太之蕾与回忆之蕾；藏珍之蕾无额外信用点。",
+    "decision": "Do not equate location-only credit source with Treasure Bud. Keep both disputed new locations outside the cross-verified list."
+  },
+  "secondaryRead": {
+    "url": "https://www.miyoushe.com/sr/article/56044070",
+    "author": "星海梧桐",
+    "section": "攻略",
+    "publishedAt": "2024-08-01",
+    "editedAt": "2024-08-06",
+    "visibleBody": "该成就获取位置位于幽囚狱；只需与任何一个阿铁马铁窗集团成员买东西即可获得。",
+    "scope": "Historical community text confirms location/existence only. Does not independently verify the four current material rows, currency, prices or limits. Not published as an official source."
+  },
+  "sourcePolicy": "Existing reviewed BWIKI item detail URLs remain the public citation entry points. Facts explicitly explain the same-site outbound links to supporting tables, whose URLs are recorded here. No new runtime citation URLs, generic domain allowlist, or community authors classified as official."
+}

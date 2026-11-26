@@ -1,0 +1,35 @@
+{
+  "status": "drafts_saved_and_isolated",
+  "records": [
+    {
+      "id": 38,
+      "slug": "immortal-scionette",
+      "updatedAt": "2026-11-26T06:34:06.688Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 39,
+      "slug": "immortal-flower",
+      "updatedAt": "2026-11-26T06:34:06.694Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 50,
+      "slug": "artifexs-module",
+      "updatedAt": "2026-11-26T06:34:06.698Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 51,
+      "slug": "artifexs-cyberheart",
+      "updatedAt": "2026-11-26T06:34:06.702Z",
+      "action": "updated_draft"
+    },
+    {
+      "id": 71,
+      "slug": "credit",
+      "updatedAt": "2026-11-26T06:34:06.705Z",
+      "action": "updated_draft"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "records": 75,
+  "calendarEntries": 15,
+  "calendarParentRecords": 7,
+  "canonicalPublicationBytes": 229554,
+  "payloadDraftIsolation": true,
+  "cloudDraftIsolation": true,
+  "payloadPublishedVersionHistory": true,
+  "fullCanonicalCloudMatch": true,
+  "eventAndVersionTextVerified": true,
+  "calendarDatesSourcesAnchorsVerified": true,
+  "threeLocaleIsolation": true,
+  "consistentBackupsBeforeAfter": true,
+  "fiveMaterialDetailsAndIndexVerified": true,
+  "tenRelatedConesBidirectional": true,
+  "exactlyFiveContentUpdates": true,
+  "otherSeventyRecordsUnchanged": true,
+  "verifiedRouteListsAndPublicSourcesUnchanged": true,
+  "schemaChanges": 0,
+  "localMainBuilds": 0,
+  "workerDeployments": 0
+}

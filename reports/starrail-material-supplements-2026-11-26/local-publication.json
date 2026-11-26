@@ -1,0 +1,38 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 38,
+      "slug": "immortal-scionette",
+      "updatedAt": "2026-11-26T06:35:33.813Z",
+      "versionCount": 4
+    },
+    {
+      "id": 39,
+      "slug": "immortal-flower",
+      "updatedAt": "2026-11-26T06:35:33.824Z",
+      "versionCount": 4
+    },
+    {
+      "id": 50,
+      "slug": "artifexs-module",
+      "updatedAt": "2026-11-26T06:35:33.831Z",
+      "versionCount": 4
+    },
+    {
+      "id": 51,
+      "slug": "artifexs-cyberheart",
+      "updatedAt": "2026-11-26T06:35:33.838Z",
+      "versionCount": 4
+    },
+    {
+      "id": 71,
+      "slug": "credit",
+      "updatedAt": "2026-11-26T06:35:33.845Z",
+      "versionCount": 4
+    }
+  ],
+  "totalPublished": 75,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

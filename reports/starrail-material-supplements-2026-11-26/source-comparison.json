@@ -1,0 +1,17 @@
+{
+  "updates": [
+    "immortal-scionette",
+    "immortal-flower",
+    "artifexs-module",
+    "artifexs-cyberheart",
+    "credit"
+  ],
+  "independentShopMaterialCrossVerification": false,
+  "shopNameResolved": true,
+  "sameSiteMaterialAndShopAgreement": true,
+  "creditConflictResolved": false,
+  "creditClassificationClarified": true,
+  "priorVerifiedRoutesUnchanged": true,
+  "pricesLimitsAndLiveStockPublished": false,
+  "newPublicSourceURLs": 0
+}
