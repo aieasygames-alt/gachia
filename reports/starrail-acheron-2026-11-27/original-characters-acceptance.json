@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "locale": "zh",
+      "path": "/zh/starrail/characters/silver-wolf",
+      "h1": "银狼",
+      "mainTextSHA256": "c998ae8135030b2c476cce7cfdc5cedefc6a21de423fd9ed8840f2b840d95bdb"
+    },
+    {
+      "locale": "zh",
+      "path": "/zh/starrail/characters/sparkle",
+      "h1": "花火",
+      "mainTextSHA256": "2e3268a3a95efd4703b2f22f1b940314a782d76228839dade1595ab6d52320f0"
+    },
+    {
+      "locale": "en",
+      "path": "/en/starrail/characters/silver-wolf",
+      "h1": "Silver Wolf",
+      "mainTextSHA256": "d1ff95c8a48caeec417f8180d1d7ef0f36d910d4cd165e9ebda7d10d9dee4225"
+    },
+    {
+      "locale": "en",
+      "path": "/en/starrail/characters/sparkle",
+      "h1": "Sparkle",
+      "mainTextSHA256": "0272b345c258e99a02e9b7206f22f84c8c048c31db8d2f6ccc5c3b8f0d7f27ef"
+    },
+    {
+      "locale": "ja",
+      "path": "/ja/starrail/characters/silver-wolf",
+      "h1": "Silver Wolf",
+      "mainTextSHA256": "ad8c3ed92ed96f7fa7db02b6e861344aecc322869ca6b65997a85921609ca6b7"
+    },
+    {
+      "locale": "ja",
+      "path": "/ja/starrail/characters/sparkle",
+      "h1": "Sparkle",
+      "mainTextSHA256": "c27f37e67d2826f5bc3c16625a5e4068c25f72f0fdf8371583711cade1edf3fc"
+    }
+  ],
+  "originalCharactersPreserved": true
+}

@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "versionId": "5b4f0ece-c1b2-4265-a946-f6ccc8bb2707",
+  "previewOrigin": "https://5b4f0ece-gachia.aieasygames.workers.dev",
+  "moduleSHA256": "3c7b065893cd7ec55616c1ebe344555784e5571722b34ff6cfff3b2cc452e498",
+  "sourceCommit": "f071cdc3dfe134b2a1f2b720678831127b5648cb",
+  "moduleProof": {
+    "path": "/Users/robert/.codex/worktrees/starrail-cms-release/gachia/reports/starrail-acheron-2026-11-27/.private/upload/module-proof/receipt.json",
+    "pin": "f3fef7138f6e8ea0597a3ee915d51dfa0309eaeac9154dd35fd189aac39e332f"
+  },
+  "bindingsPreserved": true,
+  "trafficMutation": false
+}

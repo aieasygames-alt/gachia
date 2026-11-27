@@ -68,7 +68,7 @@ for d in guideBatch:
    assert d['summary'] not in text and 'noindex' in text,p
   assets.update(html.unescape(a) for a in re.findall(r'(?:src|href)="(/_next/static/[^"\s]+)"',text))
   checks.append({'path':p,'status':s,'cacheControl':h.get('cache-control'),'guidePublished':locale=='zh'})
-profile=next((d for d in expected if d.get('characterData')),None)
+profile=next((d for d in expected if d['slug']=='aha-character-data' and d['locale']=='zh'),None)
 for locale in ['zh','en','ja']:
  for suffix in ['/characters/aha','/characters','/calculator']:
   p='/'+locale+'/starrail'+suffix;s,b,h=req(p);text=html.unescape(b.decode())

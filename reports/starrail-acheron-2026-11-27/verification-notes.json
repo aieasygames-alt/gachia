@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-27",
+  "scope": "Acheron base four skills, six promotions, all ordinary trace nodes, ordinary Eidolons; no unsupported fifth skill",
+  "sourceBoundary": "BWIKI, Star Rail Station and pinned extract are third-party and may share upstream. Qiyuan mode/unlock conditions are unverified and excluded.",
+  "ultimateBoundary": "Highest cumulative totals require consuming three Crimson Knot stacks on all three slashes focused on one target. The per-slash group maximum is a total coefficient, not base plus maximum. A6 random hits, A4 separate factor, damage bonuses and Eidolon effects are excluded from base multiplier columns.",
+  "levels": "Trainable 6/10/10/10; Eidolon3 adds basic1/ultimate2 and Eidolon5 skill2/talent2, so effective display7/12/12/12. No material is charged for the bonus levels.",
+  "costBoundary": "Only selected promotions, ordinary skill upgrades and 13 trace nodes. No character feeding, light cones, relics or Eidolon acquisition costs. Ultimate subattacks share one upgrade.",
+  "verificationHarnessAdjustment": "Use raw UTF-8 JSON in local PUT checks, matching the actual publisher; default Python ASCII escaping expanded the intentionally oversized extra-skill fixture to the 512KiB rejection before structural validation. Rerun all local checks with UTF-8: missing/extra Acheron skills rejected400.",
+  "editor": "Only reviewed shared parsers and two help/type files synchronized after exact pre-edit HEAD checks; private consistent SQLite backup precedes change; no schema migration.",
+  "readerHarnessAdjustment": "Select aha-character-data explicitly for Aha route checks. Adding Acheron changes alphabetical export order; selecting the first character incorrectly expected Acheron on the Aha page. No runtime data discrepancy; rerun complete production acceptance."
+}

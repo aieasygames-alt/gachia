@@ -1,0 +1,14 @@
+{
+  "status": "published_and_verified",
+  "records": [
+    {
+      "id": 79,
+      "slug": "acheron-character-data",
+      "updatedAt": "2026-11-27T01:48:02.247Z",
+      "versionCount": 2
+    }
+  ],
+  "totalPublished": 79,
+  "method": "Payload Local API",
+  "cloudWrites": 0
+}

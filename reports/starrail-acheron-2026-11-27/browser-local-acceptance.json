@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "fullTotal": 3308000,
+  "withoutLeixin": 3148000,
+  "ultimate7to10": {
+    "信用点": 540000,
+    "焚天之魔": 27,
+    "蛀星孕灾的旧恶": 3,
+    "造梦马达": 4,
+    "命运的足迹": 2
+  },
+  "fourSkillsOnly": true,
+  "fiveSkillSwitchResets": true,
+  "noPaidEidolonLevels": true
+}

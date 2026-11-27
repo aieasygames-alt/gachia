@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "records": 79,
+  "checks": [
+    "two_character_details_index_calculator_locale_isolation_and_no_store",
+    "all_15_cn_calendar_entries_preserved",
+    "legacy_character_card_removed_without_publishing_old_fallback",
+    "anonymous_draft_bad_owner_bad_source_incomplete_data_and_stale_revision_rejected",
+    "silver_wolf_form_dynamic_update_withdrawal_and_original_character_preservation",
+    "sparxie_form_dynamic_update_withdrawal_and_original_character_preservation",
+    "acheron_missing_or_extra_skill_rejected_by_real_worker",
+    "acheron_four_skills_dynamic_update_withdrawal_without_legacy_fallback",
+    "yaoguang_dynamic_numeric_update_withdrawal_hides_all_three_readers_preserving_aha",
+    "all_character_withdrawal_removes_verified_calculator_tab"
+  ],
+  "writes": "local D1 only",
+  "productionWrites": 0
+}

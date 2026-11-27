@@ -6,7 +6,7 @@ rev=int(time.time()*1000);base='http://127.0.0.1:4400';checks=[]
 def req(path,body=None,auth=True):
  h={'User-Agent':'GachiaCMS/1.0'}
  if body is not None:h.update({'content-type':'application/json',**({'authorization':'Bearer '+token} if auth else {})})
- q=urllib.request.Request(base+path,data=json.dumps(body).encode() if body is not None else None,headers=h,method='PUT' if body is not None else 'GET')
+ q=urllib.request.Request(base+path,data=json.dumps(body,ensure_ascii=False).encode() if body is not None else None,headers=h,method='PUT' if body is not None else 'GET')
  try:
   with urllib.request.urlopen(q,timeout=45) as res:return res.status,html.unescape(res.read().decode()),res.headers
  except urllib.error.HTTPError as e:return e.code,e.read().decode(),e.headers
