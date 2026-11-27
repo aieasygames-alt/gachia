@@ -1,0 +1,11 @@
+{
+  "files": [
+    "packages/data/cms/starrail-character.ts",
+    "packages/data/cms/starrail-updates.ts",
+    "tools/payload-cms/payload.config.ts",
+    "tools/payload-cms/payload-types.ts"
+  ],
+  "oldServerPID": 21425,
+  "publicRecords": 78,
+  "migrationRequired": false
+}

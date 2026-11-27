@@ -1,0 +1,146 @@
+{
+  "110221": {
+    "id": "110221",
+    "name": "炽情之灵",
+    "type": "Material",
+    "sub_type": "TracePath",
+    "rarity": 2,
+    "icon": "icon/item/110221.png",
+    "come_from": [
+      "拟造花萼【丹鼎司】",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110222": {
+    "id": "110222",
+    "name": "星火之精",
+    "type": "Material",
+    "sub_type": "TracePath",
+    "rarity": 3,
+    "icon": "icon/item/110222.png",
+    "come_from": [
+      "拟造花萼【丹鼎司】",
+      "「万能合成机」- 材料合成",
+      "余烬兑换",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110223": {
+    "id": "110223",
+    "name": "焚天之魔",
+    "type": "Material",
+    "sub_type": "TracePath",
+    "rarity": 4,
+    "icon": "icon/item/110223.png",
+    "come_from": [
+      "拟造花萼【丹鼎司】",
+      "「万能合成机」- 材料合成",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110414": {
+    "id": "110414",
+    "name": "炼形者雷枝",
+    "type": "Material",
+    "sub_type": "AvatarRank",
+    "rarity": 4,
+    "icon": "icon/item/110414.png",
+    "come_from": [
+      "凝滞虚影【迴星港】",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "110504": {
+    "id": "110504",
+    "name": "蛀星孕灾的旧恶",
+    "type": "Material",
+    "sub_type": "WeeklyMonsterDrop",
+    "rarity": 4,
+    "icon": "icon/item/110504.png",
+    "come_from": [
+      "历战余响【禁闭舱段】"
+    ]
+  },
+  "114001": {
+    "id": "114001",
+    "name": "蓄梦元件",
+    "type": "Material",
+    "sub_type": "CommonMonsterDrop",
+    "rarity": 2,
+    "icon": "icon/item/114001.png",
+    "come_from": [
+      "惊梦剧团掉落",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "委托奖励",
+      "余烬兑换",
+      "「万能合成机」- 材料置换",
+      "拟造花萼（金）"
+    ]
+  },
+  "114002": {
+    "id": "114002",
+    "name": "流梦阀门",
+    "type": "Material",
+    "sub_type": "CommonMonsterDrop",
+    "rarity": 3,
+    "icon": "icon/item/114002.png",
+    "come_from": [
+      "突破至均衡等级2后，惊梦剧团掉落",
+      "「万能合成机」- 材料合成",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "114003": {
+    "id": "114003",
+    "name": "造梦马达",
+    "type": "Material",
+    "sub_type": "CommonMonsterDrop",
+    "rarity": 4,
+    "icon": "icon/item/114003.png",
+    "come_from": [
+      "突破至均衡等级4后，惊梦剧团掉落",
+      "「万能合成机」- 材料合成",
+      "「差分宇宙」中敌方掉落",
+      "「模拟宇宙」中敌方掉落",
+      "「万能合成机」- 材料置换"
+    ]
+  },
+  "2": {
+    "id": "2",
+    "name": "信用点",
+    "type": "Virtual",
+    "sub_type": "Virtual",
+    "rarity": 3,
+    "icon": "icon/item/2.png",
+    "come_from": [
+      "拟造花萼【大矿区】",
+      "拟造花萼【工造司】",
+      "拟造花萼【「白日梦」酒店-梦境】",
+      "拟造花萼【「呓语密林」神悟树庭】",
+      "拟造花萼【鸽川区】",
+      "任务奖励",
+      "委托奖励",
+      "余烬兑换"
+    ]
+  },
+  "241": {
+    "id": "241",
+    "name": "命运的足迹",
+    "type": "Material",
+    "sub_type": "WeeklyMonsterDrop",
+    "rarity": 5,
+    "icon": "icon/item/241.png",
+    "come_from": [
+      "「货币战争」积分奖励",
+      "「模拟宇宙」积分奖励",
+      "无名勋礼",
+      "余烬兑换",
+      "星芒兑换",
+      "限时活动奖励"
+    ]
+  }
+}

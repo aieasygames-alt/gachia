@@ -1,0 +1,1400 @@
+{
+  "updates": [],
+  "creates": [
+    {
+      "gameId": "starrail",
+      "slug": "acheron-character-data",
+      "locale": "zh",
+      "kind": "character",
+      "title": "黄泉技能倍率、行迹与养成材料",
+      "summary": "雷·虚无黄泉四项技能逐级倍率、终结技分段与残梦机制，六次晋阶、十三个行迹节点及完整/分段材料预算。",
+      "facts": [
+        {
+          "text": "黄泉为雷属性虚无角色，本页补齐普攻1—7级和战技、终结技、天赋1—12级，共115格倍率。材料培养上限为6/10/10/10；星魂3为终结技+2、普攻+1，星魂5为战技+2、天赋+2，故展示至7/12/12/12，不将描述中的理论最高10/15级当作材料培养目标。"
+        },
+        {
+          "text": "残梦达到9点可施放终结技，使用残梦机制。战技本身获得1点残梦并附1层集真赤；天赋的负面效果触发每次技能最多1次，不能把一次多目标负面效果当作多次充能。"
+        },
+        {
+          "text": "10级战技指定单体160%、相邻目标60%攻击力雷伤；普攻6级100%，3魂后7级110%。天赋10级在终结技期间降低全敌全属性抗性20%，12级22%，持续至终结技结束。"
+        },
+        {
+          "text": "终结技依次发动3次啼泽雨斩和1次黄泉返渡。10级每斩单体24%，消去集真赤时群体基础15%，消去最多3层时该次群体倍率提高至60%，返渡全敌120%；不能误算成15%再加60%。"
+        },
+        {
+          "text": "三次斩击均消去3层集真赤且集中同一目标时，10级指定目标基础累计上限372%，其他目标300%。这些累计值不含雷心额外6段、奈落、增伤或星魂，实际伤害随层数、攻击对象和其他效果变化；并非无条件每次都达到上限。"
+        },
+        {
+          "text": "秘技四相断我：每个波次开始获得四相断我，对全敌造成200%攻击力雷伤，无视弱点属性削韧；持有效果施放终结技后获得1残梦并给随机敌方1层集真赤。攻击普通敌人可直接消灭而不进入战斗，未命中不消耗秘技点。"
+        },
+        {
+          "text": "额外能力赤鬼：战斗开始获得5残梦并给随机敌人5层集真赤；残梦满后每溢出1点获得1层四相断我，最多3层。"
+        },
+        {
+          "text": "额外能力奈落：队伍中除黄泉外有1/2名虚无角色时，普攻、战技、终结技造成的伤害为原伤害115%/160%；这是原伤害倍率，不是另加115%/160%的普通增伤。"
+        },
+        {
+          "text": "额外能力雷心：啼泽雨斩击中带集真赤敌人后，自身造成伤害提高30%，最多3层，持续3回合；返渡额外造成6次随机单体伤害，每次25%攻击力，视为终结技伤害。十个属性节点合计攻击力28%、暴击伤害24%、雷属性伤害8%。"
+        },
+        {
+          "text": "1魂：对处于负面效果的目标造成伤害时暴击率提高18%。2魂：奈落最高数值需求的虚无角色减少1名，回合开始获得1残梦并给集真赤最多者1层。"
+        },
+        {
+          "text": "3魂：终结技+2、普攻+1；5魂：战技+2、天赋+2。4魂：敌方进入战斗时陷入终结技伤害易伤，受到终结技伤害提高8%。6魂：终结技伤害全属性抗性穿透提高20%，普攻和战技伤害同时视为终结技伤害并无视弱点属性削韧，击破触发雷属性效果。"
+        },
+        {
+          "text": "六次晋阶合计：信用点308,000、蓄梦元件15、流梦阀门15、造梦马达15、炼形者雷枝65。普攻五段及其余三项各九段升级逐档独立核验，终结技内部四次攻击不重复收取材料。"
+        },
+        {
+          "text": "终结技7→10独立合计：信用点540,000、焚天之魔27、造梦马达4、命运的足迹2、蛀星孕灾的旧恶3；战技和天赋相同范围同量。雷心节点另需信用点160,000、焚天之魔8、命运的足迹1、蛀星孕灾的旧恶1。"
+        },
+        {
+          "text": "精度采用Station可见数值与固定数据一致的记录，例如战技7级相邻48.75%、天赋7级减抗16.25%、终结技2级指定目标累计238.08%。BWIKI有一位小数截断，已记录差异，不据此压低原参数。"
+        },
+        {
+          "text": "本批覆盖基础技能、常规星魂与行迹。BWIKI另列奇缘星魂，当前适用模式和解锁条件尚未独立核准，未混入基础倍率和材料目标。"
+        },
+        {
+          "text": "默认完整目标合计：信用点3,308,000、蓄梦元件56、流梦阀门71、炼形者雷枝65、造梦马达73、炽情之灵18、蛀星孕灾的旧恶12、星火之精69、命运的足迹8、焚天之魔139；不含经验喂养信用点。"
+        }
+      ],
+      "boundary": "适用于截至2026-11-27核验的中文基础角色资料。BWIKI、Star Rail Station与固定StarRailRes数据均为第三方，可能共享游戏数据上游，不算独立官方确认。部分倍率展示精度有差异，已记录采用口径。奇缘星魂适用模式及解锁条件待独立核准，未并入基础倍率与材料；不提供未经核验的配装排行，实际以当前游戏内显示为准。",
+      "region": "国服（中文资料；第三方数据核验）",
+      "checkedAt": "2026-11-27",
+      "sources": [
+        {
+          "url": "https://wiki.biligame.com/sr/%E9%BB%84%E6%B3%89"
+        },
+        {
+          "url": "https://starrailstation.com/cn/character/acheron"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/characters.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skills.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_skill_trees.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/character_promotions.json"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/03907e798b46f9eb109a1f882055cdf49ce3d374/index_new/cn/items.json"
+        }
+      ],
+      "characterData": {
+        "id": "acheron",
+        "name": "黄泉",
+        "identity": "5星 · 雷 · 虚无 · 自称巡海游侠的旅人",
+        "materialNote": "默认目标为六次晋阶、普攻6级、战技/终结技/天赋各10级、三个额外能力和十个属性节点。仅计算尚未完成的目标；不含角色经验书及喂经验信用点、光锥、遗器、星魂获取或奇缘星魂成本。星魂加级不消耗升级材料；终结技的斩击和收刀不重复计费。需解锁的前置节点请一并选入，本计算不替代游戏内解锁条件判断。",
+        "skills": [
+          {
+            "key": "basic",
+            "label": "普攻",
+            "name": "三途枯榷",
+            "trainableMax": 6,
+            "note": "对指定敌方单体造成雷属性攻击力伤害。普攻本身不直接获得残梦；若其他效果使敌人陷入负面效果，按天赋每次技能最多触发一次。培养上限6级，3魂加1级后展示至7级。",
+            "columns": [
+              "单体攻击力倍率"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "50%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "60%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "70%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "80%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "90%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "100%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "110%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 5000
+                  },
+                  {
+                    "name": "炽情之灵",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "蓄梦元件",
+                    "quantity": 6
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 10000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 45000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 160000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 8
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 4
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "skill",
+            "label": "战技",
+            "name": "八雷飞渡",
+            "trainableMax": 10,
+            "note": "获得1点残梦，为指定敌方单体附上1层集真赤；两列分别为指定单体与相邻目标的雷属性攻击力倍率。7/9级相邻倍率采用Station与固定数据一致的48.75%/56.25%，BWIKI显示截至一位小数。",
+            "columns": [
+              "单体攻击力倍率",
+              "相邻攻击力倍率"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "80%",
+                  "30%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "88%",
+                  "33%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "96%",
+                  "36%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "104%",
+                  "39%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "112%",
+                  "42%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "120%",
+                  "45%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "130%",
+                  "48.75%"
+                ]
+              },
+              {
+                "level": 8,
+                "values": [
+                  "140%",
+                  "52.5%"
+                ]
+              },
+              {
+                "level": 9,
+                "values": [
+                  "150%",
+                  "56.25%"
+                ]
+              },
+              {
+                "level": 10,
+                "values": [
+                  "160%",
+                  "60%"
+                ]
+              },
+              {
+                "level": 11,
+                "values": [
+                  "168%",
+                  "63%"
+                ]
+              },
+              {
+                "level": 12,
+                "values": [
+                  "176%",
+                  "66%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 2500
+                  },
+                  {
+                    "name": "蓄梦元件",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 5000
+                  },
+                  {
+                    "name": "炽情之灵",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "蓄梦元件",
+                    "quantity": 6
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 10000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 30000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 7
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 6
+                  }
+                ]
+              },
+              {
+                "toLevel": 7,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 45000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 8,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 80000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 9,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 160000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 8
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "toLevel": 10,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 300000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 14
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "ultimate",
+            "label": "终结技",
+            "name": "残梦尽染，一刀缭断",
+            "trainableMax": 10,
+            "note": "消耗9点残梦，依次施放3次啼泽雨斩和1次黄泉返渡。前两列为三次斩击均消去3层集真赤、集中攻击同一目标时的基础累计上限，不含雷心额外6段、奈落独立倍率、增伤、星魂或其他效果。后四列为每次斩击单体、消去集真赤时的群体基础、该次群体倍率最高提高至的总倍率（不是额外再相加）、收刀群体倍率。10级每次群体最高60%，由基础15%提高至60%；累计单体3×24%＋3×60%＋120%＝372%，其他目标300%。无集真赤时不触发该次群体伤害；终结技期间不能附上集真赤，收刀移除全部集真赤。所有分段共用一项终结技升级费用。",
+            "columns": [
+              "指定目标累计上限",
+              "其他目标累计上限",
+              "每斩单体倍率",
+              "每斩群体基础倍率",
+              "每斩群体最高总倍率",
+              "返渡群体倍率"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "223.2%",
+                  "180%",
+                  "14.4%",
+                  "9%",
+                  "36%",
+                  "72%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "238.08%",
+                  "192%",
+                  "15.36%",
+                  "9.6%",
+                  "38.4%",
+                  "76.8%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "252.96%",
+                  "204%",
+                  "16.32%",
+                  "10.2%",
+                  "40.8%",
+                  "81.6%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "267.84%",
+                  "216%",
+                  "17.28%",
+                  "10.8%",
+                  "43.2%",
+                  "86.4%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "282.72%",
+                  "228%",
+                  "18.24%",
+                  "11.4%",
+                  "45.6%",
+                  "91.2%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "297.6%",
+                  "240%",
+                  "19.2%",
+                  "12%",
+                  "48%",
+                  "96%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "316.2%",
+                  "255%",
+                  "20.4%",
+                  "12.75%",
+                  "51%",
+                  "102%"
+                ]
+              },
+              {
+                "level": 8,
+                "values": [
+                  "334.8%",
+                  "270%",
+                  "21.6%",
+                  "13.5%",
+                  "54%",
+                  "108%"
+                ]
+              },
+              {
+                "level": 9,
+                "values": [
+                  "353.4%",
+                  "285%",
+                  "22.8%",
+                  "14.25%",
+                  "57%",
+                  "114%"
+                ]
+              },
+              {
+                "level": 10,
+                "values": [
+                  "372%",
+                  "300%",
+                  "24%",
+                  "15%",
+                  "60%",
+                  "120%"
+                ]
+              },
+              {
+                "level": 11,
+                "values": [
+                  "386.88%",
+                  "312%",
+                  "24.96%",
+                  "15.6%",
+                  "62.4%",
+                  "124.8%"
+                ]
+              },
+              {
+                "level": 12,
+                "values": [
+                  "401.76%",
+                  "324%",
+                  "25.92%",
+                  "16.2%",
+                  "64.8%",
+                  "129.6%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 2500
+                  },
+                  {
+                    "name": "蓄梦元件",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 5000
+                  },
+                  {
+                    "name": "炽情之灵",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "蓄梦元件",
+                    "quantity": 6
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 10000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 30000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 7
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 6
+                  }
+                ]
+              },
+              {
+                "toLevel": 7,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 45000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 8,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 80000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 9,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 160000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 8
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "toLevel": 10,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 300000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 14
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "talent",
+            "label": "天赋",
+            "name": "红叶时雨，万倾一空",
+            "trainableMax": 10,
+            "note": "残梦达到9点可激活终结技；终结技期间无视弱点属性削韧，并降低全敌全属性抗性至终结技结束，表中为降低幅度。任意单位施放技能期间使敌方陷入负面效果，获得1残梦并附1层集真赤，每次技能最多触发1次；多目标时附给集真赤最多者。敌人离场或被消灭后，其集真赤转给场上层数最多者。",
+            "columns": [
+              "全属性抗性降低"
+            ],
+            "levels": [
+              {
+                "level": 1,
+                "values": [
+                  "10%"
+                ]
+              },
+              {
+                "level": 2,
+                "values": [
+                  "11%"
+                ]
+              },
+              {
+                "level": 3,
+                "values": [
+                  "12%"
+                ]
+              },
+              {
+                "level": 4,
+                "values": [
+                  "13%"
+                ]
+              },
+              {
+                "level": 5,
+                "values": [
+                  "14%"
+                ]
+              },
+              {
+                "level": 6,
+                "values": [
+                  "15%"
+                ]
+              },
+              {
+                "level": 7,
+                "values": [
+                  "16.25%"
+                ]
+              },
+              {
+                "level": 8,
+                "values": [
+                  "17.5%"
+                ]
+              },
+              {
+                "level": 9,
+                "values": [
+                  "18.75%"
+                ]
+              },
+              {
+                "level": 10,
+                "values": [
+                  "20%"
+                ]
+              },
+              {
+                "level": 11,
+                "values": [
+                  "21%"
+                ]
+              },
+              {
+                "level": 12,
+                "values": [
+                  "22%"
+                ]
+              }
+            ],
+            "upgrades": [
+              {
+                "toLevel": 2,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 2500
+                  },
+                  {
+                    "name": "蓄梦元件",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 3,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 5000
+                  },
+                  {
+                    "name": "炽情之灵",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "蓄梦元件",
+                    "quantity": 6
+                  }
+                ]
+              },
+              {
+                "toLevel": 4,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 10000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 5,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 20000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 6,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 30000
+                  },
+                  {
+                    "name": "星火之精",
+                    "quantity": 7
+                  },
+                  {
+                    "name": "流梦阀门",
+                    "quantity": 6
+                  }
+                ]
+              },
+              {
+                "toLevel": 7,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 45000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 3
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 3
+                  }
+                ]
+              },
+              {
+                "toLevel": 8,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 80000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 5
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "造梦马达",
+                    "quantity": 4
+                  }
+                ]
+              },
+              {
+                "toLevel": 9,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 160000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 8
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  }
+                ]
+              },
+              {
+                "toLevel": 10,
+                "materials": [
+                  {
+                    "name": "信用点",
+                    "quantity": 300000
+                  },
+                  {
+                    "name": "焚天之魔",
+                    "quantity": 14
+                  },
+                  {
+                    "name": "命运的足迹",
+                    "quantity": 1
+                  },
+                  {
+                    "name": "蛀星孕灾的旧恶",
+                    "quantity": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ascensions": [
+          {
+            "stage": 1,
+            "atLevel": 20,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 4000
+              },
+              {
+                "name": "蓄梦元件",
+                "quantity": 5
+              }
+            ]
+          },
+          {
+            "stage": 2,
+            "atLevel": 30,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 8000
+              },
+              {
+                "name": "蓄梦元件",
+                "quantity": 10
+              }
+            ]
+          },
+          {
+            "stage": 3,
+            "atLevel": 40,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 16000
+              },
+              {
+                "name": "流梦阀门",
+                "quantity": 6
+              },
+              {
+                "name": "炼形者雷枝",
+                "quantity": 3
+              }
+            ]
+          },
+          {
+            "stage": 4,
+            "atLevel": 50,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 40000
+              },
+              {
+                "name": "流梦阀门",
+                "quantity": 9
+              },
+              {
+                "name": "炼形者雷枝",
+                "quantity": 7
+              }
+            ]
+          },
+          {
+            "stage": 5,
+            "atLevel": 60,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 80000
+              },
+              {
+                "name": "造梦马达",
+                "quantity": 6
+              },
+              {
+                "name": "炼形者雷枝",
+                "quantity": 20
+              }
+            ]
+          },
+          {
+            "stage": 6,
+            "atLevel": 70,
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "造梦马达",
+                "quantity": 9
+              },
+              {
+                "name": "炼形者雷枝",
+                "quantity": 35
+              }
+            ]
+          }
+        ],
+        "nodes": [
+          {
+            "id": "1308101",
+            "name": "赤鬼（晋阶2）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 5000
+              },
+              {
+                "name": "炽情之灵",
+                "quantity": 3
+              },
+              {
+                "name": "蛀星孕灾的旧恶",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "id": "1308102",
+            "name": "奈落（晋阶4）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 20000
+              },
+              {
+                "name": "星火之精",
+                "quantity": 5
+              },
+              {
+                "name": "命运的足迹",
+                "quantity": 1
+              },
+              {
+                "name": "蛀星孕灾的旧恶",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "id": "1308103",
+            "name": "雷心（晋阶6）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "焚天之魔",
+                "quantity": 8
+              },
+              {
+                "name": "命运的足迹",
+                "quantity": 1
+              },
+              {
+                "name": "蛀星孕灾的旧恶",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "id": "1308201",
+            "name": "攻击强化 +4%（等级1）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 2500
+              },
+              {
+                "name": "蓄梦元件",
+                "quantity": 2
+              }
+            ]
+          },
+          {
+            "id": "1308202",
+            "name": "暴击伤害强化 +5.3%（晋阶2）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 5000
+              },
+              {
+                "name": "炽情之灵",
+                "quantity": 3
+              },
+              {
+                "name": "蓄梦元件",
+                "quantity": 6
+              }
+            ]
+          },
+          {
+            "id": "1308203",
+            "name": "攻击强化 +4%（晋阶3）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 10000
+              },
+              {
+                "name": "星火之精",
+                "quantity": 3
+              },
+              {
+                "name": "流梦阀门",
+                "quantity": 3
+              }
+            ]
+          },
+          {
+            "id": "1308204",
+            "name": "伤害强化•雷 +3.2%（晋阶3）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 10000
+              },
+              {
+                "name": "星火之精",
+                "quantity": 3
+              },
+              {
+                "name": "流梦阀门",
+                "quantity": 3
+              }
+            ]
+          },
+          {
+            "id": "1308205",
+            "name": "攻击强化 +6%（晋阶4）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 20000
+              },
+              {
+                "name": "星火之精",
+                "quantity": 5
+              },
+              {
+                "name": "流梦阀门",
+                "quantity": 4
+              }
+            ]
+          },
+          {
+            "id": "1308206",
+            "name": "暴击伤害强化 +8%（晋阶5）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 45000
+              },
+              {
+                "name": "焚天之魔",
+                "quantity": 3
+              },
+              {
+                "name": "造梦马达",
+                "quantity": 3
+              }
+            ]
+          },
+          {
+            "id": "1308207",
+            "name": "攻击强化 +6%（晋阶5）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 45000
+              },
+              {
+                "name": "焚天之魔",
+                "quantity": 3
+              },
+              {
+                "name": "造梦马达",
+                "quantity": 3
+              }
+            ]
+          },
+          {
+            "id": "1308208",
+            "name": "伤害强化•雷 +4.8%（晋阶6）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "焚天之魔",
+                "quantity": 8
+              },
+              {
+                "name": "造梦马达",
+                "quantity": 8
+              }
+            ]
+          },
+          {
+            "id": "1308209",
+            "name": "暴击伤害强化 +10.7%（等级75）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "焚天之魔",
+                "quantity": 8
+              },
+              {
+                "name": "造梦马达",
+                "quantity": 8
+              }
+            ]
+          },
+          {
+            "id": "1308210",
+            "name": "攻击强化 +8%（等级80）",
+            "materials": [
+              {
+                "name": "信用点",
+                "quantity": 160000
+              },
+              {
+                "name": "焚天之魔",
+                "quantity": 8
+              },
+              {
+                "name": "造梦马达",
+                "quantity": 8
+              }
+            ]
+          }
+        ]
+      },
+      "_status": "published"
+    }
+  ]
+}

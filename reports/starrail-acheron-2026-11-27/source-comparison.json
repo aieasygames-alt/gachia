@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "stationAdjacentSkillRanges": 32,
+  "stationSkillMaterialIdentities": 102,
+  "stationNodes": 13,
+  "stationNodeMaterialIdentities": 40,
+  "bwikiAscensions": 6,
+  "stationMultiplierCells": 115,
+  "bwikiMultiplierValuesMatched": 97,
+  "multiplierDifferencesRecorded": [
+    {
+      "skill": "skill",
+      "column": 1,
+      "level": 7,
+      "bwiki": "48.7%攻击力",
+      "adopted": "48.75%"
+    },
+    {
+      "skill": "skill",
+      "column": 1,
+      "level": 9,
+      "bwiki": "56.2%攻击力",
+      "adopted": "56.25%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 0,
+      "level": 2,
+      "bwiki": "238.0%攻击力",
+      "adopted": "238.08%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 2,
+      "level": 2,
+      "bwiki": "15.3%攻击力",
+      "adopted": "15.36%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 0,
+      "level": 3,
+      "bwiki": "252.9%攻击力",
+      "adopted": "252.96%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 2,
+      "level": 3,
+      "bwiki": "16.3%攻击力",
+      "adopted": "16.32%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 0,
+      "level": 4,
+      "bwiki": "267.8%攻击力",
+      "adopted": "267.84%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 2,
+      "level": 4,
+      "bwiki": "17.2%攻击力",
+      "adopted": "17.28%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 0,
+      "level": 5,
+      "bwiki": "282.7%攻击力",
+      "adopted": "282.72%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 2,
+      "level": 5,
+      "bwiki": "18.2%攻击力",
+      "adopted": "18.24%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 3,
+      "level": 7,
+      "bwiki": "12.7%攻击力",
+      "adopted": "12.75%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 3,
+      "level": 9,
+      "bwiki": "14.2%攻击力",
+      "adopted": "14.25%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 0,
+      "level": 11,
+      "bwiki": "386.8%攻击力",
+      "adopted": "386.88%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 2,
+      "level": 11,
+      "bwiki": "24.9%攻击力",
+      "adopted": "24.96%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 0,
+      "level": 12,
+      "bwiki": "401.7%攻击力",
+      "adopted": "401.76%"
+    },
+    {
+      "skill": "ultimate",
+      "column": 2,
+      "level": 12,
+      "bwiki": "25.9%攻击力",
+      "adopted": "25.92%"
+    },
+    {
+      "skill": "talent",
+      "column": 0,
+      "level": 7,
+      "bwiki": "16.2%",
+      "adopted": "16.25%"
+    },
+    {
+      "skill": "talent",
+      "column": 0,
+      "level": 9,
+      "bwiki": "18.7%",
+      "adopted": "18.75%"
+    }
+  ],
+  "costResolution": "All adjacent ranges, individual material names and 13 nodes match pinned data. BWIKI ascensions and three major node costs also agree.",
+  "precisionResolution": "Station visible decimals agree exactly with pinned Acheron params; BWIKI one-decimal truncations recorded.",
+  "independence": "Third-party displays and extracted data may share upstream; no independent official confirmation claim."
+}

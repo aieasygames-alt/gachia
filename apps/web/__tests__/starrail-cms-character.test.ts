@@ -1,6 +1,7 @@
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import achBatch from '../../../reports/starrail-acheron-2026-11-27/batch.json';
 import spBatch from '../../../reports/starrail-sparxie-2026-11-26/batch.json';
 import swBatch from '../../../reports/starrail-silverwolf-999-2026-11-26/batch.json';
 import yaoBatch from '../../../reports/starrail-yaoguang-2026-11-26/batch.json';
@@ -93,6 +94,23 @@ describe('CMS character page, index entry and material calculator', () => {
     load.mockResolvedValue({ source: 'cms', updates: [doc] });
     expect(renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }))).not.toContain('/starrail/characters/sparxie');
     expect(await starRailCharacterMetadata('zh', 'sparxie')).toMatchObject({ robots: { index: false } });
+  });
+
+  it('renders four Acheron skills and hides withdrawn or untranslated legacy data', async () => {
+    const ach = parseStarRailUpdate(achBatch.creates[0])!;
+    load.mockResolvedValue({ source: 'cms', updates: [doc, ach] });
+    const detail = renderToStaticMarkup(await StarRailCmsCharacter({ locale: 'zh', id: 'acheron' }));
+    for (const skill of ach.characterData!.skills) for (const row of skill.levels) for (const value of row.values) expect(detail).toContain(value);
+    for (const value of ['炼形者雷枝', '集真赤', '3,308,000', '每斩群体最高总倍率']) expect(detail).toContain(value);
+    expect(detail).not.toContain('欢愉技');
+    expect(renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }))).toContain('/starrail/characters/acheron');
+    for (const locale of ['en', 'ja'] as const) {
+      expect(renderToStaticMarkup(await StarRailCmsCharacter({ locale, id: 'acheron' }))).not.toContain(ach.summary);
+      expect(await starRailCharacterMetadata(locale, 'acheron')).toMatchObject({ robots: { index: false } });
+    }
+    load.mockResolvedValue({ source: 'cms', updates: [doc] });
+    expect(renderToStaticMarkup(await StarRailCmsCharacterCard({ locale: 'zh' }))).not.toContain('/starrail/characters/acheron');
+    expect(await starRailCharacterMetadata('zh', 'acheron')).toMatchObject({ robots: { index: false } });
   });
 
 });

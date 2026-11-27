@@ -1,7 +1,10 @@
 // Structured character publications are independent of the legacy build/tier database.
-export const STARRAIL_CMS_CHARACTERS = { aha: 'aha-character-data', yaoguang: 'yaoguang-character-data', 'silver-wolf-lv999': 'silver-wolf-lv999-character-data', sparxie: 'sparxie-character-data' } as const;
+export const STARRAIL_CMS_CHARACTERS = { aha: 'aha-character-data', yaoguang: 'yaoguang-character-data', 'silver-wolf-lv999': 'silver-wolf-lv999-character-data', sparxie: 'sparxie-character-data', acheron: 'acheron-character-data' } as const;
 export const STARRAIL_CMS_CHARACTER_ALIASES = { 'yao-guang': 'yaoguang' } as const;
-export const STARRAIL_CMS_CHARACTER_NAMES = { aha: { zh: '阿哈', en: 'Aha', ja: 'Aha' }, yaoguang: { zh: '爻光', en: 'Yao Guang', ja: 'Yao Guang' }, 'silver-wolf-lv999': { zh: '银狼LV.999', en: 'Silver Wolf LV.999', ja: 'Silver Wolf LV.999' }, sparxie: { zh: '火花', en: 'Sparxie', ja: 'Sparxie' } } as const;
+export const STARRAIL_CMS_CHARACTER_NAMES = { aha: { zh: '阿哈', en: 'Aha', ja: 'Aha' }, yaoguang: { zh: '爻光', en: 'Yao Guang', ja: 'Yao Guang' }, 'silver-wolf-lv999': { zh: '银狼LV.999', en: 'Silver Wolf LV.999', ja: 'Silver Wolf LV.999' }, sparxie: { zh: '火花', en: 'Sparxie', ja: 'Sparxie' }, acheron: { zh: '黄泉', en: 'Acheron', ja: '黄泉' } } as const;
+const ordinarySkills = ['basic', 'skill', 'ultimate', 'talent'] as const;
+const elationSkills = [...ordinarySkills, 'elation'] as const;
+const characterSkills = { aha: elationSkills, yaoguang: elationSkills, 'silver-wolf-lv999': elationSkills, sparxie: elationSkills, acheron: ordinarySkills } satisfies Record<keyof typeof STARRAIL_CMS_CHARACTERS, readonly string[]>;
 export type MaterialCost = { name: string; quantity: number }[];
 export type VerifiedStarRailCharacter = {
   id: keyof typeof STARRAIL_CMS_CHARACTERS;
@@ -29,10 +32,11 @@ const cleanCost = (v: MaterialCost): MaterialCost => v.map(({ name, quantity }) 
 
 export function parseStarRailCharacter(input: unknown): VerifiedStarRailCharacter | null {
   if (!object(input) || typeof input.id !== 'string' || !Object.hasOwn(STARRAIL_CMS_CHARACTERS, input.id) || !text(input.name, 100) || !text(input.identity, 200) || !text(input.materialNote)) return null;
-  if (!Array.isArray(input.skills) || input.skills.length !== 5 || !unique(input.skills.map(s => object(s) ? s.key : null))) return null;
+  const keys: readonly string[] = characterSkills[input.id as keyof typeof characterSkills];
+  if (!Array.isArray(input.skills) || input.skills.length !== keys.length || !unique(input.skills.map(s => object(s) ? s.key : null))) return null;
   const expected = { basic: [6, 7], skill: [10, 12], ultimate: [10, 12], talent: [10, 12], elation: [10, 12] } as const;
   for (const s of input.skills) {
-    if (!object(s) || !Object.hasOwn(expected, String(s.key)) || !text(s.label, 100) || !text(s.name, 100) || !text(s.note)) return null;
+    if (!object(s) || typeof s.key !== 'string' || !keys.includes(s.key) || !Object.hasOwn(expected, s.key) || !text(s.label, 100) || !text(s.name, 100) || !text(s.note)) return null;
     const [cap, displayCap] = expected[s.key as keyof typeof expected];
     if (s.trainableMax !== cap || !Array.isArray(s.columns) || s.columns.length < 1 || s.columns.length > 6 || !s.columns.every(c => text(c, 100))) return null;
     const columnCount = s.columns.length;

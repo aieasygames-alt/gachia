@@ -161,7 +161,7 @@ export interface GameUpdate {
   currentVersion?: string | null;
   releaseDate?: string | null;
   /**
-   * 独立角色页与材料计算器共用。完整五项技能、六次晋阶和十三个节点须通过发布校验；无数据的角色资料可留空。
+   * 独立角色页与材料计算器共用。技能按已注册角色结构校验：普通角色四项、欢愉角色五项；六次晋阶和十三个节点须完整。无数据的角色资料可留空。
    */
   characterData?:
     | {
